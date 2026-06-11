@@ -10,11 +10,11 @@
             3117,
             3158,
             3047,
+            3009,
             3111,
             3006,
             3005,
             3008,
-            3009,
             3010,
             3020
         ],
@@ -532,9 +532,9 @@
             3072,
             6671,
             3095,
-            4403,
             3026,
-            3031
+            3031,
+            4403
         ],
         "categories": [
             "Damage"
@@ -731,8 +731,8 @@
             3146,
             3072,
             3074,
-            4403,
-            3153
+            3153,
+            4403
         ],
         "categories": [
             "Damage",
@@ -872,8 +872,8 @@
             3102,
             3157,
             4645,
-            4403,
-            3089
+            3089,
+            4403
         ],
         "categories": [
             "SpellDamage"
@@ -2642,13 +2642,13 @@
     {
         "id": 2052,
         "name": "Poro-Snax",
-        "description": "<mainText><stats></stats><br><br> <active>Propriété active - Consommation :</active> sert une bonne ration à un Poro proche, ce qui le fait grandir.<br><br><flavorText>Ce savoureux mélange de volailles d'Avarosa élevées en liberté et d'herbes de Freljord bios garanties sans OZM contient les nutriments essentiels nécessaires pour faire ronronner de plaisir votre Poro.<br><br>Les gains seront intégralement reversés aux associations de lutte contre la cruauté noxienne envers les animaux.</flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br> <active>Propriété active - Consommation :</active> sert une bonne ration à un Poro proche, ce qui le fait grandir.<br><br><flavorText>Ce savoureux mélange de volailles d'Avarosa et d'herbes de Freljord (récoltées chaque jour au moment de la gelée) contient tous les nutriments nécessaires pour garder votre Poro en bonne santé.<br><br>Les gains seront intégralement reversés aux associations pour la protection de l'habitat des Poros tachetés.</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
         "to": [],
         "categories": [],
-        "maxStacks": 2,
+        "maxStacks": 99,
         "requiredChampion": "",
         "requiredAlly": "",
         "requiredBuffCurrencyName": "",
@@ -4684,7 +4684,6 @@
             2524,
             3071,
             6620,
-            4403,
             2502,
             2510,
             2525,
@@ -4698,6 +4697,7 @@
             323119,
             326620,
             328020,
+            4403,
             4629,
             4644,
             6617,
@@ -5156,10 +5156,10 @@
             3046,
             6675,
             6671,
-            4403,
             2512,
             3085,
-            3094
+            3094,
+            4403
         ],
         "categories": [
             "CriticalStrike",
@@ -5421,8 +5421,8 @@
             1029
         ],
         "to": [
-            4403,
             3193,
+            4403,
             6667
         ],
         "categories": [
@@ -8423,7 +8423,7 @@
     {
         "id": 4010,
         "name": "Malédiction du sanguinaire",
-        "description": "<mainText><stats><attention> +60</attention> puissance<br><attention> +350</attention> PV<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Vile décomposition</passive><br>Infliger des <magicDamage>dégâts magiques</magicDamage> avec des compétences ou des compétences passives à des champions réduit leur <scaleMR>résistance magique de 7.5%</scaleMR> pendant 6 sec. (Cumulable 4 fois).</mainText>",
+        "description": "<mainText><stats><attention> +60</attention> puissance<br><attention> +350</attention> PV<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Vile décomposition</passive><br>Infliger des <magicDamage>dégâts magiques</magicDamage> avec des compétences ou des compétences passives à des champions réduit leur <scaleMR>résistance magique de 7.5%</scaleMR> pendant 6 sec. (cumulable 4 fois).</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -9126,7 +9126,7 @@
     {
         "id": 4645,
         "name": "Flamme-ombre",
-        "description": "<mainText><stats><attention> +110</attention> puissance<br><attention> +15</attention> pénétration magique</stats><br><br><passive>Floraicendre</passive><br>Vos <magicDamage>dégâts magiques</magicDamage> et vos <trueDamage>dégâts bruts</trueDamage> <attention>infligent des coups critiques</attention> aux ennemis qui ont moins de 40% de leurs PV, leur infligeant 20% de dégâts bonus. </mainText>",
+        "description": "<mainText><stats><attention> +110</attention> puissance<br><attention> +15</attention> pénétration magique</stats><br><br><passive>Floraicendre</passive><br><magicDamage>Vos dégâts magiques</magicDamage> et vos <trueDamage>dégâts bruts</trueDamage> <attention>infligent des coups critiques</attention> aux ennemis qui ont moins de 40% de leurs PV, leur infligeant 20% de dégâts bonus. </mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -12173,6 +12173,27 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/220012_Anvil_Shardblade.png"
     },
     {
+        "id": 220013,
+        "name": "Poro-Snax",
+        "description": "<mainText><stats></stats><br><br> <active>Propriété active - Consommation :</active> sert une bonne ration à un Poro proche, ce qui le fait grandir.<br><br><flavorText>Ce mélange savoureux de poule avarosane et d'herbes du Freljord, désormais sublimé par une touche raffinée de confiserie demacienne, contient les nutriments essentiels pour aider votre Poro à garder tout son éclat.<br><br>L'intégralité des bénéfices sera reversée au Chœur des jeunes de Nimbechamp. Aidez un enfant demacien à s'offrir un etwahl, aujourd'hui !</flavorText></mainText>",
+        "active": true,
+        "inStore": false,
+        "from": [],
+        "to": [],
+        "categories": [],
+        "maxStacks": 2,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 0,
+        "priceTotal": 0,
+        "displayInItemSets": true,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/2052_Poro_Snack_RainbowCandy.png"
+    },
+    {
         "id": 221011,
         "name": "Ceinture du géant",
         "description": "<mainText><stats><attention> +300</attention> PV</stats><br><br></mainText>",
@@ -12513,7 +12534,7 @@
     {
         "id": 222504,
         "name": "Rookern kaénique",
-        "description": "<mainText><stats><attention> +350</attention> PV<br><attention> +80</attention> résistance magique</stats><br><br><passive>Fléau des mages</passive><br>Après n'avoir subi aucun dégât magique pendant 15 sec, vous gagnez un <shield>bouclier anti-dégâts magiques</shield>. </mainText>",
+        "description": "<mainText><stats><attention> +350</attention> PV<br><attention> +80</attention> résistance magique</stats><br><br><passive>Fléau des mages</passive><br>Après n'avoir subi aucun dégât magique pendant 10 sec, vous gagnez un <shield>bouclier anti-dégâts magiques</shield>. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13449,7 +13470,7 @@
     {
         "id": 223071,
         "name": "Couperet noir",
-        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +350</attention> PV<br><attention> +20</attention> accélération de compétence</stats><br><br><passive>Découpage</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> aux champions ennemis avec des compétences, des compétences passives et des attaques réduit leur <scaleArmor>armure de 6%</scaleArmor> pendant 6 sec. (Cumulable 5 fois).<br><br><passive>Ferveur</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> vous octroie <speed>20 vitesse de déplacement</speed> pendant 2 sec.</mainText>",
+        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +350</attention> PV<br><attention> +20</attention> accélération de compétence</stats><br><br><passive>Découpage</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> aux champions ennemis avec des compétences, des compétences passives et des attaques réduit leur <scaleArmor>armure de 6%</scaleArmor> pendant 6 sec. (cumulable 5 fois).<br><br><passive>Ferveur</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> vous octroie <speed>20 vitesse de déplacement</speed> pendant 2 sec.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13581,7 +13602,7 @@
     {
         "id": 223078,
         "name": "Force de la trinité",
-        "description": "<mainText><stats><attention> +35</attention> dégâts d'attaque<br><attention> +25%</attention> de vitesse d'attaque<br><attention> +333</attention> PV<br><attention> +20</attention> accélération de compétence</stats><br><br><passive>Lame enchantée</passive><br>Après avoir utilisé une de vos compétences, votre prochaine attaque inflige des dégâts physiques bonus.<br><br><passive>Accélération</passive><br>Les attaques de base confèrent de la vitesse de déplacement.<br><br></mainText>",
+        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +25%</attention> de vitesse d'attaque<br><attention> +375</attention> PV<br><attention> +20</attention> accélération de compétence</stats><br><br><passive>Lame enchantée</passive><br>Après avoir utilisé une de vos compétences, votre prochaine attaque inflige des dégâts physiques bonus.<br><br><passive>Accélération</passive><br>Les attaques de base confèrent de la vitesse de déplacement.<br><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13734,7 +13755,7 @@
     {
         "id": 223094,
         "name": "Canon ultrarapide",
-        "description": "<mainText><stats><attention> +30%</attention> de vitesse d'attaque<br><attention> +25%</attention> de chances de coup critique<br><attention> +4%</attention> de vitesse de déplacement</stats><br><br><passive>Énergisant</passive><br>Vos déplacements et vos attaques permettent d'<keyword>énergiser une attaque</keyword>.<br><br><passive>Sniper</passive><br>Vos <keyword>attaques énergisées</keyword> infligent <magicDamage>200 pts de dégâts magiques bonus</magicDamage>. De plus, vos attaques énergisées ont une portée augmentée de 35% au maximum.<br>.<br><buffedStat>Dans le mode Arena, les effets Énergisant se génèrent deux fois plus vite.</buffedStat><br></mainText>",
+        "description": "<mainText><stats><attention> +30%</attention> de vitesse d'attaque<br><attention> +25%</attention> de chances de coup critique<br><attention> +4%</attention> de vitesse de déplacement</stats><br><br><passive>Énergisant</passive><br>Vos déplacements et vos attaques permettent d'<keyword>énergiser une attaque</keyword>.<br><br><passive>Sniper</passive><br>Vos <keyword>attaques énergisées</keyword> infligent <magicDamage>200 pts de dégâts magiques bonus</magicDamage>. De plus, vos attaques énergisées ont une portée augmentée de 35% au maximum.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -14852,7 +14873,7 @@
     {
         "id": 224004,
         "name": "Sabre spectral",
-        "description": "<mainText><stats><attention> +55</attention> dégâts d'attaque<br><attention> 21</attention> létalité</stats><br><br> <active>Propriété active -</active> <active>Ancre d'âme</active>  (0 sec)<br>Vous marquez le sol sous vos pieds. 5 sec plus tard, vous retournez à l'emplacement de la marque. Vous pouvez relancer cet effet à tout moment pendant la durée d'<active>Ancre d'âme</active> pour retourner à l'emplacement de la marque plus tôt.</mainText>",
+        "description": "<mainText><stats><attention> +60</attention> dégâts d'attaque<br><attention> 21</attention> létalité</stats><br><br> <active>Propriété active -</active> <active>Ancre d'âme</active>  (0 sec)<br>Vous marquez le sol sous vos pieds. 5 sec plus tard, vous retournez à l'emplacement de la marque. Vous pouvez relancer cet effet à tout moment pendant la durée d'<active>Ancre d'âme</active> pour retourner à l'emplacement de la marque plus tôt.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14876,7 +14897,7 @@
     {
         "id": 224005,
         "name": "Mandat impérial",
-        "description": "<mainText><stats><attention> +60</attention> puissance<br><attention> +35</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Tir coordonné</passive>  (0 sec) par cible<br><keyword>Ralentir</keyword> ou <keyword>immobiliser</keyword> un champion ennemi le marque pendant 5 secondes. Les dégâts d'un champion allié font exploser la marque, infligeant des <magicDamage>dégâts magiques équivalents à 20% des PV actuels</magicDamage>. </mainText>",
+        "description": "<mainText><stats><attention> +60</attention> puissance<br><attention> +15</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Contrôle</passive><br>Vous gagnez  15 d'accélération de compétence pour vos compétences avec des effets <keyword>d'immobilisation</keyword>.<br><br><passive>Commande</passive><br>Lorsque vous <keyword>immobilisez</keyword> un champion ennemi, vous le marquez avec 6% de <Keyword>vulnérabilité</Keyword> pendant 4 sec.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15586,7 +15607,7 @@
     {
         "id": 226662,
         "name": "Gantelet givrant",
-        "description": "<mainText><stats><attention> +300</attention> PV<br><attention> +45</attention> armure<br><attention> +10</attention> accélération de compétence</stats><br><br><passive>Lame enchantée</passive><br>Après avoir utilisé une de vos compétences, votre prochaine attaque inflige des <physicalDamage>dégâts physiques bonus</physicalDamage>  <OnHit>à l'impact</OnHit> et crée un champ de givre pendant 2 sec qui <status>ralentit</status> les ennemis.</mainText>",
+        "description": "<mainText><stats><attention> +300</attention> PV<br><attention> +45</attention> armure<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Lame enchantée</passive><br>Après avoir utilisé une de vos compétences, votre prochaine attaque inflige des <physicalDamage>dégâts physiques bonus</physicalDamage>  <OnHit>à l'impact</OnHit> et crée un champ de givre pendant 2 sec qui <status>ralentit</status> les ennemis.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15901,7 +15922,7 @@
     {
         "id": 226694,
         "name": "Rancune de Serylda",
-        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> +40%</attention> de pénétration d'armure<br><attention> +10</attention> accélération de compétence</stats><br><br><passive>Froid mordant</passive><br>Vos compétences blessantes <status>ralentissent</status> de 30% pendant 1 sec les ennemis qui ont <scaleHealth>moins de 50% de leurs PV</scaleHealth>.</mainText>",
+        "description": "<mainText><stats><attention> +50</attention> dégâts d'attaque<br><attention> +40%</attention> de pénétration d'armure<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Froid mordant</passive><br>Vos compétences blessantes <status>ralentissent</status> de 50% pendant 1 sec les ennemis qui ont <scaleHealth>moins de 50% de leurs PV</scaleHealth>.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16030,7 +16051,7 @@
     {
         "id": 226699,
         "name": "Cyclosabre voltaïque",
-        "description": "<mainText><stats><attention> +50</attention> dégâts d'attaque<br><attention> 18</attention> létalité<br><attention> +20</attention> accélération de compétence</stats><br><br><passive>Galvanisation</passive><br>Infliger des dégâts à un champion ennemi avec une compétence déclenche <keyword>Énergisé</keyword> si l'effet est prêt.<br><br><passive>Firmament</passive><br>Votre <keyword>attaque énergisée</keyword> inflige <physicalDamage>0%</physicalDamage> des PV actuels de la cible sous forme de <physicalDamage>dégâts physiques bonus</physicalDamage> et vous confère  <scaleLethality>0 létalité</scaleLethality> pendant 4 sec.</mainText>",
+        "description": "<mainText><stats><attention> +60</attention> dégâts d'attaque<br><attention> 20</attention> létalité<br><attention> +20</attention> accélération de compétence</stats><br><br><passive>Galvanisation</passive><br>Infliger des dégâts à un champion ennemi avec une compétence déclenche <keyword>Énergisé</keyword> si l'effet est prêt.<br><br><passive>Firmament</passive><br>Votre <keyword>attaque énergisée</keyword> inflige <physicalDamage>0%</physicalDamage> des PV actuels de la cible sous forme de <physicalDamage>dégâts physiques bonus</physicalDamage> et vous confère  <scaleLethality>0 létalité</scaleLethality> pendant 4 sec.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16185,7 +16206,7 @@
     {
         "id": 228005,
         "name": "Couperet d'obsidienne",
-        "description": "<mainText><stats><ornnBonus> +70</ornnBonus> dégâts d'attaque<br><ornnBonus> +700</ornnBonus> PV<br><ornnBonus> +40</ornnBonus> accélération de compétence</stats><br><br><passive>Découpage</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> aux champions ennemis avec des compétences, des compétences passives et des attaques réduit leur <scaleArmor>armure de 500%</scaleArmor> pendant 0.1 sec. (se cumule 5 fois).<br><br><passive>Ferveur</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> vous octroie <speed>20 vitesse de déplacement</speed> pendant 2 sec.</mainText>",
+        "description": "<mainText><stats><ornnBonus> +70</ornnBonus> dégâts d'attaque<br><ornnBonus> +700</ornnBonus> PV<br><ornnBonus> +40</ornnBonus> accélération de compétence</stats><br><br><passive>Découpage</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> aux champions ennemis avec des compétences, des compétences passives et des attaques réduit leur <scaleArmor>armure de 6%</scaleArmor> pendant 6 sec. (se cumule 5 fois).<br><br><passive>Ferveur</passive><br>Infliger des <physicalDamage>dégâts physiques</physicalDamage> vous octroie <speed>20 vitesse de déplacement</speed> pendant 2 sec.</mainText>",
         "active": false,
         "inStore": false,
         "from": [],

@@ -10,11 +10,11 @@
             3117,
             3158,
             3047,
+            3009,
             3111,
             3006,
             3005,
             3008,
-            3009,
             3010,
             3020
         ],
@@ -532,9 +532,9 @@
             3072,
             6671,
             3095,
-            4403,
             3026,
-            3031
+            3031,
+            4403
         ],
         "categories": [
             "Damage"
@@ -731,8 +731,8 @@
             3146,
             3072,
             3074,
-            4403,
-            3153
+            3153,
+            4403
         ],
         "categories": [
             "Damage",
@@ -872,8 +872,8 @@
             3102,
             3157,
             4645,
-            4403,
-            3089
+            3089,
+            4403
         ],
         "categories": [
             "SpellDamage"
@@ -2642,13 +2642,13 @@
     {
         "id": 2052,
         "name": "魄罗佳肴",
-        "description": "<mainText><stats></stats><br><br><active>主动 - 消耗：</active> 用一勺美味来招待附近的一只魄罗，来让它体型长大。<br><br><flavorText>这道由自由放养、草料喂养的阿瓦罗萨考尼什鸡，与绿色无毒害的弗雷尔卓德香草所搭配的美味，包含了多种必备精华营养素，绝对能让你的魄罗发出愉悦的呼噜声。<br><br>所有收入都将被捐献给反诺克萨斯虐待动物组织。</flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br>用一勺美味来招待附近的一只魄罗，来让它体型长大。<br><br><flavorText>这道由阿瓦罗萨鸡与当地弗雷尔卓德香草——当日摘取并经过速冻处理——所搭配的美味，包含了多种必备精华营养素，绝对能让你的魄罗保持酷炫和平静。<br><br>所有收入都将被捐献给濒危物种斑点魄罗的栖息地保护工作。</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
         "to": [],
         "categories": [],
-        "maxStacks": 2,
+        "maxStacks": 99,
         "requiredChampion": "",
         "requiredAlly": "",
         "requiredBuffCurrencyName": "",
@@ -4684,7 +4684,6 @@
             2524,
             3071,
             6620,
-            4403,
             2502,
             2510,
             2525,
@@ -4698,6 +4697,7 @@
             323119,
             326620,
             328020,
+            4403,
             4629,
             4644,
             6617,
@@ -5156,10 +5156,10 @@
             3046,
             6675,
             6671,
-            4403,
             2512,
             3085,
-            3094
+            3094,
+            4403
         ],
         "categories": [
             "CriticalStrike",
@@ -5421,8 +5421,8 @@
             1029
         ],
         "to": [
-            4403,
             3193,
+            4403,
             6667
         ],
         "categories": [
@@ -12173,6 +12173,27 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/220012_Anvil_Shardblade.png"
     },
     {
+        "id": 220013,
+        "name": "魄罗佳肴",
+        "description": "<mainText><stats></stats><br><br><active>主动 - 消耗：</active>用一勺美味来招待附近的一只魄罗，来让它体型长大。<br><br><flavorText>这道由阿瓦罗萨鸡与弗雷尔卓德香草——再添上一抹精致的德玛西亚糖花工艺——所搭配的美味，包含了多种必备精华营养素，绝对能让你的魄罗保持容光焕发。<br><br>所有收入都将被捐献给云丛青年合唱团。今天就帮一个德玛西亚孩童买下一架叆华！</flavorText></mainText>",
+        "active": true,
+        "inStore": false,
+        "from": [],
+        "to": [],
+        "categories": [],
+        "maxStacks": 2,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 0,
+        "priceTotal": 0,
+        "displayInItemSets": true,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/2052_Poro_Snack_RainbowCandy.png"
+    },
+    {
         "id": 221011,
         "name": "巨人腰带",
         "description": "<mainText><stats><attention>300</attention>生命值</stats><br><br></mainText>",
@@ -12513,7 +12534,7 @@
     {
         "id": 222504,
         "name": "败魔",
-        "description": "<mainText><stats><attention>350</attention>生命值<br><attention>80</attention>魔法抗性</stats><br><br><passive>法师之祸</passive><br>如果连续15秒没有受到魔法伤害，获得<shield>魔法护盾</shield>。 </mainText>",
+        "description": "<mainText><stats><attention>350</attention>生命值<br><attention>80</attention>魔法抗性</stats><br><br><passive>法师之祸</passive><br>如果连续10秒没有受到魔法伤害，获得<shield>魔法护盾</shield>。 </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13581,7 +13602,7 @@
     {
         "id": 223078,
         "name": "三相之力",
-        "description": "<mainText><stats><attention>35</attention>攻击力<br><attention>25%</attention>攻击速度<br><attention>333</attention>生命值<br><attention>20</attention>技能急速</stats><br><br><passive>咒刃</passive><br>在施放一个技能后，你的下一次普通攻击会获得强化，造成额外物理伤害。<br><br><passive>加快</passive><br>普攻会提供移动速度。<br><br></mainText>",
+        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>25%</attention>攻击速度<br><attention>375</attention>生命值<br><attention>20</attention>技能急速</stats><br><br><passive>咒刃</passive><br>在施放一个技能后，你的下一次普通攻击会获得强化，造成额外物理伤害。<br><br><passive>加快</passive><br>普攻会提供移动速度。<br><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13734,7 +13755,7 @@
     {
         "id": 223094,
         "name": "疾射火炮",
-        "description": "<mainText><stats><attention>30%</attention>攻击速度<br><attention>25%</attention>暴击几率<br><attention>4%</attention>移动速度</stats><br><br><passive>盈能</passive><br>移动和攻击会生成一次<keyword>盈能攻击</keyword>。<br><br><passive>神射手</passive><br>你的<keyword>盈能攻击</keyword>附带<magicDamage>200额外魔法伤害</magicDamage>。此外，【盈能】攻击至多获得35%额外攻击距离。<br><br><buffedStat>【盈能】的叠层速度在【斗魂竞技场】中翻倍。</buffedStat><br></mainText>",
+        "description": "<mainText><stats><attention>30%</attention>攻击速度<br><attention>25%</attention>暴击几率<br><attention>4%</attention>移动速度</stats><br><br><passive>盈能</passive><br>移动和攻击会生成一次<keyword>盈能攻击</keyword>。<br><br><passive>神射手</passive><br>你的<keyword>盈能攻击</keyword>附带<magicDamage>200额外魔法伤害</magicDamage>。此外，【盈能】攻击至多获得35%额外攻击距离。 <br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -14852,7 +14873,7 @@
     {
         "id": 224004,
         "name": "幽魂弯刀",
-        "description": "<mainText><stats><attention>55</attention>攻击力<br><attention> 21</attention>穿甲</stats><br><br><active>主动 - </active> <active>灵魂之锚</active>  (0秒)<br>标记你的当前位置。在5秒后，回到被标记的位置。你可以在<active>灵魂之锚</active>期间的任一时间点进行重新施放以提前回到你标记的位置。</mainText>",
+        "description": "<mainText><stats><attention>60</attention>攻击力<br><attention> 21</attention>穿甲</stats><br><br><active>主动 - </active> <active>灵魂之锚</active>  (0秒)<br>标记你的当前位置。在5秒后，回到被标记的位置。你可以在<active>灵魂之锚</active>期间的任一时间点进行重新施放以提前回到你标记的位置。</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14876,7 +14897,7 @@
     {
         "id": 224005,
         "name": "帝国指令",
-        "description": "<mainText><stats><attention>60</attention>法术强度<br><attention>35</attention>技能急速<br><attention>150%</attention>基础法力回复</stats><br><br><passive>协同开火</passive> 每个目标 (0秒)<br><keyword>减速</keyword>或<keyword>定身</keyword>一名敌方英雄时会将其标记5秒。友方英雄的伤害会引爆标记，造成<magicDamage>相当于20%当前生命值的魔法伤害</magicDamage>。 </mainText>",
+        "description": "<mainText><stats><attention>60</attention>法术强度<br><attention>15</attention>技能急速<br><attention>150%</attention>基础法力回复</stats><br><br><passive>控制</passive><br>你的带有<keyword>定身</keyword>效果的那些技能获得 15技能急速。<br><br><passive>命令</passive><br>在<keyword>定身</keyword>一个敌方英雄时，为其打上标记，施加持续4秒的6%<Keyword>易损</Keyword>。<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15586,7 +15607,7 @@
     {
         "id": 226662,
         "name": "冰脉护手",
-        "description": "<mainText><stats><attention>300</attention>生命值<br><attention>45</attention>护甲<br><attention>10</attention>技能急速</stats><br><br><passive>咒刃</passive><br>在施放一个技能后，你的下一次攻击造成<physicalDamage>额外物理伤害</physicalDamage><OnHit>攻击特效</OnHit>并生成一个持续2秒的冰冷地带，这个地带可造成<status>减速</status>。</mainText>",
+        "description": "<mainText><stats><attention>300</attention>生命值<br><attention>45</attention>护甲<br><attention>15</attention>技能急速</stats><br><br><passive>咒刃</passive><br>在施放一个技能后，你的下一次攻击造成<physicalDamage>额外物理伤害</physicalDamage><OnHit>攻击特效</OnHit>并生成一个持续2秒的冰冷地带，这个地带可造成<status>减速</status>。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15901,7 +15922,7 @@
     {
         "id": 226694,
         "name": "赛瑞尔达的怨恨",
-        "description": "<mainText><stats><attention>40</attention>攻击力<br><attention>40%</attention>护甲穿透<br><attention>10</attention>技能急速</stats><br><br><passive>严寒</passive><br>伤害型技能会对<scaleHealth>低于50%生命值</scaleHealth>的敌人造成持续1秒的30%<status>减速</status>。</mainText>",
+        "description": "<mainText><stats><attention>50</attention>攻击力<br><attention>40%</attention>护甲穿透<br><attention>15</attention>技能急速</stats><br><br><passive>严寒</passive><br>伤害型技能会对<scaleHealth>低于50%生命值</scaleHealth>的敌人造成持续1秒的50%<status>减速</status>。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16030,7 +16051,7 @@
     {
         "id": 226699,
         "name": "电震涡流剑",
-        "description": "<mainText><stats><attention>50</attention>攻击力<br><attention> 18</attention>穿甲<br><attention>20</attention>技能急速</stats><br><br><passive>通电</passive><br>用技能对一名敌人造成伤害会触发<keyword>盈能</keyword>(充能完毕时)。<br><br><passive>苍穹</passive><br>你的<keyword>盈能攻击</keyword>造成相当于<physicalDamage>0%</physicalDamage>目标当前生命值的<physicalDamage>额外物理伤害</physicalDamage>，并为你提供持续4秒的 <scaleLethality>0穿甲</scaleLethality>。</mainText>",
+        "description": "<mainText><stats><attention>60</attention>攻击力<br><attention> 20</attention>穿甲<br><attention>20</attention>技能急速</stats><br><br><passive>通电</passive><br>用技能对一名敌人造成伤害会触发<keyword>盈能</keyword>(充能完毕时)。<br><br><passive>苍穹</passive><br>你的<keyword>盈能攻击</keyword>造成相当于<physicalDamage>0%</physicalDamage>目标当前生命值的<physicalDamage>额外物理伤害</physicalDamage>，并为你提供持续4秒的 <scaleLethality>0穿甲</scaleLethality>。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16185,7 +16206,7 @@
     {
         "id": 228005,
         "name": "黑曜切割者",
-        "description": "<mainText><stats><ornnBonus>70</ornnBonus>攻击力<br><ornnBonus>700</ornnBonus>生命值<br><ornnBonus>40</ornnBonus>技能急速</stats><br><br><passive>切割</passive><br>对英雄造成<physicalDamage>物理伤害</physicalDamage>时会将该目标的<scaleArmor>护甲降低500%</scaleArmor>，持续0.1秒(可叠加5次)。<br><br><passive>热烈</passive><br>造成<physicalDamage>物理伤害</physicalDamage>时会提供持续2秒的<speed>20移动速度</speed>。</mainText>",
+        "description": "<mainText><stats><ornnBonus>70</ornnBonus>攻击力<br><ornnBonus>700</ornnBonus>生命值<br><ornnBonus>40</ornnBonus>技能急速</stats><br><br><passive>切割</passive><br>对英雄造成<physicalDamage>物理伤害</physicalDamage>时会将该目标的<scaleArmor>护甲降低6%</scaleArmor>，持续6秒(可叠加5次)。<br><br><passive>热烈</passive><br>造成<physicalDamage>物理伤害</physicalDamage>时会提供持续2秒的<speed>20移动速度</speed>。</mainText>",
         "active": false,
         "inStore": false,
         "from": [],

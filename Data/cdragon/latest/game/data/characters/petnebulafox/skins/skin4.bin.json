@@ -1,5 +1,5 @@
 {
-    "{968a182c}": {
+    "Characters/PetNebulaFox/Skins/Skin4": {
         "championSkinName": "PetNebulaFox_Base_Variant3_Tier1",
         "loadscreen": {
             "image": "ASSETS/Characters/PetNebulaFox/HUD/LoadScreen_NebulaFox_Base_Variant3_Tier1.LL_NebulaFox_Base_Variant3.tex",
@@ -161,7 +161,7 @@
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{11cf728e}",
+        "mResourceResolver": "Characters/PetNebulaFox/Skins/Skin4/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -46332,7 +46332,7 @@
         "overrideScaleCap": 500.0,
         "__type": "VfxSystemDefinitionData"
     },
-    "{11cf728e}": {
+    "Characters/PetNebulaFox/Skins/Skin4/Resources": {
         "resourceMap": {
             "PetNebulaFox_Base_Emote_Joke": "Characters/PetNebulaFox/Skins/Skin4/Particles/PetNebulaFox_Skin4_Emote_Joke",
             "PetNebulaFox_Base_Emote_Joke01": "Characters/PetNebulaFox/Skins/Skin4/Particles/PetNebulaFox_Skin4_Emote_Joke01",
@@ -46405,6 +46405,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "BloomColor",
                 "__type": "StaticMaterialShaderParamDef"
@@ -46683,6 +46723,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "AFFECTED_BY_VERTEX_COLOR",
                 "on": false,

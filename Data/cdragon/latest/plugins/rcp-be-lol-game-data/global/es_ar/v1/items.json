@@ -10,11 +10,11 @@
             3117,
             3158,
             3047,
+            3009,
             3111,
             3006,
             3005,
             3008,
-            3009,
             3010,
             3020
         ],
@@ -532,9 +532,9 @@
             3072,
             6671,
             3095,
-            4403,
             3026,
-            3031
+            3031,
+            4403
         ],
         "categories": [
             "Damage"
@@ -731,8 +731,8 @@
             3146,
             3072,
             3074,
-            4403,
-            3153
+            3153,
+            4403
         ],
         "categories": [
             "Damage",
@@ -872,8 +872,8 @@
             3102,
             3157,
             4645,
-            4403,
-            3089
+            3089,
+            4403
         ],
         "categories": [
             "SpellDamage"
@@ -2642,13 +2642,13 @@
     {
         "id": 2052,
         "name": "Porogalletas",
-        "description": "<mainText><stats></stats><br><br> <active>Activa, Consumir:</active> Le obsequia una deliciosa galletita a un poro cercano, lo que ocasiona que aumente de tamaño.<br><br><flavorText>Una mezcla sabrosa hecha de gallinas de Avarosa criadas al aire libre y alimentadas con hierba orgánica freljodiana libre de modificaciones genéticas. Contiene todos los nutrientes esenciales para que tu poro ronronee de alegría.<br><br>Todas las ganancias se donarán para combatir la crueldad animal noxiana. </flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br> <active>Activa, Consumir:</active> le obsequia una deliciosa galletita a un poro cercano y lo hace crecer.<br><br><flavorText>Una mezcla sabrosa hecha de gallinas de Avarosa y hierbas frescas criogenizadas de El Fréljord. Contiene todos los nutrientes esenciales para que tu poro viva feliz y tranquilo.<br><br>Todas las ganancias se donarán para proteger el hábitat del poro moteado, una especie en peligro de extinción.</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
         "to": [],
         "categories": [],
-        "maxStacks": 2,
+        "maxStacks": 99,
         "requiredChampion": "",
         "requiredAlly": "",
         "requiredBuffCurrencyName": "",
@@ -4684,7 +4684,6 @@
             2524,
             3071,
             6620,
-            4403,
             2502,
             2510,
             2525,
@@ -4698,6 +4697,7 @@
             323119,
             326620,
             328020,
+            4403,
             4629,
             4644,
             6617,
@@ -5156,10 +5156,10 @@
             3046,
             6675,
             6671,
-            4403,
             2512,
             3085,
-            3094
+            3094,
+            4403
         ],
         "categories": [
             "CriticalStrike",
@@ -5421,8 +5421,8 @@
             1029
         ],
         "to": [
-            4403,
             3193,
+            4403,
             6667
         ],
         "categories": [
@@ -9126,7 +9126,7 @@
     {
         "id": 4645,
         "name": "Lumbría",
-        "description": "<mainText><stats><attention> 110</attention> de Poder de Habilidad<br><attention> 15</attention> de Penetración de Magia</stats><br><br><passive>Flor de Ceniza</passive><br>El <magicDamage>daño mágico</magicDamage> y el <trueDamage>daño verdadero</trueDamage> infligen <attention>golpes críticos</attention> a los enemigos que tengan menos de un 40% de Vida, lo que inflige un 20% de daño aumentado. </mainText>",
+        "description": "<mainText><stats><attention> 110</attention> de Poder de Habilidad<br><attention> 15</attention> de Penetración de Magia</stats><br><br><passive>Flor de Ceniza</passive><br>El <magicDamage>daño mágico</magicDamage> y el <trueDamage>daño verdadero</trueDamage> asestan <attention>golpes críticos</attention> a los enemigos con menos de un 40% de Vida y les infligen un 20% más de daño. </mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -12173,6 +12173,27 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/220012_Anvil_Shardblade.png"
     },
     {
+        "id": 220013,
+        "name": "Porogalletas",
+        "description": "<mainText><stats></stats><br><br> <active>Activa, Consumir:</active> Le obsequia una deliciosa galletita a un poro cercano y lo hace crecer.<br><br><flavorText>Una mezcla sabrosa hecha de gallinas Avarosanas y hierbas de El Fréljord con un toque de repostería demaciana fina. Contiene los nutrientes esenciales para que tu poro esté siempre radiante.<br><br>Todas las ganancias se donarán al coro juvenil de Cloudfield. ¡Ayuda a un niño demaciano a comprarse un etwahl hoy mismo!</flavorText></mainText>",
+        "active": true,
+        "inStore": false,
+        "from": [],
+        "to": [],
+        "categories": [],
+        "maxStacks": 2,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 0,
+        "priceTotal": 0,
+        "displayInItemSets": true,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/2052_Poro_Snack_RainbowCandy.png"
+    },
+    {
         "id": 221011,
         "name": "Cinturón de Gigante",
         "description": "<mainText><stats><attention> 300</attention> de Vida</stats><br><br></mainText>",
@@ -12513,7 +12534,7 @@
     {
         "id": 222504,
         "name": "Rukerno Kaénico",
-        "description": "<mainText><stats><attention> 350</attention> de Vida<br><attention>80</attention> de Resistencia Mágica</stats><br><br><passive>Ruina del Mago</passive><br>Si no recibes daño mágico durante 15 seg, obtienes un <shield>escudo mágico</shield>. </mainText>",
+        "description": "<mainText><stats><attention> 350</attention> de Vida<br><attention>80</attention> de Resistencia Mágica</stats><br><br><passive>Ruina del Mago</passive><br>Si no recibes daño mágico durante 10 seg, obtienes un <shield>escudo mágico</shield>. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13581,7 +13602,7 @@
     {
         "id": 223078,
         "name": "Fuerza de la Trinidad",
-        "description": "<mainText><stats><attention> 35</attention> de Daño de Ataque<br><attention> 25%</attention> de Velocidad de Ataque<br><attention> 333</attention> de Vida<br><attention> 20</attention> de Aceleración de Habilidad</stats><br><br><passive>Espada Encantada</passive><br>Después de usar una habilidad, tu próximo ataque recibe una mejora de daño físico adicional.<br><br><passive>Apresurar</passive><br>Los ataques básicos otorgan velocidad de movimiento.<br><br></mainText>",
+        "description": "<mainText><stats><attention> 40</attention> de Daño de Ataque<br><attention> 25%</attention> de Velocidad de Ataque<br><attention> 375</attention> de Vida<br><attention> 20</attention> de Aceleración de Habilidad</stats><br><br><passive>Espada Encantada</passive><br>Después de usar una habilidad, tu próximo ataque recibe una mejora de daño físico adicional.<br><br><passive>Apresurar</passive><br>Los ataques básicos otorgan velocidad de movimiento.<br><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13734,7 +13755,7 @@
     {
         "id": 223094,
         "name": "Cañón de Fuego Rápido",
-        "description": "<mainText><stats><attention> 30%</attention> de Velocidad de Ataque<br><attention> 25%</attention> de Probabilidad de Golpe Crítico<br><attention> 4%</attention> de Velocidad de Movimiento</stats><br><br><passive>Energizado</passive><br>Moverse y atacar generará un <keyword>ataque energizado</keyword>.<br><br><passive>Francotirador</passive><br>Tu <keyword>ataque energizado</keyword> inflige <magicDamage>200 de daño mágico adicional</magicDamage>. Además, los ataques energizados obtienen hasta un 35% de Alcance de Ataque adicional.<br><br><buffedStat>Los ataques energizados se acumulan el doble de rápido en la Arena.</buffedStat><br></mainText>",
+        "description": "<mainText><stats><attention> 30%</attention> de Velocidad de Ataque<br><attention> 25%</attention> de Probabilidad de Golpe Crítico<br><attention> 4%</attention> de Velocidad de Movimiento</stats><br><br><passive>Energizado</passive><br>Moverse y atacar generará un <keyword>ataque energizado</keyword>.<br><br><passive>Francotirador</passive><br>Tu <keyword>ataque energizado</keyword> inflige <magicDamage>200 de daño mágico adicional</magicDamage>. Además, los ataques energizados obtienen hasta un 35% de alcance de ataque adicional.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -14852,7 +14873,7 @@
     {
         "id": 224004,
         "name": "Sable Espectral",
-        "description": "<mainText><stats><attention> 55</attention> de Daño de Ataque<br><attention> 21</attention> de Letalidad</stats><br><br> <active>Activa:</active> <active>Ancla Álmica</active>  (0 seg)<br>Marca tu ubicación actual. Tras 5 seg, regresa a esa ubicación. Puedes volver a lanzarlo durante la duración de <active>Ancla Álmica</active> para regresar antes a la ubicación marcada.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> de Daño de Ataque<br><attention> 21</attention> de Letalidad</stats><br><br> <active>Activa:</active> <active>Ancla Álmica</active>  (0 seg)<br>Marca tu ubicación actual. Tras 5 seg, regresa a esa ubicación. Puedes volver a lanzarlo durante la duración de <active>Ancla Álmica</active> para regresar antes a la ubicación marcada.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14876,7 +14897,7 @@
     {
         "id": 224005,
         "name": "Mandato Imperial",
-        "description": "<mainText><stats><attention> 60</attention> de Poder de Habilidad<br><attention> 35</attention> de Aceleración de Habilidad<br><attention> 150%</attention> de Regen. de Maná Básica</stats><br><br><passive>Fuego Coordinado</passive>  (0 seg) por objetivo<br><keyword>Ralentizar</keyword> o <keyword>inmovilizar</keyword> a un campeón enemigo lo marca durante 5 seg. El daño infligido por un campeón aliado detona la marca, lo que inflige <magicDamage>daño mágico equivalente a un 20% de la Vida actual</magicDamage>. </mainText>",
+        "description": "<mainText><stats><attention> 60</attention> de Poder de Habilidad<br><attention> 15</attention> de Aceleración de Habilidad<br><attention> 150%</attention> de Regen. de Maná Básica</stats><br><br><passive>Control</passive><br>Obtienes  15 de Aceleración de Habilidad para tus habilidades con efectos <keyword>inmovilizadores</keyword>.<br><br><passive>Orden</passive><br>Al <keyword>inmovilizar</keyword> a un campeón enemigo, lo marcas y lo vuelves un 6% <Keyword>Vulnerable</Keyword> durante 4 seg.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15586,7 +15607,7 @@
     {
         "id": 226662,
         "name": "Guantelete del Hijo del Hielo",
-        "description": "<mainText><stats><attention> 300</attention> de Vida<br><attention> 45</attention> de Armadura<br><attention> 10</attention> de Aceleración de Habilidad</stats><br><br><passive>Espada Encantada</passive><br>Después de usar una habilidad, tu siguiente ataque inflige <physicalDamage>daño físico adicional</physicalDamage>  <OnHit>al impacto</OnHit> y crea un campo congelado que <status>ralentiza</status> durante 2 seg.</mainText>",
+        "description": "<mainText><stats><attention> 300</attention> de Vida<br><attention> 45</attention> de Armadura<br><attention> 15</attention> de Aceleración de Habilidad</stats><br><br><passive>Espada Encantada</passive><br>Después de usar una habilidad, tu siguiente ataque inflige <physicalDamage>daño físico adicional</physicalDamage>  <OnHit>al impacto</OnHit> y crea un campo congelado que <status>ralentiza</status> durante 2 seg.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15901,7 +15922,7 @@
     {
         "id": 226694,
         "name": "Rencor de Serylda",
-        "description": "<mainText><stats><attention> 40</attention> de Daño de Ataque<br><attention> 40%</attention> de Penetración de Armadura<br><attention> 10</attention> de Aceleración de Habilidad</stats><br><br><passive>Frío Implacable</passive><br>Las habilidades de daño <status>ralentizan</status> en un 30% a los enemigos <scaleHealth>con menos de un 50% de Vida</scaleHealth> durante 1 seg.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> de Daño de Ataque<br><attention> 40%</attention> de Penetración de Armadura<br><attention> 15</attention> de Aceleración de Habilidad</stats><br><br><passive>Frío Implacable</passive><br>Las habilidades de daño <status>ralentizan</status> en un 50% a los enemigos <scaleHealth>con menos de un 50% de Vida</scaleHealth> durante 1 seg.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16030,7 +16051,7 @@
     {
         "id": 226699,
         "name": "Cicloespada Voltaica",
-        "description": "<mainText><stats><attention> 50</attention> de Daño de Ataque<br><attention> 18</attention> de Letalidad<br><attention> 20</attention> de Aceleración de Habilidad</stats><br><br><passive>Galvanizar</passive><br>Infligir daño a campeones enemigos con una habilidad activa el efecto <keyword>Energizado</keyword> si está listo.<br><br><passive>Firmamento</passive><br>Tu <keyword>Ataque Energizado</keyword> inflige un <physicalDamage>0%</physicalDamage> de la Vida actual del objetivo como <physicalDamage>daño físico adicional</physicalDamage> y te otorga  <scaleLethality>0 de Letalidad</scaleLethality> durante 4 seg.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> de Daño de Ataque<br><attention> 20</attention> de Letalidad<br><attention> 20</attention> de Aceleración de Habilidad</stats><br><br><passive>Galvanizar</passive><br>Infligir daño a campeones enemigos con una habilidad activa el efecto <keyword>Energizado</keyword> si está listo.<br><br><passive>Firmamento</passive><br>Tu <keyword>Ataque Energizado</keyword> inflige un <physicalDamage>0%</physicalDamage> de la Vida actual del objetivo como <physicalDamage>daño físico adicional</physicalDamage> y te otorga  <scaleLethality>0 de Letalidad</scaleLethality> durante 4 seg.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16185,7 +16206,7 @@
     {
         "id": 228005,
         "name": "Cuchilla de Obsidiana",
-        "description": "<mainText><stats><ornnBonus> 70</ornnBonus> de Daño de Ataque<br><ornnBonus> 700</ornnBonus> de Vida<br><ornnBonus> 40</ornnBonus> de Aceleración de Habilidad</stats><br><br><passive>Cortar</passive><br>Al infligir <physicalDamage>daño físico</physicalDamage> a campeones reduces la <scaleArmor>Armadura del objetivo en un 500%</scaleArmor> durante 0.1 seg. (se acumula 5 veces).<br><br><passive>Fervor</passive><br>Al infligir <physicalDamage>daño físico</physicalDamage>, obtienes <speed>20 de Velocidad de Movimiento</speed> durante 2 seg.</mainText>",
+        "description": "<mainText><stats><ornnBonus> 70</ornnBonus> de Daño de Ataque<br><ornnBonus> 700</ornnBonus> de Vida<br><ornnBonus> 40</ornnBonus> de Aceleración de Habilidad</stats><br><br><passive>Cortar</passive><br>Al infligir <physicalDamage>daño físico</physicalDamage> a campeones reduces la <scaleArmor>Armadura del objetivo en un 6%</scaleArmor> durante 6 seg. (se acumula 5 veces).<br><br><passive>Fervor</passive><br>Al infligir <physicalDamage>daño físico</physicalDamage>, obtienes <speed>20 de Velocidad de Movimiento</speed> durante 2 seg.</mainText>",
         "active": false,
         "inStore": false,
         "from": [],

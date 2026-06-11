@@ -5220,7 +5220,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Base_AnimeShapes02.TFT_Set16.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Base_AnimeShapes02.TFT_Event_5YR_Set17.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -8416,7 +8416,7 @@
                 "importance": 1,
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/TFT6_Booms_Yasuo_Sphere01_1.TFT_Set16.scb",
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/TFT6_Booms_Yasuo_Sphere01_1.TFT_Event_5YR_Set17.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -13169,7 +13169,7 @@
                 "importance": 1,
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/TFT6_Booms_Yasuo_Sphere01_1.TFT_Set16.scb",
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/TFT6_Booms_Yasuo_Sphere01_1.TFT_Event_5YR_Set17.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -14534,6 +14534,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "IntensityStrength",
                 "value": [
                     1.0,
@@ -14709,6 +14749,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,

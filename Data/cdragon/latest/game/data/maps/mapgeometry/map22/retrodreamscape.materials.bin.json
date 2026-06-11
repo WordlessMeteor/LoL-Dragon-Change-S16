@@ -1749,6 +1749,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomColor",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -2032,6 +2072,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "AFFECTED_BY_VERTEX_COLOR",
                 "on": false,
@@ -64172,7 +64220,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/TFT_Smoke_2x2.TFT_Set16.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/TFT_Smoke_2x2.TFT_Event_5YR_Set17.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -67547,6 +67595,94 @@
                 "name": "MapBehavior_LossStreakEnd",
                 "Cue": "ArenaSkin_Cue_LossStreakEnd",
                 "Actions": [
+                    {
+                        "PropName": "TFT_GoldMine_Home1",
+                        "AnimationName": "Win",
+                        "SkipIfModelInvisible": true,
+                        "{a4404f0c}": true,
+                        "__type": "MapActionPlayAnimation"
+                    },
+                    {
+                        "startTime": 0.10000000149011612,
+                        "PropName": "TFT_GoldMine_Home2",
+                        "AnimationName": "Win",
+                        "SkipIfModelInvisible": true,
+                        "{a4404f0c}": true,
+                        "__type": "MapActionPlayAnimation"
+                    },
+                    {
+                        "startTime": 0.20000000298023224,
+                        "PropName": "TFT_GoldMine_Home3",
+                        "AnimationName": "Win",
+                        "SkipIfModelInvisible": true,
+                        "{a4404f0c}": true,
+                        "__type": "MapActionPlayAnimation"
+                    },
+                    {
+                        "startTime": 0.30000001192092896,
+                        "PropName": "TFT_GoldMine_Home4",
+                        "AnimationName": "Win",
+                        "SkipIfModelInvisible": true,
+                        "{a4404f0c}": true,
+                        "__type": "MapActionPlayAnimation"
+                    },
+                    {
+                        "startTime": 0.4000000059604645,
+                        "PropName": "TFT_GoldMine_Home5",
+                        "AnimationName": "Win",
+                        "SkipIfModelInvisible": true,
+                        "{a4404f0c}": true,
+                        "__type": "MapActionPlayAnimation"
+                    },
+                    {
+                        "PropName": "TFT_GoldMine_Away1",
+                        "AnimationName": "Win",
+                        "SkipIfModelInvisible": true,
+                        "{a4404f0c}": true,
+                        "__type": "MapActionPlayAnimation"
+                    },
+                    {
+                        "PropName": "TFT_GoldMine_Away2",
+                        "AnimationName": "Win",
+                        "SkipIfModelInvisible": true,
+                        "{a4404f0c}": true,
+                        "__type": "MapActionPlayAnimation"
+                    },
+                    {
+                        "PropName": "TFT_GoldMine_Away3",
+                        "AnimationName": "Win",
+                        "SkipIfModelInvisible": true,
+                        "{a4404f0c}": true,
+                        "__type": "MapActionPlayAnimation"
+                    },
+                    {
+                        "PropName": "TFT_GoldMine_Away4",
+                        "AnimationName": "Win",
+                        "SkipIfModelInvisible": true,
+                        "{a4404f0c}": true,
+                        "__type": "MapActionPlayAnimation"
+                    },
+                    {
+                        "PropName": "TFT_GoldMine_Away5",
+                        "AnimationName": "Win",
+                        "SkipIfModelInvisible": true,
+                        "{a4404f0c}": true,
+                        "__type": "MapActionPlayAnimation"
+                    },
+                    {
+                        "MapParticleName": [
+                            "TFT_RetroDreamscape_Victory1"
+                        ],
+                        "__type": "MapActionToggleMapParticle"
+                    },
+                    {
+                        "startTime": 4.0,
+                        "MapParticleName": [
+                            "TFT_RetroDreamscape_Victory1"
+                        ],
+                        "shown": false,
+                        "__type": "MapActionToggleMapParticle"
+                    },
                     {
                         "SoundEventName": "Play_mus_map22_stinger_Set16_RetroDreamscape_win",
                         "LocationName": "BoardCenterLocator",

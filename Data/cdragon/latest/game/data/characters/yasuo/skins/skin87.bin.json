@@ -90298,7 +90298,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 10.600000381469727,
-                "lifetime": 0.5,
+                "lifetime": 0.8500000238418579,
                 "emitterName": "ground_ring",
                 "birthDrag": {
                     "constantValue": [
@@ -90528,7 +90528,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.5,
-                "lifetime": 0.6000000238418579,
+                "lifetime": 0.949999988079071,
                 "emitterName": "SmokeTrail",
                 "birthVelocity": {
                     "constantValue": [
@@ -90754,7 +90754,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.699999988079071,
+                    "constantValue": 0.949999988079071,
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 10.699999809265137,
@@ -90806,7 +90806,7 @@
                 "scale0": {
                     "dynamics": {
                         "times": [
-                            0.800000011920929,
+                            0.8999999761581421,
                             1.0
                         ],
                         "values": [
@@ -90874,7 +90874,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.4000000059604645,
-                "lifetime": 0.4000000059604645,
+                "lifetime": 0.699999988079071,
                 "emitterName": "Fill",
                 "birthVelocity": {
                     "constantValue": [
@@ -91230,7 +91230,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.699999988079071,
-                "lifetime": 0.4000000059604645,
+                "lifetime": 0.699999988079071,
                 "emitterName": "Fill1",
                 "birthVelocity": {
                     "constantValue": [
@@ -91552,7 +91552,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.5,
-                "lifetime": 0.6000000238418579,
+                "lifetime": 0.699999988079071,
                 "emitterName": "Twirl_Hot",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -91766,7 +91766,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.5,
-                "lifetime": 0.6000000238418579,
+                "lifetime": 0.699999988079071,
                 "emitterName": "RingsDarkTop",
                 "birthVelocity": {
                     "constantValue": [
@@ -91981,7 +91981,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.5,
-                "lifetime": 0.6000000238418579,
+                "lifetime": 0.699999988079071,
                 "emitterName": "RingsDarkBase",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -92651,7 +92651,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 10.199999809265137,
-                "lifetime": 0.6000000238418579,
+                "lifetime": 0.75,
                 "emitterName": "core",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -92902,7 +92902,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 10.199999809265137,
-                "lifetime": 0.6000000238418579,
+                "lifetime": 0.7200000286102295,
                 "emitterName": "core1",
                 "bindWeight": {
                     "constantValue": 1.0,
@@ -93149,7 +93149,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.699999988079071,
+                    "constantValue": 0.949999988079071,
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 10.699999809265137,
@@ -93190,7 +93190,7 @@
                 "scale0": {
                     "dynamics": {
                         "times": [
-                            0.800000011920929,
+                            0.8999999761581421,
                             1.0
                         ],
                         "values": [
@@ -93770,7 +93770,7 @@
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.10000000149011612,
-                "lifetime": 0.6000000238418579,
+                "lifetime": 0.6499999761581421,
                 "emitterName": "black_ink",
                 "birthVelocity": {
                     "constantValue": [
@@ -94197,7 +94197,7 @@
                     "constantValue": 0.20000000298023224,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 0.6000000238418579,
+                "lifetime": 0.6499999761581421,
                 "emitterName": "FireTrail",
                 "importance": 3,
                 "birthOrbitalVelocity": {
@@ -157017,6 +157017,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Alpha",
                 "value": [
                     1.0,
@@ -157098,6 +157138,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "TEX_SWAP",
                 "on": false,
@@ -157336,6 +157384,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Alpha",
                 "value": [
                     1.0,
@@ -157436,6 +157524,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "TEX_SWAP",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -157520,6 +157616,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Alpha",
                 "value": [
@@ -157615,6 +157751,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "TEX_SWAP",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -157692,6 +157836,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "SpecularColor",
                 "__type": "StaticMaterialShaderParamDef"
@@ -157854,6 +158038,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "ALPHA",
                 "__type": "StaticMaterialSwitchDef"

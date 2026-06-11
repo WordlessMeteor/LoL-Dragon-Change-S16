@@ -61,28 +61,28 @@
                         "Play_sfx_LuxSkin18_Recall3D_buffactivate",
                         "Play_sfx_LuxSkin18_Respawn3D_buffactivate",
                         "Play_sfx_LuxSkin18_Taunt3D_buffactivate",
-                        "Play_vo_LuxSkin18_AttackChampion2D",
+                        "Play_vo_LuxSkin18_Attack2DGeneral",
                         "Play_vo_LuxSkin18_Death3D",
-                        "Play_vo_LuxSkin18_FirstEncounter2DAsheSkin11",
-                        "Play_vo_LuxSkin18_FirstEncounter2DCelestial",
-                        "Play_vo_LuxSkin18_FirstEncounter2DDarkStar",
-                        "Play_vo_LuxSkin18_FirstEncounter2DJhinSkin05",
-                        "Play_vo_LuxSkin18_FirstEncounter2DMalphiteSkin23",
-                        "Play_vo_LuxSkin18_FirstEncounter2DMordekaiserSkin06",
-                        "Play_vo_LuxSkin18_FirstEncounter2DThreshSkin05",
-                        "Play_vo_LuxSkin18_FirstEncounter2DXerathSkin05",
-                        "Play_vo_LuxSkin18_FirstMove2D",
-                        "Play_vo_LuxSkin18_JokeResponse3D",
-                        "Play_vo_LuxSkin18_KillChampion3DCelestial",
-                        "Play_vo_LuxSkin18_KillChampion3DDarkStar",
-                        "Play_vo_LuxSkin18_KillChampion3DGeneral",
-                        "Play_vo_LuxSkin18_KillChampion3DPentakill",
+                        "Play_vo_LuxSkin18_FirstEncounter3DAsheSkin11",
+                        "Play_vo_LuxSkin18_FirstEncounter3DCosmic",
+                        "Play_vo_LuxSkin18_FirstEncounter3DDarkStar",
+                        "Play_vo_LuxSkin18_FirstEncounter3DJhinSkin05",
+                        "Play_vo_LuxSkin18_FirstEncounter3DMalphiteSkin23",
+                        "Play_vo_LuxSkin18_FirstEncounter3DMordekaiserSkin06",
+                        "Play_vo_LuxSkin18_FirstEncounter3DThreshSkin05",
+                        "Play_vo_LuxSkin18_FirstEncounter3DXerathSkin05",
+                        "Play_vo_LuxSkin18_JokeResponse3DGeneral",
+                        "Play_vo_LuxSkin18_Kill3DCosmic",
+                        "Play_vo_LuxSkin18_Kill3DDarkStar",
+                        "Play_vo_LuxSkin18_Kill3DGeneral",
+                        "Play_vo_LuxSkin18_Kill3DPenta",
                         "Play_vo_LuxSkin18_Laugh3DGeneral",
-                        "Play_vo_LuxSkin18_MoveOrder2D",
-                        "Play_vo_LuxSkin18_MoveOrder2DLong",
-                        "Play_vo_LuxSkin18_Respawn2D",
+                        "Play_vo_LuxSkin18_Move2DFirst",
+                        "Play_vo_LuxSkin18_Move2DLong",
+                        "Play_vo_LuxSkin18_Move2DStandard",
+                        "Play_vo_LuxSkin18_Respawn2DGeneral",
                         "Play_vo_LuxSkin18_Taunt3DGeneral",
-                        "Play_vo_LuxSkin18_TauntResponse3D",
+                        "Play_vo_LuxSkin18_TauntResponse3DGeneral",
                         "Stop_sfx_LuxSkin18_LuxLightBinding_OnBuffActivate",
                         "Stop_sfx_LuxSkin18_LuxLightBindingDummy_missilelaunch",
                         "Stop_sfx_LuxSkin18_LuxLightBindingMis_OnBuffActivate",
@@ -125,6 +125,10 @@
                         "Play_vo_LuxSkin18_Move2DStandard",
                         "Play_vo_LuxSkin18_Recall3DGeneral",
                         "Play_vo_LuxSkin18_Respawn2DGeneral",
+                        "Play_vo_LuxSkin18_Spell3DEEnd",
+                        "Play_vo_LuxSkin18_Spell3DQHit",
+                        "Play_vo_LuxSkin18_Spell3DRCast",
+                        "Play_vo_LuxSkin18_Spell3DWCast",
                         "Play_vo_LuxSkin18_Taunt3DGeneral",
                         "Play_vo_LuxSkin18_TauntResponse3DGeneral"
                     ],
@@ -121560,6 +121564,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "UV_Twinkle_Scale",
                 "value": [
                     12.0,
@@ -121640,6 +121684,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             }
         ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
         "shaderMacros": {
             "NUM_BLEND_WEIGHTS": "4"
         },
@@ -121689,6 +121743,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "UV_Twinkle_Scale",
                 "value": [
@@ -121770,6 +121864,16 @@
                 "__type": "StaticMaterialShaderParamDef"
             }
         ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
         "shaderMacros": {
             "NUM_BLEND_WEIGHTS": "4"
         },
@@ -121834,6 +121938,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "SS_Scale",
                 "value": [
@@ -121910,6 +122054,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_LOCAL_SPACE",
                 "on": false,

@@ -1,5 +1,5 @@
 {
-    "{d6157ab8}": {
+    "Characters/PetSpongeFish/Skins/Skin2": {
         "championSkinName": "PetSpongeFish_Base_Variant2_Tier1",
         "loadscreen": {
             "image": "ASSETS/Characters/PetSpongeFish/HUD/LoadScreen_SpongeFish_Base_Variant2_Tier1.LL_SpongeFish_Base_Variant2.tex",
@@ -121,7 +121,7 @@
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{530e9ae2}",
+        "mResourceResolver": "Characters/PetSpongeFish/Skins/Skin2/Resources",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/PetSpongeFish/Skins/Skin2/Particles/PetSpongeFish_Skin2_Emote_Taunt_01": {
@@ -38082,6 +38082,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomColor",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -38348,6 +38388,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "AFFECTED_BY_VERTEX_COLOR",
                 "on": false,
                 "Group": "Deform",
@@ -38493,6 +38541,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "BloomColor",
                 "__type": "StaticMaterialShaderParamDef"
@@ -38766,6 +38854,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "AFFECTED_BY_VERTEX_COLOR",
                 "on": false,
                 "Group": "Deform",
@@ -38864,7 +38960,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{530e9ae2}": {
+    "Characters/PetSpongeFish/Skins/Skin2/Resources": {
         "resourceMap": {
             "PetSpongeFish_Emote_Idle_Trail": "Characters/PetSpongeFish/Skins/Skin2/Particles/PetSpongeFish_Skin2_Emote_Idle_Trail",
             "PetSpongeFish_Emote_Idle_Ground": "Characters/PetSpongeFish/Skins/Skin2/Particles/PetSpongeFish_Skin2_Emote_Idle_Ground",

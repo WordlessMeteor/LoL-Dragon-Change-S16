@@ -277,7 +277,7 @@
                             "__type": "NotMaterialDriver"
                         },
                         {
-                            "Spell": "{79b559d5}",
+                            "Spell": "Characters/Mordekaiser/Spells/MordekaiserPassiveAbility/MordekaiserPassive_FullStacks",
                             "__type": "HasBuffDynamicMaterialBoolDriver"
                         }
                     ],
@@ -304,7 +304,7 @@
                             "__type": "IsEnemyDynamicMaterialBoolDriver"
                         },
                         {
-                            "Spell": "{79b559d5}",
+                            "Spell": "Characters/Mordekaiser/Spells/MordekaiserPassiveAbility/MordekaiserPassive_FullStacks",
                             "__type": "HasBuffDynamicMaterialBoolDriver"
                         }
                     ],
@@ -162269,7 +162269,7 @@
                     ],
                     "__type": "ValueColor"
                 },
-                "pass": 305,
+                "pass": -9999,
                 "meshRenderFlags": 0,
                 "depthBiasFactors": [
                     10.0,
@@ -165460,7 +165460,7 @@
                     },
                     "__type": "ValueColor"
                 },
-                "pass": 310,
+                "pass": 1,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "disableBackfaceCull": true,
@@ -227451,6 +227451,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Fresnel_Color",
                 "value": [
                     0.929411768913269,
@@ -227532,6 +227572,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "IRIDESCENCE_ON",
                 "on": false,

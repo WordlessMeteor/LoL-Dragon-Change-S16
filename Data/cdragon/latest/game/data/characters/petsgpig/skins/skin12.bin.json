@@ -637,7 +637,7 @@
                 "texture": "ASSETS/Characters/PetSGPig/Skins/Skin12/Particles/PetSGPig_Skin12_Sparkles02.tex",
                 "numFrames": 4,
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Set17.tex",
+                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Event_5YR_Set17.tex",
                     "paletteSelector": {
                         "constantValue": [
                             7.0,
@@ -1050,7 +1050,7 @@
                 "texture": "ASSETS/Characters/PetSGPig/Skins/Skin12/Particles/PetSGPig_Skin12_Sparkles02.tex",
                 "numFrames": 4,
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Set17.tex",
+                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Event_5YR_Set17.tex",
                     "paletteSelector": {
                         "constantValue": [
                             7.0,
@@ -1865,7 +1865,7 @@
                 "texture": "ASSETS/Characters/PetSGPig/Skins/Skin12/Particles/PetSGPig_Skin12_Sparkles02.tex",
                 "numFrames": 4,
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Set17.tex",
+                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Event_5YR_Set17.tex",
                     "paletteSelector": {
                         "constantValue": [
                             7.0,
@@ -3460,6 +3460,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Fresnel_Color",
                 "value": [
                     0.29411765933036804,
@@ -3565,6 +3605,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "INVERT_FRESNEL",
                 "__type": "StaticMaterialSwitchDef"

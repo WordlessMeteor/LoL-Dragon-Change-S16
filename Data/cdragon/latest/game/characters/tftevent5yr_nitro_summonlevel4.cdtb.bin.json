@@ -1,0 +1,416 @@
+{
+    "Characters/TFTEvent5YR_Nitro_SummonLevel4/Spells/TFTEvent5YR_Nitro_SummonLevel4CritAttack": {
+        "ObjectName": "TFTEvent5YR_Nitro_SummonLevel4CritAttack",
+        "mScriptName": "TFTEvent5YR_Nitro_SummonLevel4CritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "THexCritAttack",
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.45964911580085754,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Barrel",
+                    "mSpeed": 2750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.5,
+            "missileSpeed": 2750.0,
+            "mHitEffectOrientType": 3,
+            "mHitEffectKey": "TFTEvent5YR_Nitro_SummonLevel4_Base_BA_Minigun_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_tft14_THexBasicAttack_OnCast",
+                "15": "Play_sfx_tft14_THexBasicAttack_OnMissileCast",
+                "16": "Play_sfx_tft14_THexBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_tft14_THexBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTEvent5YR_Nitro_SummonLevel4/Spells/TFTEvent5YR_Nitro_SummonLevel4BasicAttack": {
+        "ObjectName": "TFTEvent5YR_Nitro_SummonLevel4BasicAttack",
+        "mScriptName": "TFTEvent5YR_Nitro_SummonLevel4BasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "THexBasicAttack",
+            "{11704a2b}": 0.25,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Barrel",
+                    "mSpeed": 2750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.5,
+            "missileSpeed": 2750.0,
+            "mHitEffectOrientType": 3,
+            "mHitEffectKey": "TFTEvent5YR_Nitro_SummonLevel4_Base_BA_Minigun_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_tft14_THexBasicAttack_OnCast",
+                "15": "Play_sfx_tft14_THexBasicAttack_OnMissileCast",
+                "16": "Play_sfx_tft14_THexBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_tft14_THexBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{7a61a8fd}": {
+        "ObjectName": "TFTEvent5YR_Nitro_SummonLevel4BasicAttack2",
+        "mScriptName": "TFTEvent5YR_Nitro_SummonLevel4BasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "THexBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.25,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Barrel",
+                    "mSpeed": 2750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.5,
+            "missileSpeed": 2750.0,
+            "mHitEffectOrientType": 3,
+            "mHitEffectKey": "TFTEvent5YR_Nitro_SummonLevel4_Base_BA_Minigun_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_tft14_THexBasicAttack_OnCast",
+                "15": "Play_sfx_tft14_THexBasicAttack_OnMissileCast",
+                "16": "Play_sfx_tft14_THexBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_tft14_THexBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTEvent5YR_Nitro_SummonLevel4/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFTEvent5YR_Nitro_SummonLevel4/CharacterRecords/Root": {
+        "mCharacterName": "TFTEvent5YR_Nitro_SummonLevel4",
+        "baseHPModifiable": {
+            "baseValue": 800.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 210.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 120.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 80.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 50.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 50.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 180.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.75,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.75,
+            "__type": "ModifiableFloat"
+        },
+        "basicAttack": {
+            "mAttackName": "TFTEvent5YR_Nitro_SummonLevel4BasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFTEvent5YR_Nitro_SummonLevel4BasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFTEvent5YR_Nitro_SummonLevel4CritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFT14_SummonLevel2Spell",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "{9493d989}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446664,
+        "CharacterRole": "{2ccf900f}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 50.0,
+        "mShopData": "{3865b8b2}",
+        "MobileHealthBarHeightOverride": 180.0,
+        "{f94987a3}": true,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

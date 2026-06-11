@@ -538,6 +538,181 @@
         ],
         "__type": "SkinCharacterDataProperties"
     },
+    "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_Homeguard_Tentacles2": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Tail1",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "CustomMaterial": {
+                    "Material": "Characters/Velkoz/Skins/Skin29/Materials/Scrolling_Tentacles",
+                    "__type": "VfxMaterialDefinitionData"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Tentacles2"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "Tentacles2"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "pass": 20,
+                "alphaRef": 0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texAddressModeBase": 1,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 2.75,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Gold_Avatar",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Tentacles2"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "Tentacles2"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.2500038146972656
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            0.9750000238418579,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 25,
+                "meshRenderFlags": 0,
+                "depthBiasFactors": [
+                    0.0,
+                    -15.0
+                ],
+                "{cb13aff1}": -1.0,
+                "disableBackfaceCull": true,
+                "particleIsLocalOrientation": 1,
+                "texture": "ASSETS/Items/3157/Particles/ItemZhonya_Base_P_speed_swirl_mult.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        1.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 5000.0,
+        "particleName": "Velkoz_Skin29_Homeguard_Tentacles2",
+        "particlePath": "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_Homeguard_Tentacles2",
+        "flags": 1222,
+        "transform": [
+            [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+            ],
+            [
+                -10.0,
+                140.0,
+                50.0,
+                1.0
+            ]
+        ],
+        "__type": "VfxSystemDefinitionData"
+    },
     "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_W_Turret": {
         "complexEmitterDefinitionData": [
             {
@@ -24002,6 +24177,82 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
+    "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_Homeguard_Tentacles": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Tail1",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "CustomMaterial": {
+                    "Material": "Characters/Velkoz/Skins/Skin29/Materials/Scrolling_Tentacles_homeguard",
+                    "__type": "VfxMaterialDefinitionData"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Tentacles2"
+                        ],
+                        "mSubmeshesToDrawAlways": [
+                            "Tentacles2"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 1,
+                "pass": 20,
+                "alphaRef": 0,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "texAddressModeBase": 1,
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 5000.0,
+        "particleName": "Velkoz_Skin29_Homeguard_Tentacles",
+        "particlePath": "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_Homeguard_Tentacles",
+        "flags": 1222,
+        "transform": [
+            [
+                1.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                1.0,
+                0.0,
+                0.0
+            ],
+            [
+                0.0,
+                0.0,
+                1.0,
+                0.0
+            ],
+            [
+                -10.0,
+                140.0,
+                50.0,
+                1.0
+            ]
+        ],
+        "__type": "VfxSystemDefinitionData"
+    },
     "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_P_Grass": {
         "complexEmitterDefinitionData": [
             {
@@ -31389,6 +31640,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Pulse_Strength",
                 "value": [
                     1.0,
@@ -31640,6 +31931,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "ALPHABLEND_BLENDMAT",
                 "on": false,
@@ -31881,6 +32180,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Anim_Scale_Frequency",
                 "value": [
                     0.25,
@@ -32051,6 +32390,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "ADDITIVE_ALPHA",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -32172,6 +32519,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Pulse_Strength",
                 "value": [
@@ -32424,6 +32811,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "ALPHABLEND_BLENDMAT",
                 "on": false,
@@ -32641,6 +33036,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Anim_Scale_Frequency",
                 "value": [
                     0.25,
@@ -32811,6 +33246,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "ADDITIVE_ALPHA",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -32917,6 +33360,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Anim_Scale_Frequency",
                 "value": [
@@ -33094,6 +33577,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "ADDITIVE_ALPHA",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -33201,6 +33692,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Anim_Scale_Frequency",
                 "value": [
@@ -33372,6 +33903,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "ADDITIVE_ALPHA",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -33449,6 +33988,607 @@
         },
         "__type": "StaticMaterialDef"
     },
+    "Characters/Velkoz/Skins/Skin29/Materials/Scrolling_Tentacles_homeguard": {
+        "name": "Characters/Velkoz/Skins/Skin29/Materials/Scrolling_Tentacles_homeguard",
+        "samplerValues": [
+            {
+                "TextureName": "Mask",
+                "texturePath": "ASSETS/Characters/Velkoz/Skins/Skin29/Velkoz_Skin29_TX_Mask2_CM.SKINS_Velkoz_Skin29.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Velkoz/Skins/Skin29/Velkoz_Skin29_TX_CM.SKINS_Velkoz_Skin29.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Bottom_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Blank.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Top_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Blank.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Frequency",
+                "value": [
+                    0.25,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Intensity",
+                "value": [
+                    4.625,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Speed",
+                "value": [
+                    1.5499999523162842,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Dir",
+                "value": [
+                    2.0,
+                    2.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Dir_Intensity",
+                "value": [
+                    0.7275000214576721,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Frequency",
+                "value": [
+                    1.024999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Speed",
+                "value": [
+                    0.7749999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bottom_ScrollSpeed",
+                "value": [
+                    0.0010000000474974513,
+                    0.07000000029802322,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_ColorBias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    2.0304999351501465,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LQ_Lighting_Intensity",
+                "value": [
+                    1.899999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Low_Quality_Bias",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimColor",
+                "value": [
+                    1.0,
+                    0.9799954295158386,
+                    0.6500037908554077,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimLightOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Rim_max",
+                "value": [
+                    -0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Top_ScrollSpeed",
+                "value": [
+                    0.0,
+                    -0.07999999821186066,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Top_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ADDITIVE_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_COLOR_ANIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/ScrollingUVs_MultiLayer",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Velkoz/Skins/Skin29/Materials/Scrolling_Tentacles": {
+        "name": "Characters/Velkoz/Skins/Skin29/Materials/Scrolling_Tentacles",
+        "samplerValues": [
+            {
+                "TextureName": "Mask",
+                "texturePath": "ASSETS/Characters/Velkoz/Skins/Skin29/Velkoz_Skin29_TX_Mask2_CM.SKINS_Velkoz_Skin29.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Velkoz/Skins/Skin29/Velkoz_Skin29_TX_CM.SKINS_Velkoz_Skin29.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Bottom_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Blank.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Top_Texture",
+                "texturePath": "ASSETS/Shared/Materials/Blank.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Frequency",
+                "value": [
+                    0.25,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Intensity",
+                "value": [
+                    4.625,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Scale_Speed",
+                "value": [
+                    1.5499999523162842,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Dir",
+                "value": [
+                    2.0,
+                    2.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Dir_Intensity",
+                "value": [
+                    0.7275000214576721,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Frequency",
+                "value": [
+                    1.024999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Anim_Wave_Speed",
+                "value": [
+                    0.7749999761581421,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bottom_ScrollSpeed",
+                "value": [
+                    0.0010000000474974513,
+                    0.07000000029802322,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_ColorBias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    2.0304999351501465,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LQ_Lighting_Intensity",
+                "value": [
+                    1.899999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Low_Quality_Bias",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimColor",
+                "value": [
+                    1.0,
+                    0.9799954295158386,
+                    0.6500037908554077,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimLightOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Rim_max",
+                "value": [
+                    -0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Top_ScrollSpeed",
+                "value": [
+                    0.0,
+                    -0.07999999821186066,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Top_Tile",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ADDITIVE_ALPHA",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "BLOOM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "VERTEX_COLOR_ANIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/ScrollingUVs_MultiLayer",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
     "Characters/Velkoz/Skins/Skin29/Materials/Velkoz_Skin29_Strange_inst": {
         "name": "Characters/Velkoz/Skins/Skin29/Materials/Velkoz_Skin29_Strange_inst",
         "samplerValues": [
@@ -33484,6 +34624,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Pulse_Strength",
                 "value": [
@@ -33736,6 +34916,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "ALPHABLEND_BLENDMAT",
                 "on": false,
@@ -33972,6 +35160,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Pulse_Strength",
                 "value": [
@@ -34254,6 +35482,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "ALPHABLEND_BLENDMAT",
                 "on": false,
@@ -34586,7 +35822,9 @@
             "Velkoz_P_Grass": "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_P_Grass",
             "Velkoz_Dance_LoopSmoke03": "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_Dance_LoopSmoke03",
             "Velkoz_Homeguard_Tentacles": "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_Homeguard_Tentacles",
-            "Velkoz_Homeguard_Tentacles2": "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_Homeguard_Tentacles2"
+            "Velkoz_Homeguard_Tentacles2": "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_Homeguard_Tentacles2",
+            "Velkoz_Death_CryLoop02": "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_Death_CryLoop02",
+            "Velkoz_Death_CryLoop02_Child1": "Characters/Velkoz/Skins/Skin29/Particles/Velkoz_Skin29_Death_CryLoop02_Child1"
         },
         "__type": "ResourceResolver"
     },

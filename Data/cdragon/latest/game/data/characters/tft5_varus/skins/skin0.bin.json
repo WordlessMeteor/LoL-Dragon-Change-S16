@@ -1217,7 +1217,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/common_ball32_02.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/common_ball32_02.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4252,7 +4252,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Flare-Omnimax.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/Flare-Omnimax.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -5584,6 +5584,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Additive_Color",
                 "value": [
                     0.8666666746139526,
@@ -5637,6 +5677,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "ADDITIVE",
                 "__type": "StaticMaterialSwitchDef"
@@ -5785,6 +5833,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "IntensityStrength",
                 "value": [
@@ -5961,6 +6049,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,

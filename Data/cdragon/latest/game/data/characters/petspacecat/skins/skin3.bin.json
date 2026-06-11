@@ -1,5 +1,5 @@
 {
-    "{bb7b2091}": {
+    "Characters/PetSpaceCat/Skins/Skin3": {
         "championSkinName": "PetSpaceCat_Base_Varient2_Tier1",
         "loadscreen": {
             "image": "ASSETS/Characters/PetSpaceCat/HUD/LoadScreen_SpaceCat_Base_Varient2_Tier1.LL_SpaceCat_Base_Varient2.tex",
@@ -84,7 +84,7 @@
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{fd423593}",
+        "mResourceResolver": "Characters/PetSpaceCat/Skins/Skin3/Resources",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/PetSpaceCat/Skins/Skin3/Materials/PetSpaceCat_Matcap_Variant2": {
@@ -121,6 +121,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "BlendMod",
                 "value": [
@@ -177,6 +217,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "BLEND_ALPHA",
                 "on": false,
@@ -21322,7 +21370,7 @@
         "flags": 198,
         "__type": "VfxSystemDefinitionData"
     },
-    "{fd423593}": {
+    "Characters/PetSpaceCat/Skins/Skin3/Resources": {
         "resourceMap": {
             "PetSpaceCat_Emote_Trail": "Characters/PetSpaceCat/Skins/Skin3/Particles/PetSpaceCat_Skin3_Emote_Trail",
             "PetSpaceCat_Emote_Trail02": "Characters/PetSpaceCat/Skins/Skin3/Particles/PetSpaceCat_Skin3_Emote_Trail02",
@@ -21358,9 +21406,9 @@
     },
     "__linked": [
         "Characters/PetSpaceCat",
+        "Characters/PetSpaceCat_Multi_Base_Root_Base_Tier1_Skins_Skin1_Skins_Skin2_Skins_Skin3.bin",
         "DATA/Characters/PetSpaceCat/Animations/Base.bin",
-        "Characters/PetSpaceCat_Multi_Base_Root_Base_Tier1_Skins_Skin1_Skins_Skin3_Skins_Skin4.bin",
-        "Characters/PetSpaceCat_Multi_Base_Root_Base_Tier1_Skins_Skin1_Skins_Skin3.bin",
-        "Characters/PetSpaceCat_Multi_Skins_Skin1_Skins_Skin3.bin"
+        "Characters/PetSpaceCat_Multi_Base_Root_Base_Tier1_Skins_Skin1_Skins_Skin2_Skins_Skin3_Skins_Skin4.bin",
+        "Characters/PetSpaceCat_Multi_Skins_Skin1_Skins_Skin2_Skins_Skin3.bin"
     ]
 }

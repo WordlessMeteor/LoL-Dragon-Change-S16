@@ -10291,11 +10291,14 @@ lol-uikit-content-block.runes-not-yet-unlocked {
 }
 
 .skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked {
-    outline: 1px solid #0596aa
+    outline: none
 }
 
 .skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked .skin-selection-thumbnail:before {
-    border-color: #0596aa
+    background-image: url(/fe/lol-static-assets/images/aram-wardrobe/skin-border.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: none
 }
 
 .skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.disabled .skin-selection-thumbnail {
@@ -10347,9 +10350,10 @@ lol-uikit-content-block.runes-not-yet-unlocked {
 }
 
 .skin-selection-carousel-container .skin-selection-carousel .skin-selection-item.aw-unlocked.skin-carousel-offset-2.disabled:after {
-    background-image: url(/fe/lol-champ-select/images/config/icon-lock-small-open.png);
+    background-image: url(/fe/lol-static-assets/images/aram-wardrobe/open-lock.png);
     background-position: 50%;
     background-repeat: no-repeat;
+    background-size: contain;
     bottom: -20px;
     display: block;
     height: 40px;
@@ -10443,12 +10447,12 @@ lol-uikit-content-block.runes-not-yet-unlocked {
 }
 
 .skin-selection-carousel-container .skin-selection-carousel .skin-selection-item .aw-badge-container {
-    height: 22px;
+    height: 32px;
     pointer-events: auto;
     position: absolute;
     right: -10px;
     top: -10px;
-    width: 22px;
+    width: 32px;
     z-index: 2
 }
 
@@ -10575,8 +10579,8 @@ lol-uikit-content-block.runes-not-yet-unlocked {
 
 .aw-tooltip-content .aw-tooltip-header .aw-tooltip-icon {
     flex-shrink: 0;
-    height: 24px;
-    width: 24px
+    height: 36px;
+    width: 36px
 }
 
 .aw-tooltip-content .aw-tooltip-header .aw-tooltip-header-text {

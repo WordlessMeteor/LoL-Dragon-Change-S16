@@ -9310,7 +9310,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/Base_weaponswipe.scb",
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/Base_weaponswipe.TFT_Event_5YR_Set17.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -9380,7 +9380,7 @@
                     },
                     "erosionFeatherOut": 0.20000000298023224,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Wisps_128.TFT_Set16.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Wisps_128.TFT_Event_5YR_Set17.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "disableBackfaceCull": true,
@@ -18828,7 +18828,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/Base_weaponswipe.scb",
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/Base_weaponswipe.TFT_Event_5YR_Set17.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -18891,7 +18891,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Wisps_128.TFT_Set16.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Wisps_128.TFT_Event_5YR_Set17.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "depthBiasFactors": [
@@ -23851,7 +23851,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/TFT6_Booms_Yasuo_Sphere01_1.TFT_Set16.scb",
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/Set16/TFT6_Booms_Yasuo_Sphere01_1.TFT_Event_5YR_Set17.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -23938,7 +23938,7 @@
                     },
                     "erosionFeatherOut": 0.15000000596046448,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Set17.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Event_5YR_Set17.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             0.0,
@@ -23994,7 +23994,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Set16/TFT7_Booms_Yasuo_Wind02.TFT_Set16.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/Set16/TFT7_Booms_Yasuo_Wind02.TFT_Event_5YR_Set17.tex",
                 "birthUVOffset": {
                     "constantValue": [
                         -0.30000001192092896,
@@ -24039,7 +24039,7 @@
                     "__type": "ValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Maps/Particles/TFT/Set16/Color_Galio_windwall_dust.TFT_Set16.tex",
+                    "textureMult": "ASSETS/Maps/Particles/TFT/Set16/Color_Galio_windwall_dust.TFT_Event_5YR_Set17.tex",
                     "texAddressModeMult": 2,
                     "UvRotationMult": {
                         "constantValue": 90.0,
@@ -24280,7 +24280,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Base_Slash_add.TFT_Set16.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Base_Slash_add.TFT_Event_5YR_Set17.tex",
                 "birthUVOffset": {
                     "constantValue": [
                         1.5,
@@ -26113,6 +26113,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "IntensityStrength",
                 "value": [
                     0.8500000238418579,
@@ -26288,6 +26328,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,

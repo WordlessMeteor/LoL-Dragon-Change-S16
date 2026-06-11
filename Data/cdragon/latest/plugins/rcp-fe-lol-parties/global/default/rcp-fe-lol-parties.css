@@ -1377,6 +1377,10 @@ lol-uikit-content-block.cherry-progression-champion-tooltip {
     background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .65) 42%, rgba(0, 0, 0, .65))
 }
 
+.parties-view .parties-background.is-demacia .parties-background-mask {
+    background: linear-gradient(180deg, rgba(0, 0, 0, .65) 0, rgba(0, 0, 0, .65) 42%, rgba(0, 0, 0, .65))
+}
+
 @-moz-keyframes parties-slide-down {
     0% {
         transform: translate(0)
@@ -4963,12 +4967,14 @@ body[data-locale=ja-JP] .parties-game-type-card-name {
     font-family: var(--font-display)
 }
 
+.parties-game-type-card-category-div .game-mode-description-text,
 .parties-game-type-card-category-div span.allowable-premade-sizes-text,
 .parties-game-type-card-category-div span.quick-play-text {
     font-family: var(--font-body)
 }
 
 .parties-game-type-card-category-btn,
+.parties-game-type-card-category-div .game-mode-description-text,
 .parties-game-type-card-category-div span.allowable-premade-sizes-text,
 .parties-game-type-card-category-div span.quick-play-text {
     -webkit-font-feature-settings: "kern" 1;
@@ -5002,6 +5008,7 @@ body[data-locale=ja-JP] .parties-game-type-card-name {
     letter-spacing: 0
 }
 
+.parties-game-type-card-category-div .game-mode-description-text,
 .parties-game-type-card-category-div span.allowable-premade-sizes-text,
 .parties-game-type-card-category-div span.quick-play-text {
     color: #a09b8c;
@@ -5012,11 +5019,13 @@ body[data-locale=ja-JP] .parties-game-type-card-name {
     -webkit-font-smoothing: subpixel-antialiased
 }
 
+.parties-game-type-card-category-div .game-mode-description-text:lang(ja-jp),
 .parties-game-type-card-category-div span.allowable-premade-sizes-text:lang(ja-jp),
 .parties-game-type-card-category-div span.quick-play-text:lang(ja-jp) {
     font-size: 13px
 }
 
+.parties-game-type-card-category-div .game-mode-description-text:lang(ar-ae),
 .parties-game-type-card-category-div span.allowable-premade-sizes-text:lang(ar-ae),
 .parties-game-type-card-category-div span.quick-play-text:lang(ar-ae) {
     letter-spacing: 0
@@ -5056,6 +5065,7 @@ hr {
     margin-bottom: 0
 }
 
+.parties-game-type-card-category-div .game-mode-description-text,
 .parties-game-type-card-category-div span.allowable-premade-sizes-text,
 .parties-game-type-card-category-div span.quick-play-text {
     letter-spacing: .6px;
@@ -5158,6 +5168,12 @@ hr {
 .parties-game-type-card-category-btn.disabled {
     color: #5c5b57;
     cursor: default
+}
+
+.parties-game-type-card-category-btn.unselectable {
+    color: #cdbe91;
+    cursor: default;
+    pointer-events: none
 }
 
 .parties-game-type-highlight-mode {
@@ -8080,6 +8096,19 @@ lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
     width: 16px
 }
 
+.v2-banner-component .lobby-banner .player-name-container .voice-team-mute-warning-icon {
+    align-items: center;
+    display: inline-flex;
+    height: 16px;
+    margin-left: 4px;
+    width: 16px
+}
+
+.v2-banner-component .lobby-banner .player-name-container .voice-team-mute-warning-icon img {
+    height: 16px;
+    width: 16px
+}
+
 .v2-banner-component .lobby-banner .player-achievements-container {
     display: flex;
     min-height: 82px
@@ -8275,11 +8304,13 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-action,
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon,
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status {
     font-family: var(--font-body)
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-action,
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon,
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status,
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-title,
 .v2-footer-component .center-container .find-match-button-container {
@@ -8338,6 +8369,7 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-action,
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon,
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status {
     color: #a09b8c;
     font-size: 12px;
@@ -8348,11 +8380,13 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-action:lang(ja-jp),
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon:lang(ja-jp),
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status:lang(ja-jp) {
     font-size: 13px
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-action:lang(ar-ae),
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon:lang(ar-ae),
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text .aw-boost-tooltip-status:lang(ar-ae) {
     letter-spacing: 0
 }
@@ -8397,6 +8431,10 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
     width: 32px
 }
 
+.v2-footer-component .center-container:has(.aw-boost-button-container) .close-button-container {
+    width: 197px
+}
+
 .v2-footer-component .center-container .find-match-button-container {
     color: #cdfafa;
     height: 48px;
@@ -8430,6 +8468,7 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 .v2-footer-component .center-container .aw-boost-button-container {
     height: 32px;
     margin-left: 15px;
+    position: relative;
     width: 32px
 }
 
@@ -8475,8 +8514,8 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-icon {
     flex-shrink: 0;
-    height: 24px;
-    width: 24px
+    height: 36px;
+    width: 36px
 }
 
 .aw-boost-tooltip-content .aw-boost-tooltip-header .aw-boost-tooltip-header-text {
@@ -8495,6 +8534,20 @@ lol-uikit-tooltip lol-uikit-content-block.position-tooltip .position-text {
 .aw-boost-tooltip-content .aw-boost-tooltip-action {
     margin-top: 8px;
     white-space: nowrap
+}
+
+.aw-boost-tooltip-content .aw-boost-tooltip-expiring-soon {
+    margin-top: 8px;
+    white-space: pre-line
+}
+
+.aw-boost-expiration-tooltip-anchor {
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%
 }
 
 .v2-footer-notifications,
@@ -8668,7 +8721,8 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
 .v2-footer-notifications .parties-mmr-warning-icon,
 .v2-footer-notifications .parties-notification-warning-icon,
 .v2-footer-notifications .parties-ready-warning-icon,
-.v2-footer-notifications .parties-tft-warning-icon {
+.v2-footer-notifications .parties-tft-warning-icon,
+.v2-footer-notifications .parties-voice-limited-warning-icon {
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
@@ -8743,6 +8797,18 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
     fill: #c89b3c
 }
 
+.v2-footer-notifications .parties-voice-limited-warning-icon {
+    margin-right: 4px
+}
+
+.v2-footer-notifications .parties-voice-limited-warning-icon path {
+    fill: #c89b3c
+}
+
+.v2-footer-notifications .parties-voice-limited-warning {
+    color: #c89b3c
+}
+
 .v2-footer-notifications .parties-footer-error,
 .v2-footer-notifications .parties-footer-warning,
 .v2-footer-notifications .parties-restrictions-warning-error {
@@ -8802,6 +8868,12 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
 lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] {
     max-width: 400px;
     text-align: left
+}
+
+lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] .parties-voice-limited-player-list {
+    list-style: disc;
+    margin: 4px 0 0;
+    padding-left: 16px
 }
 
 .v2-header-component .lobby-header-content .lobby-header-description {
@@ -8895,6 +8967,10 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] {
     position: absolute;
     top: 79px;
     width: 100%
+}
+
+.v2-header-component.is-demacia {
+    margin-top: 4px
 }
 
 .v2-header-component .lobby-header-overlay {

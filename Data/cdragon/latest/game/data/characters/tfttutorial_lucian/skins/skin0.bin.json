@@ -66,6 +66,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "IntensityStrength",
                 "value": [
                     1.0,
@@ -241,6 +281,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,
@@ -2374,7 +2422,7 @@
                 },
                 "texture": "ASSETS/Characters/TFTTutorial_Lucian/Skins/Base/Particles/TFTTutorial_Lucian_Base_E_Trail_Smoke.tex",
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Set17.tex",
+                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Event_5YR_Set17.tex",
                     "paletteSelector": {
                         "constantValue": [
                             7.0,
@@ -2678,7 +2726,7 @@
                 },
                 "texture": "ASSETS/Characters/TFTTutorial_Lucian/Skins/Base/Particles/TFTTutorial_Lucian_Base_Wisps2.tex",
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Set17.tex",
+                    "paletteTexture": "ASSETS/Maps/Particles/TFT/TFT_Glb_Gradient.TFT_Event_5YR_Set17.tex",
                     "paletteSelector": {
                         "constantValue": [
                             1.0,

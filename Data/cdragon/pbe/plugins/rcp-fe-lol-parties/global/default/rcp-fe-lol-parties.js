@@ -1387,8 +1387,8 @@
                         playerSlotCount: 2
                     },
                     1740: {
-                        subteamCount: 4,
-                        playerSlotCount: 2
+                        subteamCount: 6,
+                        playerSlotCount: 3
                     },
                     1741: {
                         subteamCount: 5,
@@ -16418,9 +16418,7 @@
                     },
                     showGameModeInfo() {
                         this.playSound(r.SFX_URLS.SFX_SOC_UI_CLICK_GENERIC);
-                        const e = i.ComponentFactory.create("RankedFtuxModalComponent", {
-                                shouldShowRankedModal: !0
-                            }),
+                        const e = i.ComponentFactory.create("RankedFtuxModalComponent"),
                             t = i.ModalManager.add({
                                 type: "DialogAlert",
                                 data: {
@@ -17580,7 +17578,7 @@
         }, (e, t, n) => {
             "use strict";
             var i = n(1),
-                o = l(n(43)),
+                o = (n(15), l(n(43))),
                 s = n(12),
                 a = n(9),
                 r = l(n(10));
@@ -17610,8 +17608,9 @@
                 hasInvites: i.Ember.computed.gt("invites.length", 0),
                 isNotCustom: i.Ember.computed.not("isCustom"),
                 isRanked: i.Ember.computed("selected.queue.isRanked", "queueType", (function() {
-                    const e = this.get("queueType") === a.QUEUE_TYPE.RANKED_PREMADE_5x5;
-                    return this.get("selected.queue.isRanked") && !e
+                    const e = [a.QUEUE_TYPE.RANKED_PREMADE_5x5],
+                        t = this.get("queueType");
+                    return this.get("selected.queue.isRanked") && !e.includes(t)
                 })),
                 _tryingToViewProgression: !0,
                 viewingProgression: i.Ember.computed.and("_tryingToViewProgression", "progressionEnabled", "isTFT", "showingState.isInViewport"),
@@ -22602,63 +22601,18 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var i, o = n(1),
-                s = (i = n(570)) && i.__esModule ? i : {
-                    default: i
-                };
-            n(571);
-            const a = "ranked-5s-ftux-seen";
-            var r = o.Ember.Component.extend({
-                layout: n(572),
+            var i = n(1);
+            n(570);
+            var o = i.Ember.Component.extend({
+                layout: n(571),
                 classNames: ["ranked-ftux-modal"],
-                parties: o.Parties,
                 queueTypeQueueId: 710,
-                shouldShowRankedModal: !1,
-                gameModeTitleText: o.Ember.computed("tra", (function() {
+                gameModeTitleText: i.Ember.computed("tra", (function() {
                     return this.get("tra").formatString("RANKED_FIVES_FTUX_TITLE_TEXT_1", {
                         url: "https://www.leagueoflegends.com/news/dev/dev-the-return-of-ranked-5s"
                     })
-                })),
-                _saveRankedFivesFtuxModalSeen() {
-                    try {
-                        return s.default.saveAccountSetting(a, !0)
-                    } catch (e) {
-                        o.logger.warning(`Failed to save ${a} setting: ${e}`)
-                    }
-                },
-                actions: {
-                    closeRankedFivesFtuxModal() {
-                        this._saveRankedFivesFtuxModalSeen()
-                    }
-                }
+                }))
             });
-            t.default = r
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var i = n(1);
-            var o = {
-                saveLocalSetting: (e, t) => {
-                    const n = {
-                        [e]: t
-                    };
-                    return (0, i.dataBinding)("/lol-settings").patch("/v1/local/lol-leagues", {
-                        data: n,
-                        schemaVersion: 1
-                    })
-                },
-                saveAccountSetting: (e, t) => {
-                    const n = {
-                        [e]: t
-                    };
-                    return (0, i.dataBinding)("/lol-settings").patch("/v2/account/LCUPreferences/lol-leagues", {
-                        data: n,
-                        schemaVersion: 1
-                    })
-                }
-            };
             t.default = o
         }, (e, t, n) => {
             "use strict";
@@ -22666,23 +22620,23 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "HcVWunvj",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\index.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","closeButton","dismissibleType","okText","onClose"],[["get",["shouldShowRankedModal"]],"DialogAlert",true,true,"inside",["get",["tra","RANKED_FIVES_FTUX_CLOSE_BUTTON_TEXT"]],["helper",["action"],[["get",[null]],"closeRankedFivesFtuxModal"],null]]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--header"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-image-wrapper"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","content-image"],["static-attr","src","lol-game-data/assets/ASSETS/LeagueClient/GameModeAssets/Ranked/tutorial-modal-landscape.png"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title external-link"],["flush-element"],["append",["helper",["sanitize"],[["get",["gameModeTitleText"]]],null],false],["close-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_1"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_2"]],false],["close-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_2"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_3"]],false],["close-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_3"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "jM71sNFR",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-image-wrapper"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","content-image"],["static-attr","src","lol-game-data/assets/ASSETS/LeagueClient/GameModeAssets/Ranked/tutorial-modal-landscape.png"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title external-link"],["flush-element"],["append",["helper",["sanitize"],[["get",["gameModeTitleText"]]],null],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_1"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_2"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_2"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_3"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_3"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
-            var i = g(n(574)),
-                o = g(n(580)),
-                s = g(n(583)),
-                a = g(n(586)),
-                r = g(n(592)),
-                l = g(n(595)),
-                c = g(n(599)),
-                m = g(n(602)),
-                u = g(n(606)),
-                d = g(n(609)),
-                p = g(n(612)),
+            var i = g(n(573)),
+                o = g(n(579)),
+                s = g(n(582)),
+                a = g(n(585)),
+                r = g(n(591)),
+                l = g(n(594)),
+                c = g(n(598)),
+                m = g(n(601)),
+                u = g(n(605)),
+                d = g(n(608)),
+                p = g(n(611)),
                 h = n(1);
 
             function g(e) {
@@ -22755,10 +22709,10 @@
             o.UIKit.getModalManager();
             class b extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(575)
+                    return n(574)
                 }
                 stylesheetMarkup() {
-                    return n(576)
+                    return n(575)
                 }
                 constructor() {
                     super(), this._dataBinding = (0, o.dataBinding)("/lol-cosmetics", r), this._type = null, this._setName = "default", this._subscriber = null, this._showNoneOption = null, this._mouseOverHandler = this._handleMouseOver.bind(this), this._iconClickHandler = this._handleIconClick.bind(this), this._orientation = "left", this._selectedItemId = null, this._modal = null
@@ -22812,7 +22766,7 @@
                     this._selectedItemId = e.itemId;
                     const t = this._getIcon();
                     if (0 === e.itemId) {
-                        const e = n(579);
+                        const e = n(578);
                         t.style.backgroundImage = "url(" + e + ")", t.classList.add("none-icon")
                     } else t.style.backgroundImage = "url(" + e.loadoutsIcon + ")", t.classList.remove("none-icon")
                 }
@@ -22839,8 +22793,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-cosmetics-picker">\r\n  <div class="loadouts-icon"></div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ":host {\n  --rcp-fe-lol-parties-cosmetics-picker-border-width: 2px;\n}\n:host {\n  display: block;\n}\n:host .loadouts-icon {\n  box-sizing: border-box;\n  border-width: var(--rcp-fe-lol-parties-cosmetics-picker-border-width);\n  border-style: solid;\n  border-color: #f0e6d2;\n  width: 100%;\n  height: 100%;\n  background-size: cover;\n  background-position: center;\n  background-repeat: no-repeat;\n  cursor: pointer;\n  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.5);\n  border-image: linear-gradient(to bottom, #c89b3c, #785a28) 2;\n}\n:host .loadouts-icon.none-icon {\n  background-size: 50%;\n}\n:host .loadouts-icon:hover {\n  -webkit-filter: brightness(110%);\n  border-image: linear-gradient(to bottom, #f0e6d2, #c89b3c) 1;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-cosmetics-picker/component-style.styl"],
@@ -22929,10 +22883,10 @@
                 l = "sfx-ui";
             class c extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(581)
+                    return n(580)
                 }
                 stylesheetMarkup() {
-                    return n(582)
+                    return n(581)
                 }
                 constructor() {
                     super(), this._cachedInviteIds = [], this._patcherState = null, this._settings = null, this._listeners = {}, this._listeners.onClickClearAll = this._onClickClearAll.bind(this), this._listeners.onUXSettingsChange = this._updateUXSettings.bind(this), this._patcherConnected = !0, o.Navigation.subscribe("isConnectedToServer", this._updatePatcherConnected.bind(this)), this._lobbyBinding = (0, o.dataBinding)("/lol-lobby", r), this._patcherBinding = (0, o.dataBinding)("/patcher", r), this._chatBinding = (0, o.dataBinding)("/lol-chat", r), this._settingsBinding = (0, o.dataBinding)("/lol-settings", r), this._observePatcher(), this._observeSettings(), this._observeCurrentPlayerChat(), this._observeUXSettings()
@@ -23151,8 +23105,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-game-invites">\r\n  <div class="parties-game-info-panel-invites">\r\n    <div class="parties-game-invite-heading">\r\n      <div class="parties-game-invite-heading-container">\r\n        <div class="parties-game-invite-heading-text"></div>\r\n        <div class="parties-game-invite-count parties-hide-game-invite-count"></div>\r\n      </div>\r\n      <button class="parties-clear-all-button parties-hide-clear-all"></button>\r\n    </div>\r\n    <div class="parties-game-invites parties-game-invite-scroll parties-blue-scroll"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ':host .parties-game-invite-heading {\n  font-family: var(--font-display);\n}\n:host .parties-game-invite-heading {\n  -webkit-user-select: none;\n}\n:host .parties-game-invite-heading {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .parties-game-invite-heading {\n  text-transform: uppercase;\n}\n:host .parties-game-invite-heading:lang(ko-kr),\n:host .parties-game-invite-heading:lang(ja-jp),\n:host .parties-game-invite-heading:lang(tr-tr),\n:host .parties-game-invite-heading:lang(el-gr),\n:host .parties-game-invite-heading:lang(th-th),\n:host .parties-game-invite-heading:lang(zh-tw) {\n  text-transform: none;\n}\n:host .parties-game-invite-heading {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n:host .parties-game-invite-heading:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .parties-game-invite-heading:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-game-info-panel-invites {\n  flex: 1;\n  display: flex;\n  flex-direction: column;\n  overflow: hidden;\n  max-height: 202px;\n  direction: ltr;\n}\n:host .parties-game-invite-heading {\n  display: flex;\n  align-items: center;\n  height: 32px;\n  color: #a09b8c;\n  padding: 0 5px 0 9px;\n  flex-shrink: 0;\n  pointer-events: none;\n  margin-top: 1px;\n}\n:host .hover-highlight {\n  pointer-events: auto;\n}\n:host .hover-highlight:hover {\n  background: linear-gradient(to right, rgba(10,203,230,0.2), rgba(10,203,230,0));\n  cursor: pointer;\n  color: #f0e6d2;\n}\n:host .hover-highlight:active {\n  color: #cdbe91;\n}\n:host .parties-game-invite-heading-container {\n  flex: 1;\n  display: flex;\n  margin-right: 7px;\n  overflow: hidden;\n}\n:host .parties-game-invite-heading-text {\n  overflow: hidden;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n:host .parties-game-invite-count {\n  padding-left: 5px;\n}\n:host .parties-game-invite-count.parties-hide-game-invite-count {\n  display: none;\n}\n:host .parties-clear-all-button {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n  -webkit-mask: url("/fe/lol-parties/clear_mask.png") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #c8aa6e;\n  width: 18px;\n  height: 18px;\n  pointer-events: auto;\n}\n:host .parties-clear-all-button:hover {\n  background-color: #f0e6d2;\n}\n:host .parties-clear-all-button:active {\n  background-color: #463714;\n}\n:host .parties-clear-all-button.parties-hide-clear-all {\n  display: none;\n  pointer-events: none;\n}\n:host lol-parties-game-invite {\n  display: flex;\n  flex-direction: column;\n  justify-content: flex-end;\n  flex-shrink: 0;\n}\n:host .parties-game-invite-scroll {\n  flex-grow: 1;\n}\n:host .parties-blue-scroll {\n  overflow-x: hidden;\n  overflow-y: auto;\n}\n:host .parties-blue-scroll::-webkit-scrollbar {\n  width: 9px;\n  background: transparent;\n}\n:host .parties-blue-scroll::-webkit-scrollbar-thumb {\n  background: transparent;\n  border-radius: 6px;\n  border: 2px solid transparent;\n  background-clip: padding-box;\n}\n:host .parties-blue-scroll:hover::-webkit-scrollbar-thumb {\n  background-color: #0596aa;\n}\n:host lol-parties-game-invite.use-animation {\n  animation: game-invite-slide-in 0.3s 1;\n}\n:host lol-parties-game-invite.use-animation {\n  animation: game-invite-slide-in 0.3s 1;\n}\n@-moz-keyframes game-invite-slide-in {\n  0% {\n    animation-timing-function: cubic-bezier(0, 0, 0, 1);\n    height: 0px;\n  }\n  100% {\n    height: 72px;\n  }\n}\n@-webkit-keyframes game-invite-slide-in {\n  0% {\n    animation-timing-function: cubic-bezier(0, 0, 0, 1);\n    height: 0px;\n  }\n  100% {\n    height: 72px;\n  }\n}\n@-o-keyframes game-invite-slide-in {\n  0% {\n    animation-timing-function: cubic-bezier(0, 0, 0, 1);\n    height: 0px;\n  }\n  100% {\n    height: 72px;\n  }\n}\n@keyframes game-invite-slide-in {\n  0% {\n    animation-timing-function: cubic-bezier(0, 0, 0, 1);\n    height: 0px;\n  }\n  100% {\n    height: 72px;\n  }\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-game-invites/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -23204,10 +23158,10 @@
                 m = "sfx-ui";
             class u extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(584)
+                    return n(583)
                 }
                 stylesheetMarkup() {
-                    return n(585)
+                    return n(584)
                 }
                 constructor() {
                     super(), this._errorOpen = !1, this._gameInvite = null, this._patcherConnected = null, this._patcherState = null, this._chatSettings = null, this._listeners = {}, this._listeners.onMouseOver = this._onMouseOver.bind(this), this._listeners.onMouseOut = this._onMouseOut.bind(this), this._listeners.onAcceptClicked = this._acceptGameInvite.bind(this), this._listeners.onDeclineClicked = this._declineGameInvite.bind(this), this._listeners.onCloseErrorClicked = this._closeError.bind(this), this._playerNames = i.playerNames, this._summonerBinding = (0, i.dataBinding)("/lol-summoner", c), this._lobbyBinding = (0, i.dataBinding)("/lol-lobby", c), this._toastManager = i.UIKit.getToastManager(), this._templateHelper = i.UIKit.getTemplateHelper()
@@ -23497,8 +23451,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-game-invite">\r\n  <div class="parties-game-invite">\r\n    <div class="parties-map-icon"></div>\r\n\r\n    <div class="parties-game-info-container parties-game-info-container-dnd parties-game-invite-hide">\r\n      <div class="parties-game-invite-name"></div>\r\n      <div class="parties-game-info-subtitle-hold parties-game-info-subtitle-disabled"></div>\r\n    </div>\r\n\r\n    <div class="parties-game-info-container parties-game-info-container-available">\r\n      <div class="parties-game-invite-name"></div>\r\n      <div class="parties-game-info-subtitle parties-game-name"></div>\r\n      <div class="parties-game-info-subtitle parties-game-type"></div>\r\n      <div class="parties-game-info-subtitle parties-game-info-subtitle-disabled"></div>\r\n    </div>\r\n\r\n    <div class="parties-game-invite-buttons use-animation">\r\n      <div class="parties-accept-btn"></div>\r\n      <div class="parties-decline-btn"></div>\r\n    </div>\r\n  </div>\r\n\r\n  <div class="parties-error-message parties-game-invite-hide">\r\n    <div class="parties-error-message-text"></div>\r\n    <div class="parties-error-message-close-btn"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ':host .parties-game-invite-name,\n:host .parties-game-info-subtitle {\n  font-family: var(--font-body);\n}\n:host .parties-game-invite-name,\n:host .parties-game-info-subtitle {\n  -webkit-user-select: none;\n}\n:host .parties-game-invite-name,\n:host .parties-game-info-subtitle {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .parties-game-invite-name {\n  color: #a09b8c;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .parties-game-invite-name:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-game-info-subtitle {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .parties-game-info-subtitle:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .parties-game-info-subtitle:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-map-icon {\n  width: 34px;\n  height: 32px;\n  background-size: auto 64px;\n  background-repeat: no-repeat;\n}\n:host .parties-map-icon.game_map_howling_abyss {\n  background-image: url("/fe/lol-parties/map_ha.png");\n}\n:host .parties-map-icon.game_map_summoners_rift {\n  background-image: url("/fe/lol-parties/map_sr.png");\n}\n:host .parties-map-icon.game_map_twisted_treeline {\n  background-image: url("/fe/lol-parties/map_tt.png");\n}\n:host .parties-map-icon.game_map_rotating_game_mode {\n  background-image: url("/fe/lol-parties/map_rgm.png");\n}\n:host .parties-map-icon.game_map_21 {\n  background-image: url("/fe/lol-parties/map_21.png");\n}\n:host .parties-map-icon.game_map_22 {\n  background-image: url("/fe/lol-parties/map_tft.png");\n}\n:host .parties-map-icon.game_map_30 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Cherry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-map-icon.game_map_33 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Strawberry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-map-icon.game_map_35 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/GameModeCommon/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host.parties-hide-divider .parties-game-invite::after {\n  background: none;\n}\n:host .parties-game-invite {\n  direction: ltr;\n  display: flex;\n  align-items: center;\n  height: 72px;\n  flex-shrink: 0;\n}\n:host .parties-game-invite:lang(ar-ae) {\n  direction: rtl;\n}\n:host .parties-mini {\n  height: 44px;\n}\n:host .parties-game-invite::after {\n  content: \'\';\n  position: absolute;\n  bottom: 0;\n  left: 10px;\n  width: calc(100% - 20px);\n  height: 1px;\n  background-color: #005a82;\n}\n:host .parties-game-invite:hover::after {\n  background: none;\n}\n:host .parties-map-icon {\n  margin: 0 10px;\n  background-position: center top;\n}\n:host .parties-map-icon.disabled {\n  background-position-y: -32px;\n}\n:host .parties-game-info-container {\n  line-height: 16px;\n  flex: 1;\n  overflow: hidden;\n}\n:host .parties-game-info-container > * {\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n:host .parties-game-invite-name {\n  color: #f0e6d2;\n}\n:host .parties-game-info-subtitle {\n  white-space: nowrap;\n  text-overflow: ellipsis;\n  overflow: hidden;\n}\n:host .parties-game-info-subtitle.parties-game-info-subtitle-hide {\n  display: none;\n}\n:host .parties-game-info-subtitle-disabled {\n  white-space: normal;\n}\n:host .parties-game-invite:hover {\n  background-image: linear-gradient(to right, rgba(10,203,230,0.2), rgba(10,203,230,0));\n}\n:host .parties-game-invite-buttons {\n  display: flex;\n  max-width: 35px;\n}\n:host .parties-game-invite-buttons.acceptable {\n  max-width: 67px;\n}\n:host .parties-accept-btn,\n:host .parties-decline-btn {\n  width: 30px;\n  height: 30px;\n  cursor: pointer;\n  flex-shrink: 0;\n}\n:host .parties-accept-btn {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n  background-image: url("/fe/lol-parties/bluebutton_checkmark.png");\n  background-size: cover;\n  background-position-y: 0px;\n}\n:host .parties-accept-btn:hover {\n  background-position-y: -30px;\n}\n:host .parties-accept-btn:active {\n  background-position-y: -60px;\n}\n:host .parties-accept-btn:disabled,\n:host .parties-accept-btn[disabled],\n:host .parties-accept-btn.disabled {\n  cursor: default;\n  background-position-y: -90px;\n}\n:host .parties-decline-btn {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n  -webkit-mask: url("/fe/lol-parties/x_mask.png") no-repeat center;\n  background-color: #0ac8b9;\n  -webkit-mask-size: 18px;\n  margin: 0 3px 0 0;\n}\n:host .parties-decline-btn:hover {\n  background-color: #cdfafa;\n}\n:host .parties-decline-btn:active {\n  background-color: #005a82;\n}\n:host .parties-decline-btn:lang(ar-ae) {\n  margin: 0 0 0 3px;\n}\n:host .parties-error-message {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  background-color: #bc213b;\n  color: #fff;\n  padding: 8px 10px;\n  direction: ltr;\n}\n:host .parties-error-message-close-btn {\n  -webkit-mask: url("/fe/lol-parties/x_mask.png") center no-repeat;\n  -webkit-mask-size: 18px;\n  background-color: #fff;\n  height: 18px;\n  width: 18px;\n  margin: 0 0 0 5px;\n  cursor: pointer;\n}\n:host .parties-error-message-close-btn:lang(ar-ae) {\n  margin: 0 5px 0 0;\n}\n:host .parties-game-invite-hide {\n  display: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-game-invite/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/helpers/shared.styl"],
@@ -23529,7 +23483,7 @@
                     return i
                 }(n(1)),
                 s = n(15),
-                a = (i = n(587)) && i.__esModule ? i : {
+                a = (i = n(586)) && i.__esModule ? i : {
                     default: i
                 },
                 r = n(111);
@@ -23545,10 +23499,10 @@
             const c = o.default.getProvider().getSocket();
             class m extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(590)
+                    return n(589)
                 }
                 stylesheetMarkup() {
-                    return n(591)
+                    return n(590)
                 }
                 constructor() {
                     super(), this._animationsEnabled = !0, this._gameflowAvailable = !1, this._gameflowPhase = s.GAMEFLOW_PHASES.NONE, this._gameflowSession = null, this._haveGameInvites = !1, this._haveGameSearch = !1, this._isInQueueDelay = !1, this._previousGameflowPhase = s.GAMEFLOW_PHASES.NONE, this._searchCount = 0, this._searchState = void 0, this._listeners = {}, this._listeners.onUXSettingsChange = this._updateUXSettings.bind(this), this._matchmakingBinding = (0, o.dataBinding)("/lol-matchmaking", c), this._lobbyBinding = (0, o.dataBinding)("/lol-lobby", c), this._gameflowBinding = (0, o.dataBinding)("/lol-gameflow", c), this._templateHelper = o.UIKit.getTemplateHelper(), this._toastManager = o.UIKit.getToastManager()
@@ -23760,8 +23714,8 @@
         }, (e, t, n) => {
             "use strict";
             const i = {
-                backgroundVideo: n(588),
-                queueDelayVideo: n(589)
+                backgroundVideo: n(587),
+                queueDelayVideo: n(588)
             };
             e.exports = i
         }, (e, t, n) => {
@@ -23774,8 +23728,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-game-info-panel">\r\n  <div class="parties-game-section">\r\n    <div class="parties-game-info-panel-bg-container"></div>\r\n    <div class="parties-game-info-panel-content">\r\n      <lol-parties-game-search class="parties-game-search-hide"></lol-parties-game-search>\r\n      <lol-parties-game-invites class="parties-game-invites-hide"></lol-parties-game-invites>\r\n      <lol-parties-status-card class="parties-status-card-hide"></lol-parties-status-card>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ':host .parties-game-section {\n  flex: 0 0 auto;\n  position: relative;\n  overflow: hidden;\n}\n:host .parties-game-section:not(.use-animation) lol-parties-game-search.parties-game-search-hide {\n  display: none;\n}\n:host .parties-game-section:not(.use-animation) lol-parties-game-invites.parties-game-invites-hide {\n  display: none;\n}\n:host .parties-game-section.use-animation lol-parties-game-search {\n  transition: height 300ms cubic-bezier(0, 0, 0, 1);\n  overflow: hidden;\n  height: 90px;\n}\n:host .parties-game-section.use-animation lol-parties-game-search.parties-game-search-hide {\n  height: 0px;\n}\n:host .parties-game-section.use-animation lol-parties-game-invites {\n  transition: max-height 300ms cubic-bezier(0, 0, 0, 1);\n  max-height: 202px;\n}\n:host .parties-game-section.use-animation lol-parties-game-invites.parties-game-invites-hide {\n  max-height: 0px;\n}\n:host .parties-game-info-panel-bg-container {\n  position: absolute;\n  top: 50%;\n  left: 0;\n  margin-top: -101px;\n  width: 100%;\n  height: 202px;\n  background-image: url("../../images/elements/static_game_panel_bg.png");\n}\n:host .parties-game-info-panel-bg-container.queue-delay {\n  background-image: url("../../images/elements/static_queue_delay_bg.jpg");\n}\n:host .parties-game-info-panel-content {\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  max-height: 202px;\n}\n:host video {\n  height: 100%;\n}\n:host .parties-status-card-hide.hide {\n  display: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-game-info-panel/component-style.styl"],
@@ -23823,10 +23777,10 @@
             const m = o.default.getProvider().getSocket();
             class u extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(593)
+                    return n(592)
                 }
                 stylesheetMarkup() {
-                    return n(594)
+                    return n(593)
                 }
                 constructor() {
                     super(), this._listeners = {
@@ -24024,8 +23978,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-game-search">\r\n  <div class="parties-game-search-status">\r\n    <div class="parties-game-search-header">\r\n      <div class="parties-game-search-header-text"></div>\r\n      <div class="parties-game-search-cancel"></div>\r\n    </div>\r\n\r\n    <div class="parties-game-search-body">\r\n      <div class="parties-game-search-map"></div>\r\n      <div class="parties-game-search-body-data">\r\n        <div class="parties-game-search-elapsed"></div>\r\n        <div class="parties-game-search-info"></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class="parties-game-search-divider parties-game-search-hide"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ':host .parties-game-search-elapsed,\n:host .parties-game-search-header-text {\n  font-family: var(--font-display);\n}\n:host .parties-game-search-info {\n  font-family: var(--font-body);\n}\n:host .parties-game-search-info,\n:host .parties-game-search-elapsed {\n  -webkit-user-select: none;\n}\n:host .parties-game-search-info,\n:host .parties-game-search-elapsed {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .parties-game-search-elapsed {\n  text-transform: uppercase;\n}\n:host .parties-game-search-elapsed:lang(ko-kr),\n:host .parties-game-search-elapsed:lang(ja-jp),\n:host .parties-game-search-elapsed:lang(tr-tr),\n:host .parties-game-search-elapsed:lang(el-gr),\n:host .parties-game-search-elapsed:lang(th-th),\n:host .parties-game-search-elapsed:lang(zh-tw) {\n  text-transform: none;\n}\n:host .parties-game-search-elapsed {\n  color: #f0e6d2;\n  font-size: 30px;\n  font-weight: 700;\n  line-height: 32px;\n  letter-spacing: 0.05em;\n}\n:host .parties-game-search-elapsed:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-game-search-info {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .parties-game-search-info:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .parties-game-search-info:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-game-search-elapsed,\n:host .parties-game-search-header-text {\n  font-family: var(--font-display);\n}\n:host .parties-game-search-info {\n  font-family: var(--font-body);\n}\n:host .parties-game-search-map {\n  width: 34px;\n  height: 32px;\n  background-size: auto 64px;\n  background-repeat: no-repeat;\n}\n:host .parties-game-search-map.game_map_howling_abyss {\n  background-image: url("/fe/lol-parties/map_ha.png");\n}\n:host .parties-game-search-map.game_map_summoners_rift {\n  background-image: url("/fe/lol-parties/map_sr.png");\n}\n:host .parties-game-search-map.game_map_twisted_treeline {\n  background-image: url("/fe/lol-parties/map_tt.png");\n}\n:host .parties-game-search-map.game_map_rotating_game_mode {\n  background-image: url("/fe/lol-parties/map_rgm.png");\n}\n:host .parties-game-search-map.game_map_21 {\n  background-image: url("/fe/lol-parties/map_21.png");\n}\n:host .parties-game-search-map.game_map_22 {\n  background-image: url("/fe/lol-parties/map_tft.png");\n}\n:host .parties-game-search-map.game_map_30 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Cherry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-game-search-map.game_map_33 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Strawberry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-game-search-map.game_map_35 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/GameModeCommon/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host {\n  display: block;\n  position: relative;\n  flex: 0 0 auto;\n/* Divider line below each game queue */\n/* Hide the divider if the game queue is hovered */\n}\n:host .parties-game-search-status {\n  direction: ltr;\n}\n:host .parties-game-search-status.queue-delay .parties-game-search-info {\n  position: relative;\n  color: #a09b8c;\n  display: flex;\n}\n:host .parties-game-search-status.queue-delay .parties-game-search-info::before {\n  position: relative;\n  top: 1px;\n  width: 18px;\n  height: 18px;\n  margin-right: 5px;\n  content: \'\';\n  -webkit-mask: url("/fe/lol-parties/icon_warning_mask.png") no-repeat center;\n  -webkit-mask-size: contain;\n  background-color: #f0e6d2;\n}\n:host .parties-game-search-status.queue-delay .parties-game-search-info::before {\n  position: absolute;\n  left: 142px /*rtl:0px*/;\n  top: -2px;\n}\n:host .parties-game-search-status.queue-delay .parties-game-search-divider {\n  background-color: #413b07;\n}\n:host .parties-game-search-header {\n  display: flex;\n  justify-content: space-between;\n  height: 32px;\n  align-items: center;\n  padding: 0 9px;\n}\n:host .parties-game-search-body-data {\n  flex: 1;\n}\n:host .parties-game-search-info {\n  color: #0acbe6;\n}\n:host .parties-game-search-elapsed {\n  display: flex;\n  align-items: center;\n}\n:host .parties-game-search-elapsed.priority-warning::before {\n  position: relative;\n  top: 1px;\n  width: 18px;\n  height: 18px;\n  margin-right: 5px;\n  content: \'\';\n  -webkit-mask: url("/fe/lol-parties/icon_warning_mask.png") no-repeat center;\n  -webkit-mask-size: contain;\n  background-color: #c89b3c;\n}\n:host .parties-game-search-elapsed.priority-alert::before {\n  position: relative;\n  top: 1px;\n  width: 18px;\n  height: 18px;\n  margin-right: 5px;\n  content: \'\';\n  -webkit-mask: url("/fe/lol-parties/icon_warning_mask.png") no-repeat center;\n  -webkit-mask-size: contain;\n  background-color: #ff2345;\n}\n:host .parties-game-search-elapsed.priority-max-alert {\n  color: #ff2345;\n}\n:host .parties-game-search-elapsed.priority-max-alert::before {\n  position: relative;\n  top: 1px;\n  width: 18px;\n  height: 18px;\n  margin-right: 5px;\n  content: \'\';\n  -webkit-mask: url("/fe/lol-parties/icon_warning_mask.png") no-repeat center;\n  -webkit-mask-size: contain;\n  background-color: #ff2345;\n}\n:host .parties-game-search-body {\n  display: flex;\n  align-items: flex-start;\n  position: relative;\n  padding: 0 5px 10px 10px /*rtl:0 10px 10px 5px*/;\n}\n:host .parties-game-search-map {\n  margin: 5px 10px 0 0 /*rtl:5px 0 0 10px*/;\n}\n:host .parties-game-search-header-text {\n  color: #a09b8c;\n  font-size: 12px;\n  text-transform: uppercase;\n  font-weight: normal;\n  line-height: 16px;\n  margin: 2px 0;\n  letter-spacing: 1px;\n  display: flex;\n  position: relative;\n}\n:host .parties-game-search-cancel {\n  outline: none;\n  border: none;\n  background: none;\n  cursor: pointer;\n  padding: 0;\n  -webkit-mask: url("/fe/lol-parties/x_mask.png") no-repeat center;\n  -webkit-mask-size: 18px;\n  background-color: #c8aa6e;\n  width: 18px;\n  height: 18px;\n}\n:host .parties-game-search-cancel:hover {\n  background-color: #f0e6d2;\n}\n:host .parties-game-search-cancel:active {\n  background-color: #463714;\n}\n:host .parties-game-search-divider {\n  content: \'\';\n  position: absolute;\n  bottom: 0;\n  left: 10px;\n  width: calc(100% - 20px);\n  height: 1px;\n  background-color: #005a82;\n}\n:host .parties-game-search-status:hover .parties-game-search-divider {\n  background: none;\n}\n:host .parties-game-search-hide {\n  display: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-game-search/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/helpers/shared.styl"],
@@ -24070,8 +24024,8 @@
                 })(e)
             }
             const c = {
-                    open: n(596),
-                    closed: n(588)
+                    open: n(595),
+                    closed: n(587)
                 },
                 m = {
                     open: "parties_open_party_status_header",
@@ -24080,10 +24034,10 @@
                 u = o.default.getProvider().getSocket();
             class d extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(597)
+                    return n(596)
                 }
                 stylesheetMarkup() {
-                    return n(598)
+                    return n(597)
                 }
                 constructor() {
                     super(), this._lobbyBinding = (0, o.dataBinding)("/lol-lobby", u), this._playerSettingsBinding = (0, o.dataBinding)("/lol-settings", u), this._observeLobby(), this._templateHelper = o.UIKit.getTemplateHelper(), this._tooltipManager = o.UIKit.getTooltipManager()
@@ -24242,8 +24196,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-status-card">\r\n  <div class="parties-status-card parties-status-card-hide">\r\n    <div class="parties-status-card-bg-container"></div>\r\n\r\n    <div class="parties-status-card-header">\r\n      <div class="parties-status-card-header-icon"></div>\r\n      <div class="parties-status-card-header-text"></div>\r\n      <lol-uikit-info-icon class="parties-status-card-header-info"></lol-uikit-info-icon>\r\n    </div>\r\n\r\n    <div class="parties-status-card-body">\r\n      <div class="parties-status-card-map"></div>\r\n      <div class="parties-status-card-data">\r\n        <div class="parties-status-member-icons"></div>\r\n        <div class="parties-status-mode-text"></div>\r\n      </div>\r\n    </div>\r\n\r\n    <div class="parties-status-card-divider"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ':host .parties-status-card-header .parties-status-card-header-text {\n  font-family: var(--font-display);\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  -webkit-user-select: none;\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  text-transform: uppercase;\n}\n:host .parties-status-card-header .parties-status-card-header-text:lang(ko-kr),\n:host .parties-status-card-header .parties-status-card-header-text:lang(ja-jp),\n:host .parties-status-card-header .parties-status-card-header-text:lang(tr-tr),\n:host .parties-status-card-header .parties-status-card-header-text:lang(el-gr),\n:host .parties-status-card-header .parties-status-card-header-text:lang(th-th),\n:host .parties-status-card-header .parties-status-card-header-text:lang(zh-tw) {\n  text-transform: none;\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n:host .parties-status-card-header .parties-status-card-header-text:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .parties-status-card-header .parties-status-card-header-text:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  font-family: var(--font-display);\n}\n:host .parties-status-card-body .parties-status-card-map {\n  width: 34px;\n  height: 32px;\n  background-size: auto 64px;\n  background-repeat: no-repeat;\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_howling_abyss {\n  background-image: url("/fe/lol-parties/map_ha.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_summoners_rift {\n  background-image: url("/fe/lol-parties/map_sr.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_twisted_treeline {\n  background-image: url("/fe/lol-parties/map_tt.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_rotating_game_mode {\n  background-image: url("/fe/lol-parties/map_rgm.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_21 {\n  background-image: url("/fe/lol-parties/map_21.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_22 {\n  background-image: url("/fe/lol-parties/map_tft.png");\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_30 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Cherry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_33 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Strawberry/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\n:host .parties-status-card-body .parties-status-card-map.game_map_35 {\n  background-image: url("/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/GameModeCommon/img/icon-v2.png");\n  background-size: 30px 30px;\n  background-position: center;\n}\nlol-uikit-content-block.parties-status-card-info {\n  width: 250px;\n  white-space: normal;\n}\nlol-uikit-content-block.parties-status-card-info h6 {\n  margin-bottom: 8px;\n  display: flex;\n  justify-content: center;\n}\nlol-uikit-content-block.parties-status-card-info h6 .parties-status-card-header-text {\n  margin-left: 2px;\n  margin-top: 2px;\n}\nlol-uikit-content-block.parties-status-card-info h6 .parties-status-card-header-text:lang(ar-ae) {\n  margin-right: 0;\n  margin-right: 2px;\n}\n.parties-status-card-header-icon {\n  background-image: url("/fe/lol-parties/party_panel_header_icon.png");\n  width: 20px;\n  height: 20px;\n  background-repeat: no-repeat;\n  background-size: contain;\n  display: inline-block;\n}\n:host .parties-status-card {\n  position: relative;\n  cursor: pointer;\n}\n:host .parties-status-card.open {\n  background: #143c14;\n}\n:host .parties-status-card.closed {\n  background: #0d2641;\n}\n:host .parties-status-card .parties-status-card-bg-container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 202px;\n  color: #36d987;\n}\n:host .parties-status-card-hide {\n  display: none;\n}\n:host .parties-status-card-header {\n  direction: ltr;\n  display: flex;\n  justify-content: space-between;\n  height: 22px;\n  position: relative;\n  align-items: center;\n  padding: 5px;\n  margin: 0 0 0 8px;\n}\n:host .parties-status-card-header:lang(ar-ae) {\n  direction: rtl;\n  margin: 0 8px 0 0;\n}\n:host .parties-status-card-header .parties-status-card-header-icon {\n  background-image: url("/fe/lol-parties/party_panel_header_icon.png");\n  width: 20px;\n  height: 20px;\n  flex-grow: 0;\n  background-repeat: no-repeat;\n  background-size: contain;\n}\n:host .parties-status-card-header .parties-status-card-header-text {\n  display: flex;\n  align-items: center;\n  height: 32px;\n  color: #a09b8c;\n  padding: 0 5px 0 9px;\n  flex-grow: 1;\n  pointer-events: none;\n  margin-top: 1px;\n  text-transform: uppercase;\n}\n:host .parties-status-card-header .parties-status-card-header-info {\n  flex-grow: 0;\n  width: 16px;\n  height: 16px;\n  margin-right: 10px;\n  visibility: hidden;\n}\n:host .parties-status-card-body {\n  direction: ltr;\n  display: flex;\n  align-items: center;\n  position: relative;\n  margin-top: -4px;\n  padding: 0 5px 10px 10px;\n}\n:host .parties-status-card-body:lang(ar-ae) {\n  direction: rtl;\n  padding: 0 10px 10px 5px;\n}\n:host .parties-status-card-body .parties-status-card-map {\n  margin: 7px 10px 0 0;\n}\n:host .parties-status-card-body .parties-status-card-map:lang(ar-ae) {\n  margin: 7px 0 0 10px;\n}\n:host .parties-status-card-body .parties-status-member-icons {\n  display: flex;\n  align-items: flex-start;\n  padding: 0 0 0 6px;\n}\n:host .parties-status-card-body .parties-status-member-icons:lang(ar-ae) {\n  padding: 0 6px 0 0;\n}\n:host .parties-status-card-body .parties-status-member-icons .parties-status-member-empty {\n  width: 34px;\n  height: 34px;\n  margin: 0 0 0 -16px;\n  background-image: url("/fe/lol-parties/player_empty.png");\n  background-repeat: no-repeat;\n  background-position: center top;\n  background-size: contain;\n}\n:host .parties-status-card-body .parties-status-member-icons .parties-status-member-empty:lang(ar-ae) {\n  margin: 0 -16px 0 0;\n}\n:host .parties-status-card-body .parties-status-member-icons .parties-status-member-joined {\n  width: 34px;\n  height: 34px;\n  margin: 0 0 0 -16px;\n  background-image: url("/fe/lol-parties/player_joined.png");\n  background-repeat: no-repeat;\n  background-position: center top;\n  background-size: contain;\n}\n:host .parties-status-card-body .parties-status-member-icons .parties-status-member-joined:lang(ar-ae) {\n  margin: 0 -16px 0 0;\n}\n:host .parties-status-card-body .parties-status-number-counter-display {\n  color: #ccc4b3;\n  line-height: 34px;\n  font-size: 18px;\n  font-weight: 550;\n  letter-spacing: 0.05em;\n  margin-left: -3px;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-status-card/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/helpers/shared.styl"],
@@ -24260,10 +24214,10 @@
             var i = n(1);
             class o extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(600)
+                    return n(599)
                 }
                 stylesheetMarkup() {
-                    return n(601)
+                    return n(600)
                 }
                 constructor() {
                     super(), this.shadowRoot.querySelector(".loadouts-purchase-dialog-body-title").innerText = i.tra.get("tft_upgrade_purchase_dialog_body_title"), this._fallback = !1
@@ -24301,8 +24255,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-loadouts-purchase-dialog-content">\r\n  <div class="loadouts-purchase-dialog-content-wrapper">\r\n    <div class="loadouts-purchase-dialog-body-title"></div>\r\n    <div class="little-legend-container">\r\n      <img class="little-legend-img" />\r\n      <div class="little-legend-overlay"></div>\r\n      <lol-uikit-lottie\r\n        class="lottie-animation"\r\n        image-path="/fe/lol-parties/lottie/LLUpgradeConfirm_StarIcons/images/"\r\n        loop="true"\r\n        autoplay="true"\r\n      >\r\n      </lol-uikit-lottie>\r\n    </div>\r\n    <div class="loadouts-purchase-dialog-body-content"></div>\r\n    <div class="lol-parties-purchase-dialog-error-message"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ':host .loadouts-purchase-dialog-body-title,\n:host .lol-parties-purchase-dialog-error-message {\n  font-family: var(--font-display);\n}\n:host .loadouts-purchase-dialog-body-title,\n:host .lol-parties-purchase-dialog-error-message {\n  -webkit-user-select: none;\n}\n:host .loadouts-purchase-dialog-body-title,\n:host .lol-parties-purchase-dialog-error-message {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .loadouts-purchase-dialog-body-title,\n:host .lol-parties-purchase-dialog-error-message {\n  text-transform: uppercase;\n}\n:host .loadouts-purchase-dialog-body-title:lang(ko-kr),\n:host .lol-parties-purchase-dialog-error-message:lang(ko-kr),\n:host .loadouts-purchase-dialog-body-title:lang(ja-jp),\n:host .lol-parties-purchase-dialog-error-message:lang(ja-jp),\n:host .loadouts-purchase-dialog-body-title:lang(tr-tr),\n:host .lol-parties-purchase-dialog-error-message:lang(tr-tr),\n:host .loadouts-purchase-dialog-body-title:lang(el-gr),\n:host .lol-parties-purchase-dialog-error-message:lang(el-gr),\n:host .loadouts-purchase-dialog-body-title:lang(th-th),\n:host .lol-parties-purchase-dialog-error-message:lang(th-th),\n:host .loadouts-purchase-dialog-body-title:lang(zh-tw),\n:host .lol-parties-purchase-dialog-error-message:lang(zh-tw) {\n  text-transform: none;\n}\n:host .loadouts-purchase-dialog-body-title {\n  color: #f0e6d2;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 18px;\n  letter-spacing: 0.075em;\n}\n:host .loadouts-purchase-dialog-body-title:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .lol-parties-purchase-dialog-error-message {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n:host .lol-parties-purchase-dialog-error-message:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .lol-parties-purchase-dialog-error-message:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .loadouts-purchase-dialog-content-wrapper {\n  padding-top: 10px;\n  padding-bottom: 51px;\n  background: linear-gradient(180deg, #1e2328 0%, #010a13 100%);\n  font-size: 14px;\n  letter-spacing: 0.03em;\n  text-align: center;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 518px;\n  height: 341px;\n}\n:host .loadouts-purchase-dialog-body-title {\n  color: #c8aa6e;\n  padding-bottom: 20px;\n  font-size: 24px;\n  line-height: 36px;\n}\n:host .loadouts-purchase-dialog-body-content {\n  color: #a09b8c;\n  padding-top: 26px;\n  padding-left: 20px;\n  padding-right: 20px;\n  font-size: 14px;\n  line-height: 32px;\n}\n:host .lol-parties-purchase-dialog-error-message {\n  position: absolute;\n  bottom: 36px;\n  left: 0;\n  width: 100%;\n  line-height: 24px;\n  font-size: 12px;\n  color: #ff2345;\n}\n:host .lottie-animation {\n  position: absolute;\n  left: 0;\n  top: 0;\n  width: 209px;\n  height: 209px;\n}\n:host .little-legend-container {\n  position: relative;\n  width: 209px;\n  height: 209px;\n  border: 4px solid;\n  border-image: linear-gradient(180deg, #c8aa6e 0%, #c89b3c 48.96%, #785a28 100%) 50 stretch stretch;\n}\n:host .little-legend-container::before {\n  position: absolute;\n  content: " ";\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  top: -5px;\n  border: 1px solid rgba(0,0,0,0.25);\n}\n:host .little-legend-container::after {\n  position: absolute;\n  display: block;\n  content: "";\n}\n:host .little-legend-container.rarity::after {\n  bottom: -43px;\n  left: 48px;\n  width: 112px;\n  height: 64px;\n  background-size: 100% 100%;\n}\n:host .little-legend-container.rarity-0::after {\n  background-image: url("/fe/lol-parties/common_plating_hover.png");\n}\n:host .little-legend-container.rarity-1::after {\n  background-image: url("/fe/lol-parties/epic_plating_hover.png");\n}\n:host .little-legend-container.rarity-2::after {\n  background-image: url("/fe/lol-parties/legendary_plating_hover.png");\n}\n:host .little-legend-container.rarity-3::after {\n  background-image: url("/fe/lol-parties/mythic_plating_hover.png");\n}\n:host .little-legend-container.rarity-tag::after {\n  top: -32px;\n  left: 50%;\n  margin-left: -56px;\n  width: 112px;\n  height: 64px;\n  background-size: cover;\n  background-position: center;\n  background-image: var(--purchase-dialog-rarity-tag);\n}\n:host .little-legend-img {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  object-fit: cover;\n  box-sizing: border-box;\n  border: 1px solid rgba(0,0,0,0.25);\n}\n:host .little-legend-overlay {\n  position: absolute;\n  height: 83px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.77) 66.15%);\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-loadouts-purchase-dialog-content/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -24335,7 +24289,7 @@
                 s = (i = n(156)) && i.__esModule ? i : {
                     default: i
                 },
-                a = n(603),
+                a = n(602),
                 r = n(132);
 
             function l(e) {
@@ -24352,10 +24306,10 @@
                 d = "equip";
             class p extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(604)
+                    return n(603)
                 }
                 stylesheetMarkup() {
-                    return n(605)
+                    return n(604)
                 }
                 constructor() {
                     super(), this._showNoneOption = null, this._sortByLastAcquiredBinding = (0, o.dataBinding)("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_sortByLastAcquired", c), this._favorites = [], this._configAllowsSortByLastAcquired = !1, this._favoritesEnabled = !1, this._moonEnabled = !1, this._rarityTagEnabled = !1, this._rarityTags = null, this._hideUnowned = !0, this._isShardShardsEnabled = !1, this._isRewardsProgramEnabled = r.REWARDS_PROGRAM_STATUS.UNSET, this._searchString = "", this._sortType = r.SORTING_TYPES.DEFAULT, this._type = "", this._removedRecentHighlighting = [], this._starShardsAmount = 0, this._templateHelper = o.UIKit.getTemplateHelper(), this._tooltipManager = o.UIKit.getTooltipManager(), this._maxFavorites = 8, this._fallback = !1, this._alwaysShowWIPBadge = !1, o.db.get("/lol-client-config/v3/client-config/lol.client_settings.tft.tft_loadouts_favorites_max").then((e => {
@@ -24716,7 +24670,7 @@
                     let s;
                     t.appendChild(this._createCosmeticOption({
                         itemId: 0,
-                        loadoutsIcon: n(579),
+                        loadoutsIcon: n(578),
                         level: 0,
                         contentId: "NONE_OPTION",
                         name: i,
@@ -24961,8 +24915,8 @@
             "use strict";
             e.exports = '\ufeff\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-cosmetics-panel">\r\n  <slot></slot>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ":host {\n  width: 100%;\n  height: 100%;\n  display: flex;\n  position: relative;\n}\n", "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-cosmetics-panel/component-style.styl"],
@@ -24983,10 +24937,10 @@
                 a = n(132);
             class r extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(607)
+                    return n(606)
                 }
                 stylesheetMarkup() {
-                    return n(608)
+                    return n(607)
                 }
                 constructor() {
                     super(), this._onClickBinding = this._onClicked.bind(this), this._onMouseInBinding = this._onMouseIn.bind(this), this._eventPreventDefaultCallback = e => e.preventDefault(), this._fallback = !0, this.isRewardsProgramEnabled = a.REWARDS_PROGRAM_STATUS.UNSET
@@ -25093,8 +25047,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-cosmetics-renderer">\r\n  <div class="cosmetics-renderer">\r\n    <img class="cosmetics-renderer-icon" />\r\n    <div class="cosmetics-renderer-filter"></div>\r\n    <div class="cosmetics-renderer-favorited-icon hidden"></div>\r\n    <div class="cosmetics-renderer-rank-container hidden">\r\n      <div class="cosmetics-renderer-rank-bounding-container">\r\n        <span class="cosmetics-renderer-star rank-1 unowned"></span>\r\n        <span class="cosmetics-renderer-star rank-2 unowned"></span>\r\n        <span class="cosmetics-renderer-star rank-3 unowned"></span>\r\n      </div>\r\n    </div>\r\n    <div class="cosmetics-renderer-rarity"></div>\r\n    <div class="cosmetics-renderer-loyalty hidden"></div>\r\n    <div class="cosmetics-renderer-rewards-program hidden"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ':host {\n  --rcp-fe-lol-parties-cosmetics-renderer-border-width: 2px;\n}\n:host {\n  position: relative;\n  width: 64px;\n  height: 72px;\n  margin: 7px;\n  box-sizing: border-box;\n  cursor: pointer;\n}\n:host .cosmetics-renderer {\n  position: relative;\n  width: 100%;\n  height: 64px;\n  box-sizing: border-box;\n  border: thin solid #1e2328;\n}\n:host .cosmetics-renderer.selected {\n  filter: none;\n  border-width: 2px;\n  border: 2px solid #c79a3b;\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity {\n  bottom: -20px;\n  left: 3px;\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity.rarity-0 {\n  background-image: url("/fe/lol-parties/common_plating_hover.png");\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity.rarity-1 {\n  background-image: url("/fe/lol-parties/epic_plating_hover.png");\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity.rarity-2 {\n  background-image: url("/fe/lol-parties/legendary_plating_hover.png");\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity.rarity-3 {\n  background-image: url("/fe/lol-parties/mythic_plating_hover.png");\n}\n:host .cosmetics-renderer.selected .cosmetics-renderer-rarity.rarity-tag {\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n  width: 64px;\n  height: 64px;\n  left: 50%;\n  margin-left: -32px;\n  bottom: -30px;\n  background-image: var(--cosmetic-rarity-tag);\n  pointer-events: none;\n}\n:host .cosmetics-renderer:hover,\n:host .cosmetics-renderer.highlighted {\n  filter: brightness(110%);\n  border-width: 2px;\n  border-image: linear-gradient(to bottom, #f0e6d2, #c89b3c) 1;\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity {\n  bottom: -20px;\n  left: 3px;\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity.rarity-0,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity.rarity-0 {\n  background-image: url("/fe/lol-parties/common_plating_hover.png");\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity.rarity-1,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity.rarity-1 {\n  background-image: url("/fe/lol-parties/epic_plating_hover.png");\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity.rarity-2,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity.rarity-2 {\n  background-image: url("/fe/lol-parties/legendary_plating_hover.png");\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity.rarity-3,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity.rarity-3 {\n  background-image: url("/fe/lol-parties/mythic_plating_hover.png");\n}\n:host .cosmetics-renderer:hover .cosmetics-renderer-rarity.rarity-tag,\n:host .cosmetics-renderer.highlighted .cosmetics-renderer-rarity.rarity-tag {\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n  width: 64px;\n  height: 64px;\n  left: 50%;\n  margin-left: -32px;\n  bottom: -30px;\n  background-image: var(--cosmetic-rarity-tag-hover);\n  pointer-events: none;\n}\n:host .cosmetics-renderer:hover:not(.selected) .cosmetics-renderer-loyalty::after,\n:host .cosmetics-renderer.highlighted:not(.selected) .cosmetics-renderer-loyalty::after {\n  transform: translate(229%, -336%);\n}\n:host .cosmetics-renderer:not(.owned)::before {\n  content: \'\';\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  left: 0;\n  background-color: #000;\n  background-size: 100% 100%;\n  opacity: 50%;\n}\n:host .cosmetics-renderer:not(.owned)::before::hover {\n  opacity: 0;\n}\n:host .cosmetics-renderer:not(.owned)::after {\n  content: \' \';\n  position: absolute;\n  width: 100%;\n  height: 40px;\n  left: 0;\n  background-image: url("/fe/lol-parties/lock.png");\n  background-position: center bottom;\n  background-repeat: no-repeat;\n  background-size: 40px 40px;\n  transform: translate(0, -52%) /*rtl:translate(0, -52%)*/;\n}\n:host .cosmetics-renderer:not(.owned):hover::before {\n  background-color: rgba(0,0,0,0.3);\n}\n:host .cosmetics-renderer:not(.owned):hover::after {\n  background-image: url("/fe/lol-parties/lock_hover.png");\n  height: 54px;\n  background-size: 54px 54px;\n  transform: translate(0, -47%) /*rtl:translate(0, -52%)*/;\n}\n:host .cosmetics-renderer .cosmetics-renderer-filter {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: rgba(0,0,0,0.6);\n  border: thin solid #000;\n}\n:host .cosmetics-renderer .cosmetics-renderer-filter.owned {\n  background-color: rgba(0,0,0,0);\n}\n:host .cosmetics-renderer .cosmetics-renderer-favorited-icon {\n  position: absolute;\n  bottom: 2px;\n  right: 2px;\n  width: 20px;\n  height: 20px;\n  background: transparent url("/fe/lol-parties/favorites-heart.png") no-repeat top;\n  background-size: contain;\n}\n:host .cosmetics-renderer .cosmetics-renderer-favorited-icon.hidden {\n  display: none;\n}\n:host .cosmetics-renderer .cosmetics-renderer-icon {\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  position: relative;\n}\n:host .cosmetics-renderer .cosmetics-renderer-icon::before {\n  content: "";\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  box-shadow: inset 0 0 1 10px #000;\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity {\n  position: absolute;\n  bottom: -19px;\n  left: 4px;\n  width: 56px;\n  height: 32px;\n  background-position: center bottom;\n  background-repeat: no-repeat;\n  background-size: contain;\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity.rarity-0 {\n  background-image: url("/fe/lol-parties/common_plating.png");\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity.rarity-1 {\n  background-image: url("/fe/lol-parties/epic_plating.png");\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity.rarity-2 {\n  background-image: url("/fe/lol-parties/legendary_plating.png");\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity.rarity-3 {\n  background-image: url("/fe/lol-parties/mythic_plating.png");\n}\n:host .cosmetics-renderer .cosmetics-renderer-rarity.rarity-tag {\n  background-position: center;\n  background-size: cover;\n  background-repeat: no-repeat;\n  width: 64px;\n  height: 64px;\n  left: 50%;\n  margin-left: -32px;\n  bottom: -29px;\n  background-image: var(--cosmetic-rarity-tag);\n  pointer-events: none;\n}\n:host .cosmetics-renderer .cosmetics-renderer-loyalty {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n:host .cosmetics-renderer .cosmetics-renderer-loyalty::after {\n  content: \' \';\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  background-image: url("/fe/lol-parties/Loyalty.png");\n  background-position: center bottom;\n  background-size: 22px 22px;\n  transform: translate(233%, -340%);\n}\n:host .cosmetics-renderer .cosmetics-renderer-rewards-program {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n:host .cosmetics-renderer .cosmetics-renderer-rewards-program::after {\n  content: \' \';\n  position: absolute;\n  width: 22px;\n  height: 22px;\n  background-image: url("/fe/lol-static-assets/images/loyalty-nav-bar.svg");\n  background-position: center bottom;\n  background-size: 22px 22px;\n  transform: translate(233%, -340%);\n}\n:host .cosmetics-renderer .hidden {\n  visibility: hidden;\n  opacity: 0;\n}\n:host-context([is-recent-item="true"]) .cosmetics-renderer {\n  border-width: 2px;\n  border-image: linear-gradient(to bottom, #fdfaf1, #78531c) 1;\n}\n:host-context([is-recent-item="true"]) .cosmetics-renderer .cosmetics-renderer-rarity {\n  bottom: -20px;\n  left: 3px;\n}\n:host-context([is-recent-item="true"]) .cosmetics-renderer .cosmetics-renderer-rarity.rarity-tag {\n  left: 50%;\n  bottom: -29px;\n}\n:host-context([is-recent-item="true"]) .cosmetics-renderer .cosmetics-renderer-icon {\n  filter: drop-shadow(0px 0px 5px rgba(255,193,34,0.25)) drop-shadow(0px 0px 4px rgba(255,184,0,0.25)) drop-shadow(0px 0px 8px #ffcf53);\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-cosmetics-renderer/component-style.styl"],
@@ -25114,10 +25068,10 @@
                 };
             class a extends o.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(610)
+                    return n(609)
                 }
                 stylesheetMarkup() {
-                    return n(611)
+                    return n(610)
                 }
                 constructor() {
                     super(), this._listenersAdded = !1, this._fallback = !1
@@ -25178,8 +25132,8 @@
             "use strict";
             e.exports = '\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-cosmetics-upgrade-celebration">\r\n  <lol-uikit-lottie\r\n    id="bg-particles-intro"\r\n    class="lottie-animation"\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_01Scene/LLUpgradeCeremony_Scene_IN.json"\r\n    image-path="/fe/lol-parties/lottie/LLUpgradeCeremony_01Scene/images/"\r\n    autoplay="false"\r\n  >\r\n  </lol-uikit-lottie>\r\n  <lol-uikit-lottie\r\n    id="bg-particles-loop"\r\n    class="lottie-animation hidden"\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_01Scene/LLUpgradeCeremony_Scene_LOOP.json"\r\n    image-path="/fe/lol-parties/lottie/LLUpgradeCeremony_01Scene/images/"\r\n    autoplay="false"\r\n    loop="true"\r\n  >\r\n  </lol-uikit-lottie>\r\n\r\n  <lol-uikit-video\r\n    class="bg-video bg-video-intro"\r\n    type="intro"\r\n    preload\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_02BGParticles/videos/LLUpgradeCeremony_ParticlesBG_IN.webm"\r\n  >\r\n  </lol-uikit-video>\r\n  <lol-uikit-video\r\n    class="bg-video bg-video-loop"\r\n    type="idle"\r\n    preload\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_02BGParticles/videos/LLUpgradeCeremony_ParticlesBG_LOOP.webm"\r\n  >\r\n  </lol-uikit-video>\r\n\r\n  <div class="little-legend-container hidden">\r\n    <img class="little-legend-img new-tier-img" />\r\n    <img class="little-legend-img previous-tier-img" />\r\n    <div class="little-legend-overlay"></div>\r\n  </div>\r\n\r\n  <lol-uikit-video\r\n    class="bg-video lighting-bolts"\r\n    type="intro"\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_04FGLightning/videos/LLUpgradeCeremony_BoltsFG.webm"\r\n  >\r\n  </lol-uikit-video>\r\n\r\n  <lol-uikit-video\r\n    class="rarity-bolts"\r\n    type="intro"\r\n    src="/fe/lol-parties/lottie/LLUpgradeCeremony_05RarityBolts/videos/LLUpgradeCeremony_RarityBolts.webm"\r\n  >\r\n  </lol-uikit-video>\r\n  <lol-uikit-lottie\r\n    id="bg-particles-stars"\r\n    class="lottie-animation"\r\n    image-path="/fe/lol-parties/lottie/LLUpgradeCeremony_06LevelStarIcons/images/"\r\n    autoplay="false"\r\n  >\r\n  </lol-uikit-lottie>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ':host {\n  width: 1280px;\n  height: 720px;\n  position: relative;\n}\n:host .hidden {\n  visibility: hidden;\n}\n:host .lottie-animation {\n  position: absolute;\n  width: 1280px;\n  height: 720px;\n}\n:host .bg-video {\n  position: absolute;\n  width: 720px;\n  height: 720px;\n  left: 280px;\n  top: 0;\n  mix-blend-mode: screen;\n}\n:host .rarity-bolts {\n  position: absolute;\n  width: 96px;\n  height: 96px;\n  left: 592px;\n  top: 408px;\n}\n:host .rarity-bolts.rarity-tag {\n  top: 191px;\n}\n:host .little-legend-container {\n  position: absolute;\n  width: 208px;\n  height: 208px;\n  left: 532px;\n  top: 236px;\n  border: 4px solid;\n  border-image: linear-gradient(180deg, #c8aa6e 0%, #c89b3c 48.96%, #785a28 100%) 50 stretch stretch;\n}\n:host .little-legend-container::before {\n  position: absolute;\n  content: " ";\n  left: -5px;\n  right: -5px;\n  bottom: -5px;\n  top: -5px;\n  border: 1px solid rgba(0,0,0,0.25);\n}\n:host .little-legend-container::after {\n  position: absolute;\n  content: "";\n}\n:host .little-legend-container.rarity::after {\n  bottom: -43px;\n  left: 48px;\n  width: 112px;\n  height: 64px;\n  background-size: 100% 100%;\n}\n:host .little-legend-container.rarity-0::after {\n  background-image: url("/fe/lol-parties/common_plating_hover.png");\n}\n:host .little-legend-container.rarity-1::after {\n  background-image: url("/fe/lol-parties/epic_plating_hover.png");\n}\n:host .little-legend-container.rarity-2::after {\n  background-image: url("/fe/lol-parties/legendary_plating_hover.png");\n}\n:host .little-legend-container.rarity-3::after {\n  background-image: url("/fe/lol-parties/mythic_plating_hover.png");\n}\n:host .little-legend-container.rarity-tag::after {\n  top: -32px;\n  left: 50%;\n  margin-left: -56px;\n  width: 112px;\n  height: 64px;\n  background-size: cover;\n  background-position: center;\n  background-image: var(--upgrade-celebration-rarity-tag);\n}\n:host .little-legend-img {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  object-fit: cover;\n  box-sizing: border-box;\n  border: 1px solid rgba(0,0,0,0.25);\n}\n:host .little-legend-overlay {\n  position: absolute;\n  height: 83px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.77) 66.15%);\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-cosmetics-upgrade-celebration/component-style.styl"],
@@ -25197,10 +25151,10 @@
             const o = (0, i.getProvider)().getSocket();
             class s extends i.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(613)
+                    return n(612)
                 }
                 stylesheetMarkup() {
-                    return n(614)
+                    return n(613)
                 }
                 constructor() {
                     super(), this._selectedSeries = "", this._selectedOuterRadius = "44px", this._selectedInnerRadius = "38px", this._dataBinding = (0, i.dataBinding)("/lol-missions", o), this._created = !0
@@ -25269,8 +25223,8 @@
             "use strict";
             e.exports = '\ufeff\x3c!-- @format --\x3e\r\n\r\n<template id="lol-parties-template-series-button">\r\n  <div class="series-button-container">\r\n    <div class="series-tracker-label"></div>\r\n    <div class="series-tracker-button"></div>\r\n    <div class="series-tracker-reminder-label hidden"></div>\r\n  </div>\r\n</template>\r\n'
         }, (e, t, n) => {
-            var i = n(577),
-                o = n(578)(i);
+            var i = n(576),
+                o = n(577)(i);
             o.push([e.id, ':host .series-button-container .series-tracker-reminder-label {\n  font-family: var(--font-display);\n}\n:host .series-button-container .series-tracker-label {\n  font-family: var(--font-body);\n}\n:host .series-button-container .series-tracker-label,\n:host .series-button-container .series-tracker-reminder-label {\n  -webkit-user-select: none;\n}\n:host .series-button-container .series-tracker-label,\n:host .series-button-container .series-tracker-reminder-label {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .series-button-container .series-tracker-reminder-label {\n  text-transform: uppercase;\n}\n:host .series-button-container .series-tracker-reminder-label:lang(ko-kr),\n:host .series-button-container .series-tracker-reminder-label:lang(ja-jp),\n:host .series-button-container .series-tracker-reminder-label:lang(tr-tr),\n:host .series-button-container .series-tracker-reminder-label:lang(el-gr),\n:host .series-button-container .series-tracker-reminder-label:lang(th-th),\n:host .series-button-container .series-tracker-reminder-label:lang(zh-tw) {\n  text-transform: none;\n}\n:host .series-button-container .series-tracker-reminder-label {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n:host .series-button-container .series-tracker-reminder-label:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .series-button-container .series-tracker-reminder-label:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .series-button-container .series-tracker-label {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.1em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .series-button-container .series-tracker-label:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .series-button-container .series-tracker-label:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host([type="simple"]) .series-button-container .series-tracker-label {\n  display: none;\n}\n:host([type="simple"]) .series-button-container .series-tracker-button {\n  transform: none;\n}\n:host([type="simple"]) .series-button-container .series-tracker-reminder-label {\n  transform: none;\n}\n:host {\n  height: 48px;\n}\n:host .series-button-container {\n  height: var(--outer-radius);\n  position: relative;\n  margin-right: 8px;\n  margin-top: 4px;\n  display: flex;\n  align-items: center;\n}\n:host .series-button-container .series-tracker-label {\n  height: 29px;\n  border-radius: 10px;\n  background: rgba(0,0,0,0.54);\n  text-align: right;\n  padding-right: 25px;\n  padding-left: 15px;\n  line-height: 29px;\n  flex: 0 0 auto;\n  cursor: pointer;\n}\n:host .series-button-container .series-tracker-button {\n  position: relative;\n  width: var(--outer-radius);\n  height: var(--outer-radius);\n  border: 1px solid rgba(0,0,0,0.35);\n  border-radius: 50%;\n  box-sizing: border-box;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background: linear-gradient(#c1a05e, #6c5228);\n  flex: 0 0 auto;\n  transform: translateX(-35%);\n  cursor: pointer;\n}\n:host .series-button-container .series-tracker-button::before {\n  content: "";\n  position: absolute;\n  width: var(--inner-radius);\n  height: var(--inner-radius);\n  box-sizing: border-box;\n  border: 1px solid rgba(0,0,0,0.35);\n  background-image: url("/lol-game-data/assets/ASSETS/UX/TFT/OutOfGame/Missions/SeriesIcons/series_icon.svg");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-size: 45%;\n  background-color: #1e2328;\n  border-radius: 50%;\n}\n:host .series-button-container .series-tracker-reminder-label {\n  width: 21px;\n  height: 18px;\n  position: absolute;\n  background: #c89b3c;\n  border-radius: 4px;\n  right: -4px;\n  top: -4px;\n  font-size: 12px;\n  line-height: 18px;\n  letter-spacing: 0.03em;\n  text-align: center;\n  color: #000;\n  box-shadow: 0 0 0 #c89b3c;\n  animation: flash 1s infinite alternate;\n  transform: translateX(-35%);\n}\n:host .series-button-container .series-tracker-reminder-label.hidden {\n  opacity: 0;\n}\n@-moz-keyframes flash {\n  0% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  25% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  100% {\n    filter: brightness(125%);\n    box-shadow: 0 0 8px #c89b3c;\n  }\n}\n@-webkit-keyframes flash {\n  0% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  25% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  100% {\n    filter: brightness(125%);\n    box-shadow: 0 0 8px #c89b3c;\n  }\n}\n@-o-keyframes flash {\n  0% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  25% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  100% {\n    filter: brightness(125%);\n    box-shadow: 0 0 8px #c89b3c;\n  }\n}\n@keyframes flash {\n  0% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  25% {\n    filter: brightness(100%);\n    box-shadow: 0 0 0 #c89b3c;\n  }\n  100% {\n    filter: brightness(125%);\n    box-shadow: 0 0 8px #c89b3c;\n  }\n}\n:host .series-button-container:hover {\n  filter: brightness(125%);\n}\n:host .series-button-container:hover .series-tracker-reminder-label {\n  animation: none;\n}\n', "", {
                 version: 3,
                 sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-parties/src/elements/lol-parties-series-button/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
@@ -25377,7 +25331,7 @@
                 e.default.add({
                     PartyAPI: t
                 });
-                __webpack_require__(573)();
+                __webpack_require__(572)();
                 return e.default.HomeRegistry.resolvePartiesHandler((() => t.show())), t
             }))))
         }), {

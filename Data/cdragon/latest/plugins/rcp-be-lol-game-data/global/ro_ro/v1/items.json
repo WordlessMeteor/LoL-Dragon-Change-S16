@@ -10,11 +10,11 @@
             3117,
             3158,
             3047,
+            3009,
             3111,
             3006,
             3005,
             3008,
-            3009,
             3010,
             3020
         ],
@@ -532,9 +532,9 @@
             3072,
             6671,
             3095,
-            4403,
             3026,
-            3031
+            3031,
+            4403
         ],
         "categories": [
             "Damage"
@@ -731,8 +731,8 @@
             3146,
             3072,
             3074,
-            4403,
-            3153
+            3153,
+            4403
         ],
         "categories": [
             "Damage",
@@ -872,8 +872,8 @@
             3102,
             3157,
             4645,
-            4403,
-            3089
+            3089,
+            4403
         ],
         "categories": [
             "SpellDamage"
@@ -2642,13 +2642,13 @@
     {
         "id": 2052,
         "name": "Poro-Snax",
-        "description": "<mainText><stats></stats><br><br> <active>Activă – Consumă:</active> îi oferi o gustare savuroasă unui animăluț poro din apropiere, ceea ce-l va face să crească în dimensiune.<br><br><flavorText>Acest amestec delicios de găini avarosane nestresate și ierburi organice din Freljord îți oferă toți nutrienții de care ai nevoie pentru a satisface cele mai exigente gusturi ale animăluțelor poro.<br><br>Toate veniturile rezultate din vânzarea acestui produs vor fi donate pentru lupta contra violenței noxiene împotriva animalelor. </flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br> <active>Activă – Consumă:</active> îi oferi o gustare savuroasă unui animăluț poro din apropiere, ceea ce-l va face să crească în dimensiune.<br><br><flavorText>Acest amestec savuros de găină avarosană și ierburi locale din Freljord – culese zilnic și congelate rapid – conține toți nutrienții esențiali de care are nevoie animăluțul tău poro ca să rămână relaxat și liniștit.<br><br>Toate veniturile vor fi donate pentru a ajuta la protejarea habitatului animăluțului poro pătat, care este pe cale de dispariție.</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
         "to": [],
         "categories": [],
-        "maxStacks": 2,
+        "maxStacks": 99,
         "requiredChampion": "",
         "requiredAlly": "",
         "requiredBuffCurrencyName": "",
@@ -4684,7 +4684,6 @@
             2524,
             3071,
             6620,
-            4403,
             2502,
             2510,
             2525,
@@ -4698,6 +4697,7 @@
             323119,
             326620,
             328020,
+            4403,
             4629,
             4644,
             6617,
@@ -5156,10 +5156,10 @@
             3046,
             6675,
             6671,
-            4403,
             2512,
             3085,
-            3094
+            3094,
+            4403
         ],
         "categories": [
             "CriticalStrike",
@@ -5421,8 +5421,8 @@
             1029
         ],
         "to": [
-            4403,
             3193,
+            4403,
             6667
         ],
         "categories": [
@@ -12173,6 +12173,27 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/220012_Anvil_Shardblade.png"
     },
     {
+        "id": 220013,
+        "name": "Poro-Snax",
+        "description": "<mainText><stats></stats><br><br> <active>Activă – Consumă:</active> îi oferi o gustare savuroasă unui animăluț poro din apropiere, ceea ce-l va face să crească în dimensiune.<br><br><flavorText>Acest amestec savuros de găină avarosană și ierburi din Freljord, acum desăvârșit cu o notă de rafinament demacian în arta zahărului, conține toți nutrienții esențiali de care are nevoie animăluțul tău poro ca să strălucească de sănătate.<br><br>Toate încasările vor fi donate Corului de tineret din Câmpia norilor. Ajută un copil din Demacia să-și cumpere un etwahl chiar azi!</flavorText></mainText>",
+        "active": true,
+        "inStore": false,
+        "from": [],
+        "to": [],
+        "categories": [],
+        "maxStacks": 2,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 0,
+        "priceTotal": 0,
+        "displayInItemSets": true,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/2052_Poro_Snack_RainbowCandy.png"
+    },
+    {
         "id": 221011,
         "name": "Cureaua uriașului",
         "description": "<mainText><stats><attention> 300</attention> viață</stats><br><br></mainText>",
@@ -12513,7 +12534,7 @@
     {
         "id": 222504,
         "name": "Kaenic Rookern",
-        "description": "<mainText><stats><attention> 350</attention> viață<br><attention> 80</attention> rezistență la magie</stats><br><br><passive>Sfârșitul magilor</passive><br>Dacă nu suferi daune magice timp de 15 secunde, primești un <shield>scut anti-magie</shield>. </mainText>",
+        "description": "<mainText><stats><attention> 350</attention> viață<br><attention> 80</attention> rezistență la magie</stats><br><br><passive>Sfârșitul magilor</passive><br>Dacă nu suferi daune magice timp de 10 secunde, primești un <shield>scut anti-magie</shield>. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13581,7 +13602,7 @@
     {
         "id": 223078,
         "name": "Forța treimii",
-        "description": "<mainText><stats><attention> 35</attention> daune din atac<br><attention> 25%</attention> viteză de atac<br><attention> 333</attention> viață<br><attention> 20</attention> rapiditatea abilităților</stats><br><br><passive>Sabia vrăjită</passive><br>După ce folosești o abilitate, următorul atac este îmbunătățit și provoacă daune fizice suplimentare.<br><br><passive>Imbold</passive><br>Atacurile de bază îți oferă viteză de mișcare.<br><br></mainText>",
+        "description": "<mainText><stats><attention> 40</attention> daune din atac<br><attention> 25%</attention> viteză de atac<br><attention> 375</attention> viață<br><attention> 20</attention> rapiditatea abilităților</stats><br><br><passive>Sabia vrăjită</passive><br>După ce folosești o abilitate, următorul atac este îmbunătățit și provoacă daune fizice suplimentare.<br><br><passive>Imbold</passive><br>Atacurile de bază îți oferă viteză de mișcare.<br><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13734,7 +13755,7 @@
     {
         "id": 223094,
         "name": "Tun-mitralieră",
-        "description": "<mainText><stats><attention> 30%</attention> viteză de atac<br><attention> 25%</attention> șanse de lovitură critică<br><attention> 4%</attention> viteză de mișcare</stats><br><br><passive>Energizat</passive><br>Când te miști sau ataci, următorul <keyword>atac va fi ''energizat''</keyword>.<br><br><passive>Maestrul preciziei</passive><br><keyword>Atacul tău ''energizat''</keyword> provoacă <magicDamage>200 daune magice bonus</magicDamage>. În plus, atacurile ''energizate'' primesc până la 35% rază de atac bonus.<br><br><buffedStat>Atacurile ''energizate'' se cumulează de două ori mai repede în Arenă.</buffedStat><br></mainText>",
+        "description": "<mainText><stats><attention> 30%</attention> viteză de atac<br><attention> 25%</attention> șanse de lovitură critică<br><attention> 4%</attention> viteză de mișcare</stats><br><br><passive>Energizat</passive><br>Când te miști sau ataci, următorul <keyword>atac va fi ''energizat''</keyword>.<br><br><passive>Maestrul preciziei</passive><br><keyword>Atacul tău ''energizat''</keyword> provoacă <magicDamage>200 daune magice bonus</magicDamage>. În plus, atacurile ''energizate'' primesc până la 35% rază de atac bonus.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -14852,7 +14873,7 @@
     {
         "id": 224004,
         "name": "Hanger fantomatic",
-        "description": "<mainText><stats><attention> 55</attention> daune din atac<br><attention> 21</attention> letalitate</stats><br><br> <active>Activă –</active> <active>Ancora sufletului</active>  (0 sec.)<br>Însemnezi locația actuală. După 5 secunde, revii în acea locație. Poți refolosi activa oricând în timpul <active>''Ancorei sufletului''</active> ca să te întorci în locația însemnată mai devreme.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> daune din atac<br><attention> 21</attention> letalitate</stats><br><br> <active>Activă –</active> <active>Ancora sufletului</active>  (0 sec.)<br>Însemnezi locația actuală. După 5 secunde, revii în acea locație. Poți refolosi activa oricând în timpul <active>''Ancorei sufletului''</active> ca să te întorci în locația însemnată mai devreme.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14876,7 +14897,7 @@
     {
         "id": 224005,
         "name": "Decret imperial",
-        "description": "<mainText><stats><attention> 60</attention> puterea abilităților<br><attention> 35</attention> rapiditatea abilităților<br><attention> 150%</attention> regenerare de bază a manei</stats><br><br><passive>Foc coordonat</passive>  (0 sec.) per țintă<br>Când <keyword>încetinești</keyword> sau <keyword>imobilizezi</keyword> un campion inamic, îl însemnezi timp de 5 secunde. Daunele campionilor aliați detonează însemnul, provocând <magicDamage>daune magice în valoare de 20% din viața actuală</magicDamage>. </mainText>",
+        "description": "<mainText><stats><attention> 60</attention> puterea abilităților<br><attention> 15</attention> rapiditatea abilităților<br><attention> 150%</attention> regenerare de bază a manei</stats><br><br><passive>Control</passive><br>Primești  15 rapiditatea abilităților pentru abilitățile tale cu efecte de <keyword>imobilizare</keyword>.<br><br><passive>Comandă</passive><br>Când <keyword>imobilizezi</keyword> un campion inamic, îl marchezi ca 6% <Keyword>vulnerabil</Keyword> timp de 4 secunde.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15586,7 +15607,7 @@
     {
         "id": 226662,
         "name": "Mănușa din gheață",
-        "description": "<mainText><stats><attention> 300</attention> viață<br><attention> 45</attention> armură<br><attention> 10</attention> rapiditatea abilităților</stats><br><br><passive>Sabia vrăjită</passive><br>După ce folosești o abilitate, următorul tău atac provoacă <physicalDamage>daune fizice bonus</physicalDamage>  <OnHit>la impact</OnHit> și creează o zonă înghețată timp de 2 sec., care <status>încetinește</status> inamicii.</mainText>",
+        "description": "<mainText><stats><attention> 300</attention> viață<br><attention> 45</attention> armură<br><attention> 15</attention> rapiditatea abilităților</stats><br><br><passive>Sabia vrăjită</passive><br>După ce folosești o abilitate, următorul tău atac provoacă <physicalDamage>daune fizice bonus</physicalDamage>  <OnHit>la impact</OnHit> și creează o zonă înghețată timp de 2 sec., care <status>încetinește</status> inamicii.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15901,7 +15922,7 @@
     {
         "id": 226694,
         "name": "Dușmănia Seryldei",
-        "description": "<mainText><stats><attention> 40</attention> daune din atac<br><attention> 40%</attention> penetrare armură<br><attention> 10</attention> rapiditatea abilităților</stats><br><br><passive>Frig cumplit</passive><br>Abilitățile ofensive <status>încetinesc</status> inamicii care au <scaleHealth>sub 50% viață</scaleHealth> cu 30% timp de 1 secundă.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> daune din atac<br><attention> 40%</attention> penetrare armură<br><attention> 15</attention> rapiditatea abilităților</stats><br><br><passive>Frig cumplit</passive><br>Abilitățile ofensive <status>încetinesc</status> inamicii care au <scaleHealth>sub 50% viață</scaleHealth> cu 50% timp de 1 secundă.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16030,7 +16051,7 @@
     {
         "id": 226699,
         "name": "Ciclo-sabie voltaică",
-        "description": "<mainText><stats><attention> 50</attention> daune din atac<br><attention> 18</attention> letalitate<br><attention> 20</attention> rapiditatea abilităților</stats><br><br><passive>Dinamizare</passive><br>Când îi provoci daune unui campion inamic cu o abilitate, declanșezi efectul <keyword>''Energizat''</keyword> dacă este gata.<br><br><passive>Firmament</passive><br><keyword>Atacul tău energizat</keyword> provoacă <physicalDamage>0daune fizice bonus</physicalDamage> egale cu <physicalDamage>% din viața actuală a țintei</physicalDamage> și îți oferă  <scaleLethality>0 letalitate</scaleLethality> timp de 4 secunde.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> daune din atac<br><attention> 20</attention> letalitate<br><attention> 20</attention> rapiditatea abilităților</stats><br><br><passive>Dinamizare</passive><br>Când îi provoci daune unui campion inamic cu o abilitate, declanșezi efectul <keyword>''Energizat''</keyword> dacă este gata.<br><br><passive>Firmament</passive><br><keyword>Atacul tău energizat</keyword> provoacă <physicalDamage>0daune fizice bonus</physicalDamage> egale cu <physicalDamage>% din viața actuală a țintei</physicalDamage> și îți oferă  <scaleLethality>0 letalitate</scaleLethality> timp de 4 secunde.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16185,7 +16206,7 @@
     {
         "id": 228005,
         "name": "Satârul de obsidian",
-        "description": "<mainText><stats><ornnBonus> 70</ornnBonus> daune din atac<br><ornnBonus> 700</ornnBonus> viață<br><ornnBonus> 40</ornnBonus> rapiditatea abilităților</stats><br><br><passive>Sculptare</passive><br>Când le provoci <physicalDamage>daune fizice</physicalDamage> campionilor, reduci <scaleArmor>armura țintei cu 500%</scaleArmor> timp de 0.1 secunde (se cumulează de 5 ori).<br><br><passive>Fervoare</passive><br>Când provoci <physicalDamage>daune fizice</physicalDamage>, primești <speed>20 viteză de mișcare</speed> timp de 2 secunde.</mainText>",
+        "description": "<mainText><stats><ornnBonus> 70</ornnBonus> daune din atac<br><ornnBonus> 700</ornnBonus> viață<br><ornnBonus> 40</ornnBonus> rapiditatea abilităților</stats><br><br><passive>Sculptare</passive><br>Când le provoci <physicalDamage>daune fizice</physicalDamage> campionilor, reduci <scaleArmor>armura țintei cu 6%</scaleArmor> timp de 6 secunde (se cumulează de 5 ori).<br><br><passive>Fervoare</passive><br>Când provoci <physicalDamage>daune fizice</physicalDamage>, primești <speed>20 viteză de mișcare</speed> timp de 2 secunde.</mainText>",
         "active": false,
         "inStore": false,
         "from": [],

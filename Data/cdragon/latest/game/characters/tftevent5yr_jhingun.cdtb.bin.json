@@ -1,0 +1,180 @@
+{
+    "Characters/TFTEvent5YR_JhinGun/CharacterRecords/Root": {
+        "mCharacterName": "TFTEvent5YR_JhinGun",
+        "baseHPModifiable": {
+            "baseValue": 1000.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 180.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 85.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 60.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 60.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 4200.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.699999988079071,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.699999988079071,
+            "__type": "ModifiableFloat"
+        },
+        "basicAttack": {
+            "mAttackName": "TFTEvent5YR_JhinGunBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "critAttacks": [
+            {
+                "mAttackName": "TFTEvent5YR_JhinGunCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFTEvent5YR_JhinGunSpell",
+            "",
+            "",
+            ""
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "OmitFromMatchHistory": true,
+        "__type": "TFTCharacterRecord"
+    },
+    "Characters/TFTEvent5YR_JhinGun/Spells/TFTEvent5YR_JhinGunBasicAttack": {
+        "ObjectName": "TFTEvent5YR_JhinGunBasicAttack",
+        "mScriptName": "TFTEvent5YR_JhinGunBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 6282,
+            "mAlternateName": "JhinGunBasicAttack",
+            "{11704a2b}": 0.48500001430511475,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_GLB_WEAPON_1",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+                    "mSpeed": 2600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.0,
+            "missileSpeed": 2600.0,
+            "mMissileEffectKey": "TFTEvent5YR_JhinGun_W_Mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFTEvent5YR_JhinGun_W_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTEvent5YR_JhinGun/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

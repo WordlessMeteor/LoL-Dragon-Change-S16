@@ -17,7 +17,10 @@
             "flags": 4,
             "mAffectsTypeFlags": 14346,
             "mSpellTags": [
-                "Trait_SwapsIntoImmobilizingCCSpell"
+                "Trait_SwapsIntoImmobilizingCCAbility",
+                "Trait_DamageAbility",
+                "Trait_PassiveSlot",
+                "Trait_RecastOrReplaceSpell"
             ],
             "DataValues": [
                 {
@@ -215,6 +218,19 @@
                 7.0,
                 7.0
             ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0
+                ],
+                "{0a3e0478}": 7.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCharacterPassiveBuffs": [
                 {
                     "mParentPassiveBuff": "Characters/Gnar/Spells/GnarWAbility/GnarW",
@@ -233,6 +249,19 @@
                 0.0,
                 0.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 300.0,
                 300.0,
@@ -401,7 +430,10 @@
             },
             "mSpellTags": [
                 "Trait_Ultimate",
-                "Trait_ImmobilizingCCSpell"
+                "Trait_ImmobilizingCCSpell",
+                "Trait_DamageAbility",
+                "Trait_KnockBack",
+                "Trait_AoE"
             ],
             "DataValues": [
                 {
@@ -552,6 +584,18 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    90.0,
+                    60.0,
+                    30.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "useAnimatorFramerate": true,
             "mPingableWhileDisabled": true,
@@ -564,6 +608,19 @@
                 10000.0,
                 10000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 590.0,
                 590.0,
@@ -814,6 +871,14 @@
                 ],
                 "__type": "ObjectTags"
             },
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_SignatureSpell",
+                "Trait_Ranged_Piercing",
+                "Trait_Low_Damage",
+                "Trait_AoE"
+            ],
             "DataValues": [
                 {
                     "name": "MiniBaseDamage",
@@ -1098,6 +1163,18 @@
                 10.0,
                 10.0
             ],
+            "Cooldown": {
+                "values": [
+                    17.5,
+                    16.0,
+                    14.5,
+                    13.0,
+                    11.5,
+                    10.0,
+                    10.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "castRange": [
                 10000.0,
@@ -1108,6 +1185,19 @@
                 10000.0,
                 10000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 1100.0,
                 1100.0,
@@ -1363,6 +1453,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mIsDisabledWhileDead": false,
             "useAnimatorFramerate": true,
@@ -1375,6 +1478,19 @@
                 1125.0,
                 1125.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    1125.0,
+                    1125.0,
+                    1125.0,
+                    1125.0,
+                    1125.0,
+                    1125.0,
+                    1125.0
+                ],
+                "{0a3e0478}": 1125.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 1125.0,
                 1125.0,
@@ -1553,6 +1669,19 @@
                 11.0,
                 11.0
             ],
+            "Cooldown": {
+                "values": [
+                    11.0,
+                    11.0,
+                    11.0,
+                    11.0,
+                    11.0,
+                    11.0,
+                    11.0
+                ],
+                "{0a3e0478}": 11.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mIsDisabledWhileDead": false,
             "mProjectTargetToCastRange": true,
@@ -1565,6 +1694,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 275.0,
                 275.0,
@@ -1776,6 +1918,19 @@
                 0.0,
                 0.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -1858,7 +2013,10 @@
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mSpellTags": [
-                "Trait_ImmobilizingCCSpell"
+                "Trait_ImmobilizingCCSpell",
+                "Trait_DamageAbility",
+                "Trait_Target_Directional",
+                "Trait_AoE"
             ],
             "mCoefficient": 1.0,
             "mCoefficient2": 1.0,
@@ -1878,6 +2036,19 @@
                 7.0,
                 7.0
             ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0
+                ],
+                "{0a3e0478}": 7.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "bIsToggleSpell": true,
             "mDoNotNeedToFaceTarget": true,
@@ -1890,6 +2061,19 @@
                 2500.0,
                 2500.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0,
+                    2500.0
+                ],
+                "{0a3e0478}": 2500.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 525.0,
                 525.0,
@@ -2081,6 +2265,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "castRange": [
                 387.5,
@@ -2091,6 +2288,19 @@
                 387.5,
                 387.5
             ],
+            "{0e1136d1}": {
+                "values": [
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5
+                ],
+                "{0a3e0478}": 387.5,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -2158,6 +2368,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "castRange": [
                 387.5,
@@ -2168,6 +2391,19 @@
                 387.5,
                 387.5
             ],
+            "{0e1136d1}": {
+                "values": [
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5
+                ],
+                "{0a3e0478}": 387.5,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -2251,6 +2487,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mIsDisabledWhileDead": false,
             "mProjectTargetToCastRange": true,
@@ -2264,6 +2513,19 @@
                 1150.0,
                 1150.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    1150.0,
+                    1150.0,
+                    1150.0,
+                    1150.0,
+                    1150.0,
+                    1150.0,
+                    1150.0
+                ],
+                "{0a3e0478}": 1150.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 1125.0,
                 1125.0,
@@ -2368,6 +2630,12 @@
                 ],
                 "__type": "ObjectTags"
             },
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_SignatureSpell",
+                "Trait_Ranged_StopsFirstHit",
+                "Trait_AoE"
+            ],
             "DataValues": [
                 {
                     "name": "MegaBaseDamage",
@@ -2492,6 +2760,18 @@
                 10.0,
                 10.0
             ],
+            "Cooldown": {
+                "values": [
+                    17.5,
+                    16.0,
+                    14.5,
+                    13.0,
+                    11.5,
+                    10.0,
+                    10.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "castRange": [
                 10000.0,
@@ -2502,6 +2782,19 @@
                 10000.0,
                 10000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 1100.0,
                 1100.0,
@@ -2716,6 +3009,19 @@
                 20.0,
                 20.0
             ],
+            "Cooldown": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "castRange": [
                 20.0,
@@ -2726,6 +3032,19 @@
                 20.0,
                 20.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 210.0,
                 210.0,
@@ -2763,7 +3082,10 @@
             "mAffectsTypeFlags": 6154,
             "mSpellTags": [
                 "PositiveEffect_MoveBlock",
-                "Trait_PlayerSelectedDashDirection"
+                "Trait_PlayerSelectedDashDirection",
+                "Trait_DamageAbility",
+                "Trait_Low_Damage",
+                "Trait_AoE"
             ],
             "mCoefficient": 6.0,
             "mCoefficient2": 6.0,
@@ -2783,6 +3105,18 @@
                 12.0,
                 12.0
             ],
+            "Cooldown": {
+                "values": [
+                    24.5,
+                    22.0,
+                    19.5,
+                    17.0,
+                    14.5,
+                    12.0,
+                    12.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "cantCastWhileRooted": true,
             "castRange": [
@@ -2794,6 +3128,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 675.0,
                 675.0,
@@ -2982,6 +3329,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "castRange": [
                 387.5,
@@ -2992,6 +3352,19 @@
                 387.5,
                 387.5
             ],
+            "{0e1136d1}": {
+                "values": [
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5
+                ],
+                "{0a3e0478}": 387.5,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -3054,7 +3427,10 @@
             "mAffectsStatusFlags": 16,
             "mSpellTags": [
                 "PositiveEffect_MoveBlock",
-                "Trait_PlayerSelectedDashDirection"
+                "Trait_PlayerSelectedDashDirection",
+                "Trait_DamageAbility",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_Low_Damage"
             ],
             "DataValues": [
                 {
@@ -3276,6 +3652,18 @@
                 12.0,
                 12.0
             ],
+            "Cooldown": {
+                "values": [
+                    24.5,
+                    22.0,
+                    19.5,
+                    17.0,
+                    14.5,
+                    12.0,
+                    12.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "cantCastWhileRooted": true,
             "castRange": [
@@ -3287,6 +3675,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 475.0,
                 475.0,
@@ -3474,6 +3875,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "castRange": [
                 200.0,
@@ -3484,6 +3898,19 @@
                 200.0,
                 200.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -3530,6 +3957,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "castRange": [
                 387.5,
@@ -3540,6 +3980,19 @@
                 387.5,
                 387.5
             ],
+            "{0e1136d1}": {
+                "values": [
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5,
+                    387.5
+                ],
+                "{0a3e0478}": 387.5,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,

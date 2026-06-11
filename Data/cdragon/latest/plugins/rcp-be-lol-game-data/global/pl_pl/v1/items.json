@@ -10,11 +10,11 @@
             3117,
             3158,
             3047,
+            3009,
             3111,
             3006,
             3005,
             3008,
-            3009,
             3010,
             3020
         ],
@@ -532,9 +532,9 @@
             3072,
             6671,
             3095,
-            4403,
             3026,
-            3031
+            3031,
+            4403
         ],
         "categories": [
             "Damage"
@@ -731,8 +731,8 @@
             3146,
             3072,
             3074,
-            4403,
-            3153
+            3153,
+            4403
         ],
         "categories": [
             "Damage",
@@ -872,8 +872,8 @@
             3102,
             3157,
             4645,
-            4403,
-            3089
+            3089,
+            4403
         ],
         "categories": [
             "SpellDamage"
@@ -2642,13 +2642,13 @@
     {
         "id": 2052,
         "name": "Poro-Chrupki",
-        "description": "<mainText><stats></stats><br><br> <active>Użycie — Zużyj:</active> Serwuje przepyszną porcję pobliskiemu Poro, zwiększając jego rozmiary.<br><br><flavorText>Ta pyszna mieszanka avarosańsich kur z wolnego wybiegu i organicznych ziół freljordzkich bez ZMO zawiera wszystkie składniki potrzebne, by Poro mruczał z radości.<br><br>Cały zysk zostanie przekazany na rzecz walki z noxiańską przemocą wobec zwierząt.</flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br> <active>Użycie — Zużyj:</active> Serwuje przepyszną porcję pobliskiemu Poro, zwiększając jego rozmiary.<br><br><flavorText>Ta pyszna mieszanka avarosańskich kur i organicznych ziół freljordzkich, które po zebraniu są od razu mrożone, zawiera wszystkie składniki potrzebne, by Poro pozostał spokojny i zrelaksowany.<br><br>Cały dochód zostanie przekazany na rzecz ochrony środowiska zagrożonego Cętkowanego Poro.</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
         "to": [],
         "categories": [],
-        "maxStacks": 2,
+        "maxStacks": 99,
         "requiredChampion": "",
         "requiredAlly": "",
         "requiredBuffCurrencyName": "",
@@ -4684,7 +4684,6 @@
             2524,
             3071,
             6620,
-            4403,
             2502,
             2510,
             2525,
@@ -4698,6 +4697,7 @@
             323119,
             326620,
             328020,
+            4403,
             4629,
             4644,
             6617,
@@ -5156,10 +5156,10 @@
             3046,
             6675,
             6671,
-            4403,
             2512,
             3085,
-            3094
+            3094,
+            4403
         ],
         "categories": [
             "CriticalStrike",
@@ -5421,8 +5421,8 @@
             1029
         ],
         "to": [
-            4403,
             3193,
+            4403,
             6667
         ],
         "categories": [
@@ -12173,6 +12173,27 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/220012_Anvil_Shardblade.png"
     },
     {
+        "id": 220013,
+        "name": "Poro-Chrupki",
+        "description": "<mainText><stats></stats><br><br> <active>Użycie — Zużyj:</active> Serwuje przepyszną porcję pobliskiemu Poro, zwiększając jego rozmiary.<br><br><flavorText>Ta smakowita mieszanka avarosańskich kur i freljordzkich ziół — teraz z dodatkiem wyrafinowanego demaciańskiego cukiernictwa — zawiera niezbędne składniki odżywcze, dzięki którym twój Poro będzie promienieć z radości.<br><br>Cały dochód zostanie przekazany na rzecz Młodzieżowego Chóru z Chmurłanu. Pomóż demaciańskiemu dziecku kupić etwahl!</flavorText></mainText>",
+        "active": true,
+        "inStore": false,
+        "from": [],
+        "to": [],
+        "categories": [],
+        "maxStacks": 2,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 0,
+        "priceTotal": 0,
+        "displayInItemSets": true,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/2052_Poro_Snack_RainbowCandy.png"
+    },
+    {
         "id": 221011,
         "name": "Pas Giganta",
         "description": "<mainText><stats><attention> 300 pkt.</attention> zdrowia</stats><br><br></mainText>",
@@ -12513,7 +12534,7 @@
     {
         "id": 222504,
         "name": "Kaeniczna Powłoka",
-        "description": "<mainText><stats><attention> 350 pkt.</attention> zdrowia<br><attention> 80 pkt.</attention> odporności na magię</stats><br><br><passive>Zmora Maga</passive><br>Jeśli przez 15 sek. nie otrzymasz obrażeń magicznych od bohaterów, zyskasz <shield>magiczną tarczę</shield>. </mainText>",
+        "description": "<mainText><stats><attention> 350 pkt.</attention> zdrowia<br><attention> 80 pkt.</attention> odporności na magię</stats><br><br><passive>Zmora Maga</passive><br>Jeśli przez 10 sek. nie otrzymasz obrażeń magicznych od bohaterów, zyskasz <shield>magiczną tarczę</shield>. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13581,7 +13602,7 @@
     {
         "id": 223078,
         "name": "Moc Trójcy",
-        "description": "<mainText><stats><attention> 35 pkt.</attention> obrażeń od ataku<br><attention> 25%</attention> prędkości ataku<br><attention> 333 pkt.</attention> zdrowia<br><attention> 20 jedn.</attention> przyspieszenia umiejętności</stats><br><br><passive>Czaroostrze</passive><br>Twój następny atak po użyciu umiejętności jest wzmocniony i zadaje dodatkowo obrażenia fizyczne.<br><br><passive>Żwawość</passive><br>Ataki podstawowe zapewniają prędkość ruchu.<br><br></mainText>",
+        "description": "<mainText><stats><attention> 40 pkt.</attention> obrażeń od ataku<br><attention> 25%</attention> prędkości ataku<br><attention> 375 pkt.</attention> zdrowia<br><attention> 20 jedn.</attention> przyspieszenia umiejętności</stats><br><br><passive>Czaroostrze</passive><br>Twój następny atak po użyciu umiejętności jest wzmocniony i zadaje dodatkowo obrażenia fizyczne.<br><br><passive>Żwawość</passive><br>Ataki podstawowe zapewniają prędkość ruchu.<br><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13734,7 +13755,7 @@
     {
         "id": 223094,
         "name": "Ognista Armata",
-        "description": "<mainText><stats><attention> 30%</attention> prędkości ataku<br><attention> 25%</attention> szansy na trafienie krytyczne<br><attention> 4%</attention> prędkości ruchu</stats><br><br><passive>Naładowanie</passive><br>Poruszanie się i trafianie atakami generuje <keyword>naładowany atak</keyword>.<br><br><passive>Strzelec Wyborowy</passive><br>Twoje <keyword>naładowane ataki</keyword> zadają <magicDamage>200 pkt. dodatkowych obrażeń magicznych</magicDamage>. Ponadto zasięg twoich naładowanych ataków jest zwiększony o maksymalnie 35%.<br><br><buffedStat>Naładowane ataki kumulują się dwa razy szybciej na Arenie.</buffedStat><br></mainText>",
+        "description": "<mainText><stats><attention> 30%</attention> prędkości ataku<br><attention> 25%</attention> szansy na trafienie krytyczne<br><attention> 4%</attention> prędkości ruchu</stats><br><br><passive>Naładowanie</passive><br>Poruszanie się i trafianie atakami generuje <keyword>naładowany atak</keyword>.<br><br><passive>Strzelec Wyborowy</passive><br>Twoje <keyword>naładowane ataki</keyword> zadają <magicDamage>200 pkt. dodatkowych obrażeń magicznych</magicDamage>. Ponadto zasięg twoich naładowanych ataków jest zwiększony o maksymalnie 35%.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -14852,7 +14873,7 @@
     {
         "id": 224004,
         "name": "Widmowy Rapier",
-        "description": "<mainText><stats><attention> 55 pkt.</attention> obrażeń od ataku<br><attention> 21</attention> pkt. destrukcji</stats><br><br> <active>Użycie —</active> <active>Przywiązanie Duszy</active>  (0 sek.)<br>Oznacz miejsce, w którym się obecnie znajdujesz. Po 5 sek. powróć do tego miejsca. W czasie trwania <active>Przywiązania Duszy</active> możesz w dowolnej chwili użyć go ponownie, aby powrócić do oznaczonego miejsca wcześniej.</mainText>",
+        "description": "<mainText><stats><attention> 60 pkt.</attention> obrażeń od ataku<br><attention> 21</attention> pkt. destrukcji</stats><br><br> <active>Użycie —</active> <active>Przywiązanie Duszy</active>  (0 sek.)<br>Oznacz miejsce, w którym się obecnie znajdujesz. Po 5 sek. powróć do tego miejsca. W czasie trwania <active>Przywiązania Duszy</active> możesz w dowolnej chwili użyć go ponownie, aby powrócić do oznaczonego miejsca wcześniej.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14876,7 +14897,7 @@
     {
         "id": 224005,
         "name": "Imperialny Mandat",
-        "description": "<mainText><stats><attention> 60 pkt.</attention> mocy umiejętności<br><attention> 35 jedn.</attention> przyspieszenia umiejętności<br><attention> 150%</attention> podstawowej regeneracji many</stats><br><br><passive>Skoordynowany Ogień</passive>  (0 sek.) na cel<br><keyword>Spowolnienie</keyword> lub <keyword>unieruchomienie</keyword> wrogiego bohatera oznacza go na 5 sek. Zadane przez sojuszniczego bohatera obrażenia detonują oznaczenie, zadając <magicDamage>obrażenia magiczne równe 20% bieżącego zdrowia</magicDamage>. </mainText>",
+        "description": "<mainText><stats><attention> 60 pkt.</attention> mocy umiejętności<br><attention> 15 jedn.</attention> przyspieszenia umiejętności<br><attention> 150%</attention> podstawowej regeneracji many</stats><br><br><passive>Kontrola</passive><br>Zyskujesz  15 jedn. przyspieszenia umiejętności dla swoich umiejętności z efektami <keyword>unieruchamiającymi</keyword>.<br><br><passive>Rozkaz</passive><br>Przy <keyword>unieruchomieniu</keyword> wrogiego bohatera oznacz go statusem 6% <Keyword>wrażliwości</Keyword> na 4 sek.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15586,7 +15607,7 @@
     {
         "id": 226662,
         "name": "Lodowa Rękawica",
-        "description": "<mainText><stats><attention> 300 pkt.</attention> zdrowia<br><attention> 45 pkt.</attention> pancerza<br><attention> 10 jedn.</attention> przyspieszenia umiejętności</stats><br><br><passive>Czaroostrze</passive><br>Po użyciu umiejętności następny atak zadaje <physicalDamage>dodatkowe obrażenia fizyczne</physicalDamage>  <OnHit>przy trafieniu</OnHit> oraz na 2 sek. tworzy pole lodowe, które <status>spowalnia</status>.</mainText>",
+        "description": "<mainText><stats><attention> 300 pkt.</attention> zdrowia<br><attention> 45 pkt.</attention> pancerza<br><attention> 15 jedn.</attention> przyspieszenia umiejętności</stats><br><br><passive>Czaroostrze</passive><br>Po użyciu umiejętności następny atak zadaje <physicalDamage>dodatkowe obrażenia fizyczne</physicalDamage>  <OnHit>przy trafieniu</OnHit> oraz na 2 sek. tworzy pole lodowe, które <status>spowalnia</status>.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15901,7 +15922,7 @@
     {
         "id": 226694,
         "name": "Uraza Seryldy",
-        "description": "<mainText><stats><attention> 40 pkt.</attention> obrażeń od ataku<br><attention> 40%</attention> przebicia pancerza<br><attention> 10 jedn.</attention> przyspieszenia umiejętności</stats><br><br><passive>Przenikliwe Zimno</passive><br>Umiejętności zadające obrażenia <status>spowalniają</status> wrogów <scaleHealth>poniżej 50% zdrowia</scaleHealth> o 30% na 1 sek.</mainText>",
+        "description": "<mainText><stats><attention> 50 pkt.</attention> obrażeń od ataku<br><attention> 40%</attention> przebicia pancerza<br><attention> 15 jedn.</attention> przyspieszenia umiejętności</stats><br><br><passive>Przenikliwe Zimno</passive><br>Umiejętności zadające obrażenia <status>spowalniają</status> wrogów <scaleHealth>poniżej 50% zdrowia</scaleHealth> o 50% na 1 sek.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16030,7 +16051,7 @@
     {
         "id": 226699,
         "name": "Woltaiczny Cyklomiecz",
-        "description": "<mainText><stats><attention> 50 pkt.</attention> obrażeń od ataku<br><attention> 18</attention> pkt. destrukcji<br><attention> 20 jedn.</attention> przyspieszenia umiejętności</stats><br><br><passive>Galwanizacja</passive><br>Zadanie obrażeń wrogim bohaterom za pomocą umiejętności aktywuje <keyword>Naładowanie</keyword>, jeśli jest ono gotowe.<br><br><passive>Sklepienie</passive><br>Twoje <keyword>naładowane ataki</keyword> zadają <physicalDamage>dodatkowe obrażenia fizyczne</physicalDamage> równe <physicalDamage>0%</physicalDamage> bieżącego zdrowia celu i zapewniają ci  <scaleLethality>0 pkt. destrukcji</scaleLethality> na 4 sek.</mainText>",
+        "description": "<mainText><stats><attention> 60 pkt.</attention> obrażeń od ataku<br><attention> 20</attention> pkt. destrukcji<br><attention> 20 jedn.</attention> przyspieszenia umiejętności</stats><br><br><passive>Galwanizacja</passive><br>Zadanie obrażeń wrogim bohaterom za pomocą umiejętności aktywuje <keyword>Naładowanie</keyword>, jeśli jest ono gotowe.<br><br><passive>Sklepienie</passive><br>Twoje <keyword>naładowane ataki</keyword> zadają <physicalDamage>dodatkowe obrażenia fizyczne</physicalDamage> równe <physicalDamage>0%</physicalDamage> bieżącego zdrowia celu i zapewniają ci  <scaleLethality>0 pkt. destrukcji</scaleLethality> na 4 sek.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16185,7 +16206,7 @@
     {
         "id": 228005,
         "name": "Obsydianowy Tasak",
-        "description": "<mainText><stats><ornnBonus> 70 pkt.</ornnBonus> obrażeń od ataku<br><ornnBonus> 700 pkt.</ornnBonus> zdrowia<br><ornnBonus> 40 jedn.</ornnBonus> przyspieszenia umiejętności</stats><br><br><passive>Drążenie</passive><br>Zadawanie <physicalDamage>obrażeń fizycznych</physicalDamage> bohaterom zmniejsza <scaleArmor>pancerz celu o 500%</scaleArmor> na 0.1 sek. (kumuluje się 5 razy).<br><br><passive>Ferwor</passive><br>Zadawanie <physicalDamage>obrażeń fizycznych</physicalDamage> zapewnia <speed>20 jedn. prędkości ruchu</speed> na 2 sek.</mainText>",
+        "description": "<mainText><stats><ornnBonus> 70 pkt.</ornnBonus> obrażeń od ataku<br><ornnBonus> 700 pkt.</ornnBonus> zdrowia<br><ornnBonus> 40 jedn.</ornnBonus> przyspieszenia umiejętności</stats><br><br><passive>Drążenie</passive><br>Zadawanie <physicalDamage>obrażeń fizycznych</physicalDamage> bohaterom zmniejsza <scaleArmor>pancerz celu o 6%</scaleArmor> na 6 sek. (kumuluje się 5 razy).<br><br><passive>Ferwor</passive><br>Zadawanie <physicalDamage>obrażeń fizycznych</physicalDamage> zapewnia <speed>20 jedn. prędkości ruchu</speed> na 2 sek.</mainText>",
         "active": false,
         "inStore": false,
         "from": [],

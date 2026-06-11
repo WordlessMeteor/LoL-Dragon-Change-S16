@@ -57,6 +57,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "IntensityStrength",
                 "value": [
                     1.0,
@@ -232,6 +272,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,
@@ -1780,7 +1828,7 @@
                     ],
                     "__type": "VfxShapeLegacy"
                 },
-                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Item_SwordoftheDivine_Flicker_04.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Item_SwordoftheDivine_Flicker_04.TFT_Event_5YR_Set17.tex",
                 "blendMode": 4,
                 "Color": {
                     "constantValue": [
@@ -2503,7 +2551,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "particleColorTexture": "ASSETS/Maps/Particles/TFT/DefaultColorOverlifetime.TFT_Set17.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/DefaultColorOverlifetime.TFT_Event_5YR_Set17.tex",
                 "pass": 10,
                 "meshRenderFlags": 0,
                 "miscRenderFlags": 1,
@@ -2684,7 +2732,7 @@
                     ],
                     "__type": "{ee39916f}"
                 },
-                "particleColorTexture": "ASSETS/Maps/Particles/TFT/DefaultColorOverlifetime.TFT_Set17.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/DefaultColorOverlifetime.TFT_Event_5YR_Set17.tex",
                 "meshRenderFlags": 0,
                 "colorLookUpTypeY": 3,
                 "colorLookUpScales": [
@@ -2896,7 +2944,7 @@
                     ],
                     "__type": "VfxShapeLegacy"
                 },
-                "particleColorTexture": "ASSETS/Maps/Particles/TFT/DefaultColorOverlifetime.TFT_Set17.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/DefaultColorOverlifetime.TFT_Event_5YR_Set17.tex",
                 "meshRenderFlags": 0,
                 "colorLookUpTypeY": 3,
                 "colorLookUpScales": [
@@ -3326,7 +3374,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/FlareBuilding.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -3567,7 +3615,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Flare-Omnimax.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/Flare-Omnimax.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4006,7 +4054,7 @@
                     "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
                     "__type": "VfxFlexShapeDefinitionData"
                 },
-                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Item_SwordoftheDivine_Flicker_04.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Item_SwordoftheDivine_Flicker_04.TFT_Event_5YR_Set17.tex",
                 "blendMode": 4,
                 "Color": {
                     "constantValue": [

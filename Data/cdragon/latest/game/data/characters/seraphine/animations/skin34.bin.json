@@ -591,7 +591,6 @@
                     },
                     "{9a8d7fce}": {
                         "mSoundName": "Play_sfx_Seraphine_Dance3D_cast_music",
-                        "mIsLoop": false,
                         "__type": "SoundEventData"
                     }
                 },
@@ -2162,12 +2161,10 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
-                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     },
                     "{584a6a6f}": {
                         "mSoundName": "Play_sfx_Seraphine_Recall3D_buffactivate",
-                        "mIsLoop": false,
                         "__type": "SoundEventData"
                     },
                     "{b36c09d2}": {
@@ -2186,7 +2183,6 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
-                        "mIsLoop": false,
                         "__type": "ParticleEventData"
                     }
                 },
@@ -2253,7 +2249,6 @@
                     },
                     "{1a66b7e0}": {
                         "mSoundName": "Play_sfx_Seraphine_Winddown3D_buffactivate",
-                        "mIsLoop": false,
                         "__type": "SoundEventData"
                     },
                     "{ef307666}": {
@@ -2323,81 +2318,14 @@
                 ],
                 "__type": "SequencerClipData"
             },
-            "{607bc5bf}": {
-                "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "{5938b661}": {
-                        "mMaskDataName": "{a2c0a94a}",
-                        "mBlendInTime": 0.15000000596046448,
-                        "mBlendOutTime": 0.15000000596046448,
-                        "__type": "ConformToPathEventData"
-                    },
-                    "{28c34dbb}": {
-                        "mHideSubmeshList": [
-                            "bar"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "Rabbit": {
-                        "mShowSubmeshList": [
-                            "Rabbit"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "{7eae23cc}": {
-                        "mEffectKey": "{be148fad}",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "__type": "ParticleEventData"
-                    },
-                    "{9452c1d8}": {
-                        "mEffectKey": "{58ba469b}",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "recall_Root",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "__type": "ParticleEventData"
-                    }
-                },
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Seraphine/Skins/Skin34/Animations/Run_homeguard.anm",
-                    "__type": "AnimationResourceData"
-                },
-                "__type": "AtomicClipData"
-            },
-            "{c380648a}": {
-                "mConditionFloatPairDataList": [
-                    {
-                        "mClipName": "Run_Slow",
-                        "__type": "ConditionFloatPairData"
-                    },
-                    {
-                        "mClipName": "Run_Base",
-                        "mValue": 310.0,
-                        "__type": "ConditionFloatPairData"
-                    },
-                    {
-                        "mClipName": "Run_Fast",
-                        "mValue": 370.0,
-                        "__type": "ConditionFloatPairData"
-                    },
-                    {
-                        "mClipName": "{26fe5de1}",
-                        "mValue": 535.0,
-                        "__type": "ConditionFloatPairData"
-                    }
-                ],
+            "Run": {
                 "Updater": {
-                    "__type": "MoveSpeedParametricUpdater"
+                    "__type": "IsHomeguardParametricUpdater"
                 },
                 "mChangeAnimationMidPlay": true,
-                "__type": "ConditionFloatClipData"
+                "mTrueConditionClipName": "{607bc5bf}",
+                "mFalseConditionClipName": "{c380648a}",
+                "__type": "ConditionBoolClipData"
             },
             "Run4": {
                 "mTrackDataName": "Default",
@@ -2804,6 +2732,55 @@
                 },
                 "__type": "AtomicClipData"
             },
+            "{607bc5bf}": {
+                "mFlags": 2,
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "{5938b661}": {
+                        "mMaskDataName": "{a2c0a94a}",
+                        "mBlendInTime": 0.15000000596046448,
+                        "mBlendOutTime": 0.15000000596046448,
+                        "__type": "ConformToPathEventData"
+                    },
+                    "{28c34dbb}": {
+                        "mHideSubmeshList": [
+                            "bar"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "Rabbit": {
+                        "mShowSubmeshList": [
+                            "Rabbit"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{7eae23cc}": {
+                        "mEffectKey": "{be148fad}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{9452c1d8}": {
+                        "mEffectKey": "{58ba469b}",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "recall_Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Seraphine/Skins/Skin34/Animations/Run_homeguard.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
             "Run_Homeguard_IN": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -2821,7 +2798,6 @@
                     },
                     "{80cfbbcc}": {
                         "mSoundName": "Play_sfx_SeraphineSkin34_Homeguard3D_buffactivate",
-                        "mIsLoop": false,
                         "__type": "SoundEventData"
                     }
                 },
@@ -2848,7 +2824,6 @@
                     },
                     "{30903939}": {
                         "mSoundName": "Play_sfx_SeraphineSkin34_Homeguard3D_buffdeactivate",
-                        "mIsLoop": false,
                         "__type": "SoundEventData"
                     }
                 },
@@ -2858,16 +2833,40 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "Run": {
-                "mFlags": 2,
+            "Run_Homeguard_To_Idle": {
+                "mClipNameList": [
+                    "Run_Homeguard_OUT",
+                    "Idle_In"
+                ],
+                "__type": "SequencerClipData"
+            },
+            "{c380648a}": {
+                "mConditionFloatPairDataList": [
+                    {
+                        "mClipName": "Run_Slow",
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Base",
+                        "mValue": 310.0,
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "Run_Fast",
+                        "mValue": 370.0,
+                        "__type": "ConditionFloatPairData"
+                    },
+                    {
+                        "mClipName": "{26fe5de1}",
+                        "mValue": 470.0,
+                        "__type": "ConditionFloatPairData"
+                    }
+                ],
                 "Updater": {
-                    "__type": "IsHomeguardParametricUpdater"
+                    "__type": "MoveSpeedParametricUpdater"
                 },
                 "mChangeAnimationMidPlay": true,
-                "mPlayAnimChangeFromBeginning": true,
-                "mTrueConditionClipName": "{607bc5bf}",
-                "mFalseConditionClipName": "{c380648a}",
-                "__type": "ConditionBoolClipData"
+                "__type": "ConditionFloatClipData"
             },
             "{26fe5de1}": {
                 "mTrackDataName": "Default",
@@ -2879,19 +2878,11 @@
                         "__type": "ConformToPathEventData"
                     }
                 },
-                "mTickDuration": 0.05000000074505806,
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Seraphine/Skins/Skin34/Animations/Seraphin_Run_Superfast.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
-            },
-            "Run_Homeguard_To_Idle": {
-                "mClipNameList": [
-                    "Run_Homeguard_OUT",
-                    "Idle_In"
-                ],
-                "__type": "SequencerClipData"
             }
         },
         "mMaskDataMap": {
@@ -33392,603 +33383,603 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179737676068": {
+            "3084207950763518244": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179788008925": {
+            "3084207950813851101": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179531891254": {
+            "3084207950557733430": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178494682281": {
+            "3084207949520524457": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178816599895": {
+            "3084207949842442071": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179205561580": {
+            "3084207950231403756": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182397767926": {
+            "3084207953423610102": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181387093820": {
+            "3084207952412935996": {
                 "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
-            "14087370182533924217": {
+            "3084207953559766393": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182542172441": {
+            "3084207953568014617": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181346446526": {
+            "3084207952372288702": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370180922813484": {
+            "3084207951948655660": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181504936235": {
+            "3084207952530778411": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370180497831341": {
+            "3084207951523673517": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182430872763": {
+            "3084207953456714939": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370180315945756": {
+            "3084207951341787932": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181024198112": {
+            "3084207952050040288": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182368464435": {
+            "3084207953394306611": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370180358022634": {
+            "3084207951383864810": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181253811857": {
+            "3084207952279654033": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370180614031532": {
+            "3084207951639873708": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181619403278": {
+            "3084207952645245454": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370180883023089": {
+            "3084207951908865265": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179329328827": {
+            "3084207950355171003": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181203479000": {
+            "3084207952229321176": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181220256619": {
+            "3084207952246098795": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178360441598": {
+            "3084207949386283774": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370180738750650": {
+            "3084207951764592826": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182308510084": {
+            "3084207953334352260": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179557127451": {
+            "3084207950582969627": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182530524765": {
+            "3084207953556366941": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181124231863": {
+            "3084207952150074039": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
-            "14087370179801628080": {
+            "3084207950827470256": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181116159595": {
+            "3084207952142001771": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370180958562367": {
+            "3084207951984404543": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181285656680": {
+            "3084207952311498856": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181900836171": {
+            "3084207952926678347": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181285581833": {
+            "3084207952311424009": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370180031503807": {
+            "3084207951057345983": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179405938852": {
+            "3084207950431781028": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178368387100": {
+            "3084207949394229276": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181335989537": {
+            "3084207952361831713": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181319211918": {
+            "3084207952345054094": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179188234513": {
+            "3084207950214076689": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179550211291": {
+            "3084207950576053467": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179342397001": {
+            "3084207950368239177": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178299329998": {
+            "3084207949325172174": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182146474330": {
+            "3084207953172316506": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179254160439": {
+            "3084207950280002615": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181962121597": {
+            "3084207952987963773": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179746887509": {
+            "3084207950772729685": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181458529153": {
+            "3084207952484371329": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179058888351": {
+            "3084207950084730527": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178865327877": {
+            "3084207949891170053": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181151451026": {
+            "3084207952177293202": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179205938770": {
+            "3084207950231780946": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182035248228": {
+            "3084207953061090404": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182020294990": {
+            "3084207953046137166": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181147975604": {
+            "3084207952173817780": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178825535238": {
+            "3084207949851377414": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181039489398": {
+            "3084207952065331574": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182328990104": {
+            "3084207953354832280": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370180028440898": {
+            "3084207951054283074": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179665812684": {
+            "3084207950691654860": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179878025507": {
+            "3084207950903867683": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179944444435": {
+            "3084207950970286611": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178901016303": {
+            "3084207949926858479": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181201565509": {
+            "3084207952227407685": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181494715899": {
+            "3084207952520558075": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370182302835385": {
+            "3084207953328677561": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178661407331": {
+            "3084207949687249507": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178859413137": {
+            "3084207949885255313": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178388590870": {
+            "3084207949414433046": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370179298486114": {
+            "3084207950324328290": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181447550051": {
+            "3084207952473392227": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875360418084": {
+            "10400565850509797668": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875410750941": {
+            "10400565850560130525": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875154633270": {
+            "10400565850304012854": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874117424297": {
+            "10400565849266803881": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874439341911": {
+            "10400565849588721495": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874828303596": {
+            "10400565849977683180": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367878020509942": {
+            "10400565853169889526": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877009835836": {
-                "mClipName": "Run_Homeguard_To_Idle",
+            "10400565852159215420": {
+                "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
-            "6952367878156666233": {
+            "10400565853306045817": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367878164914457": {
+            "10400565853314294041": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876969188542": {
+            "10400565852118568126": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876545555500": {
+            "10400565851694935084": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877127678251": {
+            "10400565852277057835": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876120573357": {
+            "10400565851269952941": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367878053614779": {
+            "10400565853202994363": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875938687772": {
+            "10400565851088067356": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876646940128": {
+            "10400565851796319712": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877991206451": {
+            "10400565853140586035": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875980764650": {
+            "10400565851130144234": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876876553873": {
+            "10400565852025933457": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876236773548": {
+            "10400565851386153132": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877242145294": {
+            "10400565852391524878": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876505765105": {
+            "10400565851655144689": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874952070843": {
+            "10400565850101450427": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876826221016": {
+            "10400565851975600600": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876842998635": {
+            "10400565851992378219": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367873983183614": {
+            "10400565849132563198": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876361492666": {
+            "10400565851510872250": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877931252100": {
+            "10400565853080631684": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875179869467": {
+            "10400565850329249051": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367878153266781": {
+            "10400565853302646365": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876746973879": {
+            "10400565851896353463": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
-            "6952367875424370096": {
+            "10400565850573749680": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876738901611": {
+            "10400565851888281195": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876581304383": {
+            "10400565851730683967": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876908398696": {
+            "10400565852057778280": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877523578187": {
+            "10400565852672957771": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876908323849": {
+            "10400565852057703433": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875654245823": {
+            "10400565850803625407": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875028680868": {
+            "10400565850178060452": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367873991129116": {
+            "10400565849140508700": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876958731553": {
+            "10400565852108111137": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876941953934": {
+            "10400565852091333518": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874810976529": {
+            "10400565849960356113": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875172953307": {
+            "10400565850322332891": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874965139017": {
+            "10400565850114518601": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367873922072014": {
+            "10400565849071451598": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877769216346": {
+            "10400565852918595930": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874876902455": {
+            "10400565850026282039": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877584863613": {
+            "10400565852734243197": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875369629525": {
+            "10400565850519009109": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877081271169": {
+            "10400565852230650753": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874681630367": {
+            "10400565849831009951": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874488069893": {
+            "10400565849637449477": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876774193042": {
+            "10400565851923572626": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874828680786": {
+            "10400565849978060370": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877657990244": {
+            "10400565852807369828": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877643037006": {
+            "10400565852792416590": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876770717620": {
+            "10400565851920097204": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874448277254": {
+            "10400565849597656838": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876662231414": {
+            "10400565851811610998": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877951732120": {
+            "10400565853101111704": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875651182914": {
+            "10400565850800562498": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875288554700": {
+            "10400565850437934284": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875500767523": {
+            "10400565850650147107": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367875567186451": {
+            "10400565850716566035": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874523758319": {
+            "10400565849673137903": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876824307525": {
+            "10400565851973687109": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877117457915": {
+            "10400565852266837499": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877925577401": {
+            "10400565853074956985": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874284149347": {
+            "10400565849433528931": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874482155153": {
+            "10400565849631534737": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874011332886": {
+            "10400565849160712470": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874921228130": {
+            "10400565850070607714": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877070292067": {
+            "10400565852219671651": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -33996,467 +33987,467 @@
                 "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
-            "6247030502247654538": {
+            "6247030499685781194": {
                 "mClipName": "Attack_to_run",
                 "__type": "TransitionClipBlendData"
             },
-            "6463208476976899210": {
+            "6463208474415025866": {
                 "mClipName": "Attack_to_run",
                 "__type": "TransitionClipBlendData"
             },
-            "17672038036713530506": {
+            "17672038034151657162": {
                 "mTime": 1.0,
                 "__type": "TimeBlendData"
             },
-            "13331225804529493130": {
+            "13331225801967619786": {
                 "mClipName": "Run_In",
                 "__type": "TransitionClipBlendData"
             },
-            "18256824853703189642": {
+            "18256824851141316298": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "18292250706033271946": {
+            "18292250703471398602": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13156647006128596106": {
+            "13156647003566722762": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11337156945233601674": {
+            "11337156942671728330": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "13837355123036152970": {
+            "13837355120474279626": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "9511872539664606346": {
+            "9511872537102733002": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "17814222228967941258": {
+            "17814222226406067914": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "8730679900475778186": {
+            "8730679897913904842": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "11772600606810727562": {
+            "11772600604248854218": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "12758784132297811082": {
+            "12758784129735937738": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "10010948559798559882": {
+            "10010948557236686538": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "14328987329190978698": {
+            "14328987326629105354": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "11166258500013679754": {
+            "11166258497451806410": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "4493192456740824202": {
+            "4493192454178950858": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "12542606157568566410": {
+            "12542606155006693066": {
                 "mClipName": "Spell2_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "12614665482478314634": {
+            "12614665479916441290": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "331853494673761418": {
+            "331853492111888074": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "10546613092794524810": {
+            "10546613090232651466": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "17288678524411995274": {
+            "17288678521850121930": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "5471580096894624906": {
+            "5471580094332751562": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "18242224318538867850": {
+            "18242224315976994506": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "6521702302301054090": {
+            "6521702299739180746": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12167572168787387530": {
+            "12167572166225514186": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11490697228587132042": {
+            "11490697226025258698": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12895556605629719690": {
+            "12895556603067846346": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "15537732400644646026": {
+            "15537732398082772682": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "12895235140212515978": {
+            "12895235137650642634": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "7509011031910278282": {
+            "7509011029348404938": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "4822230008661566602": {
+            "4822230006099693258": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "365979165914064010": {
+            "365979163352190666": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "13111734580358964362": {
+            "13111734577797091018": {
                 "mClipName": "Spell2_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "13039675255449216138": {
+            "13039675252887342794": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "3887196992459269258": {
+            "3887196989897395914": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "5441875415880721546": {
+            "5441875413318848202": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "4549319836689261706": {
+            "4549319834127388362": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "69381171267527818": {
+            "69381168705654474": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "16592740260199294090": {
+            "16592740257637420746": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "4170346688587785354": {
+            "4170346686025912010": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "15800951301036074122": {
+            "15800951298474200778": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "6286593340091688074": {
+            "6286593337529814730": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "13638038223543362698": {
+            "13638038220981489354": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "3331659456806151306": {
+            "3331659454244277962": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "2500323551177893002": {
+            "2500323548616019658": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "12319147710761428106": {
+            "12319147708199554762": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "3963236197274248330": {
+            "3963236194712374986": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "16115027789647733898": {
+            "16115027787085860554": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "16050804121468429450": {
+            "16050804118906556106": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "13793459114162021514": {
+            "13793459111600148170": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "17264305877792351370": {
+            "17264305875230478026": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "1624491475125429386": {
+            "1624491472563556042": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "2474919936313549962": {
+            "2474919933751676618": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "452753697319969930": {
+            "452753694758096586": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "4360724013085910154": {
+            "4360724010524036810": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13590883339513914506": {
+            "13590883336952041162": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6247030500586407359": {
+            "6247030501389253513": {
                 "mClipName": "Attack_to_run",
                 "__type": "TransitionClipBlendData"
             },
-            "6463208475315652031": {
+            "6463208476118498185": {
                 "mClipName": "Attack_to_run",
                 "__type": "TransitionClipBlendData"
             },
-            "17672038035052283327": {
+            "17672038035855129481": {
                 "mTime": 1.0,
                 "__type": "TimeBlendData"
             },
-            "13331225802868245951": {
-                "mClipName": "Run_Homeguard_IN",
+            "13331225803671092105": {
+                "mClipName": "Run_In",
                 "__type": "TransitionClipBlendData"
             },
-            "18256824852041942463": {
+            "18256824852844788617": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "18292250704372024767": {
+            "18292250705174870921": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13156647004467348927": {
+            "13156647005270195081": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11337156943572354495": {
+            "11337156944375200649": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "13837355121374905791": {
+            "13837355122177751945": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "9511872538003359167": {
+            "9511872538806205321": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "17814222227306694079": {
+            "17814222228109540233": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "8730679898814531007": {
+            "8730679899617377161": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "11772600605149480383": {
+            "11772600605952326537": {
                 "mClipName": "{7baba5ea}",
                 "__type": "TransitionClipBlendData"
             },
-            "12758784130636563903": {
+            "12758784131439410057": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "10010948558137312703": {
+            "10010948558940158857": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "14328987327529731519": {
+            "14328987328332577673": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "11166258498352432575": {
+            "11166258499155278729": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "4493192455079577023": {
+            "4493192455882423177": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "12542606155907319231": {
+            "12542606156710165385": {
                 "mClipName": "Spell2_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "12614665480817067455": {
+            "12614665481619913609": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "331853493012514239": {
+            "331853493815360393": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "10546613091133277631": {
+            "10546613091936123785": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "17288678522750748095": {
+            "17288678523553594249": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "5471580095233377727": {
+            "5471580096036223881": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "18242224316877620671": {
+            "18242224317680466825": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "6521702300639806911": {
+            "6521702301442653065": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12167572167126140351": {
+            "12167572167928986505": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11490697226925884863": {
+            "11490697227728731017": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "12895556603968472511": {
+            "12895556604771318665": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "15537732398983398847": {
+            "15537732399786245001": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "12895235138551268799": {
+            "12895235139354114953": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "7509011030249031103": {
+            "7509011031051877257": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "4822230007000319423": {
+            "4822230007803165577": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "365979164252816831": {
+            "365979165055662985": {
                 "mClipName": "Spell1_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "13111734578697717183": {
+            "13111734579500563337": {
                 "mClipName": "Spell2_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "13039675253787968959": {
+            "13039675254590815113": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "3887196990798022079": {
+            "3887196991600868233": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "5441875414219474367": {
+            "5441875415022320521": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "4549319835028014527": {
+            "4549319835830860681": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "69381169606280639": {
+            "69381170409126793": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "16592740258538046911": {
+            "16592740259340893065": {
                 "mClipName": "Spell3_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "4170346686926538175": {
+            "4170346687729384329": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "15800951299374826943": {
+            "15800951300177673097": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "6286593338430440895": {
+            "6286593339233287049": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "13638038221882115519": {
+            "13638038222684961673": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "3331659455144904127": {
+            "3331659455947750281": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "2500323549516645823": {
+            "2500323550319491977": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "12319147709100180927": {
+            "12319147709903027081": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "3963236195613001151": {
+            "3963236196415847305": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "16115027787986486719": {
+            "16115027788789332873": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "16050804119807182271": {
+            "16050804120610028425": {
                 "mClipName": "Spell4_To_Run",
                 "__type": "TransitionClipBlendData"
             },
-            "13793459112500774335": {
+            "13793459113303620489": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "17264305876131104191": {
+            "17264305876933950345": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "1624491473464182207": {
+            "1624491474267028361": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "2474919934652302783": {
+            "2474919935455148937": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "452753695658722751": {
+            "452753696461568905": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "4360724011424662975": {
+            "4360724012227509129": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13590883337852667327": {
+            "13590883338655513481": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -35448,11 +35439,11 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178849559204": {
+            "3084207949875401380": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370181037966093": {
+            "3084207952063808269": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -35504,11 +35495,11 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874472301220": {
+            "10400565849621680804": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367876660708109": {
+            "10400565851810087693": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -35928,7 +35919,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "2432597616341574794": {
+            "2432597613779701450": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -35956,7 +35947,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "2432597614680327615": {
+            "2432597615483173769": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -36016,7 +36007,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11831733634937676938": {
+            "11831733632375803594": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -36044,7 +36035,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "11831733633276429759": {
+            "11831733634079275913": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -36556,7 +36547,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "14087370178609523867": {
+            "3084207949635366043": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -36584,7 +36575,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367874232265883": {
+            "10400565849381645467": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -36944,7 +36935,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "13547403779258737802": {
+            "13547403776696864458": {
                 "mClipName": "Run_In",
                 "__type": "TransitionClipBlendData"
             },
@@ -36968,8 +36959,8 @@
                 "mClipName": "Run_In",
                 "__type": "TransitionClipBlendData"
             },
-            "13547403777597490623": {
-                "mClipName": "Run_Homeguard_IN",
+            "13547403778400336777": {
+                "mClipName": "Run_In",
                 "__type": "TransitionClipBlendData"
             },
             "13547403776462058804": {
@@ -37260,7 +37251,7 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "14087370181437426677": {
+            "3084207952463268853": {
                 "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
@@ -37288,8 +37279,8 @@
                 "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
-            "6952367877060168693": {
-                "mClipName": "Run_Homeguard_To_Idle",
+            "10400565852209548277": {
+                "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
             "2075725347617377269": {
@@ -42440,7 +42431,227 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6952367877185889418": {
+            "12758784130636563903": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "10010948558137312703": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "14328987327529731519": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "11166258498352432575": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "4493192455079577023": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "12542606155907319231": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "12614665480817067455": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "331853493012514239": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "10546613091133277631": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "17288678522750748095": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "5471580095233377727": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "18242224316877620671": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "18256824852041942463": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "18292250704372024767": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "13156647004467348927": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "11337156943572354495": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "13837355121374905791": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "9511872538003359167": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "17814222227306694079": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "8730679898814531007": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "11772600605149480383": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "13331225802868245951": {
+                "mClipName": "Run_Homeguard_To_Idle",
+                "__type": "TransitionClipBlendData"
+            },
+            "13547403777597490623": {
+                "mClipName": "Run_Homeguard_To_Idle",
+                "__type": "TransitionClipBlendData"
+            },
+            "6247030500586407359": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "6463208475315652031": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "12895556603968472511": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "15537732398983398847": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "12895235138551268799": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "7509011030249031103": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "4822230007000319423": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "365979164252816831": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "13111734578697717183": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "13039675253787968959": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "3887196990798022079": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "5441875414219474367": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "4549319835028014527": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "69381169606280639": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "16592740258538046911": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "4170346686926538175": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "15800951299374826943": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "6286593338430440895": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "13638038221882115519": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "3331659455144904127": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "2500323549516645823": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "12319147709100180927": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "3963236195613001151": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "16115027787986486719": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "16050804119807182271": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "13793459112500774335": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "17264305876131104191": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "1624491473464182207": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "2474919934652302783": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "452753695658722751": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "4360724011424662975": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "13590883337852667327": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "6952367874624016074": {
                 "mClipName": "Run_Homeguard_OUT",
                 "__type": "TransitionClipBlendData"
             },
@@ -42500,7 +42711,23 @@
                 "mClipName": "Run_Homeguard_OUT",
                 "__type": "TransitionClipBlendData"
             },
-            "14087370179901900223": {
+            "6952367877009835836": {
+                "mClipName": "Run_Homeguard_To_Idle",
+                "__type": "TransitionClipBlendData"
+            },
+            "6952367877060168693": {
+                "mClipName": "Run_Homeguard_To_Idle",
+                "__type": "TransitionClipBlendData"
+            },
+            "17371216859193132479": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "12030939628123702719": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "3084207950927742399": {
                 "mClipName": "Run_Homeguard_IN",
                 "__type": "TransitionClipBlendData"
             },
@@ -42552,11 +42779,15 @@
                 "mClipName": "Run_Homeguard_IN",
                 "__type": "TransitionClipBlendData"
             },
-            "17371216859193132479": {
+            "14957847539837814207": {
                 "mClipName": "Run_Homeguard_IN",
                 "__type": "TransitionClipBlendData"
             },
-            "12030939628123702719": {
+            "14087370179901900223": {
+                "mClipName": "Run_Homeguard_IN",
+                "__type": "TransitionClipBlendData"
+            },
+            "2809786440093517247": {
                 "mClipName": "Run_Homeguard_IN",
                 "__type": "TransitionClipBlendData"
             },
@@ -42564,913 +42795,65 @@
                 "mClipName": "Run_Homeguard_IN",
                 "__type": "TransitionClipBlendData"
             },
-            "2075725346081850815": {
-                "mClipName": "Run_Homeguard_IN",
+            "2809786441578710844": {
+                "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
-            "14957847539837814207": {
-                "mClipName": "Run_Homeguard_IN",
+            "2809786441629043701": {
+                "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
-            "3352494160944949540": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
+            "14087370181387093820": {
+                "mClipName": "Idle_In",
+                "__type": "TransitionClipBlendData"
             },
-            "3352494160995282397": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
+            "14087370181437426677": {
+                "mClipName": "Idle_In",
+                "__type": "TransitionClipBlendData"
             },
-            "3352494160739164726": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
+            "6952367877388563222": {
+                "mClipName": "Run_Homeguard_OUT",
+                "__type": "TransitionClipBlendData"
             },
-            "3352494159701955753": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160056832676": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162245239565": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160023873367": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494159816797339": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160412835052": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163605041398": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047531399460": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047581732317": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047325614646": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046288405673": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046643282596": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048831689485": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046610323287": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046403247259": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046999284972": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109050191491318": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
+            "6952367874560122337": {
+                "mClipName": "Run_Homeguard_OUT",
+                "__type": "TransitionClipBlendData"
             },
             "3352494162594367292": {
-                "mClipName": "Run_Homeguard_To_Idle",
+                "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
             "3352494162644700149": {
-                "mClipName": "Run_Homeguard_To_Idle",
+                "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
-            "3352494163741197689": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163749445913": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162553719998": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162130086956": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162712209707": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494161705104813": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163638146235": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494161523219228": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162231471584": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163575737907": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494161565296106": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162461085329": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494161821305004": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162826676750": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162090296561": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160536602299": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162410752472": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162427530091": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494159567715070": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494161946024122": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163515783556": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160764400923": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163737798237": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109050327647609": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109050335895833": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049140169918": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048716536876": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049298659627": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048291554733": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109050224596155": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048109669148": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048817921504": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109050162187827": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048151746026": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049047535249": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048407754924": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049413126670": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048676746481": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047123052219": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048997202392": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049013980011": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046154164990": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048532474042": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109050102233476": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047350850843": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109050324248157": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162331505335": {
-                "mTime": 0.05000000074505806,
-                "__type": "TimeBlendData"
-            },
-            "16249109048917955255": {
-                "mTime": 0.05000000074505806,
-                "__type": "TimeBlendData"
-            },
-            "3352494161008901552": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162323433067": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162165835839": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047595351472": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048909882987": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048752285759": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162770420874": {
-                "mClipName": "Run_Homeguard_OUT",
+            "16249109049180817212": {
+                "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
             },
-            "3352494161037317409": {
-                "mClipName": "Run_Homeguard_OUT",
+            "16249109049231150069": {
+                "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
-            },
-            "3352494160283456960": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494160986984552": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494161524794879": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494161003762171": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494160331792170": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494161087650266": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494163307684329": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494161104427885": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494163747316332": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494161054095028": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494160515149835": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494163535001010": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494162291620825": {
-                "mClipName": "Run_Homeguard_OUT",
-                "__type": "TransitionClipBlendData"
-            },
-            "3352494162492930152": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163108109643": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162492855305": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494161238777279": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160613212324": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494159575660572": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049079380072": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049694559563": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049079305225": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047825227199": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047199662244": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046162110492": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162543263009": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049129712929": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162526485390": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160395507985": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160757484763": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160549670473": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494159506603470": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163353747802": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049112935310": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046981957905": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047343934683": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047136120393": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046093053390": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049940197722": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160461433911": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163169395069": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160954160981": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162665802625": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160266161823": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160072601349": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162358724498": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160413212242": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163242521700": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163227568462": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162355249076": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160032808710": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162246762870": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163536263576": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494161235714370": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160873086156": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494161085298979": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494161151717907": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160108289775": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162408838981": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162701989371": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494163510108857": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494159868680803": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160066686609": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494159595864342": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494160505759586": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "3352494162654823523": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047047883831": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049755844989": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047540610901": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049252252545": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046852611743": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046659051269": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048945174418": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046999662162": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049828971620": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049814018382": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048941698996": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046619258630": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048833212790": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109050122713496": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047822164290": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047459536076": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047671748899": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047738167827": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046694739695": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109048995288901": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049288439291": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109050096558777": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046455130723": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046653136529": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109046182314262": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109047092209506": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049241273443": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "6521702299801645997": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "6521702302804373142": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "12167572166287979437": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "12167572169290706582": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "11490697226087723949": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "11490697229090451094": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
             },
             "16249109047695623615": {
                 "mClipName": "Run_Homeguard_IN",
                 "__type": "TransitionClipBlendData"
             },
-            "4170346686025912010": {
-                "mClipName": "Spell4_To_Run",
-                "__type": "TransitionClipBlendData"
-            },
-            "15800951298474200778": {
-                "mClipName": "Spell4_To_Run",
-                "__type": "TransitionClipBlendData"
-            },
-            "6286593337529814730": {
-                "mClipName": "Spell4_To_Run",
-                "__type": "TransitionClipBlendData"
-            },
-            "13638038220981489354": {
-                "mClipName": "Spell4_To_Run",
-                "__type": "TransitionClipBlendData"
-            },
-            "3331659454244277962": {
-                "mClipName": "Spell4_To_Run",
-                "__type": "TransitionClipBlendData"
-            },
-            "2500323548616019658": {
-                "mClipName": "Spell4_To_Run",
-                "__type": "TransitionClipBlendData"
-            },
-            "12319147708199554762": {
-                "mClipName": "Spell4_To_Run",
-                "__type": "TransitionClipBlendData"
-            },
-            "3963236194712374986": {
-                "mClipName": "Spell4_To_Run",
-                "__type": "TransitionClipBlendData"
-            },
-            "16115027787085860554": {
-                "mClipName": "Spell4_To_Run",
-                "__type": "TransitionClipBlendData"
-            },
-            "16050804118906556106": {
-                "mClipName": "Spell4_To_Run",
-                "__type": "TransitionClipBlendData"
-            },
-            "13793459111600148170": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "17264305875230478026": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "1624491472563556042": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "2474919933751676618": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "452753694758096586": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "4360724010524036810": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "13590883336952041162": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "14087370181765821206": {
+            "16249109049559544598": {
                 "mClipName": "Run_In",
                 "__type": "TransitionClipBlendData"
             },
-            "14087370178937380321": {
+            "16249109046731103713": {
                 "mClipName": "Run_In",
                 "__type": "TransitionClipBlendData"
             },
-            "14087370179830043937": {
+            "13331225801903726049": {
                 "mClipName": "Run_In",
                 "__type": "TransitionClipBlendData"
             },
-            "14087370179076183488": {
+            "13547403776632970721": {
                 "mClipName": "Run_In",
                 "__type": "TransitionClipBlendData"
-            },
-            "14087370179779711080": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "14087370180317521407": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "14087370179796488699": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "14087370179124518698": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "14087370179880376794": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "14087370182100410857": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "14087370179897154413": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "14087370182540042860": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "14087370179846821556": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "14087370179307876363": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943556935832865": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943556181972416": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943556885500008": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943557423310335": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943556902277627": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943556230307626": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943556986165722": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943559206199785": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943557002943341": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943559645831788": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943556952610484": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943556413665291": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943558871610134": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "13222943556043169249": {
-                "mClipName": "Run_In",
-                "__type": "TransitionClipBlendData"
-            },
-            "16249109049180817212": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
-            },
-            "16249109049231150069": {
-                "mTime": 0.0,
-                "__type": "TimeBlendData"
             }
         },
         "__type": "AnimationGraphData"

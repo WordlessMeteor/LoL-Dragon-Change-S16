@@ -1,5 +1,5 @@
 {
-    "{efa9d6fb}": {
+    "Characters/PetChibiSeraphine/Skins/Skin3": {
         "championSkinName": "PetChibiSeraphine_CrystalRose_CrystalRose_Tier1",
         "loadscreen": {
             "image": "ASSETS/Characters/PetChibiSeraphine/HUD/LoadScreen_ChibiSeraphine_CrystalRose_CrystalRose_Tier1.CHIBI_Seraphine_CrystalRose.tex",
@@ -214,7 +214,7 @@
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{deabac69}",
+        "mResourceResolver": "Characters/PetChibiSeraphine/Skins/Skin3/Resources",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/PetChibiSeraphine/Skins/Skin3/Particles/PetChibiSeraphine_Skin3_Finisher_Shot02_Enemy": {
@@ -110069,6 +110069,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Bloom_Intensity",
                 "value": [
                     1.0,
@@ -110100,6 +110140,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA",
                 "on": false,
@@ -110138,7 +110186,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{deabac69}": {
+    "Characters/PetChibiSeraphine/Skins/Skin3/Resources": {
         "resourceMap": {
             "{6a5e65e7}": "Characters/PetChibiSeraphine/Skins/Skin3/Particles/PetChibiSeraphine_Skin3_Finisher_Env_A",
             "{6b5e677a}": "Characters/PetChibiSeraphine/Skins/Skin3/Particles/PetChibiSeraphine_Skin3_Finisher_Env_B",

@@ -97,7 +97,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/TFT11_Dragonlord_Walls.TFT_Set17.scb",
+                        "mSimpleMeshName": "ASSETS/Maps/Particles/TFT/TFT11_Dragonlord_Walls.TFT_Event_5YR_Set17.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -2987,7 +2987,7 @@
                 },
                 "texture": "ASSETS/Shared/Particles/TFT/TFT4_ChoGath_Base_Q_IndicatorText.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Maps/Particles/TFT/TFT4_ChoGath_Base_SwirlTrail.TFT_Set17.tex",
+                    "textureMult": "ASSETS/Maps/Particles/TFT/TFT4_ChoGath_Base_SwirlTrail.TFT_Event_5YR_Set17.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             0.25,
@@ -31201,6 +31201,56 @@
         ],
         "paramValues": [
             {
+                "name": "Bloom_MaskPower",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Bloom_Intensity",
                 "value": [
                     0.30000001192092896,
@@ -31552,6 +31602,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "ADD_BEAUTY_SHADOW",
                 "on": false,
@@ -31953,6 +32011,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Fresnel_Power",
                 "value": [
                     1.0,
@@ -32079,6 +32177,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "CAMERA_POS_OVERRIDE",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -32160,6 +32266,56 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_MaskPower",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Bloom_Intensity",
                 "value": [
@@ -32518,6 +32674,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "ADD_BEAUTY_SHADOW",
                 "on": false,

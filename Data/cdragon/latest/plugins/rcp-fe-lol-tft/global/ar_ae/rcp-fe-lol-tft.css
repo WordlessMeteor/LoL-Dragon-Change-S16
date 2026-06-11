@@ -9573,7 +9573,7 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
     height: 147px;
     margin: 0 0 0 20px;
     position: relative;
-    width: 240px
+    width: 245px
 }
 
 .rcp-fe-lol-tft-event-promo .event-promo-container.clickable:active {
@@ -9595,7 +9595,7 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
     height: 100%;
     justify-content: center;
     line-height: 18px;
-    padding: 50px 20px 0 85px;
+    padding: 50px 10px 0 85px;
     position: relative;
     text-shadow: 0 2px #000;
     text-transform: uppercase;
@@ -9667,11 +9667,11 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
 }
 
 .rcp-fe-lol-tft-event-promo .event-promo-container.event-promo-container-Set17AGE {
-    height: 133px
+    height: 145px
 }
 
 .rcp-fe-lol-tft-event-promo .event-promo-container.event-promo-container-Set17AGE .event-promo-text {
-    padding: 45px 0 0 80px
+    padding: 58px 0 0 80px
 }
 
 .rcp-fe-lol-tft-event-promo .event-promo-container.event-promo-container-Set17AGE .event-promo-lottie-container {
@@ -9926,6 +9926,7 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
 
 .rcp-fe-lol-tft-event-mission-chain .event-mission-container .card {
     display: flex;
+    height: fit-content;
     padding: 20px 8px;
     width: 100%
 }
@@ -9946,7 +9947,8 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
 
 .rcp-fe-lol-tft-event-mission-chain .event-mission-container .card .card-left .objective-columns .middle-column {
     flex: 9;
-    height: var(--column-height)
+    max-height: fit-content;
+    min-height: 30px
 }
 
 .rcp-fe-lol-tft-event-mission-chain .event-mission-container .card .card-left .objective-columns .right-column {
@@ -12217,6 +12219,14 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
     z-index: 1
 }
 
+.rcp-fe-lol-tft-event-hub-first-time-flow-2-modal .modal-close-x-button {
+    color: #f0e6d2;
+    left: 82%;
+    position: absolute;
+    top: 9%;
+    transform: translateX(-100%)
+}
+
 .rcp-fe-lol-tft-event-hub-first-time-flow-2-modal .rcp-fe-lol-tft-event-hub-first-time-flow-2-content {
     align-items: center;
     display: flex;
@@ -12251,20 +12261,20 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
 
 .rcp-fe-lol-tft-event-hub-first-time-flow-2-modal .rcp-fe-lol-tft-event-hub-first-time-flow-2-content .rcp-fe-lol-tft-event-hub-first-time-flow-2-button {
     align-items: center;
-    background-image: url(/lol-game-data/assets/ASSETS/UX/TFT/OutOfGame/EventHub/7YA/7YA_PC_CTA_Button_Default.png);
+    background-image: var(--button-default);
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: 100%;
     display: flex;
     height: 48px;
     justify-content: center;
-    margin-bottom: -51.5px;
-    margin-left: 2px;
-    width: 152px
+    margin-bottom: -53px;
+    margin-left: 3px;
+    width: 146px
 }
 
 .rcp-fe-lol-tft-event-hub-first-time-flow-2-modal .rcp-fe-lol-tft-event-hub-first-time-flow-2-content .rcp-fe-lol-tft-event-hub-first-time-flow-2-button:hover {
-    background-image: url(/lol-game-data/assets/ASSETS/UX/TFT/OutOfGame/EventHub/7YA/7YA_PC_CTA_Button_Hover.png)
+    background-image: var(--button-hover)
 }
 
 .rcp-fe-lol-tft-event-hub-first-time-flow-2-modal .rcp-fe-lol-tft-event-hub-first-time-flow-2-content .rcp-fe-lol-tft-event-hub-first-time-flow-2-button:hover .rcp-fe-lol-tft-event-hub-first-time-flow-2-button-text {
@@ -12272,7 +12282,7 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
 }
 
 .rcp-fe-lol-tft-event-hub-first-time-flow-2-modal .rcp-fe-lol-tft-event-hub-first-time-flow-2-content .rcp-fe-lol-tft-event-hub-first-time-flow-2-button:active {
-    background-image: url(/lol-game-data/assets/ASSETS/UX/TFT/OutOfGame/EventHub/7YA/7YA_PC_CTA_Button_Clicked.png)
+    background-image: var(--button-clicked)
 }
 
 .rcp-fe-lol-tft-event-hub-first-time-flow-2-modal .rcp-fe-lol-tft-event-hub-first-time-flow-2-content .rcp-fe-lol-tft-event-hub-first-time-flow-2-button:active .rcp-fe-lol-tft-event-hub-first-time-flow-2-button-text {

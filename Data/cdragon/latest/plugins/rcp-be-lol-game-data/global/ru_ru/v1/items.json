@@ -10,11 +10,11 @@
             3117,
             3158,
             3047,
+            3009,
             3111,
             3006,
             3005,
             3008,
-            3009,
             3010,
             3020
         ],
@@ -532,9 +532,9 @@
             3072,
             6671,
             3095,
-            4403,
             3026,
-            3031
+            3031,
+            4403
         ],
         "categories": [
             "Damage"
@@ -731,8 +731,8 @@
             3146,
             3072,
             3074,
-            4403,
-            3153
+            3153,
+            4403
         ],
         "categories": [
             "Damage",
@@ -872,8 +872,8 @@
             3102,
             3157,
             4645,
-            4403,
-            3089
+            3089,
+            4403
         ],
         "categories": [
             "SpellDamage"
@@ -2642,13 +2642,13 @@
     {
         "id": 2052,
         "name": "Поро-снэк",
-        "description": "<mainText><stats></stats><br><br> <active>Активно – поглощение:</active> Вы подбрасываете горсть восхитительного лакомства ближайшему поро – и он увеличивается в размерах.<br><br><flavorText>Это пикантное сочетание мяса выращенных на свободном выгуле и сочной траве аваросских диких курочек и органических, не содержащих ЗМО фрельйордских трав включает в себя все основные питательные элементы, что заставят вашего поро мурлыкать от удовольствия.<br><br>Все вырученные средства будут пущены на борьбу с жестоким обращением ноксианцев с животными.</flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br> <active>Активно – поглощение:</active> Вы подбрасываете горсть восхитительного лакомства ближайшему поро, и он растет в размерах.<br><br><flavorText>Это пикантное сочетание мяса аваросских курочек и фрельйордских трав, свежесобранных и подвергнутых шоковой заморозке, содержит все основные питательные элементы, что помогут вашим поро жить в мире и покое.<br><br>Все вырученные средства будут пущены на сохранение среды обитания вымирающего вида – пятнистых поро.</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
         "to": [],
         "categories": [],
-        "maxStacks": 2,
+        "maxStacks": 99,
         "requiredChampion": "",
         "requiredAlly": "",
         "requiredBuffCurrencyName": "",
@@ -4684,7 +4684,6 @@
             2524,
             3071,
             6620,
-            4403,
             2502,
             2510,
             2525,
@@ -4698,6 +4697,7 @@
             323119,
             326620,
             328020,
+            4403,
             4629,
             4644,
             6617,
@@ -5156,10 +5156,10 @@
             3046,
             6675,
             6671,
-            4403,
             2512,
             3085,
-            3094
+            3094,
+            4403
         ],
         "categories": [
             "CriticalStrike",
@@ -5421,8 +5421,8 @@
             1029
         ],
         "to": [
-            4403,
             3193,
+            4403,
             6667
         ],
         "categories": [
@@ -9126,7 +9126,7 @@
     {
         "id": 4645,
         "name": "Сумрачное пламя",
-        "description": "<mainText><stats><attention> 110</attention> силы умений<br><attention> 15</attention> магического пробивания</stats><br><br><passive>Огненный цветок</passive><br>При нанесении <magicDamage>магического</magicDamage> или <trueDamage>чистого урона</trueDamage> врагам, у которых осталось менее 40% здоровья, вы совершаете <attention>критический удар</attention>, нанося 20% дополнительного урона. </mainText>",
+        "description": "<mainText><stats><attention> 110</attention> силы умений<br><attention> 15</attention> магического пробивания</stats><br><br><passive>Огненный цветок</passive><br><magicDamage>Магический</magicDamage> и <trueDamage>чистый урон</trueDamage>, наносимый врагам со здоровьем ниже 40%, становится <attention>критическим</attention>, повышаясь на 20%. </mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -12173,6 +12173,27 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/220012_Anvil_Shardblade.png"
     },
     {
+        "id": 220013,
+        "name": "Поро-снэк",
+        "description": "<mainText><stats></stats><br><br> <active>Активно – поглощение:</active> Вы подбрасываете горсть восхитительного лакомства ближайшему поро – и он растет в размерах.<br><br><flavorText>Это пикантное сочетание мяса аваросских курочек и фрельйордских трав, приправленное изысканными демасийскими сладостями, содержит все основные питательные элементы, что помогут вашим поро лучиться радостью.<br><br>Все вырученные средства будут переданы Молодежному хору Клаудфилда. Помогите демасийскому ребенку накопить на этваль!</flavorText></mainText>",
+        "active": true,
+        "inStore": false,
+        "from": [],
+        "to": [],
+        "categories": [],
+        "maxStacks": 2,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 0,
+        "priceTotal": 0,
+        "displayInItemSets": true,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/2052_Poro_Snack_RainbowCandy.png"
+    },
+    {
         "id": 221011,
         "name": "Пояс великана",
         "description": "<mainText><stats><attention> 300</attention> здоровья</stats><br><br></mainText>",
@@ -12513,7 +12534,7 @@
     {
         "id": 222504,
         "name": "Кейниковый рукерн",
-        "description": "<mainText><stats><attention> 350</attention> здоровья<br><attention> 80</attention> сопротивления магии</stats><br><br><passive>Бич магов</passive><br>Если вы не получаете магический урон в течение 15 сек., на вас накладывается <shield>щит от магического урона</shield>. </mainText>",
+        "description": "<mainText><stats><attention> 350</attention> здоровья<br><attention> 80</attention> сопротивления магии</stats><br><br><passive>Бич магов</passive><br>Если вы не получаете магический урон в течение 10 сек., на вас накладывается <shield>щит от магического урона</shield>. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13581,7 +13602,7 @@
     {
         "id": 223078,
         "name": "Тройственный Союз",
-        "description": "<mainText><stats><attention> 35</attention> силы атаки<br><attention> 25%</attention> скорости атаки<br><attention> 333</attention> здоровья<br><attention> 20</attention> ускорения умений</stats><br><br><passive>Чародейский клинок</passive><br>Ваша следующая автоатака после применения умения наносит доп. физ. урон.<br><br><passive>Стремительность</passive><br>Автоатаки дают скорость передвижения.<br><br></mainText>",
+        "description": "<mainText><stats><attention> 40</attention> силы атаки<br><attention> 25%</attention> скорости атаки<br><attention> 375</attention> здоровья<br><attention> 20</attention> ускорения умений</stats><br><br><passive>Чародейский клинок</passive><br>Ваша следующая автоатака после применения умения наносит доп. физ. урон.<br><br><passive>Стремительность</passive><br>Автоатаки дают скорость передвижения.<br><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13734,7 +13755,7 @@
     {
         "id": 223094,
         "name": "Скорострельная пушка",
-        "description": "<mainText><stats><attention> 30%</attention> скорости атаки<br><attention> 25%</attention> шанса критического удара<br><attention> 4%</attention> скорости передвижения</stats><br><br><passive>Заряженность</passive><br>Передвижение и автоатаки дают <keyword>заряды</keyword> энергии, которые усиливают атаки.<br><br><passive>Орлиный глаз</passive><br>Ваши <keyword>заряженные автоатаки</keyword> дополнительно наносят <magicDamage>200 ед. магического урона</magicDamage>. Кроме того, дальность заряженных атак увеличивается на значение вплоть до 35%.<br><br><buffedStat>В режиме ''Арена'' заряды накапливаются вдвое быстрее.</buffedStat><br></mainText>",
+        "description": "<mainText><stats><attention> 30%</attention> скорости атаки<br><attention> 25%</attention> шанса критического удара<br><attention> 4%</attention> скорости передвижения</stats><br><br><passive>Заряженность</passive><br>Передвижение и автоатаки дают <keyword>заряды</keyword> энергии, которые усиливают атаки.<br><br><passive>Орлиный глаз</passive><br>Ваши <keyword>заряженные автоатаки</keyword> дополнительно наносят <magicDamage>200 ед. маг. урона</magicDamage>. Кроме того, дальность заряженных атак растет на значение вплоть до 35%.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -14852,7 +14873,7 @@
     {
         "id": 224004,
         "name": "Призрачная сабля",
-        "description": "<mainText><stats><attention> 55</attention> силы атаки<br><attention> 21</attention> смертоносности</stats><br><br> <active>Активно –</active> <active>Якорь душ</active>  (0 сек.)<br>Вы помечаете свое текущее местоположение. Через 5 сек. вы возвращаетесь в это место. Во время действия <active>Якоря душ</active> его можно применить повторно, чтобы раньше вернуться в указанное место.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> силы атаки<br><attention> 21</attention> смертоносности</stats><br><br> <active>Активно –</active> <active>Якорь душ</active>  (0 сек.)<br>Вы помечаете свое текущее местоположение. Через 5 сек. вы возвращаетесь в это место. Во время действия <active>Якоря душ</active> его можно применить повторно, чтобы раньше вернуться в указанное место.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14876,7 +14897,7 @@
     {
         "id": 224005,
         "name": "Имперский мандат",
-        "description": "<mainText><stats><attention> 60</attention> силы умений<br><attention> 35</attention> ускорения умений<br><attention> 150%</attention> базового восстановления маны</stats><br><br><passive>Координированный огонь</passive>  (0 сек.) для каждой цели<br><keyword>Замедляя</keyword> или <keyword>обездвиживая</keyword> вражеского чемпиона, вы помечаете его на 5 сек. Урон союзных чемпионов снимает эту метку – при этом цель получает <magicDamage>магический урон в размере 20% от текущего запаса здоровья</magicDamage>. </mainText>",
+        "description": "<mainText><stats><attention> 60</attention> силы умений<br><attention> 15</attention> ускорения умений<br><attention> 150%</attention> базового восстановления маны</stats><br><br><passive>Контроль</passive><br>Вы получаете  15 ускорения умений с эффектами <keyword>обездвиживания</keyword>.<br><br><passive>Команда</passive><br><keyword>Обездвиживая</keyword> вражеского чемпиона, вы накладываете на него метку <Keyword>уязвимости</Keyword> (6%) на 4 сек.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15586,7 +15607,7 @@
     {
         "id": 226662,
         "name": "Хладорожденная рукавица",
-        "description": "<mainText><stats><attention> 300</attention> здоровья<br><attention> 45</attention> брони<br><attention> 10</attention> ускорения умений</stats><br><br><passive>Чародейский клинок</passive><br>Ваша следующая автоатака после применения умения наносит <physicalDamage>дополнительный физический урон</physicalDamage>  <OnHit>при попадании</OnHit>, а также на 2 сек. создает ледяное поле, которое <status>замедляет</status> врагов.</mainText>",
+        "description": "<mainText><stats><attention> 300</attention> здоровья<br><attention> 45</attention> брони<br><attention> 15</attention> ускорения умений</stats><br><br><passive>Чародейский клинок</passive><br>Ваша следующая автоатака после применения умения наносит <physicalDamage>дополнительный физический урон</physicalDamage>  <OnHit>при попадании</OnHit>, а также на 2 сек. создает ледяное поле, которое <status>замедляет</status> врагов.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15901,7 +15922,7 @@
     {
         "id": 226694,
         "name": "Злоба Серильды",
-        "description": "<mainText><stats><attention> 40</attention> силы атаки<br><attention> 40%</attention> пробивания брони<br><attention> 10</attention> ускорения умений</stats><br><br><passive>Лютый холод</passive><br>Умения, наносящие урон, <status>замедляют</status> врагов со <scaleHealth>здоровьем ниже 50% </scaleHealth> на 30% на 1 сек.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> силы атаки<br><attention> 40%</attention> пробивания брони<br><attention> 15</attention> ускорения умений</stats><br><br><passive>Лютый холод</passive><br>Умения, наносящие урон, <status>замедляют</status> врагов со <scaleHealth>здоровьем ниже 50% </scaleHealth> на 50% на 1 сек.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16030,7 +16051,7 @@
     {
         "id": 226699,
         "name": "Электрический цикломеч",
-        "description": "<mainText><stats><attention> 50</attention> силы атаки<br><attention> 18</attention> смертоносности<br><attention> 20</attention> ускорения умений</stats><br><br><passive>Электризация</passive><br>При нанесении вражескому чемпиону урона умением срабатывает <keyword>Заряженность</keyword>, если она готова.<br><br><passive>Небосклон</passive><br>Ваша <keyword>заряженная атака</keyword> наносит <physicalDamage>доп. физ. урон</physicalDamage> в размере <physicalDamage>0%</physicalDamage> от тек. здоровья цели и дает вам  <scaleLethality>0 смертоносности</scaleLethality> на 4 сек.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> силы атаки<br><attention> 20</attention> смертоносности<br><attention> 20</attention> ускорения умений</stats><br><br><passive>Электризация</passive><br>При нанесении вражескому чемпиону урона умением срабатывает <keyword>Заряженность</keyword>, если она готова.<br><br><passive>Небосклон</passive><br>Ваша <keyword>заряженная атака</keyword> наносит <physicalDamage>доп. физ. урон</physicalDamage> в размере <physicalDamage>0%</physicalDamage> от тек. здоровья цели и дает вам  <scaleLethality>0 смертоносности</scaleLethality> на 4 сек.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16185,7 +16206,7 @@
     {
         "id": 228005,
         "name": "Обсидиановая секира",
-        "description": "<mainText><stats><ornnBonus> 70</ornnBonus> силы атаки<br><ornnBonus> 700</ornnBonus> здоровья<br><ornnBonus> 40</ornnBonus> ускорения умений</stats><br><br><passive>Прорезание</passive><br>Нанося <physicalDamage>физ. урон</physicalDamage> чемпиону, вы снижаете его <scaleArmor>броню на 500%</scaleArmor> на 0.1 сек. (суммируется до 5 р.).<br><br><passive>Пыл</passive><br>Нанося <physicalDamage>физ. урон</physicalDamage>, вы получаете <speed>20 скорости передвижения</speed> на 2 сек.</mainText>",
+        "description": "<mainText><stats><ornnBonus> 70</ornnBonus> силы атаки<br><ornnBonus> 700</ornnBonus> здоровья<br><ornnBonus> 40</ornnBonus> ускорения умений</stats><br><br><passive>Прорезание</passive><br>Нанося <physicalDamage>физ. урон</physicalDamage> чемпиону, вы снижаете его <scaleArmor>броню на 6%</scaleArmor> на 6 сек. (суммируется до 5 р.).<br><br><passive>Пыл</passive><br>Нанося <physicalDamage>физ. урон</physicalDamage>, вы получаете <speed>20 скорости передвижения</speed> на 2 сек.</mainText>",
         "active": false,
         "inStore": false,
         "from": [],

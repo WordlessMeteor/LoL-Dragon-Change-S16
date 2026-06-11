@@ -4,16 +4,6 @@
             "tagEventList": [
                 "TFT_ChaosMinionRanged"
             ],
-            "bankUnits": [
-                {
-                    "name": "MODE_TFT_NPC_Minion_SFX",
-                    "bankPath": [
-                        "ASSETS/Sounds/Wwise2016/SFX/Shared/MODE_TFT_NPC_Minion_SFX_audio.bnk",
-                        "ASSETS/Sounds/Wwise2016/SFX/Shared/MODE_TFT_NPC_Minion_SFX_events.bnk"
-                    ],
-                    "__type": "BankUnit"
-                }
-            ],
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
@@ -420,6 +410,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "AlphaControl",
                 "__type": "StaticMaterialShaderParamDef"
             },
@@ -615,6 +645,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "ENABLE_SHINE",
                 "__type": "StaticMaterialSwitchDef"

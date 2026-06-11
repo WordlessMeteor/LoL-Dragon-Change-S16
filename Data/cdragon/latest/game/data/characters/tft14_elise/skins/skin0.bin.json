@@ -3215,7 +3215,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/TFT_Booms_Yasuo_Base_Glow02.TFT_Set14.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/TFT_Booms_Yasuo_Base_Glow02.TFT_Event_5YR_Set17.tex",
                 "birthFrameRate": {
                     "constantValue": 0.0,
                     "__type": "ValueFloat"
@@ -3732,7 +3732,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/TFT_SRU_Jungle_Companions_Skin01_AnimeShapes02_LowerAlphaErode.TFT_Set16.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/TFT_SRU_Jungle_Companions_Skin01_AnimeShapes02_LowerAlphaErode.TFT_Event_5YR_Set17.tex",
                 "birthFrameRate": {
                     "dynamics": {
                         "probabilityTables": [
@@ -4716,7 +4716,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/TFT_VelKoz_Skin_02_Trail_Soft_SG_2.TFT_Set17.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/TFT_VelKoz_Skin_02_Trail_Soft_SG_2.TFT_Event_5YR_Set17.tex",
                 "textureMult": {
                     "textureMult": "ASSETS/Shared/Particles/TFT/TFT9_Gangplank_ball32_02_128.tex",
                     "__type": "VfxTextureMultDefinitionData"
@@ -7382,7 +7382,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Flash_02_a.TFT_Set14.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/Flash_02_a.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -7631,7 +7631,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/Flash_02_a.TFT_Set14.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/Flash_02_a.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -8109,7 +8109,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/LF_Star_01.TFT_Set15.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/LF_Star_01.TFT_Event_5YR_Set17.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -8695,6 +8695,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "IntensityStrength",
                 "value": [
                     1.0,
@@ -8870,6 +8910,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,

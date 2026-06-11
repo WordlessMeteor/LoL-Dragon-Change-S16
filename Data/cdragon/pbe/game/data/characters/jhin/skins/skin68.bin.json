@@ -1,5 +1,5 @@
 {
-    "{96dd229c}": {
+    "Characters/Jhin/Skins/Skin68": {
         "skinClassification": 2,
         "championSkinName": "JhinSkin68",
         "skinParent": 64,
@@ -176,7 +176,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{f0e3d5a3}",
+            "animationGraphData": "Characters/Jhin/Animations/Skin64",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -191,17 +191,17 @@
                 190.0,
                 110.0
             ],
-            "Material": "{25fb7de0}",
+            "Material": "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_MatCap_inst_inst",
             "reflectionFresnelColor": [
                 0,
                 0,
                 0,
                 255
             ],
-            "initialSubmeshToHide": "Spikes RecallMirror RecallStair",
+            "initialSubmeshToHide": "Spikes RecallMirror RecallStair RecallMi",
             "materialOverride": [
                 {
-                    "Material": "{25fb7de0}",
+                    "Material": "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_MatCap_inst_inst",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -211,28 +211,33 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{e98d9509}",
+                    "Material": "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_Weapon_inst",
                     "submesh": "Barrel",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{e98d9509}",
+                    "Material": "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_Weapon_inst",
                     "submesh": "Lever",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{80d2b023}",
+                    "Material": "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_Recall_inst_inst",
                     "submesh": "RecallMirror",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{25fb7de0}",
+                    "Material": "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_MatCap_inst_inst",
                     "submesh": "Crystal",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{80d2b023}",
+                    "Material": "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_Recall_inst_inst",
                     "submesh": "RecallStair",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/Jhin/Skins/Skin64/Materials/Jhin_Skin64_Recall_inst_inst",
+                    "submesh": "RecallMi",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
             ],
@@ -249,10 +254,10 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{9b37255e}",
+        "mResourceResolver": "Characters/Jhin/Skins/Skin68/Resources",
         "__type": "SkinCharacterDataProperties"
     },
-    "{04a1131a}": {
+    "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_E_Trap_Cas": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -3287,7 +3292,7 @@
         "particlePath": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_E_Trap_Cas",
         "__type": "VfxSystemDefinitionData"
     },
-    "{63d9b7cb}": {
+    "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_Q_bounce_mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -6362,7 +6367,7 @@
         "particlePath": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_Q_bounce_mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{91cb5a24}": {
+    "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_Z_Recall_AttachMesh_01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7047,113 +7052,6 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 7.5,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 10.0,
-                "isSingleParticle": 1,
-                "emitterName": "Weapon4",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 2.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "{a445c8b3}"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "{a445c8b3}"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 1,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.10000000149011612,
-                            0.8500000238418579,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "alphaRef": 0,
-                "isTexturePixelated": true,
-                "disableBackfaceCull": true,
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "doesCastShadow": 1,
-                "isGroundLayer": 1,
-                "texture": "ASSETS/Characters/Jhin/Skins/Skin68/Jhin_Skin68_Recall_TX_CM.Chroma_Jhin_BrokenTabernacle.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 2.0,
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
                     "constantValue": 4.699999809265137,
                     "__type": "ValueFloat"
                 },
@@ -7276,133 +7174,7 @@
                 "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
-                "texture": "ASSETS/Characters/Jhin/Skins/Skin64/Particles/Base_white_RGB.SKINS_Jhin_Skin64.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 6.0,
-                "rate": {
-                    "constantValue": 2.0,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 10.0,
-                "isSingleParticle": 1,
-                "emitterName": "Weapon7",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 2.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "{a445c8b3}"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "{a445c8b3}"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "birthColor": {
-                    "constantValue": [
-                        0.7411764860153198,
-                        1.0,
-                        0.25882354378700256,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.20000000298023224,
-                            0.8500000238418579,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.6000000238418579
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 5,
-                "alphaRef": 0,
-                "isTexturePixelated": true,
-                "disableBackfaceCull": true,
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "texture": "ASSETS/Characters/Jhin/Skins/Skin64/Particles/Diana_Skin11_E_Glow.SKINS_Jhin_Skin64.tex",
-                "birthUVOffset": {
-                    "constantValue": [
-                        -0.10000000149011612,
-                        -0.09000000357627869
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "texAddressModeBase": 2,
-                "uvScale": {
-                    "constantValue": [
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "ValueVector2"
-                },
+                "texture": "ASSETS/Characters/Jhin/Skins/Skin68/Jhin_Skin68_Recall_TX_CM.Chroma_Jhin_BrokenTabernacle.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -7662,140 +7434,6 @@
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "timeBeforeFirstEmission": 2.0,
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 7.5,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 10.0,
-                "isSingleParticle": 1,
-                "emitterName": "Weapon11",
-                "importance": 3,
-                "bindWeight": {
-                    "constantValue": 2.0,
-                    "__type": "ValueFloat"
-                },
-                "EmitterPosition": {
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSubmeshesToDraw": [
-                            "{a445c8b3}"
-                        ],
-                        "mSubmeshesToDrawAlways": [
-                            "{a445c8b3}"
-                        ],
-                        "mLockMeshToAttachment": true,
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveAttachedMesh"
-                },
-                "blendMode": 4,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.5,
-                            0.699999988079071,
-                            0.800000011920929,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.3499961793422699
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.3499961793422699
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.4000000059604645
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.800000011920929
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.800000011920929
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 5,
-                "alphaRef": 0,
-                "isTexturePixelated": true,
-                "disableBackfaceCull": true,
-                "particleIsLocalOrientation": 1,
-                "isUniformScale": 1,
-                "doesCastShadow": 1,
-                "isGroundLayer": 1,
-                "texture": "ASSETS/Characters/Jhin/Skins/Skin64/Particles/Aurora_Skin20_W_Glass01.SKINS_Jhin_Skin64.tex",
-                "uvScale": {
-                    "constantValue": [
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "birthUvRotateRate": {
-                    "constantValue": 6.0,
-                    "__type": "ValueFloat"
-                },
-                "uvTransformCenter": [
-                    0.5799999833106995,
-                    0.6800000071525574
-                ],
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jhin/Skins/Skin64/Jhin_Skin64_Recall_glass_mask_TX_CM.SKINS_Jhin_Skin64.tex",
-                    "__type": "VfxTextureMultDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
             }
         ],
         "particleName": "Jhin_Skin68_Z_Recall_AttachMesh_01",
@@ -7803,7 +7441,7 @@
         "flags": 1237,
         "__type": "VfxSystemDefinitionData"
     },
-    "{c700792c}": {
+    "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_R_Shell_01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7941,7 +7579,7 @@
         "particlePath": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_R_Shell_01",
         "__type": "VfxSystemDefinitionData"
     },
-    "{c77dcab2}": {
+    "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_Q_mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -12068,7 +11706,7 @@
         "particlePath": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_Q_mis",
         "__type": "VfxSystemDefinitionData"
     },
-    "{cf8e19bf}": {
+    "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_E_Trap_Idle": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.25,
@@ -13532,7 +13170,7 @@
         "particlePath": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_E_Trap_Idle",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d1592823}": {
+    "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_R_small_mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -21084,7 +20722,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{25fb7de0}": {
+    "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_MatCap_inst_inst": {
         "name": "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_MatCap_inst_inst",
         "samplerValues": [
             {
@@ -21403,7 +21041,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{80d2b023}": {
+    "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_Recall_inst_inst": {
         "name": "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_Recall_inst_inst",
         "samplerValues": [
             {
@@ -21722,7 +21360,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{e98d9509}": {
+    "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_Weapon_inst": {
         "name": "Characters/Jhin/Skins/Skin68/Materials/Jhin_Skin68_Weapon_inst",
         "samplerValues": [
             {
@@ -22041,7 +21679,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{9b37255e}": {
+    "Characters/Jhin/Skins/Skin68/Resources": {
         "resourceMap": {
             "Jhin_BA_4th_shot_ready": "{39bbee45}",
             "Jhin_BA_4th_shot_readyhand": "{121e07a0}",
@@ -22065,24 +21703,24 @@
             "Jhin_E_Trap_Activate_enemy": "{90c41fab}",
             "Jhin_E_Trap_Activate_enemy_OnKill": "{ddb9506a}",
             "Jhin_E_Trap_activate_OnKill": "{37bd9350}",
-            "Jhin_E_Trap_Cas": "{04a1131a}",
+            "Jhin_E_Trap_Cas": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_E_Trap_Cas",
             "Jhin_E_Trap_explosion": "{9a19af5b}",
             "Jhin_E_Trap_explosion_OnKill": "{dd46bdda}",
             "Jhin_E_Trap_hit_tar": "{787efd20}",
-            "Jhin_E_Trap_Idle": "{cf8e19bf}",
+            "Jhin_E_Trap_Idle": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_E_Trap_Idle",
             "Jhin_E_Trap_indicator": "{7096006d}",
             "Jhin_E_Trap_indicator_enemy": "{d9807833}",
             "Jhin_J_ground_dust": "{09516e24}",
             "Jhin_J_Pistol": "{c45555f0}",
             "Jhin_P_Speedbuff": "{804b0238}",
-            "Jhin_Q_bounce_mis": "{63d9b7cb}",
+            "Jhin_Q_bounce_mis": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_Q_bounce_mis",
             "Jhin_Q_bounce_tar": "{5bdb865e}",
             "Jhin_Q_hit_tar": "{348dac5f}",
             "Jhin_Q_Kill_bounce_01": "{be48221c}",
             "Jhin_Q_Kill_bounce_02": "{c14826d5}",
             "Jhin_Q_Kill_bounce_03": "{c0482542}",
             "Jhin_Q_LastBounce_Audio": "{a54a6233}",
-            "Jhin_Q_mis": "{c77dcab2}",
+            "Jhin_Q_mis": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_Q_mis",
             "Jhin_R_BigMissile_Champion_Sound": "{fe15c24c}",
             "Jhin_R_BigMissile_Minion_Sound": "{6c9c5e37}",
             "Jhin_R_big_hit_tar": "{3919a52e}",
@@ -22093,7 +21731,7 @@
             "Jhin_R_SmallMissile_Champion_Sound": "{a3ed0d21}",
             "Jhin_R_SmallMissile_Minion_Sound": "{63b1b3a6}",
             "Jhin_R_small_hit_tar": "{c0b70dff}",
-            "Jhin_R_small_mis": "{d1592823}",
+            "Jhin_R_small_mis": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_R_small_mis",
             "Jhin_R_ViewCone": "{a7a580a6}",
             "Jhin_R_ViewCone_Enemy": "{c093947a}",
             "Jhin_W_beam": "{ebe3825a}",
@@ -22112,18 +21750,20 @@
             "Jhin_JhinPassiveReload_cast_audio_BV2": "{47d1a6a5}",
             "Jhin_JhinPassiveReload_cast_recoil_audio_BV2": "{c8e29757}",
             "{19bfb21c}": "{98e868bc}",
-            "{fb5ccfd6}": "{c700792c}",
+            "{fb5ccfd6}": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_R_Shell_01",
             "{55578828}": "{af06defe}",
             "{df3e95ee}": "{f1e1f640}",
             "{04ce2ee7}": "{9c007025}",
-            "{88d645f6}": "{91cb5a24}",
+            "{88d645f6}": "Characters/Jhin/Skins/Skin68/Particles/Jhin_Skin68_Z_Recall_AttachMesh_01",
             "{05ce307a}": "{99006b6c}",
             "{d5db6acd}": "{afeed39c}",
             "{06ce320d}": "{9a006cff}",
             "{ffce2708}": "{97006846}",
             "{4db4ff17}": "{3c70ef55}",
             "{c5d03506}": "{3881f0b5}",
-            "{0bef79a8}": "{27a748a8}"
+            "{0bef79a8}": "{27a748a8}",
+            "{eb3a444a}": "{085ff78c}",
+            "{ec3a45dd}": "{095ff91f}"
         },
         "__type": "ResourceResolver"
     },

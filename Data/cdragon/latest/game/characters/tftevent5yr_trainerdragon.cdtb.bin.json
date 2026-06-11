@@ -1,0 +1,1387 @@
+{
+    "Characters/TFTEvent5YR_TrainerDragon/Spells/TFTEvent5YR_TrainerDragonQFireball": {
+        "ObjectName": "TFTEvent5YR_TrainerDragonQFireball",
+        "mScriptName": "TFTEvent5YR_TrainerDragonQFireball",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "",
+            "{f26881a0}": 1.0,
+            "mCastRangeGrowthMax": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                2400.0,
+                2400.0,
+                2400.0,
+                2400.0,
+                2400.0,
+                2400.0,
+                2400.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    2400.0,
+                    2400.0,
+                    2400.0,
+                    2400.0,
+                    2400.0,
+                    2400.0,
+                    2400.0
+                ],
+                "{0a3e0478}": 2400.0,
+                "__type": "{0a0eddc9}"
+            },
+            "luaOnMissileUpdateDistanceInterval": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 250.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mStartBoneName": "Jaw",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.5,
+            "missileSpeed": 4500.0,
+            "mMissileEffectKey": "TFTEvent5YR_TrainerDragon_Q_FireballBig_Mis",
+            "mLineWidth": 120.0,
+            "mHitEffectKey": "TFTEvent5YR_TrainerDragon_Q_FireballBig_Tar",
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTEvent5YR_TrainerDragon/Spells/TFTEvent5YR_TrainerDragonQ": {
+        "ObjectName": "TFTEvent5YR_TrainerDragonQ",
+        "mScriptName": "TFTEvent5YR_TrainerDragonQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "Damage",
+                    "values": [
+                        110.0,
+                        110.0,
+                        145.0,
+                        180.0,
+                        215.0,
+                        215.0,
+                        215.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BurnDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TooltipBurnPercent",
+                    "values": [
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FireballSize",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShouldBurn",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "{11704a2b}": 1.0,
+            "mChannelDuration": [
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoNotNeedToFaceTarget": true,
+            "mUpdateRotationWhenCasting": true,
+            "missileSpeed": 20.0,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFTEvent5YR_TrainerDragonQ",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFTEvent5YR_TrainerDragonSpell_Name",
+                        "keyTooltip": "Spell_TFTEvent5YR_TrainerDragonSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 4,
+                            "Elements": [
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_TFT11_BasicMagicDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{695ac77a}": {
+        "ObjectName": "TFTEvent5YR_TrainerDragonQ4_TooltipOnly",
+        "mScriptName": "TFTEvent5YR_TrainerDragonQ4_TooltipOnly",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "Damage",
+                    "values": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BurnDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TooltipBurnPercent",
+                    "values": [
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldAmount",
+                    "values": [
+                        50.0,
+                        150.0,
+                        250.0,
+                        350.0,
+                        450.0,
+                        350.0,
+                        350.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FireballSize",
+                    "values": [
+                        0.0,
+                        1.0,
+                        1.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShouldBurn",
+                    "values": [
+                        0.0,
+                        0.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShouldStun",
+                    "values": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedShieldAmount": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "ShieldAmount",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "{11704a2b}": 1.0,
+            "mChannelDuration": [
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoNotNeedToFaceTarget": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "missileSpeed": 20.0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFTEvent5YR_TrainerDragonQ4_TooltipOnly",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFTEvent5YR_TrainerDragonSpell_Name",
+                        "keyTooltip": "Spell_TFTEvent5YR_TrainerDragonSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "ShieldAmount",
+                                    "nameOverride": "Spell_ListType_ShieldAmount",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_ListType_MagicDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{9f499bc7}": {
+        "ObjectName": "TFTEvent5YR_TrainerDragonQ3_TooltipOnly",
+        "mScriptName": "TFTEvent5YR_TrainerDragonQ3_TooltipOnly",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "Damage",
+                    "values": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BurnDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TooltipBurnPercent",
+                    "values": [
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldAmount",
+                    "values": [
+                        50.0,
+                        150.0,
+                        250.0,
+                        350.0,
+                        450.0,
+                        350.0,
+                        350.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FireballSize",
+                    "values": [
+                        0.0,
+                        1.0,
+                        1.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShouldBurn",
+                    "values": [
+                        0.0,
+                        0.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShouldStun",
+                    "values": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedShieldAmount": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "ShieldAmount",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "{11704a2b}": 1.0,
+            "mChannelDuration": [
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoNotNeedToFaceTarget": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "missileSpeed": 20.0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFTEvent5YR_TrainerDragonQ3_TooltipOnly",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFTEvent5YR_TrainerDragonSpell_Name",
+                        "keyTooltip": "Spell_TFTEvent5YR_TrainerDragonSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "ShieldAmount",
+                                    "nameOverride": "Spell_ListType_ShieldAmount",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_ListType_MagicDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{c2604930}": {
+        "ObjectName": "TFTEvent5YR_TrainerDragonQ2_TooltipOnly",
+        "mScriptName": "TFTEvent5YR_TrainerDragonQ2_TooltipOnly",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "Damage",
+                    "values": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BurnDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TooltipBurnPercent",
+                    "values": [
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldAmount",
+                    "values": [
+                        50.0,
+                        150.0,
+                        250.0,
+                        350.0,
+                        450.0,
+                        350.0,
+                        350.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FireballSize",
+                    "values": [
+                        0.0,
+                        1.0,
+                        1.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShouldBurn",
+                    "values": [
+                        0.0,
+                        0.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShouldStun",
+                    "values": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedShieldAmount": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "ShieldAmount",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "{11704a2b}": 1.0,
+            "mChannelDuration": [
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoNotNeedToFaceTarget": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "missileSpeed": 20.0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFTEvent5YR_TrainerDragonQ2_TooltipOnly",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFTEvent5YR_TrainerDragonSpell_Name",
+                        "keyTooltip": "Spell_TFTEvent5YR_TrainerDragonSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "ShieldAmount",
+                                    "nameOverride": "Spell_ListType_ShieldAmount",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_ListType_MagicDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{cf697ee5}": {
+        "ObjectName": "TFTEvent5YR_TrainerDragonQ1_TooltipOnly",
+        "mScriptName": "TFTEvent5YR_TrainerDragonQ1_TooltipOnly",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "Damage",
+                    "values": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BurnDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TooltipBurnPercent",
+                    "values": [
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldAmount",
+                    "values": [
+                        50.0,
+                        150.0,
+                        250.0,
+                        350.0,
+                        450.0,
+                        350.0,
+                        350.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FireballSize",
+                    "values": [
+                        0.0,
+                        1.0,
+                        1.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShouldBurn",
+                    "values": [
+                        0.0,
+                        0.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShouldStun",
+                    "values": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "ModifiedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "ModifiedShieldAmount": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "ShieldAmount",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell",
+            "{11704a2b}": 1.0,
+            "mChannelDuration": [
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355,
+                0.3499999940395355
+            ],
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoNotNeedToFaceTarget": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "missileSpeed": 20.0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFTEvent5YR_TrainerDragonQ1_TooltipOnly",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFTEvent5YR_TrainerDragonSpell_Name",
+                        "keyTooltip": "Spell_TFTEvent5YR_TrainerDragonSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "ShieldAmount",
+                                    "nameOverride": "Spell_ListType_ShieldAmount",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTEvent5YR_TrainerDragon/Spells/TFTEvent5YR_TrainerDragonBasicAttack": {
+        "ObjectName": "TFTEvent5YR_TrainerDragonBasicAttack",
+        "mScriptName": "TFTEvent5YR_TrainerDragonBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 12.0,
+            "missileSpeed": 1500.0,
+            "mMissileEffectKey": "TFTEvent5YR_TrainerDragon_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/TFTEvent5YR_TrainerDragon/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/TFTEvent5YR_TrainerDragon/CharacterRecords/Root": {
+        "mCharacterName": "TFTEvent5YR_TrainerDragon",
+        "baseHPModifiable": {
+            "baseValue": 300.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 40.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 90.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 550.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 890.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.800000011920929,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.800000011920929,
+            "__type": "ModifiableFloat"
+        },
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.11999999731779099,
+            "mAttackName": "TFTEvent5YR_TrainerDragonBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFTEvent5YR_TrainerDragonBasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFTEvent5YR_TrainerDragonBasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spellNames": [
+            "TFTEvent5YR_TrainerDragonQ",
+            "",
+            "",
+            ""
+        ],
+        "spells": [
+            "Characters/TFTEvent5YR_TrainerDragon/Spells/TFTEvent5YR_TrainerDragonQ",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "extraSpells": [
+            "TFTEvent5YR_TrainerDragonQFireball",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "{c1984296}": [
+            "Characters/TFTEvent5YR_TrainerDragon/Spells/TFTEvent5YR_TrainerDragonQFireball",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "unitTagsString": "Champion | Monster",
+        "CharacterRole": "{32cdc033}",
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 500.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 40.0,
+        "mShopData": "{baafff24}",
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

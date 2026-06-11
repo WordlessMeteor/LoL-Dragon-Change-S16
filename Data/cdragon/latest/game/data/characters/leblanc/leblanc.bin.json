@@ -8,6 +8,7 @@
             "Characters/Leblanc/Spells/LeblancREAbility/LeblancRERoot"
         ],
         "mName": "LeblancREAbility",
+        "AbilityTraits": 2048,
         "__type": "AbilityObject"
     },
     "Characters/Leblanc/Spells/LeblancEAbility": {
@@ -38,6 +39,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "mTurnSpeedScalar": 3.0,
             "castRange": [
@@ -49,6 +63,19 @@
                 550.0,
                 550.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -118,7 +145,10 @@
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mSpellTags": [
-                "Trait_ImmobilizingCCSpell"
+                "Trait_ImmobilizingCCSpell",
+                "Trait_DamageAbility",
+                "Trait_Ranged_StopsFirstHit",
+                "Trait_Low_Damage"
             ],
             "mEffectAmount": [
                 {
@@ -345,6 +375,18 @@
                 11.0,
                 11.0
             ],
+            "Cooldown": {
+                "values": [
+                    14.0,
+                    14.0,
+                    13.25,
+                    12.5,
+                    11.75,
+                    11.0,
+                    11.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "castRange": [
                 10000.0,
@@ -355,6 +397,19 @@
                 10000.0,
                 10000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 925.0,
                 925.0,
@@ -405,6 +460,18 @@
                 50.0,
                 50.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
             "mTargetingTypeData": {
                 "__type": "Location"
             },
@@ -622,6 +689,18 @@
                 8.0,
                 8.0
             ],
+            "Cooldown": {
+                "values": [
+                    10.5,
+                    10.0,
+                    9.5,
+                    9.0,
+                    8.5,
+                    8.0,
+                    8.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mShowChannelBar": false,
             "castRange": [
@@ -633,6 +712,19 @@
                 950.0,
                 950.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 925.0,
                 925.0,
@@ -852,6 +944,18 @@
                 8.0,
                 8.0
             ],
+            "Cooldown": {
+                "values": [
+                    10.5,
+                    10.0,
+                    9.5,
+                    9.0,
+                    8.5,
+                    8.0,
+                    8.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mShowChannelBar": false,
             "castRange": [
@@ -863,6 +967,19 @@
                 950.0,
                 950.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 925.0,
                 925.0,
@@ -978,7 +1095,10 @@
             "mAlternateName": "LeblancRE",
             "mSpellTags": [
                 "Trait_Ultimate",
-                "Trait_ImmobilizingCCSpell"
+                "Trait_ImmobilizingCCSpell",
+                "Trait_DamageAbility",
+                "Trait_Upgrade",
+                "Trait_Low_Damage"
             ],
             "mAnimationName": "Spell3",
             "mImgIconName": [
@@ -995,6 +1115,18 @@
                 25.0,
                 25.0
             ],
+            "Cooldown": {
+                "values": [
+                    45.0,
+                    45.0,
+                    35.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "castRange": [
                 10000.0,
@@ -1005,6 +1137,19 @@
                 10000.0,
                 10000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 925.0,
                 925.0,
@@ -1169,6 +1314,9 @@
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mAlternateName": "LeblancQ",
+            "mSpellTags": [
+                "Trait_DamageAbility"
+            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
@@ -1344,6 +1492,19 @@
                 6.0,
                 6.0
             ],
+            "Cooldown": {
+                "values": [
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0
+                ],
+                "{0a3e0478}": 6.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "castRange": [
                 700.0,
@@ -1354,6 +1515,19 @@
                 700.0,
                 700.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 800.0,
                 800.0,
@@ -1417,6 +1591,18 @@
                 50.0,
                 50.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
             "selectionPriority": 1,
             "mCastingBreaksStealth": true,
             "mClientData": {
@@ -1538,8 +1724,12 @@
             "mSpellTags": [
                 "PositiveEffect_MoveBlock",
                 "Trait_Ultimate",
-                "Trait_SwapsIntoImmobilizingCCSpell",
-                "Trait_PlayerSelectedDashDirection"
+                "Trait_SwapsIntoImmobilizingCCAbility",
+                "Trait_PlayerSelectedDashDirection",
+                "Trait_DamageAbility",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_Upgrade",
+                "Trait_AoE"
             ],
             "mAnimationName": "Spell4",
             "mImgIconName": [
@@ -1556,6 +1746,18 @@
                 25.0,
                 25.0
             ],
+            "Cooldown": {
+                "values": [
+                    45.0,
+                    45.0,
+                    35.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "cantCastWhileRooted": true,
             "mSpellRevealsChampion": false,
@@ -1569,6 +1771,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 600.0,
                 600.0,
@@ -1682,7 +1897,7 @@
             "mAlternateName": "LeblancRWReturn",
             "mSpellTags": [
                 "PositiveEffect_Teleport",
-                "Trait_SwapsIntoImmobilizingCCSpell"
+                "Trait_SwapsIntoImmobilizingCCAbility"
             ],
             "mAnimationName": "Spell1",
             "mImgIconName": [
@@ -1699,6 +1914,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mMaxAmmo": [
                 0,
                 0,
@@ -1729,6 +1957,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 200.0,
                 200.0,
@@ -1858,6 +2099,19 @@
                 60.0,
                 60.0
             ],
+            "Cooldown": {
+                "values": [
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0
+                ],
+                "{0a3e0478}": 60.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRange": [
                 0.0,
                 0.0,
@@ -1867,6 +2121,19 @@
                 0.0,
                 0.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mClientData": {
                 "mTooltipData": {
                     "mObjectName": "LeblancP",
@@ -2004,6 +2271,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "cantCastWhileRooted": true,
             "bIsToggleSpell": true,
             "castRange": [
@@ -2015,6 +2295,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 200.0,
                 200.0,
@@ -2145,6 +2438,18 @@
                 12.0,
                 12.0
             ],
+            "Cooldown": {
+                "values": [
+                    22.0,
+                    20.0,
+                    18.0,
+                    16.0,
+                    14.0,
+                    12.0,
+                    12.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "cantCastWhileRooted": true,
             "bIsToggleSpell": true,
@@ -2157,6 +2462,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 600.0,
                 600.0,
@@ -2186,6 +2504,18 @@
                 120.0,
                 130.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    90.0,
+                    100.0,
+                    110.0,
+                    120.0,
+                    130.0
+                ],
+                "{0a3e0478}": 80.0,
+                "__type": "{630af303}"
+            },
             "mTargetingTypeData": {
                 "__type": "Area"
             },
@@ -2224,7 +2554,12 @@
             },
             "mSpellTags": [
                 "PositiveEffect_MoveBlock",
-                "Trait_PlayerSelectedDashDirection"
+                "Trait_PlayerSelectedDashDirection",
+                "Trait_DamageAbility",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_SignatureSpell",
+                "Trait_Melee_SmallWindup",
+                "Trait_AoE"
             ],
             "mEffectAmount": [
                 {
@@ -2448,6 +2783,18 @@
                 10.0,
                 10.0
             ],
+            "Cooldown": {
+                "values": [
+                    15.0,
+                    15.0,
+                    13.75,
+                    12.5,
+                    11.25,
+                    10.0,
+                    10.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "cantCastWhileRooted": true,
             "mSpellRevealsChampion": false,
@@ -2461,6 +2808,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 600.0,
                 600.0,
@@ -2508,6 +2868,17 @@
                 100.0,
                 120.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    60.0,
+                    70.0,
+                    80.0,
+                    90.0,
+                    100.0,
+                    120.0
+                ],
+                "__type": "{630af303}"
+            },
             "mTargetingTypeData": {
                 "__type": "Area"
             },
@@ -2775,6 +3146,18 @@
                 40.0,
                 40.0
             ],
+            "Cooldown": {
+                "values": [
+                    54.0,
+                    54.0,
+                    42.0,
+                    30.0,
+                    32.0,
+                    40.0,
+                    40.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mMaxAmmo": [
                 0,
                 0,
@@ -2817,6 +3200,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 1000.0,
                 1000.0,
@@ -2930,6 +3326,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "cantCastWhileRooted": true,
             "bIsToggleSpell": true,
             "castRange": [
@@ -2941,6 +3350,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 200.0,
                 200.0,
@@ -2968,7 +3390,9 @@
             "mAlternateName": "LeblancRQ",
             "mSpellTags": [
                 "Trait_Ultimate",
-                "Trait_SwapsIntoImmobilizingCCSpell"
+                "Trait_SwapsIntoImmobilizingCCAbility",
+                "Trait_DamageAbility",
+                "Trait_Upgrade"
             ],
             "mAnimationName": "Spell1",
             "mImgIconName": [
@@ -2985,6 +3409,18 @@
                 25.0,
                 25.0
             ],
+            "Cooldown": {
+                "values": [
+                    45.0,
+                    45.0,
+                    35.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "bHaveHitEffect": true,
             "castRange": [
@@ -2996,6 +3432,19 @@
                 700.0,
                 700.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 800.0,
                 800.0,
@@ -3161,6 +3610,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "mTurnSpeedScalar": 3.0,
             "castRange": [
@@ -3172,6 +3634,19 @@
                 550.0,
                 550.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -3330,6 +3805,18 @@
                 40.0,
                 40.0
             ],
+            "Cooldown": {
+                "values": [
+                    48.0,
+                    40.0,
+                    32.0,
+                    24.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "cantCastWhileRooted": true,
             "bIsToggleSpell": true,
@@ -3342,6 +3829,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 600.0,
                 600.0,
@@ -3404,6 +3904,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "bHaveHitEffect": true,
             "castRange": [
                 622.7000122070312,
@@ -3414,6 +3927,19 @@
                 622.7000122070312,
                 622.7000122070312
             ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -3638,6 +4164,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "cannotBeSuppressed": true,
             "mCantCancelWhileWindingUp": true,
             "mIsDisabledWhileDead": false,
@@ -3651,6 +4190,19 @@
                 700.0,
                 700.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 800.0,
                 800.0,
@@ -3773,7 +4325,9 @@
             },
             "mSpellTags": [
                 "Trait_Ultimate",
-                "Trait_SwapsIntoImmobilizingCCSpell"
+                "Trait_SwapsIntoImmobilizingCCAbility",
+                "Trait_DamageAbility",
+                "Trait_Upgrade"
             ],
             "DataValues": [
                 {
@@ -3997,6 +4551,18 @@
                 25.0,
                 25.0
             ],
+            "Cooldown": {
+                "values": [
+                    45.0,
+                    45.0,
+                    35.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mMaxAmmo": [
                 2,
                 2,
@@ -4037,6 +4603,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 1000.0,
                 1000.0,
@@ -4237,6 +4816,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "cannotBeSuppressed": true,
             "mCantCancelWhileWindingUp": true,
             "mIsDisabledWhileDead": false,
@@ -4249,6 +4841,19 @@
                 700.0,
                 700.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 800.0,
                 800.0,

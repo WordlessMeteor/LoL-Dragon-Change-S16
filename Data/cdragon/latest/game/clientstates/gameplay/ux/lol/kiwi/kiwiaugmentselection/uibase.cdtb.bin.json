@@ -231,12 +231,13 @@
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
         "Layer": 513,
         "SceneTransitionIn": {
-            "TransitionTime": 0.6499999761581421,
+            "TransitionTime": 0.15000000596046448,
             "EasingType": 14,
             "__type": "SceneAlphaTransitionData"
         },
         "SceneTransitionOut": {
-            "TransitionTime": 0.6499999761581421,
+            "TransitionTime": 1.0,
+            "EasingType": 18,
             "startAlpha": 255,
             "endAlpha": 0,
             "__type": "SceneAlphaTransitionData"
@@ -255,11 +256,9 @@
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
         "Elements": [
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentInSet",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HitRegion",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_IdleVFX",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HoverVFX",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_PickedVFX",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_NotPickedVFX",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_FlashInVFX",
@@ -275,7 +274,9 @@
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Name",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_Icon_Medium",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/RerollButton",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup"
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup"
         ],
         "HitRegionElement": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HitRegion",
         "DefaultStateElements": {
@@ -321,24 +322,25 @@
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
         "Elements": [
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/NewVFX",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/NewVFX_Card",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/NewVFX_Text",
             "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/New_Text"
         ],
         "__type": "UiElementGroupData"
     },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/NewVFX": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/NewVFX",
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/NewVFX_Card": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/NewVFX_Card",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Layer": 7,
+        "Layer": 21,
         "Position": {
             "UIRect": {
                 "Position": [
-                    688.0,
-                    475.0
+                    618.0,
+                    237.0
                 ],
                 "Size": [
-                    80.0,
-                    35.0
+                    364.0,
+                    586.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -354,7 +356,7 @@
             "IgnoreGlobalScale": true,
             "__type": "UiPositionRect"
         },
-        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_TextNew_Glow",
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_TextNew_Card",
         "__type": "UiElementParticleSystemData"
     },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/New_Text": {
@@ -393,60 +395,19 @@
         "WrappingMode": 1,
         "__type": "UiElementTextData"
     },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup",
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/NewVFX_Text": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GuaranteedElementsGroup/NewVFX_Text",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Elements": [
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/LayoutRegion"
-        ],
-        "Region": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/LayoutRegion",
-        "LayoutStyle": {
-            "HorizontalJustification": 1,
-            "__type": "LayoutStyleVerticalList"
-        },
-        "IgnoreDisabledElements": true,
-        "__type": "UiElementGroupManagedLayoutData"
-    },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Elements": [
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Background_Default",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/HitRegion",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Background_Hover",
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Icon"
-        ],
-        "HitRegionElement": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/HitRegion",
-        "DefaultStateElements": {
-            "DisplayElementList": [
-                "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Background_Default",
-                "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Icon"
-            ],
-            "__type": "UiElementGroupButtonState"
-        },
-        "HoverStateElements": {
-            "DisplayElementList": [
-                "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Background_Hover",
-                "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Icon"
-            ],
-            "__type": "UiElementGroupButtonState"
-        },
-        "__type": "UiElementGroupButtonData"
-    },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Icon": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Icon",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Layer": 34,
+        "Layer": 7,
         "Position": {
             "UIRect": {
                 "Position": [
-                    957.0,
-                    14.0
+                    688.0,
+                    475.0
                 ],
                 "Size": [
-                    40.0,
-                    40.0
+                    80.0,
+                    35.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -462,135 +423,8 @@
             "IgnoreGlobalScale": true,
             "__type": "UiPositionRect"
         },
-        "FillType": 1,
-        "__type": "UiElementIconData"
-    },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Background_Hover": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Background_Hover",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Layer": 19,
-        "Position": {
-            "UIRect": {
-                "Position": [
-                    950.0,
-                    8.0
-                ],
-                "Size": [
-                    54.0,
-                    54.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "Anchor": [
-                    0.5,
-                    1.0
-                ],
-                "__type": "AnchorSingle"
-            },
-            "IgnoreGlobalScale": true,
-            "__type": "UiPositionRect"
-        },
-        "TextureData": {
-            "TextureName": "ASSETS/UX/Kiwi/AugmentSets/AugmentCardHex_Hover_V2.png",
-            "__type": "LooseUiTextureData"
-        },
-        "__type": "UiElementIconData"
-    },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Background_Default": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/Background_Default",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Layer": 18,
-        "Position": {
-            "UIRect": {
-                "Position": [
-                    950.0,
-                    8.0
-                ],
-                "Size": [
-                    54.0,
-                    54.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "Anchor": [
-                    0.5,
-                    1.0
-                ],
-                "__type": "AnchorSingle"
-            },
-            "IgnoreGlobalScale": true,
-            "__type": "UiPositionRect"
-        },
-        "TextureData": {
-            "TextureName": "ASSETS/UX/Kiwi/AugmentSets/AugmentCardHex_Default_V2.png",
-            "__type": "LooseUiTextureData"
-        },
-        "__type": "UiElementIconData"
-    },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/HitRegion": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/AugmentSet/HitRegion",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Layer": 199,
-        "Position": {
-            "UIRect": {
-                "Position": [
-                    950.0,
-                    4.0
-                ],
-                "Size": [
-                    54.0,
-                    54.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "Anchor": [
-                    0.5,
-                    1.0
-                ],
-                "__type": "AnchorSingle"
-            },
-            "IgnoreGlobalScale": true,
-            "__type": "UiPositionRect"
-        },
-        "__type": "UiElementRegionData"
-    },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/LayoutRegion": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSetGroup/LayoutRegion",
-        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Position": {
-            "UIRect": {
-                "Position": [
-                    656.0,
-                    296.0
-                ],
-                "Size": [
-                    64.0,
-                    200.0
-                ],
-                "SourceResolutionWidth": 1600,
-                "SourceResolutionHeight": 1200,
-                "__type": "UiElementRect"
-            },
-            "Anchors": {
-                "Anchor": [
-                    0.5,
-                    1.0
-                ],
-                "__type": "AnchorSingle"
-            },
-            "IgnoreGlobalScale": true,
-            "__type": "UiPositionRect"
-        },
-        "__type": "UiElementRegionData"
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_TextNew_TextGlow",
+        "__type": "UiElementParticleSystemData"
     },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenReroll": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/GoldenReroll",
@@ -955,6 +789,146 @@
         "HTMLStyleSheet": "{9c87124a}",
         "__type": "UiElementTextData"
     },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_VFX",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_Frame",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_Icon",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_Level"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_Level": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_Level",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Layer": 39,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    923.0,
+                    251.0
+                ],
+                "Size": [
+                    36.0,
+                    36.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Cherry_Beaufort_10_16_0_0_Black",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_VFX": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_VFX",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Enabled": true,
+        "Layer": 40,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    909.0,
+                    241.0
+                ],
+                "Size": [
+                    63.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_QuestCard_VFX",
+        "PlayDuringTransition": false,
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_Frame": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_Frame",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Layer": 34,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    876.0,
+                    209.0
+                ],
+                "Size": [
+                    128.0,
+                    128.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_Icon": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentQuestGroup/Augment_Quest_Icon",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Layer": 38,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    922.0,
+                    255.0
+                ],
+                "Size": [
+                    36.0,
+                    36.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Kiwi/Augments/AugmentSelection/QuestIcon.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_NotPickedVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_NotPickedVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
@@ -986,27 +960,32 @@
         "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_StaticVFX",
         "__type": "UiElementParticleSystemData"
     },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentInSet": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentInSet",
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
         "Elements": [
-            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentInSet/Augment_InSet"
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_AbilityHotkey",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_Ability",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_Champion",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_AbilityFrame",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_ChampionFrame"
         ],
         "__type": "UiElementGroupData"
     },
-    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentInSet/Augment_InSet": {
-        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentInSet/Augment_InSet",
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_AbilityHotkey": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_AbilityHotkey",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Layer": 22,
+        "Enabled": true,
+        "Layer": 21,
         "Position": {
             "UIRect": {
                 "Position": [
-                    618.0,
-                    237.0
+                    774.0,
+                    405.0
                 ],
                 "Size": [
-                    364.0,
-                    586.0
+                    52.0,
+                    16.0
                 ],
                 "SourceResolutionWidth": 1600,
                 "SourceResolutionHeight": 1200,
@@ -1015,15 +994,147 @@
             "Anchors": {
                 "Anchor": [
                     0.5,
-                    0.5
+                    1.0
                 ],
                 "__type": "AnchorSingle"
             },
             "IgnoreGlobalScale": true,
             "__type": "UiPositionRect"
         },
-        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/Particles/Augment_SetOverlay",
-        "__type": "UiElementParticleSystemData"
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Cherry_Beaufort_12(18)_0_0_Gold2",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "Color": [
+            0,
+            194,
+            240,
+            255
+        ],
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_AbilityFrame": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_AbilityFrame",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Enabled": true,
+        "Layer": 28,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    768.0,
+                    335.0
+                ],
+                "Size": [
+                    64.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_Champion": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_Champion",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Enabled": true,
+        "Layer": 31,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    633.0,
+                    247.0
+                ],
+                "Size": [
+                    52.0,
+                    52.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_Ability": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_Ability",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Enabled": true,
+        "Layer": 22,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    768.0,
+                    335.0
+                ],
+                "Size": [
+                    64.0,
+                    64.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_ChampionFrame": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/AugmentSpellGroup/Augment_Icon_ChampionFrame",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
+        "Enabled": true,
+        "Layer": 25,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    595.0,
+                    209.0
+                ],
+                "Size": [
+                    128.0,
+                    128.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
     },
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HoverVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_HoverVFX",
@@ -1399,7 +1510,7 @@
     "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_PickedVFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection/Augment_Slot/Augment_Button/Augment_PickedVFX",
         "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiAugmentSelection/UIBase/AugmentSelection",
-        "Layer": 6,
+        "Layer": 25,
         "Position": {
             "UIRect": {
                 "Position": [

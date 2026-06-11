@@ -1,8 +1,8 @@
 {
-    "{3b5b52c9}": {
+    "Characters/TFT_Choncc_Props/Skins/Skin8": {
         "championSkinName": "TFT_Choncc_Props",
         "skinAnimationProperties": {
-            "animationGraphData": "{6c183c46}",
+            "animationGraphData": "Characters/TFT_Choncc_Props/Animations/Skin8",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -38,10 +38,10 @@
         "armorMaterial": "Metal",
         "emoteBuffbone": "",
         "godrayFXbone": "",
-        "mResourceResolver": "{5a427eeb}",
+        "mResourceResolver": "Characters/TFT_Choncc_Props/Skins/Skin8/Resources",
         "__type": "SkinCharacterDataProperties"
     },
-    "{5a427eeb}": {
+    "Characters/TFT_Choncc_Props/Skins/Skin8/Resources": {
         "resourceMap": {
             "TFT_Choncc_idle_01": "Characters/TFT_Choncc_Props/Skins/Skin2/Particles/TFT_Choncc_idle_01",
             "TFT_Choncc_Click_02": "Characters/TFT_Choncc_Props/Skins/Skin2/Particles/TFT_Choncc_Click_02",
@@ -3823,6 +3823,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Bloom_Color",
                 "value": [
                     1.0,
@@ -3970,6 +4010,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "VERTEX_DEFORM_TEX_ON",
                 "on": false,

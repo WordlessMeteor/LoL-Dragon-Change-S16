@@ -97,6 +97,12 @@
                         "Play_vo_LeonaSkin64_Recall3DGeneral",
                         "Play_vo_LeonaSkin64_Respawn2DGeneral",
                         "Play_vo_LeonaSkin64_Spell2DRRankOne",
+                        "Play_vo_LeonaSkin64_Spell3DBasic",
+                        "Play_vo_LeonaSkin64_Spell3DECast",
+                        "Play_vo_LeonaSkin64_Spell3DEHit",
+                        "Play_vo_LeonaSkin64_Spell3DQHit",
+                        "Play_vo_LeonaSkin64_Spell3DRCast",
+                        "Play_vo_LeonaSkin64_Spell3DWCast",
                         "Play_vo_LeonaSkin64_Taunt3DGeneral",
                         "Play_vo_LeonaSkin64_UseItem2DWard"
                     ],
@@ -463,6 +469,16 @@
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "UnitTags": {
+                                "mObjectTagList": [
+                                    "{ea595ca6}",
+                                    "{c02a7870}"
+                                ],
+                                "__type": "ObjectTags"
+                            },
+                            "__type": "{18278f59}"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -505,6 +521,16 @@
                                 "__type": "HasGearDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "UnitTags": {
+                                "mObjectTagList": [
+                                    "{ea595ca6}",
+                                    "{c02a7870}"
+                                ],
+                                "__type": "ObjectTags"
+                            },
+                            "__type": "{18278f59}"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -580,6 +606,16 @@
                         {
                             "mGearIndex": 1,
                             "__type": "HasGearDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "UnitTags": {
+                                "mObjectTagList": [
+                                    "{ea595ca6}",
+                                    "{c02a7870}"
+                                ],
+                                "__type": "ObjectTags"
+                            },
+                            "__type": "{18278f59}"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -800,6 +836,16 @@
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "UnitTags": {
+                                "mObjectTagList": [
+                                    "{ea595ca6}",
+                                    "{c02a7870}"
+                                ],
+                                "__type": "ObjectTags"
+                            },
+                            "__type": "{18278f59}"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -837,6 +883,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Fresnel_Size",
                 "value": [
@@ -890,6 +976,16 @@
                     0.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "shaderMacros": {
@@ -960,6 +1056,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Spec_Intensity",
                 "value": [
@@ -1131,6 +1267,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "MULTIPLY_DIFFUSE",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -1273,6 +1417,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Pulse_Strength",
                 "value": [
@@ -1556,6 +1740,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "ALPHABLEND_BLENDMAT",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -1762,6 +1954,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Bloom_Color",
                 "value": [
                     0.0,
@@ -1813,6 +2045,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_DIFFUSE_ALPHA",
                 "__type": "StaticMaterialSwitchDef"
@@ -1955,6 +2195,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Alpha_Multiplier",
                 "value": [
@@ -2534,6 +2814,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_SCREEN_SPACE_TEXTURE",
                 "Group": "Screen_Space",
                 "__type": "StaticMaterialSwitchDef"
@@ -2804,6 +3092,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Alpha_Multiplier",
                 "value": [
@@ -3353,6 +3681,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_SCREEN_SPACE_TEXTURE",
                 "on": false,
                 "Group": "Screen_Space",
@@ -3604,6 +3940,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Alpha_Multiplier",
                 "value": [
@@ -4135,6 +4511,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_SCREEN_SPACE_TEXTURE",
                 "Group": "Screen_Space",
                 "__type": "StaticMaterialSwitchDef"
@@ -4315,6 +4699,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Spec_Intensity",
                 "value": [
                     1.2000000476837158,
@@ -4485,6 +4909,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "MULTIPLY_DIFFUSE",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -4610,6 +5042,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "SS_Scale",
                 "value": [
                     4.0,
@@ -4679,6 +5151,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_LOCAL_SPACE",
                 "__type": "StaticMaterialSwitchDef"
@@ -4821,6 +5301,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Alpha_Multiplier",
                 "value": [
@@ -5400,6 +5920,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_SCREEN_SPACE_TEXTURE",
                 "Group": "Screen_Space",
                 "__type": "StaticMaterialSwitchDef"
@@ -5603,6 +6131,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Spec_Intensity",
                 "value": [
                     0.800000011920929,
@@ -5779,6 +6347,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "MULTIPLY_DIFFUSE",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -5906,6 +6482,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Spec_Intensity",
                 "__type": "StaticMaterialShaderParamDef"
@@ -6077,6 +6693,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "MULTIPLY_DIFFUSE",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -6217,6 +6841,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "SS_Scale",
                 "value": [
                     15.0,
@@ -6286,6 +6950,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_LOCAL_SPACE",
                 "__type": "StaticMaterialSwitchDef"
@@ -6431,6 +7103,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Alpha_Multiplier",
                 "value": [
@@ -6998,6 +7710,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_SCREEN_SPACE_TEXTURE",
                 "Group": "Screen_Space",
                 "__type": "StaticMaterialSwitchDef"
@@ -7177,6 +7897,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "SS_Scale",
                 "value": [
                     5.0,
@@ -7246,6 +8006,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_LOCAL_SPACE",
                 "__type": "StaticMaterialSwitchDef"
@@ -61492,31 +62260,14 @@
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
-                        0.9816586375236511,
-                        0.9451438188552856,
-                        0.32170596718788147,
-                        1.0
+                        0.880003035068512,
+                        0.34000152349472046,
+                        0.39000535011291504,
+                        0.6000000238418579
                     ],
                     "__type": "ValueColor"
                 },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.8368794322013855
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                0.6783245801925659,
-                                0.3632257580757141,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 14,
+                "pass": 10,
                 "{cb13aff1}": -120.0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
@@ -61681,610 +62432,6 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Tex05.SKINS_Leona_Skin64.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 3.299999952316284,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "Mask8",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        70.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Ring03.SKINS_Leona_Skin64.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "birthColor": {
-                    "constantValue": [
-                        0.0,
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "meshRenderFlags": 0,
-                "depthBiasFactors": [
-                    -1.0,
-                    -100.0
-                ],
-                "{cb13aff1}": -120.0,
-                "stencilMode": 1,
-                "stencilRef": 7,
-                "isUniformScale": 1,
-                "hasPostRotateOrientation": 1,
-                "isRotationEnabled": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        -45.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        13.0,
-                        200.0,
-                        200.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Base_white_RGB.SKINS_Leona_Skin64.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 3.299999952316284,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "Mask9",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        70.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Plane01.SKINS_Leona_Skin64.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.6000000238418579
-                        ],
-                        "values": [
-                            [
-                                0.5709315538406372,
-                                0.5626611709594727,
-                                0.5626611709594727,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 11,
-                "meshRenderFlags": 0,
-                "depthBiasFactors": [
-                    -1.0,
-                    -100.0
-                ],
-                "{cb13aff1}": -120.0,
-                "stencilMode": 2,
-                "stencilRef": 7,
-                "isUniformScale": 1,
-                "hasPostRotateOrientation": 1,
-                "isRotationEnabled": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        -45.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        12.0,
-                        200.0,
-                        200.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.014999999664723873,
-                            0.029999999329447746,
-                            0.5
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.149999976158142,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_Emote_Tex10.SKINS_Leona_Skin64.tex",
-                "uvMode": 1,
-                "uvScale": {
-                    "constantValue": [
-                        3.0,
-                        2.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "particleUVRotateRate": {
-                    "constantValue": 1.0,
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.3028092384338379,
-                            0.6775052547454834,
-                            1.0
-                        ],
-                        "values": [
-                            0.0,
-                            5.85134220123291,
-                            8.72114086151123,
-                            10.0
-                        ],
-                        "__type": "VfxAnimatedFloatVariableData"
-                    },
-                    "__type": "IntegratedValueFloat"
-                },
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Tex04.SKINS_Leona_Skin64.tex",
-                    "birthUvScrollRateMult": {
-                        "constantValue": [
-                            0.0,
-                            -0.03500000014901161
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "birthUVOffsetMult": {
-                        "constantValue": [
-                            0.0,
-                            0.11999999731779099
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "__type": "VfxTextureMultDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 3.299999952316284,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "Mask10",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        70.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Plane01.SKINS_Leona_Skin64.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        0.7439841032028198,
-                        0.4287327527999878,
-                        1.0
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.6000000238418579
-                        ],
-                        "values": [
-                            [
-                                0.5709315538406372,
-                                0.5626611709594727,
-                                0.5626611709594727,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 12,
-                "meshRenderFlags": 0,
-                "depthBiasFactors": [
-                    -1.0,
-                    -100.0
-                ],
-                "{cb13aff1}": -120.0,
-                "stencilMode": 2,
-                "stencilRef": 7,
-                "isUniformScale": 1,
-                "hasPostRotateOrientation": 1,
-                "isRotationEnabled": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        -45.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        11.0,
-                        200.0,
-                        200.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.014999999664723873,
-                            0.029999999329447746,
-                            0.5
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.149999976158142,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin16_Galaxy_02.SKINS_Leona_Skin64.tex",
-                "uvMode": 1,
-                "particleUVScrollRate": {
-                    "constantValue": [
-                        1.0,
-                        0.0
-                    ],
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.6885755062103271,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                0.3630000054836273,
-                                0.0
-                            ],
-                            [
-                                1.5,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector2fVariableData"
-                    },
-                    "__type": "IntegratedValueVector2"
-                },
-                "uvScale": {
-                    "constantValue": [
-                        1.0,
-                        3.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "uvRotation": {
-                    "constantValue": 112.0,
-                    "__type": "ValueFloat"
-                },
-                "particleUVRotateRate": {
-                    "dynamics": {
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            0.0
-                        ],
-                        "__type": "VfxAnimatedFloatVariableData"
-                    },
-                    "__type": "IntegratedValueFloat"
-                },
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Tex04.SKINS_Leona_Skin64.tex",
-                    "birthUvScrollRateMult": {
-                        "constantValue": [
-                            0.0,
-                            -0.03500000014901161
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "birthUVOffsetMult": {
-                        "constantValue": [
-                            0.0,
-                            0.11999999731779099
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "__type": "VfxTextureMultDefinitionData"
-                },
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 3.299999952316284,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "Mask11",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        70.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Plane01.SKINS_Leona_Skin64.scb",
-                        "__type": "VfxMeshDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveMesh"
-                },
-                "blendMode": 1,
-                "birthColor": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.609994649887085
-                    ],
-                    "__type": "ValueColor"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.8999999761581421,
-                            0.949999988079071
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                0.32156863808631897,
-                                0.3490196168422699,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                0.32156863808631897,
-                                0.3490196168422699,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "pass": 13,
-                "meshRenderFlags": 0,
-                "depthBiasFactors": [
-                    -1.0,
-                    -100.0
-                ],
-                "{cb13aff1}": -120.0,
-                "stencilMode": 2,
-                "stencilRef": 7,
-                "isUniformScale": 1,
-                "hasPostRotateOrientation": 1,
-                "isRotationEnabled": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        -45.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        12.0,
-                        200.0,
-                        200.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.014999999664723873,
-                            0.029999999329447746,
-                            0.5
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.149999976158142,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Shared/Particles/DefaultColorOverlifetime.tex",
-                "uvMode": 1,
-                "birthUvScrollRate": {
-                    "constantValue": [
-                        0.009999999776482582,
-                        0.014999999664723873
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "uvScale": {
-                    "constantValue": [
-                        3.0,
-                        2.0
-                    ],
-                    "__type": "ValueVector2"
-                },
-                "textureMult": {
-                    "textureMult": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Tex09.SKINS_Leona_Skin64.tex",
-                    "birthUvScrollRateMult": {
-                        "constantValue": [
-                            0.0,
-                            -0.029999999329447746
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "birthUVOffsetMult": {
-                        "constantValue": [
-                            0.0,
-                            0.11999999731779099
-                        ],
-                        "__type": "ValueVector2"
-                    },
-                    "__type": "VfxTextureMultDefinitionData"
-                },
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -62683,6 +62830,285 @@
                     "__type": "ValueVector3"
                 },
                 "texture": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_eclipse-bead.SKINS_Leona_Skin64.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 3.299999952316284,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "Mask13",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        90.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Plane01.SKINS_Leona_Skin64.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 1,
+                "pass": 100,
+                "meshRenderFlags": 0,
+                "{cb13aff1}": -120.0,
+                "miscRenderFlags": 1,
+                "hasPostRotateOrientation": 1,
+                "isRotationEnabled": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        12.0,
+                        12.0,
+                        12.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.014999999664723873,
+                            0.029999999329447746,
+                            0.5
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.149999976158142,
+                                1.0,
+                                1.149999976158142
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_Emote_Tex10.SKINS_Leona_Skin64.tex",
+                "uvMode": 1,
+                "uvScale": {
+                    "constantValue": [
+                        3.0,
+                        2.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "particleUVRotateRate": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.3028092384338379,
+                            0.6775052547454834,
+                            1.0
+                        ],
+                        "values": [
+                            0.0,
+                            5.85134220123291,
+                            8.72114086151123,
+                            10.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "IntegratedValueFloat"
+                },
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Tex09.SKINS_Leona_Skin64.tex",
+                    "uvScaleMult": {
+                        "constantValue": [
+                            1.0,
+                            0.8999999761581421
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.0,
+                            -0.009999999776482582
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUVOffsetMult": {
+                        "constantValue": [
+                            0.0,
+                            0.004999999888241291
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 3.299999952316284,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "new-sun5",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        70.0,
+                        0.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.9799954295158386,
+                        0.9499961733818054,
+                        0.3199969530105591,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.8368794322013855
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.6783245801925659,
+                                0.3632257580757141,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 150,
+                "{cb13aff1}": -120.0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        235.0,
+                        245.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.014999999664723873,
+                            0.029999999329447746,
+                            0.5
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.149999976158142,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Leona/Skins/Skin64/Particles/Leona_Skin64_W_Tex03.SKINS_Leona_Skin64.tex",
+                "uvMode": 2,
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.0,
+                        -0.026000000536441803
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -0.026000000536441803
+                            ],
+                            [
+                                0.0,
+                                -0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "birthUVOffset": {
+                    "constantValue": [
+                        0.0,
+                        0.10000000149011612
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "textureMult": {
+                    "__type": "VfxTextureMultDefinitionData"
+                },
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

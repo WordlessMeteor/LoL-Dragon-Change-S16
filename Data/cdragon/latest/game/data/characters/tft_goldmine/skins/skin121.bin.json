@@ -1,8 +1,8 @@
 {
-    "{f430a603}": {
+    "Characters/TFT_GoldMine/Skins/Skin121": {
         "championSkinName": "TFT_StarNemesis_Away",
         "skinAnimationProperties": {
-            "animationGraphData": "{5c716cf4}",
+            "animationGraphData": "Characters/TFT_GoldMine/Animations/Skin121",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -47,7 +47,7 @@
             ],
             "__type": "SkinMeshDataProperties"
         },
-        "mResourceResolver": "{18b8b411}",
+        "mResourceResolver": "Characters/TFT_GoldMine/Skins/Skin121/Resources",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Spawn_02": {
@@ -14228,7 +14228,7 @@
         "particlePath": "Characters/TFT_GoldMine/Skins/Skin121/Particles/StarNemesis_Goldmine_Away_Star_Death_02",
         "__type": "VfxSystemDefinitionData"
     },
-    "{18b8b411}": {
+    "Characters/TFT_GoldMine/Skins/Skin121/Resources": {
         "resourceMap": {
             "{ab656bba}": "Maps/Shipping/Map22/Particles/TFT_Arenas/TFT_GoldMines",
             "{a096c3ba}": "Maps/Shipping/Map22/Particles/TFT_VFX_Library/TFT_Get_Gold",
@@ -14270,6 +14270,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "DissolveIntensity",
                 "value": [
@@ -14330,6 +14370,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_DISSOLVE",
                 "on": false,
@@ -14474,6 +14522,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Bloom_Color",
                 "value": [
@@ -14623,6 +14711,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "VERTEX_DEFORM_TEX_ON",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -14736,6 +14832,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "DissolveIntensity",
                 "value": [
                     1.0,
@@ -14795,6 +14931,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_DISSOLVE",
                 "on": false,

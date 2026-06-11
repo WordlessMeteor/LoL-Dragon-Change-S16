@@ -142667,7 +142667,7 @@
                 "alphaRef": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isGroundLayer": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         -90.0,
@@ -143274,8 +143274,9 @@
                 "pass": -500,
                 "alphaRef": 0,
                 "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isGroundLayer": 1,
+                "isFollowingTerrain": 1,
                 "birthRotationalVelocity0": {
                     "constantValue": [
                         0.0,
@@ -144873,8 +144874,7 @@
                 ],
                 "disableBackfaceCull": true,
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthScale0": {
                     "constantValue": [
                         12.800000190734863,
@@ -144998,8 +144998,8 @@
                     -80.0
                 ],
                 "disableBackfaceCull": true,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "miscRenderFlags": 1,
+                "isFollowingTerrain": 1,
                 "birthScale0": {
                     "constantValue": [
                         12.800000190734863,
@@ -145747,8 +145747,7 @@
                 },
                 "pass": -11,
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -148944,8 +148943,7 @@
                 ],
                 "disableBackfaceCull": true,
                 "miscRenderFlags": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthScale0": {
                     "constantValue": [
                         12.800000190734863,
@@ -150747,8 +150745,7 @@
                 ],
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -151114,8 +151111,7 @@
                 ],
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isGroundLayer": 1,
-                "useNavmeshMask": 1,
+                "isFollowingTerrain": 1,
                 "birthRotation0": {
                     "constantValue": [
                         90.0,
@@ -174522,6 +174518,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Bloom_Color",
                 "value": [
                     1.0,
@@ -174658,6 +174694,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "VERTEX_DEFORM_TEX_ON",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -174786,6 +174830,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "MoveIntensity",
                 "value": [
@@ -175017,6 +175101,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_DIRECTIONALDISSOLUTION",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -175116,6 +175208,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Bloom_Color",
                 "value": [
@@ -175253,6 +175385,14 @@
         ],
         "switches": [
             {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "VERTEX_DEFORM_TEX_ON",
                 "on": false,
                 "__type": "StaticMaterialSwitchDef"
@@ -175372,6 +175512,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "SS_Scale",
                 "value": [
                     10.0,
@@ -175447,6 +175627,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_LOCAL_SPACE",
                 "on": false,

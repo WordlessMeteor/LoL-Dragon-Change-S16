@@ -2107,12 +2107,19 @@ div.preload-watch {
     text-transform: none
 }
 
+.discord-beta__affordance {
+    font-family: var(--font-body)
+}
+
 .discord-beta {
+    display: inline-block
+}
+
+.discord-beta__affordance {
     background-color: #463714;
     border-radius: 2px;
     color: #cdbe91;
     display: inline-block;
-    font-family: var(--font-body);
     font-size: 12px;
     padding: 2px 4px
 }
@@ -15952,6 +15959,10 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     width: 100%
 }
 
+.honor-panel-component:lang(ar-ae) {
+    direction: ltr
+}
+
 .honor-panel-component .honor-panel-scrollable {
     display: block;
     max-height: calc(100vh - 160px);
@@ -15961,6 +15972,10 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 .honor-panel-component .honor-panel-description {
     color: #ccc4b3;
     padding: 12px 0
+}
+
+.honor-panel-component .honor-panel-description:lang(ar-ae) {
+    text-align: right
 }
 
 .honor-panel-component .honor-panel-section {
@@ -15983,13 +15998,25 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     text-transform: uppercase
 }
 
+.honor-panel-component .honor-panel-signals-title:lang(ar-ae) {
+    text-align: right
+}
+
 .honor-panel-component .honor-panel-signals-subtitle {
     color: #a09b8c
+}
+
+.honor-panel-component .honor-panel-signals-subtitle:lang(ar-ae) {
+    text-align: right
 }
 
 .honor-panel-component .honor-panel-section-title {
     margin-bottom: 8px;
     text-transform: uppercase
+}
+
+.honor-panel-component .honor-panel-section-title:lang(ar-ae) {
+    text-align: right
 }
 
 .honor-panel-component .honor-panel-restriction-row {
@@ -16116,6 +16143,10 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     flex-direction: column
 }
 
+.honor-panel-header-component .honor-panel-header-title-block:lang(ar-ae) {
+    text-align: right
+}
+
 .honor-panel-header-component .honor-panel-header-eyebrow {
     color: #c8aa6e;
     margin-bottom: 5px;
@@ -16164,10 +16195,68 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     margin-right: auto
 }
 
-.honor-panel-header-component .honor-panel-header-progress-track {
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper {
+    display: inline-block;
     flex-shrink: 0;
+    line-height: 0;
+    position: relative
+}
+
+.honor-panel-header-component .honor-panel-header-progress-track {
+    display: block;
     height: 18px;
     width: auto
+}
+
+.honor-panel-header-component .honor-panel-header-progress-track-node {
+    background-color: transparent;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+    height: 100%;
+    mix-blend-mode: screen;
+    pointer-events: auto;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    transition: background-color .12s ease;
+    width: 9.0909%
+}
+
+.honor-panel-header-component .honor-panel-header-progress-track-node:hover {
+    background-color: hsla(0, 0%, 100%, .28)
+}
+
+.honor-panel-header-component .honor-panel-header-progress-track-node-1 {
+    left: 4.5454%
+}
+
+.honor-panel-header-component .honor-panel-header-progress-track-node-2 {
+    left: 27.2727%
+}
+
+.honor-panel-header-component .honor-panel-header-progress-track-node-3 {
+    left: 50%
+}
+
+.honor-panel-header-component .honor-panel-header-progress-track-node-4 {
+    left: 72.7272%
+}
+
+.honor-panel-header-component .honor-panel-header-progress-track-node-5 {
+    left: 95.4545%
+}
+
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-0 .honor-panel-header-progress-track-node:hover,
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-1 .honor-panel-header-progress-track-node-2:hover,
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-1 .honor-panel-header-progress-track-node-3:hover,
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-1 .honor-panel-header-progress-track-node-4:hover,
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-1 .honor-panel-header-progress-track-node-5:hover,
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-2 .honor-panel-header-progress-track-node-3:hover,
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-2 .honor-panel-header-progress-track-node-4:hover,
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-2 .honor-panel-header-progress-track-node-5:hover,
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-3 .honor-panel-header-progress-track-node-4:hover,
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-3 .honor-panel-header-progress-track-node-5:hover,
+.honor-panel-header-component .honor-panel-header-progress-track-wrapper-level-4 .honor-panel-header-progress-track-node-5:hover {
+    background-color: hsla(0, 0%, 100%, .1)
 }
 
 .honor-panel-restriction-component .honor-panel-restriction-row-title,
@@ -16252,6 +16341,10 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     position: relative
 }
 
+.honor-panel-restriction-component:lang(ar-ae) {
+    background: linear-gradient(270deg, rgba(141, 34, 34, .5), rgba(118, 16, 13, .15))
+}
+
 .honor-panel-restriction-component .honor-panel-restriction-stripe {
     background-color: #ff4545;
     bottom: 0;
@@ -16259,6 +16352,11 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     position: absolute;
     top: 0;
     width: 6px
+}
+
+.honor-panel-restriction-component .honor-panel-restriction-stripe:lang(ar-ae) {
+    left: auto;
+    right: 0
 }
 
 .honor-panel-restriction-component .honor-panel-restriction-row-content {
@@ -16311,6 +16409,11 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     margin-left: -6px
 }
 
+.honor-panel-restriction-component .honor-panel-restriction-row-badge+.honor-panel-restriction-row-badge:lang(ar-ae) {
+    margin-left: 0;
+    margin-right: -6px
+}
+
 .honor-panel-restriction-component .honor-panel-restriction-row-badge-icon {
     height: 16px;
     width: 16px
@@ -16328,12 +16431,21 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     line-height: 16px
 }
 
+.honor-panel-restriction-component .honor-panel-restriction-row-badge-text.is-time {
+    text-transform: lowercase
+}
+
 .honor-panel-restriction-tooltip-content {
     display: flex;
     flex-direction: column;
     gap: 4px;
     padding: 16px;
     white-space: nowrap
+}
+
+.honor-panel-restriction-tooltip-content:lang(ar-ae) {
+    direction: ltr;
+    text-align: right
 }
 
 .honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
@@ -16348,8 +16460,9 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     line-height: 16px
 }
 
-.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-value {
-    color: #f0e6d2
+.honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-body b {
+    color: #f0e6d2;
+    font-weight: 700
 }
 
 .honor-panel-reward-component .honor-panel-reward-row-title {
@@ -16412,6 +16525,10 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     position: relative
 }
 
+.honor-panel-reward-component:lang(ar-ae) {
+    background: linear-gradient(-96.02deg, rgba(36, 108, 163, .4) 3.56%, rgba(36, 108, 163, .06) 99.55%)
+}
+
 .honor-panel-reward-component .honor-panel-reward-stripe {
     background-color: #50d9ff;
     bottom: 0;
@@ -16419,6 +16536,11 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     position: absolute;
     top: 0;
     width: 6px
+}
+
+.honor-panel-reward-component .honor-panel-reward-stripe:lang(ar-ae) {
+    left: auto;
+    right: 0
 }
 
 .honor-panel-reward-component .honor-panel-reward-row-content {
@@ -16475,12 +16597,12 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     line-height: 16px
 }
 
-.honor-panel-signal-category-component .honor-panel-signal-category-title {
+.honor-panel-signal-category-component .honor-panel-signal-category-title,
+.honor-panel-signal-category-component .honor-panel-signal-name {
     font-family: var(--font-display)
 }
 
-.honor-panel-signal-category-component .honor-panel-signal-description,
-.honor-panel-signal-category-component .honor-panel-signal-name {
+.honor-panel-signal-category-component .honor-panel-signal-description {
     font-family: var(--font-body)
 }
 
@@ -16493,12 +16615,23 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     -webkit-font-smoothing: antialiased
 }
 
+.honor-panel-signal-category-component .honor-panel-signal-category-title,
+.honor-panel-signal-category-component .honor-panel-signal-name {
+    text-transform: uppercase
+}
+
 .honor-panel-signal-category-component .honor-panel-signal-category-title:lang(el-gr),
 .honor-panel-signal-category-component .honor-panel-signal-category-title:lang(ja-jp),
 .honor-panel-signal-category-component .honor-panel-signal-category-title:lang(ko-kr),
 .honor-panel-signal-category-component .honor-panel-signal-category-title:lang(th-th),
 .honor-panel-signal-category-component .honor-panel-signal-category-title:lang(tr-tr),
-.honor-panel-signal-category-component .honor-panel-signal-category-title:lang(zh-tw) {
+.honor-panel-signal-category-component .honor-panel-signal-category-title:lang(zh-tw),
+.honor-panel-signal-category-component .honor-panel-signal-name:lang(el-gr),
+.honor-panel-signal-category-component .honor-panel-signal-name:lang(ja-jp),
+.honor-panel-signal-category-component .honor-panel-signal-name:lang(ko-kr),
+.honor-panel-signal-category-component .honor-panel-signal-name:lang(th-th),
+.honor-panel-signal-category-component .honor-panel-signal-name:lang(tr-tr),
+.honor-panel-signal-category-component .honor-panel-signal-name:lang(zh-tw) {
     text-transform: none
 }
 
@@ -16514,28 +16647,12 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     letter-spacing: 0
 }
 
-.honor-panel-signal-category-component .honor-panel-signal-description {
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: .025em;
-    line-height: 16px;
-    -webkit-font-smoothing: subpixel-antialiased
-}
-
-.honor-panel-signal-category-component .honor-panel-signal-description:lang(ja-jp) {
-    font-size: 13px
-}
-
-.honor-panel-signal-category-component .honor-panel-signal-description:lang(ar-ae) {
-    letter-spacing: 0
-}
-
 .honor-panel-signal-category-component .honor-panel-signal-name {
+    color: #f0e6d2;
     font-size: 12px;
-    font-weight: 900;
-    letter-spacing: .1em;
-    line-height: 16px;
-    -webkit-font-smoothing: subpixel-antialiased
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
 }
 
 .honor-panel-signal-category-component .honor-panel-signal-name:lang(ja-jp) {
@@ -16543,6 +16660,18 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 }
 
 .honor-panel-signal-category-component .honor-panel-signal-name:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-description {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-description:lang(ar-ae) {
     letter-spacing: 0
 }
 
@@ -16562,6 +16691,10 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 .honor-panel-signal-category-component .honor-panel-signal-category-title {
     color: #ccc4b3;
     text-transform: uppercase
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-category-title:lang(ar-ae) {
+    text-align: right
 }
 
 .honor-panel-signal-category-component .honor-panel-signal-category-chevron {
@@ -16608,8 +16741,11 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 
 .honor-panel-signal-category-component .honor-panel-signal-name {
     color: #a09b8c;
-    letter-spacing: .6px;
-    text-transform: uppercase
+    letter-spacing: .6px
+}
+
+.honor-panel-signal-category-component .honor-panel-signal-name:lang(ar-ae) {
+    text-align: right
 }
 
 .honor-panel-signal-category-component .honor-panel-signal-description {
@@ -16620,7 +16756,8 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
 
 .honor-panel-signal-category-component .honor-panel-signal-description:lang(ar-ae) {
     margin-left: 0;
-    margin-right: 20px
+    margin-right: 20px;
+    text-align: right
 }
 
 .shoppefront-catalog-wrapper .shoppefront-category-title,

@@ -1,0 +1,590 @@
+{
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "{faaeb1b6}": true,
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ManagedLayout",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestBackground"
+        ],
+        "__type": "UISceneData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_AcquireFX",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_CompleteFX",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_LevelUpFX",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/QuestLevelGroup",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestCount",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestCompletedOverlay",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIconFrame",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIcon",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestHitArea",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Meter",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuest_Backdrop",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIBackdrop"
+        ],
+        "Enabled": false,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1222.0,
+                    1004.0
+                ],
+                "Size": [
+                    54.0,
+                    57.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "{8ffd7c61}"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_AcquireFX": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_AcquireFX",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Layer": 75,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -47.0,
+                    -48.5
+                ],
+                "Size": [
+                    90.0,
+                    90.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/Particles/Kiwi_Quest_AcquireFX_1",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Meter": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Meter",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Meter/BarFill",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Meter/Backdrop"
+        ],
+        "StartPercentage": 1.0,
+        "BarElements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Meter/BarFill"
+        ],
+        "__type": "UiElementGroupMeterData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIBackdrop": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIBackdrop",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Enabled": true,
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -27.0,
+                    -28.5
+                ],
+                "Size": [
+                    50.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            11,
+            14,
+            5,
+            255
+        ],
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Common/white.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/QuestLevelGroup": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/QuestLevelGroup",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/QuestLevelGroup/LevelText",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/QuestLevelGroup/LevelFrame"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/QuestLevelGroup/LevelFrame": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/QuestLevelGroup/LevelFrame",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Enabled": true,
+        "Layer": 7,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    31.0,
+                    -10.0
+                ],
+                "Size": [
+                    32.0,
+                    32.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Kiwi/Augments/AugmentSelection/QuestIcon.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/QuestLevelGroup/LevelText": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/QuestLevelGroup/LevelText",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Enabled": true,
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    41.0,
+                    -7.0
+                ],
+                "Size": [
+                    14.0,
+                    19.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_Cherry_Beaufort_10_16_0_0_Black",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Meter/Backdrop": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Meter/Backdrop",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Enabled": true,
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -27.0,
+                    25.5
+                ],
+                "Size": [
+                    50.0,
+                    5.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            11,
+            14,
+            5,
+            255
+        ],
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Common/white.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Meter/BarFill": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Meter/BarFill",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Enabled": true,
+        "Layer": 9,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -27.0,
+                    25.5
+                ],
+                "Size": [
+                    50.0,
+                    5.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            200,
+            200,
+            200,
+            255
+        ],
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Common/white.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestCount": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestCount",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    3.0,
+                    -2.5
+                ],
+                "Size": [
+                    14.0,
+                    19.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "FontDescription": "UX/Fonts/Descriptions/HUD_CounterTiny",
+        "TextAlignmentHorizontal": 2,
+        "__type": "UiElementTextData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIcon": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIcon",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Enabled": true,
+        "Layer": 7,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -27.0,
+                    -28.5
+                ],
+                "Size": [
+                    50.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_LevelUpFX": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_LevelUpFX",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Layer": 75,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -47.0,
+                    -48.5
+                ],
+                "Size": [
+                    90.0,
+                    90.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/Particles/Kiwi_Quest_LevelUpFX_1",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_CompleteFX": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/Kiwi_Quest_CompleteFX",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Layer": 75,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -47.0,
+                    -48.5
+                ],
+                "Size": [
+                    90.0,
+                    90.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/Particles/Kiwi_Quest_CompleteFX_1",
+        "__type": "UiElementParticleSystemData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIconFrame": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestIconFrame",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Enabled": true,
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -27.0,
+                    -28.5
+                ],
+                "Size": [
+                    50.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Kiwi/AugmentSets/TooltipAugmentFrame_Hover.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestCompletedOverlay": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestCompletedOverlay",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Layer": 8,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -27.0,
+                    -28.0
+                ],
+                "Size": [
+                    50.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Kiwi/QuestComplete_Check.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestHitArea": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuestHitArea",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Enabled": true,
+        "Layer": 4,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -27.0,
+                    -28.5
+                ],
+                "Size": [
+                    50.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "{0ce0dfe5}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuest_Backdrop": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestTemplate/ModesQuest_Backdrop",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Enabled": true,
+        "Layer": 5,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -27.0,
+                    0.0
+                ],
+                "Size": [
+                    50.0,
+                    57.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "{0be0de52}": 1,
+                "__type": "{f090d2e7}"
+            },
+            "__type": "UiPositionRect"
+        },
+        "UseAlpha": false,
+        "__type": "UiElementIconData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ManagedLayout": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ManagedLayout",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Elements": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ManagedLayout/LayoutRegion"
+        ],
+        "Region": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ManagedLayout/LayoutRegion",
+        "LayoutStyle": {
+            "HorizontalJustification": 1,
+            "VerticalJustification": 3,
+            "RowHorizontalAlignment": 1,
+            "RowVerticalAlignment": 1,
+            "__type": "LayoutStyleGrid"
+        },
+        "IgnoreDisabledElements": true,
+        "__type": "UiElementGroupManagedLayoutData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ManagedLayout/LayoutRegion": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ManagedLayout/LayoutRegion",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1202.0,
+                    1056.0
+                ],
+                "Size": [
+                    105.0,
+                    140.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestBackground": {
+        "name": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker/ModesQuestBackground",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Kiwi/ModesQuestTracker/UIBase/ModesQuestTracker",
+        "{e13c4b8e}": true,
+        "Enabled": true,
+        "BlockInputEvents": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    1204.0,
+                    1042.0
+                ],
+                "Size": [
+                    96.0,
+                    168.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/LoL/Mayhem_Quest_Tracker.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "__linked": []
+}

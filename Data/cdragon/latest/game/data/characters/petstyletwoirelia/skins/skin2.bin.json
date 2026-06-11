@@ -70025,113 +70025,6 @@
             },
             {
                 "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.25,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 0.25,
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "Distort_Impact2",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        150.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "particleColorTexture": "ASSETS/Characters/PetStyleTwoIrelia/Skins/Skin2/Particles/PetStyleTwoIrelia_Skin2_Finisher_Tex_08.tex",
-                "blendMode": 1,
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "alphaRef": 0,
-                "distortionDefinition": {
-                    "distortion": 0.05000000074505806,
-                    "distortionMode": 2,
-                    "normalMapTexture": "ASSETS/Characters/PetStyleTwoIrelia/Skins/Skin2/Particles/PetStyleTwoIrelia_Skin2_Emote_Particles_1_159.tex",
-                    "__type": "VfxDistortionDefinitionData"
-                },
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthRotation0": {
-                    "constantValue": [
-                        90.0,
-                        0.0,
-                        90.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthScale0": {
-                    "constantValue": [
-                        400.0,
-                        300.0,
-                        300.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.5,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224
-                            ],
-                            [
-                                0.800000011920929,
-                                0.699999988079071,
-                                0.800000011920929
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/PetStyleTwoIrelia/Skins/Skin2/Particles/PetStyleTwoIrelia_Skin2_Emote_3026_Itemscolor-hold.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
                     "constantValue": 10.0,
                     "__type": "ValueFloat"
                 },
@@ -89318,6 +89211,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomColor",
                 "value": [
                     1.0,
@@ -89590,6 +89523,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "AFFECTED_BY_VERTEX_COLOR",
                 "on": false,
                 "Group": "Deform",
@@ -89723,6 +89664,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Alpha",
                 "value": [
                     1.0,
@@ -89744,6 +89725,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_TEX_ALPHA",
                 "on": false,
@@ -89860,6 +89849,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "BloomColor",
                 "value": [
@@ -90133,6 +90162,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "AFFECTED_BY_VERTEX_COLOR",
                 "on": false,
                 "Group": "Deform",
@@ -90360,6 +90397,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Alpha",
                 "value": [
                     1.0,
@@ -90381,6 +90458,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_TEX_ALPHA",
                 "on": false,

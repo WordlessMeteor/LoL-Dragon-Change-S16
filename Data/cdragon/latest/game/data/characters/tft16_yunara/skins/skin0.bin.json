@@ -58,6 +58,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "IntensityStrength",
                 "value": [
                     0.8500000238418579,
@@ -233,6 +273,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "DEBUG_VIEW_RIM_A",
                 "on": false,
@@ -7277,7 +7325,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_ImpactTERO.TFT_Set16.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_ImpactTERO.TFT_Event_5YR_Set17.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -7956,7 +8004,7 @@
                     },
                     "__type": "VfxPrimitiveMesh"
                 },
-                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Set17.tex",
+                "particleColorTexture": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Event_5YR_Set17.tex",
                 "blendMode": 1,
                 "birthColor": {
                     "constantValue": [
@@ -11043,7 +11091,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Set17.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Event_5YR_Set17.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -11229,7 +11277,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Set17.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Event_5YR_Set17.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -17634,7 +17682,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_ImpactTERO.TFT_Set16.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_ImpactTERO.TFT_Event_5YR_Set17.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -17982,7 +18030,7 @@
                     },
                     "erosionFeatherIn": 0.25,
                     "erosionFeatherOut": 0.25,
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_ImpactTERO.TFT_Set16.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_ImpactTERO.TFT_Event_5YR_Set17.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -18338,7 +18386,7 @@
                     },
                     "erosionFeatherIn": 0.25,
                     "erosionFeatherOut": 0.25,
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_ImpactTERO.TFT_Set16.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_ImpactTERO.TFT_Event_5YR_Set17.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -20822,7 +20870,7 @@
                     },
                     "erosionFeatherOut": 0.15000000596046448,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Set17.tex",
+                    "erosionMapName": "ASSETS/Maps/Particles/TFT/Set16/TFT16_Coven_Erode.TFT_Event_5YR_Set17.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             0.0,

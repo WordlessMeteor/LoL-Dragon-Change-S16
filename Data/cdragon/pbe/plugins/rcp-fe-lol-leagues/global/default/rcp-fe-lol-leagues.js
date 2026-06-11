@@ -152,11 +152,15 @@
                     tra: a,
                     ComponentFactory: e,
                     NotificationsRootComponent: n(112),
-                    SeasonStartModalComponent: n(114),
+                    SeasonStartModalComponent: n(115),
                     SplitNotificationsComponent: n(117),
                     EosNotificationsComponent: n(120),
                     SeasonMemorialModalComponent: n(123).default,
-                    LeaguesDialogsComponent: n(126),
+                    LeaguesDialogsComponent: n(126)
+                }), t.setFactoryDefinition({
+                    name: "RankedFtuxModalComponent",
+                    tra: a,
+                    ComponentFactory: e,
                     RankedFtuxModalComponent: n(129).default
                 })
             };
@@ -3044,17 +3048,23 @@
             e.exports = n.p + "cherry-promotion-vignette-background.png"
         }, (e, t, n) => {
             "use strict";
-            var a = n(1);
-            n(5);
-            const s = ["Matchmaking", "ReadyCheck", "ChampSelect", "GameStart", "FailedToLaunch", "InProgress", "Reconnect", "WaitingForStats", "PreEndOfGame", "EndOfGame", "TerminatedInError"];
-            e.exports = a.Ember.Component.extend({
+            var a, s = n(1),
+                i = (n(5), (a = n(113)) && a.__esModule ? a : {
+                    default: a
+                });
+            const o = "ranked-5s-ftux-seen",
+                l = ["Matchmaking", "ReadyCheck", "ChampSelect", "GameStart", "FailedToLaunch", "InProgress", "Reconnect", "WaitingForStats", "PreEndOfGame", "EndOfGame", "TerminatedInError"];
+            e.exports = s.Ember.Component.extend({
                 classNames: ["notifications-root"],
-                layout: n(113),
+                layout: n(114),
                 init() {
-                    this._super(...arguments), this.seasonMemorialEnabledDefault = true, a.db.observe("/lol-login/v1/session", this, this.handleLoginSession), a.db.observe("/lol-settings/v2/ready", this, this.handleSettingsReady), a.db.observe("/lol-ranked/v1/current-ranked-stats", this, this.handleRankedStats), a.db.observe("/riotclient/region-locale", this, this.handleRegionLocale), a.db.observe("/lol-summoner/v1/current-summoner", this, this.handleCurrentSummoner), a.db.observe("/lol-gameflow/v1/session", this, this.handleGameflowSession), a.db.observe("/lol-client-config/v3/client-config/lol.client_settings.season_rewards.season_memorial_modal_enabled", this, this.handleSeasonMemorialEnabled), a.db.observe("/lol-ranked/v1/eos-memorial", this, this.handleSeasonMemorialDebugModel)
+                    this._super(...arguments), this.seasonMemorialEnabledDefault = true, s.db.observe("/lol-login/v1/session", this, this.handleLoginSession), s.db.observe("/lol-settings/v2/ready", this, this.handleSettingsReady), s.db.observe("/lol-ranked/v1/current-ranked-stats", this, this.handleRankedStats), s.db.observe("/riotclient/region-locale", this, this.handleRegionLocale), s.db.observe("/lol-summoner/v1/current-summoner", this, this.handleCurrentSummoner), s.db.observe("/lol-gameflow/v1/session", this, this.handleGameflowSession), s.db.observe("/lol-client-config/v3/client-config/lol.client_settings.season_rewards.season_memorial_modal_enabled", this, this.handleSeasonMemorialEnabled), s.db.observe("/lol-ranked/v1/eos-memorial", this, this.handleSeasonMemorialDebugModel)
                 },
                 willDestroyElement() {
-                    this._super(...arguments), a.db.unobserve(this)
+                    this._super(...arguments), s.db.unobserve(this)
+                },
+                didRender() {
+                    this._super(...arguments), this._showRankedInfoModal()
                 },
                 handleAccountLeaguesSettings(e) {
                     this.set("accountLeaguesSettings", e)
@@ -3063,10 +3073,10 @@
                     this.set("session", e)
                 },
                 handleSettingsReady(e) {
-                    e && a.db.observe("/lol-settings/v2/account/LCUPreferences/lol-leagues", this, this.handleAccountLeaguesSettings), this.set("settingsReady", e)
+                    e && s.db.observe("/lol-settings/v2/account/LCUPreferences/lol-leagues", this, this.handleAccountLeaguesSettings), this.set("settingsReady", e)
                 },
                 handleRankedStats(e) {
-                    this.set("currentRankedStats", e), this.get("recentSeasons") || a.db.post("/lol-seasons/v1/allSeasons/product/LOL", {
+                    this.set("currentRankedStats", e), this.get("recentSeasons") || s.db.post("/lol-seasons/v1/allSeasons/product/LOL", {
                         lastNYears: 2
                     }).then((e => {
                         this.set("recentSeasons", e)
@@ -3087,36 +3097,33 @@
                 handleSeasonMemorialDebugModel(e) {
                     e && this.setProperties(e)
                 },
-                shouldShowRankedModal: a.Ember.computed("accountLeaguesSettings.data.ranked-5s-ftux-seen", (function() {
-                    return !this.get("accountLeaguesSettings.data.ranked-5s-ftux-seen")
-                })),
-                hasSeenSeasonMemorialModal: a.Ember.computed("previousSeason.seasonId", "accountLeaguesSettings.data.season-memorial-modal", (function() {
+                hasSeenSeasonMemorialModal: s.Ember.computed("previousSeason.seasonId", "accountLeaguesSettings.data.season-memorial-modal", (function() {
                     const e = this.get("previousSeason.seasonId");
                     return (this.get("accountLeaguesSettings.data.season-memorial-modal") || 0) >= e
                 })),
-                isGameflowPhaseValid: a.Ember.computed("gameflowSession.phase", (function() {
+                isGameflowPhaseValid: s.Ember.computed("gameflowSession.phase", (function() {
                     const e = this.get("gameflowSession.phase");
-                    return !s.includes(e)
+                    return !l.includes(e)
                 })),
-                shouldShowSeasonMemorialModal: a.Ember.computed("hasSeenSeasonMemorialModal", "isGameflowPhaseValid", "isSeasonMemorialModalEnabled", "activeSeason", (function() {
+                shouldShowSeasonMemorialModal: s.Ember.computed("hasSeenSeasonMemorialModal", "isGameflowPhaseValid", "isSeasonMemorialModalEnabled", "activeSeason", (function() {
                     const e = this.get("hasSeenSeasonMemorialModal"),
                         t = this.get("isGameflowPhaseValid"),
                         n = this.get("isSeasonMemorialModalEnabled"),
                         a = Boolean(this.get("activeSeason"));
                     return !e && t && n && a
                 })),
-                activeSeason: a.Ember.computed("recentSeasons.@each.seasonStart", "recentSeasons.@each.seasonEnd", (function() {
+                activeSeason: s.Ember.computed("recentSeasons.@each.seasonStart", "recentSeasons.@each.seasonEnd", (function() {
                     const e = this.get("recentSeasons") || [],
                         t = Date.now();
                     return e.find((e => t >= e.seasonStart && t < e.seasonEnd))
                 })),
-                previousSeason: a.Ember.computed("recentSeasons.@each.seasonEnd", (function() {
+                previousSeason: s.Ember.computed("recentSeasons.@each.seasonEnd", (function() {
                     const e = this.get("recentSeasons") || [];
                     e.sort(((e, t) => t.seasonEnd - e.seasonEnd));
                     const t = Date.now();
                     return e.find((e => t > e.seasonEnd))
                 })),
-                isDependenciesInitialized: a.Ember.computed("session.state", "currentSummoner.unnamed", "currentSummoner.nameChangeFlag", "activeSeason", "previousSeason", "currentRankedStats", "settingsReady", "accountLeaguesSettings", "regionLocale", (function() {
+                isDependenciesInitialized: s.Ember.computed("session.state", "currentSummoner.unnamed", "currentSummoner.nameChangeFlag", "activeSeason", "previousSeason", "currentRankedStats", "settingsReady", "accountLeaguesSettings", "regionLocale", (function() {
                     const e = this.get("session.state"),
                         t = this.get("currentSummoner"),
                         n = Boolean(this.get("activeSeason")),
@@ -3127,20 +3134,76 @@
                         l = Boolean(this.get("regionLocale"));
                     return !this._isLoginSessionInvalid(e) && this._isNamedSummoner(t) && n && a && s && i && o && l
                 })),
+                _showRankedInfoModal() {
+                    if (!!this.get("accountLeaguesSettings.data.ranked-5s-ftux-seen") || void 0 === this.get("accountLeaguesSettings")) return !1;
+                    const e = s.componentFactory.create("RankedFtuxModalComponent"),
+                        t = s.ModalManager.add({
+                            type: "DialogAlert",
+                            data: {
+                                contents: e.domNode,
+                                okText: this.get("tra.RANKED_FIVES_FTUX_CLOSE_BUTTON_TEXT"),
+                                dismissible: !0,
+                                dismissibleType: "inside",
+                                onClose: () => this._saveRankedFivesFtuxModalSeen()
+                            },
+                            show: !0
+                        });
+                    t.okPromise.then((() => {
+                        s.ModalManager.remove(t), e && e.componentPromise && e.componentPromise.then((e => s.Ember.run((() => {
+                            e.app.destroy()
+                        }))))
+                    })).catch((e => {
+                        s.logger.error(`Failed to destroy modal: ${e}`)
+                    }))
+                },
                 _isLoginSessionInvalid: e => "SUCCEEDED" !== e,
-                _isNamedSummoner: e => e && !e.unnamed && !e.nameChangeFlag
+                _isNamedSummoner: e => e && !e.unnamed && !e.nameChangeFlag,
+                _saveRankedFivesFtuxModalSeen() {
+                    try {
+                        return i.default.saveAccountSetting(o, !0)
+                    } catch (e) {
+                        s.logger.warning(`Failed to save ${o} setting: ${e}`)
+                    }
+                }
             })
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var a = n(1);
+            var s = {
+                saveLocalSetting: (e, t) => {
+                    const n = {
+                        [e]: t
+                    };
+                    return (0, a.dataBinding)("/lol-settings").patch("/v1/local/lol-leagues", {
+                        data: n,
+                        schemaVersion: 1
+                    })
+                },
+                saveAccountSetting: (e, t) => {
+                    const n = {
+                        [e]: t
+                    };
+                    return (0, a.dataBinding)("/lol-settings").patch("/v2/account/LCUPreferences/lol-leagues", {
+                        data: n,
+                        schemaVersion: 1
+                    })
+                }
+            };
+            t.default = s
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "acmrjK1d",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isDependenciesInitialized"]]],null,3],["text","\\n"],["block",["if"],[["get",["previousSeason"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["leagues-dialogs"],null,[["previousSeason","activeSeason"],[["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["ranked-ftux-modal"],null,[["shouldShowRankedModal"],[["get",["shouldShowRankedModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["season-memorial-modal"],null,[["accountLeaguesSettings","activeSeason","previousSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["activeSeason"]],["get",["previousSeason"]],["get",["regionLocale"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["split-notifications"],null,[["accountLeaguesSettings","currentSummoner","currentRankedStats","activeSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["currentSummoner"]],["get",["currentRankedStats"]],["get",["activeSeason"]],["get",["regionLocale"]]]]],false],["text","\\n  "],["append",["helper",["eos-notifications"],null,[["regionLocale","previousSeason","activeSeason"],[["get",["regionLocale"]],["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowSeasonMemorialModal"]]],null,2],["text","\\n  "],["append",["helper",["season-start-modal"],null,[["activeSeason","accountLeaguesSettings"],[["get",["activeSeason"]],["get",["accountLeaguesSettings"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowRankedModal"]]],null,1]],"locals":[]}],"hasPartials":false}',
+                id: "5nT+niNV",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\notifications-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isDependenciesInitialized"]]],null,2],["text","\\n"],["block",["if"],[["get",["previousSeason"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["leagues-dialogs"],null,[["previousSeason","activeSeason"],[["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["season-memorial-modal"],null,[["accountLeaguesSettings","activeSeason","previousSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["activeSeason"]],["get",["previousSeason"]],["get",["regionLocale"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["split-notifications"],null,[["accountLeaguesSettings","currentSummoner","currentRankedStats","activeSeason","regionLocale"],[["get",["accountLeaguesSettings"]],["get",["currentSummoner"]],["get",["currentRankedStats"]],["get",["activeSeason"]],["get",["regionLocale"]]]]],false],["text","\\n  "],["append",["helper",["eos-notifications"],null,[["regionLocale","previousSeason","activeSeason"],[["get",["regionLocale"]],["get",["previousSeason"]],["get",["activeSeason"]]]]],false],["text","\\n\\n"],["block",["if"],[["get",["shouldShowSeasonMemorialModal"]]],null,1],["text","\\n  "],["append",["helper",["season-start-modal"],null,[["activeSeason","accountLeaguesSettings"],[["get",["activeSeason"]],["get",["accountLeaguesSettings"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
-                i = (a = n(115)) && a.__esModule ? a : {
+                i = (a = n(113)) && a.__esModule ? a : {
                     default: a
                 };
             n(116);
@@ -3186,40 +3249,13 @@
             })
         }, (e, t, n) => {
             "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var a = n(1);
-            var s = {
-                saveLocalSetting: (e, t) => {
-                    const n = {
-                        [e]: t
-                    };
-                    return (0, a.dataBinding)("/lol-settings").patch("/v1/local/lol-leagues", {
-                        data: n,
-                        schemaVersion: 1
-                    })
-                },
-                saveAccountSetting: (e, t) => {
-                    const n = {
-                        [e]: t
-                    };
-                    return (0, a.dataBinding)("/lol-settings").patch("/v2/account/LCUPreferences/lol-leagues", {
-                        data: n,
-                        schemaVersion: 1
-                    })
-                }
-            };
-            t.default = s
-        }, (e, t, n) => {
-            "use strict";
             n.r(t)
         }, (e, t, n) => {
             "use strict";
             var a, s = n(1),
                 i = n(29),
                 o = n(32),
-                l = (a = n(115)) && a.__esModule ? a : {
+                l = (a = n(113)) && a.__esModule ? a : {
                     default: a
                 };
             n(118);
@@ -3482,7 +3518,7 @@
             var a, s = n(1),
                 i = n(5),
                 o = n(32),
-                l = (a = n(115)) && a.__esModule ? a : {
+                l = (a = n(113)) && a.__esModule ? a : {
                     default: a
                 };
             n(124);
@@ -3646,7 +3682,7 @@
                 s = n(5),
                 i = n(32);
             n(127);
-            var o, l = (o = n(115)) && o.__esModule ? o : {
+            var o, l = (o = n(113)) && o.__esModule ? o : {
                 default: o
             };
             const r = n(128),
@@ -4037,45 +4073,27 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var a, s = n(1),
-                i = (a = n(115)) && a.__esModule ? a : {
-                    default: a
-                };
+            var a = n(1);
             n(130);
-            const o = "ranked-5s-ftux-seen";
-            var l = s.Ember.Component.extend({
+            var s = a.Ember.Component.extend({
                 layout: n(131),
                 classNames: ["ranked-ftux-modal"],
-                parties: s.Parties,
                 queueTypeQueueId: 710,
-                shouldShowRankedModal: !1,
-                gameModeTitleText: s.Ember.computed("tra", (function() {
+                gameModeTitleText: a.Ember.computed("tra", (function() {
                     return this.get("tra").formatString("RANKED_FIVES_FTUX_TITLE_TEXT_1", {
                         url: "https://www.leagueoflegends.com/news/dev/dev-the-return-of-ranked-5s"
                     })
-                })),
-                _saveRankedFivesFtuxModalSeen() {
-                    try {
-                        return i.default.saveAccountSetting(o, !0)
-                    } catch (e) {
-                        s.logger.warning(`Failed to save ${o} setting: ${e}`)
-                    }
-                },
-                actions: {
-                    closeRankedFivesFtuxModal() {
-                        this._saveRankedFivesFtuxModalSeen()
-                    }
-                }
+                }))
             });
-            t.default = l
+            t.default = s
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "HcVWunvj",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\index.js\\" "],["text","\\n"],["block",["uikit-modal"],null,[["displayModal","type","dismissible","closeButton","dismissibleType","okText","onClose"],[["get",["shouldShowRankedModal"]],"DialogAlert",true,true,"inside",["get",["tra","RANKED_FIVES_FTUX_CLOSE_BUTTON_TEXT"]],["helper",["action"],[["get",[null]],"closeRankedFivesFtuxModal"],null]]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--header"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title-container"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-image-wrapper"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","content-image"],["static-attr","src","lol-game-data/assets/ASSETS/LeagueClient/GameModeAssets/Ranked/tutorial-modal-landscape.png"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title external-link"],["flush-element"],["append",["helper",["sanitize"],[["get",["gameModeTitleText"]]],null],false],["close-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_1"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_2"]],false],["close-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_2"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_3"]],false],["close-element"],["text","\\n          "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_3"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "jM71sNFR",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-leagues\\\\src\\\\app\\\\ranked-fives-ftux-modal\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-content-block",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--header"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title-container"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-header--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-image-wrapper"],["flush-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","content-image"],["static-attr","src","lol-game-data/assets/ASSETS/LeagueClient/GameModeAssets/Ranked/tutorial-modal-landscape.png"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux--content-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title external-link"],["flush-element"],["append",["helper",["sanitize"],[["get",["gameModeTitleText"]]],null],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_1"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_2"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_2"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","ranked-fives-ftux-content--item"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--title"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_TITLE_TEXT_3"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","ranked-fives-ftux-item--desc"],["flush-element"],["append",["unknown",["tra","RANKED_FIVES_FTUX_SUBTITLE_TEXT_3"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

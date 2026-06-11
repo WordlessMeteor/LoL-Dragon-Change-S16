@@ -10,11 +10,11 @@
             3117,
             3158,
             3047,
+            3009,
             3111,
             3006,
             3005,
             3008,
-            3009,
             3010,
             3020
         ],
@@ -532,9 +532,9 @@
             3072,
             6671,
             3095,
-            4403,
             3026,
-            3031
+            3031,
+            4403
         ],
         "categories": [
             "Damage"
@@ -731,8 +731,8 @@
             3146,
             3072,
             3074,
-            4403,
-            3153
+            3153,
+            4403
         ],
         "categories": [
             "Damage",
@@ -872,8 +872,8 @@
             3102,
             3157,
             4645,
-            4403,
-            3089
+            3089,
+            4403
         ],
         "categories": [
             "SpellDamage"
@@ -2642,13 +2642,13 @@
     {
         "id": 2052,
         "name": "Snack para poros",
-        "description": "<mainText><stats></stats><br><br> <active>Activa - Consumir:</active> Sirve una comida exquisita a un poro cercano, lo que hace que crezca.<br><br><flavorText>Esta sabrosa mezcla de pollo de granja avarosano y especias de Freljord orgánicas contiene los nutrientes necesarios para hacer que tu poro siga ronroneando del gusto.<br><br>Toda la recaudación se donará a la lucha contra el maltrato animal en Noxus.</flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br> <active>Activa - Consumir:</active> Sirve una comida exquisita a un poro cercano, lo que hace que crezca.<br><br><flavorText>Esta sabrosa mezcla de gallina avarosana y hierbas locales de Freljord (recogidas a diario y congeladas al instante) contiene los nutrientes esenciales que tu poro esté fresco y tranquilo.<br><br>Todos los beneficios se donarán para preservar el hábitat del poro moteado, una especie en peligro de extinción.</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
         "to": [],
         "categories": [],
-        "maxStacks": 2,
+        "maxStacks": 99,
         "requiredChampion": "",
         "requiredAlly": "",
         "requiredBuffCurrencyName": "",
@@ -4684,7 +4684,6 @@
             2524,
             3071,
             6620,
-            4403,
             2502,
             2510,
             2525,
@@ -4698,6 +4697,7 @@
             323119,
             326620,
             328020,
+            4403,
             4629,
             4644,
             6617,
@@ -5156,10 +5156,10 @@
             3046,
             6675,
             6671,
-            4403,
             2512,
             3085,
-            3094
+            3094,
+            4403
         ],
         "categories": [
             "CriticalStrike",
@@ -5421,8 +5421,8 @@
             1029
         ],
         "to": [
-            4403,
             3193,
+            4403,
             6667
         ],
         "categories": [
@@ -9126,7 +9126,7 @@
     {
         "id": 4645,
         "name": "Llamasombría",
-        "description": "<mainText><stats><attention> 110</attention> de poder de habilidad<br><attention> 15</attention> de penetración mágica</stats><br><br><passive>Florascua</passive><br>El <magicDamage>daño mágico</magicDamage> y el <trueDamage>daño verdadero</trueDamage> asestan <attention>impactos críticos</attention> a los enemigos con menos de un 40% de la vida, lo que inflige un 20% de daño adicional. </mainText>",
+        "description": "<mainText><stats><attention> 110</attention> de poder de habilidad<br><attention> 15</attention> de penetración mágica</stats><br><br><passive>Florascua</passive><br><magicDamage>El daño mágico</magicDamage> y el <trueDamage>daño verdadero</trueDamage> asestan <attention>impactos críticos</attention> a los enemigos con menos de un 40% de la vida, lo que inflige un 20% de daño adicional. </mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -12173,6 +12173,27 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/220012_Anvil_Shardblade.png"
     },
     {
+        "id": 220013,
+        "name": "Snack para poros",
+        "description": "<mainText><stats></stats><br><br> <active>Activa - Consumir:</active> Sirve una comida exquisita a un poro cercano, lo que hace que crezca.<br><br><flavorText>Esta sabrosa mezcla de gallina avarosana y hierbas locales de Freljord, rematadas con un refinado toque de repostería demaciana, contiene los nutrientes esenciales para que tu poro esté radiante.<br><br>Todos los beneficios se donarán al Coro Juvenil de Cloudfield. ¡Ayuda a que los niños demacianos puedan comprarse un etwahl hoy mismo!</flavorText></mainText>",
+        "active": true,
+        "inStore": false,
+        "from": [],
+        "to": [],
+        "categories": [],
+        "maxStacks": 2,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 0,
+        "priceTotal": 0,
+        "displayInItemSets": true,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/2052_Poro_Snack_RainbowCandy.png"
+    },
+    {
         "id": 221011,
         "name": "Cinturón de gigante",
         "description": "<mainText><stats><attention> 300</attention> de vida</stats><br><br></mainText>",
@@ -12513,7 +12534,7 @@
     {
         "id": 222504,
         "name": "Rookern kaénico",
-        "description": "<mainText><stats><attention> 350</attention> de vida<br><attention> 80</attention> de resistencia mágica</stats><br><br><passive>Perdición del mago</passive><br>Tras 15 s sin recibir daño mágico, obtienes un <shield>escudo mágico</shield>. </mainText>",
+        "description": "<mainText><stats><attention> 350</attention> de vida<br><attention> 80</attention> de resistencia mágica</stats><br><br><passive>Perdición del mago</passive><br>Tras 10 s sin recibir daño mágico, obtienes un <shield>escudo mágico</shield>. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13581,7 +13602,7 @@
     {
         "id": 223078,
         "name": "Fuerza de trinidad",
-        "description": "<mainText><stats><attention> 35</attention> de daño de ataque<br><attention> 25%</attention> de velocidad de ataque<br><attention> 333</attention> de vida<br><attention> 20</attention> de velocidad de habilidades</stats><br><br><passive>Hoja encantada</passive><br>Tras usar una habilidad, tu siguiente ataque inflige daño físico adicional.<br><br><passive>¡Adelante!</passive><br>Los ataques básicos otorgan velocidad de movimiento.<br><br></mainText>",
+        "description": "<mainText><stats><attention> 40</attention> de daño de ataque<br><attention> 25%</attention> de velocidad de ataque<br><attention> 375</attention> de vida<br><attention> 20</attention> de velocidad de habilidades</stats><br><br><passive>Hoja encantada</passive><br>Tras usar una habilidad, tu siguiente ataque inflige daño físico adicional.<br><br><passive>¡Adelante!</passive><br>Los ataques básicos otorgan velocidad de movimiento.<br><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13734,7 +13755,7 @@
     {
         "id": 223094,
         "name": "Cañón de fuego rápido",
-        "description": "<mainText><stats><attention> 30%</attention> de velocidad de ataque<br><attention> 25%</attention> de probabilidad de impacto crítico<br><attention> 4%</attention> de velocidad de movimiento</stats><br><br><passive>Vigor</passive><br>Moverse y atacar genera un <keyword>ataque con vigor</keyword>.<br><br><passive>Francotirador</passive><br>Tus <keyword>ataques con vigor</keyword> infligen <magicDamage>200 de daño mágico adicional</magicDamage>. Además, los ataques con vigor obtienen hasta un 35% de alcance de ataque adicional.<br><br><buffedStat>Los ataques con vigor se acumulan el doble de rápido en Arena.</buffedStat><br></mainText>",
+        "description": "<mainText><stats><attention> 30%</attention> de velocidad de ataque<br><attention> 25%</attention> de probabilidad de impacto crítico<br><attention> 4%</attention> de velocidad de movimiento</stats><br><br><passive>Vigor</passive><br>Moverse y atacar genera un <keyword>ataque con vigor</keyword>.<br><br><passive>Francotirador</passive><br>Tus <keyword>ataques con vigor</keyword> infligen <magicDamage>200 de daño mágico adicional</magicDamage>. Además, los ataques con vigor obtienen hasta un 35% de alcance de ataque adicional.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -14852,7 +14873,7 @@
     {
         "id": 224004,
         "name": "Sable espectral",
-        "description": "<mainText><stats><attention> 55</attention> de daño de ataque<br><attention> 21</attention> de letalidad</stats><br><br> <active>Activa -</active> <active>Ancla del alma</active>  (0 s)<br>Marca tu ubicación actual. Tras 5 s, vuelve a esa ubicación. Puedes volver a lanzar la habilidad en cualquier momento de la duración de <active>Ánima ancorada</active> para volver a la ubicación marcada.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> de daño de ataque<br><attention> 21</attention> de letalidad</stats><br><br> <active>Activa -</active> <active>Ancla del alma</active>  (0 s)<br>Marca tu ubicación actual. Tras 5 s, vuelve a esa ubicación. Puedes volver a lanzar la habilidad en cualquier momento de la duración de <active>Ánima ancorada</active> para volver a la ubicación marcada.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14876,7 +14897,7 @@
     {
         "id": 224005,
         "name": "Mandato imperial",
-        "description": "<mainText><stats><attention> 60</attention> de poder de habilidad<br><attention> 35</attention> de velocidad de habilidades<br><attention> 150%</attention> de regeneración de maná básica</stats><br><br><passive>Fuego coordinado</passive>  (0 s) por objetivo<br><keyword>Ralentizar</keyword> o <keyword>inmovilizar</keyword> a un campeón enemigo lo marca durante 5 s. El daño de los campeones aliados detona la marca, lo que inflige <magicDamage>daño mágico equivalente al 20% de la vida actual</magicDamage>. </mainText>",
+        "description": "<mainText><stats><attention> 60</attention> de poder de habilidad<br><attention> 15</attention> de velocidad de habilidades<br><attention> 150%</attention> de regeneración de maná básica</stats><br><br><passive>Control</passive><br>Otorga  15 de velocidad de habilidades a tus habilidades con efectos de <keyword>inmovilización</keyword>.<br><br><passive>Orden</passive><br>Al <keyword>inmovilizar</keyword> a un campeón enemigo, le aplica una <Keyword>vulnerabilidad</Keyword> del 6% durante 4 s.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15586,7 +15607,7 @@
     {
         "id": 226662,
         "name": "Guantelete de hielo",
-        "description": "<mainText><stats><attention> 300</attention> de vida<br><attention> 45</attention> de armadura<br><attention> 10</attention> de velocidad de habilidades</stats><br><br><passive>Hoja encantada</passive><br>Tras usar una habilidad, tu siguiente ataque inflige <physicalDamage>daño físico adicional</physicalDamage>  <OnHit>al impactar</OnHit> y crea un campo de escarcha durante 2 s que <status>ralentiza</status>.</mainText>",
+        "description": "<mainText><stats><attention> 300</attention> de vida<br><attention> 45</attention> de armadura<br><attention> 15</attention> de velocidad de habilidades</stats><br><br><passive>Hoja encantada</passive><br>Tras usar una habilidad, tu siguiente ataque inflige <physicalDamage>daño físico adicional</physicalDamage>  <OnHit>al impactar</OnHit> y crea un campo de escarcha durante 2 s que <status>ralentiza</status>.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15901,7 +15922,7 @@
     {
         "id": 226694,
         "name": "Rencor de Serylda",
-        "description": "<mainText><stats><attention> 40</attention> de daño de ataque<br><attention> 40%</attention> de penetración de armadura<br><attention> 10</attention> de velocidad de habilidades</stats><br><br><passive>Frío punzante</passive><br>Las habilidades de daño <status>ralentizan</status> a los enemigos con menos del <scaleHealth>50% de vida</scaleHealth> un 30% durante 1 s.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> de daño de ataque<br><attention> 40%</attention> de penetración de armadura<br><attention> 15</attention> de velocidad de habilidades</stats><br><br><passive>Frío punzante</passive><br>Las habilidades de daño <status>ralentizan</status> a los enemigos con menos del <scaleHealth>50% de vida</scaleHealth> un 50% durante 1 s.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16030,7 +16051,7 @@
     {
         "id": 226699,
         "name": "Espada ciclovoltaica",
-        "description": "<mainText><stats><attention> 50</attention> de daño de ataque<br><attention> 18</attention> de letalidad<br><attention> 20</attention> de velocidad de habilidades</stats><br><br><passive>Galvanizado</passive><br>Infligir daño a campeones enemigos con una habilidad activa los efectos de <keyword>vigor</keyword> si están listos.<br><br><passive>Firmamento</passive><br>Tus <keyword>ataques con vigor</keyword> infligen un <physicalDamage>0%</physicalDamage> de la vida actual del objetivo como <physicalDamage>daño físico adicional</physicalDamage> y te otorga  <scaleLethality>0 de letalidad</scaleLethality> durante 4 s.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> de daño de ataque<br><attention> 20</attention> de letalidad<br><attention> 20</attention> de velocidad de habilidades</stats><br><br><passive>Galvanizado</passive><br>Infligir daño a campeones enemigos con una habilidad activa los efectos de <keyword>vigor</keyword> si están listos.<br><br><passive>Firmamento</passive><br>Tus <keyword>ataques con vigor</keyword> infligen un <physicalDamage>0%</physicalDamage> de la vida actual del objetivo como <physicalDamage>daño físico adicional</physicalDamage> y te otorga  <scaleLethality>0 de letalidad</scaleLethality> durante 4 s.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16185,7 +16206,7 @@
     {
         "id": 228005,
         "name": "Cuchilla obsidiana",
-        "description": "<mainText><stats><ornnBonus> 70</ornnBonus> de daño de ataque<br><ornnBonus> 700</ornnBonus> de vida<br><ornnBonus> 40</ornnBonus> de velocidad de habilidades</stats><br><br><passive>Trinchar</passive><br>Infligir <physicalDamage>daño físico</physicalDamage> a campeones reduce la <scaleArmor>armadura del objetivo un 500%</scaleArmor> durante 0.1 s. (Se acumula 5 veces).<br><br><passive>Fervor</passive><br>Infligir <physicalDamage>daño físico</physicalDamage> te otorga <speed>20 de velocidad de movimiento</speed> durante 2 s.</mainText>",
+        "description": "<mainText><stats><ornnBonus> 70</ornnBonus> de daño de ataque<br><ornnBonus> 700</ornnBonus> de vida<br><ornnBonus> 40</ornnBonus> de velocidad de habilidades</stats><br><br><passive>Trinchar</passive><br>Infligir <physicalDamage>daño físico</physicalDamage> a campeones reduce la <scaleArmor>armadura del objetivo un 6%</scaleArmor> durante 6 s. (Se acumula 5 veces).<br><br><passive>Fervor</passive><br>Infligir <physicalDamage>daño físico</physicalDamage> te otorga <speed>20 de velocidad de movimiento</speed> durante 2 s.</mainText>",
         "active": false,
         "inStore": false,
         "from": [],

@@ -6658,7 +6658,7 @@ lol-uikit-content-block[type=attention].mass-disenchant-attention-tooltip-contai
 .skin-preview-component .skin-preview-container {
     background-position: -90% 0;
     height: 100%;
-    position: relative;
+    position: absolute;
     width: 100%
 }
 
@@ -6688,6 +6688,7 @@ lol-uikit-content-block[type=attention].mass-disenchant-attention-tooltip-contai
     flex-direction: column;
     left: 60px;
     min-height: 560px;
+    overflow: hidden;
     padding: 2px;
     position: absolute;
     top: 22px;
@@ -6724,22 +6725,24 @@ lol-uikit-content-block[type=attention].mass-disenchant-attention-tooltip-contai
 }
 
 .skin-preview-component .abilities-preview-container .preview-title-container {
-    height: 83px
+    box-sizing: border-box;
+    min-height: 83px;
+    min-width: 0;
+    overflow: hidden;
+    padding: 15px 12px 5px;
+    width: 100%
 }
 
 .skin-preview-component .abilities-preview-container .preview-title-container .skin-title {
-    background: #010a13;
-    margin-top: 15px;
-    position: absolute;
     text-align: center;
-    width: 100%
+    word-wrap: break-word;
+    max-width: 100%;
+    overflow-wrap: break-word
 }
 
 .skin-preview-component .abilities-preview-container .preview-title-container .sub-title {
-    position: absolute;
-    text-align: center;
-    top: 50px;
-    width: 100%
+    margin-top: 5px;
+    text-align: center
 }
 
 .skin-preview-component .abilities-preview-container .preview-text-container {

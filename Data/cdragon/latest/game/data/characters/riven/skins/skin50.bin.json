@@ -104,6 +104,11 @@
             "simpleSkin": "ASSETS/Characters/Riven/Skins/Skin44/Riven_Skin44.skn",
             "skinScale": 1.5,
             "selfIllumination": 0.699999988079071,
+            "overrideBoundingBox": [
+                74.0,
+                168.0,
+                74.0
+            ],
             "Material": "Characters/Riven/Skins/Skin50/Materials/Riven_Body_Iridescent",
             "reflectionFresnelColor": [
                 0,
@@ -271,6 +276,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "fresnelAlpha_minmax",
                 "value": [
@@ -471,6 +516,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_FRESNEL_ALPHA",
                 "on": false,

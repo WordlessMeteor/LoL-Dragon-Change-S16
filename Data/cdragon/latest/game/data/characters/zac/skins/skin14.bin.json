@@ -7216,9 +7216,8 @@
                     "__type": "ValueColor"
                 },
                 "pass": 5,
-                "miscRenderFlags": 1,
+                "{cb13aff1}": -80.0,
                 "isUniformScale": 1,
-                "isFollowingTerrain": 1,
                 "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -7352,9 +7351,8 @@
                     },
                     "__type": "ValueColor"
                 },
-                "miscRenderFlags": 1,
+                "{cb13aff1}": -80.0,
                 "isUniformScale": 1,
-                "isFollowingTerrain": 1,
                 "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -7494,9 +7492,8 @@
                 },
                 "pass": 2,
                 "alphaRef": 0,
-                "miscRenderFlags": 1,
+                "{cb13aff1}": -80.0,
                 "isUniformScale": 1,
-                "isGroundLayer": 1,
                 "useNavmeshMask": 1,
                 "birthScale0": {
                     "constantValue": [
@@ -7616,9 +7613,7 @@
                 },
                 "pass": 3,
                 "alphaRef": 0,
-                "miscRenderFlags": 1,
                 "isUniformScale": 1,
-                "isGroundLayer": 1,
                 "useNavmeshMask": 1,
                 "birthScale0": {
                     "constantValue": [
@@ -7731,10 +7726,9 @@
                 },
                 "pass": 1,
                 "alphaRef": 0,
-                "miscRenderFlags": 1,
+                "{cb13aff1}": -80.0,
                 "isUniformScale": 1,
                 "isGroundLayer": 1,
-                "useNavmeshMask": 1,
                 "birthScale0": {
                     "constantValue": [
                         0.7799999713897705,
@@ -7829,9 +7823,8 @@
                     "__type": "ValueColor"
                 },
                 "pass": 20,
-                "miscRenderFlags": 1,
+                "{cb13aff1}": -80.0,
                 "isUniformScale": 1,
-                "isFollowingTerrain": 1,
                 "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -7926,9 +7919,8 @@
                     "__type": "ValueColor"
                 },
                 "pass": 15,
-                "miscRenderFlags": 1,
+                "{cb13aff1}": -80.0,
                 "isUniformScale": 1,
-                "isFollowingTerrain": 1,
                 "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
@@ -27118,6 +27110,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Panning_Scale",
                 "value": [
                     1.0,
@@ -27150,6 +27182,16 @@
             {
                 "name": "Alpha_Control",
                 "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
             }
         ],
         "shaderMacros": {
@@ -27248,6 +27290,46 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "fresnelAlpha_minmax",
                 "value": [
@@ -27466,6 +27548,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_FRESNEL_ALPHA",
                 "on": false,
@@ -27668,6 +27758,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "fresnelAlpha_minmax",
                 "value": [
                     0.0,
@@ -27885,6 +28015,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_FRESNEL_ALPHA",
                 "on": false,

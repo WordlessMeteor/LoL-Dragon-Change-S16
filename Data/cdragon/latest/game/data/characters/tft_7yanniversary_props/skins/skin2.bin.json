@@ -1,0 +1,863 @@
+{
+    "Characters/TFT_7yAnniversary_Props/Skins/Skin2": {
+        "championSkinName": "TFT_7yAnniversary_Props",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/TFT_7yAnniversary_Props/Animations/Skin2",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7yAnniversary_Props_Skin02.TFT_ArenaSkin_7yAnniversary.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7yAnniversary_Props_Skin02.TFT_ArenaSkin_7yAnniversary.skn",
+            "selfIllumination": 2.0,
+            "overrideBoundingBox": [
+                500.0,
+                500.0,
+                500.0
+            ],
+            "submeshRenderOrder": "Duckbill_Body Duckbill_Eyes Duckbill_Cup_B Duckbill_Cup_A",
+            "materialOverride": [
+                {
+                    "Material": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Body",
+                    "submesh": "Duckbill_Body",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Eyes",
+                    "submesh": "Duckbill_Eyes",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/TFT_7yAnniversary_Props/Skins/Skin3/Materials/7yAnniversary_AnimProp_Mat_Cup",
+                    "submesh": "Duckbill_Cup_A",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                },
+                {
+                    "Material": "Characters/TFT_7yAnniversary_Props/Skins/Skin3/Materials/7yAnniversary_AnimProp_Mat_Cup_B",
+                    "submesh": "Duckbill_Cup_B",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "7yAnniversary_Skin2_Idle",
+                "boneName": "Spine2",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "mResourceResolver": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Resources": {
+        "resourceMap": {
+            "7yAnniversary_Skin2_Idle": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Particles/7yAnniversary_Skin2_Idle"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Particles/7yAnniversary_Skin2_Idle": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Glow_add1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.7000076174736023,
+                        0.08999770879745483,
+                        1.0,
+                        0.17999541759490967
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "alphaRef": 0,
+                "depthBiasFactors": [
+                    -1.0,
+                    -15.0
+                ],
+                "disableBackfaceCull": true,
+                "isUniformScale": 1,
+                "isRotationEnabled": 1,
+                "isGroundLayer": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        100.0,
+                        57.0,
+                        125.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        1.2999999523162842,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/TFT_7yAnniversary_Props_Skin02_Idle_Skin22_common_ball32_Gradient.TFT_ArenaSkin_7yAnniversary.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 0.009999999776482582,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.699999988079071,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.20000000298023224,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.699999988079071
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "rateByVelocityFunction": {
+                    "constantValue": [
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector2"
+                },
+                "MaximumRateByVelocity": 12.0,
+                "emitterName": "Bokeh_Dots_LOCAL2",
+                "birthVelocity": {
+                    "constantValue": [
+                        35.0,
+                        35.0,
+                        35.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                35.0,
+                                35.0,
+                                35.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "SpawnShape": {
+                    "radius": 30.0,
+                    "__type": "VfxShapeSphere"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.31974920630455017,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.9215686321258545,
+                                0.8117647171020508,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                0.9843137264251709,
+                                0.4941176474094391,
+                                1.0
+                            ],
+                            [
+                                0.03921568766236305,
+                                0.9058823585510254,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.8823529481887817,
+                                0.4470588266849518,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 5,
+                "colorLookUpTypeY": 3,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        360.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                360.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "rotation0": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        7.0,
+                        13.0,
+                        6.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0036231884732842445,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                7.0,
+                                13.0,
+                                6.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.2000000476837158,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/TFT_7yAnniversary_Props_Skin02_Idle_TFT_Journeys_Sparkles_2x2.TFT_ArenaSkin_7yAnniversary.tex",
+                "frameRate": 2.0,
+                "numFrames": 2,
+                "texDiv": [
+                    2.0,
+                    1.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "glow1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "blendMode": 1,
+                "birthColor": {
+                    "constantValue": [
+                        0.4899977147579193,
+                        0.17999541759490967,
+                        0.5499961972236633,
+                        0.1600061058998108
+                    ],
+                    "__type": "ValueColor"
+                },
+                "pass": -10,
+                "alphaRef": 0,
+                "softParticleParams": {
+                    "beginIn": 1.0,
+                    "deltaIn": 15.0,
+                    "__type": "VfxSoftParticleDefinitionData"
+                },
+                "depthBiasFactors": [
+                    -1.0,
+                    -20.0
+                ],
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isGroundLayer": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        180.0,
+                        60.0,
+                        60.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                180.0,
+                                60.0,
+                                60.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.800000011920929,
+                        1.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.6399999856948853,
+                                0.20000000298023224,
+                                0.20000000298023224
+                            ],
+                            [
+                                0.800000011920929,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/TFT_7yAnniversary_Props_Base_Idle_Aura_Self.TFT_ArenaSkin_7yAnniversary.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Avatar_Burst1",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSubmeshesToDraw": [
+                            "Duckbill_Body"
+                        ],
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        0.3000076413154602
+                    ],
+                    "__type": "ValueColor"
+                },
+                "Color": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueColor"
+                },
+                "reflectionDefinition": {
+                    "reflectionFresnelColor": [
+                        0.0,
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "fresnel": 0.05000000074505806,
+                    "fresnelColor": [
+                        0.9001144170761108,
+                        0.0,
+                        0.9353474974632263,
+                        1.0
+                    ],
+                    "__type": "VfxReflectionDefinitionData"
+                },
+                "depthBiasFactors": [
+                    -1.0,
+                    -1.0
+                ],
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        1.0019999742507935,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/color-hold.TFT_ArenaSkin_7yAnniversary.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 6000.0,
+        "particleName": "7yAnniversary_Skin2_Idle",
+        "particlePath": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Particles/7yAnniversary_Skin2_Idle",
+        "flags": 213,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Eyes": {
+        "name": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Eyes",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7YAnniversary_PetDuckbill_Eyes_Tx.TFT_ArenaSkin_7yAnniversary.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Alpha_mult",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            },
+            {
+                "name": "env_transition",
+                "parentName": "normal",
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Body": {
+        "name": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Body",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7YAnniversary_PetDuckbill_Tx.TFT_ArenaSkin_7yAnniversary.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Alpha_mult",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            },
+            {
+                "name": "env_transition",
+                "parentName": "normal",
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "__linked": [
+        "DATA/Characters/TFT_7yAnniversary_Props/TFT_7yAnniversary_Props.bin",
+        "DATA/Characters/TFT_7yAnniversary_Props/Animations/Skin2.bin",
+        "DATA/Characters/TFT_7yAnniversary_Props/TFT_7yAnniversary_Props_Multi_Skins_Skin2_Skins_Skin3_Skins_Skin9.bin"
+    ]
+}

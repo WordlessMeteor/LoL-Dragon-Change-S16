@@ -33967,7 +33967,7 @@
         "__type": "CustomShaderDef"
     },
     "Shaders/StaticMesh/TFT_SparkleParallaxGlow": {
-        "ShadingModel": "{33ed59d6}",
+        "ShadingModel": "{e3f0ccbe}",
         "parameters": [
             {
                 "name": "PitchFactor",
@@ -71609,6 +71609,57 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Rim_Light_Power",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Rim_Light_Power",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Rim_Light_Color",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Rim_Light_Color",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Rim_Light_Intensity",
+                "data": [
+                    2.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Rim_Light_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Bloom_Intensity",
                 "data": [
                     1.0,
@@ -71671,6 +71722,10 @@
             },
             {
                 "name": "USE_DISSOLVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "ADD_FRESNEL_RIM",
                 "__type": "ShaderStaticSwitch"
             }
         ],
@@ -91724,6 +91779,28 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Refraction_Distortion_Strength",
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Distortion_Strength",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Refraction_Blend",
+                "logicalParameters": [
+                    {
+                        "name": "Refraction_Blend",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "CausticsChromaticAberration",
                 "data": [
                     0.5,
@@ -92216,6 +92293,11 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "USE_VOID_PREVIEW_IN_MM",
+                "{066e669c}": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "USE_VOID",
                 "onByDefault": true,
                 "__type": "ShaderStaticSwitch"
@@ -92231,6 +92313,7 @@
             {
                 "name": "WaterNormal",
                 "defaultTexturePath": "ASSETS/Shared/Materials/velvet_NM.tex",
+                "samplerName": "Wrap_No_Mip",
                 "__type": "ShaderTexture"
             },
             {

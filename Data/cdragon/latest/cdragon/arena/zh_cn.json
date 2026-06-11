@@ -473,13 +473,13 @@
             "calculations": {},
             "dataValues": {
                 "BombDelay": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    13.0,
+                    13.0,
+                    13.0,
+                    13.0,
+                    13.0,
+                    13.0,
+                    13.0
                 ],
                 "KnockupDuration": [
                     0.75,
@@ -3444,7 +3444,7 @@
             "id": 310,
             "name": "小丑学院",
             "rarity": 2,
-            "tooltip": "<spellName>背刺</spellName>：你从背后袭击敌人时，会造成@BasicAttackDamage@<physicalDamage>额外伤害</physicalDamage>。<br><br><spellName>欺诈魔术</spellName>：你传送并变为<keywordStealth>隐形</keywordStealth>，持续@StealthDuration@秒。你在<keywordStealth>隐形</keywordStealth>状态下的第一次攻击将造成额外的<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。如果从背后进行打击，那么这个攻击会暴击，造成@QCritDamageMod@伤害。<br><br><spellName>幻像：阵亡</spellName>：在阵亡时，在你周围造成<magicDamage>@FearDamage*100@%最大生命值的魔法伤害</magicDamage>以及@FearDuration@秒恐惧。"
+            "tooltip": "<spellName>背刺</spellName>：你从背后袭击敌人时，会造成@BasicAttackDamage@<physicalDamage>额外物理伤害</physicalDamage>。<br><br><spellName>欺诈魔术</spellName>：你传送并变为<keywordStealth>隐形</keywordStealth>，持续@StealthDuration@秒。你在<keywordStealth>隐形</keywordStealth>状态下的第一次攻击将造成额外的<physicalDamage>@TotalDamage@物理伤害</physicalDamage>。如果从背后进行打击，那么这个攻击会暴击，造成@QCritDamageMod@伤害。<br><br><spellName>幻像：阵亡</spellName>：在阵亡时，在你周围造成<magicDamage>@FearDamage*100@%最大生命值的魔法伤害</magicDamage>以及@FearDuration@秒恐惧。"
         },
         {
             "apiName": "NumbToPain",
@@ -3527,13 +3527,13 @@
             "calculations": {},
             "dataValues": {
                 "BonusGold": [
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0,
-                    250.0
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
                 ],
                 "MaxLevel": [
                     1.0,
@@ -3545,13 +3545,13 @@
                     1.0
                 ]
             },
-            "desc": "为你的战队投票，选择与【猎人】结盟。<br><br>与【猎人】结盟，会在你击败一个<keywordMajor>【恶魔】战队</keywordMajor>时为你提供<gold>+%i:goldCoins%@BonusGold@额外金币</gold>。",
+            "desc": "为你的战队投票，选择与【猎人】结盟。<br><br>与【猎人】结盟，会<keywordMajor>在你打败一个【恶魔】战队时</keywordMajor>为你提供<gold>+%i:goldCoins%@BonusGold@额外金币</gold>。",
             "iconLarge": "assets/ux/cherry/augments/icons/yonehunter_large.arena_2026_s2_a2.png",
             "iconSmall": "assets/ux/cherry/augments/icons/yonehunter_small.arena_2026_s2_a2.png",
             "id": 362,
             "name": "与【猎人】结盟",
             "rarity": 4,
-            "tooltip": "为你的战队投票，选择与【猎人】结盟。<br><br>与【猎人】结盟，会在你击败一个<keywordMajor>【恶魔】战队</keywordMajor>时为你提供<gold>+%i:goldCoins%@BonusGold@额外金币</gold>。"
+            "tooltip": "为你的战队投票，选择与【猎人】结盟。<br><br>与【猎人】结盟，会<keywordMajor>在你打败一个【恶魔】战队时</keywordMajor>为你提供<gold>+%i:goldCoins%@BonusGold@额外金币</gold>。"
         },
         {
             "apiName": "AugmentedPower",
@@ -7254,8 +7254,8 @@
                 "AttackReduction": [
                     0.4000000059604645,
                     0.4000000059604645,
-                    0.4000000059604645,
-                    0.4000000059604645,
+                    0.5,
+                    0.6000000238418579,
                     0.4000000059604645,
                     0.4000000059604645,
                     0.4000000059604645
@@ -8215,7 +8215,23 @@
         },
         {
             "apiName": "ScopiestWeapons",
-            "calculations": {},
+            "calculations": {
+                "RangeIncrease": {
+                    "__type": "{e9a3c91d}",
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "__type": "NamedDataValueCalculationPart",
+                            "mDataValue": "MeleeRangeIncrease"
+                        }
+                    ],
+                    "mRangedMultiplier": {
+                        "__type": "NumberCalculationPart",
+                        "mNumber": 0.6000000238418579
+                    },
+                    "mSimpleTooltipCalculationDisplay": 5
+                }
+            },
             "dataValues": {
                 "MaxLevel": [
                     3.0,
@@ -8236,22 +8252,22 @@
                     450.0
                 ],
                 "RangedRangeIncrease": [
-                    75.0,
-                    75.0,
-                    125.0,
-                    175.0,
+                    90.0,
+                    90.0,
+                    135.0,
+                    180.0,
                     250.0,
                     300.0,
                     350.0
                 ]
             },
-            "desc": "获得@MeleeRangeIncrease@攻击距离，如果你是远程英雄则降低至@RangedRangeIncrease@攻击距离。",
+            "desc": "获得@RangeIncrease@攻击距离。",
             "iconLarge": "assets/ux/cherry/augments/icons/scopiestweapons_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/scopiestweapons_small.png",
             "id": 115,
             "name": "最万用的瞄准镜",
             "rarity": 2,
-            "tooltip": "获得@MeleeRangeIncrease@攻击距离，如果你是远程英雄则降低至@RangedRangeIncrease@攻击距离。"
+            "tooltip": "获得@RangeIncrease@攻击距离。"
         },
         {
             "apiName": "SlimeTime",
@@ -8488,13 +8504,13 @@
                     0.75
                 ]
             },
-            "desc": "在你获得一个技能的永久<keywordMajor>层数</keywordMajor>时，多获得@StackModifier*100@%！",
+            "desc": "在你获得一个技能、强化符文或装备的永久<keywordMajor>层数</keywordMajor>时，多获得@StackModifier*100@%！",
             "iconLarge": "assets/ux/cherry/augments/icons/stackosaurusrex_large.png",
             "iconSmall": "assets/ux/cherry/augments/icons/stackosaurusrex_small.png",
             "id": 204,
             "name": "叠角龙",
             "rarity": 0,
-            "tooltip": "在你获得一个技能的永久<keywordMajor>层数</keywordMajor>时，多获得@StackModifier*100@%！"
+            "tooltip": "在你获得一个技能、强化符文或装备的永久<keywordMajor>层数</keywordMajor>时，多获得@StackModifier*100@%！"
         },
         {
             "apiName": "escAPADe",
@@ -9168,6 +9184,46 @@
             "tooltip": "你的召唤物获得@MinionAmp*100@%体型提升、生命值和伤害。"
         },
         {
+            "apiName": "GoHSwindlersOrb",
+            "calculations": {},
+            "dataValues": {
+                "DebuffDuration": [
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
+                ],
+                "MaxLevel": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "ShieldShred": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ]
+            },
+            "desc": "对一名敌方英雄造成伤害时，会降低其<shield>护盾值</shield>。",
+            "iconLarge": "assets/ux/cherry/augments/icons/swindlers_orb_item_large.png",
+            "iconSmall": "assets/ux/cherry/augments/icons/swindlers_orb_item_small.png",
+            "id": 392,
+            "name": "诈骗者之球",
+            "rarity": 4,
+            "tooltip": "对一名敌方英雄造成伤害时，会使其获得的任何<shield>护盾</shield>降低@ShieldShred@%，持续@DebuffDuration@秒。<br><br><rules>影响常规护盾和<physicalDamage>物理伤害</physicalDamage>护盾，但不影响仅格挡<magicDamage>魔法伤害</magicDamage>的护盾。</rules>"
+        },
+        {
             "apiName": "TankEngine",
             "calculations": {
                 "{cd5eb5cd}": {
@@ -9281,13 +9337,13 @@
                     4.0
                 ],
                 "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0,
+                    3.0
                 ]
             },
             "desc": "你的技能可施加{{ Item_Keyword_OnHit }}。",
@@ -12816,13 +12872,13 @@
                     0.10000000149011612
                 ],
                 "HealthPercentageMod": [
-                    0.10000000149011612,
-                    0.10000000149011612,
-                    0.10000000149011612,
-                    0.10000000149011612,
-                    0.10000000149011612,
-                    0.10000000149011612,
-                    0.10000000149011612
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448,
+                    0.15000000596046448
                 ],
                 "MaxLevel": [
                     1.0,
@@ -13780,18 +13836,18 @@
             "calculations": {},
             "dataValues": {
                 "Cooldown": [
-                    10.0,
-                    10.0,
                     5.0,
                     5.0,
-                    5.0,
-                    5.0,
-                    5.0
+                    0.5,
+                    0.25,
+                    0.25,
+                    0.25,
+                    0.25
                 ],
                 "MSBuffAmount": [
                     0.5,
                     0.5,
-                    0.5,
+                    0.75,
                     0.5,
                     0.5,
                     0.5,

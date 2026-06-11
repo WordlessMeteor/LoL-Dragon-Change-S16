@@ -41,6 +41,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mApplyAttackEffect": true,
             "mProjectTargetToCastRange": true,
@@ -57,6 +70,19 @@
                 1100.0,
                 1100.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0
+                ],
+                "{0a3e0478}": 1100.0,
+                "__type": "{0a0eddc9}"
+            },
             "luaOnMissileUpdateDistanceInterval": 51.0,
             "mMissileSpec": {
                 "mMissileWidth": 70.0,
@@ -131,6 +157,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mShowChannelBar": false,
             "mIgnoreRangeCheck": true,
@@ -144,6 +183,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "mTargetingTypeData": {
                 "__type": "Location"
             },
@@ -162,7 +214,13 @@
             "mAffectsTypeFlags": 8192,
             "mAlternateName": "PykeQ",
             "mSpellTags": [
-                "Trait_ImmobilizingCCSpell"
+                "Trait_ImmobilizingCCSpell",
+                "Trait_DamageAbility",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_ChannelSpell",
+                "Trait_SignatureSpell",
+                "Trait_Target_Directional",
+                "Trait_Ranged_StopsFirstHit"
             ],
             "DataValues": [
                 {
@@ -383,6 +441,18 @@
                 8.0,
                 7.5
             ],
+            "Cooldown": {
+                "values": [
+                    10.0,
+                    10.0,
+                    9.5,
+                    9.0,
+                    8.5,
+                    8.0,
+                    7.5
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mUseChargeChanneling": true,
             "mCanMoveWhileChanneling": true,
@@ -415,6 +485,18 @@
                 90.0,
                 95.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0,
+                    90.0,
+                    95.0
+                ],
+                "{0a3e0478}": 70.0,
+                "__type": "{630af303}"
+            },
             "mTargetingTypeData": {
                 "__type": "Direction"
             },
@@ -871,6 +953,19 @@
                         30.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageStoreMaxBonusADRatio",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -917,8 +1012,8 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 8.0,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "DamageStoreMaxBonusADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -968,6 +1063,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mAmmoUsed": [
                 0,
                 0,
@@ -992,6 +1100,19 @@
                 0.0,
                 0.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -1131,6 +1252,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRange": [
                 200.0,
                 200.0,
@@ -1140,6 +1274,19 @@
                 200.0,
                 200.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -1197,6 +1344,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRange": [
                 200.0,
                 200.0,
@@ -1206,6 +1366,19 @@
                 200.0,
                 200.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -1255,6 +1428,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRange": [
                 25000.0,
                 25000.0,
@@ -1264,6 +1450,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -1330,7 +1529,9 @@
             "mAffectsTypeFlags": 8192,
             "mAlternateName": "PykeR",
             "mSpellTags": [
-                "Trait_Ultimate"
+                "Trait_Ultimate",
+                "Trait_DamageAbility",
+                "Trait_AoE"
             ],
             "DataValues": [
                 {
@@ -1517,6 +1718,19 @@
                 40.0,
                 25.0
             ],
+            "Cooldown": {
+                "values": [
+                    115.0,
+                    100.0,
+                    85.0,
+                    70.0,
+                    55.0,
+                    40.0,
+                    25.0
+                ],
+                "{0a3e0478}": 115.0,
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "cantCastWhileRooted": true,
             "mDoNotNeedToFaceTarget": true,
@@ -1529,6 +1743,19 @@
                 750.0,
                 750.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0
+                ],
+                "{0a3e0478}": 750.0,
+                "__type": "{0a0eddc9}"
+            },
             "castFrame": 15.0,
             "mFloatVarsDecimals": [
                 0,
@@ -1556,6 +1783,18 @@
                 100.0,
                 100.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
             "mTargetingTypeData": {
                 "__type": "Location"
             },
@@ -1687,6 +1926,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRange": [
                 25000.0,
                 25000.0,
@@ -1696,6 +1948,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -1771,6 +2036,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRange": [
                 200.0,
                 200.0,
@@ -1780,6 +2058,19 @@
                 200.0,
                 200.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRadius": [
                 100.0,
                 100.0,
@@ -1840,6 +2131,19 @@
                 0.0,
                 0.0
             ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
             "mIsDisabledWhileDead": false,
             "mIgnoreRangeCheck": true,
             "castRange": [
@@ -1851,6 +2155,19 @@
                 25000.0,
                 25000.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
             "luaOnMissileUpdateDistanceInterval": 51.0,
             "mMissileSpec": {
                 "mMissileWidth": 110.0,
@@ -1902,7 +2219,10 @@
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell",
                 "PositiveEffect_MoveBlock",
-                "Trait_PlayerSelectedDashDirection"
+                "Trait_PlayerSelectedDashDirection",
+                "Trait_DamageAbility",
+                "Trait_Melee_SmallWindup",
+                "Trait_AoE"
             ],
             "mEffectAmount": [
                 {
@@ -2117,6 +2437,18 @@
                 11.0,
                 11.0
             ],
+            "Cooldown": {
+                "values": [
+                    15.0,
+                    15.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    11.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "cantCastWhileRooted": true,
             "mDisableCastBar": true,
@@ -2130,6 +2462,19 @@
                 550.0,
                 550.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -2156,6 +2501,18 @@
                 40.0,
                 40.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0,
+                    40.0
+                ],
+                "{0a3e0478}": 40.0,
+                "__type": "{630af303}"
+            },
             "mTargetingTypeData": {
                 "__type": "Location"
             },
@@ -2309,6 +2666,9 @@
             "flags": 36,
             "mAffectsTypeFlags": 8192,
             "mAlternateName": "PykeW",
+            "mSpellTags": [
+                "Trait_Camouflage"
+            ],
             "mEffectAmount": [
                 {
                     "value": [
@@ -2519,6 +2879,20 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        12.0,
+                        12.0,
+                        11.0,
+                        10.0,
+                        9.0,
+                        8.0,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "{601654a1}": {
                     "mFormulaParts": [
@@ -2574,6 +2948,18 @@
                 10.0,
                 10.0
             ],
+            "Cooldown": {
+                "values": [
+                    14.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    10.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mAmmoUsed": [
                 0,
                 0,
@@ -2593,6 +2979,19 @@
                 600.0,
                 600.0
             ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
             "castRangeDisplayOverride": [
                 600.0,
                 600.0,
@@ -2628,6 +3027,18 @@
                 65.0,
                 65.0
             ],
+            "{210f9ec0}": {
+                "values": [
+                    65.0,
+                    65.0,
+                    65.0,
+                    65.0,
+                    65.0,
+                    65.0
+                ],
+                "{0a3e0478}": 65.0,
+                "__type": "{630af303}"
+            },
             "mTargetingTypeData": {
                 "__type": "Self"
             },

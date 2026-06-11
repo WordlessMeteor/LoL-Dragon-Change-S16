@@ -10,11 +10,11 @@
             3117,
             3158,
             3047,
+            3009,
             3111,
             3006,
             3005,
             3008,
-            3009,
             3010,
             3020
         ],
@@ -532,9 +532,9 @@
             3072,
             6671,
             3095,
-            4403,
             3026,
-            3031
+            3031,
+            4403
         ],
         "categories": [
             "Damage"
@@ -731,8 +731,8 @@
             3146,
             3072,
             3074,
-            4403,
-            3153
+            3153,
+            4403
         ],
         "categories": [
             "Damage",
@@ -872,8 +872,8 @@
             3102,
             3157,
             4645,
-            4403,
-            3089
+            3089,
+            4403
         ],
         "categories": [
             "SpellDamage"
@@ -2642,13 +2642,13 @@
     {
         "id": 2052,
         "name": "Poro-Snax",
-        "description": "<mainText><stats></stats><br><br> <active>Attiva - Consumazione:</active> Dà una deliziosa cucchiaiata di biscotti a un Poro vicino, facendolo crescere.<br><br><flavorText>Il delizioso mix di polli ruspanti avarosani e di erbe del Freljord non magicamente modificate contiene tutti i nutrimenti necessari a far felice il tuo Poro.<br><br>Tutti i guadagni verranno donati alla lotta contro la crudeltà sugli animali di Noxus.</flavorText></mainText>",
+        "description": "<mainText><stats></stats><br><br> <active>Attiva - Consumazione:</active> Dà una deliziosa cucchiaiata di biscotti a un Poro vicino, facendolo crescere.<br><br><flavorText>Il delizioso mix di polli avarosani e di erbe del Freljord colte e surgelate in giornata contiene tutti i nutrimenti necessari a tenere calmo e compassato il tuo Poro.<br><br>Tutti i proventi saranno destinati alla conservazione dell'habitat del raro Poro maculato.</flavorText></mainText>",
         "active": true,
         "inStore": false,
         "from": [],
         "to": [],
         "categories": [],
-        "maxStacks": 2,
+        "maxStacks": 99,
         "requiredChampion": "",
         "requiredAlly": "",
         "requiredBuffCurrencyName": "",
@@ -4684,7 +4684,6 @@
             2524,
             3071,
             6620,
-            4403,
             2502,
             2510,
             2525,
@@ -4698,6 +4697,7 @@
             323119,
             326620,
             328020,
+            4403,
             4629,
             4644,
             6617,
@@ -5156,10 +5156,10 @@
             3046,
             6675,
             6671,
-            4403,
             2512,
             3085,
-            3094
+            3094,
+            4403
         ],
         "categories": [
             "CriticalStrike",
@@ -5421,8 +5421,8 @@
             1029
         ],
         "to": [
-            4403,
             3193,
+            4403,
             6667
         ],
         "categories": [
@@ -9126,7 +9126,7 @@
     {
         "id": 4645,
         "name": "Ombrofiamma",
-        "description": "<mainText><stats><attention> 110</attention> potere magico<br><attention> 15</attention> penetrazione magica</stats><br><br><passive>Bocciolardente</passive><br><magicDamage>I danni magici</magicDamage> e i <trueDamage>danni puri</trueDamage><attention> infliggono colpi critici</attention> contro i nemici al di sotto di un 40% di salute, infliggendo danni aumentati di un 20%. </mainText>",
+        "description": "<mainText><stats><attention> 110</attention> potere magico<br><attention> 15</attention> penetrazione magica</stats><br><br><passive>Bocciolardente</passive><br><magicDamage>I danni magici</magicDamage> e i <trueDamage>danni puri</trueDamage> <attention>infliggono colpi critici</attention> contro i nemici al di sotto di un 40% di salute, infliggendo danni aumentati di un 20%. </mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -12173,6 +12173,27 @@
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/220012_Anvil_Shardblade.png"
     },
     {
+        "id": 220013,
+        "name": "Poro-Snax",
+        "description": "<mainText><stats></stats><br><br> <active>Attiva - Consumazione:</active> Dà una deliziosa cucchiaiata di biscotti a un Poro vicino, facendolo crescere.<br><br><flavorText>Questa deliziosa miscela di gallina avarosana ed erbe del Freljord, ora arricchita da un tocco di raffinata arte dolciaria demaciana, contiene tutti i nutrienti essenziali per mantenere il tuo Poro sempre splendente.<br><br>Tutti i proventi saranno donati al Coro giovanile di Cloudfield. Aiuta un bambino di Demacia a permettersi un etwahl, oggi stesso!</flavorText></mainText>",
+        "active": true,
+        "inStore": false,
+        "from": [],
+        "to": [],
+        "categories": [],
+        "maxStacks": 2,
+        "requiredChampion": "",
+        "requiredAlly": "",
+        "requiredBuffCurrencyName": "",
+        "requiredBuffCurrencyCost": 0,
+        "specialRecipe": 0,
+        "isEnchantment": false,
+        "price": 0,
+        "priceTotal": 0,
+        "displayInItemSets": true,
+        "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/2052_Poro_Snack_RainbowCandy.png"
+    },
+    {
         "id": 221011,
         "name": "Cintura del gigante",
         "description": "<mainText><stats><attention> 300</attention> salute</stats><br><br></mainText>",
@@ -12513,7 +12534,7 @@
     {
         "id": 222504,
         "name": "Rookern kaenico",
-        "description": "<mainText><stats><attention> 350</attention> salute<br><attention> 80</attention> resistenza magica</stats><br><br><passive>Castigamaghi</passive><br>Dopo non aver subito danni magici per 15 secondi, ottieni uno <shield>scudo magico</shield>. </mainText>",
+        "description": "<mainText><stats><attention> 350</attention> salute<br><attention> 80</attention> resistenza magica</stats><br><br><passive>Castigamaghi</passive><br>Dopo non aver subito danni magici per 10 secondi, ottieni uno <shield>scudo magico</shield>. </mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13581,7 +13602,7 @@
     {
         "id": 223078,
         "name": "Virtù della Triade",
-        "description": "<mainText><stats><attention> 35</attention> attacco fisico<br><attention> 25%</attention> velocità d'attacco<br><attention> 333</attention> salute<br><attention> 20</attention> velocità abilità</stats><br><br><passive>Lama incantata</passive><br>Dopo aver usato un'abilità, il tuo prossimo attacco base infligge danni fisici aggiuntivi.<br><br><passive>Accelerazione</passive><br>Gli attacchi base forniscono velocità di movimento.<br><br></mainText>",
+        "description": "<mainText><stats><attention> 40</attention> attacco fisico<br><attention> 25%</attention> velocità d'attacco<br><attention> 375</attention> salute<br><attention> 20</attention> velocità abilità</stats><br><br><passive>Lama incantata</passive><br>Dopo aver usato un'abilità, il tuo prossimo attacco base infligge danni fisici aggiuntivi.<br><br><passive>Accelerazione</passive><br>Gli attacchi base forniscono velocità di movimento.<br><br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13734,7 +13755,7 @@
     {
         "id": 223094,
         "name": "Archibugio a ripetizione",
-        "description": "<mainText><stats><attention> 30%</attention> velocità d'attacco<br><attention> 25%</attention> probabilità colpo critico<br><attention> 4%</attention> velocità di movimento</stats><br><br><passive>Energizzato</passive><br>Muoversi e attaccare genera un <keyword>attacco Energizzato</keyword>.<br><br><passive>Tiratore</passive><br>I tuoi <keyword>attacchi energizzati</keyword> infliggono <magicDamage>200 danni magici bonus</magicDamage>. Inoltre, gli attacchi energizzati ottengono fino a un 35% massimo di gittata d'attacco bonus.<br><br><buffedStat>In Arena, gli attacchi energizzati si accumulano al doppio della velocità.</buffedStat><br></mainText>",
+        "description": "<mainText><stats><attention> 30%</attention> velocità d'attacco<br><attention> 25%</attention> probabilità colpo critico<br><attention> 4%</attention> velocità di movimento</stats><br><br><passive>Energizzato</passive><br>Muoversi e attaccare genera un <keyword>attacco Energizzato</keyword>.<br><br><passive>Tiratore</passive><br>I tuoi <keyword>attacchi energizzati</keyword> infliggono <magicDamage>200 danni magici bonus</magicDamage>. Inoltre, gli attacchi energizzati ottengono fino a un 35% massimo di gittata d'attacco bonus.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -14852,7 +14873,7 @@
     {
         "id": 224004,
         "name": "Sciabola spettrale",
-        "description": "<mainText><stats><attention> 55</attention> attacco fisico<br><attention> 21</attention> Letalità</stats><br><br> <active>Attiva -</active> <active>Ancora spirituale</active>  (0 secondo/i)<br>Segna la tua posizione attuale. Dopo 5 secondi, ritorni a quella posizione. Puoi lanciare di nuovo in qualsiasi momento durante <active>Ancora spirituale</active> per tornare in anticipo alla posizione marchiata.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> attacco fisico<br><attention> 21</attention> Letalità</stats><br><br> <active>Attiva -</active> <active>Ancora spirituale</active>  (0 secondo/i)<br>Segna la tua posizione attuale. Dopo 5 secondi, ritorni a quella posizione. Puoi lanciare di nuovo in qualsiasi momento durante <active>Ancora spirituale</active> per tornare in anticipo alla posizione marchiata.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -14876,7 +14897,7 @@
     {
         "id": 224005,
         "name": "Mandato imperiale",
-        "description": "<mainText><stats><attention> 60</attention> potere magico<br><attention> 35</attention> velocità abilità<br><attention> 150%</attention> rigenerazione mana base</stats><br><br><passive>Fuoco coordinato</passive>  (0 secondo/i) per bersaglio<br><keyword>Rallentare</keyword> o <keyword>immobilizzare</keyword> un campione nemico lo marchia per 5 secondi. I danni dei campioni alleati fanno esplodere il marchio, infliggendo <magicDamage>danni magici pari a un 20% della salute attuale</magicDamage>. </mainText>",
+        "description": "<mainText><stats><attention> 60</attention> potere magico<br><attention> 15</attention> velocità abilità<br><attention> 150%</attention> rigenerazione mana base</stats><br><br><passive>Controllo</passive><br>Ottieni  15 velocità abilità per le tue abilità con effetti di <keyword>immobilizzazione</keyword>.<br><br><passive>Comando</passive><br>Quando <keyword>immobilizzi</keyword> un campione nemico, lo marchi come <Keyword>Vulnerabile</Keyword> per un 6% per 4 secondi.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15586,7 +15607,7 @@
     {
         "id": 226662,
         "name": "Guanto del gelo",
-        "description": "<mainText><stats><attention> 300</attention> salute<br><attention> 45</attention> armatura<br><attention> 10</attention> velocità abilità</stats><br><br><passive>Lama incantata</passive><br>Dopo aver usato un'abilità, il tuo prossimo attacco infligge <physicalDamage>danni fisici bonus</physicalDamage>  <OnHit>Sul colpo</OnHit> e crea un campo di ghiaccio per 2 secondo/i che <status>rallenta</status>.</mainText>",
+        "description": "<mainText><stats><attention> 300</attention> salute<br><attention> 45</attention> armatura<br><attention> 15</attention> velocità abilità</stats><br><br><passive>Lama incantata</passive><br>Dopo aver usato un'abilità, il tuo prossimo attacco infligge <physicalDamage>danni fisici bonus</physicalDamage>  <OnHit>Sul colpo</OnHit> e crea un campo di ghiaccio per 2 secondo/i che <status>rallenta</status>.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15901,7 +15922,7 @@
     {
         "id": 226694,
         "name": "Rancore di Serylda",
-        "description": "<mainText><stats><attention> 40</attention> attacco fisico<br><attention> 40%</attention> penetrazione armatura<br><attention> 10</attention> velocità abilità</stats><br><br><passive>Freddo pungente</passive><br>Le tue abilità che infliggono danni <status>rallentano</status> i nemici con <scaleHealth>salute inferiore a un 50%</scaleHealth> di un 30% per 1 secondo/i.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> attacco fisico<br><attention> 40%</attention> penetrazione armatura<br><attention> 15</attention> velocità abilità</stats><br><br><passive>Freddo pungente</passive><br>Le tue abilità che infliggono danni <status>rallentano</status> i nemici con <scaleHealth>salute inferiore a un 50%</scaleHealth> di un 50% per 1 secondo/i.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16030,7 +16051,7 @@
     {
         "id": 226699,
         "name": "Ciclospada voltaica",
-        "description": "<mainText><stats><attention> 50</attention> attacco fisico<br><attention> 18</attention> Letalità<br><attention> 20</attention> velocità abilità</stats><br><br><passive>Galvanizzare</passive><br>Infliggere danni a un campione nemico con un'abilità attiva <keyword>Energizzato</keyword> se è pronto.<br><br><passive>Firmamento</passive><br>Il tuo <keyword>attacco energizzato</keyword> infligge <physicalDamage>0%</physicalDamage> della salute attuale del bersaglio come <physicalDamage>danni fisici bonus</physicalDamage> e ti fornisce  <scaleLethality>0 Letalità</scaleLethality> per 4 secondi.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> attacco fisico<br><attention> 20</attention> Letalità<br><attention> 20</attention> velocità abilità</stats><br><br><passive>Galvanizzare</passive><br>Infliggere danni a un campione nemico con un'abilità attiva <keyword>Energizzato</keyword> se è pronto.<br><br><passive>Firmamento</passive><br>Il tuo <keyword>attacco energizzato</keyword> infligge <physicalDamage>0%</physicalDamage> della salute attuale del bersaglio come <physicalDamage>danni fisici bonus</physicalDamage> e ti fornisce  <scaleLethality>0 Letalità</scaleLethality> per 4 secondi.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16185,7 +16206,7 @@
     {
         "id": 228005,
         "name": "Mannaia di ossidiana",
-        "description": "<mainText><stats><ornnBonus> 70</ornnBonus> attacco fisico<br><ornnBonus> 700</ornnBonus> salute<br><ornnBonus> 40</ornnBonus> velocità abilità</stats><br><br><passive>Sradicamento</passive><br>Infliggere <physicalDamage>danni fisici</physicalDamage> ai campioni riduce l'<scaleArmor>armatura del bersaglio di un 500%</scaleArmor> per 0.1 secondo/i (si accumula 5 volte).<br><br><passive>Temperamento</passive><br>Infliggere <physicalDamage>danni fisici</physicalDamage> conferisce <speed>20 velocità di movimento</speed> per 2 secondo/i.</mainText>",
+        "description": "<mainText><stats><ornnBonus> 70</ornnBonus> attacco fisico<br><ornnBonus> 700</ornnBonus> salute<br><ornnBonus> 40</ornnBonus> velocità abilità</stats><br><br><passive>Sradicamento</passive><br>Infliggere <physicalDamage>danni fisici</physicalDamage> ai campioni riduce l'<scaleArmor>armatura del bersaglio di un 6%</scaleArmor> per 6 secondo/i (si accumula 5 volte).<br><br><passive>Temperamento</passive><br>Infliggere <physicalDamage>danni fisici</physicalDamage> conferisce <speed>20 velocità di movimento</speed> per 2 secondo/i.</mainText>",
         "active": false,
         "inStore": false,
         "from": [],

@@ -1,5 +1,5 @@
 {
-    "{1e1a5bfe}": {
+    "Characters/PetChibiBriar/Skins/Skin3": {
         "championSkinName": "PetChibiBriar_BloodMoon_BloodMoon_Tier1",
         "loadscreen": {
             "image": "ASSETS/Characters/PetChibiBriar/HUD/LoadScreen_ChibiBriar_BloodMoon_BloodMoon_Tier1.CHIBI_Briar_BloodMoon.tex",
@@ -158,36 +158,36 @@
             ],
             "rigPoseModifierData": [
                 {
-                    "mStartingJointName": "{ebac29e7}",
-                    "mEndingJointName": "{e6ac2208}",
+                    "mStartingJointName": "L_Sleeve01",
+                    "mEndingJointName": "L_Sleeve04",
                     "mDefaultMaskName": "{72821679}",
                     "mMaxBoneAngle": 45.0,
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{f14cbee9}",
-                    "mEndingJointName": "{f44cc3a2}",
+                    "mStartingJointName": "R_Sleeve01",
+                    "mEndingJointName": "R_Sleeve04",
                     "mDefaultMaskName": "{72821679}",
                     "mMaxBoneAngle": 45.0,
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{210073aa}",
-                    "mEndingJointName": "{1f007084}",
+                    "mStartingJointName": "R_HairC1",
+                    "mEndingJointName": "R_HairC3",
                     "mDefaultMaskName": "{72821679}",
                     "mMaxBoneAngle": 45.0,
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
-                    "mStartingJointName": "{7d0ac9a0}",
-                    "mEndingJointName": "{7f0accc6}",
+                    "mStartingJointName": "L_HairC1",
+                    "mEndingJointName": "L_HairC3",
                     "mDefaultMaskName": "{72821679}",
                     "mMaxBoneAngle": 45.0,
                     "__type": "ConformToPathRigPoseModifierData"
                 },
                 {
                     "mStartingJointName": "HairA1",
-                    "mEndingJointName": "{6329fd4e}",
+                    "mEndingJointName": "HairA2",
                     "mDefaultMaskName": "{72821679}",
                     "mMaxBoneAngle": 45.0,
                     "__type": "ConformToPathRigPoseModifierData"
@@ -203,7 +203,7 @@
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{bbedd574}",
+        "mResourceResolver": "Characters/PetChibiBriar/Skins/Skin3/Resources",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/PetChibiBriar/Skins/Skin3/Particles/PetChibiBriar_Skin3_Emote_Run_Trail": {
@@ -87362,6 +87362,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "Bloom_Intensity",
                 "value": [
                     0.6499999761581421,
@@ -87393,6 +87433,14 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA",
                 "__type": "StaticMaterialSwitchDef"
@@ -163857,7 +163905,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{8cdc9251}",
+                            "Shackles",
                             "ShackleHandle"
                         ],
                         "mLockMeshToAttachment": true,
@@ -174385,6 +174433,46 @@
         ],
         "paramValues": [
             {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "BloomColor",
                 "value": [
                     1.0,
@@ -174663,6 +174751,14 @@
         ],
         "switches": [
             {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "AFFECTED_BY_VERTEX_COLOR",
                 "on": false,
                 "Group": "Deform",
@@ -174794,7 +174890,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{bbedd574}": {
+    "Characters/PetChibiBriar/Skins/Skin3/Resources": {
         "resourceMap": {
             "PetChibiBriar_Skin3_Emote_Laugh_Fre": "Characters/PetChibiBriar/Skins/Skin3/Particles/PetChibiBriar_Skin3_Emote_Laugh_Fre",
             "PetChibiBriar_Skin3_Emote_Dance_Smoke": "Characters/PetChibiBriar/Skins/Skin3/Particles/PetChibiBriar_Skin3_Emote_Dance_Smoke",

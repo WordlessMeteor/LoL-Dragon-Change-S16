@@ -717,7 +717,7 @@
             t.CHERRY_SIZE_3_NUM_TEAMS = 6;
             t.CHERRY_SUBTEAM_SIZE = 2;
             t.CHERRY_SUBTEAM_SIZE_3 = 3;
-            t.CHERRY_SIZE_3_QUEUES = [1750, 1751, 1753, 1756, 1759, 1562, 1565];
+            t.CHERRY_SIZE_3_QUEUES = [1740, 1750, 1751, 1753, 1756, 1759, 1562, 1565];
             t.CHERRY_SUBTEAM_DISPLAY_DATA = [{
                 subteamId: 1,
                 display: {
