@@ -1236,6 +1236,15 @@ lol-uikit-scrollable>.lol-settings-general-section-title:nth-of-type(n+2) {
     margin-bottom: 10px
 }
 
+.lol-settings-voice-auto-badge {
+    background-color: #1e2328;
+    border-radius: 3px;
+    color: #a09b8c;
+    display: inline-block;
+    margin-left: 4px;
+    padding: 1px 6px
+}
+
 .lol-settings-voice-party-join {
     display: flex;
     flex-direction: column;
@@ -1366,12 +1375,16 @@ lol-uikit-content-block.voice-settings-push-to-talk-alert b {
     left: auto;
     position: absolute;
     right: 100px;
-    top: 318px;
+    top: 300px;
     width: 200px
 }
 
 lol-uikit-scrollable:has(.lol-settings-voice-agreement) .lol-settings-voice-sensitivity {
-    top: 398px
+    top: 380px
+}
+
+.lol-settings-voice-sensitivity .lol-settings-voice-row {
+    margin-bottom: 20px
 }
 
 .lol-settings-voice-sensitivity .lol-settings-voice-sensitivity-label {

@@ -288,20 +288,20 @@
         ],
         "__type": "JunglePathRecommendation"
     },
-    "{0d96d872}": {
-        "mRootSpell": "{33932228}",
+    "Characters/Locke/Spells/LockeWAbility": {
+        "mRootSpell": "Characters/Locke/Spells/LockeWAbility/LockeW",
         "mChildSpells": [
-            "{33932228}",
+            "Characters/Locke/Spells/LockeWAbility/LockeW",
             "{c467fdb2}"
         ],
         "mName": "LockeWAbility",
         "AbilityTraits": 32768,
         "__type": "AbilityObject"
     },
-    "{e813cc60}": {
-        "mRootSpell": "{a4862468}",
+    "Characters/Locke/Spells/LockeEAbility": {
+        "mRootSpell": "Characters/Locke/Spells/LockeEAbility/LockeE",
         "mChildSpells": [
-            "{a4862468}",
+            "Characters/Locke/Spells/LockeEAbility/LockeE",
             "{cabdaa68}",
             "{1f220483}",
             "{db850a14}"
@@ -349,7 +349,7 @@
         },
         "__type": "SpellObject"
     },
-    "{a4862468}": {
+    "Characters/Locke/Spells/LockeEAbility/LockeE": {
         "ObjectName": "LockeE",
         "mScriptName": "LockeE",
         "mSpell": {
@@ -443,7 +443,7 @@
                 "DashDamage": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{98829645}",
+                            "mDataValue": "BaseDashDamage",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -464,7 +464,7 @@
             "{f26881a0}": 0.0,
             "mCharacterPassiveBuffs": [
                 {
-                    "mParentPassiveBuff": "{a4862468}",
+                    "mParentPassiveBuff": "Characters/Locke/Spells/LockeEAbility/LockeE",
                     "mComponentBuffs": [
                         "{1f220483}",
                         "{cabdaa68}",
@@ -554,7 +554,6 @@
                 "mTooltipData": {
                     "mObjectName": "LockeE",
                     "mFormat": "{d7c27163}",
-                    "EnableExtendedTooltip": false,
                     "mLocKeys": {
                         "keyName": "Spell_LockeE_Name",
                         "keySummary": "Spell_LockeE_Summary",
@@ -826,8 +825,8 @@
         },
         "__type": "SpellObject"
     },
-    "{bd6451c7}": {
-        "mRootSpell": "{dd380c44}",
+    "Characters/Locke/Spells/LockeRAbility": {
+        "mRootSpell": "Characters/Locke/Spells/LockeRAbility/LockeR",
         "mLifetimeManuallyManaged": true,
         "mName": "LockeRAbility",
         "mType": 2,
@@ -1188,7 +1187,7 @@
         },
         "__type": "SpellObject"
     },
-    "{dd380c44}": {
+    "Characters/Locke/Spells/LockeRAbility/LockeR": {
         "ObjectName": "LockeR",
         "mScriptName": "LockeR",
         "mSpell": {
@@ -1343,12 +1342,14 @@
                     "__type": "GameCalculation"
                 },
                 "{708b59ae}": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mBuffName": "{b5c3348f}",
                             "mIconKey": "%i:LockeR%",
                             "mScalingTagKey": "font color='#0bf7de'",
-                            "mDataValue": "{54fb02fa}",
+                            "mDataValue": "ExecuteThresholdPerStack",
                             "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1456,7 +1457,7 @@
             },
             "mCastType": 1,
             "missileSpeed": 20.0,
-            "mMissileEffectKey": "{670bed9c}",
+            "mMissileEffectKey": "Locke_R_Mis",
             "mana": [
                 100.0,
                 100.0,
@@ -1562,7 +1563,7 @@
         },
         "__type": "SpellObject"
     },
-    "{33932228}": {
+    "Characters/Locke/Spells/LockeWAbility/LockeW": {
         "ObjectName": "LockeW",
         "mScriptName": "LockeW",
         "mSpell": {
@@ -1618,13 +1619,13 @@
                 {
                     "name": "BaseDamageRestoreAmount",
                     "values": [
-                        20.0,
-                        60.0,
-                        100.0,
-                        140.0,
-                        180.0,
-                        220.0,
-                        260.0
+                        0.0,
+                        40.0,
+                        80.0,
+                        120.0,
+                        160.0,
+                        200.0,
+                        240.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1699,11 +1700,11 @@
                 "{098c0d8e}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{6fda3861}",
+                            "mDataValue": "BaseDamageRestoreAmount",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 1.0,
+                            "mCoefficient": 1.2000000476837158,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -1746,12 +1747,12 @@
                 "{7ec943a6}": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 60.0,
-                            "mEndValue": 300.0,
+                            "mStartValue": 40.0,
+                            "mEndValue": 200.0,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.4000000059604645,
+                            "mCoefficient": 0.20000000298023224,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -1766,7 +1767,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{650cc643}",
+                            "mDataValue": "TimeMaxPower",
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
@@ -2083,7 +2084,7 @@
                 "{098c0d8e}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{6fda3861}",
+                            "mDataValue": "BaseDamageRestoreAmount",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -2229,8 +2230,8 @@
         },
         "__type": "SpellObject"
     },
-    "{9192181c}": {
-        "mRootSpell": "{43461298}",
+    "Characters/Locke/Spells/LockeQAbility": {
+        "mRootSpell": "Characters/Locke/Spells/LockeQAbility/LockeQ",
         "mChildSpells": [
             "{ad71c860}"
         ],
@@ -2238,7 +2239,7 @@
         "AbilityTraits": 256,
         "__type": "AbilityObject"
     },
-    "{43461298}": {
+    "Characters/Locke/Spells/LockeQAbility/LockeQ": {
         "ObjectName": "LockeQ",
         "mScriptName": "LockeQ",
         "mSpell": {
@@ -2413,6 +2414,32 @@
                         0.375
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TwoMarkBonusPercent",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ThreeMarkBonusPercent",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2432,7 +2459,7 @@
                 "{ae806e50}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{af1aca13}",
+                            "mDataValue": "MarkRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
@@ -2443,8 +2470,6 @@
                     "__type": "GameCalculation"
                 },
                 "{ac10fc3d}": {
-                    "mSimpleTooltipCalculationDisplay": 5,
-                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mStartValue": 0.20000000298023224,
@@ -2581,11 +2606,6 @@
                                 {
                                     "type": "Cooldown",
                                     "nameOverride": "Spell_ListType_Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Cost",
-                                    "nameOverride": "Spell_ListType_ManaCost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2761,7 +2781,7 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 0.0,
-            "mMissileEffectKey": "{22029911}",
+            "mMissileEffectKey": "Locke_Q_Mis",
             "mLineWidth": 65.0,
             "mLineDragLength": 350.0,
             "mHitEffectOrientType": 2,
@@ -2980,7 +3000,7 @@
                         "keyName": "Spell_LockePassive_Name",
                         "keySummary": "Spell_LockePassive_Summary",
                         "keyTooltip": "Spell_LockePassive_Tooltip",
-                        "keyTooltipExtended": "Spell_LockePassive_TooltipExtendedBelowLine"
+                        "keyTooltipExtendedBelowLine": "Spell_LockePassive_TooltipExtendedBelowLine"
                     },
                     "__type": "TooltipInstanceSpell"
                 },
@@ -3047,7 +3067,7 @@
             "castConeDistance": 100.0,
             "castFrame": 8.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{dfa31b76}",
+            "mHitEffectKey": "Locke_BA_Tar_02",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "__type": "SpellDataResource"
@@ -3272,7 +3292,7 @@
             "castConeDistance": 100.0,
             "castFrame": 8.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{dea319e3}",
+            "mHitEffectKey": "Locke_BA_Tar_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "__type": "SpellDataResource"
@@ -3336,7 +3356,7 @@
             "castConeDistance": 100.0,
             "castFrame": 7.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{dfa31b76}",
+            "mHitEffectKey": "Locke_BA_Tar_02",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "__type": "SpellDataResource"
@@ -3382,7 +3402,6 @@
         "EpicStatStone": true,
         "TriggeredFromScript": true,
         "stoneName": "LockeESkillshotsDodged",
-        "DataCollectionOnly": true,
         "__type": "StatStoneData"
     },
     "{9da6727a}": {
@@ -3411,7 +3430,6 @@
         "TriggeredFromScript": true,
         "trackingType": 2,
         "stoneName": "LockeWDistanceTraveled",
-        "DataCollectionOnly": true,
         "__type": "StatStoneData"
     },
     "{dc10264e}": {
@@ -3439,7 +3457,6 @@
         "EpicStatStone": true,
         "TriggeredFromScript": true,
         "stoneName": "LockeRMultiHits",
-        "DataCollectionOnly": true,
         "__type": "StatStoneData"
     },
     "{b049fb53}": {
@@ -3481,7 +3498,6 @@
         "EpicStatStone": true,
         "TriggeredFromScript": true,
         "stoneName": "LockeWHealingTotal",
-        "DataCollectionOnly": true,
         "__type": "StatStoneData"
     },
     "{a6a67819}": {
@@ -3509,7 +3525,6 @@
         "EpicStatStone": true,
         "TriggeredFromScript": true,
         "stoneName": "LockeRChampsExecuted",
-        "DataCollectionOnly": true,
         "__type": "StatStoneData"
     },
     "{e6679cf2}": {
@@ -3537,7 +3552,6 @@
         "EpicStatStone": true,
         "TriggeredFromScript": true,
         "stoneName": "LockeQMarksTriggered",
-        "DataCollectionOnly": true,
         "__type": "StatStoneData"
     },
     "{910e3e3b}": {
@@ -3623,7 +3637,6 @@
         ],
         "EpicStatStone": true,
         "stoneName": "LockeEpicMonstersKilled",
-        "DataCollectionOnly": true,
         "__type": "StatStoneData"
     },
     "{b4591dbe}": {
@@ -3664,7 +3677,6 @@
         ],
         "EpicStatStone": true,
         "stoneName": "LockeTakedowns",
-        "DataCollectionOnly": true,
         "__type": "StatStoneData"
     },
     "{e7ea6283}": {
@@ -3691,13 +3703,12 @@
         ],
         "EpicStatStone": true,
         "stoneName": "LockeStructuresDestroyed",
-        "DataCollectionOnly": true,
         "__type": "StatStoneData"
     },
-    "{256ffa87}": {
+    "Characters/Locke/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{8a7ef7bb}": {
+    "Characters/Locke/CharacterRecords/Root": {
         "mCharacterName": "Locke",
         "baseHPModifiable": {
             "baseValue": 655.0,
@@ -3830,10 +3841,10 @@
             "LockeRAbility/LockeR"
         ],
         "spells": [
-            "{43461298}",
-            "{33932228}",
-            "{a4862468}",
-            "{dd380c44}"
+            "Characters/Locke/Spells/LockeQAbility/LockeQ",
+            "Characters/Locke/Spells/LockeWAbility/LockeW",
+            "Characters/Locke/Spells/LockeEAbility/LockeE",
+            "Characters/Locke/Spells/LockeRAbility/LockeR"
         ],
         "extraSpells": [
             "BaseSpell",
@@ -3873,10 +3884,10 @@
         ],
         "mAbilities": [
             "{e9b7db02}",
-            "{9192181c}",
-            "{e813cc60}",
-            "{0d96d872}",
-            "{bd6451c7}"
+            "Characters/Locke/Spells/LockeQAbility",
+            "Characters/Locke/Spells/LockeEAbility",
+            "Characters/Locke/Spells/LockeWAbility",
+            "Characters/Locke/Spells/LockeRAbility"
         ],
         "passiveName": "",
         "passiveLuaName": "LockePassive",
@@ -3888,6 +3899,7 @@
             "LockeBasicAttack"
         ],
         "mUseCCAnimations": true,
+        "outlineBBoxExpansion": 30.0,
         "selectionHeight": 100.0,
         "selectionRadius": 125.0,
         "pathfindingCollisionRadius": 35.0,
