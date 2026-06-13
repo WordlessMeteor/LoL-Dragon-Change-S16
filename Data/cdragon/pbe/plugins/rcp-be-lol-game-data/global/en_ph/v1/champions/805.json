@@ -3,25 +3,25 @@
     "contentId": "9f36d46b-5250-4c56-8fd1-7fcec9ca3c7e",
     "name": "Locke",
     "alias": "Locke",
-    "title": "",
-    "shortBio": "",
+    "title": "the Ashen Exorcist",
+    "shortBio": "A nail-slinging exorcist versed in forbidden rites, Corvin Locke is the progeny of Demacian occultists. Born into lies and hypocrisy, he learned young that demons aren't the cause of humanity's darkness, but the consequence. Now, Locke tears through every soul, exposing its darkness, intent on making the world a more honest place… one exorcism at a time.",
     "isVisibleInClient": true,
     "tacticalInfo": {
-        "style": 3,
-        "difficulty": 3,
+        "style": 8,
+        "difficulty": 2,
         "damageType": "kMagic",
         "attackType": "melee"
     },
     "playstyleInfo": {
         "damage": 3,
-        "durability": 1,
-        "crowdControl": 2,
-        "mobility": 2,
+        "durability": 2,
+        "crowdControl": 1,
+        "mobility": 3,
         "utility": 1
     },
     "championTagInfo": {
-        "championTagPrimary": "",
-        "championTagSecondary": ""
+        "championTagPrimary": "Burst",
+        "championTagSecondary": "Mobile"
     },
     "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/805.png",
     "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/805.ogg",
@@ -392,10 +392,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Locke/HUD/Icons2D/Locke_W.Locke.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
-            "cost": "@Cost@ Mana and @HealthCost*100@% Current Health Per Second",
+            "cost": "@Cost@ Mana and <font color='#CC3300'>@HealthCost*100@% Current Health</font> Per Second",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Locke ignites his soul, gaining Attack Speed and Move Speed, and dealing damage to himself. At the end of the duration, Locke will heal back a portion of the damage he takes during the effect.",
-            "dynamicDescription": "Locke ignites his own soul, gaining @AttackSpeed@ Attack Speed and <speed>@MoveSpeed@ Move Speed</speed> that decay over time.<br>For @Duration@ seconds, he suffers <trueDamage>@HealthCost*100@% current health true damage</trueDamage> per second but heals back the last <healing>@DamageRestoreAmount@ damage taken</healing>,  and an additional <healing>@AdditionalHeal@ Health</healing> based on missing health and time passed, up to a maximum of<healing>@MaxHealingThreshold@ health remaining</healing>.<br><br>Can be <recast>Recast</recast> to end early.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Locke ignites his own soul, gaining <attackSpeed>@AttackSpeed@ Attack Speed</attackSpeed>and <speed>@MoveSpeed@ Move Speed</speed> that decays over @DecayTimeHelper@ seconds.<br><br>For @BaseDuration@ seconds, he suffers <trueDamage>@HealthCost*100@% current Health true damage</trueDamage> per second but <healing>Heals</healing> back the last <healing>@DamageRestoreAmount@</healing> damage taken, and an additional <healing>@AdditionalHeal@ Health</healing> based on missing Health and time passed, up to a maximum of <healing>@MaxHealingThreshold@ Health remaining</healing>.<br><br>Can be <recast>Recast</recast> to end early.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -545,7 +545,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Locke teleports to a location before dashing to attack his next target, dealing damage to enemies passed through.",
-            "dynamicDescription": "Locke teleports to a location, dealing <magicDamage>@OnHitDamage@ magic damage</magicDamage> around him on arrival. On his next attack, he dashes to his target, dealing <magicDamage>@DashDamage@ magic damage</magicDamage> to all enemies in his path. Each hit consumes <keywordMajor>Soul Nails</keywordMajor>.<br><br>If Locke scores a takedown, the cooldown of this ability is reset.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Locke teleports to a location, dealing <magicDamage>@OnHitDamage@ magic damage</magicDamage> around him on arrival. <br><br>On his next Attack, he dashes to his target, dealing <magicDamage>@DashDamage@ magic damage</magicDamage> to all enemies in his path. Each hit consumes <keywordMajor>Soul Nails</keywordMajor>.<br><br>If Locke scores a takedown, the Cooldown of this Ability is reset.@SpellModifierDescriptionAppend@",
             "range": [
                 425.0,
                 425.0,
@@ -695,7 +695,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Locke throws a binding artifact that deals damage and potentially executes enemies hit. Locke gains additional power for sealing away enemy champions.",
-            "dynamicDescription": "Locke throws a binding artifact to a location, dealing <magicDamage>@Damage@ magic damage</magicDamage> to and <status>slowing</status> enemies in the area by @SlowAmount*100@%, decaying over @SlowDuration@ seconds. The artifact marks enemies hitfor @Duration@ seconds, sealing away marked enemy champions brought below @ExecutionThreshold*100@%, and resetting the duration of the mark on other affected champions.<br><br>After the duration ends, if at least one champion was sealed, the artifact lands on the ground.. Locke can pick up the artifact to permanently increase its Execution Threshold by @ExecuteThresholdPerStack*100@%, and refund @CooldownReduction@% of his current cooldown, for each champion sealed.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Locke throws a binding artifact to a location, dealing <magicDamage>@Damage@ magic damage</magicDamage> and <status>Slowing</status> enemies in the area by @SlowAmount*100@%, decaying over @SlowDuration@ seconds. The artifact marks enemies hit for @Duration@ seconds, sealing away marked enemy champions brought below @ExecutionThreshold*100@%, and resetting the duration of the mark on other affected champions.<br><br>After the duration ends, if at least one champion was sealed, the artifact lands on the ground. Locke can pick up the artifact to permanently increase its execution threshold by @ExecuteThresholdPerStack*100@%, and refund @CooldownReduction@% of his current Cooldown, for each champion sealed.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

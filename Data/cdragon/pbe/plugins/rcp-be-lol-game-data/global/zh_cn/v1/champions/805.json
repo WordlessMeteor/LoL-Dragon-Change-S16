@@ -3,25 +3,25 @@
     "contentId": "9f36d46b-5250-4c56-8fd1-7fcec9ca3c7e",
     "name": "灰烬驱魔人",
     "alias": "Locke",
-    "title": "",
-    "shortBio": "",
+    "title": "洛克",
+    "shortBio": "以符文铁钉为武器，擅长各类禁忌仪式，驱魔人考文·洛克出身自德玛西亚的神秘教派。生于谎言与虚伪之中的洛克自幼便明白一个道理——恶魔并非人类堕落的因，而是其必然的果。面对虚伪之人，洛克会毫不犹豫地撕开他们的灵魂，暴露出其中的谎言与黑暗——这个世界必须变得更加真实，驱魔只是一个开始。",
     "isVisibleInClient": true,
     "tacticalInfo": {
-        "style": 3,
-        "difficulty": 3,
+        "style": 8,
+        "difficulty": 2,
         "damageType": "kMagic",
         "attackType": "melee"
     },
     "playstyleInfo": {
         "damage": 3,
-        "durability": 1,
-        "crowdControl": 2,
-        "mobility": 2,
+        "durability": 2,
+        "crowdControl": 1,
+        "mobility": 3,
         "utility": 1
     },
     "championTagInfo": {
-        "championTagPrimary": "",
-        "championTagSecondary": ""
+        "championTagPrimary": "爆发",
+        "championTagSecondary": "机动"
     },
     "squarePortraitPath": "/lol-game-data/assets/v1/champion-icons/805.png",
     "stingerSfxPath": "/lol-game-data/assets/v1/champion-sfx-audios/805.ogg",
@@ -392,10 +392,10 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Locke/HUD/Icons2D/Locke_W.Locke.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
-            "cost": "@Cost@法力值和每秒@HealthCost*100@%当前生命值",
+            "cost": "@Cost@法力值和每秒<font color='#CC3300'>@HealthCost*100@%当前生命值</font>",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "洛克点燃自己的灵魂，从而获得攻击速度和移动速度，但会不断对自身造成伤害。技能结束时，洛克将回复一部分在技能持续期间受到的伤害。",
-            "dynamicDescription": "洛克点燃自己的灵魂，获得@AttackSpeed@攻击速度和<speed>@MoveSpeed@移动速度</speed>(随时间衰减)。<br>在接下来的@Duration@秒内，洛克会受到每秒<trueDamage>@HealthCost*100@%当前生命值的真实伤害</trueDamage>。技能结束时，他会回复之前<healing>所受的@DamageRestoreAmount@伤害</healing>，以及额外<healing>@AdditionalHeal@生命值</healing>(基于他的已损失生命值和技能持续时间，至多回复至<healing>@MaxHealingThreshold@剩余生命值</healing>）。<br><br>可以提前<recast>再次施放</recast>以提前结束该技能。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "洛克点燃自己的灵魂，获得<attackSpeed>@AttackSpeed@攻击速度</attackSpeed>和在@DecayTimeHelper@秒里持续衰减的<speed>@MoveSpeed@移动速度</speed>。<br>在接下来的@BaseDuration@秒内，洛克会受到每秒<trueDamage>@HealthCost*100@%当前生命值的真实伤害</trueDamage>，但在技能结束时，他会<healing>治疗自身</healing>相当于之前<healing>所受的@DamageRestoreAmount@伤害</healing>，以及额外<healing>@AdditionalHeal@生命值</healing>(基于他的已损失生命值和技能持续时间，至多回复至<healing>@MaxHealingThreshold@剩余生命值</healing>）。<br><br>可以<recast>再次施放</recast>以提前结束该技能。@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,
@@ -545,7 +545,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "洛克传送至目标位置，并在下一次攻击时朝目标冲刺，对途经的敌人们造成伤害。",
-            "dynamicDescription": "洛克传送至目标位置，在抵达时对他周围造成<magicDamage>@OnHitDamage@魔法伤害</magicDamage>。洛克的下一次攻击将朝目标冲刺，对他途经的所有敌人造成<magicDamage>@DashDamage@魔法伤害</magicDamage>。每次命中均可消耗<keywordMajor>伏魔三钉</keywordMajor>的印记。<br><br>如果洛克参与了击杀，该技能将立刻冷却完毕。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "洛克传送至目标位置，在抵达时对他周围造成<magicDamage>@OnHitDamage@魔法伤害</magicDamage>。<br><br>洛克的下一次攻击将朝目标冲刺，对他途经的所有敌人造成<magicDamage>@DashDamage@魔法伤害</magicDamage>。每次命中均可消耗<keywordMajor>伏魔三钉</keywordMajor>的印记。<br><br>如果洛克参与了击杀，该技能将立刻冷却完毕。@SpellModifierDescriptionAppend@",
             "range": [
                 425.0,
                 425.0,
