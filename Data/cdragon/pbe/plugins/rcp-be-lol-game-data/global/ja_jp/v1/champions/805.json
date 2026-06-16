@@ -28,7 +28,8 @@
     "chooseVoPath": "/lol-game-data/assets/v1/champion-choose-vo/805.ogg",
     "banVoPath": "/lol-game-data/assets/v1/champion-ban-vo/805.ogg",
     "roles": [
-        "assassin"
+        "assassin",
+        "mage"
     ],
     "recommendedItemDefaults": [],
     "skins": [
@@ -245,7 +246,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "「魂の釘」を構えて投げ、命中した敵にダメージを与えてマークを付与する。マークを消費して、通常攻撃で追加ダメージを与えられる。",
-            "dynamicDescription": "数本の<keywordMajor>「魂の釘」</keywordMajor>を構えて投げ、<magicDamage>@MissileDamage@の魔法ダメージ</magicDamage>を与えて、命中した敵をマークする。釘は命中した本数に応じてスタックする<status>スロウ</status>を付与する。(@SlowDuration1@/@SlowDuration2@/@SlowDuration3@秒間、@SlowAmount1*100@/@SlowAmount2*100@/@SlowAmount3*100@%)<br><br>敵を通常攻撃すると<keywordMajor>「魂の釘」</keywordMajor>を消費し、スタックごとに<magicDamage>@NailDamage@の魔法ダメージ</magicDamage>を与える。ダメージは、釘が2本の場合@TwoMarkBonusPercent@%、3本の場合@ThreeMarkBonusPercent@%増加する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "数本の<keywordMajor>「魂の釘」</keywordMajor>を構えて投げ、<magicDamage>@MissileDamage@の魔法ダメージ</magicDamage>を与えて、命中した敵をマークする。釘は命中した本数に応じてスタックする<status>スロウ効果</status>を付与する(@SlowDuration1@/@SlowDuration2@/@SlowDuration3@秒間、@SlowAmount1*100@/@SlowAmount2*100@/@SlowAmount3*100@%)。<br><br>敵を通常攻撃すると<keywordMajor>「魂の釘」</keywordMajor>を消費し、スタックごとに<magicDamage>@NailDamage@の魔法ダメージ</magicDamage>を与える。ダメージは、釘が2本の場合@TwoMarkBonusPercent@%、3本の場合@ThreeMarkBonusPercent@%増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -406,19 +407,19 @@
             ],
             "costCoefficients": [
                 50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0,
-                50.0
+                55.0,
+                60.0,
+                65.0,
+                70.0,
+                75.0
             ],
             "cooldownCoefficients": [
-                20.0,
                 18.0,
+                17.0,
                 16.0,
+                15.0,
                 14.0,
-                12.0,
-                12.0
+                13.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

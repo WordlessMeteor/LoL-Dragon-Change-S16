@@ -424,6 +424,19 @@
                         275.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "E2AttackDelay",
+                    "values": [
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -459,7 +472,7 @@
                 "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E.Locke.dds",
                 "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E2.Locke.dds"
             ],
-            "mCastTime": 0.25,
+            "mCastTime": 0.17499999701976776,
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
             "mCharacterPassiveBuffs": [
@@ -563,11 +576,6 @@
                         "LevelUp": {
                             "levelCount": 5,
                             "Elements": [
-                                {
-                                    "type": "Cooldown",
-                                    "nameOverride": "Spell_ListType_Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                },
                                 {
                                     "type": "Cost",
                                     "nameOverride": "Spell_ListType_Cost",
@@ -1767,12 +1775,12 @@
                 "{035921bc}": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 250.0,
-                            "mEndValue": 590.0,
+                            "mStartValue": 150.0,
+                            "mEndValue": 450.0,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         },
                         {
-                            "mCoefficient": 1.0,
+                            "mCoefficient": 0.6000000238418579,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -1805,7 +1813,6 @@
                             "__type": "NamedDataValueCalculationPart"
                         }
                     ],
-                    "mPrecision": 1,
                     "__type": "GameCalculation"
                 }
             },
@@ -1826,14 +1833,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    20.0,
-                    20.0,
+                    19.0,
                     18.0,
+                    17.0,
                     16.0,
+                    15.0,
                     14.0,
-                    12.0,
-                    12.0
+                    13.0
                 ],
+                "{0a3e0478}": 19.0,
                 "__type": "{0a0eddc9}"
             },
             "mAmmoUsed": [
@@ -1914,11 +1922,11 @@
             "{210f9ec0}": {
                 "values": [
                     50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0,
-                    50.0
+                    55.0,
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0
                 ],
                 "{0a3e0478}": 50.0,
                 "__type": "{630af303}"
@@ -2489,6 +2497,32 @@
                         40.0,
                         40.0,
                         40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "QMissileMinionMod",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "QMarkMinionMod",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -3984,6 +4018,7 @@
         ],
         "characterToolData": {
             "searchTags": "assassin",
+            "searchTagsSecondary": "mage",
             "championId": 805,
             "roles": "BRAWLER",
             "magicRank": 2,

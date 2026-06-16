@@ -14930,7 +14930,9 @@
                     tagName: "template",
                     isModalOpen: !1,
                     discordIntegrationService: r.Ember.inject.service("discord-integration"),
+                    friendFinderService: r.Ember.inject.service("friendFinder"),
                     friendRequestsService: r.Ember.inject.service("friendRequests"),
+                    isFriendingRestricted: r.Ember.computed.alias("friendFinderService.isFriendingRestricted"),
                     hasSentFriendRequests: r.Ember.computed.alias("friendRequestsService.hasSentFriendRequests"),
                     discordOnlyFriends: r.Ember.computed.alias("friendRequestsService.discordOnlyFriends"),
                     isDiscordEnabled: r.Ember.computed.alias("discordIntegrationService.isEnabled"),
@@ -19692,16 +19694,27 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = n(1).Ember.Service.extend({
+            var r = n(1);
+            const o = "/lol-parental-controls/v1/status";
+            var i = r.Ember.Service.extend({
                 isFriendFinderModalOpen: !1,
+                isFriendingRestricted: !1,
+                init() {
+                    this._super(...arguments), r.db.observe(o, this, (e => {
+                        this.set("isFriendingRestricted", e && e.enabled && e.isFriendingRestricted)
+                    }))
+                },
                 openFriendFinderModal() {
                     this.set("isFriendFinderModalOpen", !0)
                 },
                 closeFriendFinderModal() {
                     this.set("isFriendFinderModalOpen", !1)
+                },
+                willDestroy() {
+                    this._super(...arguments), r.db.unobserve(o, this)
                 }
             });
-            t.default = r
+            t.default = i
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -22426,8 +22439,8 @@
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({
-                id: "kp97Mygu",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-modal.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-modal.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-friend-finder-modal"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["static-attr","class","title"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","modal-body"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","recently-played-panel active"],["flush-element"],["text","\\n      "],["append",["unknown",["friend-finder-add-summoner-by-name"]],false],["text","\\n      "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasSentFriendRequests"]]],null,3],["block",["if"],[["get",["isDiscordEnabled"]]],null,2],["block",["if"],[["get",["friendRequestsService","friendableRecentlyHonored","length"]]],null,0],["text","        "],["append",["helper",["friend-finder-recently-played"],null,[["isLoading","friendableSummoners","emptyText","titleText","closeModal","source"],[["get",["friendRequestsService","isLoadingRecentlyPlayedSummoners"]],["get",["friendRequestsService","friendableRecentlyPlayed"]],["get",["tra","recently_played_empty"]],["get",["tra","friend_finder_modal_recently_played_with"]],["get",["onClose"]],"recently-played"]]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["append",["helper",["friend-finder-recently-played"],null,[["titleIconUrl","isLoading","friendableSummoners","titleText","closeModal","source"],["/fe/lol-social/recently-honored-default-icon.png",["get",["friendRequestsService","isLoadingHonorRecognition"]],["get",["friendRequestsService","friendableRecentlyHonored"]],["get",["tra","friend_finder_modal_recently_honored"]],["get",["onClose"]],"recently-honored"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["friend-finder-discord"],null,[["friendableSummoners","closeModal","source"],[["get",["discordOnlyFriends"]],["get",["onClose"]],"discord"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["append",["helper",["discord-banner"],null,[["bannerText","buttonText","shouldShowDiscordBanner"],[["get",["tra","friend_finder_modal_discord_banner_text"]],["get",["tra","friend_finder_modal_discord_button_text"]],["get",["shouldShowDiscordBanner"]]]]],false],["text","\\n"],["block",["if"],[["get",["shouldShowDiscordFriendRequests"]]],null,1]],"locals":[]},{"statements":[["text","          "],["append",["helper",["friend-finder-requested-players"],null,[["closeModal"],[["get",["onClose"]]]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "nKq7np4g",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\templates\\\\components\\\\friend-finder-modal.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-social\\\\src\\\\app\\\\components\\\\friend-finder-modal.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-friend-finder-modal"],["flush-element"],["text","\\n  "],["open-element","h4",[]],["static-attr","class","title"],["flush-element"],["append",["unknown",["tra","friend_finder_modal_title"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","modal-body"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isFriendingRestricted"]]],null,5,4],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["append",["helper",["friend-finder-recently-played"],null,[["titleIconUrl","isLoading","friendableSummoners","titleText","closeModal","source"],["/fe/lol-social/recently-honored-default-icon.png",["get",["friendRequestsService","isLoadingHonorRecognition"]],["get",["friendRequestsService","friendableRecentlyHonored"]],["get",["tra","friend_finder_modal_recently_honored"]],["get",["onClose"]],"recently-honored"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["helper",["friend-finder-discord"],null,[["friendableSummoners","closeModal","source"],[["get",["discordOnlyFriends"]],["get",["onClose"]],"discord"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["append",["helper",["discord-banner"],null,[["bannerText","buttonText","shouldShowDiscordBanner"],[["get",["tra","friend_finder_modal_discord_banner_text"]],["get",["tra","friend_finder_modal_discord_button_text"]],["get",["shouldShowDiscordBanner"]]]]],false],["text","\\n"],["block",["if"],[["get",["shouldShowDiscordFriendRequests"]]],null,1]],"locals":[]},{"statements":[["text","            "],["append",["helper",["friend-finder-requested-players"],null,[["closeModal"],[["get",["onClose"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","recently-played-panel active"],["flush-element"],["text","\\n        "],["append",["unknown",["friend-finder-add-summoner-by-name"]],false],["text","\\n        "],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasSentFriendRequests"]]],null,3],["block",["if"],[["get",["isDiscordEnabled"]]],null,2],["block",["if"],[["get",["friendRequestsService","friendableRecentlyHonored","length"]]],null,0],["text","          "],["append",["helper",["friend-finder-recently-played"],null,[["isLoading","friendableSummoners","emptyText","titleText","closeModal","source"],[["get",["friendRequestsService","isLoadingRecentlyPlayedSummoners"]],["get",["friendRequestsService","friendableRecentlyPlayed"]],["get",["tra","recently_played_empty"]],["get",["tra","friend_finder_modal_recently_played_with"]],["get",["onClose"]],"recently-played"]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","friend-finder-parental-controls-overlay"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","friend-finder-parental-controls-poro"],["flush-element"],["close-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","friend-finder-parental-controls-text"],["flush-element"],["text","\\n          Adding friends has been disabled on this account. Please talk to your parent or guardian to enable this feature.\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

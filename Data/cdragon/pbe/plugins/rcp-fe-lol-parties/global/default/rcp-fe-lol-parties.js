@@ -10417,14 +10417,15 @@
                 }
             }
             const r = (0, i.emberDataBinding)({
-                Ember: i.Ember,
-                websocket: (0, i.getProvider)().getSocket(),
-                logPrefix: "parties:player-banner:component",
-                basePaths: {
-                    summoner: "/lol-summoner",
-                    chat: "/lol-chat"
-                }
-            });
+                    Ember: i.Ember,
+                    websocket: (0, i.getProvider)().getSocket(),
+                    logPrefix: "parties:player-banner:component",
+                    basePaths: {
+                        summoner: "/lol-summoner",
+                        chat: "/lol-chat"
+                    }
+                }),
+                l = "/lol-parental-controls/v1/status";
             e.exports = i.Ember.Component.extend(r, o.default, s.default, {
                 layout: n(190),
                 classNames: ["player-party-controls"],
@@ -10433,6 +10434,7 @@
                 isMe: !1,
                 playerNames: i.playerNames,
                 showRestrictions: !0,
+                isFriendingRestricted: !1,
                 chatService: i.Ember.inject.service("chat"),
                 lobbiesService: i.Ember.inject.service("lobbies"),
                 matchmakingService: i.Ember.inject.service("matchmaking"),
@@ -10463,13 +10465,21 @@
                 _onCurrentPlayerIsLeader: function() {
                     this.set("_transferringLeadership", !1)
                 },
+                init() {
+                    this._super(...arguments), i.db.observe(l, this, (e => {
+                        this.set("isFriendingRestricted", e && e.enabled && e.isFriendingRestricted)
+                    }))
+                },
+                willDestroyElement() {
+                    this._super(...arguments), i.db.unobserve(l, this)
+                },
                 isFriended: i.Ember.computed("member", "member.summonerId", "chatService.friends.[]", (function() {
                     return this.get("chatService").isFriend(this.get("member.summonerId"))
                 })),
-                contextMenuModel: i.Ember.computed("showPartyOwnerTools", "hasInvitePrivileges", "isMe", "member", "isFriended", "tra.ready", "tra.context_menu_promote_to_leader", "tra.context_menu_kick", "tra.context_menu_friend_request", "tra.context_menu_revoke_invite_privilege", "tra.context_menu_grant_invite_privilege", (function() {
-                    const e = this.get("isFriended"),
-                        t = this.get("showPartyOwnerTools") || !e;
-                    return !this.get("isMe") && this.get("member") && t ? [{
+                shouldHideAddFriend: i.Ember.computed.or("isFriended", "isFriendingRestricted"),
+                contextMenuModel: i.Ember.computed("showPartyOwnerTools", "hasInvitePrivileges", "isMe", "member", "shouldHideAddFriend", "tra.ready", "tra.context_menu_promote_to_leader", "tra.context_menu_kick", "tra.context_menu_friend_request", "tra.context_menu_revoke_invite_privilege", "tra.context_menu_grant_invite_privilege", (function() {
+                    const e = this.get("showPartyOwnerTools") || !this.get("shouldHideAddFriend");
+                    return !this.get("isMe") && this.get("member") && e ? [{
                         action: function() {
                             this.send("promoteToOwner")
                         },
@@ -10490,7 +10500,7 @@
                         class: "add-friend",
                         target: this,
                         label: this.get("tra.context_menu_friend_request"),
-                        hidden: e
+                        hidden: this.get("shouldHideAddFriend")
                     }, {
                         action: function() {
                             this.send("toggleInvitePrivilege")
@@ -10582,8 +10592,8 @@
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "8K40ngWd",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties\\\\player-banners\\\\player-party-controls-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties\\\\player-banners\\\\player-party-controls-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties\\\\player-banners\\\\player-party-controls-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-player-labels-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","parties-player-name-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLeader"]]],null,10],["text","    "],["open-element","lol-uikit-resizing-text-field",[]],["static-attr","class","parties-player-name"],["static-attr","data-max-width","140"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName"],["tooltip",["get",["member","puuid"]],["get",["member","summonerName"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isNotMe"]]],null,9],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-not-ready-loader"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGhostedBanner"]]],null,2],["close-element"],["text","\\n"],["block",["if"],[["get",["showRestrictions"]]],null,1],["text","\\n"],["block",["if"],[["get",["showPositionSelector"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["player-positions"],null,[["member","isMe","currentTeamIsFull","animationsEnabled","positionSelectorEmberApp","positionSelectorData","cachePositionSelector"],[["get",["member"]],["get",["isMe"]],["get",["currentTeamIsFull"]],["get",["animationsEnabled"]],["get",["positionSelectorEmberApp"]],["get",["positionSelectorData"]],["helper",["action"],[["get",[null]],["get",["cachePositionSelector"]]],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["player-restrictions"],null,[["member","currentPlayerIsLeader","isMe","queueId"],[["get",["member"]],["get",["currentPlayerIsLeader"]],["get",["isMe"]],["get",["queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-not-ready-loader-segment"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-not-ready-loader-segment"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-not-ready-loader-segment"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n            "],["append",["unknown",["tra","captain_controls_tooltip"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["player-management-button"],null,[["type","action"],["options","openCaptainMenu"]],3]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n            "],["append",["unknown",["tra","context_menu_friend_request"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["player-management-button"],null,[["type","action"],["add-friend","sendFriendRequest"]],5]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n            "],["append",["unknown",["tra","kick_tooltip"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["comment"," kick button is for party owners only "],["text","\\n"],["block",["player-management-button"],null,[["type","action"],["kick","kick"]],7]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","player-party-tools"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showPartyOwnerTools"]]],null,8],["text","\\n    "],["comment"," any party member can Add Friend "],["text","\\n"],["block",["unless"],[["get",["isFriended"]]],null,6],["text","\\n    "],["comment"," options menu button is for party owners only "],["text","\\n"],["block",["if"],[["get",["showPartyOwnerTools"]]],null,4],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","parties-player-leader-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "SxifWK3V",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties\\\\player-banners\\\\player-party-controls-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties\\\\player-banners\\\\player-party-controls-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-parties\\\\src\\\\components\\\\parties\\\\player-banners\\\\player-party-controls-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","parties-player-labels-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","parties-player-name-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isLeader"]]],null,10],["text","    "],["open-element","lol-uikit-resizing-text-field",[]],["static-attr","class","parties-player-name"],["static-attr","data-max-width","140"],["flush-element"],["text","\\n      "],["append",["helper",["player-name"],null,[["format","puuid","summonerName"],["tooltip",["get",["member","puuid"]],["get",["member","summonerName"]]]]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["isNotMe"]]],null,9],["text","\\n"],["open-element","div",[]],["static-attr","class","lol-not-ready-loader"],["flush-element"],["text","\\n"],["block",["if"],[["get",["shouldShowGhostedBanner"]]],null,2],["close-element"],["text","\\n"],["block",["if"],[["get",["showRestrictions"]]],null,1],["text","\\n"],["block",["if"],[["get",["showPositionSelector"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["player-positions"],null,[["member","isMe","currentTeamIsFull","animationsEnabled","positionSelectorEmberApp","positionSelectorData","cachePositionSelector"],[["get",["member"]],["get",["isMe"]],["get",["currentTeamIsFull"]],["get",["animationsEnabled"]],["get",["positionSelectorEmberApp"]],["get",["positionSelectorData"]],["helper",["action"],[["get",[null]],["get",["cachePositionSelector"]]],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["player-restrictions"],null,[["member","currentPlayerIsLeader","isMe","queueId"],[["get",["member"]],["get",["currentPlayerIsLeader"]],["get",["isMe"]],["get",["queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-not-ready-loader-segment"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-not-ready-loader-segment"],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-not-ready-loader-segment"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n            "],["append",["unknown",["tra","captain_controls_tooltip"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["player-management-button"],null,[["type","action"],["options","openCaptainMenu"]],3]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n            "],["append",["unknown",["tra","context_menu_friend_request"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["player-management-button"],null,[["type","action"],["add-friend","sendFriendRequest"]],5]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["text","\\n            "],["append",["unknown",["tra","kick_tooltip"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["comment"," kick button is for party owners only "],["text","\\n"],["block",["player-management-button"],null,[["type","action"],["kick","kick"]],7]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","player-party-tools"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showPartyOwnerTools"]]],null,8],["text","\\n    "],["comment"," any party member can Add Friend "],["text","\\n"],["block",["unless"],[["get",["shouldHideAddFriend"]]],null,6],["text","\\n    "],["comment"," options menu button is for party owners only "],["text","\\n"],["block",["if"],[["get",["showPartyOwnerTools"]]],null,4],["text","  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","parties-player-leader-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -16434,7 +16444,7 @@
                                 e.app.destroy()
                             }))))
                         })).catch((e => {
-                            i.logger.error(`Failed to destroy modal: ${e}`)
+                            i.logger.error("Failed to destroy modal", e)
                         }))
                     }
                 }
@@ -16864,14 +16874,15 @@
             }
             n(322);
             const r = (0, i.emberDataBinding)({
-                Ember: i.Ember,
-                websocket: (0, i.getProvider)().getSocket(),
-                logPrefix: "parties:player-banner:component",
-                basePaths: {
-                    summoner: "/lol-summoner",
-                    chat: "/lol-chat"
-                }
-            });
+                    Ember: i.Ember,
+                    websocket: (0, i.getProvider)().getSocket(),
+                    logPrefix: "parties:player-banner:component",
+                    basePaths: {
+                        summoner: "/lol-summoner",
+                        chat: "/lol-chat"
+                    }
+                }),
+                l = "/lol-parental-controls/v1/status";
             e.exports = i.Ember.Component.extend(r, o.default, s.default, {
                 layout: n(323),
                 classNames: ["v2-player-party-controls"],
@@ -16879,6 +16890,7 @@
                 isLeader: !1,
                 isMe: !1,
                 isMultiteamLobby: !1,
+                isFriendingRestricted: !1,
                 chatService: i.Ember.inject.service("chat"),
                 lobbiesService: i.Ember.inject.service("lobbies"),
                 matchmakingService: i.Ember.inject.service("matchmaking"),
@@ -16915,10 +16927,18 @@
                 _onCurrentPlayerIsLeader: function() {
                     this.set("_transferringLeadership", !1)
                 },
+                init() {
+                    this._super(...arguments), i.db.observe(l, this, (e => {
+                        this.set("isFriendingRestricted", e && e.enabled && e.isFriendingRestricted)
+                    }))
+                },
+                willDestroyElement() {
+                    this._super(...arguments), i.db.unobserve(l, this)
+                },
                 isFriended: i.Ember.computed("member", "member.summonerId", "chatService.friends.[]", (function() {
                     return this.get("chatService").isFriend(this.get("member.summonerId"))
                 })),
-                contextMenuModel: i.Ember.computed("showPartyOwnerTools", "showPlayerOptionsTools", "showPartyMemberTools", "hasInvitePrivileges", "isMe", "member", "isFriended", "tra.ready", "tra.context_menu_promote_to_leader", "tra.context_menu_kick", "tra.context_menu_friend_request", "tra.context_menu_block", "tra.context_menu_revoke_invite_privilege", "tra.context_menu_grant_invite_privilege", "tra.context_menu_view_profile", (function() {
+                contextMenuModel: i.Ember.computed("showPartyOwnerTools", "showPlayerOptionsTools", "showPartyMemberTools", "hasInvitePrivileges", "isMe", "member", "isFriended", "isFriendingRestricted", "tra.ready", "tra.context_menu_promote_to_leader", "tra.context_menu_kick", "tra.context_menu_friend_request", "tra.context_menu_block", "tra.context_menu_revoke_invite_privilege", "tra.context_menu_grant_invite_privilege", "tra.context_menu_view_profile", (function() {
                     const e = this.get("isFriended"),
                         t = this.get("showPartyOwnerTools"),
                         n = this.get("showPartyOwnerTools") || !e || this.get("showPartyMemberTools");
@@ -16943,7 +16963,7 @@
                         class: "add-friend",
                         target: this,
                         label: this.get("tra.context_menu_friend_request"),
-                        hidden: e
+                        hidden: e || this.get("isFriendingRestricted")
                     }, {
                         action: function() {
                             this.send("toggleInvitePrivilege")
@@ -16965,7 +16985,7 @@
                         class: "add-friend",
                         target: this,
                         label: this.get("tra.context_menu_friend_request"),
-                        hidden: e
+                        hidden: e || this.get("isFriendingRestricted")
                     }, {
                         action: function() {
                             this.send("block")

@@ -165,6 +165,7 @@ lol-friend-finder-social-summoner .social-profile-name {
 .leaver-buster-dialog a:visited,
 .lol-friend-finder-by-summoner-name .description,
 .lol-friend-finder-modal .feature-not-implemented,
+.lol-friend-finder-modal .friend-finder-parental-controls-text,
 .lol-friend-finder-recent-summoner .friend-request-discord-id,
 .lol-friend-finder-recent-summoner .friend-request-discord-id .friend-request-discord-text,
 .lol-friend-finder-recent-summoner .summoner-identity .player-name-wrapper,
@@ -228,6 +229,7 @@ lol-friend-finder-social-summoner .social-summoner-name {
 .lol-friend-finder-by-summoner-name .description,
 .lol-friend-finder-modal .feature-not-implemented,
 .lol-friend-finder-modal .friend-finder-panel-header-title,
+.lol-friend-finder-modal .friend-finder-parental-controls-text,
 .lol-friend-finder-modal .header,
 .lol-friend-finder-modal .title,
 .lol-friend-finder-recent-summoner .friend-request-discord-id,
@@ -636,6 +638,7 @@ lol-friend-finder-social-summoner .social-profile-name:lang(ar-ae) {
 .code-of-conduct .code-of-conduct-content-container .more-info-link,
 .code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-body-container .rule-item-body,
 .discord-eat .discord-attention-tooltip-text-msg,
+.lol-friend-finder-modal .friend-finder-parental-controls-text,
 .player-behavior-reform-card .reform-card-body,
 .player-behavior-reform-card-v2 .reform-card-body,
 .player-behavior-reform-card-v3 .reform-card-body,
@@ -651,6 +654,7 @@ lol-friend-finder-by-social-network .social-description {
 .code-of-conduct .code-of-conduct-content-container .more-info-link:lang(ar-ae),
 .code-of-conduct .code-of-conduct-content-container .rule-item-container .rule-item-body-container .rule-item-body:lang(ar-ae),
 .discord-eat .discord-attention-tooltip-text-msg:lang(ar-ae),
+.lol-friend-finder-modal .friend-finder-parental-controls-text:lang(ar-ae),
 .player-behavior-reform-card .reform-card-body:lang(ar-ae),
 .player-behavior-reform-card-v2 .reform-card-body:lang(ar-ae),
 .player-behavior-reform-card-v3 .reform-card-body:lang(ar-ae),
@@ -2104,6 +2108,30 @@ lol-friend-finder-social-summoner .social-added {
     content: "";
     height: 30px;
     width: 30px
+}
+
+.lol-friend-finder-modal .friend-finder-parental-controls-overlay {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.lol-friend-finder-modal .friend-finder-parental-controls-poro {
+    background: url(/fe/lol-social/poro_shocked.png) no-repeat 50%;
+    background-size: contain;
+    height: 105px;
+    width: 110px
+}
+
+.lol-friend-finder-modal .friend-finder-parental-controls-text {
+    color: #a09b8c;
+    letter-spacing: .01em;
+    margin-top: 32px;
+    text-align: center;
+    width: 370px
 }
 
 @-moz-keyframes friend-finder-spin {

@@ -471,8 +471,8 @@
                         t = this.get("selectedState.isViewingTopPlayers");
                     return !e || !this.get("selectedState.league.requestedRankedEntry") && !t
                 })),
-                isShowingLol: a.Ember.computed("isViewingTft", "isViewingCherry", (function() {
-                    return !this.get("isViewingTft") && !this.get("isViewingCherry")
+                isShowingLol: a.Ember.computed("isViewingTft", "isViewingCherry", "isViewingRankedPremade", (function() {
+                    return !this.get("isViewingTft") && !this.get("isViewingCherry") && !this.get("isViewingRankedPremade")
                 })),
                 isShowingSplitEndCountdown: a.Ember.computed("isViewingLocalSummoner", "activeLoLSeason", "isShowingLol", (function() {
                     const e = this.get("activeLoLSeason");
@@ -497,6 +497,9 @@
                 isViewingCherry: a.Ember.computed("selectedState.league", (function() {
                     return "CHERRY" === this.get("selectedState.league.queueType")
                 })),
+                isViewingRankedPremade: a.Ember.computed("selectedState.league", (function() {
+                    return "RANKED_PREMADE_5x5" === this.get("selectedState.league.queueType")
+                })),
                 nextUpdateMillis: a.Ember.computed("selectedState.league.nextApexUpdateMillis", "selectedState.league.nextRatedUpdateMillis", (function() {
                     const e = this.get("selectedState.league") || {};
                     return e.nextApexUpdateMillis || e.nextRatedUpdateMillis
@@ -507,10 +510,11 @@
                         year: "numeric"
                     }) : (new Date).getFullYear()
                 })),
-                seasonNameText: a.Ember.computed("isViewingCherry", "isViewingTft", "tftSets", "currentSeasonYear", "activeLoLSeason.metadata.currentSplit", (function() {
+                seasonNameText: a.Ember.computed("isViewingCherry", "isViewingTft", "isViewingRankedPremade", "tftSets", "currentSeasonYear", "activeLoLSeason.metadata.currentSplit", (function() {
                     const e = this.get("tra");
                     if (this.get("isViewingCherry")) return this.get("tra.QUEUE_NAME_CHERRY");
                     if (this.get("isViewingTft")) return this.get("tftSets").LCTFTModeData.mDefaultSet.SetDisplayName;
+                    if (this.get("isViewingRankedPremade")) return this.get("tra.QUEUE_NAME_RANKED_PREMADE_5x5");
                     {
                         const t = this.get("currentSeasonYear"),
                             n = this.get("activeLoLSeason.metadata.currentSplit");
@@ -3064,7 +3068,8 @@
                     this._super(...arguments), s.db.unobserve(this)
                 },
                 didRender() {
-                    this._super(...arguments), this._showRankedInfoModal()
+                    this._super(...arguments);
+                    this.get("shouldShowRankedInfoModal") && this._showRankedInfoModal()
                 },
                 handleAccountLeaguesSettings(e) {
                     this.set("accountLeaguesSettings", e)
@@ -3112,6 +3117,13 @@
                         a = Boolean(this.get("activeSeason"));
                     return !e && t && n && a
                 })),
+                shouldShowRankedInfoModal: s.Ember.computed("isGameflowPhaseValid", "isDependenciesInitialized", "accountLeaguesSettings.data.ranked-5s-ftux-seen", "accountLeaguesSettings", "rankedInfoModalShown", (function() {
+                    const e = Boolean(this.get("isDependenciesInitialized")),
+                        t = this.get("isGameflowPhaseValid"),
+                        n = !!this.get("accountLeaguesSettings.data.ranked-5s-ftux-seen") || void 0 === this.get("accountLeaguesSettings"),
+                        a = this.get("rankedInfoModalShown");
+                    return e && t && !n && !a
+                })),
                 activeSeason: s.Ember.computed("recentSeasons.@each.seasonStart", "recentSeasons.@each.seasonEnd", (function() {
                     const e = this.get("recentSeasons") || [],
                         t = Date.now();
@@ -3135,7 +3147,7 @@
                     return !this._isLoginSessionInvalid(e) && this._isNamedSummoner(t) && n && a && s && i && o && l
                 })),
                 _showRankedInfoModal() {
-                    if (!!this.get("accountLeaguesSettings.data.ranked-5s-ftux-seen") || void 0 === this.get("accountLeaguesSettings")) return !1;
+                    this.set("rankedInfoModalShown", !0);
                     const e = s.componentFactory.create("RankedFtuxModalComponent"),
                         t = s.ModalManager.add({
                             type: "DialogAlert",
