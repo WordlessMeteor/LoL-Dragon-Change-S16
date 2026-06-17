@@ -182,7 +182,6 @@
             324005,
             3135,
             3165,
-            4005,
             4637,
             6621,
             6657
@@ -696,6 +695,7 @@
             326616,
             3802,
             3916,
+            4005,
             4630,
             4637,
             4642,
@@ -1277,7 +1277,7 @@
     {
         "id": 1120,
         "name": "도란의 투구",
-        "description": "<mainText><stats>체력 <attention> 140</attention><br>방어력 <attention> 10</attention><br>마법 저항력 <attention> 10</attention></stats><br><br><passive>도움의 손길</passive><br>기본 공격 시 미니언에게 <physicalDamage>5의 추가 물리 피해</physicalDamage>를 입힙니다.</mainText>",
+        "description": "<mainText><stats>체력 <attention> 150</attention><br>방어력 <attention> 8</attention><br>마법 저항력 <attention> 8</attention></stats><br><br><passive>도움의 손길</passive><br>기본 공격 시 미니언에게 <physicalDamage>5의 추가 물리 피해</physicalDamage>를 입힙니다.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8394,12 +8394,13 @@
     {
         "id": 4005,
         "name": "제국의 명령",
-        "description": "<mainText><stats>주문력 <attention> 65</attention><br>스킬 가속 <attention> 15</attention><br>기본 마나 재생 <attention> 150%</attention></stats><br><br><passive>통제</passive><br><keyword>이동 불가</keyword> 효과를 지닌 스킬의  스킬 가속이 15 증가합니다.<br><br><passive>명령</passive><br>적 챔피언에게 <keyword>이동 불가</keyword> 효과를 적용하면 4초 동안 해당 챔피언에게 6% <Keyword>취약</Keyword> 표식을 남깁니다.<br></mainText>",
+        "description": "<mainText><stats>주문력 <attention> 60</attention><br>스킬 가속 <attention> 15</attention><br>기본 마나 재생 <attention> 150%</attention></stats><br><br><passive>통제</passive><br><keyword>이동 불가</keyword> 효과를 지닌 스킬의  스킬 가속이 20 증가합니다.<br><br><passive>명령</passive><br>적 챔피언에게 <keyword>이동 불가</keyword> 효과를 적용하면 4초 동안 해당 챔피언에게 7% <Keyword>취약</Keyword> 표식을 남깁니다.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [
-            1026,
-            4642
+            1052,
+            4642,
+            1052
         ],
         "to": [],
         "categories": [
@@ -8416,7 +8417,7 @@
         "specialRecipe": 0,
         "isEnchantment": false,
         "price": 650,
-        "priceTotal": 2400,
+        "priceTotal": 2350,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/4005_Enchanter_T4_ImperialMandate.png"
     },
@@ -8554,7 +8555,7 @@
     {
         "id": 4015,
         "name": "당혹",
-        "description": "<mainText><stats>주문력 <attention> 60</attention><br>이동 속도 <attention> 5%</attention><br>방어구 관통력 <attention> 22%</attention><br>마법 관통력 <attention> 30%</attention></stats><br><br><passive>거인 학살자</passive><br>자신보다 최대 체력이 높은 적 챔피언에게 최대 15%의 추가 피해를 입힙니다.<br><br><rules>체력 차이가 2500 이상일 때 추가 피해량이 최대가 됩니다.</rules></mainText>",
+        "description": "<mainText><stats>주문력 <attention> 60</attention><br>이동 속도 <attention> 5%</attention><br>방어구 관통력 <attention> 22%</attention><br>마법 관통력 <attention> 30%</attention></stats><br><br><passive>거인 학살자</passive><br>자신보다 최대 체력이 높은 적 챔피언에게 최대 15%의 추가 피해를 입힙니다.<br><br><rules>체력 차이가 3000 이상일 때 추가 피해량이 최대가 됩니다.</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8582,7 +8583,7 @@
     {
         "id": 4016,
         "name": "무언의 서약",
-        "description": "<mainText><stats>주문력 <attention> 50</attention><br>체력 회복 및 보호막 <attention> 15%</attention><br>스킬 가속 <attention> 25</attention></stats><br><br><passive>서약</passive><br><attention>서약한</attention> <scaleAP>아군  주문력</scaleAP>의 15%를 얻고 <attention>서약한</attention> 아군에게 내  스킬 가속의 15%를 부여합니다.<br><br> <active>활성화</active>  (0초)<br><active>서약</active><br>아군에게 <attention>서약</attention>합니다.</mainText>",
+        "description": "<mainText><stats>주문력 <attention> 50</attention><br>체력 회복 및 보호막 <attention> 15%</attention><br>스킬 가속 <attention> 25</attention></stats><br><br><passive>서약</passive><br><attention>서약한</attention> <scaleAP>아군  주문력</scaleAP>의 10%를 얻고 <attention>서약한</attention> 아군에게 내  스킬 가속의 10%를 부여합니다.<br><br> <active>활성화</active>  (0초)<br><active>서약</active><br>아군에게 <attention>서약</attention>합니다.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -8607,7 +8608,7 @@
     {
         "id": 4017,
         "name": "지옥불 손도끼",
-        "description": "<mainText><stats>공격력 <attention> 35</attention><br>물리 관통력 <attention> 12</attention></stats><br><br><passive>그을리기</passive> 대상별  (0초)<br>다음 스킬 적중 시 적에게 <keywordMajor>화상</keywordMajor>을 적용해 대상과 자신의 <scaleHealth>최대 체력</scaleHealth> 차이에 비례해 <scaleAD>현재 체력의 0~0에 해당하는 물리 피해</scaleAD>를 4초에 걸쳐 입힙니다.<br><br><rules>추가 피해량은 체력 차이가 3000일 때 최대가 됩니다.</rules></mainText>",
+        "description": "<mainText><stats>공격력 <attention> 40</attention><br>물리 관통력 <attention> 12</attention></stats><br><br><passive>그을리기</passive> 대상별  (0초)<br>다음 스킬 적중 시 적에게 <keywordMajor>화상</keywordMajor>을 적용해 대상과 자신의 <scaleHealth>최대 체력</scaleHealth> 차이에 비례해 <scaleAD>현재 체력의 0~0에 해당하는 물리 피해</scaleAD>를 4초에 걸쳐 입힙니다.<br><br><rules>추가 피해량은 체력 차이가 3000일 때 최대가 됩니다.</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15871,7 +15872,7 @@
     {
         "id": 226692,
         "name": "월식",
-        "description": "<mainText><stats>공격력 <attention> 50</attention><br>스킬 가속 <attention> 10</attention></stats><br><br><passive>늘 떠오르는 달</passive><br>2초 내에 한 챔피언에게 별개의 기본 공격이나 스킬로 2회 공격하면 2초 동안 <shield>피해를 흡수하는 보호막</shield>을 얻습니다.</mainText>",
+        "description": "<mainText><stats>공격력 <attention> 60</attention><br>스킬 가속 <attention> 15</attention></stats><br><br><passive>늘 떠오르는 달</passive><br>2초 내에 한 챔피언에게 별개의 기본 공격이나 스킬로 2회 공격하면 2초 동안 <shield>피해를 흡수하는 보호막</shield>을 얻습니다.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16899,7 +16900,7 @@
     {
         "id": 324005,
         "name": "제국의 명령",
-        "description": "<mainText><stats>주문력 <attention> 65</attention><br>스킬 가속 <attention> 15</attention><br>기본 마나 재생 <attention> 150%</attention></stats><br><br><passive>통제</passive><br><keyword>이동 불가</keyword> 효과를 지닌 스킬의  스킬 가속이 15 증가합니다.<br><br><passive>명령</passive><br>적 챔피언에게 <keyword>이동 불가</keyword> 효과를 적용하면 4초 동안 해당 챔피언에게 6% <Keyword>취약</Keyword> 표식을 남깁니다.<br></mainText>",
+        "description": "<mainText><stats>주문력 <attention> 65</attention><br>스킬 가속 <attention> 15</attention><br>기본 마나 재생 <attention> 150%</attention></stats><br><br><passive>통제</passive><br><keyword>이동 불가</keyword> 효과를 지닌 스킬의  스킬 가속이 20 증가합니다.<br><br><passive>명령</passive><br>적 챔피언에게 <keyword>이동 불가</keyword> 효과를 적용하면 4초 동안 해당 챔피언에게 7% <Keyword>취약</Keyword> 표식을 남깁니다.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [

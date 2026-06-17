@@ -357,7 +357,11 @@
             "mSpellTags": [
                 "Trait_PlayerSelectedDashDirection",
                 "PositiveEffect_Teleport",
-                "Trait_DamageAbility"
+                "Trait_DamageAbility",
+                "PositiveEffect_MoveBlock",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_Melee_SmallWindup",
+                "Trait_AoE"
             ],
             "DataValues": [
                 {
@@ -428,13 +432,13 @@
                 {
                     "name": "E2AttackDelay",
                     "values": [
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1235,7 +1239,9 @@
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mSpellTags": [
-                "Trait_Ultimate"
+                "Trait_Ultimate",
+                "Trait_DamageAbility",
+                "Trait_AoE"
             ],
             "DataValues": [
                 {
@@ -1618,17 +1624,21 @@
                     "__type": "HasBuffCastRequirement"
                 }
             ],
+            "mSpellTags": [
+                "Trait_SelfHeal",
+                "PositiveEffect_Boon"
+            ],
             "DataValues": [
                 {
                     "name": "BaseMoveSpeed",
                     "values": [
+                        0.3499999940395355,
+                        0.4000000059604645,
                         0.44999998807907104,
                         0.5,
                         0.550000011920929,
                         0.6000000238418579,
-                        0.6499999761581421,
-                        0.699999988079071,
-                        0.75
+                        0.6499999761581421
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1965,6 +1975,10 @@
                                     "nameOverride": "Spell_ListType_MovementSpeed",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
                                 }
                             ],
                             "__type": "TooltipInstanceList"
@@ -1996,6 +2010,7 @@
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 8192,
+            "mAffectsStatusFlags": 32,
             "mCastRequirementsCaster": [
                 {
                     "mBuffName": "{df165b56}",
@@ -2304,6 +2319,15 @@
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_SignatureSpell",
+                "Trait_Ammo",
+                "Trait_DamageAbility",
+                "PositiveEffect_EmpowerAttack",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_Ranged_StopsFirstHit",
+                "Trait_Ranged_Piercing"
+            ],
             "DataValues": [
                 {
                     "name": "BaseMissileDamage",
@@ -2691,6 +2715,11 @@
                                 {
                                     "type": "Cooldown",
                                     "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MarkDamage",
+                                    "nameOverride": "Spell_ListType_DamageperStack",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

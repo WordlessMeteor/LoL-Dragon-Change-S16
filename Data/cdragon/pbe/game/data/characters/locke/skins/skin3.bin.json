@@ -274,7 +274,7 @@
             "initialSubmeshToHide": "Weaponsmear Nail Recall_Page Recall_Nail",
             "materialOverride": [
                 {
-                    "Material": "Characters/Locke/Skins/Skin3/Materials/Locke_Weapon_Transition",
+                    "Material": "{3f1f9c04}",
                     "submesh": "Weapon",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -299,7 +299,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "Characters/Locke/Skins/Skin3/Materials/Locke_Weapon_Transition",
+                    "Material": "{3f1f9c04}",
                     "submesh": "Nailbelt",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -27943,6 +27943,610 @@
             ]
         ],
         "__type": "VfxSystemDefinitionData"
+    },
+    "{3f1f9c04}": {
+        "name": "Characters/Locke/Skins/Skin3/Materials/Locke_Weapon_Nail_Transition",
+        "samplerValues": [
+            {
+                "TextureName": "Scroll_Scale_Noise_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scroll_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alt_Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Locke/Skins/Skin03/Locke_Skin03_WeaponW_TX_CM.Chroma_Locke_HighNoon.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Dissolve_Texture",
+                "texturePath": "ASSETS/Shared/FX/Textures/NoiseDissolve/Shared_ND_Caustic_04.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Locke/Skins/Skin03/Locke_Skin03_Weapon_TX_CM.Chroma_Locke_HighNoon.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Noise_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Flowmap",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "HolesMask_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Gradient_Color_Texture",
+                "texturePath": "ASSETS/Shared/Materials/EDG_Rainbow2.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Scroll_Scale_U_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_U_Max",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_V_Max",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_Sine_Period",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_V_Min",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_Noise_Scaling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Scale_Noise_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scrolll_Texture_ColorTint",
+                "value": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Texture_Scale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Scroll_Texture_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Scroll_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Scroll_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Bloom_Power",
+                "value": [
+                    4.425000190734863,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Out_Alpha_Color",
+                "value": [
+                    0.43718624114990234,
+                    0.18413062393665314,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Alpha_Bias",
+                "value": [
+                    -1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Body_Height",
+                "value": [
+                    250.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Texture_Intensity",
+                "value": [
+                    0.824999988079071,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Lighting_Intensity",
+                "value": [
+                    4.949999809265137,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveIntensity",
+                "value": [
+                    0.3774999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Dissolve_Color",
+                "value": [
+                    0.9450980424880981,
+                    0.24705882370471954,
+                    0.11764705926179886,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveBias",
+                "value": [
+                    -1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "DissolveWidth",
+                "value": [
+                    0.4724999964237213,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FlowScale",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Speed",
+                "value": [
+                    0.0,
+                    0.10000000149011612,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScreenSpace_Scale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Gradient_Speed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_Scale",
+                "value": [
+                    4.0,
+                    2.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Noise_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FlowSpeed",
+                "value": [
+                    0.6899999976158142,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "HolesEdge_Color",
+                "value": [
+                    1.0,
+                    0.35683223605155945,
+                    0.0,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "HolesScaling_Speed",
+                "value": [
+                    3.737499952316284,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holes_ScrollingSpeed",
+                "value": [
+                    0.0,
+                    -0.05000000074505806,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holes_ScrollingSpeed2",
+                "value": [
+                    0.0,
+                    -0.25,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FresnelColor",
+                "value": [
+                    0.9000076055526733,
+                    0.02999923750758171,
+                    0.4800030589103699,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Intensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Scale",
+                "value": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "value": [
+                    0.6235294342041016,
+                    0.1921568661928177,
+                    0.32156863808631897,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "FlowIntensity",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_SINE__SCROLL_SCALE",
+                "on": false,
+                "Group": "Gradient",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_SCROLL_TEXTURE",
+                "on": false,
+                "Group": "Gradient",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_GRADIENT_SCROLL",
+                "on": false,
+                "Group": "Gradient",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_DISSOLVE_TRANSITION",
+                "Group": "Dissolve/Transition",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_POST_LIGHT_ON_DISSOLVE",
+                "Group": "Dissolve/Transition",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "DISSOLVE_OUT_ALPHA",
+                "on": false,
+                "Group": "Dissolve/Transition",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCREENSPACE_ON",
+                "on": false,
+                "Group": "ScreenSpace",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "GRADIENT_ON",
+                "on": false,
+                "Group": "Gradient",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "HOLES_ON",
+                "Group": "Hole",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "HOLES_SROULLING",
+                "Group": "Hole",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "FRESNEL_ON",
+                "on": false,
+                "Group": "Fresnel",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "ADDITIONAL_BLOOM_MASK",
+                "on": false,
+                "Group": "Bloom",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Crepe_Anomaly_Mask",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "DissolveBias",
+                    "driver": {
+                        "mBoolDriver": {
+                            "Spell": "{33932228}",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": 1.5,
+                        "mOffValue": -1.0,
+                        "mTurnOnTimeSec": 0.699999988079071,
+                        "mTurnOffTimeSec": 1.2000000476837158,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                },
+                {
+                    "name": "Dissolve_Alpha_Bias",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mBoolDriver": {
+                                "__type": "IsDeadDynamicMaterialBoolDriver"
+                            },
+                            "mDelayOn": 3.0,
+                            "__type": "DelayedBoolMaterialDriver"
+                        },
+                        "mOnValue": 1.100000023841858,
+                        "mOffValue": -1.0,
+                        "mTurnOnTimeSec": 2.5,
+                        "mTurnOffTimeSec": 0.0,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "staticSwitch": {
+                "name": "DISSOLVE_OUT_ALPHA",
+                "Enabled": false,
+                "driver": {
+                    "__type": "IsDeadDynamicMaterialBoolDriver"
+                },
+                "__type": "DynamicMaterialStaticSwitch"
+            },
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
     },
     "Characters/Locke/Skins/Skin3/Materials/Locke_Weapon_Transition": {
         "name": "Characters/Locke/Skins/Skin3/Materials/Locke_Weapon_Transition",

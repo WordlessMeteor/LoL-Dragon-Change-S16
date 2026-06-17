@@ -292,41 +292,41 @@
             ],
             "DataValues": [
                 {
-                    "name": "EmpoweredBaseDamage",
+                    "name": "BaseDamage",
                     "values": [
-                        65.0,
-                        100.0,
-                        135.0,
+                        45.0,
+                        70.0,
+                        95.0,
+                        120.0,
+                        145.0,
                         170.0,
-                        205.0,
-                        240.0,
-                        275.0
+                        195.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "EmpoweredADRatio",
+                    "name": "BonusAD",
                     "values": [
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "UnempoweredModifier",
+                    "name": "EmpoweredRatio",
                     "values": [
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -453,28 +453,28 @@
                 }
             ],
             "mSpellCalculations": {
-                "BaseDamage": {
-                    "mMultiplier": {
-                        "mDataValue": "UnempoweredModifier",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "EmpoweredDamage",
-                    "__type": "GameCalculationModified"
-                },
-                "EmpoweredDamage": {
+                "{06178e02}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "EmpoweredBaseDamage",
+                            "mDataValue": "BaseDamage",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "EmpoweredADRatio",
+                            "mDataValue": "BonusAD",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{d147e525}": {
+                    "mMultiplier": {
+                        "mDataValue": "{2dfd6100}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "{06178e02}",
+                    "__type": "GameCalculationModified"
                 },
                 "DashSpeed": {
                     "mFormulaParts": [
@@ -625,13 +625,13 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "EmpoweredBaseDamage",
-                                    "multiplier": 0.800000011920929,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_BaseDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "EmpoweredBaseDamage",
+                                    "type": "BaseDamage",
+                                    "multiplier": 1.2000000476837158,
                                     "nameOverride": "Spell_ListType_EmpoweredDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1971,7 +1971,8 @@
                 "Trait_AttackReset",
                 "Trait_DamageAbility",
                 "Trait_SignatureSpell",
-                "Trait_AoE"
+                "Trait_AoE",
+                "PositiveEffect_EmpowerAttack"
             ],
             "mEffectAmount": [
                 {

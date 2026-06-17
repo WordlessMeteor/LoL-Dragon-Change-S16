@@ -719,15 +719,9 @@
                     },
                     "mFormulaParts": [
                         {
-                            "mLevel1Value": 8.0,
-                            "mInitialBonusPerLevel": 0.25,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 18,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                            "mStartValue": 6.0,
+                            "mEndValue": 12.0,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
                         },
                         {
                             "mCoefficient": 0.019999999552965164,
@@ -2237,14 +2231,14 @@
             ],
             "{210f9ec0}": {
                 "values": [
-                    70.0,
-                    75.0,
-                    80.0,
-                    85.0,
                     90.0,
-                    95.0
+                    90.0,
+                    90.0,
+                    90.0,
+                    90.0,
+                    90.0
                 ],
-                "{0a3e0478}": 70.0,
+                "{0a3e0478}": 90.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 1,
@@ -2270,10 +2264,6 @@
                                 },
                                 {
                                     "type": "Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -4781,7 +4771,7 @@
                 "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
-                "baseValue": 1.7999999523162842,
+                "baseValue": 2.200000047683716,
                 "__type": "ModifiableFloat"
             },
             "{3a509002}": {

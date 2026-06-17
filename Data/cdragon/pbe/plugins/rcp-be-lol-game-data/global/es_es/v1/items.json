@@ -182,7 +182,6 @@
             324005,
             3135,
             3165,
-            4005,
             4637,
             6621,
             6657
@@ -696,6 +695,7 @@
             326616,
             3802,
             3916,
+            4005,
             4630,
             4637,
             4642,
@@ -1277,7 +1277,7 @@
     {
         "id": 1120,
         "name": "Yelmo de Doran",
-        "description": "<mainText><stats><attention> 140</attention> de vida<br><attention> 10</attention> de armadura<br><attention> 10</attention> de resistencia mágica</stats><br><br><passive>Mano amiga</passive><br>Los ataques infligen <physicalDamage>5 de daño físico adicional</physicalDamage> a los súbditos.</mainText>",
+        "description": "<mainText><stats><attention> 150</attention> de vida<br><attention> 8</attention> de armadura<br><attention> 8</attention> de resistencia mágica</stats><br><br><passive>Mano amiga</passive><br>Los ataques infligen <physicalDamage>5 de daño físico adicional</physicalDamage> a los súbditos.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8394,12 +8394,13 @@
     {
         "id": 4005,
         "name": "Mandato imperial",
-        "description": "<mainText><stats><attention> 65</attention> de poder de habilidad<br><attention> 15</attention> de velocidad de habilidades<br><attention> 150%</attention> de regeneración de maná básica</stats><br><br><passive>Control</passive><br>Otorga  15 de velocidad de habilidades a tus habilidades con efectos de <keyword>inmovilización</keyword>.<br><br><passive>Orden</passive><br>Al <keyword>inmovilizar</keyword> a un campeón enemigo, le aplica una <Keyword>vulnerabilidad</Keyword> del 6% durante 4 s.<br></mainText>",
+        "description": "<mainText><stats><attention> 60</attention> de poder de habilidad<br><attention> 15</attention> de velocidad de habilidades<br><attention> 150%</attention> de regeneración de maná básica</stats><br><br><passive>Control</passive><br>Otorga  20 de velocidad de habilidades a tus habilidades con efectos de <keyword>inmovilización</keyword>.<br><br><passive>Orden</passive><br>Al <keyword>inmovilizar</keyword> a un campeón enemigo, le aplica una <Keyword>vulnerabilidad</Keyword> del 7% durante 4 s.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [
-            1026,
-            4642
+            1052,
+            4642,
+            1052
         ],
         "to": [],
         "categories": [
@@ -8416,7 +8417,7 @@
         "specialRecipe": 0,
         "isEnchantment": false,
         "price": 650,
-        "priceTotal": 2400,
+        "priceTotal": 2350,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/4005_Enchanter_T4_ImperialMandate.png"
     },
@@ -8554,7 +8555,7 @@
     {
         "id": 4015,
         "name": "Perplejidad",
-        "description": "<mainText><stats><attention> 60</attention> de poder de habilidad<br><attention> 5%</attention> de velocidad de movimiento<br><attention> 22%</attention> de penetración de armadura<br><attention> 30%</attention> de penetración mágica</stats><br><br><passive>Verdugo de gigantes</passive><br>Infliges hasta un 15% de daño adicional a campeones que tengan más vida máxima que tú.<br><br><rules>El aumento máximo de daño se alcanza cuando la diferencia de vida es superior a 2500.</rules></mainText>",
+        "description": "<mainText><stats><attention> 60</attention> de poder de habilidad<br><attention> 5%</attention> de velocidad de movimiento<br><attention> 22%</attention> de penetración de armadura<br><attention> 30%</attention> de penetración mágica</stats><br><br><passive>Verdugo de gigantes</passive><br>Infliges hasta un 15% de daño adicional a campeones que tengan más vida máxima que tú.<br><br><rules>El aumento máximo de daño se alcanza cuando la diferencia de vida es superior a 3000.</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8582,7 +8583,7 @@
     {
         "id": 4016,
         "name": "Promesa sin palabras",
-        "description": "<mainText><stats><attention> 50</attention> de poder de habilidad<br><attention> 15%</attention> de poder de curaciones y escudos<br><attention> 25</attention> de velocidad de habilidades</stats><br><br><passive>Promesa</passive><br>Obtienes un 15% del <scaleAP>poder de habilidad  del aliado</scaleAP> de la <attention>promesa</attention>. Le otorgas un 15% de tu velocidad de habilidades  al aliado de la <attention>promesa</attention>.<br><br> <active>ACTIVA</active>  (0 s)<br><active>Promesa</active><br>Haces una <attention>promesa</attention> a un aliado.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> de poder de habilidad<br><attention> 15%</attention> de poder de curaciones y escudos<br><attention> 25</attention> de velocidad de habilidades</stats><br><br><passive>Promesa</passive><br>Obtienes un 10% del <scaleAP>poder de habilidad  del aliado</scaleAP> de la <attention>promesa</attention>. Le otorgas un 10% de tu velocidad de habilidades  al aliado de la <attention>promesa</attention>.<br><br> <active>ACTIVA</active>  (0 s)<br><active>Promesa</active><br>Haces una <attention>promesa</attention> a un aliado.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -8607,7 +8608,7 @@
     {
         "id": 4017,
         "name": "Hacha infernal",
-        "description": "<mainText><stats><attention> 35</attention> de daño de ataque<br><attention> 12</attention> de letalidad</stats><br><br><passive>Chamusquina</passive>  (0 s) por objetivo<br>Tu siguiente habilidad aplica una <keywordMajor>quemadura</keywordMajor> a los enemigos, la cual inflige entre <scaleAD>un 0 y un 0 de la vida actual como daño físico</scaleAD> durante 4 s, en función de cuánta <scaleHealth>vida máxima</scaleHealth> tengan más que tú.<br><br><rules>El daño adicional máximo se alcanza con una diferencia de 3000 de vida.</rules></mainText>",
+        "description": "<mainText><stats><attention> 40</attention> de daño de ataque<br><attention> 12</attention> de letalidad</stats><br><br><passive>Chamusquina</passive>  (0 s) por objetivo<br>Tu siguiente habilidad aplica una <keywordMajor>quemadura</keywordMajor> a los enemigos, la cual inflige entre <scaleAD>un 0 y un 0 de la vida actual como daño físico</scaleAD> durante 4 s, en función de cuánta <scaleHealth>vida máxima</scaleHealth> tengan más que tú.<br><br><rules>El daño adicional máximo se alcanza con una diferencia de 3000 de vida.</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15871,7 +15872,7 @@
     {
         "id": 226692,
         "name": "Eclipse",
-        "description": "<mainText><stats><attention> 50</attention> de daño de ataque<br><attention> 10</attention> de velocidad de habilidades</stats><br><br><passive>Luna creciente</passive><br>Golpear a un campeón con 2 ataques o habilidades independientes en 2 s te otorga un <shield>escudo</shield> durante 2 s.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> de daño de ataque<br><attention> 15</attention> de velocidad de habilidades</stats><br><br><passive>Luna creciente</passive><br>Golpear a un campeón con 2 ataques o habilidades independientes en 2 s te otorga un <shield>escudo</shield> durante 2 s.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16899,7 +16900,7 @@
     {
         "id": 324005,
         "name": "Mandato imperial",
-        "description": "<mainText><stats><attention> 65</attention> de poder de habilidad<br><attention> 15</attention> de velocidad de habilidades<br><attention> 150%</attention> de regeneración de maná básica</stats><br><br><passive>Control</passive><br>Otorga  15 de velocidad de habilidades a tus habilidades con efectos de <keyword>inmovilización</keyword>.<br><br><passive>Orden</passive><br>Al <keyword>inmovilizar</keyword> a un campeón enemigo, le aplica una <Keyword>vulnerabilidad</Keyword> del 6% durante 4 s.<br></mainText>",
+        "description": "<mainText><stats><attention> 65</attention> de poder de habilidad<br><attention> 15</attention> de velocidad de habilidades<br><attention> 150%</attention> de regeneración de maná básica</stats><br><br><passive>Control</passive><br>Otorga  20 de velocidad de habilidades a tus habilidades con efectos de <keyword>inmovilización</keyword>.<br><br><passive>Orden</passive><br>Al <keyword>inmovilizar</keyword> a un campeón enemigo, le aplica una <Keyword>vulnerabilidad</Keyword> del 7% durante 4 s.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [

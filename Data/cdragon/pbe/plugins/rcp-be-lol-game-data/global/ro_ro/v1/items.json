@@ -182,7 +182,6 @@
             324005,
             3135,
             3165,
-            4005,
             4637,
             6621,
             6657
@@ -696,6 +695,7 @@
             326616,
             3802,
             3916,
+            4005,
             4630,
             4637,
             4642,
@@ -1277,7 +1277,7 @@
     {
         "id": 1120,
         "name": "Coiful lui Doran",
-        "description": "<mainText><stats><attention> 140</attention> viață<br><attention> 10</attention> armură<br><attention> 10</attention> rezistență la magie</stats><br><br><passive>Mână de ajutor</passive><br>Atacurile provoacă <physicalDamage>5 daune fizice bonus</physicalDamage> împotriva minionilor.</mainText>",
+        "description": "<mainText><stats><attention> 150</attention> viață<br><attention> 8</attention> armură<br><attention> 8</attention> rezistență la magie</stats><br><br><passive>Mână de ajutor</passive><br>Atacurile provoacă <physicalDamage>5 daune fizice bonus</physicalDamage> împotriva minionilor.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8394,12 +8394,13 @@
     {
         "id": 4005,
         "name": "Decret imperial",
-        "description": "<mainText><stats><attention> 65</attention> puterea abilităților<br><attention> 15</attention> rapiditatea abilităților<br><attention> 150%</attention> regenerare de bază a manei</stats><br><br><passive>Control</passive><br>Primești  15 rapiditatea abilităților pentru abilitățile tale cu efecte de <keyword>imobilizare</keyword>.<br><br><passive>Comandă</passive><br>Când <keyword>imobilizezi</keyword> un campion inamic, îl marchezi ca 6% <Keyword>vulnerabil</Keyword> timp de 4 secunde.<br></mainText>",
+        "description": "<mainText><stats><attention> 60</attention> puterea abilităților<br><attention> 15</attention> rapiditatea abilităților<br><attention> 150%</attention> regenerare de bază a manei</stats><br><br><passive>Control</passive><br>Primești  20 rapiditatea abilităților pentru abilitățile tale cu efecte de <keyword>imobilizare</keyword>.<br><br><passive>Comandă</passive><br>Când <keyword>imobilizezi</keyword> un campion inamic, îl marchezi ca 7% <Keyword>vulnerabil</Keyword> timp de 4 secunde.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [
-            1026,
-            4642
+            1052,
+            4642,
+            1052
         ],
         "to": [],
         "categories": [
@@ -8416,7 +8417,7 @@
         "specialRecipe": 0,
         "isEnchantment": false,
         "price": 650,
-        "priceTotal": 2400,
+        "priceTotal": 2350,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/4005_Enchanter_T4_ImperialMandate.png"
     },
@@ -8554,7 +8555,7 @@
     {
         "id": 4015,
         "name": "Perplexitate",
-        "description": "<mainText><stats><attention> 60</attention> puterea abilităților<br><attention> 5%</attention> viteză de mișcare<br><attention> 22%</attention> penetrare armură<br><attention> 30%</attention> penetrare magică</stats><br><br><passive>Vânătorul de uriași</passive><br>Provoci până la 15% daune bonus împotriva campionilor care au mai multă viață maximă decât tine.<br><br><rules>Provoci daune maxime când diferența de viață este mai mare de 2500.</rules></mainText>",
+        "description": "<mainText><stats><attention> 60</attention> puterea abilităților<br><attention> 5%</attention> viteză de mișcare<br><attention> 22%</attention> penetrare armură<br><attention> 30%</attention> penetrare magică</stats><br><br><passive>Vânătorul de uriași</passive><br>Provoci până la 15% daune bonus împotriva campionilor care au mai multă viață maximă decât tine.<br><br><rules>Provoci daune maxime când diferența de viață este mai mare de 3000.</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8582,7 +8583,7 @@
     {
         "id": 4016,
         "name": "Promisiune nerostită",
-        "description": "<mainText><stats><attention> 50</attention> puterea abilităților<br><attention> 15%</attention> vindecare și putere a scuturilor<br><attention> 25</attention> rapiditatea abilităților</stats><br><br><passive>Promisiune</passive><br>Primești 15% din <scaleAP> puterea abilităților aliatului</scaleAP> căruia i-ai făcut o <attention>''Promisiune''</attention>, iar aliatul căruia i-ai făcut o <attention>''Promisiune''</attention> primește 15% din  rapiditatea abilităților tale.<br><br> <active>ACTIVĂ</active>  (0 sec.)<br><active>Promisiune</active><br>Îi faci o <attention>''Promisiune''</attention> unui aliat.</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> puterea abilităților<br><attention> 15%</attention> vindecare și putere a scuturilor<br><attention> 25</attention> rapiditatea abilităților</stats><br><br><passive>Promisiune</passive><br>Primești 10% din <scaleAP> puterea abilităților aliatului</scaleAP> căruia i-ai făcut o <attention>''Promisiune''</attention>, iar aliatul căruia i-ai făcut o <attention>''Promisiune''</attention> primește 10% din  rapiditatea abilităților tale.<br><br> <active>ACTIVĂ</active>  (0 sec.)<br><active>Promisiune</active><br>Îi faci o <attention>''Promisiune''</attention> unui aliat.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -8607,7 +8608,7 @@
     {
         "id": 4017,
         "name": "Secure din focul iadului",
-        "description": "<mainText><stats><attention> 35</attention> daune din atac<br><attention> 12</attention> letalitate</stats><br><br><passive>Carbonizare</passive>  (0 sec.) per țintă<br>Următoarea lovitură cu o abilitate <keywordMajor>arde</keywordMajor> inamicii, provocându-le <scaleAD>daune fizice în valoare de 0-0 din viața actuală</scaleAD> de-a lungul a 4 secunde, în funcție de câtă <scaleHealth>viață maximă</scaleHealth> în plus are ținta față de tine.<br><br><rules>Atingi valoarea maximă a daunelor bonus la o diferență de viață de 3000.</rules></mainText>",
+        "description": "<mainText><stats><attention> 40</attention> daune din atac<br><attention> 12</attention> letalitate</stats><br><br><passive>Carbonizare</passive>  (0 sec.) per țintă<br>Următoarea lovitură cu o abilitate <keywordMajor>arde</keywordMajor> inamicii, provocându-le <scaleAD>daune fizice în valoare de 0-0 din viața actuală</scaleAD> de-a lungul a 4 secunde, în funcție de câtă <scaleHealth>viață maximă</scaleHealth> în plus are ținta față de tine.<br><br><rules>Atingi valoarea maximă a daunelor bonus la o diferență de viață de 3000.</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15871,7 +15872,7 @@
     {
         "id": 226692,
         "name": "Eclipsă",
-        "description": "<mainText><stats><attention> 50</attention> daune din atac<br><attention> 10</attention> rapiditatea abilităților</stats><br><br><passive>Măreția lunii</passive><br>Când lovești un campion cu 2 atacuri sau abilități diferite în decurs de 2 secunde, primești un <shield>scut</shield> timp de 2 secunde.</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> daune din atac<br><attention> 15</attention> rapiditatea abilităților</stats><br><br><passive>Măreția lunii</passive><br>Când lovești un campion cu 2 atacuri sau abilități diferite în decurs de 2 secunde, primești un <shield>scut</shield> timp de 2 secunde.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16899,7 +16900,7 @@
     {
         "id": 324005,
         "name": "Decret imperial",
-        "description": "<mainText><stats><attention> 65</attention> puterea abilităților<br><attention> 15</attention> rapiditatea abilităților<br><attention> 150%</attention> regenerare de bază a manei</stats><br><br><passive>Control</passive><br>Primești  15 rapiditatea abilităților pentru abilitățile tale cu efecte de <keyword>imobilizare</keyword>.<br><br><passive>Comandă</passive><br>Când <keyword>imobilizezi</keyword> un campion inamic, îl marchezi ca 6% <Keyword>vulnerabil</Keyword> timp de 4 secunde.<br></mainText>",
+        "description": "<mainText><stats><attention> 65</attention> puterea abilităților<br><attention> 15</attention> rapiditatea abilităților<br><attention> 150%</attention> regenerare de bază a manei</stats><br><br><passive>Control</passive><br>Primești  20 rapiditatea abilităților pentru abilitățile tale cu efecte de <keyword>imobilizare</keyword>.<br><br><passive>Comandă</passive><br>Când <keyword>imobilizezi</keyword> un campion inamic, îl marchezi ca 7% <Keyword>vulnerabil</Keyword> timp de 4 secunde.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [

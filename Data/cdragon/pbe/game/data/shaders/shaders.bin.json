@@ -48815,74 +48815,6 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "MainColor",
-                "data": [
-                    1.0,
-                    0.2899976968765259,
-                    1.0,
-                    1.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "MainColor",
-                        "fields": 15,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "ColorIntensity",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "ColorIntensity",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "Fresnel_Size",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "Fresnel_Size",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
-                "name": "Bloom_Intensity",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "Bloom_Intensity",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
                 "name": "Parallax_Tiling",
                 "data": [
                     1.0,
@@ -49007,6 +48939,57 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "MainColor",
+                "data": [
+                    1.0,
+                    0.2899976968765259,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "MainColor",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "ColorIntensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "ColorIntensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Fresnel_Size",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Fresnel_Size",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "GradientFresnel_Intensity",
                 "data": [
                     1.0,
@@ -49072,6 +49055,23 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Bloom_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -49088,16 +49088,6 @@
         ],
         "textures": [
             {
-                "name": "Mask_Texture",
-                "defaultTexturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
-                "__type": "ShaderTexture"
-            },
-            {
-                "name": "Gradient_Texture",
-                "defaultTexturePath": "ASSETS/Shared/Materials/Ice_Gradient_V02.tex",
-                "__type": "ShaderTexture"
-            },
-            {
                 "name": "Diffuse_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/TwistedFate_Skin11_Z_Teleport_Position_Gradient.tex",
                 "__type": "ShaderTexture"
@@ -49110,6 +49100,16 @@
             {
                 "name": "ScreenSpace_Lines_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/StepsMask.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Mask_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Generic_Noise.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Gradient_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Ice_Gradient_V02.tex",
                 "__type": "ShaderTexture"
             }
         ],
@@ -55843,6 +55843,23 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Matcap_Alpha",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Matcap_Alpha",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Alpha",
                 "data": [
                     1.0,
@@ -55941,6 +55958,10 @@
             },
             {
                 "name": "BLEND_ALPHA",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "USE_MATCAP_AS_ALPHA",
                 "__type": "ShaderStaticSwitch"
             },
             {
