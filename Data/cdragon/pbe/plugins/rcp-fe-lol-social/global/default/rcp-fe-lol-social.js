@@ -17690,8 +17690,8 @@
                         n = this.get("isOffline");
                     return !e && (!n && !t)
                 })),
-                isInvitableViaRiot: r.Ember.computed("isDiscordEnabled", "isFriendDiscordOnly", "isFriendRemote", "isOffline", (function() {
-                    const e = this.get("isDiscordEnabled"),
+                isInvitableViaRiot: r.Ember.computed("discordIntegrationService.isOOGIJEnabled", "isFriendDiscordOnly", "isFriendRemote", "isOffline", (function() {
+                    const e = this.get("discordIntegrationService.isOOGIJEnabled"),
                         t = this.get("isFriendDiscordOnly"),
                         n = this.get("isFriendRemote"),
                         r = this.get("isOffline");
@@ -19578,13 +19578,16 @@
                 i = "/lol-chat/v1/discord-link-status",
                 a = "/lol-settings/v2/account/LCUPreferences/lol-general",
                 s = "discord-beta-eat-seen",
-                l = "discord-live-eat-seen";
-            var c = r.Ember.Service.extend({
+                l = "discord-live-eat-seen",
+                c = "/lol-client-config/v3/client-config/lol.client_settings.oogij.enabled",
+                d = "/lol-client-config/v3/client-config/lol.client_settings.discordIntegrationBeta.enabled";
+            var p = r.Ember.Service.extend({
                 isDiscordBetaEatSeen: !0,
                 isDiscordLiveEatSeen: !0,
                 isEnabled: !1,
                 isLinkAvailable: !1,
                 isLinked: !1,
+                isOOGIJEnabled: !1,
                 isDiscordIntegrationBeta: !0,
                 hasClientConfigFetched: !1,
                 hasLinkStatusFetched: !1,
@@ -19622,8 +19625,10 @@
                     }
                 },
                 init: function() {
-                    this._super(...arguments), r.db.observe("/lol-client-config/v3/client-config/lol.client_settings.discordIntegrationBeta.enabled", this, (e => {
-                        this.set("isDiscordIntegrationBeta", e), this.set("hasClientConfigFetched", !0)
+                    this._super(...arguments), r.db.observe(c, this, (e => {
+                        this.set("isOOGIJEnabled", Boolean(e))
+                    })), r.db.observe(d, this, (e => {
+                        this.set("isDiscordIntegrationBeta", Boolean(e)), this.set("hasClientConfigFetched", !0)
                     })), r.db.observe(a, this, (e => {
                         e?.data && (this.set("isDiscordBetaEatSeen", Boolean(e.data[s])), this.set("isDiscordLiveEatSeen", Boolean(e.data[l])), this.set("hasSettingsObserverFetched", !0))
                     })), r.db.observe(o, this, (e => {
@@ -19633,10 +19638,10 @@
                     }))
                 },
                 willDestroy() {
-                    this._super(...arguments), r.db.unobserve(o, this), r.db.unobserve(i, this), r.db.unobserve(a, this)
+                    this._super(...arguments), r.db.unobserve(c, this), r.db.unobserve(d, this), r.db.unobserve(a, this), r.db.unobserve(o, this), r.db.unobserve(i, this)
                 }
             });
-            t.default = c
+            t.default = p
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

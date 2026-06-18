@@ -5116,11 +5116,13 @@
             const o = "/lol-chat/v1/is-discord-integration-enabled",
                 s = "/lol-chat/v1/is-discord-link-available",
                 a = "/lol-chat/v1/is-discord-linked",
-                r = e => `/lol-lobby/v2/ags/${e}/joinCode`;
-            var l = i.Ember.Service.extend({
+                r = "/lol-client-config/v3/client-config/lol.client_settings.oogij.enabled",
+                l = e => `/lol-lobby/v2/ags/${e}/joinCode`;
+            var c = i.Ember.Service.extend({
                 isEnabled: !1,
                 isLinkAvailable: !1,
                 isLinked: !1,
+                isOOGIJEnabled: !1,
                 agsActivityId: "",
                 init: function() {
                     this._super(...arguments), i.db.observe(o, this, (e => {
@@ -5129,6 +5131,8 @@
                         this.set("isLinkAvailable", Boolean(e))
                     })), i.db.observe(a, this, (e => {
                         this.set("isLinked", Boolean(e))
+                    })), i.db.observe(r, this, (e => {
+                        this.set("isOOGIJEnabled", Boolean(e))
                     }))
                 },
                 async getSmartUrlData() {
@@ -5138,12 +5142,12 @@
                     let t;
                     this.set("agsActivityId", e);
                     try {
-                        t = await i.db.get(r(e))
+                        t = await i.db.get(l(e))
                     } catch (e) {
                         i.logger.warning("Could not GET shared join code: ", e)
                     }
                     if (!t) try {
-                        t = await i.db.post(r(e))
+                        t = await i.db.post(l(e))
                     } catch (e) {
                         i.logger.error("Could not POST shared join code (this is a bug): ", e)
                     }
@@ -5151,13 +5155,13 @@
                 },
                 deleteSmartUrl() {
                     const e = this.get("agsActivityId");
-                    e && i.db.delete(r(e))
+                    e && i.db.delete(l(e))
                 },
                 willDestroy() {
-                    this._super(...arguments), this.deleteSmartUrl(), i.db.unobserve(o, this), i.db.unobserve(s, this), i.db.unobserve(a, this)
+                    this._super(...arguments), this.deleteSmartUrl(), i.db.unobserve(o, this), i.db.unobserve(s, this), i.db.unobserve(a, this), i.db.unobserve(r, this)
                 }
             });
-            t.default = l
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             var i = n(1);
@@ -12980,8 +12984,8 @@
                     const e = this.get("customGameService.spectatorPolicy");
                     return !(!e || !o.CUSTOM_GAME_SPECTATOR_TYPES[e] || "none" === o.CUSTOM_GAME_SPECTATOR_TYPES[e] || "dropin" === o.CUSTOM_GAME_SPECTATOR_TYPES[e])
                 })),
-                shouldShowDiscordSmartUrlButton: i.Ember.computed("discordIntegrationService.isEnabled", (function() {
-                    return this.get("discordIntegrationService.isEnabled")
+                shouldShowDiscordSmartUrlButton: i.Ember.computed("discordIntegrationService.isOOGIJEnabled", (function() {
+                    return this.get("discordIntegrationService.isOOGIJEnabled")
                 })),
                 isLobbyFull: i.Ember.computed.alias("customGameService.isLobbyFull"),
                 didInsertElementListener: i.Ember.on("didInsertElement", (function() {
@@ -16390,8 +16394,8 @@
                         t = this.get("assets").getMap(this.get("mapId"), this.get("gameMode"), this.get("assetMutator"));
                     return t && (Array.isArray(t.tutorialCards) && (e.tutorialCards = t.tutorialCards), e.title = t.locStrings.tutorial_title, e.subheader = t.locStrings.tutorial_subheader, e.confirmLabel = t.locStrings.tutorial_confirm_label, e.tutorialBg = t.assets["tutorial-bg"] || "", e.iconV2 = t.assets["icon-v2"] || ""), e
                 })),
-                shouldShowDiscordSmartUrlButton: i.Ember.computed("discordIntegrationService.isEnabled", "isTFT", (function() {
-                    return this.get("discordIntegrationService.isEnabled") && !this.get("isTFT")
+                shouldShowDiscordSmartUrlButton: i.Ember.computed("discordIntegrationService.isOOGIJEnabled", "isTFT", (function() {
+                    return this.get("discordIntegrationService.isOOGIJEnabled") && !this.get("isTFT")
                 })),
                 hasGameModeTutorial: i.Ember.computed.alias("tutorialData.tutorialCards.length"),
                 hasGameModeInfo: i.Ember.computed.equal("lobbiesService.currentQueue.type", l.QUEUE_TYPE.RANKED_PREMADE_5x5),
