@@ -1562,6 +1562,9 @@
                 championPreviewObserver: i.Ember.observer("champSelectScreen", (function() {
                     this.get("champSelectScreen") === l.SCREENS.selected ? window.addEventListener("keyup", this.championPreviewKeyUpHandler) : window.removeEventListener("keyup", this.championPreviewKeyUpHandler)
                 })),
+                resetAbilityPreviewsWhenNotShowable: i.Ember.observer("shouldShowAbilityPreviews", "isViewingAbilityPreviews", (function() {
+                    !this.get("shouldShowAbilityPreviews") && this.get("isViewingAbilityPreviews") && this.get("championPreviewService")?.hideAbilityPreviews()
+                })),
                 isShowingBanShowcase: i.Ember.computed("champSelectScreen", (function() {
                     return this.get("champSelectScreen") === l.SCREENS.banShowcase
                 })),
@@ -9895,7 +9898,7 @@
                     })), i.db.observe("/lol-settings/v2/local/lol-audio", this, this.handleAudioSettings), i.datadogRum.startOperation(i.datadogRum.XP_CGL_PREGAME_CHAMP_SELECT_ABILITY_TOOLTIP_SETTING), i.db.observe("/lol-settings/v2/local/lol-user-experience", this, this.handleUserExperienceSettings)
                 },
                 willDestroy() {
-                    this._super(...arguments), this.get("isViewingAbilityPreviews", !1), this.get("isInChampionPreviewState", !1), i.db.unobserve("/lol-settings/v1/local/lol-audio", this, this.handleAudioSettings)
+                    this._super(...arguments), this.set("isViewingAbilityPreviews", !1), this.set("isInChampionPreviewState", !1), i.db.unobserve("/lol-settings/v1/local/lol-audio", this, this.handleAudioSettings)
                 },
                 handleAudioSettings(e) {
                     if (!e?.data) return;
