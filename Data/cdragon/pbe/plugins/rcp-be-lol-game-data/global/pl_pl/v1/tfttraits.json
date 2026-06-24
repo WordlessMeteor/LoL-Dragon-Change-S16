@@ -12267,7 +12267,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Za każde co @CastsToGainXP@. użycie umiejętności Strażnik Czasu zachowuje <TFTBonus>@XPPerCast@</TFTBonus> PD. Jeśli zbierze wystarczająco PD, aby umożliwić ci awans, przekazuje ci wymagane&nbsp;PD.<br><br>Jeśli masz 10. poziom, zamiast przekazywać PD zyskuje <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;wzmocnienia obrażeń.<br><br><rules>Przechowywane PD: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "Za każde co @CastsToGainXP@. użycie umiejętności Strażnik Czasu zachowuje <TFTBonus>@XPPerCast@</TFTBonus> PD. Jeśli zbierze wystarczająco PD, aby umożliwić ci awans, przekazuje ci wymagane&nbsp;PD.<br><br>Jeśli masz 10. poziom, zamiast przekazywać PD zyskuje <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;wzmocnienia obrażeń.<br><br><rules>Przechowywane PD: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>W Skarbie Choncca liczba użyć umiejętności wymaganych do zdobycia PD jest zwiększona do @CastsToGainXPCT@ aż do etapu 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12279,6 +12279,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13779,7 +13783,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Co sekundę Shurimianie zyskują @ASPerSecond*100@% prędkości ataku i przywracają sobie @HealthRestorePerSecond@ pkt. zdrowia. Na początku walki zyskują dodatkowe efekty.<br><br><row>(@MinUnits@) @BonusHealth*100@% maksymalnego zdrowia</row><br><row>(@MinUnits@) @ArmorMR@ pkt. pancerza i odporności na magię</row><br><row>(@MinUnits@) Co @GodhoodCadence@ sek. jeden Shurimianin zostaje wyniesiony do BOSKOŚCI.</row>",
+        "tooltip_text": "tft_trait_description_TFT16_Shurima",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13859,7 +13863,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13867,7 +13871,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13875,8 +13879,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14579,7 +14583,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Po każdej walce w twoim sklepie pojawi się Wschodzący Urok. Uroki zapewniają potężne efekty, które można kupić za złoto.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "Po każdej walce w twoim sklepie pojawi się Wschodzący Urok. Uroki zapewniają potężne efekty, które można kupić za złoto.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>W Skarbie Choncca Urok Wiernych Zwolenników nie pojawi się, dopóki nie osiągniesz 7. poziomu.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15862,11 +15866,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 45.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 4,
@@ -15878,11 +15882,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 6,

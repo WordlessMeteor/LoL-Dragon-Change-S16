@@ -12267,7 +12267,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "每施放技能@CastsToGainXP@次，時光守護者儲存<TFTBonus>@XPPerCast@</TFTBonus>經驗值。若儲存的經驗值足夠讓玩家升級，將所需經驗值轉移給玩家。<br><br>若玩家已達10級，改為獲得<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>傷害增幅。<br><br><rules>已儲存經驗值：@TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "每施放技能@CastsToGainXP@次，時光守護者儲存<TFTBonus>@XPPerCast@</TFTBonus>經驗值。若儲存的經驗值足夠讓玩家升級，將所需經驗值轉移給玩家。<br><br>若玩家已達10級，改為獲得<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>傷害增幅。<br><br><rules>已儲存經驗值：@TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>在巴豆龍的寶藏，在階段3-5之前，獲得經驗值所需的施放次數增加到 @CastsToGainXPCT@。</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12279,6 +12279,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13779,7 +13783,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "蘇瑞瑪英雄每秒增加@ASPerSecond*100@%攻速並回復@HealthRestorePerSecond@生命。戰鬥開始時，獲得額外效果。<br><br><row>(@MinUnits@) @BonusHealth*100@%最大生命</row><br><row>(@MinUnits@) @ArmorMR@雙防</row><br><row>(@MinUnits@) 每過@GodhoodCadence@秒，一名蘇瑞瑪英雄得到神格飛昇為神。</row>",
+        "tooltip_text": "tft_trait_description_TFT16_Shurima",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13859,7 +13863,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13867,7 +13871,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13875,8 +13879,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14579,7 +14583,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "每場戰鬥結束後，商店出現飛昇者護符。這些護符擁有強大效果，可用金錢購買。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "每場戰鬥結束後，商店出現飛昇者護符。這些護符擁有強大效果，可用金錢購買。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>在巴豆龍的寶藏，你必須達等級7之後，忠誠之花護符才會出現。</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15862,11 +15866,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 45.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 4,
@@ -15878,11 +15882,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 6,

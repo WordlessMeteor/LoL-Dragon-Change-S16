@@ -12267,7 +12267,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Po každém @CastsToGainXP@. seslání schopnosti si Strážce času uloží <TFTBonus>@XPPerCast@</TFTBonus> Zk. Pokud je uložené množství dostatečné pro postup na vyšší úroveň, předá ti potřebné množství&nbsp;Zk. <br><br>Jestliže už jsi na 10. úrovni, získá místo toho <TFTBonus>@DAGainAtMaxLevel@&nbsp;%</TFTBonus>&nbsp;ke zvýšení poškození.<br><br><rules>Uložené Zk.: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "Po každém @CastsToGainXP@. seslání schopnosti si Strážce času uloží <TFTBonus>@XPPerCast@</TFTBonus> Zk. Pokud je uložené množství dostatečné pro postup na vyšší úroveň, předá ti potřebné množství&nbsp;Zk. <br><br>Jestliže už jsi na 10. úrovni, získá místo toho <TFTBonus>@DAGainAtMaxLevel@&nbsp;%</TFTBonus>&nbsp;ke zvýšení poškození.<br><br><rules>Uložené Zk.: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>V Chonccově pokladu se počet seslání potřebných k zisku Zk. zvyšuje na @CastsToGainXPCT@, a to až do fáze 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12279,6 +12279,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13779,7 +13783,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Shurimané získávají každou sekundu @ASPerSecond*100@&nbsp;% k rychlosti útoků a obnovují si @HealthRestorePerSecond@ zdraví. Na začátku boje obdrží dodatečné efekty.<br><br><row>(@MinUnits@) @BonusHealth*100@&nbsp;% k maximálnímu zdraví</row><br><row>(@MinUnits@) @ArmorMR@ k brnění a odolnosti vůči magii</row><br><row>(@MinUnits@) V pravidelném intervalu @GodhoodCadence@&nbsp;sek. dosáhne jeden Shuriman BOŽSTVÍ.</row>",
+        "tooltip_text": "tft_trait_description_TFT16_Shurima",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13859,7 +13863,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13867,7 +13871,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13875,8 +13879,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14579,7 +14583,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Po každém boji se ti v obchodě objeví Povznesené zaklínadlo. Jedná se o mocné efekty, které si můžeš koupit za zlaťáky.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "Po každém boji se ti v obchodě objeví Povznesené zaklínadlo. Jedná se o mocné efekty, které si můžeš koupit za zlaťáky.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>V Chonccově pokladu se může zaklínadlo Věrní následovníci objevit až po dosažení 7. úrovně.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15862,11 +15866,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 45.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 4,
@@ -15878,11 +15882,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 6,

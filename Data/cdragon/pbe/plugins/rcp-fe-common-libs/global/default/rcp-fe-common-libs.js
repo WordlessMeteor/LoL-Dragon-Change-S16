@@ -15642,6 +15642,7 @@
                 CLASSIC: "CLASSIC",
                 CUSTOM: "CUSTOM",
                 KIWI: "KIWI",
+                KIWI_JADE: "KIWI_JADE",
                 PRACTICETOOL: "PRACTICETOOL",
                 STRAWBERRY: "STRAWBERRY",
                 TFT: "TFT",
@@ -15893,8 +15894,8 @@
             }), e.default = void 0;
             const r = "UNRANKED",
                 n = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
-                i = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                o = n[n.length - 1],
+                i = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"];
+            const o = n[n.length - 1],
                 s = [o, "MASTER", "GRANDMASTER", "CHALLENGER"],
                 a = ["IV", "III", "II", "I"],
                 l = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];

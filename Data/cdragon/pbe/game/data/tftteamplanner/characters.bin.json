@@ -6118,8 +6118,8 @@
                     "name": "BoltDamage",
                     "values": [
                         0.0,
-                        85.0,
-                        130.0,
+                        95.0,
+                        145.0,
                         750.0,
                         540.0,
                         0.0,
@@ -13898,8 +13898,8 @@
                     "name": "DamagePerSecond",
                     "values": [
                         250.0,
-                        320.0,
-                        480.0,
+                        335.0,
+                        505.0,
                         2000.0,
                         2000.0,
                         1650.0,
@@ -62282,8 +62282,8 @@
                     "name": "Damage",
                     "values": [
                         260.0,
-                        440.0,
-                        660.0,
+                        460.0,
+                        690.0,
                         5000.0,
                         3600.0,
                         4000.0,
@@ -62308,8 +62308,8 @@
                     "name": "FirstBounceDamage",
                     "values": [
                         120.0,
-                        110.0,
-                        165.0,
+                        125.0,
+                        185.0,
                         1000.0,
                         2000.0,
                         1200.0,
@@ -93356,8 +93356,8 @@
                     "name": "DamageAD",
                     "values": [
                         60.0,
-                        50.0,
-                        75.0,
+                        55.0,
+                        85.0,
                         600.0,
                         720.0,
                         450.0,
@@ -99039,6 +99039,10 @@
                         "CastsToGainXPPAIRS": {
                             "mValue": 2,
                             "__type": "GameModeConstantInteger"
+                        },
+                        "{4a528ef2}": {
+                            "mValue": 3,
+                            "__type": "GameModeConstantInteger"
                         }
                     },
                     "__type": "{d65315ee}"
@@ -102159,7 +102163,63 @@
                     "__type": "{d65315ee}"
                 },
                 "minUnits": 4,
+                "RequiredUnitProperty": {
+                    "ActiveCondition": true,
+                    "Property": "{0ccc946d}",
+                    "__type": "TftRequiredUnitProperty"
+                },
+                "ShouldAlwaysDisplay": false,
                 "Style": 6,
+                "__type": "TftConditionalTraitSetData"
+            },
+            {
+                "{86b5abcb}": [
+                    {
+                        "targetStrategy": 1,
+                        "buffName": "TFT16_Shurima_UnitBuff",
+                        "__type": "{76621fa6}"
+                    },
+                    {
+                        "targetStrategy": 4,
+                        "buffName": "TFT16_Shurima_ArmyBuffWrapper",
+                        "__type": "{76621fa6}"
+                    },
+                    {
+                        "buffName": "TFT16_Shurima_UnitBuff_DamageTracker",
+                        "__type": "{76621fa6}"
+                    }
+                ],
+                "activatedBuffName": "TFT16_TraitVFXShurima",
+                "constants": {
+                    "{df085b93}": {
+                        "BonusHealth": {
+                            "mValue": 0.20000000298023224,
+                            "__type": "GameModeConstantFloat"
+                        },
+                        "ArmorMR": {
+                            "mValue": 50.0,
+                            "__type": "GameModeConstantFloat"
+                        },
+                        "SkinScale": {
+                            "mValue": 0.07999999821186066,
+                            "__type": "GameModeConstantFloat"
+                        },
+                        "{2b696a57}": {
+                            "__type": "GameModeConstantInteger"
+                        },
+                        "GodhoodCadence": {
+                            "__type": "GameModeConstantInteger"
+                        }
+                    },
+                    "__type": "{d65315ee}"
+                },
+                "minUnits": 4,
+                "RequiredUnitProperty": {
+                    "Property": "{0ccc946d}",
+                    "__type": "TftRequiredUnitProperty"
+                },
+                "ShouldAlwaysDisplay": false,
+                "Style": 5,
                 "__type": "TftConditionalTraitSetData"
             }
         ],
@@ -104099,11 +104159,11 @@
                 "constants": {
                     "{df085b93}": {
                         "AD": {
-                            "mValue": 0.44999998807907104,
+                            "mValue": 0.4000000059604645,
                             "__type": "GameModeConstantFloat"
                         },
                         "AP": {
-                            "mValue": 45.0,
+                            "mValue": 40.0,
                             "__type": "GameModeConstantFloat"
                         }
                     },
@@ -104131,11 +104191,11 @@
                 "constants": {
                     "{df085b93}": {
                         "AD": {
-                            "mValue": 0.3499999940395355,
+                            "mValue": 0.4000000059604645,
                             "__type": "GameModeConstantFloat"
                         },
                         "AP": {
-                            "mValue": 35.0,
+                            "mValue": 40.0,
                             "__type": "GameModeConstantFloat"
                         }
                     },

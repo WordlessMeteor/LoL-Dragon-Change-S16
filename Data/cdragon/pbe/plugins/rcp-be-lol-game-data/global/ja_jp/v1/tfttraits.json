@@ -12267,7 +12267,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "スキルを@CastsToGainXP@回使用するたびに、「クロノキーパー」はXPを<TFTBonus>@XPPerCast@</TFTBonus>蓄積する。レベルアップに必要なXPを蓄積すると、そのXPをプレイヤーに移行する。<br><br>プレイヤーレベルが10の場合、代わりに<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>のダメージ増加効果を獲得する。<br><br><rules>XP蓄積量: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "スキルを@CastsToGainXP@回使用するたびに、「クロノキーパー」はXPを<TFTBonus>@XPPerCast@</TFTBonus>蓄積する。レベルアップに必要なXPを蓄積すると、そのXPをプレイヤーに移行する。<br><br>プレイヤーレベルが10の場合、代わりに<TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>のダメージ増加効果を獲得する。<br><br><rules>XP蓄積量: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>「チョンクのお宝」では、ステージ3-5までXPを獲得するために必要な詠唱回数が@CastsToGainXPCT@に増加する。</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12279,6 +12279,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13779,7 +13783,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "毎秒、「シュリーマ」チャンピオンの攻撃速度が@ASPerSecond*100@%増加し、体力を@HealthRestorePerSecond@回復する。戦闘開始時、追加効果を獲得する。<br><br><row>(@MinUnits@) 最大体力@BonusHealth*100@%</row><br><row>(@MinUnits@) 物理防御と魔法防御@ArmorMR@</row><br><row>(@MinUnits@) @GodhoodCadence@秒ごとに、「シュリーマ」1体が超越して「神」になる。</row>",
+        "tooltip_text": "tft_trait_description_TFT16_Shurima",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13859,7 +13863,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13867,7 +13871,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13875,8 +13879,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14579,7 +14583,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "各戦闘後、「超越のチャーム」がショップに出現する。これらのチャームは、ゴールドで購入可能な強力な効果である。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "各戦闘後、「超越のチャーム」がショップに出現する。ゴールドで購入可能なこれらのチャームは、強力な効果を持つ。@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>「チョンクのお宝」では、レベル7になるまで「忠実な信者チャーム」は出現しない。</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15862,11 +15866,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 45.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 4,
@@ -15878,11 +15882,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 6,

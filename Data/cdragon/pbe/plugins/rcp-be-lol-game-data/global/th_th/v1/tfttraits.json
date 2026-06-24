@@ -12267,7 +12267,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Chronokeeper กักเก็บ XP <TFTBonus>@XPPerCast@</TFTBonus> หน่วย เมื่อร่ายสกิลครบทุก @CastsToGainXP@ ครั้ง จากนั้นหากกักเก็บไว้มากพอ ที่คุณจะอัปเลเวล&nbsp;เขาจะมอบ XP ส่วนที่เหลือให้ <br><br>โดยหากไปถึงเลเวล 10 แล้ว เขาจะได้รับการคูณความเสียหาย <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;แทน<br><br><rules>กักเก็บ XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@ หน่วย</rules>",
+        "tooltip_text": "Chronokeeper กักเก็บ XP <TFTBonus>@XPPerCast@</TFTBonus> หน่วย เมื่อร่ายสกิลครบทุก @CastsToGainXP@ ครั้ง จากนั้นหากกักเก็บไว้มากพอ ที่คุณจะอัปเลเวล&nbsp;เขาจะมอบ XP ส่วนที่เหลือให้ <br><br>โดยหากไปถึงเลเวล 10 แล้ว เขาจะได้รับการคูณความเสียหาย <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;แทน<br><br><rules>กักเก็บ XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@ หน่วย</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>ใน Choncc's Treasure จำนวนครั้งที่ต้องร่ายเพื่อกักเก็บ XP เพิ่มขึ้นเป็น @CastsToGainXPCT@ ครั้ง ไปจนถึงด่าน 3-5</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12279,6 +12279,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13779,7 +13783,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "แชมเปี้ยน Shurima ได้รับความเร็วโจมตี @ASPerSecond*100@% และฟื้นฟูพลังชีวิต @HealthRestorePerSecond@ หน่วยในทุก ๆ วินาที อีกทั้งได้รับเอฟเฟกต์เพิ่มเติม เมื่อเริ่มการต่อสู้<br><br><row> (@MinUnits@) พลังชีวิตสูงสุด @BonusHealth*100@% </row><br><row>(@MinUnits@) เกราะและต้านทานเวท @ArmorMR@ หน่วย</row><br><row>(@MinUnits@) แชมเปี้ยน Shurima จุติกลายเป็นทวยเทพในทุก ๆ @GodhoodCadence@ วินาที</row>",
+        "tooltip_text": "tft_trait_description_TFT16_Shurima",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13859,7 +13863,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13867,7 +13871,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13875,8 +13879,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14579,7 +14583,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Ascendant Charm จะปรากฏขึ้นมาในร้านค้า หลังจบทุกรอบการต่อสู้ และสามารถใช้ทอง ซื้อเพื่อรับเอฟเฟกต์แสนทรงพลัง@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "Ascendant Charm จะปรากฏในร้านค้า หลังจบทุกรอบการต่อสู้ และสามารถใช้ทองซื้อ เพื่อรับเอฟเฟกต์แสนทรงพลัง@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>ใน Choncc's Treasure คุณไม่สามารถเจอ Faithful Followers Charm ได้จนกว่าจะไปถึงเลเวล 7</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15862,11 +15866,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 45.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 4,
@@ -15878,11 +15882,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 6,

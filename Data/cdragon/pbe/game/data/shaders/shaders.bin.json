@@ -7766,6 +7766,71 @@
         "objectPath": "Shaders/SkinnedMesh/Outline_MatCap_RMA_VertexDeform",
         "__type": "CustomShaderDef"
     },
+    "{13ca01ae}": {
+        "ShadingModel": "{3c6ecc43}",
+        "parameters": [
+            {
+                "name": "FlipbookSize",
+                "data": [
+                    2.0,
+                    2.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FlipbookSize",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FrameIndex",
+                "logicalParameters": [
+                    {
+                        "name": "FrameIndex",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FlipbookSpeed",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FlipbookSpeed",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            }
+        ],
+        "staticSwitches": [
+            {
+                "name": "FLIPBOOK",
+                "__type": "ShaderStaticSwitch"
+            }
+        ],
+        "textures": [
+            {
+                "name": "Diffuse_Texture",
+                "defaultTexturePath": "ASSETS/Characters/Taliyah/Skins/Base/Particles/Taliyah_Base_R_Smoke_Dust.tex",
+                "__type": "ShaderTexture"
+            }
+        ],
+        "objectPath": "Shaders/Particles/DefaultParticleLit",
+        "__type": "CustomShaderDef"
+    },
     "Shaders/StaticMesh/TFT_Env_Shine_Billboard": {
         "parameters": [
             {
@@ -12383,6 +12448,10 @@
             },
             {
                 "name": "USE_DIFFUSE_TEX_ALPHA",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "FRESNEL_OVERALL",
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -22684,6 +22753,186 @@
             "FEATURE_WORLD_POSITION": "1"
         },
         "objectPath": "Shaders/SkinnedMesh/2_Diffuse_Lerp",
+        "__type": "CustomShaderDef"
+    },
+    "{41ed1406}": {
+        "parameters": [
+            {
+                "name": "CameraOffset",
+                "logicalParameters": [
+                    {
+                        "name": "CameraOffset",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Color_ChannelToUse",
+                "data": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Color_ChannelToUse",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Color_Use_TextureColor",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Color_Use_TextureColor",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Alpha_Texture_USE",
+                "logicalParameters": [
+                    {
+                        "name": "Alpha_Texture_USE",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Alpha_ChannelToUse",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Alpha_ChannelToUse",
+                        "fields": 15,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "SoftParticle_FadeDistance",
+                "data": [
+                    25.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "SoftParticle_FadeDistance",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FOW_Intensity_RGBA",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FOW_Intensity_RGBA",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "BloomThreshold",
+                "data": [
+                    3.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "BloomThreshold",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "FOW_Intensity_Bloom",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "FOW_Intensity_Bloom",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            }
+        ],
+        "staticSwitches": [
+            {
+                "name": "PARTICLE_COLOR_ACTIVE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "COLORBLIND_SUPPORT",
+                "onByDefault": true,
+                "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "NAVMESH_MASK_ACTIVE",
+                "__type": "ShaderStaticSwitch"
+            }
+        ],
+        "textures": [
+            {
+                "name": "Diffuse_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Atlast_Test.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Alpha_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/Atlast_Test.tex",
+                "__type": "ShaderTexture"
+            }
+        ],
+        "featureDefines": {
+            "FEATURE_BLOOM": "1",
+            "FEATURE_FOW": "1",
+            "FEATURE_NAVMESH_MASK": "1"
+        },
+        "featureMask": 1,
+        "objectPath": "Shaders/Particles/DefaultParticleQuadUnlit",
         "__type": "CustomShaderDef"
     },
     "Shaders/SkinnedMesh/TFT_Screenspace_ChampTiers": {

@@ -12267,7 +12267,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Cada @CastsToGainXP@ lanzamientos, el Guardián del tiempo almacena <TFTBonus>@XPPerCast@</TFTBonus> de EXP. Si tiene EXP suficiente para que subas de nivel, te transfiere la EXP&nbsp;necesaria.<br><br>Si ya has subido al nivel 10, obtiene un <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;de amplificación de daño.<br><br><rules>EXP almacenada: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "Cada @CastsToGainXP@ lanzamientos, el Guardián del tiempo almacena <TFTBonus>@XPPerCast@</TFTBonus> de EXP. Si tiene EXP suficiente para que subas de nivel, te transfiere la EXP&nbsp;necesaria.<br><br>Si ya has subido al nivel 10, obtiene un <TFTBonus>@DAGainAtMaxLevel@%</TFTBonus>&nbsp;de amplificación de daño.<br><br><rules>EXP almacenada: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>En el Tesoro de Choncc, la cantidad de lanzamientos necesarios para obtener EXP aumenta a @CastsToGainXPCT@ hasta la fase 3-5.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12279,6 +12279,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13779,7 +13783,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Cada segundo, los shurimanos obtienen un @ASPerSecond*100@% de velocidad de ataque y restauran @HealthRestorePerSecond@ de vida. Al comienzo del combate, obtienen efectos adicionales.<br><br><row>(@MinUnits@) @BonusHealth*100@% de vida máxima.</row><br><row>(@MinUnits@) @ArmorMR@ de armadura y resistencia mágica.</row><br><row>(@MinUnits@) Un shurimano asciende a DEIDAD cada @GodhoodCadence@ s.</row>",
+        "tooltip_text": "tft_trait_description_TFT16_Shurima",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13859,7 +13863,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13867,7 +13871,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13875,8 +13879,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14579,7 +14583,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Tras cada combate, un amuleto ascendente aparecerá en tu tienda. Estos amuletos otorgan poderosos efectos que se pueden comprar con oro.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "Tras cada combate, un amuleto ascendente aparecerá en tu tienda. Estos amuletos otorgan poderosos efectos que se pueden comprar con oro.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>En el Tesoro de Choncc, el amuleto de Seguidores fieles no puede aparecer hasta alcanzar el nivel 7.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15862,11 +15866,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 45.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 4,
@@ -15878,11 +15882,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 6,
@@ -27719,7 +27723,7 @@
         "trait_id": "TFTEvent5YR_TheCrew",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_StarCrew.TFT_Set15.png",
-        "tooltip_text": "¡Invoca a la <i>Nocturnus</i> para que te ayude en combate! Dispara un cohete que inflige @TFTTrait.TFTEvent5YR_TheCrew.1:BaseRocketDamage@ de daño mágico cada vez que tu equipo inflige @TFTTrait.TFTEvent5YR_TheCrew.1:BaseDamageThreshold@ de daño.<br><br>Los campeones de coste 2 o superior se convierten en miembros de La tripulación al alcanzar el nivel de 3 estrellas. Otorga bonificaciones adicionales por cada miembro de La tripulación.<br><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.1:MinUnits@) 2 miembros de La tripulación al máximo.</row><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.2:MinUnits@) 4 miembros de La tripulación al máximo.</row><br><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus1Active default=false alternate=TFTGuildInactive>(1 <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>): + @TFTTrait.TFTEvent5YR_TheCrew.1:OnARollRolls@ cambios de tienda gratis al subir de nivel de estrellas a una unidad que hayas desplegado en el combate anterior.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus2Active default=false alternate=TFTGuildInactive>(2 <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>): Los cohetes infligen <magicDamage>@TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedRocketDamage@</magicDamage> de daño.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus3Active default=false alternate=TFTGuildInactive>(3 <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>): + @TFTTrait.TFTEvent5YR_TheCrew.1:FreeRerollsPerRound@ cambio gratis por ronda.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus4Active default=false alternate=TFTGuildInactive>(4 <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>): Se disparan cohetes tras infligir @TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedDamageThreshold@ de daño. Otorga @TFTTrait.TFTEvent5YR_TheCrew.1:XPPerRound@ de EXP por ronda.</tftActiveRank>",
+        "tooltip_text": "¡Invoca a la <i>Nocturnus</i> para que te ayude en combate! Dispara un cohete que inflige @TFTTrait.TFTEvent5YR_TheCrew.1:BaseRocketDamage@ de daño mágico cada vez que tu equipo inflige @TFTTrait.TFTEvent5YR_TheCrew.1:BaseDamageThreshold@ de daño.<br>Los campeones de coste 2 o superior se convierten en miembros de La tripulación al alcanzar el nivel de 3 estrellas. Otorga bonificaciones adicionales por cada miembro de La tripulación.<br><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.1:MinUnits@) 2 miembros de La tripulación al máximo.</row><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.2:MinUnits@) 4 miembros de La tripulación al máximo.</row><br><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus1Active default=false alternate=TFTGuildInactive>(1 <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>): + @TFTTrait.TFTEvent5YR_TheCrew.1:OnARollRolls@ cambios de tienda gratis al subir de nivel de estrellas a una unidad desplegada en el combate anterior.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus2Active default=false alternate=TFTGuildInactive>(2 <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>): Los cohetes infligen <magicDamage>@TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedRocketDamage@</magicDamage> de daño.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus3Active default=false alternate=TFTGuildInactive>(3 <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>): + @TFTTrait.TFTEvent5YR_TheCrew.1:FreeRerollsPerRound@ cambio gratis por ronda.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus4Active default=false alternate=TFTGuildInactive>(4 <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>): Se disparan cohetes cada @TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedDamageThreshold@ de daño infligido. + @TFTTrait.TFTEvent5YR_TheCrew.1:XPPerRound@ de EXP por ronda.</tftActiveRank>",
         "innate_trait_sets": [
             {
                 "constants": [

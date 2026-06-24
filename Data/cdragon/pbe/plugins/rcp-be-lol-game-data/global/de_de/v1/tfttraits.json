@@ -12267,7 +12267,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Der Zeitwächter speichert nach jeder @CastsToGainXP@. Fähigkeitsaktivierung <TFTBonus>@XPPerCast@</TFTBonus> ERF. Wenn er genug&nbsp;ERF für einen Stufenaufstieg gespeichert hat, gibt er sie an dich weiter.<br><br>Wenn du bereits Stufe 10 erreicht hast, erhält er stattdessen <TFTBonus>@DAGainAtMaxLevel@ %</TFTBonus> Schadenssteigerung.<br><br><rules>Gespeicherte ERF: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "Der Zeitwächter speichert nach jeder @CastsToGainXP@. Fähigkeitsaktivierung <TFTBonus>@XPPerCast@</TFTBonus> ERF. Wenn er genug&nbsp;ERF für einen Stufenaufstieg gespeichert hat, gibt er sie an dich weiter.<br><br>Wenn du bereits Stufe 10 erreicht hast, erhält er stattdessen <TFTBonus>@DAGainAtMaxLevel@ %</TFTBonus>&nbsp;Schadenssteigerung.<br><br><rules>Gespeicherte ERF: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>In „Chonccs Schatz“ wird die Anzahl der benötigten Aktivierungen, um ERF zu erhalten, bis Phase 3–5 auf @CastsToGainXPCT@ erhöht.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12279,6 +12279,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13779,7 +13783,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Shurimaner erhalten jede Sekunde @ASPerSecond*100@ % Angriffstempo und stellen @HealthRestorePerSecond@ Leben wieder her. Zu Kampfbeginn erhalten sie zusätzliche Effekte.<br><br><row>(@MinUnits@) @BonusHealth*100@ % maximales Leben</row><br><row>(@MinUnits@) @ArmorMR@ Rüstung und Magieresistenz</row><br><row>(@MinUnits@) Alle @GodhoodCadence@ Sekunden steigt ein Shurimaner zur GÖTTLICHKEIT auf.</row>",
+        "tooltip_text": "tft_trait_description_TFT16_Shurima",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13859,7 +13863,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13867,7 +13871,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13875,8 +13879,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14579,7 +14583,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Nach jedem Kampf erscheint ein Aszendent-Glücksbringer bei deinem Händler. Hierbei handelt es sich um mächtige Effekte, die du für Gold kaufen kannst.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "Nach jedem Kampf erscheint ein Aszendent-Glücksbringer bei deinem Händler. Hierbei handelt es sich um mächtige Effekte, die du für Gold kaufen kannst.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>In „Chonccs Schatz“ kann der Glücksbringer „Treue Anhänger“ erst erscheinen, wenn du Stufe 7 erreicht hast.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15862,11 +15866,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 45.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 4,
@@ -15878,11 +15882,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 6,
@@ -17159,7 +17163,7 @@
         "trait_id": "TFT17_Stargazer_Huntress",
         "set": "TFTSet17",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_17_Stargazer.TFT_Set17.png",
-        "tooltip_text": "Sterndeuter kartieren in jedem Spiel eine andere Konstellation. Dieses Spiel: <TFTStargazer>Die Jägerin</TFTStargazer>.<br><br>Kampfbeginn: Markiere die Gegner mit dem höchsten Leben. <br><br>Verbündete auf verstärkten Feldern erhalten @Huntress_AS_Teamwide*100@ % Angriffstempo. Sterndeuter auf verstärkten Feldern erhalten mehr und heilen sich um @Huntress_Heal*100@ % ihres max. Lebens, wenn ein markierter Gegner stirbt.<br><br><row>(@MinUnits@) @Huntress_AS*100@ % %i:scaleAS%, @NumMarks@ Marken</row><br><row>(@MinUnits@) @Huntress_AS*100@ % %i:scaleAS%, @NumMarks@ Marken</row><br><row>(@MinUnits@) @Huntress_AS*100@ % %i:scaleAS%, @NumMarks@ Marken</row><br><br><rules>Mit jeder Spielerstufe werden mehr Felder enthüllt.</rules>",
+        "tooltip_text": "Sterndeuter kartieren in jedem Spiel eine andere Konstellation. Dieses Spiel: <TFTStargazer>Die Jägerin</TFTStargazer>.<br><br>Kampfbeginn: Markiere die Gegner mit dem höchsten Leben. <br><br>Verbündete auf verstärkten Feldern erhalten @Huntress_AS_Teamwide*100@ % Angriffstempo. Sterndeuter auf verstärkten Feldern erhalten mehr und heilen sich um @Huntress_Heal*100@ % ihres max. Lebens, wenn ein markierter Gegner stirbt.<br><br><row>(@MinUnits@) @Huntress_AS*100@ % %i:scaleAS%, @NumMarks@ Markierungen</row><br><row>(@MinUnits@) @Huntress_AS*100@ % %i:scaleAS%, @NumMarks@ Markierungen</row><br><row>(@MinUnits@) @Huntress_AS*100@ % %i:scaleAS%, @NumMarks@ Markierungen</row><br><br><rules>Mit jeder Spielerstufe werden mehr Felder enthüllt.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [

@@ -12267,7 +12267,7 @@
         "trait_id": "TFT16_Chronokeeper",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Chronokeeper.TFT_Set16.png",
-        "tooltip_text": "Zaman Bekçisi her @CastsToGainXP@ yetenek kullanımında bir <TFTBonus>@XPPerCast@</TFTBonus> XP biriktirir. Seviye atlamana yetecek kadar XP biriktirdiğinde sana gereken XP'yi kazandırır.<br><br>10. seviyedeysen <TFTBonus>%@DAGainAtMaxLevel@</TFTBonus> Hasar Artışı kazanır.<br><br><rules>Biriken XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules>",
+        "tooltip_text": "Zaman Bekçisi her @CastsToGainXP@ yetenek kullanımında bir <TFTBonus>@XPPerCast@</TFTBonus> XP biriktirir. Seviye atlamana yetecek kadar XP biriktirdiğinde sana gereken XP'yi kazandırır.<br><br>10. seviyedeysen <TFTBonus>%@DAGainAtMaxLevel@</TFTBonus> Hasar Artışı kazanır.<br><br><rules>Biriken XP: @TFTUnitProperty.trait:TFT16_ChronoKeeperStoredXP@</rules><ShowIfCustom.Set=TFTSetEventCT><br><br>Choncc'un Hazinesi'nde XP kazanmak için gereken yetenek kullanım sayısı Aşama 3-5'e kadar artarak @CastsToGainXPCT@ olur.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [
             {
                 "constants": []
@@ -12279,6 +12279,10 @@
                     {
                         "name": "CastsToGainXP",
                         "value": 2.0
+                    },
+                    {
+                        "name": "CastsToGainXPCT",
+                        "value": 3.0
                     },
                     {
                         "name": "CastsToGainXPPAIRS",
@@ -13779,7 +13783,7 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.TFT_Set16.png",
-        "tooltip_text": "Shurima'lılar her saniye %@ASPerSecond*100@ Saldırı Hızı kazanır ve @HealthRestorePerSecond@ Can yeniler. Çatışma başlangıcında ilave etkiler kazanırlar.<br><br><row>(@MinUnits@) %@BonusHealth*100@ Azami Can</row><br><row>(@MinUnits@) @ArmorMR@ Zırh ve Büyü Direnci</row><br><row>(@MinUnits@) Her @GodhoodCadence@ saniyede bir, bir Shurima'lı YÜKSELİŞ'E ERER.</row>",
+        "tooltip_text": "Shurima'lılar her saniye %@ASPerSecond*100@ Saldırı Hızı kazanır ve @HealthRestorePerSecond@ Can yeniler. Çatışma başlangıcında ilave etkiler kazanırlar.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prizmatik: Nasus, Renekton ve Xerath'ı aç. Ardından Shurima özelliğinin 4 birimlik eşiğini etkinleştir.</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) %@BonusHealth*100@ Azami Can</row><br><row>(@MinUnits@) @ArmorMR@ Zırh ve Büyü Direnci</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Her @GodhoodCadence@ saniyede bir, bir Shurima'lı YÜKSELİŞ'E ERER.</ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>Yalnızca Nasus, Renekton ve Xerath açıldığında etkinleşebilir.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -13859,7 +13863,7 @@
                     },
                     {
                         "name": "Ascend",
-                        "value": 1.0
+                        "value": 0.0
                     },
                     {
                         "name": "BonusHealth",
@@ -13867,7 +13871,7 @@
                     },
                     {
                         "name": "GodhoodCadence",
-                        "value": 3.0
+                        "value": 0.0
                     },
                     {
                         "name": "SkinScale",
@@ -13875,8 +13879,8 @@
                     }
                 ],
                 "min_units": 4,
-                "style_idx": 6,
-                "style_name": "kChromatic"
+                "style_idx": 5,
+                "style_name": "kGold"
             }
         ]
     },
@@ -14579,7 +14583,7 @@
         "trait_id": "TFT16_XerathUnique",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Ascendant.TFT_Set12.png",
-        "tooltip_text": "Her çatışmadan sonra dükkânında bir Yükselmiş tılsım belirir. Yükselmiş tılsımlar güçlü etkiler kazandırır ve altın karşılığında alınabilir.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@",
+        "tooltip_text": "Her çatışmadan sonra dükkânında bir Yükselmiş tılsım belirir. Yükselmiş tılsımlar güçlü etkiler kazandırır ve altın karşılığında alınabilir.@TFTUnitProperty.trait:TFT16_XerathUnique_PurchasedCharmDisplay@<br><br><ShowIfCustom.Set=TFTSetEventCT>Choncc'un Hazinesi'nde Sadık Takipçiler tılsımı sen 7. seviyeye ulaşana kadar sunulmaz.</ShowIfCustom.Set=TFTSetEventCT>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -15862,11 +15866,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.45
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 45.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 4,
@@ -15878,11 +15882,11 @@
                 "constants": [
                     {
                         "name": "AD",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "AP",
-                        "value": 35.0
+                        "value": 40.0
                     }
                 ],
                 "min_units": 6,
