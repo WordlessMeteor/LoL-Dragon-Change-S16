@@ -66,6 +66,7 @@
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label,
 .lol-settings-voice-ptt-modal .lol-settings-voice-ptt-modal-title,
 .lol-settings-voice-ptt-modal-warning,
+.lol-settings-voice-restricted,
 .lol-settings-voice-row,
 .lol-settings-voice-sensitivity .lol-settings-voice-sensitivity-label,
 .lol-settings-window-size-text,
@@ -138,6 +139,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label,
 .lol-settings-voice-ptt-modal .lol-settings-voice-ptt-modal-title,
 .lol-settings-voice-ptt-modal-warning,
+.lol-settings-voice-restricted,
 .lol-settings-voice-row,
 .lol-settings-voice-section-title,
 .lol-settings-voice-sensitivity .lol-settings-voice-sensitivity-label,
@@ -408,6 +410,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label,
 .lol-settings-voice-ptt-modal .lol-settings-voice-ptt-modal-title,
 .lol-settings-voice-ptt-modal-warning,
+.lol-settings-voice-restricted,
 .lol-settings-voice-row,
 .lol-settings-voice-sensitivity .lol-settings-voice-sensitivity-label,
 .lol-settings-window-size-text,
@@ -457,6 +460,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label:lang(ja-jp),
 .lol-settings-voice-ptt-modal .lol-settings-voice-ptt-modal-title:lang(ja-jp),
 .lol-settings-voice-ptt-modal-warning:lang(ja-jp),
+.lol-settings-voice-restricted:lang(ja-jp),
 .lol-settings-voice-row:lang(ja-jp),
 .lol-settings-voice-sensitivity .lol-settings-voice-sensitivity-label:lang(ja-jp),
 .lol-settings-window-size-text:lang(ja-jp),
@@ -501,6 +505,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label:lang(ar-ae),
 .lol-settings-voice-ptt-modal .lol-settings-voice-ptt-modal-title:lang(ar-ae),
 .lol-settings-voice-ptt-modal-warning:lang(ar-ae),
+.lol-settings-voice-restricted:lang(ar-ae),
 .lol-settings-voice-row:lang(ar-ae),
 .lol-settings-voice-sensitivity .lol-settings-voice-sensitivity-label:lang(ar-ae),
 .lol-settings-window-size-text:lang(ar-ae),
@@ -1236,6 +1241,33 @@ lol-uikit-scrollable>.lol-settings-general-section-title:nth-of-type(n+2) {
     margin-bottom: 10px
 }
 
+.lol-settings-voice-restricted {
+    align-items: center;
+    background: rgba(0, 0, 0, .6);
+    border: 1px solid rgba(200, 155, 60, .5);
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #a09b8c;
+    display: flex;
+    margin-bottom: 16px;
+    padding: 14px 16px;
+    width: 90%
+}
+
+.lol-settings-voice-content-disabled {
+    opacity: .5;
+    pointer-events: none
+}
+
+.lol-settings-voice-auto-badge {
+    background-color: #1e2328;
+    border-radius: 3px;
+    color: #a09b8c;
+    display: inline-block;
+    margin-left: 4px;
+    padding: 1px 6px
+}
+
 .lol-settings-voice-party-join {
     display: flex;
     flex-direction: column;
@@ -1366,12 +1398,20 @@ lol-uikit-content-block.voice-settings-push-to-talk-alert b {
     left: auto;
     position: absolute;
     right: 100px;
-    top: 318px;
+    top: 300px;
     width: 200px
 }
 
 lol-uikit-scrollable:has(.lol-settings-voice-agreement) .lol-settings-voice-sensitivity {
-    top: 398px
+    top: 380px
+}
+
+lol-uikit-scrollable:has(.lol-settings-voice-restricted) .lol-settings-voice-sensitivity {
+    top: 350px
+}
+
+.lol-settings-voice-sensitivity .lol-settings-voice-row {
+    margin-bottom: 20px
 }
 
 .lol-settings-voice-sensitivity .lol-settings-voice-sensitivity-label {

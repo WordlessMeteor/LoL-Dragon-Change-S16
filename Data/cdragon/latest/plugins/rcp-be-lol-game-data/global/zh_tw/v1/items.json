@@ -182,7 +182,6 @@
             324005,
             3135,
             3165,
-            4005,
             4637,
             6621,
             6657
@@ -696,6 +695,7 @@
             326616,
             3802,
             3916,
+            4005,
             4630,
             4637,
             4642,
@@ -1277,7 +1277,7 @@
     {
         "id": 1120,
         "name": "多蘭之盔",
-        "description": "<mainText><stats><attention> 140</attention> 生命<br><attention> 10</attention> 物理防禦<br><attention> 10</attention> 魔法防禦</stats><br><br><passive>伸出援手</passive><br>普攻對士兵造成<physicalDamage>5額外物理傷害</physicalDamage>。</mainText>",
+        "description": "<mainText><stats><attention> 150</attention> 生命<br><attention> 8</attention> 物理防禦<br><attention> 8</attention> 魔法防禦</stats><br><br><passive>伸出援手</passive><br>普攻對士兵造成<physicalDamage>5額外物理傷害</physicalDamage>。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8394,12 +8394,13 @@
     {
         "id": 4005,
         "name": "帝王命令",
-        "description": "<mainText><stats><attention> 65</attention> 魔法攻擊<br><attention> 15</attention> 技能加速<br><attention> 150%</attention> 基礎魔力回復</stats><br><br><passive>控制</passive><br>你的<keyword>硬控場</keyword>效果技能會獲得15技能加速。<br><br><passive>指令</passive><br>當你<keyword>硬控場敵方英雄</keyword>時，將他們標記為6%<Keyword>易傷</Keyword>，持續4秒。<br></mainText>",
+        "description": "<mainText><stats><attention> 60</attention> 魔法攻擊<br><attention> 15</attention> 技能加速<br><attention> 150%</attention> 基礎魔力回復</stats><br><br><passive>控制</passive><br>你的<keyword>硬控場</keyword>效果技能會獲得20技能加速。<br><br><passive>指令</passive><br>當你<keyword>硬控場敵方英雄</keyword>時，將他們標記為7%<Keyword>易傷</Keyword>，持續4秒。<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [
-            1026,
-            4642
+            1052,
+            4642,
+            1052
         ],
         "to": [],
         "categories": [
@@ -8415,7 +8416,7 @@
         "requiredBuffCurrencyCost": 0,
         "specialRecipe": 0,
         "isEnchantment": false,
-        "price": 650,
+        "price": 700,
         "priceTotal": 2400,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/4005_Enchanter_T4_ImperialMandate.png"
@@ -8554,7 +8555,7 @@
     {
         "id": 4015,
         "name": "困惑",
-        "description": "<mainText><stats><attention> 60</attention> 魔法攻擊<br><attention> 5%</attention> 跑速<br><attention> 22%</attention> 物理穿透<br><attention> 30%</attention> 魔法穿透</stats><br><br><passive>巨人殺手</passive><br>敵方英雄最大生命超過你時，最多額外造成15%傷害。<br><br><rules>當生命差距達到2500時，傷害加成會達到最大值。</rules></mainText>",
+        "description": "<mainText><stats><attention> 60</attention> 魔法攻擊<br><attention> 5%</attention> 跑速<br><attention> 22%</attention> 物理穿透<br><attention> 30%</attention> 魔法穿透</stats><br><br><passive>巨人殺手</passive><br>敵方英雄最大生命超過你時，最多額外造成15%傷害。<br><br><rules>當生命差距達到3000時，傷害加成會達到最大值。</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8582,7 +8583,7 @@
     {
         "id": 4016,
         "name": "無言之約",
-        "description": "<mainText><stats><attention> 50</attention> 魔法攻擊<br><attention> 15%</attention> 治療及護盾強度<br><attention> 25</attention> 技能加速</stats><br><br><passive>誓願</passive><br>獲得<attention>誓願</attention><scaleAP>友軍15%的魔攻</scaleAP>，並將你15%的技能加速賦予<attention>誓願</attention>友軍。<br><br> <active>主動</active> (0秒)<br><active>誓願</active><br>對一位友軍許下<attention>誓願</attention>。</mainText>",
+        "description": "<mainText><stats><attention> 50</attention> 魔法攻擊<br><attention> 15%</attention> 治療及護盾強度<br><attention> 25</attention> 技能加速</stats><br><br><passive>誓願</passive><br>獲得<attention>誓願</attention><scaleAP>友軍10%的魔攻</scaleAP>，並將你10%的技能加速賦予<attention>誓願</attention>友軍。<br><br> <active>主動</active> (0秒)<br><active>誓願</active><br>對一位友軍許下<attention>誓願</attention>。</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -8607,7 +8608,7 @@
     {
         "id": 4017,
         "name": "獄火手斧",
-        "description": "<mainText><stats><attention> 35</attention> 物理攻擊<br><attention> 12</attention>物理致命</stats><br><br><passive>燒焦</passive>每個目標(0秒)<br>下一次技能命中會<keywordMajor>燃燒</keywordMajor>敵軍，在4秒內造成<scaleAD>0至0目前生命的物理傷害</scaleAD>，傷害量取決於敵軍超過你多少<scaleHealth>最大生命</scaleHealth>。<br><br><rules>生命差距為3000時，達到最大額外傷害。</rules></mainText>",
+        "description": "<mainText><stats><attention> 40</attention> 物理攻擊<br><attention> 12</attention>物理致命</stats><br><br><passive>燒焦</passive>每個目標(0秒)<br>下一次技能命中會<keywordMajor>燃燒</keywordMajor>敵軍，在4秒內造成<scaleAD>0至0目前生命的物理傷害</scaleAD>，傷害量取決於敵軍超過你多少<scaleHealth>最大生命</scaleHealth>。<br><br><rules>生命差距為3000時，達到最大額外傷害。</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13440,7 +13441,7 @@
     {
         "id": 223069,
         "name": "虛空獻祭",
-        "description": "<mainText><stats><attention> 1000</attention> 生命<br><attention> 100</attention> 物理防禦<br><attention> 80</attention> 魔法防禦<br><attention> 25</attention> 技能加速<br><attention> 200%</attention> 基礎生命回復</stats><br><br><passive>獻祭</passive><br>承受或造成傷害後，每秒對鄰近敵軍造成<magicDamage>0魔法傷害</magicDamage>，持續5秒。 </mainText>",
+        "description": "<mainText><stats><attention> 1000</attention> 生命<br><attention> 100</attention> 物理防禦<br><attention> 80</attention> 魔法防禦<br><attention> 25</attention> 技能加速<br><attention> 200%</attention> 基礎生命回復</stats><br><br><passive>獻祭</passive><br>受到或造成傷害後，在5秒內每秒對鄰近敵軍造成<magicDamage>0魔法傷害</magicDamage>。<br><br><passive>荒蕪</passive><br>擊殺敵軍時，對其周圍造成<magicDamage>魔法傷害</magicDamage>。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15871,7 +15872,7 @@
     {
         "id": 226692,
         "name": "星蝕",
-        "description": "<mainText><stats><attention> 50</attention> 物理攻擊<br><attention> 10</attention> 技能加速</stats><br><br><passive>不落之月</passive><br>在2秒內使用2次不同的普攻或技能命中英雄時可獲得<shield>護盾</shield>，持續2秒。</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> 物理攻擊<br><attention> 15</attention> 技能加速</stats><br><br><passive>不落之月</passive><br>在2秒內使用2次不同的普攻或技能命中英雄時可獲得<shield>護盾</shield>，持續2秒。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16899,7 +16900,7 @@
     {
         "id": 324005,
         "name": "帝王命令",
-        "description": "<mainText><stats><attention> 65</attention> 魔法攻擊<br><attention> 15</attention> 技能加速<br><attention> 150%</attention> 基礎魔力回復</stats><br><br><passive>控制</passive><br>你的<keyword>硬控場</keyword>效果技能會獲得15技能加速。<br><br><passive>指令</passive><br>當你<keyword>硬控場敵方英雄</keyword>時，將他們標記為6%<Keyword>易傷</Keyword>，持續4秒。<br></mainText>",
+        "description": "<mainText><stats><attention> 65</attention> 魔法攻擊<br><attention> 15</attention> 技能加速<br><attention> 150%</attention> 基礎魔力回復</stats><br><br><passive>控制</passive><br>你的<keyword>硬控場</keyword>效果技能會獲得20技能加速。<br><br><passive>指令</passive><br>當你<keyword>硬控場敵方英雄</keyword>時，將他們標記為7%<Keyword>易傷</Keyword>，持續4秒。<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [

@@ -8092,26 +8092,41 @@ lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
     width: 16px
 }
 
-.v2-banner-component .lobby-banner .player-name-container .voice-team-mute-warning-icon {
-    align-items: center;
-    display: inline-flex;
-    height: 16px;
-    margin-left: 4px;
-    width: 16px
-}
-
-.v2-banner-component .lobby-banner .player-name-container .voice-team-mute-warning-icon img {
-    height: 16px;
-    width: 16px
-}
-
 .v2-banner-component .lobby-banner .player-achievements-container {
     display: flex;
-    min-height: 82px
+    min-height: 82px;
+    position: relative
 }
 
 .v2-banner-component .lobby-banner .player-achievements-container.hide {
     opacity: 0
+}
+
+.v2-banner-component .lobby-banner .player-achievements-container .voice-team-mute-warning-icon {
+    align-items: center;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    left: 0;
+    margin: 12px auto 0;
+    position: absolute;
+    right: 0;
+    top: 100%
+}
+
+.v2-banner-component .lobby-banner .player-achievements-container .voice-team-mute-warning-icon img {
+    height: 20px;
+    width: 20px
+}
+
+.v2-banner-component .lobby-banner:not(.local) .player-achievements-container .voice-team-mute-warning-icon {
+    height: 18px;
+    margin-top: 6px
+}
+
+.v2-banner-component .lobby-banner:not(.local) .player-achievements-container .voice-team-mute-warning-icon img {
+    height: 18px;
+    width: 18px
 }
 
 .v2-banner-component .lobby-banner .quick-play-spacer {
@@ -8209,7 +8224,8 @@ lol-uikit-content-block.autofill-tooltip[type=tooltip-large] span {
 }
 
 .v2-banner-component .lobby-banner.local .position-icons-container.demacia-position-layout {
-    margin-top: 20px
+    gap: 15px;
+    margin-top: 30px
 }
 
 .v2-banner-component .lobby-banner-animation-container {
@@ -8794,11 +8810,8 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large]:lang(ar-ae) {
 }
 
 .v2-footer-notifications .parties-voice-limited-warning-icon {
+    background-image: url(/fe/lol-parties/icon-voice-limited-warning.svg);
     margin-right: 4px
-}
-
-.v2-footer-notifications .parties-voice-limited-warning-icon path {
-    fill: #c89b3c
 }
 
 .v2-footer-notifications .parties-voice-limited-warning {
@@ -9978,12 +9991,25 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] .parties-voic
 .v2-banner-position-icon-component .position-image-container {
     height: 24px;
     margin: 0 7px;
+    position: relative;
     width: 24px
+}
+
+.v2-banner-position-icon-component .position-image-container .position-backdrop {
+    background-color: #000;
+    border: 1px solid #cdcdcd;
+    height: 36px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 36px
 }
 
 .v2-banner-position-icon-component .position-image-container .position-image {
     background-size: contain;
     height: 100%;
+    position: relative;
     width: 100%
 }
 
@@ -19407,4 +19433,161 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     margin: 15px auto 0;
     text-align: center;
     width: 400px
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-header--title,
+.ranked-fives-ftux .ranked-fives-ftux-item--title {
+    font-family: var(--font-display)
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-item--desc {
+    font-family: var(--font-body)
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-header--title,
+.ranked-fives-ftux .ranked-fives-ftux-item--desc,
+.ranked-fives-ftux .ranked-fives-ftux-item--title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-header--title,
+.ranked-fives-ftux .ranked-fives-ftux-item--title {
+    text-transform: uppercase
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-header--title:lang(el-gr),
+.ranked-fives-ftux .ranked-fives-ftux-header--title:lang(ja-jp),
+.ranked-fives-ftux .ranked-fives-ftux-header--title:lang(ko-kr),
+.ranked-fives-ftux .ranked-fives-ftux-header--title:lang(th-th),
+.ranked-fives-ftux .ranked-fives-ftux-header--title:lang(tr-tr),
+.ranked-fives-ftux .ranked-fives-ftux-header--title:lang(zh-tw),
+.ranked-fives-ftux .ranked-fives-ftux-item--title:lang(el-gr),
+.ranked-fives-ftux .ranked-fives-ftux-item--title:lang(ja-jp),
+.ranked-fives-ftux .ranked-fives-ftux-item--title:lang(ko-kr),
+.ranked-fives-ftux .ranked-fives-ftux-item--title:lang(th-th),
+.ranked-fives-ftux .ranked-fives-ftux-item--title:lang(tr-tr),
+.ranked-fives-ftux .ranked-fives-ftux-item--title:lang(zh-tw) {
+    text-transform: none
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-header--title {
+    color: #f0e6d2;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 32px
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-header--title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-item--title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-item--title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-item--title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-item--desc {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-item--desc:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.ranked-fives-ftux {
+    background: url(/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/GameModeCommon/img/tutorial-bg.png) 50% no-repeat;
+    height: 520px;
+    width: 900px
+}
+
+.ranked-fives-ftux .ranked-fives-ftux--header {
+    align-items: flex-end;
+    display: flex;
+    height: 70px;
+    justify-content: center
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-header--title-container {
+    position: relative;
+    text-align: center;
+    width: fit-content
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-header--title {
+    margin-bottom: 20px
+}
+
+.ranked-fives-ftux .ranked-fives-ftux--content-image-wrapper {
+    display: block;
+    height: auto;
+    width: 100%
+}
+
+.ranked-fives-ftux .ranked-fives-ftux--content-image-wrapper .content-image {
+    display: block
+}
+
+.ranked-fives-ftux .ranked-fives-ftux--content-image-wrapper:after,
+.ranked-fives-ftux .ranked-fives-ftux--content-image-wrapper:before {
+    background: linear-gradient(90deg, rgba(120, 90, 40, .5), #785a28 49.44%, rgba(120, 90, 40, .5));
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%
+}
+
+.ranked-fives-ftux .ranked-fives-ftux--content-container {
+    align-items: center;
+    direction: rtl;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-content--item {
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: flex-start;
+    margin: 5px;
+    text-align: center;
+    width: 275px
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-item--title {
+    font-size: 14px;
+    font-weight: 400
+}
+
+.ranked-fives-ftux .ranked-fives-ftux-item--title.external-link:after {
+    background-color: #f0e6d2;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-leagues/external-link-mask.png) no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 9px
 }

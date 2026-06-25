@@ -717,8 +717,13 @@
                     let t = [...e];
                     const n = e.filter((e => "TeamDivisionRestriction" === e.restrictionCode)).length > 0,
                         i = e.filter((e => e.restrictionCode === c)).length > 0;
-                    return n && i && (t = t.filter((function(e) {
+                    n && i && (t = t.filter((function(e) {
                         return e.restrictionCode !== c
+                    })));
+                    const o = e.filter((e => e.restrictionCode === a.GAME_VERSION_MISSING_RESTRICTION)).length > 0,
+                        s = e.filter((e => e.restrictionCode === a.UNSUPPORTED_CLIENT_PLATFORM_RESTRICTION)).length > 0;
+                    return o && s && (t = t.filter((function(e) {
+                        return e.restrictionCode !== a.GAME_VERSION_MISSING_RESTRICTION
                     }))), t
                 },
                 applyRestrictionGroupRules: function(e) {
@@ -1105,10 +1110,10 @@
                 WIPMODEWIP: "WIPMODEWIP",
                 WIPMODEWIP5: "WIPMODEWIP5"
             };
-            t.ONE_PAGE_TUTORIAL_GAME_MODES = ["ARAM", "TFT", "CHERRY", "STRAWBERRY", "ULTBOOK", "SWIFTPLAY", "BRAWL", "RUBY", "RUBY_TRIAL_1", "RUBY_TRIAL_2", "RUBY_TRIAL_3", "GRAPE", "GUAVA", "KIWI", "LIME", "ORANGE", "PAPAYA", "PEACH", "PEAR", "PLUM", "TOMATO"];
+            t.ONE_PAGE_TUTORIAL_GAME_MODES = ["ARAM", "TFT", "CHERRY", "STRAWBERRY", "ULTBOOK", "SWIFTPLAY", "BRAWL", "RUBY", "RUBY_TRIAL_1", "RUBY_TRIAL_2", "RUBY_TRIAL_3", "GRAPE", "GUAVA", "KIWI", "KIWI_JADE", "LIME", "ORANGE", "PAPAYA", "PEACH", "PEAR", "PLUM", "TOMATO"];
             t.ONE_PAGE_TUTORIAL_LONG_CARD_LAYOUT_GAME_MODES = ["CHERRY", "STRAWBERRY", "ULTBOOK", "SWIFTPLAY"];
-            t.LANDSCAPE_IMAGE_LAYOUT_GAME_MODES = ["ARAM", "BRAWL", "RUBY", "RUBY_TRIAL_1", "RUBY_TRIAL_2", "RUBY_TRIAL_3", "GRAPE", "GUAVA", "KIWI", "LIME", "ORANGE", "PAPAYA", "PEACH", "PEAR", "PLUM", "TOMATO"];
-            t.DISMISS_TUTORIAL_WITH_ANY_BUTTON = ["ARAM", "CHERRY", "SWIFTPLAY", "BRAWL", "RUBY", "RUBY_TRIAL_1", "RUBY_TRIAL_2", "RUBY_TRIAL_3", "GRAPE", "GUAVA", "KIWI", "LIME", "ORANGE", "PAPAYA", "PEACH", "PEAR", "PLUM", "TOMATO"];
+            t.LANDSCAPE_IMAGE_LAYOUT_GAME_MODES = ["ARAM", "BRAWL", "RUBY", "RUBY_TRIAL_1", "RUBY_TRIAL_2", "RUBY_TRIAL_3", "GRAPE", "GUAVA", "KIWI", "KIWI_JADE", "LIME", "ORANGE", "PAPAYA", "PEACH", "PEAR", "PLUM", "TOMATO"];
+            t.DISMISS_TUTORIAL_WITH_ANY_BUTTON = ["ARAM", "CHERRY", "SWIFTPLAY", "BRAWL", "RUBY", "RUBY_TRIAL_1", "RUBY_TRIAL_2", "RUBY_TRIAL_3", "GRAPE", "GUAVA", "KIWI", "KIWI_JADE", "LIME", "ORANGE", "PAPAYA", "PEACH", "PEAR", "PLUM", "TOMATO"];
             t.MULTI_TEAM_GAME_MODES = ["CHERRY"];
             t.NO_TEAM_SIZE_GAME_MODES = ["STRAWBERRY"];
             t.NPE_FIRST_TOUCH_QUEUE_SELECT_ID = {
@@ -3471,8 +3476,8 @@
                         HextechLoadingAnimationComponent: C,
                         PlayerRestrictionInfoComponent: P,
                         RemainingTimeTextComponent: I,
-                        CountdownWidgetComponent: w,
-                        PlayerReadyStateBlockComponent: T,
+                        CountdownWidgetComponent: T,
+                        PlayerReadyStateBlockComponent: w,
                         PerkPageTooltipComponent: M,
                         PlayerNameComponent: L,
                         SkinPurchaseButtonComponent: R,
@@ -3618,8 +3623,8 @@
                     ChallengeItemFooterComponent: H,
                     PlayerRestrictionInfoComponent: P,
                     RemainingTimeTextComponent: I,
-                    CountdownWidgetComponent: w,
-                    PlayerReadyStateBlockComponent: T,
+                    CountdownWidgetComponent: T,
+                    PlayerReadyStateBlockComponent: w,
                     QuickPlayLoadoutSelectorComponent: n(388),
                     QuickPlaySelectionRendererComponent: n(394),
                     QuickPlayChampionSquareComponent: n(397),
@@ -3717,6 +3722,8 @@
                     ...o.PromethiumModules
                 }), o.StrawberryModules && Object.assign(ke, {
                     ...o.StrawberryModules
+                }), o.TftBridgeComponents && Object.assign(ke, {
+                    ...o.TftBridgeComponents
                 }), Object.assign(ke, {
                     AwBoostService: n(473).default
                 });
@@ -8382,7 +8389,8 @@
             "use strict";
             var i = n(1);
             const o = {
-                KIWI: "Mayhem"
+                KIWI: "Mayhem",
+                KIWI_JADE: "Mayhem"
             };
             e.exports = i.Ember.Service.extend({
                 init: function() {
@@ -9712,7 +9720,9 @@
                 }))),
                 _processNotifications: function(e) {
                     e.forEach((e => {
-                        this._processQueueDodgeNotification(e)
+                        const t = this.get("bridgeService.bridgeEnabled"),
+                            n = this.get("lobbiesService.lobby.gameConfig.gameMode");
+                        t && "TFT" === n && e.notificationReason === o.INVITATION_BLOCK_NOTIFICATIONS.INCOMPATIBLE_DEVICE ? this._processBlockedInviteNotification(e) : this._processQueueDodgeNotification(e)
                     }))
                 },
                 _processBlockedInviteNotification: function(e) {
@@ -9768,7 +9778,8 @@
                     })
                 },
                 _inviteBlockedOnIncompatibleDeviceReceived: function() {
-                    0
+                    const e = i.tra.get("tft_lobby_invite_blocked_unsupported_recipient_hardware");
+                    this._modalNotify(e)
                 }
             })
         }, (e, t) => {
@@ -10739,8 +10750,11 @@
                             c = {
                                 gameMode: e ? e.description : ""
                             }
-                        } else l === a.MULTIPLAYER_UNMATCHED_TEAMS_RESTRICTIONS && (m = this.get("lobbiesService.isTFT") ? `${m}_TFT` : `${m}_LOL`);
-                        0, this.get("tra").exists(m) && t.pushObject(this.get("tra").formatString(m, c))
+                        } else if (l === a.MULTIPLAYER_UNMATCHED_TEAMS_RESTRICTIONS) m = this.get("lobbiesService.isTFT") ? `${m}_TFT` : `${m}_LOL`;
+                        else if (l === a.UNSUPPORTED_CLIENT_PLATFORM_RESTRICTION) {
+                            m = `game_select_queue_restriction_${n?"self":"player"}_${l.toLowerCase()}`
+                        }
+                        this.get("tra").exists(m) && t.pushObject(this.get("tra").formatString(m, c))
                     }
                     return t
                 })),
@@ -11466,7 +11480,8 @@
                         creatingCustomGameAndHaveNameError: Boolean(this.get("creatingCustomGameAndHaveNameError")),
                         selectingTrainingGameButNoMode: Boolean(this.get("selectingTrainingGameButNoMode")),
                         joiningCustomGameButNoneSelected: Boolean(this.get("joiningCustomGameButNoneSelected")),
-                        allQueuesForCategoryDisabled: Boolean(this.get("allQueuesForCategoryDisabled"))
+                        allQueuesForCategoryDisabled: Boolean(this.get("allQueuesForCategoryDisabled")),
+                        isUnsupportedGameMode: Boolean(this.get("isUnsupportedGameMode"))
                     };
                     const t = Object.fromEntries(Object.entries(e).filter((([e, t]) => !0 === t))),
                         n = Object.values(t).some((e => !0 === e)),
@@ -11505,7 +11520,9 @@
                     return this.get("selected.isJoiningCustomGame") ? this.get("customGameListService.confirmButtonText") : this.get("tra.parties_button_confirm")
                 })),
                 isUnsupportedGameMode: i.Ember.computed("bridgeService.bridgeEnabled", "bridgeService.blockTFTMode", "showingState.isShowingGameSelect", "showingState.isInViewport", "selected.isCreatingCustomGame", "customGamesService.selectedSubcategory.gameMode", (function() {
-                    return !1
+                    const e = this.get("bridgeService.bridgeEnabled") && this.get("bridgeService.blockTFTMode") && this.get("showingState.isShowingGameSelect") && this.get("showingState.isInViewport"),
+                        t = this.get("selected.isCreatingCustomGame") && "TFT" === this.get("customGamesService.selectedSubcategory.gameMode");
+                    return e && t
                 })),
                 unsupportedGameModeTooltipText: i.Ember.computed("tra.tft_mode_unsupportedclientplatform_tooltip", "tra.tft_mode_unsupportedclientplatform_link", (function() {
                     return `${this.get("tra.tft_mode_unsupportedclientplatform_tooltip")} ${this.get("tra.tft_mode_unsupportedclientplatform_link")}`
@@ -11518,7 +11535,11 @@
                 },
                 confirmButtonShowTooltip: i.Ember.computed.or("patcherDisconnected", "confirmDisabledByLobby"),
                 confirmButtonShowBridgeTooltip: i.Ember.computed("selected.gameMode", "selected.isCreatingCustomGame", "selected.isJoiningCustomGame", "bridgeService.hasSeenBridgeTftTooltip", "bridgeService.bridgeEnabled", "confirmButtonEnabled", "showingState.isShowingGameSelect", "showingState.isInViewport", (function() {
-                    return !1
+                    const e = this.get("bridgeService.bridgeEnabled") && !this.get("bridgeService.hasSeenBridgeTftTooltip"),
+                        t = "TFT" === this.get("selected.gameMode"),
+                        n = this.get("selected.isCreatingCustomGame") || this.get("selected.isJoiningCustomGame"),
+                        i = this.get("showingState.isShowingGameSelect");
+                    return e && t && !n && i && this.get("confirmButtonEnabled") && this.get("showingState.isInViewport")
                 })),
                 tftDirectLaunchButtonDisabled: i.Ember.computed("fullLaunchService.fullLaunchEnabled", "fullLaunchService.directLaunchEnabled", "selected.gameMode", "selected.isCreatingCustomGame", (function() {
                     return !1
@@ -11682,9 +11703,9 @@
                                 this.showParty()
                             };
                             this.set("selected.isUpdatingSelection", !0);
-                            const s = this.get("selected.gameMode");
-                            let a;
-                            return a = this.changePartyGameConfig(), a.then((() => {
+                            const s = this.get("selected.gameMode"),
+                                a = this.get("selected.queueId");
+                            return (this.get("shouldRemakeParty") ? i.PartyAPI.leaveLobby().then((() => i.PartyAPI.createLobby(a))) : this.changePartyGameConfig()).then((() => {
                                 i.Telemetry.recordCriticalFlow("UI_LOBBY_CREATED", !0, {
                                     lobbyType: s
                                 }), o(), i.datadogRum.stopOperationWithOk(i.datadogRum.XP_CGL_PREGAME_LOBBY_CREATE)
@@ -11710,13 +11731,24 @@
                     this.set("selected.isCreatingCustomGame", t), t || this.set("selected.needsAdditionalGameConfig", !1), this.set("selected.isJoiningCustomGame", !1), this.set("selected.isTrainingGame", !1)
                 },
                 shouldRemakeParty: i.Ember.computed("bridgeService.bridgeEnabled", "lobbiesService.inLobby", "lobbiesService.gameMode", "selected.gameMode", (function() {
-                    return !1
+                    const e = this.get("bridgeService.bridgeEnabled"),
+                        t = this.get("lobbiesService.inLobby"),
+                        n = "TFT" === this.get("lobbiesService.gameMode"),
+                        i = "TFT" === this.get("selected.gameMode");
+                    return e && t && (!n && i || n && !i)
                 })),
                 shouldShowPartyRemakeWarning: i.Ember.computed("shouldRemakeParty", "showingState.isInViewport", "showingState.isShowingGameSelect", "lobbiesService.isSolo", "confirmButtonEnabled", (function() {
-                    return !1
+                    const e = this.get("shouldRemakeParty"),
+                        t = this.get("showingState.isInViewport"),
+                        n = this.get("showingState.isShowingGameSelect"),
+                        i = this.get("lobbiesService.isSolo"),
+                        o = this.get("confirmButtonEnabled");
+                    return e && t && n && !i && o
                 })),
                 partyRemakeWarningTooltipText: i.Ember.computed("tra.game_select_party_remake_warning_tft_to_league", "tra.game_select_party_remake_warning_league_to_tft", "lobbiesService.gameMode", "selected.gameMode", (function() {
-                    return ""
+                    const e = "TFT" === this.get("lobbiesService.gameMode"),
+                        t = "TFT" === this.get("selected.gameMode");
+                    return !e && t ? this.get("tra.game_select_party_remake_warning_league_to_tft") : this.get("tra.game_select_party_remake_warning_tft_to_league")
                 })),
                 actions: {
                     confirmButton: function() {
@@ -11857,7 +11889,7 @@
                     return this.get("customGamesService.localSummonerLevel") >= this.get("customGameSubCategoryMinLevel")
                 })),
                 isDisabled: i.Ember.computed("noQueues", "noEligibleQueues", "isTraining", "customGameSubCategoryExists", "customGameSubCategoryMinLevelEligible", "hasSoloEligibilityWarning", "isUnsupportedGameMode", (function() {
-                    return this.get("requiresCustomGameSubCategory") ? !this.get("customGameSubCategoryExists") || !this.get("customGameSubCategoryMinLevelEligible") : this.get("isTraining") ? this.get("eligibilityService").isTutorialRestricted() : !!this.get("hasSoloEligibilityWarning") || this.get("noQueues")
+                    return !!this.get("isUnsupportedGameMode") || (this.get("requiresCustomGameSubCategory") ? !this.get("customGameSubCategoryExists") || !this.get("customGameSubCategoryMinLevelEligible") : this.get("isTraining") ? this.get("eligibilityService").isTutorialRestricted() : !!this.get("hasSoloEligibilityWarning") || this.get("noQueues"))
                 })),
                 shouldShowEligibilityWarning: i.Ember.computed("hasTeamEligibilityWarning", "hasSoloEligibilityWarning", "showTFTLaunchButton", (function() {
                     return this.get("hasTeamEligibilityWarning") || this.get("hasSoloEligibilityWarning")
@@ -12149,7 +12181,11 @@
                     }
                 },
                 isUnsupportedGameMode: i.Ember.computed("isTFT", "tftBridgeService.bridgeEnabled", "tftBridgeService.blockTFTMode", "fullLaunchService.fullLaunchEnabled", (function() {
-                    return !1
+                    const e = this.get("isTFT"),
+                        t = this.get("tftBridgeService"),
+                        n = this.get("tftBridgeService.bridgeEnabled"),
+                        i = t.shouldBlockTFTMode();
+                    return e && n && i
                 })),
                 isFlyoutOpen: !1,
                 flyoutTooltipText: i.Ember.computed("tra.tft_mode_unsupportedclientplatform_tooltip", "tra.tft_mode_unsupportedclientplatform_link", (function() {
@@ -12160,7 +12196,7 @@
                 })),
                 actions: {
                     selectGameType: function() {
-                        this.get("animationLock") || (this.get("isDisabled") ? this.playSound("/fe/lol-uikit/sfx-uikit-button-locked-click.ogg") : this.get("isCurrentlySelected") || this._selectQueue())
+                        this.get("animationLock") || (this.get("isDisabled") ? (this.playSound("/fe/lol-uikit/sfx-uikit-button-locked-click.ogg"), this.get("isUnsupportedGameMode") && this.set("isFlyoutOpen", !this.get("isFlyoutOpen"))) : this.get("isCurrentlySelected") || this._selectQueue())
                     },
                     selectCategory: function(e) {
                         this.get("isCurrentlySelected") && !this.get("isDisabled") && this.sendAction("selectQueue", {
@@ -14533,11 +14569,9 @@
                     return this.get("patcherService.isConnected") || (e = i.tra.get("parties_patcher_not_connected")), this.get("hasRankedDivisionRestriction") ? e = this.get("tra.game_select_queue_restriction_party_teamdivisionrestriction") : this.get("isPremadeRestrictedFives") ? e = this.get("tra.parties_premade_size_five_restriction") : this.get("lobbiesService.canStartMatchmaking") || (e = this.get("readyWarning") ? this.get("readyWarning") : this.get("tra.parties_position_select_members_required_tooltip")), this.get("displayNotLeaderTooltip") ? e = this.get("customGamesService.isCustomUI") ? this.get("tra.parties_start_game_wait_for_captain") : this.get("tra.parties_find_match_wait_for_captain") : this.get("hasPenaltyTime") && (e = this.get("queueErrorMessage")), this.get("hasQueueAvailabilityWarning") ? this.get("queueAvailabilityWarningTooltip") : e.replace(/\n/, "<br>")
                 })),
                 confirmButtonShowBridgeTooltip: i.Ember.computed("bridgeService.hasSeenBridgeTftTooltip", "bridgeService.bridgeEnabled", "confirmButtonShowTooltip", "confirmButtonDisabled", "showingState.isShowingParty", "showingState.isInViewport", (function() {
-                    return !1
+                    return this.get("bridgeService.bridgeEnabled") && !this.get("bridgeService.hasSeenBridgeTftTooltip") && !this.get("confirmButtonShowTooltip") && !this.get("confirmButtonDisabled") && this.get("showingState.isShowingParty") && this.get("showingState.isInViewport")
                 })),
-                shouldUseV2FooterNotifications: i.Ember.computed("bridgeService.bridgeEnabled", (function() {
-                    return !1
-                })),
+                shouldUseV2FooterNotifications: i.Ember.computed.alias("bridgeService.bridgeEnabled"),
                 closeButtonDisabled: i.Ember.computed.or("animationLock"),
                 closeButtonText: i.Ember.computed("tra.ready", "tra.parties_button_quit", "tra.parties_button_quit_matchmaking", "isInQueue", (function() {
                     return this.get("isInQueue") ? this.get("tra.parties_button_quit_matchmaking") : this.get("tra.parties_button_quit")
@@ -16120,10 +16154,16 @@
                 notDraftPick: i.Ember.computed.not("showPositionSelector"),
                 hasLobbyRestrictions: i.Ember.computed.or("eligibilitiesEntity.hasLobbyRestrictions", "eligibilitiesEntity.playerRestrictions", "shouldShowPremadeSizeError"),
                 shouldShowRestrictionTooltip: i.Ember.computed("restrictions", "queuesEntity", "lobbiesService.queueId", (function() {
+                    const e = this.get("queuesEntity"),
+                        t = this.get("lobbiesService.queueId"),
+                        n = e.getQueueById(t);
+                    if (n && n.gameMode === a.TFT_GAME_MODE) {
+                        return this.get("eligibilitiesEntity").applyRestrictionGroupRules(this.get("restrictions")).length > 1
+                    }
                     return !1
                 })),
                 hasTFTNewPlayerRestriction: i.Ember.computed("restrictions", (function() {
-                    return !1
+                    return !!this.get("restrictions").find((e => e.restrictionCode === r.TFT_NEW_PLAYER_RESTRICTION))
                 })),
                 hidePositionWarning: i.Ember.computed.or("matchmakingService.isInQueue", "currentTeamIsFull", "notDraftPick"),
                 hideAutofillStatus: i.Ember.computed.alias("hidePositionWarning"),
@@ -16135,7 +16175,12 @@
                     return 0
                 })),
                 clientPlatformRestrictions: i.Ember.computed("restrictions", "restrictions.[]", "currentPlayer.summonerId", "tra.ready", (function() {
-                    0
+                    const e = this.get("restrictions"),
+                        t = r.UNSUPPORTED_CLIENT_PLATFORM_RESTRICTION,
+                        n = e.find((e => e.restrictionCode === t));
+                    if (n) {
+                        return `${n.summonerIds.includes(this.get("currentPlayer.summonerId"))?this.get("tra.game_select_queue_restriction_party_unsupportedclientplatform_self"):this.get("tra.game_select_queue_restriction_party_unsupportedclientplatform")} ${this.get("tra.game_select_queue_restriction_party_unsupportedclientplatform_link")}`
+                    }
                 })),
                 QPLobbyRestrictions: i.Ember.computed("restrictions", "restrictions.[]", "currentPlayer.summonerId", "tra.ready", "lobbiesService.queueId", (function() {
                     const e = this.get("restrictions"),
@@ -16183,7 +16228,7 @@
                 })),
                 shouldDisplayInDemandChampionWarning: i.Ember.computed.or("hasInDemandChampionWarning", "hasTeamInDemandChampionWarning"),
                 hasPartyUnrankedWarning: i.Ember.computed("warnings.[]", (function() {
-                    return !1
+                    return (this.get("warnings") || []).some((e => "FullPartyUnranked" === e.restrictionCode))
                 })),
                 partyUnrankedWarning: i.Ember.computed.alias("tra.parties_unranked_warning"),
                 mmrStandardDeviationWarning: i.Ember.computed.alias("tra.parties_large_skill_gap_warning"),
@@ -16268,13 +16313,15 @@
                         const e = this.get("queuesEntity"),
                             t = this.get("lobbiesService.queueId"),
                             n = e.getQueueById(t);
-                        return n && n.gameMode === a.CHERRY_GAME_MODE ? this.get("tra.game_select_queue_restriction_party_cherrypartyineligiblesize") : this.get("tra").formatString("game_select_queue_restriction_party_teamsizerestriction", {
+                        return r.PAIRS_QUEUE_IDS.includes(t) ? this.get("tra.game_select_queue_restriction_party_doubleupteamsizerestriction") : n && n.gameMode === a.CHERRY_GAME_MODE ? this.get("tra.game_select_queue_restriction_party_cherrypartyineligiblesize") : this.get("tra").formatString("game_select_queue_restriction_party_teamsizerestriction", {
                             teamSizeRestriction: this.get("teamSizeRestrictionMembers")
                         })
                     }
                     if (this.get("hasTFTNewPlayerRestriction") && this.get("eligibilityService.partyHasNewTFTPlayer")) return this.get("tftNewPlayerErrorText");
-                    const t = this.get("disabledReasons");
-                    return t && t.length > 0 ? t.find((e => e[0])) : ""
+                    const t = this.get("clientPlatformRestrictions");
+                    if (t) return t;
+                    const n = this.get("disabledReasons");
+                    return n && n.length > 0 ? n.find((e => e[0])) : ""
                 })),
                 restrictionsTooltipTextObserver: i.Ember.on("init", i.Ember.observer("teamSizeRestrictionMembers", "hasLobbyRestrictions", "restrictions.@each.restrictionCode", "restrictions.@each.summonerIdsString", "restrictions.@each.puuidsString", "restrictions", "currentPartyMembers", "lobbiesService.currentPartyMembers.@each.summonerId", "lobbiesService.queueId", "tra.ready", (function() {
                     i.Ember.run.once(this, (() => {
@@ -17659,7 +17706,8 @@
                     return this.get("_tryingToViewRankedProgression") && this.get("rankedProgressionEnabled") && this.get("isRanked")
                 })),
                 gameModeProgressionEnabled: i.Ember.computed("gameMode", (function() {
-                    return "KIWI" === this.get("gameMode")
+                    const e = this.get("gameMode");
+                    return "KIWI" === e || "KIWI_JADE" === e
                 })),
                 _tryingToViewGameModeProgression: !0,
                 viewingGameModeProgression: i.Ember.computed("_tryingToViewGameModeProgression", "gameModeProgressionEnabled", (function() {
@@ -17859,10 +17907,10 @@
                     return this.get("eventHubService").getActiveEventForGameMode(this.get("gameMode"))
                 })),
                 missionType: i.Ember.computed("gameMode", (function() {
-                    return "KIWI" === this.get("gameMode") ? "LOL_MAYHEM_DAILY" : null
+                    return "KIWI" === this.get("gameMode") || "KIWI_JADE" === this.get("gameMode") ? "LOL_MAYHEM_DAILY" : null
                 })),
                 missionObjectiveGroup: i.Ember.computed("gameMode", (function() {
-                    return "KIWI" === this.get("gameMode") ? "Mayhem_Daily_Pooled_Objectives" : null
+                    return "KIWI" === this.get("gameMode") || "KIWI_JADE" === this.get("gameMode") ? "Mayhem_Daily_Pooled_Objectives" : null
                 })),
                 actions: {
                     navigateToEventHub() {
@@ -22704,9 +22752,14 @@
                 layout: n(571),
                 classNames: ["ranked-ftux-modal"],
                 queueTypeQueueId: 710,
-                gameModeTitleText: i.Ember.computed("tra", (function() {
+                region: window.RIOT.CONSTANTS.regionLocale.region,
+                infoUrl: i.Ember.computed("region", (function() {
+                    return "TENCENT" === this.get("region") ? "https://lol.qq.com/news/detail.shtml?docid=3793875343098578394" : "https://www.leagueoflegends.com/news/dev/dev-the-return-of-ranked-5s"
+                })),
+                gameModeTitleText: i.Ember.computed("tra", "infoUrl", (function() {
+                    const e = this.get("infoUrl");
                     return this.get("tra").formatString("RANKED_FIVES_FTUX_TITLE_TEXT_1", {
-                        url: "https://www.leagueoflegends.com/news/dev/dev-the-return-of-ranked-5s"
+                        url: e
                     })
                 }))
             });
@@ -25422,6 +25475,8 @@
                     e.default.PromethiumModules = t.getPromethiumModules(), e.default.tra = e.default.tra.overlay("/fe/lol-tft-promethium/trans.json")
                 }), (() => null)), t.getOptional("rcp-fe-lol-strawberry-hub").then((t => {
                     e.default.StrawberryModules = t.getStrawberryModules(), e.default.tra = e.default.tra.overlay("/fe/lol-strawberry-hub/trans.json")
+                }), (() => null)), t.getOptional("rcp-fe-tft").then((t => {
+                    e.default.TftBridgeComponents = t.getBridgeComponents(), e.default.tra = e.default.tra.overlay("/fe/tft/trans.json")
                 }), (() => null))
             })).then((() => {
                 const t = new(__webpack_require__(3));

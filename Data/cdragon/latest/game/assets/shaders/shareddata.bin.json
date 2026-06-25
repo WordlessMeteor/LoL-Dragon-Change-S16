@@ -9,7 +9,6 @@
             "{d8907437}",
             "{cb07a94b}",
             "{b2db15bc}",
-            "{b4d758b6}",
             "{6ab0703d}",
             "{6500c3ef}",
             "{75055a4d}",
@@ -229,13 +228,6 @@
                 "__type": "X3DSharedTextureDef"
             },
             {
-                "name": "DYNAMIC_PER_PARTICLE_INST",
-                "BindLocation": 0,
-                "frequency": 2,
-                "SAMPLER": "{a6bded4f}",
-                "__type": "X3DSharedTextureDef"
-            },
-            {
                 "name": "CLUSTER_MAP",
                 "type": 1,
                 "{67542274}": 1,
@@ -288,7 +280,10 @@
             "{b40cd67c}",
             "{51bfd9ae}",
             "{a7d7f4a0}",
-            "{0df3cfcb}"
+            "{0df3cfcb}",
+            "{4826710d}",
+            "{3359c942}",
+            "{14725299}"
         ],
         "{08f782f8}": [
             {
@@ -296,6 +291,15 @@
                 "{a1d375b5}": 2,
                 "{52fc6665}": 14,
                 "{9d17b3be}": "{f15a89f3}",
+                "__type": "{4bcf438a}"
+            },
+            {
+                "name": "ParticleInstanceInfo",
+                "BindLocation": 0,
+                "frequency": 2,
+                "{a1d375b5}": 2,
+                "{52fc6665}": 14,
+                "{9d17b3be}": "{97746434}",
                 "__type": "{4bcf438a}"
             }
         ],
@@ -370,6 +374,23 @@
         "{b6887851}": 4,
         "__type": "{429c75be}"
     },
+    "{14725299}": {
+        "name": "Clamp_Linear_Mip",
+        "__type": "{429c75be}"
+    },
+    "{3359c942}": {
+        "name": "EnvironmentWrap",
+        "{82ab734b}": 0,
+        "{83ab74de}": 0,
+        "{84ab7671}": 0,
+        "{b6887851}": 4,
+        "__type": "{429c75be}"
+    },
+    "{4826710d}": {
+        "name": "EnvironmentClamp",
+        "{b6887851}": 4,
+        "__type": "{429c75be}"
+    },
     "{51bfd9ae}": {
         "name": "Mirror",
         "{82ab734b}": 2,
@@ -429,7 +450,7 @@
                 "__type": "X3DSharedConstantDef"
             },
             {
-                "name": "SHADOW_PROJECTION_MATRIX",
+                "name": "mShadowProj",
                 "type": 9,
                 "__type": "X3DSharedConstantDef"
             },
@@ -495,6 +516,11 @@
             },
             {
                 "name": "DRAGON_TERRAIN",
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "VERY_LOW_ENV_QUALITY_MODE",
+                "type": 4,
                 "__type": "X3DSharedConstantDef"
             }
         ],
@@ -716,6 +742,11 @@
             {
                 "name": "mViewInv",
                 "type": 9,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "VERY_LOW_ENV_QUALITY_MODE",
+                "type": 4,
                 "__type": "X3DSharedConstantDef"
             }
         ],
@@ -988,17 +1019,6 @@
                 "name": "TransitionPositions",
                 "type": 3,
                 "Count": 5,
-                "__type": "X3DSharedConstantDef"
-            }
-        ],
-        "__type": "X3DSharedConstantBufferDef"
-    },
-    "{b4d758b6}": {
-        "name": "ShadowPassVS",
-        "constants": [
-            {
-                "name": "mShadowProj",
-                "type": 9,
                 "__type": "X3DSharedConstantDef"
             }
         ],

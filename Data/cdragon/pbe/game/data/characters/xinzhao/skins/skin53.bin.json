@@ -1,5 +1,5 @@
 {
-    "{e49b5036}": {
+    "Characters/XinZhao/Skins/Skin53": {
         "skinClassification": 1,
         "championSkinName": "XinZhaoSkin53",
         "metaDataTags": "faction:demacia,gender:male,race:human,skinline:worldchampions2025",
@@ -169,7 +169,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{69bb53f9}",
+            "animationGraphData": "Characters/XinZhao/Animations/Skin53",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -192,7 +192,7 @@
             "submeshRenderOrder": "Body Hair Weapon Clothes Leg Eyemask Shield Hammer Trophy23 Trophy24 Trophy25 WeaponEdge Gemstone Gemstone1 Gemstone2 VFXPlane Arm Ribbon",
             "materialOverride": [
                 {
-                    "Material": "{8db958c9}",
+                    "Material": "Characters/XinZhao/Skins/Skin53/Materials/DarkStar_inst",
                     "submesh": "Weapon",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -207,12 +207,12 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{435d7cee}",
+                    "Material": "Characters/XinZhao/Skins/Skin53/Materials/Arm",
                     "submesh": "Arm",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{394d35f7}",
+                    "Material": "Characters/XinZhao/Skins/Skin53/Materials/Diffuse_Bloom_inst",
                     "submesh": "Ribbon",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -257,22 +257,22 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{87e94acf}",
+                    "Material": "Characters/XinZhao/Skins/Skin53/Materials/HKG_MatCap_Diff_Alpha_inst",
                     "submesh": "Gemstone",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{87e94acf}",
+                    "Material": "Characters/XinZhao/Skins/Skin53/Materials/HKG_MatCap_Diff_Alpha_inst",
                     "submesh": "Gemstone1",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{87e94acf}",
+                    "Material": "Characters/XinZhao/Skins/Skin53/Materials/HKG_MatCap_Diff_Alpha_inst",
                     "submesh": "Gemstone2",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{394d35f7}",
+                    "Material": "Characters/XinZhao/Skins/Skin53/Materials/Diffuse_Bloom_inst",
                     "submesh": "Ribbon1",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -282,7 +282,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{394d35f7}",
+                    "Material": "Characters/XinZhao/Skins/Skin53/Materials/Diffuse_Bloom_inst",
                     "submesh": "Ribbon2",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -339,7 +339,7 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{6d1207ec}",
+        "mResourceResolver": "Characters/XinZhao/Skins/Skin53/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -445,6 +445,62 @@
                                 "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Bard/Spells/BardRAbility/BardRStasis",
+                                "mDeactivateEarlySeconds": -1.0,
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Cassiopeia/Spells/CassiopeiaRAbility/CassiopeiaRStun",
+                                "mDeactivateEarlySeconds": -1.0,
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mScriptName": "LissandraPassiveVictim",
+                                "mDeactivateEarlySeconds": -1.0,
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Ornn/Spells/OrnnWAbility/OrnnVulnerableDebuff",
+                                "mDeactivateEarlySeconds": -1.0,
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Shared/Spells/ZhonyasRingShield",
+                                "mDeactivateEarlySeconds": -1.0,
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Brand/Spells/BrandPassiveAbility/BrandAblaze",
+                                "mDeactivateEarlySeconds": -1.0,
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "mScriptName": "SennaEWraithForm",
+                                "mDeactivateEarlySeconds": -1.0,
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
                         }
                     ],
                     "__type": "AllTrueMaterialDriver"
@@ -461,7 +517,7 @@
         ],
         "__type": "SkinCharacterDataProperties"
     },
-    "{394d35f7}": {
+    "Characters/XinZhao/Skins/Skin53/Materials/Diffuse_Bloom_inst": {
         "name": "Characters/XinZhao/Skins/Skin53/Materials/Diffuse_Bloom_inst",
         "samplerValues": [
             {
@@ -597,9 +653,38 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Bloom_Intensity",
+                    "driver": {
+                        "mElements": [
+                            {
+                                "mCondition": {
+                                    "mScriptName": "SennaEWraithForm",
+                                    "mDeactivateEarlySeconds": -1.0,
+                                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                                },
+                                "mValue": {
+                                    "__type": "FloatLiteralMaterialDriver"
+                                },
+                                "__type": "SwitchMaterialDriverElement"
+                            }
+                        ],
+                        "mDefaultValue": {
+                            "mValue": 1.5499999523162842,
+                            "__type": "FloatLiteralMaterialDriver"
+                        },
+                        "__type": "SwitchMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
         "__type": "StaticMaterialDef"
     },
-    "{435d7cee}": {
+    "Characters/XinZhao/Skins/Skin53/Materials/Arm": {
         "name": "Characters/XinZhao/Skins/Skin53/Materials/Arm",
         "samplerValues": [
             {
@@ -1118,7 +1203,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{87e94acf}": {
+    "Characters/XinZhao/Skins/Skin53/Materials/HKG_MatCap_Diff_Alpha_inst": {
         "name": "Characters/XinZhao/Skins/Skin53/Materials/HKG_MatCap_Diff_Alpha_inst",
         "samplerValues": [
             {
@@ -1264,7 +1349,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{8db958c9}": {
+    "Characters/XinZhao/Skins/Skin53/Materials/DarkStar_inst": {
         "name": "Characters/XinZhao/Skins/Skin53/Materials/DarkStar_inst",
         "samplerValues": [
             {
@@ -1456,9 +1541,28 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
+        "dynamicMaterial": {
+            "textures": [
+                {
+                    "name": "Diffuse_Texture",
+                    "options": [
+                        {
+                            "driver": {
+                                "Spell": "Characters/Bard/Spells/BardRAbility/BardRStasis",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "TextureName": "ASSETS/Characters/Bard/Skins/Base/Particles/common_ItemZhonya_Base_P_speed_swirl_mult.tex",
+                            "__type": "DynamicMaterialTextureSwapOption"
+                        }
+                    ],
+                    "__type": "DynamicMaterialTextureSwapDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
         "__type": "StaticMaterialDef"
     },
-    "{4da373ae}": {
+    "Characters/XinZhao/Skins/Skin53/Particles/XinZhao_Skin53_Idle_Wave01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2345,7 +2449,7 @@
         ],
         "__type": "VfxSystemDefinitionData"
     },
-    "{7183d57b}": {
+    "Characters/XinZhao/Skins/Skin53/Particles/XinZhao_Skin53_W_WeaponSpin": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2511,7 +2615,7 @@
         "particlePath": "Characters/XinZhao/Skins/Skin53/Particles/XinZhao_Skin53_W_WeaponSpin",
         "__type": "VfxSystemDefinitionData"
     },
-    "{6d1207ec}": {
+    "Characters/XinZhao/Skins/Skin53/Resources": {
         "resourceMap": {
             "XinZhao_BA_Crit_Tar": "{600bf6fb}",
             "XinZhao_BA_Tar": "{109c05a7}",
@@ -2606,7 +2710,7 @@
             "XinZhao_Q_Swipe_01_Tar": "{c495ee85}",
             "XinZhao_Q_Swipe_02_Tar": "{1bd31ffa}",
             "XinZhao_Q_Swipe_03_Tar": "{f120098f}",
-            "XinZhao_W_WeaponSpin": "{7183d57b}",
+            "XinZhao_W_WeaponSpin": "Characters/XinZhao/Skins/Skin53/Particles/XinZhao_Skin53_W_WeaponSpin",
             "XinZhao_W_Spin_Tar": "{39078452}",
             "XinZhao_R_Cas": "{e8054f5f}",
             "XinZhao_BA_01": "{bc13c27b}",
@@ -2627,7 +2731,7 @@
             "{1ee009a6}": "{6b35cc20}",
             "{1fe00b39}": "{6c35cdb3}",
             "{588ff873}": "{d62d5c8e}",
-            "{92015a90}": "{4da373ae}",
+            "{92015a90}": "Characters/XinZhao/Skins/Skin53/Particles/XinZhao_Skin53_Idle_Wave01",
             "{3f068dd6}": "{972fb8ec}",
             "{3e068c43}": "{9a2fbda5}",
             "{3d068ab0}": "{992fbc12}",

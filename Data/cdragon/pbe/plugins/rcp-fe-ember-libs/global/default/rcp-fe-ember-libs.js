@@ -57854,7 +57854,7 @@
                 PatcherEvents: l,
                 Telemetry: u,
                 datadogRum: c
-            } = n(1), h = ["Lobby", "Matchmaking", "ReadyCheck", "ChampSelect"], p = a({
+            } = n(1), h = ["Lobby", "Matchmaking", "ReadyCheck", "ChampSelect"], p = "Windows", d = a({
                 Ember: o,
                 websocket: s().getSocket(),
                 logPrefix: "service:play-button",
@@ -57937,7 +57937,7 @@
                     }
                 }
             });
-            t.exports = o.Service.extend(p, {
+            t.exports = o.Service.extend(d, {
                 patcherService: o.inject.service("patcher"),
                 summoner: o.inject.service("summoner"),
                 hasUnlockedAfterLogin: !1,
@@ -58001,7 +58001,7 @@
                 supportsMacMetal: o.computed.not("needsToUpdateMacGraphicsHardware"),
                 isWindowsMinVer: o.computed("systemInfo", (function() {
                     const t = this.get("systemInfo.operatingSystem");
-                    return !t || ("Windows" !== t.platform || t.versionMajor >= 10)
+                    return !t || (t.platform !== p || t.versionMajor >= 10)
                 })),
                 isTencentRegion: o.computed("regionLocale", (function() {
                     return "TENCENT" === this.get("regionLocale.region")
@@ -58010,6 +58010,17 @@
                     return "RIOT" === this.get("regionLocale.region")
                 })),
                 isTencentWindowsMinVer: o.computed("systemInfo", "tencentOSCheckEnabled", (function() {
+                    const t = this.get("systemInfo.operatingSystem");
+                    if (this.get("tencentOSCheckEnabled")) {
+                        if (t) {
+                            if (t.platform !== p) return !0;
+                            {
+                                const t = this.get("systemInfo.operatingSystem.versionMajor");
+                                return (parseInt(t) || 0) > 7
+                            }
+                        }
+                        return !0
+                    }
                     return !0
                 })),
                 isTencentOSCheckPassed: o.computed.and("isTencentRegion", "isTencentWindowsMinVer"),

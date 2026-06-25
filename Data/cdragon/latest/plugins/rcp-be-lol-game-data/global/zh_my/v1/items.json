@@ -182,7 +182,6 @@
             324005,
             3135,
             3165,
-            4005,
             4637,
             6621,
             6657
@@ -696,6 +695,7 @@
             326616,
             3802,
             3916,
+            4005,
             4630,
             4637,
             4642,
@@ -1277,7 +1277,7 @@
     {
         "id": 1120,
         "name": "多兰之盔",
-        "description": "<mainText><stats><attention> 140</attention> 生命<br><attention> 10</attention>  物理防御<br><attention> 10</attention> 魔法防御</stats><br><br><passive>援助之手</passive><br>普攻对士兵造成<physicalDamage>5额外物理伤害</physicalDamage>。</mainText>",
+        "description": "<mainText><stats><attention> 150</attention> 生命<br><attention> 8</attention>  物理防御<br><attention> 8</attention> 魔法防御</stats><br><br><passive>援助之手</passive><br>普攻对士兵造成<physicalDamage>5额外物理伤害</physicalDamage>。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8394,12 +8394,13 @@
     {
         "id": 4005,
         "name": "帝王命令",
-        "description": "<mainText><stats><attention> 65</attention>  魔法攻击<br><attention> 15</attention> 技能疾速<br><attention> 150%</attention> 基础魔力回复</stats><br><br><passive>控制</passive><br>带有<keyword>定身</keyword>效果的技能获得 15技能加速。<br><br><passive>号令</passive><br>当你<keyword>定身</keyword>一名敌方英雄时，使其被标记6%的<Keyword>脆弱</Keyword>状态，持续4秒。<br></mainText>",
+        "description": "<mainText><stats><attention> 60</attention>  魔法攻击<br><attention> 15</attention> 技能疾速<br><attention> 150%</attention> 基础魔力回复</stats><br><br><passive>控制</passive><br>带有<keyword>定身</keyword>效果的技能获得 20技能加速。<br><br><passive>号令</passive><br>当你<keyword>定身</keyword>一名敌方英雄时，使其被标记7%的<Keyword>脆弱</Keyword>状态，持续4秒。<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [
-            1026,
-            4642
+            1052,
+            4642,
+            1052
         ],
         "to": [],
         "categories": [
@@ -8415,7 +8416,7 @@
         "requiredBuffCurrencyCost": 0,
         "specialRecipe": 0,
         "isEnchantment": false,
-        "price": 650,
+        "price": 700,
         "priceTotal": 2400,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/4005_Enchanter_T4_ImperialMandate.png"
@@ -8554,7 +8555,7 @@
     {
         "id": 4015,
         "name": "困惑",
-        "description": "<mainText><stats><attention> 60</attention>  魔法攻击<br><attention> 5%</attention> 移动速度<br><attention> 22%</attention> 物理穿透<br><attention> 30%</attention> 魔法穿透</stats><br><br><passive>巨人杀手</passive><br>对抗最大生命值比你高的英雄时，最多造成15%额外伤害。<br><br><rules>生命值差距达到2500时，伤害加成达到最大值。</rules></mainText>",
+        "description": "<mainText><stats><attention> 60</attention>  魔法攻击<br><attention> 5%</attention> 移动速度<br><attention> 22%</attention> 物理穿透<br><attention> 30%</attention> 魔法穿透</stats><br><br><passive>巨人杀手</passive><br>对抗最大生命值比你高的英雄时，最多造成15%额外伤害。<br><br><rules>生命值差距达到3000时，伤害加成达到最大值。</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8582,7 +8583,7 @@
     {
         "id": 4016,
         "name": "无言盟誓",
-        "description": "<mainText><stats><attention> 50</attention>  魔法攻击<br><attention> 15%</attention> 治愈及护盾强度<br><attention> 25</attention> 技能疾速</stats><br><br><passive>誓言</passive><br>获得<attention>宣誓</attention><scaleAP>友军15%的魔法攻击</scaleAP>，并向<attention>宣誓</attention>友军提供15%自身技能加速。<br><br><active>主动</active>（0秒）<br><active>誓言</active><br>向一名友军许下<attention>誓言</attention>。</mainText>",
+        "description": "<mainText><stats><attention> 50</attention>  魔法攻击<br><attention> 15%</attention> 治愈及护盾强度<br><attention> 25</attention> 技能疾速</stats><br><br><passive>誓言</passive><br>获得<attention>宣誓</attention><scaleAP>友军10%的魔法攻击</scaleAP>，并向<attention>宣誓</attention>友军提供10%自身技能加速。<br><br><active>主动</active>（0秒）<br><active>誓言</active><br>向一名友军许下<attention>誓言</attention>。</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -8607,7 +8608,7 @@
     {
         "id": 4017,
         "name": "狱火战斧",
-        "description": "<mainText><stats><attention> 35</attention> 物理攻击<br><attention>12</attention>物理致命</stats><br><br><passive>烧焦</passive>每个目标（0秒）<br>你的下个技能命中时会<keywordMajor>燃烧</keywordMajor>敌人，在4秒内造成<scaleAD>0至0当前生命值的物理伤害</scaleAD>，燃烧伤害会随着你与目标的<scaleHealth>最大生命值</scaleHealth>差额而提升。<br><br><rules>当生命值差额达到3000时，额外伤害将达到上限</rules></mainText>",
+        "description": "<mainText><stats><attention> 40</attention> 物理攻击<br><attention>12</attention>物理致命</stats><br><br><passive>烧焦</passive>每个目标（0秒）<br>你的下个技能命中时会<keywordMajor>燃烧</keywordMajor>敌人，在4秒内造成<scaleAD>0至0当前生命值的物理伤害</scaleAD>，燃烧伤害会随着你与目标的<scaleHealth>最大生命值</scaleHealth>差额而提升。<br><br><rules>当生命值差额达到3000时，额外伤害将达到上限</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13440,7 +13441,7 @@
     {
         "id": 223069,
         "name": "虚空献祭",
-        "description": "<mainText><stats><attention> 1000</attention> 生命<br><attention> 100</attention>  物理防御<br><attention> 80</attention> 魔法防御<br><attention> 25</attention> 技能疾速<br><attention> 200%</attention> 基础生命回复</stats><br><br><passive>献祭</passive><br>承受或造成伤害后，每秒对附近敌人造成<magicDamage>0魔法伤害</magicDamage>，持续5秒。 </mainText>",
+        "description": "<mainText><stats><attention> 1000</attention> 生命<br><attention> 100</attention>  物理防御<br><attention> 80</attention> 魔法防御<br><attention> 25</attention> 技能疾速<br><attention> 200%</attention> 基础生命回复</stats><br><br><passive>献祭</passive><br>承受或造成伤害后，每秒对附近敌人造成<magicDamage>0魔法伤害</magicDamage>，持续5秒。<br><br><passive>荒芜</passive><br>击杀一名敌人，可在其附近造成<magicDamage>魔法伤害</magicDamage>。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15871,7 +15872,7 @@
     {
         "id": 226692,
         "name": "日月双蚀",
-        "description": "<mainText><stats><attention> 50</attention> 物理攻击<br><attention> 10</attention> 技能疾速</stats><br><br><passive>不落之月</passive><br>2秒内使用2次不同的普攻或技能命中英雄，可为你提供一道<shield>护盾</shield>，持续2秒。</mainText>",
+        "description": "<mainText><stats><attention> 60</attention> 物理攻击<br><attention> 15</attention> 技能疾速</stats><br><br><passive>不落之月</passive><br>2秒内使用2次不同的普攻或技能命中英雄，可为你提供一道<shield>护盾</shield>，持续2秒。</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16899,7 +16900,7 @@
     {
         "id": 324005,
         "name": "帝王命令",
-        "description": "<mainText><stats><attention> 65</attention>  魔法攻击<br><attention> 15</attention> 技能疾速<br><attention> 150%</attention> 基础魔力回复</stats><br><br><passive>控制</passive><br>带有<keyword>定身</keyword>效果的技能获得 15技能加速。<br><br><passive>号令</passive><br>当你<keyword>定身</keyword>一名敌方英雄时，使其被标记6%的<Keyword>脆弱</Keyword>状态，持续4秒。<br></mainText>",
+        "description": "<mainText><stats><attention> 65</attention>  魔法攻击<br><attention> 15</attention> 技能疾速<br><attention> 150%</attention> 基础魔力回复</stats><br><br><passive>控制</passive><br>带有<keyword>定身</keyword>效果的技能获得 20技能加速。<br><br><passive>号令</passive><br>当你<keyword>定身</keyword>一名敌方英雄时，使其被标记7%的<Keyword>脆弱</Keyword>状态，持续4秒。<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [

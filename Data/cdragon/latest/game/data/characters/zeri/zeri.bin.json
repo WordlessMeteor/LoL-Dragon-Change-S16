@@ -1245,6 +1245,26 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "ExcessAttackSpeedToADMult",
+                            "values": [
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929,
+                                0.800000011920929
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "ActiveDamageThatCanCrit": {
                     "mFormulaParts": [
@@ -2719,8 +2739,41 @@
                         0.550000011920929
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "APRatio",
+                            "values": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
@@ -2734,8 +2787,8 @@
                             "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.5,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -3354,6 +3407,39 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "MSPercent",
+                            "values": [
+                                0.019999999552965164,
+                                0.019999999552965164,
+                                0.019999999552965164,
+                                0.019999999552965164,
+                                0.019999999552965164,
+                                0.019999999552965164,
+                                0.019999999552965164
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "BaseBonusMS",
+                            "values": [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "TotalBonusDamage": {
                     "mFormulaParts": [
@@ -3802,6 +3888,39 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "CDReductionPerHit",
+                            "values": [
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75,
+                                0.75
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "BonusAPRatio",
+                            "values": [
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896,
+                                0.30000001192092896
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "{f9c2333e}": {
                 "ARAM": {
                     "value": [

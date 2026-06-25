@@ -1174,7 +1174,9 @@
                     "components/tft-promethium-score-row": Be.default,
                     "components/tft-promethium-progression": Ge.default,
                     "components/tft-promethium-progression-banner-spine": Ue.default
-                }), !1;
+                }), s.TftBridgeComponents && Object.assign(e, {
+                    ...s.TftBridgeComponents
+                });
                 0;
                 s.ApplicationInjector.setFactoryDefinition(e), s.emberApplicationFactory.setFactoryDefinition(a.POSTGAME_EMBER_APP_NAME, e, {
                     EMBER_CLI_COMPAT: !0
@@ -2086,9 +2088,7 @@
                 })),
                 closeButtonText: s.Ember.computed.alias("tra.postgame_scoreboard_button_nav_quit"),
                 bridgeService: s.Ember.inject.service("bridge"),
-                isUnsupportedGameMode: s.Ember.computed("bridgeService.bridgeEnabled", "bridgeService.blockTFTMode", "isTFT", (function() {
-                    return !1
-                })),
+                isUnsupportedGameMode: s.Ember.computed.and("bridgeService.bridgeEnabled", "bridgeService.blockTFTMode", "isTFT"),
                 unsupportedGameModeTooltipText: s.Ember.computed("tra.tft_mode_unsupportedclientplatform_tooltip", "tra.tft_mode_unsupportedclientplatform_link", (function() {
                     return `${this.get("tra.tft_mode_unsupportedclientplatform_tooltip")} ${this.get("tra.tft_mode_unsupportedclientplatform_link")}`
                 })),
@@ -3631,7 +3631,7 @@
                     })
                 })),
                 init() {
-                    this._super(...arguments)
+                    this._super(...arguments), this.get("bridge")
                 }
             });
             t.default = l
@@ -10577,7 +10577,7 @@
                 Viewport: e => e.get("rcp-fe-lol-shared-components").getApi_Viewport(),
                 _: e => e.get("rcp-fe-common-libs").getLodash(4)
             }).then((async () => {
-                let n = await e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-social/trans.json").overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-postgame/trans.json").overlay("/fe/lol-shared-components/trans.json").overlay("/fe/lol-shared-components/trans-challenges.json").overlay("/fe/lol-shared-components/trans-champion-mastery.json").overlay("/fe/lol-navigation/trans-activity-center.json").overlay("/fe/lol-tft-promethium/trans.json");
+                let n = await e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-social/trans.json").overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-postgame/trans.json").overlay("/fe/lol-shared-components/trans.json").overlay("/fe/lol-shared-components/trans-challenges.json").overlay("/fe/lol-shared-components/trans-champion-mastery.json").overlay("/fe/lol-navigation/trans-activity-center.json").overlay("/fe/lol-tft-promethium/trans.json").overlay("/fe/tft/trans.json");
                 const s = t.default.emberL10n(t.default.Ember, n);
                 return t.default.add({
                     tra: n,
@@ -10595,6 +10595,8 @@
                     t.default.StrawberryModules = e.getStrawberryModules(), t.default.tra = t.default.tra.overlay("/fe/lol-strawberry-hub/trans.json")
                 }), (() => null)), e.getOptional("rcp-fe-lol-tft-team-planner").then((e => {
                     t.default.TeamPlanner = e
+                }), (() => null)), e.getOptional("rcp-fe-tft").then((e => {
+                    t.default.TftBridgeComponents = e.getBridgeComponents()
                 }), (() => null)), t.default.traService = t.default.emberL10n(t.default.Ember, t.default.tra), t.default.add({
                     ApplicationInjector: a,
                     ProgressionComponentHelper: o

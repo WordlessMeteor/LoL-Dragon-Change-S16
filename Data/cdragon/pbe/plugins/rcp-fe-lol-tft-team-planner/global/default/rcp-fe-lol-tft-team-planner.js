@@ -66,8 +66,8 @@
                 _ = P(a(40)),
                 v = P(a(43)),
                 T = P(a(46)),
-                y = P(a(49)),
-                b = P(a(52)),
+                b = P(a(49)),
+                y = P(a(52)),
                 x = P(a(55)),
                 S = P(a(58)),
                 C = P(a(61)),
@@ -105,14 +105,14 @@
                         TeamEditorTraitFilterButtonComponent: _.default,
                         TeamEditorTierContainerComponent: v.default,
                         TeamEditorTierGridComponent: T.default,
-                        TeamEditorTierGridTileComponent: y.default,
+                        TeamEditorTierGridTileComponent: b.default,
                         MyTeamsPlannerService: s.default.extend({
                             privateApi: this
                         }),
                         TraitsCalculatorService: r.default.extend({
                             privateApi: this
                         }),
-                        MyTeamsRemindersToggleComponent: b.default,
+                        MyTeamsRemindersToggleComponent: y.default,
                         MyTeamsSetTabsComponent: x.default,
                         MyTeamsRootComponent: S.default,
                         MyTeamsHeaderComponent: C.default,
@@ -557,9 +557,12 @@
                     })), m.observe(s.SortOptionPath, this, (e => {
                         void 0 !== e && (this.isAZSortSupported() || 3 !== e) ? this.set("currentSortOption", e) : this.set("currentSortOption", 0)
                     })), m.observe(s.readyCheck, this, (e => {
-                        e && "Accepted" === e.playerResponse && this.saveAndExit("match-accept").then((() => {
-                            0
-                        }))
+                        if (e && "Accepted" === e.playerResponse) {
+                            if (!this.get("isVisible")) return void m.post(s.forceUploadTeamPlannerDataPath);
+                            this.saveAndExit("match-accept").then((() => {
+                                m.post(s.forceUploadTeamPlannerDataPath)
+                            }))
+                        }
                     })), m.observe(s.setPath, this, (e => {
                         e && (this.set("eventSetSelected", e === this.get("tftSets").eventSet?.SetCoreName), this.set("currentSetName", e), this.set("currentSetChampionsByAlias", this.tftChampionsBySet.get(e)), this.privateApi.currentSetName = e, this.privateApi.remindedTeamId = this.getCurrentlyRemindedTeamId(), m.post(s.dirtyTeam).then((e => {
                             this._handleLocalTeamChange(e)

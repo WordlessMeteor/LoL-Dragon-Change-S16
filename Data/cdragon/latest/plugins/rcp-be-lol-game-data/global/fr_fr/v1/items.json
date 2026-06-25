@@ -182,7 +182,6 @@
             324005,
             3135,
             3165,
-            4005,
             4637,
             6621,
             6657
@@ -696,6 +695,7 @@
             326616,
             3802,
             3916,
+            4005,
             4630,
             4637,
             4642,
@@ -1277,7 +1277,7 @@
     {
         "id": 1120,
         "name": "Casque de Doran",
-        "description": "<mainText><stats><attention> +140</attention> PV<br><attention> +10</attention> armure<br><attention> +10</attention> résistance magique</stats><br><br><passive>Coup de main</passive><br>Vos attaques infligent <physicalDamage>5 pts de dégâts physiques bonus</physicalDamage> aux sbires.</mainText>",
+        "description": "<mainText><stats><attention> +150</attention> PV<br><attention> +8</attention> armure<br><attention> +8</attention> résistance magique</stats><br><br><passive>Coup de main</passive><br>Vos attaques infligent <physicalDamage>5 pts de dégâts physiques bonus</physicalDamage> aux sbires.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8394,12 +8394,13 @@
     {
         "id": 4005,
         "name": "Mandat impérial",
-        "description": "<mainText><stats><attention> +65</attention> puissance<br><attention> +15</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Contrôle</passive><br>Vous gagnez  15 d'accélération de compétence pour vos compétences avec des effets <keyword>d'immobilisation</keyword>.<br><br><passive>Commande</passive><br>Lorsque vous <keyword>immobilisez</keyword> un champion ennemi, vous le marquez avec 6% de <Keyword>vulnérabilité</Keyword> pendant 4 sec.<br></mainText>",
+        "description": "<mainText><stats><attention> +60</attention> puissance<br><attention> +15</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Contrôle</passive><br>Vous gagnez  20 d'accélération de compétence pour vos compétences avec des effets <keyword>d'immobilisation</keyword>.<br><br><passive>Commande</passive><br>Lorsque vous <keyword>immobilisez</keyword> un champion ennemi, vous le marquez avec 7% de <Keyword>vulnérabilité</Keyword> pendant 4 sec.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [
-            1026,
-            4642
+            1052,
+            4642,
+            1052
         ],
         "to": [],
         "categories": [
@@ -8415,7 +8416,7 @@
         "requiredBuffCurrencyCost": 0,
         "specialRecipe": 0,
         "isEnchantment": false,
-        "price": 650,
+        "price": 700,
         "priceTotal": 2400,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/4005_Enchanter_T4_ImperialMandate.png"
@@ -8554,7 +8555,7 @@
     {
         "id": 4015,
         "name": "Perplexité",
-        "description": "<mainText><stats><attention> +60</attention> puissance<br><attention> +5%</attention> de vitesse de déplacement<br><attention> +22%</attention> de pénétration d'armure<br><attention> +30%</attention> de pénétration magique</stats><br><br><passive>Tueur de géants</passive><br>Vous infligez jusqu'à 15% de dégâts bonus aux champions qui ont plus de PV max que vous.<br><br><rules>Les dégâts bonus max sont atteints quand la différence de PV est supérieure à 2500.</rules></mainText>",
+        "description": "<mainText><stats><attention> +60</attention> puissance<br><attention> +5%</attention> de vitesse de déplacement<br><attention> +22%</attention> de pénétration d'armure<br><attention> +30%</attention> de pénétration magique</stats><br><br><passive>Tueur de géants</passive><br>Vous infligez jusqu'à 15% de dégâts bonus aux champions qui ont plus de PV max que vous.<br><br><rules>Les dégâts bonus max sont atteints quand la différence de PV est supérieure à 3000.</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8582,7 +8583,7 @@
     {
         "id": 4016,
         "name": "Promesse ineffable",
-        "description": "<mainText><stats><attention> +50</attention> puissance<br><attention> +15%</attention> d'efficacité des soins et boucliers<br><attention> +25</attention> accélération de compétence</stats><br><br><passive>Promesse</passive><br>Vous gagnez 15% de la <scaleAP> puissance de l'allié</scaleAP> auquel vous avez fait une <attention>promesse</attention>, et vous octroyez 15% de votre  accélération de compétence à l'allié auquel vous avez fait une <attention>promesse</attention>.<br><br> <active>PROPRIÉTÉ ACTIVE</active>  (0 sec)<br><active>Promesse</active><br>Vous faites une <attention>promesse</attention> à un allié.</mainText>",
+        "description": "<mainText><stats><attention> +50</attention> puissance<br><attention> +15%</attention> d'efficacité des soins et boucliers<br><attention> +25</attention> accélération de compétence</stats><br><br><passive>Promesse</passive><br>Vous gagnez 10% de la <scaleAP> puissance de l'allié</scaleAP> auquel vous avez fait une <attention>promesse</attention>, et vous octroyez 10% de votre  accélération de compétence à l'allié auquel vous avez fait une <attention>promesse</attention>.<br><br> <active>PROPRIÉTÉ ACTIVE</active>  (0 sec)<br><active>Promesse</active><br>Vous faites une <attention>promesse</attention> à un allié.</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -8607,7 +8608,7 @@
     {
         "id": 4017,
         "name": "Hachette infernale",
-        "description": "<mainText><stats><attention> +35</attention> dégâts d'attaque<br><attention> 12</attention> létalité</stats><br><br><passive>Carbonisation</passive>  (0 sec) par cible<br>Votre prochaine compétence réussie <keywordMajor>brûle</keywordMajor> de <scaleAD>0 à 0 des PV actuels des ennemis en leur infligeant des dégâts physiques</scaleAD> en 4 sec, selon le nombre de <scaleHealth>PV max</scaleHealth> qu'ils ont de plus que vous.<br><br><rules>Le maximum de dégâts bonus est atteint à 3000 PV de différence.</rules></mainText>",
+        "description": "<mainText><stats><attention> +40</attention> dégâts d'attaque<br><attention> 12</attention> létalité</stats><br><br><passive>Carbonisation</passive>  (0 sec) par cible<br>Votre prochaine compétence réussie <keywordMajor>brûle</keywordMajor> de <scaleAD>0 à 0 des PV actuels des ennemis en leur infligeant des dégâts physiques</scaleAD> en 4 sec, selon le nombre de <scaleHealth>PV max</scaleHealth> qu'ils ont de plus que vous.<br><br><rules>Le maximum de dégâts bonus est atteint à 3000 PV de différence.</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13440,7 +13441,7 @@
     {
         "id": 223069,
         "name": "Immolation du Néant",
-        "description": "<mainText><stats><attention> +1000</attention> PV<br><attention> +100</attention> armure<br><attention> +80</attention> résistance magique<br><attention> +25</attention> accélération de compétence<br><attention> +200%</attention> de régénération de base des PV</stats><br><br><passive>Immolation</passive><br>Subir ou infliger des dégâts vous permet d'infliger chaque seconde <magicDamage>0 pts de dégâts magiques</magicDamage> aux ennemis proches pendant 5 sec. </mainText>",
+        "description": "<mainText><stats><attention> +1000</attention> PV<br><attention> +100</attention> armure<br><attention> +80</attention> résistance magique<br><attention> +25</attention> accélération de compétence<br><attention> +200%</attention> de régénération de base des PV</stats><br><br><passive>Immolation</passive><br>Subir ou infliger des dégâts vous permet d'infliger chaque seconde <magicDamage>0 pts de dégâts magiques</magicDamage> aux ennemis proches pendant 5 sec. <br><br><passive>Désolation</passive><br>Éliminer un ennemi inflige des <magicDamage>dégâts magiques</magicDamage> autour de lui.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15871,7 +15872,7 @@
     {
         "id": 226692,
         "name": "Éclipse",
-        "description": "<mainText><stats><attention> +50</attention> dégâts d'attaque<br><attention> +10</attention> accélération de compétence</stats><br><br><passive>Lune ascendante</passive><br>Quand vous touchez un champion avec 2 attaques ou compétences distinctes en moins de 2 sec, vous gagnez un <shield>bouclier</shield> pendant 2 sec.</mainText>",
+        "description": "<mainText><stats><attention> +60</attention> dégâts d'attaque<br><attention> +15</attention> accélération de compétence</stats><br><br><passive>Lune ascendante</passive><br>Quand vous touchez un champion avec 2 attaques ou compétences distinctes en moins de 2 sec, vous gagnez un <shield>bouclier</shield> pendant 2 sec.</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16899,7 +16900,7 @@
     {
         "id": 324005,
         "name": "Mandat impérial",
-        "description": "<mainText><stats><attention> +65</attention> puissance<br><attention> +15</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Contrôle</passive><br>Vous gagnez  15 d'accélération de compétence pour vos compétences avec des effets <keyword>d'immobilisation</keyword>.<br><br><passive>Commande</passive><br>Lorsque vous <keyword>immobilisez</keyword> un champion ennemi, vous le marquez avec 6% de <Keyword>vulnérabilité</Keyword> pendant 4 sec.<br></mainText>",
+        "description": "<mainText><stats><attention> +65</attention> puissance<br><attention> +15</attention> accélération de compétence<br><attention> +150%</attention> de régénération de base du mana</stats><br><br><passive>Contrôle</passive><br>Vous gagnez  20 d'accélération de compétence pour vos compétences avec des effets <keyword>d'immobilisation</keyword>.<br><br><passive>Commande</passive><br>Lorsque vous <keyword>immobilisez</keyword> un champion ennemi, vous le marquez avec 7% de <Keyword>vulnérabilité</Keyword> pendant 4 sec.<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [

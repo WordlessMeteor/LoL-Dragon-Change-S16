@@ -182,7 +182,6 @@
             324005,
             3135,
             3165,
-            4005,
             4637,
             6621,
             6657
@@ -696,6 +695,7 @@
             326616,
             3802,
             3916,
+            4005,
             4630,
             4637,
             4642,
@@ -1277,7 +1277,7 @@
     {
         "id": 1120,
         "name": "Doran's Helm",
-        "description": "<mainText><stats>พลังชีวิต <attention> 140</attention><br>เกราะ <attention> 10</attention><br>ต้านทานเวท <attention> 10</attention></stats><br><br><passive>Helping Hand</passive><br>การโจมตีสร้าง<physicalDamage>โบนัสความเสียหายกายภาพ 5 หน่วย</physicalDamage>แก่มินเนี่ยน</mainText>",
+        "description": "<mainText><stats>พลังชีวิต <attention> 150</attention><br>เกราะ <attention> 8</attention><br>ต้านทานเวท <attention> 8</attention></stats><br><br><passive>Helping Hand</passive><br>การโจมตีสร้าง<physicalDamage>โบนัสความเสียหายกายภาพ 5 หน่วย</physicalDamage>แก่มินเนี่ยน</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8394,12 +8394,13 @@
     {
         "id": 4005,
         "name": "Imperial Mandate",
-        "description": "<mainText><stats>พลังเวท <attention> 65</attention><br>เร่งสกิล <attention> 15</attention><br>อัตราฟื้นฟูมานาพื้นฐาน <attention> 150%</attention></stats><br><br><passive>Control</passive><br>ได้รับเร่งสกิล  15 หน่วย สำหรับสกิลที่มีเอฟเฟกต์<keyword>หยุดการเคลื่อนที่</keyword><br><br><passive>Command</passive><br>เมื่อ<keyword>หยุดการเคลื่อนที่</keyword>แชมเปี้ยนศัตรู จะทำเครื่องหมาย<Keyword>เปราะบาง</Keyword>ใส่พวกเขา 6% เป็นเวลา 4 วินาที<br></mainText>",
+        "description": "<mainText><stats>พลังเวท <attention> 60</attention><br>เร่งสกิล <attention> 15</attention><br>อัตราฟื้นฟูมานาพื้นฐาน <attention> 150%</attention></stats><br><br><passive>Control</passive><br>ได้รับเร่งสกิล  20 หน่วย สำหรับสกิลที่มีเอฟเฟกต์<keyword>หยุดการเคลื่อนที่</keyword><br><br><passive>Command</passive><br>เมื่อ<keyword>หยุดการเคลื่อนที่</keyword>แชมเปี้ยนศัตรู จะทำเครื่องหมาย<Keyword>เปราะบาง</Keyword>ใส่พวกเขา 7% เป็นเวลา 4 วินาที<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [
-            1026,
-            4642
+            1052,
+            4642,
+            1052
         ],
         "to": [],
         "categories": [
@@ -8415,7 +8416,7 @@
         "requiredBuffCurrencyCost": 0,
         "specialRecipe": 0,
         "isEnchantment": false,
-        "price": 650,
+        "price": 700,
         "priceTotal": 2400,
         "displayInItemSets": true,
         "iconPath": "/lol-game-data/assets/ASSETS/Items/Icons2D/4005_Enchanter_T4_ImperialMandate.png"
@@ -8554,7 +8555,7 @@
     {
         "id": 4015,
         "name": "Perplexity",
-        "description": "<mainText><stats>พลังเวท <attention> 60</attention><br>ความเร็วเคลื่อนที่ <attention> 5%</attention><br>เจาะเกราะ <attention> 22%</attention><br>เจาะเกราะเวท <attention> 30%</attention></stats><br><br><passive>Giant Slayer</passive><br>สร้างโบนัสความเสียหายสูงสุด 15% ให้กับแชมเปี้ยนที่มีพลังชีวิตสูงสุดมากกว่าคุณ<br><br><rules>สร้างความเสียหายสูงสุดเมื่อศัตรูมีพลังชีวิตสูงสุด มากกว่าคุณ 2500 หน่วย</rules></mainText>",
+        "description": "<mainText><stats>พลังเวท <attention> 60</attention><br>ความเร็วเคลื่อนที่ <attention> 5%</attention><br>เจาะเกราะ <attention> 22%</attention><br>เจาะเกราะเวท <attention> 30%</attention></stats><br><br><passive>Giant Slayer</passive><br>สร้างโบนัสความเสียหายสูงสุด 15% ให้กับแชมเปี้ยนที่มีพลังชีวิตสูงสุดมากกว่าคุณ<br><br><rules>สร้างความเสียหายสูงสุดเมื่อศัตรูมีพลังชีวิตสูงสุด มากกว่าคุณ 3000 หน่วย</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -8582,7 +8583,7 @@
     {
         "id": 4016,
         "name": "Wordless Promise",
-        "description": "<mainText><stats>พลังเวท <attention> 50</attention><br>ฮีลและพลังโล่ป้องกัน <attention> 15%</attention><br>เร่งสกิล <attention> 25</attention></stats><br><br><passive>Promise</passive><br>ได้รับ<scaleAP>พลังเวท  15% จากเพื่อนร่วมทีม</scaleAP>ที่เป็นคู่<attention>สาบาน</attention> และมอบเร่งสกิลของคุณ  15% ให้กับเพื่อนร่วมทีมที่เป็นคู่<attention>สาบาน</attention><br><br> <active>เปิดใช้งาน</active>  (0 วินาที)<br><active>Promise</active><br>ทำการ<attention>สาบาน</attention>กับเพื่อนร่วมทีม</mainText>",
+        "description": "<mainText><stats>พลังเวท <attention> 50</attention><br>ฮีลและพลังโล่ป้องกัน <attention> 15%</attention><br>เร่งสกิล <attention> 25</attention></stats><br><br><passive>Promise</passive><br>ได้รับ<scaleAP>พลังเวท  10% จากเพื่อนร่วมทีม</scaleAP>ที่เป็นคู่<attention>สาบาน</attention> และมอบเร่งสกิลของคุณ  10% ให้กับเพื่อนร่วมทีมที่เป็นคู่<attention>สาบาน</attention><br><br> <active>เปิดใช้งาน</active>  (0 วินาที)<br><active>Promise</active><br>ทำการ<attention>สาบาน</attention>กับเพื่อนร่วมทีม</mainText>",
         "active": true,
         "inStore": true,
         "from": [],
@@ -8607,7 +8608,7 @@
     {
         "id": 4017,
         "name": "Hellfire Hatchet",
-        "description": "<mainText><stats>พลังโจมตี <attention> 35</attention><br>โจมตีจุดตาย <attention> 12</attention> หน่วย</stats><br><br><passive>Char</passive>  (0 วินาที) วินาทีต่อเป้าหมาย<br>การใช้สกิลครั้งถัดไปที่โดนศัตรูจะ<keywordMajor>เผา</keywordMajor>พวกเขา สร้าง<scaleAD>ความเสียหายกายภาพ 0 ถึง 0 ตามพลังชีวิตปัจจุบัน</scaleAD>ในช่วงเวลา 4 วินาที ขึ้นอยู่กับว่าศัตรูมี<scaleHealth>พลังชีวิตสูงสุด</scaleHealth>มากกว่าคุณเท่าไร<br><br><rules>โบนัสความเสียหายสูงสุดจะเกิดขึ้นเมื่อมีพลังชีวิตแตกต่างกันที่ 3000 หน่วย</rules></mainText>",
+        "description": "<mainText><stats>พลังโจมตี <attention> 40</attention><br>โจมตีจุดตาย <attention> 12</attention> หน่วย</stats><br><br><passive>Char</passive>  (0 วินาที) วินาทีต่อเป้าหมาย<br>การใช้สกิลครั้งถัดไปที่โดนศัตรูจะ<keywordMajor>เผา</keywordMajor>พวกเขา สร้าง<scaleAD>ความเสียหายกายภาพ 0 ถึง 0 ตามพลังชีวิตปัจจุบัน</scaleAD>ในช่วงเวลา 4 วินาที ขึ้นอยู่กับว่าศัตรูมี<scaleHealth>พลังชีวิตสูงสุด</scaleHealth>มากกว่าคุณเท่าไร<br><br><rules>โบนัสความเสียหายสูงสุดจะเกิดขึ้นเมื่อมีพลังชีวิตแตกต่างกันที่ 3000 หน่วย</rules></mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -13440,7 +13441,7 @@
     {
         "id": 223069,
         "name": "Void Immolation",
-        "description": "<mainText><stats>พลังชีวิต <attention> 1000</attention><br>เกราะ <attention> 100</attention><br>ต้านทานเวท <attention> 80</attention><br>เร่งสกิล <attention> 25</attention><br>อัตราฟื้นฟูพลังชีวิตพื้นฐาน <attention> 200%</attention></stats><br><br><passive>Immolate</passive><br>หลังได้รับหรือสร้างความเสียหายจะสร้าง<magicDamage>ความเสียหายเวท 0 หน่วย</magicDamage>ต่อวินาทีแก่ศัตรูใกล้เคียงเป็นเวลา 5 วินาที </mainText>",
+        "description": "<mainText><stats>พลังชีวิต <attention> 1000</attention><br>เกราะ <attention> 100</attention><br>ต้านทานเวท <attention> 80</attention><br>เร่งสกิล <attention> 25</attention><br>อัตราฟื้นฟูพลังชีวิตพื้นฐาน <attention> 200%</attention></stats><br><br><passive>Immolate</passive><br>หลังได้รับหรือสร้างความเสียหายจะสร้าง<magicDamage>ความเสียหายเวท 0 หน่วย</magicDamage>ต่อวินาทีแก่ศัตรูใกล้เคียงเป็นเวลา 5 วินาที<br><br><passive>Desolate</passive><br>การสังหารศัตรูจะสร้าง<magicDamage>ความเสียหายเวท</magicDamage>รอบตัวพวกเขา</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -15871,7 +15872,7 @@
     {
         "id": 226692,
         "name": "Eclipse",
-        "description": "<mainText><stats>พลังโจมตี <attention> 50</attention><br>เร่งสกิล <attention> 10</attention></stats><br><br><passive>Ever Rising Moon</passive><br>การโจมตีแชมเปี้ยนด้วยการโจมตีปกติหรือสกิลที่แตกต่างกัน 2 ครั้งภายในเวลา 2 วินาทีจะมอบ<shield>โล่ป้องกัน</shield>ให้กับคุณเป็นเวลา 2 วินาที</mainText>",
+        "description": "<mainText><stats>พลังโจมตี <attention> 60</attention><br>เร่งสกิล <attention> 15</attention></stats><br><br><passive>Ever Rising Moon</passive><br>การโจมตีแชมเปี้ยนด้วยการโจมตีปกติหรือสกิลที่แตกต่างกัน 2 ครั้งภายในเวลา 2 วินาทีจะมอบ<shield>โล่ป้องกัน</shield>ให้กับคุณเป็นเวลา 2 วินาที</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -16899,7 +16900,7 @@
     {
         "id": 324005,
         "name": "Imperial Mandate",
-        "description": "<mainText><stats>พลังเวท <attention> 65</attention><br>เร่งสกิล <attention> 15</attention><br>อัตราฟื้นฟูมานาพื้นฐาน <attention> 150%</attention></stats><br><br><passive>Control</passive><br>ได้รับเร่งสกิล  15 หน่วย สำหรับสกิลที่มีเอฟเฟกต์<keyword>หยุดการเคลื่อนที่</keyword><br><br><passive>Command</passive><br>เมื่อ<keyword>หยุดการเคลื่อนที่</keyword>แชมเปี้ยนศัตรู จะทำเครื่องหมาย<Keyword>เปราะบาง</Keyword>ใส่พวกเขา 6% เป็นเวลา 4 วินาที<br></mainText>",
+        "description": "<mainText><stats>พลังเวท <attention> 65</attention><br>เร่งสกิล <attention> 15</attention><br>อัตราฟื้นฟูมานาพื้นฐาน <attention> 150%</attention></stats><br><br><passive>Control</passive><br>ได้รับเร่งสกิล  20 หน่วย สำหรับสกิลที่มีเอฟเฟกต์<keyword>หยุดการเคลื่อนที่</keyword><br><br><passive>Command</passive><br>เมื่อ<keyword>หยุดการเคลื่อนที่</keyword>แชมเปี้ยนศัตรู จะทำเครื่องหมาย<Keyword>เปราะบาง</Keyword>ใส่พวกเขา 7% เป็นเวลา 4 วินาที<br></mainText>",
         "active": false,
         "inStore": true,
         "from": [
@@ -18108,7 +18109,7 @@
     {
         "id": 447112,
         "name": "Flesheater",
-        "description": "<mainText><stats>Adaptive Force <attention> 70</attention><br>พลังชีวิต <attention> 500</attention><br>เร่งสกิล <attention> 20</attention></stats><br><br><passive>Hack the Meat</passive><br>การสร้างความเสียหายจะลด<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR>ของศัตรูลง 3 หน่วยเป็นเวลา 5 วินาที สแตคได้สูงสุด 10 ครั้ง การติดสแตคมีคูลดาวน์ 1 วินาทีต่อหนึ่งสกิล<br><br><passive>Cannibalize</passive><br>เมื่อโค่นล้มแชมเปี้ยน ขโมย 10% จากค่าสถานะและขนาดตัวของพวกเขาไปจนจบรอบ</mainText>",
+        "description": "<mainText><stats>Adaptive Force <attention> 70</attention><br>พลังชีวิต <attention> 500</attention><br>เร่งสกิล <attention> 20</attention></stats><br><br><passive>Hack the Meat</passive><br>การสร้างความเสียหายจะลด<scaleArmor>เกราะ</scaleArmor> และ<scaleMR>ต้านทานเวท</scaleMR>ของศัตรูลง 3 หน่วยเป็นเวลา 5 วินาที สแตคได้สูงสุด 10 ครั้ง การติดสแตคมีคูลดาวน์ 1 วินาทีต่อหนึ่งสกิล<br><br><passive>Cannibalize</passive><br>เมื่อโค่นล้มแชมเปี้ยน ขโมย 10% จากค่าสถานะและขนาดตัวของพวกเขาไปจนจบรอบ</mainText>",
         "active": false,
         "inStore": true,
         "from": [],
@@ -19138,7 +19139,7 @@
     {
         "id": 667112,
         "name": "Flesheater",
-        "description": "<mainText><stats>Adaptive Force <attention> 55</attention><br>พลังชีวิต <attention> 500</attention></stats><br><br><passive>Hack the Meat</passive><br>การสร้างความเสียหายจะลด<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR>ของศัตรูลง 3 หน่วยเป็นเวลา 5 วินาที สแตคได้สูงสุด 10 ครั้ง การติดสแตคมีคูลดาวน์ 1 วินาทีต่อหนึ่งสกิล<br><br><passive>Cannibalize</passive><br>เมื่อโค่นล้มแชมเปี้ยน ขโมย 10% จากค่าสถานะและขนาดตัวของพวกเขาไปจนจบรอบ</mainText>",
+        "description": "<mainText><stats>Adaptive Force <attention> 55</attention><br>พลังชีวิต <attention> 500</attention></stats><br><br><passive>Hack the Meat</passive><br>การสร้างความเสียหายจะลด<scaleArmor>เกราะ</scaleArmor> และ<scaleMR>ต้านทานเวท</scaleMR>ของศัตรูลง 3 หน่วยเป็นเวลา 5 วินาที สแตคได้สูงสุด 10 ครั้ง การติดสแตคมีคูลดาวน์ 1 วินาทีต่อหนึ่งสกิล<br><br><passive>Cannibalize</passive><br>เมื่อโค่นล้มแชมเปี้ยน ขโมย 10% จากค่าสถานะและขนาดตัวของพวกเขาไปจนจบรอบ</mainText>",
         "active": false,
         "inStore": true,
         "from": [],

@@ -495,6 +495,8 @@
                         };
                         a.PromethiumModules && Object.assign(e, {
                             ...a.PromethiumModules
+                        }), a.TftBridgeComponents && Object.assign(e, {
+                            ...a.TftBridgeComponents
                         }), a.SharedEmberComponents.EmberCollectionApi.registerToFactoryDefinition(e), a.emberApplicationFactory.setFactoryDefinition(l.PLUGIN_NAME, e, {
                             EMBER_CLI_COMPAT: !0
                         });
@@ -3318,7 +3320,10 @@
                     null != t && (this.removeSound(t, "mousedown"), this.removeSound(t, "mouseenter")), this.removeObserver("clientConfigOverrideUrl", this, this.setOverrideUrlCache), this.get("isEventsStoreEnabled") && this._stopBackgroundMusic(!1)
                 },
                 showPardonOurDustButton: a.Ember.computed("tftBridgeService.bridgeEnabled", "tftBridgeService.showPardonOurDustButton", (function() {
-                    0
+                    const e = this.get("tftBridgeService"),
+                        t = e.get("bridgeEnabled"),
+                        n = e.shouldShowPardonOurDustButton();
+                    return t && n
                 })),
                 _playBackgroundMusic(e) {
                     this.get("isEventsMusicDisabled") || (this._stopBackgroundMusic(), this.set("music", this.playMusic(e)), this.set("tftService.eventStoreMuted", !1))
@@ -4363,7 +4368,7 @@
                     return n ? n.description : ""
                 })),
                 showTooltip: a.Ember.computed("quickPlayDisabled", "isUnsupportedGameMode", (function() {
-                    return this.get("quickPlayDisabled")
+                    return this.get("quickPlayDisabled") && !this.get("isUnsupportedGameMode")
                 })),
                 tooltipText: a.Ember.computed("isNotLobbyLeader", "isPlayButtonDisabled", "isPatching", "playButtonService.isPlayGameflowEnabled", "playButtonService.isAtLeastOneQueueEnabled", "playButtonService.isPlayerBanned", "playButtonService.isShowingTournaments", "playButtonService.isEligibilityInfoMissing", "playButtonService.gameflowRegistrationStatus", "playButtonService.gameflowRegistrationStatus.errorCodes.[]", "tra", "playerBannedToolTipText", (function() {
                     if (this.get("isNotLobbyLeader")) return this.get("tra.tft_home_quick_play_not_leader_error");
@@ -4387,11 +4392,9 @@
                 })),
                 bridgeService: a.Ember.inject.service("bridge"),
                 shouldShowBridgeTooltip: a.Ember.computed("bridgeService.hasSeenBridgeTftTooltip", "bridgeService.bridgeEnabled", "quickPlayDisabled", (function() {
-                    return !1
+                    return this.get("bridgeService.bridgeEnabled") && !this.get("bridgeService.hasSeenBridgeTftTooltip") && !this.get("quickPlayDisabled")
                 })),
-                isUnsupportedGameMode: a.Ember.computed("bridgeService.bridgeEnabled", "bridgeService.blockTFTMode", (function() {
-                    return !1
-                })),
+                isUnsupportedGameMode: a.Ember.computed.and("bridgeService.bridgeEnabled", "bridgeService.blockTFTMode"),
                 unsupportedGameModeTooltipText: a.Ember.computed("tra.tft_mode_unsupportedclientplatform_tooltip", "tra.tft_mode_unsupportedclientplatform_link", (function() {
                     return `${this.get("tra.tft_mode_unsupportedclientplatform_tooltip")} ${this.get("tra.tft_mode_unsupportedclientplatform_link")}`
                 })),
@@ -4455,10 +4458,16 @@
                     }
                 },
                 shouldRemakeParty: a.Ember.computed("bridgeService.bridgeEnabled", "inLobby", "isTFTLobby", (function() {
-                    return !1
+                    const e = this.get("bridgeService.bridgeEnabled"),
+                        t = this.get("inLobby"),
+                        n = this.get("isTFTLobby");
+                    return e && t && !n
                 })),
                 shouldShowPartyRemakeWarning: a.Ember.computed("shouldRemakeParty", "quickPlayDisabled", "isSolo", (function() {
-                    return !1
+                    const e = this.get("shouldRemakeParty"),
+                        t = this.get("quickPlayDisabled"),
+                        n = this.get("isSolo");
+                    return e && !t && !n
                 })),
                 createQuickPlayLobby() {
                     const e = this._buildTftLobbyCreateContext(),
@@ -4480,7 +4489,9 @@
                     let s;
                     return a.Telemetry.sendCustomData(l.DEFAULT_TELEMETRY_TABLE, {
                         eventName: "click-event-hub-play-button"
-                    }), s = a.Parties.createLobby(t), s.then((() => {
+                    }), this.get("shouldRemakeParty") ? (a.Parties.suppressNavigateHomeForNextPartyDestroy(), s = a.Parties.leaveLobby().catch((e => {
+                        throw a.Parties.clearSuppressNavigateHome(), e
+                    })).then((() => a.Parties.createLobby(t)))) : s = a.Parties.createLobby(t), s.then((() => {
                         const e = this.get("promethiumManagerService");
                         e.validatePromethiumQueue(this.get("quickPlayGameModeQueueId")) && e.clearMissions(), a.datadogRum.stopOperationWithOk(a.datadogRum.XP_CGL_PREGAME_LOBBY_CREATE), a.Parties.showParty().then((() => {
                             a.navigation.sendTFTScreenLoadTelemetryEvent({
@@ -8783,12 +8794,13 @@
                     const e = this.get("activeBanner.bountyType");
                     return e && "dual" === e
                 })),
-                legalDisclaimerTrovesV2: c((function() {
-                    const e = this.get("tra");
+                legalDisclaimerTrovesV2: c("isStandardBounty", (function() {
+                    const e = this.get("tra"),
+                        t = this.get("isStandardBounty") ? e.get("troves_loot_odds_mythic_promise_description_standard_bounty") : e.get("troves_loot_odds_mythic_promise_description");
                     return {
                         badgeTitle: e.get("troves_loot_odds_mythic_promise_badge_title"),
                         title: e.get("troves_loot_odds_mythic_promise_title"),
-                        description: e.get("troves_loot_odds_mythic_promise_description"),
+                        description: t,
                         iconCssClass: "mythic-promise-icon"
                     }
                 })),
@@ -14860,7 +14872,10 @@
                     await e.getOptional("rcp-fe-lol-tft-team-planner").then((e => t.default.add({
                         TeamPlanner: e
                     })));
-                    let n = await e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-tft/trans.json").overlay("/fe/lol-loot/trans.json").overlay("/fe/lol-match-history/trans.json").overlay("/fe/lol-parties/trans.json").overlay("/fe/lol-navigation/trans.json").overlay("/fe/lol-tft/trans-troves.json").overlay("/fe/lol-tft/trans-rotational-shop.json").overlay("/fe/lol-tft/trans-skill-tree.json").overlay("/fe/lol-tft-promethium/trans.json");
+                    const n = await e.get("rcp-fe-lol-l10n").tra().overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-tft/trans.json").overlay("/fe/lol-loot/trans.json").overlay("/fe/lol-match-history/trans.json").overlay("/fe/lol-parties/trans.json").overlay("/fe/lol-navigation/trans.json").overlay("/fe/lol-tft/trans-troves.json").overlay("/fe/lol-tft/trans-rotational-shop.json").overlay("/fe/lol-tft/trans-skill-tree.json").overlay("/fe/lol-tft-promethium/trans.json").overlay("/fe/tft/trans.json");
+                    await e.getOptional("rcp-fe-tft").then((e => {
+                        t.default.TftBridgeComponents = e.getBridgeComponents()
+                    }), (() => null));
                     const a = await e.getOptional("rcp-fe-lol-tft-promethium");
                     await t.default.add({
                         PromethiumModules: a.getPromethiumModules(),

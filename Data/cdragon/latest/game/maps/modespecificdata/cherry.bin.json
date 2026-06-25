@@ -915,7 +915,7 @@
         "name": "{10568f78}",
         "{8c61159d}": [
             {
-                "KeySequence": "[Shift][;]",
+                "KeySequence": "[Shift][Semicolon]",
                 "{371f336e}": {
                     "{6bfb316f}": "evtPracticeToolSpawnDragonOcean",
                     "{5307f5e1}": "{5bbee0fc}",
@@ -5177,11 +5177,6 @@
             },
             {
                 "{f248d989}": "{84d8022e}",
-                "__type": "{c8d6dccd}"
-            },
-            {
-                "{f248d989}": "{9ec182ed}",
-                "{01d6318d}": 3,
                 "__type": "{c8d6dccd}"
             },
             {
@@ -11557,22 +11552,6 @@
         "{72fce42a}": [
             {
                 "__type": "{b846a56c}"
-            }
-        ],
-        "__type": "{c8400f38}"
-    },
-    "{bfb2cbdc}": {
-        "{6bfb316f}": "WASD Shop exclusive",
-        "name": "{ce85d2c1}",
-        "{5ff6cd50}": [
-            {
-                "__type": "{f2839c7c}"
-            },
-            {
-                "{5e3d5ec0}": [
-                    6
-                ],
-                "__type": "{49401c5c}"
             }
         ],
         "__type": "{c8400f38}"
@@ -42705,7 +42684,7 @@
                             "values": [
                                 0.30000001192092896,
                                 0.30000001192092896,
-                                0.44999998807907104,
+                                0.6000000238418579,
                                 0.6000000238418579,
                                 0.75,
                                 0.75,
@@ -42718,8 +42697,8 @@
                             "values": [
                                 0.15000000596046448,
                                 0.15000000596046448,
-                                0.20000000298023224,
-                                0.20000000298023224,
+                                0.25,
+                                0.30000001192092896,
                                 0.20000000298023224,
                                 0.20000000298023224,
                                 0.20000000298023224
@@ -42729,13 +42708,13 @@
                         {
                             "name": "AugDuration",
                             "values": [
-                                5.0,
-                                5.0,
-                                5.0,
-                                5.0,
-                                5.0,
-                                5.0,
-                                5.0
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -78698,13 +78677,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0,
-                        50.0
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -78906,13 +78885,13 @@
                 {
                     "name": "MoveSpeedModPerBlue",
                     "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -104146,6 +104125,17 @@
         },
         "__type": "ResourceResolver"
     },
+    "Maps/ModeSpecificData/Augments/DustToDiamonds": {
+        "AugmentNameId": "DustToDiamonds",
+        "NameTra": "Kiwi_DustToDiamonds_Name",
+        "DescriptionTra": "Kiwi_DustToDiamonds_Description",
+        "AugmentTooltipTra": "Kiwi_DustToDiamonds_Tooltip",
+        "RootSpell": "{741c1387}",
+        "AugmentLargeIconPath": "ASSETS/UX/Cherry/Augments/Icons/Dust_to_Diamonds.tex",
+        "AugmentSmallIconPath": "ASSETS/UX/Cherry/Augments/Icons/Dust_to_Diamonds_small.tex",
+        "AugmentPlatformId": 394,
+        "__type": "AugmentData"
+    },
     "Maps/ModeSpecificData/Augments/ARAM_SpeedDemon": {
         "AugmentNameId": "ARAM_SpeedDemon",
         "NameTra": "Kiwi_ARAM_SpeedDemon_Name",
@@ -121567,7 +121557,15 @@
                 "__type": "LocationClamped"
             },
             "mClientData": {
-                "mUseTooltipFromAnotherSpell": "Characters/Akshan/Spells/AkshanEAbility/AkshanE",
+                "mTooltipData": {
+                    "mObjectName": "Augment_YouSpinMeRightRound3",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Kiwi_YouSpinMeRightRound_Name",
+                        "keyTooltip": "Kiwi_ARAM_YouSpinMeRightRound_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
                 "__type": "SpellDataResourceClient"
             },
             "__type": "SpellDataResource"
@@ -121644,7 +121642,16 @@
             "mCastingBreaksStealth": true,
             "mCastingBreaksStealthWhileAttached": true,
             "mClientData": {
-                "mUseTooltipFromAnotherSpell": "Characters/Akshan/Spells/AkshanEAbility/AkshanE",
+                "mTooltipData": {
+                    "mObjectName": "Augment_YouSpinMeRightRound2",
+                    "mFormat": "{d7c27163}",
+                    "EnableExtendedTooltip": false,
+                    "mLocKeys": {
+                        "keyName": "Kiwi_YouSpinMeRightRound_Name",
+                        "keyTooltip": "Kiwi_ARAM_YouSpinMeRightRound_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
                 "__type": "SpellDataResourceClient"
             },
             "__type": "SpellDataResource"
@@ -165317,13 +165324,13 @@
                 {
                     "name": "TrueDamagePerc",
                     "values": [
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -165384,6 +165391,20 @@
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "{df58b3f4}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "TrueDamagePerc",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "mRangedMultiplier": {
+                        "mNumber": 0.6000000238418579,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "__type": "{e9a3c91d}"
                 }
             },
             "mImgIconName": [
@@ -165622,8 +165643,8 @@
                             "values": [
                                 0.009999999776482582,
                                 0.009999999776482582,
+                                0.012500000186264515,
                                 0.014999999664723873,
-                                0.019999999552965164,
                                 0.03999999910593033,
                                 0.05000000074505806,
                                 0.05999999865889549
@@ -165635,8 +165656,8 @@
                             "values": [
                                 200.0,
                                 200.0,
+                                300.0,
                                 500.0,
-                                750.0,
                                 750.0,
                                 750.0,
                                 750.0
@@ -174082,6 +174103,29 @@
         "mBuff": {
             "mDescription": "buff_desc_Augment_ARAM_PoroKing_Transform",
             "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{741c1387}": {
+        "ObjectName": "Augment_DustToDiamonds",
+        "mScriptName": "Augment_DustToDiamonds",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "AnvilsGranted",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
     },
@@ -188802,13 +188846,13 @@
                 {
                     "name": "BaseCooldown",
                     "values": [
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -189361,13 +189405,13 @@
                 {
                     "name": "MaxLevelManaSpendThreshold",
                     "values": [
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -190447,6 +190491,18 @@
         },
         "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
         "{982aa425}": "ASSETS/UX/NarrativeBarks/Cherry/Portrait_Darius_65.tex",
+        "__type": "{05c8aed6}"
+    },
+    "{69f0cf55}": {
+        "{1ff99d7f}": {
+            "title": "Cherry_GoH_Title_Locke",
+            "Subtitle": "Cherry_GoH_Name_Locke",
+            "{bff2f361}": "Cherry_GoH_TooltipShort_Locke",
+            "{3b7aa707}": "Cherry_GoH_TooltipLong_Locke",
+            "__type": "{fa33a427}"
+        },
+        "EventIcon": "ClientStates/Gameplay/UX/LoL/NB/EventCards/UIBase/NexusBlitzIcons/Events/NEXUSBLITZ_Event_BardleRoyale",
+        "{982aa425}": "ASSETS/Characters/Locke/HUD/Locke_Circle_0.Locke.tex",
         "__type": "{05c8aed6}"
     },
     "{6a701716}": {
@@ -193861,6 +193917,123 @@
                 "TimeLength": 7.0,
                 "{006b2944}": true,
                 "__type": "{72553f91}"
+            },
+            "CherryGoHIntro_Locke": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "IntroBark_Text_Locke",
+                "TimeLength": 10.0,
+                "__type": "{72553f91}"
+            },
+            "CherryGoHHotstreak_Locke": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "HotstreakBark_Text_Locke",
+                "TimeLength": 10.0,
+                "__type": "{72553f91}"
+            },
+            "CherryGoHTeamEliminated_Locke": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "TeamEliminatedBark_Text_Locke",
+                "TimeLength": 10.0,
+                "__type": "{72553f91}"
+            },
+            "CherryGoHEliminationRisk_Locke": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "EliminationRiskBark_Text_Rell",
+                "TimeLength": 10.0,
+                "__type": "{72553f91}"
+            },
+            "CherryGoHFirstPlace_Locke": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "FirstPlaceBark_Text_Locke",
+                "TimeLength": 20.0,
+                "{006b2944}": true,
+                "__type": "{72553f91}"
+            },
+            "CherryGoHFinals_Locke": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "FinalsBark_Text_Locke",
+                "TimeLength": 10.0,
+                "__type": "{72553f91}"
+            },
+            "VoteBark_Locke": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "VoteEnterBark_Text_Locke",
+                "TimeLength": 6.0,
+                "{006b2944}": true,
+                "__type": "{72553f91}"
+            },
+            "GoHVayneLockeDialogOne": {
+                "SpeakerIcon": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/ChampionSplash_Vayne",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Vayne",
+                "DescriptionTra": "Bark_VayneLocke_Text_DialogOne",
+                "TimeLength": 6.0,
+                "__type": "{72553f91}"
+            },
+            "GoHVayneLockeDialogTwo": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "Bark_VayneLocke_Text_DialogTwo",
+                "TimeLength": 6.0,
+                "__type": "{72553f91}"
+            },
+            "GoHTahmKenchLockeDialogOne": {
+                "SpeakerIcon": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/ChampionSplash_TahmKench",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_TahmKench",
+                "DescriptionTra": "Bark_TahmKenchLocke_Text_DialogOne",
+                "TimeLength": 6.0,
+                "__type": "{72553f91}"
+            },
+            "GoHTahmKenchLockeDialogTwo": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "Bark_TahmKenchLocke_Text_DialogTwo",
+                "TimeLength": 6.0,
+                "__type": "{72553f91}"
+            },
+            "UniqueBark1_Locke": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "UniqueBark_Text_Locke_1",
+                "TimeLength": 4.0,
+                "{006b2944}": true,
+                "__type": "{72553f91}"
+            },
+            "UniqueBark2_Locke": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "UniqueBark_Text_Locke_2",
+                "TimeLength": 4.0,
+                "{006b2944}": true,
+                "__type": "{72553f91}"
+            },
+            "UniqueBark3_Locke": {
+                "SpeakerIcon": "{adf53d95}",
+                "{a077200a}": "ClientStates/Gameplay/UX/LoL/Cherry/CherryNarrativeBarks/UIBase/NarrativeBark/DetailIcon_Yuumi",
+                "TitleTra": "Cherry_GoH_Name_Locke",
+                "DescriptionTra": "UniqueBark_Text_Locke_3",
+                "TimeLength": 4.0,
+                "{006b2944}": true,
+                "__type": "{72553f91}"
             }
         },
         "__type": "{276246d8}"
@@ -193916,7 +194089,8 @@
             "Maps/ModeSpecificData/Augments/TrashToTreasure",
             "Maps/ModeSpecificData/Augments/UnstableTransmutation",
             "Maps/ModeSpecificData/Augments/ARAM_Juiced",
-            "Maps/ModeSpecificData/Augments/RagsToRiches"
+            "Maps/ModeSpecificData/Augments/RagsToRiches",
+            "Maps/ModeSpecificData/Augments/DustToDiamonds"
         ],
         "{02196d1e}": true,
         "__type": "{eb5adb26}"
@@ -193951,7 +194125,6 @@
             "{6238f853}",
             "{bc703f68}",
             "{699d2aa6}",
-            "{bfb2cbdc}",
             "{2c79af94}",
             "{76fcd08b}",
             "{692658d3}",

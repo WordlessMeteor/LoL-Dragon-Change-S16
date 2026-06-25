@@ -25457,7 +25457,7 @@
                     },
                     {
                         "name": "ManaToGive",
-                        "value": 8.0
+                        "value": 10.0
                     }
                 ],
                 "min_units": 2,
@@ -25534,7 +25534,7 @@
                     },
                     {
                         "name": "ManaReductionPct",
-                        "value": 0.08
+                        "value": 0.07
                     },
                     {
                         "name": "MaxHealthLost",
@@ -25564,7 +25564,7 @@
                 "constants": [
                     {
                         "name": "ArmorMR",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "ManaReductionPctPerGalioItem",
@@ -25580,7 +25580,7 @@
                 "constants": [
                     {
                         "name": "ArmorMR",
-                        "value": 20.0
+                        "value": 15.0
                     },
                     {
                         "name": "ManaReductionPctPerGalioItem",
@@ -25881,7 +25881,7 @@
         "trait_id": "TFTEvent5YR_Fated",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Fated.png",
-        "tooltip_text": "Kéo một tướng lên một tướng khác để bắt cặp chúng và mở khóa <TFTBonus>Hiệu Ứng Định Mệnh</TFTBonus>, dựa trên vai trò của các tướng.<br><br><row>(@TFTTrait.TFTEvent5YR_Fated.1:MinUnits@) Cặp đôi nhận Hiệu Ứng Định Mệnh và được tăng @TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@% Máu tối đa. </row><br><row>(@TFTTrait.TFTEvent5YR_Fated.2:MinUnits@) TẤT CẢ đơn vị nhận Hiệu Ứng Định Mệnh. Cặp đôi nhận thêm @TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@% Máu tối đa và @TFTTrait.TFTEvent5YR_Fated.2:PairBondIncreasePercent*100@% Hiệu Ứng Định Mệnh. </row><br><br>Hiệu Ứng Định Mệnh:<br><ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><status>Sát Thủ</status>: @TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@ Lá Chắn khi bắt đầu giao tranh</ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><TFTGuildInactive>Sát Thủ: @TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@ Lá Chắn khi bắt đầu giao tranh</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><br><ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><status>Thuật Sư</status>: @TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@% %i:scaleAD% %i:scaleAP%</ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><TFTGuildInactive>Thuật Sư: @TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@% %i:scaleAD% %i:scaleAP%</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><status>Đấu Sĩ</status>: @TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@% %i:scaleSV%</ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><TFTGuildInactive>Đấu Sĩ: @TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@% %i:scaleSV%</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><status>Xạ Thủ</status>: @TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@% %i:scaleAS%</ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><TFTGuildInactive>Xạ Thủ: @TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@% %i:scaleAS%</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><br><ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><status>Đặc Thù</status>: Gây sát thương chuẩn bằng @TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@% sát thương</ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><TFTGuildInactive>Đặc Thù: Gây sát thương chuẩn bằng @TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@% sát thương</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><br><ShowIf.TFTEvent5YR_Trait_Fated_TankActive><status>Đỡ Đòn</status>: @TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@ %i:scaleArmor% %i:scaleMR%</ShowIf.TFTEvent5YR_Trait_Fated_TankActive><ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><TFTGuildInactive>Đỡ Đòn: @TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@ %i:scaleArmor% %i:scaleMR%</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><br><br>Các đơn vị của bạn chỉ có thể hưởng lợi một lần từ mỗi hiệu ứng định mệnh.",
+        "tooltip_text": "Kéo một tướng lên một tướng khác để bắt cặp chúng và mở khóa <TFTBonus>Hiệu Ứng Định Mệnh</TFTBonus>, dựa trên vai trò của các tướng.<br><row>(@TFTTrait.TFTEvent5YR_Fated.1:MinUnits@) Cặp đôi nhận Hiệu Ứng Định Mệnh và được tăng @TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@% Máu tối đa. </row><br><row>(@TFTTrait.TFTEvent5YR_Fated.2:MinUnits@) TẤT CẢ đơn vị nhận Hiệu Ứng Định Mệnh. Cặp đôi nhận thêm @TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@% Máu tối đa và @TFTTrait.TFTEvent5YR_Fated.2:PairBondIncreasePercent*100@% Hiệu Ứng Định Mệnh. </row><br><br>Hiệu Ứng Định Mệnh:<br><ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><status>Sát Thủ</status>: @TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@ Lá Chắn khi bắt đầu giao tranh</ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><TFTGuildInactive>Sát Thủ: @TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@ Lá Chắn khi bắt đầu giao tranh</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><br><ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><status>Thuật Sư</status>: @TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@% %i:scaleAD% %i:scaleAP%</ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><TFTGuildInactive>Thuật Sư: @TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@% %i:scaleAD% %i:scaleAP%</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><status>Đấu Sĩ</status>: @TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@% %i:scaleSV%</ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><TFTGuildInactive>Đấu Sĩ: @TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@% %i:scaleSV%</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><status>Xạ Thủ</status>: @TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@% %i:scaleAS%</ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><TFTGuildInactive>Xạ Thủ: @TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@% %i:scaleAS%</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><br><ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><status>Đặc Thù</status>: Gây sát thương chuẩn bằng @TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@% sát thương</ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><TFTGuildInactive>Đặc Thù: Gây sát thương chuẩn bằng @TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@% sát thương</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><br><ShowIf.TFTEvent5YR_Trait_Fated_TankActive><status>Đỡ Đòn</status>: @TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@ %i:scaleArmor% %i:scaleMR%</ShowIf.TFTEvent5YR_Trait_Fated_TankActive><ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><TFTGuildInactive>Đỡ Đòn: @TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@ %i:scaleArmor% %i:scaleMR%</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><br>Các đơn vị của bạn chỉ có thể hưởng lợi một lần từ mỗi hiệu ứng định mệnh.",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -26427,7 +26427,7 @@
         "trait_id": "TFTEvent5YR_Honeymancy",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Bee.TFT_Set12.png",
-        "tooltip_text": "Tướng của bạn mang theo Bầy Ong, giúp gây sát thương phép định kỳ lên mục tiêu mỗi @TFTTrait.TFTEvent5YR_Honeymancy:Period@ giây. Sát thương của Ong dựa trên sát thương gây ra và nhận vào bởi tướng chủ thể, cộng thêm một lượng cố định cho mỗi con Ong.<br><br>Khi một tướng bị hạ gục, họ sẽ để lại @TFTTrait.TFTEvent5YR_Honeymancy:NumTransfers@ con ong đi theo các đồng minh gần đó cho đến hết giao tranh.<br><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.1:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.1:MiniCount@ con Ong, @TFTTrait.TFTEvent5YR_Honeymancy.1:BonusDamage*100@% sát thương gây ra, @TFTTrait.TFTEvent5YR_Honeymancy.1:DamageReceived*100@% sát thương nhận vào, @TFTTrait.TFTEvent5YR_Honeymancy.1:DamagePerMini@ sát thương với mỗi con Ong.</row><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.2:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.2:MiniCount@ con Ong, @TFTTrait.TFTEvent5YR_Honeymancy.2:BonusDamage*100@% sát thương gây ra, @TFTTrait.TFTEvent5YR_Honeymancy.2:DamageReceived*100@% sát thương nhận vào, @TFTTrait.TFTEvent5YR_Honeymancy.2:DamagePerMini@ sát thương với mỗi con Ong.</row>",
+        "tooltip_text": "Đội của bạn nhận Ong giúp gây sát thương phép lên mục tiêu của họ sau mỗi @TFTTrait.TFTEvent5YR_Honeymancy:Period@ giây. Sát thương của Ong dựa trên sát thương gây ra và nhận vào bởi chủ thể, cộng thêm một lượng cố định cho mỗi con Ong.<br><br>Khi một tướng bị hạ gục, họ sẽ để lại @TFTTrait.TFTEvent5YR_Honeymancy:NumTransfers@ Bầy Ong đi theo các đồng minh gần đó cho đến hết giao tranh.<br><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.1:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.1:MiniCount@ con Ong, @TFTTrait.TFTEvent5YR_Honeymancy.1:BonusDamage*100@% sát thương gây ra, @TFTTrait.TFTEvent5YR_Honeymancy.1:DamageReceived*100@% sát thương nhận vào, @TFTTrait.TFTEvent5YR_Honeymancy.1:DamagePerMini@ sát thương với mỗi con Ong.</row><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.2:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.2:MiniCount@ con Ong, @TFTTrait.TFTEvent5YR_Honeymancy.2:BonusDamage*100@% sát thương gây ra, @TFTTrait.TFTEvent5YR_Honeymancy.2:DamageReceived*100@% sát thương nhận vào, @TFTTrait.TFTEvent5YR_Honeymancy.2:DamagePerMini@ sát thương với mỗi con Ong.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -26451,7 +26451,7 @@
                     },
                     {
                         "name": "DamagePerMini",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "DamageReceived",
@@ -26475,7 +26475,7 @@
                     },
                     {
                         "name": "DamagePerMini",
-                        "value": 25.0
+                        "value": 21.0
                     },
                     {
                         "name": "DamageReceived",
@@ -26685,7 +26685,7 @@
         "trait_id": "TFTEvent5YR_Maestro",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_10_Classical.png",
-        "tooltip_text": "Nhận 1 Gậy Nhạc Trưởng.<br>Chủ sở hữu có Tốc Độ Đánh cố định và chuyển hóa Tốc Độ Đánh cộng thêm thành Sức Mạnh Công Kích.<br><br>Cứ mỗi @TFTTrait.TFTEvent5YR_Maestro.1:NumAutosToSpawnJhinGun@ đòn đánh, Nhạc Trưởng triệu hồi một Súng Trường Hạ Màn tại một ô dự bị trống của bạn, tối đa 4 súng. Sau khi triệu hồi cả 4 súng, tất cả súng bắn với tốc độ tương tự như Nhạc Trưởng, gây sát thương vật lý. <br>Mỗi đợt bắn thứ 4 sẽ trở thành <tftEvent5YRHarmonic>Hòa Âm</tftEvent5YRHarmonic>, gây một tỉ lệ phần trăm tổng sát thương mà Nhạc Trưởng cùng các khẩu Súng Trường đã gây ra kể từ đợt Hòa Âm trước đó.<br><br><row>(@TFTTrait.TFTEvent5YR_Maestro.1:MinUnits@) @TFTTrait.TFTEvent5YR_Maestro.1:EmpoweredShotEchoDamagePercentage*100@% Sát Thương <tftEvent5YRHarmonic>Hòa Âm</tftEvent5YRHarmonic>.</row><br><row>(@TFTTrait.TFTEvent5YR_Maestro.2:MinUnits@) @TFTTrait.TFTEvent5YR_Maestro.2:EmpoweredShotEchoDamagePercentage*100@% Sát Thương <tftEvent5YRHarmonic>Hòa Âm</tftEvent5YRHarmonic>. <br>Nhạc Trưởng có thể triệu hồi nhiều hơn 4 Súng Trường. Bắt đầu giao tranh: Triệu hồi 1 Súng Trường tại một ô dự bị còn trống.</row>",
+        "tooltip_text": "Nhận 1 Gậy Nhạc Trưởng.<br>Chủ sở hữu có Tốc Độ Đánh cố định và chuyển hóa Tốc Độ Đánh cộng thêm thành Sức Mạnh Công Kích.<br>Cứ mỗi @TFTTrait.TFTEvent5YR_Maestro.1:NumAutosToSpawnJhinGun@ đòn đánh, Nhạc Trưởng triệu hồi một Súng Trường Hạ Màn tại một ô dự bị trống của bạn, tối đa 4 súng. Sau khi triệu hồi cả 4 súng, tất cả súng bắn với tốc độ tương tự như Nhạc Trưởng, gây sát thương vật lý. <br>Mỗi đợt bắn thứ 4 sẽ trở thành <tftEvent5YRHarmonic>Hòa Âm</tftEvent5YRHarmonic>, gây một tỉ lệ phần trăm tổng sát thương mà Nhạc Trưởng cùng các khẩu Súng Trường đã gây ra kể từ đợt Hòa Âm trước đó.<br><row>(@TFTTrait.TFTEvent5YR_Maestro.1:MinUnits@) @TFTTrait.TFTEvent5YR_Maestro.1:EmpoweredShotEchoDamagePercentage*100@% Sát Thương <tftEvent5YRHarmonic>Hòa Âm</tftEvent5YRHarmonic>.</row><br><row>(@TFTTrait.TFTEvent5YR_Maestro.2:MinUnits@) @TFTTrait.TFTEvent5YR_Maestro.2:EmpoweredShotEchoDamagePercentage*100@% Sát Thương <tftEvent5YRHarmonic>Hòa Âm</tftEvent5YRHarmonic>. <br>Nhạc Trưởng có thể triệu hồi nhiều hơn 4 Súng Trường. Bắt đầu giao tranh: Triệu hồi 1 Súng Trường tại một ô dự bị còn trống.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -26944,7 +26944,7 @@
                 "constants": [
                     {
                         "name": "PermBonusHealth",
-                        "value": 60.0
+                        "value": 70.0
                     },
                     {
                         "name": "ShieldValue",
@@ -26962,7 +26962,7 @@
         "trait_id": "TFTEvent5YR_Nitro",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_14_NitroForge.TFT_Set14.png",
-        "tooltip_text": "Sau mỗi giao tranh người chơi, tướng của bạn trao Hợp Kim cho R-080T, dựa trên cấp sao của họ. Mỗi Hợp Kim tăng @TFTTrait.TFTEvent5YR_Nitro.:HealthPerScrap@ Máu và @TFTTrait.TFTEvent5YR_Nitro.:APPerScrap@ Sức Mạnh Phép Thuật. <br><br><row>(@TFTTrait.TFTEvent5YR_Nitro.1:MinUnits@) Triệu hồi R-080T!</row><br><row>(@TFTTrait.TFTEvent5YR_Nitro.2:MinUnits@) Nâng cấp R-080T lên T-43X! Ở mốc @TFTTrait.TFTEvent5YR_Nitro.:FourStarScrapThreshold@ Hợp Kim, nâng cấp T-43X để bắn ra tia laser khổng lồ!</row><br><br><rules>Hợp Kim với mỗi cấp sao: @TFTTrait.TFTEvent5YR_Nitro.:ScrapPerOneStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerTwoStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerThreeStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerFourStar@</rules>",
+        "tooltip_text": "Sau mỗi giao tranh người chơi, tướng của bạn trao Hợp Kim cho R-080T, dựa trên cấp sao của họ. Mỗi Hợp Kim tăng @TFTTrait.TFTEvent5YR_Nitro.:HealthPerScrap@ Máu và @TFTTrait.TFTEvent5YR_Nitro.:APPerScrap@ Sức Mạnh Phép Thuật. <br><br><row>(@TFTTrait.TFTEvent5YR_Nitro.1:MinUnits@) Triệu hồi R-080T!</row><br><row>(@TFTTrait.TFTEvent5YR_Nitro.2:MinUnits@) Nâng cấp R-080T lên T-43X! Tại @TFTTrait.TFTEvent5YR_Nitro.:FourStarScrapThreshold@ Hợp Kim, nâng cấp lên T-43X để bắn ra một tia laser khổng lồ!</row><br><br><rules>Hợp Kim với mỗi cấp sao: @TFTTrait.TFTEvent5YR_Nitro.:ScrapPerOneStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerTwoStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerThreeStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerFourStar@</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -27000,11 +27000,11 @@
                     },
                     {
                         "name": "Stage3BonusHP",
-                        "value": 100.0
+                        "value": 150.0
                     },
                     {
                         "name": "Stage4BonusHP",
-                        "value": 300.0
+                        "value": 380.0
                     },
                     {
                         "name": "Stage5BonusHP",
@@ -27046,7 +27046,7 @@
         "trait_id": "TFTEvent5YR_Overlord",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_14_Overlord.TFT_Set14.png",
-        "tooltip_text": "Sử dụng Bộ Chọn Lãnh Chúa để chọn một Lãnh Chúa.<br>Lãnh Chúa cắn vào tướng đứng trên ô phía sau mình, gây sát thương chuẩn lên chúng.<br>Lãnh Chúa nhận được lượng máu bằng với sát thương của cú cắn, và nhận thêm một phần Sức Mạnh Công Kích cùng Sức Mạnh Phép Thuật của tướng đó.<br><br><row>(@TFTTrait.TFTEvent5YR_Overlord.1:MinUnits@) Sát thương chuẩn tương đương @TFTTrait.TFTEvent5YR_Overlord.1:HPPercentDamage*100@% Máu tối đa, @TFTTrait.TFTEvent5YR_Overlord.1:PercentADAPGain*100@% %i:scaleAD%%i:scaleAP%</row> <br><row>(@TFTTrait.TFTEvent5YR_Overlord.2:MinUnits@) Sát thương chuẩn tương đương @TFTTrait.TFTEvent5YR_Overlord.2:HPPercentDamage*100@% Máu tối đa, @TFTTrait.TFTEvent5YR_Overlord.2:PercentADAPGain*100@% %i:scaleAD%%i:scaleAP%. <br>Cắn hai đơn vị. Sát thương từ đòn đánh và kỹ năng của Lãnh Chúa gây <TFTKeyword>Cào Xé</TFTKeyword> 30%, <TFTKeyword>Phân Tách</TFTKeyword> 30%, <TFTKeyword>Suy Yếu</TFTKeyword> @TFTTrait.TFTEvent5YR_Overlord.2:EnemyDamageReduction*100@% và <TFTKeyword>Vết Thương Sâu</TFTKeyword> 33% lên kẻ địch trong @TFTTrait.TFTEvent5YR_Overlord.2:DebuffDuration@ giây. Những hiệu ứng này không cộng dồn.</row><br><br><tftitemrules><tftbold>Cào Xé</tftbold>: Giảm Kháng Phép<br><tftbold>Phân Tách</tftbold>: Giảm Giáp<br><tftbold>Suy Yếu</tftbold>: Giảm sát thương gây ra<br><tftbold>Vết Thương Sâu</tftbold>: Giảm lượng hồi máu nhận được</tftitemrules><br>",
+        "tooltip_text": "Dùng Bộ Chọn Lãnh Chúa để chọn Lãnh Chúa.<br>Lãnh Chúa cắn tướng đứng ở ô phía sau, gây sát thương chuẩn.<br>Lãnh Chúa nhận lượng máu bằng sát thương cắn và nhận thêm một phần SMCK & SMPT của tướng đó.<br><row>(@TFTTrait.TFTEvent5YR_Overlord.1:MinUnits@) Sát thương chuẩn tương đương @TFTTrait.TFTEvent5YR_Overlord.1:HPPercentDamage*100@% Máu tối đa, @TFTTrait.TFTEvent5YR_Overlord.1:PercentADAPGain*100@% %i:scaleAD%%i:scaleAP%</row> <br><row>(@TFTTrait.TFTEvent5YR_Overlord.2:MinUnits@) Sát thương chuẩn tương đương @TFTTrait.TFTEvent5YR_Overlord.2:HPPercentDamage*100@% Máu tối đa, @TFTTrait.TFTEvent5YR_Overlord.2:PercentADAPGain*100@% %i:scaleAD%%i:scaleAP%. <br>Cắn 2 đơn vị. Sát thương từ đòn đánh và kỹ năng của Lãnh Chúa gây <TFTKeyword>Cào Xé</TFTKeyword> 30%, <TFTKeyword>Phân Tách</TFTKeyword> 30%, <TFTKeyword>Suy Yếu</TFTKeyword> @TFTTrait.TFTEvent5YR_Overlord.2:EnemyDamageReduction*100@% và <TFTKeyword>Vết Thương Sâu</TFTKeyword> 33% lên kẻ địch trong @TFTTrait.TFTEvent5YR_Overlord.2:DebuffDuration@ giây. Những hiệu ứng này không cộng dồn.</row><br><tftitemrules><tftbold>Cào Xé</tftbold>: Giảm Kháng Phép<br><tftbold>Phân Tách</tftbold>: Giảm Giáp<br><tftbold>Suy Yếu</tftbold>: Giảm sát thương gây ra<br><tftbold>Vết Thương Sâu</tftbold>: Giảm hồi máu nhận được</tftitemrules><br>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -27093,7 +27093,7 @@
                     },
                     {
                         "name": "PercentADAPGain",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "PercentHPGain",
@@ -27332,7 +27332,7 @@
                 "constants": [
                     {
                         "name": "ASPctPerNumCinders",
-                        "value": 2.0
+                        "value": 2.25
                     },
                     {
                         "name": "BaseASPct",
@@ -27445,7 +27445,7 @@
         "trait_id": "TFTEvent5YR_Shimmerscale",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_7_Shimmerscale.png",
-        "tooltip_text": "Nhận trang bị Kim Long. Những trang bị này mang lại vàng và tăng sức mạnh chiến đấu.<br><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.1:MinUnits@)Nhận Quyền Trượng Giả Kim. Nhận Rìu Của Draven ở Vòng @TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemStage@-@TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemRound@.</row><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.2:MinUnits@)Nhận Vương Miện Vô Địch.</row>",
+        "tooltip_text": "Nhận trang bị Kim Long. Những trang bị này mang lại vàng và tăng sức mạnh chiến đấu.<br><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.1:MinUnits@) Nhận Quyền Trượng Giả Kim. Ở Vòng @TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemStage@-@TFTTrait.TFTEvent5YR_Shimmerscale.1:SecondItemRound@ nhận Rìu Của Draven.</row><br><row>(@TFTTrait.TFTEvent5YR_Shimmerscale.2:MinUnits@) Nhận Vương Miện Vô Địch.</row>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -27719,7 +27719,7 @@
         "trait_id": "TFTEvent5YR_TheCrew",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_15_StarCrew.TFT_Set15.png",
-        "tooltip_text": "Triệu hồi tàu <i>Dạ Ảnh</i> để hỗ trợ bạn trong trận chiến! Nó bắn ra một tên lửa gây @TFTTrait.TFTEvent5YR_TheCrew.1:BaseRocketDamage@ sát thương phép mỗi khi đội của bạn gây @TFTTrait.TFTEvent5YR_TheCrew.1:BaseDamageThreshold@ sát thương.<br><br>Tướng 2 vàng trở lên sẽ trở thành thành viên Chiến Hạm sau khi đạt 3 sao. Nhận thêm hiệu ứng bổ sung với mỗi thành viên Chiến Hạm.<br><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.1:MinUnits@) Tối đa 2 thành viên Chiến Hạm.</row><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.2:MinUnits@) Tối đa 4 thành viên Chiến Hạm.</row><br><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus1Active default=false alternate=TFTGuildInactive>(1x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>): + @TFTTrait.TFTEvent5YR_TheCrew.1:OnARollRolls@ lượt đổi miễn phí khi bạn nâng sao một tướng đã triển khai trong giao tranh trước.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus2Active default=false alternate=TFTGuildInactive>(2x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>): Tên lửa gây <magicDamage>@TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedRocketDamage@</magicDamage> sát thương.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus3Active default=false alternate=TFTGuildInactive>(3x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>): + @TFTTrait.TFTEvent5YR_TheCrew.1:FreeRerollsPerRound@ lượt đổi miễn phí / vòng.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus4Active default=false alternate=TFTGuildInactive>(4x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>): Tên lửa bắn ra mỗi khi gây @TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedDamageThreshold@ sát thương. Nhận @TFTTrait.TFTEvent5YR_TheCrew.1:XPPerRound@ XP mỗi vòng.</tftActiveRank>",
+        "tooltip_text": "Triệu hồi tàu <i>Dạ Ảnh</i> để hỗ trợ bạn trong trận chiến! Nó bắn ra một tên lửa gây @TFTTrait.TFTEvent5YR_TheCrew.1:BaseRocketDamage@ sát thương phép mỗi khi đội của bạn gây @TFTTrait.TFTEvent5YR_TheCrew.1:BaseDamageThreshold@ sát thương.<br>Tướng 2 vàng trở lên sẽ trở thành thành viên Chiến Hạm sau khi đạt 3 sao. Nhận thêm hiệu ứng bổ sung với mỗi thành viên Chiến Hạm.<br><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.1:MinUnits@) Tối đa 2 tướng Chiến Hạm.</row><br><row>(@TFTTrait.TFTEvent5YR_TheCrew.2:MinUnits@) Tối đa 4 tướng Chiến Hạm.</row><br><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus1Active default=false alternate=TFTGuildInactive>(1x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus1Active>): + @TFTTrait.TFTEvent5YR_TheCrew.1:OnARollRolls@ lượt đổi miễn phí khi bạn nâng sao một tướng đã triển khai trong giao tranh trước.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus2Active default=false alternate=TFTGuildInactive>(2x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus2Active>): Tên lửa gây <magicDamage>@TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedRocketDamage@</magicDamage> sát thương.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus3Active default=false alternate=TFTGuildInactive>(3x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus3Active>): + @TFTTrait.TFTEvent5YR_TheCrew.1:FreeRerollsPerRound@ lượt đổi miễn phí / vòng.</tftActiveRank><br><tftActiveRank enabled=TFTEvent5YR_Trait_WildcardCrew_Bonus4Active default=false alternate=TFTGuildInactive>(4x <ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarEnabled%</ShowIf.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active><ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>%i:3StarDisabled%</ShowIfNot.TFTEvent5YR_Trait_WildcardCrew_Bonus4Active>): Tên lửa bắn ra mỗi khi gây @TFTTrait.TFTEvent5YR_TheCrew.1:UpgradedDamageThreshold@ sát thương. Nhận @TFTTrait.TFTEvent5YR_TheCrew.1:XPPerRound@ XP mỗi vòng.</tftActiveRank>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -27729,7 +27729,7 @@
                     },
                     {
                         "name": "BaseRocketDamage",
-                        "value": 95.0
+                        "value": 105.0
                     },
                     {
                         "name": "FreeRerollOdds",
@@ -27749,7 +27749,7 @@
                     },
                     {
                         "name": "UpgradedRocketDamage",
-                        "value": 120.0
+                        "value": 130.0
                     },
                     {
                         "name": "XPPerRound",
@@ -27820,7 +27820,7 @@
         "trait_id": "TFTEvent5YR_Yordle",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Yordle.png",
-        "tooltip_text": "Sau mỗi giao tranh người chơi, nhận 1 Gói Yordle chứa đầy báu vật Yordle!<br><br><row>(@TFTTrait.TFTEvent5YR_Yordle.1:MinUnits@) Nhận 1 Gói Yordle!</row><br><row>(@TFTTrait.TFTEvent5YR_Yordle.2:MinUnits@) Nếu bạn có từ @TFTTrait.TFTEvent5YR_Yordle.2:NumOfThreeStarsNeeded@ tướng 3 sao trở lên, Gói Yordle của bạn sẽ chứa một Trùm Yordle.</row>",
+        "tooltip_text": "Sau mỗi giao tranh người chơi, nhận 1 Gói Yordle chứa đầy báu vật Yordle!<br><br><row>(@TFTTrait.TFTEvent5YR_Yordle.1:MinUnits@) Nhận 1 Gói Yordle!</row><br><row>(@TFTTrait.TFTEvent5YR_Yordle.2:MinUnits@) Nếu bạn triển khai từ @TFTTrait.TFTEvent5YR_Yordle.2:NumOfThreeStarsNeeded@ tướng 3 sao trở lên, Gói Yordle của bạn sẽ chứa một Trùm Yordle.</row>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

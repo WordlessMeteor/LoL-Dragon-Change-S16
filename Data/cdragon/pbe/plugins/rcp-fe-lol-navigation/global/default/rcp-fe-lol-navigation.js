@@ -1426,8 +1426,8 @@
                 N = T.WildcardTransition,
                 R = T.PredicateTransition,
                 L = T.PrecedencePredicateTransition,
-                P = n(12).IntervalSet,
-                M = (n(12).Interval, n(21).ATNDeserializationOptions),
+                M = n(12).IntervalSet,
+                P = (n(12).Interval, n(21).ATNDeserializationOptions),
                 D = n(22),
                 B = D.LexerActionType,
                 H = D.LexerSkipAction,
@@ -1450,7 +1450,7 @@
             }
 
             function X(e) {
-                return null == e && (e = M.defaultOptions), this.deserializationOptions = e, this.stateFactories = null, this.actionFactories = null, this
+                return null == e && (e = P.defaultOptions), this.deserializationOptions = e, this.stateFactories = null, this.actionFactories = null, this
             }
             X.prototype.isFeatureSupported = function(e, t) {
                 var n = q.indexOf(e);
@@ -1522,7 +1522,7 @@
                 }
             }, X.prototype.readSets = function(e, t, n) {
                 for (var i = this.readInt(), a = 0; a < i; a++) {
-                    var s = new P;
+                    var s = new M;
                     t.push(s);
                     var o = this.readInt();
                     0 !== this.readInt() && s.addOne(-1);
@@ -4739,8 +4739,8 @@
                         N = "[object String]",
                         R = "[object Symbol]",
                         L = "[object WeakMap]",
-                        P = "[object ArrayBuffer]",
-                        M = "[object DataView]",
+                        M = "[object ArrayBuffer]",
+                        P = "[object DataView]",
                         D = "[object Float32Array]",
                         B = "[object Float64Array]",
                         H = "[object Int8Array]",
@@ -4793,11 +4793,11 @@
                         Ne = "['’]",
                         Re = "[" + Ce + "]",
                         Le = "[" + Oe + "]",
-                        Pe = "[" + Ie + "]",
-                        Me = "\\d+",
+                        Me = "[" + Ie + "]",
+                        Pe = "\\d+",
                         De = "[" + xe + "]",
                         Be = "[" + Ae + "]",
-                        He = "[^" + Ce + Oe + Me + xe + Ae + we + "]",
+                        He = "[^" + Ce + Oe + Pe + xe + Ae + we + "]",
                         Ue = "\\ud83c[\\udffb-\\udfff]",
                         Fe = "[^" + Ce + "]",
                         Ve = "(?:\\ud83c[\\udde6-\\uddff]){2}",
@@ -4808,23 +4808,23 @@
                         Ke = "(?:" + Ge + "|" + He + ")",
                         qe = "(?:['’](?:d|ll|m|re|s|t|ve))?",
                         $e = "(?:['’](?:D|LL|M|RE|S|T|VE))?",
-                        ze = "(?:" + Pe + "|" + Ue + ")" + "?",
+                        ze = "(?:" + Me + "|" + Ue + ")" + "?",
                         Xe = "[" + ke + "]?",
                         Qe = Xe + ze + ("(?:" + Ye + "(?:" + [Fe, Ve, je].join("|") + ")" + Xe + ze + ")*"),
                         Je = "(?:" + [De, Ve, je].join("|") + ")" + Qe,
-                        Ze = "(?:" + [Fe + Pe + "?", Pe, Ve, je, Re].join("|") + ")",
+                        Ze = "(?:" + [Fe + Me + "?", Me, Ve, je, Re].join("|") + ")",
                         et = RegExp(Ne, "g"),
-                        tt = RegExp(Pe, "g"),
+                        tt = RegExp(Me, "g"),
                         nt = RegExp(Ue + "(?=" + Ue + ")|" + Ze + Qe, "g"),
-                        it = RegExp([Ge + "?" + Be + "+" + qe + "(?=" + [Le, Ge, "$"].join("|") + ")", Ke + "+" + $e + "(?=" + [Le, Ge + We, "$"].join("|") + ")", Ge + "?" + We + "+" + qe, Ge + "+" + $e, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", Me, Je].join("|"), "g"),
+                        it = RegExp([Ge + "?" + Be + "+" + qe + "(?=" + [Le, Ge, "$"].join("|") + ")", Ke + "+" + $e + "(?=" + [Le, Ge + We, "$"].join("|") + ")", Ge + "?" + We + "+" + qe, Ge + "+" + $e, "\\d*(?:1ST|2ND|3RD|(?![123])\\dTH)(?=\\b|[a-z_])", "\\d*(?:1st|2nd|3rd|(?![123])\\dth)(?=\\b|[A-Z_])", Pe, Je].join("|"), "g"),
                         at = RegExp("[" + Ye + Ce + Ie + ke + "]"),
                         st = /[a-z][A-Z]|[A-Z]{2,}[a-z]|[0-9][a-zA-Z]|[a-zA-Z][0-9]|[^a-zA-Z0-9 ]/,
                         ot = ["Array", "Buffer", "DataView", "Date", "Error", "Float32Array", "Float64Array", "Function", "Int8Array", "Int16Array", "Int32Array", "Map", "Math", "Object", "Promise", "RegExp", "Set", "String", "Symbol", "TypeError", "Uint8Array", "Uint8ClampedArray", "Uint16Array", "Uint32Array", "WeakMap", "_", "clearTimeout", "isFinite", "parseInt", "setTimeout"],
                         rt = -1,
                         lt = {};
-                    lt[D] = lt[B] = lt[H] = lt[U] = lt[F] = lt[V] = lt[j] = lt[G] = lt[Y] = !0, lt[v] = lt[E] = lt[P] = lt[b] = lt[M] = lt[y] = lt[T] = lt[S] = lt[I] = lt[x] = lt[A] = lt[k] = lt[O] = lt[N] = lt[L] = !1;
+                    lt[D] = lt[B] = lt[H] = lt[U] = lt[F] = lt[V] = lt[j] = lt[G] = lt[Y] = !0, lt[v] = lt[E] = lt[M] = lt[b] = lt[P] = lt[y] = lt[T] = lt[S] = lt[I] = lt[x] = lt[A] = lt[k] = lt[O] = lt[N] = lt[L] = !1;
                     var ct = {};
-                    ct[v] = ct[E] = ct[P] = ct[M] = ct[b] = ct[y] = ct[D] = ct[B] = ct[H] = ct[U] = ct[F] = ct[I] = ct[x] = ct[A] = ct[k] = ct[O] = ct[N] = ct[R] = ct[V] = ct[j] = ct[G] = ct[Y] = !0, ct[T] = ct[S] = ct[L] = !1;
+                    ct[v] = ct[E] = ct[M] = ct[P] = ct[b] = ct[y] = ct[D] = ct[B] = ct[H] = ct[U] = ct[F] = ct[I] = ct[x] = ct[A] = ct[k] = ct[O] = ct[N] = ct[R] = ct[V] = ct[j] = ct[G] = ct[Y] = !0, ct[T] = ct[S] = ct[L] = !1;
                     var dt = {
                             "\\": "\\",
                             "'": "'",
@@ -4905,13 +4905,13 @@
                         return !!(null == e ? 0 : e.length) && Gt(e, t, 0) > -1
                     }
 
-                    function Pt(e, t, n) {
+                    function Mt(e, t, n) {
                         for (var i = -1, a = null == e ? 0 : e.length; ++i < a;)
                             if (n(t, e[i])) return !0;
                         return !1
                     }
 
-                    function Mt(e, t) {
+                    function Pt(e, t) {
                         for (var n = -1, i = null == e ? 0 : e.length, a = Array(i); ++n < i;) a[n] = t(e[n], n, e);
                         return a
                     }
@@ -5017,7 +5017,7 @@
                     }
 
                     function Zt(e, t) {
-                        return Mt(t, (function(t) {
+                        return Pt(t, (function(t) {
                             return e[t]
                         }))
                     }
@@ -5319,13 +5319,13 @@
                             Ne = t.TypeError,
                             Re = i.prototype,
                             Le = xe.prototype,
-                            Pe = we.prototype,
-                            Me = t["__core-js_shared__"],
+                            Me = we.prototype,
+                            Pe = t["__core-js_shared__"],
                             De = Le.toString,
-                            Be = Pe.hasOwnProperty,
+                            Be = Me.hasOwnProperty,
                             He = 0,
-                            Ue = (n = /[^.]+$/.exec(Me && Me.keys && Me.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "",
-                            Fe = Pe.toString,
+                            Ue = (n = /[^.]+$/.exec(Pe && Pe.keys && Pe.keys.IE_PROTO || "")) ? "Symbol(src)_1." + n : "",
+                            Fe = Me.toString,
                             Ve = De.call(we),
                             je = gt._,
                             Ge = ke("^" + De.call(Be).replace(ae, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$"),
@@ -5335,7 +5335,7 @@
                             qe = Ye ? Ye.allocUnsafe : a,
                             $e = cn(we.getPrototypeOf, we),
                             ze = we.create,
-                            Xe = Pe.propertyIsEnumerable,
+                            Xe = Me.propertyIsEnumerable,
                             Qe = Re.splice,
                             Je = We ? We.isConcatSpreadable : a,
                             Ze = We ? We.iterator : a,
@@ -5371,8 +5371,8 @@
                             Nn = kn && new kn,
                             Rn = {},
                             Ln = Bs(In),
-                            Pn = Bs(xn),
-                            Mn = Bs(An),
+                            Mn = Bs(xn),
+                            Pn = Bs(An),
                             Dn = Bs(wn),
                             Bn = Bs(kn),
                             Hn = We ? We.prototype : a,
@@ -5463,11 +5463,11 @@
                         }
 
                         function Zn(e, t) {
-                            return Ps(Oa(e), li(t, 0, e.length))
+                            return Ms(Oa(e), li(t, 0, e.length))
                         }
 
                         function ei(e) {
-                            return Ps(Oa(e))
+                            return Ms(Oa(e))
                         }
 
                         function ti(e, t, n) {
@@ -5544,12 +5544,12 @@
                                     r = function(e, t, n) {
                                         var i = e.constructor;
                                         switch (t) {
-                                            case P:
+                                            case M:
                                                 return Ia(e);
                                             case b:
                                             case y:
                                                 return new i(+e);
-                                            case M:
+                                            case P:
                                                 return function(e, t) {
                                                     var n = t ? Ia(e.buffer) : e.buffer;
                                                     return new e.constructor(n, e.byteOffset, e.byteLength)
@@ -5625,7 +5625,7 @@
                                 l = [],
                                 c = t.length;
                             if (!r) return l;
-                            n && (t = Mt(t, Jt(n))), i ? (s = Pt, o = !1) : t.length >= 200 && (s = en, o = !1, t = new zn(t));
+                            n && (t = Pt(t, Jt(n))), i ? (s = Mt, o = !1) : t.length >= 200 && (s = en, o = !1, t = new zn(t));
                             e: for (; ++a < r;) {
                                 var d = e[a],
                                     u = null == n ? d : n(d);
@@ -5719,8 +5719,8 @@
                             }
                             return n.set(e, t), this.size = n.size, this
                         };
-                        var pi = Pa(yi),
-                            hi = Pa(Ti, !0);
+                        var pi = Ma(yi),
+                            hi = Ma(Ti, !0);
 
                         function gi(e, t) {
                             var n = !0;
@@ -5755,8 +5755,8 @@
                             }
                             return a
                         }
-                        var Ei = Ma(),
-                            bi = Ma(!0);
+                        var Ei = Pa(),
+                            bi = Pa(!0);
 
                         function yi(e, t) {
                             return e && Ei(e, t, Nr)
@@ -5811,9 +5811,9 @@
                         }
 
                         function Oi(e, t, n) {
-                            for (var s = n ? Pt : Lt, o = e[0].length, r = e.length, l = r, c = i(r), d = 1 / 0, u = []; l--;) {
+                            for (var s = n ? Mt : Lt, o = e[0].length, r = e.length, l = r, c = i(r), d = 1 / 0, u = []; l--;) {
                                 var m = e[l];
-                                l && t && (m = Mt(m, Jt(t))), d = bn(m.length, d), c[l] = !n && (t || o >= 120 && m.length >= 120) ? new zn(l && m) : a
+                                l && t && (m = Pt(m, Jt(t))), d = bn(m.length, d), c[l] = !n && (t || o >= 120 && m.length >= 120) ? new zn(l && m) : a
                             }
                             m = e[0];
                             var p = -1,
@@ -5856,10 +5856,10 @@
                                 }
                                 if (p && !u) return o || (o = new Xn), r || cr(e) ? ns(e, t, n, i, s, o) : function(e, t, n, i, a, s, o) {
                                     switch (n) {
-                                        case M:
+                                        case P:
                                             if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) return !1;
                                             e = e.buffer, t = t.buffer;
-                                        case P:
+                                        case M:
                                             return !(e.byteLength != t.byteLength || !s(new Ke(e), new Ke(t)));
                                         case b:
                                         case y:
@@ -5933,7 +5933,7 @@
                             }(e, t, n, i, Li, s))
                         }
 
-                        function Pi(e, t, n, i) {
+                        function Mi(e, t, n, i) {
                             var s = n.length,
                                 o = s,
                                 r = !i;
@@ -5957,7 +5957,7 @@
                             return !0
                         }
 
-                        function Mi(e) {
+                        function Pi(e) {
                             return !(!er(e) || (t = e, Ue && Ue in t)) && (Qo(e) ? Ge : ve).test(Bs(e));
                             var t
                         }
@@ -6001,7 +6001,7 @@
                         function Vi(e) {
                             var t = us(e);
                             return 1 == t.length && t[0][2] ? xs(t[0][0], t[0][1]) : function(n) {
-                                return n === e || Pi(n, e, t)
+                                return n === e || Mi(n, e, t)
                             }
                         }
 
@@ -6045,9 +6045,9 @@
 
                         function Wi(e, t, n) {
                             var i = -1;
-                            t = Mt(t.length ? t : [il], Jt(cs()));
+                            t = Pt(t.length ? t : [il], Jt(cs()));
                             var a = Fi(e, (function(e, n, a) {
-                                var s = Mt(t, (function(t) {
+                                var s = Pt(t, (function(t) {
                                     return t(e)
                                 }));
                                 return {
@@ -6090,7 +6090,7 @@
                                 s = -1,
                                 o = t.length,
                                 r = e;
-                            for (e === t && (t = Oa(t)), n && (r = Mt(e, Jt(n))); ++s < o;)
+                            for (e === t && (t = Oa(t)), n && (r = Pt(e, Jt(n))); ++s < o;)
                                 for (var l = 0, c = t[s], d = n ? n(c) : c;
                                     (l = a(r, d, l, i)) > -1;) r !== e && Qe.call(r, l, 1), Qe.call(e, l, 1);
                             return e
@@ -6130,7 +6130,7 @@
 
                         function Zi(e, t) {
                             var n = Fr(e);
-                            return Ps(n, li(t, 0, n.length))
+                            return Ms(n, li(t, 0, n.length))
                         }
 
                         function ea(e, t, n, i) {
@@ -6159,7 +6159,7 @@
                             } : il;
 
                         function ia(e) {
-                            return Ps(Fr(e))
+                            return Ms(Fr(e))
                         }
 
                         function aa(e, t, n) {
@@ -6225,7 +6225,7 @@
 
                         function da(e) {
                             if ("string" == typeof e) return e;
-                            if (Yo(e)) return Mt(e, da) + "";
+                            if (Yo(e)) return Pt(e, da) + "";
                             if (lr(e)) return Fn ? Fn.call(e) : "";
                             var t = e + "";
                             return "0" == t && 1 / e == -1 / 0 ? "-0" : t
@@ -6238,7 +6238,7 @@
                                 o = !0,
                                 r = [],
                                 l = r;
-                            if (n) o = !1, a = Pt;
+                            if (n) o = !1, a = Mt;
                             else if (s >= 200) {
                                 var c = t ? null : Xa(e);
                                 if (c) return mn(c);
@@ -6302,7 +6302,7 @@
                         }
 
                         function ba(e, t) {
-                            return Yo(e) ? e : ys(e, t) ? [e] : Ms(vr(e))
+                            return Yo(e) ? e : ys(e, t) ? [e] : Ps(vr(e))
                         }
                         var ya = Qi;
 
@@ -6401,7 +6401,7 @@
                             }))
                         }
 
-                        function Pa(e, t) {
+                        function Ma(e, t) {
                             return function(n, i) {
                                 if (null == n) return n;
                                 if (!Ko(n)) return e(n, i);
@@ -6411,7 +6411,7 @@
                             }
                         }
 
-                        function Ma(e) {
+                        function Pa(e) {
                             return function(t, n, i) {
                                 for (var a = -1, s = we(t), o = i(t), r = o.length; r--;) {
                                     var l = o[e ? r : ++a];
@@ -6559,7 +6559,7 @@
 
                         function Ya(e) {
                             return is((function(t) {
-                                return t = Mt(t, Jt(cs())), Qi((function(n) {
+                                return t = Pt(t, Jt(cs())), Qi((function(n) {
                                     var i = this;
                                     return e(t, (function(e) {
                                         return At(e, i, n)
@@ -6617,7 +6617,7 @@
                             return function(t) {
                                 var n = gs(t);
                                 return n == I ? ln(t) : n == O ? pn(t) : function(e, t) {
-                                    return Mt(t, (function(t) {
+                                    return Pt(t, (function(t) {
                                         return [t, e[t]]
                                     }))
                                 }(t, e(t))
@@ -6679,7 +6679,7 @@
                         }
 
                         function Za(e, t, n, i) {
-                            return e === a || Fo(e, Pe[n]) && !Be.call(i, n) ? t : e
+                            return e === a || Fo(e, Me[n]) && !Be.call(i, n) ? t : e
                         }
 
                         function es(e, t, n, i, s, o) {
@@ -6775,7 +6775,7 @@
                             var n = function(e, t) {
                                 return null == e ? a : e[t]
                             }(e, t);
-                            return Mi(n) ? n : a
+                            return Pi(n) ? n : a
                         }
                         var ps = Et ? function(e) {
                                 return null == e ? [] : (e = we(e), Rt(Et(e), (function(t) {
@@ -6829,16 +6829,16 @@
                             if (e === n) return !0;
                             var i = os(n);
                             return !!i && e === i[0]
-                        }(In && gs(new In(new ArrayBuffer(1))) != M || xn && gs(new xn) != I || An && gs(An.resolve()) != w || wn && gs(new wn) != O || kn && gs(new kn) != L) && (gs = function(e) {
+                        }(In && gs(new In(new ArrayBuffer(1))) != P || xn && gs(new xn) != I || An && gs(An.resolve()) != w || wn && gs(new wn) != O || kn && gs(new kn) != L) && (gs = function(e) {
                             var t = xi(e),
                                 n = t == A ? e.constructor : a,
                                 i = n ? Bs(n) : "";
                             if (i) switch (i) {
                                 case Ln:
-                                    return M;
-                                case Pn:
-                                    return I;
+                                    return P;
                                 case Mn:
+                                    return I;
+                                case Pn:
                                     return w;
                                 case Dn:
                                     return O;
@@ -6847,11 +6847,11 @@
                             }
                             return t
                         });
-                        var Ss = Me ? Qo : fl;
+                        var Ss = Pe ? Qo : fl;
 
                         function Cs(e) {
                             var t = e && e.constructor;
-                            return e === ("function" == typeof t && t.prototype || Pe)
+                            return e === ("function" == typeof t && t.prototype || Me)
                         }
 
                         function Is(e) {
@@ -6914,7 +6914,7 @@
                             }
                         }
 
-                        function Ps(e, t) {
+                        function Ms(e, t) {
                             var n = -1,
                                 i = e.length,
                                 s = i - 1;
@@ -6925,8 +6925,8 @@
                             }
                             return e.length = t, e
                         }
-                        var Ms = function(e) {
-                            var t = Po(e, (function(e) {
+                        var Ps = function(e) {
+                            var t = Mo(e, (function(e) {
                                     return 500 === n.size && n.clear(), e
                                 })),
                                 n = t.cache;
@@ -6995,17 +6995,17 @@
                             return e && e.length ? e[0] : a
                         }
                         var Ks = Qi((function(e) {
-                                var t = Mt(e, va);
+                                var t = Pt(e, va);
                                 return t.length && t[0] === e[0] ? Oi(t) : []
                             })),
                             qs = Qi((function(e) {
                                 var t = zs(e),
-                                    n = Mt(e, va);
+                                    n = Pt(e, va);
                                 return t === zs(n) ? t = a : n.pop(), n.length && n[0] === e[0] ? Oi(n, cs(t, 2)) : []
                             })),
                             $s = Qi((function(e) {
                                 var t = zs(e),
-                                    n = Mt(e, va);
+                                    n = Pt(e, va);
                                 return (t = "function" == typeof t ? t : a) && n.pop(), n.length && n[0] === e[0] ? Oi(n, a, t) : []
                             }));
 
@@ -7021,7 +7021,7 @@
                         var Js = is((function(e, t) {
                             var n = null == e ? 0 : e.length,
                                 i = ri(e, t);
-                            return $i(e, Mt(t, (function(e) {
+                            return $i(e, Pt(t, (function(e) {
                                 return Es(e, n) ? +e : e
                             })).sort(Aa)), i
                         }));
@@ -7047,14 +7047,14 @@
                             return e = Rt(e, (function(e) {
                                 if (qo(e)) return t = En(e.length, t), !0
                             })), Qt(t, (function(t) {
-                                return Mt(e, qt(t))
+                                return Pt(e, qt(t))
                             }))
                         }
 
                         function ao(e, t) {
                             if (!e || !e.length) return [];
                             var n = io(e);
-                            return null == t ? n : Mt(n, (function(e) {
+                            return null == t ? n : Pt(n, (function(e) {
                                 return At(t, a, e)
                             }))
                         }
@@ -7131,7 +7131,7 @@
                             }));
 
                         function So(e, t) {
-                            return (Yo(e) ? Mt : Fi)(e, cs(t, 3))
+                            return (Yo(e) ? Pt : Fi)(e, cs(t, 3))
                         }
                         var Co = Ra((function(e, t, n) {
                             e[n ? 0 : 1].push(t)
@@ -7234,7 +7234,7 @@
                                 return ui(e, fr(t) || 0, n)
                             }));
 
-                        function Po(e, t) {
+                        function Mo(e, t) {
                             if ("function" != typeof e || null != t && "function" != typeof t) throw new Ne(s);
                             var n = function() {
                                 var i = arguments,
@@ -7244,10 +7244,10 @@
                                 var o = e.apply(this, i);
                                 return n.cache = s.set(a, o) || s, o
                             };
-                            return n.cache = new(Po.Cache || $n), n
+                            return n.cache = new(Mo.Cache || $n), n
                         }
 
-                        function Mo(e) {
+                        function Po(e) {
                             if ("function" != typeof e) throw new Ne(s);
                             return function() {
                                 var t = arguments;
@@ -7264,9 +7264,9 @@
                                 return !e.apply(this, t)
                             }
                         }
-                        Po.Cache = $n;
+                        Mo.Cache = $n;
                         var Do = ya((function(e, t) {
-                                var n = (t = 1 == t.length && Yo(t[0]) ? Mt(t[0], Jt(cs())) : Mt(vi(t, 1), Jt(cs()))).length;
+                                var n = (t = 1 == t.length && Yo(t[0]) ? Pt(t[0], Jt(cs())) : Pt(vi(t, 1), Jt(cs()))).length;
                                 return Qi((function(i) {
                                     for (var a = -1, s = bn(i.length, n); ++a < s;) i[a] = t[a].call(this, i[a]);
                                     return At(e, this, i)
@@ -7298,7 +7298,7 @@
                             },
                             Yo = i.isArray,
                             Wo = yt ? Jt(yt) : function(e) {
-                                return tr(e) && xi(e) == P
+                                return tr(e) && xi(e) == M
                             };
 
                         function Ko(e) {
@@ -7447,12 +7447,12 @@
                                     for (var o = t[n], r = Rr(o), l = -1, c = r.length; ++l < c;) {
                                         var d = r[l],
                                             u = e[d];
-                                        (u === a || Fo(u, Pe[d]) && !Be.call(e, d)) && (e[d] = o[d])
+                                        (u === a || Fo(u, Me[d]) && !Be.call(e, d)) && (e[d] = o[d])
                                     }
                                 return e
                             })),
                             Ir = Qi((function(e) {
-                                return e.push(a, es), At(Pr, a, e)
+                                return e.push(a, es), At(Mr, a, e)
                             }));
 
                         function xr(e, t, n) {
@@ -7481,14 +7481,14 @@
                         var Lr = La((function(e, t, n) {
                                 Gi(e, t, n)
                             })),
-                            Pr = La((function(e, t, n, i) {
+                            Mr = La((function(e, t, n, i) {
                                 Gi(e, t, n, i)
                             })),
-                            Mr = is((function(e, t) {
+                            Pr = is((function(e, t) {
                                 var n = {};
                                 if (null == e) return n;
                                 var i = !1;
-                                t = Mt(t, (function(t) {
+                                t = Pt(t, (function(t) {
                                     return t = ba(t, e), i || (i = t.length > 1), t
                                 })), Na(e, ss(e), n), i && (n = ci(n, 7, ts));
                                 for (var a = t.length; a--;) ma(n, t[a]);
@@ -7504,7 +7504,7 @@
 
                         function Br(e, t) {
                             if (null == e) return {};
-                            var n = Mt(ss(e), (function(e) {
+                            var n = Pt(ss(e), (function(e) {
                                 return [e]
                             }));
                             return t = cs(t), Ki(e, n, (function(e, n) {
@@ -7618,7 +7618,7 @@
                         }
 
                         function ll() {}
-                        var cl = Ya(Mt),
+                        var cl = Ya(Pt),
                             dl = Ya(Nt),
                             ul = Ya(Ut);
 
@@ -7684,7 +7684,7 @@
                         }, Vn.cond = function(e) {
                             var t = null == e ? 0 : e.length,
                                 n = cs();
-                            return e = t ? Mt(e, (function(e) {
+                            return e = t ? Pt(e, (function(e) {
                                 if ("function" != typeof e[1]) throw new Ne(s);
                                 return [n(e[0]), e[1]]
                             })) : [], Qi((function(n) {
@@ -7766,12 +7766,12 @@
                             return Vi(ci(e, 1))
                         }, Vn.matchesProperty = function(e, t) {
                             return ji(e, ci(t, 1))
-                        }, Vn.memoize = Po, Vn.merge = Lr, Vn.mergeWith = Pr, Vn.method = sl, Vn.methodOf = ol, Vn.mixin = rl, Vn.negate = Mo, Vn.nthArg = function(e) {
+                        }, Vn.memoize = Mo, Vn.merge = Lr, Vn.mergeWith = Mr, Vn.method = sl, Vn.methodOf = ol, Vn.mixin = rl, Vn.negate = Po, Vn.nthArg = function(e) {
                             return e = hr(e), Qi((function(t) {
                                 return Yi(t, e)
                             }))
-                        }, Vn.omit = Mr, Vn.omitBy = function(e, t) {
-                            return Br(e, Mo(cs(t)))
+                        }, Vn.omit = Pr, Vn.omitBy = function(e, t) {
+                            return Br(e, Po(cs(t)))
                         }, Vn.once = function(e) {
                             return wo(2, e)
                         }, Vn.orderBy = function(e, t, n, i) {
@@ -7785,7 +7785,7 @@
                         }, Vn.pullAllWith = function(e, t, n) {
                             return e && e.length && t && t.length ? qi(e, t, a, n) : e
                         }, Vn.pullAt = Js, Vn.range = pl, Vn.rangeRight = hl, Vn.rearg = Uo, Vn.reject = function(e, t) {
-                            return (Yo(e) ? Rt : _i)(e, Mo(cs(t, 3)))
+                            return (Yo(e) ? Rt : _i)(e, Po(cs(t, 3)))
                         }, Vn.remove = function(e, t) {
                             var n = [];
                             if (!e || !e.length) return n;
@@ -7848,7 +7848,7 @@
                                 trailing: a
                             })
                         }, Vn.thru = po, Vn.toArray = mr, Vn.toPairs = Hr, Vn.toPairsIn = Ur, Vn.toPath = function(e) {
-                            return Yo(e) ? Mt(e, Ds) : lr(e) ? [e] : Oa(Ms(vr(e)))
+                            return Yo(e) ? Pt(e, Ds) : lr(e) ? [e] : Oa(Ps(vr(e)))
                         }, Vn.toPlainObject = _r, Vn.transform = function(e, t, n) {
                             var i = Yo(e),
                                 a = i || $o(e) || cr(e);
@@ -7956,14 +7956,14 @@
                         }, Vn.isError = Xo, Vn.isFinite = function(e) {
                             return "number" == typeof e && Ft(e)
                         }, Vn.isFunction = Qo, Vn.isInteger = Jo, Vn.isLength = Zo, Vn.isMap = nr, Vn.isMatch = function(e, t) {
-                            return e === t || Pi(e, t, us(t))
+                            return e === t || Mi(e, t, us(t))
                         }, Vn.isMatchWith = function(e, t, n) {
-                            return n = "function" == typeof n ? n : a, Pi(e, t, us(t), n)
+                            return n = "function" == typeof n ? n : a, Mi(e, t, us(t), n)
                         }, Vn.isNaN = function(e) {
                             return ir(e) && e != +e
                         }, Vn.isNative = function(e) {
                             if (Ss(e)) throw new Ie("Unsupported core-js use. Try https://npms.io/search?q=ponyfill.");
-                            return Mi(e)
+                            return Pi(e)
                         }, Vn.isNil = function(e) {
                             return null == e
                         }, Vn.isNull = function(e) {
@@ -8225,7 +8225,7 @@
                                 return Ni(n, e, t)
                             }))
                         })), Wn.prototype.reject = function(e) {
-                            return this.filter(Mo(cs(e)))
+                            return this.filter(Po(cs(e)))
                         }, Wn.prototype.slice = function(e, t) {
                             e = hr(e);
                             var n = this;
@@ -8802,7 +8802,7 @@
                 if (e.seriesName && e.seriesName.startsWith("prestige")) return !0
             };
             t.isLevelMission = L;
-            const P = function(e) {
+            const M = function(e) {
                 let t = {};
                 i._.each(e, (function(e) {
                     t[e.rewardGroup] || (t[e.rewardGroup] = []), t[e.rewardGroup].push(i.Ember.Object.create(e))
@@ -8815,11 +8815,11 @@
                     s.groupName = a, s.rewards = i._.sortBy(t[a], "sequence"), n.push(i.Ember.Object.create(s))
                 })), n
             };
-            t.buildRewardGroups = P;
-            const M = function(e) {
+            t.buildRewardGroups = M;
+            const P = function(e) {
                 return e && ("SELECT_REWARDS" === e.status || "REWARDS_ELIGIBLE" === e.status)
             };
-            t.isInSelectRewardsState = M;
+            t.isInSelectRewardsState = P;
             const D = function(e) {
                 return i._.filter(e, (function(e) {
                     return a.isInSelectRewardsState(e)
@@ -8888,8 +8888,8 @@
                 isLevelMission: L,
                 isValidGameFlowToCelebrate: F,
                 getSeriesByMission: T,
-                isInSelectRewardsState: M,
-                buildRewardGroups: P,
+                isInSelectRewardsState: P,
+                buildRewardGroups: M,
                 filterByRewardStrategyMissions: O,
                 filterForSelectRewardsStateMissions: D,
                 filterForAutocompleteMissions: B,
@@ -15039,8 +15039,8 @@
                         ObjectivesTooltipRequirementIconComponent: i.SharedObjectivesComponents.ObjectivesTooltipRequirementIconComponent,
                         RolloverMessageComponent: R.default,
                         MuteButtonComponent: L.default,
-                        PersistentControlPanelComponent: P.default,
-                        SeasonPassWrapperComponent: M.default,
+                        PersistentControlPanelComponent: M.default,
+                        SeasonPassWrapperComponent: P.default,
                         SeasonPassProgressionComponent: D.default,
                         ObjectivesTrackerComponent: B.default,
                         SeasonPassBannerComponent: H.default,
@@ -15104,7 +15104,7 @@
                             "components/media-group": Ne.default,
                             "components/count-down": Re.default,
                             "components/cta-button": Le.default,
-                            "components/objectives-card-wrapper": Me.default,
+                            "components/objectives-card-wrapper": Pe.default,
                             "components/activity-background": Ae.default,
                             "components/activity-parallax-background": ke.default,
                             "components/activity-header": we.default,
@@ -15184,8 +15184,8 @@
                 N = dt(n(266)),
                 R = dt(n(267)),
                 L = dt(n(268)),
-                P = dt(n(269)),
-                M = dt(n(270)),
+                M = dt(n(269)),
+                P = dt(n(270)),
                 D = dt(n(271)),
                 B = dt(n(272)),
                 H = dt(n(274)),
@@ -15238,8 +15238,8 @@
                 Ne = dt(n(326)),
                 Re = dt(n(327)),
                 Le = dt(n(328)),
-                Pe = dt(n(329)),
-                Me = dt(n(330)),
+                Me = dt(n(329)),
+                Pe = dt(n(330)),
                 De = dt(n(331)),
                 Be = dt(n(332)),
                 He = dt(n(333)),
@@ -15292,7 +15292,7 @@
                     "components/media-card": Oe.default,
                     "components/media-group": Ne.default,
                     "components/cta-button": Le.default,
-                    "components/error-message": Pe.default
+                    "components/error-message": Me.default
                 }
         }, (e, t, n) => {
             "use strict";
@@ -19119,7 +19119,7 @@
                     return this.get("action.type") === l.ACTION.ROUTE_LOBBY && this.get("patcherService.isGettingReadyForGame")
                 })),
                 isPlayButtonDisabledByOSCheck: a.Ember.computed("action", "playButtonService.isRegionOSCheckPassed", (function() {
-                    return !1
+                    return this.get("action.type") === l.ACTION.ROUTE_LOBBY && !this.get("playButtonService.isRegionOSCheckPassed")
                 })),
                 isInfoHubDisabled: a.Ember.computed("action", "clientConfigService.isInfoHubDisabled", (function() {
                     return this.get("action.type") === l.ACTION.ROUTE_INFO_HUB && this.get("clientConfigService.isInfoHubDisabled")
@@ -32534,7 +32534,9 @@
                     let t = e.overlay("/fe/lol-l10n/trans.json").overlay("/fe/lol-navigation/trans-game-in-progress.json").observe((() => {
                         this._updateButtons(t)
                     }));
-                    return this._reconnectButton._isLocalized = !0, this._quitButton._isLocalized = !0, this._quitGameInProgressButton._isLocalized = !0, t.ready().then((() => {
+                    return t = t.overlay("/fe/tft/trans.json").observe((() => {
+                        this._disabledButtonMessageInnerHTML = s.UIKit.getTemplateHelper().contentBlockDialog("", t.get("tft_reconnect_treatment_message"), "dialog-large"), this._disabledButtonMessageInnerHTML.setAttribute("style", "padding: 18px;"), this._updateButtons(t)
+                    })), this._reconnectButton._isLocalized = !0, this._quitButton._isLocalized = !0, this._quitGameInProgressButton._isLocalized = !0, t.ready().then((() => {
                         this._updateButtons(t)
                     }))
                 }
@@ -32543,7 +32545,14 @@
                 }
                 gameflowDataCallback(e) {
                     const t = a.default.get(e, "map.assets.gameflow-background");
-                    t && (this._rootNode.style.backgroundImage = `url(${t})`)
+                    t && (this._rootNode.style.backgroundImage = `url(${t})`);
+                    const n = (0, s.getProvider)().getSocket();
+                    if ("TFT" === a.default.get(e, "map.gameMode")) {
+                        const e = "v3/client-config/lol.client_settings.tft.bridge_enabled";
+                        this.clientConfigDataBinding = (0, s.dataBinding)("/lol-client-config", n), this.clientConfigDataBinding.observe(e, this, (e => {
+                            this._bridgeEnabled = e, !1 !== e && (this._sysInfoDataBinding = (0, s.dataBinding)("/riotclient", n), this._sysInfoDataBinding.observe("/system-info/v1/basic-info", this, this._onSysInfoRetrieved))
+                        }))
+                    }
                 }
                 _buildButton(e) {
                     const t = e || {},
@@ -32551,7 +32560,7 @@
                     return a.default.extend(n, t), t.clickCallback && n.addEventListener("click", t.clickCallback), n.setAttribute("margin-right", "10px"), n._isLocalized = !1, n
                 }
                 _updateButtons(e) {
-                    this._reconnectButton.innerHTML = e.get("game_in_progress_reconnect_button"), this._quitButton.innerHTML = e.get("game_in_progress_quit_button"), this._quitGameInProgressButton.innerHTML = e.get("game_in_progress_quit_button")
+                    this._reconnectButton.innerHTML = e.get("game_in_progress_reconnect_button"), this._isPlatformSupported || (this._reconnectButtonInnerHTML = e.get("tft_reconnect_button_disabled_caption")), this._quitButton.innerHTML = e.get("game_in_progress_quit_button"), this._quitGameInProgressButton.innerHTML = e.get("game_in_progress_quit_button")
                 }
                 _updateIsSpectating(e) {
                     e ? this._quitButton.classList.remove("hidden") : this._quitButton.classList.add("hidden")
@@ -32624,10 +32633,37 @@
                     }
                 }
                 async _onSysInfoRetrieved(e) {
-                    0
+                    if (!this._bridgeEnabled) return;
+                    const t = e.operatingSystem.versionMajor,
+                        n = parseInt(t) || 0;
+                    if (this._isPlatformSupported = "Windows" === e.operatingSystem.platform && n > 7, !0 === this._isPlatformSupported) return;
+                    if (!this._disabledButtonMessageInnerHTML) return;
+                    if (null !== this._incompatibleDeviceModal) return;
+                    let i;
+                    try {
+                        i = await this._gameflowDataBinding.get("/v1/session")
+                    } catch (e) {
+                        return s.logger.info(`Failed to get gameflow session data: ${e}`), void(i = {
+                            phase: "Unknown",
+                            gameData: null
+                        })
+                    }
+                    const a = i?.gameData?.queue?.gameMode;
+                    if (!a || "TFT" !== a) return;
+                    this._reconnectButton.removeAttribute("disabled"), this._reconnectButton.classList.add("hidden");
+                    const o = {
+                            type: "DialogAlert",
+                            data: {
+                                contents: this._disabledButtonMessageInnerHTML,
+                                dismissable: !1
+                            }
+                        },
+                        r = s.UIKit.getModalManager().add(o),
+                        l = r.domNode.querySelector("lol-uikit-flat-button-group");
+                    l && l.setAttribute("style", "visibility: hidden;"), this._incompatibleDeviceModal = r
                 }
                 _onSessionChanged(e) {
-                    null !== this._incompatibleDeviceModal && "Reconnect" !== e?.phase && (s.UIKit.getModalManager().remove(this._incompatibleDeviceModal), this._incompatibleDeviceModal = null)
+                    this._bridgeEnabled && null !== this._incompatibleDeviceModal && "Reconnect" !== e?.phase && (s.UIKit.getModalManager().remove(this._incompatibleDeviceModal), this._incompatibleDeviceModal = null)
                 }
             }
         }, (e, t, n) => {

@@ -25457,7 +25457,7 @@
                     },
                     {
                         "name": "ManaToGive",
-                        "value": 8.0
+                        "value": 10.0
                     }
                 ],
                 "min_units": 2,
@@ -25534,7 +25534,7 @@
                     },
                     {
                         "name": "ManaReductionPct",
-                        "value": 0.08
+                        "value": 0.07
                     },
                     {
                         "name": "MaxHealthLost",
@@ -25564,7 +25564,7 @@
                 "constants": [
                     {
                         "name": "ArmorMR",
-                        "value": 15.0
+                        "value": 12.0
                     },
                     {
                         "name": "ManaReductionPctPerGalioItem",
@@ -25580,7 +25580,7 @@
                 "constants": [
                     {
                         "name": "ArmorMR",
-                        "value": 20.0
+                        "value": 15.0
                     },
                     {
                         "name": "ManaReductionPctPerGalioItem",
@@ -25881,7 +25881,7 @@
         "trait_id": "TFTEvent5YR_Fated",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_11_Fated.png",
-        "tooltip_text": "チャンピオンを別のチャンピオンに重ねてペアを作ると、チャンピオンのロールに応じた<TFTBonus>「運命の祝福」</TFTBonus>が解放される。<br><br><row>(@TFTTrait.TFTEvent5YR_Fated.1:MinUnits@) ペアが「運命の祝福」を獲得し、最大体力が@TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@%増加する。</row><br><row>(@TFTTrait.TFTEvent5YR_Fated.2:MinUnits@) すべてのユニットが「運命の祝福」を獲得する。ペアは追加で最大体力が@TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@%増加し、さらに「運命の祝福」も@TFTTrait.TFTEvent5YR_Fated.2:PairBondIncreasePercent*100@%増加する。</row><br><br>運命の祝福:<br><ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><status>アサシン</status>: 戦闘開始時に耐久値@TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@のシールドを獲得</ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><TFTGuildInactive>アサシン: 戦闘開始時に耐久値@TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@のシールドを獲得</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><br><ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><status>キャスター</status>: %i:scaleAD%と%i:scaleAP%が@TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><TFTGuildInactive>キャスター: %i:scaleAD%と%i:scaleAP%が@TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><status>ファイター</status>: %i:scaleSV%が@TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><TFTGuildInactive>ファイター: %i:scaleSV%が@TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><status>マークスマン</status>: %i:scaleAS%が@TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><TFTGuildInactive>マークスマン: %i:scaleAS%が@TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><br><ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><status>スペシャリスト</status>: ダメージの@TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@%を確定ダメージとして与える</ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><TFTGuildInactive>スペシャリスト: ダメージの@TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@%を確定ダメージとして与える</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><br><ShowIf.TFTEvent5YR_Trait_Fated_TankActive><status>タンク</status>: %i:scaleArmor%と%i:scaleMR%が@TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@増加</ShowIf.TFTEvent5YR_Trait_Fated_TankActive><ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><TFTGuildInactive>タンク: %i:scaleArmor%と%i:scaleMR%が@TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><br><br>味方のユニットが特定の「運命の祝福」から得られる効果は1つのみ。",
+        "tooltip_text": "チャンピオンを別のチャンピオンに重ねてペアを作ると、チャンピオンのロールに応じた<TFTBonus>「運命の祝福」</TFTBonus>が解放される。<br><br><row>(@TFTTrait.TFTEvent5YR_Fated.1:MinUnits@) ペアが「運命の祝福」を獲得し、最大体力が@TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@%増加する。</row><br><row>(@TFTTrait.TFTEvent5YR_Fated.2:MinUnits@) すべてのユニットが「運命の祝福」を獲得する。ペアは最大体力が@TFTTrait.TFTEvent5YR_Fated.1:PairHPBonus*100@%増加し、さらに「運命の祝福」も@TFTTrait.TFTEvent5YR_Fated.2:PairBondIncreasePercent*100@%増加する。</row><br><br>運命の祝福:<br><ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><status>アサシン</status>: 戦闘開始時に耐久値@TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@のシールドを獲得</ShowIf.TFTEvent5YR_Trait_Fated_AssassinActive><ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><TFTGuildInactive>アサシン: 戦闘開始時に耐久値@TFTTrait.TFTEvent5YR_Fated.1:YasuoBuffBonus@のシールドを獲得</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_AssassinActive><br><ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><status>キャスター</status>: %i:scaleAD%と%i:scaleAP%が@TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_CasterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><TFTGuildInactive>キャスター: %i:scaleAD%と%i:scaleAP%が@TFTTrait.TFTEvent5YR_Fated.1:AhriBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_CasterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><status>ファイター</status>: %i:scaleSV%が@TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_FighterActive><ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><TFTGuildInactive>ファイター: %i:scaleSV%が@TFTTrait.TFTEvent5YR_Fated.1:SettBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_FighterActive><br><ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><status>マークスマン</status>: %i:scaleAS%が@TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@%増加</ShowIf.TFTEvent5YR_Trait_Fated_MarksmanActive><ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><TFTGuildInactive>マークスマン: %i:scaleAS%が@TFTTrait.TFTEvent5YR_Fated.1:KindredBuffBonus*100@%増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_MarksmanActive><br><ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><status>スペシャリスト</status>: ダメージの@TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@%を確定ダメージとして与える</ShowIf.TFTEvent5YR_Trait_Fated_SpecialistActive><ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><TFTGuildInactive>スペシャリスト: ダメージの@TFTTrait.TFTEvent5YR_Fated.1:SyndraBuffBonus*100@%を確定ダメージとして与える</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_SpecialistActive><br><ShowIf.TFTEvent5YR_Trait_Fated_TankActive><status>タンク</status>: %i:scaleArmor%と%i:scaleMR%が@TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@増加</ShowIf.TFTEvent5YR_Trait_Fated_TankActive><ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><TFTGuildInactive>タンク: %i:scaleArmor%と%i:scaleMR%が@TFTTrait.TFTEvent5YR_Fated.1:ThreshBuffBonus@増加</TFTGuildInactive></ShowIfNot.TFTEvent5YR_Trait_Fated_TankActive><br><br>味方のユニットが特定の「運命の祝福」から得られる効果は1つのみ。",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -26427,7 +26427,7 @@
         "trait_id": "TFTEvent5YR_Honeymancy",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_12_Bee.TFT_Set12.png",
-        "tooltip_text": "味方のチャンピオンが「ハチ」を獲得する。ハチは@TFTTrait.TFTEvent5YR_Honeymancy:Period@秒ごとに対象に魔法ダメージを与える。ハチのダメージは、宿主のチャンピオンが与えたダメージと受けたダメージ、そしてハチ1匹ごとの固定値に基づいて算出される。<br><br>チャンピオンが倒されると、その戦闘が終了するまで周囲のチャンピオンを追従するハチを@TFTTrait.TFTEvent5YR_Honeymancy:NumTransfers@匹残す。<br><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.1:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.1:MiniCount@匹のハチ、与ダメージの@TFTTrait.TFTEvent5YR_Honeymancy.1:BonusDamage*100@%、被ダメージの@TFTTrait.TFTEvent5YR_Honeymancy.1:DamageReceived*100@%、ハチごとに@TFTTrait.TFTEvent5YR_Honeymancy.1:DamagePerMini@ダメージ。</row><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.2:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.2:MiniCount@匹のハチ、与ダメージの@TFTTrait.TFTEvent5YR_Honeymancy.2:BonusDamage*100@%、被ダメージの@TFTTrait.TFTEvent5YR_Honeymancy.2:DamageReceived*100@%、ハチごとに@TFTTrait.TFTEvent5YR_Honeymancy.2:DamagePerMini@ダメージ。</row>",
+        "tooltip_text": "味方のチームが「ハチ」を獲得する。ハチは@TFTTrait.TFTEvent5YR_Honeymancy:Period@秒ごとに対象に魔法ダメージを与える。ハチのダメージは、宿主が与えたダメージと受けたダメージ、そしてハチ1匹ごとの固定値に基づいて算出される。<br><br>ユニットが倒されると、その戦闘が終了するまで近くの味方を追従するハチを@TFTTrait.TFTEvent5YR_Honeymancy:NumTransfers@匹残す。<br><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.1:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.1:MiniCount@匹のハチ、与ダメージの@TFTTrait.TFTEvent5YR_Honeymancy.1:BonusDamage*100@%、被ダメージの@TFTTrait.TFTEvent5YR_Honeymancy.1:DamageReceived*100@%、ハチごとに@TFTTrait.TFTEvent5YR_Honeymancy.1:DamagePerMini@ダメージ。</row><br><row>(@TFTTrait.TFTEvent5YR_Honeymancy.2:MinUnits@) @TFTTrait.TFTEvent5YR_Honeymancy.2:MiniCount@匹のハチ、与ダメージの@TFTTrait.TFTEvent5YR_Honeymancy.2:BonusDamage*100@%、被ダメージの@TFTTrait.TFTEvent5YR_Honeymancy.2:DamageReceived*100@%、ハチごとに@TFTTrait.TFTEvent5YR_Honeymancy.2:DamagePerMini@ダメージ。</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -26451,7 +26451,7 @@
                     },
                     {
                         "name": "DamagePerMini",
-                        "value": 12.0
+                        "value": 10.0
                     },
                     {
                         "name": "DamageReceived",
@@ -26475,7 +26475,7 @@
                     },
                     {
                         "name": "DamagePerMini",
-                        "value": 25.0
+                        "value": 21.0
                     },
                     {
                         "name": "DamageReceived",
@@ -26944,7 +26944,7 @@
                 "constants": [
                     {
                         "name": "PermBonusHealth",
-                        "value": 60.0
+                        "value": 70.0
                     },
                     {
                         "name": "ShieldValue",
@@ -26962,7 +26962,7 @@
         "trait_id": "TFTEvent5YR_Nitro",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_14_NitroForge.TFT_Set14.png",
-        "tooltip_text": "対人戦ラウンドが終了するたびに、味方チャンピオンは自身のスターレベルに応じてR-080Tにクロムを付与する。クロム1つあたり、体力が@TFTTrait.TFTEvent5YR_Nitro.:HealthPerScrap@、魔力が@TFTTrait.TFTEvent5YR_Nitro.:APPerScrap@増加する。<br><br><row>(@TFTTrait.TFTEvent5YR_Nitro.1:MinUnits@) R-080Tを召喚する！</row><br><row>(@TFTTrait.TFTEvent5YR_Nitro.2:MinUnits@) R-080TをT-43Xにアップグレード！@TFTTrait.TFTEvent5YR_Nitro.:FourStarScrapThreshold@クロムになると、T-43Xがアップグレードされて巨大なレーザーを発射！</row><br><br><rules>スターごとのクロム: @TFTTrait.TFTEvent5YR_Nitro.:ScrapPerOneStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerTwoStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerThreeStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerFourStar@</rules>",
+        "tooltip_text": "対人戦ラウンドが終了するたびに、味方チャンピオンは自身のスターレベルに応じてR-080Tにクロムを付与する。クロム1つあたり、体力が@TFTTrait.TFTEvent5YR_Nitro.:HealthPerScrap@、魔力が@TFTTrait.TFTEvent5YR_Nitro.:APPerScrap@増加する。<br><br><row>(@TFTTrait.TFTEvent5YR_Nitro.1:MinUnits@) R-080Tを召喚！</row><br><row>(@TFTTrait.TFTEvent5YR_Nitro.2:MinUnits@) R-080TをT-43Xにアップグレード！@TFTTrait.TFTEvent5YR_Nitro.:FourStarScrapThreshold@クロムになると、T-43Xがアップグレードされて巨大なレーザーを発射！</row><br><br><rules>スターごとのクロム: @TFTTrait.TFTEvent5YR_Nitro.:ScrapPerOneStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerTwoStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerThreeStar@/@TFTTrait.TFTEvent5YR_Nitro.:ScrapPerFourStar@</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -27000,11 +27000,11 @@
                     },
                     {
                         "name": "Stage3BonusHP",
-                        "value": 100.0
+                        "value": 150.0
                     },
                     {
                         "name": "Stage4BonusHP",
-                        "value": 300.0
+                        "value": 380.0
                     },
                     {
                         "name": "Stage5BonusHP",
@@ -27093,7 +27093,7 @@
                     },
                     {
                         "name": "PercentADAPGain",
-                        "value": 0.35
+                        "value": 0.4
                     },
                     {
                         "name": "PercentHPGain",
@@ -27222,7 +27222,7 @@
         "trait_id": "TFTEvent5YR_Preserver",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_5_Rejuvenator.png",
-        "tooltip_text": "味方チームが@TFTTrait.TFTEvent5YR_Preserver.1:Duration@秒ごとに最大体力の一定割合を回復する。体力が最大の場合は、代わりにマナを回復する。<br><br><row> (@TFTTrait.TFTEvent5YR_Preserver.1:MinUnits@) %i:scaleHealth%が@TFTTrait.TFTEvent5YR_Preserver.1:HealthPct*100@%または%i:scaleMana%が@TFTTrait.TFTEvent5YR_Preserver.1:ManaPct*100@%</row><br><row> (@TFTTrait.TFTEvent5YR_Preserver.2:MinUnits@) %i:scaleHealth%が@TFTTrait.TFTEvent5YR_Preserver.2:HealthPct*100@%および%i:scaleMana%が@TFTTrait.TFTEvent5YR_Preserver.2:ManaPct*100@%。常に両方を獲得する。</row><br><br>",
+        "tooltip_text": "味方チームが@TFTTrait.TFTEvent5YR_Preserver.1:Duration@秒ごとに最大体力の一定割合を回復する。体力が最大の場合は、代わりにマナを回復する。<br><br><row> (@TFTTrait.TFTEvent5YR_Preserver.1:MinUnits@) %i:scaleHealth%が@TFTTrait.TFTEvent5YR_Preserver.1:HealthPct*100@%または%i:scaleMana%が@TFTTrait.TFTEvent5YR_Preserver.1:ManaPct*100@%</row><br><row> (@TFTTrait.TFTEvent5YR_Preserver.2:MinUnits@) %i:scaleHealth%が@TFTTrait.TFTEvent5YR_Preserver.2:HealthPct*100@%および%i:scaleMana%が@TFTTrait.TFTEvent5YR_Preserver.2:ManaPct*100@%常に両方を獲得する。</row><br><br>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -27332,7 +27332,7 @@
                 "constants": [
                     {
                         "name": "ASPctPerNumCinders",
-                        "value": 2.0
+                        "value": 2.25
                     },
                     {
                         "name": "BaseASPct",
@@ -27396,7 +27396,7 @@
         "trait_id": "TFTEvent5YR_Rebel",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_3_Rebel.png",
-        "tooltip_text": "味方チームが隣接する味方1体ごとにシールドとダメージ増加効果を獲得する。<br><br><row>(@TFTTrait.TFTEvent5YR_Rebel.1:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.1:ShieldDuration@秒間、耐久値@TFTTrait.TFTEvent5YR_Rebel.1:ShieldAmount@のシールド、%i:scaleDA%が@TFTTrait.TFTEvent5YR_Rebel.1:DamageAmp@%</row><br><row>(@TFTTrait.TFTEvent5YR_Rebel.2:MinUnits@)@TFTTrait.TFTEvent5YR_Rebel.2:ShieldDuration@秒間、耐久値@TFTTrait.TFTEvent5YR_Rebel.2:ShieldAmount@のシールド、%i:scaleDA%が@TFTTrait.TFTEvent5YR_Rebel.2:DamageAmp@%</row>",
+        "tooltip_text": "味方チームが隣接する味方1体ごとにシールドとダメージ増加効果を獲得する。<br><br><row>(@TFTTrait.TFTEvent5YR_Rebel.1:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.1:ShieldDuration@秒間、耐久値@TFTTrait.TFTEvent5YR_Rebel.1:ShieldAmount@のシールド、%i:scaleDA%が@TFTTrait.TFTEvent5YR_Rebel.1:DamageAmp@%</row><br><row>(@TFTTrait.TFTEvent5YR_Rebel.2:MinUnits@) @TFTTrait.TFTEvent5YR_Rebel.2:ShieldDuration@秒間、耐久値@TFTTrait.TFTEvent5YR_Rebel.2:ShieldAmount@のシールド、%i:scaleDA%が@TFTTrait.TFTEvent5YR_Rebel.2:DamageAmp@%</row>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -27729,7 +27729,7 @@
                     },
                     {
                         "name": "BaseRocketDamage",
-                        "value": 95.0
+                        "value": 105.0
                     },
                     {
                         "name": "FreeRerollOdds",
@@ -27749,7 +27749,7 @@
                     },
                     {
                         "name": "UpgradedRocketDamage",
-                        "value": 120.0
+                        "value": 130.0
                     },
                     {
                         "name": "XPPerRound",
@@ -27820,7 +27820,7 @@
         "trait_id": "TFTEvent5YR_Yordle",
         "set": "TFTSetEvent5YR",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_6_Yordle.png",
-        "tooltip_text": "対人戦が終了するたびに、ヨードルな戦利品がいっぱい詰まった「ヨードルラッキーバッグ」を1個獲得する！<br><br><row>(@TFTTrait.TFTEvent5YR_Yordle.1:MinUnits@) 「ヨードルラッキーバッグ」を1個獲得！</row><br><row>(@TFTTrait.TFTEvent5YR_Yordle.2:MinUnits@) ★3のチャンピオンが@TFTTrait.TFTEvent5YR_Yordle.2:NumOfThreeStarsNeeded@体以上いると、「ヨードルラッキーバッグ」から「ヨードル大魔王」が出現するようになる。</row>",
+        "tooltip_text": "対人戦が終了するたびに、ヨードルな戦利品がいっぱい詰まった「ヨードルラッキーバッグ」を1個獲得する！<br><br><row>(@TFTTrait.TFTEvent5YR_Yordle.1:MinUnits@) 「ヨードルラッキーバッグ」を1個獲得！</row><br><row>(@TFTTrait.TFTEvent5YR_Yordle.2:MinUnits@) ★3のチャンピオンを@TFTTrait.TFTEvent5YR_Yordle.2:NumOfThreeStarsNeeded@体以上配置すると、「ヨードルラッキーバッグ」から「ヨードル大魔王」が出現するようになる。</row>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
