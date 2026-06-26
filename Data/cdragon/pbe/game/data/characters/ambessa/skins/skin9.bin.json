@@ -3,7 +3,7 @@
         "skinClassification": 2,
         "championSkinName": "AmbessaSkin9",
         "skinParent": 8,
-        "metaDataTags": "gender:female,race:human,faction:noxus,skinline:worldchampions2025",
+        "metaDataTags": "gender:female,race:human,faction:noxus,skinline:worldchampions,subskinline:t1",
         "skinUpgradeData": {
             "mGearSkinUpgrades": [
                 "{c40c3a40}",
@@ -305,6 +305,43 @@
             "__type": "CharacterHealthBarDataRecord"
         },
         "mResourceResolver": "Characters/Ambessa/Skins/Skin9/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "Spell": "{14a1d4d5}",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "BuffType": 10,
+                                "__type": "HasBuffOfTypeBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Avatar",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "L_Weapon",
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Weapon_L",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "R_Weapon",
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Weapon_R",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Ambessa/Skins/Skin9/Particles/Ambessa_Skin09_W_ParryWindupSubtle": {

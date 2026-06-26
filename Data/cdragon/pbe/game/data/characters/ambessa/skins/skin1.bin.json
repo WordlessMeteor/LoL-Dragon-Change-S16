@@ -282,6 +282,41 @@
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "Spell": "{14a1d4d5}",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "BuffType": 10,
+                                "__type": "HasBuffOfTypeBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Avatar",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "L_Weapon",
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Weapon_L",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "R_Weapon",
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Weapon_R",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
                     "mScriptName": "AmbessaSkin1EmpoweredState",
                     "__type": "HasBuffDynamicMaterialBoolDriver"
                 },

@@ -1,8 +1,8 @@
 {
-    "{4fc99e87}": {
+    "Characters/Ambessa/Skins/Skin8": {
         "skinClassification": 1,
         "championSkinName": "AmbessaSkin08",
-        "metaDataTags": "gender:female,race:human,faction:noxus,skinline:worldchampions2025",
+        "metaDataTags": "gender:female,race:human,faction:noxus,skinline:worldchampions,subskinline:t1",
         "skinUpgradeData": {
             "mGearSkinUpgrades": [
                 "{c40c3a40}",
@@ -179,7 +179,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{a4199210}",
+            "animationGraphData": "Characters/Ambessa/Animations/Skin8",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -202,7 +202,7 @@
             "initialSubmeshToHide": "Chain Krug_Krug_Body_Mat Trophy Recall Helmet Weapon_VFX Weapon_VFX02",
             "materialOverride": [
                 {
-                    "Material": "{466d6690}",
+                    "Material": "Characters/Ambessa/Skins/Skin8/Materials/Crystal_inst",
                     "submesh": "Weapon",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -212,7 +212,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{27f3eec2}",
+                    "Material": "Characters/Ambessa/Skins/Skin8/Materials/Ambessa_metal_inst",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -279,7 +279,7 @@
         "armorMaterial": "Flesh",
         "idleParticlesEffects": [
             {
-                "effectKey": "{6f80fa24}",
+                "effectKey": "Ambessa_Idle_Smoke",
                 "boneName": "Root",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
@@ -293,10 +293,47 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{de43b61d}",
+        "mResourceResolver": "Characters/Ambessa/Skins/Skin8/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "Spell": "{14a1d4d5}",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "BuffType": 10,
+                                "__type": "HasBuffOfTypeBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Avatar",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "L_Weapon",
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Weapon_L",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "R_Weapon",
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Weapon_R",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
         "__type": "SkinCharacterDataProperties"
     },
-    "{27e931e9}": {
+    "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_W_ParryWindupSubtle": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2883,7 +2920,7 @@
         "particlePath": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_W_ParryWindupSubtle",
         "__type": "VfxSystemDefinitionData"
     },
-    "{603c4278}": {
+    "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_R_EnergyWindupFaster": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.5,
@@ -6421,7 +6458,7 @@
         "particlePath": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_R_EnergyWindupFaster",
         "__type": "VfxSystemDefinitionData"
     },
-    "{85243162}": {
+    "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -6808,7 +6845,7 @@
         "particlePath": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_01",
         "__type": "VfxSystemDefinitionData"
     },
-    "{9af3b8cd}": {
+    "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Idle_Smoke": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7045,7 +7082,7 @@
         "particlePath": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Idle_Smoke",
         "__type": "VfxSystemDefinitionData"
     },
-    "{9dd8ba08}": {
+    "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_Case03": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7342,7 +7379,7 @@
         "particlePath": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_Case03",
         "__type": "VfxSystemDefinitionData"
     },
-    "{9ed8bb9b}": {
+    "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_Case02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -8829,7 +8866,7 @@
         "particlePath": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_Case02",
         "__type": "VfxSystemDefinitionData"
     },
-    "{9fd8bd2e}": {
+    "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_Case01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -12604,7 +12641,7 @@
         "particlePath": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_Case01",
         "__type": "VfxSystemDefinitionData"
     },
-    "{27f3eec2}": {
+    "Characters/Ambessa/Skins/Skin8/Materials/Ambessa_metal_inst": {
         "name": "Characters/Ambessa/Skins/Skin8/Materials/Ambessa_metal_inst",
         "samplerValues": [
             {
@@ -12945,7 +12982,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{466d6690}": {
+    "Characters/Ambessa/Skins/Skin8/Materials/Crystal_inst": {
         "name": "Characters/Ambessa/Skins/Skin8/Materials/Crystal_inst",
         "samplerValues": [
             {
@@ -13138,7 +13175,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{de43b61d}": {
+    "Characters/Ambessa/Skins/Skin8/Resources": {
         "resourceMap": {
             "Ambessa_Z_WeaponHeat": "{ddbcb790}",
             "Ambessa_Z_Death": "{8f3c50b4}",
@@ -13183,7 +13220,7 @@
             "Ambessa_Q_Precise_WhipSmash_ExplodeChild_Large": "{e80baf20}",
             "Ambessa_Q_Precise_Tar": "{d9f9f2ad}",
             "Ambessa_Q_Precise_Lesser_Tar": "{27bfb54b}",
-            "Ambessa_W_Parry_Windup": "{27e931e9}",
+            "Ambessa_W_Parry_Windup": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_W_ParryWindupSubtle",
             "Ambessa_W_Shield": "{2c529752}",
             "Ambessa_W_Release": "{e5d2d7a8}",
             "Ambessa_W_Release_Greater": "{b5c4edde}",
@@ -13201,7 +13238,7 @@
             "Ambessa_R_Cas_Dust_Child": "{64a18227}",
             "Ambessa_R_Distort_Child": "{fca50af1}",
             "Ambessa_R_Cas_Residual": "{3c4da9f4}",
-            "Ambessa_R_Energy_Windup": "{603c4278}",
+            "Ambessa_R_Energy_Windup": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_R_EnergyWindupFaster",
             "Ambessa_R_Energy_Avatar": "{a0166cba}",
             "Ambessa_R_Uppercut_Swipe": "{4edb5588}",
             "Ambessa_R_Uppercut_Swipe_TrailChild": "{b09c89f2}",
@@ -13218,18 +13255,18 @@
             "{fb033dce}": "{1357168f}",
             "{531cfd7a}": "{eebdc011}",
             "{3d28b402}": "{49f5259e}",
-            "{6f80fa24}": "{9af3b8cd}",
+            "Ambessa_Idle_Smoke": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Idle_Smoke",
             "{c7098599}": "{0d8264fa}",
-            "{d10be77f}": "{85243162}",
-            "{3f9e5c91}": "{9fd8bd2e}",
+            "{d10be77f}": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_01",
+            "Ambessa_Recall_Case01": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_Case01",
             "{4206c985}": "{ab7cbd32}",
             "{7ad8b904}": "{2be11661}",
             "{22b2839c}": "{6fc0d338}",
             "{23b2852f}": "{70c0d4cb}",
             "{7cd8bc2a}": "{29e1133b}",
-            "{3c9e57d8}": "{9ed8bb9b}",
+            "Ambessa_Recall_Case02": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_Case02",
             "{b152e27a}": "{7f406235}",
-            "{3d9e596b}": "{9dd8ba08}",
+            "Ambessa_Recall_Case03": "Characters/Ambessa/Skins/Skin8/Particles/Ambessa_Skin08_Recall_Case03",
             "{429e614a}": "{a4d8c50d}"
         },
         "__type": "ResourceResolver"

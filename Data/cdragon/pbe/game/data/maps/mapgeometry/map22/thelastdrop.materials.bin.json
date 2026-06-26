@@ -49487,6 +49487,53 @@
         "particlePath": "Maps/Particles/TFT/Set13/TheLastDrop/TheLastDrop_Idle_lv1_Light",
         "__type": "VfxSystemDefinitionData"
     },
+    "{d2d6d082}": {
+        "complexEmitterDefinitionData": [
+            {
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "isSingleParticle": 1,
+                "emitterName": "Zwriter",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 3,
+                "pass": 9500,
+                "isGroundLayer": 1,
+                "WriteAlphaOnly": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        90.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1400.0,
+                        1000.0,
+                        600.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Maps/Particles/TFT/SpaceBattle/PetChibiMalphite_Skin2_color-hold.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "visibilityRadius": 1500.0,
+        "particleName": "TheLastDrop_Zwriter",
+        "particlePath": "Maps/Particles/TFT/Set13/TheLastDrop/TheLastDrop_Zwriter",
+        "flags": 197,
+        "__type": "VfxSystemDefinitionData"
+    },
     "Maps/Particles/TFT/Set13/TheLastDrop/TheLastDrop_Levelup_Stage2_Child_1": {
         "complexEmitterDefinitionData": [
             {
@@ -62855,7 +62902,7 @@
                     "Material": "Maps/KitPieces/TFT/Set13/Materials/Default/TheLastDrop_Level9_Wave_TableA",
                     "__type": "VfxMaterialDefinitionData"
                 },
-                "renderPhaseOverride": 0,
+                "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Level9_TableA.skn",
@@ -62874,7 +62921,7 @@
                     ],
                     "__type": "ValueColor"
                 },
-                "pass": -2000,
+                "pass": 100,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "stencilMode": 2,
@@ -62897,7 +62944,7 @@
                     "Material": "Maps/KitPieces/TFT/Set13/Materials/Default/TheLastDrop_Level9_Wave_SofaA",
                     "__type": "VfxMaterialDefinitionData"
                 },
-                "renderPhaseOverride": 0,
+                "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Level9_SofaA.skn",
@@ -62907,7 +62954,7 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "blendMode": 3,
-                "pass": -600,
+                "pass": 150,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "stencilMode": 2,
@@ -62938,7 +62985,7 @@
                     "Material": "Maps/KitPieces/TFT/Set13/Materials/Default/TheLastDrop_Level9_Wall_Wave",
                     "__type": "VfxMaterialDefinitionData"
                 },
-                "renderPhaseOverride": 0,
+                "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Level9_WallA.skn",
@@ -62948,7 +62995,6 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "blendMode": 3,
-                "pass": -7000,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "stencilMode": 2,
@@ -62978,7 +63024,6 @@
                 "pass": -600,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
-                "miscRenderFlags": 1,
                 "stencilMode": 2,
                 "StencilReferenceId": "{3b5cc210}",
                 "isGroundLayer": 1,
@@ -63141,7 +63186,7 @@
                     "Material": "Maps/KitPieces/TFT/Set13/Materials/Default/TheLastDrop_Level9_Wave_PuppetA",
                     "__type": "VfxMaterialDefinitionData"
                 },
-                "renderPhaseOverride": 0,
+                "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Level9_PuppetA.skn",
@@ -63151,7 +63196,6 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "blendMode": 3,
-                "pass": -7000,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "disableBackfaceCull": true,
@@ -63175,7 +63219,7 @@
                     "Material": "Maps/KitPieces/TFT/Set13/Materials/Default/TheLastDrop_Level9_Wave_ToyA",
                     "__type": "VfxMaterialDefinitionData"
                 },
-                "renderPhaseOverride": 0,
+                "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Level9_Toy_A.skn",
@@ -63185,7 +63229,6 @@
                     "__type": "VfxPrimitiveMesh"
                 },
                 "blendMode": 3,
-                "pass": -7000,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "disableBackfaceCull": true,
@@ -63209,7 +63252,7 @@
                     "Material": "Maps/KitPieces/TFT/Set13/Materials/Default/TheLastDrop_Level9_GhostA_Wave",
                     "__type": "VfxMaterialDefinitionData"
                 },
-                "renderPhaseOverride": 0,
+                "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Level9_GhostA.skn",
@@ -63228,7 +63271,7 @@
                     ],
                     "__type": "ValueColor"
                 },
-                "pass": -249,
+                "pass": 200,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "stencilMode": 2,
@@ -63250,7 +63293,7 @@
                     "Material": "Maps/KitPieces/TFT/Set13/Materials/Default/TheLastDrop_Level9_Wave_TableA2",
                     "__type": "VfxMaterialDefinitionData"
                 },
-                "renderPhaseOverride": 0,
+                "renderPhaseOverride": 5,
                 "primitive": {
                     "mMesh": {
                         "mMeshName": "ASSETS/Maps/Particles/TFT/TheLastDrop/TheLastDrop_Level9_TableA.skn",
@@ -63269,7 +63312,7 @@
                     ],
                     "__type": "ValueColor"
                 },
-                "pass": -1999,
+                "pass": 199,
                 "meshRenderFlags": 0,
                 "alphaRef": 0,
                 "stencilMode": 2,
@@ -80192,21 +80235,54 @@
             "{29cc49b4}": {
                 "transform": [
                     [
-                        0.9999999403953552,
+                        1.0,
                         0.0,
                         0.0,
                         0.0
                     ],
                     [
                         0.0,
-                        0.9999999403953552,
+                        1.0,
                         0.0,
                         0.0
                     ],
                     [
                         0.0,
                         0.0,
-                        0.9999998807907104,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        2000.0,
+                        0.0,
+                        1960.0,
+                        1.0
+                    ]
+                ],
+                "name": "TheLastDrop_Idle_lv9_3D",
+                "mVisibilityFlags": 32,
+                "system": "Maps/Particles/TFT/Set13/TheLastDrop/TheLastDrop_Idle_lv9_3D",
+                "AllDimensions": true,
+                "__type": "MapParticle"
+            },
+            "{49b31e98}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
                         0.0
                     ],
                     [
@@ -80216,9 +80292,9 @@
                         1.0
                     ]
                 ],
-                "name": "TheLastDrop_Idle_lv9_3D",
+                "name": "TheLastDrop_Idle_lv9_Zwriter",
                 "mVisibilityFlags": 32,
-                "system": "Maps/Particles/TFT/Set13/TheLastDrop/TheLastDrop_Idle_lv9_3D",
+                "system": "{d2d6d082}",
                 "AllDimensions": true,
                 "__type": "MapParticle"
             }

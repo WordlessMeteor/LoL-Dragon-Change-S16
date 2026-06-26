@@ -1764,5 +1764,15 @@
 				DDragon: 16.12.1 -> 16.13.1
 			</td>
 		</tr>
+		<tr>
+			<td style="text-align:center;">2026-06-26 12-29-28</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>PBE: 16.14.790.8746 -> 16.14.791.3133</li>
+					</ul>
+			</td>
+		</tr>
 	</tbody>
 </table>
