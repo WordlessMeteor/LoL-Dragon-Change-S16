@@ -1,5 +1,5 @@
 {
-    "{600f2901}": {
+    "Characters/Ezreal/Skins/Skin76": {
         "skinClassification": 2,
         "championSkinName": "EzrealSkin76",
         "skinParent": 44,
@@ -192,32 +192,32 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{8105bbe0}",
+                    "Material": "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Horn_Mat",
                     "submesh": "Horns",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{5e9ea410}",
+                    "Material": "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Hand_Mat",
                     "submesh": "Hand",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{81302b01}",
+                    "Material": "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Body_Mat",
                     "submesh": "Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{81302b01}",
+                    "Material": "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Body_Mat",
                     "submesh": "Cape",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{81302b01}",
+                    "Material": "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Body_Mat",
                     "submesh": "Gauntlet",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{bb1fbd1c}",
+                    "Material": "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Beads_Mat",
                     "submesh": "Beads",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -244,7 +244,7 @@
                 "__type": "SkinEmblem"
             }
         ],
-        "mResourceResolver": "{2807da63}",
+        "mResourceResolver": "Characters/Ezreal/Skins/Skin76/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -310,7 +310,7 @@
         ],
         "__type": "SkinCharacterDataProperties"
     },
-    "{2807da63}": {
+    "Characters/Ezreal/Skins/Skin76/Resources": {
         "resourceMap": {
             "Ezreal_BA_crit_mis": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_BA_crit_mis",
             "Ezreal_BA_crit_tar": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_BA_crit_tar",
@@ -335,7 +335,7 @@
             "Ezreal_W_mis": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_W_mis",
             "Ezreal_W_tar": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_W_tar",
             "Ezreal_W_objective_tar": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_W_tar_objects",
-            "Ezreal_E_Avatar": "{f0b2a932}",
+            "Ezreal_E_Avatar": "Characters/Ezreal/Skins/Skin76/Particles/Ezreal_Skin76_E_Avatar",
             "Ezreal_BA_cas": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_BA_cas",
             "Ezreal_W_hit_Objects": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_W_hit_Objects",
             "Ezreal_R_Gauntlet_Glow": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_R_Gauntlet_Glow",
@@ -378,13 +378,13 @@
             "{d6c3b18c}": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_Recall_Clouds_02",
             "{9d89a4ad}": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_Recall_Trail_01",
             "{77ac2ebd}": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_Recall_Winddown",
-            "{6b35ec4d}": "{fbe8d081}",
+            "{6b35ec4d}": "Characters/Ezreal/Skins/Skin76/Particles/Ezreal_Skin76_Recall_Fireworks_03",
             "{49c90344}": "Characters/Ezreal/Skins/Skin44/Particles/Ezreal_Skin44_Recall_Seat_Cloud",
-            "{c56819e7}": "{ff63a18b}"
+            "{c56819e7}": "Characters/Ezreal/Skins/Skin76/Particles/Ezreal_Skin76_Recall_Avtar"
         },
         "__type": "ResourceResolver"
     },
-    "{5e9ea410}": {
+    "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Hand_Mat": {
         "name": "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Hand_Mat",
         "samplerValues": [
             {
@@ -853,7 +853,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{8105bbe0}": {
+    "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Horn_Mat": {
         "name": "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Horn_Mat",
         "samplerValues": [
             {
@@ -1328,7 +1328,7 @@
         },
         "__type": "StaticMaterialDef"
     },
-    "{81302b01}": {
+    "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Body_Mat": {
         "name": "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Body_Mat",
         "samplerValues": [
             {
@@ -1354,6 +1354,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -1522,7 +1526,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{bb1fbd1c}": {
+    "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Beads_Mat": {
         "name": "Characters/Ezreal/Skins/Skin76/Materials/Ezreal_Skin76_Beads_Mat",
         "samplerValues": [
             {
@@ -1548,6 +1552,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -1716,7 +1724,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{f0b2a932}": {
+    "Characters/Ezreal/Skins/Skin76/Particles/Ezreal_Skin76_E_Avatar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1894,7 +1902,7 @@
         "mIsPoseAfterimage": true,
         "__type": "VfxSystemDefinitionData"
     },
-    "{fbe8d081}": {
+    "Characters/Ezreal/Skins/Skin76/Particles/Ezreal_Skin76_Recall_Fireworks_03": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -2530,7 +2538,7 @@
         "particlePath": "Characters/Ezreal/Skins/Skin76/Particles/Ezreal_Skin76_Recall_Fireworks_03",
         "__type": "VfxSystemDefinitionData"
     },
-    "{ff63a18b}": {
+    "Characters/Ezreal/Skins/Skin76/Particles/Ezreal_Skin76_Recall_Avtar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {

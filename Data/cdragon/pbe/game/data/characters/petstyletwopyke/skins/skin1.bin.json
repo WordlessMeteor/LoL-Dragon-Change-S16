@@ -1,5 +1,5 @@
 {
-    "{678a0f5b}": {
+    "Characters/PetStyleTwoPyke/Skins/Skin1": {
         "championSkinName": "PetStyleTwoPyke_Base_Classic_Tier1",
         "loadscreen": {
             "image": "ASSETS/Characters/PetStyleTwoPyke/HUD/LoadScreen_StyleTwoPyke_Base_Classic_Tier1.TFT_Style2_Pyke_Base.tex",
@@ -44,7 +44,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{2618c606}",
+            "animationGraphData": "Characters/PetStyleTwoPyke/Animations/Skin1",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -187,7 +187,7 @@
             "AlphaOutWhileUntargetable": false,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{faa389c9}",
+        "mResourceResolver": "Characters/PetStyleTwoPyke/Skins/Skin1/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -305,6 +305,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -1656,7 +1661,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{3876ac04}"
+                            "Arm03"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -1726,7 +1731,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{3876ac04}"
+                            "Arm03"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -5994,7 +5999,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{9fbca9db}"
+                            "Hooks"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -19274,12 +19279,12 @@
                         "mSubmeshesToDraw": [
                             "Arm",
                             "Arm02",
-                            "{3876ac04}",
+                            "Arm03",
                             "BODY",
                             "",
                             "Cloak02",
-                            "{9fbca9db}",
-                            "{753166f9}",
+                            "Hooks",
+                            "Hooks02",
                             "Scapula",
                             "Mask",
                             "HEAD"
@@ -29448,7 +29453,7 @@
         "particlePath": "Characters/PetStyleTwoPyke/Skins/Skin1/Particles/PetStyleTwoPyke_Skin1_Idle_WeaponTrail",
         "__type": "VfxSystemDefinitionData"
     },
-    "{faa389c9}": {
+    "Characters/PetStyleTwoPyke/Skins/Skin1/Resources": {
         "resourceMap": {
             "PetStyleTwoPyke_Pedestal_Appear": "Characters/PetStyleTwoPyke/Skins/Skin1/Particles/PetStyleTwoPyke_Pedestal_Appear",
             "PetStyleTwoPyke_Pedestal_Disappear": "Characters/PetStyleTwoPyke/Skins/Skin1/Particles/PetStyleTwoPyke_Pedestal_Disappear",

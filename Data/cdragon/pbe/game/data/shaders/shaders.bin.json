@@ -7766,7 +7766,7 @@
         "objectPath": "Shaders/SkinnedMesh/Outline_MatCap_RMA_VertexDeform",
         "__type": "CustomShaderDef"
     },
-    "{13ca01ae}": {
+    "Shaders/Particles/DefaultParticleLit": {
         "ShadingModel": "{3c6ecc43}",
         "parameters": [
             {
@@ -22755,7 +22755,7 @@
         "objectPath": "Shaders/SkinnedMesh/2_Diffuse_Lerp",
         "__type": "CustomShaderDef"
     },
-    "{41ed1406}": {
+    "Shaders/Particles/DefaultParticleQuadUnlit": {
         "parameters": [
             {
                 "name": "CameraOffset",
@@ -25458,6 +25458,10 @@
             {
                 "name": "USE_ALPHA",
                 "__type": "ShaderStaticSwitch"
+            },
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "__type": "ShaderStaticSwitch"
             }
         ],
         "textures": [
@@ -27963,6 +27967,17 @@
                     }
                 ],
                 "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "logicalParameters": [
+                    {
+                        "name": "Bloom_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
             }
         ],
         "staticSwitches": [
@@ -27999,11 +28014,12 @@
             }
         ],
         "featureDefines": {
+            "FEATURE_BLOOM": "1",
             "FEATURE_SHADOW": "1",
             "FEATURE_WORLD_NORMAL": "1",
             "FEATURE_WORLD_POSITION": "1"
         },
-        "featureMask": 16,
+        "featureMask": 17,
         "objectPath": "Shaders/SkinnedMesh/Specular_Fresnel_Masked",
         "__type": "CustomShaderDef"
     },
