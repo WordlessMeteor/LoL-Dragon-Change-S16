@@ -457,8 +457,55 @@
                         0.10000000149011612
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "APRatio",
+                            "values": [
+                                0.6499999761581421,
+                                0.6499999761581421,
+                                0.6499999761581421,
+                                0.6499999761581421,
+                                0.6499999761581421,
+                                0.6499999761581421,
+                                0.6499999761581421
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "OnHitDamage": {
                     "mFormulaParts": [
@@ -480,8 +527,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.4000000059604645,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -647,6 +694,23 @@
         },
         "mBuff": {
             "__type": "BuffData"
+        },
+        "BotData": {
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 128,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 32,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 512,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
         },
         "__type": "SpellObject"
     },
@@ -1391,6 +1455,20 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        90.0,
+                        90.0,
+                        75.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "Damage": {
                     "mFormulaParts": [
@@ -2586,6 +2664,20 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        8.5,
+                        8.5,
+                        7.5,
+                        6.5,
+                        5.5,
+                        4.5,
+                        4.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "MissileDamage": {
                     "mFormulaParts": [

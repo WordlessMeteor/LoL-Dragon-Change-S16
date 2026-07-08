@@ -126,7 +126,8 @@
                     RenderTelemetrySenderComponent: i.RenderTelemetrySenderComponent,
                     ...i.EmberCollectionApi.registerToFactoryDefinition({}),
                     RankedReferenceModalButtonComponent: r.RankedReferenceModalButtonComponent
-                }), t.setFactoryDefinition({
+                }), !1;
+                t.setFactoryDefinition({
                     name: "LeaguesPromotionVignetteV2Component",
                     tra: s,
                     ComponentFactory: e,
@@ -314,14 +315,15 @@
                     })) : null
                 },
                 _handleSummonerLeaguesData: function(e) {
-                    if (!e) return;
-                    const t = this._getHighestRankedLadder(e);
-                    if (t && this.set("highestRankedQueueType", t.queueType), !this.get("isViewingLocalSummoner") && this.leagueTierNames.isApexForQueue(e[0])) {
-                        const t = e[0];
-                        this._cacheApexQueueInfo(t, t.queueType, t.tier)
+                    const t = (e || []).filter((e => !0));
+                    if (0 === t.length) return;
+                    const n = this._getHighestRankedLadder(t);
+                    if (n && this.set("highestRankedQueueType", n.queueType), !this.get("isViewingLocalSummoner") && this.leagueTierNames.isApexForQueue(t[0])) {
+                        const e = t[0];
+                        this._cacheApexQueueInfo(e, e.queueType, e.tier)
                     }
-                    const n = this.enrichSummonerLeaguesData(e);
-                    this.set("leagues.summonerLeagues", n), this.set("isLoading", !1)
+                    const s = this.enrichSummonerLeaguesData(t);
+                    this.set("leagues.summonerLeagues", s), this.set("isLoading", !1)
                 },
                 _handleApexQueueInfoData: function(e, t, n) {
                     return e ? (this._cacheApexQueueInfo(e, t, n), e.divisions = this._getCachedApexLeagues(t), Promise.resolve(this.enrichSummonerLeaguesData([e], !0)).then((e => e))) : Promise.resolve()
@@ -1002,9 +1004,9 @@
                 l = "RANKED_TFT",
                 r = "RANKED_TFT_DOUBLE_UP",
                 c = "RANKED_TFT_TURBO",
-                u = "RANKED_TFT_PAIRS",
-                d = [n, s, i],
-                m = [...d, a],
+                u = "RANKED_TFT_PAIRS";
+            let d = [n, s, i];
+            const m = [...d, a],
                 p = [o],
                 g = [l, r],
                 E = [c, u],
@@ -3706,6 +3708,9 @@
                         platformConfig: "/lol-platform-config",
                         summoner: "/lol-summoner",
                         riotclient: "/riotclient"
+                    },
+                    boundProperties: {
+                        uxSettings: "/lol-settings/v2/local/lol-user-experience"
                     }
                 }),
                 u = "COMPLETED_PROVISIONALS",
@@ -3867,27 +3872,31 @@
                         l = this._acknowledgeNotification.bind(this),
                         r = R[o];
                     return s.LeagueTierNames.getTiersForQueue(e.queueType).then((c => {
-                        const u = s.Ember.Object.create({
+                        const u = {
                                 notification: i,
                                 rewardImagePath: t,
                                 vignetteSize: r,
                                 isShowing: !1,
                                 isLowSpec: this.get("isLowSpec"),
                                 rankedStats: this.get("rankedStats"),
-                                tiers: c
-                            }),
+                                tiers: c,
+                                acknowledgeNotification: l
+                            },
                             d = e.notifyReason === _ && e.queueType === a.QUEUES.RANKED_CHERRY_QUEUE_TYPE;
                         if (e.notifyReason === h && e.queueType === a.QUEUES.RANKED_CHERRY_QUEUE_TYPE) return void l(e);
-                        const m = d ? T.CHERRY_RATED_TIER_PROMOTED : T[o],
-                            p = s.componentFactory.create({
+                        let m = d ? T.CHERRY_RATED_TIER_PROMOTED : T[o];
+                        const p = s.componentFactory.create({
                                 type: m,
                                 data: u
                             }),
                             g = {
+                                id: `leagues-notification-${e.id}`,
                                 type: "VignetteCelebration",
                                 data: {
-                                    nextButtonText: n.get("LEAGUES_VIGNETTE_OK_BUTTON")
+                                    nextButtonText: n.get("LEAGUES_VIGNETTE_OK_BUTTON"),
+                                    nextButtonShown: !0
                                 },
+                                customClassName: "",
                                 height: r,
                                 timing: "INFINITE",
                                 content: p,
@@ -3903,7 +3912,7 @@
                                 },
                                 onShow: function() {
                                     s.Ember.run.later((() => {
-                                        u.set("isShowing", !0)
+                                        s.Ember.set(u, "isShowing", !0)
                                     }), v[o])
                                 }
                             };
@@ -4283,6 +4292,7 @@
                     ContextualNotificationManager: e => e.get("rcp-fe-lol-uikit").getContextualNotificationManager(),
                     dataBinding: e => e.get("rcp-fe-common-libs").getDataBinding("rcp-fe-lol-leagues"),
                     Ember: e => e.get("rcp-fe-ember-libs").getEmber(),
+                    EmberAddons: e => e.get("rcp-fe-ember-libs").getSharedEmberAddons(),
                     emberDataBinding: e => e.get("rcp-fe-ember-libs").getEmberDataBinding("rcp-fe-lol-leagues"),
                     LeaguesConsts: e => e.get("rcp-fe-lol-shared-components").getApi_LeagueTierNames().getConstants(),
                     LeagueTierNames: e => e.get("rcp-fe-lol-shared-components").getApi_LeagueTierNames(),

@@ -2235,9 +2235,9 @@
                 i = "RANKED_TFT",
                 r = "RANKED_TFT_DOUBLE_UP",
                 c = "RANKED_TFT_TURBO",
-                m = "RANKED_TFT_PAIRS",
-                p = [a, n, l],
-                d = [...p, s],
+                m = "RANKED_TFT_PAIRS";
+            let p = [a, n, l];
+            const d = [...p, s],
                 u = [o],
                 h = [i, r],
                 g = [c, m],
