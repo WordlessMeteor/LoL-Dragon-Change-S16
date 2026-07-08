@@ -123198,6 +123198,11 @@
         "name": "Characters/Karma/Skins/Skin75/Materials/KarmaSkin75_Body_inst",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Karma/Skins/Skin75/Karma_Skin75_TX_CM.tex",
                 "addressU": 1,
@@ -123340,6 +123345,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

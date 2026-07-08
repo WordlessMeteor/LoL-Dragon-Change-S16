@@ -258,6 +258,11 @@
         "name": "Characters/Teemo/Skins/Skin62/Materials/Teemo_Skin62_Gold_Fresnel_inst",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Teemo/Skins/Skin62/Teemo_Skin62_TX_CM.tex",
                 "addressU": 1,
@@ -406,6 +411,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

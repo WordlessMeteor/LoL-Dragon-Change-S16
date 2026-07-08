@@ -1139,6 +1139,11 @@
         "name": "Characters/Leblanc/Skins/Skin59/Materials/Leblanc_Skin59_Rim_inst",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Leblanc/Skins/Skin59/Leblanc_Skin59_DLimbs_MaterialMask_TX_CM.SKINS_Leblanc_Skin59.tex",
                 "addressU": 1,
@@ -1281,6 +1286,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
