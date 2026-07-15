@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Ekko lanza una granada temporal que, al alcanzar a un campeón enemigo, genera un campo de distorsión cronológica. Las unidades sorprendidas en su interior sufren daño y quedan ralentizadas. Al cabo de unos instantes, la granada regresa a Ekko y daña a todo cuanto se encuentre en su camino.",
-            "dynamicDescription": "Ekko lanza un dispositivo que inflige <magicDamage>@InitialDamage@ de daño mágico</magicDamage>. Al golpear a un campeón o llegar al final de su alcance, se expande en una zona que <status>ralentiza</status> a los enemigos un @Effect2Amount*-100@%. Cuando se expande, Ekko lo recupera e inflige <magicDamage>@RecallDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko lanza un dispositivo que inflige <magicDamage>@InitialDamage@ de daño mágico</magicDamage>. Al golpear a un campeón o llegar al final de su alcance, se expande creando una zona que <status>ralentiza</status> a los enemigos un @SlowPercent*-100@%. Cuando se expande, Ekko lo recupera e inflige <magicDamage>@RecallDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Los ataques básicos de Ekko infligen daño mágico adicional a objetivos con poca vida. Con Convergencia paralela puede romper la línea temporal y, al cabo de unos segundos, crea una anomalía que ralentiza a los enemigos situados dentro. Si el propio Ekko entra en ella, recibe un escudo y aturde a los enemigos al dejarlos congelados en el tiempo.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Los ataques de Ekko contra enemigos que estén por debajo del 30% de vida infligen un <magicDamage>@MissingHealthPercent@ de la vida que les falte como daño mágico</magicDamage>.<br><br><spellActive>Activa:</spellActive> Ekko lanza una cronosfera que dura 1,5 s tras un lapso de tiempo y que <status>ralentiza</status> a los enemigos en el interior un @Effect10Amount@%. Si Ekko entra en la esfera, la detona, <status>aturde</status> durante @Effect2Amount@ s y obtiene un <shield>escudo de @TotalShield@</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Los ataques de Ekko contra enemigos con menos de un @BelowHealthThreshold*100@% de vida infligen <magicDamage>@MissingHealthPercent@ de daño mágico según la vida que les falte</magicDamage>.<br><br><spellActive>Activa:</spellActive> Ekko lanza una cronosfera que dura @SlowZoneDuration@ s tras un lapso de tiempo y que <status>ralentiza</status> a los enemigos en el interior un @SlowPercent@%. Si Ekko entra en la esfera, la detona, <status>aturde</status> durante @StunDuration@ s y obtiene un <shield>@TotalShield@escudo de </shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

@@ -19350,6 +19350,16 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{43d86479}": {
+        "mExpandedMutator": "BASELINESR",
+        "mMutators": [
+            "MapID(11)?NeutralMinionSpawnScript(NeutralMinionSpawn_SRX.lua)",
+            "MapID(11)?LevelScriptFile(LevelScript_SRX.lua)",
+            "EnableWardPreload(1)",
+            "MapSkin_Event_Current"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{43fe08fc}": {
         "mExpandedMutator": "MapSkin_SRU_BannerTest",
         "mMutators": [
@@ -19399,6 +19409,20 @@
             "MapID(11)?MapSkinName(Popstar)",
             "MapID(11)?PopstarSpawnTiming(1)",
             "MapID(11)?SRU_Baron_SkinID(2)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{45fbd536}": {
+        "mExpandedMutator": "KIWI_JADE",
+        "mMutators": [
+            "ARAM_AOEHealthpacks",
+            "CompanionFeatureMutator(1)",
+            "ARAMCompanionMutator",
+            "LevelScriptFile(DeprecateLua_HA.lua)",
+            "MinionInitialTimeToSpawn(50)",
+            "AramBoonLoadout(1)",
+            "MapSkin_Map12_Jade",
+            "MapID(12)?AudioFeature(KiwiJADE)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -19855,6 +19879,15 @@
             "MapSkin_HA_Trueshot",
             "SpawnThemeMusicOverride(Play_mus_map11_XP12021_spawn)",
             "AnnouncerVoice(Trueshot)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
+    "{6a8762e5}": {
+        "mExpandedMutator": "JADE",
+        "mMutators": [
+            "CharacterDataOverride(JADE)",
+            "LevelScriptFile(DeprecateLua_Jade.lua)",
+            "MinionInitialTimeToSpawn(65)"
         ],
         "__type": "GameMutatorExpansions"
     },
@@ -20774,6 +20807,13 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{c35345d3}": {
+        "mExpandedMutator": "MapSkin_Map12_Jade",
+        "mMutators": [
+            "MapID(12)?MapSkinName(Jade)"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{c53fb552}": {
         "mExpandedMutator": "TFT3_SetVariation_Bonanza",
         "mMutators": [
@@ -21260,6 +21300,10 @@
         "TimeoutInFow": 20.0,
         "__type": "StealthVfx"
     },
+    "{12f5fc70}": {
+        "effectName": "r:Jade_Twitch_Q_Invisible",
+        "__type": "StealthVfx"
+    },
     "{1306dc84}": {
         "effectName": "DATA/Shared/Particles/GlobalCamouflageEnter_Ally.troy",
         "EffectNameForOtherTeam": "DATA/Shared/Particles/GlobalCamouflageEnter.troy",
@@ -21275,15 +21319,19 @@
         "FowVisibilityRadius": 1.0,
         "__type": "StealthVfx"
     },
+    "{152c4f11}": {
+        "effectName": "r:Jade_Twitch_Q_Camouflage_Ring",
+        "UseTargetObject": true,
+        "OnlySendToOwner": true,
+        "PersistentThroughReconnect": true,
+        "TimeoutInFow": 20.0,
+        "__type": "StealthVfx"
+    },
     "{189f792e}": {
         "effectName": "r:SRE_Dragon_Chemtech_Camouflage_On_Ally",
         "EffectNameForOtherTeam": "r:SRE_Dragon_Chemtech_Camouflage_On_Enemy",
         "boneName": "C_BUFFBONE_GLB_CENTER_LOC",
         "FowTeam": 1,
-        "__type": "StealthVfx"
-    },
-    "{1915335a}": {
-        "effectName": "r:Twitch_Q_Invisible",
         "__type": "StealthVfx"
     },
     "{3f4ecb17}": {
@@ -21342,13 +21390,6 @@
         "TimeoutInFow": 20.0,
         "__type": "StealthVfx"
     },
-    "{5d2cf108}": {
-        "effectName": "r:Twitch_Q_Cas_Invisible",
-        "FowTeam": 1,
-        "FowVisibilityRadius": 10.0,
-        "SendIfOnScreenOrDiscard": true,
-        "__type": "StealthVfx"
-    },
     "{6456f55d}": {
         "effectName": "r:SRE_Dragon_Chemtech_Camouflage_Persistent_Ally",
         "EffectNameForOtherTeam": "r:SRE_Dragon_Chemtech_Camouflage_Persistent_Enemy",
@@ -21366,6 +21407,13 @@
         "UseKeywordObject": true,
         "OnlySendToOwner": true,
         "TimeoutInFow": 15.0,
+        "__type": "StealthVfx"
+    },
+    "{a1ace792}": {
+        "effectName": "r:Jade_Twitch_Q_Cas_Invisible",
+        "FowTeam": 1,
+        "FowVisibilityRadius": 10.0,
+        "SendIfOnScreenOrDiscard": true,
         "__type": "StealthVfx"
     },
     "{a50a656f}": {
@@ -21429,6 +21477,10 @@
         "UseOwnerFacing": true,
         "__type": "StealthVfx"
     },
+    "{c3ebd2bc}": {
+        "FadeAmount": 0.20000000298023224,
+        "__type": "StealthCharacterFade"
+    },
     "{c5af0bd9}": {
         "effectName": "r:Pyke_Camo_Ring_BV2",
         "FowTeam": 1,
@@ -21466,14 +21518,6 @@
         "UseOwnerFacing": true,
         "TimeoutInFow": 5.0,
         "UseAttachmentForMeshOnly": true,
-        "__type": "StealthVfx"
-    },
-    "{e30c7acf}": {
-        "effectName": "r:Twitch_Q_Camouflage_Ring",
-        "UseTargetObject": true,
-        "OnlySendToOwner": true,
-        "PersistentThroughReconnect": true,
-        "TimeoutInFow": 20.0,
         "__type": "StealthVfx"
     },
     "{ed81496c}": {
@@ -22133,6 +22177,28 @@
                     "{79241b8a}",
                     "{1d445715}",
                     "{630e3299}"
+                ],
+                "__type": "RegionsThatAllowContent"
+            },
+            "{a113bfb4}": {
+                "mRegionList": [
+                    "br",
+                    "eun",
+                    "eune",
+                    "euw",
+                    "id",
+                    "jp",
+                    "la",
+                    "la1",
+                    "la2",
+                    "na",
+                    "oc",
+                    "oc1",
+                    "ph",
+                    "sg",
+                    "th",
+                    "vn",
+                    "ru"
                 ],
                 "__type": "RegionsThatAllowContent"
             }
@@ -23419,6 +23485,7 @@
             "{dea5bd5c}",
             "{6fba490f}",
             "{d52647e8}",
+            "{b55e5cff}",
             "{359bec10}",
             "{de9ddf30}",
             "{becbf88f}",
@@ -23435,7 +23502,9 @@
             "{a171d834}",
             "{3ca9c8f9}",
             "{ee148ab2}",
-            "{df0cf05b}"
+            "{df0cf05b}",
+            "{e86cd143}",
+            "{5cb2c12b}"
         ],
         "__type": "DeathEventPriority"
     },
@@ -23805,18 +23874,6 @@
                 "HideHealthBarFromEnemies": true,
                 "Ghosted": true,
                 "HasVfxPriority": true,
-                "DetectionEyeEffect": {
-                    "effect": "{84500b56}",
-                    "__type": "StealthVfxInstance"
-                },
-                "DetectionEyeWarningEffect": {
-                    "effect": "{59720fd2}",
-                    "__type": "StealthVfxInstance"
-                },
-                "DetectedEffect": {
-                    "effect": "{aff48344}",
-                    "__type": "StealthVfxInstance"
-                },
                 "EnterStealthEffect": {
                     "effect": "{1306dc84}",
                     "__type": "StealthVfxInstance"
@@ -23854,11 +23911,11 @@
                     "__type": "StealthCharacterFadeInstance"
                 },
                 "CamoRingEffect": {
-                    "effect": "{e30c7acf}",
+                    "effect": "{152c4f11}",
                     "__type": "StealthVfxInstance"
                 },
                 "CamoRingEffectOther": {
-                    "effect": "{1915335a}",
+                    "effect": "{12f5fc70}",
                     "__type": "StealthVfxInstance"
                 },
                 "DetectionEyeEffect": {
@@ -23874,7 +23931,7 @@
                     "__type": "StealthVfxInstance"
                 },
                 "EnterStealthEffect": {
-                    "effect": "{5d2cf108}",
+                    "effect": "{a1ace792}",
                     "__type": "StealthVfxInstance"
                 },
                 "PersistentStealthEffect": {
@@ -24074,6 +24131,188 @@
                 "CharacterFadeInstance": {
                     "fade": "{ed81496c}",
                     "__type": "StealthCharacterFadeInstance"
+                },
+                "DamageShimmerEffect": {
+                    "effect": "{b2be2816}",
+                    "__type": "StealthVfxInstance"
+                },
+                "__type": "StealthData"
+            },
+            {
+                "StealthName": "LockeCamo",
+                "duration": 10.0,
+                "EnemyRevealDuration": 0.25,
+                "SelfRevealDuration": 0.25,
+                "RevealFlags": {
+                    "OnPerceptionBubbleReveal": true,
+                    "InRangeOfTower": true,
+                    "OnEnemyChampionInDetectionRadius": true,
+                    "__type": "StealthBreakFlags"
+                },
+                "UnitDetectionRadius": 400.0,
+                "UnitWarningOffSetRadius": 100.0,
+                "UnSelectableByEnemies": true,
+                "HideVfxFromEnemies": true,
+                "HideHealthBarFromEnemies": true,
+                "Ghosted": true,
+                "UseStealthStatus": false,
+                "ScreenFade": "{07faad4e}",
+                "CharacterFadeInstance": {
+                    "fade": "{3f4ecb17}",
+                    "__type": "StealthCharacterFadeInstance"
+                },
+                "CamoRingEffect": {
+                    "effect": "{ccf63b02}",
+                    "__type": "StealthVfxInstance"
+                },
+                "CamoRingEffectOther": {
+                    "effect": "{59720fd2}",
+                    "__type": "StealthVfxInstance"
+                },
+                "EnterStealthEffect": {
+                    "effect": "{1306dc84}",
+                    "__type": "StealthVfxInstance"
+                },
+                "PersistentStealthEffect": {
+                    "effect": "{435d432b}",
+                    "__type": "StealthVfxInstance"
+                },
+                "RevealPriorityEffect": {
+                    "effect": "{f5b4e66f}",
+                    "__type": "StealthVfxInstance"
+                },
+                "RevealEffect": {
+                    "effect": "{c2569023}",
+                    "__type": "StealthVfxInstance"
+                },
+                "ExitStealthEffect": {
+                    "effect": "{024d0c5e}",
+                    "__type": "StealthVfxInstance"
+                },
+                "DamageShimmerEffect": {
+                    "effect": "{b2be2816}",
+                    "__type": "StealthVfxInstance"
+                },
+                "DamageShimmerSfx": {
+                    "effect": "{dfeadced}",
+                    "__type": "StealthVfxInstance"
+                },
+                "__type": "StealthData"
+            },
+            {
+                "StealthName": "TeemoStealth",
+                "RevealFlags": {
+                    "OnPerceptionBubbleReveal": true,
+                    "InRangeOfTower": true,
+                    "__type": "StealthBreakFlags"
+                },
+                "UnSelectableByEnemies": true,
+                "HideVfxFromEnemies": true,
+                "HideModelFromEnemies": true,
+                "HideHealthBarFromEnemies": true,
+                "Ghosted": true,
+                "Invisibility": true,
+                "ScreenFade": "{d02c1921}",
+                "CharacterFadeInstance": {
+                    "fade": "{c3ebd2bc}",
+                    "__type": "StealthCharacterFadeInstance"
+                },
+                "EnterStealthEffect": {
+                    "effect": "{1306dc84}",
+                    "__type": "StealthVfxInstance"
+                },
+                "PersistentStealthEffect": {
+                    "effect": "{435d432b}",
+                    "__type": "StealthVfxInstance"
+                },
+                "ExitStealthEffect": {
+                    "effect": "{024d0c5e}",
+                    "__type": "StealthVfxInstance"
+                },
+                "DamageShimmerEffect": {
+                    "effect": "{b2be2816}",
+                    "__type": "StealthVfxInstance"
+                },
+                "__type": "StealthData"
+            },
+            {
+                "StealthName": "Jade_TwitchCamo",
+                "RevealFlags": {
+                    "OnPerceptionBubbleReveal": true,
+                    "InRangeOfTower": true,
+                    "OnEnemyChampionInDetectionRadius": true,
+                    "__type": "StealthBreakFlags"
+                },
+                "UnitDetectionRadius": 450.0,
+                "UnSelectableByEnemies": true,
+                "HideVfxFromEnemies": true,
+                "HideModelFromEnemies": true,
+                "HideHealthBarFromEnemies": true,
+                "Ghosted": true,
+                "ScreenFade": "{07faad4e}",
+                "CharacterFadeInstance": {
+                    "fade": "{3f4ecb17}",
+                    "__type": "StealthCharacterFadeInstance"
+                },
+                "CamoRingEffect": {
+                    "effect": "{152c4f11}",
+                    "__type": "StealthVfxInstance"
+                },
+                "CamoRingEffectOther": {
+                    "effect": "{12f5fc70}",
+                    "__type": "StealthVfxInstance"
+                },
+                "DetectionEyeEffect": {
+                    "effect": "{84500b56}",
+                    "__type": "StealthVfxInstance"
+                },
+                "DetectionEyeWarningEffect": {
+                    "effect": "{59720fd2}",
+                    "__type": "StealthVfxInstance"
+                },
+                "DetectedEffect": {
+                    "effect": "{aff48344}",
+                    "__type": "StealthVfxInstance"
+                },
+                "EnterStealthEffect": {
+                    "effect": "{a1ace792}",
+                    "__type": "StealthVfxInstance"
+                },
+                "PersistentStealthEffect": {
+                    "effect": "{435d432b}",
+                    "__type": "StealthVfxInstance"
+                },
+                "DamageShimmerEffect": {
+                    "effect": "{b2be2816}",
+                    "__type": "StealthVfxInstance"
+                },
+                "DamageShimmerSfx": {
+                    "effect": "{dfeadced}",
+                    "__type": "StealthVfxInstance"
+                },
+                "__type": "StealthData"
+            },
+            {
+                "StealthName": "Jade_WukongStealth",
+                "RevealFlags": {
+                    "OnPerceptionBubbleReveal": true,
+                    "InRangeOfTower": true,
+                    "__type": "StealthBreakFlags"
+                },
+                "UnSelectableByEnemies": true,
+                "HideVfxFromEnemies": true,
+                "HideModelFromEnemies": true,
+                "HideHealthBarFromEnemies": true,
+                "Ghosted": true,
+                "Invisibility": true,
+                "ScreenFade": "{d02c1921}",
+                "PersistentStealthEffect": {
+                    "effect": "{435d432b}",
+                    "__type": "StealthVfxInstance"
+                },
+                "ExitStealthEffect": {
+                    "effect": "{024d0c5e}",
+                    "__type": "StealthVfxInstance"
                 },
                 "DamageShimmerEffect": {
                     "effect": "{b2be2816}",

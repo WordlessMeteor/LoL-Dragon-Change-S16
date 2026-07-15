@@ -1626,7 +1626,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷欧娜于下次基础攻击中使用盾牌冲撞，造成额外的魔法伤害并且晕眩敌人。",
-            "dynamicDescription": "雷欧娜的下一次攻击会 <status>晕眩</status> 目标 @Effect1Amount@ 秒并造成额外 <magicDamage>@TotalDamageTooltip@</magicDamage> 魔法伤害。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "雷欧娜的下一次普攻会使目标<status>晕眩</status>@StunDuration@秒，并造成额外<magicDamage>@TotalDamageTooltip@</magicDamage>魔法伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1776,7 +1776,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷欧娜举起盾牌，获得伤害减免、物理防御与魔法防御。当技能时间第一次结束时周围还有敌人，则敌人受到魔法伤害并且延长增益效果时间。",
-            "dynamicDescription": "雷欧娜举起她的盾牌，使即将承受的伤害降低 @FlatDamageReduction@ 并获得<scaleArmor>@BonusArmorTooltip@ 物理防御</scaleArmor>及 <scaleMR>@BonusMRTooltip@ 魔法防御</scaleMR>，持续 @Effect3Amount@ 秒。之后，她的盾牌将引爆，对附近敌人造成 <magicDamage>@TotalDamageTooltip@ 魔法伤害</magicDamage>。如果她命中了至少一名敌人，则她的<scaleArmor>物理防御</scaleArmor>及<scaleMR>魔法防御</scaleMR>加成将被额外延长 @Effect3Amount@ 秒。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "雷欧娜举起她的盾牌，使即将受到的伤害降低@FlatDamageReduction@，并获得<scaleArmor>@BonusArmorTooltip@物理防御</scaleArmor>和<scaleMR>@BonusMRTooltip@魔法防御</scaleMR>，持续@ArmorMRDuration@秒。随后，她的盾牌会爆炸，对附近敌人造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。如果命中至少一个目标，则会额外保留<scaleArmor>物理防御</scaleArmor>和<scaleMR>魔法防御</scaleMR>加成@ArmorMRDuration@秒。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1926,7 +1926,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷欧娜发出剑气，对路径上所有敌方造成魔法伤害。当剑气淡去后，雷欧娜会停顿后冲往最后被打到的敌人身后。",
-            "dynamicDescription": "雷欧娜刺出光明之剑，造成 <magicDamage>@TotalDamageTooltip@ 魔法伤害</magicDamage>。最后一个被命中的敌方英雄将会被<status>定身</status> @Effect2Amount@ 秒，并且雷欧娜会冲向该英雄。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "雷欧娜用光明之剑进行猛刺，造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。最后一名被命中的英雄会被<status>禁锢</status>@RootDuration@秒，且雷欧娜会冲向该英雄。@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,

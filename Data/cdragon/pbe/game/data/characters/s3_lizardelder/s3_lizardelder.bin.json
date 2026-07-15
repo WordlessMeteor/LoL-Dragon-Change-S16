@@ -1,0 +1,214 @@
+{
+    "{49f9a704}": {
+        "mCharacterName": "S3_LizardElder",
+        "baseHPModifiable": {
+            "baseValue": 1400.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 65.0,
+        "primaryAbilityResource": {
+            "arType": 8,
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 65.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 20.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMoveSpeedModifiable": {
+            "baseValue": 300.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6299999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": 0.11666666716337204,
+            "mAttackProbability": 0.3400000035762787,
+            "mAttackName": "S3_LizardElderInitialAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.33000001311302185,
+                "mAttackName": "S3_LizardAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackProbability": 0.33000001311302185,
+                "mAttackName": "S3_LizardAttack3",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackProbability": 0.0,
+                "mAttackName": "S3_LizardElderBasicAttack4",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 260.0,
+        "goldGivenOnDeath": 55.0,
+        "experienceRadius": -1.0,
+        "significance": 0.6000000238418579,
+        "extraSpells": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "BaseSpell",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ],
+        "{c1984296}": [
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "Shared/Spells/BaseSpell",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "enemyTooltip": "game_character_enemyTooltip_S3_LizardElder",
+        "name": "game_character_displayname_S3_LizardElder",
+        "weaponMaterials": [
+            "S3_LizardElderBasicAttack"
+        ],
+        "DisguiseMinimapIconOverride": "LesserCamp",
+        "selectionHeight": 100.0,
+        "selectionRadius": 145.0,
+        "pathfindingCollisionRadius": 31.52079963684082,
+        "overrideGameplayCollisionRadius": 65.0,
+        "unitTagsString": "Monster | Monster_Large | Monster_Red | Monster_Camp | Monster_Buff",
+        "characterToolData": {
+            "mapAIPresence": {
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "description": "game_character_description_S3_LizardElder",
+            "baseAttackSpeedBonus": 50.0,
+            "attackSpeed": 1.5,
+            "__type": "CharacterToolData"
+        },
+        "flags": 8398088,
+        "__type": "CharacterRecord"
+    },
+    "{6b76e9f7}": {
+        "ObjectName": "S3_LizardElderInitialAttack",
+        "mScriptName": "S3_LizardElderInitialAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack4",
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 20.0,
+            "mMissileEffectName": "DATA/Particles/GlobalFireball_mis.troy",
+            "mHitEffectKey": "{857e7571}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{887183ec}": {
+        "ObjectName": "S3_LizardAttack3",
+        "mScriptName": "S3_LizardAttack3",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack3",
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 20.0,
+            "mMissileEffectName": "DATA/Particles/GlobalFireball_mis.troy",
+            "mHitEffectKey": "{857e7571}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{8971857f}": {
+        "ObjectName": "S3_LizardAttack2",
+        "mScriptName": "S3_LizardAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 20.0,
+            "mMissileEffectName": "DATA/Particles/GlobalFireball_mis.troy",
+            "mHitEffectKey": "{857e7571}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{d6cbd2e2}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

@@ -1370,7 +1370,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Sejuani carica in avanti, lanciando in aria i nemici. La carica si ferma dopo aver colpito un campione nemico.",
-            "dynamicDescription": "Sejuani parte alla carica, infliggendo <magicDamage>@TotalDamageTooltip@ danni magici</magicDamage> ai nemici e <status>lanciandoli</status> <status>in aria</status> per @Effect4Amount@ secondi. La carica si ferma dopo aver colpito un campione nemico.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani parte alla carica, infliggendo <magicDamage>@TotalDamageTooltip@ danni magici</magicDamage> ai nemici e <status>lanciandoli</status> <status>in aria</status> per @KnockupDurationTOOLTIPONLY@ secondi. La carica si ferma dopo aver colpito un campione nemico.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Sejuani congela e stordisce un campione nemico che ha il massimo di cariche di Congelamento.",
-            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> gli attacchi dei campioni da mischia alleati nelle vicinanze applicano una carica a campioni e mostri della giungla.<br><br><spellPassive>Attiva:</spellPassive> Sejuani infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> al nemico bersaglio con 4 cariche e lo <status>stordisce</status> per @Effect1Amount@ secondo. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> gli attacchi dei campioni da mischia alleati nelle vicinanze applicano una carica a campioni e mostri della giungla.<br><br><spellPassive>Attiva:</spellPassive> Sejuani infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> al nemico bersaglio con 4 cariche e lo <status>stordisce</status> per @CCDuration@ secondo. @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Sejuani lancia la sua bola, che congela e stordisce il primo campione colpito e crea una tempesta di ghiaccio che rallenta gli altri nemici.",
-            "dynamicDescription": "Sejuani lancia la sua bola di Vero Ghiaccio, <status>stordendo</status> e rivelando il primo nemico colpito per @Effect2Amount@ secondo/i e infliggendogli <magicDamage>@MinorDamageTooltip@ danni magici</magicDamage>.<br><br>Se la bola percorre almeno il 25% della sua gittata, <status>stordisce</status> e rivela il bersaglio per @Effect6Amount@ secondi. Inoltre, crea una tempesta glaciale che <status>rallenta</status> i nemici circostanti del @Effect4Amount@% per @Effect3Amount@ secondi. Tutti i nemici colpiti subiscono <magicDamage>@TotalDamageTooltip@ danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani lancia la sua bola di Vero Ghiaccio, <status>stordendo</status> e rivelando il primo campione nemico colpito per @BaseStunDuration@ secondo e infliggendogli <magicDamage>@MinorDamageTooltip@ danni magici</magicDamage>.<br><br>Se la bola percorre almeno il 25% della sua gittata, invece, <status>stordisce</status> e rivela per @EmpoweredStunDuration@ secondo/i. Inoltre, crea una tempesta glaciale che <status>rallenta</status> i nemici circostanti di un @ExplosionSlowAmount@% per @ZoneDuration@ secondo/i. Tutti i nemici colpiti subiscono <magicDamage>@TotalDamageTooltip@ danni magici</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

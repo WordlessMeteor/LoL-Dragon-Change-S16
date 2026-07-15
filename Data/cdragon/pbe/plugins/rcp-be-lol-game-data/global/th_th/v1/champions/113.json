@@ -1370,7 +1370,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Sejuani พุ่งไปข้างหน้าและกระแทกศัตรูทุกตัวให้ลอยขึ้นไปบนอากาศ การกระแทกจะหยุดลงหลังจากที่กระทบตัวแชมเปี้ยนศัตรูเรียบร้อยแล้ว",
-            "dynamicDescription": "Sejuani พุุ่งเข้าชาร์จ สร้างความเสียหายเวท <magicDamage>@TotalDamageTooltip@ หน่วย</magicDamage>กับศัตรู และ<status>กระแทก</status>ศัตรู<status>ให้ลอยขึ้น</status>เป็นเวลา @Effect4Amount@ วินาที เธอจะหยุดเมื่อพุ่งโดนตัวแชมเปี้ยนศัตรู@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani พุ่งเข้าชาร์จ สร้าง<magicDamage>ความเสียหายเวท @TotalDamageTooltip@ หน่วย</magicDamage>แก่ศัตรู และ<status>กระแทก</status>พวกเขา<status>ให้ลอยขึ้น</status>เป็นเวลา @KnockupDurationTOOLTIPONLY@ วินาที การพุ่งชาร์จจะสิ้นสุดลงเมื่อชนแชมเปี้ยนศัตรู@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Sejuani แช่แข็งและสตันแชมเปี้ยนศัตรูที่มีสแตค Frost สูงสุด",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> การโจมตีจากแชมเปี้ยนร่วมทีมระยะประชิดที่อยู่ใกล้เคียง จะสะสมสแตคบนตัวแชมเปี้ยนศัตรูและมอนสเตอร์ป่า<br><br><spellPassive>กดใช้:</spellPassive> Sejuani สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ให้กับศัตรูที่มีแต้มสะสม 4 สแตค และ<status>สตัน</status>พวกเขาเป็นเวลา @Effect1Amount@ วินาที @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> การโจมตีจากแชมเปี้ยนร่วมทีมระยะประชิดที่อยู่ใกล้เคียง จะสะสมสแตคบนตัวแชมเปี้ยนศัตรูและมอนสเตอร์<br><br><spellPassive>กดใช้:</spellPassive> Sejuani สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรูที่มีแต้มสะสม 4 สแตค และ<status>สตัน</status>พวกเขาเป็นเวลา @CCDuration@ วินาที @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Sejuani ปาลูกตุ้มของเธอไปแช่แข็งและสตันแชมเปี้ยนศัตรูตัวแรกที่โดน จากนั้นจะสร้างพายุน้ำแข็งที่จะสโลว์ศัตรูตัวอื่น ๆ ที่อยู่รอบ ๆ",
-            "dynamicDescription": "Sejuani เหวี่ยงตุ้มน้ำแข็ง True Ice ออกไป <status>สตัน</status>และเผยตำแหน่งแชมเปี้ยนศัตรูตัวแรกที่โดน เป็นเวลา @Effect2Amount@ วินาที และสร้างความเสียหายเวท <magicDamage>@MinorDamageTooltip@ หน่วย</magicDamage><br><br>หากลูกตุ้มถูกปาออกไปไกลอย่างน้อย 25% ของระยะทางสูงสุด มันจะ<status>สตัน</status>และเผยตำแหน่งศัตรู เป็นเวลา @Effect6Amount@ วินาทีแทน จากนั้นมันจะสร้างพายุหิมะที่จะ<status>สโลว์</status>ศัตรูในบริเวณรอบ ๆ @Effect4Amount@% เป็นเวลา @Effect3Amount@ วินาที ศัตรูทั้งหมดที่อยู่ในระยะเอฟเฟกต์จะได้รับความเสียหายเวท <magicDamage>@TotalDamageTooltip@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani เหวี่ยงตุ้มน้ำแข็งทรูไอซ์ <status>สตัน</status>และเปิดเผยแชมเปี้ยนศัตรูตัวแรกที่โดนเป็นเวลา @BaseStunDuration@ วินาที พร้อมสร้าง<magicDamage>ความเสียหายเวท @MinorDamageTooltip@ หน่วย</magicDamage><br><br>หากตุ้มพุ่งไปไกลกว่า 25% ของระยะของมัน ทำการ<status>สตัน</status>และเปิดเผยตำแหน่งเป็นเวลา @EmpoweredStunDuration@ วินาทีแทน จากนั้นสร้างพายุหิมะ<status>สโลว์</status>ศัตรูโดยรอบ @ExplosionSlowAmount@% เป็นเวลา @ZoneDuration@ วินาที ศัตรูได้รับ<magicDamage>ความเสียหายเวท @TotalDamageTooltip@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

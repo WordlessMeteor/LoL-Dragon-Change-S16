@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Ekko elhajít egy időgránátot, amely egy ellenséges hőst eltalálva időtorzító mezővé alakul, a területen belül rekedt áldozatok pedig sebzést szenvednek el és lelassulnak. Kisvártatva a gránát visszatér Ekkóhoz, miközben megsebzi azt, aki az útjába kerül.",
-            "dynamicDescription": "Ekko elhajít egy szerkezetet, <magicDamage>@InitialDamage@ varázssebzést</magicDamage> okozva. Hősnek ütközve vagy a hatótávolsága szélét elérve egy mezőt hoz létre, amely @Effect2Amount*-100@%-kal <status>lelassítja</status> az ellenfeleket. Ezután Ekko visszahívja magához, <magicDamage>@RecallDamage@ varázssebzést</magicDamage> okozva a mező területén belül.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko elhajít egy szerkezetet, <magicDamage>@InitialDamage@ varázssebzést</magicDamage> okozva. Hősnek ütközve vagy a hatótávolsága szélét elérve egy mezőt hoz létre, amely @SlowPercent*-100@%-kal <status>lelassítja</status> az ellenfeleket. Ezután Ekko visszahívja magához, <magicDamage>@RecallDamage@ varázssebzést</magicDamage> okozva a mező területén belül.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Ekko alaptámadásai bónusz varázssebzést okoznak az alacsony életerejű ellenfeleknek. A Párhuzamos valóság elsütésével néhány másodperc múltán létrehoz egy anomáliát, amely lassítja a benne rekedt ellenfeleket. Ha Ekko belép az anomáliába, egy pajzs veszi körül, az ellenfelek pedig rövid időre időcsapdába kerülnek és elkábulnak.",
-            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Ekko a 30%-nál kevesebb életerejű ellenfeleknek <magicDamage>a hiányzó életerejük @MissingHealthPercent@-ával egyenlő varázssebzést</magicDamage> okoz.<br><br><spellActive>Aktív:</spellActive> Ekko kis késleltetést követően egy 1,5 másodpercig tartó időburkot hoz létre, amely @Effect10Amount@%-kal <status>lelassítja</status> a területén belüli ellenfeleket. Ha Ekko belép a burokba, az felrobban, @Effect2Amount@ másodpercre <status>elkábítva</status> az ellenfeleket, ő maga pedig <shield>@TotalShield@ pajzsot</shield> kap.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> Ekko a kevesebb mint @BelowHealthThreshold*100@% életerejű ellenfeleknek a hiányzó életerejük <magicDamage>@MissingHealthPercent@-ával egyenlő varázssebzést</magicDamage> okoz.<br><br><spellActive>Aktív:</spellActive> Ekko kis késleltetést követően egy @SlowZoneDuration@ másodpercig tartó időburkot hoz létre, amely @SlowPercent@%-kal <status>lelassítja</status> a területén belüli ellenfeleket. Ha Ekko belép a burokba, az felrobban, @StunDuration@ másodpercre <status>elkábítva</status> az ellenfeleket, ő maga pedig <shield>@TotalShield@ pajzsot</shield> kap.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

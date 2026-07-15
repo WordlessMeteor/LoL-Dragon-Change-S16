@@ -1626,7 +1626,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تستخدم ليونا درعها لتنفيذ هجومها الأساسي التالي فتلحق ضرر سحر إضافي وتصعق الهدف.",
-            "dynamicDescription": "هجوم ليونا التالي <status>يصعق</status> لمدة @Effect1Amount@ث ويلحق مقدارًا إضافيًا <magicDamage>@TotalDamageTooltip@</magicDamage>  من ضرر السحر.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يؤدي هجوم ليونا التالي إلى <status>الصعق</status> لمدة @StunDuration@ث ويلحق <magicDamage>@TotalDamageTooltip@</magicDamage> ضرر سحر إضافي.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1776,7 +1776,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ترفع ليونا درعها لكسب تقليص الضرر والدروع ومقاومة السحر. عند بداية انتهاء التأثير، إذا كان هناك أعداء قريبون فسوف تلحق ضرر سحر بهم وتطيل مدة التأثير.",
-            "dynamicDescription": "ترفع ليونا درعها فتقلص الضرر المُلحَق بنسبة @FlatDamageReduction@ وتكسب <scaleArmor>@BonusArmorTooltip@ من الدروع</scaleArmor> و <scaleMR>@BonusMRTooltip@ مقاومة سحر</scaleMR> لمدة @Effect3Amount@ث. بعد ذلك، ينفجر درعها، فيلحق <magicDamage>@TotalDamageTooltip@ ضرر سحر</magicDamage> بالأعداء في الجوار. إذا أصابت هدفًا واحدًا على الأقل، فإنها تحتفظ بـ <scaleArmor>دروع</scaleArmor> و <scaleMR>مقاومة سحر</scaleMR> إضافية لمدة @Effect3Amount@ث إضافية.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ترفع ليونا درعها، فتقلص الضرر الملحق بمقدار @FlatDamageReduction@ وتكسب <scaleArmor>@BonusArmorTooltip@ دروع</scaleArmor> و <scaleMR>@BonusMRTooltip@ مقاومة سحر</scaleMR> لمدة @ArmorMRDuration@ث. بعد ذلك، ينفجر درعها، فيلحق <magicDamage>@TotalDamageTooltip@ ضرر سحر</magicDamage> بالأعداء في الجوار. إذا أصابت هدفًا واحدًا على الأقل، فإنها تحتفظ بمكافآت <scaleArmor>الدروع</scaleArmor> و<scaleMR>مقاومة السحر</scaleMR> لمدة @ArmorMRDuration@ث إضافية.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1926,7 +1926,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تطلق ليونا صورة شمسية من سيفها فتلحق ضرر السحر بكل الأعداء في خط مستقيم. وعندما تتلاشى الصورة، يتم شل حركة آخر بطل معاد أصيب بها لفترة وجيزة وتندفع ليونا باتجاهه.",
-            "dynamicDescription": "تطعن ليونا بسيف من النور، فتلحق <magicDamage>@TotalDamageTooltip@ ضرر سحر</magicDamage>. ويتم <status>تثبيت</status> آخر بطل لمدة @Effect2Amount@ث وتندفع ليونا نحوه.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تنقضّ ليونا بسيف من النور، فتلحق <magicDamage>@TotalDamageTooltip@ ضرر سحر</magicDamage>. ويتم <status>تثبيت</status> آخر بطل تصيبه لمدة @RootDuration@ث وتندفع ليونا نحوه.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,

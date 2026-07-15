@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ينشئُ كارثوس ستارًا من طاقة المكر يمكن عبوره. تتعرض كل وحدة معادية تعبر الستار إلى تقليص سرعة حركتها ومقاومة سحرها لفترة من الوقت.",
-            "dynamicDescription": "ينشئ كارثوس حائطًا يدوم لمدة @Effect4Amount@ث. ويفقد الأعداء الذين يعبرونه <scaleMR>@Effect1Amount@% مقاومة سحر</scaleMR> لمدة @Effect5Amount@ث ويتم <status>إبطاؤهم</status> بنسبة @Effect3Amount@% تتلاشى مع مرور المدة.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ينشئ كارثوس حائطًا يدوم لمدة @WallDuration@ث. ويفقد الأعداء الذين يعبرونه <scaleMR>@MagicResistShred@% مقاومة سحر</scaleMR> لمدة @DebuffDuration@ث ويتم <status>إبطاؤهم</status> بنسبة @SlowPercent@% تتلاشى مع مرور المدة.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ مانا في الثانية",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يسرق كارثوس الطاقة من ضحاياه عبر تأثيره الكامن، فيكسب مانا مع كل عملية قتل. كبديل لذلك، يستطيع كارثوس إحاطة نفسه بأرواح ضحاياه، فيلحق الضرر بالأعداء في الجوار، ولكن هذا يستنزف المانا لديه بسرعة.",
-            "dynamicDescription": "<spellPassive>التأثير الكامن: </spellPassive>عندما يقتل كارثوس إحدى الوحدات، يستعيد <scaleMana>@Effect2Amount@ مانا</scaleMana>.<br><br><toggle>تفعيل/تعطيل: </toggle>ينشئ كارثوس هالة نخرية فتلحق <magicDamage>@TotalDPS@ ضرر سحر</magicDamage> في الثانية بالأعداء في الجوار.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن: </spellPassive>عندما يقتل كارثوس إحدى الوحدات، يستعيد <scaleMana>@ManaRestoreOnKill@ مانا</scaleMana>.<br><br><toggle>تفعيل/تعطيل: </toggle>ينشئ كارثوس هالة فتاكة، فيلحق <magicDamage>@TotalDPS@ ضرر سحر</magicDamage> في الثانية بالأعداء في الجوار.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

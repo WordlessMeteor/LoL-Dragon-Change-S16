@@ -1370,7 +1370,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Sejuani charge droit devant elle, projetant les ennemis dans les airs. La charge s'arrête si elle touche un champion ennemi.",
-            "dynamicDescription": "Sejuani se rue dans une direction, infligeant <magicDamage>@TotalDamageTooltip@ pts de dégâts magiques</magicDamage> aux ennemis et les <status>projetant dans les airs</status> pendant @Effect4Amount@ sec. La ruée s'arrête si elle touche un champion ennemi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani se rue dans une direction, infligeant <magicDamage>@TotalDamageTooltip@ pts de dégâts magiques</magicDamage> aux ennemis et les <status>projetant dans les airs</status> pendant @KnockupDurationTOOLTIPONLY@ sec. La ruée s'arrête si elle touche un champion ennemi.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Sejuani gèle et étourdit un champion ennemi qui porte le nombre max d'effets Givre.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> les attaques des champions de mêlée alliés proches appliquent un effet sur les champions et les monstres.<br><br><spellPassive>Active :</spellPassive> Sejuani inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> à l'ennemi ciblé portant 4 effets cumulés et l'<status>étourdit</status> pendant @Effect1Amount@ sec. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> les attaques des champions de mêlée alliés proches appliquent un effet sur les champions et les monstres.<br><br><spellPassive>Active :</spellPassive> Sejuani inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> à l'ennemi ciblé portant 4 effets cumulés et l'<status>étourdit</status> pendant @CCDuration@ sec. @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Sejuani projette des bolas qui gèlent et étourdissent le premier champion touché, en plus de créer une tempête de glace qui ralentit les autres ennemis.",
-            "dynamicDescription": "Sejuani projette ses bolas de glace pure, <status>étourdissant</status> et révélant pendant @Effect2Amount@ sec le premier champion ennemi touché en plus de lui infliger <magicDamage>@MinorDamageTooltip@ pts de dégâts magiques</magicDamage>.<br><br>Si les bolas parcourent au moins 25% de leur portée max, ils <status>étourdissent</status> et révèlent l'ennemi pendant @Effect6Amount@ sec. Ils créent également une tempête de glace qui <status>ralentit</status> les ennemis proches de @Effect4Amount@% pendant @Effect3Amount@ sec. Tous les ennemis affectés subissent <magicDamage>@TotalDamageTooltip@ pts de dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani projette ses bolas de glace pure, <status>étourdissant</status> et révélant pendant @BaseStunDuration@ sec le premier champion ennemi touché en plus de lui infliger <magicDamage>@MinorDamageTooltip@ pts de dégâts magiques</magicDamage>.<br><br>Si les bolas parcourent au moins 25% de leur portée max, ils <status>étourdissent</status> et révèlent l'ennemi pendant @EmpoweredStunDuration@ sec. Ils créent également une tempête de glace qui <status>ralentit</status> les ennemis proches de @ExplosionSlowAmount@% pendant @ZoneDuration@ sec. Tous les ennemis affectés subissent <magicDamage>@TotalDamageTooltip@ pts de dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

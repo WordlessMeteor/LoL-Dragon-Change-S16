@@ -1752,7 +1752,7 @@
             "cost": "1 เมล็ด",
             "cooldown": "ไม่มีคูลดาวน์",
             "description": "Zyra ปลูกเมล็ดพันธุ์พืชที่อยู่ได้นาน 60 วินาที Deadly Sines และ Grasping Roots ที่ใช้กับเมล็ดพันธุ์จะทำให้มันเติบโตขึ้นเป็นต้นไม้ที่จะช่วย Zyra ในการต่อสู้ Zyra สามารถสะสมเมล็ดพันธุ์ได้หลายเมล็ดพร้อม ๆ กัน และการสังหารศัตรูจะทำให้ระยะเวลาการสะสมเมล็ดของ Rampant Growth ลดลง",
-            "dynamicDescription": "Zyra วาง<keywordMajor>เมล็ดพันธุ์</keywordMajor>ไว้อยู่ได้นาน @Effect6Amount@ วินาที <keywordMajor>เมล็ดพันธุ์</keywordMajor>เหล่านี้จะมอบ <keywordStealth>True Sight</keywordStealth> กับศัตรูที่เหยียบมันเป็นเวลา @Effect3Amount@ วินาที แต่จะถูกทำลายไป<br><br>สกิลนี้สามารถเก็บได้ 2 ชาร์จด้วยระยะเวลาชาร์จ @AmmoRechargeTime@ วินาที การสังหารมินเนี่ยนศัตรูหรือมอนสเตอร์จะลดระยะเวลาชาร์จลง @Effect1Amount*100@% การโค่นล้มแชมเปี้ยนจะลดระยะเวลาชาร์จ @Effect2Amount*100@% แทน@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra วาง<keywordMajor>เมล็ดพันธุ์</keywordMajor>ที่อยู่ได้นาน @SeedDuration@ วินาที <keywordMajor>เมล็ดพันธุ์</keywordMajor>เหล่านี้จะมอบ <keywordStealth>True Sight</keywordStealth> กับศัตรูที่เหยียบมันเป็นเวลา @VisionGranted@ วินาที แต่จะถูกทำลายไป<br><br>สกิลนี้มี 2 ชาร์จ และใช้เวลา @AmmoRechargeTime@ วินาทีในการรีชาร์จ การสังหารมินเนี่ยนศัตรูหรือมอนสเตอร์จะลดระยะเวลาชาร์จลง @KillAmmoRefundMinion*100@% การโค่นล้มแชมเปี้ยนจะลดระยะเวลาชาร์จ @KillAmmoRefundChamp*100@% แทน@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Zyra ส่งเถาวัลย์ออกไปบนพื้นเพื่อหยุดศัตรู สร้างความเสียหายและทำให้ศัตรูไม่สามารถเคลื่อนที่ได้ หากใช้ใกล้กับเมล็ดพันธุ์ Grasping Roots จะทำให้เติบโตขึ้นมาเป็น Vine Lasher ที่จะทำการโจมตีระยะใกล้และลดความเร็วเคลื่อนที่ของศัตรู",
-            "dynamicDescription": "Zyra ส่งเถาวัลย์ออกไปด้านหน้า ที่จะ<status>ตรึง</status>ศัตรูเป็นเวลา @Effect5Amount@ วินาที และสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@&nbsp;หน่วย</magicDamage> <br><br>หากว่าสกิลนี้ผ่านใกล้ ๆ <keywordMajor>เมล็ดพันธุ์</keywordMajor> จะทำให้<keywordMajor>เมล็ดพันธุ์</keywordMajor>เหล่านี้โตขึ้นกลายไปเป็น Vine Lasher ที่จะสร้าง<magicDamage>ความเสียหายเวท @spell.ZyraP:PlantDamage@ หน่วย</magicDamage> และอยู่ได้นาน @spell.ZyraP:PlantDuration@ วินาที Vine Lasher มีระยะโจมตี 400 หน่วย และการโจมตีจะ<status>สโลว์</status>ศัตรู @Effect2Amount@% เป็นเวลา @Effect3Amount@ วินาที เอฟเฟกต์<status>สโลว์</status>จาก Vine Lasher หลายต้น จะทับซ้อนได้สูงสุด @MaxSlowStacks@ ครั้ง@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra ส่งเถาวัลย์ออกไปด้านหน้า ทำการ<status>ตรึง</status>เป็นเวลา @RootDuration@ วินาทีและสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage><br><br>หากว่าสกิลนี้ผ่านใกล้ ๆ <keywordMajor>เมล็ดพันธุ์</keywordMajor> จะทำให้<keywordMajor>เมล็ดพันธุ์</keywordMajor>เหล่านี้โตขึ้นกลายไปเป็น Vine Lasher ที่จะสร้าง<magicDamage>ความเสียหายเวท @spell.ZyraP:PlantDamage@ หน่วย</magicDamage>และอยู่ได้นาน @spell.ZyraP:PlantDuration@ วินาที Vine Lasher มีระยะโจมตี 400 หน่วยและ<status>สโลว์</status>ศัตรู @SlowAmountPlantAttack@% เป็นเวลา @SlowDurationPlantAttack@ วินาที เอฟเฟกต์<status>สโลว์</status> จาก Vine Lasher หลายต้นจะสแตคสูงสุดที่ @MaxSlowStacks@ ครั้ง@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Zyra ส่งไม้เลื้อยออกไปยังพื้นที่เป้าหมาย สร้างความเสียหายให้กับศัตรูที่มันแพร่กระจายออกและกระแทกให้พวกเขาลอยขึ้นเมื่อสัมผัส ต้นไม้ในบริเวณนั้นจะติดสถานะบ้าคลั่ง",
-            "dynamicDescription": "Zyra อัญเชิญความโกรธเกรี้ยวของธรรมชาติ ทำให้พุ่มไม้เลื้อยเติบโต สร้าง<magicDamage>ความเสียหายเวท  @TotalDamage@ หน่วย</magicDamage> หลังจากนั้น 2 วินาที เถาวัลย์จะตวัดขึ้นไป และมันจะ<status>กระแทกศัตรูให้ลอยขึ้น</status> เป็นเวลา @Effect1Amount@ วินาที<br><br>ต้นไม้ที่อยู่ในพื้นที่จะเกิดอาการเดือดดาล เริ่มนับระยะเวลาการคงอยู่ใหม่ ได้รับ<healing>พลังชีวิตเพิ่มขึ้น @Effect2Amount*100@%</healing> และการโจมตีจะสร้างโบนัสความเสียหาย @PlantDamageBonus@% @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra อัญเชิญความโกรธเกรี้ยวของธรรมชาติ ทำให้พุ่มไม้เลื้อยเติบโตแล้วสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> หลังจากผ่านไป 2 วินาที เถาวัลย์จะดีดตัว <status>กระแทก</status>ศัตรูลอยขึ้นเป็นเวลา @KnockupDuration@ วินาที<br><br>เหล่าต้นไม้ของ Zyra ที่อยู่ในพงหนามจะเดือดดาล รีเซ็ตระยะเวลาของพวกมัน พร้อมได้รับ<healing>พลังชีวิต @EnragedBonusHealthPercent*100@%</healing> และโจมตีเพื่อสร้างโบนัสความเสียหาย @PlantDamageBonus@%@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

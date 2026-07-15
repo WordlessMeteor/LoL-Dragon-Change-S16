@@ -989,7 +989,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Kindred กระโดดตีลังกา พร้อมทั้งยิงลูกศรออกไป 3 ลูก ใส่ศัตรูที่อยู่รอบข้าง",
-            "dynamicDescription": "Kindred กระโดดและยิงธนูออกไปหาศัตรู 3 เป้าหมาย สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และได้รับ<attackSpeed>ความเร็วโจมตีเพิ่ม @TotalQAttackSpeed@</attackSpeed> เป็นเวลา @Effect8Amount@ วินาที<br><br>ในขณะที่อยู่ใน <spellName>Wolf's Frenzy</spellName> คูลดาวน์ของสกิลนี้จะถูกลดลงเหลือ @Effect4Amount@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kindred กระโดดและยิงธนูออกไปหาศัตรู 3 เป้าหมาย สร้าง<physicalDamage>ความเสียหายกายภาพ @TotalDamage@ หน่วย</physicalDamage> และได้รับ<attackSpeed>ความเร็วโจมตี @TotalQAttackSpeed@ </attackSpeed> เป็นเวลา @BaseASDuration@ วินาที<br><br>ในขณะที่อยู่ใน <spellName>Wolf's Frenzy</spellName> คูลดาวน์ของสกิลนี้จะลดลงเหลือ @CDNewValue@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 340.0,
                 340.0,
@@ -1439,7 +1439,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "แกะจะทำให้สิ่งมีชีวิตทุกอย่างในอาณาเขตรอดจากความตายจนกว่าผลของมันจะหมดไป ไม่มีอะไรที่จะตายในระหว่างนั้น แล้วในตอนจบจะฟื้นฟูพลังชีวิตให้ทุกตัวที่อยู่ในอาณาเขตด้วย",
-            "dynamicDescription": "Kindred เสกพื้นที่ศักดิ์สิทธิ์ขึ้นเป็นเวลา @Effect2Amount@ วินาที ซึ่งทำให้เพื่อนร่วมทีม ศัตรู หรือยูนิตอื่นไม่สามารถตายได้ เมื่อมีพลังชีวิตเหลืออยู่ 10% ยูนิตนั้นจะไม่สามาถรับความเสียหายเพิ่มหรือถูกฮีลในขณะอยู่ในพื้นที่นี้<br><br>เมื่อพื้นที่ศักดิ์สิทธิ์จบลง ยูนิตทั้งหมดที่อยู่ข้างในจะได้รับฮีล <healing>@Effect1Amount@ หน่วย</healing>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kindred มอบพรผืนดินเป็นเวลา @BuffDuration@ วินาที ทำให้ยูนิตร่วมทีม ศัตรู หรือยูนิตที่เป็นกลางไม่มีวันตายตราบใดที่ยังอยู่ข้างใน เมื่อพลังชีวิตลดลงเหลือ 10% ยูนิตที่อยู่ในพื้นที่จะไม่ได้รับความเสียหายและไม่สามารถฮีลเพิ่มได้อีก<br><br>เมื่อพรสิ้นสุดลง ยูนิตทั้งหมดที่อยู่ข้างในจะได้รับการฮีล<healing>พลังชีวิต @HealFlat@ หน่วย</healing>@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

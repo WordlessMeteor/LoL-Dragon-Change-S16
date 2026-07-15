@@ -22,92 +22,6 @@
                 "Trait_AttackBuff_Duration",
                 "Trait_AoE"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        30.0,
-                        35.0,
-                        40.0,
-                        45.0,
-                        50.0,
-                        55.0,
-                        60.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.75,
-                        2.75,
-                        2.75,
-                        2.75,
-                        2.75,
-                        2.75,
-                        2.75
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0,
-                        800.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "CherryNegaHaste",
@@ -119,6 +33,58 @@
                         -20.0,
                         -20.0,
                         -20.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DRAmount",
+                    "values": [
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DRDuration",
+                    "values": [
+                        2.75,
+                        2.75,
+                        2.75,
+                        2.75,
+                        2.75,
+                        2.75,
+                        2.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RecastDelay",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FearDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -283,7 +249,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "DRAmount",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_DamageReduction",
                                     "Style": 1,
@@ -329,8 +295,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "FearDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -342,8 +308,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "FearDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -355,8 +321,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "FearDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -963,92 +929,6 @@
             "mSpellTags": [
                 "Trait_AttackBuff_Duration"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        27.5,
-                        35.0,
-                        42.5,
-                        50.0,
-                        57.5,
-                        65.0,
-                        72.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        35.0,
-                        70.0,
-                        80.0,
-                        90.0,
-                        100.0,
-                        110.0,
-                        125.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        5.0,
-                        10.0,
-                        15.0,
-                        20.0,
-                        25.0,
-                        30.0,
-                        35.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        70.0,
-                        80.0,
-                        90.0,
-                        100.0,
-                        110.0,
-                        120.0,
-                        130.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "PassiveASBonus",
@@ -1151,6 +1031,32 @@
                         0.25,
                         0.25,
                         0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSBonus",
+                    "values": [
+                        27.5,
+                        35.0,
+                        42.5,
+                        50.0,
+                        57.5,
+                        65.0,
+                        72.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ASBonus",
+                    "values": [
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0,
+                        100.0,
+                        110.0,
+                        120.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1361,8 +1267,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "MSBonus",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2846,101 +2752,6 @@
                 "Trait_Strike",
                 "Trait_SignatureSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        50.0,
-                        100.0,
-                        150.0,
-                        200.0,
-                        250.0,
-                        300.0,
-                        350.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        25.0,
-                        25.0,
-                        37.5,
-                        50.0,
-                        62.5,
-                        75.0,
-                        75.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        135.0,
-                        150.0,
-                        165.0,
-                        180.0,
-                        195.0,
-                        210.0,
-                        225.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0,
-                        200.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0,
-                        300.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        425.0,
-                        425.0,
-                        425.0,
-                        425.0,
-                        425.0,
-                        425.0,
-                        425.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "TargetPercentHPDamage",
@@ -2965,6 +2776,97 @@
                         1.2000000476837158,
                         1.2000000476837158,
                         1.2000000476837158
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BiteZoneLength",
+                    "values": [
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HPDamageCap",
+                    "values": [
+                        135.0,
+                        150.0,
+                        165.0,
+                        180.0,
+                        195.0,
+                        210.0,
+                        225.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "LifestealPercent",
+                    "values": [
+                        12.5,
+                        25.0,
+                        37.5,
+                        50.0,
+                        62.5,
+                        75.0,
+                        87.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CheatLength",
+                    "values": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CheatLengthMoveBlock",
+                    "values": [
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "QCastRangeOverride",
+                    "values": [
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -3152,7 +3054,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "LifestealPercent",
                                     "typeIndex": 3,
                                     "nameOverride": "Spell_ListType_Healing",
                                     "Style": 1,
@@ -3239,8 +3141,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "LifestealPercent",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -4734,6 +4636,69 @@
             }
         ],
         "__type": "JunglePathRecommendation"
+    },
+    "{a6089a06}": {
+        "mOverrides": [
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "{ad33a648}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "{c86c2457}",
+                            "{467823a4}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "{34714b89}",
+                            "{337149f6}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "{294c5614}",
+                            "{274c52ee}"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{9753bf03}",
+                            "{23bea8c0}",
+                            "{264a12c4}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{a856185d}",
+                            "{a4561211}",
+                            "{bdc8958a}",
+                            "{27591ee1}",
+                            "{2fba3e76}",
+                            "{2c4c5acd}",
+                            "{bac890d1}",
+                            "{2b59252d}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
     },
     "Characters/Warwick/CharacterRecords/Root": {
         "mCharacterName": "Warwick",

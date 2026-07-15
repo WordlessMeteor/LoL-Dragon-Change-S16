@@ -1370,7 +1370,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "史瓦妮向前衝刺，將敵人擊飛至空中，衝刺過程中若撞上敵方英雄則停止前進。",
-            "dynamicDescription": "史瓦妮向前衝刺，對敵人造成<magicDamage>@TotalDamageTooltip@ 魔法傷害</magicDamage>並<status>擊飛</status>敵人 @Effect4Amount@ 秒。衝刺會在命中一名敵方英雄後停止。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "史瓦妮向前衝刺，對敵人造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>並<status>擊</status><status>飛</status>敵人@KnockupDurationTOOLTIPONLY@秒。衝刺會在命中敵方英雄後停止。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "史瓦妮冰凍並暈眩一名身上帶有最大寒霜層數的敵方英雄。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>附近的近戰友軍英雄的普攻會在敵方英雄與野怪身上附加一層堆層。<br><br><spellPassive>主動：</spellPassive>史瓦妮對身上有4層堆層的目標敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並<status>暈眩</status>他們@Effect1Amount@秒。 @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>鄰近近戰友方英雄的普攻會在敵方英雄與野怪身上附加一層堆層。<br><br><spellPassive>主動：</spellPassive>史瓦妮對身上有4層堆層的目標敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，並<status>暈眩</status>目標@CCDuration@秒。 @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "史瓦妮擲出她的冰星錘，冰凍並暈眩首位被擊中的敵方英雄，並且創造一道冰之風暴，緩速範圍內其他敵人。",
-            "dynamicDescription": "史瓦妮擲出手中的冰星錘，<status>暈眩</status>並揭示首個命中的敵人 @Effect2Amount@ 秒，並造成 <magicDamage>@MinorDamageTooltip@ 魔法傷害</magicDamage>。<br><br>如果冰星錘移動了相當於至少 25% 範圍的距離，它將轉而<status>暈眩</status>並揭示敵人 @Effect6Amount@ 秒。它接著也會創造一道冰之風暴，對附近敵人造成 @Effect4Amount@% 的<status>緩速</status>，持續 @Effect3Amount@ 秒。所有被影響的敵人會承受<magicDamage>@TotalDamageTooltip@ 魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "史瓦妮擲出手中的冰星錘，<status>暈眩</status>並揭露首位命中的敵方英雄視野，持續@BaseStunDuration@秒，並造成<magicDamage>@MinorDamageTooltip@魔法傷害</magicDamage>。<br><br>如果冰星錘移動了相當於至少25%範圍的距離，就會轉而<status>暈眩</status>並揭露敵人@EmpoweredStunDuration@秒。它接著也會創造一道冰之風暴，對附近敵人造成@ExplosionSlowAmount@的<status>緩速</status>，持續@ZoneDuration@秒。所有被影響的敵人會承受<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

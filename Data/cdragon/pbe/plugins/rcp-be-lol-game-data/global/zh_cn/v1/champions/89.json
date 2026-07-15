@@ -1734,7 +1734,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "蕾欧娜用盾进行下次普通攻击，造成额外魔法伤害并晕眩目标。",
-            "dynamicDescription": "蕾欧娜的下次攻击会<status>晕眩</status>目标@Effect1Amount@秒，并造成额外的<magicDamage>@TotalDamageTooltip@</magicDamage>魔法伤害。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "蕾欧娜的下次攻击会<status>晕眩</status>目标@StunDuration@秒，并造成额外的<magicDamage>@TotalDamageTooltip@</magicDamage>魔法伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1884,7 +1884,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "蕾欧娜举起盾牌，提供伤害减免、护甲和魔法抗性。当持续时间首次结束时，如果附近有敌人，那么她会对其造成魔法伤害并延长效果的持续时间。",
-            "dynamicDescription": "蕾欧娜举起她的盾牌，使即将到来的伤害降低@FlatDamageReduction@并获得<scaleArmor>@BonusArmorTooltip@护甲</scaleArmor>和<scaleMR>@BonusMRTooltip@魔法抗性</scaleMR>，持续@Effect3Amount@秒。之后，她的盾牌会爆炸，对附近的敌人造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。如果她命中了至少一名敌人，那么她会将<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>加成延续额外的@Effect3Amount@秒。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "蕾欧娜举起她的盾牌，使即将到来的伤害降低@FlatDamageReduction@并获得<scaleArmor>@BonusArmorTooltip@护甲</scaleArmor>和<scaleMR>@BonusMRTooltip@魔法抗性</scaleMR>，持续@ArmorMRDuration@秒。之后，她的盾牌会爆炸，对附近的敌人造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。如果她命中了至少一名敌人，那么她会将该<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>加成延续额外的@ArmorMRDuration@秒。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -2034,7 +2034,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "蕾欧娜投掷一束日光，对直线上的所有敌人造成魔法伤害。当效果消失时，蕾欧娜会冲向最后一个被击中的敌人并使其无法移动。",
-            "dynamicDescription": "蕾欧娜用光明之剑进行猛刺，造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。最后一个被命中的敌方英雄将会被<status>禁锢</status>@Effect2Amount@秒，并且蕾欧娜将会冲向该英雄。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "蕾欧娜用光明之剑进行猛刺，造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。最后一个被命中的英雄将会被<status>禁锢</status>@RootDuration@秒，并且蕾欧娜将会冲向该英雄。@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,

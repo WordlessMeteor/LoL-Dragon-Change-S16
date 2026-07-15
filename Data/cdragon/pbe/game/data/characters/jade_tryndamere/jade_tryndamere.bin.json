@@ -1,0 +1,2015 @@
+{
+    "{054bc9ed}": {
+        "mNameTraKey": "Jade_Portrait_Name_Tryndamere_Feeney",
+        "catalogEntry": {
+            "contentId": "77768806-0995-4a84-b092-4fe254662f0b",
+            "itemID": 25,
+            "__type": "CatalogEntry"
+        },
+        "mDescriptionTraKey": "Jade_Portrait_Description_Tryndamere_Feeney",
+        "{55bb9b57}": 25,
+        "{ff3c9ff8}": "{e79c1e24}",
+        "image": {
+            "image": "ASSETS/Characters/Jade_Tryndamere/Skins/Base/Jade_TryndamereLoadScreen_Feeney.project_jade.tex",
+            "__type": "CensoredImage"
+        },
+        "__type": "{3018b0da}"
+    },
+    "{32ac05f4}": {
+        "mNameTraKey": "Jade_Portrait_Name_Tryndamere_LoR_01",
+        "catalogEntry": {
+            "contentId": "53e8873c-30a7-4df6-ab96-c6fbf714a8b6",
+            "itemID": 24,
+            "__type": "CatalogEntry"
+        },
+        "mDescriptionTraKey": "Jade_Portrait_Description_Tryndamere_LoR_01",
+        "{55bb9b57}": 24,
+        "{ff3c9ff8}": "{e15eb251}",
+        "image": {
+            "image": "ASSETS/Characters/Jade_Tryndamere/Skins/Base/Jade_TryndamereLoadScreen_LoR_01.project_jade.tex",
+            "__type": "CensoredImage"
+        },
+        "__type": "{3018b0da}"
+    },
+    "{0fa25305}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{21a8598e}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{369d47ef}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{b2df7184}": {
+        "mRootSpell": "{16f47364}",
+        "mChildSpells": [
+            "{16f47364}",
+            "{17e52b5e}"
+        ],
+        "mName": "Jade_TryndamereEAbility",
+        "__type": "AbilityObject"
+    },
+    "{16f47364}": {
+        "ObjectName": "Jade_TryndamereE",
+        "mScriptName": "Jade_TryndamereE",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        -10.0,
+                        40.0,
+                        90.0,
+                        140.0,
+                        190.0,
+                        240.0,
+                        290.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CooldownRefund",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAoE",
+                    "values": [
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseHealthCost",
+                    "values": [
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashSpeed",
+                    "values": [
+                        900.0,
+                        900.0,
+                        900.0,
+                        900.0,
+                        900.0,
+                        900.0,
+                        900.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mDataValue": "ADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tryndamere_Slash.project_jade.dds"
+            ],
+            "cooldownTime": [
+                12.0,
+                13.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                7.0
+            ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0
+                ],
+                "{0a3e0478}": 8.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "mProjectTargetToCastRange": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castRadius": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.75,
+            "missileSpeed": 700.0,
+            "mLineWidth": 160.0,
+            "mFloatVarsDecimals": [
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tryndamere_TryndamereE_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TryndamereE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TryndamereE_Jade_Name",
+                        "keySummary": "Spell_TryndamereE_Jade_Summary",
+                        "keyTooltip": "Spell_TryndamereE_Jade_Tooltip",
+                        "keyCost": "Spell_TryndamereW_Jade_HealthCost"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseHealthCost",
+                                    "nameOverride": "Spell_ListType_HealthCost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": true,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                160.0,
+                                160.0,
+                                160.0,
+                                160.0,
+                                160.0,
+                                160.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 128,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{17e52b5e}": {
+        "ObjectName": "Jade_TryndamereSlash",
+        "mScriptName": "Jade_TryndamereSlash",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_TryndamereE",
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                ""
+            ],
+            "cooldownTime": [
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0
+                ],
+                "{0a3e0478}": 8.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "castRange": [
+                660.0,
+                660.0,
+                660.0,
+                660.0,
+                660.0,
+                660.0,
+                660.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    660.0,
+                    660.0,
+                    660.0,
+                    660.0,
+                    660.0,
+                    660.0,
+                    660.0
+                ],
+                "{0a3e0478}": 660.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                35.0,
+                35.0,
+                35.0,
+                35.0,
+                35.0,
+                35.0,
+                35.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.75,
+            "missileSpeed": 700.0,
+            "mLineWidth": 92.5,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                92.5,
+                                92.5,
+                                92.5,
+                                92.5,
+                                92.5,
+                                92.5
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{1ff44316}": {
+        "mRootSpell": "{d1a6c804}",
+        "mChildSpells": [
+            "{d1a6c804}",
+            "{b8e06586}"
+        ],
+        "mName": "Jade_TryndamereWAbility",
+        "__type": "AbilityObject"
+    },
+    "{427e07d7}": {
+        "ObjectName": "Jade_TryndamereBasicAttack",
+        "mScriptName": "Jade_TryndamereBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_TryndamereBasicAttack",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.5,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{e0a644eb}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tryndamere_TryndamereBasicAttack_OnCast",
+                "13": "Play_sfx_Tryndamere_TryndamereBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{5e3d26be}": {
+        "mRootSpell": "{b6ce403c}",
+        "mChildSpells": [
+            "{b6ce403c}"
+        ],
+        "mName": "Jade_TryndamerePassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{4f16daa3}": {
+        "ObjectName": "Jade_TryndamereQPassive",
+        "mScriptName": "Jade_TryndamereQPassive",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tryndamere_Fury.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_Jade_TryndamerePassive_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{b6ce403c}": {
+        "ObjectName": "Jade_TryndamerePassive",
+        "mScriptName": "Jade_TryndamerePassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinimumCrit",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaximumCrit",
+                    "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tryndamere_Fury.project_jade.dds"
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TryndamerePassive",
+                    "mFormat": "{476ec0b8}",
+                    "EnableExtendedTooltip": false,
+                    "mLocKeys": {
+                        "keyName": "Spell_TryndamerePassive_Jade_Name",
+                        "keySummary": "Spell_TryndamerePassive_Jade_Summary",
+                        "keyTooltip": "Spell_TryndamerePassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_TryndamerePassive",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f1792928}": {
+        "mRootSpell": "{891c72a4}",
+        "mChildSpells": [
+            "{891c72a4}"
+        ],
+        "mName": "Jade_TryndamereQAbility",
+        "__type": "AbilityObject"
+    },
+    "{891c72a4}": {
+        "ObjectName": "Jade_TryndamereQ",
+        "mScriptName": "Jade_TryndamereQ",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mCastRequirementsCaster": [
+                {
+                    "slot": 0,
+                    "{c073c624}": 0.10000000149011612,
+                    "__type": "{e2ef74d0}"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "HealPerFury",
+                    "values": [
+                        0.0,
+                        10.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADPerStack",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CritDamagePerStack",
+                    "values": [
+                        0.007499999832361937,
+                        0.014999999664723873,
+                        0.02250000089406967,
+                        0.029999999329447746,
+                        0.03750000149011612,
+                        0.04500000178813934,
+                        0.05249999836087227
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "OutOfCombatTimer",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "InitialHeal": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{3aa920de}": {
+                    "mExpandedTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "{137cf12a}": "HealPerFury",
+                            "{01ba2bd1}": 4,
+                            "__type": "{2b25a73a}"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tryndamere_Bloodlust.project_jade.dds"
+            ],
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0
+                ],
+                "{0a3e0478}": 13.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "castRadius": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "mHitEffectKey": "{99f49d02}",
+            "mFloatVarsDecimals": [
+                2,
+                1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tryndamere_TryndamereQ_OnCast"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TryndamereQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TryndamereQ_Jade_Name",
+                        "keySummary": "Spell_TryndamereQ_Jade_Summary",
+                        "keyTooltip": "Spell_TryndamereQ_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Spell_TryndamereQ_Jade_TooltipExtendedBelowLine"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "CritDamagePerStack",
+                                    "typeIndex": 3,
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_Jade_TryndamereQ_CritDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "HealPerFury",
+                                    "typeIndex": 4,
+                                    "nameOverride": "Spell_ListType_TryndamereHealPerFury",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_TryndamereQ",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{ec17e271}": [
+                {
+                    "EffectTag": 8,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "InitialHeal",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{91666d7f}": {
+        "ObjectName": "Jade_TryndamereBasicAttack2",
+        "mScriptName": "Jade_TryndamereBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_TryndamereBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.5,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{e0a644eb}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tryndamere_TryndamereBasicAttack_OnCast",
+                "13": "Play_sfx_Tryndamere_TryndamereBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ce999d7e}": {
+        "mRootSpell": "{93f67304}",
+        "mChildSpells": [
+            "{93f67304}"
+        ],
+        "mName": "Jade_TryndamereUndyingRageAbility",
+        "__type": "AbilityObject"
+    },
+    "{93f67304}": {
+        "ObjectName": "Jade_TryndamereUndyingRage",
+        "mScriptName": "Jade_TryndamereUndyingRage",
+        "mSpell": {
+            "flags": 20,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "SpecialCase_StasisLocked",
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "name": "FuryGained",
+                    "values": [
+                        2.0,
+                        4.0,
+                        6.0,
+                        8.0,
+                        10.0,
+                        12.0,
+                        14.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealAtEnd",
+                    "values": [
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinimumHealth",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tryndamere_EndlessRage.project_jade.dds"
+            ],
+            "cooldownTime": [
+                120.0,
+                110.0,
+                100.0,
+                90.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "Cooldown": {
+                "values": [
+                    120.0,
+                    110.0,
+                    100.0,
+                    90.0,
+                    80.0,
+                    70.0,
+                    60.0
+                ],
+                "{0a3e0478}": 120.0,
+                "__type": "{0a0eddc9}"
+            },
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRadius": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 4.179999828338623,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tryndamere_UndyingRage_OnCast",
+                "18": "Play_sfx_Tryndamere_UndyingRage_OnBuffActivate",
+                "19": "Play_sfx_Tryndamere_UndyingRage_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TryndamereUndyingRage",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TryndamereR_Jade_Name",
+                        "keySummary": "Spell_TryndamereR_Jade_Summary",
+                        "keyTooltip": "Spell_TryndamereR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "FuryGained",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_TryndamereFuryGained",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_TryndamereR_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 8388608,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "Duration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 32,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "MinimumHealth",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{b8e06586}": {
+        "ObjectName": "Jade_Tryndamere_MockingShoutSlow",
+        "mScriptName": "Jade_Tryndamere_MockingShoutSlow",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/48thSlave_Pacify.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_TryndamereW_Slow",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{d1a6c804}": {
+        "ObjectName": "Jade_TryndamereW",
+        "mScriptName": "Jade_TryndamereW",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mCastRequirementsCaster": [
+                {
+                    "{675c02b0}": 2,
+                    "mUnitsRequirements": [
+                        {
+                            "mUnitTags": {
+                                "mObjectTagList": [
+                                    "{ea595ca6}"
+                                ],
+                                "__type": "ObjectTags"
+                            },
+                            "__type": "HasUnitTagsCastRequirement"
+                        }
+                    ],
+                    "mUnitsRequired": 1,
+                    "mRange": 800.0,
+                    "mDistanceType": 1,
+                    "__type": "HasNNearbyUnitsRequirement"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "ADReduction",
+                    "values": [
+                        0.0,
+                        -20.0,
+                        -40.0,
+                        -60.0,
+                        -80.0,
+                        -100.0,
+                        -120.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPotency",
+                    "values": [
+                        -0.22499999403953552,
+                        -0.30000001192092896,
+                        -0.375,
+                        -0.44999998807907104,
+                        -0.5249999761581421,
+                        -0.6000000238418579,
+                        -0.675000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseHealthCost",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/48thSlave_Pacify.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                14.0,
+                14.0,
+                14.0,
+                14.0,
+                14.0,
+                14.0,
+                14.0
+            ],
+            "Cooldown": {
+                "values": [
+                    14.0,
+                    14.0,
+                    14.0,
+                    14.0,
+                    14.0,
+                    14.0,
+                    14.0
+                ],
+                "{0a3e0478}": 14.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "mPingableWhileDisabled": true,
+            "castRangeDisplayOverride": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "castRadius": [
+                830.0,
+                830.0,
+                830.0,
+                830.0,
+                830.0,
+                830.0,
+                830.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "mHitEffectKey": "{36d9d3f7}",
+            "mFloatVarsDecimals": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_Tryndamere_TryndamereW_OnHit"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TryndamereW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TryndamereW_Jade_Name",
+                        "keySummary": "Spell_TryndamereW_Jade_Summary",
+                        "keyTooltip": "Spell_TryndamereW_Jade_Tooltip",
+                        "keyCost": "Spell_TryndamereW_Jade_HealthCost"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "ADReduction",
+                                    "typeIndex": 1,
+                                    "multiplier": -1.0,
+                                    "nameOverride": "Spell_ListType_PhysicalDamageReduction",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SlowPotency",
+                                    "typeIndex": 2,
+                                    "multiplier": -100.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_TryndamereW_Jade_Attack_Tooltip",
+            "mFloatVarsDecimals": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "SlowPotency",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{dbbbec8f}": {
+        "ObjectName": "Jade_TryndamereCritAttack",
+        "mScriptName": "Jade_TryndamereCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_TryndamereCritAttack",
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 13.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{4db8a692}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tryndamere_TryndamereCritAttack_OnCast",
+                "13": "Play_sfx_Tryndamere_TryndamereCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{2cd5a65b}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{c8892a17}": {
+        "mCharacterName": "Jade_Tryndamere",
+        "baseHPModifiable": {
+            "baseValue": 559.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 95.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 2.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.18000000715255737,
+            "__type": "ModifiableFloat"
+        },
+        "primaryAbilityResource": {
+            "arType": 4,
+            "{726ee5cd}": {
+                "baseValue": 8.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arIncrements": 1.0,
+            "arHasRegenText": false,
+            "arAllowMaxValueToBeOverridden": true,
+            "arPreventRegenWhileAtZero": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 60.0,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.200000047683716,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 18.0,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.0999999046325684,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "{01262a25}": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 345.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6700000166893005,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6700000166893005,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.9000000953674316,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 400.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.10999999940395355,
+            "mAttackProbability": 0.699999988079071,
+            "mAttackName": "Jade_TryndamereBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.30000001192092896,
+                "mAttackName": "Jade_TryndamereBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.10999999940395355,
+                "mAttackName": "Jade_TryndamereCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_TryndamereQAbility/Jade_TryndamereQ",
+            "Jade_TryndamereWAbility/Jade_TryndamereW",
+            "Jade_TryndamereEAbility/Jade_TryndamereE",
+            "Jade_TryndamereUndyingRageAbility/Jade_TryndamereUndyingRage"
+        ],
+        "spells": [
+            "{891c72a4}",
+            "{d1a6c804}",
+            "{16f47364}",
+            "{93f67304}"
+        ],
+        "extraSpells": [
+            "Jade_Tryndamere_slash",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{17e52b5e}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{b2df7184}",
+            "{5e3d26be}",
+            "{f1792928}",
+            "{1ff44316}",
+            "{ce999d7e}"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Tryndamere",
+        "passiveLuaName": "Jade_TryndamerePassive",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Tryndamere",
+        "passive1IconName": "ASSETS/Characters/Jade_Tryndamere/HUD/Icons2D/Jade_Tryndamere_Passive.project_jade.dds",
+        "name": "game_character_displayname_Jade_Tryndamere",
+        "weaponMaterials": [
+            "Jade_TryndamereBasicAttack"
+        ],
+        "selectionHeight": 180.0,
+        "selectionRadius": 135.0,
+        "pathfindingCollisionRadius": 35.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1055,
+            "skillOrder": 2,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            14,
+            0,
+            0
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Jade_Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
+                    "displayName": "Undying Rage",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
+                    "displayName": "Undying Rage",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
+                    "displayName": "Undying Rage",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
+                    "displayName": "Undying Rage",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Tryndamere",
+                    "level": [
+                        1,
+                        4,
+                        7
+                    ],
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "fighter",
+            "searchTagsSecondary": "assassin",
+            "championId": 60023,
+            "roles": "BRAWLER",
+            "PARFadeColor": "175 0 0",
+            "magicRank": 2,
+            "LevelSpellEffectiveness": 2.0,
+            "difficultyRank": 5,
+            "description": "game_character_description_Jade_Tryndamere",
+            "defenseRank": 5,
+            "classification": "Strong",
+            "ChasingAttackRangePercent": 0.5,
+            "attackRank": 10,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Precision",
+        "mCharacterPassiveSpell": "{b6ce403c}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{b6ce403c}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{db6c713f}",
+        "__type": "CharacterRecord"
+    },
+    "{db6c713f}": {
+        "ScriptName": "charscriptJade_Tryndamere",
+        "path": "{db6c713f}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "c5e52cfc-9ae2-4e76-a513-48db3692ff6c",
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "aafb5980-1f21-486c-9180-710df09c6c32",
+                                    "Formula": "ptp.CurrentFury * - 1",
+                                    "Dest": {
+                                        "Var": "CurrentFury",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{2b9c7047}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "f5b407c8-88cd-4fc2-81f1-989f1ae49da3",
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "08e77909-cc56-4558-b150-0a175b876130",
+                                    "Formula": "ptp.CurrentFury * - 1",
+                                    "Dest": {
+                                        "Var": "CurrentFury",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "__linked": []
+}

@@ -192,7 +192,7 @@
                 RSVP: u,
                 observer: h,
                 computed: g
-            } = n.Ember, f = "CHEATER_TERMINATED", _ = "DISRUPTIVE_BEHAVIOR_TERMINATED", y = "REMAKE", E = "EARLY_SURRENDER_LEAVER", T = "EARLY_SURRENDER_ACCOMPLICE", b = "VICTORY";
+            } = n.Ember, _ = "CHEATER_TERMINATED", f = "DISRUPTIVE_BEHAVIOR_TERMINATED", y = "REMAKE", E = "EARLY_SURRENDER_LEAVER", T = "EARLY_SURRENDER_ACCOMPLICE", A = "VICTORY";
             e.exports = d.extend(s.FixDataBindingMixin, l.default, {
                 classNames: ["match-history-main", "lol-match-history-bg"],
                 layout: a(22),
@@ -373,15 +373,15 @@
                         o = n.Lodash.get(e, "participant.stats.teamEarlySurrendered"),
                         i = n.Lodash.get(e, "participant.stats.gameEndedInIGNBSurrender"),
                         r = n.Lodash.get(e, "endOfGameResult");
-                    return i ? _ : "Abort_AntiCheatExit" === r ? f : a && !s && !l ? y : a && o && s ? E : a && l ? T : t ? b : "DEFEAT"
+                    return i ? f : "Abort_AntiCheatExit" === r ? _ : a && !s && !l ? y : a && o && s ? E : a && l ? T : t ? A : "DEFEAT"
                 },
                 calculateTitleClass: function(e) {
                     const t = "defeat",
                         a = "terminated";
-                    return e === f || e === _ ? a : e === y ? "earlySurrender" : e === E || e === T ? t : e === b ? "victory" : t
+                    return e === _ || e === f ? a : e === y ? "earlySurrender" : e === E || e === T ? t : e === A ? "victory" : t
                 },
                 calculateMatchResultTitle: function(e) {
-                    return e === f || e === _ ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_CHEATER_TERMINATED") : e === y ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_REMAKE") : e === E ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_REMAKE_LEAVER") : e === T ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_REMAKE_RESTRICTED") : e === b ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_VICTORY") : this.get("tra.MATCH_HISTORY_MATCH_RESULT_DEFEAT")
+                    return e === _ || e === f ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_CHEATER_TERMINATED") : e === y ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_REMAKE") : e === E ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_REMAKE_LEAVER") : e === T ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_REMAKE_RESTRICTED") : e === A ? this.get("tra.MATCH_HISTORY_MATCH_RESULT_VICTORY") : this.get("tra.MATCH_HISTORY_MATCH_RESULT_DEFEAT")
                 },
                 _formatChampMasteryIpXpDescription(e) {
                     const t = [];
@@ -804,8 +804,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "jZds9ydB",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-root-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history"],["flush-element"],["text","\\n\\n"],["block",["if"],[["get",["isLoading"]]],null,13,12],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["append",["helper",["match-summary-recently-played-champions"],null,[["puuid","atLeastOneMatch","gameCount","areAllMatchesLoaded","champions","matches","masteries"],[["get",["puuid"]],["get",["atLeastOneGeneralMatch"]],["get",["gameCount"]],["get",["areAllGeneralMatchesLoaded"]],["get",["champions"]],["get",["allGeneralMatches"]],["get",["masteries"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["atLeastOneGeneralMatch"]]],null,0]],"locals":[]},{"statements":[["text","          "],["comment"," NO-OP "],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["comment"," no games for this player "],["text","\\n          "],["open-element","div",[]],["static-attr","class","match-history-wrapper loading-fade-in"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","match-history-no-games-header"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_NO_GAMES_HEADER"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","match-history-no-games-reason-header"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_NO_GAMES_REASON_HEADER"]],false],["close-element"],["text","\\n            "],["open-element","ul",[]],["static-attr","class","match-history-no-games-reason"],["flush-element"],["text","\\n              "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_NO_GAMES_REASON_1"]],false],["close-element"],["text","\\n              "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_NO_GAMES_REASON_2"]],false],["close-element"],["text","\\n              "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_NO_GAMES_REASON_3"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["append",["helper",["match-summary-general-match-summary"],null,[["champions","match","spells","items"],[["get",["champions"]],["get",["match"]],["get",["spells"]],["get",["items"]]]]],false],["text","\\n"]],"locals":["match"]},{"statements":[["block",["each"],[["get",["activeMatchList"]]],[["key"],["gameId"]],4]],"locals":[]},{"statements":[["text","                  "],["append",["helper",["tft-match-summary"],null,[["puuid","tftSets","companions","champions","match","spells","items","queues"],[["get",["puuid"]],["get",["tftSets"]],["get",["companions"]],["get",["champions"]],["get",["match"]],["get",["spells"]],["get",["items"]],["get",["queues"]]]]],false],["text","\\n"]],"locals":["match"]},{"statements":[["block",["each"],[["get",["activeMatchList"]]],[["key"],["gameId"]],6]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","match-history-wrapper loading-fade-in"],["flush-element"],["text","\\n"],["text","            "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","match-history-list"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTftSelected"]]],null,7,5],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-navigation-item",[]],["dynamic-attr","active",["unknown",["matchListType","defaultActive"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setMatchListSource",["get",["matchListType","id"]]],null],null],["flush-element"],["append",["unknown",["matchListType","title"]],false],["close-element"],["text","\\n"]],"locals":["matchListType"]},{"statements":[["text","          "],["open-element","lol-uikit-navigation-bar",[]],["static-attr","type","tabbed"],["static-attr","selectedIndex","0"],["flush-element"],["text","\\n"],["block",["each"],[["get",["matchListTypes"]]],null,9],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","match-history-left"],["flush-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","match-history-left-title"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_RECENT_GAMES_LABEL"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isTftMatchHistoryEnabled"]]],null,10],["text","\\n"],["block",["if"],[["get",["atLeastOneMatchInCategory"]]],null,8,3],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-history-right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTftSelected"]]],null,2,1],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-telemetry-sender"],null,[["renderEventName"],["profile-match-history-rendered"]],11]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-history-left-title"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_RECENT_GAMES_LABEL"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-history-loading-icon-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-history-loading-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "8knsAaQb",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-root-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history"],["flush-element"],["text","\\n\\n"],["block",["if"],[["get",["isLoading"]]],null,13,12],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["append",["helper",["match-summary-recently-played-champions"],null,[["puuid","atLeastOneMatch","gameCount","areAllMatchesLoaded","champions","matches","masteries"],[["get",["puuid"]],["get",["atLeastOneGeneralMatch"]],["get",["gameCount"]],["get",["areAllGeneralMatchesLoaded"]],["get",["champions"]],["get",["allGeneralMatches"]],["get",["masteries"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["atLeastOneGeneralMatch"]]],null,0]],"locals":[]},{"statements":[["text","          "],["comment"," NO-OP "],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["comment"," no games for this player "],["text","\\n          "],["open-element","div",[]],["static-attr","class","match-history-wrapper loading-fade-in"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","match-history-no-games-header"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_NO_GAMES_HEADER"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","match-history-no-games-reason-header"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_NO_GAMES_REASON_HEADER"]],false],["close-element"],["text","\\n            "],["open-element","ul",[]],["static-attr","class","match-history-no-games-reason"],["flush-element"],["text","\\n              "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_NO_GAMES_REASON_1"]],false],["close-element"],["text","\\n              "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_NO_GAMES_REASON_2"]],false],["close-element"],["text","\\n              "],["open-element","li",[]],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_NO_GAMES_REASON_3"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["append",["helper",["match-summary-general-match-summary"],null,[["champions","match","spells","items"],[["get",["champions"]],["get",["match"]],["get",["spells"]],["get",["items"]]]]],false],["text","\\n"]],"locals":["match"]},{"statements":[["block",["each"],[["get",["activeMatchList"]]],[["key"],["gameId"]],4]],"locals":[]},{"statements":[["text","                  "],["append",["helper",["tft-match-summary"],null,[["puuid","tftSets","companions","champions","match","spells","items","queues"],[["get",["puuid"]],["get",["tftSets"]],["get",["companions"]],["get",["champions"]],["get",["match"]],["get",["spells"]],["get",["items"]],["get",["queues"]]]]],false],["text","\\n"]],"locals":["match"]},{"statements":[["block",["each"],[["get",["activeMatchList"]]],[["key"],["gameId"]],6]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","match-history-wrapper loading-fade-in"],["flush-element"],["text","\\n"],["text","            "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","match-history-list"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTftSelected"]]],null,7,5],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-navigation-item",[]],["dynamic-attr","active",["unknown",["matchListType","defaultActive"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"setMatchListSource",["get",["matchListType","id"]]],null],null],["flush-element"],["append",["unknown",["matchListType","title"]],false],["close-element"],["text","\\n"]],"locals":["matchListType"]},{"statements":[["text","          "],["open-element","lol-uikit-navigation-bar",[]],["static-attr","type","tabbed"],["static-attr","selectedIndex","0"],["flush-element"],["text","\\n"],["block",["each"],[["get",["matchListTypes"]]],null,9],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","match-history-left"],["flush-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","match-history-left-title"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_RECENT_GAMES_LABEL"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isTftMatchHistoryEnabled"]]],null,10],["text","\\n"],["block",["if"],[["get",["atLeastOneMatchInCategory"]]],null,8,3],["text","      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-history-right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isTftSelected"]]],null,2,1],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["render-telemetry-sender"],null,[["renderEventName"],["profile-match-history-rendered"]],11]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-history-left-title"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_RECENT_GAMES_LABEL"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-history-loading-icon-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-history-loading-icon"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1034,8 +1034,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "9OVFV6Ed",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-recently-played-champions-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-recently-played-champions-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-recently-played-champions-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-right-box"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","right-box-title"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_RECENTLY_PLAYED_CHAMPS_LABEL"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","recent-champs-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["recentlyPlayedChamps"]]],null,7],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","recent-champ-notes"],["flush-element"],["append",["unknown",["recentlyPlayedChampsBottomLabel"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-right-box second-box"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","right-box-title"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_RECENT_ACTIVITIES_LABEL"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","recent-activity-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["champRoleList"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["recent-activity"],null,[["roleName","index","champRoleMap","gameCount"],[["get",["roleName"]],["get",["index"]],["get",["champRoles"]],["get",["gameCount"]]]]],false],["text","\\n"]],"locals":["roleName","index"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","recent-champ-percent"],["flush-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","recent-champ-percent-number"],["flush-element"],["append",["helper",["champ-percentage-display"],[["get",["champ"]]],null],false],["close-element"],["text","%\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-champion-mastery-tooltip",[]],["dynamic-attr","name",["unknown",["champ","championName"]],null],["dynamic-attr","score",["unknown",["champ","score"]],null],["flush-element"],["text","\\n                  "],["open-element","lol-uikit-radial-progress",[]],["static-attr","slot","lol-uikit-radial-progress"],["static-attr","type","blue"],["dynamic-attr","percent",["unknown",["champ","masteryProgress"]],null],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["open-element","h4",[]],["flush-element"],["append",["unknown",["champ","masteryLevel"]],false],["close-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],2]],"locals":[]},{"statements":[["text","                "],["append",["helper",["mastery-crest"],null,[["masteryLevel"],[["helper",["champion-level"],[["get",["champ"]]],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","recent-champ-placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["champ","squarePortraitPath"]]]]],["static-attr","alt",""],["static-attr","class","recent-champ-img"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["recent-champ-item recent-champ-",["get",["champIndex"]]]]],["flush-element"],["text","\\n          "],["open-element","lol-uikit-champion-thumbnail",[]],["flush-element"],["text","\\n            "],["open-element","img",[]],["dynamic-attr","class",["concat",["lcm-champion-banner ",["helper",["unless"],[["get",["champ","masteryLevel"]],"no-mastery"],null]]]],["dynamic-attr","src",["concat",[["unknown",["champ","masteryBannerPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","thumbnail-square"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","recent-champ-portrait"],["flush-element"],["text","\\n"],["block",["if"],[["get",["champ","squarePortraitPath"]]],null,6,5],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["mastery-crest level-",["helper",["champion-level"],[["get",["champ"]]],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["champ","masteryLevel"]]],null,4],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","recent-champ-tooltip-anchor"],["flush-element"],["text","\\n"],["block",["if"],[["get",["champ","mastery"]]],null,3],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["champ","percentage"]]],null,1],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["champ","champIndex"]}],"hasPartials":false}',
+                id: "m8l5UdbL",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-recently-played-champions-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-recently-played-champions-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-recently-played-champions-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-right-box"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","right-box-title"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_RECENTLY_PLAYED_CHAMPS_LABEL"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","recent-champs-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["recentlyPlayedChamps"]]],null,7],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","recent-champ-notes"],["flush-element"],["append",["unknown",["recentlyPlayedChampsBottomLabel"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-right-box second-box"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","right-box-title"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SUMMARY_RECENT_ACTIVITIES_LABEL"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","recent-activity-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["champRoleList"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["recent-activity"],null,[["roleName","index","champRoleMap","gameCount"],[["get",["roleName"]],["get",["index"]],["get",["champRoles"]],["get",["gameCount"]]]]],false],["text","\\n"]],"locals":["roleName","index"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","recent-champ-percent"],["flush-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","recent-champ-percent-number"],["flush-element"],["append",["helper",["champ-percentage-display"],[["get",["champ"]]],null],false],["close-element"],["text","%\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","lol-uikit-champion-mastery-tooltip",[]],["dynamic-attr","name",["unknown",["champ","championName"]],null],["dynamic-attr","score",["unknown",["champ","score"]],null],["flush-element"],["text","\\n                  "],["open-element","lol-uikit-radial-progress",[]],["static-attr","slot","lol-uikit-radial-progress"],["static-attr","type","blue"],["dynamic-attr","percent",["unknown",["champ","masteryProgress"]],null],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","slot","top"],["static-attr","class","top"],["flush-element"],["open-element","h4",[]],["flush-element"],["append",["unknown",["champ","masteryLevel"]],false],["close-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-tooltip"],null,[["tooltipConfig"],[["get",["tooltipConfig"]]]],2]],"locals":[]},{"statements":[["text","                "],["append",["helper",["mastery-crest"],null,[["masteryLevel"],[["helper",["champion-level"],[["get",["champ"]]],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","recent-champ-placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["champ","squarePortraitPath"]]]]],["static-attr","alt",""],["static-attr","class","recent-champ-img"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["recent-champ-item recent-champ-",["get",["champIndex"]]]]],["flush-element"],["text","\\n          "],["open-element","lol-uikit-champion-thumbnail",[]],["flush-element"],["text","\\n            "],["open-element","img",[]],["dynamic-attr","class",["concat",["lcm-champion-banner ",["helper",["unless"],[["get",["champ","masteryLevel"]],"no-mastery"],null]]]],["dynamic-attr","src",["concat",[["unknown",["champ","masteryBannerPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","thumbnail-square"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","recent-champ-portrait"],["flush-element"],["text","\\n"],["block",["if"],[["get",["champ","squarePortraitPath"]]],null,6,5],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["mastery-crest level-",["helper",["champion-level"],[["get",["champ"]]],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["champ","masteryLevel"]]],null,4],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","recent-champ-tooltip-anchor"],["flush-element"],["text","\\n"],["block",["if"],[["get",["champ","mastery"]]],null,3],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["champ","percentage"]]],null,1],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["champ","champIndex"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1091,8 +1091,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "CFH65egb",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-general-match-summary-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-general-match-summary-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-general-match-summary-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["player-history-object-wrapper ",["helper",["if"],[["get",["showHighLightClass"]],"high-spec-highlight"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"displayMatchDetails",["get",["match"]]],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-champion"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-champion-icon"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-champion-icon-border"],["flush-element"],["close-element"],["text","\\n      "],["append",["helper",["champ-portrait"],null,[["champions","id"],[["get",["champions"]],["get",["match","participant","championId"]]]]],false],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-champion-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-lv"],["flush-element"],["append",["unknown",["match","participant","champLevel"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-result"],["flush-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["player-history-result-text ",["unknown",["match","titleInfo","titleClass"]]]]],["flush-element"],["append",["unknown",["match","titleInfo","title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-mode"],["flush-element"],["append",["unknown",["match","titleInfo","subTitle"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-team-name"],["flush-element"],["append",["unknown",["clubName"]],false],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","player-history-spells"],["flush-element"],["text","\\n"],["block",["each"],[["get",["match","participant","spellIds"]]],null,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-items"],["flush-element"],["text","\\n    "],["open-element","ul",[]],["static-attr","class","player-history-items-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["match","participant","itemIds"]]],null,3],["block",["if"],[["get",["hasRoleBoundItem"]]],null,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-stats"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","player-history-stats-kills"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["match","participant","mostKills"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["match","participant","kills"]],false],["close-element"],["text","\\n        /"],["open-element","span",[]],["flush-element"],["append",["unknown",["match","participant","deaths"]],false],["close-element"],["text","\\n        /"],["open-element","span",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["match","participant","mostAssists"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["match","participant","assists"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","span",[]],["dynamic-attr","class",["concat",["player-history-stats-minions\\n          ",["helper",["if"],[["get",["match","participant","mostMinionKills"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["match","participant","minionsPlusNeutralMonstersCount"]],false],["close-element"],["text","\\n      "],["open-element","span",[]],["dynamic-attr","class",["concat",["player-history-stats-gold ",["helper",["if"],[["get",["match","participant","mostGoldEarned"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["match","participant","goldEarnedDisplay"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["match","additionalInfo"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["open-element","div",[]],["static-attr","class","player-history-ip"],["flush-element"],["append",["unknown",["match","additionalInfo","champMasteryIpXpDesc"]],false],["close-element"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","player-history-others"],["flush-element"],["text","\\n      "],["block",["if"],[["get",["match","additionalInfo","champMasteryIpXpDesc"]]],null,0],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-map"],["flush-element"],["append",["unknown",["match","additionalInfo","mapName"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-date"],["flush-element"],["append",["unknown",["match","additionalInfo","duration"]],false],["open-element","span",[]],["static-attr","class","inline-bullet"],["flush-element"],["text","•"],["close-element"],["append",["unknown",["match","additionalInfo","creationTime"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-accessory-game-action"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","player-history-item role-bound-item"],["flush-element"],["text","\\n          "],["append",["helper",["spell-item-icon"],null,[["ref","id","class"],[["get",["items"]],["get",["match","participant","roleBoundItem"]],"player-history-item-pic"]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","player-history-item"],["flush-element"],["text","\\n          "],["append",["helper",["spell-item-icon"],null,[["ref","id","class"],[["get",["items"]],["get",["itemId"]],"player-history-item-pic"]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["itemId"]},{"statements":[["text","        "],["append",["helper",["spell-item-icon"],null,[["ref","id","class"],[["get",["spells"]],["get",["spellId"]],"player-history-spell-pic"]]],false],["text","\\n"]],"locals":["spellId"]}],"hasPartials":false}',
+                id: "14WHnnNk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-general-match-summary-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-general-match-summary-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-summary-general-match-summary-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["player-history-object-wrapper ",["helper",["if"],[["get",["showHighLightClass"]],"high-spec-highlight"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"displayMatchDetails",["get",["match"]]],null],null],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-champion"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-champion-icon"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-champion-icon-border"],["flush-element"],["close-element"],["text","\\n      "],["append",["helper",["champ-portrait"],null,[["champions","id"],[["get",["champions"]],["get",["match","participant","championId"]]]]],false],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-champion-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-lv"],["flush-element"],["append",["unknown",["match","participant","champLevel"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-result"],["flush-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["player-history-result-text ",["unknown",["match","titleInfo","titleClass"]]]]],["flush-element"],["append",["unknown",["match","titleInfo","title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-mode"],["flush-element"],["append",["unknown",["match","titleInfo","subTitle"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-team-name"],["flush-element"],["append",["unknown",["clubName"]],false],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","player-history-spells"],["flush-element"],["text","\\n"],["block",["each"],[["get",["match","participant","spellIds"]]],null,4],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-items"],["flush-element"],["text","\\n    "],["open-element","ul",[]],["static-attr","class","player-history-items-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["match","participant","itemIds"]]],null,3],["block",["if"],[["get",["hasRoleBoundItem"]]],null,2],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-stats"],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","player-history-stats-kills"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["match","participant","mostKills"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["match","participant","kills"]],false],["close-element"],["text","\\n        /"],["open-element","span",[]],["flush-element"],["append",["unknown",["match","participant","deaths"]],false],["close-element"],["text","\\n        /"],["open-element","span",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["match","participant","mostAssists"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["match","participant","assists"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","span",[]],["dynamic-attr","class",["concat",["player-history-stats-minions\\n          ",["helper",["if"],[["get",["match","participant","mostMinionKills"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["match","participant","minionsPlusNeutralMonstersCount"]],false],["close-element"],["text","\\n      "],["open-element","span",[]],["dynamic-attr","class",["concat",["player-history-stats-gold ",["helper",["if"],[["get",["match","participant","mostGoldEarned"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["match","participant","goldEarnedDisplay"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["match","additionalInfo"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["open-element","div",[]],["static-attr","class","player-history-ip"],["flush-element"],["append",["unknown",["match","additionalInfo","champMasteryIpXpDesc"]],false],["close-element"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","player-history-others"],["flush-element"],["text","\\n      "],["block",["if"],[["get",["match","additionalInfo","champMasteryIpXpDesc"]]],null,0],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-map"],["flush-element"],["append",["unknown",["match","additionalInfo","mapName"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-date"],["flush-element"],["append",["unknown",["match","additionalInfo","duration"]],false],["open-element","span",[]],["static-attr","class","inline-bullet"],["flush-element"],["text","•"],["close-element"],["append",["unknown",["match","additionalInfo","creationTime"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-accessory-game-action"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","player-history-item role-bound-item"],["flush-element"],["text","\\n          "],["append",["helper",["spell-item-icon"],null,[["ref","id","class"],[["get",["items"]],["get",["match","participant","roleBoundItem"]],"player-history-item-pic"]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","player-history-item"],["flush-element"],["text","\\n          "],["append",["helper",["spell-item-icon"],null,[["ref","id","class"],[["get",["items"]],["get",["itemId"]],"player-history-item-pic"]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":["itemId"]},{"statements":[["text","        "],["append",["helper",["spell-item-icon"],null,[["ref","id","class"],[["get",["spells"]],["get",["spellId"]],"player-history-spell-pic"]]],false],["text","\\n"]],"locals":["spellId"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1181,8 +1181,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "R8ewTmkd",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\tft-match-summary-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\tft-match-summary-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\tft-match-summary-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-summary-little-legends-container placement_",["unknown",["placement"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-champion"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-champion-icon"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-champion-icon-border"],["flush-element"],["close-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","match-summary-little-legends-img"],["dynamic-attr","src",["unknown",["companionIcon"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-champion-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-lv"],["flush-element"],["append",["unknown",["currentPlayerLevel"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","match-summary-player-stats"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-summary-placement-display"],["flush-element"],["append",["unknown",["placementText"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-summary-details"],["flush-element"],["text","\\n    "],["append",["unknown",["modeText"]],false],["text","\\n    ●\\n    "],["append",["unknown",["matchLength"]],false],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["matchData","gameVariation"]]],null,13],["text","  "],["open-element","div",[]],["static-attr","class","match-summary-details"],["flush-element"],["text","\\n    "],["append",["unknown",["matchDate"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["currentPlayer","augments"]]],null,10],["text","\\n"],["open-element","div",[]],["static-attr","class","match-summary-right"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-summary-champions-in-play"],["flush-element"],["text","\\n"],["block",["each"],[["get",["units"]]],[["key"],["name"]],6],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-summary-traits"],["flush-element"],["text","\\n"],["block",["each"],[["get",["currentPlayer","traits"]]],[["key"],["name"]],2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["trait","name"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-summary-trait-img-bg trait_level_",["unknown",["trait","rank"]]]]],["flush-element"],["text","\\n          "],["open-element","img",[]],["dynamic-attr","class",["concat",["match-summary-trait-img ",["unknown",["trait","name"]]]]],["dynamic-attr","src",["unknown",["trait","iconPath"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["match-history-tooltip"],null,[["direction","tooltipId"],["bottom","match-summary-tft-trait-tooltip"]],0],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["trait","tier_current"]]],null,1]],"locals":["trait","index"]},{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n                  "],["open-element","p",[]],["flush-element"],["append",["unknown",["item","name"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","match-history-tft-player-piece-item"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["item","squareIconPath"]],");"]]],["flush-element"],["text","\\n"],["block",["match-history-tooltip"],null,[["direction","tooltipId"],["bottom","match-summary-tft-champion-tooltip"]],3],["text","            "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["unit","championName"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["tft-player-piece piece-level-",["unknown",["unit","tier"]]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","piece-inner-border"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["unit","iconPath"]],");"]]],["flush-element"],["text","\\n"],["block",["match-history-tooltip"],null,[["direction","tooltipId"],["bottom","match-summary-tft-champion-tooltip"]],5],["text","        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","match-history-tft-player-piece-item-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["unit","equippedItems"]]],null,4],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"]],"locals":["unit","index"]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["augment","name"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","match-summary-augment-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["augment","squareIconPath"]],");"]]],["flush-element"],["text","\\n"],["block",["match-history-tooltip"],null,[["direction","tooltipId"],["bottom","match-summary-augment-tooltip"]],7],["text","        "],["close-element"],["text","\\n"]],"locals":["augment"]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["augmentContainer","name"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","match-summary-augment"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-summary-augment-inner"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["augmentContainer","icon"]],");"]]],["flush-element"],["text","\\n"],["block",["match-history-tooltip"],null,[["direction","tooltipId"],["top","match-summary-augment-tooltip"]],9],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-summary-augment-icon-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["currentPlayer","augments"]]],null,8],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["matchData","gameVariation","description"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["match-history-tooltip"],null,[["direction","tooltipId"],["bottom","match-summary-tft-trait-tooltip"]],11]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-summary-details"],["flush-element"],["text","\\n      "],["append",["unknown",["matchData","gameVariation","displayName"]],false],["text","\\n      "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","match-summary-set-mechanic-tooltip-icon"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["matchData","gameVariation","description"]]],null,12],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "3eCX5l4x",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\tft-match-summary-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\tft-match-summary-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\tft-match-summary-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-summary-little-legends-container placement_",["unknown",["placement"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-champion"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-champion-icon"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-champion-icon-border"],["flush-element"],["close-element"],["text","\\n      "],["open-element","img",[]],["static-attr","class","match-summary-little-legends-img"],["dynamic-attr","src",["unknown",["companionIcon"]],null],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-champion-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-lv"],["flush-element"],["append",["unknown",["currentPlayerLevel"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","match-summary-player-stats"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-summary-placement-display"],["flush-element"],["append",["unknown",["placementText"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-summary-details"],["flush-element"],["text","\\n    "],["append",["unknown",["modeText"]],false],["text","\\n    ●\\n    "],["append",["unknown",["matchLength"]],false],["text","\\n  "],["close-element"],["text","\\n"],["block",["if"],[["get",["matchData","gameVariation"]]],null,13],["text","  "],["open-element","div",[]],["static-attr","class","match-summary-details"],["flush-element"],["text","\\n    "],["append",["unknown",["matchDate"]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["currentPlayer","augments"]]],null,10],["text","\\n"],["open-element","div",[]],["static-attr","class","match-summary-right"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-summary-champions-in-play"],["flush-element"],["text","\\n"],["block",["each"],[["get",["units"]]],[["key"],["name"]],6],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-summary-traits"],["flush-element"],["text","\\n"],["block",["each"],[["get",["currentPlayer","traits"]]],[["key"],["name"]],2],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["trait","name"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-summary-trait-img-bg trait_level_",["unknown",["trait","rank"]]]]],["flush-element"],["text","\\n          "],["open-element","img",[]],["dynamic-attr","class",["concat",["match-summary-trait-img ",["unknown",["trait","name"]]]]],["dynamic-attr","src",["unknown",["trait","iconPath"]],null],["flush-element"],["close-element"],["text","\\n"],["block",["match-history-tooltip"],null,[["direction","tooltipId"],["bottom","match-summary-tft-trait-tooltip"]],0],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["trait","tier_current"]]],null,1]],"locals":["trait","index"]},{"statements":[["text","                "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n                  "],["open-element","p",[]],["flush-element"],["append",["unknown",["item","name"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","match-history-tft-player-piece-item"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["item","squareIconPath"]],");"]]],["flush-element"],["text","\\n"],["block",["match-history-tooltip"],null,[["direction","tooltipId"],["bottom","match-summary-tft-champion-tooltip"]],3],["text","            "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["unit","championName"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["tft-player-piece piece-level-",["unknown",["unit","tier"]]]]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","piece-inner-border"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["unit","iconPath"]],");"]]],["flush-element"],["text","\\n"],["block",["match-history-tooltip"],null,[["direction","tooltipId"],["bottom","match-summary-tft-champion-tooltip"]],5],["text","        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","match-history-tft-player-piece-item-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["unit","equippedItems"]]],null,4],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n\\n"]],"locals":["unit","index"]},{"statements":[["text","            "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["flush-element"],["append",["unknown",["augment","name"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","match-summary-augment-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["augment","squareIconPath"]],");"]]],["flush-element"],["text","\\n"],["block",["match-history-tooltip"],null,[["direction","tooltipId"],["bottom","match-summary-augment-tooltip"]],7],["text","        "],["close-element"],["text","\\n"]],"locals":["augment"]},{"statements":[["text","        "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n          "],["open-element","p",[]],["flush-element"],["append",["unknown",["augmentContainer","name"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","match-summary-augment"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-summary-augment-inner"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["augmentContainer","icon"]],");"]]],["flush-element"],["text","\\n"],["block",["match-history-tooltip"],null,[["direction","tooltipId"],["top","match-summary-augment-tooltip"]],9],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-summary-augment-icon-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["currentPlayer","augments"]]],null,8],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["static-attr","class","match-summary-tft-tooltip"],["flush-element"],["text","\\n            "],["open-element","p",[]],["flush-element"],["append",["unknown",["matchData","gameVariation","description"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["match-history-tooltip"],null,[["direction","tooltipId"],["bottom","match-summary-tft-trait-tooltip"]],11]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-summary-details"],["flush-element"],["text","\\n      "],["append",["unknown",["matchData","gameVariation","displayName"]],false],["text","\\n      "],["open-element","lol-uikit-info-icon",[]],["static-attr","class","match-summary-set-mechanic-tooltip-icon"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["matchData","gameVariation","description"]]],null,12],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1236,8 +1236,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "Uxnk5Ihg",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\champ-role-percentage-tooltip-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\champ-role-percentage-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n    "],["open-element","h6",[]],["flush-element"],["append",["unknown",["localizedRoleName"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["localizedChampRolePercentage"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "uz/yCMqm",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\champ-role-percentage-tooltip-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\champ-role-percentage-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n    "],["open-element","h6",[]],["flush-element"],["append",["unknown",["localizedRoleName"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["localizedChampRolePercentage"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1254,8 +1254,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "kqLxtnOX",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\champ-portrait-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\champ-portrait-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["champion"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","img",[]],["static-attr","class","no-champ-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["champion","squarePortraitPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-champion-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "QdiAVA/K",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\champ-portrait-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\champ-portrait-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["champion"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","img",[]],["static-attr","class","no-champ-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["champion","squarePortraitPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-champion-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1272,8 +1272,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "astCObq8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\spell-item-icon-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\spell-item-icon-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["item"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["item","iconPath"]]]]],["static-attr","alt",""],["dynamic-attr","class",["concat",[["unknown",["class"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Qo1mjQee",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\spell-item-icon-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\spell-item-icon-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["item"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["item","iconPath"]]]]],["static-attr","alt",""],["dynamic-attr","class",["concat",[["unknown",["class"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1292,8 +1292,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "zcVdkihi",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\recent-activity-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\recent-activity-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["recent-activity-item item-",["unknown",["index"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","recent-activity-bar"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","recent-activity-fill"],["dynamic-attr","style",["concat",["height: ",["unknown",["champRolePercentage"]],"%"]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["recent-activity-icon ",["unknown",["roleName"]],"-icon"]]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "bHTplLz3",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\recent-activity-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\recent-activity-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["recent-activity-item item-",["unknown",["index"]]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","recent-activity-bar"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","recent-activity-fill"],["dynamic-attr","style",["concat",["height: ",["unknown",["champRolePercentage"]],"%"]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["recent-activity-icon ",["unknown",["roleName"]],"-icon"]]],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1354,8 +1354,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "cGJYBkTI",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-history-tooltip-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-history-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["dynamic-attr","id",["concat",["match-history-tooltip-",["unknown",["tooltipId"]]]]],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
+                id: "KXLehy7p",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-history-tooltip-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\summary\\\\match-history-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["dynamic-attr","id",["concat",["match-history-tooltip-",["unknown",["tooltipId"]]]]],["flush-element"],["text","\\n  "],["yield","default"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":["default"],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -1403,8 +1403,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "5XE+mD6s",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["component"],[["get",["model","componentName"]]],[["model"],[["get",["model"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "jc77samF",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\app\\\\templates\\\\index.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["append",["helper",["component"],[["get",["model","componentName"]]],[["model"],[["get",["model"]]]]],false]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, e => {
@@ -1544,70 +1544,80 @@
             let r, c, m, p, d, u, h = !1,
                 g = !1;
 
-            function f() {
+            function _() {
                 r.release(), p && s.Lodash.isFunction(p) && !g && (p("closeButtonClick"), g = !0), c && c.onRemove()
             }
 
-            function _() {
+            function f() {
                 r.release(), p && s.Lodash.isFunction(p && !g) && (p("closeMatchDetailModalOnly"), g = !0)
             }
             e.exports = class {
                 constructor(e, t) {
                     s.logger.trace("Creating Match Details Ember application"), h || function(e, t) {
-                        r = s.Viewport.overlay().getScreenRoot("rcp-fe-lol-match-details-overlay"), d = r.getElement(), u = document.createElement("lol-uikit-full-page-modal"), u.className = "rcp-fe-lol-match-details-overlay-content", d.appendChild(u), u.addEventListener("closeButtonClick", f), u.addEventListener("closeMatchDetailModalOnly", _);
+                        r = s.Viewport.overlay().getScreenRoot("rcp-fe-lol-match-details-overlay"), d = r.getElement(), u = document.createElement("lol-uikit-full-page-modal"), u.className = "rcp-fe-lol-match-details-overlay-content", d.appendChild(u), u.addEventListener("closeButtonClick", _), u.addEventListener("closeMatchDetailModalOnly", f);
                         const n = {
-                            ComponentFactory: s.ComponentFactory,
-                            tra: t,
-                            MatchDetailsRootComponent: a(51).default,
-                            MatchDetailsNavComponent: a(80).default,
-                            LayerHeaderComponent: a(82),
-                            MatchOverviewComponent: a(85).OverviewComponent,
-                            MatchDetailsTimelineChartComponent: a(89).TimelineChartComponent,
-                            MatchDetailsEventChartComponent: a(112),
-                            MatchDetailsMapChartComponent: a(116),
-                            MapTooltipComponent: a(130),
-                            MatchScoreboardComponent: a(133),
-                            MatchDetailsTeamDataComponent: a(140),
-                            MatchDetailsTeamObjectivesComponent: a(143),
-                            ScoreboardTooltipComponent: a(146),
-                            ElementalTooltipComponent: a(148),
-                            ItemTooltipComponent: a(151),
-                            SpellTooltipComponent: a(154),
-                            KeystoneTooltipComponent: a(157),
-                            ChampIconComponent: a(160),
-                            PlayerHistoryRowComponent: a(162),
-                            MatchStatsComponent: a(166),
-                            SubteamAvatarsComponent: a(170),
-                            TeamAvatarsComponent: a(173),
-                            TeamAvatarComponent: a(176),
-                            StatsTableComponent: a(178),
-                            StatsRowComponent: a(181),
-                            StatsBgComponent: a(184),
-                            MatchGraphComponent: a(187).default,
-                            GraphCategoriesComponent: a(190).default,
-                            GraphDisplayComponent: a(194),
-                            MatchRunesComponent: a(197),
-                            RunesRuneStatsComponent: a(200),
-                            RunesPlayerStatsComponent: a(203),
-                            PlayerNameComponent: s.SharedEmberComponents.PlayerNameComponent,
-                            GameIdClipboardCopyComponent: s.SharedEmberComponents.GameIdClipboardCopyComponent,
-                            StatsService: a(206),
-                            PlayerReportsService: l.default,
-                            Router: a(44).default,
-                            IndexRoute: a(45).default,
-                            TEMPLATES: {
-                                index: a(46)
-                            }
-                        };
-                        0;
-                        s.EmberApplicationFactory.setFactoryDefinition(o, n, {
+                                ComponentFactory: s.ComponentFactory,
+                                tra: t,
+                                MatchDetailsRootComponent: a(51).default,
+                                MatchDetailsNavComponent: a(81).default,
+                                LayerHeaderComponent: a(83),
+                                MatchOverviewComponent: a(86).OverviewComponent,
+                                MatchDetailsTimelineChartComponent: a(90).TimelineChartComponent,
+                                MatchDetailsEventChartComponent: a(113),
+                                MatchDetailsMapChartComponent: a(117),
+                                MapTooltipComponent: a(131),
+                                MatchScoreboardComponent: a(134),
+                                MatchDetailsTeamDataComponent: a(141),
+                                MatchDetailsTeamObjectivesComponent: a(144),
+                                ScoreboardTooltipComponent: a(147),
+                                ElementalTooltipComponent: a(149),
+                                ItemTooltipComponent: a(152),
+                                SpellTooltipComponent: a(155),
+                                KeystoneTooltipComponent: a(158),
+                                ChampIconComponent: a(161),
+                                PlayerHistoryRowComponent: a(163),
+                                MatchStatsComponent: a(167),
+                                SubteamAvatarsComponent: a(171),
+                                TeamAvatarsComponent: a(174),
+                                TeamAvatarComponent: a(177),
+                                StatsTableComponent: a(179),
+                                StatsRowComponent: a(182),
+                                StatsBgComponent: a(185),
+                                MatchGraphComponent: a(188).default,
+                                GraphCategoriesComponent: a(191).default,
+                                GraphDisplayComponent: a(195),
+                                MatchRunesComponent: a(198),
+                                RunesRuneStatsComponent: a(201),
+                                RunesPlayerStatsComponent: a(204),
+                                PlayerNameComponent: s.SharedEmberComponents.PlayerNameComponent,
+                                GameIdClipboardCopyComponent: s.SharedEmberComponents.GameIdClipboardCopyComponent,
+                                StatsService: a(207),
+                                PlayerReportsService: l.default,
+                                Router: a(44).default,
+                                IndexRoute: a(45).default,
+                                TEMPLATES: {
+                                    index: a(46)
+                                }
+                            },
+                            i = a(208).default,
+                            c = a(211).default,
+                            m = a(213).default,
+                            y = a(216).default,
+                            E = a(219).default;
+                        Object.assign(n, {
+                            JadeMatchDetailsNavComponent: i,
+                            JadeMatchDetailsGraphComponent: c,
+                            JadeGraphDisplayComponent: m,
+                            JadeGraphCategoriesComponent: y,
+                            JadeCheckboxLabelComponent: E
+                        }), s.EmberApplicationFactory.setFactoryDefinition(o, n, {
                             EMBER_CLI_COMPAT: !0
                         }), s.Viewport.main().getScreenRoot("rcp-fe-lol-profiles-main").on("hide", (function() {
-                            f()
+                            _()
                         })), s.Viewport.overlay().on("remove", (function(e, t) {
                             t && "rcp-fe-lol-match-details-overlay" === t.name && p && s.Lodash.isFunction(p) && !g && (p("closeButtonClick"), g = !0)
                         })), s.Navigation.on("navigate", (() => {
-                            f()
+                            _()
                         })), h = !0
                     }(0, t)
                 }
@@ -1638,8 +1648,8 @@
                                 eogGameMode: h,
                                 componentName: "match-details-root"
                             };
-                            const f = s.ComponentFactory.create(o, m);
-                            u.appendChild(f.domNode), c = f, r.bump()
+                            const _ = s.ComponentFactory.create(o, m);
+                            u.appendChild(_.domNode), c = _, r.bump()
                         }(e)
                 }
                 hideMatchDetails() {
@@ -1685,19 +1695,20 @@
                 value: !0
             }), t.default = void 0;
             var n = a(1),
-                s = (a(52), c(a(13))),
-                l = c(a(8)),
-                o = a(7),
-                i = a(76),
-                r = a(77);
+                s = a(52),
+                l = m(a(13)),
+                o = m(a(8)),
+                i = a(7),
+                r = a(76),
+                c = a(77);
 
-            function c(e) {
+            function m(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            a(78);
-            const m = (0, n.EmberDataBinding)({
+            a(78), a(79);
+            const p = (0, n.EmberDataBinding)({
                 Ember: n.Ember,
                 websocket: (0, n.getProvider)().getSocket(),
                 boundProperties: {
@@ -1705,10 +1716,10 @@
                     currentSummoner: "/lol-summoner/v1/current-summoner"
                 }
             });
-            var p = n.Ember.Component.extend(m, o.FixDataBindingMixin, l.default, {
+            var d = n.Ember.Component.extend(p, i.FixDataBindingMixin, o.default, {
                 classNames: ["match-details-root"],
                 classNameBindings: ["hideHeader:match-details-no-header", "model.eogGameMode"],
-                layout: a(79),
+                layout: a(80),
                 isLoading: !0,
                 isTransitioning: !1,
                 mapsAndGameData: n.Ember.inject.service("mapsAndGameData"),
@@ -1745,10 +1756,10 @@
                         t = this.get("playerReportsService");
                     t && t.set("gameId", e);
                     const a = this.retrieveData("matchHistory", `/v1/games/${e}`),
-                        l = this.retrieveData("matchHistory", `/v1/game-timelines/${e}`);
+                        s = this.retrieveData("matchHistory", `/v1/game-timelines/${e}`);
                     return n.Ember.RSVP.hashSettled({
                         gameData: a,
-                        gameTimeline: l
+                        gameTimeline: s
                     }).then((e => {
                         if (this.get("isDestroyed")) return;
                         const t = e.gameData.value;
@@ -1766,7 +1777,7 @@
                                 })?.playerName : n, t.participantIdentities[a].player.displayName = o
                             })), t.participants = t.participants.map((e => {
                                 const a = n.Lodash.find(t.participantIdentities, (t => t.participantId === e.participantId));
-                                return a.player.summonerName = this.getNameFallback(a.player.summonerName, e.participantId), a.player.displayName = this.getNameFallback(a.player.displayName, e.participantId), n.Lodash.set(a.player, "participantId", a.participantId), new s.default(e, a)
+                                return a.player.summonerName = this.getNameFallback(a.player.summonerName, e.participantId), a.player.displayName = this.getNameFallback(a.player.displayName, e.participantId), n.Lodash.set(a.player, "participantId", a.participantId), new l.default(e, a)
                             }))), this.get("baseSummonerId")) {
                             const e = n.Lodash.find(t.participants, (e => e.player.summonerId === this.get("baseSummonerId")));
                             t.participants = n.Lodash.sortBy(t.participants, ["teamId", function(t) {
@@ -1790,7 +1801,7 @@
                     }))
                 },
                 init() {
-                    this._super(...arguments), this._playerNames = n.playerNames, this.get("dataSource") === r.MATCH_HISTORY_PAGE_DATA_SOURCE.collections && n.TelemetryService.sendTelemetryEvent("profile_matchHist_details", "featureClick", "match_history", {
+                    this._super(...arguments), this._playerNames = n.playerNames, this.get("dataSource") === c.MATCH_HISTORY_PAGE_DATA_SOURCE.collections && n.TelemetryService.sendTelemetryEvent("profile_matchHist_details", "featureClick", "match_history", {
                         game_id: this.get("baseGameId")
                     })
                 },
@@ -1815,7 +1826,8 @@
                     return this.get("baseCurrentParticipant") || {}
                 })),
                 sectionName: n.Ember.computed("displaySections", "currentSelectedSectionName", "model.eogGameMode", (function() {
-                    return "match-" + this.get("displaySections")[this.get("selectedSectionIndex")].name
+                    const e = this.get("displaySections")[this.get("selectedSectionIndex")].name;
+                    return this.get("model.eogGameMode") === s.GAME_MODES.JADE && "graph" === e ? "jade-match-details-graph" : "match-" + e
                 })),
                 selectedSectionIndex: n.Ember.computed("displaySections.[]", "displaySections.@each.selected", (function() {
                     const e = this.get("displaySections");
@@ -1825,14 +1837,13 @@
                     })), t
                 })),
                 subteamGameModeData: n.Ember.computed((function() {
-                    return i.GAME_MODES_WITH_SUBTEAMS
+                    return r.GAME_MODES_WITH_SUBTEAMS
                 })),
                 isGameModeWithSubteams: n.Ember.computed("baseGameData", "subteamGameModeData", (function() {
                     return !!this.get("subteamGameModeData")[this.get("baseGameData.gameMode")]
                 })),
                 matchDetailsNavComponent: n.Ember.computed("model.eogGameMode", (function() {
-                    this.get("model.eogGameMode");
-                    return "match-details-nav"
+                    return this.get("model.eogGameMode") === s.GAME_MODES.JADE ? "jade-match-details-nav" : "match-details-nav"
                 })),
                 displaySections: n.Ember.computed("tra.metadata", "sections.@each.sectionName", "currentSelectedSectionName", "matchHistoryConfig", "isGameModeWithSubteams", "subteamGameModeData", (function() {
                     let e = this.get("sections");
@@ -1864,7 +1875,7 @@
                     }
                 }
             });
-            t.default = p
+            t.default = d
         }, (e, t, a) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1940,21 +1951,21 @@
                     return l.getGameKeyFromGameMode
                 }
             });
-            var n = f(a(53)),
-                s = f(a(54)),
+            var n = _(a(53)),
+                s = _(a(54)),
                 l = a(55),
-                o = f(a(56)),
-                i = f(a(57)),
-                r = f(a(68)),
-                c = f(a(69)),
-                m = f(a(70)),
-                p = f(a(71)),
-                d = f(a(72)),
-                u = f(a(73)),
-                h = f(a(74)),
-                g = f(a(75));
+                o = _(a(56)),
+                i = _(a(57)),
+                r = _(a(68)),
+                c = _(a(69)),
+                m = _(a(70)),
+                p = _(a(71)),
+                d = _(a(72)),
+                u = _(a(73)),
+                h = _(a(74)),
+                g = _(a(75));
 
-            function f(e) {
+            function _(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
@@ -2018,6 +2029,7 @@
                 CHERRY: "CHERRY",
                 CLASSIC: "CLASSIC",
                 CUSTOM: "CUSTOM",
+                JADE: "JADE",
                 KIWI: "KIWI",
                 KIWI_JADE: "KIWI_JADE",
                 PRACTICETOOL: "PRACTICETOOL",
@@ -2231,39 +2243,41 @@
                 n = "RANKED_FLEX_SR",
                 s = "RANKED_FLEX_TT",
                 l = "RANKED_PREMADE_5x5",
-                o = "CHERRY",
-                i = "RANKED_TFT",
-                r = "RANKED_TFT_DOUBLE_UP",
-                c = "RANKED_TFT_TURBO",
-                m = "RANKED_TFT_PAIRS";
-            let p = [a, n, l];
-            const d = [...p, s],
-                u = [o],
-                h = [i, r],
-                g = [c, m],
-                f = [...h, ...g],
-                _ = [...d, ...h],
-                y = [...g, ...u];
-            var E = {
+                o = "JADE_RANKED_SOLO_5x5",
+                i = "CHERRY",
+                r = "RANKED_TFT",
+                c = "RANKED_TFT_DOUBLE_UP",
+                m = "RANKED_TFT_TURBO",
+                p = "RANKED_TFT_PAIRS",
+                d = [a, n, l, o],
+                u = [...d, s],
+                h = [i],
+                g = [r, c],
+                _ = [m, p],
+                f = [...g, ..._],
+                y = [...u, ...g],
+                E = [..._, ...h];
+            var T = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: a,
                 RANKED_FLEX_SR_QUEUE_TYPE: n,
                 RANKED_PREMADE_5X5_QUEUE_TYPE: l,
+                JADE_RANKED_SOLO_5x5: o,
                 RANKED_FLEX_TT_QUEUE_TYPE: s,
-                RANKED_CHERRY_QUEUE_TYPE: o,
-                RANKED_TFT_QUEUE_TYPE: i,
-                RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: r,
-                RANKED_TFT_TURBO_QUEUE_TYPE: c,
-                RANKED_TFT_PAIRS_QUEUE_TYPE: m,
-                RANKED_LOL_QUEUE_TYPES: d,
-                RANKED_SR_QUEUE_TYPES: p,
-                RANKED_TFT_QUEUE_TYPES: h,
-                RATED_TFT_QUEUE_TYPES: g,
+                RANKED_CHERRY_QUEUE_TYPE: i,
+                RANKED_TFT_QUEUE_TYPE: r,
+                RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: c,
+                RANKED_TFT_TURBO_QUEUE_TYPE: m,
+                RANKED_TFT_PAIRS_QUEUE_TYPE: p,
+                RANKED_LOL_QUEUE_TYPES: u,
+                RANKED_SR_QUEUE_TYPES: d,
+                RANKED_TFT_QUEUE_TYPES: g,
+                RATED_TFT_QUEUE_TYPES: _,
                 RANKED_AND_RATED_TFT_QUEUE_TYPES: f,
-                ALL_RANKED_QUEUE_TYPES: _,
-                ALL_RATED_QUEUE_TYPES: y,
-                ALL_RANKED_AND_RATED_QUEUE_TYPES: [..._, ...y]
+                ALL_RANKED_QUEUE_TYPES: y,
+                ALL_RATED_QUEUE_TYPES: E,
+                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...y, ...E]
             };
-            t.default = E
+            t.default = T
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2271,8 +2285,8 @@
             }), t.default = void 0;
             const a = "UNRANKED",
                 n = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
-                s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"];
-            const l = n[n.length - 1],
+                s = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
+                l = n[n.length - 1],
                 o = [l, "MASTER", "GRANDMASTER", "CHALLENGER"],
                 i = ["IV", "III", "II", "I"],
                 r = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
@@ -2292,7 +2306,7 @@
                 APEX_TIERS: ["MASTER", "GRANDMASTER", "CHALLENGER"],
                 REGULAR_TIERS: n,
                 TIERS: s,
-                ALL_TIERS: [a, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
+                ALL_TIERS: [a, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER", "SALT", "WOOD", "LEGEND"],
                 TIERS_WITH_NO_DIVISIONS: [a, "MASTER", "GRANDMASTER", "CHALLENGER"],
                 HIGHEST_TIER: l,
                 LOWEST_TIER: n[0],
@@ -2446,10 +2460,13 @@
             "use strict";
             a.r(t)
         }, (e, t, a) => {
+            "use strict";
+            a.r(t)
+        }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "9fRtD2Od",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\index.js\\" "],["text","\\n"],["append",["helper",["component"],[["get",["matchDetailsNavComponent"]]],[["selectedSectionIndex","displaySections","handleSectionSelected"],[["get",["selectedSectionIndex"]],["get",["displaySections"]],["helper",["action"],[["get",[null]],"handleSectionSelected"],null]]]],false],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,2,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["layer-header"],null,[["gameData","additionalInfo","currentParticipant","platformConfig","isThirdPersonView","maps","queues","gameModeMutators","potatoModeSetting"],[["get",["gameData"]],["get",["additionalInfo"]],["get",["currentParticipant"]],["get",["platformConfig"]],["get",["isThirdPersonView"]],["get",["maps"]],["get",["queues"]],["get",["gameModeMutators"]],["get",["potatoModeSetting"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["hideHeader"]]],null,0],["text","  "],["append",["helper",["component"],[["get",["sectionName"]]],[["isTransitioning","champions","gameData","eogGameMode","gameTimeline","currentParticipant","augments","champions","championsByAlias","items","runes","runesStyles","spells","localPuuid"],[["get",["isTransitioning"]],["get",["champions"]],["get",["gameData"]],["get",["model","eogGameMode"]],["get",["gameTimeline"]],["get",["currentParticipant"]],["get",["augments"]],["get",["champions"]],["get",["championsByAlias"]],["get",["items"]],["get",["runes"]],["get",["runesStyles"]],["get",["spells"]],["get",["localPuuid"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","match-details-loading-icon-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-details-loading-icon"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "tbd+WQdv",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-root-component\\\\index.js\\" "],["text","\\n"],["append",["helper",["component"],[["get",["matchDetailsNavComponent"]]],[["selectedSectionIndex","displaySections","handleSectionSelected"],[["get",["selectedSectionIndex"]],["get",["displaySections"]],["helper",["action"],[["get",[null]],"handleSectionSelected"],null]]]],false],["text","\\n"],["block",["if"],[["get",["isLoading"]]],null,2,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["layer-header"],null,[["gameData","additionalInfo","currentParticipant","platformConfig","isThirdPersonView","maps","queues","gameModeMutators","potatoModeSetting"],[["get",["gameData"]],["get",["additionalInfo"]],["get",["currentParticipant"]],["get",["platformConfig"]],["get",["isThirdPersonView"]],["get",["maps"]],["get",["queues"]],["get",["gameModeMutators"]],["get",["potatoModeSetting"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["hideHeader"]]],null,0],["text","  "],["append",["helper",["component"],[["get",["sectionName"]]],[["isTransitioning","champions","gameData","eogGameMode","gameTimeline","currentParticipant","augments","champions","championsByAlias","items","runes","runesStyles","spells","localPuuid"],[["get",["isTransitioning"]],["get",["champions"]],["get",["gameData"]],["get",["model","eogGameMode"]],["get",["gameTimeline"]],["get",["currentParticipant"]],["get",["augments"]],["get",["champions"]],["get",["championsByAlias"]],["get",["items"]],["get",["runes"]],["get",["runesStyles"]],["get",["spells"]],["get",["localPuuid"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","match-details-loading-icon-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-details-loading-icon"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -2459,7 +2476,7 @@
             }), t.default = void 0;
             var n = a(1).Ember.Component.extend({
                 classNames: ["match-details-nav-component"],
-                layout: a(81),
+                layout: a(82),
                 actions: {
                     handleNavItemClicked(e) {
                         this.sendAction("handleSectionSelected", e)
@@ -2470,18 +2487,18 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "86wzgQ/k",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-nav\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-nav\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-navigation-bar",[]],["static-attr","class","rcp-fe-lol-match-details-overlay-sub-nav"],["static-attr","type","nav-bar-secondary"],["dynamic-attr","selectedindex",["unknown",["selectedSectionIndex"]],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["displaySections"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-navigation-item",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleNavItemClicked",["get",["section","name"]]],null],null],["dynamic-attr","data-name",["concat",[["unknown",["section","name"]]]]],["dynamic-attr","disabled",["unknown",["section","disabled"]],null],["dynamic-attr","active",["unknown",["section","selected"]],null],["flush-element"],["text","\\n        "],["append",["unknown",["section","displayName"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["section","display"]]],null,0]],"locals":["section"]}],"hasPartials":false}',
+                id: "pqUME9+j",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-nav\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\match-details-nav\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-navigation-bar",[]],["static-attr","class","rcp-fe-lol-match-details-overlay-sub-nav"],["static-attr","type","nav-bar-secondary"],["dynamic-attr","selectedindex",["unknown",["selectedSectionIndex"]],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["displaySections"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","lol-uikit-navigation-item",[]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleNavItemClicked",["get",["section","name"]]],null],null],["dynamic-attr","data-name",["concat",[["unknown",["section","name"]]]]],["dynamic-attr","disabled",["unknown",["section","disabled"]],null],["dynamic-attr","active",["unknown",["section","selected"]],null],["flush-element"],["text","\\n        "],["append",["unknown",["section","displayName"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["section","display"]]],null,0]],"locals":["section"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1),
                 s = a(10);
-            a(83);
+            a(84);
             var l = a(21);
             e.exports = n.Ember.Component.extend({
-                layout: a(84),
+                layout: a(85),
                 classNames: ["match-details-layer-header"],
                 animationDisabled: n.Ember.computed.bool("potatoModeSetting.data.potatoModeEnabled"),
                 map: n.Ember.computed("maps", "gameData.mapId", "gameData.gameMode", (function() {
@@ -2573,21 +2590,21 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "jWZgp33V",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\layer-header-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\layer-header-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\layer-header-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-layer-header-wrapper match_details_clearfix"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isThirdPersonView"]]],null,3],["block",["if"],[["get",["animationDisabled"]]],null,2,1],["text","  "],["open-element","div",[]],["static-attr","class","match-layer-header-right"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-layer-header-name"],["flush-element"],["append",["unknown",["outcome"]],false],["close-element"],["text","\\n    "],["open-element","ul",[]],["static-attr","class","match-layer-header-info-list match_details_clearfix"],["flush-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["unknown",["mapName"]],false],["close-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["unknown",["type"]],false],["close-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["unknown",["duration"]],false],["close-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["unknown",["createdAt"]],false],["close-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["helper",["game-id-clipboard-copy"],null,[["gameId"],[["get",["gameId"]]]]],false],["close-element"],["text","\\n      "],["block",["if"],[["get",["additionalInfo","champMasteryIpXpDesc"]]],null,0],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-layer-header-replay"],["flush-element"],["text","\\n"],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["unknown",["additionalInfo","champMasteryIpXpDesc"]],false],["close-element"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-layer-header-icon"],["flush-element"],["text","\\n      "],["open-element","video",[]],["static-attr","class","match-layer-header-video"],["static-attr","autoplay","true"],["static-attr","loop","true"],["dynamic-attr","src",["concat",[["unknown",["mapIcon"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-layer-header-icon"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-layer-header-icon-img map-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["mapIcon"]],")"]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-layer-header-left"],["modifier",["action"],[["get",[null]],"backToMatchHistory"],[["on"],["click"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "GSoww0lB",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\layer-header-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\layer-header-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\layer-header-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-layer-header-wrapper match_details_clearfix"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isThirdPersonView"]]],null,3],["block",["if"],[["get",["animationDisabled"]]],null,2,1],["text","  "],["open-element","div",[]],["static-attr","class","match-layer-header-right"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-layer-header-name"],["flush-element"],["append",["unknown",["outcome"]],false],["close-element"],["text","\\n    "],["open-element","ul",[]],["static-attr","class","match-layer-header-info-list match_details_clearfix"],["flush-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["unknown",["mapName"]],false],["close-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["unknown",["type"]],false],["close-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["unknown",["duration"]],false],["close-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["unknown",["createdAt"]],false],["close-element"],["text","\\n      "],["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["helper",["game-id-clipboard-copy"],null,[["gameId"],[["get",["gameId"]]]]],false],["close-element"],["text","\\n      "],["block",["if"],[["get",["additionalInfo","champMasteryIpXpDesc"]]],null,0],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-layer-header-replay"],["flush-element"],["text","\\n"],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["open-element","li",[]],["static-attr","class","match-layer-header-info-item"],["flush-element"],["append",["unknown",["additionalInfo","champMasteryIpXpDesc"]],false],["close-element"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-layer-header-icon"],["flush-element"],["text","\\n      "],["open-element","video",[]],["static-attr","class","match-layer-header-video"],["static-attr","autoplay","true"],["static-attr","loop","true"],["dynamic-attr","src",["concat",[["unknown",["mapIcon"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-layer-header-icon"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-layer-header-icon-img map-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["mapIcon"]],")"]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-layer-header-left"],["modifier",["action"],[["get",[null]],"backToMatchHistory"],[["on"],["click"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(86);
-            var s, l = (s = a(87)) && s.__esModule ? s : {
+            a(87);
+            var s, l = (s = a(88)) && s.__esModule ? s : {
                 default: s
             };
             const o = ["DARKSTAR", "STARGUARDIAN"],
                 i = n.Ember.Component.extend({
                     classNames: ["match-details-overview-component"],
-                    layout: a(88),
+                    layout: a(89),
                     chartTitle: n.Ember.computed("displayedChart", (function() {
                         return this.get("tra").get(l.default.CHART_TITLES_KEYS[this.get("displayedChart")])
                     })),
@@ -2664,17 +2681,17 @@
                         timestamp: r
                     } = e, g = u(e, t);
                     if (void 0 === g) return;
-                    const f = d(e.events, t, m, a),
-                        _ = {
+                    const _ = d(e.events, t, m, a),
+                        f = {
                             timestamp: r
                         };
-                    _[l.default.TEAM_BLUE_ID] = g.teamGolds[l.default.TEAM_BLUE_ID], _[l.default.TEAM_RED_ID] = g.teamGolds[l.default.TEAM_RED_ID], o.push({
+                    f[l.default.TEAM_BLUE_ID] = g.teamGolds[l.default.TEAM_BLUE_ID], f[l.default.TEAM_RED_ID] = g.teamGolds[l.default.TEAM_RED_ID], o.push({
                         gold: g.teamGolds[p] - g.teamGolds[h],
                         timestamp: r
-                    }), s.push(_), i.push({
+                    }), s.push(f), i.push({
                         champions: g.championGolds,
                         timestamp: r
-                    }), c.push(n.Lodash.extend(f, {
+                    }), c.push(n.Lodash.extend(_, {
                         timestamp: r
                     }))
                 })), {
@@ -2730,7 +2747,7 @@
                         }
                         case l.default.BUILD_KILL_EVENT_TYPE: {
                             const t = l.default.OBJECTIVE_TYPE_DISPLAY_MAP[e.buildingType];
-                            i[s] = f(i[s], t, l.default.OBJECTIVE_GREATENESS_MAP), r.push({
+                            i[s] = _(i[s], t, l.default.OBJECTIVE_GREATENESS_MAP), r.push({
                                 isChampion: !1,
                                 class: `${t}-${g(s)}`
                             }), a.buildingKills.push({
@@ -2745,7 +2762,7 @@
                         }
                         case l.default.ELITE_MONSTER_KILL_TYPE: {
                             let t = l.default.OBJECTIVE_TYPE_DISPLAY_MAP[e.monsterType];
-                            i[s] = f(i[s], t, l.default.OBJECTIVE_GREATENESS_MAP), e.monsterSubType && l.default.OBJECTIVE_TYPE_DISPLAY_MAP[e.monsterSubType] && (t = l.default.OBJECTIVE_TYPE_DISPLAY_MAP[e.monsterSubType]), r.push({
+                            i[s] = _(i[s], t, l.default.OBJECTIVE_GREATENESS_MAP), e.monsterSubType && l.default.OBJECTIVE_TYPE_DISPLAY_MAP[e.monsterSubType] && (t = l.default.OBJECTIVE_TYPE_DISPLAY_MAP[e.monsterSubType]), r.push({
                                 isChampion: !1,
                                 class: `${t}-${s}`
                             });
@@ -2818,7 +2835,7 @@
                 return l.default.TEAM_BLUE_ID + l.default.TEAM_RED_ID - e
             }
 
-            function f(e, t, a) {
+            function _(e, t, a) {
                 return e && a[e] > a[t] ? e : t
             }
             e.exports = {
@@ -2829,7 +2846,7 @@
                 summarizeGoldsTimeline: u,
                 getTeamId: h,
                 getOtherTeamId: g,
-                getGreaterObjective: f,
+                getGreaterObjective: _,
                 participantsByIdMap: c
             }
         }, (e, t, a) => {
@@ -3028,18 +3045,18 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "Y5FOe9iJ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-overview-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-overview-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-overview-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-details-overview-container\\n    ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasTimelineData"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-timeline-no-timeline-header"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_TIMELINE_NO_TIMELINE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-timeline-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-timeline-display"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["unless"],[["get",["displayed","teamGoldAdvantage"]],"chart-hidden"],null]]]],["flush-element"],["text","\\n          "],["append",["helper",["match-details-timeline-chart"],null,[["chartData","chartType","specs"],[["get",["overviewData"]],"teamGoldAdvantage",["get",["constants","TIMELINE_CHART_SPECS"]]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["unless"],[["get",["displayed","teamGold"]],"chart-hidden"],null]]]],["flush-element"],["text","\\n          "],["append",["helper",["match-details-timeline-chart"],null,[["chartData","chartType","specs"],[["get",["overviewData"]],"teamGold",["get",["constants","TIMELINE_CHART_SPECS"]]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["unless"],[["get",["displayed","championGold"]],"chart-hidden"],null]]]],["flush-element"],["text","\\n          "],["append",["helper",["match-details-timeline-chart"],null,[["chartData","chartType","specs"],[["get",["overviewData"]],"championGold",["get",["constants","TIMELINE_CHART_SPECS"]]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-details-timeline-display-posfix"],["flush-element"],["close-element"],["text","\\n        "],["append",["helper",["match-details-event-chart"],null,[["chartData","specs"],[["get",["overviewData"]],["get",["constants","EVENT_CHART_SPECS"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-timeline-header"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-dropdown",[]],["static-attr","class","match-details-timeline-chart-dropdown"],["static-attr","direction","downward"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","class","match-details-timeline-selector-option"],["dynamic-attr","selected",["concat",[["helper",["if"],[["get",["displayed","teamGoldAdvantage"]],"true","false"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTimelineChart","teamGoldAdvantage"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_TIMELINE_GOLD_ADVANTAGE_OPTION"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","class","match-details-timeline-selector-option"],["dynamic-attr","selected",["concat",[["helper",["if"],[["get",["displayed","teamGold"]],"true","false"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTimelineChart","teamGold"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_TIMELINE_TEAM_GOLD_OPTION"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","class","match-details-timeline-selector-option"],["dynamic-attr","selected",["concat",[["helper",["if"],[["get",["displayed","championGold"]],"true","false"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTimelineChart","championGold"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_TIMELINE_CHAMPION_GOLD_OPTION"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-details-map-container"],["flush-element"],["text","\\n      "],["append",["helper",["match-details-map-chart"],null,[["chartData","killType","playerId","specs"],[["get",["overviewData"]],["get",["killType"]],["get",["playerId"]],["get",["constants","MAP_CHART_SPECS"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "wslpNGHV",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-overview-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-overview-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-overview-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-details-overview-container\\n    ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasTimelineData"]]],null,1,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-timeline-no-timeline-header"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_TIMELINE_NO_TIMELINE"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-timeline-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-timeline-display"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["unless"],[["get",["displayed","teamGoldAdvantage"]],"chart-hidden"],null]]]],["flush-element"],["text","\\n          "],["append",["helper",["match-details-timeline-chart"],null,[["chartData","chartType","specs"],[["get",["overviewData"]],"teamGoldAdvantage",["get",["constants","TIMELINE_CHART_SPECS"]]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["unless"],[["get",["displayed","teamGold"]],"chart-hidden"],null]]]],["flush-element"],["text","\\n          "],["append",["helper",["match-details-timeline-chart"],null,[["chartData","chartType","specs"],[["get",["overviewData"]],"teamGold",["get",["constants","TIMELINE_CHART_SPECS"]]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["unless"],[["get",["displayed","championGold"]],"chart-hidden"],null]]]],["flush-element"],["text","\\n          "],["append",["helper",["match-details-timeline-chart"],null,[["chartData","chartType","specs"],[["get",["overviewData"]],"championGold",["get",["constants","TIMELINE_CHART_SPECS"]]]]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-details-timeline-display-posfix"],["flush-element"],["close-element"],["text","\\n        "],["append",["helper",["match-details-event-chart"],null,[["chartData","specs"],[["get",["overviewData"]],["get",["constants","EVENT_CHART_SPECS"]]]]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-timeline-header"],["flush-element"],["text","\\n        "],["open-element","lol-uikit-flat-dropdown",[]],["static-attr","class","match-details-timeline-chart-dropdown"],["static-attr","direction","downward"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","class","match-details-timeline-selector-option"],["dynamic-attr","selected",["concat",[["helper",["if"],[["get",["displayed","teamGoldAdvantage"]],"true","false"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTimelineChart","teamGoldAdvantage"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_TIMELINE_GOLD_ADVANTAGE_OPTION"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","class","match-details-timeline-selector-option"],["dynamic-attr","selected",["concat",[["helper",["if"],[["get",["displayed","teamGold"]],"true","false"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTimelineChart","teamGold"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_TIMELINE_TEAM_GOLD_OPTION"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","class","match-details-timeline-selector-option"],["dynamic-attr","selected",["concat",[["helper",["if"],[["get",["displayed","championGold"]],"true","false"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTimelineChart","championGold"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_TIMELINE_CHAMPION_GOLD_OPTION"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-details-map-container"],["flush-element"],["text","\\n      "],["append",["helper",["match-details-map-chart"],null,[["chartData","killType","playerId","specs"],[["get",["overviewData"]],["get",["killType"]],["get",["playerId"]],["get",["constants","MAP_CHART_SPECS"]]]]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(90);
+            a(91);
             var s, l = (s = a(9)) && s.__esModule ? s : {
                 default: s
             };
-            const o = a(91),
+            const o = a(92),
                 i = {
                     teamGoldAdvantage: m,
                     teamGold: p,
@@ -3047,7 +3064,7 @@
                 },
                 r = n.Ember.Component.extend({
                     classNames: ["match-details-timeline-chart-component"],
-                    layout: a(111),
+                    layout: a(112),
                     draw: function(e, t) {
                         const a = e.timelines[t],
                             s = this.get("specs"),
@@ -3131,7 +3148,7 @@
                 const u = n.d3.scale.linear().range([0, m]).domain([0, e[e.length - 1].timestamp]),
                     h = n.d3.scale.linear().range([c, 0]).domain([d, p]),
                     g = n.d3.svg.axis().scale(u).ticks(a.ticks.x).tickPadding(a.tickPadding.x).tickSize(0).tickFormat(n.l10nDuration.formatMilliseconds),
-                    f = n.d3.svg.axis().scale(h).orient("left").tickSize(-m).tickPadding(a.tickPadding.y).tickFormat((e => {
+                    _ = n.d3.svg.axis().scale(h).orient("left").tickSize(-m).tickPadding(a.tickPadding.y).tickFormat((e => {
                         let t = n.d3.format("s")(Math.abs(e)).replace("k", s);
                         return "de_DE" === l && (t = t.replace(".", ",")), t
                     }));
@@ -3148,7 +3165,7 @@
                     },
                     axis: {
                         x: g,
-                        y: f
+                        y: _
                     }
                 }
             }
@@ -3167,10 +3184,10 @@
                 const p = n.d3.svg.area().interpolate("linear").x((e => a.scale.x(e.x))).y0(a.scale.y(0)).y1((e => a.scale.y(e.y))),
                     d = n.d3.svg.area().interpolate("linear").x((e => a.scale.x(e.x))).y0(a.scale.y(0)).y1(a.scale.y(0)),
                     u = g(c),
-                    _ = t.append("svg:g");
-                _.selectAll("path").data(u).enter().append("path").attr("class", (e => "data-area data-fill-" + e.teamId)).attr("d", (e => d(e.data))), _.selectAll("path").data(u).transition().delay(200).duration(430).ease("cubic-out").attr("d", (e => p(e.data)));
+                    f = t.append("svg:g");
+                f.selectAll("path").data(u).enter().append("path").attr("class", (e => "data-area data-fill-" + e.teamId)).attr("d", (e => d(e.data))), f.selectAll("path").data(u).transition().delay(200).duration(430).ease("cubic-out").attr("d", (e => p(e.data)));
                 const y = t.append("svg:g");
-                y.selectAll(".timeline-data-point").data(s).enter().append("circle").attr("class", (e => e.gold > 0 ? "timeline-data-point data-fill-100" : e.gold < 0 ? "timeline-data-point data-fill-200" : "timeline-data-point data-fill-even")).attr("cx", (e => a.scale.x(e.timestamp))).attr("cy", a.scale.y(0)).attr("r", (() => a.pointRarius)).attr("tooltip", (e => f(e, l, o, e.gold > 0 ? i : r))), y.selectAll(".timeline-data-point").data(s).transition().delay(200).duration(430).ease("cubic-out").attr("cy", (e => a.scale.y(e.gold)))
+                y.selectAll(".timeline-data-point").data(s).enter().append("circle").attr("class", (e => e.gold > 0 ? "timeline-data-point data-fill-100" : e.gold < 0 ? "timeline-data-point data-fill-200" : "timeline-data-point data-fill-even")).attr("cx", (e => a.scale.x(e.timestamp))).attr("cy", a.scale.y(0)).attr("r", (() => a.pointRarius)).attr("tooltip", (e => _(e, l, o, e.gold > 0 ? i : r))), y.selectAll(".timeline-data-point").data(s).transition().delay(200).duration(430).ease("cubic-out").attr("cy", (e => a.scale.y(e.gold)))
             }
 
             function p(e) {
@@ -3183,7 +3200,7 @@
                 } = e, i = u(s);
                 n.Lodash.each([100, 200], (e => {
                     const r = n.d3.svg.line().x((e => a.scale.x(e.timestamp))).y((t => a.scale.y(t[e]))).interpolate("linear");
-                    t.append("svg:g").selectAll(".data-line").data([s]).enter().append("svg:path").attr("class", "data-line data-stroke-" + (e === i ? "100" : "200")).attr("d", r(s)), t.append("svg:g").selectAll(".timeline-data-point").data(s).enter().append("svg:circle").attr("class", "timeline-data-point data-fill-" + (e === i ? "100" : "200")).attr("cx", (e => a.scale.x(e.timestamp))).attr("cy", (t => a.scale.y(t[e]))).attr("r", (() => a.pointRarius)).attr("tooltip", (t => _(t[e], t.timestamp, l, o)))
+                    t.append("svg:g").selectAll(".data-line").data([s]).enter().append("svg:path").attr("class", "data-line data-stroke-" + (e === i ? "100" : "200")).attr("d", r(s)), t.append("svg:g").selectAll(".timeline-data-point").data(s).enter().append("svg:circle").attr("class", "timeline-data-point data-fill-" + (e === i ? "100" : "200")).attr("cx", (e => a.scale.x(e.timestamp))).attr("cy", (t => a.scale.y(t[e]))).attr("r", (() => a.pointRarius)).attr("tooltip", (t => f(t[e], t.timestamp, l, o)))
                 }))
             }
 
@@ -3214,12 +3231,12 @@
                         c = i ? "" : "none",
                         m = t.append("svg:g").attr("class", "data-champ-gold-" + e.participantId).style("display", c).selectAll(".data-champ-gold"),
                         p = n.d3.svg.line().x((e => a.scale.x(e.timestamp))).y((t => a.scale.y(t.champions[e.participantId]))).interpolate("linear");
-                    m.data([s]).enter().append("svg:path").attr("class", `data-line data-stroke-${r}`).attr("d", p(s)), m.data(s).enter().append("svg:circle").attr("class", `timeline-data-point data-fill-${r}`).attr("cx", (e => a.scale.x(e.timestamp))).attr("cy", (t => a.scale.y(t.champions[e.participantId]))).attr("r", (() => a.pointRarius)).attr("tooltip", (t => _(t.champions[e.participantId], t.timestamp, l, o)));
+                    m.data([s]).enter().append("svg:path").attr("class", `data-line data-stroke-${r}`).attr("d", p(s)), m.data(s).enter().append("svg:circle").attr("class", `timeline-data-point data-fill-${r}`).attr("cx", (e => a.scale.x(e.timestamp))).attr("cy", (t => a.scale.y(t.champions[e.participantId]))).attr("r", (() => a.pointRarius)).attr("tooltip", (t => f(t.champions[e.participantId], t.timestamp, l, o)));
                     const u = d[e.teamId === h ? 100 : 200],
                         g = document.createElement("div");
                     g.classList.add(`gold-toggle-${r}`, "champ-gold-toggle-icon"), g.setAttribute("status", i ? "shown" : "hidden");
-                    const f = document.createElement("img");
-                    f.classList.add("champ-gold-toggle-img"), f.src = e.imgSrc, g.appendChild(f), u.appendChild(g), g.addEventListener("click", (() => {
+                    const _ = document.createElement("img");
+                    _.classList.add("champ-gold-toggle-img"), _.src = e.imgSrc, g.appendChild(_), u.appendChild(g), g.addEventListener("click", (() => {
                         const a = t.select(".data-champ-gold-" + e.participantId),
                             n = "none" === a.style("display");
                         a.style("display", n ? "" : "none"), g.setAttribute("status", n ? "shown" : "hidden")
@@ -3296,7 +3313,7 @@
                 }]
             }
 
-            function f(e, t, a, s) {
+            function _(e, t, a, s) {
                 const o = n.l10nDuration.formatMilliseconds(e.timestamp);
                 return 0 === e.gold ? t("MATCH_HISTORY_OVERVIEW_TIMELINE_GOLD_ADVANTAGE_TOOLTIP_EVEN", {
                     time: o
@@ -3307,7 +3324,7 @@
                 })
             }
 
-            function _(e, t, a, s) {
+            function f(e, t, a, s) {
                 const o = n.l10nDuration.formatMilliseconds(t);
                 return a("MATCH_HISTORY_OVERVIEW_TIMELINE_GOLD_TOOLTIP", {
                     gold: l.default.formatGold(e, s),
@@ -3326,15 +3343,15 @@
                 drawChampionGoldSpecifics: d,
                 getZeroYInterpolatedPoints: h,
                 getTeamDataGroups: g,
-                getTeamGoldAdvantageTooltip: f,
-                getGoldTooltip: _,
+                getTeamGoldAdvantageTooltip: _,
+                getGoldTooltip: f,
                 getTranslateAttr: y
             }
         }, (e, t, a) => {
             "use strict";
             a.r(t)
         }, (e, t, a) => {
-            var n = a(92);
+            var n = a(93);
             e.exports = (n.default || n).template({
                 compiler: [7, ">= 4.0.0"],
                 main: function(e, t, a, n, s) {
@@ -3348,7 +3365,7 @@
                 useData: !0
             })
         }, (e, t, a) => {
-            e.exports = a(93).default
+            e.exports = a(94).default
         }, (e, t, a) => {
             "use strict";
 
@@ -3366,12 +3383,12 @@
                 return t.default = e, t
             }
             t.__esModule = !0;
-            var l = s(a(94)),
-                o = n(a(108)),
-                i = n(a(96)),
-                r = s(a(95)),
-                c = s(a(109)),
-                m = n(a(110));
+            var l = s(a(95)),
+                o = n(a(109)),
+                i = n(a(97)),
+                r = s(a(96)),
+                c = s(a(110)),
+                m = n(a(111));
 
             function p() {
                 var e = new l.HandlebarsEnvironment;
@@ -3390,11 +3407,11 @@
                 }
             }
             t.__esModule = !0, t.HandlebarsEnvironment = m;
-            var s = a(95),
-                l = n(a(96)),
-                o = a(97),
-                i = a(105),
-                r = n(a(107));
+            var s = a(96),
+                l = n(a(97)),
+                o = a(98),
+                i = a(106),
+                r = n(a(108));
             t.VERSION = "4.1.2";
             t.COMPILER_REVISION = 7;
             t.REVISION_CHANGES = {
@@ -3535,17 +3552,17 @@
             t.__esModule = !0, t.registerDefaultHelpers = function(e) {
                 s.default(e), l.default(e), o.default(e), i.default(e), r.default(e), c.default(e), m.default(e)
             };
-            var s = n(a(98)),
-                l = n(a(99)),
-                o = n(a(100)),
-                i = n(a(101)),
-                r = n(a(102)),
-                c = n(a(103)),
-                m = n(a(104))
+            var s = n(a(99)),
+                l = n(a(100)),
+                o = n(a(101)),
+                i = n(a(102)),
+                r = n(a(103)),
+                c = n(a(104)),
+                m = n(a(105))
         }, (e, t, a) => {
             "use strict";
             t.__esModule = !0;
-            var n = a(95);
+            var n = a(96);
             t.default = function(e) {
                 e.registerHelper("blockHelperMissing", (function(t, a) {
                     var s = a.inverse,
@@ -3565,8 +3582,8 @@
         }, (e, t, a) => {
             "use strict";
             t.__esModule = !0;
-            var n, s = a(95),
-                l = a(96),
+            var n, s = a(96),
+                l = a(97),
                 o = (n = l) && n.__esModule ? n : {
                     default: n
                 };
@@ -3599,7 +3616,7 @@
         }, (e, t, a) => {
             "use strict";
             t.__esModule = !0;
-            var n, s = a(96),
+            var n, s = a(97),
                 l = (n = s) && n.__esModule ? n : {
                     default: n
                 };
@@ -3611,7 +3628,7 @@
         }, (e, t, a) => {
             "use strict";
             t.__esModule = !0;
-            var n = a(95);
+            var n = a(96);
             t.default = function(e) {
                 e.registerHelper("if", (function(e, t) {
                     return n.isFunction(e) && (e = e.call(this)), !t.hash.includeZero && !e || n.isEmpty(e) ? t.inverse(this) : t.fn(this)
@@ -3642,7 +3659,7 @@
         }, (e, t, a) => {
             "use strict";
             t.__esModule = !0;
-            var n = a(95);
+            var n = a(96);
             t.default = function(e) {
                 e.registerHelper("with", (function(e, t) {
                     n.isFunction(e) && (e = e.call(this));
@@ -3660,14 +3677,14 @@
             t.__esModule = !0, t.registerDefaultDecorators = function(e) {
                 l.default(e)
             };
-            var n, s = a(106),
+            var n, s = a(107),
                 l = (n = s) && n.__esModule ? n : {
                     default: n
                 }
         }, (e, t, a) => {
             "use strict";
             t.__esModule = !0;
-            var n = a(95);
+            var n = a(96);
             t.default = function(e) {
                 e.registerDecorator("inline", (function(e, t, a, s) {
                     var l = e;
@@ -3682,7 +3699,7 @@
         }, (e, t, a) => {
             "use strict";
             t.__esModule = !0;
-            var n = a(95),
+            var n = a(96),
                 s = {
                     methodMap: ["debug", "info", "warn", "error"],
                     level: "info",
@@ -3824,12 +3841,12 @@
                     if (null != e)
                         for (var a in e) Object.prototype.hasOwnProperty.call(e, a) && (t[a] = e[a]);
                     return t.default = e, t
-                }(a(95)),
-                l = a(96),
+                }(a(96)),
+                l = a(97),
                 o = (n = l) && n.__esModule ? n : {
                     default: n
                 },
-                i = a(94);
+                i = a(95);
 
             function r(e, t, a, n, s, l, o) {
                 function i(t) {
@@ -3863,18 +3880,18 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "qVQp4YfG",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-timeline-chart-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-timeline-chart-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-timeline-chart-component\\\\index.js\\" "],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "xXba79x2",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-timeline-chart-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-timeline-chart-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-timeline-chart-component\\\\index.js\\" "],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(113);
-            const s = a(114);
+            a(114);
+            const s = a(115);
             e.exports = n.Ember.Component.extend({
                 classNames: ["match-details-event-chart-component"],
-                layout: a(115),
+                layout: a(116),
                 draw: function(e) {
                     const {
                         events: t
@@ -3951,7 +3968,7 @@
             "use strict";
             a.r(t)
         }, (e, t, a) => {
-            var n = a(92);
+            var n = a(93);
             e.exports = (n.default || n).template({
                 1: function(e, t, a, n, s, l) {
                     var o;
@@ -4033,36 +4050,36 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "4qhIn1TW",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-event-chart-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-event-chart-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-event-chart-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-details-event-bg-100"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match-details-event-bg-200"],["flush-element"],["close-element"],["text","\\n"],["open-element","svg",[]],["static-attr","id","match-details-svg-defs"],["flush-element"],["text","\\n  "],["open-element","defs",[]],["flush-element"],["text","\\n    "],["open-element","filter",[]],["static-attr","id","match-details-brightness-filter"],["flush-element"],["text","\\n      "],["open-element","feComponentTransfer",[]],["flush-element"],["text","\\n        "],["open-element","feFuncR",[]],["static-attr","type","linear"],["static-attr","slope","3"],["flush-element"],["close-element"],["text","\\n        "],["open-element","feFuncG",[]],["static-attr","type","linear"],["static-attr","slope","3"],["flush-element"],["close-element"],["text","\\n        "],["open-element","feFuncB",[]],["static-attr","type","linear"],["static-attr","slope","3"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "0DgzOfdq",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-event-chart-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-event-chart-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-event-chart-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-details-event-bg-100"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match-details-event-bg-200"],["flush-element"],["close-element"],["text","\\n"],["open-element","svg",[]],["static-attr","id","match-details-svg-defs"],["flush-element"],["text","\\n  "],["open-element","defs",[]],["flush-element"],["text","\\n    "],["open-element","filter",[]],["static-attr","id","match-details-brightness-filter"],["flush-element"],["text","\\n      "],["open-element","feComponentTransfer",[]],["flush-element"],["text","\\n        "],["open-element","feFuncR",[]],["static-attr","type","linear"],["static-attr","slope","3"],["flush-element"],["close-element"],["text","\\n        "],["open-element","feFuncG",[]],["static-attr","type","linear"],["static-attr","slope","3"],["flush-element"],["close-element"],["text","\\n        "],["open-element","feFuncB",[]],["static-attr","type","linear"],["static-attr","slope","3"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(117);
+            a(118);
             const s = {
                     death: {
-                        100: a(118),
-                        200: a(119)
+                        100: a(119),
+                        200: a(120)
                     },
                     tower: {
-                        100: a(120),
-                        200: a(121)
+                        100: a(121),
+                        200: a(122)
                     },
                     inhibitor: {
-                        100: a(122),
-                        200: a(123)
+                        100: a(123),
+                        200: a(124)
                     },
                     nexus: {
-                        100: a(124),
-                        200: a(125)
+                        100: a(125),
+                        200: a(126)
                     }
                 },
                 l = {
-                    11: a(126),
-                    12: a(127),
-                    21: a(128)
+                    11: a(127),
+                    12: a(128),
+                    21: a(129)
                 };
 
             function o(e, t, a, s, l) {
@@ -4086,7 +4103,7 @@
             }
             e.exports = n.Ember.Component.extend({
                 classNames: ["match-details-map-chart-component"],
-                layout: a(129),
+                layout: a(130),
                 displayType: "champion",
                 displayPlayer: null,
                 playerImgSrcMap: n.Ember.computed("teams", (function() {
@@ -4212,8 +4229,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "vB4xXVdm",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-map-chart-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-map-chart-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-map-chart-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["mapBg"]]],null,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["map-champ-toggle team-",["get",["index"]]," ",["helper",["if"],[["get",["player","disabled"]],"map-toggle-disabled"],null]]]],["modifier",["action"],[["get",[null]],"toggleChampDisplay",["get",["player","participantId"]]]],["flush-element"],["text","\\n            "],["open-element","img",[]],["dynamic-attr","src",["unknown",["player","imgSrc"]],null],["static-attr","class","map-champ-toggle-img"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["player"]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["map-champ-toggles team-",["get",["index"]]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["team"]]],null,0],["text","      "],["close-element"],["text","\\n"]],"locals":["index","team"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","map-chart-header"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-dropdown",[]],["static-attr","class","match-details-timeline-chart-dropdown map-type-selector"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","class","map-selector-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectMapChart","champion"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_MAP_CHAMPION_KILLS_OPTION"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","class","map-selector-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectMapChart","building"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_MAP_BUILDING_KILLS_OPTION"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","map-svg-wrapper"],["flush-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","map-champ-toggle-container"],["flush-element"],["text","\\n    "],["open-element","ul",[]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["each"],[["helper",["-each-in"],[["get",["teams"]]],null]],null,1],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "5ZLTnplI",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-map-chart-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-map-chart-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\match-details-map-chart-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["mapBg"]]],null,2]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["map-champ-toggle team-",["get",["index"]]," ",["helper",["if"],[["get",["player","disabled"]],"map-toggle-disabled"],null]]]],["modifier",["action"],[["get",[null]],"toggleChampDisplay",["get",["player","participantId"]]]],["flush-element"],["text","\\n            "],["open-element","img",[]],["dynamic-attr","src",["unknown",["player","imgSrc"]],null],["static-attr","class","map-champ-toggle-img"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["player"]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["map-champ-toggles team-",["get",["index"]]]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["team"]]],null,0],["text","      "],["close-element"],["text","\\n"]],"locals":["index","team"]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","map-chart-header"],["flush-element"],["text","\\n    "],["open-element","lol-uikit-flat-dropdown",[]],["static-attr","class","match-details-timeline-chart-dropdown map-type-selector"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","class","map-selector-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectMapChart","champion"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_MAP_CHAMPION_KILLS_OPTION"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","class","map-selector-option"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectMapChart","building"],null],null],["flush-element"],["text","\\n        "],["append",["unknown",["tra","MATCH_HISTORY_OVERVIEW_MAP_BUILDING_KILLS_OPTION"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","map-svg-wrapper"],["flush-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","map-champ-toggle-container"],["flush-element"],["text","\\n    "],["open-element","ul",[]],["flush-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["each"],[["helper",["-each-in"],[["get",["teams"]]],null]],null,1],["text","  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -4243,9 +4260,9 @@
                     return e ? a : t
                 })(e)
             }
-            a(131);
+            a(132);
             const l = n.Ember.Component.extend({
-                layout: a(132),
+                layout: a(133),
                 classNames: ["map-tooltip"],
                 victimTeam: n.Ember.computed("killerTeam", (function() {
                     return 300 - this.get("killerTeam")
@@ -4267,15 +4284,15 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "BTCqr+pP",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\map-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\map-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\map-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-details-map-event-tooltip"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","map-event-tooltip-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","map-event-tooltip-icon"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["map-event-tooltip-icon-champion map-event-team-color-",["unknown",["killerTeam"]]]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","map-event-tooltip-icon-cover"],["flush-element"],["text","\\n"],["block",["if"],[["get",["killerImgSrc"]]],null,3,2],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","map-event-tooltip-kill-sign"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["victimImgSrc"]]],null,1,0],["text","      "],["open-element","span",[]],["static-attr","class","map-event-tooltip-timestamp"],["flush-element"],["append",["unknown",["formattedTime"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["concat",["map-event-icon-tower-",["unknown",["victimTeam"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","map-event-tooltip-icon"],["flush-element"],["text","\\n          "],["open-element","div",[]],["dynamic-attr","class",["concat",["map-event-tooltip-icon-champion map-event-team-color-",["unknown",["victimTeam"]]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","map-event-tooltip-icon-cover"],["flush-element"],["text","\\n              "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["victimImgSrc"]]]]],["static-attr","class","map-event-tooltip-icon-img"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","img",[]],["dynamic-attr","class",["concat",["map-event-tooltip-icon-img map-event-icon-minions-",["unknown",["killerTeam"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["killerImgSrc"]]]]],["static-attr","class","map-event-tooltip-icon-img"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "c6cUdw/h",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\map-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\map-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\overview\\\\map-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-details-map-event-tooltip"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","map-event-tooltip-row"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","map-event-tooltip-icon"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["map-event-tooltip-icon-champion map-event-team-color-",["unknown",["killerTeam"]]]]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","map-event-tooltip-icon-cover"],["flush-element"],["text","\\n"],["block",["if"],[["get",["killerImgSrc"]]],null,3,2],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","map-event-tooltip-kill-sign"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["victimImgSrc"]]],null,1,0],["text","      "],["open-element","span",[]],["static-attr","class","map-event-tooltip-timestamp"],["flush-element"],["append",["unknown",["formattedTime"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["concat",["map-event-icon-tower-",["unknown",["victimTeam"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","map-event-tooltip-icon"],["flush-element"],["text","\\n          "],["open-element","div",[]],["dynamic-attr","class",["concat",["map-event-tooltip-icon-champion map-event-team-color-",["unknown",["victimTeam"]]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","map-event-tooltip-icon-cover"],["flush-element"],["text","\\n              "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["victimImgSrc"]]]]],["static-attr","class","map-event-tooltip-icon-img"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","img",[]],["dynamic-attr","class",["concat",["map-event-tooltip-icon-img map-event-icon-minions-",["unknown",["killerTeam"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["killerImgSrc"]]]]],["static-attr","class","map-event-tooltip-icon-img"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1),
-                s = a(134),
-                l = a(137);
+                s = a(135),
+                l = a(138);
 
             function o(e) {
                 const t = {
@@ -4290,9 +4307,9 @@
                     }))
                 })), t
             }
-            a(138), e.exports = n.Ember.Component.extend({
+            a(139), e.exports = n.Ember.Component.extend({
                 classNames: ["match-details-scoreboard-component"],
-                layout: a(139),
+                layout: a(140),
                 mapsAndGameData: n.Ember.inject.service("mapsAndGameData"),
                 blockedPlayers: n.Ember.computed.alias("mapsAndGameData.blockedPlayers"),
                 friends: n.Ember.computed.alias("mapsAndGameData.friends"),
@@ -4407,8 +4424,8 @@
                 return c = c.filter((e => e.participants.length > 0)), n.Ember.A(c)
             };
             var n = a(1),
-                s = a(135),
-                l = a(136)
+                s = a(136),
+                l = a(137)
         }, (e, t, a) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -4559,14 +4576,14 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "8GAS2N7G",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-scoreboard-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-scoreboard-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-scoreboard-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isHexakill"]],"match-details-team-container-hexakill","match-details-team-container"],null],"\\n    match_details_clearfix\\n    ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["teams"]]],null,10],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["append",["helper",["match-details-team-objectives"],null,[["team","mapId","gameTimeline"],[["get",["t"]],["get",["gameData","mapId"]],["get",["gameTimeline"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","match-details-banned-item"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["ban","squarePortraitPath"]]]]],["static-attr","alt",""],["static-attr","class","match-details-banned-img"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","match-details-banned-top"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","match-details-banned-btm"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["ban"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","match-details-banned-wrapper"],["flush-element"],["text","\\n"],["block",["each"],[["get",["t","bans"]]],[["key"],["championId"]],2,1],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-details-right-title match_details_",["unknown",["t","color"]]]]],["flush-element"],["append",["unknown",["rightTitleText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["t","hasBans"]]],null,3],["block",["if"],[["get",["hasObjectives"]]],null,0]],"locals":[]},{"statements":[["text","            "],["append",["helper",["player-history-row"],null,[["currentParticipant","participant","titleInfo","showSpellTooltip","showItemTooltip","team","augments","champions","items","spells","runes","friends","blockedPlayers","displayTooltip","mapId","gameId","queueId","gameCreation","localPuuid","session","gameMode"],[["get",["currentParticipant"]],["get",["p"]],["get",["p","titleInfo"]],true,true,["get",["t"]],["get",["augments"]],["get",["champions"]],["get",["items"]],["get",["spells"]],["get",["runes"]],["get",["friends"]],["get",["blockedPlayers"]],true,["get",["gameData","mapId"]],["get",["gameData","gameId"]],["get",["gameData","queueId"]],["get",["gameData","gameCreation"]],["get",["localPuuid"]],["get",["mapsAndGameData","session"]],["get",["gameData","gameMode"]]]]],false],["text","\\n"]],"locals":["p"]},{"statements":[["text","            "],["append",["helper",["match-details-team-data"],null,[["team","gameMode","queueId"],[["get",["t"]],["get",["gameData","gameMode"]],["get",["gameData","queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","match-details-subteam-data"],["flush-element"],["text","\\n              "],["append",["helper",["match-details-team-data"],null,[["team","gameMode","queueId"],[["get",["t"]],["get",["gameData","gameMode"]],["get",["gameData","queueId"]]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","match-details-team-name"],["flush-element"],["text","\\n              "],["append",["helper",["if"],[["get",["t","isFirstTeam"]],["get",["tra","MATCH_HISTORY_MATCH_RESULT_TEAM_1_LABEL"]],["get",["tra","MATCH_HISTORY_MATCH_RESULT_TEAM_2_LABEL"]]],null],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","match-details-subteam-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","match-details-subteam-placement"],["flush-element"],["text","\\n                "],["append",["unknown",["t","placementDisplayText"]],false],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","match-details-subteam-display-data"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","match-details-subteam-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["t","teamIcon"]],")"]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","match-details-subteam-name"],["flush-element"],["text","\\n                  "],["append",["unknown",["t","teamNameDisplayText"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-team-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-left-wrapper"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-details-team-header match_details_",["unknown",["t","color"]]," match_details_clearfix"]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isGameModeWithSubteams"]]],null,9,8],["block",["if"],[["get",["isGameModeWithSubteams"]]],null,7,6],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-details-team-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["t","participants"]]],null,5],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["t","hasBansOrObjectives"]]],null,4],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["t"]}],"hasPartials":false}',
+                id: "Gf5+LKYT",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-scoreboard-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-scoreboard-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-scoreboard-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["isHexakill"]],"match-details-team-container-hexakill","match-details-team-container"],null],"\\n    match_details_clearfix\\n    ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["teams"]]],null,10],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["append",["helper",["match-details-team-objectives"],null,[["team","mapId","gameTimeline"],[["get",["t"]],["get",["gameData","mapId"]],["get",["gameTimeline"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","match-details-banned-item"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["ban","squarePortraitPath"]]]]],["static-attr","alt",""],["static-attr","class","match-details-banned-img"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","match-details-banned-top"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","match-details-banned-btm"],["flush-element"],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["ban"]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","match-details-banned-wrapper"],["flush-element"],["text","\\n"],["block",["each"],[["get",["t","bans"]]],[["key"],["championId"]],2,1],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-details-right-title match_details_",["unknown",["t","color"]]]]],["flush-element"],["append",["unknown",["rightTitleText"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["t","hasBans"]]],null,3],["block",["if"],[["get",["hasObjectives"]]],null,0]],"locals":[]},{"statements":[["text","            "],["append",["helper",["player-history-row"],null,[["currentParticipant","participant","titleInfo","showSpellTooltip","showItemTooltip","team","augments","champions","items","spells","runes","friends","blockedPlayers","displayTooltip","mapId","gameId","queueId","gameCreation","localPuuid","session","gameMode"],[["get",["currentParticipant"]],["get",["p"]],["get",["p","titleInfo"]],true,true,["get",["t"]],["get",["augments"]],["get",["champions"]],["get",["items"]],["get",["spells"]],["get",["runes"]],["get",["friends"]],["get",["blockedPlayers"]],true,["get",["gameData","mapId"]],["get",["gameData","gameId"]],["get",["gameData","queueId"]],["get",["gameData","gameCreation"]],["get",["localPuuid"]],["get",["mapsAndGameData","session"]],["get",["gameData","gameMode"]]]]],false],["text","\\n"]],"locals":["p"]},{"statements":[["text","            "],["append",["helper",["match-details-team-data"],null,[["team","gameMode","queueId"],[["get",["t"]],["get",["gameData","gameMode"]],["get",["gameData","queueId"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","match-details-subteam-data"],["flush-element"],["text","\\n              "],["append",["helper",["match-details-team-data"],null,[["team","gameMode","queueId"],[["get",["t"]],["get",["gameData","gameMode"]],["get",["gameData","queueId"]]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","match-details-team-name"],["flush-element"],["text","\\n              "],["append",["helper",["if"],[["get",["t","isFirstTeam"]],["get",["tra","MATCH_HISTORY_MATCH_RESULT_TEAM_1_LABEL"]],["get",["tra","MATCH_HISTORY_MATCH_RESULT_TEAM_2_LABEL"]]],null],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","match-details-subteam-container"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","match-details-subteam-placement"],["flush-element"],["text","\\n                "],["append",["unknown",["t","placementDisplayText"]],false],["text","\\n              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","match-details-subteam-display-data"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","match-details-subteam-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["t","teamIcon"]],")"]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","match-details-subteam-name"],["flush-element"],["text","\\n                  "],["append",["unknown",["t","teamNameDisplayText"]],false],["text","\\n                "],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-team-wrapper"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-left-wrapper"],["flush-element"],["text","\\n        "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-details-team-header match_details_",["unknown",["t","color"]]," match_details_clearfix"]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["isGameModeWithSubteams"]]],null,9,8],["block",["if"],[["get",["isGameModeWithSubteams"]]],null,7,6],["text","        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-details-team-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["t","participants"]]],null,5],["text","        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["t","hasBansOrObjectives"]]],null,4],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["t"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(141);
+            a(142);
             var s, l = (s = a(9)) && s.__esModule ? s : {
                     default: s
                 },
@@ -4645,7 +4662,7 @@
             }
             e.exports = n.Ember.Component.extend({
                 classNames: ["match-details-team-data-component"],
-                layout: a(142),
+                layout: a(143),
                 teamKdaOverride: n.Ember.computed("queueId", (function() {
                     return r[this.get("queueId")]
                 })),
@@ -4704,8 +4721,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "3pS2rM7j",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-data-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-data-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-data-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-details-team-data"],["flush-element"],["text","\\n"],["block",["if"],[["get",["teamKdaOverride"]]],null,8,5],["text","  "],["open-element","div",[]],["static-attr","class","match-details-team-right"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-details-team-gold"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-team-gold-count"],["flush-element"],["append",["unknown",["formattedTeamGold"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-team-gold-coin"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-details-team-kill-icon ",["helper",["if"],[["get",["isGameModeWithCS"]],"","match-details-team-kill-icon-no-cs"],null]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isGameModeWithCS"]]],null,4],["block",["if"],[["get",["playerGoldOverride"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","match-details-team-gold-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerGoldOverride","styleClass"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","match-details-team-cs-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerCSOverride","styleClass"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["playerCSOverride"]]],null,3,2]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-team-kill"],["flush-element"],["text","\\n      "],["append",["unknown",["team","kills"]],false],["open-element","span",[]],["static-attr","class","match-details-team-k-break"],["flush-element"],["text","/"],["close-element"],["append",["unknown",["team","deaths"]],false],["open-element","span",[]],["static-attr","class","match-details-team-k-break"],["flush-element"],["text","/"],["close-element"],["append",["unknown",["team","assists"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["teamScore"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["teamScoreGrade"]],false],["open-element","span",[]],["static-attr","class","match-details-team-score-break"],["flush-element"],["close-element"],["text","("],["append",["unknown",["teamScore"]],false],["text",")\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["teamKdaOverride","styleClass"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["teamKdaOverride","gradeStat"]]],null,7,6],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "bxC936IR",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-data-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-data-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-data-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-details-team-data"],["flush-element"],["text","\\n"],["block",["if"],[["get",["teamKdaOverride"]]],null,8,5],["text","  "],["open-element","div",[]],["static-attr","class","match-details-team-right"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-details-team-gold"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-team-gold-count"],["flush-element"],["append",["unknown",["formattedTeamGold"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-team-gold-coin"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-details-team-kill-icon ",["helper",["if"],[["get",["isGameModeWithCS"]],"","match-details-team-kill-icon-no-cs"],null]]]],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["isGameModeWithCS"]]],null,4],["block",["if"],[["get",["playerGoldOverride"]]],null,1,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","match-details-team-gold-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerGoldOverride","styleClass"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","match-details-team-cs-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["dynamic-attr","class",["unknown",["playerCSOverride","styleClass"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["playerCSOverride"]]],null,3,2]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-team-kill"],["flush-element"],["text","\\n      "],["append",["unknown",["team","kills"]],false],["open-element","span",[]],["static-attr","class","match-details-team-k-break"],["flush-element"],["text","/"],["close-element"],["append",["unknown",["team","deaths"]],false],["open-element","span",[]],["static-attr","class","match-details-team-k-break"],["flush-element"],["text","/"],["close-element"],["append",["unknown",["team","assists"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["teamScore"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["append",["unknown",["teamScoreGrade"]],false],["open-element","span",[]],["static-attr","class","match-details-team-score-break"],["flush-element"],["close-element"],["text","("],["append",["unknown",["teamScore"]],false],["text",")\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["unknown",["teamKdaOverride","styleClass"]],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["teamKdaOverride","gradeStat"]]],null,7,6],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -4730,7 +4747,7 @@
                     }
                 })
             }
-            a(144);
+            a(145);
             const l = {
                     AIR_DRAGON: "air-dragon",
                     EARTH_DRAGON: "earth-dragon",
@@ -4746,7 +4763,7 @@
                 p = new Set([10]);
             e.exports = n.Ember.Component.extend({
                 classNames: ["match-details-team-objectives-component"],
-                layout: a(145),
+                layout: a(146),
                 showTower: n.Ember.computed("mapId", (function() {
                     return !!this.get("mapId") && !this.isMapIdInSet(o)
                 })),
@@ -4826,8 +4843,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "4eLkziJ1",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-objectives-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-objectives-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-objectives-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-details-right-data"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showTower"]]],null,6],["block",["if"],[["get",["showInhib"]]],null,5],["block",["if"],[["get",["showBaron"]]],null,4],["block",["if"],[["get",["showDragon"]]],null,3],["block",["if"],[["get",["showRiftHerald"]]],null,2],["block",["if"],[["get",["showVilemaw"]]],null,1],["block",["if"],[["get",["showHorde"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon horde-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","hordeKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon vilemaw-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","vilemawKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon rift-herald-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","riftHeraldKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon dragon-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","dragonKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon baron-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","baronKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon inhibitor-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","inhibitorKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon tower-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","towerKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "g+jfeboQ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-objectives-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-objectives-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\match-details-team-objectives-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-details-right-data"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showTower"]]],null,6],["block",["if"],[["get",["showInhib"]]],null,5],["block",["if"],[["get",["showBaron"]]],null,4],["block",["if"],[["get",["showDragon"]]],null,3],["block",["if"],[["get",["showRiftHerald"]]],null,2],["block",["if"],[["get",["showVilemaw"]]],null,1],["block",["if"],[["get",["showHorde"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon horde-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","hordeKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon vilemaw-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","vilemawKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon rift-herald-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","riftHeraldKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon dragon-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","dragonKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon baron-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","baronKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon inhibitor-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","inhibitorKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-details-right-data-item"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-icon tower-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-details-right-data-text"],["flush-element"],["append",["unknown",["team","towerKills"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -4858,7 +4875,7 @@
                 })(e)
             }
             const l = n.Ember.Component.extend({
-                layout: a(147),
+                layout: a(148),
                 classNames: ["scoreboard-tooltip"],
                 text: n.Ember.computed("traString", "tra.metadata", (function() {
                     return this.get("tra").get(this.get("traString"))
@@ -4872,8 +4889,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "K3ijlVK3",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\scoreboard-tooltip-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\scoreboard-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "Kb7qTIsV",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\scoreboard-tooltip-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\scoreboard-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["text"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -4903,9 +4920,9 @@
                     return e ? a : t
                 })(e)
             }
-            a(149);
+            a(150);
             const l = n.Ember.Component.extend({
-                layout: a(150),
+                layout: a(151),
                 classNames: ["elemental-tooltip"],
                 text: n.Ember.computed("traString", "tra.metadata", (function() {
                     return this.get("tra").get(this.get("traString"))
@@ -4923,8 +4940,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "16PQTdv7",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\elemental-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\elemental-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\elemental-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["text"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["elementalData"]]],null,1],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-details-elemental-icon ",["get",["d"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["d"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","match-details-elemental-data"],["flush-element"],["text","\\n"],["block",["each"],[["get",["elementalData"]]],null,0],["text","      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "DsPTGuyr",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\elemental-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\elemental-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\elemental-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-system"],["flush-element"],["text","\\n    "],["open-element","p",[]],["flush-element"],["append",["unknown",["text"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["elementalData"]]],null,1],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-details-elemental-icon ",["get",["d"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["d"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","match-details-elemental-data"],["flush-element"],["text","\\n"],["block",["each"],[["get",["elementalData"]]],null,0],["text","      "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -4954,9 +4971,9 @@
                     return e ? a : t
                 })(e)
             }
-            a(152);
+            a(153);
             const l = n.Ember.Component.extend({
-                layout: a(153),
+                layout: a(154),
                 classNames: ["item-tooltip"]
             });
             n.default && n.default.EmberApplicationFactory.setFactoryDefinition({
@@ -4970,8 +4987,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "4DqKNStd",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\item-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\item-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\item-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-history-item-tooltip"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-item-info"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["item","iconPath"]]]]],["static-attr","class","match-item-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-item-right"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-history-tooltip-title"],["flush-element"],["append",["unknown",["item","name"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-item-price"],["flush-element"],["append",["unknown",["item","priceTotal"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["open-element","lol-uikit-game-data-markup",[]],["static-attr","type","item"],["dynamic-attr","markup",["concat",[["unknown",["item","description"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "HJ1aId8z",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\item-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\item-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\item-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-history-item-tooltip"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-item-info"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["item","iconPath"]]]]],["static-attr","class","match-item-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-item-right"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-history-tooltip-title"],["flush-element"],["append",["unknown",["item","name"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-item-price"],["flush-element"],["append",["unknown",["item","priceTotal"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["flush-element"],["text","\\n      "],["open-element","lol-uikit-game-data-markup",[]],["static-attr","type","item"],["dynamic-attr","markup",["concat",[["unknown",["item","description"]]]]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -5001,9 +5018,9 @@
                     return e ? a : t
                 })(e)
             }
-            a(155);
+            a(156);
             const l = n.Ember.Component.extend({
-                layout: a(156),
+                layout: a(157),
                 classNames: ["spell-tooltip"],
                 spellLvlLbl: n.Ember.computed("tra.metadata", (function() {
                     return this.get("tra.MATCH_HISTORY_SUMMONER_SPELL_LEVEL")
@@ -5020,8 +5037,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "Od3vtGqh",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\spell-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\spell-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\spell-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-history-item-tooltip"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-spell-icon-tooltip-header"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["spell","iconPath"]]]]],["static-attr","class","match-spell-icon-tooltip-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-spell-icon-tooltip-name"],["flush-element"],["append",["unknown",["spell","name"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-spell-icon-tooltip-level"],["flush-element"],["append",["unknown",["spellLvlLbl"]],false],["text"," "],["append",["unknown",["spell","summonerLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","match-spell-icon-description"],["flush-element"],["append",["unknown",["spell","description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "crk0sCm2",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\spell-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\spell-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\spell-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-history-item-tooltip"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-spell-icon-tooltip-header"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["spell","iconPath"]]]]],["static-attr","class","match-spell-icon-tooltip-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-spell-icon-tooltip-name"],["flush-element"],["append",["unknown",["spell","name"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-spell-icon-tooltip-level"],["flush-element"],["append",["unknown",["spellLvlLbl"]],false],["text"," "],["append",["unknown",["spell","summonerLevel"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","match-spell-icon-description"],["flush-element"],["append",["unknown",["spell","description"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -5051,9 +5068,9 @@
                     return e ? a : t
                 })(e)
             }
-            a(158);
+            a(159);
             const l = n.Ember.Component.extend({
-                layout: a(159),
+                layout: a(160),
                 classNames: ["Keystone-tooltip"],
                 sanitizeConfig: {
                     allowedTags: ["p", "em", "i", "br", "b", "strong", "hr", "h1", "h2", "h3", "a", "h4", "h5", "strike", "code", "ul", "ol", "li", "blockquote", "lol-uikit-tooltipped-keyword"],
@@ -5073,15 +5090,15 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "5Y6wI8es",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\keystone-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\keystone-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\keystone-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-history-item-tooltip"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-keystone-icon-tooltip-header"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["keystone","iconPath"]]]]],["static-attr","class","match-keystone-icon-tooltip-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-keystone-icon-tooltip-name"],["flush-element"],["append",["helper",["sanitize"],[["get",["keystone","name"]]],[["config"],[["get",["sanitizeConfig"]]]]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","match-keystone-icon-description"],["flush-element"],["append",["helper",["sanitize"],[["get",["keystone","shortDesc"]]],[["config"],[["get",["sanitizeConfig"]]]]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "eE3k4cVH",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\keystone-tooltip-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\keystone-tooltip-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\keystone-tooltip-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-tooltip",[]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-history-item-tooltip"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-keystone-icon-tooltip-header"],["flush-element"],["text","\\n      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["keystone","iconPath"]]]]],["static-attr","class","match-keystone-icon-tooltip-icon"],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","match-keystone-icon-tooltip-name"],["flush-element"],["append",["helper",["sanitize"],[["get",["keystone","name"]]],[["config"],[["get",["sanitizeConfig"]]]]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","match-keystone-icon-description"],["flush-element"],["append",["helper",["sanitize"],[["get",["keystone","shortDesc"]]],[["config"],[["get",["sanitizeConfig"]]]]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
             e.exports = n.Ember.Component.extend({
-                layout: a(161),
+                layout: a(162),
                 champIconClass: null,
                 champ: n.Ember.computed("champId", (function() {
                     return this.get("champions").get(this.get("champId"))
@@ -5090,8 +5107,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "YShfMf5m",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\champ-icon-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\champ-icon-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["champ"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","img",[]],["static-attr","class","no-champ-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["champ","squarePortraitPath"]]]]],["static-attr","alt",""],["dynamic-attr","class",["concat",[["unknown",["champIconClass"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "b1GowzGT",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\champ-icon-component\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\champ-icon-component\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["champ"]]],null,1,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","img",[]],["static-attr","class","no-champ-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["champ","squarePortraitPath"]]]]],["static-attr","alt",""],["dynamic-attr","class",["concat",[["unknown",["champIconClass"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -5100,9 +5117,9 @@
                 l = (n = a(9)) && n.__esModule ? n : {
                     default: n
                 },
-                o = a(163),
+                o = a(164),
                 i = a(20);
-            a(164);
+            a(165);
             const {
                 Component: r,
                 computed: c
@@ -5121,7 +5138,7 @@
                 }
             }
             e.exports = r.extend({
-                layout: a(165),
+                layout: a(166),
                 classNames: ["player-history-object"],
                 classNameBindings: ["selectable", "isCurrentParticipant:me", "showHighLightClass:high-spec-highlight", "wasSevereTransgressor:has-subtitle"],
                 currentParticipant: null,
@@ -5534,20 +5551,20 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "9r30wG5D",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\player-history-row-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\player-history-row-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\player-history-row-component\\\\index.js\\" "],["text","\\n"],["comment"," add class \\"me\\" to mark my profile to the parent div "],["text","\\n"],["open-element","div",[]],["static-attr","class","player-history-object-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-champion"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-champion-icon"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-champion-icon-border"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["champion"]]],null,11,10],["text","      "],["open-element","div",[]],["static-attr","class","player-history-champion-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-lv"],["flush-element"],["append",["unknown",["participant","champLevel"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-result"],["flush-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["player-history-result-text ",["unknown",["titleInfo","titleClass"]]]]],["flush-element"],["append",["unknown",["titleInfo","title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-mode"],["flush-element"],["append",["unknown",["titleInfo","subTitle"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["wasSevereTransgressor"]]],null,9],["text","    "],["open-element","div",[]],["static-attr","class","player-history-team-name"],["flush-element"],["append",["unknown",["clubName"]],false],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","player-history-keystone"],["flush-element"],["text","\\n"],["block",["if"],[["get",["keystone","iconPath"]]],null,8],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","player-history-spells"],["flush-element"],["text","\\n"],["block",["each"],[["get",["spellDTOs"]]],null,7],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["player-history-items ",["helper",["if"],[["get",["hasAugments"]],"player-history-items-with-augments"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasAugments"]]],null,5],["text","    "],["open-element","ul",[]],["static-attr","class","player-history-items-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["itemDTOs"]]],null,3],["block",["if"],[["get",["hasRoleBoundItem"]]],null,1],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["modeHasMinions"]],"player-history-stats","player-history-stats-no-minions"],null]]]],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","player-history-stats-kills"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["participant","mostKills"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["participant","kills"]],false],["close-element"],["text","\\n        /"],["open-element","span",[]],["flush-element"],["append",["unknown",["participant","deaths"]],false],["close-element"],["text","\\n        /"],["open-element","span",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["participant","mostAssists"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["participant","assists"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["modeHasMinions"]]],null,0],["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",["player-history-stats-gold ",["helper",["if"],[["get",["participant","mostGoldEarned"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["playerGoldDisplay"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["concat",["player-history-stats-minions ",["helper",["if"],[["get",["participant","mostMinionKills"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["playerCSDisplay"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","player-history-item role-bound-item"],["flush-element"],["text","\\n          "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["roleBoundItemIconPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-item-pic"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["item","iconPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-item-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","player-history-item"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconPath"]]],null,2],["text","        "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["player-history-augment-border player-history-augment-rarity-",["unknown",["augment","rarity"]]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","player-history-augment"],["dynamic-attr","style",["concat",["-webkit-mask-image: url(",["unknown",["augment","augmentSmallIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["augment"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","player-history-augment-wrapper"],["flush-element"],["text","\\n"],["block",["each"],[["get",["participantAugments"]]],null,4],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["spell","iconPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-spell-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["spell","iconPath"]]],null,6]],"locals":["spell"]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["keystone","iconPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-keystone-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","player-history-subtitle"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SEVERE_TRANSGRESSOR"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","class","no-champ-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["champion","squarePortraitPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-champion-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "4L8gAWJZ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\player-history-row-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\player-history-row-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\scoreboard\\\\player-history-row-component\\\\index.js\\" "],["text","\\n"],["comment"," add class \\"me\\" to mark my profile to the parent div "],["text","\\n"],["open-element","div",[]],["static-attr","class","player-history-object-wrapper"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-champion"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-champion-icon"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","player-history-champion-icon-border"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["champion"]]],null,11,10],["text","      "],["open-element","div",[]],["static-attr","class","player-history-champion-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-lv"],["flush-element"],["append",["unknown",["participant","champLevel"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","player-history-result"],["flush-element"],["text","\\n\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["player-history-result-text ",["unknown",["titleInfo","titleClass"]]]]],["flush-element"],["append",["unknown",["titleInfo","title"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","player-history-mode"],["flush-element"],["append",["unknown",["titleInfo","subTitle"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["wasSevereTransgressor"]]],null,9],["text","    "],["open-element","div",[]],["static-attr","class","player-history-team-name"],["flush-element"],["append",["unknown",["clubName"]],false],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","player-history-keystone"],["flush-element"],["text","\\n"],["block",["if"],[["get",["keystone","iconPath"]]],null,8],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","div",[]],["static-attr","class","player-history-spells"],["flush-element"],["text","\\n"],["block",["each"],[["get",["spellDTOs"]]],null,7],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["player-history-items ",["helper",["if"],[["get",["hasAugments"]],"player-history-items-with-augments"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasAugments"]]],null,5],["text","    "],["open-element","ul",[]],["static-attr","class","player-history-items-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["itemDTOs"]]],null,3],["block",["if"],[["get",["hasRoleBoundItem"]]],null,1],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["modeHasMinions"]],"player-history-stats","player-history-stats-no-minions"],null]]]],["flush-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","player-history-stats-kills"],["flush-element"],["text","\\n        "],["open-element","span",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["participant","mostKills"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["participant","kills"]],false],["close-element"],["text","\\n        /"],["open-element","span",[]],["flush-element"],["append",["unknown",["participant","deaths"]],false],["close-element"],["text","\\n        /"],["open-element","span",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["participant","mostAssists"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["participant","assists"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["modeHasMinions"]]],null,0],["text","      "],["open-element","span",[]],["dynamic-attr","class",["concat",["player-history-stats-gold ",["helper",["if"],[["get",["participant","mostGoldEarned"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["playerGoldDisplay"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["concat",["player-history-stats-minions ",["helper",["if"],[["get",["participant","mostMinionKills"]],"player-history-stats-highest-value"],null]]]],["flush-element"],["append",["unknown",["playerCSDisplay"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","player-history-item role-bound-item"],["flush-element"],["text","\\n          "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["roleBoundItemIconPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-item-pic"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["item","iconPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-item-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","li",[]],["static-attr","class","player-history-item"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconPath"]]],null,2],["text","        "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["player-history-augment-border player-history-augment-rarity-",["unknown",["augment","rarity"]]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","player-history-augment"],["dynamic-attr","style",["concat",["-webkit-mask-image: url(",["unknown",["augment","augmentSmallIconPath"]],");"]]],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["augment"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","player-history-augment-wrapper"],["flush-element"],["text","\\n"],["block",["each"],[["get",["participantAugments"]]],null,4],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["spell","iconPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-spell-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["spell","iconPath"]]],null,6]],"locals":["spell"]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["keystone","iconPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-keystone-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","player-history-subtitle"],["flush-element"],["append",["unknown",["tra","MATCH_HISTORY_SEVERE_TRANSGRESSOR"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["static-attr","class","no-champ-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["champion","squarePortraitPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-champion-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(167);
+            a(168);
             var s = a(20),
                 l = a(77),
                 o = a(76);
             e.exports = n.Ember.Component.extend({
                 classNames: ["match-details-stats-component"],
-                layout: a(168),
+                layout: a(169),
                 stats: n.Ember.inject.service(),
                 init() {
                     this._super(...arguments), this._calculateCherryStartingSubteamPlacement(), this.get("stats.dataSource") === l.MATCH_HISTORY_PAGE_DATA_SOURCE.postgame && (n.TelemetryService.sendTelemetryEvent("eog_AdvDetails_stats", "featureClick", "postgame"), n.TelemetryService.startTelemetryTimerEvent("eog_AdvDetails_stats", "timeSpent", "postgame"))
@@ -5589,7 +5606,7 @@
                 mapId: n.Ember.computed.alias("gameData.mapId"),
                 gameMode: n.Ember.computed.alias("gameData.gameMode"),
                 queueId: n.Ember.computed.alias("gameData.queueId"),
-                tabDescriptions: n.Ember.A(a(169)),
+                tabDescriptions: n.Ember.A(a(170)),
                 showSubteamAvatars: n.Ember.computed.equal("gameMode", s.CHERRY_GAME_MODE),
                 subteamSize: n.Ember.computed("queueId", (function() {
                     return s.CHERRY_SIZE_3_QUEUES.includes(this.get("queueId")) ? s.CHERRY_SUBTEAM_SIZE_3 : s.CHERRY_SUBTEAM_SIZE
@@ -5663,8 +5680,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "hHzpuJXD",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\match-details-stats-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\match-details-stats-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\match-details-stats-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-stats-container ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["modifier",["action"],[["get",[null]],"stopEventPropagation"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-stats-container-spacer-top"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-stats-teams"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-stats-teams-aligner-spacer"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["showSubteamAvatars"]]],null,2,1],["text","    "],["open-element","div",[]],["static-attr","class","match_details_clearfix"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","match-stats-table-container"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tabDescriptions"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["stats-table"],null,[["tab","mapId","gameMode","participants","currentSummonerId"],[["get",["tab"]],["get",["mapId"]],["get",["gameMode"]],["get",["sortedParticipants"]],["get",["stats","currentSummonerId"]]]]],false],["text","\\n"]],"locals":["tab"]},{"statements":[["text","      "],["append",["helper",["team-avatars"],null,[["champions","participants","currentSummonerId","teamId","isMyTeam"],[["get",["champions"]],["get",["sortedParticipants"]],["get",["stats","currentSummonerId"]],["get",["myTeamId"]],true]]],false],["text","\\n      "],["append",["helper",["team-avatars"],null,[["champions","participants","currentSummonerId","teamId","isMyTeam"],[["get",["champions"]],["get",["sortedParticipants"]],["get",["stats","currentSummonerId"]],["get",["otherTeamId"]],false]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["subteam-avatars"],null,[["champions","participants","startingSubteamPlacement","currentSummonerId","subteamSize","updateStartingSubteamPlacement"],[["get",["champions"]],["get",["sortedParticipants"]],["get",["startingSubteamPlacement"]],["get",["stats","currentSummonerId"]],["get",["subteamSize"]],"updateStartingSubteamPlacement"]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "aUKIaYLd",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\match-details-stats-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\match-details-stats-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\match-details-stats-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-stats-container ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["modifier",["action"],[["get",[null]],"stopEventPropagation"]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-stats-container-spacer-top"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-stats-teams"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","match-stats-teams-aligner-spacer"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["showSubteamAvatars"]]],null,2,1],["text","    "],["open-element","div",[]],["static-attr","class","match_details_clearfix"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","match-stats-table-container"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tabDescriptions"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["stats-table"],null,[["tab","mapId","gameMode","participants","currentSummonerId"],[["get",["tab"]],["get",["mapId"]],["get",["gameMode"]],["get",["sortedParticipants"]],["get",["stats","currentSummonerId"]]]]],false],["text","\\n"]],"locals":["tab"]},{"statements":[["text","      "],["append",["helper",["team-avatars"],null,[["champions","participants","currentSummonerId","teamId","isMyTeam"],[["get",["champions"]],["get",["sortedParticipants"]],["get",["stats","currentSummonerId"]],["get",["myTeamId"]],true]]],false],["text","\\n      "],["append",["helper",["team-avatars"],null,[["champions","participants","currentSummonerId","teamId","isMyTeam"],[["get",["champions"]],["get",["sortedParticipants"]],["get",["stats","currentSummonerId"]],["get",["otherTeamId"]],false]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["append",["helper",["subteam-avatars"],null,[["champions","participants","startingSubteamPlacement","currentSummonerId","subteamSize","updateStartingSubteamPlacement"],[["get",["champions"]],["get",["sortedParticipants"]],["get",["startingSubteamPlacement"]],["get",["stats","currentSummonerId"]],["get",["subteamSize"]],"updateStartingSubteamPlacement"]]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, e => {
@@ -5673,10 +5690,10 @@
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(171);
+            a(172);
             var s = a(20);
             e.exports = n.Ember.Component.extend({
-                layout: a(172),
+                layout: a(173),
                 classNames: ["subteam-avatars-container"],
                 participants: null,
                 startingSubteamPlacement: 1,
@@ -5713,15 +5730,15 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "rV7w2sTJ",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\subteam-avatars-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\subteam-avatars-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\subteam-avatars-component\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["subteams"]]],null,1],["open-element","div",[]],["static-attr","class","subteam-navigation-arrow subteam-navigation-left"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"navigateSubteams",false],null],null],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","subteam-navigation-arrow subteam-navigation-right"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"navigateSubteams",true],null],null],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match_details_clearfix"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["team-avatar"],null,[["champions","participant","participants","currentSummonerId","isHexakill"],[["get",["champions"]],["get",["participant"]],["get",["participants"]],["get",["currentSummonerId"]],false]]],false],["text","\\n"]],"locals":["participant"]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["subteams-avatar-subteam-container ",["helper",["if"],[["get",["subteam","isLocalSubteam"]],"local-subteam"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","subteams-avatar-subteam-placement-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","subteams-avatar-subteam-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["subteam","subteamIcon"]],")"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","subteams-avatar-subteam-gradient-overlay"],["dynamic-attr","style",["concat",["background: ",["unknown",["subteam","subteamGradient"]]]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","subteams-avatar-subteam-placement"],["flush-element"],["append",["unknown",["subteam","placement"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["each"],[["get",["subteam","participants"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":["subteam"]}],"hasPartials":false}',
+                id: "ogoKCPVQ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\subteam-avatars-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\subteam-avatars-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\subteam-avatars-component\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["subteams"]]],null,1],["open-element","div",[]],["static-attr","class","subteam-navigation-arrow subteam-navigation-left"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"navigateSubteams",false],null],null],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","subteam-navigation-arrow subteam-navigation-right"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"navigateSubteams",true],null],null],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match_details_clearfix"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["team-avatar"],null,[["champions","participant","participants","currentSummonerId","isHexakill"],[["get",["champions"]],["get",["participant"]],["get",["participants"]],["get",["currentSummonerId"]],false]]],false],["text","\\n"]],"locals":["participant"]},{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["subteams-avatar-subteam-container ",["helper",["if"],[["get",["subteam","isLocalSubteam"]],"local-subteam"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","subteams-avatar-subteam-placement-container"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","subteams-avatar-subteam-icon"],["dynamic-attr","style",["concat",["background-image: url(",["unknown",["subteam","subteamIcon"]],")"]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","subteams-avatar-subteam-gradient-overlay"],["dynamic-attr","style",["concat",["background: ",["unknown",["subteam","subteamGradient"]]]]],["flush-element"],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","subteams-avatar-subteam-placement"],["flush-element"],["append",["unknown",["subteam","placement"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"],["block",["each"],[["get",["subteam","participants"]]],null,0],["text","  "],["close-element"],["text","\\n"]],"locals":["subteam"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(174), e.exports = n.Ember.Component.extend({
-                layout: a(175),
+            a(175), e.exports = n.Ember.Component.extend({
+                layout: a(176),
                 classNames: ["team-avatar-container"],
                 classNameBindings: ["teamStyle"],
                 teamId: null,
@@ -5744,15 +5761,15 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "RUwyPRlG",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\team-avatars-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\team-avatars-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\team-avatars-component\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["validParticipants"]]],null,0],["open-element","div",[]],["static-attr","class","match_details_clearfix"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["team-avatar"],null,[["champions","participant","participants","currentSummonerId","isHexakill"],[["get",["champions"]],["get",["participant"]],["get",["participants"]],["get",["currentSummonerId"]],["get",["isHexakill"]]]]],false],["text","\\n"]],"locals":["participant"]}],"hasPartials":false}',
+                id: "2uT3lh32",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\team-avatars-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\team-avatars-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\team-avatars-component\\\\index.js\\" "],["text","\\n"],["block",["each"],[["get",["validParticipants"]]],null,0],["open-element","div",[]],["static-attr","class","match_details_clearfix"],["flush-element"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["team-avatar"],null,[["champions","participant","participants","currentSummonerId","isHexakill"],[["get",["champions"]],["get",["participant"]],["get",["participants"]],["get",["currentSummonerId"]],["get",["isHexakill"]]]]],false],["text","\\n"]],"locals":["participant"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
             e.exports = n.Ember.Component.extend({
-                layout: a(177),
+                layout: a(178),
                 classNames: ["team-avatar-wrapper"],
                 classNameBindings: ["isCurrent:current", "isHexakill:hexakill"],
                 currentSummonerId: null,
@@ -5784,18 +5801,18 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "h6ENCRy8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\team-avatar\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\team-avatar\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["team-avatar-outer ",["helper",["if"],[["get",["isHexakill"]],"hexakill"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-avatar-border ",["helper",["if"],[["get",["isHexakill"]],"hexakill"],null]]]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-avatar ",["helper",["if"],[["get",["isHexakill"]],"hexakill"],null]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["avatarSrc"]]]]],["static-attr","alt",""],["dynamic-attr","class",["concat",["team-avatar-img ",["helper",["if"],[["get",["isHexakill"]],"hexakill"],null]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "oxJdClN9",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\team-avatar\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\team-avatar\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["team-avatar-outer ",["helper",["if"],[["get",["isHexakill"]],"hexakill"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-avatar-border ",["helper",["if"],[["get",["isHexakill"]],"hexakill"],null]]]],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["team-avatar ",["helper",["if"],[["get",["isHexakill"]],"hexakill"],null]]]],["flush-element"],["text","\\n    "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["avatarSrc"]]]]],["static-attr","alt",""],["dynamic-attr","class",["concat",["team-avatar-img ",["helper",["if"],[["get",["isHexakill"]],"hexakill"],null]]]],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(179);
+            a(180);
             var s = a(15),
                 l = a(77);
             e.exports = n.Ember.Component.extend({
-                layout: a(180),
+                layout: a(181),
                 classNames: ["match-history-stats-wrapper"],
                 classNameBindings: ["openStyle"],
                 stats: n.Ember.inject.service(),
@@ -5825,14 +5842,14 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "g/1eknCS",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-table-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-table-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-table-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-stats-header"],["modifier",["action"],[["get",[null]],"toggle"]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-stats-main"],["flush-element"],["text","\\n  "],["append",["helper",["stats-bg"],null,[["currentSummonerId","gameMode","players"],[["get",["currentSummonerId"]],["get",["gameMode"]],["get",["participants"]]]]],false],["text","\\n\\n  "],["open-element","table",[]],["static-attr","class","match-history-stats-tb"],["static-attr","border","0"],["static-attr","cellspacing","0"],["static-attr","cellpadding","0"],["static-attr","ondragstart","return false;"],["static-attr","ondrop","return false;"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tab","attributes"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["stats-row"],null,[["attr","mapId","participants","currentSummonerId"],[["get",["attr"]],["get",["mapId"]],["get",["participants"]],["get",["currentSummonerId"]]]]],false],["text","\\n"]],"locals":["attr"]}],"hasPartials":false}',
+                id: "pRGkVPvZ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-table-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-table-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-table-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-stats-header"],["modifier",["action"],[["get",[null]],"toggle"]],["flush-element"],["append",["unknown",["headerText"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-stats-main"],["flush-element"],["text","\\n  "],["append",["helper",["stats-bg"],null,[["currentSummonerId","gameMode","players"],[["get",["currentSummonerId"]],["get",["gameMode"]],["get",["participants"]]]]],false],["text","\\n\\n  "],["open-element","table",[]],["static-attr","class","match-history-stats-tb"],["static-attr","border","0"],["static-attr","cellspacing","0"],["static-attr","cellpadding","0"],["static-attr","ondragstart","return false;"],["static-attr","ondrop","return false;"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tab","attributes"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["stats-row"],null,[["attr","mapId","participants","currentSummonerId"],[["get",["attr"]],["get",["mapId"]],["get",["participants"]],["get",["currentSummonerId"]]]]],false],["text","\\n"]],"locals":["attr"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1),
-                s = o(a(182)),
+                s = o(a(183)),
                 l = o(a(9));
 
             function o(e) {
@@ -5846,7 +5863,7 @@
                 localizedRowName: n.Ember.computed("attr.name", (function() {
                     return this.get("tra." + this.get("attr.name"))
                 })),
-                layout: a(183),
+                layout: a(184),
                 index: null,
                 participants: null,
                 cellContents: n.Ember.computed("participants", "tra.metadata.locale.id", (function() {
@@ -5931,17 +5948,17 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "fQ/fmx+z",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-row\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-row\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isVisible"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["cellContent","content"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["concat",["stats-",["unknown",["cellContent","content"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","td",[]],["dynamic-attr","class",["concat",["stats-td-normal ",["helper",["if"],[["get",["isHexakill"]],"hexakill"],null]," ",["unknown",["cellContent","currentStyle"]]]]],["modifier",["action"],[["get",[null]],"columnHovered",["get",["index"]]],[["on"],["mouseEnter"]]],["modifier",["action"],[["get",[null]],"columnLoseHover",["get",["index"]]],[["on"],["mouseLeave"]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["cellContent","isFirstBlood"]]],null,1,0],["text","    "],["close-element"],["text","\\n"]],"locals":["cellContent","index"]},{"statements":[["text","  "],["open-element","td",[]],["static-attr","class","stats-td-normal stats-td-column-header"],["flush-element"],["append",["unknown",["localizedRowName"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["cellContents"]]],null,2]],"locals":[]}],"hasPartials":false}',
+                id: "2TGpgxjq",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-row\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-row\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["isVisible"]]],null,3]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["unknown",["cellContent","content"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","span",[]],["dynamic-attr","class",["concat",["stats-",["unknown",["cellContent","content"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","td",[]],["dynamic-attr","class",["concat",["stats-td-normal ",["helper",["if"],[["get",["isHexakill"]],"hexakill"],null]," ",["unknown",["cellContent","currentStyle"]]]]],["modifier",["action"],[["get",[null]],"columnHovered",["get",["index"]]],[["on"],["mouseEnter"]]],["modifier",["action"],[["get",[null]],"columnLoseHover",["get",["index"]]],[["on"],["mouseLeave"]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["cellContent","isFirstBlood"]]],null,1,0],["text","    "],["close-element"],["text","\\n"]],"locals":["cellContent","index"]},{"statements":[["text","  "],["open-element","td",[]],["static-attr","class","stats-td-normal stats-td-column-header"],["flush-element"],["append",["unknown",["localizedRowName"]],false],["close-element"],["text","\\n"],["block",["each"],[["get",["cellContents"]]],null,2]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(185);
+            a(186);
             var s = a(20);
             e.exports = n.Ember.Component.extend({
-                layout: a(186),
+                layout: a(187),
                 classNames: ["match-history-stats-bg"],
                 isHexakill: n.Ember.computed("players", (function() {
                     return 12 === this.get("players").length
@@ -5987,8 +6004,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "Dd0Lmg9v",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-bg\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-bg\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-bg\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-stats-bg-spacer"],["flush-element"],["close-element"],["text","\\n"],["block",["each"],[["get",["columnContents"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-history-stats-bg-column ",["unknown",["column","team"]]," ",["helper",["if"],[["get",["column","isHexakill"]],"hexakill"],null]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["column"]}],"hasPartials":false}',
+                id: "7Oy+cQh6",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-bg\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-bg\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\stats\\\\stats-bg\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-stats-bg-spacer"],["flush-element"],["close-element"],["text","\\n"],["block",["each"],[["get",["columnContents"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["match-history-stats-bg-column ",["unknown",["column","team"]]," ",["helper",["if"],[["get",["column","isHexakill"]],"hexakill"],null]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":["column"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -5998,10 +6015,10 @@
             }), t.default = void 0;
             var n = a(1),
                 s = a(77);
-            a(188);
+            a(189);
             var l = n.Ember.Component.extend({
                 classNames: ["match-details-graph-component"],
-                layout: a(189),
+                layout: a(190),
                 selectedAttributes: n.Ember.A([]),
                 init() {
                     this._super(...arguments), this.get("stats.dataSource") === s.MATCH_HISTORY_PAGE_DATA_SOURCE.postgame && (n.TelemetryService.sendTelemetryEvent("eog_AdvDetails_graph", "featureClick", "postgame"), n.TelemetryService.startTelemetryTimerEvent("eog_AdvDetails_graph", "timeSpent", "postgame"))
@@ -6029,8 +6046,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "AMTXsTAN",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\match-details-graph-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\match-details-graph-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\match-details-graph-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-graph-container ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["flush-element"],["text","\\n  "],["append",["helper",["graph-categories"],null,[["selectedAttributes","mapId"],[["get",["selectedAttributes"]],["get",["mapId"]]]]],false],["text","\\n  "],["append",["helper",["graph-display"],null,[["selectedAttributes","gameMode","queueId","champions"],[["get",["selectedAttributes"]],["get",["gameMode"]],["get",["queueId"]],["get",["champions"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "HfJ3+5M8",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\match-details-graph-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\match-details-graph-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\match-details-graph-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-graph-container ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["flush-element"],["text","\\n  "],["append",["helper",["graph-categories"],null,[["selectedAttributes","mapId"],[["get",["selectedAttributes"]],["get",["mapId"]]]]],false],["text","\\n  "],["append",["helper",["graph-display"],null,[["selectedAttributes","gameMode","queueId","champions"],[["get",["selectedAttributes"]],["get",["gameMode"]],["get",["queueId"]],["get",["champions"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -6039,12 +6056,12 @@
                 value: !0
             }), t.default = void 0;
             var n = a(1);
-            a(191);
+            a(192);
             var s = a(77);
-            const l = a(192);
+            const l = a(193);
             var o = n.Ember.Component.extend({
                 classNames: ["match-graph-categories"],
-                layout: a(193),
+                layout: a(194),
                 selectedAttributes: n.Ember.A([]),
                 stats: n.Ember.inject.service(),
                 mapId: null,
@@ -6126,14 +6143,14 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "PL7HfUDh",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-categories\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-categories\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-categories\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","match-graph-categories-scrollbar"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["statsCategories"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","match-graph-category-attribute"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-flat-checkbox",[]],["dynamic-attr","class",["concat",["match-graph-attribute-checkbox ",["unknown",["statAttribute","name"]]]]],["modifier",["action"],[["get",[null]],"selectAttribute",["get",["statAttribute"]]]],["flush-element"],["text","\\n              "],["append",["helper",["input"],null,[["slot","class","type","id","checked","disabled","name"],["input","match-history-category-attribute-checkbox","checkbox",["get",["statAttribute","name"]],["get",["statAttribute","selected"]],["get",["statAttribute","disabled"]],["get",["statAttribute","name"]]]]],false],["text","\\n              "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","class","match-history-category-label"],["dynamic-attr","for",["concat",[["unknown",["statAttribute","name"]]]]],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","flat-checkbox-span"],["flush-element"],["close-element"],["text","\\n                "],["append",["unknown",["statAttribute","locString"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["statAttribute"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-graph-category"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["dynamic-attr","class",["concat",["match-graph-category-checkbox ",["unknown",["statCategory","name"]]]]],["dynamic-attr","disabled",["unknown",["statCategory","disabled"]],null],["modifier",["action"],[["get",[null]],"selectCategory",["get",["statCategory"]]]],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","class","type","id","checked","name"],["input","match-history-category-checkbox","checkbox",["get",["statCategory","name"]],["get",["statCategory","selected"]],["get",["statCategory","name"]]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","class","match-history-category-label"],["dynamic-attr","for",["concat",[["unknown",["statCategory","name"]]]]],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","flat-checkbox-span"],["flush-element"],["close-element"],["text","\\n          "],["append",["unknown",["statCategory","locString"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-graph-category-attributes"],["flush-element"],["text","\\n"],["block",["each"],[["get",["statCategory","attributes"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["statCategory"]}],"hasPartials":false}',
+                id: "uvKgCH1u",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-categories\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-categories\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-categories\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","match-graph-categories-scrollbar"],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["each"],[["get",["statsCategories"]]],null,1],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","match-graph-category-attribute"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-flat-checkbox",[]],["dynamic-attr","class",["concat",["match-graph-attribute-checkbox ",["unknown",["statAttribute","name"]]]]],["modifier",["action"],[["get",[null]],"selectAttribute",["get",["statAttribute"]]]],["flush-element"],["text","\\n              "],["append",["helper",["input"],null,[["slot","class","type","id","checked","disabled","name"],["input","match-history-category-attribute-checkbox","checkbox",["get",["statAttribute","name"]],["get",["statAttribute","selected"]],["get",["statAttribute","disabled"]],["get",["statAttribute","name"]]]]],false],["text","\\n              "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","class","match-history-category-label"],["dynamic-attr","for",["concat",[["unknown",["statAttribute","name"]]]]],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","flat-checkbox-span"],["flush-element"],["close-element"],["text","\\n                "],["append",["unknown",["statAttribute","locString"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["statAttribute"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-graph-category"],["flush-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["dynamic-attr","class",["concat",["match-graph-category-checkbox ",["unknown",["statCategory","name"]]]]],["dynamic-attr","disabled",["unknown",["statCategory","disabled"]],null],["modifier",["action"],[["get",[null]],"selectCategory",["get",["statCategory"]]]],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","class","type","id","checked","name"],["input","match-history-category-checkbox","checkbox",["get",["statCategory","name"]],["get",["statCategory","selected"]],["get",["statCategory","name"]]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","class","match-history-category-label"],["dynamic-attr","for",["concat",[["unknown",["statCategory","name"]]]]],["flush-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","flat-checkbox-span"],["flush-element"],["close-element"],["text","\\n          "],["append",["unknown",["statCategory","locString"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-graph-category-attributes"],["flush-element"],["text","\\n"],["block",["each"],[["get",["statCategory","attributes"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["statCategory"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(195);
+            a(196);
             var s = a(20);
             const l = 16,
                 o = "legs",
@@ -6141,7 +6158,7 @@
             e.exports = n.Ember.Component.extend({
                 classNames: ["match-graph-display"],
                 classNameBindings: ["graphIsScrollable:match-graph-display-scrollable"],
-                layout: a(196),
+                layout: a(197),
                 stats: n.Ember.inject.service(),
                 champions: null,
                 championData: n.Ember.computed.alias("champions"),
@@ -6186,13 +6203,13 @@
                     }
                     const h = n.d3.scale.ordinal().rangeBands([0, u], .4),
                         g = n.d3.scale.ordinal(),
-                        f = n.d3.svg.axis().scale(d).orient("bottom").tickFormat(n.d3.format("d")).innerTickSize(-p).outerTickSize(0),
-                        _ = n.d3.svg.axis().scale(h).orient("left"),
+                        _ = n.d3.svg.axis().scale(d).orient("bottom").tickFormat(n.d3.format("d")).innerTickSize(-p).outerTickSize(0),
+                        f = n.d3.svg.axis().scale(h).orient("left"),
                         y = n.d3.select(".match-graph-display .match-main-graph").append("svg").attr("width", m + c + i).attr("height", p + a + r),
                         E = y.append("g").attr("transform", "translate(" + c + "," + a + ")");
                     d.domain([0, 0]), h.domain(e.map((function(e) {
                         return e.graphYAxisIndex
-                    }))), this._appendAxis(f, _, E, p), this._initialAvatarsRender(e, y, h), this.set("x", d), this.set("y0", h), this.set("y1", g), this.set("xAxis", f), this.set("yAxis", _), this.set("svg", E)
+                    }))), this._appendAxis(_, f, E, p), this._initialAvatarsRender(e, y, h), this.set("x", d), this.set("y0", h), this.set("y1", g), this.set("xAxis", _), this.set("yAxis", f), this.set("svg", E)
                 },
                 rerenderGraph: function() {
                     const e = this.get("graphData"),
@@ -6320,18 +6337,18 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "zYZZMQY8",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-display\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-display\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-display\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","match-main-graph-scrollable-wrapper"],["dynamic-attr","overflow-masks",["concat",[["helper",["if"],[["get",["graphIsScrollable"]],"enabled"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-main-graph"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "5JHmfAXH",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-display\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-display\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\graph-display\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","match-main-graph-scrollable-wrapper"],["dynamic-attr","overflow-masks",["concat",[["helper",["if"],[["get",["graphIsScrollable"]],"enabled"],null]]]],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-main-graph"],["flush-element"],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1),
                 s = a(77);
-            a(198);
+            a(199);
             e.exports = n.Ember.Component.extend({
                 classNames: ["match-details-runes-component"],
-                layout: a(199),
+                layout: a(200),
                 selectedAttributes: n.Ember.A([]),
                 init() {
                     this._super(...arguments), this.get("stats.dataSource") === s.MATCH_HISTORY_PAGE_DATA_SOURCE.postgame && (n.TelemetryService.sendTelemetryEvent("eog_AdvDetails_runes", "featureClick", "postgame"), n.TelemetryService.startTelemetryTimerEvent("eog_AdvDetails_runes", "timeSpent", "postgame"))
@@ -6391,17 +6408,17 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "c1Smipbc",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\match-details-runes-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\match-details-runes-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\match-details-runes-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-runes-container ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["flush-element"],["text","\\n"],["text","  "],["append",["helper",["runes-player-stats"],null,[["participant","currentParticipant","champions","items","runes","spells","runesPrimaryStyle","runesSubStyle"],[["get",["statsCurrentParticipant"]],["get",["currentParticipant"]],["get",["champions"]],["get",["items"]],["get",["runes"]],["get",["spells"]],["get",["runesPrimaryStyle"]],["get",["runesSubStyle"]]]]],false],["text","\\n\\n"],["block",["each"],[["get",["runesStats"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["runes-rune-stats"],null,[["stats","index"],[["get",["stats"]],["get",["index"]]]]],false],["text","\\n"]],"locals":["stats","index"]}],"hasPartials":false}',
+                id: "tgnyqcno",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\match-details-runes-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\match-details-runes-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\match-details-runes-component\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-runes-container ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["flush-element"],["text","\\n"],["text","  "],["append",["helper",["runes-player-stats"],null,[["participant","currentParticipant","champions","items","runes","spells","runesPrimaryStyle","runesSubStyle"],[["get",["statsCurrentParticipant"]],["get",["currentParticipant"]],["get",["champions"]],["get",["items"]],["get",["runes"]],["get",["spells"]],["get",["runesPrimaryStyle"]],["get",["runesSubStyle"]]]]],false],["text","\\n\\n"],["block",["each"],[["get",["runesStats"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["runes-rune-stats"],null,[["stats","index"],[["get",["stats"]],["get",["index"]]]]],false],["text","\\n"]],"locals":["stats","index"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
             "use strict";
             var n = a(1);
-            a(201);
+            a(202);
             const s = '<span class="statvalue">#</span>';
             e.exports = n.Ember.Component.extend({
-                layout: a(202),
+                layout: a(203),
                 classNames: ["match-history-runes-wrapper"],
                 classNameBindings: ["isKeystone:keystone"],
                 stats: {},
@@ -6430,8 +6447,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "AsSD8olB",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\rune-stats\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\rune-stats\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\rune-stats\\\\index.js\\" "],["text","\\n"],["open-element","img",[]],["static-attr","class","match-history-runes-icon"],["dynamic-attr","src",["concat",[["unknown",["runeIconPath"]]]]],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-runes-name"],["flush-element"],["append",["unknown",["runeName"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-runes-stats-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["statStrings"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","match-history-runes-stats-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["statString"]]],null],false],["close-element"],["text","\\n"]],"locals":["statString"]}],"hasPartials":false}',
+                id: "cVHUa/xa",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\rune-stats\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\rune-stats\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\rune-stats\\\\index.js\\" "],["text","\\n"],["open-element","img",[]],["static-attr","class","match-history-runes-icon"],["dynamic-attr","src",["concat",[["unknown",["runeIconPath"]]]]],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-runes-name"],["flush-element"],["append",["unknown",["runeName"]],false],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","match-history-runes-stats-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["statStrings"]]],null,0],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","span",[]],["static-attr","class","match-history-runes-stats-text"],["flush-element"],["append",["helper",["sanitize"],[["get",["statString"]]],null],false],["close-element"],["text","\\n"]],"locals":["statString"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -6440,7 +6457,7 @@
                 l = (n = a(9)) && n.__esModule ? n : {
                     default: n
                 };
-            a(204);
+            a(205);
             const {
                 Component: o,
                 computed: i
@@ -6453,7 +6470,7 @@
                 }
             }
             e.exports = o.extend({
-                layout: a(205),
+                layout: a(206),
                 classNames: ["runes-player-stats"],
                 goldEarnedDisplay: i("participant.goldEarned", "tra.metadata.locale.id", (function() {
                     const e = this.get("participant.goldEarned"),
@@ -6537,8 +6554,8 @@
         }, (e, t, a) => {
             const n = a(1).Ember;
             e.exports = n.HTMLBars.template({
-                id: "CUqL28+Y",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\player-stats\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\player-stats\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\player-stats\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","spells"],["flush-element"],["text","\\n"],["block",["each"],[["get",["spellDTOs"]]],null,5],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","champion"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","champion-icon"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","champion-icon-border"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["champion"]]],null,3,2],["text","    "],["open-element","div",[]],["static-attr","class","champion-frame"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","champ-level"],["flush-element"],["append",["unknown",["participant","champLevel"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","player-info"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","name"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","gameName","tagLine"],["short",["get",["puuid"]],["get",["summonerName"]],["get",["gameName"]],["get",["tagLine"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","styles"],["flush-element"],["append",["unknown",["runesPrimaryStyleName"]],false],["text"," / "],["append",["unknown",["runesSubStyleName"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","items-container"],["flush-element"],["text","\\n  "],["open-element","ul",[]],["static-attr","class","items-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["itemDTOs"]]],null,1],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","stats"],["flush-element"],["text","\\n  "],["open-element","span",[]],["static-attr","class","stats-kills"],["flush-element"],["append",["unknown",["kdaDisplay"]],false],["close-element"],["text","\\n  "],["open-element","span",[]],["static-attr","class","stats-minions"],["flush-element"],["append",["unknown",["participant","minionsPlusNeutralMonstersCount"]],false],["close-element"],["text","\\n  "],["open-element","span",[]],["static-attr","class","stats-gold"],["flush-element"],["append",["unknown",["goldEarnedDisplay"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["item","iconPath"]]]]],["static-attr","alt",""],["static-attr","class","item-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","li",[]],["static-attr","class","item"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconPath"]]],null,0],["text","      "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","no-champ-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["champion","squarePortraitPath"]]]]],["static-attr","alt",""],["static-attr","class","champion-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["spell","iconPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-spell-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["spell","iconPath"]]],null,4]],"locals":["spell"]}],"hasPartials":false}',
+                id: "mVQ3AeHn",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\player-stats\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\player-stats\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\runes\\\\player-stats\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","spells"],["flush-element"],["text","\\n"],["block",["each"],[["get",["spellDTOs"]]],null,5],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","champion"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","champion-icon"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","champion-icon-border"],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["champion"]]],null,3,2],["text","    "],["open-element","div",[]],["static-attr","class","champion-frame"],["flush-element"],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","champ-level"],["flush-element"],["append",["unknown",["participant","champLevel"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","player-info"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","name"],["flush-element"],["text","\\n    "],["append",["helper",["player-name"],null,[["format","puuid","summonerName","gameName","tagLine"],["short",["get",["puuid"]],["get",["summonerName"]],["get",["gameName"]],["get",["tagLine"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","styles"],["flush-element"],["append",["unknown",["runesPrimaryStyleName"]],false],["text"," / "],["append",["unknown",["runesSubStyleName"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","items-container"],["flush-element"],["text","\\n  "],["open-element","ul",[]],["static-attr","class","items-list"],["flush-element"],["text","\\n"],["block",["each"],[["get",["itemDTOs"]]],null,1],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","stats"],["flush-element"],["text","\\n  "],["open-element","span",[]],["static-attr","class","stats-kills"],["flush-element"],["append",["unknown",["kdaDisplay"]],false],["close-element"],["text","\\n  "],["open-element","span",[]],["static-attr","class","stats-minions"],["flush-element"],["append",["unknown",["participant","minionsPlusNeutralMonstersCount"]],false],["close-element"],["text","\\n  "],["open-element","span",[]],["static-attr","class","stats-gold"],["flush-element"],["append",["unknown",["goldEarnedDisplay"]],false],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["item","iconPath"]]]]],["static-attr","alt",""],["static-attr","class","item-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","li",[]],["static-attr","class","item"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconPath"]]],null,0],["text","      "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","      "],["open-element","img",[]],["static-attr","class","no-champ-icon"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["champion","squarePortraitPath"]]]]],["static-attr","alt",""],["static-attr","class","champion-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["spell","iconPath"]]]]],["static-attr","alt",""],["static-attr","class","player-history-spell-pic"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["spell","iconPath"]]],null,4]],"locals":["spell"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, a) => {
@@ -6667,6 +6684,302 @@
                 participants: n.Ember.computed("dataSource", "_eogParticipants", "_legsParticipants", (function() {
                     return "eogStats" === this.get("dataSource") ? this.get("_eogParticipants") : "legs" === this.get("dataSource") ? this.get("_legsParticipants") : n.Ember.A([])
                 }))
+            })
+        }, (e, t, a) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var n = a(1);
+            a(209);
+            var s = n.Ember.Component.extend({
+                classNames: ["jade-match-details-nav-component"],
+                layout: a(210),
+                actions: {
+                    handleTabSelected(e) {
+                        this.sendAction("handleSectionSelected", e)
+                    }
+                }
+            });
+            t.default = s
+        }, (e, t, a) => {
+            "use strict";
+            a.r(t)
+        }, (e, t, a) => {
+            const n = a(1).Ember;
+            e.exports = n.HTMLBars.template({
+                id: "DogI4Xx/",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\jade-match-details-nav\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\jade-match-details-nav\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\details\\\\jade-match-details-nav\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-match-details-tabs-nav"],["flush-element"],["text","\\n"],["block",["each"],[["get",["displaySections"]]],null,0],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-match-details-tab ",["helper",["if"],[["get",["section","selected"]],"active"],null]," ",["helper",["if"],[["get",["section","disabled"]],"disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"handleTabSelected",["get",["section","name"]]],null],null],["flush-element"],["append",["unknown",["section","displayName"]],false],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-match-details-tab-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":["section"]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, a) => {
+            "use strict";
+            var n;
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var s = ((n = a(188)) && n.__esModule ? n : {
+                default: n
+            }).default.extend({
+                classNames: ["jade-match-details-graph-component"],
+                layout: a(212)
+            });
+            t.default = s
+        }, (e, t, a) => {
+            const n = a(1).Ember;
+            e.exports = n.HTMLBars.template({
+                id: "nQsxtpUV",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-match-details-graph\\\\layout.hbs\\" style-path=\\"null\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-match-details-graph\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["match-graph-container ",["helper",["if"],[["get",["isTransitioning"]],"match-details-loading-hide","match-details-loading-fade-in"],null]]]],["flush-element"],["text","\\n  "],["append",["helper",["jade-graph-categories"],null,[["selectedAttributes","mapId"],[["get",["selectedAttributes"]],["get",["mapId"]]]]],false],["text","\\n  "],["append",["helper",["jade-graph-display"],null,[["selectedAttributes","gameMode","queueId","champions"],[["get",["selectedAttributes"]],["get",["gameMode"]],["get",["queueId"]],["get",["champions"]]]]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, a) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var n = a(1);
+            a(214);
+            var s = a(76);
+            const l = "blue";
+            var o = n.Ember.Component.extend({
+                classNames: ["jade-graph-display-component"],
+                layout: a(215),
+                stats: n.Ember.inject.service(),
+                champions: null,
+                championData: n.Ember.computed.alias("champions"),
+                currentPlayerParticipant: n.Ember.computed("stats.participants.[]", "stats.currentSummonerId", (function() {
+                    const e = this.get("stats.currentSummonerId");
+                    return (this.get("stats.participants") || []).find((t => t.summonerId === e))
+                })),
+                participantToAvatarData(e) {
+                    const t = this.get("championData"),
+                        a = this.get("currentPlayerParticipant.summonerId");
+                    return {
+                        isCurrent: e.summonerId === a,
+                        championImage: t.get(e.championId).squarePortraitPath
+                    }
+                },
+                blueTeamParticipants: n.Ember.computed("stats.participants.[]", "currentPlayerParticipant.teamId", (function() {
+                    const e = this.get("stats.participants") || [],
+                        t = this.get("currentPlayerParticipant.teamId") || s.TEAM_ID.BLUE;
+                    return e.filter((e => e.teamId === t)).map(this.participantToAvatarData.bind(this))
+                })),
+                redTeamParticipants: n.Ember.computed("stats.participants.[]", "currentPlayerParticipant.teamId", (function() {
+                    const e = this.get("stats.participants") || [],
+                        t = this.get("currentPlayerParticipant.teamId") || s.TEAM_ID.BLUE;
+                    return e.filter((e => e.teamId !== t)).map(this.participantToAvatarData.bind(this))
+                })),
+                graphData: n.Ember.computed("selectedAttributes", "stats.participants", "stats.currentSummonerId", (function() {
+                    const e = this.get("selectedAttributes"),
+                        t = this.get("stats.currentSummonerId"),
+                        a = this.get("stats.participants"),
+                        n = [];
+                    let s = 1,
+                        l = !1;
+                    return a && 0 !== a.length ? (a.forEach((function(a) {
+                        const o = {},
+                            i = a.summonerId === t;
+                        i && (l = !0), o.isCurrent = i, o.isLocalPlayer = i, o.teamId = a.teamId, o.championId = a.championId, o.graphYAxisIndex = s++, o.stats = [], e.forEach((function(e) {
+                            const t = {};
+                            t.id = e.key, t.value = a.stats[e.key], t.name = e.locString, t.teamId = a.teamId, o.stats.push(t)
+                        })), n.push(o)
+                    })), l || (n[0].isCurrent = !0), this._applyTeamColors(n)) : n
+                })),
+                _applyTeamColors: function(e) {
+                    const t = e.find((e => e.isCurrent)),
+                        a = [],
+                        n = [];
+                    return t && (t.teamColor = l, t.stats.forEach((e => e.teamColor = l)), a.push(t)), e.forEach((function(e) {
+                        e.teamId === t.teamId && !e.isCurrent ? (e.teamColor = l, e.stats.forEach((e => e.teamColor = l)), a.push(e)) : e.isCurrent || (e.teamColor = "red", e.stats.forEach((e => e.teamColor = "red")), n.push(e))
+                    })), a.concat(n)
+                },
+                generateRerenderGraphData: n.Ember.on("didInsertElement", n.Ember.observer("graphData", "championData", (function() {
+                    this.get("graphData.length") && this.get("championData") && (this.get("isInitialGraphRendered") || (this.renderInitialGraph(), this.set("isInitialGraphRendered", !0)), this.rerenderGraph())
+                }))),
+                renderInitialGraph: function() {
+                    const e = this.get("graphData"),
+                        t = 20,
+                        a = 20,
+                        s = 50,
+                        l = 527,
+                        o = n.d3.scale.linear().range([4, 597 - s]),
+                        i = n.d3.scale.ordinal().rangeBands([0, l], .4),
+                        r = n.d3.scale.ordinal(),
+                        c = n.d3.svg.axis().scale(o).orient("bottom").tickFormat(n.d3.format("d")).innerTickSize(-527).outerTickSize(0).ticks(8),
+                        m = n.d3.svg.axis().scale(i).orient("left").tickSize(0).tickValues([]),
+                        p = n.d3.select(".jade-graph-display-component .match-main-graph").append("svg").attr("width", 597).attr("height", l + t + a),
+                        d = p.append("defs"),
+                        u = d.append("linearGradient").attr("id", "blue_team_gradient").attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%").attr("gradientTransform", "rotate(360)");
+                    u.append("stop").attr("offset", "37.5%").attr("stop-color", "rgba(12, 51, 96, 1)"), u.append("stop").attr("offset", "100%").attr("stop-color", "rgba(44, 102, 170, 1)");
+                    const h = d.append("linearGradient").attr("id", "red_team_gradient").attr("x1", "0%").attr("x2", "0%").attr("y1", "100%").attr("y2", "0%").attr("gradientTransform", "rotate(360)");
+                    h.append("stop").attr("offset", "37.5%").attr("stop-color", "rgba(104, 0, 0, 1)"), h.append("stop").attr("offset", "100%").attr("stop-color", "rgba(212, 45, 45, 1)");
+                    const g = p.append("g").attr("class", "jade-match-graph-container");
+                    o.domain([0, 0]), i.domain(e.map((function(e) {
+                        return e.graphYAxisIndex
+                    }))), this._appendAxis(c, m, g, l), this.set("x", o), this.set("y0", i), this.set("y1", r), this.set("xAxis", c), this.set("yAxis", m), this.set("svg", g)
+                },
+                rerenderGraph: function() {
+                    const e = this.get("graphData"),
+                        t = this.get("x"),
+                        a = this.get("y0"),
+                        s = this.get("y1"),
+                        l = this.get("svg"),
+                        o = this.get("xAxis"),
+                        i = this._getStatsIds(e);
+                    t.domain([0, n.d3.max(e, (function(e) {
+                        return n.d3.max(e.stats, (function(e) {
+                            return e.value
+                        }))
+                    }))]), s.domain(i).rangeRoundBands([0, a.rangeBand()]), l.selectAll(".match-graph-x-axis").call(o);
+                    const r = l.selectAll(".match-graph-stat-bar").data(e);
+                    this._renderStatBars(r);
+                    const c = r.selectAll("rect").data((function(e) {
+                        return e.stats
+                    }));
+                    this._renderStats(c, i), this._applyTooltips(c, i)
+                },
+                _renderStatBars: function(e) {
+                    const t = this.get("y0");
+                    e.enter().append("g").attr("class", "match-graph-stat-bar").attr("transform", (function(e) {
+                        const a = e.teamColor === l ? 0 : 16;
+                        return `translate(0, ${t(e.graphYAxisIndex)+a-8})`
+                    }))
+                },
+                _renderStats: function(e, t) {
+                    const a = this.get("y1"),
+                        n = this.get("x");
+                    e.enter().append("rect").attr("width", 0), e.attr("x", 1).attr("id", (function(e) {
+                        return e.id
+                    })).attr("class", (function(e) {
+                        return `match-graph-stat-bar-rect ${e.id}`
+                    })).attr("data-value", (function(e) {
+                        return e.value
+                    })).style("fill", (function(e, t) {
+                        return `url(${e.teamColor===l?"#blue_team_gradient":"#red_team_gradient"})`
+                    })).transition().attr("y", (function(e, n) {
+                        const s = t?.length > 1 ? 4 * n - 2 * t?.length : 0,
+                            l = a(t[n]) + s,
+                            o = Math.round(a.rangeBand() / 2 - 7);
+                        return a.rangeBand() > 14 ? l + o : l
+                    })).attr("height", (function() {
+                        const e = a.rangeBand();
+                        return e > 14 ? 14 : e
+                    })).attr("width", (function(e) {
+                        return n(e.value)
+                    })), e.exit().transition().attr("width", 0).remove()
+                },
+                _applyTooltips: function(e) {
+                    e.on("mouseover", (e => {
+                        this.$(`.${e.id}`).each(((t, a) => {
+                            const n = this.$(a).offset(),
+                                s = this.$(".match-main-graph-scrollable-wrapper"),
+                                l = Math.abs(a.getAttribute("width")),
+                                o = Math.abs(a.getAttribute("height")),
+                                i = Math.abs(n.left) - 424 + l,
+                                r = Math.abs(n.top) - 133 + o / 2 - 4 + s.scrollTop(),
+                                c = a.getAttribute("data-value");
+                            this.$(".match-main-graph").append(`\n          <div class="math-graph-tooltip ${e.id}-tooltip"\n            style="left: ${i}px; top: ${r}px;">\n            ${c}\n          </div>\n        `)
+                        })), this.$(this.element).append(`\n        <div class="match-main-graph-tooltip-hint">\n          ${e.name}\n        </div>\n      `)
+                    })), e.on("mouseout", (e => {
+                        this.$(`.${e.id}-tooltip`).remove(), this.$(".match-main-graph-tooltip-hint").remove()
+                    }))
+                },
+                _appendAxis(e, t, a, n) {
+                    a.append("g").attr("class", "match-graph-axis match-graph-x-axis").attr("transform", "translate(0," + n + ")").classed("grid", !0).call(e), a.append("g").attr("class", "match-graph-axis match-graph-y-axis").call(t)
+                },
+                _getStatsIds: function(e) {
+                    return e[0].stats.map((function(e) {
+                        return e.id
+                    }))
+                }
+            });
+            t.default = o
+        }, (e, t, a) => {
+            "use strict";
+            a.r(t)
+        }, (e, t, a) => {
+            const n = a(1).Ember;
+            e.exports = n.HTMLBars.template({
+                id: "6yvW30kr",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-graph-display\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-graph-display\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-graph-display\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-graph-player-avatars"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-graph-players-group"],["flush-element"],["text","\\n"],["block",["each"],[["get",["blueTeamParticipants"]]],null,1],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-graph-players-group"],["flush-element"],["text","\\n"],["block",["each"],[["get",["redTeamParticipants"]]],null,0],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-graph-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","match-main-graph"],["flush-element"],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-graph-content-overlay"],["flush-element"],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-graph-player-champion-image-sizer red"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","jade-graph-player-champion-image"],["dynamic-attr","src",["unknown",["participant","championImage"]],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["participant"]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-graph-player-champion-image-sizer blue ",["helper",["if"],[["get",["participant","isCurrent"]],"current"],null]]]],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","jade-graph-player-champion-image"],["dynamic-attr","src",["unknown",["participant","championImage"]],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":["participant"]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, a) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var n, s = a(1),
+                l = a(77),
+                o = (n = a(191)) && n.__esModule ? n : {
+                    default: n
+                };
+            a(217);
+            var i = o.default.extend({
+                classNames: ["jade-graph-categories-component"],
+                layout: a(218),
+                actions: {
+                    toggleCategory: function(e) {
+                        const t = e.selected,
+                            a = this.get("statsCategories");
+                        t ? a.forEach((function(t) {
+                            t.name === e.name && (t.set("selected", !1), t.attributes.forEach((e => {
+                                e.set("selected", !1), e.set("disabled", !1)
+                            })))
+                        })) : a.forEach((t => {
+                            const a = t.name === e.name;
+                            t.set("selected", a), t.attributes.forEach((e => {
+                                e.set("selected", a)
+                            }))
+                        })), this._setDisableValues(), this._setSelectedAttributes()
+                    },
+                    toggleAttributeSelected: function(e) {
+                        const t = this.get("statsCategories"),
+                            a = e.selected;
+                        e.set("selected", !a), t.forEach((t => {
+                            let n = 0;
+                            t.attributes.forEach((o => {
+                                o.name !== e.get("name") || a || t.set("selected", !0), o.get("selected") && (this.get("telemetrySent").get(e.get("name")) || this.get("stats.dataSource") !== l.MATCH_HISTORY_PAGE_DATA_SOURCE.postgame || (s.TelemetryService.sendTelemetryEvent("eog_advDetails_graph_" + e.get("name"), "featureClick", "postgame", {
+                                    gameId: this.get("stats.api.paths.root.eogStatsBlock.gameId")
+                                }), this.get("telemetrySent").set(e.get("name"), !0)), n++)
+                            })), 0 === n && t.set("selected", !1)
+                        })), this._setDisableValues(), this._setSelectedAttributes()
+                    }
+                }
+            });
+            t.default = i
+        }, (e, t, a) => {
+            "use strict";
+            a.r(t)
+        }, (e, t, a) => {
+            const n = a(1).Ember;
+            e.exports = n.HTMLBars.template({
+                id: "FnszXuVk",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-graph-categories\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-graph-categories\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-graph-categories\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","class","jade-match-graph-categories-scrollbar"],["flush-element"],["text","\\n"],["block",["each"],[["get",["statsCategories"]]],null,1],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","match-graph-category-attribute"],["flush-element"],["text","\\n            "],["append",["helper",["jade-checkbox-label"],null,[["checked","disabled","text","onCheckboxClicked"],[["get",["statAttribute","selected"]],["get",["statAttribute","disabled"]],["get",["statAttribute","locString"]],["helper",["action"],[["get",[null]],"toggleAttributeSelected",["get",["statAttribute"]]],null]]]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["statAttribute"]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","match-graph-category"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","match-graph-category-checkbox-label"],["flush-element"],["text","\\n        "],["append",["helper",["jade-checkbox-label"],null,[["checked","disabled","text","onCheckboxClicked"],[["get",["statCategory","selected"]],["get",["statCategory","disabled"]],["get",["statCategory","locString"]],["helper",["action"],[["get",[null]],"toggleCategory",["get",["statCategory"]]],null]]]],false],["text","\\n      "],["close-element"],["text","\\n\\n      "],["open-element","div",[]],["static-attr","class","match-graph-category-attributes"],["flush-element"],["text","\\n"],["block",["each"],[["get",["statCategory","attributes"]]],null,0],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["statCategory"]}],"hasPartials":false}',
+                meta: {}
+            })
+        }, (e, t, a) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var n = a(1);
+            a(220);
+            var s = n.Ember.Component.extend({
+                classNames: ["jade-checkbox-label-component"],
+                classNameBindings: ["checked", "disabled"],
+                layout: a(221)
+            });
+            t.default = s
+        }, (e, t, a) => {
+            "use strict";
+            a.r(t)
+        }, (e, t, a) => {
+            const n = a(1).Ember;
+            e.exports = n.HTMLBars.template({
+                id: "0fWVj8ST",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-checkbox-label\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-checkbox-label\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-match-history\\\\src\\\\components\\\\graph\\\\jade-checkbox-label\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-checkbox-label-checkbox-container"],["dynamic-attr","onclick",["unknown",["onCheckboxClicked"]],null],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-checkbox-label-text-container"],["flush-element"],["text","\\n  "],["append",["unknown",["text"]],false],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                meta: {}
             })
         }],
         t = {};

@@ -1128,7 +1128,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Karthus vytvoří éterickou stěnu vysávající energii. Nepřátelským jednotkám, které touto stěnou projdou, se na určitou dobu sníží rychlost pohybu a odolnost vůči magii.",
-            "dynamicDescription": "Karthus vytvoří zeď, která za @Effect4Amount@&nbsp;sek. zmizí. Nepřátelům, kteří skrz ni projdou, se na @Effect5Amount@&nbsp;sek. sníží <scaleMR>odolnost vůči magii o @Effect1Amount@&nbsp;%</scaleMR> a budou <status>zpomaleni</status> o @Effect3Amount@&nbsp;%, tento postih postupně odeznívá.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus vytvoří zeď, která za @WallDuration@ sek. zmizí. Nepřátelům, kteří skrz ni projdou, se na @DebuffDuration@ sek. sníží <scaleMR>odolnost vůči magii o @MagicResistShred@ %</scaleMR> a budou <status>zpomaleni</status> o @SlowPercent@ %, tento postih postupně odeznívá.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ many za sekundu",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Karthus pasivně krade energii svých obětí, a tak s každým zabitím získává manu. Případně se Karthus může obklopit dušemi svých obětí, které poškozují okolní nepřátele, ale svou manu tím rychle vyčerpá.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Zabitím libovolné jednotky si Karthus obnoví <scaleMana>@Effect2Amount@ many</scaleMana>.<br><br><toggle>Přepnutí:</toggle> Karthus vytvoří nekrotickou auru, která okolním nepřátelům způsobuje <magicDamage>@TotalDPS@ bodů magického poškození</magicDamage> za sekundu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt: </spellPassive>Zabitím jednotky si Karthus obnoví <scaleMana>@ManaRestoreOnKill@ many</scaleMana>.<br><br><toggle>Přepnutí:</toggle> Karthus vytvoří nekrotickou auru, která okolním nepřátelům způsobuje <magicDamage>@TotalDPS@ bodů magického poškození</magicDamage> za sekundu.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

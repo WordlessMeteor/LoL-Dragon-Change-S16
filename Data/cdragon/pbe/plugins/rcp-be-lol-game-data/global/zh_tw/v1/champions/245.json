@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "艾克往目標方向投擲一枚手榴彈，當擊中英雄時，此裝置展開一個時光力場，緩速並造成傷害力場內敵人。片刻後，裝置會合起並回到艾克身邊，對路徑上所有敵方目標造成傷害。",
-            "dynamicDescription": "艾克丟出一個裝置，造成 <magicDamage>@InitialDamage@ 魔法傷害</magicDamage>。在命中一名英雄或到達它的最大距離後，它會展開成一個緩速力場，使其中的敵人<status>緩速</status>@Effect2Amount*-100@%。在它展開後，艾克會將其召回，造成 <magicDamage>@RecallDamage@ 魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "艾克丟出一個裝置，造成<magicDamage>@InitialDamage@魔法傷害</magicDamage>。在命中一名英雄或到達最大距離後，裝置會展開成一個緩速力場，使其中的敵人<status>緩速</status>@SlowPercent*-100@。裝置展開後，艾克會將其召回，造成<magicDamage>@RecallDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "艾克的基本攻擊對低血量的敵人造成額外魔法傷害。他可以施放時空攔截來分開時間軸，創造一個在數秒後會緩速範圍內敵人的力場。若艾克進入力場，他立即獲得護盾並暈眩敵人。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>艾克對生命低於 30% 的敵方英雄進行的攻擊會造成 <magicDamage>@MissingHealthPercent@ 已損失生命的魔法傷害</magicDamage>。<br><br><spellActive>主動：</spellActive>在短暫延遲後，艾克放出一顆時空球體場域來使其中的敵人<status>緩速</status> @Effect10Amount@%。若艾克進入了球體場域，那麼他會將其引爆，造成 @Effect2Amount@ 秒<status>暈眩</status>並獲得<shield>@TotalShield@護盾</shield>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>艾克對生命低於@BelowHealthThreshold*100@%的敵軍普攻時，造成<magicDamage>@MissingHealthPercent@已損失生命的魔法傷害</magicDamage>。<br><br><spellActive>主動：</spellActive>艾克在短暫延遲後放出一顆持續@SlowZoneDuration@秒的時空球，使其命中的敵軍<status>緩速</status>@SlowPercent@%。如果艾克進入球體，會引爆它，造成@StunDuration@秒的<status>暈眩</status>，並獲得<shield>@TotalShield@護盾</shield>。@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

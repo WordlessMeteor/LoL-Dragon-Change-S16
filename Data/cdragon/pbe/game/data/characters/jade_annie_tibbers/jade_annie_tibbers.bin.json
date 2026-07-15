@@ -1,0 +1,2384 @@
+{
+    "{2ca1d72c}": {
+        "ScriptName": "charscriptJade_Annie_Tibbers_Jade",
+        "path": "{2ca1d72c}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "ca05fff1-c145-4338-a848-96134cefc858",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "144069e8-b06a-4cd1-aa31-e867949b66e6",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "2c2f562c-6696-4caf-8652-67c205e7e76e",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "1199bc42-d2fe-44de-b44e-f12b7865b87f",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "e3ed3d0e-9dec-49c3-9c74-7094f965b048",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "142b3585-c18f-47da-b066-d63c91a0684b",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "b70a74e0-d7e0-4fdd-9521-e855d1a9ead7",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "99d39d14-185b-471e-a564-9bccf64672ee",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "b7d1827f-e356-4708-9c11-d5e2f3510d82",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "56649256-4491-4f67-b98b-4808b68f4203",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "60eff9ce-cd5d-4d0f-8d94-ba231a6b531b",
+                        "__type": "ScriptCommentBlock"
+                    },
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "e88674d4-231c-4bb8-b0fb-343891968688",
+                        "Src": {
+                            "value": 1,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "AttackTicker",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "b76306f6-b7f4-4da0-9c76-339d711c7246",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "LoSIssueOrdered",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "b81b6f73-5cf2-48c6-b9db-b3b8a3bb7caa",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "FirstVengeanceCycle",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "74a79e3d-f1ab-4af4-bba1-60ae668cfd4d",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "TibbersAttackingInhibOrNexus",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "481a529e-a98b-49df-bc9b-ee040ef173a5",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "TibbersOrderedWhileCCd",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{685f0c4d}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "d842461c-6279-4b59-b1cf-c7f9b43e17c2",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "a2040857-a423-4eae-9d94-bdd8f16ab7a4",
+                                    "Var": {
+                                        "Var": "Attacker",
+                                        "__type": "{622705af}"
+                                    },
+                                    "__type": "{851b8dc5}"
+                                },
+                                null,
+                                {
+                                    "{d851ffa3}": "52c37694-e4d9-41a5-ba4b-38aaccda5f59",
+                                    "Formula": "ptp.DirectionTo * 600",
+                                    "Dest": {
+                                        "Var": "Offset",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "abce695b-5f43-4734-8415-243b1ff26516",
+                                    "Formula": "ptp.OwnerPos + ptp.Offset",
+                                    "Dest": {
+                                        "Var": "Offset",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "aaec7f0d-25b4-4c8b-9cff-33e7509c5a75",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 3,
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "78877b40-0c19-4e77-93f8-a9dc64c4bf3b",
+                                    "Var": {
+                                        "Var": "Attacker",
+                                        "__type": "{622705af}"
+                                    },
+                                    "__type": "{851b8dc5}"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "0ee3f5f6-e9b1-49a4-a43f-f74346f72c16",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "34210116-19f5-49ba-8966-50d1c827511c",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "a4280294-8296-4c30-b84a-1b1cfb35e6e5",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "7bb3ff09-76f6-411d-9735-9adedc5d6ea6",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "bb03164b-c59c-4556-a01b-643786fcfc06",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "ab087673-17f9-4a3d-a98d-19ebf0d5fc27",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "49636134-b793-464f-8158-86b5f73233ae",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "1ab125c9-3410-4202-9a8b-8c2843710ddc",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "3caf92bd-df5c-4af3-b0c7-3cb6840ce2bb",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "6787b49c-0d19-45ae-863d-a357cbd2913d",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{5127f14d}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{0d722018}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{d576330f}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{54757ad9}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{dd84d169}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "d69cca73-af2f-4a74-83af-e9f7e46c7321",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "2053eb74-2af9-4da1-8f33-9a4c1d771ad3",
+                                    "Condition": null,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "2c458df6-8284-49fe-9268-e5d3cc2a7b8d",
+                                    "Condition": null,
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "2d690485-ea2b-4a0e-8475-9b4c4a63b67f",
+                                    "Condition": null,
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "8fe7ef64-c912-4b57-a37e-6bb8127096c8",
+                                    "Condition": null,
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "cdae0b92-08bc-4d73-9ecc-7b5792f3e5ee",
+                                    "Condition": null,
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "5b6207e9-7e9a-447c-90ea-868adab867c2",
+                                    "Condition": null,
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "a32cbbbf-7e3d-4736-94bb-2af8e0b0ef80",
+                                    "Condition": null,
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "a8b4a509-3485-4c45-806d-a7619b6d8fed",
+                                    "Condition": null,
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "b3850898-ad25-4df4-87cd-e68c7452b668",
+                                    "Condition": null,
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "03d4bc67-4ef9-420c-8de0-c00a7cf544d7",
+                                    "Condition": null,
+                                    "type": 2,
+                                    "Sequence": {
+                                        "blocks": [
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "572d2c2f-920b-4ceb-8da2-87c55a8e57b4",
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "IsDisabled": true,
+                                    "{d851ffa3}": "273cbab0-30d1-4997-88e7-c9fb58240d97",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "COUNT",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "IsDisabled": true,
+                                                "{d851ffa3}": "67e10fcc-9aac-493f-bbec-f7a430af5dd2",
+                                                "Src": null,
+                                                "Dest": {
+                                                    "Var": "HitResult",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "e1f3068a-f0b5-4690-a94e-1b514208bb5a",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "62a2c0ed-e009-480a-a032-f8082c30b101",
+                                    "Condition": null,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "c2e83cb9-7cf3-4970-a34b-038bac9d717b",
+                                                "Src": null,
+                                                "Dest": {
+                                                    "Var": "HitResult",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "d97b8e89-a9eb-470b-966b-3b7e972c4ce0",
+                        "Condition": null,
+                        "Invert": true,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "4cd39d84-b75f-4d02-8026-8dd9876e800c",
+                                    "Formula": "cv.AttackTicker + 1",
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "AttackTicker",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "37b50945-c07c-4558-8340-31162ef60ca6",
+                                    "Formula": "cv.AttackTicker % 2",
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "AttackTicker",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "e702909d-be19-425f-bd39-e2ce46f5ce9b",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Table": {
+                                                "__type": "CharacterVars"
+                                            },
+                                            "Var": "{8856756b}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            null,
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "bbd10eb1-0283-4bb3-a9b0-a9f12b085481",
+                                    "Sequence": {
+                                        "blocks": [
+                                            null,
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "255ae5e7-c74a-4a1d-8ee5-61d10c2da121",
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{419e53ac}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "51f2a6fb-145a-4e53-b917-65397f0a0496",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{b2036774}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": true,
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "59dc8a78-60fe-4e2e-8b27-9ef6c3c957d4",
+                                    "__type": "{66cbd003}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "cdf5efab-857d-4765-b455-030cc4094ef0",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "d885a02e-8e86-4866-91a4-ad4d81480a37",
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "e7dacdab-4fbf-4893-8d04-b6432870b2b6",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "gameTime",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Operation": 1,
+                                                    "Value2": {
+                                                        "Table": {
+                                                            "__type": "CharacterVars"
+                                                        },
+                                                        "Var": "{a639dd31}",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
+                                                },
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "3c7234ad-0b10-4539-b62c-8c5d83949952",
+                                                            "Condition": null,
+                                                            "Invert": true,
+                                                            "Sequence": {
+                                                                "blocks": [
+                                                                    {
+                                                                        "{d851ffa3}": "8d09d819-402e-42a6-9f9d-6e4c1f97a7da",
+                                                                        "Src": {
+                                                                            "__type": "BoolGet"
+                                                                        },
+                                                                        "Dest": {
+                                                                            "Table": {
+                                                                                "__type": "InstanceVars"
+                                                                            },
+                                                                            "Var": "LoSIssueOrdered",
+                                                                            "__type": "ScriptTableSet"
+                                                                        },
+                                                                        "__type": "SetVarInTableBlock"
+                                                                    },
+                                                                    {
+                                                                        "{d851ffa3}": "dfabb3d3-eeab-4935-a1c1-60b1c0ba73cf",
+                                                                        "Src": {
+                                                                            "__type": "BoolGet"
+                                                                        },
+                                                                        "Dest": {
+                                                                            "Table": {
+                                                                                "__type": "CharacterVars"
+                                                                            },
+                                                                            "Var": "TibbersAttackingInhibOrNexus",
+                                                                            "__type": "ScriptTableSet"
+                                                                        },
+                                                                        "__type": "SetVarInTableBlock"
+                                                                    },
+                                                                    {
+                                                                        "{d851ffa3}": "09d9c5a4-ad48-4338-ae36-6074d57f7ba7",
+                                                                        "Condition": {
+                                                                            "Value1": {
+                                                                                "Var": "Order",
+                                                                                "__type": "ScriptTableGet"
+                                                                            },
+                                                                            "Value2": {
+                                                                                "value": 5,
+                                                                                "__type": "IntGet"
+                                                                            },
+                                                                            "__type": "ComparisonScriptCondition"
+                                                                        },
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                null,
+                                                                                {
+                                                                                    "{d851ffa3}": "b76e3647-946b-4de6-93ba-d3a51b96afaf",
+                                                                                    "Src": {
+                                                                                        "__type": "BoolGet"
+                                                                                    },
+                                                                                    "Dest": {
+                                                                                        "Var": "HasTarget",
+                                                                                        "__type": "ScriptTableSet"
+                                                                                    },
+                                                                                    "__type": "SetVarInTableBlock"
+                                                                                },
+                                                                                {
+                                                                                    "{d851ffa3}": "9710e0bb-fa69-4840-95b3-1b90305d09c2",
+                                                                                    "Var": {
+                                                                                        "Var": "Target",
+                                                                                        "__type": "{622705af}"
+                                                                                    },
+                                                                                    "__type": "{851b8dc5}"
+                                                                                },
+                                                                                null,
+                                                                                {
+                                                                                    "{d851ffa3}": "845e8aec-e17c-4a09-8b8d-6150e948fbae",
+                                                                                    "Condition": null,
+                                                                                    "Sequence": {
+                                                                                        "blocks": [
+                                                                                            {
+                                                                                                "{d851ffa3}": "ceac3f4a-9557-4656-9a3d-c135d83a88d4",
+                                                                                                "Src": {
+                                                                                                    "value": true,
+                                                                                                    "__type": "BoolGet"
+                                                                                                },
+                                                                                                "Dest": {
+                                                                                                    "Var": "HasTarget",
+                                                                                                    "__type": "ScriptTableSet"
+                                                                                                },
+                                                                                                "__type": "SetVarInTableBlock"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "d7057919-4497-426e-98cc-4d8b70fa6081",
+                                                                                                "Condition": null,
+                                                                                                "Sequence": {
+                                                                                                    "blocks": [
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "4d4bbed3-24ca-42c5-9824-b9bf79fcd377",
+                                                                                                            "Condition": {
+                                                                                                                "Value1": {
+                                                                                                                    "Var": "Target",
+                                                                                                                    "__type": "ScriptTableGet"
+                                                                                                                },
+                                                                                                                "Operation": 1,
+                                                                                                                "Value2": {
+                                                                                                                    "Var": "{64a63045}",
+                                                                                                                    "__type": "ScriptTableGet"
+                                                                                                                },
+                                                                                                                "__type": "ComparisonScriptCondition"
+                                                                                                            },
+                                                                                                            "Sequence": {
+                                                                                                                "blocks": [
+                                                                                                                    null,
+                                                                                                                    null,
+                                                                                                                    null
+                                                                                                                ],
+                                                                                                                "__type": "ScriptSequence"
+                                                                                                            },
+                                                                                                            "__type": "{e524b2fc}"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "690a92d3-9537-4dbc-9ac5-ec8b2e554551",
+                                                                                                            "Sequence": {
+                                                                                                                "blocks": [
+                                                                                                                    null
+                                                                                                                ],
+                                                                                                                "__type": "ScriptSequence"
+                                                                                                            },
+                                                                                                            "__type": "{e524b2fc}"
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "__type": "ScriptSequence"
+                                                                                                },
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            }
+                                                                                        ],
+                                                                                        "__type": "ScriptSequence"
+                                                                                    },
+                                                                                    "__type": "{e524b2fc}"
+                                                                                },
+                                                                                {
+                                                                                    "{d851ffa3}": "bbc4526d-ff59-4a77-83a5-539779f1b150",
+                                                                                    "Sequence": {
+                                                                                        "blocks": [
+                                                                                            {
+                                                                                                "{d851ffa3}": "8217a4ed-03c0-4010-a36e-fe44601b51c1",
+                                                                                                "Sequence": {
+                                                                                                    "blocks": [
+                                                                                                        null,
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "f13b92ec-7d12-4825-801e-376068456396",
+                                                                                                            "Sequence": {
+                                                                                                                "blocks": [
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "6104f04f-b259-48bd-8308-d84894ae57b5",
+                                                                                                                        "Formula": "ptp.DistanceToTarget * 0.1",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch1",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "1c29ba30-e2a1-42b5-b010-ae5a82d7b1ff",
+                                                                                                                        "Formula": "ptp.DistanceToSearch1 + 125",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch1",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "f2a0d876-c1d9-45d5-b2ec-076a4c22a9f1",
+                                                                                                                        "Formula": "min(ptp.DistanceToSearch1, 250)",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch1",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                                "__type": "ScriptSequence"
+                                                                                                            },
+                                                                                                            "__type": "ScriptCommentBlock"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "d543ce2a-16c0-4539-8ac1-f0ff5056822f",
+                                                                                                            "Sequence": {
+                                                                                                                "blocks": [
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "2845ad10-8d55-4792-ad37-4ef6ab88ee42",
+                                                                                                                        "Formula": "ptp.DistanceToTarget * 0.125",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch2",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "7962ab01-11e5-4d9d-aa58-331f22ed96be",
+                                                                                                                        "Formula": "ptp.DistanceToSearch2 + 250",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch2",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "7ec0a8a0-fc79-45c7-a6ad-c6bb40e22688",
+                                                                                                                        "Formula": "min(ptp.DistanceToSearch2, 350)",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch2",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                                "__type": "ScriptSequence"
+                                                                                                            },
+                                                                                                            "__type": "ScriptCommentBlock"
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "__type": "ScriptSequence"
+                                                                                                },
+                                                                                                "__type": "ScriptCommentBlock"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "a189e094-efc2-49e0-ba9d-6699b25938c1",
+                                                                                                "Sequence": {
+                                                                                                    "blocks": [
+                                                                                                        null,
+                                                                                                        null,
+                                                                                                        null,
+                                                                                                        null,
+                                                                                                        null,
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "a6035d1c-b77c-46f9-87bb-fec56b7edf79",
+                                                                                                            "Condition": {
+                                                                                                                "Value1": {
+                                                                                                                    "Var": "{06e40ce6}",
+                                                                                                                    "__type": "ScriptTableGet"
+                                                                                                                },
+                                                                                                                "Value2": {
+                                                                                                                    "__type": "BoolGet"
+                                                                                                                },
+                                                                                                                "__type": "ComparisonScriptCondition"
+                                                                                                            },
+                                                                                                            "Sequence": {
+                                                                                                                "blocks": [
+                                                                                                                    null,
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "f801726c-c2fa-4f08-879d-ad8aa6b1dcc7",
+                                                                                                                        "Src": {
+                                                                                                                            "value": true,
+                                                                                                                            "__type": "BoolGet"
+                                                                                                                        },
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "HasTarget",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "SetVarInTableBlock"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "04a7862e-172a-4db8-ae6a-9697d225678c",
+                                                                                                                        "Condition": null,
+                                                                                                                        "Sequence": {
+                                                                                                                            "blocks": [
+                                                                                                                                {
+                                                                                                                                    "{d851ffa3}": "7410c5c6-a6dd-4e6e-b76e-e37f2f52fa29",
+                                                                                                                                    "Condition": {
+                                                                                                                                        "Value1": {
+                                                                                                                                            "Var": "Target",
+                                                                                                                                            "__type": "ScriptTableGet"
+                                                                                                                                        },
+                                                                                                                                        "Operation": 1,
+                                                                                                                                        "Value2": {
+                                                                                                                                            "Var": "{64a63045}",
+                                                                                                                                            "__type": "ScriptTableGet"
+                                                                                                                                        },
+                                                                                                                                        "__type": "ComparisonScriptCondition"
+                                                                                                                                    },
+                                                                                                                                    "Sequence": {
+                                                                                                                                        "blocks": [
+                                                                                                                                            null,
+                                                                                                                                            null,
+                                                                                                                                            null,
+                                                                                                                                            null
+                                                                                                                                        ],
+                                                                                                                                        "__type": "ScriptSequence"
+                                                                                                                                    },
+                                                                                                                                    "__type": "{e524b2fc}"
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "__type": "ScriptSequence"
+                                                                                                                        },
+                                                                                                                        "__type": "{e524b2fc}"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                                "__type": "ScriptSequence"
+                                                                                                            },
+                                                                                                            "__type": "{e524b2fc}"
+                                                                                                        },
+                                                                                                        null
+                                                                                                    ],
+                                                                                                    "__type": "ScriptSequence"
+                                                                                                },
+                                                                                                "__type": "ScriptCommentBlock"
+                                                                                            }
+                                                                                        ],
+                                                                                        "__type": "ScriptSequence"
+                                                                                    },
+                                                                                    "__type": "{e524b2fc}"
+                                                                                },
+                                                                                {
+                                                                                    "{d851ffa3}": "46f66f40-f6a2-402f-8196-87b3367a4188",
+                                                                                    "Sequence": {
+                                                                                        "blocks": [
+                                                                                            {
+                                                                                                "{d851ffa3}": "f5b1cda4-c503-4423-aa89-50db04ca513b",
+                                                                                                "Condition": null,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "8d825272-c090-451c-93ef-e81a16b25d5d",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "4fea10f5-f2fa-4ae0-9317-179c9a21f8ba",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "7ad5ba89-5c63-4dcc-ae76-4183ed5c2800",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "6d3a1e63-e973-412f-b628-8f206e0abb62",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "86f50c62-9a58-41c7-a267-894e5967e9d2",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "697b7bfd-5dd9-4230-8ed6-3a819e979e22",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "cfa76e1c-4253-44d5-bde8-508c24a369a0",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "5b83d5c1-7928-40de-a46b-1cfc2dc9859b",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "3cb5efaf-6a8b-4a4b-918e-b15fe59608bc",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "Sequence": {
+                                                                                                    "blocks": [
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "b58779be-cf5d-455d-81e7-6c6c63bac700",
+                                                                                                            "Src": {
+                                                                                                                "value": true,
+                                                                                                                "__type": "BoolGet"
+                                                                                                            },
+                                                                                                            "Dest": {
+                                                                                                                "Table": {
+                                                                                                                    "__type": "InstanceVars"
+                                                                                                                },
+                                                                                                                "Var": "TibbersOrderedWhileCCd",
+                                                                                                                "__type": "ScriptTableSet"
+                                                                                                            },
+                                                                                                            "__type": "SetVarInTableBlock"
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "__type": "ScriptSequence"
+                                                                                                },
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            }
+                                                                                        ],
+                                                                                        "__type": "ScriptSequence"
+                                                                                    },
+                                                                                    "__type": "ScriptCommentBlock"
+                                                                                }
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    },
+                                                                    {
+                                                                        "{d851ffa3}": "fae63a5d-4e51-4a49-8d1b-00dbf63be6cd",
+                                                                        "Condition": {
+                                                                            "Value1": {
+                                                                                "Var": "Order",
+                                                                                "__type": "ScriptTableGet"
+                                                                            },
+                                                                            "Value2": {
+                                                                                "value": 6,
+                                                                                "__type": "IntGet"
+                                                                            },
+                                                                            "__type": "ComparisonScriptCondition"
+                                                                        },
+                                                                        "type": 3,
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                null,
+                                                                                {
+                                                                                    "{d851ffa3}": "0ac7935f-1420-4523-94a8-c4712c7d42b3",
+                                                                                    "Src": {
+                                                                                        "__type": "BoolGet"
+                                                                                    },
+                                                                                    "Dest": {
+                                                                                        "Var": "HasTarget",
+                                                                                        "__type": "ScriptTableSet"
+                                                                                    },
+                                                                                    "__type": "SetVarInTableBlock"
+                                                                                },
+                                                                                {
+                                                                                    "{d851ffa3}": "61965853-b7fb-4feb-bd6c-22916d704375",
+                                                                                    "Sequence": {
+                                                                                        "blocks": [
+                                                                                            {
+                                                                                                "{d851ffa3}": "5a49c2ac-570b-4221-8c3e-e117ce20b07c",
+                                                                                                "Sequence": {
+                                                                                                    "blocks": [
+                                                                                                        {
+                                                                                                            "IsDisabled": true,
+                                                                                                            "{d851ffa3}": "e9085972-c174-4644-a056-611525a1d488",
+                                                                                                            "Var": {
+                                                                                                                "Var": "Target",
+                                                                                                                "__type": "{622705af}"
+                                                                                                            },
+                                                                                                            "__type": "{851b8dc5}"
+                                                                                                        },
+                                                                                                        null,
+                                                                                                        null,
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "786de7ad-3b76-45b6-8157-9fdd8985d144",
+                                                                                                            "Sequence": {
+                                                                                                                "blocks": [
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "09767e69-faa5-4359-8c04-4b4fa50022eb",
+                                                                                                                        "Formula": "ptp.DistanceToTarget * 0.1",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch1",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "9c1cc7dd-848c-407c-9afa-83ebd3322839",
+                                                                                                                        "Formula": "ptp.DistanceToSearch1 + 125",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch1",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "5f03e26b-cc71-480b-8d1e-1e1aefa96c02",
+                                                                                                                        "Formula": "min(ptp.DistanceToSearch1, 250)",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch1",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                                "__type": "ScriptSequence"
+                                                                                                            },
+                                                                                                            "__type": "ScriptCommentBlock"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "770dba2e-b5fb-4761-a687-fd0f21a1298b",
+                                                                                                            "Sequence": {
+                                                                                                                "blocks": [
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "880c8c8f-10b5-45d0-80ac-da3cd77769ae",
+                                                                                                                        "Formula": "ptp.DistanceToTarget * 0.125",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch2",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "c5ac84eb-16f6-433f-93c3-f80fecbc7055",
+                                                                                                                        "Formula": "ptp.DistanceToSearch2 + 250",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch2",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "ea37c655-251a-40fa-96e3-ee3ac6599cda",
+                                                                                                                        "Formula": "min(ptp.DistanceToSearch2, 350)",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "DistanceToSearch2",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                                "__type": "ScriptSequence"
+                                                                                                            },
+                                                                                                            "__type": "ScriptCommentBlock"
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "__type": "ScriptSequence"
+                                                                                                },
+                                                                                                "__type": "ScriptCommentBlock"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "2c1f7216-6537-4034-b6d9-694c022c5b13",
+                                                                                                "Sequence": {
+                                                                                                    "blocks": [
+                                                                                                        null,
+                                                                                                        null,
+                                                                                                        null,
+                                                                                                        null,
+                                                                                                        null,
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "aed300e3-5791-4af8-ac55-00e139026ea8",
+                                                                                                            "Sequence": {
+                                                                                                                "blocks": [
+                                                                                                                    null,
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "d7217457-2d5c-4f99-9e14-2dfb6d3f8717",
+                                                                                                                        "Condition": {
+                                                                                                                            "Value1": {
+                                                                                                                                "Var": "{5d34c6ca}",
+                                                                                                                                "__type": "ScriptTableGet"
+                                                                                                                            },
+                                                                                                                            "Operation": 4,
+                                                                                                                            "Value2": {
+                                                                                                                                "value": 175,
+                                                                                                                                "__type": "IntGet"
+                                                                                                                            },
+                                                                                                                            "__type": "ComparisonScriptCondition"
+                                                                                                                        },
+                                                                                                                        "__type": "{e524b2fc}"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "71450937-8038-49e8-9945-27b219fffd4f",
+                                                                                                                        "Condition": {
+                                                                                                                            "Value1": {
+                                                                                                                                "Var": "{06e40ce6}",
+                                                                                                                                "__type": "ScriptTableGet"
+                                                                                                                            },
+                                                                                                                            "Value2": {
+                                                                                                                                "__type": "BoolGet"
+                                                                                                                            },
+                                                                                                                            "__type": "ComparisonScriptCondition"
+                                                                                                                        },
+                                                                                                                        "type": 1,
+                                                                                                                        "Sequence": {
+                                                                                                                            "blocks": [
+                                                                                                                                {
+                                                                                                                                    "{d851ffa3}": "d516c953-ddde-472a-bd0a-97d93b37596d",
+                                                                                                                                    "Formula": "ptp.DirectionToAnnie * 100",
+                                                                                                                                    "Dest": {
+                                                                                                                                        "Var": "Offset",
+                                                                                                                                        "__type": "ScriptTableSet"
+                                                                                                                                    },
+                                                                                                                                    "__type": "{15ebaa9c}"
+                                                                                                                                },
+                                                                                                                                {
+                                                                                                                                    "{d851ffa3}": "aaecc2bd-77d0-4e4c-8f8d-8759fda6d74c",
+                                                                                                                                    "Formula": "ptp.AnniePos - ptp.Offset",
+                                                                                                                                    "Dest": {
+                                                                                                                                        "Var": "Offset",
+                                                                                                                                        "__type": "ScriptTableSet"
+                                                                                                                                    },
+                                                                                                                                    "__type": "{15ebaa9c}"
+                                                                                                                                },
+                                                                                                                                null,
+                                                                                                                                null,
+                                                                                                                                null,
+                                                                                                                                null,
+                                                                                                                                {
+                                                                                                                                    "{d851ffa3}": "c04f05ef-0fc9-4cb4-9f32-96c099f78c33",
+                                                                                                                                    "Src": {
+                                                                                                                                        "value": true,
+                                                                                                                                        "__type": "BoolGet"
+                                                                                                                                    },
+                                                                                                                                    "Dest": {
+                                                                                                                                        "Var": "HasTarget",
+                                                                                                                                        "__type": "ScriptTableSet"
+                                                                                                                                    },
+                                                                                                                                    "__type": "SetVarInTableBlock"
+                                                                                                                                }
+                                                                                                                            ],
+                                                                                                                            "__type": "ScriptSequence"
+                                                                                                                        },
+                                                                                                                        "__type": "{e524b2fc}"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                                "__type": "ScriptSequence"
+                                                                                                            },
+                                                                                                            "__type": "ScriptCommentBlock"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "606c425e-a449-4bda-a6ff-0a4ad9deee23",
+                                                                                                            "Condition": {
+                                                                                                                "Value1": {
+                                                                                                                    "Var": "{06e40ce6}",
+                                                                                                                    "__type": "ScriptTableGet"
+                                                                                                                },
+                                                                                                                "Value2": {
+                                                                                                                    "__type": "BoolGet"
+                                                                                                                },
+                                                                                                                "__type": "ComparisonScriptCondition"
+                                                                                                            },
+                                                                                                            "Sequence": {
+                                                                                                                "blocks": [
+                                                                                                                    null,
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "359b635b-8307-41a0-9c78-ec9bfaf9425f",
+                                                                                                                        "Src": {
+                                                                                                                            "Var": "{2d8bf2fb}",
+                                                                                                                            "__type": "ScriptTableGet"
+                                                                                                                        },
+                                                                                                                        "Dest": {
+                                                                                                                            "Table": {
+                                                                                                                                "__type": "NextBuffVars"
+                                                                                                                            },
+                                                                                                                            "Var": "mLastPosPoint",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "SetVarInTableBlock"
+                                                                                                                    },
+                                                                                                                    null,
+                                                                                                                    null,
+                                                                                                                    null,
+                                                                                                                    null,
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "2c7349d4-2123-4d86-b087-8a67e3377a9a",
+                                                                                                                        "Src": {
+                                                                                                                            "Var": "{2d8bf2fb}",
+                                                                                                                            "__type": "ScriptTableGet"
+                                                                                                                        },
+                                                                                                                        "Dest": {
+                                                                                                                            "Table": {
+                                                                                                                                "__type": "CharacterVars"
+                                                                                                                            },
+                                                                                                                            "Var": "TibbersLastMoveOrderPosition",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "SetVarInTableBlock"
+                                                                                                                    },
+                                                                                                                    null
+                                                                                                                ],
+                                                                                                                "__type": "ScriptSequence"
+                                                                                                            },
+                                                                                                            "__type": "{e524b2fc}"
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "__type": "ScriptSequence"
+                                                                                                },
+                                                                                                "__type": "ScriptCommentBlock"
+                                                                                            }
+                                                                                        ],
+                                                                                        "__type": "ScriptSequence"
+                                                                                    },
+                                                                                    "__type": "ScriptCommentBlock"
+                                                                                },
+                                                                                {
+                                                                                    "{d851ffa3}": "b4b203fc-b531-4b57-b91a-2c2b90e70930",
+                                                                                    "Sequence": {
+                                                                                        "blocks": [
+                                                                                            {
+                                                                                                "{d851ffa3}": "93bade89-f8b2-409a-91bf-f6f03c7cb189",
+                                                                                                "Condition": null,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "8b3d5dd9-7d18-4063-8f0d-199b4ca18319",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "39ec851d-9081-4fa0-884c-ba163f32da91",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "f92933d4-a016-4aec-b36f-61df9ddb4c0d",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "4c75c61b-f8d4-42dd-8d9e-f7dac73f9513",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "cc804919-5149-4ca4-a29f-42a924cdf549",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "dc18eeca-6200-4afa-96d6-8f48ce10ef41",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "6c71ae8c-f4a5-4dbf-aa7c-31d6894af45e",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "679798c8-3347-45a1-a606-18cd31e6ac1e",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "ed723aa8-f84c-4fc4-8f26-ffaecbc4e780",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "Sequence": {
+                                                                                                    "blocks": [
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "382323ec-2e5c-4fcb-aa01-ff2576e7f0a9",
+                                                                                                            "Src": {
+                                                                                                                "value": true,
+                                                                                                                "__type": "BoolGet"
+                                                                                                            },
+                                                                                                            "Dest": {
+                                                                                                                "Table": {
+                                                                                                                    "__type": "InstanceVars"
+                                                                                                                },
+                                                                                                                "Var": "TibbersOrderedWhileCCd",
+                                                                                                                "__type": "ScriptTableSet"
+                                                                                                            },
+                                                                                                            "__type": "SetVarInTableBlock"
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "__type": "ScriptSequence"
+                                                                                                },
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            }
+                                                                                        ],
+                                                                                        "__type": "ScriptSequence"
+                                                                                    },
+                                                                                    "__type": "ScriptCommentBlock"
+                                                                                }
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    },
+                                                                    {
+                                                                        "{d851ffa3}": "c4bf5eba-fa24-4b97-95fa-18179fa6f278",
+                                                                        "Condition": {
+                                                                            "Value1": {
+                                                                                "Var": "Order",
+                                                                                "__type": "ScriptTableGet"
+                                                                            },
+                                                                            "Value2": {
+                                                                                "value": 9,
+                                                                                "__type": "IntGet"
+                                                                            },
+                                                                            "__type": "ComparisonScriptCondition"
+                                                                        },
+                                                                        "type": 3,
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                null,
+                                                                                {
+                                                                                    "{d851ffa3}": "ba40e144-cb61-49b6-bbec-b9ed577f1ed6",
+                                                                                    "Src": {
+                                                                                        "__type": "BoolGet"
+                                                                                    },
+                                                                                    "Dest": {
+                                                                                        "Var": "HasTarget",
+                                                                                        "__type": "ScriptTableSet"
+                                                                                    },
+                                                                                    "__type": "SetVarInTableBlock"
+                                                                                },
+                                                                                {
+                                                                                    "{d851ffa3}": "d983a5ca-242c-411e-a4cc-cd17ca168a0f",
+                                                                                    "Sequence": {
+                                                                                        "blocks": [
+                                                                                            {
+                                                                                                "{d851ffa3}": "2d1214f2-a739-4753-bb2d-1ed6ffdb18f3",
+                                                                                                "Sequence": {
+                                                                                                    "blocks": [
+                                                                                                        null,
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "a3d3d157-fe65-4af1-92aa-abea5803a3f6",
+                                                                                                            "Condition": {
+                                                                                                                "Value1": {
+                                                                                                                    "Var": "{5d34c6ca}",
+                                                                                                                    "__type": "ScriptTableGet"
+                                                                                                                },
+                                                                                                                "Operation": 4,
+                                                                                                                "Value2": {
+                                                                                                                    "value": 175,
+                                                                                                                    "__type": "IntGet"
+                                                                                                                },
+                                                                                                                "__type": "ComparisonScriptCondition"
+                                                                                                            },
+                                                                                                            "__type": "{e524b2fc}"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "c18e7c7e-c0d8-408a-882e-d1fc3546a35a",
+                                                                                                            "Condition": {
+                                                                                                                "Value1": {
+                                                                                                                    "Var": "{06e40ce6}",
+                                                                                                                    "__type": "ScriptTableGet"
+                                                                                                                },
+                                                                                                                "Value2": {
+                                                                                                                    "__type": "BoolGet"
+                                                                                                                },
+                                                                                                                "__type": "ComparisonScriptCondition"
+                                                                                                            },
+                                                                                                            "type": 1,
+                                                                                                            "Sequence": {
+                                                                                                                "blocks": [
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "0f8689ba-fa8e-4855-a357-bf1812c23889",
+                                                                                                                        "Formula": "ptp.DirectionToAnnie * 100",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "Offset",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    },
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "2544f0cf-12dc-4f68-83bb-bf5a41a95584",
+                                                                                                                        "Formula": "ptp.AnniePos - ptp.Offset",
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "Offset",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "{15ebaa9c}"
+                                                                                                                    },
+                                                                                                                    null,
+                                                                                                                    null,
+                                                                                                                    null,
+                                                                                                                    null,
+                                                                                                                    {
+                                                                                                                        "{d851ffa3}": "88e9b5f3-2d80-4f88-ac3c-1184a2249d10",
+                                                                                                                        "Src": {
+                                                                                                                            "value": true,
+                                                                                                                            "__type": "BoolGet"
+                                                                                                                        },
+                                                                                                                        "Dest": {
+                                                                                                                            "Var": "HasTarget",
+                                                                                                                            "__type": "ScriptTableSet"
+                                                                                                                        },
+                                                                                                                        "__type": "SetVarInTableBlock"
+                                                                                                                    }
+                                                                                                                ],
+                                                                                                                "__type": "ScriptSequence"
+                                                                                                            },
+                                                                                                            "__type": "{e524b2fc}"
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "__type": "ScriptSequence"
+                                                                                                },
+                                                                                                "__type": "ScriptCommentBlock"
+                                                                                            }
+                                                                                        ],
+                                                                                        "__type": "ScriptSequence"
+                                                                                    },
+                                                                                    "__type": "ScriptCommentBlock"
+                                                                                },
+                                                                                {
+                                                                                    "{d851ffa3}": "3a755e37-487a-4cd3-8545-9ed120cc6ce9",
+                                                                                    "Sequence": {
+                                                                                        "blocks": [
+                                                                                            {
+                                                                                                "{d851ffa3}": "dd2761bb-f233-4d75-9ee0-f4cc200016bc",
+                                                                                                "Condition": null,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "9e804e8d-91e7-442e-bb81-c3fc0ea3070a",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "71a9a7b4-53b4-41b9-ab43-8da911d203ce",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "5aaa5b76-8bde-4310-84d4-8435311a8585",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "70d12fb6-722d-49a7-b701-f4f410beb899",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "f618cc95-9d69-42b3-9b22-07b589cccfe9",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "4ed1b0c4-0561-489e-96c6-d4469125445d",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "b0a97bdd-265d-4ce6-8705-4feb43479093",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "a52d2c66-9e38-4782-82ce-52474a21d201",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            },
+                                                                                            {
+                                                                                                "{d851ffa3}": "2ebec60d-5af0-4d23-8e80-2f6fa61f02e4",
+                                                                                                "Condition": null,
+                                                                                                "type": 2,
+                                                                                                "Sequence": {
+                                                                                                    "blocks": [
+                                                                                                        {
+                                                                                                            "{d851ffa3}": "9ec99e7a-658d-4b17-ba50-d65bc5fcae86",
+                                                                                                            "Src": {
+                                                                                                                "value": true,
+                                                                                                                "__type": "BoolGet"
+                                                                                                            },
+                                                                                                            "Dest": {
+                                                                                                                "Table": {
+                                                                                                                    "__type": "InstanceVars"
+                                                                                                                },
+                                                                                                                "Var": "TibbersOrderedWhileCCd",
+                                                                                                                "__type": "ScriptTableSet"
+                                                                                                            },
+                                                                                                            "__type": "SetVarInTableBlock"
+                                                                                                        }
+                                                                                                    ],
+                                                                                                    "__type": "ScriptSequence"
+                                                                                                },
+                                                                                                "__type": "{e524b2fc}"
+                                                                                            }
+                                                                                        ],
+                                                                                        "__type": "ScriptSequence"
+                                                                                    },
+                                                                                    "__type": "ScriptCommentBlock"
+                                                                                }
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    }
+                                                                ],
+                                                                "__type": "ScriptSequence"
+                                                            },
+                                                            "__type": "{e524b2fc}"
+                                                        },
+                                                        {
+                                                            "{d851ffa3}": "0b08066e-b409-4cf8-804e-0a8453be87a2",
+                                                            "Sequence": {
+                                                                "blocks": [
+                                                                    null
+                                                                ],
+                                                                "__type": "ScriptSequence"
+                                                            },
+                                                            "__type": "{e524b2fc}"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "3d855ff4-57ea-420c-a4b1-a8a9760f7063",
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "f88716a0-fe08-4f53-ad6a-1429b9db4573",
+                                                            "__type": "ScriptCommentBlock"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "ScriptCommentBlock"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{9ac6f555}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "da8da21a-adee-4a39-a9dc-a8f26a38b3bf",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "82514a5e-c8c0-4943-ae98-5855ce7a0ad8",
+                                    "Condition": null,
+                                    "Invert": true,
+                                    "Sequence": {
+                                        "blocks": [
+                                            null,
+                                            {
+                                                "{d851ffa3}": "e7f2053d-5dc6-4564-b93f-047e345134ba",
+                                                "Src": {
+                                                    "Var": "{61a62b8c}",
+                                                    "__type": "ScriptTableGet"
+                                                },
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "NextBuffVars"
+                                                    },
+                                                    "Var": "AnnieRef",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            null,
+                                            null,
+                                            null,
+                                            {
+                                                "IsDisabled": true,
+                                                "{d851ffa3}": "cbb0d59a-c5a6-46fc-9313-60470c6bd453",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "{a879f94b}",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Operation": 2,
+                                                    "Value2": {
+                                                        "value": 1500,
+                                                        "__type": "IntGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
+                                                },
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            {
+                                                "IsDisabled": true,
+                                                "{d851ffa3}": "6cffc734-fc57-4833-978a-7a3721cfcdcf",
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    },
+                    {
+                        "{d851ffa3}": "87efa7ac-4c0f-4543-8e36-1a2bfea45abd",
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    },
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{6b1c1b08}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "eba6887a-21cb-4156-9450-a495aa1abcf5",
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                null,
+                                {
+                                    "{d851ffa3}": "fe247714-4ba4-4e68-9468-eb03722852d2",
+                                    "Formula": "ptp.GameTime - cv.TibbersCombatTimer",
+                                    "Dest": {
+                                        "Var": "OutOfCombatFor",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "502baf97-13c1-4286-a050-14c2de42b69c",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{9ab3cac5}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 2,
+                                        "Value2": {
+                                            "value": 5,
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "e7067a03-0342-47e2-8b1a-946a7900f55b",
+                                    "Condition": null,
+                                    "type": 1,
+                                    "Invert": true,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "c6251c7b-a005-4c5c-a9a4-f28e91add5f0",
+                                                "Condition": null,
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "e4c14ad1-d383-4d2d-bf73-6e816804cb0e",
+                                                            "Condition": {
+                                                                "Value1": {
+                                                                    "Var": "{61a62b8c}",
+                                                                    "__type": "ScriptTableGet"
+                                                                },
+                                                                "Value2": {
+                                                                    "Var": "{64a63045}",
+                                                                    "__type": "ScriptTableGet"
+                                                                },
+                                                                "__type": "ComparisonScriptCondition"
+                                                            },
+                                                            "Sequence": {
+                                                                "blocks": [
+                                                                    null,
+                                                                    null,
+                                                                    null,
+                                                                    {
+                                                                        "{d851ffa3}": "c6e21f58-9d9e-4d76-9c7e-f11c75feb828",
+                                                                        "Condition": {
+                                                                            "Value1": {
+                                                                                "Var": "{7e120e30}",
+                                                                                "__type": "ScriptTableGet"
+                                                                            },
+                                                                            "Operation": 2,
+                                                                            "Value2": {
+                                                                                "value": 600,
+                                                                                "__type": "IntGet"
+                                                                            },
+                                                                            "__type": "ComparisonScriptCondition"
+                                                                        },
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                null
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    },
+                                                                    {
+                                                                        "{d851ffa3}": "d5046110-83bf-40dd-9a6b-430665cad957",
+                                                                        "Condition": {
+                                                                            "Value1": {
+                                                                                "Var": "{7e120e30}",
+                                                                                "__type": "ScriptTableGet"
+                                                                            },
+                                                                            "Operation": 2,
+                                                                            "Value2": {
+                                                                                "value": 600,
+                                                                                "__type": "IntGet"
+                                                                            },
+                                                                            "__type": "ComparisonScriptCondition"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    },
+                                                                    {
+                                                                        "{d851ffa3}": "cc362324-e61d-40cd-8884-144ba0557bdb",
+                                                                        "Condition": {
+                                                                            "Value1": {
+                                                                                "Var": "{7e120e30}",
+                                                                                "__type": "ScriptTableGet"
+                                                                            },
+                                                                            "Operation": 2,
+                                                                            "Value2": {
+                                                                                "value": 300,
+                                                                                "__type": "IntGet"
+                                                                            },
+                                                                            "__type": "ComparisonScriptCondition"
+                                                                        },
+                                                                        "type": 2,
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                null
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    }
+                                                                ],
+                                                                "__type": "ScriptSequence"
+                                                            },
+                                                            "__type": "{e524b2fc}"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "{3f0930d5}": {
+        "ObjectName": "Jade_Annie_TibbersBasicAttack_Jade",
+        "mScriptName": "Jade_Annie_TibbersBasicAttack_Jade",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0
+                ],
+                "{0a3e0478}": 150.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{ec85d0d1}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_AnnieTibbers_AnnieTibbersBasicAttack_OnCast",
+                "13": "Play_sfx_AnnieTibbers_AnnieTibbersBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{4fbd8657}": {
+        "ObjectName": "Jade_Annie_TibbersBasicAttack2_Jade",
+        "mScriptName": "Jade_Annie_TibbersBasicAttack2_Jade",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0
+                ],
+                "{0a3e0478}": 150.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{ec85d0d1}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_AnnieTibbers_AnnieTibbersBasicAttack_OnCast",
+                "13": "Play_sfx_AnnieTibbers_AnnieTibbersBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{be865b45}": {
+        "ObjectName": "Jade_Annie_TibbersBasicAttack2",
+        "mScriptName": "Jade_Annie_TibbersBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0
+                ],
+                "{0a3e0478}": 150.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{ec85d0d1}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f2a396f5}": {
+        "ObjectName": "Jade_Annie_TibbersBasicAttack",
+        "mScriptName": "Jade_Annie_TibbersBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0
+                ],
+                "{0a3e0478}": 150.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{ec85d0d1}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{650ab8f7}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{e9998dab}": {
+        "mCharacterName": "Jade_Annie_Tibbers",
+        "baseHPModifiable": {
+            "baseValue": 850.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 150.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.20000000298023224,
+            "__type": "ModifiableFloat"
+        },
+        "{2290fc9a}": {
+            "baseValue": 0.001500000013038516,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 92.0,
+        "primaryAbilityResource": {
+            "arType": 7,
+            "{726ee5cd}": {
+                "baseValue": 45.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arIncrements": 50.0,
+            "arMaxSegments": 2,
+            "arHasRegenText": false,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 1.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 350.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 150.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6299999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6299999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 625.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": 0.10000000149011612,
+            "mAttackName": "Jade_Annie_TibbersBasicAttack_Jade",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "Jade_Annie_TibbersBasicAttack2_Jade",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "towerTargetingPriorityBoost": 10.0,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 50.0,
+        "significance": 0.5,
+        "name": "game_spell_displayname_InfernalGuardian",
+        "weaponMaterials": [
+            "Jade_Annie_TibbersBasicAttack_Jade"
+        ],
+        "minimapIconOverride": "NoIcon",
+        "DisguiseMinimapIconOverride": "NoIcon",
+        "selectionHeight": 180.0,
+        "selectionRadius": 155.0,
+        "pathfindingCollisionRadius": 35.0,
+        "overrideGameplayCollisionRadius": 80.0,
+        "unitTagsString": "Minion | Minion_Summon | Minion_Summon_Large",
+        "characterToolData": {
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "description": "game_spell_description_InfernalGuardian",
+            "ChasingAttackRangePercent": 0.5,
+            "BaseSpellEffectiveness": 1.0,
+            "attackSpeed": 0.6299999952316284,
+            "__type": "CharacterToolData"
+        },
+        "flags": 8398088,
+        "{c5c48b41}": 1,
+        "Script": "{2ca1d72c}",
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

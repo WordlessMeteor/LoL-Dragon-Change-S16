@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Ekko'nun fırlattığı zaman bombası bir rakip şampiyona isabet ederse, zamanın bozulmaya uğradığı bir alan oluşturur ve alan içindeki herkesi yavaşlatarak hasar verir. Bir süre sonra yoluna çıkanlara hasar vererek Ekko'ya geri döner.",
-            "dynamicDescription": "Ekko <magicDamage>@InitialDamage@ Büyü Hasarı</magicDamage> veren bir cihaz fırlatır. Cihaz bir şampiyona isabet ettikten ya da azami menziline ulaştıktan sonra genişleyerek içindeki rakipleri %@Effect2Amount*-100@ <status>yavaşlatan</status> bir alan oluşturur. Cihaz genişledikten sonra Ekko onu geri çağırarak rakiplere <magicDamage>@RecallDamage@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko <magicDamage>@InitialDamage@ Büyü Hasarı</magicDamage> veren bir cihaz fırlatır. Cihaz bir şampiyona isabet ettikten ya da azami menziline ulaştıktan sonra genişleyerek içindeki rakipleri %@SlowPercent*-100@ <status>yavaşlatan</status> bir alan oluşturur. Cihaz genişledikten sonra Ekko onu geri çağırarak rakiplere <magicDamage>@RecallDamage@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Ekko'nun normal saldırıları düşük cana sahip rakiplere ilave büyü hasarı verir. Ekko, Paralel Yakınsama kullanıp zamanın akışını yardığında bir anomali oluşur ve bu anomali birkaç saniye sonra içinde kalan rakipleri yavaşlatır. Ekko bu alanın içine girerse bir kalkan kazanır ve rakipleri zamanda dondurarak sersemleten bir patlamaya yol açar.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Ekko'nun canı %30'un altındaki rakiplere yönelik saldırıları, onlara <magicDamage>eksik canlarının @MissingHealthPercent@ kadarına eşdeğer büyü hasarı</magicDamage> verir.<br><br><spellActive>Aktif:</spellActive> Ekko 1,5 saniyeliğine varlığını koruyan ve kısa bir gecikmenin ardından içindeki rakipleri @Effect10Amount@ <status>yavaşlatan</status> bir zaman küresi gönderir. Ekko kürenin içine girerse, onu patlatarak rakipleri @Effect2Amount@ saniyeliğine <status>sersemletir</status> ve <shield>@TotalShield@ Kalkan</shield> kazanır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Ekko'nun canı %@BelowHealthThreshold*100@ değerinin altındaki rakiplere yönelik saldırıları onlara <magicDamage>eksin canlarının @MissingHealthPercent@ kadarına eşdeğer miktarda büyü hasarı</magicDamage> verir.<br><br><spellActive>Aktif:</spellActive> Ekko @SlowZoneDuration@ saniyeliğine varlığını koruyan ve kısa bir gecikmenin ardından içindeki rakipleri %@SlowPercent@ <status>yavaşlatan</status> bir zaman küresi gönderir. Ekko kürenin içine girerse onu patlatarak rakipleri @StunDuration@ saniyeliğine <status>sersemletir</status> ve <shield>@TotalShield@ Kalkan</shield> kazanır.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

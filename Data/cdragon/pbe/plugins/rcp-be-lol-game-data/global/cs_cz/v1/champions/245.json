@@ -1384,7 +1384,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ekko hodí časový granát, který po zasažení nepřátelského šampiona vytvoří pole narušující tok času, jež zpomaluje a poškozuje všechny jednotky lapené uvnitř. Po krátké prodlevě se granát vrátí zpět k Ekkovi a způsobí poškození všem jednotkám, kterých se během letu dotkne.",
-            "dynamicDescription": "Ekko hodí zařízení, které způsobí <magicDamage>@InitialDamage@ bodů magického poškození</magicDamage>. Po zasažení šampiona či dosažení konce dostřelu se projektil rozšíří na pole, <status>zpomalující</status> o @Effect2Amount*-100@&nbsp;% nepřátele, kteří se v něm nacházejí. Po tomto rozšíření jej Ekko přivolá zpět k sobě a způsobí tak <magicDamage>@RecallDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko hodí zařízení, které způsobí <magicDamage>@InitialDamage@ bodů magického poškození</magicDamage>. Po zasažení šampiona či dosažení konce dostřelu se projektil rozšíří na pole, jež <status>zpomaluje</status> o @SlowPercent*-100@ % nepřátele, kteří se v něm nacházejí. Po tomto rozšíření jej Ekko přivolá zpět k sobě a způsobí tak <magicDamage>@RecallDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ekkovy základní útoky způsobují nepřátelům s nízkou hodnotou zdraví bonusové magické poškození. Sesláním Paralelní konvergence může přetrhnout časovou linii a po několika sekundách vytvořit anomálii, jež zpomalí nepřátele, kteří se v ní nacházejí. Pokud Ekko do této anomálie vstoupí, získá štít a uvězní protivníky v čase, čímž je omráčí.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Ekkovy útoky vedené proti šampionům s méně než 30&nbsp;% zdraví způsobují <magicDamage>magické poškození ve výši @MissingHealthPercent@ chybějícího zdraví</magicDamage>.<br><br><spellActive>Aktivace:</spellActive> Ekko hodí po krátké prodlevě chronosféru s životností 1,5&nbsp;sekundy, která <status>zpomalí</status> nepřítele v zasažené oblasti o @Effect10Amount@&nbsp;%. Pokud do této sféry vstoupí Ekko, odpálí ji, čímž nepřátele uvnitř ní na @Effect2Amount@&nbsp;sek. <status>omráčí</status> a sám získá <shield>štít o síle @TotalShield@ bodů</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní schopnost:</spellPassive> Ekkovy útoky proti nepřátelům s méně než @BelowHealthThreshold*100@ % zdraví jim způsobí <magicDamage>magické poškození ve výši @MissingHealthPercent@ chybějícího zdraví</magicDamage>.<br><br><spellActive>Aktivace:</spellActive> Ekko po krátké prodlevě vypustí chronosféru, která po dobu @SlowZoneDuration@ sek. <status>zpomaluje</status> nepřátele uvnitř o @SlowPercent@ %. Pokud do této sféry vstoupí Ekko, odpálí ji, čímž nepřátele uvnitř ní na @StunDuration@ sek. <status>omráčí</status> a sám získá <shield>@TotalShield@štít o síle  bodů</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

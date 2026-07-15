@@ -1832,7 +1832,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Οι επιθέσεις του Θρες ανανεώνονται, προκαλώντας περισσότερη ζημιά όσο περισσότερο περιμένει μεταξύ των επιθέσεων. Όταν ενεργοποιείται, ο Θρες περιστρέφει την αλυσίδα του, πετώντας προς την κατεύθυνση του χτυπήματος όλους τους εχθρούς που πετυχαίνει.",
-            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Οι επιθέσεις του Θρες προκαλούν επιπλέον ζημιά, ανάλογα με το πόσος χρόνος έχει περάσει από την τελευταία επίθεσή του. Προκαλούν από <magicDamage>@PAttackDamageMin@</magicDamage> έως <magicDamage>@PAttackDamageMax@ Μαγική Ζημιά</magicDamage>.<br><br><spellActive>Ενεργή:</spellActive> Ο Θρες τινάζει τις αλυσίδες του, <status>Τραβώντας</status> ή <status>Σπρώχνοντας</status> τους εχθρούς προς την κατεύθυνση του τινάγματος. Οι εχθροί που πετυχαίνει <status>Επιβραδύνονται</status> κατά @Effect2Amount@% για @Effect4Amount@ δευτ. και δέχονται <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Οι επιθέσεις του Θρες κάνουν περισσότερη ζημιά, ανάλογα με τον χρόνο που έχει περάσει από την προηγούμενη επίθεσή του. Προκαλούν από <magicDamage>@PAttackDamageMin@</magicDamage> έως <magicDamage>@PAttackDamageMax@ Μαγική Ζημιά</magicDamage>.<br><br><spellActive>Ενεργή:</spellActive> Ο Θρες τινάζει τις αλυσίδες του, <status>Τραβώντας</status> ή <status>Σπρώχνοντας</status> τους εχθρούς προς την κατεύθυνση του τινάγματος. Οι εχθροί που πετυχαίνει <status>Επιβραδύνονται</status> κατά @ActiveSlowPercentage@% για @SlowDuration@ δευτ. και δέχονται <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1982,7 +1982,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Μια φυλακή από τείχη που προκαλούν επιβράδυνση και ζημιά αν καταστραφούν.",
-            "dynamicDescription": "Ο Θρες δημιουργεί γύρω του μια φυλακή από άυλα τείχη, <status>Επιβραδύνοντας</status> τους Ήρωες κατά @Effect3Amount@% για @Effect2Amount@ δευτ. και προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>. Τα τείχη σπάνε μετά από μία σύγκρουση. Όταν ένα τείχος σπάσει, οι υπόλοιπες συγκρούσεις δεν προκαλούν ζημιά και <status>Επιβραδύνουν</status> για τη μισή χρονική διάρκεια.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Θρες δημιουργεί γύρω του μια φυλακή από άυλα τείχη, <status>Επιβραδύνοντας</status> τους Ήρωες κατά @SlowAmount@% για @SlowDuration@ δευτ. και προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>. Τα τείχη σπάνε μετά από μία σύγκρουση. Όταν ένα τείχος σπάσει, οι υπόλοιπες συγκρούσεις δεν προκαλούν ζημιά και <status>Επιβραδύνουν</status> για τη μισή χρονική διάρκεια.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

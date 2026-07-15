@@ -1626,7 +1626,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Leona menggunakan shield untuk melakukan basic attack berikutnya, menghasilkan magic damage bonus dan menerapkan stun pada target.",
-            "dynamicDescription": "Serangan Leona berikutnya menerapkan <status>Stun</status> selama @Effect1Amount@ detik dan menghasilkan tambahan <magicDamage>@TotalDamageTooltip@</magicDamage> magic damage.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Serangan Leona berikutnya menerapkan <status>Stun</status> selama @StunDuration@ detik dan menghasilkan tambahan <magicDamage>@TotalDamageTooltip@</magicDamage> magic damage.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1776,7 +1776,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Leona mengangkat shield-nya untuk memperoleh Damage Reduction, Armor, dan Magic Resist. Saat durasi yang pertama berakhir, jika ada musuh di sekitar, dia akan menghasilkan magic damage pada mereka dan memperpanjang durasi efek ini.",
-            "dynamicDescription": "Leona mengangkat shield-nya, mengurangi damage yang diterima sebesar @FlatDamageReduction@ dan memperoleh <scaleArmor>@BonusArmorTooltip@ Armor</scaleArmor> dan <scaleMR>@BonusMRTooltip@ Magic Resist</scaleMR> selama @Effect3Amount@ detik. Setelahnya, shield akan meledak, menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> ke musuh di sekitar. Jika mengenai setidaknya satu musuh, dia mempertahankan bonus <scaleArmor>Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> selama tambahan @Effect3Amount@ detik.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona mengangkat shield, mengurangi damage yang diterima sebesar @FlatDamageReduction@ dan memperoleh <scaleArmor>@BonusArmorTooltip@ Armor</scaleArmor> serta <scaleMR>@BonusMRTooltip@ Magic Resist</scaleMR> selama @ArmorMRDuration@ detik. Setelahnya, shield akan meledak, menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> ke musuh di sekitar. Jika mengenai setidaknya satu musuh, dia mempertahankan bonus <scaleArmor>Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> selama @ArmorMRDuration@ detik lebih lama.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1926,7 +1926,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Leona memproyeksikan bayangan pedang mataharinya, menghasilkan magic damage pada semua musuh di satu garis. Saat bayangan menghilang, champion musuh terakhir yang terkena akan terdiam sejenak, dan Leona akan melesat ke arahnya.",
-            "dynamicDescription": "Leona menusukkan pedang cahaya, menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage>. Champion terakhir yang diserang akan terkena efek <status>Root</status> selama @Effect2Amount@ detik, dan Leona akan melesat ke arahnya.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona menusukkan pedang cahaya, menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage>. Champion terakhir yang diserang akan terkena <status>Root</status> selama @RootDuration@ detik, dan Leona akan dash ke arahnya.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,

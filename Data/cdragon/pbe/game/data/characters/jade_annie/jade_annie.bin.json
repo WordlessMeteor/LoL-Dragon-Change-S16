@@ -1,0 +1,2476 @@
+{
+    "{ce7fc548}": {
+        "mRootSpell": "{f939baba}",
+        "mChildSpells": [
+            "{f939baba}",
+            "{08683855}",
+            "{88742e5f}"
+        ],
+        "mName": "Jade_AnniePassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{08683855}": {
+        "ObjectName": "Jade_AnniePassive_StunBuildupBuff",
+        "mScriptName": "Jade_AnniePassive_StunBuildupBuff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive2.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_AnniePassive_StunBuildupBuff",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_AnniePassiveBuff_Jade_Tooltip",
+                    "keyTooltip": "Buff_AnniePassiveBuildup_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{88742e5f}": {
+        "ObjectName": "Jade_AnniePassive_StunReadyBuff",
+        "mScriptName": "Jade_AnniePassive_StunReadyBuff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_AnniePassive_StunReadyBuff",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_AnniePassive_Jade_Name",
+                    "keyTooltip": "Buff_AnniePassive_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f939baba}": {
+        "ObjectName": "Jade_AnniePassive",
+        "mScriptName": "Jade_AnniePassive",
+        "mSpell": {
+            "mSpellTags": [
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "StunDuration": {
+                    "mFormulaParts": [
+                        {
+                            "mNumber": 1.5,
+                            "__type": "NumberCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive.project_jade.dds"
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Annie_AnniePassivePrimed_OnBuffActivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AnniePassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_AnniePassive_Jade_Name",
+                        "keyTooltip": "Spell_AnniePassive_Jade_Tooltip",
+                        "keySummary": "Spell_AnniePassive_Jade_Summary"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_AnniePassive",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_AnniePassive_Jade_Name",
+                    "keyTooltip": "Buff_AnniePassive_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{16b6f5c9}": {
+        "ObjectName": "Jade_AnnieCritAttack",
+        "mScriptName": "Jade_AnnieCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "Jade_AnnieCritAttack",
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.4327000081539154,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 11.0,
+            "missileSpeed": 1200.0,
+            "mMissileEffectKey": "{ef760acf}",
+            "mHitEffectKey": "{b5c08754}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Annie_AnnieCritAttack_OnCast",
+                "13": "Play_sfx_Annie_AnnieCritAttack_OnHit",
+                "16": "Play_sfx_Annie_AnnieCritAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{3ba453f8}": {
+        "mRootSpell": "{f5ca624a}",
+        "mChildSpells": [
+            "{f5ca624a}"
+        ],
+        "mName": "Jade_AnnieWAbility",
+        "__type": "AbilityObject"
+    },
+    "{4d157f6d}": {
+        "mRootSpell": "{4aa76d8c}",
+        "mChildSpells": [
+            "{4aa76d8c}",
+            "{4914638d}",
+            "{8ed4e0a4}",
+            "{9664479d}"
+        ],
+        "mName": "Jade_AnnieRAbility",
+        "__type": "AbilityObject"
+    },
+    "{4914638d}": {
+        "ObjectName": "Jade_Annie_InfernalGuardianGuide",
+        "mScriptName": "Jade_Annie_InfernalGuardianGuide",
+        "mSpell": {
+            "flags": 36,
+            "mSpellTags": [
+                "Trait_RecastOrReplaceSpell"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        25.0,
+                        200.0,
+                        325.0,
+                        450.0,
+                        0.0,
+                        0.0,
+                        125.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        5.0,
+                        10.0,
+                        15.0,
+                        20.0,
+                        0.0,
+                        0.0,
+                        5.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        0.0,
+                        0.0,
+                        25.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        10.0,
+                        30.0,
+                        50.0,
+                        70.0,
+                        0.0,
+                        0.0,
+                        20.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        -900.0,
+                        0.0,
+                        900.0,
+                        1800.0,
+                        0.0,
+                        0.0,
+                        900.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        300.0,
+                        1200.0,
+                        2100.0,
+                        3000.0,
+                        0.0,
+                        0.0,
+                        900.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6499999761581421,
+            "mCoefficient2": 0.10000000149011612,
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R2.project_jade.dds"
+            ],
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mDoesntBreakChannels": true,
+            "mSpellRevealsChampion": false,
+            "mUseMinimapTargeting": true,
+            "bIsToggleSpell": true,
+            "castRange": [
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0
+                ],
+                "{0a3e0478}": 20000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                250.3000030517578,
+                250.3000030517578,
+                250.3000030517578,
+                250.3000030517578,
+                250.3000030517578,
+                250.3000030517578,
+                250.3000030517578
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 20.799999237060547,
+            "missileSpeed": 0.0,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "TargetOrLocation"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "{4aa76d8c}",
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionMinimap"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{4aa76d8c}": {
+        "ObjectName": "Jade_AnnieR",
+        "mScriptName": "Jade_AnnieR",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_DamageAbility",
+                "Trait_DoT",
+                "Trait_Pet",
+                "Trait_AoE"
+            ],
+            "DataValues": [
+                {
+                    "name": "InitialDamage",
+                    "values": [
+                        25.0,
+                        200.0,
+                        325.0,
+                        450.0,
+                        525.0,
+                        650.0,
+                        775.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AuraDamage",
+                    "values": [
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TibbersAA",
+                    "values": [
+                        15.0,
+                        80.0,
+                        105.0,
+                        130.0,
+                        75.0,
+                        90.0,
+                        105.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TibbersAttackSpeedDecay",
+                    "values": [
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612,
+                        -0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TibbersLifetime",
+                    "values": [
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Health",
+                    "values": [
+                        1.0,
+                        1200.0,
+                        2100.0,
+                        3000.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TibbersTotalResists",
+                    "values": [
+                        0.0,
+                        30.0,
+                        50.0,
+                        70.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "InitialBurstDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "InitialDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.699999988079071,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TibbersAuraDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "AuraDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.20000000298023224,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R1.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                120.0,
+                120.0,
+                120.0,
+                120.0,
+                120.0,
+                120.0,
+                120.0
+            ],
+            "Cooldown": {
+                "values": [
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0
+                ],
+                "{0a3e0478}": 120.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "bIsToggleSpell": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0,
+                250.0
+            ],
+            "castRadiusSecondary": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 0.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "14": "Play_sfx_Annie_AnnieR_OnHitLocation",
+                "12": "Play_sfx_Annie_AnnieR_OnCast"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AnnieR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_AnnieR_Jade_Name",
+                        "keyTooltip": "Spell_AnnieR_Jade_Tooltip",
+                        "keySummary": "Spell_AnnieR_Jade_Summary",
+                        "keyTooltipExtended": "Spell_AnnieR_Jade_ExtTooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "InitialDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Health",
+                                    "nameOverride": "Spell_AnnieR_LevelUp_TibbersHP_Jade_Name",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "TibbersTotalResists",
+                                    "nameOverride": "Spell_AnnieR_LevelUp_TibbersResistances_Jade_Name",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "TibbersAA",
+                                    "nameOverride": "Spell_AnnieR_LevelUp_TibbersAD_Jade_Name",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "InitialBurstDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{8ed4e0a4}": {
+        "ObjectName": "Jade_Annie_InfernalGuardianTimer",
+        "mScriptName": "Jade_Annie_InfernalGuardianTimer",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R2.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_InfernalGuardianTimer",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{9664479d}": {
+        "ObjectName": "Jade_Annie_infernalguardianburning_jade",
+        "mScriptName": "Jade_Annie_infernalguardianburning_jade",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R2.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_Annie_infernalguardianburning_jade",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_AnnieRBuff_Jade_Name",
+                    "keyTooltip": "Buff_AnnieRBuff_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{4bb54789}": {
+        "ObjectName": "Jade_AnnieBasicAttack",
+        "mScriptName": "Jade_AnnieBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "Jade_AnnieBasicAttack",
+            "{11704a2b}": 0.4327000081539154,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 1200.0,
+            "mMissileEffectKey": "{ef760acf}",
+            "mHitEffectKey": "{e2dd53a3}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Annie_AnnieBasicAttack_OnCast",
+                "13": "Play_sfx_Annie_AnnieBasicAttack_OnHit",
+                "16": "Play_sfx_Annie_AnnieBasicAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{732116a6}": {
+        "mRootSpell": "{6926a2a2}",
+        "mChildSpells": [
+            "{6926a2a2}"
+        ],
+        "mName": "Jade_AnnieQAbility",
+        "__type": "AbilityObject"
+    },
+    "{6926a2a2}": {
+        "ObjectName": "Jade_AnnieQ",
+        "mScriptName": "Jade_AnnieQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_Annie_Disintegrate",
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        40.0,
+                        85.0,
+                        125.0,
+                        165.0,
+                        205.0,
+                        245.0,
+                        280.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.800000011920929,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Q.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0
+            ],
+            "Cooldown": {
+                "values": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                ],
+                "{0a3e0478}": 4.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0
+                ],
+                "{0a3e0478}": 625.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mSpeed": 1400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.699999809265137,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "{82ef5c7d}",
+            "mana": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0
+                ],
+                "{0a3e0478}": 60.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Annie_AnnieQ_OnCast",
+                "13": "Play_sfx_Annie_AnnieQ_OnHit",
+                "16": "Play_sfx_Annie_AnnieQ_OnMissileLaunch"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AnnieQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_AnnieQ_Jade_Name",
+                        "keySummary": "Spell_AnnieQ_Jade_Summary",
+                        "keyTooltip": "Spell_AnnieQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_AnnieQ",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_AnniePassive_Jade_Name",
+                    "keyTooltip": "Buff_AnniePassive_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{717526c5}": {
+        "ObjectName": "Jade_AnnieUpgradeActive",
+        "mScriptName": "Jade_AnnieUpgradeActive",
+        "mBuff": {
+            "mDescription": "<titleLeft>Upgrade Active</titleLeft><mainText>Tibber's is empowered.</mainText>",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{b5ca2aca}": {
+        "mRootSpell": "{f2e121aa}",
+        "mChildSpells": [
+            "{f2e121aa}"
+        ],
+        "mName": "Jade_AnnieEAbility",
+        "__type": "AbilityObject"
+    },
+    "{c81aa132}": {
+        "ObjectName": "Jade_AnnieUpgradeInactive",
+        "mScriptName": "Jade_AnnieUpgradeInactive",
+        "mBuff": {
+            "mDescription": "<titleLeft>Upgrade available</titleLeft><mainText>Buying the upgrade empowers Tibbers</mainText>",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{e95feb61}": {
+        "ObjectName": "Jade_AnnieBasicAttack2",
+        "mScriptName": "Jade_AnnieBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "Jade_AnnieBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.4327000081539154,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.5,
+            "missileSpeed": 1200.0,
+            "mMissileEffectKey": "{ef760acf}",
+            "mHitEffectKey": "{e2dd53a3}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Annie_AnnieBasicAttack_OnCast",
+                "13": "Play_sfx_Annie_AnnieBasicAttack_OnHit",
+                "16": "Play_sfx_Annie_AnnieBasicAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f2e121aa}": {
+        "ObjectName": "Jade_AnnieE",
+        "mScriptName": "Jade_AnnieE",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8192,
+            "mSpellTags": [
+                "PositiveEffect_Boon"
+            ],
+            "DataValues": [
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageReduction",
+                    "values": [
+                        9.0,
+                        13.0,
+                        17.0,
+                        21.0,
+                        25.0,
+                        29.0,
+                        33.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageReflection",
+                    "values": [
+                        10.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MovementSpeed",
+                    "values": [
+                        0.10000000149011612,
+                        0.15000000596046448,
+                        0.20000000298023224,
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MovementSpeedDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldAmount",
+                    "values": [
+                        25.0,
+                        60.0,
+                        95.0,
+                        130.0,
+                        165.0,
+                        200.0,
+                        235.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CastRangeGenerosity",
+                    "values": [
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0,
+                        225.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Resistances",
+                    "values": [
+                        10.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ReturnDamage",
+                    "values": [
+                        10.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "DamageReturn": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "DamageReflection",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.20000000298023224,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.20000000298023224,
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_E.project_jade.dds"
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0
+                ],
+                "{0a3e0478}": 800.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castFrame": 25.0,
+            "mana": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "TargetingForgivenessDefinitions": [
+                {
+                    "ForgivenessRange": 175.0,
+                    "TargetForgivenessDefinitions": [
+                        {
+                            "mUnitTags": {
+                                "mObjectTagList": [
+                                    "{ea595ca6}",
+                                    "{c02a7870}"
+                                ],
+                                "__type": "ObjectTags"
+                            },
+                            "__type": "HasUnitTagsCastRequirement"
+                        },
+                        {
+                            "__type": "SameTeamCastRequirement"
+                        }
+                    ],
+                    "__type": "TargetingForgivenessDefinitions"
+                }
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Annie_AnnieE_OnCast",
+                "18": "Play_sfx_Annie_AnnieE_OnBuffActivate",
+                "19": "Play_sfx_Annie_AnnieE_OnBuffDeactivate"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AnnieE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_AnnieE_Jade_Name",
+                        "keyTooltip": "Spell_AnnieE_Jade_Tooltip",
+                        "keySummary": "Spell_AnnieE_Jade_Summary"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "DamageReflection",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Resistances",
+                                    "nameOverride": "Spell_ListType_ArmorBonus",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Resistances",
+                                    "nameOverride": "Spell_ListType_MagicResistBonus",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_AnnieE",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_AnnieE_Jade_Name",
+                    "keyTooltip": "Buff_AnnieEBuff_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "DamageReturn",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 524288,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "ShieldAmount",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f5ca624a}": {
+        "ObjectName": "Jade_AnnieW",
+        "mScriptName": "Jade_AnnieW",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_Annie_Incinerate",
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        80.0,
+                        130.0,
+                        180.0,
+                        230.0,
+                        280.0,
+                        270.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.8500000238418579,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_W.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0
+                ],
+                "{0a3e0478}": 8.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeAngle": 24.760000228881836,
+            "castConeDistance": 600.0,
+            "castFrame": 7.5,
+            "missileSpeed": 0.0,
+            "mana": [
+                70.0,
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                120.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    70.0,
+                    80.0,
+                    90.0,
+                    100.0,
+                    110.0,
+                    120.0
+                ],
+                "{0a3e0478}": 70.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Cone"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Annie_AnnieW_OnCast"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AnnieW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_AnnieW_Jade_Name",
+                        "keySummary": "Spell_AnnieW_Jade_Summary",
+                        "keyTooltip": "Spell_AnnieW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "coneAngleDegrees": 27.5,
+                        "coneRange": 690.0,
+                        "textureConeOverrideName": "ASSETS/Spells/Textures/Annie_W.tex",
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{17e34636}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1056",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1082",
+                            "Items/2003",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6655",
+                            "Items/6653",
+                            "Items/6656"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4628",
+                            "Items/4645",
+                            "Items/3165"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3102"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089",
+                            "Items/3135"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4629",
+                            "Items/4645",
+                            "Items/3165",
+                            "Items/4637",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4628",
+                            "Items/3116"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "mCoreItems": [
+                    "Items/3871",
+                    "Items/3869"
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3112"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3802"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6655",
+                            "Items/6653",
+                            "Items/6656"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4628",
+                            "Items/3102",
+                            "Items/3165"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3102"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089",
+                            "Items/3135"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4629",
+                            "Items/3165",
+                            "Items/4637",
+                            "Items/3116",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4628"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "mPosition": "utility",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3850",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3858",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6655",
+                            "Items/6653",
+                            "Items/6656"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4628",
+                            "Items/3102",
+                            "Items/3165"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3102"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089",
+                            "Items/3135"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4629",
+                            "Items/3165",
+                            "Items/4637",
+                            "Items/3116",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4628"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "{4a4ee06b}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{e9deeb15}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "middle",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "utility",
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "middle",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "utility",
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    1,
+                    0,
+                    2,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{3066a655}": {
+        "mCharacterName": "Jade_Annie",
+        "baseHPModifiable": {
+            "baseValue": 460.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 76.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.0099999904632568,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10999999940395355,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 85.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 300.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 50.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.5,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.11999999731779099,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "secondaryAbilityResource": {
+            "arType": 12,
+            "{726ee5cd}": {
+                "baseValue": 4.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arIncrements": 4.0,
+            "arMaxSegments": 4,
+            "arDisplayAsPips": true,
+            "VisibilityFlags": 9,
+            "arOverrideSmallPipName": "GenericLargeUncolored",
+            "arOverrideLargePipName": "AnnieLarge",
+            "arOverrideSpacerName": "PipSpacer1",
+            "{4eb6a404}": 2,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 50.625,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 2.625,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 12.5,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 4.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 335.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 625.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.5789999961853027,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.5789999961853027,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 1.3600000143051147,
+            "__type": "ModifiableFloat"
+        },
+        "mAdaptiveForceToAbilityPowerWeight": 1.0,
+        "acquisitionRange": 625.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.10420524328947067,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_AnnieBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_AnnieBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.10420524328947067,
+                "mAttackName": "Jade_AnnieCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_AnnieQAbility/Jade_AnnieQ",
+            "Jade_AnnieWAbility/Jade_AnnieW",
+            "Jade_AnnieEAbility/Jade_AnnieE",
+            "Jade_AnnieRAbility/Jade_AnnieR"
+        ],
+        "spells": [
+            "{6926a2a2}",
+            "{f5ca624a}",
+            "{f2e121aa}",
+            "{4aa76d8c}"
+        ],
+        "extraSpells": [
+            "Jade_Annie_InfernalGuardianGuide",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{4914638d}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{b5ca2aca}",
+            "{ce7fc548}",
+            "{732116a6}",
+            "{4d157f6d}",
+            "{3ba453f8}"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Annie",
+        "passiveLuaName": "Jade_AnniePassive_Jade",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Annie",
+        "passiveSpell": "Jade_AnniePassive",
+        "passive1IconName": "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive.project_jade.dds",
+        "name": "game_character_displayname_Jade_Annie",
+        "mUseCCAnimations": true,
+        "selectionHeight": 85.0,
+        "selectionRadius": 100.0,
+        "pathfindingCollisionRadius": 30.0,
+        "overrideGameplayCollisionRadius": 55.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1056,
+            "__type": "ToolEducationData"
+        },
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Jade_Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
+                    "displayName": "Infernal Guardian",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
+                    "displayName": "Infernal Guardian",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
+                    "displayName": "Infernal Guardian",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
+                    "displayName": "Infernal Guardian",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Annie",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "mage",
+            "searchTagsSecondary": "support",
+            "championId": 60001,
+            "roles": "MAGE",
+            "magicRank": 10,
+            "difficultyRank": 6,
+            "description": "game_character_description_Jade_Annie",
+            "defenseRank": 3,
+            "classification": "Arcane",
+            "ChasingAttackRangePercent": 0.800000011920929,
+            "botEnabled": true,
+            "botEnabledMM": true,
+            "botDefaultSpell1": "SummonerHeal",
+            "botDefaultSpell2": "SummonerTeleport",
+            "attackRank": 2,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "purchaseIdentities": [
+            "Ranged"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Sorcery",
+        "mCharacterPassiveSpell": "{f939baba}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{f939baba}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{bb93ec69}",
+        "__type": "CharacterRecord"
+    },
+    "{bb93ec69}": {
+        "ScriptName": "charscriptJade_Annie",
+        "path": "{bb93ec69}",
+        "sequences": {
+            "{6a7835b9}": {
+                "__type": "RootScriptSequence"
+            }
+        },
+        "globalProperties": {
+            "buffName": "Jade_AnniePassive_Jade",
+            "buffTextureName": "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive2.project_jade.dds",
+            "__type": "ScriptGlobalProperties"
+        },
+        "__type": "CharScript"
+    },
+    "{da6561ad}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

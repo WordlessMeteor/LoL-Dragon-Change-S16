@@ -989,7 +989,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "镜爪翻滚并对附近目标发射最多三支箭矢。",
-            "dynamicDescription": "镜爪进行翻滚，对最多 3 名敌人发射一根箭矢，造成 <physicalDamage>@TotalDamage@ 物理伤害</physicalDamage>并提供持续 @Effect8Amount@ 秒的 <attackSpeed>@TotalQAttackSpeed@ 攻击速度</attackSpeed>。<br><br>在 <spellName>魔狼狂热</spellName> 之内时，这个技能的冷却时间会缩短至 @Effect4Amount@ 秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "镜爪进行翻滚，朝最多3名敌人射出一支箭，造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>，并获得<attackSpeed>@TotalQAttackSpeed@攻击速度</attackSpeed>，持续@BaseASDuration@秒。<br><br>在<spellName>魔狼狂热</spellName>内时，此技能的冷却时间缩短至@CDNewValue@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 340.0,
                 340.0,
@@ -1439,7 +1439,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "神羊庇护周围的生命。效果结束前，任何物体都无法死亡。效果结束时，所有单位会受到治疗。",
-            "dynamicDescription": "镜爪避护地面 @Effect2Amount@ 秒，使其中的友军、敌方或中立单位不会死亡。生命降至 10% 时，仍留在该区域内的单位就不会受到伤害或治疗效果了。<br><br>当庇护结束时，范围内的所有单位将会受到 <healing>@Effect1Amount@ 的治愈</healing>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "镜爪在地面赐福@BuffDuration@秒，使位于其中的友军、敌军或中立单位不会死亡。在降至10%生命值时，仍留在该区域的单位不会受到伤害或治疗效果。<br><br>赐福结束时，位在其中的所有单位会回复<healing>@HealFlat@生命值</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

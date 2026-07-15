@@ -1392,7 +1392,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "墨菲特发出一块大地碎片穿过他敌人处的地面，在碰撞时造成伤害并且偷取移动速度3秒。",
-            "dynamicDescription": "墨菲特朝一名敌人发出一块大地碎片，造成<magicDamage>@QDamageCalc@魔法伤害</magicDamage>，并对目标造成持续@SlowDuration@秒的@Effect2Amount@%<status>减速</status>。墨菲特还会窃取目标的这一部分速度，来获得持续@SlowDuration@秒的与这个<status>减速</status>效果等额的<speed>移动速度</speed>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "墨菲特朝一名敌人发出一块大地碎片，造成<magicDamage>@QDamageCalc@魔法伤害</magicDamage>和持续@SlowDuration@秒的@SpeedSteal@%<status>减速</status>。墨菲特还会窃取该<status>被减速</status>的数额，从而将它作为持续@SlowDuration@秒的<speed>移动速度</speed>。@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,

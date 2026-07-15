@@ -1552,7 +1552,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Нами посылает пузырь в указанную область, нанося урон всем врагам в зоне поражения и оглушая их.",
-            "dynamicDescription": "Нами выпускает пузырь, <status>оглушая</status> врагов на @Effect2Amount@ сек. и нанося им <magicDamage>@TotalDamageTT@ магического урона</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Нами выпускает пузырь, <status>оглушая</status> врагов на @StunDuration@ сек. и нанося им <magicDamage>@TotalDamageTT@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -2002,7 +2002,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Нами призывает огромную волну, которая наносит урон врагам, подбрасывает и замедляет их. Союзники, задетые волной, получают удвоенное усиление Бурных волн.",
-            "dynamicDescription": "Нами призывает огромную волну, которая <status>подбрасывает</status> на 0.5 сек., <status>замедляет</status> на @Effect4Amount@% и наносит <magicDamage>@TotalDamage@ магического урона</magicDamage>. Продолжительность <status>замедления</status> увеличивается пропорционально расстоянию, пройденному волной (вплоть до @Effect5Amount@ сек.).<br><br>Союзники, задетые волной, получают удвоенное усиление <spellName>Бурных волн</spellName>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Нами призывает огромную волну, <status>подбрасывающую</status> на 0,5 сек., <status>замедляющую</status> на @SlowAmount@% и наносящую <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>. Длительность <status>замедления</status> растет с расстоянием, пройденным волной (до @MaxSlowDuration@ сек.).<br><br>Союзники, задетые волной, получают удвоенное усиление <spellName>Бурных волн</spellName>.@SpellModifierDescriptionAppend@",
             "range": [
                 2550.0,
                 2550.0,

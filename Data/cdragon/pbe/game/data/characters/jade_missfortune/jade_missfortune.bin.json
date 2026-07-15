@@ -1,0 +1,4879 @@
+{
+    "{e8522e0e}": {
+        "mRootSpell": "{d0112f56}",
+        "mChildSpells": [
+            "{d0112f56}",
+            "{d23259cb}",
+            "{0e147027}"
+        ],
+        "mName": "Jade_MissFortuneRicochetShotAbility",
+        "__type": "AbilityObject"
+    },
+    "{0e147027}": {
+        "ObjectName": "Jade_MissFortuneRicochetShotDud",
+        "mScriptName": "Jade_MissFortuneRicochetShotDud",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_MissFortuneRicochetShot",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579,
+                        0.8500000238418579
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        5.0,
+                        20.0,
+                        35.0,
+                        50.0,
+                        65.0,
+                        80.0,
+                        95.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        10.0,
+                        40.0,
+                        70.0,
+                        100.0,
+                        130.0,
+                        160.0,
+                        190.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0,
+                        110.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        160.0,
+                        160.0,
+                        160.0,
+                        160.0,
+                        160.0,
+                        160.0,
+                        160.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.3499999940395355,
+            "mCoefficient2": 0.5,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_DoubleUp.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                3.0,
+                3.0
+            ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    3.0,
+                    3.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRangeUseBoundingBoxes": true,
+            "castRange": [
+                176.0,
+                176.0,
+                176.0,
+                176.0,
+                176.0,
+                176.0,
+                176.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    176.0,
+                    176.0,
+                    176.0,
+                    176.0,
+                    176.0,
+                    176.0,
+                    176.0
+                ],
+                "{0a3e0478}": 176.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castRadius": [
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mTracksTarget": false,
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_WEAPON",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 2000.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 8.699999809265137,
+            "missileSpeed": 400.0,
+            "mMissileEffectKey": "{f1fa51ef}",
+            "mLineWidth": 60.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "LocationClamped"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "startLocator": {
+                            "basePosition": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "endLocator": {
+                            "basePosition": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "fallbackDirection": 2,
+                        "coneAngleDegrees": 50.0,
+                        "coneRange": 550.0,
+                        "textureConeOverrideName": "ASSETS/Characters/Jade_MissFortune/HUD/Textures/ConicRangeIndicator.project_jade.tex",
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{d0112f56}": {
+        "ObjectName": "Jade_MissFortuneRicochetShot",
+        "mScriptName": "Jade_MissFortuneRicochetShot",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_MissFortuneRicochetShot",
+            "mSpellTags": [
+                "Trait_MultiTargetAttack"
+            ],
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.0,
+                        20.0,
+                        45.0,
+                        70.0,
+                        95.0,
+                        120.0,
+                        120.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        55.0,
+                        55.0,
+                        55.0,
+                        55.0,
+                        55.0,
+                        55.0,
+                        55.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        -10.0,
+                        25.0,
+                        60.0,
+                        95.0,
+                        130.0,
+                        165.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RicochetBonus",
+                    "values": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADRatio",
+                    "values": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BounceRange",
+                    "values": [
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "APRatio",
+                            "values": [
+                                0.550000011920929,
+                                0.550000011920929,
+                                0.550000011920929,
+                                0.550000011920929,
+                                0.550000011920929,
+                                0.550000011920929,
+                                0.550000011920929
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "{72c5c2a8}": 0,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mDataValue": "ADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{ce5e078d}": {
+                    "mMultiplier": {
+                        "mDataValue": "{b6832d6b}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalDamage",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mCoefficient": 0.3499999940395355,
+            "mCoefficient2": 1.0,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_DoubleUp.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                9.0,
+                9.0,
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                5.0
+            ],
+            "Cooldown": {
+                "values": [
+                    9.0,
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    5.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRangeUseBoundingBoxes": true,
+            "mUseAutoattackCastTimeData": {
+                "__type": "UseAutoattackCastTimeData"
+            },
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castRadius": [
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0
+            ],
+            "castConeAngle": 60.0,
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_WEAPON",
+                    "mStartBoneSkinOverrides": {
+                        "31": "UltGun_Root"
+                    },
+                    "mSpeed": 1400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.699999809265137,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "{3b888305}",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                40.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0,
+                    90.0,
+                    40.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_MissFortune_MissFortuneRicochetShot_OnCast",
+                "13": "Play_sfx_MissFortune_MissFortuneRicochetShot_OnHit",
+                "16": "Play_sfx_MissFortune_MissFortuneRicochetShot_OnMissileLaunch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_MissFortuneRicochetShot",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_MissFortuneQ_Jade_Name",
+                        "keySummary": "Spell_MissFortuneQ_Jade_Summary",
+                        "keyTooltip": "Spell_MissFortuneQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "startLocator": {
+                            "basePosition": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "endLocator": {
+                            "basePosition": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "fallbackDirection": 2,
+                        "coneAngleDegrees": 30.0,
+                        "coneRange": 435.0,
+                        "textureConeOverrideName": "ASSETS/Characters/Jade_MissFortune/HUD/Textures/ConicRangeIndicator.project_jade.tex",
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{d23259cb}": {
+        "ObjectName": "Jade_MissFortuneRShotExtra",
+        "mScriptName": "Jade_MissFortuneRShotExtra",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_MissFortuneRShotExtra",
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_DoubleUp.project_jade.dds"
+            ],
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                3.0,
+                3.0
+            ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    3.0,
+                    3.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "mIsDisabledWhileDead": false,
+            "castRange": [
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0,
+                575.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    575.0,
+                    575.0,
+                    575.0,
+                    575.0,
+                    575.0,
+                    575.0,
+                    575.0
+                ],
+                "{0a3e0478}": 575.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "neck",
+                    "mSpeed": 1400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.699999809265137,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "{3b888305}",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_MissFortune_MissFortuneRShotExtra_OnHit",
+                "16": "Play_sfx_MissFortune_MissFortuneRShotExtra_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{76e8e7da}": {
+        "mRootSpell": "{865a6ad2}",
+        "mChildSpells": [
+            "{865a6ad2}",
+            "{a8a066f8}",
+            "{2996810a}"
+        ],
+        "mName": "Jade_MissFortuneBulletTimeAbility",
+        "__type": "AbilityObject"
+    },
+    "{2996810a}": {
+        "ObjectName": "Jade_MissFortuneBulletSound",
+        "mScriptName": "Jade_MissFortuneBulletSound",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_BulletTime.project_jade.dds"
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_MissFortune_MissFortuneBulletEMPTY_OnMissileLaunch"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{64ed9a38}": {
+        "ObjectName": "Jade_MissFortuneBulletEMPTY",
+        "mScriptName": "Jade_MissFortuneBulletEMPTY",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "MissFortuneBulletTime",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        20.0,
+                        55.0,
+                        90.0,
+                        125.0,
+                        0.0,
+                        0.0,
+                        35.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.15000000596046448,
+            "mAnimationLoopName": "Spell4_Loop",
+            "mAnimationWinddownName": "Spell4_Winddown",
+            "mImgIconName": [
+                "ASSETS/Characters/MissFortune/HUD/Icons2D/MissFortune_BulletTime.dds"
+            ],
+            "cooldownTime": [
+                130.0,
+                120.0,
+                110.0,
+                100.0,
+                20.0,
+                18.0,
+                18.0
+            ],
+            "Cooldown": {
+                "values": [
+                    130.0,
+                    120.0,
+                    110.0,
+                    100.0,
+                    20.0,
+                    18.0,
+                    18.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0
+                ],
+                "{0a3e0478}": 1500.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeAngle": 23.0,
+            "castConeDistance": 1500.0,
+            "mMissileSpec": {
+                "mMissileWidth": 100.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "weapon",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.849999904632568,
+            "missileSpeed": 2000.0,
+            "mMissileEffectName": "DATA/Particles/Empty.troy",
+            "mLineWidth": 100.0,
+            "mTargetingTypeData": {
+                "__type": "Cone"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_MissFortune_MissFortuneBulletEMPTY_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "coneFollowsEnd": true,
+                        "coneAngleDegrees": 23.0,
+                        "coneRange": 1500.0,
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{865a6ad2}": {
+        "ObjectName": "Jade_MissFortuneBulletTime",
+        "mScriptName": "Jade_MissFortuneBulletTime",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_ChannelSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseWaves",
+                    "values": [
+                        12.0,
+                        14.0,
+                        16.0,
+                        18.0,
+                        20.0,
+                        22.0,
+                        24.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseCritDamageMultiplier",
+                    "values": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseChannelDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "tADRatio",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusCritDamageScalar",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamagePerWave",
+                    "values": [
+                        35.0,
+                        65.0,
+                        95.0,
+                        125.0,
+                        155.0,
+                        185.0,
+                        215.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "PhysicalDamagePerWave": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{2b98b069}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "tADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "CritMultiplier": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseCritDamageMultiplier",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mPart1": {
+                                "mDataValue": "BonusCritDamageScalar",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mStat": 9,
+                                "mStatFormula": 2,
+                                "mCoefficient": 1.0,
+                                "__type": "StatByCoefficientCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalWaves": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseWaves",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalChannelDuration": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseChannelDuration",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "PhysicalCritPerWave": {
+                    "mMultiplier": {
+                        "mSubparts": [
+                            {
+                                "mStat": 2,
+                                "mDataValue": "tADRatio",
+                                "__type": "StatByNamedDataValueCalculationPart"
+                            },
+                            {
+                                "mDataValue": "APRatio",
+                                "__type": "StatByNamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "SumOfSubPartsCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "CritMultiplier",
+                    "__type": "GameCalculationModified"
+                },
+                "TotalPhysicalDamage": {
+                    "mMultiplier": {
+                        "mSubparts": [
+                            {
+                                "mStat": 2,
+                                "mDataValue": "tADRatio",
+                                "__type": "StatByNamedDataValueCalculationPart"
+                            },
+                            {
+                                "mDataValue": "APRatio",
+                                "__type": "StatByNamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "SumOfSubPartsCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalWaves",
+                    "__type": "GameCalculationModified"
+                },
+                "TotalPhysicalCritDamage": {
+                    "mMultiplier": {
+                        "mPart1": {
+                            "mSubparts": [
+                                {
+                                    "mStat": 2,
+                                    "mDataValue": "tADRatio",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mDataValue": "APRatio",
+                                    "__type": "StatByNamedDataValueCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        },
+                        "mPart2": {
+                            "mSubparts": [
+                                {
+                                    "mDataValue": "BaseCritDamageMultiplier",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                {
+                                    "mPart1": {
+                                        "mDataValue": "BonusCritDamageScalar",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "mPart2": {
+                                        "mStat": 9,
+                                        "mStatFormula": 2,
+                                        "mCoefficient": 1.0,
+                                        "__type": "StatByCoefficientCalculationPart"
+                                    },
+                                    "__type": "ProductOfSubPartsCalculationPart"
+                                }
+                            ],
+                            "__type": "SumOfSubPartsCalculationPart"
+                        },
+                        "__type": "ProductOfSubPartsCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalWaves",
+                    "__type": "GameCalculationModified"
+                },
+                "TotalDamage": {
+                    "mMultiplier": {
+                        "mNumber": 8.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "tooltipOnly": true,
+                    "mModifiedGameCalculation": "PhysicalDamagePerWave",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_BulletTime.project_jade.dds"
+            ],
+            "mCastTime": 0.0010000000474974513,
+            "{11704a2b}": 0.3888999819755554,
+            "{f26881a0}": 1.333400011062622,
+            "cooldownTime": [
+                130.0,
+                120.0,
+                110.0,
+                100.0,
+                90.0,
+                80.0,
+                70.0
+            ],
+            "Cooldown": {
+                "values": [
+                    130.0,
+                    120.0,
+                    110.0,
+                    100.0,
+                    90.0,
+                    80.0,
+                    70.0
+                ],
+                "{0a3e0478}": 130.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mApplyAttackDamage": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeAngle": 17.0,
+            "castConeDistance": 1400.0,
+            "castFrame": 7.849999904632568,
+            "missileSpeed": 779.9000244140625,
+            "mMissileEffectKey": "{c7d19360}",
+            "mLineWidth": 100.0,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Cone"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_MissFortune_MissFortuneBulletTime_OnCast"
+            },
+            "mDimensionBehavior": 1,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_MissFortuneBulletTime",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_MissFortuneR_Jade_Name",
+                        "keySummary": "Spell_MissFortuneR_Jade_Summary",
+                        "keyTooltip": "Spell_MissFortuneR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamagePerWave",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "coneAngleDegrees": 17.0,
+                        "coneRange": 1400.0,
+                        "textureConeOverrideName": "ASSETS/Characters/Jade_MissFortune/HUD/Textures/MF_ConicRangeIndicator.project_jade.tex",
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mPart1": {
+                            "mSpellCalculationKey": "PhysicalDamagePerWave",
+                            "__type": "{f3cbe7b2}"
+                        },
+                        "mPart2": {
+                            "mSpellCalculationKey": "TotalWaves",
+                            "__type": "{f3cbe7b2}"
+                        },
+                        "__type": "ProductOfSubPartsCalculationPart"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{a8a066f8}": {
+        "ObjectName": "Jade_MissFortuneBullets",
+        "mScriptName": "Jade_MissFortuneBullets",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_MissFortuneBullets",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        15.0,
+                        55.0,
+                        95.0,
+                        140.0,
+                        185.0,
+                        230.0,
+                        275.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6499999761581421,
+            "mAnimationName": "Spell1",
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0
+            ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0
+                ],
+                "{0a3e0478}": 7.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                1450.0,
+                1450.0,
+                1450.0,
+                1450.0,
+                1450.0,
+                1450.0,
+                1450.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1450.0,
+                    1450.0,
+                    1450.0,
+                    1450.0,
+                    1450.0,
+                    1450.0,
+                    1450.0
+                ],
+                "{0a3e0478}": 1450.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 0.0,
+            "mMissileSpec": {
+                "mMissileWidth": 20.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 2.8499999046325684,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "{c7d19360}",
+            "mLineWidth": 20.0,
+            "bHaveHitBone": true,
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "mDimensionBehavior": 1,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "coneFollowsEnd": true,
+                        "coneAngleDegrees": 45.0,
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{325a9109}": {
+        "ObjectName": "Jade_MissFortuneCritAttack",
+        "mScriptName": "Jade_MissFortuneCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_MissFortuneCritAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375
+                ],
+                "{0a3e0478}": 554.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_WEAPON",
+                    "mStartBoneSkinOverrides": {
+                        "31": "UltGun_Root"
+                    },
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "{4f2c2527}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_MissFortune_MissFortuneCritAttack_OnCast",
+                "16": "Play_sfx_MissFortune_MissFortuneCritAttack_OnMissileLaunch",
+                "13": "Play_sfx_MissFortune_MissFortuneCritAttack_OnHit",
+                "15": "Play_sfx_MissFortune_MissFortuneCritAttack_OnMissileCast"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{bb23d19a}": {
+        "mRootSpell": "{a6765c46}",
+        "mChildSpells": [
+            "{a6765c46}",
+            "{8ae744b3}",
+            "{38564619}"
+        ],
+        "mName": "Jade_MissFortuneViciousStrikesAbility",
+        "__type": "AbilityObject"
+    },
+    "{38564619}": {
+        "ObjectName": "Jade_MissFortunePassiveW",
+        "mScriptName": "Jade_MissFortunePassiveW",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_ImpureShots.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_MissFortunePassiveW",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_MissFortuneW_Jade_Name",
+                    "keyTooltip": "Spell_MissFortuneW_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{8ae744b3}": {
+        "ObjectName": "Jade_MissFortunePassiveWStack",
+        "mScriptName": "Jade_MissFortunePassiveWStack",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_ImpureShots.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_MissFortunePassiveWStack",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_MissFortuneW_Jade_Name",
+                    "keyTooltip": "Buff_MissFortuneW_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{a6765c46}": {
+        "ObjectName": "Jade_MissFortuneViciousStrikes",
+        "mScriptName": "Jade_MissFortuneViciousStrikes",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_MissFortuneViciousStrikes",
+            "DataValues": [
+                {
+                    "name": "PassiveBaseMS",
+                    "values": [
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveMaxMS",
+                    "values": [
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0,
+                        100.0,
+                        110.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "LoveTapBaseRefund",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveAS",
+                    "values": [
+                        0.25,
+                        0.4000000059604645,
+                        0.550000011920929,
+                        0.699999988079071,
+                        0.8500000238418579,
+                        1.0,
+                        1.149999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveBaseMSOOC",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveMaxMSExtraOOC",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ASMod",
+                    "values": [
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageOnHItPerStack",
+                    "values": [
+                        2.0,
+                        4.0,
+                        6.0,
+                        8.0,
+                        10.0,
+                        12.0,
+                        14.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageOnHitPerStackAPRatio",
+                    "values": [
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaximumDamageOnHItPerStack",
+                    "values": [
+                        10.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaximumDamageOnHitPerStackAPRatio",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "GrievousAmount",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "GrievousDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{7a5be266}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{0046a1e7}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "{573ab4bd}",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{9926de8a}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{2359dfa3}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "{3ee73141}",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_ImpureShots.project_jade.dds"
+            ],
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0
+                ],
+                "{0a3e0478}": 16.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.0,
+            "missileSpeed": 1400.0,
+            "mFloatVarsDecimals": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "mana": [
+                45.0,
+                45.0,
+                45.0,
+                45.0,
+                45.0,
+                45.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_MissFortune_MissFortuneViciousStrikes_OnCast",
+                "18": "Play_sfx_MissFortune_MissFortuneViciousStrikes_OnBuffActivate",
+                "19": "Play_sfx_MissFortune_MissFortuneViciousStrikes_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_MissFortuneViciousStrikes",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_MissFortuneW_Jade_Name",
+                        "keySummary": "Spell_MissFortuneW_Jade_Summary",
+                        "keyTooltip": "Spell_MissFortuneW_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Jade_GreviousWounds_Buff"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "DamageOnHItPerStack",
+                                    "nameOverride": "Spell_ListType_DamageperStack",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MaximumDamageOnHItPerStack",
+                                    "nameOverride": "Spell_ListType_MaximumBonusDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ASMod",
+                                    "nameOverride": "Spell_ListType_AttackSpeedPerc",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_MissFortuneWSelf_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{ec17e271}": [
+                {
+                    "EffectTag": 2,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "PassiveBaseMS",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{729ef379}": {
+        "mRootSpell": "{485d4588}",
+        "mChildSpells": [
+            "{485d4588}",
+            "{6687be6d}"
+        ],
+        "mName": "Jade_MissFortuneScattershotAbility",
+        "__type": "AbilityObject"
+    },
+    "{485d4588}": {
+        "ObjectName": "Jade_MissFortuneScattershot",
+        "mScriptName": "Jade_MissFortuneScattershot",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_MissFortuneScattershot",
+            "DataValues": [
+                {
+                    "name": "BaseDamagePerSecond",
+                    "values": [
+                        0.0,
+                        90.0,
+                        145.0,
+                        200.0,
+                        255.0,
+                        310.0,
+                        330.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseSlowAmount",
+                    "values": [
+                        0.11999999731779099,
+                        0.20000000298023224,
+                        0.2800000011920929,
+                        0.36000001430511475,
+                        0.4399999976158142,
+                        0.5199999809265137,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatioPerSecond",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TicksPerSecond",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CastDelay",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPer100AP",
+                    "values": [
+                        0.0006000000284984708,
+                        0.0006000000284984708,
+                        0.0006000000284984708,
+                        0.0006000000284984708,
+                        0.0006000000284984708,
+                        0.0006000000284984708,
+                        0.0006000000284984708
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamagePerSecond": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamagePerSecond",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatioPerSecond",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalSlowAmount": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseSlowAmount",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "TotalDamage": {
+                    "mMultiplier": {
+                        "mDataValue": "BaseDuration",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalDamagePerSecond",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_MakeItRain.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                15.0,
+                15.0,
+                15.0,
+                15.0,
+                15.0,
+                15.0,
+                15.0
+            ],
+            "Cooldown": {
+                "values": [
+                    15.0,
+                    15.0,
+                    15.0,
+                    15.0,
+                    15.0,
+                    15.0,
+                    15.0
+                ],
+                "{0a3e0478}": 15.0,
+                "__type": "{0a0eddc9}"
+            },
+            "{f4ca428f}": 1,
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0
+                ],
+                "{0a3e0478}": 800.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "mFloatVarsDecimals": [
+                0,
+                2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mana": [
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0
+                ],
+                "{0a3e0478}": 80.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_MissFortune_MissFortuneScattershot_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_MissFortuneScattershot",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_MissFortuneE_Jade_Name",
+                        "keySummary": "Spell_MissFortuneE_Jade_Summary",
+                        "keyTooltip": "Spell_MissFortuneE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamagePerSecond",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_DamagePerSecond",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseSlowAmount",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "isConstrainedToRange": true,
+                        "constraintRange": {
+                            "mPerLevelValues": [
+                                1000.0,
+                                1000.0,
+                                1000.0,
+                                1000.0,
+                                1000.0,
+                                1000.0
+                            ],
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamagePerSecond",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalSlowAmount",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{6687be6d}": {
+        "ObjectName": "Jade_MissFortuneScattershotSlow",
+        "mScriptName": "Jade_MissFortuneScattershotSlow",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_MakeItRain.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_MissFortuneScattershotSlow",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_MissFortuneE_Jade_Name",
+                    "keyTooltip": "Buff_MissFortuneE_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{8b72d021}": {
+        "ObjectName": "Jade_MissFortuneBasicAttack2",
+        "mScriptName": "Jade_MissFortuneBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_MissFortuneBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375
+                ],
+                "{0a3e0478}": 554.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "L_Weapon",
+                    "mStartBoneSkinOverrides": {
+                        "31": "R_WEAPON"
+                    },
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "{4f2c2527}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_MissFortune_MissFortuneBasicAttack_OnCast",
+                "16": "Play_sfx_MissFortune_MissFortuneBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_MissFortune_MissFortuneBasicAttack_OnHit",
+                "15": "Play_sfx_MissFortune_MissFortuneBasicAttack_OnMissileCast"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{8ddff82a}": {
+        "ObjectName": "Jade_MissFortuneIsPirateHunter",
+        "mScriptName": "Jade_MissFortuneIsPirateHunter",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/IsPirate.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_MissFortuneIsPirateHunter_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{96e8c7c9}": {
+        "ObjectName": "Jade_MissFortuneBasicAttack",
+        "mScriptName": "Jade_MissFortuneBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_MissFortuneBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375
+                ],
+                "{0a3e0478}": 554.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_WEAPON",
+                    "mStartBoneSkinOverrides": {
+                        "31": "L_WEAPON"
+                    },
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "{4f2c2527}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_MissFortune_MissFortuneBasicAttack_OnCast",
+                "16": "Play_sfx_MissFortune_MissFortuneBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_MissFortune_MissFortuneBasicAttack_OnHit",
+                "15": "Play_sfx_MissFortune_MissFortuneBasicAttack_OnMissileCast"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ba8eac88}": {
+        "mRootSpell": "{b9cc5b22}",
+        "mChildSpells": [
+            "{b9cc5b22}"
+        ],
+        "mName": "Jade_MissFortunePassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{b9cc5b22}": {
+        "ObjectName": "Jade_MissFortunePassive",
+        "mScriptName": "Jade_MissFortunePassive",
+        "mSpell": {
+            "mSpellTags": [
+                "Trait_NonPrimaryAttack"
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mStat": 2,
+                            "mSubpart": {
+                                "mLevel1Value": 0.5,
+                                "mBreakpoints": [
+                                    {
+                                        "mLevel": 4,
+                                        "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 7,
+                                        "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 9,
+                                        "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 11,
+                                        "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 13,
+                                        "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 20,
+                                        "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 25,
+                                        "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 30,
+                                        "mAdditionalBonusAtThisLevel": 0.10000000149011612,
+                                        "__type": "Breakpoint"
+                                    }
+                                ],
+                                "__type": "ByCharLevelBreakpointsCalculationPart"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MinionDamage": {
+                    "mMultiplier": {
+                        "mNumber": 0.5,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "TotalDamage",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/MissFortune_Strut.project_jade.dds"
+            ],
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "20": "Play_sfx_MissFortune_MissFortuneStrutStacks_OnBuffCast"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_MissFortunePassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_MissFortunePassive_Jade_Name",
+                        "keyTooltip": "Spell_MissFortunePassive_Jade_Buff_Tooltip",
+                        "keySummary": "Spell_MissFortunePassive_Jade_Summary"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_MissFortunePassive",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_MissFortunePassive_Jade_Name",
+                    "keyTooltip": "Spell_MissFortunePassive_Jade_Buff_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{3277c5fd}": {
+        "mCharacterName": "Jade_MissFortune",
+        "baseHPModifiable": {
+            "baseValue": 520.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 85.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.149999976158142,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.12999999523162842,
+            "__type": "ModifiableFloat"
+        },
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 250.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 38.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.5199999809265137,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.12999999523162842,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 49.5,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 18.0,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 325.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 550.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.656000018119812,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.656000018119812,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 3.009999990463257,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 800.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.15199336409568787,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_MissFortuneBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_MissFortuneBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.15199336409568787,
+                "mAttackName": "Jade_MissFortuneCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_MissFortuneRicochetShotAbility/Jade_MissFortuneRicochetShot",
+            "Jade_MissFortuneViciousStrikesAbility/Jade_MissFortuneViciousStrikes",
+            "Jade_MissFortuneScattershotAbility/Jade_MissFortuneScattershot",
+            "Jade_MissFortuneBulletTimeAbility/Jade_MissFortuneBulletTime"
+        ],
+        "spells": [
+            "{d0112f56}",
+            "{a6765c46}",
+            "{485d4588}",
+            "{865a6ad2}"
+        ],
+        "extraSpells": [
+            "Jade_MissFortuneRShotExtra",
+            "Jade_MissFortunePassiveAttackCrit",
+            "Jade_MissFortuneBullets",
+            "Jade_MissFortuneBulletEMPTY",
+            "Jade_MissFortuneRicochetShotDud",
+            "Jade_MissFortunePassiveAttack",
+            "Jade_MissFortunePassiveAttack2",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{d23259cb}",
+            "Shared/Spells/BaseSpell",
+            "{a8a066f8}",
+            "{0e147027}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{76e8e7da}",
+            "{729ef379}",
+            "{e8522e0e}",
+            "{bb23d19a}",
+            "{ba8eac88}"
+        ],
+        "passiveName": "Spell_Jade_MissFortunePassive_Name",
+        "passiveLuaName": "Jade_MissFortunePassive_Jade",
+        "passiveToolTip": "Spell_Jade_MissFortunePassive_Summary",
+        "passiveSpell": "Jade_MissFortunePassive",
+        "passive1IconName": "ASSETS/Characters/Jade_MissFortune/HUD/Icons2D/Jade_MissFortune_W.project_jade.dds",
+        "name": "game_character_displayname_Jade_MissFortune",
+        "weaponMaterials": [
+            "Jade_MissFortuneBasicAttack"
+        ],
+        "outlineBBoxExpansion": 45.0,
+        "selectionHeight": 122.22219848632812,
+        "selectionRadius": 100.0,
+        "pathfindingCollisionRadius": 35.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1055,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            0,
+            14,
+            0
+        ],
+        "characterToolData": {
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "Spell_Jade_MissFortunePassive_Name",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "marksman",
+            "searchTagsSecondary": "mage",
+            "championId": 60021,
+            "roles": "ATTACKER",
+            "magicRank": 5,
+            "difficultyRank": 1,
+            "description": "game_character_description_Jade_MissFortune",
+            "defenseRank": 2,
+            "classification": "Deadly",
+            "ChasingAttackRangePercent": 0.800000011920929,
+            "attackRank": 8,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "purchaseIdentities": [
+            "Ranged"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Precision",
+        "mPerkReplacements": {
+            "mReplacements": [
+                {
+                    "mReplaceTarget": "Perks/Styles/Resolve/Aftershock",
+                    "mReplaceWith": "Perks/Styles/Resolve/GraspOfTheUndying",
+                    "__type": "PerkReplacement"
+                },
+                {
+                    "mReplaceTarget": "Perks/Styles/Inspiration/GlacialAugment",
+                    "mReplaceWith": "Perks/Styles/Inspiration/FirstStrike",
+                    "__type": "PerkReplacement"
+                }
+            ],
+            "__type": "PerkReplacementList"
+        },
+        "mCharacterPassiveSpell": "{b9cc5b22}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{b9cc5b22}",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{8ddff82a}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{e5c85859}",
+        "__type": "CharacterRecord"
+    },
+    "{4b82c6b0}": {
+        "mCooldown": 15.0,
+        "mSituations": {
+            "MoveOrder2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Move - Long",
+                        "mConditions": [
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 2,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DLong",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Move - Standard",
+                        "mConditions": [
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 5,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DStandard",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "FirstMove2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "First Move - Enemy Gun Goddess",
+                        "mConditions": [
+                            {
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "steelvalkyries",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "ContextualConditionIsAlly"
+                                    }
+                                ],
+                                "__type": "ContextualConditionAnyOtherHero"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DFirstEnemyGunGoddess",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "First Move",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Move2DFirst",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackChampion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack - Gun Goddess",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "steelvalkyries",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 4,
+                            "mSelfEventName": "Attack2DGunGoddess",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Attack - Champion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "KillChampion": {
+                "mRules": [
+                    {
+                        "mRuleName": "Pentakill",
+                        "mConditions": [
+                            {
+                                "mMultikillSize": 5,
+                                "__type": "ContextualConditionMultikillSize"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DPenta",
+                            "mAllyEventName": "Kill3DPenta",
+                            "mEnemyEventName": "Kill3DPenta",
+                            "mWaitForAnnouncerQueue": true,
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
+                        "CooldownModifications": {
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "General",
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DGeneral",
+                            "mEnemyEventName": "Kill3DGeneral",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Aurelion Sol",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/AurelionSol/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DAurelionSol",
+                            "mEnemyEventName": "Kill3DAurelionSol",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Evelynn",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{4c442335}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DEvelynn",
+                            "mEnemyEventName": "Kill3DEvelynn",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Gangplank",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{06436fd9}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DGangplank",
+                            "mEnemyEventName": "Kill3DGangplank",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Garen",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{4ef8473d}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DGaren",
+                            "mEnemyEventName": "Kill3DGaren",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Graves",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Graves/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DGraves",
+                            "mEnemyEventName": "Kill3DGraves",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Illaoi",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Illaoi/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DIllaoi",
+                            "mEnemyEventName": "Kill3DIllaoi",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Katarina",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{f0080945}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DKatarina",
+                            "mEnemyEventName": "Kill3DKatarina",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Bullet Angel Kai'sa",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Kaisa/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "steelvalkyries",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DKaisaSkin01",
+                            "mEnemyEventName": "Kill3DKaisaSkin01",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Twisted Fate",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{6e7b06f0}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DTwistedFate",
+                            "mEnemyEventName": "Kill3DTwistedFate",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Gun Goddess",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "steelvalkyries",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DGunGoddess",
+                            "mEnemyEventName": "Kill3DGunGoddess",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "General",
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DGeneral",
+                            "mEnemyEventName": "Kill3DGeneral",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "TauntEndedNearby": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt Response",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "TauntResponse3DGeneral",
+                            "mAllyEventName": "TauntResponse3DGeneral",
+                            "mEnemyEventName": "TauntResponse3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "JokeEndedNearby": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke Response",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "JokeResponse3DGeneral",
+                            "mAllyEventName": "JokeResponse3DGeneral",
+                            "mEnemyEventName": "JokeResponse3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "BuyItem": {
+                "mRules": [
+                    {
+                        "mRuleName": "Buy Item - Ward",
+                        "mConditions": [
+                            {
+                                "mItemVOGroupHash": "Ward",
+                                "__type": "ContextualConditionItemVOGroup"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 5,
+                            "mSelfEventName": "BuyItem2DWard",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Buy Item - Doran's Blade",
+                        "mConditions": [
+                            {
+                                "mItems": [
+                                    "Items/1055"
+                                ],
+                                "__type": "ContextualConditionItemID"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "BuyItem2DDoransBlade",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Buy Item - General",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 50,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 6,
+                            "mSelfEventName": "BuyItem2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "UseItem": {
+                "mRules": [
+                    {
+                        "mRuleName": "Use Item - Potion",
+                        "mConditions": [
+                            {
+                                "mItemVOGroupHash": "Potion",
+                                "__type": "ContextualConditionItemVOGroup"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 5,
+                            "mSelfEventName": "UseItem2DPotion",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Use Item - Ward",
+                        "mConditions": [
+                            {
+                                "mItemVOGroupHash": "Ward",
+                                "__type": "ContextualConditionItemVOGroup"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 10,
+                            "mSelfEventName": "UseItem2DWard",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Taunt": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt",
+                        "mAudioAction": {
+                            "mSelfEventName": "Taunt3DGeneral",
+                            "mAllyEventName": "Taunt3DGeneral",
+                            "mEnemyEventName": "Taunt3DGeneral",
+                            "mSpectatorEventName": "Taunt3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Joke": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke",
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DGeneral",
+                            "mAllyEventName": "Joke3DGeneral",
+                            "mEnemyEventName": "Joke3DGeneral",
+                            "mSpectatorEventName": "Joke3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "RecallLeadIn": {
+                "mRules": [
+                    {
+                        "mRuleName": "Recall",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 10.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Recall3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Respawn2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Respawn",
+                        "mAudioAction": {
+                            "mSelfEventName": "Respawn2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Laugh": {
+                "mRules": [
+                    {
+                        "mRuleName": "Laugh",
+                        "mAudioAction": {
+                            "mSelfEventName": "Laugh3DGeneral",
+                            "mAllyEventName": "Laugh3DGeneral",
+                            "mEnemyEventName": "Laugh3DGeneral",
+                            "mSpectatorEventName": "Laugh3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackMinion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack - Minion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackNeutral2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack - Neutral",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellCast": {
+                "mRules": [
+                    {
+                        "mRuleName": "Q",
+                        "mConditions": [
+                            {
+                                "mSpell": "{d0112f56}",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DQCast",
+                            "mAllyEventName": "Spell3DQCast",
+                            "mEnemyEventName": "Spell3DQCast",
+                            "mSpectatorEventName": "Spell3DQCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W",
+                        "mConditions": [
+                            {
+                                "mSpell": "{a6765c46}",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DWCast",
+                            "mAllyEventName": "Spell3DWCast",
+                            "mEnemyEventName": "Spell3DWCast",
+                            "mSpectatorEventName": "Spell3DWCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "R",
+                        "mConditions": [
+                            {
+                                "mSpell": "{865a6ad2}",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DRCast",
+                            "mAllyEventName": "Spell3DRCast",
+                            "mEnemyEventName": "Spell3DRCast",
+                            "mSpectatorEventName": "Spell3DRCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 100,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "EnemyEncounter": {
+                "mCoolDownTime": 15.0,
+                "mRules": [
+                    {
+                        "mRuleName": "Aurelion Sol",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/AurelionSol/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DAurelionSol",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Blitzcrank",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{2464ef80}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DBlitzcrank",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Braum",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Braum/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DBraum",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Camille",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Camille/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DCamille",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Ekko",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Ekko/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DEkko",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Evelynn",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{4c442335}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DEvelynn",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Gangplank",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{06436fd9}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DGangplank",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Graves",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Graves/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DGraves",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Handsome Men",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Braum/CharacterRecords/Root",
+                                            "Characters/Darius/CharacterRecords/Root",
+                                            "Characters/Draven/CharacterRecords/Root",
+                                            "{3d1d2371}",
+                                            "{4ef8473d}",
+                                            "{9f7b14c3}",
+                                            "Characters/Jayce/CharacterRecords/Root",
+                                            "Characters/Kayn/CharacterRecords/Root",
+                                            "{61c598de}",
+                                            "Characters/Lucian/CharacterRecords/Root",
+                                            "{e63bb49d}",
+                                            "Characters/Rakan/CharacterRecords/Root",
+                                            "Characters/Yasuo/CharacterRecords/Root",
+                                            "Characters/Yone/CharacterRecords/Root",
+                                            "Characters/Sett/CharacterRecords/Root",
+                                            "Characters/Aphelios/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DHandsome",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Illaoi",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Illaoi/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DIllaoi",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Jhin",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Jhin/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DJhin",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Bullet Angel Kai'sa",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Kaisa/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "steelvalkyries",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DKaisaSkin01",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Kai'sa",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Kaisa/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DKaisa",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Nautilus",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Nautilus/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DNautilus",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Tahm Kench",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/TahmKench/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DTahmKench",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Twisted Fate",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{6e7b06f0}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DTwistedFate",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Viktor",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Viktor/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DViktor",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Zoe",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Zoe/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DZoe",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Dark Star",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "darkstar",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DDarkStar",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Piltover",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "faction",
+                                        "mData": "piltover",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DPiltover",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Program",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "program",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DProgram",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Zaun",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "faction",
+                                        "mData": "zaun",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DZaun",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            }
+        },
+        "mObjectPath": "Characters/Jade_MissFortune/CAC/Jade_MissFortune_Skin16",
+        "__type": "ContextualActionData"
+    },
+    "{7dfad125}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{c23fb993}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{d9fd749d}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "bottom",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "bottom",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{e5c85859}": {
+        "ScriptName": "charscriptJade_MissFortune",
+        "path": "{e5c85859}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{2b9c7047}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{b415ce8f}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "7e57de4f-dc52-457a-9751-41942d732a66",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{70954771}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 1,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{bd909891}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "30ae6bd0-a1ee-4149-bc8c-4025ae2f5697",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{e6e5718f}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "Jade_MissFortuneBulletTime_Jade",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "__linked": []
+}

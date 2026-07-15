@@ -989,7 +989,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يتشقلب كيندريد ويطلق ثلاثة أسهم كحدٍ أقصى على الأهداف القريبة.",
-            "dynamicDescription": "يقفز كيندريد ويطلق سهمًا على ما يصل إلى 3 أعداء، فيلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> ويكسب <attackSpeed>@TotalQAttackSpeed@ سرعة هجوم</attackSpeed> لمدة @Effect8Amount@ث.<br><br>عندما يكون في داخل <spellName>جنون وولف</spellName>، تم تقليص فترة التبريد هذه القدرة إلى @Effect4Amount@ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يقفز كيندريد لإطلاق سهمٍ على ما يصل إلى 3 أعداء، مما يلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> إضافة إلى كسب <attackSpeed>@TotalQAttackSpeed@ سرعة هجوم</attackSpeed> لمدة @BaseASDuration@ث.<br><br>عند الوجود داخل <spellName>جنون وولف</spellName>، يتم تقليص فترة تبريد هذه القدرة إلى @CDNewValue@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 340.0,
                 340.0,
@@ -1439,7 +1439,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تمنح لامب كل الكائنات الحية ضمن منطقة معينة تأجيلًا للموت. لا يموت أيها حتى انتهاء التأثير. وفي النهاية، يتم علاج الوحدات.",
-            "dynamicDescription": "يبارك كيندريد الأرض لمدة @Effect2Amount@ ثانية، ولا يسمح لأي وحدة أو حليف أو عدو أو محايد بالموت أثناء وجوده في الداخل. عند بلوغ الوحدات 10% من الصحة، لن يعد بوسعها أن تتضرر أو تُعالج أثناء وجودها داخل المنطقة.<br><br>عندما ينتهي تأثير البركة، جميع الوحدات في الداخل تعالج من أجل <healing>@Effect1Amount@ الصحة</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يبارك كيندريد الأرض لمدة @BuffDuration@ث، مما يسمح لأي وحدة أو حليف أو عدو أو محايد بتجنب الموت أثناء الوجود داخل المنطقة. عند بلوغ الوحدات 10% صحة، لا يعود ممكنًا خضوع الوحدات للضرر أو العلاج أثناء وجودها داخل المنطقة.<br><br>عندما ينتهي تأثير البركة، تعالج جميع الوحدات في الداخل لاستعادة <healing>@HealFlat@ صحة</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

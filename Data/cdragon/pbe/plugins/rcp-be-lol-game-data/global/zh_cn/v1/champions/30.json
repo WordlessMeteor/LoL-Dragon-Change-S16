@@ -1155,7 +1155,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "卡尔萨斯创造一道可通过的魔能之墙。所有穿过墙体的敌方单位都会被暂时降低移动速度和魔法抗性。",
-            "dynamicDescription": "卡尔萨斯生成一个持续@Effect4Amount@秒的墙体。穿过它的敌人们会受到<scaleMR>@Effect1Amount@%魔法抗性</scaleMR>削减，持续@Effect5Amount@秒，以及在此期间持续衰减的@Effect3Amount@%<status>减速</status>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "卡尔萨斯生成一个持续@WallDuration@秒的墙体。穿过它的敌人们会受到持续@DebuffDuration@秒的<scaleMR>@MagicResistShred@%魔法抗性</scaleMR>削减，以及在此期间持续衰减的@SlowPercent@%<status>减速</status>。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1305,7 +1305,7 @@
             "cost": "每秒@Cost@法力",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "卡尔萨斯被动地从他的猎物那里窃取法力，每杀死一个敌人就会获得法力。卡尔萨斯也可以转化这种力量，用猎物的灵魂环绕自身，对附近的敌人造成伤害，但会急速消耗他自己的法力。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>当卡尔萨斯击杀了一个单位时，他会回复<scaleMana>@Effect2Amount@法力</scaleMana>。<br><br><toggle>激活：</toggle>卡尔萨斯生成一个死灵光环，每秒对附近的敌人们造成<magicDamage>@TotalDPS@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>卡尔萨斯击杀一个单位时，回复<scaleMana>@ManaRestoreOnKill@法力值</scaleMana>。<br><br><toggle>激活：</toggle>卡尔萨斯生成一个死灵光环，每秒对附近敌人造成<magicDamage>@TotalDPS@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

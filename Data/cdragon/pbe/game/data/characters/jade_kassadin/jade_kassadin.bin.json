@@ -1,0 +1,3068 @@
+{
+    "{0582b0ad}": {
+        "ObjectName": "Jade_KassadinBasicAttack",
+        "mScriptName": "Jade_KassadinBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAlternateName": "Jade_KassadinBasicAttack",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906
+                ],
+                "{0a3e0478}": 49.400001525878906,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.039999961853027,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{c03c3512}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Kassadin_KassadinBasicAttack_OnCast",
+                "13": "Play_sfx_Kassadin_KassadinBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{4c073a0c}": {
+        "mRootSpell": "{05a6ecf1}",
+        "mChildSpells": [
+            "{05a6ecf1}",
+            "{c3d462df}"
+        ],
+        "mName": "Jade_KassadinWAbility",
+        "__type": "AbilityObject"
+    },
+    "{05a6ecf1}": {
+        "ObjectName": "Jade_KassadinW",
+        "mScriptName": "Jade_KassadinW",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8192,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "PositiveEffect_EmpowerAttack",
+                "Trait_AttackReset"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        4.0,
+                        4.0,
+                        4.5,
+                        5.0,
+                        5.5,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        20.0,
+                        20.0,
+                        22.5,
+                        25.0,
+                        27.5,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "ManaGainAmount",
+                    "values": [
+                        5.0,
+                        8.0,
+                        11.0,
+                        14.0,
+                        17.0,
+                        20.0,
+                        23.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        15.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        75.0,
+                        90.0,
+                        105.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.30000001192092896,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.10000000149011612,
+            "mCoefficient2": 0.800000011920929,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Nullblade.project_jade.dds"
+            ],
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "{0a3e0478}": 1.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 5.300000190734863,
+            "missileSpeed": 0.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                25.0,
+                25.0,
+                25.0,
+                25.0,
+                25.0,
+                25.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
+                ],
+                "{0a3e0478}": 25.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Kassadin_NetherBlade_OnCast"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KassadinW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_KassadinW_Jade_Name",
+                        "keySummary": "Spell_KassadinW_Jade_Summary",
+                        "keyTooltip": "Spell_KassadinW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 3,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ManaGainAmount",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_KassadinBaseManaRestore",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_NetherBlade",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c3d462df}": {
+        "ObjectName": "Jade_KassadinW_Buff",
+        "mScriptName": "Jade_KassadinW_Buff",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8192,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "PositiveEffect_EmpowerAttack",
+                "Trait_AttackReset"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        4.0,
+                        4.0,
+                        4.5,
+                        5.0,
+                        5.5,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        20.0,
+                        20.0,
+                        22.5,
+                        25.0,
+                        27.5,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "ManaGainAmount",
+                    "values": [
+                        5.0,
+                        8.0,
+                        11.0,
+                        14.0,
+                        17.0,
+                        20.0,
+                        23.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        15.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        75.0,
+                        90.0,
+                        105.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.30000001192092896,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.10000000149011612,
+            "mCoefficient2": 0.800000011920929,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Nullblade.project_jade.dds"
+            ],
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "{0a3e0478}": 1.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 5.300000190734863,
+            "missileSpeed": 0.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                25.0,
+                25.0,
+                25.0,
+                25.0,
+                25.0,
+                25.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0,
+                    25.0
+                ],
+                "{0a3e0478}": 25.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Kassadin_NetherBlade_OnBuffActivate",
+                "19": "Play_sfx_Kassadin_NetherBlade_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KassadinW_Buff",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_KassadinW_Jade_Name",
+                        "keySummary": "Spell_KassadinW_Jade_Summary",
+                        "keyTooltip": "Spell_KassadinW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 3,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ManaGainAmount",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_KassadinBaseManaRestore",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_KassadinW_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{4abc08ba}": {
+        "ObjectName": "Jade_KassadinBasicAttack3",
+        "mScriptName": "Jade_KassadinBasicAttack3",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906
+                ],
+                "{0a3e0478}": 49.400001525878906,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.800000190734863,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{c03c3512}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Kassadin_KassadinBasicAttack_OnCast",
+                "13": "Play_sfx_Kassadin_KassadinBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{4bbc0a4d}": {
+        "ObjectName": "Jade_KassadinBasicAttack2",
+        "mScriptName": "Jade_KassadinBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAlternateName": "Jade_KassadinBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906
+                ],
+                "{0a3e0478}": 49.400001525878906,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.800000190734863,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{c03c3512}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Kassadin_KassadinBasicAttack_OnCast",
+                "13": "Play_sfx_Kassadin_KassadinBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{eb41b7be}": {
+        "mRootSpell": "{ed56de05}",
+        "mChildSpells": [
+            "{ed56de05}",
+            "{a427ec3b}",
+            "{5d0f24de}"
+        ],
+        "mName": "Jade_KassadinEAbility",
+        "__type": "AbilityObject"
+    },
+    "{5d0f24de}": {
+        "ObjectName": "Jade_KassadinE_Counter",
+        "mScriptName": "Jade_KassadinE_Counter",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0,
+                        100.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "Damage",
+                    "values": [
+                        0.0,
+                        60.0,
+                        120.0,
+                        180.0,
+                        240.0,
+                        300.0,
+                        360.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedMod",
+                    "values": [
+                        -0.25,
+                        -0.30000001192092896,
+                        -0.3499999940395355,
+                        -0.4000000059604645,
+                        -0.44999998807907104,
+                        -0.5,
+                        -0.550000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "Damage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 1.0,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_ForcePulse_Charging.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0
+                ],
+                "{0a3e0478}": 6.0,
+                "__type": "{0a0eddc9}"
+            },
+            "{f4ca428f}": 2,
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRadius": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "castConeAngle": 39.0,
+            "castConeDistance": 600.0,
+            "castFrame": 18.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{988602a4}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mana": [
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0
+                ],
+                "{0a3e0478}": 80.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Cone"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KassadinE_Counter",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_KassadinE_Jade_Name",
+                        "keySummary": "Spell_KassadinE_Jade_Summary",
+                        "keyTooltip": "Spell_KassadinE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Damage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MoveSpeedMod",
+                                    "typeIndex": 2,
+                                    "multiplier": -100.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "coneAngleDegrees": 39.0,
+                        "coneRange": 640.0,
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_KassadinE_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{a427ec3b}": {
+        "ObjectName": "Jade_KassadinE_CanCast",
+        "mScriptName": "Jade_KassadinE_CanCast",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0,
+                        100.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "Damage",
+                    "values": [
+                        0.0,
+                        60.0,
+                        120.0,
+                        180.0,
+                        240.0,
+                        300.0,
+                        360.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedMod",
+                    "values": [
+                        -0.25,
+                        -0.30000001192092896,
+                        -0.3499999940395355,
+                        -0.4000000059604645,
+                        -0.44999998807907104,
+                        -0.5,
+                        -0.550000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "Damage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 1.0,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_ForcePulse.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0
+                ],
+                "{0a3e0478}": 6.0,
+                "__type": "{0a0eddc9}"
+            },
+            "{f4ca428f}": 2,
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRadius": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "castConeAngle": 39.0,
+            "castConeDistance": 600.0,
+            "castFrame": 18.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{988602a4}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mana": [
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0
+                ],
+                "{0a3e0478}": 80.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Cone"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KassadinE_CanCast",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_KassadinE_Jade_Name",
+                        "keySummary": "Spell_KassadinE_Jade_Summary",
+                        "keyTooltip": "Spell_KassadinE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Damage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MoveSpeedMod",
+                                    "typeIndex": 2,
+                                    "multiplier": -100.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "coneAngleDegrees": 39.0,
+                        "coneRange": 640.0,
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_KassadinE_Available_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{ed56de05}": {
+        "ObjectName": "Jade_KassadinE",
+        "mScriptName": "Jade_KassadinE",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0,
+                        100.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "Damage",
+                    "values": [
+                        0.0,
+                        60.0,
+                        120.0,
+                        180.0,
+                        240.0,
+                        300.0,
+                        360.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedMod",
+                    "values": [
+                        -0.10000000149011612,
+                        -0.20000000298023224,
+                        -0.30000001192092896,
+                        -0.4000000059604645,
+                        -0.5,
+                        -0.6000000238418579,
+                        -0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "Damage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.800000011920929,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_ForcePulse.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0,
+                    6.0
+                ],
+                "{0a3e0478}": 6.0,
+                "__type": "{0a0eddc9}"
+            },
+            "{f4ca428f}": 2,
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "castRadius": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "castConeAngle": 39.0,
+            "castConeDistance": 600.0,
+            "castFrame": 18.0,
+            "missileSpeed": 0.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mana": [
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0
+                ],
+                "{0a3e0478}": 80.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Cone"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Kassadin_ForcePulse_OnCast",
+                "13": "Play_sfx_Kassadin_ForcePulse_OnHit"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KassadinE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_KassadinE_Jade_Name",
+                        "keySummary": "Spell_KassadinE_Jade_Summary",
+                        "keyTooltip": "Spell_KassadinE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Damage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MoveSpeedMod",
+                                    "typeIndex": 2,
+                                    "multiplier": -100.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "coneAngleDegrees": 39.0,
+                        "coneRange": 640.0,
+                        "__type": "TargeterDefinitionCone"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_ForcePulse",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{6dbad1e2}": {
+        "mRootSpell": "{9141e185}",
+        "mChildSpells": [
+            "{9141e185}"
+        ],
+        "mName": "Jade_KassadinQAbility",
+        "__type": "AbilityObject"
+    },
+    "{737ff2ad}": {
+        "ObjectName": "Jade_KassadinCritAttack",
+        "mScriptName": "Jade_KassadinCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906
+                ],
+                "{0a3e0478}": 49.400001525878906,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.679999828338623,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{ae8d7395}",
+            "mAfterEffectKey": "{c03c3512}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Kassadin_KassadinCritAttack_OnCast",
+                "13": "Play_sfx_Kassadin_KassadinCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{84758534}": {
+        "mRootSpell": "{e9d4bf21}",
+        "mChildSpells": [
+            "{e9d4bf21}",
+            "{a307fe40}"
+        ],
+        "mName": "Jade_KassadinPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{9141e185}": {
+        "ObjectName": "Jade_KassadinQ",
+        "mScriptName": "Jade_KassadinQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        35.0,
+                        65.0,
+                        95.0,
+                        125.0,
+                        155.0,
+                        185.0,
+                        215.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        80.0,
+                        80.0,
+                        110.0,
+                        140.0,
+                        170.0,
+                        200.0,
+                        230.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        15.0,
+                        60.0,
+                        105.0,
+                        150.0,
+                        195.0,
+                        240.0,
+                        285.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SilenceDuration",
+                    "values": [
+                        0.75,
+                        1.0,
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.6000000238418579,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.699999988079071,
+            "mCoefficient2": 0.4000000059604645,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Averdrian_AstralBeam.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0,
+                9.0
+            ],
+            "Cooldown": {
+                "values": [
+                    9.0,
+                    9.0,
+                    9.0,
+                    9.0,
+                    9.0,
+                    9.0,
+                    9.0
+                ],
+                "{0a3e0478}": 9.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mSpeed": 1400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 17.145000457763672,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "{8bababa4}",
+            "mHitEffectKey": "{15e0a840}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                120.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    70.0,
+                    80.0,
+                    90.0,
+                    100.0,
+                    110.0,
+                    120.0
+                ],
+                "{0a3e0478}": 70.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Kassadin_NullLance_OnCast",
+                "13": "Play_sfx_Kassadin_NullLance_OnHit",
+                "16": "Play_sfx_Kassadin_NullLance_OnMissileLaunch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KassadinQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_KassadinQ_Jade_Name",
+                        "keySummary": "Spell_KassadinQ_Jade_Summary",
+                        "keyTooltip": "Spell_KassadinQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SilenceDuration",
+                                    "typeIndex": 3,
+                                    "nameOverride": "Spell_ListType_SilenceDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_NullLance",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 524288,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{944d394e}": {
+        "ObjectName": "Jade_KassadinAttackSequencer",
+        "mScriptName": "Jade_KassadinAttackSequencer",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906
+                ],
+                "{0a3e0478}": 49.400001525878906,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.679999828338623,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "{ae8d7395}",
+            "mAfterEffectKey": "{c03c3512}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{afd207f9}": {
+        "mRootSpell": "{9785a4a5}",
+        "mChildSpells": [
+            "{9785a4a5}"
+        ],
+        "mName": "Jade_KassadinRAbility",
+        "__type": "AbilityObject"
+    },
+    "{9785a4a5}": {
+        "ObjectName": "Jade_KassadinR",
+        "mScriptName": "Jade_KassadinR",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "PositiveEffect_Teleport",
+                "Trait_PlayerSelectedDashDirection"
+            ],
+            "DataValues": [
+                {
+                    "name": "Damage",
+                    "values": [
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0,
+                        100.0,
+                        110.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "Damage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.699999988079071,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Riftwalk.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                6.0,
+                5.0,
+                2.0,
+                2.0,
+                2.0
+            ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCostAlwaysShownInUI": true,
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "castRadius": [
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0
+            ],
+            "castConeDistance": 100.0,
+            "castTargetAdditionalUnitsRadius": 250.0,
+            "castFrame": 10.300000190734863,
+            "missileSpeed": 0.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Kassadin_RiftWalk_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KassadinR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_KassadinR_Jade_Name",
+                        "keySummary": "Spell_KassadinR_Jade_Summary",
+                        "keyTooltip": "Spell_KassadinR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "Damage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_KassadinR_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 128,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{a307fe40}": {
+        "ObjectName": "Jade_KassadinPassive_AttackSpeedBoost",
+        "mScriptName": "Jade_KassadinPassive_AttackSpeedBoost",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KassadinPassive_AttackSpeedBoost",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_KassadinPassive_Jade_Name",
+                        "keySummary": "Spell_KassadinPassive_Jade_Summary",
+                        "keyTooltip": "Spell_KassadinPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_KassadinPassive_Speed_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{e9d4bf21}": {
+        "ObjectName": "Jade_KassadinPassive",
+        "mScriptName": "Jade_KassadinPassive",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Kassadin_Netherburn.project_jade.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KassadinPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_KassadinPassive_Jade_Name",
+                        "keySummary": "Spell_KassadinPassive_Jade_Summary",
+                        "keyTooltip": "Spell_KassadinPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_KassadinPassive_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c8f8917f}": {
+        "ObjectName": "Jade_KassadinBladeFX",
+        "mScriptName": "Jade_KassadinBladeFX",
+        "mBuff": {
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{20a3f3bf}": {
+        "ScriptName": "charscriptJade_Kassadin",
+        "path": "{20a3f3bf}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "a237a145-583d-41f6-92db-2c3170478b24",
+                        "Src": {
+                            "value": 0.8500000238418579,
+                            "__type": "FloatGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "MagicAbsorb",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    null,
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "6e595748-bf29-43d3-b155-dfc6bbcdc906",
+                        "Condition": null,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "6b67c258-fef5-44a8-9a00-6f5d1588b717",
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "8c4850f8-5a40-4239-840e-d80d62401222",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "Level2",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 2,
+                                        "Value2": {
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{b415ce8f}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "253ef63e-84d5-41ed-b1b2-4fcc52d60f9a",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{70954771}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 2,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "{7d7b0f5e}": {
+        "mCharacterName": "Jade_Kassadin",
+        "baseHPModifiable": {
+            "baseValue": 511.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 78.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.4900000095367432,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10000000149011612,
+            "__type": "ModifiableFloat"
+        },
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 275.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 45.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.5,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.11999999731779099,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "secondaryAbilityResource": {
+            "arType": 14,
+            "{726ee5cd}": {
+                "baseValue": 6.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arIncrements": 1.0,
+            "arMaxSegments": 6,
+            "arHasRegenText": false,
+            "arAllowMaxValueToBeOverridden": true,
+            "arDisplayAsPips": true,
+            "VisibilityFlags": 11,
+            "arOverrideSmallPipName": "CorkiSmall",
+            "arOverrideLargePipName": "CorkiLarge",
+            "arOverrideEmptyPipName": "EmptyPipSmall",
+            "arOverrideSpacerName": "PipSpacer1",
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 56.20000076293945,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.9000000953674316,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 17.200000762939453,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.200000047683716,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "{01262a25}": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 340.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6399999856948853,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6399999856948853,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 3.700000047683716,
+            "__type": "ModifiableFloat"
+        },
+        "mAdaptiveForceToAbilityPowerWeight": 1.0,
+        "acquisitionRange": 400.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.15000000596046448,
+            "mAttackProbability": 1.0,
+            "mAttackName": "Jade_KassadinBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "Jade_KassadinBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_KassadinBasicAttack3",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.15000000596046448,
+                "mAttackName": "Jade_KassadinCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_KassadinQAbility/Jade_KassadinQ",
+            "Jade_KassadinWAbility/Jade_KassadinW",
+            "Jade_KassadinEAbility/Jade_KassadinE",
+            "Jade_KassadinRAbility/Jade_KassadinR"
+        ],
+        "spells": [
+            "{9141e185}",
+            "{05a6ecf1}",
+            "{ed56de05}",
+            "{9785a4a5}"
+        ],
+        "{c1984296}": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{84758534}",
+            "{6dbad1e2}",
+            "{4c073a0c}",
+            "{eb41b7be}",
+            "{afd207f9}"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Kassadin",
+        "passiveLuaName": "Jade_Kassadin_VoidStone",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Kassadin",
+        "passive1IconName": "ASSETS/Characters/Jade_Kassadin/HUD/Icons2D/Jade_Kassadin_Passive.project_jade.dds",
+        "name": "game_character_displayname_Jade_Kassadin",
+        "weaponMaterials": [
+            "ArmsmasterBasicAttack"
+        ],
+        "selectionHeight": 165.0,
+        "selectionRadius": 120.0,
+        "pathfindingCollisionRadius": 35.0,
+        "{eb74898c}": 0.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1056,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            13,
+            0,
+            14,
+            0
+        ],
+        "characterToolData": {
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Kassadin",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "assassin",
+            "searchTagsSecondary": "mage",
+            "championId": 60038,
+            "roles": "MAGE",
+            "magicRank": 8,
+            "difficultyRank": 8,
+            "description": "game_character_description_Jade_Kassadin",
+            "defenseRank": 5,
+            "classification": "Deadly",
+            "ChasingAttackRangePercent": 0.5,
+            "attackRank": 3,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Sorcery",
+        "mPerkReplacements": {
+            "mReplacements": [
+                {
+                    "mReplaceTarget": "Perks/Styles/Resolve/Aftershock",
+                    "mReplaceWith": "Perks/Styles/Resolve/GraspOfTheUndying",
+                    "__type": "PerkReplacement"
+                },
+                {
+                    "mReplaceTarget": "Perks/Styles/Inspiration/GlacialAugment",
+                    "mReplaceWith": "Perks/Styles/Inspiration/FirstStrike",
+                    "__type": "PerkReplacement"
+                }
+            ],
+            "__type": "PerkReplacementList"
+        },
+        "mCharacterPassiveSpell": "{e9d4bf21}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{944d394e}",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{c8f8917f}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{20a3f3bf}",
+        "__type": "CharacterRecord"
+    },
+    "{b42f749c}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    0,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "middle",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    1,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "middle",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{f0144978}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{e5b67028}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

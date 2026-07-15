@@ -1,0 +1,3693 @@
+{
+    "{b5f043dc}": {
+        "mRootSpell": "{040d6511}",
+        "mChildSpells": [
+            "{040d6511}"
+        ],
+        "mName": "Jade_WarwickWAbility",
+        "__type": "AbilityObject"
+    },
+    "{040d6511}": {
+        "ObjectName": "Jade_WarwickW",
+        "mScriptName": "Jade_WarwickW",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8193,
+            "mAlternateName": "Jade_WarwickW",
+            "DataValues": [
+                {
+                    "name": "AttackSpeedMod",
+                    "values": [
+                        0.30000001192092896,
+                        0.4000000059604645,
+                        0.5,
+                        0.6000000238418579,
+                        0.699999988079071,
+                        0.800000011920929,
+                        0.8999999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackSpeedDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AllyAttackSpeedMod",
+                    "values": [
+                        0.15000000596046448,
+                        0.20000000298023224,
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Range",
+                    "values": [
+                        20000.0,
+                        20000.0,
+                        20000.0,
+                        20000.0,
+                        20000.0,
+                        20000.0,
+                        20000.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "Spell3_Howl",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_FrenziedStrikes.project_jade.dds"
+            ],
+            "mCastTime": 0.5,
+            "{11704a2b}": 0.43950000405311584,
+            "{f26881a0}": 1.149999976158142,
+            "cooldownTime": [
+                24.0,
+                24.0,
+                22.0,
+                20.0,
+                18.0,
+                16.0,
+                16.0
+            ],
+            "Cooldown": {
+                "values": [
+                    24.0,
+                    24.0,
+                    22.0,
+                    20.0,
+                    18.0,
+                    16.0,
+                    16.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mAmmoRechargeTime": [
+                3.0,
+                3.0,
+                3.0,
+                3.0,
+                3.0,
+                3.0,
+                3.0
+            ],
+            "mChannelIsInterruptedByDisables": false,
+            "mChannelIsInterruptedByAttacking": false,
+            "mShowChannelBar": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0
+                ],
+                "{0a3e0478}": 20000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0,
+                2200.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 16.09000015258789,
+            "missileSpeed": 20.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mana": [
+                35.0,
+                55.0,
+                55.0,
+                55.0,
+                55.0,
+                55.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    35.0,
+                    35.0,
+                    35.0,
+                    35.0,
+                    35.0,
+                    35.0
+                ],
+                "{0a3e0478}": 35.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickWActiveHit_OnCast"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_WarwickW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_WarwickW_Jade_Name",
+                        "keySummary": "Spell_WarwickW_Jade_Summary",
+                        "keyTooltip": "Spell_WarwickW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "AttackSpeedMod",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_AttackSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_WarwickW",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_WarwickW_Name",
+                    "keyTooltip": "Buff_WarwickW_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{ec17e271}": [
+                {
+                    "EffectTag": 32,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "AttackSpeedDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{0ca13add}": {
+        "ObjectName": "Jade_WarwickBasicAttack",
+        "mScriptName": "Jade_WarwickBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_WarwickBasicAttack",
+            "mAnimationName": "Attack1Base",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "{49345ac2}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickBasicAttack_OnCast",
+                "13": "Play_sfx_Warwick_WarwickBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{7f4fddee}": {
+        "mRootSpell": "{aa9287fd}",
+        "mChildSpells": [
+            "{aa9287fd}",
+            "{a2aa8638}",
+            "{29421960}"
+        ],
+        "mName": "Jade_WarwickEAbility",
+        "__type": "AbilityObject"
+    },
+    "{29421960}": {
+        "ObjectName": "Jade_WarwickETarget",
+        "mScriptName": "Jade_WarwickETarget",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_BloodScent.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_WarwickETarget",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_WarwickE_Jade_Name",
+                    "keyTooltip": "Buff_WarwickETargetPassive_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{a2aa8638}": {
+        "ObjectName": "Jade_WarwickEInternal",
+        "mScriptName": "Jade_WarwickEInternal",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/20.project_jade.dds"
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Warwick_WarwickE2_OnBuffActivate"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_WarwickEPassive_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{aa9287fd}": {
+        "ObjectName": "Jade_WarwickE",
+        "mScriptName": "Jade_WarwickE",
+        "mSpell": {
+            "flags": 36,
+            "mAffectsTypeFlags": 14346,
+            "mAlternateName": "Jade_WarwickE",
+            "mSpellTags": [
+                "Trait_PassiveSlot"
+            ],
+            "DataValues": [
+                {
+                    "name": "Range",
+                    "values": [
+                        700.0,
+                        1500.0,
+                        2300.0,
+                        3100.0,
+                        3900.0,
+                        4700.0,
+                        5500.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSBonus",
+                    "values": [
+                        0.15000000596046448,
+                        0.20000000298023224,
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "None",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_BloodScent.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mDoesntBreakChannels": true,
+            "mProjectTargetToCastRange": true,
+            "bIsToggleSpell": true,
+            "castRange": [
+                1500.0,
+                1500.0,
+                2300.0,
+                3100.0,
+                3900.0,
+                4700.0,
+                4700.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1500.0,
+                    1500.0,
+                    2300.0,
+                    3100.0,
+                    3900.0,
+                    4700.0,
+                    4700.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                1500.0,
+                1500.0,
+                2300.0,
+                3100.0,
+                3900.0,
+                4700.0,
+                4700.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 90.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Root",
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "missileSpeed": 1600.0,
+            "mMissileEffectName": "doesnotexist.troy",
+            "mLineWidth": 90.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "pelvis",
+            "mParticleStartOffset": [
+                -40.0,
+                0.0,
+                0.0
+            ],
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_WarwickE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_WarwickE_Jade_Name",
+                        "keySummary": "Spell_WarwickE_Jade_Summary",
+                        "keyTooltip": "Spell_WarwickE_Jade_Tooltip",
+                        "keyCost": "Spell_Passive",
+                        "keyCooldown": ""
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Range",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_WarwickE_ListType_Jade",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MSBonus",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MovementSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "__type": "TargeterDefinitionMinimap"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_WarwickE",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_WarwickE_Jade_Name"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{3b70749d}": {
+        "ObjectName": "Jade_WarwickCritAttack",
+        "mScriptName": "Jade_WarwickCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_WarwickCritAttack",
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "{2f2e75c2}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickCritAttack_OnCast",
+                "13": "Play_sfx_Warwick_WarwickCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{4e9e8e32}": {
+        "mRootSpell": "{f6f2a2a5}",
+        "mChildSpells": [
+            "{f6f2a2a5}"
+        ],
+        "mName": "Jade_WarwickQAbility",
+        "__type": "AbilityObject"
+    },
+    "{cc13f764}": {
+        "mRootSpell": "{9667f241}",
+        "mChildSpells": [
+            "{9667f241}",
+            "{75374118}"
+        ],
+        "mName": "Jade_WarwickPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{75374118}": {
+        "ObjectName": "Jade_WarwickPassiveStacks",
+        "mScriptName": "Jade_WarwickPassiveStacks",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InnerHunger.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_WarwickPassiveStacks",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_WarwickPassive_Jade_Name",
+                    "keyTooltip": "Buff_WarwickPassive_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{9667f241}": {
+        "ObjectName": "Jade_WarwickPassive",
+        "mScriptName": "Jade_WarwickPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "Jade_WarwickPassiveStacks",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "OnHitDamage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mStartValue": 3.0,
+                            "mEndValue": 16.0,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "{fe87f21e}": [
+                {
+                    "{6166b756}": "OnHitDamage",
+                    "__type": "{fe87f21e}"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InnerHunger.project_jade.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_WarwickPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_WarwickPassive_Jade_Name",
+                        "keySummary": "Spell_WarwickPassive_Jade_Summary",
+                        "keyTooltip": "Spell_WarwickPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{9801c0e6}": {
+        "ObjectName": "Jade_WarwickBasicAttackPassive4",
+        "mScriptName": "Jade_WarwickBasicAttackPassive4",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_WarwickBasicAttack",
+            "mAnimationName": "Attack4Passive",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "{18595b00}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{9a01c40c}": {
+        "ObjectName": "Jade_WarwickBasicAttackPassive2",
+        "mScriptName": "Jade_WarwickBasicAttackPassive2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_WarwickBasicAttack",
+            "mAnimationName": "Attack2Passive",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "{18595b00}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{9b01c59f}": {
+        "ObjectName": "Jade_WarwickBasicAttackPassive3",
+        "mScriptName": "Jade_WarwickBasicAttackPassive3",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_WarwickBasicAttack",
+            "mAnimationName": "Attack3Passive",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "{18595b00}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{9d01c8c5}": {
+        "ObjectName": "Jade_WarwickBasicAttackPassive1",
+        "mScriptName": "Jade_WarwickBasicAttackPassive1",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_WarwickBasicAttack",
+            "mAnimationName": "Attack1Passive",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "{18595b00}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{bf0edb89}": {
+        "mRootSpell": "{d9a77a83}",
+        "mChildSpells": [
+            "{d9a77a83}",
+            "{f70f054a}",
+            "{a6f4b242}"
+        ],
+        "mName": "Jade_WarwickRAbility",
+        "__type": "AbilityObject"
+    },
+    "{a6f4b242}": {
+        "ObjectName": "Jade_WarwickRSound",
+        "mScriptName": "Jade_WarwickRSound",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InfiniteDuress.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_WarwickRSound",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_WarwickR_Name",
+                    "keyTooltip": "Buff_WarwickRTarget_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{d9a77a83}": {
+        "ObjectName": "Jade_WarwickR",
+        "mScriptName": "Jade_WarwickR",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 4106,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Spell_Jade_WarwickR_Jade_Name",
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock",
+                "Trait_Ultimate",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "RDuration",
+                    "values": [
+                        1.7999999523162842,
+                        1.7999999523162842,
+                        1.7999999523162842,
+                        1.7999999523162842,
+                        1.7999999523162842,
+                        1.7999999523162842,
+                        1.7999999523162842
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RBaseDamage",
+                    "values": [
+                        165.0,
+                        250.0,
+                        335.0,
+                        420.0,
+                        505.0,
+                        590.0,
+                        675.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADScaling",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "NumberOfHits",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusLifesteal",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "{72c5c2a8}": 1,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "RBaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "ADScaling",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InfiniteDuress.project_jade.dds"
+            ],
+            "mCastTime": 0.10000000149011612,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                90.0,
+                90.0,
+                80.0,
+                70.0,
+                70.0,
+                70.0,
+                70.0
+            ],
+            "Cooldown": {
+                "values": [
+                    90.0,
+                    90.0,
+                    80.0,
+                    70.0,
+                    70.0,
+                    70.0,
+                    70.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "cantCastWhileRooted": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                675.0,
+                675.0,
+                675.0,
+                675.0,
+                675.0,
+                675.0,
+                675.0
+            ],
+            "castRadiusSecondary": [
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 4.619999885559082,
+            "missileSpeed": 0.0,
+            "mFloatVarsDecimals": [
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                100.0,
+                125.0,
+                150.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    125.0,
+                    150.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickR_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_WarwickR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_WarwickR_Jade_Name",
+                        "keySummary": "Spell_WarwickR_Jade_Summary",
+                        "keyTooltip": "Spell_WarwickR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "RBaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 256,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 32,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "RDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "RDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 8192,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "RDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "RDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f70f054a}": {
+        "ObjectName": "Jade_WarwickRChannel",
+        "mScriptName": "Jade_WarwickRChannel",
+        "mSpell": {
+            "mAffectsTypeFlags": 4106,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Spell_Jade_WarwickR_Jade_Name",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        10.0,
+                        30.0,
+                        50.0,
+                        70.0,
+                        0.0,
+                        0.0,
+                        20.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.0,
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_InfiniteDuress.project_jade.dds"
+            ],
+            "mCastTime": 0.0010000000474974513,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 0.5,
+            "mChannelDuration": [
+                1.7999999523162842,
+                1.7999999523162842,
+                1.7999999523162842,
+                1.7999999523162842,
+                1.7999999523162842,
+                1.7999999523162842,
+                1.7999999523162842
+            ],
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileChanneling": true,
+            "mChannelIsInterruptedByAttacking": false,
+            "bHaveHitEffect": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 4.619999885559082,
+            "missileSpeed": 0.0,
+            "mHitEffectName": "doesnotexist.troy",
+            "selectionPriority": 1,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_WarwickRChannel",
+                    "mFormat": "{3b504ce3}",
+                    "mLocKeys": {
+                        "keyName": "Spell_WarwickR_Jade_Name"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{bc6b889e}": {
+        "ObjectName": "Jade_WarwickAttackSequencer",
+        "mScriptName": "Jade_WarwickAttackSequencer",
+        "__type": "SpellObject"
+    },
+    "{cacfbccb}": {
+        "ObjectName": "Jade_WarwickBasicAttack4",
+        "mScriptName": "Jade_WarwickBasicAttack4",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_WarwickBasicAttack",
+            "mAnimationName": "Attack4",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "{49345ac2}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickBasicAttack_OnCast",
+                "13": "Play_sfx_Warwick_WarwickBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{cfcfc4aa}": {
+        "ObjectName": "Jade_WarwickBasicAttack3",
+        "mScriptName": "Jade_WarwickBasicAttack3",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_WarwickBasicAttack",
+            "mAnimationName": "Attack3",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "{49345ac2}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickBasicAttack_OnCast",
+                "13": "Play_sfx_Warwick_WarwickBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{d0cfc63d}": {
+        "ObjectName": "Jade_WarwickBasicAttack2",
+        "mScriptName": "Jade_WarwickBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_WarwickBasicAttack",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.31610000133514404,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 347.79998779296875,
+            "mHitEffectKey": "{49345ac2}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickBasicAttack_OnCast",
+                "13": "Play_sfx_Warwick_WarwickBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f6f2a2a5}": {
+        "ObjectName": "Jade_WarwickQ",
+        "mScriptName": "Jade_WarwickQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_WarwickQ",
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        50.0,
+                        100.0,
+                        150.0,
+                        200.0,
+                        250.0,
+                        300.0,
+                        350.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        25.0,
+                        25.0,
+                        37.5,
+                        50.0,
+                        62.5,
+                        75.0,
+                        75.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        135.0,
+                        150.0,
+                        165.0,
+                        180.0,
+                        195.0,
+                        210.0,
+                        225.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0,
+                        425.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        75.0,
+                        125.0,
+                        175.0,
+                        225.0,
+                        275.0,
+                        325.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxHealthDamage",
+                    "values": [
+                        0.05999999865889549,
+                        0.07999999821186066,
+                        0.10000000149011612,
+                        0.11999999731779099,
+                        0.14000000059604645,
+                        0.1599999964237213,
+                        0.18000000715255737
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealingRatio",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{8f13c14f}": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "{72c5c2a8}": 1,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "APDamage": {
+                    "{72c5c2a8}": 1,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 1.2000000476837158,
+            "mCoefficient2": 1.0,
+            "mAnimationName": "Jade_Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Warwick_SeverArmor.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                10.0,
+                10.0,
+                9.0,
+                8.0,
+                7.0,
+                6.0,
+                5.0
+            ],
+            "Cooldown": {
+                "values": [
+                    10.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mChannelIsInterruptedByDisables": false,
+            "mChannelIsInterruptedByAttacking": false,
+            "mShowChannelBar": false,
+            "useAnimatorFramerate": true,
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 13.600000381469727,
+            "missileSpeed": 1500.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                110.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    70.0,
+                    80.0,
+                    90.0,
+                    100.0,
+                    110.0,
+                    110.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Warwick_WarwickQ_OnCast",
+                "13": "Play_sfx_Warwick_WarwickQ_OnHit"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_WarwickQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_WarwickQ_Jade_Name",
+                        "keySummary": "Spell_WarwickQ_Jade_Summary",
+                        "keyTooltip": "Spell_WarwickQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MaxHealthDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MaxHealthPercent",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "{8f13c14f}",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 8,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 3,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{0985ebb2}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "jungle",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{9ffc0e26}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{a95e3ecf}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{2a97d00a}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{45ff6d3f}": {
+        "ScriptName": "charscriptJade_Warwick",
+        "path": "{45ff6d3f}",
+        "sequences": {
+            "{6a7835b9}": {
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "{8c6b97ea}": {
+        "mCooldown": 15.0,
+        "mSituations": {
+            "KillChampion": {
+                "mRules": [
+                    {
+                        "mRuleName": "Kill - General",
+                        "mConditions": [
+                            {
+                                "mRuleCooldown": 5.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DGeneral",
+                            "mWaitForAnnouncerQueue": true,
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "FirstMove2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Move - First",
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DFirst",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Taunt": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt",
+                        "mAudioAction": {
+                            "mSelfEventName": "Taunt3DGeneral",
+                            "mAllyEventName": "Taunt3DGeneral",
+                            "mEnemyEventName": "Taunt3DGeneral",
+                            "mSpectatorEventName": "Taunt3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Respawn2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Respawn",
+                        "mAudioAction": {
+                            "mSelfEventName": "Respawn2DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "EnemyEncounter": {
+                "mCoolDownTime": 15.0,
+                "mRules": [
+                    {
+                        "mRuleName": "Blitzcrank",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{2464ef80}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DBlitzcrank",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Camille",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Camille/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DCamille",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Evelynn",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{4c442335}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DEvelynn",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Singed",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{3aa2e8b8}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DSinged",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Zac",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Zac/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DZac",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Yordle",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCategory": "race",
+                                        "mData": "yordle",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DYordle",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Ahri",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{81a39572}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DAhri",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Caitlyn",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Caitlyn/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DCaitlyn",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Ekko",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Ekko/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DEkko",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Jinx",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Jinx/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DJinx",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Kindred",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Kindred/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DKindred",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Rengar",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Rengar/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DRengar",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Twitch",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{9f85fa8d}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DTwitch",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Viktor",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Viktor/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DViktor",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Vi",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Vi/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DVi",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Zed",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Zed/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DZed",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Akali",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Akali/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DAkali",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Reksai",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/RekSai/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DReksai",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Urgot",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Urgot/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DUrgot",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Soraka",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{a0d35919}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DSoraka",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "MoveOrder2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Move - Standard",
+                        "mConditions": [
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DStandard",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackChampion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack - Champion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackMinion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack - Minion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackNeutral2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack - Neutral",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Joke": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke",
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DGeneral",
+                            "mAllyEventName": "Joke3DGeneral",
+                            "mEnemyEventName": "Joke3DGeneral",
+                            "mSpectatorEventName": "Joke3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Laugh": {
+                "mRules": [
+                    {
+                        "mRuleName": "Laugh",
+                        "mAudioAction": {
+                            "mSelfEventName": "Laugh3DGeneral",
+                            "mAllyEventName": "Laugh3DGeneral",
+                            "mEnemyEventName": "Laugh3DGeneral",
+                            "mSpectatorEventName": "Laugh3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellCast": {
+                "mRules": [
+                    {
+                        "mRuleName": "Basic 1",
+                        "mConditions": [
+                            {
+                                "mSpell": "{0ca13add}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Basic 2",
+                        "mConditions": [
+                            {
+                                "mSpell": "{d0cfc63d}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Basic 3",
+                        "mConditions": [
+                            {
+                                "mSpell": "{cfcfc4aa}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Basic 4",
+                        "mConditions": [
+                            {
+                                "mSpell": "{cacfbccb}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Crit",
+                        "mConditions": [
+                            {
+                                "mSpell": "{3b70749d}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "cast3D",
+                            "mAllyEventName": "cast3D",
+                            "mEnemyEventName": "cast3D",
+                            "mSpectatorEventName": "cast3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            }
+        },
+        "mObjectPath": "Characters/Jade_Warwick/CAC/Jade_Warwick_Skin16",
+        "__type": "ContextualActionData"
+    },
+    "{c899091c}": {
+        "mCharacterName": "Jade_Warwick",
+        "baseHPModifiable": {
+            "baseValue": 526.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 98.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.5699999332427979,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.1599999964237213,
+            "__type": "ModifiableFloat"
+        },
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 220.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 30.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.5399999618530273,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.11999999731779099,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 60.1349983215332,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.375,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 19.5,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.5,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "{01262a25}": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 345.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6790000200271606,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6790000200271606,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.880000114440918,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 400.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.125,
+            "mAttackProbability": 1.0,
+            "mAttackName": "Jade_WarwickBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "Jade_WarwickBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackProbability": 0.0,
+                "mAttackName": "Jade_WarwickBasicAttack3",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttackPassive1",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttackPassive2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttackPassive3",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttack4",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttackPassive4",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "Jade_WarwickBasicAttack",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttack3",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttackPassive1",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttackPassive2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttackPassive3",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttack4",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_WarwickBasicAttackPassive4",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_WarwickQAbility/Jade_WarwickQ",
+            "Jade_WarwickWAbility/Jade_WarwickW",
+            "Jade_WarwickEAbility/Jade_WarwickE",
+            "Jade_WarwickRAbility/Jade_WarwickR"
+        ],
+        "spells": [
+            "{f6f2a2a5}",
+            "{040d6511}",
+            "{aa9287fd}",
+            "{d9a77a83}"
+        ],
+        "extraSpells": [
+            "Jade_WarwickRChannel",
+            "Jade_WarwickPSpellInfo",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{f70f054a}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{cc13f764}",
+            "{4e9e8e32}",
+            "{b5f043dc}",
+            "{7f4fddee}",
+            "{bf0edb89}"
+        ],
+        "passiveName": "Spell_Jade_WarwickP_Name",
+        "passiveLuaName": "Jade_WarwickPassive_Jade",
+        "passiveToolTip": "Spell_Jade_WarwickP_Summary",
+        "passiveSpell": "Jade_WarwickP",
+        "passive1IconName": "ASSETS/Characters/Jade_Warwick/HUD/Icons2D/Jade_WarwickP.project_jade.dds",
+        "name": "game_character_displayname_Jade_Warwick",
+        "weaponMaterials": [
+            "OlafBasicAttack"
+        ],
+        "selectionHeight": 191.6667022705078,
+        "selectionRadius": 120.0,
+        "pathfindingCollisionRadius": 35.0,
+        "{eb74898c}": 0.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1055,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            0,
+            0,
+            17
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
+                    "displayName": "Undying Rage",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
+                    "displayName": "Undying Rage",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
+                    "displayName": "Undying Rage",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.",
+                    "displayName": "Undying Rage",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "+40% Mana Point regeneration.",
+                "+60% Mana Point regeneration.",
+                "+80% Mana Point regeneration."
+            ],
+            "passiveData": [
+                {
+                    "name": "Spell_Jade_WarwickP_Name",
+                    "level": [
+                        1,
+                        4,
+                        7
+                    ],
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "fighter",
+            "searchTagsSecondary": "tank",
+            "championId": 60019,
+            "roles": "BRAWLER",
+            "magicRank": 3,
+            "LevelSpellEffectiveness": 2.0,
+            "difficultyRank": 3,
+            "description": "game_character_description_Jade_Warwick",
+            "defenseRank": 5,
+            "classification": "Strong",
+            "ChasingAttackRangePercent": 0.5,
+            "botEnabled": true,
+            "botEnabledMM": true,
+            "attackRank": 9,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Precision",
+        "mCharacterPassiveSpell": "{9667f241}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{9667f241}",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{bc6b889e}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{45ff6d3f}",
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

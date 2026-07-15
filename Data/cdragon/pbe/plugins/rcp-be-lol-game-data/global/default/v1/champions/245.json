@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Ekko throws a temporal grenade that expands into a time-distortion field upon hitting an enemy champion, slowing and damaging anyone caught inside. After a delay, the grenade rewinds back to Ekko, dealing damage on its return.",
-            "dynamicDescription": "Ekko throws a device dealing <magicDamage>@InitialDamage@ magic damage</magicDamage>. On hitting a champion or reaching the end of its range, it expands into a field that <status>Slows</status> enemies inside by @Effect2Amount*-100@%. After it expands, Ekko recalls it, dealing <magicDamage>@RecallDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko throws a device dealing <magicDamage>@InitialDamage@ magic damage</magicDamage>. On hitting a champion or reaching the end of its range, it expands into a field that <status>Slows</status> enemies inside by @SlowPercent*-100@%. After it expands, Ekko recalls it, dealing <magicDamage>@RecallDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Ekko's basic attacks deal bonus magic damage to low health enemies. He can cast Parallel Convergence to split the timeline, creating an anomaly after a few seconds that slows enemies caught inside. If Ekko enters the anomaly, he gains shielding and stuns enemies by suspending them in time.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Ekko's Attacks against enemies below 30% Health deal <magicDamage>@MissingHealthPercent@ missing Health magic damage</magicDamage>.<br><br><spellActive>Active:</spellActive> Ekko launches a chronosphere lasting 1.5 seconds after a delay that <status>Slows</status> enemies inside by @Effect10Amount@%. If Ekko enters the sphere, he detonates it, <status>Stunning</status> for @Effect2Amount@ seconds and gaining <shield>@TotalShield@ Shield</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Ekko's Attacks against enemies below @BelowHealthThreshold*100@% Health deal <magicDamage>@MissingHealthPercent@ missing Health magic damage</magicDamage>.<br><br><spellActive>Active:</spellActive> Ekko launches a chronosphere lasting @SlowZoneDuration@ seconds after a delay that <status>Slows</status> enemies inside by @SlowPercent@%. If Ekko enters the sphere, he detonates it, <status>Stunning</status> for @StunDuration@ seconds and gaining <shield>@TotalShield@ Shield</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

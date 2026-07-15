@@ -1,0 +1,2383 @@
+{
+    "{22068ea8}": {
+        "skinClassification": 1,
+        "championSkinName": "Jade_ChogathSkin06",
+        "metaDataTags": "faction:void,gender:male,race:monster,skinline:prehistoric",
+        "loadscreen": {
+            "image": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Jade_ChogathLoadScreen_6.project_jade.tex",
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Chogath"
+            ],
+            "bankUnits": [
+                {
+                    "name": "Chogath_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Chogath/Skins/Base/Chogath_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Chogath/Skins/Base/Chogath_Base_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                },
+                {
+                    "name": "Chogath_Base_VO",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Chogath/Skins/Base/Chogath_Base_VO_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Chogath/Skins/Base/Chogath_Base_VO_events.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Chogath/Skins/Base/Chogath_Base_VO_audio.wpk"
+                    ],
+                    "events": [
+                        "Play_vo_Chogath_Attack2DGeneral",
+                        "Play_vo_Chogath_Death3D",
+                        "Play_vo_Chogath_Joke3DGeneral",
+                        "Play_vo_Chogath_Laugh3DGeneral",
+                        "Play_vo_Chogath_Move2DStandard",
+                        "Play_vo_Chogath_Taunt3DGeneral"
+                    ],
+                    "voiceOver": true,
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "{3d87252f}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Jade_Chogath_Skin06.project_jade.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Jade_Chogath_Skin06.project_jade.skn",
+            "texture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Jade_Chogath_Skin06_TX_CM.project_jade.tex",
+            "skinScale": 0.800000011920929,
+            "selfIllumination": 0.699999988079071,
+            "overrideBoundingBox": [
+                130.0,
+                230.0,
+                130.0
+            ],
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "{9a817954}": [
+                {
+                    "category": "{e1043940}",
+                    "Submeshes": "blinn1",
+                    "__type": "{993f8595}"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "mContextualActionData": "{969eba6d}",
+        "iconCircle": "ASSETS/Characters/Jade_Chogath/HUD/GreenTerror_Circle.project_jade.tex",
+        "iconSquare": "ASSETS/Characters/Jade_Chogath/HUD/GreenTerror_Square.project_jade.tex",
+        "iconAvatar": "ASSETS/Characters/Jade_Chogath/HUD/Jade_Chogath_Circle_6.project_jade.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "{88bd68b2}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{1cf534c0}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_1_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        60.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Particles/tooth_spike_03.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        1.75,
+                        1.75,
+                        1.75
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_2_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        40.0,
+                        -90.0,
+                        40.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Particles/tooth_spike_03.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Chogath_Skin06_E_mis6",
+        "particlePath": "Characters/Jade_Chogath/Skins/Skin6/Particles/Jade_Chogath_Skin06_E_mis6",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{1ef537e6}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_1_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        60.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Particles/tooth_spike_03.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        1.4500000476837158,
+                        1.4500000476837158,
+                        1.4500000476837158
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_2_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        40.0,
+                        -90.0,
+                        40.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Particles/tooth_spike_03.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Chogath_Skin06_E_mis4",
+        "particlePath": "Characters/Jade_Chogath/Skins/Skin6/Particles/Jade_Chogath_Skin06_E_mis4",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{1ff53979}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_1_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        60.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Particles/tooth_spike_03.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        1.600000023841858,
+                        1.600000023841858,
+                        1.600000023841858
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_2_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        40.0,
+                        -90.0,
+                        40.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Particles/tooth_spike_03.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Chogath_Skin06_E_mis5",
+        "particlePath": "Characters/Jade_Chogath/Skins/Skin6/Particles/Jade_Chogath_Skin06_E_mis5",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{20f53b0c}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_1_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        60.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Particles/tooth_spike_03.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        1.149999976158142,
+                        1.149999976158142,
+                        1.149999976158142
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_2_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        40.0,
+                        -90.0,
+                        40.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Particles/tooth_spike_03.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Chogath_Skin06_E_mis2",
+        "particlePath": "Characters/Jade_Chogath/Skins/Skin6/Particles/Jade_Chogath_Skin06_E_mis2",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{21f53c9f}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_1_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        60.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Particles/tooth_spike_03.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        1.2999999523162842,
+                        1.2999999523162842,
+                        1.2999999523162842
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_2_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        40.0,
+                        -90.0,
+                        40.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Particles/tooth_spike_03.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Chogath_Skin06_E_mis3",
+        "particlePath": "Characters/Jade_Chogath/Skins/Skin6/Particles/Jade_Chogath_Skin06_E_mis3",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{399f965c}": {
+        "complexEmitterDefinitionData": [
+            {
+                "timeBeforeFirstEmission": 0.15000000596046448,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 0.5,
+                "emitterName": "Dino_spike_01",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        1800.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        -9350.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -9350.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/tooth_spike_01.project_jade.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "colorLookUpTypeY": 1,
+                "disableBackfaceCull": true,
+                "birthScale0": {
+                    "constantValue": [
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.10000000149011612,
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.75,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 0.5,
+                "emitterName": "Dino_spike_02",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        1650.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        -9600.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -9600.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/tooth_spike_01.project_jade.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "colorLookUpTypeY": 1,
+                "disableBackfaceCull": true,
+                "birthScale0": {
+                    "constantValue": [
+                        1.25,
+                        1.25,
+                        1.25
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "lifetime": 0.5,
+                "emitterName": "Dino_spike_03",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        1750.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "constantValue": [
+                        0.0,
+                        -9800.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                -9800.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/tooth_spike_02.project_jade.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "colorLookUpTypeY": 1,
+                "disableBackfaceCull": true,
+                "birthScale0": {
+                    "constantValue": [
+                        1.850000023841858,
+                        1.850000023841858,
+                        1.850000023841858
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Particles/Chogath_Skin06_Q_spike.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.15000000596046448,
+                "rate": {
+                    "constantValue": 70.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.20000000298023224,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            1.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 0.3499999940395355,
+                "isSingleParticle": 1,
+                "fieldCollectionDefinition": {
+                    "fieldDragDefinitions": [
+                        {
+                            "radius": {
+                                "constantValue": 400.0,
+                                "__type": "ValueFloat"
+                            },
+                            "strength": {
+                                "constantValue": 7.0,
+                                "__type": "ValueFloat"
+                            },
+                            "__type": "VfxFieldDragDefinitionData"
+                        }
+                    ],
+                    "__type": "VfxFieldCollectionDefinitionData"
+                },
+                "emitterName": "dust_02",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        60.0,
+                        20.0,
+                        60.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.6000000238418579,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                60.0,
+                                20.0,
+                                60.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            20.0,
+                            50.0,
+                            20.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        1.0,
+                                        6.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    20.0,
+                                    50.0,
+                                    20.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            1.0000001192092896,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/color-smoke32_03.project_jade.tex",
+                "blendMode": 1,
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        60.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                60.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.600000023841858
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                40.0,
+                                40.0,
+                                40.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            0.25,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.2999999523162842,
+                                1.2999999523162842,
+                                1.2999999523162842
+                            ],
+                            [
+                                1.399999976158142,
+                                1.399999976158142,
+                                1.399999976158142
+                            ],
+                            [
+                                1.7000000476837158,
+                                1.7000000476837158,
+                                1.7000000476837158
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/DustPuffs.project_jade.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 400.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 0.15000000596046448,
+                "fieldCollectionDefinition": {
+                    "fieldDragDefinitions": [
+                        {
+                            "radius": {
+                                "constantValue": 1000.0,
+                                "__type": "ValueFloat"
+                            },
+                            "strength": {
+                                "constantValue": 3.0,
+                                "dynamics": {
+                                    "probabilityTables": [
+                                        {
+                                            "keyTimes": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "keyValues": [
+                                                0.75,
+                                                1.5
+                                            ],
+                                            "__type": "VfxProbabilityTableData"
+                                        }
+                                    ],
+                                    "times": [
+                                        0.0
+                                    ],
+                                    "values": [
+                                        3.0
+                                    ],
+                                    "__type": "VfxAnimatedFloatVariableData"
+                                },
+                                "__type": "ValueFloat"
+                            },
+                            "__type": "VfxFieldDragDefinitionData"
+                        }
+                    ],
+                    "__type": "VfxFieldCollectionDefinitionData"
+                },
+                "emitterName": "dust_01",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        200.0,
+                        300.0,
+                        200.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.5,
+                                    0.6700000166893005
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                200.0,
+                                300.0,
+                                200.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            90.0,
+                            20.0,
+                            90.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            1.0000001192092896,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/color-smoke32_03.project_jade.tex",
+                "blendMode": 1,
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                45.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.100000023841858
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                60.0,
+                                60.0,
+                                60.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/DustPuffs.project_jade.tex",
+                "numFrames": 8,
+                "startFrame": 2,
+                "texDiv": [
+                    2.0,
+                    4.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 400.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 0.15000000596046448,
+                "fieldCollectionDefinition": {
+                    "fieldDragDefinitions": [
+                        {
+                            "radius": {
+                                "constantValue": 1000.0,
+                                "__type": "ValueFloat"
+                            },
+                            "strength": {
+                                "constantValue": 3.0,
+                                "dynamics": {
+                                    "probabilityTables": [
+                                        {
+                                            "keyTimes": [
+                                                0.0,
+                                                1.0
+                                            ],
+                                            "keyValues": [
+                                                0.75,
+                                                1.5
+                                            ],
+                                            "__type": "VfxProbabilityTableData"
+                                        }
+                                    ],
+                                    "times": [
+                                        0.0
+                                    ],
+                                    "values": [
+                                        3.0
+                                    ],
+                                    "__type": "VfxAnimatedFloatVariableData"
+                                },
+                                "__type": "ValueFloat"
+                            },
+                            "__type": "VfxFieldDragDefinitionData"
+                        }
+                    ],
+                    "__type": "VfxFieldCollectionDefinitionData"
+                },
+                "emitterName": "dust_03",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        200.0,
+                        300.0,
+                        200.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.5,
+                                    0.6700000166893005
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                200.0,
+                                300.0,
+                                200.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            170.0,
+                            20.0,
+                            170.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            1.0000001192092896,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/color-smoke32_03.project_jade.tex",
+                "blendMode": 1,
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                45.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.100000023841858
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                60.0,
+                                60.0,
+                                60.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/DustPuffs.project_jade.tex",
+                "numFrames": 8,
+                "startFrame": 2,
+                "texDiv": [
+                    2.0,
+                    4.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.125,
+                "rate": {
+                    "constantValue": 40.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.75,
+                "isSingleParticle": 1,
+                "fieldCollectionDefinition": {
+                    "fieldAccelerationDefinitions": [
+                        {
+                            "isLocalSpace": false,
+                            "acceleration": {
+                                "constantValue": [
+                                    0.0,
+                                    -2950.0,
+                                    0.0
+                                ],
+                                "__type": "ValueVector3"
+                            },
+                            "__type": "VfxFieldAccelerationDefinitionData"
+                        }
+                    ],
+                    "__type": "VfxFieldCollectionDefinitionData"
+                },
+                "emitterName": "DirtBits_02",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        1250.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.6000000238418579,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1250.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            150.0,
+                            20.0,
+                            150.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            -12.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        },
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            0.0,
+                            1.0000001192092896
+                        ],
+                        [
+                            0.0,
+                            1.0000001192092896,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/color-hold.project_jade.tex",
+                "blendMode": 1,
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1000.0,
+                                    1000.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        4.75,
+                        4.75,
+                        4.75
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.6000000238418579,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0,
+                                    3.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                4.75,
+                                4.75,
+                                4.75
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            0.699999988079071,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/DirtBits.project_jade.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "timeBeforeFirstEmission": 0.125,
+                "rate": {
+                    "constantValue": 40.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.699999988079071,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "fieldCollectionDefinition": {
+                    "fieldAccelerationDefinitions": [
+                        {
+                            "isLocalSpace": false,
+                            "acceleration": {
+                                "constantValue": [
+                                    0.0,
+                                    -2950.0,
+                                    0.0
+                                ],
+                                "__type": "ValueVector3"
+                            },
+                            "__type": "VfxFieldAccelerationDefinitionData"
+                        }
+                    ],
+                    "__type": "VfxFieldCollectionDefinitionData"
+                },
+                "emitterName": "Dirtbits",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        1300.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.6000000238418579,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                1300.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            50.0,
+                            100.0,
+                            50.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            -20.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        },
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            0.0,
+                            1.0000001192092896
+                        ],
+                        [
+                            0.0,
+                            1.0000001192092896,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/color-hold.project_jade.tex",
+                "blendMode": 1,
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotationalVelocity0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1000.0,
+                                    1000.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.800000011920929,
+                                    1.0,
+                                    4.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                4.0,
+                                4.0,
+                                4.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            0.8999999761581421,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/DirtBits.project_jade.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Chogath_Skin06_Q_cas",
+        "particlePath": "Characters/Jade_Chogath/Skins/Skin6/Particles/Jade_Chogath_Skin06_Q_cas",
+        "soundOnCreateDefault": "Play_sfx_Chogath_Rupture_cast2",
+        "flags": 132,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{8f79f076}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_1_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        0.0,
+                        0.0,
+                        60.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/tooth_spike_03.project_jade.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "texture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/Jade_Chogath_Skin06_Q_spike.project_jade.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 5.0,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "spike_2_t-rex",
+                "Filtering": {
+                    "keywordsRequired": [
+                        "Jade_ChogathSkin06"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": [
+                        40.0,
+                        -90.0,
+                        40.0
+                    ],
+                    "__type": "{ee39916f}"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/tooth_spike_03.project_jade.scb",
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveMesh"
+                },
+                "blendMode": 3,
+                "birthScale0": {
+                    "constantValue": [
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/Jade_Chogath_Skin06_Q_spike.project_jade.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Chogath_Skin06_E_mis",
+        "particlePath": "Characters/Jade_Chogath/Skins/Skin6/Particles/Jade_Chogath_Skin06_E_mis",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{f7296512}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": -1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 3.0,
+                "lifetime": 0.10000000149011612,
+                "isSingleParticle": 1,
+                "emitterName": "Avatar",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "birthColor": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.7600061297416687
+                    ],
+                    "__type": "ValueColor"
+                },
+                "depthBiasFactors": [
+                    -1.0,
+                    -1.0
+                ],
+                "disableBackfaceCull": true,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "texture": "ASSETS/Characters/Jade_Chogath/skins/Skin06/Particles/Jade_Chogath_Skin06_E_Cas_GlowMask.project_jade.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_Chogath/skins/base/Particles/Jade_Chogath_Base_Neck.project_jade.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            -0.5,
+                            1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUVOffsetMult": {
+                        "constantValue": [
+                            -0.5,
+                            0.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Chogath_Skin06_E_Cas_Spikes",
+        "particlePath": "Characters/Jade_Chogath/Skins/Skin6/Particles/Jade_Chogath_Skin06_E_Cas_Spikes",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{88bd68b2}": {
+        "resourceMap": {
+            "{c3e63fcc}": "{f8db2932}",
+            "{ba6fb091}": "{5b192cf3}",
+            "{09bfe95a}": "{9d107fec}",
+            "{7ba4aaa4}": "{8f79f076}",
+            "{3a388a22}": "{20f53b0c}",
+            "{3b388bb5}": "{21f53c9f}",
+            "{343880b0}": "{1ef537e6}",
+            "{35388243}": "{1ff53979}",
+            "{363883d6}": "{1cf534c0}",
+            "{05d9a740}": "{04f0b09e}",
+            "{20f12946}": "{de474708}",
+            "{09da6d9e}": "{0a9f0cb4}",
+            "{403505a9}": "{3aeb10a7}",
+            "{60714776}": "{399f965c}",
+            "{f3d66055}": "{f82164fb}",
+            "{cb382777}": "{b7b972dd}",
+            "{471d93f1}": "{8a8ab403}",
+            "{b528d30c}": "{07c58bba}",
+            "{9011f3e1}": "{48b7b643}",
+            "{1d0903be}": "{03e0dca0}",
+            "{f37ac468}": "{f7296512}",
+            "{abae8e51}": "{e5a5c427}",
+            "{f8be6499}": "{957f706f}",
+            "{54541bdd}": "{97236b2f}",
+            "{97cce7c5}": "{af185573}"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/Jade_Chogath/Jade_Chogath.bin",
+        "DATA/Characters/Jade_Chogath/Animations/Skin0.bin",
+        "DATA/Characters/Jade_Chogath/Jade_Chogath_Multi_Skins_Skin0_Skins_Skin4_Skins_Skin6.bin",
+        "DATA/Characters/Jade_Chogath/Jade_Chogath_Multi_Skins_Root_Skins_Skin0_Skins_Skin32_Skins_Skin33_Skins_Skin34_Skins_Skin35_Skins_Skin36_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin4_Skins_Skin40_Skins_Skin6_Skins_Skin7.bin",
+        "DATA/Characters/Jade_Chogath/Jade_Chogath_Multi_Skins_Skin0_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Chogath/Jade_Chogath_Multi_Skins_Skin0_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin8_Skins_Skin9.bin"
+    ]
+}

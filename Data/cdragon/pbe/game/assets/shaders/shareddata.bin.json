@@ -314,10 +314,6 @@
         "objectPath": "{14b3e471}",
         "__type": "SkinnedUnlitShadingModel"
     },
-    "{17311710}": {
-        "objectPath": "{17311710}",
-        "__type": "SkinnedPbrShadingModel"
-    },
     "{21026ca5}": {
         "objectPath": "{21026ca5}",
         "__type": "{c94926c6}"
@@ -361,6 +357,10 @@
     "{c63393ed}": {
         "objectPath": "{c63393ed}",
         "__type": "EnvironmentPbrShadingModel"
+    },
+    "{c907a128}": {
+        "objectPath": "{c907a128}",
+        "__type": "SkinnedPbrShadingModel"
     },
     "{e3f0ccbe}": {
         "objectPath": "{e3f0ccbe}",
@@ -753,6 +753,14 @@
                 "name": "ENV_QUALITY",
                 "type": 4,
                 "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "CONSTANT_DEPTH_BIAS",
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "SLOPE_SCALED_DEPTH_BIAS",
+                "__type": "X3DSharedConstantDef"
             }
         ],
         "__type": "X3DSharedConstantBufferDef"
@@ -771,6 +779,10 @@
             {
                 "name": "DEBUG_GENERIC_SHADER_VIEW_INDEX",
                 "type": 4,
+                "__type": "X3DSharedConstantDef"
+            },
+            {
+                "name": "PROBE_CAPTURE_MODE",
                 "__type": "X3DSharedConstantDef"
             }
         ],

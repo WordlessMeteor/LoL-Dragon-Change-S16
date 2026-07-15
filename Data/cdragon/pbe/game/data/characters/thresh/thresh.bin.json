@@ -2341,6 +2341,71 @@
                         0.699999988079071
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveBaseDamage",
+                    "values": [
+                        75.0,
+                        75.0,
+                        120.0,
+                        165.0,
+                        210.0,
+                        255.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveSlowPercentage",
+                    "values": [
+                        20.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveDmgPerSoul",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DmgPerSoul",
+                    "values": [
+                        1.7000000476837158,
+                        1.7000000476837158,
+                        1.7000000476837158,
+                        1.7000000476837158,
+                        1.7000000476837158,
+                        1.7000000476837158,
+                        1.7000000476837158
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2422,8 +2487,8 @@
                 "TotalDamage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "ActiveBaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mDataValue": "APRatio",
@@ -2584,14 +2649,12 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "ActiveBaseDamage",
                                     "nameOverride": "Spell_ListType_ActiveDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "ActiveSlowPercentage",
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -4242,6 +4305,58 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Damage",
+                    "values": [
+                        0.0,
+                        250.0,
+                        400.0,
+                        550.0,
+                        175.0,
+                        175.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        99.0,
+                        99.0,
+                        99.0,
+                        99.0,
+                        99.0,
+                        99.0,
+                        99.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WallDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -4269,8 +4384,8 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "Damage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mDataValue": "APRatio",
@@ -4411,8 +4526,7 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "Damage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },

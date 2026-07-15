@@ -672,7 +672,7 @@
                     },
                     "__type": "VfxPrimitiveCameraTrail"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.project_jade.tex",
                 "blendMode": 1,
                 "birthColor": {
                     "dynamics": {
@@ -19389,7 +19389,7 @@
                     },
                     "__type": "VfxPrimitiveCameraTrail"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.project_jade.tex",
                 "blendMode": 1,
                 "birthColor": {
                     "dynamics": {
@@ -26444,7 +26444,7 @@
                     },
                     "__type": "VfxPrimitiveCameraTrail"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.project_jade.tex",
                 "blendMode": 1,
                 "Color": {
                     "constantValue": [
@@ -28329,7 +28329,7 @@
                     },
                     "__type": "VfxPrimitiveCameraTrail"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.project_jade.tex",
                 "blendMode": 1,
                 "birthColor": {
                     "dynamics": {
@@ -32629,7 +32629,7 @@
                     },
                     "__type": "VfxPrimitiveCameraTrail"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.project_jade.tex",
                 "blendMode": 1,
                 "birthColor": {
                     "dynamics": {
@@ -36314,7 +36314,7 @@
                     },
                     "__type": "VfxPrimitiveCameraTrail"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.project_jade.tex",
                 "blendMode": 1,
                 "Color": {
                     "constantValue": [
@@ -40009,7 +40009,7 @@
                     },
                     "__type": "VfxPrimitiveCameraTrail"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.project_jade.tex",
                 "blendMode": 1,
                 "birthColor": {
                     "dynamics": {
@@ -42430,6 +42430,16 @@
         "name": "Characters/Ekko/Skins/Skin47/Materials/Ekko_Skin47_Glass_inst",
         "paramValues": [
             {
+                "name": "Light_Offset",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "modelHeight",
                 "value": [
                     275.0,
@@ -42581,6 +42591,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_SPECULAR_OFFSET",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

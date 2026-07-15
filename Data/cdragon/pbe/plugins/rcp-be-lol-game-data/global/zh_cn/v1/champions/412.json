@@ -1913,7 +1913,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "锤石会提升攻击伤害，攻击的间歇期越久伤害值越高。在激活此技能时，锤石会挥舞他的锁链，将命中的所有敌人带向锁链挥舞的方向。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>锤石的攻击造成额外伤害，伤害值基于与他最后一次攻击相隔的时间。造成<magicDamage>@PAttackDamageMin@</magicDamage>到<magicDamage>@PAttackDamageMax@魔法伤害</magicDamage>。<br><br><spellActive>主动：</spellActive>锤石挥舞他的锁链，沿挥舞的方向<status>拉拽</status>或<status>推挤</status>敌人。还会对命中的敌人们造成持续@Effect4Amount@秒的@Effect2Amount@%<status>减速</status>和<magicDamage>@TotalDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>锤石的攻击造成额外伤害，伤害值基于与他最后一次攻击相隔的时间。造成<magicDamage>@PAttackDamageMin@</magicDamage>到<magicDamage>@PAttackDamageMax@魔法伤害</magicDamage>。<br><br><spellActive>主动：</spellActive>锤石挥舞他的锁链，沿挥舞的方向<status>拉拽</status>或<status>推挤</status>敌人。还会对命中的敌人们造成持续@SlowDuration@秒的@ActiveSlowPercentage@%<status>减速</status>和<magicDamage>@TotalDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -2063,7 +2063,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "构建一座监牢，其墙壁在被敌方单位打破时对该敌方单位造成伤害和减速效果。",
-            "dynamicDescription": "锤石生成一个由灵魂墙体组成的监牢，对英雄造成持续@Effect2Amount@秒的@Effect3Amount@%<status>减速</status>和<magicDamage>@TotalDamage@魔法伤害</magicDamage>。墙体一经碰撞就会被打破，并且一旦被打破一面墙体，剩余的就不会造成伤害且<status>减速</status>时长减半。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "锤石生成一个由灵魂墙体组成的监牢，对英雄造成持续@SlowDuration@秒的@SlowAmount@%<status>减速</status>和<magicDamage>@TotalDamage@魔法伤害</magicDamage>。墙体一经碰撞就会被打破，并且一旦被打破一面墙体，剩余的就不会造成伤害且<status>减速</status>时长减半。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

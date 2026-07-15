@@ -55,13 +55,13 @@
                         region: null,
                         locale: null,
                         lang: null
-                    }
+                    }, this.jadeFontLinkElement = s("jade-fonts"), this.headerElements.push(this.jadeFontLinkElement)
                 }
                 loadStyles(e, t) {
                     const n = `/fe/lol-typekit/fonts/fonts.css?locale=${e}-${t}`;
                     this.fontLinkElementMain.setAttribute("href", n), this.fontLinkElementMain.onload = this.onStyleLoad, this.fontLoadTimeout = setTimeout(this.onStyleLoad, 300), this.fontLinkElement.setAttribute("href", n);
                     const o = `/fe/lol-typekit/fonts/styles.css?locale=${e}-${t}`;
-                    this.styleLinkElement.setAttribute("href", o), this.publicApi.notifyListeners()
+                    this.styleLinkElement.setAttribute("href", o), this.jadeFontLinkElement.setAttribute("href", "/fe/lol-jade/fonts/fonts.css"), this.publicApi.notifyListeners()
                 }
                 onStyleLoad() {
                     clearTimeout(this.fontLoadTimeout), this.fontLinkElementMain.onload = null, this.fontFaces.length = 0, this.fontFaces.push.apply(this.fontFaces, Array.from(document.fonts.values())), Promise.all(this.fontFaces.map((e => e.load()))).then((() => {
@@ -151,7 +151,7 @@
             }).then((() => {
                 const e = new(0, n(2).default),
                     o = t.default.dataBinding("/riotclient", t.default.socket);
-                return i.head.appendChild(e.fontLinkElement), i.head.appendChild(e.styleLinkElement), o.observe("/region-locale", (function(n) {
+                return i.head.appendChild(e.fontLinkElement), i.head.appendChild(e.styleLinkElement), i.head.appendChild(e.jadeFontLinkElement), o.observe("/region-locale", (function(n) {
                     if (e.isValidRegionAndLocale(n)) {
                         const {
                             region: o

@@ -1,0 +1,3154 @@
+{
+    "{149d75e3}": {
+        "mCooldown": 15.0,
+        "mSituations": {
+            "MoveOrder2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Long",
+                        "mConditions": [
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 2,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DLong",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Standard",
+                        "mConditions": [
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 5,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DStandard",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackChampion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "AttackChampion2D",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Taunt": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt",
+                        "mAudioAction": {
+                            "mSelfEventName": "Taunt3DGeneral",
+                            "mAllyEventName": "Taunt3DGeneral",
+                            "mEnemyEventName": "Taunt3DGeneral",
+                            "mSpectatorEventName": "Taunt3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Joke": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke",
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DGeneral",
+                            "mAllyEventName": "Joke3DGeneral",
+                            "mEnemyEventName": "Joke3DGeneral",
+                            "mSpectatorEventName": "Joke3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Laugh": {
+                "mRules": [
+                    {
+                        "mRuleName": "Laugh",
+                        "mAudioAction": {
+                            "mSelfEventName": "Laugh3DGeneral",
+                            "mAllyEventName": "Laugh3DGeneral",
+                            "mEnemyEventName": "Laugh3DGeneral",
+                            "mSpectatorEventName": "Laugh3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "KillChampion": {
+                "mRules": [
+                    {
+                        "mRuleName": "KillChampion3DPentakill",
+                        "mConditions": [
+                            {
+                                "mMultikillSize": 5,
+                                "__type": "ContextualConditionMultikillSize"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DPenta",
+                            "mAllyEventName": "Kill3DPenta",
+                            "mEnemyEventName": "Kill3DPenta",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Karma - Dawnbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Karma/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "dawnbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DKarmaSkin19",
+                            "mEnemyEventName": "Kill3DKarmaSkin19",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Lee Sin - Nightbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{61c598de}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "nightbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DLeeSinSkin27",
+                            "mEnemyEventName": "Kill3DLeeSinSkin27",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Nidalee - Dawnbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{4284d31c}",
+                                            "{cd9b75b5}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "dawnbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DNidaleeSkin11",
+                            "mEnemyEventName": "Kill3DNidaleeSkin11",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Riven - Dawnbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Riven/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "dawnbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DRivenSkin16",
+                            "mEnemyEventName": "Kill3DRivenSkin16",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Vladimir - Nightbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Vladimir/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "nightbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DVladimirSkin14",
+                            "mEnemyEventName": "Kill3DVladimirSkin14",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Yasuo - Nightbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 6,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Yasuo/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "nightbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DYasuoSkin09",
+                            "mEnemyEventName": "Kill3DYasuoSkin09",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "General",
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DGeneral",
+                            "mEnemyEventName": "Kill3DGeneral",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "JokeEndedNearby": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke Response",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "JokeResponse3DGeneral",
+                            "mAllyEventName": "JokeResponse3DGeneral",
+                            "mEnemyEventName": "JokeResponse3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "TauntEndedNearby": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt Response",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "TauntResponse3DGeneral",
+                            "mAllyEventName": "TauntResponse3DGeneral",
+                            "mEnemyEventName": "TauntResponse3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Respawn2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Respawn",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Respawn2DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellCast": {
+                "mRules": [
+                    {
+                        "mRuleName": "Q",
+                        "mConditions": [
+                            {
+                                "mSpell": "{a5c12f1e}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 40,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DQCast",
+                            "mAllyEventName": "Spell3DQCast",
+                            "mEnemyEventName": "Spell3DQCast",
+                            "mSpectatorEventName": "Spell3DQCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "R",
+                        "mConditions": [
+                            {
+                                "mSpell": "{6dc50532}",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DRCast",
+                            "mAllyEventName": "Spell3DRCast",
+                            "mEnemyEventName": "Spell3DRCast",
+                            "mSpectatorEventName": "Spell3DRCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 100,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "RecallLeadIn": {
+                "mRules": [
+                    {
+                        "mRuleName": "Recall",
+                        "mConditions": [
+                            {
+                                "mRuleCooldown": 10.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            },
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Recall3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Death": {
+                "mRules": [
+                    {
+                        "mRuleName": "Death3D",
+                        "mAudioAction": {
+                            "mSelfEventName": "Death3D",
+                            "mAllyEventName": "Death3D",
+                            "mEnemyEventName": "Death3D",
+                            "mSpectatorEventName": "Death3D",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "EnemyEncounter": {
+                "mCoolDownTime": 15.0,
+                "mRules": [
+                    {
+                        "mRuleName": "Aphelios - Nightbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Aphelios/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "nightbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DApheliosSkin01",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Darius - God King",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Darius/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "godking",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DDariusSkin15",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Garen - Godking",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{4ef8473d}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "godking",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DGarenSkin13",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Karma - Dawnbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Karma/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "dawnbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DKarmaSkin19",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Lee Sin - Nightbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{61c598de}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "nightbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DLeeSinSkin27",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Nidalee - Dawnbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{4284d31c}",
+                                            "{cd9b75b5}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "dawnbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DNidaleeSkin11",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Riven - Dawnbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Riven/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "dawnbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DRivenSkin16",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Vladimir - Nightbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Vladimir/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "nightbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DVladimirSkin14",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Yasuo - Nightbringer",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Yasuo/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "nightbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DYasuoSkin9",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "FirstMove2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "First Move",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Move2DFirst",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackMinion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack Minion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackNeutral2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Attack Neutral",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellHit": {
+                "mRules": [
+                    {
+                        "mRuleName": "W Hit Darius - Godking",
+                        "mConditions": [
+                            {
+                                "mSpell": "{5114b1d6}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Darius/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "godking",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell3DWHitDariusSkin15",
+                            "mAllyEventName": "Spell3DWHitDariusSkin15",
+                            "mEnemyEventName": "Spell3DWHitDariusSkin15",
+                            "mSpectatorEventName": "Spell3DWHitDariusSkin15",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W Hit Garen - Godking",
+                        "mConditions": [
+                            {
+                                "mSpell": "{5114b1d6}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{4ef8473d}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "godking",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell3DWHitGarenSkin13",
+                            "mAllyEventName": "Spell3DWHitGarenSkin13",
+                            "mEnemyEventName": "Spell3DWHitGarenSkin13",
+                            "mSpectatorEventName": "Spell3DWHitGarenSkin13",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W Hit Karma - Dawnbringer",
+                        "mConditions": [
+                            {
+                                "mSpell": "{5114b1d6}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Karma/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "dawnbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell3DWHitKarmaSkin19",
+                            "mAllyEventName": "Spell3DWHitKarmaSkin19",
+                            "mEnemyEventName": "Spell3DWHitKarmaSkin19",
+                            "mSpectatorEventName": "Spell3DWHitKarmaSkin19",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W Hit Lee Sin - Nightbringer",
+                        "mConditions": [
+                            {
+                                "mSpell": "{5114b1d6}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{61c598de}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "nightbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell3DWHitLeeSinSkin27",
+                            "mAllyEventName": "Spell3DWHitLeeSinSkin27",
+                            "mEnemyEventName": "Spell3DWHitLeeSinSkin27",
+                            "mSpectatorEventName": "Spell3DWHitLeeSinSkin27",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W Hit Nidalee - Dawnbringer",
+                        "mConditions": [
+                            {
+                                "mSpell": "{5114b1d6}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{4284d31c}",
+                                            "{cd9b75b5}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "dawnbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell3DWHitNidaleeSkin11",
+                            "mAllyEventName": "Spell3DWHitNidaleeSkin11",
+                            "mEnemyEventName": "Spell3DWHitNidaleeSkin11",
+                            "mSpectatorEventName": "Spell3DWHitNidaleeSkin11",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W Hit Riven - Dawnbringer",
+                        "mConditions": [
+                            {
+                                "mSpell": "{5114b1d6}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Riven/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "dawnbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell3DWHitRivenSkin16",
+                            "mAllyEventName": "Spell3DWHitRivenSkin16",
+                            "mEnemyEventName": "Spell3DWHitRivenSkin16",
+                            "mSpectatorEventName": "Spell3DWHitRivenSkin16",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W Hit Vladimir - Nightbringer",
+                        "mConditions": [
+                            {
+                                "mSpell": "{5114b1d6}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Vladimir/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "nightbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell3DWHitVladimirSkin14",
+                            "mAllyEventName": "Spell3DWHitVladimirSkin14",
+                            "mEnemyEventName": "Spell3DWHitVladimirSkin14",
+                            "mSpectatorEventName": "Spell3DWHitVladimirSkin14",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W Hit Yasuo - Nightbringer",
+                        "mConditions": [
+                            {
+                                "mSpell": "{5114b1d6}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Yasuo/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "nightbringer",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell3DWHitYasuoSkin09",
+                            "mAllyEventName": "Spell3DWHitYasuoSkin09",
+                            "mEnemyEventName": "Spell3DWHitYasuoSkin09",
+                            "mSpectatorEventName": "Spell3DWHitYasuoSkin09",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W Hit",
+                        "mConditions": [
+                            {
+                                "mSpell": "{5114b1d6}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DWHit",
+                            "mAllyEventName": "Spell3DWHit",
+                            "mEnemyEventName": "Spell3DWHit",
+                            "mSpectatorEventName": "Spell3DWHit",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "E Hit",
+                        "mConditions": [
+                            {
+                                "mSpell": "{3c6b0bfe}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "__type": "ContextualConditionIsAlly"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DEHitEnemy",
+                            "mAllyEventName": "Spell3DEHitEnemy",
+                            "mEnemyEventName": "Spell3DEHitEnemy",
+                            "mSpectatorEventName": "Spell3DEHitEnemy",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            }
+        },
+        "mObjectPath": "Characters/Jade_Soraka/CAC/Jade_Soraka_Skin15",
+        "__type": "ContextualActionData"
+    },
+    "{1df6a013}": {
+        "mRootSpell": "{6dc50532}",
+        "mChildSpells": [
+            "{6dc50532}"
+        ],
+        "mName": "Jade_SorakaRAbility",
+        "__type": "AbilityObject"
+    },
+    "{304b032f}": {
+        "ObjectName": "Jade_SorakaCritAttack",
+        "mScriptName": "Jade_SorakaCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_SorakaCritAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_forarm",
+                    "mSpeed": 1000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 6.5,
+            "missileSpeed": 1000.0,
+            "mMissileEffectKey": "{dda22dd5}",
+            "mHitEffectKey": "{09afbb32}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "Buffbone_Glb_Ground_Loc",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Soraka_SorakaCritAttack_OnCast",
+                "16": "Play_sfx_Soraka_SorakaCritAttack_OnMissileLaunch",
+                "13": "Play_sfx_Soraka_SorakaCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{e9a8da24}": {
+        "mRootSpell": "{3c6b0bfe}",
+        "mChildSpells": [
+            "{3c6b0bfe}"
+        ],
+        "mName": "Jade_SorakaEAbility",
+        "__type": "AbilityObject"
+    },
+    "{3c6b0bfe}": {
+        "ObjectName": "Jade_SorakaE",
+        "mScriptName": "Jade_SorakaE",
+        "mSpell": {
+            "mAffectsTypeFlags": 22539,
+            "mSpellTags": [
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "Mana",
+                    "values": [
+                        0.0,
+                        40.0,
+                        80.0,
+                        120.0,
+                        160.0,
+                        200.0,
+                        240.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Damage",
+                    "values": [
+                        0.0,
+                        50.0,
+                        100.0,
+                        150.0,
+                        200.0,
+                        250.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25,
+                        2.5,
+                        2.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "Damage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Soraka_Wish.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                725.0,
+                725.0,
+                725.0,
+                725.0,
+                725.0,
+                725.0,
+                725.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    725.0,
+                    725.0,
+                    725.0,
+                    725.0,
+                    725.0,
+                    725.0,
+                    725.0
+                ],
+                "{0a3e0478}": 725.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                260.0,
+                260.0,
+                260.0,
+                260.0,
+                260.0,
+                260.0,
+                260.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 0.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    30.0,
+                    40.0,
+                    50.0,
+                    60.0,
+                    70.0,
+                    80.0
+                ],
+                "{0a3e0478}": 30.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Soraka_SorakaE_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SorakaE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SorakaE_Jade_Name",
+                        "keySummary": "Spell_SorakaE_Jade_Summary",
+                        "keyTooltip": "Spell_SorakaE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Mana",
+                                    "nameOverride": "Spell_ListType_ManaReturn",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Damage",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Duration",
+                                    "nameOverride": "Spell_ListType_SilenceDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c87cc2b6}": {
+        "mRootSpell": "{5114b1d6}",
+        "mChildSpells": [
+            "{5114b1d6}"
+        ],
+        "mName": "Jade_SorakaWAbility",
+        "__type": "AbilityObject"
+    },
+    "{5114b1d6}": {
+        "ObjectName": "Jade_SorakaW",
+        "mScriptName": "Jade_SorakaW",
+        "mSpell": {
+            "mAffectsTypeFlags": 1,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "PositiveEffect_Boon"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseHeal",
+                    "values": [
+                        0.0,
+                        70.0,
+                        140.0,
+                        210.0,
+                        280.0,
+                        350.0,
+                        420.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Armour",
+                    "values": [
+                        5.0,
+                        25.0,
+                        45.0,
+                        65.0,
+                        85.0,
+                        105.0,
+                        125.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalHeal": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseHeal",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Soraka_Bless.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{f26881a0}": 0.5,
+            "cooldownTime": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "Cooldown": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0
+                ],
+                "{0a3e0478}": 750.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 0.0,
+            "mFloatVarsDecimals": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "mana": [
+                80.0,
+                110.0,
+                140.0,
+                170.0,
+                200.0,
+                230.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    110.0,
+                    140.0,
+                    170.0,
+                    200.0,
+                    230.0
+                ],
+                "{0a3e0478}": 80.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "TargetingForgivenessDefinitions": [
+                {
+                    "ForgivenessRange": 175.0,
+                    "TargetForgivenessDefinitions": [
+                        {
+                            "mUnitTags": {
+                                "mObjectTagList": [
+                                    "{ea595ca6}"
+                                ],
+                                "__type": "ObjectTags"
+                            },
+                            "__type": "HasUnitTagsCastRequirement"
+                        }
+                    ],
+                    "__type": "TargetingForgivenessDefinitions"
+                }
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Soraka_SorakaW_OnCast",
+                "13": "Play_sfx_Soraka_SorakaWParticleMissile_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SorakaW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SorakaW_Jade_Name",
+                        "keySummary": "Spell_SorakaW_Jade_Summary",
+                        "keyTooltip": "Spell_SorakaW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseHeal",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Healing",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Armour",
+                                    "nameOverride": "Spell_ListType_Armor",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_SorakaW_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalHeal",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 16,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalHeal",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{abcb655e}": {
+        "mRootSpell": "{985fedb6}",
+        "mChildSpells": [
+            "{985fedb6}",
+            "{5a840f56}"
+        ],
+        "mName": "Jade_SorakaPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{5a840f56}": {
+        "ObjectName": "Jade_SorakaPassive_Buff",
+        "mScriptName": "Jade_SorakaPassive_Buff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Soraka_Consecration.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_SorakaPassive_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{985fedb6}": {
+        "ObjectName": "Jade_SorakaPassive",
+        "mScriptName": "Jade_SorakaPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MovementSpeed",
+                    "values": [
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthThreshold",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Soraka_Consecration.project_jade.dds"
+            ],
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SorakaPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SorakaPassive_Jade_Name",
+                        "keyTooltip": "Spell_SorakaPassive_Jade_Tooltip",
+                        "keySummary": "Spell_SorakaPassive_Jade_Summary"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{6dc50532}": {
+        "ObjectName": "Jade_SorakaR",
+        "mScriptName": "Jade_SorakaR",
+        "mSpell": {
+            "mAffectsTypeFlags": 1,
+            "mAffectsStatusFlags": 32,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "PositiveEffect_Boon"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseHeal",
+                    "values": [
+                        80.0,
+                        200.0,
+                        320.0,
+                        440.0,
+                        560.0,
+                        680.0,
+                        800.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "HealingCalc": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseHeal",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Soraka_Purify.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                150.0,
+                160.0,
+                145.0,
+                130.0,
+                10.0,
+                10.0,
+                10.0
+            ],
+            "Cooldown": {
+                "values": [
+                    175.0,
+                    160.0,
+                    145.0,
+                    130.0,
+                    115.0,
+                    100.0,
+                    85.0
+                ],
+                "{0a3e0478}": 175.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 0.0,
+            "mana": [
+                100.0,
+                175.0,
+                250.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Soraka_SorakaR_OnCast"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SorakaR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SorakaR_Jade_Name",
+                        "keySummary": "Spell_SorakaR_Jade_Summary",
+                        "keyTooltip": "Spell_SorakaR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseHeal",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Healing",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{ec17e271}": [
+                {
+                    "EffectTag": 8,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "HealingCalc",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "HealingCalc",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{97f4fcf7}": {
+        "ObjectName": "Jade_SorakaBasicAttack",
+        "mScriptName": "Jade_SorakaBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_SorakaBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Cstm_Weapon",
+                    "mSpeed": 1000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 8.0,
+            "missileSpeed": 1000.0,
+            "mMissileEffectKey": "{dda22dd5}",
+            "mHitEffectKey": "{9eae05c9}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "Buffbone_Glb_Ground_Loc",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Soraka_SorakaBasicAttack_OnCast",
+                "16": "Play_sfx_Soraka_SorakaBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_Soraka_SorakaBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{e8d709c8}": {
+        "mRootSpell": "{a5c12f1e}",
+        "mChildSpells": [
+            "{a5c12f1e}"
+        ],
+        "mName": "Jade_SorakaQAbility",
+        "__type": "AbilityObject"
+    },
+    "{a5c12f1e}": {
+        "ObjectName": "Jade_SorakaQ",
+        "mScriptName": "Jade_SorakaQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mCastRequirementsCaster": [
+                {
+                    "{675c02b0}": 22538,
+                    "mUnitsRequirements": [
+                        {
+                            "mInvertResult": true,
+                            "__type": "SameTeamCastRequirement"
+                        }
+                    ],
+                    "mUnitsRequired": 1,
+                    "mRange": 625.0,
+                    "mDistanceType": 1,
+                    "__type": "HasNNearbyUnitsRequirement"
+                }
+            ],
+            "mSpellTags": [
+                ""
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        35.0,
+                        60.0,
+                        85.0,
+                        110.0,
+                        135.0,
+                        160.0,
+                        185.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Shred",
+                    "values": [
+                        -7.0,
+                        -8.0,
+                        -9.0,
+                        -10.0,
+                        -11.0,
+                        -12.0,
+                        -13.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TargetRadius",
+                    "values": [
+                        675.0,
+                        675.0,
+                        675.0,
+                        675.0,
+                        675.0,
+                        675.0,
+                        675.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Soraka_Starcall.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                2.5,
+                2.5,
+                2.5,
+                2.5,
+                2.5,
+                2.5,
+                2.5
+            ],
+            "Cooldown": {
+                "values": [
+                    2.5,
+                    2.5,
+                    2.5,
+                    2.5,
+                    2.5,
+                    2.5,
+                    2.5
+                ],
+                "{0a3e0478}": 2.5,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0
+                ],
+                "{0a3e0478}": 625.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                230.0,
+                230.0,
+                230.0,
+                230.0,
+                230.0,
+                230.0,
+                230.0
+            ],
+            "castConeDistance": 100.0,
+            "castTargetAdditionalUnitsRadius": 325.0,
+            "castFrame": 8.5,
+            "missileSpeed": 1750.0,
+            "mana": [
+                20.0,
+                35.0,
+                50.0,
+                65.0,
+                80.0,
+                95.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    35.0,
+                    45.0,
+                    55.0,
+                    65.0,
+                    75.0,
+                    85.0
+                ],
+                "{0a3e0478}": 35.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Soraka_SorakaQ_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SorakaQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SorakaQ_Jade_Name",
+                        "keySummary": "Spell_SorakaQ_Jade_Summary",
+                        "keyTooltip": "Spell_SorakaQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Shred",
+                                    "multiplier": -1.0,
+                                    "nameOverride": "Spell_ListType_MagicResistShred",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_SorakaQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{fba9ea1f}": {
+        "ObjectName": "Jade_SorakaBasicAttack2",
+        "mScriptName": "Jade_SorakaBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_SorakaBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Cstm_Weapon",
+                    "mSpeed": 1000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1000.0,
+            "mMissileEffectKey": "{dda22dd5}",
+            "mHitEffectKey": "{9eae05c9}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "Buffbone_Glb_Ground_Loc",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Soraka_SorakaBasicAttack_OnCast",
+                "16": "Play_sfx_Soraka_SorakaBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_Soraka_SorakaBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{56c52ab7}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{e064e069}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "utility",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "utility",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    1,
+                    2,
+                    0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{581416f9}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{a0d35919}": {
+        "mCharacterName": "Jade_Soraka",
+        "baseHPModifiable": {
+            "baseValue": 446.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 71.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.0099999904632568,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10999999940395355,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 105.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 300.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 60.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.4900000095367432,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.12999999523162842,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 51.79999923706055,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 11.199999809265137,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.799999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 335.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 550.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.140000104904175,
+            "__type": "ModifiableFloat"
+        },
+        "mAdaptiveForceToAbilityPowerWeight": 1.0,
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.11299999803304672,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_SorakaBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_SorakaBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.11299999803304672,
+                "mAttackName": "Jade_SorakaCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_SorakaQAbility/Jade_SorakaQ",
+            "Jade_SorakaWAbility/Jade_SorakaW",
+            "Jade_SorakaEAbility/Jade_SorakaE",
+            "Jade_SorakaRAbility/Jade_SorakaR"
+        ],
+        "spells": [
+            "{a5c12f1e}",
+            "{5114b1d6}",
+            "{3c6b0bfe}",
+            "{6dc50532}"
+        ],
+        "extraSpells": [
+            "BaseSpell",
+            "BaseSpell",
+            "Jade_SorakaRCastTime",
+            "Jade_SorakaQReturnMissile",
+            "Jade_SorakaWParticleMissile",
+            "Jade_SorakaQMissile",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{abcb655e}",
+            "{e8d709c8}",
+            "{c87cc2b6}",
+            "{e9a8da24}",
+            "{1df6a013}"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Soraka",
+        "passiveLuaName": "Jade_Soraka_Consecration_Self",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Soraka",
+        "passiveRange": 1000.0,
+        "passive1IconName": "ASSETS/Characters/Jade_Soraka/HUD/Icons2D/Jade_Soraka_Passive.project_jade.dds",
+        "name": "game_character_displayname_Jade_Soraka",
+        "selectionHeight": 145.0,
+        "selectionRadius": 110.0,
+        "pathfindingCollisionRadius": 44.20000076293945,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1056,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            0,
+            13,
+            0
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Instantly restores health to all friendly Champions.",
+                    "displayName": "Wish2",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Instantly restores health to all friendly Champions.",
+                    "displayName": "Wish2",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Instantly restores health to all friendly Champions.",
+                    "displayName": "Wish2",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Instantly restores health to all friendly Champions.",
+                    "displayName": "Wish2",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Soraka",
+                    "level": [
+                        8,
+                        15
+                    ],
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "support",
+            "searchTagsSecondary": "mage",
+            "championId": 60016,
+            "roles": "SUPPORT",
+            "magicRank": 7,
+            "LevelSpellEffectiveness": 4.0,
+            "difficultyRank": 3,
+            "description": "game_character_description_Jade_Soraka",
+            "defenseRank": 5,
+            "classification": "Arcane",
+            "ChasingAttackRangePercent": 0.800000011920929,
+            "botDefaultSpell1": "SummonerHeal",
+            "botDefaultSpell2": "SummonerTeleport",
+            "attackRank": 2,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 9446656,
+        "purchaseIdentities": [
+            "Ranged"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Sorcery",
+        "mCharacterPassiveSpell": "{985fedb6}",
+        "{c5c48b41}": 1,
+        "Script": "{b0b601cf}",
+        "__type": "CharacterRecord"
+    },
+    "{b0b601cf}": {
+        "ScriptName": "charscriptJade_Soraka",
+        "path": "{b0b601cf}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "__linked": []
+}

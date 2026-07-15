@@ -989,7 +989,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Kindred tumbles and shoots up to three arrows at nearby targets.",
-            "dynamicDescription": "Kindred vaults, firing an arrow at up to 3 enemies, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and gaining <attackSpeed>@TotalQAttackSpeed@ Attack Speed</attackSpeed> for @Effect8Amount@ seconds.<br><br>While inside of <spellName>Wolf's Frenzy</spellName>, this Ability's Cooldown is reduced to @Effect4Amount@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kindred vaults, firing an arrow at up to 3 enemies, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and gaining <attackSpeed>@TotalQAttackSpeed@ Attack Speed</attackSpeed> for @BaseASDuration@ seconds.<br><br>While inside of <spellName>Wolf's Frenzy</spellName>, this Ability's Cooldown is reduced to @CDNewValue@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 340.0,
                 340.0,
@@ -1439,7 +1439,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Lamb grants all living things inside a zone a respite from death. Until the effect ends, nothing can die. At the end, units are healed.",
-            "dynamicDescription": "Kindred blesses the ground for @Effect2Amount@ seconds, allowing no unit, ally, enemy, or neutral to die while inside. Upon reaching 10% Health, units can't be damaged or healed while still inside the zone.<br><br>When the blessing ends, all units inside heal for <healing>@Effect1Amount@ Health</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kindred blesses the ground for @BuffDuration@ seconds, allowing no unit, ally, enemy, or neutral to die while inside. Upon reaching 10% Health, units can't be damaged or healed while still inside the zone.<br><br>When the blessing ends, all units inside heal for <healing>@HealFlat@ Health</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

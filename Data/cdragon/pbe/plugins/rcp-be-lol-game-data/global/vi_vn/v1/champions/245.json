@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Ekko tung ra một quả lựu đạn, thứ sẽ phát nổ tạo ra một trường thời gian bóp méo khi trúng một tướng địch, làm chậm và gây sát thương lên mọi đơn vị bên trong. Sau đó, nó sẽ quay trở lại với Ekko, gây sát thương trên đường về.",
-            "dynamicDescription": "Ekko ném ra một thiết bị gây <magicDamage>@InitialDamage@ sát thương phép</magicDamage>. Khi trúng tướng hoặc đến cuối tầm thi triển, nó mở rộng thành một vùng sẽ <status>Làm Chậm</status> kẻ địch ở trong đi @Effect2Amount*-100@%. Sau khi mở rộng, Ekko có thể gọi nó về, gây <magicDamage>@RecallDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko ném một thiết bị gây <magicDamage>@InitialDamage@ sát thương phép</magicDamage>. Khi trúng tướng hoặc đến cuối tầm thi triển, nó mở rộng thành một vùng sẽ <status>Làm Chậm</status> kẻ địch bên trong đi @SlowPercent*-100@%. Sau khi mở rộng, Ekko triệu hồi nó trở lại, gây <magicDamage>@RecallDamage@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Đòn đánh của Ekko gây thêm sát thương phép lên các kẻ địch thấp máu. Cậu có thể dùng Lưỡng Giới Đồng Quy để tạo ra một vùng thời không sau vài giây giúp làm chậm kẻ địch đứng trong đó. Nếu Ekko đi vào vùng thời không, cậu có lá chắn và làm choáng kẻ địch.",
-            "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Đòn đánh của Ekko lên kẻ địch dưới 30% Máu sẽ gây <magicDamage>sát thương phép tương đương @MissingHealthPercent@ Máu tối đa</magicDamage> của chúng.<br><br><spellActive>Kích hoạt:</spellActive> Ekko phóng ra một vùng thời không tồn tại trong 1.5 giây, sau một khoảng trễ sẽ <status>Làm Chậm</status> kẻ địch bên trong đi @Effect10Amount@%. Nếu Ekko tiến vào khu vực này, cậu sẽ khiến nó phát nổ, <status>Làm Choáng</status> kẻ địch trong @Effect2Amount@ giây và nhận <shield>@TotalShield@ Lá Chắn</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Đòn Đánh của Ekko lên các kẻ địch dưới @BelowHealthThreshold*100@% Máu sẽ gây <magicDamage>sát thương phép dựa trên @MissingHealthPercent@ Máu đã mất</magicDamage>.<br><br><spellActive>Kích Hoạt:</spellActive> Ekko phóng ra một vùng thời không tồn tại trong @SlowZoneDuration@ giây sau một khoảng trễ, <status>Làm Chậm</status> các kẻ địch bên trong đi @SlowPercent@%. Nếu Ekko bước vào vùng này, anh sẽ kích nổ nó, <status>Làm Choáng</status> trong @StunDuration@ giây và nhận <shield>@TotalShield@ Lá Chắn</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

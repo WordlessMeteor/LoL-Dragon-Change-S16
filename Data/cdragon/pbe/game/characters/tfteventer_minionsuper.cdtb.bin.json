@@ -1,0 +1,251 @@
+{
+    "{0c6af271}": {
+        "ObjectName": "TFTEventER_MinionSuperSpell",
+        "mScriptName": "TFTEventER_MinionSuperSpell",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 13327,
+            "mAnimationName": "",
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFTEventER_MinionSuperSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFTEventER_MinionSuperSpell_Name",
+                        "keyTooltip": "Spell_TFTEventER_MinionSuperSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{42709d4d}": {
+        "ObjectName": "TFTEventER_MinionSuperBasicAttack",
+        "mScriptName": "TFTEventER_MinionSuperBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "mConsideredAsAutoAttack": true,
+            "castRange": [
+                73.9000015258789,
+                73.9000015258789,
+                73.9000015258789,
+                73.9000015258789,
+                73.9000015258789,
+                73.9000015258789,
+                73.9000015258789
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    73.9000015258789,
+                    73.9000015258789,
+                    73.9000015258789,
+                    73.9000015258789,
+                    73.9000015258789,
+                    73.9000015258789,
+                    73.9000015258789
+                ],
+                "{0a3e0478}": 73.9000015258789,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 15.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "mHitEffectName": "doesnotexist.troy",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{6de858da}": {
+        "mCharacterName": "TFTEventER_MinionSuper",
+        "baseHPModifiable": {
+            "baseValue": 10000.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 300.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "{726ee5cd}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 600.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 100.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 100.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 180.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.800000011920929,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.800000011920929,
+            "__type": "ModifiableFloat"
+        },
+        "basicAttack": {
+            "mAttackName": "TFTEventER_MinionSuperBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFTEventER_MinionSuperBasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFTEventER_MinionSuperBasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spells": [
+            "{0c6af271}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{caacef53}",
+        "__type": "TFTCharacterRecord"
+    },
+    "{74e54c3c}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

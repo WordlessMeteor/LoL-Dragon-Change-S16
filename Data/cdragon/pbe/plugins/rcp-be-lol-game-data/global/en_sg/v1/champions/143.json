@@ -1752,7 +1752,7 @@
             "cost": "1 Seed",
             "cooldown": "No Cooldown",
             "description": "Zyra plants a seed, lasting up to 60 seconds. Deadly Spines and Grasping Roots cast near seeds will turn them into plants who fight for Zyra. Zyra can store multiple seeds at once, and killing enemies reduces Rampant Growth's recharge time.",
-            "dynamicDescription": "Zyra plants a <keywordMajor>Seed</keywordMajor> that lasts @Effect6Amount@ seconds. These <keywordMajor>Seeds</keywordMajor> grant <keywordStealth>True Sight</keywordStealth> of enemy champions that step on them for @Effect3Amount@ seconds, but are still destroyed.<br><br>This Ability has 2 charges with a @AmmoRechargeTime@ second recharge time. Killing an enemy minion or monster reduces the recharge time by @Effect1Amount*100@%. Champion takedowns reduce the recharge time by @Effect2Amount*100@% instead.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra plants a <keywordMajor>Seed</keywordMajor> that lasts @SeedDuration@ seconds. These <keywordMajor>Seeds</keywordMajor> grant <keywordStealth>True Sight</keywordStealth> of enemy champions that step on them for @VisionGranted@ seconds, but are still destroyed.<br><br>This Ability has 2 charges with a @AmmoRechargeTime@ second recharge time. Killing an enemy minion or monster reduces the recharge time by @KillAmmoRefundMinion*100@%. Champion takedowns reduce the recharge time by @KillAmmoRefundChamp*100@% instead.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Zyra sends forth vines through the ground to ensnare her target, dealing damage and rooting enemies they come across. If cast near a seed, Grasping Roots grows a Vine Lasher, whose short range attacks reduce enemy Move Speed.",
-            "dynamicDescription": "Zyra sends vines forward, <status>Rooting</status> for @Effect5Amount@ second(s) and dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>. <br><br>If this Ability passes near a <keywordMajor>Seed</keywordMajor>, the <keywordMajor>Seed</keywordMajor> grows into a Vine Lasher that deals <magicDamage>@spell.ZyraP:PlantDamage@ magic damage</magicDamage> and lasts @spell.ZyraP:PlantDuration@ seconds. Vine Lashers have 400 range, and their Attacks <status>Slow</status> by @Effect2Amount@% for @Effect3Amount@ seconds. The <status>Slow</status> from multiple Vine Lashers stacks up to @MaxSlowStacks@ times.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra sends vines forward, <status>Rooting</status> for @RootDuration@ second(s) and dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>. <br><br>If this Ability passes near a <keywordMajor>Seed</keywordMajor>, the <keywordMajor>Seed</keywordMajor> grows into a Vine Lasher that deals <magicDamage>@spell.ZyraP:PlantDamage@ magic damage</magicDamage> and lasts @spell.ZyraP:PlantDuration@ seconds. Vine Lashers have 400 range, and their Attacks <status>Slow</status> by @SlowAmountPlantAttack@% for @SlowDurationPlantAttack@ seconds. The <status>Slow</status> from multiple Vine Lashers stacks up to @MaxSlowStacks@ times.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Zyra summons a twisted thicket at her target location, dealing damage to enemies as it expands and knocking them airborne as it contracts. Plants within the thicket are enraged.",
-            "dynamicDescription": "Zyra summons the fury of nature, growing a twisted thicket that deals <magicDamage>@TotalDamage@ magic damage</magicDamage>. After 2 seconds, the vines snap upwards, <status>Knocking Up</status> for @Effect1Amount@ second.<br><br>Zyra's plants within the thicket become enraged, resetting their duration, gaining <healing>@Effect2Amount*100@% Health</healing> and Attacking for @PlantDamageBonus@% bonus damage.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra summons the fury of nature, growing a twisted thicket that deals <magicDamage>@TotalDamage@ magic damage</magicDamage>. After 2 seconds, the vines snap upwards, <status>Knocking Up</status> for @KnockupDuration@ second.<br><br>Zyra's plants within the thicket become enraged, resetting their duration, gaining <healing>@EnragedBonusHealthPercent*100@% Health</healing> and Attacking for @PlantDamageBonus@% bonus damage.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

@@ -236,7 +236,7 @@
                     "id": 16
                 }
             ],
-            "description": "Giọng ca chính của ban nhạc heavy metal Pentakill Karthus cất giọng hát của một thiên thần sa ngã làm từ kim loại và chất nổ. Giọng anh phá vỡ mặt trời, thắp lửa sắt đa bên trong trái tim của bất kỳ ai nghe được."
+            "description": "Giọng ca chính của ban nhạc heavy metal Pentakill Karthus cất giọng hát của một thiên thần sa ngã làm từ kim loại và chất nổ. Giọng anh phá vỡ mặt trời, thắp lửa sắt đá bên trong trái tim của bất kỳ ai nghe được."
         },
         {
             "id": 30005,
@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Karthus tạo ra một bức tường xuyên thấu. Bất kì đơn vị kẻ địch nào bước qua đó đều sẽ bị giảm Tốc độ Di chuyển và Kháng Phép trong một thời gian cố định.",
-            "dynamicDescription": "Karthus tạo ra một bức tường tồn tại trong @Effect4Amount@ giây. Kẻ địch đi qua sẽ mất <scaleMR>@Effect1Amount@% Kháng Phép</scaleMR> trong @Effect5Amount@ giây và bị <status>Làm Chậm</status> đi @Effect3Amount@% giảm dần trong thời gian hiệu lực.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus tạo ra một bức tường tồn tại trong @WallDuration@ giây. Kẻ địch đi qua bức tường sẽ mất <scaleMR>@MagicResistShred@% Kháng Phép</scaleMR> trong @DebuffDuration@ giây và bị <status>Làm Chậm</status> @SlowPercent@%, giảm dần theo thời gian.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ Năng lượng mỗi giây",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Karthus hấp thụ linh hồn của các nạn nhân giúp hắn phục hồi Năng lượng theo mỗi đơn vị tiêu diệt được. Ngoài ra, Karthus còn có thể bao phủ lấy bản thân bằng những cơn sóng linh hồn các nạn nhân của hắn để gây sát thương lên những kẻ địch cạnh bên, nhưng bù lại phải tiêu hao Năng lượng liên tục.",
-            "dynamicDescription": "<spellPassive>Nội tại: </spellPassive>Khi Karthus tiêu diệt một đơn vị, hắn hồi lại <scaleMana>@Effect2Amount@ Năng Lượng</scaleMana>.<br><br><toggle>Bật / Tắt: </toggle>Karthus tạo ra vùng chết chóc, gây <magicDamage>@TotalDPS@ sát thương</magicDamage> mỗi giây lên kẻ địch ở gần.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Khi Karthus hạ gục một đơn vị, hắn hồi lại <scaleMana>@ManaRestoreOnKill@ Năng Lượng</scaleMana>.<br><br><toggle>Bật/Tắt: </toggle>Karthus tạo ra một hào quang tử khí, gây <magicDamage>@TotalDPS@ sát thương phép</magicDamage> mỗi giây lên kẻ địch xung quanh.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

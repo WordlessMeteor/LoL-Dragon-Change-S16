@@ -1752,7 +1752,7 @@
             "cost": "1 Tohum",
             "cooldown": "Bekleme Süresi Yok",
             "description": "Zyra'nın ektiği tohum, 60 saniyeye kadar varlığını korur. Tohumlar, yakınlarında Ölümcül Sarmaşık veya Kapan Kökler yetenekleri kullanıldığında filizlenerek Zyra için savaşan bitkilere dönüşür. Zyra aynı anda birden fazla tohum bulundurabilir ve rakip katletmek Aşırı Büyüme'nin yenilenme süresini azaltır.",
-            "dynamicDescription": "Zyra @Effect6Amount@ saniye boyunca varlığını koruyan bir <keywordMajor>tohum</keywordMajor> diker. Rakip şampiyonların üstüne bastığı <keywordMajor>tohumlar</keywordMajor>, @Effect3Amount@ saniyeliğine onlara yönelik <keywordStealth>Gerçek Görüş</keywordStealth> sağlar ama yine de yok olur.<br><br>Bu yetenek 2 yüke ve @AmmoRechargeTime@ saniye yenilenme süresine sahiptir. Bir minyon biçmek veya canavar kesmek yenilenme süresini %@Effect1Amount*100@ azaltır. Şampiyon alt etmekse yenilenme süresini %@Effect2Amount*100@ azaltır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra @SeedDuration@ saniye boyunca varlığını koruyan bir <keywordMajor>tohum</keywordMajor> diker. Rakip şampiyonların üstüne bastığı <keywordMajor>tohumlar</keywordMajor>, @VisionGranted@ saniyeliğine onlara yönelik <keywordStealth>Gerçek Görüş</keywordStealth> sağlar ama yine de yok olur.<br><br>Bu yetenek 2 yüke ve @AmmoRechargeTime@ saniye yenilenme süresine sahiptir. Bir minyon biçmek veya canavar kesmek yenilenme süresini %@KillAmmoRefundMinion*100@ azaltır. Şampiyon alt etmekse yenilenme süresini %@KillAmmoRefundChamp*100@ azaltır.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Zyra'nın yerden gönderdiği sarmaşıklar hedefi sarmalayarak ona hasar verir ve önüne çıkan rakipleri yere sabitler. Bir tohumun yakınında kullanılırsa, Kapan Kökler'den bir Sarmaşık Kamçı filizlenerek kısa mesafeli saldırılarla rakibin hareket hızını düşürür.",
-            "dynamicDescription": "Zyra ileri doğru sarmaşıklar göndererek rakipleri @Effect5Amount@ saniyeliğine <status>sabitler</status> ve onlara <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. <br><br>Eğer yetenek bir <keywordMajor>tohumun</keywordMajor> yakınından geçerse <keywordMajor>tohum</keywordMajor>, <magicDamage>@spell.ZyraP:PlantDamage@ Büyü Hasarı</magicDamage> veren ve @spell.ZyraP:PlantDuration@ saniye boyunca varlığını koruyan bir Sarmaşık Kamçı'ya dönüşür. Sarmaşık Kamçılar 400 Menzile sahiptir ve saldırılarıyla rakipleri @Effect3Amount@ saniyeliğine %@Effect2Amount@ <status>yavaşlatır</status>. Birden fazla Sarmaşık Kamçı'nın <status>yavaşlatma</status> etkisi en fazla @MaxSlowStacks@ defa birikebilir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra ileri doğru sarmaşıklar göndererek rakipleri @RootDuration@ saniyeliğine <status>sabitler</status> ve onlara <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.<br><br>Eğer yetenek bir <keywordMajor>tohumun</keywordMajor> yakınından geçerse <keywordMajor>tohum</keywordMajor>, <magicDamage>@spell.ZyraP:PlantDamage@ Büyü Hasarı</magicDamage> veren ve @spell.ZyraP:PlantDuration@ saniye boyunca varlığını koruyan bir Sarmaşık Kamçı'ya dönüşür. Sarmaşık Kamçılar 400 menzile sahiptir ve saldırılarıyla rakipleri @SlowDurationPlantAttack@ saniyeliğine %@SlowAmountPlantAttack@ <status>yavaşlatır</status>. Birden fazla Sarmaşık Kamçı'nın <status>yavaşlatma</status> etkisi en fazla @MaxSlowStacks@ defa birikebilir.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Zyra hedef alanda habis bir fide oluşturur; fide alana yayılırken tüm rakiplere hasar verir ve alandan çekilirken rakipleri havaya savurur. Fidenin içerisindeki bitkiler hiddetlenir.",
-            "dynamicDescription": "Zyra doğanın hiddetini çağırarak <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren, habis bir fide ortaya çıkartır. 2 saniyenin sonunda, sarmaşıklar yukarı fırlayarak rakipleri @Effect1Amount@ saniyeliğine <status>havaya savurur</status>.<br><br>Zyra'nın fidenin içerisindeki bitkileri hiddetlenir, sürelerini sıfırlar, <healing>%@Effect2Amount*100@ Can</healing> kazanır ve %@PlantDamageBonus@ İlave Hasar vererek hırsla saldırır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra doğanın hiddetini çağırarak <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren, habis bir fide ortaya çıkartır. 2 saniyenin ardından sarmaşıklar yukarı fırlayarak rakipleri @KnockupDuration@ saniyeliğine <status>havaya savurur</status>.<br><br>Zyra'nın fidenin içerisindeki bitkileri hiddetlenir, sürelerini sıfırlar, <healing>%@EnragedBonusHealthPercent*100@ Can</healing> kazanır ve %@PlantDamageBonus@ İlave Hasar vererek hırsla saldırır.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

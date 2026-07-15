@@ -341,6 +341,32 @@
                         1.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        40.0,
+                        55.0,
+                        70.0,
+                        85.0,
+                        100.0,
+                        115.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseBonusAS",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -368,8 +394,8 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 7,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "{87db99eb}",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mBuffName": "{64290302}",
@@ -384,8 +410,8 @@
                 "TotalDamage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
@@ -527,13 +553,13 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "BaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "CDNewValue",
                                     "typeIndex": 4,
                                     "nameOverride": "Spell_ListType_KindredQCooldownInW",
                                     "__type": "TooltipInstanceListElement"
@@ -956,6 +982,32 @@
                         1.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        40.0,
+                        55.0,
+                        70.0,
+                        85.0,
+                        100.0,
+                        115.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseBonusAS",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -983,8 +1035,8 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 7,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "{87db99eb}",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mBuffName": "{64290302}",
@@ -999,8 +1051,8 @@
                 "TotalDamage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
@@ -1142,13 +1194,13 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "BaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "CDNewValue",
                                     "typeIndex": 4,
                                     "nameOverride": "Spell_ListType_KindredQCooldownInW",
                                     "__type": "TooltipInstanceListElement"
@@ -1927,6 +1979,58 @@
                         0.009999999776482582
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseCurrentHealthDamage",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ZoneDuration",
+                    "values": [
+                        8.5,
+                        8.5,
+                        8.5,
+                        8.5,
+                        8.5,
+                        8.5,
+                        8.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MonsterBonusDmg",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MonsterSlowAmount",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2019,7 +2123,6 @@
                     "__type": "GameCalculation"
                 },
                 "PercentWolfDamage": {
-                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
                             "mDataValue": "CloneBasePercentDamage",
@@ -2035,6 +2138,20 @@
                     "mDisplayAsPercent": true,
                     "mPrecision": 1,
                     "__type": "GameCalculation"
+                },
+                "{fe248f68}": {
+                    "mMultiplier": {
+                        "{a8cb9c14}": true,
+                        "mStat": 13,
+                        "mSubpart": {
+                            "mNumber": 1.0,
+                            "__type": "NumberCalculationPart"
+                        },
+                        "__type": "StatBySubPartCalculationPart"
+                    },
+                    "{72c5c2a8}": 1,
+                    "mModifiedGameCalculation": "PercentWolfDamage",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mCoefficient": 0.20000000298023224,
@@ -2176,8 +2293,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 5,
+                                    "type": "CloneDamageFlat",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -3245,6 +3361,84 @@
                         2.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "InitialMarkThreshold",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RangeIncrease",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FirstTierMultiplier",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ASPerMark",
+                    "values": [
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806,
+                        0.05000000074505806
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EDamagePerMark",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AdditionalMarkThreshold",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -4147,8 +4341,7 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "HealFlat",
                                     "nameOverride": "Spell_ListType_Healing",
                                     "__type": "TooltipInstanceListElement"
                                 },

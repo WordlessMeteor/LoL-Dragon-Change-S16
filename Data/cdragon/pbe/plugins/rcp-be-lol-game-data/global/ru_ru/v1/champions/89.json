@@ -1626,7 +1626,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Леона использует свой щит для выполнения следующей автоатаки, нанося дополнительный магический урон и оглушая цель.",
-            "dynamicDescription": "Следующая автоатака Леоны <status>оглушает</status> врага на @Effect1Amount@ сек. и дополнительно наносит <magicDamage>@TotalDamageTooltip@ магического урона</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Следующая автоатака Леоны <status>оглушает</status> врага на @StunDuration@ сек. и дополнительно наносит <magicDamage>@TotalDamageTooltip@</magicDamage> ед. маг. урона.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1776,7 +1776,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Леона поднимает щит, чтобы увеличить свою броню и сопротивление магии, а также получить сопротивление урону. Если во время окончания этого эффекта рядом с ней будут противники, то они получат магический урон, а время действия умения будет увеличено, но только один раз.",
-            "dynamicDescription": "Леона поднимает щит, уменьшая входящий урон на @FlatDamageReduction@ и получая <scaleArmor>@BonusArmorTooltip@ брони</scaleArmor> и <scaleMR>@BonusMRTooltip@ сопротивления магии</scaleMR> на @Effect3Amount@ сек. После этого щит взрывается, нанося <magicDamage>@TotalDamageTooltip@ магического урона</magicDamage> врагам поблизости. Если взрыв поражает хотя бы одного врага, Леона сохраняет прибавку к <scaleArmor>броне</scaleArmor> и <scaleMR>сопротивлению магии</scaleMR> еще на @Effect3Amount@ сек.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Леона поднимает щит, снижая получаемый урон на @FlatDamageReduction@ и получая <scaleArmor>@BonusArmorTooltip@ брони</scaleArmor> и <scaleMR>@BonusMRTooltip@ сопр. магии</scaleMR> на @ArmorMRDuration@ сек. После щит взрывается, нанося <magicDamage>@TotalDamageTooltip@ ед. маг. урона</magicDamage> врагам поблизости. Если взрыв поражает хотя бы 1 врага, Леона сохраняет бонус к <scaleArmor>броне</scaleArmor> и <scaleMR>сопр. магии</scaleMR> еще на @ArmorMRDuration@ сек.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1926,7 +1926,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Леона выпускает копию своего меча, сотканную из лучей солнца и наносящую магический урон всем врагам на своем пути. Когда эта копия рассеется, последний вражеский чемпион на ее пути будет ненадолго обездвижен, и Леона совершит рывок к нему.",
-            "dynamicDescription": "Леона вытягивает вперед свой меч из света, нанося <magicDamage>@TotalDamageTooltip@ магического урона</magicDamage>. Последний пораженный чемпион <status>обездвиживается</status> на @Effect2Amount@ сек., а Леона совершает к нему рывок.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Леона вытягивает вперед свой меч из света, нанося <magicDamage>@TotalDamageTooltip@ ед. маг. урона</magicDamage>. Последний пораженный чемпион <status>обездвиживается</status> на @RootDuration@ сек., а Леона совершает к нему рывок.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,

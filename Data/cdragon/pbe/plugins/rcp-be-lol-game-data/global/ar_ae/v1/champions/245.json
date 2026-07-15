@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يرمي إيكو قنبلة يدوية زمنية تتوسع ضمن حقل تشويه زمني لدى إصابة بطل للعدو، مما يبطئ ويلحق الضرر بكل من هو موجود في داخله. وبعد فترة، تعود القنبلة إلى إيكو، ملحقة الضرر في طريق عودتها.",
-            "dynamicDescription": "يرمي إيكو جهازًا يلحق <magicDamage>@InitialDamage@ ضرر سحر</magicDamage>. بعد إصابته لبطل أو بلوغ نهاية مداه، يتمدد في مجالٍ يتسبب في <status>إبطاء</status> الأعداء داخله بنسبة @Effect2Amount*-100@%. بعد تمدده، يستدعيه إيكو للعودة، فيلحق <magicDamage>@RecallDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يرمي إيكو جهازًا يلحق <magicDamage>@InitialDamage@ ضرر سحر</magicDamage>. بعد إصابته لبطل أو بلوغ نهاية مداه، يتمدد لإنشاء حقل يتسبب في <status>إبطاء</status> الأعداء بداخله بنسبة @SlowPercent*-100@%. بعد تمدده، يستدعيه إيكو للعودة، فيلحق <magicDamage>@RecallDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تلحق هجمات إيكو الأساسية ضرر سحرٍ إضافي بالأعداء ذوي الصحة الأقل. يستطيع إلقاء التوافق الموازي كي يقسم الخط الزمني، فينشئُ انحرافًا بعد بضعة ثوان يبطئ الأعداء العالقين في داخله. إذا دخل إيكو ضمن الانحراف، يكسب درعًا ويصعق الأعداء عبر تعليقهم في الزمن.",
-            "dynamicDescription": "<spellPassive>التأثير الكامن:</spellPassive> تلحق هجمات إيكو ضد الأعداء الذين تقل صحتهم عن 30 % <magicDamage>@MissingHealthPercent@ من الصحة الناقصة على شكل ضرر سحر</magicDamage>.<br><br><spellActive>التأثير النشط:</spellActive> يطلق إيكو كرة زمن تدوم لمدة 1.5 ثانية بعد برهة، فتطبق أثر <status>إبطاء</status> على الأعداء داخلها بنسبة @Effect10Amount@%. إذا دخل إيكو الكرة فإنه يفجرها، مما يتسبب في <status>صعق</status> لمدة @Effect2Amount@ث، ويكسب <shield>@TotalShield@ درع</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تلحق هجمات إيكو ضد الأعداء الذين تقل الصحة لديهم عن @BelowHealthThreshold*100@% <magicDamage>ضرر سحر يعادل @MissingHealthPercent@ من الصحة الناقصة</magicDamage>.<br><br><spellActive>تأثير نشط:</spellActive> يطلق إيكو بعد فترة كرة زمنية تدوم لمدة @SlowZoneDuration@ث، <status>فتبطئ</status> الأعداء بداخلها بنسبة @SlowPercent@%. إذا دخل إيكو الكرة فإنه يفجرها، مما يتسبب في <status>صعق</status> الأعداء لمدة @StunDuration@ث، ويكسب <shield>@TotalShield@درعًا بقيمة </shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

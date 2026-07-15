@@ -989,7 +989,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "킨드레드가 구르며 근처의 대상들에게 최대 세 발의 화살을 발사합니다.",
-            "dynamicDescription": "킨드레드가 뛰어올라 최대 3명의 적에게 화살을 발사하여 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 @Effect8Amount@초 동안 공격 속도가 <attackSpeed>@TotalQAttackSpeed@</attackSpeed>만큼 증가합니다.<br><br><spellName>늑대의 광기</spellName> 범위 안에 있는 동안 이 스킬의 재사용 대기시간이 @Effect4Amount@초로 감소합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "킨드레드가 뛰어올라 최대 3명의 적에게 화살을 발사하여 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 @BaseASDuration@초 동안 <attackSpeed>공격 속도가 @TotalQAttackSpeed@</attackSpeed>만큼 증가합니다.<br><br><spellName>늑대의 광기</spellName> 범위 안에 있는 동안 이 스킬의 재사용 대기시간이 @CDNewValue@초로 감소합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 340.0,
                 340.0,
@@ -1439,7 +1439,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "양은 안식처 영역 안에 있는 모든 생명체를 죽음으로부터 지켜줍니다. 효과가 끝날 때까지는 아무도 죽지 않습니다. 효과가 끝나면 유닛들이 치유됩니다.",
-            "dynamicDescription": "킨드레드가 @Effect2Amount@초 동안 땅을 축복하여 해당 영역 안에 있는 아군, 적, 중립 몬스터를 포함한 모든 유닛이 사망하지 않습니다. 체력이 10%로 떨어지면 유닛들이 해당 영역 안에 있는 동안 피해를 받거나 치유되지 않습니다.<br><br>축복이 끝나면 영역 안에 있는 모든 유닛이 <healing>체력을 @Effect1Amount@</healing> 회복합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "킨드레드가 @BuffDuration@초 동안 땅을 축복하여 해당 영역 안에 있는 아군, 적, 중립 몬스터를 포함한 모든 유닛이 사망하지 않습니다. 체력이 10%로 떨어지면 유닛들이 해당 영역 안에 있는 동안 피해를 받거나 치유되지 않습니다.<br><br>축복이 끝나면 영역 안에 있는 모든 유닛이 <healing>체력을 @HealFlat@</healing> 회복합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

@@ -1702,8 +1702,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -1896,13 +1895,13 @@
                 {
                     "name": "SpeedSteal",
                     "values": [
-                        10.0,
-                        15.0,
+                        20.0,
                         20.0,
                         25.0,
                         30.0,
                         35.0,
-                        40.0
+                        40.0,
+                        45.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2113,8 +2112,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "SpeedSteal",
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -2738,6 +2736,76 @@
             }
         ],
         "__type": "RecSpellRankUpInfoList"
+    },
+    "{657bcb1c}": {
+        "mOverrides": [
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "{ad33a648}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "{4275dec1}",
+                            "{467823a4}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "{36ba497b}",
+                            "{45782211}",
+                            "{467823a4}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "{294a177d}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "{994f44fb}",
+                            "{aa405534}",
+                            "{234c4ca2}"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{23bea8c0}",
+                            "{264a12c4}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{24beaa53}",
+                            "{944f3d1c}",
+                            "{954f3eaf}",
+                            "{284c5481}",
+                            "{b5c64a5b}",
+                            "{9853c096}",
+                            "{3cbc9184}",
+                            "{27591ee1}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
     },
     "{659427fa}": {
         "OrderJunglePath": [

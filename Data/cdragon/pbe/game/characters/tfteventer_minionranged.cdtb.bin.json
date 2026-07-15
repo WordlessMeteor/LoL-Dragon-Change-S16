@@ -1,0 +1,274 @@
+{
+    "{5e1eabb9}": {
+        "ObjectName": "TFTEventER_MinionRangedSpell",
+        "mScriptName": "TFTEventER_MinionRangedSpell",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 13327,
+            "mAnimationName": "",
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0,
+                10000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0,
+                    10000.0
+                ],
+                "{0a3e0478}": 10000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFTEventER_MinionRangedSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT_MinionSpell_Name",
+                        "keyTooltip": "Spell_TFT_MinionSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{adb0edf5}": {
+        "ObjectName": "TFTEventER_MinionRangedBasicAttack",
+        "mScriptName": "TFTEventER_MinionRangedBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "mConsideredAsAutoAttack": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 60.0,
+                    "mOffsetInitialTargetHeight": 60.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 650.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.0,
+            "missileSpeed": 650.0,
+            "mMissileEffectName": "DATA/Particles/SRU_Chaos_CM_BA_Mis.troy",
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{a874e12a}": {
+        "mCharacterName": "TFTEventER_MinionRanged",
+        "baseHPModifiable": {
+            "baseValue": 150.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "{726ee5cd}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 40.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 10.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 10.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 660.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.800000011920929,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.800000011920929,
+            "__type": "ModifiableFloat"
+        },
+        "basicAttack": {
+            "mAttackName": "TFTEventER_MinionRangedBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFTEventER_MinionRangedBasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFTEventER_MinionRangedBasicAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "spells": [
+            "{5e1eabb9}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mShopData": "{8e25c53b}",
+        "__type": "TFTCharacterRecord"
+    },
+    "{b541718c}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

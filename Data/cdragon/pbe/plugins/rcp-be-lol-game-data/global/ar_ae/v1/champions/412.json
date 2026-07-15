@@ -1832,7 +1832,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يتم تحضير هجمات ثريش، فتلحق المزيد من الضرر كلما انتظر فترة أطول بين الهجمات. لدى تفعيلها، يضرب حوله بسلسلته، فيطيح بكل الأعداء المصابين في اتجاه الضربة.",
-            "dynamicDescription": "<spellPassive>التأثير الكامن:</spellPassive> تلحق هجمات ثريش ضررًا إضافيًا بناءً على الفترة التي مرت منذ آخر هجوم له. تلحق بين <magicDamage>@PAttackDamageMin@</magicDamage> و<magicDamage>@PAttackDamageMax@ ضرر سحر</magicDamage>.<br><br><spellActive>التأثير النشط:</spellActive> يُخرج ثريش السلاسل، و<status>يجذب</status> أو <status>يدفع</status> الأعداء في اتجاه الضربة. يتم <status>إبطاء</status> الأعداء المصابين أيضًا بنسبة @Effect2Amount@% لمدة @Effect4Amount@ث ويتلقون <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تلحق هجمات ثريش ضررًا إضافيًا حسب الفترة التي مرت منذ آخر هجوم له. فتلحق ما بين <magicDamage>@PAttackDamageMin@</magicDamage> و <magicDamage>@PAttackDamageMax@ ضرر سحر</magicDamage>.<br><br><spellActive>تأثير نشط:</spellActive> يضرب ثريش بسلاسله، <status>فيسحب</status> أو <status>يدفع</status> الأعداء في اتجاه الضربة. يتم <status>إبطاء</status> الأعداء المصابين أيضًا بنسبة @ActiveSlowPercentage@% لمدة @SlowDuration@ث ويتلقون <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1982,7 +1982,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "سجن من الجدران يبطئ ويلحق الضرر إذا تم اختراقه.",
-            "dynamicDescription": "ينشئ ثريش سجنًا من الجدران الطيفية، و<status>يبطئ</status> الأبطال بنسبة @Effect3Amount@% لمدة @Effect2Amount@ث ويُلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>. تتحطم الجدران بعد اصطدام واحد، وبعد تحطم حائط واحد، لا تُلحق البقية ضررًا ويتم <status>الإبطاء</status> لنصف المدة.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ينشئ ثريش سجنًا من الجدران الطيفية، <status>فيبطئ</status> الأبطال بنسبة @SlowAmount@% لمدة @SlowDuration@ث ويلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>. تتحطم الجدران بعد اصطدام واحد، وبعد تحطم جدار واحد، لا تلحق البقية ضررًا ويتم <status>الإبطاء</status> لنصف المدة.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

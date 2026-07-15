@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Ekko lance une grenade temporelle qui crée un champ de distorsion quand elle touche un champion ennemi, ralentissant toutes les unités prises à l'intérieur et leur infligeant des dégâts. Ensuite, la grenade se contracte et revient vers Ekko, infligeant des dégâts sur sa route.",
-            "dynamicDescription": "Ekko lance un appareil qui inflige <magicDamage>@InitialDamage@ pts de dégâts magiques</magicDamage>. Quand il touche un champion ou atteint sa portée max, l'appareil s'élargit pour créer un champ de force qui <status>ralentit</status> les ennemis de @Effect2Amount*-100@%. Après l'élargissement, Ekko fait revenir l'appareil vers lui, infligeant <magicDamage>@RecallDamage@ pts de dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko lance un appareil qui inflige <magicDamage>@InitialDamage@ pts de dégâts magiques</magicDamage>. Quand il touche un champion ou atteint sa portée max, l'appareil s'élargit pour créer un champ de force qui <status>ralentit</status> les ennemis de @SlowPercent*-100@%. Après l'élargissement, Ekko fait revenir l'appareil vers lui, infligeant <magicDamage>@RecallDamage@ pts de dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Les attaques de base d'Ekko infligent des dégâts magiques supplémentaires aux champions dont les PV sont bas. Ekko peut lancer Convergence parallèle pour fracturer la ligne temporelle, créant après quelques secondes une anomalie qui ralentit les ennemis pris à l'intérieur. Si Ekko entre dans l'anomalie, il obtient un bouclier et étourdit les ennemis en suspendant dans le temps leur existence.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> les attaques d'Ekko contre les ennemis qui ont moins de 30% de leurs PV infligent <magicDamage>@MissingHealthPercent@ des PV manquants en dégâts magiques</magicDamage>.<br><br><spellActive>Active :</spellActive> Ekko lance une chronosphère qui dure 1.5 sec après un délai et qui <status>ralentit</status> les ennemis de @Effect10Amount@%. Si Ekko entre dans la sphère, il la fait exploser, <status>étourdissant</status> les ennemis pendant @Effect2Amount@ sec et gagnant un <shield>bouclier de @TotalShield@ PV</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> les attaques d'Ekko contre les ennemis qui ont moins de @BelowHealthThreshold*100@% de leurs PV infligent <magicDamage>@MissingHealthPercent@ pts de dégâts magiques en fonction des PV manquants</magicDamage>.<br><br><spellActive>Active :</spellActive> Ekko lance une chronosphère qui dure @SlowZoneDuration@ sec après un délai et qui <status>ralentit</status> les ennemis de @SlowPercent@%. Si Ekko entre dans la sphère, il la fait exploser, <status>étourdissant</status> les ennemis pendant @StunDuration@ sec et gagnant un <shield>bouclier de @TotalShield@ PV</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

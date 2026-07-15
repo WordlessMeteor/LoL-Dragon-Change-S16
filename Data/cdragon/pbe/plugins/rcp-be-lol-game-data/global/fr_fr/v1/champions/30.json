@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Karthus crée un mur d'énergie. Les ennemis franchissant le mur voient leur vitesse de déplacement et leur résistance magique temporairement réduites.",
-            "dynamicDescription": "Karthus crée un mur qui dure @Effect4Amount@ sec. Les ennemis qui le traversent perdent <scaleMR>@Effect1Amount@% de résistance magique</scaleMR> pendant @Effect5Amount@ sec et sont <status>ralentis</status> de @Effect3Amount@% (ce ralentissement diminue sur la durée).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus crée un mur qui dure @WallDuration@ sec. Les ennemis qui le traversent perdent <scaleMR>@MagicResistShred@% de résistance magique</scaleMR> pendant @DebuffDuration@ sec et sont <status>ralentis</status> de @SlowPercent@% (ce ralentissement diminue sur la durée).@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ pts de mana par sec",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Karthus vole passivement l'énergie de ses victimes, gagnant du mana à chaque élimination. Karthus peut aussi s'immerger dans les âmes de ses proies, infligeant des dégâts aux ennemis proches mais au prix d'une grande perte de mana.",
-            "dynamicDescription": "<spellPassive>Passive : </spellPassive>quand Karthus tue une unité, il récupère <scaleMana>@Effect2Amount@ pts de mana</scaleMana>.<br><br><toggle>Activable/Désactivable : </toggle>Karthus crée un halo nécrosant qui inflige <magicDamage>@TotalDPS@ pts de dégâts magiques</magicDamage> par seconde aux ennemis proches.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive : </spellPassive>lorsque Karthus tue une unité, il regagne <scaleMana>@ManaRestoreOnKill@ pts de mana</scaleMana>.<br><br><toggle>Activable/Désactivable : </toggle>Karthus crée un halo nécrosant qui inflige <magicDamage>@TotalDPS@ pts de dégâts magiques</magicDamage> par seconde aux ennemis proches.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

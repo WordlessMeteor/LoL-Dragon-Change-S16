@@ -1832,7 +1832,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "瑟雷西越久沒發動攻擊，他的傷害就越高。當技能啟動時，瑟雷西揮舞並且拋出他的鎖鏈，擊退路徑上命中的敵人。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>瑟雷西的攻擊造成額外傷害，傷害根據與他最後一次攻擊相隔的時間。造成 <magicDamage>@PAttackDamageMin@</magicDamage> 到 <magicDamage>@PAttackDamageMax@ 魔法傷害</magicDamage>。<br><br><spellActive>主動：</spellActive>瑟雷西揮舞他的鎖鏈，沿著揮舞的方向<status>拉拽</status>或<status>推動</status>敵人。還會對命中的敵人造成持續 @Effect4Amount@ 秒的 @Effect2Amount@% <status>緩速</status>和 <magicDamage>@TotalDamage@ 魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>瑟雷西的攻擊造成額外傷害，傷害根據與他最後一次攻擊相隔的時間。造成<magicDamage>@PAttackDamageMin@</magicDamage>到<magicDamage>@PAttackDamageMax@的魔法傷害</magicDamage>。<br><br><spellActive>主動：</spellActive>瑟雷西拋出鎖鏈，沿著揮舞的方向<status>拉拽</status>或<status>推動</status>敵人。命中的敵人還會<status>緩速</status>@ActiveSlowPercentage@%，持續@SlowDuration@秒，並受到<magicDamage>@TotalDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1982,7 +1982,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "創造一個禁錮的空間，對試圖穿越的敵人造成傷害和緩速效果。",
-            "dynamicDescription": "瑟雷西創造一個由靈魂之牆組成的監牢，對英雄造成持續 @Effect2Amount@ 秒的 @Effect3Amount@% <status>緩速</status>和 <magicDamage>@TotalDamage@ 魔法傷害</magicDamage>。牆體一經碰撞便會被打破，且一旦被打破一面魂牆，剩餘的魂牆就不會造成傷害且<status>緩速</status>持續時間減半。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "瑟雷西創造一座由靈魂之牆組成的監牢，使英雄<status>緩速</status>@SlowAmount@%，持續@SlowDuration@秒，並造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。牆體一經碰撞便會破裂，且只要有一面破裂，剩餘的魂牆就不會造成傷害，<status>緩速</status>持續時間也會減半。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

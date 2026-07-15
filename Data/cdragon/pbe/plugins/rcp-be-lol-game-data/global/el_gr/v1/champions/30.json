@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Κάρθους δημιουργεί ένα προπέτασμα που απορροφά ενέργεια. Οι εχθρικές μονάδες που περνούν μέσα από το προπέτασμα έχουν μειωμένη Ταχύτητα Κίνησης και Αντίσταση Μαγείας για ένα χρονικό διάστημα.",
-            "dynamicDescription": "Ο Κάρθους δημιουργεί έναν τοίχο που διαρκεί για @Effect4Amount@ δευτ. Οι εχθροί που περνούν από μέσα του χάνουν <scaleMR>@Effect1Amount@% Αντίσταση Μαγείας</scaleMR> για @Effect5Amount@ δευτ. και <status>Επιβραδύνονται</status> κατά @Effect3Amount@%, ποσοστό που μειώνεται κατά τη διάρκεια της ικανότητας.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Κάρθους δημιουργεί έναν τοίχο που διαρκεί για @WallDuration@ δευτ. Οι εχθροί που περνούν από μέσα του χάνουν <scaleMR>@MagicResistShred@% Αντίσταση Μαγείας</scaleMR> για @DebuffDuration@ δευτ. και <status>Επιβραδύνονται</status> κατά @SlowPercent@%. Η Επιβράδυνση μειώνεται σταδιακά κατά τη διάρκεια της ικανότητας.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ Μάνα ανά δευτερόλεπτο",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Κάρθους απορροφά παθητικά ενέργεια από τα θύματά του αναπληρώνοντας Μάνα με κάθε μονάδα που σκοτώνει. Εναλλακτικά, ο Κάρθους μπορεί να περιβάλλει τον εαυτό του με τις ψυχές των θυμάτων του, προκαλώντας ζημιά στους κοντινούς εχθρούς, αλλά εξαντλώντας γρήγορα το δικό του Μάνα.",
-            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Όταν ο Κάρθους σκοτώνει μια μονάδα, αναπληρώνει <scaleMana>@Effect2Amount@ Μάνα</scaleMana>.<br><br><toggle>Εναλλαγή: </toggle>Ο Κάρθους δημιουργεί μια νεκρωτική αύρα, προκαλώντας <magicDamage>@TotalDPS@ Μαγική Ζημιά</magicDamage> στους κοντινούς εχθρούς ανά δευτερόλεπτο.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική: </spellPassive>Όταν ο Κάρθους εκτελεί μια μονάδα, αναπληρώνει <scaleMana>@ManaRestoreOnKill@ Μάνα</scaleMana>.<br><br><toggle>Εναλλαγή: </toggle>Ο Κάρθους δημιουργεί μια νεκρωτική αύρα, προκαλώντας <magicDamage>@TotalDPS@ Μαγική Ζημιά</magicDamage> στους κοντινούς εχθρούς ανά δευτερόλεπτο.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -1626,7 +1626,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Leona utilise son bouclier pour sa prochaine attaque de base, infligeant des dégâts magiques supplémentaires et étourdissant la cible.",
-            "dynamicDescription": "La prochaine attaque de Leona <status>étourdira</status> sa cible pendant @Effect1Amount@ sec et infligera <magicDamage>@TotalDamageTooltip@</magicDamage> pts de dégâts magiques supplémentaires.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "La prochaine attaque de Leona <status>étourdira</status> sa cible pendant @StunDuration@ sec et infligera <magicDamage>@TotalDamageTooltip@</magicDamage> pts de dégâts magiques bonus.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1776,7 +1776,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Leona lève son bouclier et profite d'une amélioration de son armure et de sa résistance magique ainsi que d'une réduction des dégâts. Lorsque l'effet prend fin pour la première fois, s'il y a des ennemis proches, elle leur inflige des dégâts magiques et l'effet de protection est prolongé.",
-            "dynamicDescription": "Leona lève son bouclier, ce qui réduit les dégâts qu'elle subit de @FlatDamageReduction@ et lui octroie <scaleArmor>+@BonusArmorTooltip@ armure</scaleArmor> et <scaleMR>+@BonusMRTooltip@ résistance magique</scaleMR> pendant @Effect3Amount@ sec. Après un court délai, son bouclier explose et inflige <magicDamage>@TotalDamageTooltip@ pts de dégâts magiques</magicDamage> aux ennemis proches. Si l'explosion touche au moins un ennemi, Leona conserve les bonus d'<scaleArmor>armure</scaleArmor> et de <scaleMR>résistance magique</scaleMR> pendant @Effect3Amount@ sec supplémentaires.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona lève son bouclier, ce qui réduit les dégâts qu'elle subit de @FlatDamageReduction@ et lui octroie <scaleArmor>@BonusArmorTooltip@ armure</scaleArmor> et <scaleMR>@BonusMRTooltip@ résistance magique</scaleMR> pendant @ArmorMRDuration@ sec. Après un court délai, son bouclier explose et inflige <magicDamage>@TotalDamageTooltip@ pts de dégâts magiques</magicDamage> aux ennemis proches. Si l'explosion touche au moins un ennemi, Leona conserve les bonus d'<scaleArmor>armure</scaleArmor> et de <scaleMR>résistance magique</scaleMR> pendant @ArmorMRDuration@ sec supplémentaires.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1926,7 +1926,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Leona projette une image solaire de son épée, infligeant des dégâts magiques à tous les ennemis sur une ligne. Lorsque l'image se dissipe, le dernier champion ennemi touché est brièvement immobilisé et Leona fonce vers lui.",
-            "dynamicDescription": "Leona donne un coup d'estoc avec une épée de lumière, infligeant <magicDamage>@TotalDamageTooltip@ pts de dégâts magiques</magicDamage>. Le dernier champion touché est <status>immobilisé</status> pendant @Effect2Amount@ sec et Leona se rue vers lui.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona donne un coup d'estoc avec une épée de lumière, infligeant <magicDamage>@TotalDamageTooltip@ pts de dégâts magiques</magicDamage>. Le dernier champion touché est <status>immobilisé</status> pendant @RootDuration@ sec et Leona se rue vers lui.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,

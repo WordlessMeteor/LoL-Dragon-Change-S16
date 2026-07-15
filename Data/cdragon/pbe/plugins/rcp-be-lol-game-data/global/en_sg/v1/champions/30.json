@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Karthus creates a passable screen of leeching energy. Any enemy units that walk through the screen have their Move Speed and Magic Resist reduced for a period.",
-            "dynamicDescription": "Karthus creates a wall that lasts for @Effect4Amount@ seconds. Enemies that pass through lose <scaleMR>@Effect1Amount@% Magic Resist</scaleMR> for @Effect5Amount@ seconds and are <status>Slowed</status> by @Effect3Amount@% decaying over the duration.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus creates a wall that lasts for @WallDuration@ seconds. Enemies that pass through lose <scaleMR>@MagicResistShred@% Magic Resist</scaleMR> for @DebuffDuration@ seconds and are <status>Slowed</status> by @SlowPercent@% decaying over the duration.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ Mana per Second",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Karthus passively steals energy from his victims, gaining Mana on each kill. Alternatively, Karthus can surround himself in the souls of his prey, dealing damage to nearby enemies, but quickly draining his own Mana.",
-            "dynamicDescription": "<spellPassive>Passive: </spellPassive>When Karthus kills a unit, he restores <scaleMana>@Effect2Amount@ Mana</scaleMana>.<br><br><toggle>Toggle: </toggle>Karthus creates a necrotic aura, dealing <magicDamage>@TotalDPS@ magic damage</magicDamage> per second to nearby enemies.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive: </spellPassive>When Karthus kills a unit, he restores <scaleMana>@ManaRestoreOnKill@ Mana</scaleMana>.<br><br><toggle>Toggle: </toggle>Karthus creates a necrotic aura, dealing <magicDamage>@TotalDPS@ magic damage</magicDamage> per second to nearby enemies.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

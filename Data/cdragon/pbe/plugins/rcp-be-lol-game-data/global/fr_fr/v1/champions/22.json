@@ -1878,13 +1878,13 @@
             "id": 22084,
             "contentId": "84912675-cacd-4b74-937b-363832ea93e0",
             "isBase": false,
-            "name": "Ashe pyrotechnicienne",
+            "name": "",
             "skinClassification": "kChampion",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ashe/Skins/Skin84/Images/ashe_splash_centered_84.SKINS_Ashe_Skin84.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ashe/Skins/Skin84/Images/ashe_splash_uncentered_84.SKINS_Ashe_Skin84.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ashe/Skins/Skin84/Images/ashe_splash_tile_84.SKINS_Ashe_Skin84.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ashe/Skins/Skin84/AsheLoadScreen_84.SKINS_Ashe_Skin84.jpg",
-            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Ashe/Skins/Skin84/AsheLoadScreen_84_LE.SKINS_Ashe_Skin84.jpg",
+            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Ashe/Skins/Skin84/Images/ashe_splash_centered_84.jpg",
+            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Ashe/Skins/Skin84/Images/ashe_splash_uncentered_84.jpg",
+            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Ashe/Skins/Skin84/Images/ashe_splash_tile_84.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Ashe/Skins/Skin84/AsheLoadScreen_84.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Ashe/Skins/Skin84/AsheLoadScreen_84_LE.jpg",
             "skinType": "",
             "rarity": "kEpic",
             "isLegacy": false,
@@ -2042,7 +2042,7 @@
                     "id": 54
                 }
             ],
-            "description": "Ashe est élégante, rigoureuse et d'un calme olympien... sauf pendant le Festival lunaire, où son caractère se révèle sous un tout nouveau jour ! L'ambiance festive a le don de la détendre, et cette année, elle prépare un final grandiose qui illuminera le ciel et marquera le début de la nouvelle année."
+            "description": null
         }
     ],
     "passive": {
@@ -2062,7 +2062,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Ashe génère des effets Concentration quand elle attaque. Une fois le maximum d'effets Concentration atteint, Ashe peut lancer Concentration du ranger pour consommer tous les effets, ce qui augmente temporairement sa vitesse d'attaque et transforme son attaque de base en une puissante volée de flèches pendant la durée de la compétence.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> les attaques d'Ashe lui octroient un effet pendant @Effect1Amount@ sec. À @Effect2Amount@ effets cumulés, elle peut activer cette compétence.<br><br><spellPassive>Active :</spellPassive> Ashe gagne <attackSpeed>+@Effect4Amount@% de vitesse d'attaque</attackSpeed> et ses attaques infligent <physicalDamage>@EmpoweredDamage@ de dégâts</physicalDamage> pendant @Effect3Amount@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> les attaques d'Ashe lui octroient un effet pendant @StackDuration@ sec. À @MaxStacks@ effets cumulés, elle peut activer cette compétence.<br><br><spellPassive>Active :</spellPassive> Ashe gagne <attackSpeed>@BonusAS@% de vitesse d'attaque</attackSpeed> et ses attaques infligent <physicalDamage>@EmpoweredDamage@ pts de dégâts</physicalDamage> pendant @BuffDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

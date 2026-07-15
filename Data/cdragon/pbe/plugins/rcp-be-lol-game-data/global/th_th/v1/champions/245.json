@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Ekko ขว้างระเบิดกาลเวลาที่สามารถขยายออกสร้างพื้นที่บิดเบือนกาลเวลาได้เมื่อมันโดนแชมเปี้ยนศัตรู สร้างความเสียหายพร้อมทั้งสโลว์ศัตรูทุกตัวที่อยู่ด้านใน หลังจากนั้นมันจะย้อนกลับไปหา Ekko และสร้างความเสียหายให้ศัตรูที่อยู่ในเส้นทางอีกครั้ง",
-            "dynamicDescription": "Ekko ขว้างอุปกรณ์ของเขาออกไปเพื่อสร้าง<magicDamage>ความเสียหายเวท @InitialDamage@ หน่วย</magicDamage> เมื่อกระทบกับแชมเปี้ยนหรือสุดระยะของมัน มันจะขยายพื้นที่ออกและ<status>สโลว์</status>ศัตรูที่อยู่ข้างใน @Effect2Amount*-100@% หลังจากขยายออก Ekko จะเรียกมันกลับมา สร้าง<magicDamage>ความเสียหายเวท @RecallDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko ขว้างอุปกรณ์เพื่อสร้าง<magicDamage>ความเสียหายเวท @InitialDamage@ หน่วย</magicDamage> เมื่อโดนแชมเปี้ยนหรือไปจนสุดระยะ อุปกรณ์จะขยายออกเป็นอาณาเขตที่<status>สโลว์</status>ศัตรูที่อยู่ข้างใน @SlowPercent*-100@% หลังจากขยายออกแล้ว Ekko จะเรียกมันกลับมา พร้อมสร้าง<magicDamage>ความเสียหายเวท @RecallDamage@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "การโจมตีปกติของ Ekko จะสร้างโบนัสความเสียหายเวทกับศัตรูที่พลังชีวิตเหลือน้อย เขาจะสามารถร่าย Parallel Convergence เพื่อแบ่งแยกเส้นเวลาออกจากกัน สร้างความผิดปกติของเวลาหลังจากผ่านไปไม่กี่วินาทีที่จะสโลว์ศัตรูที่โดนอยู่ข้างใน หาก Ekko เข้าไปยังพื้นที่ผิดปกตินี้ เขาจะได้รับโล่ป้องกันและสตันศัตรูโดยการหยุดยั้งเวลาของพวกเขา",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> การโจมตีของ Ekko กับศัตรูที่มีพลังชีวิตต่ำกว่า 30% จะสร้าง<magicDamage>ความเสียหายเวท @MissingHealthPercent@ ของพลังชีวิตที่หายไป</magicDamage><br><br><spellActive>กดใช้:</spellActive> Ekko ปล่อยโดมกาลเวลาที่จะอยู่ได้นาน 1.5 วินาทีหลังจากช่วงเวลาหนึ่ง มันจะ<status>สโลว์</status>ศัตรูที่อยู่ข้างใน @Effect10Amount@% หาก Ekko เข้าไปในโดม เขาจะระเบิดมัน ทำให้<status>สตัน</status>ศัตรูเป็นเวลา @Effect2Amount@ วินาที และได้รับโล่ป้องกันความเสียหาย <shield>@TotalShield@ หน่วย</shield>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> เมื่อ Ekko โจมตีศัตรูที่มีพลังชีวิตต่ำกว่า @BelowHealthThreshold*100@% จะสร้าง<magicDamage>ความเสียหายเวทเท่ากับ @MissingHealthPercent@ ของพลังชีวิตที่หายไป</magicDamage><br><br><spellActive>กดใช้:</spellActive> Ekko ปล่อยโดมกาลเวลาที่จะคงอยู่เป็นเวลา @SlowZoneDuration@ วินาทีหลังจากช่วงเวลาหนึ่ง ซึ่งจะ<status>สโลว์</status>ศัตรูที่อยู่ด้านใน @SlowPercent@% หาก Ekko เข้าไปในโดม เขาจะจุดระเบิดมัน <status>สตัน</status>ศัตรูเป็นเวลา @StunDuration@ วินาที และได้รับ<shield>โล่ป้องกัน @TotalShield@ หน่วย</shield>@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

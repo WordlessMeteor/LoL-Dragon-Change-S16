@@ -1752,7 +1752,7 @@
             "cost": "1 mag",
             "cooldown": "Nincs töltési idő",
             "description": "Zyra elültet egy magot, amely legfeljebb 60&nbsp;másodpercig marad életben. A magvak közelében elsütött Halálos tövisek és Kapaszkodó gyökerek varázslattal egy növény jön létre a magból, amely Zyra oldalán fog harcolni. Zyra több magot is magánál tarthat, az ellenfelek megölésével pedig csökkentheti a Buja burjánzás töltési idejét.",
-            "dynamicDescription": "Zyra elültet egy <keywordMajor>magot</keywordMajor>, amely @Effect6Amount@ másodpercig marad életben. A <keywordMajor>magok</keywordMajor> @Effect3Amount@ másodpercre <keywordStealth>Igazlátással</keywordStealth> fedik fel a rájuk lépő hősöket, de elpusztulnak.<br><br>A képességnek 2 töltete van, az újratöltési ideje @AmmoRechargeTime@ másodperc. Az ellenséges minionok vagy szörnyek megölése @Effect1Amount*100@%-kal csökkenti az újratöltési időt. A hősök kiiktatása ehelyett @Effect2Amount*100@%-kal csökkenti az újratöltési időt.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra elültet egy <keywordMajor>magot</keywordMajor>, amely @SeedDuration@ másodpercig marad életben. A <keywordMajor>magok</keywordMajor> @VisionGranted@ másodpercre <keywordStealth>Igazlátással</keywordStealth> fedik fel a rájuk lépő hősöket, de elpusztulnak.<br><br>A képességnek 2 töltete van, az újratöltési ideje @AmmoRechargeTime@ másodperc. Az ellenséges minionok vagy szörnyek megölése @KillAmmoRefundMinion*100@%-kal csökkenti az újratöltési időt. A hősök kiiktatása ehelyett @KillAmmoRefundChamp*100@%-kal csökkenti az újratöltési időt.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Zyra indákat küld előre a földön keresztül, hogy kelepcébe csalja áldozatát. Az indák sebzést okoznak, és a földhöz szegezik az útjukba kerülő ellenségeket. Ha a Kapaszkodó gyökerek varázslatot Zyra egy mag közelében süti el, a magból Indacsapás nő ki, amelynek kis hatótávolságú csapásai csökkentik az ellenség mozgási sebességét.",
-            "dynamicDescription": "Zyra gyökereket küld ki, amelyek @Effect5Amount@ másodpercre <status>mozgásképtelenné</status> teszik a célpontot, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak neki. <br><br>Ha a képesség elhalad egy <keywordMajor>mag</keywordMajor> mellett, a <keywordMajor>magból</keywordMajor> egy Indacsapás nő ki, amely <magicDamage>@spell.ZyraP:PlantDamage@ varázssebzést</magicDamage> okoz a támadásaival és @spell.ZyraP:PlantDuration@ másodpercig marad aktív. Az Indacsapás hatótávolsága 400 egység, és találatkor @Effect3Amount@ másodpercre @Effect2Amount@%-kal <status>lelassítja</status> a célpontját. Az Indacsapások <status>lassítása</status> legfeljebb @MaxSlowStacks@ alkalommal halmozódhat.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra gyökereket küld ki, amelyek @RootDuration@ másodpercre <status>mozgásképtelenné</status> teszik a célpontot, és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak neki. <br><br>Ha a képesség elhalad egy <keywordMajor>mag</keywordMajor> mellett, a <keywordMajor>magból</keywordMajor> egy Indacsapás nő ki, amely <magicDamage>@spell.ZyraP:PlantDamage@ varázssebzést</magicDamage> okoz a támadásaival, és @spell.ZyraP:PlantDuration@ másodpercig marad aktív. Az Indacsapás hatótávolsága 400 egység, és találatkor @SlowDurationPlantAttack@ másodpercre @SlowAmountPlantAttack@%-kal <status>lelassítja</status> a célpontját. Az Indacsapások <status>lassítása</status> legfeljebb @MaxSlowStacks@ alkalommal halmozódhat.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Zyra a célhelyen megidéz egy elvadult bozótot, amely elburjánzása közben sebzést okoz az ellenfeleknek, és érintésközelbe érve a levegőbe dobja őket. A bozóton belüli növények megvadulnak.",
-            "dynamicDescription": "Zyra megidézi a természet haragját, és sűrű bozótot növeszt, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz. 2 másodperc elteltével az indák @Effect1Amount@ másodpercre a <status>levegőbe lökik</status> az ellenfeleket.<br><br>A bozót területén Zyra növényei megvadulnak, így az <healing>életerejük @Effect2Amount*100@%-kal</healing>, a bónusz sebzésük pedig @PlantDamageBonus@%-kal nő.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra megidézi a természet haragját, és sűrű bozótot növeszt, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz. 2 másodperc elteltével az indák @KnockupDuration@ másodpercre a <status>levegőbe lökik</status> az ellenfeleket.<br><br>A bozót területén Zyra növényei megvadulnak, az időtartamuk újraindul, az <healing>életerejük @EnragedBonusHealthPercent*100@%-kal</healing>, a bónusz sebzésük pedig @PlantDamageBonus@%-kal nő.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

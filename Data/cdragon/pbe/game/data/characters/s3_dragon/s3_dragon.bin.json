@@ -1,0 +1,167 @@
+{
+    "{19ccd2a9}": {
+        "mCharacterName": "S3_Dragon",
+        "baseHPModifiable": {
+            "baseValue": 3500.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "primaryAbilityResource": {
+            "arType": 8,
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 145.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 21.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMoveSpeedModifiable": {
+            "baseValue": 330.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 350.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6600000262260437,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "TreatAutoAttacksAsNormalSpells": {
+            "__type": "TreatAutoAttacksAsNormalSpells"
+        },
+        "acquisitionRange": 500.0,
+        "basicAttack": {
+            "mAttackName": "S3_DragonBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "experienceRadius": 2000.0,
+        "significance": 0.949999988079071,
+        "onKillEvent": 188,
+        "OnKillEventSteal": 188,
+        "onKillEventForSpectator": 189,
+        "enemyTooltip": "game_character_enemyTooltip_S3_Dragon",
+        "name": "game_character_displayname_S3_Dragon",
+        "weaponMaterials": [
+            "S3_DragonBasicAttack"
+        ],
+        "DisguiseMinimapIconOverride": "LesserCamp",
+        "selectionHeight": 100.0,
+        "selectionRadius": 120.0,
+        "pathfindingCollisionRadius": 31.52079963684082,
+        "overrideGameplayCollisionRadius": 50.0,
+        "unitTagsString": "Monster | Monster_Dragon | Monster_Epic | Monster_Camp | Monster_Large",
+        "characterToolData": {
+            "mapAIPresence": {
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "PostAttackMoveDelay": 0.25,
+            "description": "game_character_description_S3_Dragon",
+            "__type": "CharacterToolData"
+        },
+        "flags": 8398089,
+        "__type": "CharacterRecord"
+    },
+    "{4a5b8dc9}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{6f8ab9db}": {
+        "ObjectName": "S3_DragonBasicAttack",
+        "mScriptName": "S3_DragonBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "bHaveHitEffect": true,
+            "mUpdateRotationWhenCasting": true,
+            "castRange": [
+                500.0,
+                500.0,
+                500.0,
+                500.0,
+                500.0,
+                500.0,
+                500.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "{0a3e0478}": 500.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "mouth",
+                    "mSpeed": 800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 20.739999771118164,
+            "missileSpeed": 800.0,
+            "mMissileEffectKey": "{11caba79}",
+            "mHitEffectKey": "{f4da6c7d}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "__linked": []
+}

@@ -642,10 +642,10 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                1.0,
-                1.0,
-                1.0,
-                1.0,
+                4.0,
+                3.25,
+                2.5,
+                1.75,
                 1.0,
                 1.0
             ],
@@ -797,7 +797,7 @@
                 10.0,
                 9.0,
                 8.0,
-                8.0
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -942,12 +942,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                20.0,
-                19.0,
+                24.0,
+                21.0,
                 18.0,
-                17.0,
-                16.0,
-                16.0
+                15.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -1073,8 +1073,8 @@
             "abilityVideoImagePath": "champion-abilities/0200/ability_0200_R1.jpg",
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Bel'Veth กลืนกินชิ้นส่วนปะการังแห่งวอยด์ แปลงร่างเป็นร่างที่แท้จริงและเพิ่มพลังชีวิตสูงสุด ระยะโจมตี ความเร็วโจมตี และความเร็วเคลื่อนที่ขณะไม่อยู่ในการต่อสู้ การกลืนกินชิ้นส่วนปะการังแห่งวอยด์จากมอนสเตอร์วอยด์ในตำนานจะทำให้สกิลอัลติเมทของเธอทำงานนานขึ้น รวมถึงได้รับพลังในการเรียกลูกสมุนวอยด์ออกมา",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> การโจมตีทุก ๆ 2 ครั้งใส่เป้าหมายเดิมจะสร้าง<trueDamage>ความเสียหายจริงเพิ่มเติม @FinalOnHitDamage@ หน่วย</trueDamage> ซึ่งสะสมได้ไม่จำกัด การโค่นล้มแชมเปี้ยนและมอนสเตอร์ในตำนานจะทิ้งชิ้นส่วนปะการังแห่งวอยด์ไว้<br><br><spellActive>กดใช้:</spellActive> การกลืนกินปะการังแห่งวอยด์ จะมอบสแตค <keywordMajor>Lavender @PassiveStacksOnDevour@ สแตค</keywordMajor> และทำให้ Bel'Veth เข้าสู่ร่างที่แท้จริงเป็นเวลา @SteroidDuration@ วินาที ชิ้นส่วนปะการังแห่งวอยด์จากมอนสเตอร์วอยด์ในตำนาน จะเพิ่มระยะเวลาทำงานเป็น @VoidDuration@ วินาที และมินเนี่ยนที่ถูกสังหารใกล้ ๆ เธอจะกลายเป็นลูกสมุนวอยด์ ขณะร่าย Bel'Veth จะ<status>สโลว์</status>ศัตรูรอบข้างก่อนระเบิดออก สร้างความเสียหายจริง <trueDamage>@TotalExplosionDamage@ หน่วย + @MissingHealthDamage*100@% ตามพลังชีวิตที่หายไป</trueDamage><br><br>ในร่างที่แท้จริง Bel'Veth ได้รับ<healing>พลังชีวิตสูงสุด @MaxHealthOnDevour@ หน่วย</healing> <speed>ความเร็วเคลื่อนที่ @OOCMS@ หน่วย</speed>เมื่อออกจากการต่อสู้ ระยะโจมตี @BonusAARange@ หน่วย <attackSpeed>ความเร็วโจมตีทั้งหมด @TotalASMod*100@% </attackSpeed>และ <spellName>Void Surge</spellName> สามารถทะลุกำแพงได้<br><br><br>@SpellModifierDescriptionAppend@",
+            "description": "Spell_BelvethR_Summary",
+            "dynamicDescription": "Spell_BelvethR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

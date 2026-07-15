@@ -97,11 +97,37 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{10ce4a34}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "Filter": {
+                        "__type": "ViewControllerFilter_Spectator"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Map": "Maps/Shipping/Map453",
+                    "__type": "ViewControllerFilter_Map"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeGameHeader",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeNeutralTimerViewController"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{13d3ad51}": {
         "Filter": {
             "Filters": [
                 {
                     "ChampionSkinDataLink": "Characters/MissFortune/Skins/Skin32",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Jade_MissFortune/Skins/Skin32",
                     "__type": "ViewControllerFilter_Champion"
                 }
             ],
@@ -519,6 +545,41 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{3115c138}": {
+        "Filter": {
+            "Filter": {
+                "__type": "ViewControllerFilter_Spectator"
+            },
+            "__type": "ViewControllerFilter_Not"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/AnnouncementBanners",
+            "ClientStates/Gameplay/UX/LoL/QuestTrackers",
+            "ClientStates/Gameplay/UX/ItemShop",
+            "ClientStates/Gameplay/UX/LoL/LoLMinimap",
+            "ClientStates/Gameplay/UX/LoL/LoLObjectiveBanner",
+            "ClientStates/Gameplay/UX/LoL/Surrender",
+            "ClientStates/Gameplay/UX/LoL/LoLEmotes",
+            "ClientStates/Gameplay/UX/LoL/LoLProgressBars",
+            "ClientStates/Gameplay/UX/LoL/LoLFloatingInfoBars",
+            "ClientStates/Gameplay/UX/LoL/KillCallouts",
+            "ClientStates/Gameplay/UX/LoL/TipTracker",
+            "ClientStates/Gameplay/UX/LoL/PlayerInventory",
+            "ClientStates/Gameplay/UX/LoL/StatStoneMilestoneCallout",
+            "ClientStates/Gameplay/UX/LoL/Highlighter",
+            "ClientStates/Gameplay/UX/LoL/LoLPingRadial",
+            "ClientStates/Gameplay/UX/LoL/LoLEmoteRadial",
+            "ClientStates/Gameplay/UX/LoL/DirectedTrackingElement",
+            "ClientStates/Gameplay/UX/LoL/LoLOffScreenPOI",
+            "ClientStates/Gameplay/UX/LoL/PlayerMute",
+            "ClientStates/Gameplay/UX/LoL/PlayerReport",
+            "ClientStates/Gameplay/UX/EndOfGame",
+            "ClientStates/Gameplay/UX/LoL/NemesisQuestFlyout",
+            "ClientStates/Gameplay/UX/LoL/NexusFinisher",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/Jade/TargetFrame_KIWI_JADE"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{32232bef}": {
         "Filter": {
             "Filters": [
@@ -538,6 +599,13 @@
                 {
                     "Filter": {
                         "Mode": "Maps/Shipping/Map12/Modes/KIWI",
+                        "__type": "ViewControllerFilter_Mode"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Filter": {
+                        "Mode": "Maps/Shipping/Map12/Modes/KIWI_JADE",
                         "__type": "ViewControllerFilter_Mode"
                     },
                     "__type": "ViewControllerFilter_Not"
@@ -729,6 +797,26 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{53faed6f}": {
+        "Filter": {
+            "__type": "ViewControllerFilter_Spectator"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/AnnouncementBanners",
+            "ClientStates/Gameplay/UX/LoL/LoLMinimap",
+            "ClientStates/Gameplay/UX/LoL/Jade/LoLFloatingInfoBars2_Jade/LoLFloatingInfoBars2_JADE",
+            "ClientStates/Gameplay/UX/LoL/KillCalloutsReplay",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeTargetFrameReplay",
+            "ClientStates/Gameplay/UX/LoL/EsportsBroadcastHud",
+            "ClientStates/Gameplay/UX/LoL/ReplayControls",
+            "ClientStates/Gameplay/UX/LoL/ReplayCameraControls",
+            "ClientStates/Gameplay/UX/LoL/ReplayVisibilityMenu",
+            "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade",
+            "ClientStates/Gameplay/UX/LoL/NexusFinisher",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeSpectatorNeutralTimerViewController"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{556028a4}": {
         "Filter": {
             "ChampionSkinDataLink": "Characters/Yunara/Skins/Skin0",
@@ -869,6 +957,25 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{6582f641}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "Filter": {
+                        "__type": "ViewControllerFilter_Spectator"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/Jade/Scoreboard_Jade",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeTeamFrames",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeEnemyRespawnTimers"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{66c3ef36}": {
         "Filter": {
             "Filters": [
@@ -960,6 +1067,27 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{72475649}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "Filter": {
+                        "__type": "ViewControllerFilter_Spectator"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Map": "Maps/Shipping/Map453",
+                    "__type": "ViewControllerFilter_Map"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/Jade/PlayerStats_Jade"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{74c53618}": {
         "Filter": {
             "Filters": [
@@ -1015,6 +1143,28 @@
             "ClientStates/Gameplay/UX/TFT/TFTPlainTextAnnouncement",
             "ClientStates/Gameplay/UX/TFT/TFTUnitInfo",
             "ClientStates/Gameplay/UX/TFT/TFTPictureInPicture"
+        ],
+        "__type": "ViewControllerList"
+    },
+    "{7db330e4}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "Filter": {
+                        "__type": "ViewControllerFilter_Spectator"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Mode": "Maps/Shipping/Map12/Modes/KIWI_JADE",
+                    "__type": "ViewControllerFilter_Mode"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/Kiwi/Jade/PlayerStats_KIWI_JADE",
+            "ClientStates/Gameplay/UX/LoL/Kiwi/KiwiPlayerAugments"
         ],
         "__type": "ViewControllerList"
     },
@@ -1141,6 +1291,13 @@
                                 "__type": "ViewControllerFilter_Mode"
                             },
                             "__type": "ViewControllerFilter_Not"
+                        },
+                        {
+                            "Filter": {
+                                "Mode": "Maps/Shipping/Map12/Modes/KIWI_JADE",
+                                "__type": "ViewControllerFilter_Mode"
+                            },
+                            "__type": "ViewControllerFilter_Not"
                         }
                     ],
                     "__type": "ViewControllerFilter_Or"
@@ -1152,6 +1309,30 @@
             "ClientStates/Gameplay/UX/LoL/PlayerStats",
             "ClientStates/Gameplay/UX/LoL/PlayerPerks",
             "ClientStates/Gameplay/UX/LoL/PlayerStatStones"
+        ],
+        "__type": "ViewControllerList"
+    },
+    "{8baf4caa}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "Filter": {
+                        "__type": "ViewControllerFilter_Spectator"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Filter": {
+                        "ChampionSkinDataLink": "Characters/Aphelios/Skins/Root",
+                        "__type": "ViewControllerFilter_Champion"
+                    },
+                    "__type": "ViewControllerFilter_Not"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerFrame"
         ],
         "__type": "ViewControllerList"
     },
@@ -1294,6 +1475,13 @@
                         "__type": "ViewControllerFilter_Spectator"
                     },
                     "__type": "ViewControllerFilter_Not"
+                },
+                {
+                    "Filter": {
+                        "Mode": "Maps/Shipping/Map12/Modes/KIWI_JADE",
+                        "__type": "ViewControllerFilter_Mode"
+                    },
+                    "__type": "ViewControllerFilter_Not"
                 }
             ],
             "__type": "ViewControllerFilter_And"
@@ -1371,6 +1559,34 @@
                 },
                 {
                     "ChampionSkinDataLink": "Characters/MissFortune/Skins/Skin39",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Jade_MissFortune/Skins/Skin31",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Jade_MissFortune/Skins/Skin34",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Jade_MissFortune/Skins/Skin35",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Jade_MissFortune/Skins/Skin36",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Jade_MissFortune/Skins/Skin37",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Jade_MissFortune/Skins/Skin38",
+                    "__type": "ViewControllerFilter_Champion"
+                },
+                {
+                    "ChampionSkinDataLink": "Characters/Jade_MissFortune/Skins/Skin39",
                     "__type": "ViewControllerFilter_Champion"
                 }
             ],
@@ -1940,6 +2156,10 @@
                         {
                             "Mode": "Maps/Shipping/Map30/Modes/CHERRY",
                             "__type": "ViewControllerFilter_Mode"
+                        },
+                        {
+                            "Mode": "Maps/Shipping/Map12/Modes/KIWI_JADE",
+                            "__type": "ViewControllerFilter_Mode"
                         }
                     ],
                     "__type": "ViewControllerFilter_Or"
@@ -2037,6 +2257,42 @@
         "ViewControllers": [
             "ClientStates/Gameplay/UX/TFT/TFTElimination",
             "ClientStates/Gameplay/UX/TFT/TFTStage"
+        ],
+        "__type": "ViewControllerList"
+    },
+    "{e3349b0a}": {
+        "Filter": {
+            "Filter": {
+                "__type": "ViewControllerFilter_Spectator"
+            },
+            "__type": "ViewControllerFilter_Not"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/AnnouncementBanners",
+            "ClientStates/Gameplay/UX/LoL/QuestTrackers",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeItemShop",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap",
+            "ClientStates/Gameplay/UX/LoL/LoLObjectiveBanner",
+            "ClientStates/Gameplay/UX/LoL/Surrender",
+            "ClientStates/Gameplay/UX/LoL/LoLEmotes",
+            "ClientStates/Gameplay/UX/LoL/LoLProgressBars",
+            "ClientStates/Gameplay/UX/LoL/Jade/LoLFloatingInfoBars2_Jade/LoLFloatingInfoBars2_JADE",
+            "ClientStates/Gameplay/UX/LoL/KillCallouts",
+            "ClientStates/Gameplay/UX/LoL/TipTracker",
+            "ClientStates/Gameplay/UX/LoL/Jade/TargetFrame_Jade",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadePlayerInventory",
+            "ClientStates/Gameplay/UX/LoL/StatStoneMilestoneCallout",
+            "ClientStates/Gameplay/UX/LoL/Jade/Highlighter_Jade",
+            "ClientStates/Gameplay/UX/LoL/LoLPingRadial",
+            "ClientStates/Gameplay/UX/LoL/LoLEmoteRadial",
+            "ClientStates/Gameplay/UX/LoL/DirectedTrackingElement",
+            "ClientStates/Gameplay/UX/LoL/LoLOffScreenPOI",
+            "ClientStates/Gameplay/UX/LoL/PlayerMute",
+            "ClientStates/Gameplay/UX/LoL/PlayerReport",
+            "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade",
+            "ClientStates/Gameplay/UX/LoL/NemesisQuestFlyout",
+            "ClientStates/Gameplay/UX/LoL/NexusFinisher",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeCombatOverview"
         ],
         "__type": "ViewControllerList"
     },
@@ -2224,6 +2480,20 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{f13cfdce}": {
+        "Filter": {
+            "Filters": [
+                {
+                    "__type": "ViewControllerFilter_Spectator"
+                }
+            ],
+            "__type": "ViewControllerFilter_And"
+        },
+        "ViewControllers": [
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeGameHeaderReplay"
+        ],
+        "__type": "ViewControllerList"
+    },
     "{f665c339}": {
         "Filter": {
             "ChampionSkinDataLink": "Characters/Gangplank/Skins/Root",
@@ -2311,6 +2581,69 @@
         ],
         "__type": "ViewControllerList"
     },
+    "{1e7fe657}": {
+        "ClientState": "Gameplay",
+        "SpecifiedGameModes": [
+            "Maps/Shipping/Map453/Modes/JADE",
+            "Maps/Shipping/Map453/Modes/BASELINESR"
+        ],
+        "ListsToLoad": [
+            "{e3349b0a}",
+            "{a11da69e}",
+            "{9cd9b4d9}",
+            "{e48964a2}",
+            "{ab73e0ed}",
+            "{90c14627}",
+            "{08c76845}",
+            "{1818bf4e}",
+            "{9fbf6039}",
+            "{f665c339}",
+            "{20607cff}",
+            "{928279f3}",
+            "{3fcf3af7}",
+            "{8d15449c}",
+            "{32c45aba}",
+            "{e7937f8d}",
+            "{8baf4caa}",
+            "{b18bf3c8}",
+            "{c4e5b6cf}",
+            "{ecf0ebb5}",
+            "{53faed6f}",
+            "{8ad42640}",
+            "{f13cfdce}",
+            "{38631a2e}",
+            "{6582f641}",
+            "{15c59aa1}",
+            "{f67b6a51}",
+            "{004411e2}",
+            "{a96cb2bc}",
+            "{72475649}",
+            "{ce733481}",
+            "{d65681aa}",
+            "{f6918168}",
+            "{1b699102}",
+            "{d41225e7}",
+            "{c59ea7c7}",
+            "{eff8fc00}",
+            "{b931afa5}",
+            "{050f9bfb}",
+            "{13d3ad51}",
+            "{6e8e0534}",
+            "{c648f339}",
+            "{3bc84de4}",
+            "{714e5edf}",
+            "{556028a4}",
+            "{bd2e78df}",
+            "{66c3ef36}",
+            "{1b9b98d8}",
+            "{59793893}",
+            "{9192c3da}",
+            "{831cd35b}",
+            "{27ebc1ed}",
+            "{10ce4a34}"
+        ],
+        "__type": "ViewControllerSet"
+    },
     "{2887f53a}": {
         "ClientState": "Gameplay",
         "SpecifiedGameModes": [
@@ -2334,6 +2667,56 @@
             "{d65681aa}",
             "{60459827}",
             "{ae34198c}"
+        ],
+        "__type": "ViewControllerSet"
+    },
+    "{69fdc473}": {
+        "ClientState": "Gameplay",
+        "SpecifiedGameModes": [
+            "Maps/Shipping/Map12/Modes/KIWI_JADE"
+        ],
+        "ListsToLoad": [
+            "{3115c138}",
+            "{a11da69e}",
+            "{9cd9b4d9}",
+            "{e48964a2}",
+            "{08c76845}",
+            "{1818bf4e}",
+            "{9fbf6039}",
+            "{f665c339}",
+            "{20607cff}",
+            "{928279f3}",
+            "{74c53618}",
+            "{b18bf3c8}",
+            "{c4e5b6cf}",
+            "{9f3bdd1d}",
+            "{8ad42640}",
+            "{2ff23ec6}",
+            "{32232bef}",
+            "{f67b6a51}",
+            "{004411e2}",
+            "{9483a712}",
+            "{d65681aa}",
+            "{f6918168}",
+            "{1b699102}",
+            "{d41225e7}",
+            "{c59ea7c7}",
+            "{eff8fc00}",
+            "{b931afa5}",
+            "{050f9bfb}",
+            "{13d3ad51}",
+            "{ea390d26}",
+            "{1b89e6cf}",
+            "{52920b68}",
+            "{3bc84de4}",
+            "{c648f339}",
+            "{6e8e0534}",
+            "{714e5edf}",
+            "{556028a4}",
+            "{bd2e78df}",
+            "{1b9b98d8}",
+            "{7db330e4}",
+            "{1e51f94e}"
         ],
         "__type": "ViewControllerSet"
     },
@@ -2616,6 +2999,7 @@
             "{556028a4}",
             "{bd2e78df}",
             "{1b9b98d8}",
+            "{7db330e4}",
             "{1e51f94e}"
         ],
         "__type": "ViewControllerSet"
@@ -23981,6 +24365,846 @@
                 "passes": [
                     {
                         "shader": "Shaders/UI/TFT/UI_ScrollGlitchPixelate",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{37495bb7}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_SpiritOfTheElderLizard",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_SpiritOfTheElderLizard.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{471d91ce}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_SpiritOfTheSpectralWraith",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_SpiritOfTheSpectralWraith.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{4c29dbea}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_BannerOfCommand",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_BannerOfCommand.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{63164d89}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_SpiritOfTheAncientGolem",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_SpiritOfTheAncientGolem.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{682647ff}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_WillOfTheAncients",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_WillOfTheAncients.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{6a2b61d0}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_ChaliceOfHarmony",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_ChaliceOfHarmony.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{6e13de75}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_Ohmwrecker",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_Ohmwrecker.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{7a3178c6}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_SwordOfTheDivine",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_SwordOfTheDivine.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{827b8b53}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_LuckyPick",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_LuckyPick.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{8b0f62d9}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_HeartOfGold",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_HeartOfGold.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{aef22179}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_AvariceBlade",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_AvariceBlade.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{cefb454b}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_PhilosophersStone",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_PhilosophersStone.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{e65a086d}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_BlackCleaver",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_BlackCleaver.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{e67208f9}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_RunicBulwark",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_RunicBulwark.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
+                        "depthEnable": false,
+                        "blendEnable": true,
+                        "cullEnable": false,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{e814511b}": {
+        "name": "ClientStates/Gameplay/UX/TFT/UiMaterials/TFTEventER/TFTEventER_Item_MikaelsCrucible",
+        "type": 3,
+        "samplerValues": [
+            {
+                "TextureName": "MainItemTexture",
+                "texturePath": "ASSETS/Maps/Particles/TFT/Item_Icons/Events/ER/TFTEventER_Items_MikaelsCrucible.TFT_Event_ER.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "FrameTexture",
+                "texturePath": "ASSETS/UX/TFT/DynamicUI/Items/Shimmerscale_Border.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "TextureScale",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TextureOffset",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/UI/TFT/UI_BorderItem",
                         "depthEnable": false,
                         "blendEnable": true,
                         "cullEnable": false,

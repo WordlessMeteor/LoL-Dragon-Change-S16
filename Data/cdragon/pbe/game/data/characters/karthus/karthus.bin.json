@@ -2863,14 +2863,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "DamagePerSecond",
                                     "nameOverride": "Spell_ListType_DamagePerSecond",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "ManaRestoreOnKill",
                                     "nameOverride": "Spell_ListType_ManaReturn",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -3397,6 +3395,73 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "MagicResistShred",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TT_WallWidth",
+                    "values": [
+                        700.0,
+                        800.0,
+                        900.0,
+                        1000.0,
+                        1100.0,
+                        1200.0,
+                        1300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "WallDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
@@ -3513,14 +3578,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "TT_WallWidth",
                                     "nameOverride": "Spell_ListType_KarthusWallWidth",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 3,
+                                    "type": "SlowPercent",
                                     "nameOverride": "Spell_ListType_MovementSpeedSlow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -3579,8 +3642,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowPercent",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -4847,6 +4910,71 @@
                             "Items/3157",
                             "Items/3102",
                             "Items/3116"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "{ad33a648}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "{2b4c593a}",
+                            "{ff9a32d3}",
+                            "{467823a4}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "{4373a1bd}",
+                            "{c76c22c4}",
+                            "{ff9a32d3}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "{9751806c}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "{9a53c3bc}",
+                            "{bbc89264}",
+                            "{26591d4e}"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{29592207}",
+                            "{b4c8875f}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{a4404bc2}",
+                            "{b9c88f3e}",
+                            "{2abeb3c5}",
+                            "{aab72e80}",
+                            "{3cbc9184}",
+                            "{3bba515a}",
+                            "{9c53c6e2}"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }

@@ -1626,7 +1626,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷歐娜於下次基礎攻擊中使用盾牌衝撞，造成額外的魔法傷害並且暈眩敵人。",
-            "dynamicDescription": "雷歐娜的下一次攻擊會 <status>暈眩</status> 目標 @Effect1Amount@ 秒並造成額外 <magicDamage>@TotalDamageTooltip@</magicDamage> 魔法傷害。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "雷歐娜的下一次普攻會<status>暈眩</status>目標@StunDuration@秒，並造成額外<magicDamage>@TotalDamageTooltip@</magicDamage>魔法傷害。@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1776,7 +1776,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷歐娜舉起盾牌，獲得傷害減免、物理防禦與魔法防禦。當技能時間第一次結束時周圍還有敵人，則敵人受到魔法傷害並且延長增益效果時間。",
-            "dynamicDescription": "雷歐娜舉起她的盾牌，使即將承受的傷害降低 @FlatDamageReduction@ 並獲得<scaleArmor>@BonusArmorTooltip@ 物理防禦</scaleArmor>及 <scaleMR>@BonusMRTooltip@ 魔法防禦</scaleMR>，持續 @Effect3Amount@ 秒。之後，她的盾牌將引爆，對附近敵人造成 <magicDamage>@TotalDamageTooltip@ 魔法傷害</magicDamage>。如果她命中了至少一名敵人，則她的<scaleArmor>物理防禦</scaleArmor>及<scaleMR>魔法防禦</scaleMR>加成將被額外延長 @Effect3Amount@ 秒。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "雷歐娜舉起盾牌，使即將承受的傷害降低@FlatDamageReduction@並獲得<scaleArmor>@BonusArmorTooltip@物防</scaleArmor>及<scaleMR>@BonusMRTooltip@魔防</scaleMR>，持續@ArmorMRDuration@秒。之後，她的盾牌將引爆，對鄰近敵軍造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>。如果她命中了至少一名敵軍，則她的<scaleArmor>物防</scaleArmor>和<scaleMR>魔防</scaleMR>加成將額外延長@ArmorMRDuration@秒。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1926,7 +1926,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "雷歐娜發出劍氣，對路徑上所有敵方造成魔法傷害。當劍氣淡去後，雷歐娜會停頓後衝往最後一位被擊中、暫時受到硬控場影響的敵方英雄。",
-            "dynamicDescription": "雷歐娜刺出光明之劍，造成 <magicDamage>@TotalDamageTooltip@ 魔法傷害</magicDamage>。最後一個被命中的敵方英雄將會被<status>定身</status> @Effect2Amount@ 秒，並且雷歐娜會衝向該英雄。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "雷歐娜刺出光明之劍，造成<magicDamage>@TotalDamageTooltip@魔法傷害</magicDamage>。最後一個被命中的敵方英雄將會被<status>定身</status>@RootDuration@秒，且雷歐娜會衝向該英雄。@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,

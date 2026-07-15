@@ -89510,6 +89510,16 @@
         "name": "Characters/PetChibiTristana/Skins/Skin2/Materials/ChibiTristana_Translucent_inst",
         "paramValues": [
             {
+                "name": "Light_Offset",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "modelHeight",
                 "value": [
                     275.0,
@@ -89655,6 +89665,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_SPECULAR_OFFSET",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

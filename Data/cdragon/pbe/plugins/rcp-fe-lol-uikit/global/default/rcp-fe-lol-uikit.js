@@ -12290,6 +12290,7 @@
             var r, o = (r = n(2)) && r.__esModule ? r : {
                 default: r
             };
+            n(254);
             class i {
                 static registerAs = "VignetteCelebration";
                 static template() {
@@ -12306,28 +12307,31 @@
             t.default = a
         }, (e, t, n) => {
             "use strict";
+            n.r(t)
+        }, (e, t, n) => {
+            "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var r = n(1),
                 o = k(n(175)),
-                i = k(n(255)),
-                a = k(n(256)),
-                s = k(n(257)),
-                l = k(n(259)),
-                d = k(n(260)),
-                c = k(n(262)),
-                p = k(n(263)),
-                A = k(n(265)),
-                u = k(n(267)),
-                h = k(n(269)),
+                i = k(n(256)),
+                a = k(n(257)),
+                s = k(n(258)),
+                l = k(n(260)),
+                d = k(n(261)),
+                c = k(n(263)),
+                p = k(n(264)),
+                A = k(n(266)),
+                u = k(n(268)),
+                h = k(n(270)),
                 g = k(n(177)),
-                b = k(n(273)),
+                b = k(n(274)),
                 m = k(n(236)),
                 f = k(n(47)),
                 _ = k(n(52)),
-                y = k(n(275)),
-                x = k(n(277));
+                y = k(n(276)),
+                x = k(n(278));
 
             function k(e) {
                 return e && e.__esModule ? e : {
@@ -12468,7 +12472,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(258)) && r.__esModule ? r : {
+                i = (r = n(259)) && r.__esModule ? r : {
                     default: r
                 };
             const a = {
@@ -12904,7 +12908,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, o = (r = n(261)) && r.__esModule ? r : {
+            var r, o = (r = n(262)) && r.__esModule ? r : {
                 default: r
             };
             var i = new class {
@@ -13134,7 +13138,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(264)) && r.__esModule ? r : {
+                i = (r = n(265)) && r.__esModule ? r : {
                     default: r
                 };
             var a = new class {
@@ -13286,7 +13290,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(266)) && r.__esModule ? r : {
+                i = (r = n(267)) && r.__esModule ? r : {
                     default: r
                 };
             var a = new class {
@@ -13435,7 +13439,7 @@
         }, (e, t, n) => {
             "use strict";
             var r, o = n(1),
-                i = (r = n(268)) && r.__esModule ? r : {
+                i = (r = n(269)) && r.__esModule ? r : {
                     default: r
                 };
             e.exports = {
@@ -13642,8 +13646,8 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = a(n(270)),
-                o = a(n(272)),
+            var r = a(n(271)),
+                o = a(n(273)),
                 i = a(n(183));
 
             function a(e) {
@@ -13689,7 +13693,7 @@
             var r = n(1),
                 o = s(n(80)),
                 i = s(n(183)),
-                a = n(271);
+                a = n(272);
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -14274,7 +14278,7 @@
             t.default = a
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(274)) && r.__esModule ? r : {
+            var r, o = (r = n(275)) && r.__esModule ? r : {
                 default: r
             };
             e.exports = {
@@ -14325,7 +14329,7 @@
             }), t.default = void 0;
             var r = a(n(1)),
                 o = a(n(177)),
-                i = a(n(269));
+                i = a(n(270));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -14539,7 +14543,7 @@
                 return o.gameDataBinding.get("/assets/v1/summoner-icons.json").then((e => new s(e)))
             };
             var r, o = n(1),
-                i = (r = n(276)) && r.__esModule ? r : {
+                i = (r = n(277)) && r.__esModule ? r : {
                     default: r
                 };
             const a = "data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QQYaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzE0NSA3OS4xNjM0OTksIDIwMTgvMDgvMTMtMTY6NDA6MjIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcFJpZ2h0cz0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3JpZ2h0cy8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpPcmlnaW5hbERvY3VtZW50SUQ9InhtcC5kaWQ6NDA4MTQzMDktMGVhYS1lMTRiLTg3ZWItNzliZDViOGMwZDY1IiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjg3MzAzMTk0QkQ4QjExRUI5MDAzREE5MzQ4RUFERDlCIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjg3MzAzMTkzQkQ4QjExRUI5MDAzREE5MzQ4RUFERDlCIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE5IChXaW5kb3dzKSI+IDx4bXBSaWdodHM6VXNhZ2VUZXJtcz4gPHJkZjpBbHQ+IDxyZGY6bGkgeG1sOmxhbmc9IngtZGVmYXVsdCIvPiA8L3JkZjpBbHQ+IDwveG1wUmlnaHRzOlVzYWdlVGVybXM+IDx4bXBNTTpEZXJpdmVk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";
@@ -14702,7 +14706,7 @@
                     e.default.gameDataBinding = t("/lol-game-data", r), e.default.gameFlowBinding = t("/lol-gameflow", r);
                     const o = n(21).default;
                     o.registerCustomElements(), o.registerComponents();
-                    return n(254).default
+                    return n(255).default
                 }))
             }))
         }), {

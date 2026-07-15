@@ -390,6 +390,102 @@
         ],
         "__type": "CharacterRecord"
     },
+    "{cbde471d}": {
+        "mCharacterName": "SRU_ChaosMinionRanged",
+        "mFallbackCharacterName": "SRU_OrderMinionRanged",
+        "baseHPModifiable": {
+            "baseValue": 270.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 38.0,
+        "primaryAbilityResource": {
+            "{726ee5cd}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 22.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 325.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 550.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6669999957084656,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6669999957084656,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 700.0,
+        "wakeUpRange": 635.0,
+        "firstAcquisitionRange": 900.0,
+        "basicAttack": {
+            "mAttackTotalTime": 1.5,
+            "mAttackCastTime": 0.4699999988079071,
+            "mAttackDelayCastOffsetPercent": 0.008999999612569809,
+            "mAttackProbability": 0.5,
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "__type": "AttackSlotData"
+            }
+        ],
+        "towerTargetingPriorityBoost": 1.0,
+        "expGivenOnDeath": 28.799999237060547,
+        "goldGivenOnDeath": 14.699999809265137,
+        "experienceRadius": 1600.0,
+        "perceptionBubbleRadius": 1200.0,
+        "significance": 0.4000000059604645,
+        "name": "game_character_displayname_Red_Minion_Wizard",
+        "selectionHeight": 75.0,
+        "selectionRadius": 115.0,
+        "pathfindingCollisionRadius": 35.74369812011719,
+        "overrideGameplayCollisionRadius": 48.0,
+        "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Ranged",
+        "characterToolData": {
+            "mapAIPresence": {
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "description": "game_character_description_Red_Minion_Wizard",
+            "baseAttackSpeedBonus": 60.0,
+            "attackSpeed": 1.600000023841858,
+            "__type": "CharacterToolData"
+        },
+        "Script": "{f16ee8ee}",
+        "__type": "CharacterRecord"
+    },
     "{e7afee35}": {
         "mCharacterName": "SRU_ChaosMinionRanged",
         "mFallbackCharacterName": "SRU_OrderMinionRanged",
@@ -571,8 +667,8 @@
             "mCastType": 1,
             "castFrame": 7.0,
             "missileSpeed": 1300.0,
-            "mMissileEffectName": "DATA/Particles/SRU_Chaos_CM_BA_Mis.troy",
-            "mHitEffectName": "DATA/Particles/SRU_Chaos_CM_BA_Tar.troy",
+            "mMissileEffectKey": "{6708a8cb}",
+            "mHitEffectKey": "{a6e60e2b}",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "mClientData": {
@@ -672,8 +768,8 @@
             "mCastType": 1,
             "castFrame": 14.0,
             "missileSpeed": 650.0,
-            "mMissileEffectName": "DATA/Particles/SRU_Chaos_CM_BA_Mis.troy",
-            "mHitEffectName": "DATA/Particles/SRU_Chaos_CM_BA_Tar.troy",
+            "mMissileEffectKey": "{6708a8cb}",
+            "mHitEffectKey": "{a6e60e2b}",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "mClientData": {
@@ -774,8 +870,8 @@
             "mCastType": 1,
             "castFrame": 14.0,
             "missileSpeed": 650.0,
-            "mMissileEffectName": "DATA/Particles/SRU_Chaos_CM_BA_Mis.troy",
-            "mHitEffectName": "DATA/Particles/SRU_Chaos_CM_BA_Tar.troy",
+            "mMissileEffectKey": "{6708a8cb}",
+            "mHitEffectKey": "{a6e60e2b}",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "mClientData": {
@@ -879,6 +975,132 @@
             }
         ],
         "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{f16ee8ee}": {
+        "ScriptName": "CharScriptSRU_ChaosMinionRanged_Jade",
+        "path": "{f16ee8ee}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "e7695770-ee4e-4b21-b4cf-c6275301e44a",
+                        "ToSay": {
+                            "value": "Jade Chaos Ranged",
+                            "__type": "StringGet"
+                        },
+                        "__type": "DebugPrintToChatBlock"
+                    },
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "67e549bc-cb13-4f15-b042-b14f20c04751",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "27d48da9-ef5a-4278-b937-f04d539196b9",
+                                    "__type": "ScriptCommentBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "55f596aa-07f5-4b91-963d-3f163b24c14b",
+                                    "Src": {
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "InhibsDestroyed",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "03f99d28-f511-4138-a9f0-b007b2c19f86",
+                                    "Src": {
+                                        "value": 60,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "InstanceVars"
+                                        },
+                                        "Var": "HpInhibitor",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "34779c75-2f02-40bd-9929-3ea4ab5639cb",
+                                    "Src": {
+                                        "value": 18,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "InstanceVars"
+                                        },
+                                        "Var": "DamageInhibitor",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null,
+                                {
+                                    "{d851ffa3}": "c3d3e3f8-92c8-481c-9765-21e971f728e2",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{358b1671}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "3ddc1b3e-605a-4286-9b3c-69261300b5b7",
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "c6c9845a-c85d-408c-8a06-3f6e29c45c53",
+                                                "Formula": "iv.DamageInhibitor * ptp.InhibsDestroyed",
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "InstanceVars"
+                                                    },
+                                                    "Var": "DamageInhibitor",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "88e2edfc-1f3f-4358-b288-4aa81d092818",
+                                                "Formula": "iv.HpInhibitor * ptp.InhibsDestroyed",
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "InstanceVars"
+                                                    },
+                                                    "Var": "HpInhibitor",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            },
+                                            null,
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
     },
     "__linked": []
 }

@@ -989,7 +989,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Kindred berguling dan menembakkan tiga anak panah pada musuh di sekitar.",
-            "dynamicDescription": "Kindred melompat dan menembakkan anak panah ke hingga 3 musuh, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage>, dan memperoleh <attackSpeed>@TotalQAttackSpeed@ Attack Speed</attackSpeed> selama @Effect8Amount@ detik.<br><br>Saat berada dalam <spellName>Wolf's Frenzy</spellName>, Cooldown Ability ini berkurang menjadi @Effect4Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kindred melompat dan menembakkan anak panah hingga ke 3 musuh, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage>, dan memperoleh <attackSpeed>@TotalQAttackSpeed@ Attack Speed</attackSpeed> selama @BaseASDuration@ detik.<br><br>Saat berada di dalam <spellName>Wolf's Frenzy</spellName>, Cooldown Ability ini berkurang menjadi @CDNewValue@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 340.0,
                 340.0,
@@ -1439,7 +1439,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Lamb memberi perlindungan dari kematian bagi semua makhluk hidup di dalam zona. Hingga efeknya berakhir, tidak ada yang bisa mati. Di akhir efek, semua unit menerima heal.",
-            "dynamicDescription": "Kindred memberkati zona selama @Effect2Amount@ detik, mencegah kematian semua unit di dalamnya, baik sekutu, musuh, maupun netral. Saat mencapai 10% Health, unit yang berada di dalam zona tidak bisa terkena damage atau mendapat heal.<br><br>Setelah berakhir, semua unit di dalamnya akan mendapat heal sebesar <healing>@Effect1Amount@ Health</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kindred memberkati zona selama @BuffDuration@ detik, mencegah kematian semua unit di dalamnya, baik sekutu, musuh, maupun netral. Saat mencapai 10% Health, unit yang berada di dalam zona tidak bisa terkena damage atau mendapat heal.<br><br>Setelah blessing berakhir, semua unit di dalamnya akan menerima heal sebesar <healing>@HealFlat@ Health</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

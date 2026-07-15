@@ -1,0 +1,927 @@
+{
+    "{c3d64af5}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene",
+        "Layer": 1000,
+        "SceneTransitionIn": {
+            "TransitionTime": 0.30000001192092896,
+            "TransitionStartDelaySecs": 0.6499999761581421,
+            "EasingType": 8,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "{ba8e0b22}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_VFXGroup",
+        "Scene": "{c3d64af5}",
+        "Elements": [
+            "{02875fae}"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "{02875fae}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_VFXGroup/Vanguard_VFX",
+        "Scene": "{c3d64af5}",
+        "Enabled": true,
+        "Layer": 1,
+        "Position": {
+            "UIRect": {
+                "Size": [
+                    1600.0,
+                    1200.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "VfxSystem": "{c2d89352}",
+        "__type": "UiElementParticleSystemData"
+    },
+    "{0d6f8afc}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_ContinueButton",
+        "Scene": "{c3d64af5}",
+        "Elements": [
+            "{45a0c467}",
+            "{1ac9d09b}",
+            "{772f5ace}",
+            "{d8782bb8}",
+            "{17fdb2c5}",
+            "{e725a912}"
+        ],
+        "IsEnabled": true,
+        "HitRegionElement": "{e725a912}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{1ac9d09b}"
+            ],
+            "TextElement": "{17fdb2c5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{d8782bb8}"
+            ],
+            "TextElement": "{17fdb2c5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{45a0c467}"
+            ],
+            "TextElement": "{17fdb2c5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "{772f5ace}"
+            ],
+            "TextElement": "{17fdb2c5}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "{0e78e74b}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_ExplanationText",
+        "Scene": "{c3d64af5}",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    510.0,
+                    802.0
+                ],
+                "Size": [
+                    580.0,
+                    100.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "vanguard_gameEndExplanation",
+        "FontDescription": "UX/Fonts/Descriptions/Vanguard_Explanation",
+        "TextAlignmentHorizontal": 1,
+        "HTMLStyleSheet": "{9c87124a}",
+        "WrappingMode": 1,
+        "__type": "UiElementTextData"
+    },
+    "{17fdb2c5}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_ContinueButton/Vanguard_ContinueButton_Text",
+        "Scene": "{c3d64af5}",
+        "Enabled": true,
+        "Layer": 15,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    769.0,
+                    723.0
+                ],
+                "Size": [
+                    66.0,
+                    9.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "vanguard_continue",
+        "FontDescription": "UX/Fonts/Descriptions/Vanguard_Continue",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "{1ac9d09b}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_ContinueButton/Vanguard_ContinueButton_Default",
+        "Scene": "{c3d64af5}",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    686.0,
+                    701.0
+                ],
+                "Size": [
+                    228.0,
+                    62.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                2.0,
+                190.0,
+                55.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{45a0c467}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_ContinueButton/Vanguard_ContinueButton_Clicked",
+        "Scene": "{c3d64af5}",
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    686.0,
+                    701.0
+                ],
+                "Size": [
+                    228.0,
+                    62.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                110.0,
+                190.0,
+                163.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{772f5ace}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_ContinueButton/Vanguard_ContinueButton_Disabled",
+        "Scene": "{c3d64af5}",
+        "Layer": 13,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    686.0,
+                    701.0
+                ],
+                "Size": [
+                    228.0,
+                    62.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                164.0,
+                190.0,
+                217.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{d8782bb8}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_ContinueButton/Vanguard_ContinueButton_Hover",
+        "Scene": "{c3d64af5}",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    686.0,
+                    701.0
+                ],
+                "Size": [
+                    228.0,
+                    62.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                56.0,
+                190.0,
+                109.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{e725a912}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_ContinueButton/Vanguard_ContinueButton_Region",
+        "Scene": "{c3d64af5}",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    686.0,
+                    701.0
+                ],
+                "Size": [
+                    228.0,
+                    62.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{d9aec978}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_DetectedText",
+        "Scene": "{c3d64af5}",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    300.0,
+                    610.0
+                ],
+                "Size": [
+                    1000.0,
+                    30.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "vanguard_cheaterDetected",
+        "FontDescription": "UX/Fonts/Descriptions/Vanguard_Subtitle",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "{f9dfe2c6}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardScene/Vanguard_TerminationText",
+        "Scene": "{c3d64af5}",
+        "Enabled": true,
+        "Layer": 2,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    307.0,
+                    550.0
+                ],
+                "Size": [
+                    1000.0,
+                    50.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "vanguard_gameTerminated",
+        "FontDescription": "UX/Fonts/Descriptions/Vanguard_Title",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "{6ddb93e0}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene",
+        "Layer": 1000,
+        "SceneTransitionIn": {
+            "TransitionTime": 1.0,
+            "TransitionStartDelaySecs": 1.0,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "SceneTransitionOut": {
+            "TransitionTime": 0.5,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "{4d04e4da}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_ContinueButton",
+        "Scene": "{6ddb93e0}",
+        "Elements": [
+            "{5045babc}",
+            "{06c93c74}",
+            "{04e67d33}",
+            "{6402c6f3}",
+            "{40cf9824}",
+            "{626ef213}"
+        ],
+        "IsEnabled": true,
+        "HitRegionElement": "{626ef213}",
+        "DefaultStateElements": {
+            "DisplayElementList": [
+                "{06c93c74}"
+            ],
+            "TextElement": "{40cf9824}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "HoverStateElements": {
+            "DisplayElementList": [
+                "{6402c6f3}"
+            ],
+            "TextElement": "{40cf9824}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "ClickedStateElements": {
+            "DisplayElementList": [
+                "{5045babc}"
+            ],
+            "TextElement": "{40cf9824}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "InactiveStateElements": {
+            "DisplayElementList": [
+                "{04e67d33}"
+            ],
+            "TextElement": "{40cf9824}",
+            "__type": "UiElementGroupButtonState"
+        },
+        "__type": "UiElementGroupButtonData"
+    },
+    "{04e67d33}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_ContinueButton/EoG_VC_Continue_ButtonDisabled",
+        "Scene": "{6ddb93e0}",
+        "Layer": 13,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    705.0,
+                    692.0
+                ],
+                "Size": [
+                    190.0,
+                    53.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                164.0,
+                190.0,
+                217.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{06c93c74}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_ContinueButton/EoG_VC_Continue_ButtonDefault",
+        "Scene": "{6ddb93e0}",
+        "Layer": 10,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    705.0,
+                    692.0
+                ],
+                "Size": [
+                    190.0,
+                    53.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                2.0,
+                190.0,
+                55.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{40cf9824}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_ContinueButton/EoG_VC_Continue_ButtonText",
+        "Scene": "{6ddb93e0}",
+        "Enabled": true,
+        "Layer": 15,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    743.0,
+                    704.0
+                ],
+                "Size": [
+                    118.0,
+                    19.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "endOfGame_continue",
+        "FontDescription": "UX/Fonts/Descriptions/HUD_EoGContinue",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "{5045babc}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_ContinueButton/EoG_VC_Continue_ButtonClicked",
+        "Scene": "{6ddb93e0}",
+        "Layer": 12,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    705.0,
+                    692.0
+                ],
+                "Size": [
+                    190.0,
+                    53.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                110.0,
+                190.0,
+                163.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{626ef213}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_ContinueButton/EOG_VC_ContinueButton_region",
+        "Scene": "{6ddb93e0}",
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    705.0,
+                    692.0
+                ],
+                "Size": [
+                    190.0,
+                    53.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "__type": "UiElementRegionData"
+    },
+    "{6402c6f3}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_ContinueButton/EoG_VC_Continue_ButtonHover",
+        "Scene": "{6ddb93e0}",
+        "Layer": 11,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    705.0,
+                    692.0
+                ],
+                "Size": [
+                    190.0,
+                    53.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EndOfGameAtlas.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 256,
+            "mTextureUV": [
+                0.0,
+                56.0,
+                190.0,
+                109.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{a686b316}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_VictoryGroup",
+        "Scene": "{6ddb93e0}",
+        "Elements": [
+            "{a7f07387}",
+            "{05af392d}"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "{05af392d}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_VictoryGroup/Victory_Image",
+        "Scene": "{6ddb93e0}",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    288.0,
+                    244.0
+                ],
+                "Size": [
+                    1024.0,
+                    512.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5049999952316284,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Jade/HUD/EndOfGame/EndOfGame_I1E.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{a7f07387}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_VictoryGroup/Victory_Text",
+        "Scene": "{6ddb93e0}",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    459.0,
+                    421.0
+                ],
+                "Size": [
+                    683.0,
+                    123.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5049999952316284,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "jade_end_of_game_victory",
+        "FontDescription": "{95533ef2}",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "{fa20c593}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_DefeatGroup",
+        "Scene": "{6ddb93e0}",
+        "Elements": [
+            "{5e31c897}",
+            "{14b56bfd}"
+        ],
+        "__type": "UiElementGroupData"
+    },
+    "{14b56bfd}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_DefeatGroup/Defeat_Image",
+        "Scene": "{6ddb93e0}",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    300.0,
+                    245.0
+                ],
+                "Size": [
+                    1000.0,
+                    500.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5093749761581421,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TextureData": {
+            "TextureName": "ASSETS/UX/Jade/HUD/EndOfGame/EndOfGame_I10.png",
+            "__type": "LooseUiTextureData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "{5e31c897}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/EndOfGameMainScene/EOG_DefeatGroup/Defeat_Text",
+        "Scene": "{6ddb93e0}",
+        "Enabled": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    464.0,
+                    422.0
+                ],
+                "Size": [
+                    682.0,
+                    122.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5093749761581421,
+                    1.0
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "TRAKey": "jade_end_of_game_defeat",
+        "FontDescription": "{1742e887}",
+        "TextAlignmentHorizontal": 1,
+        "__type": "UiElementTextData"
+    },
+    "{b0728b00}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardBGScene",
+        "Layer": 999,
+        "SceneTransitionIn": {
+            "TransitionTime": 0.30000001192092896,
+            "EasingType": 8,
+            "__type": "SceneAlphaTransitionData"
+        },
+        "__type": "UISceneData"
+    },
+    "{7452e6c0}": {
+        "name": "ClientStates/Gameplay/UX/LoL/Jade/EndOfGame_Jade/UIBase/VanguardBGScene/Vanguard_Background",
+        "Scene": "{b0728b00}",
+        "Enabled": true,
+        "BlockInputEvents": true,
+        "Position": {
+            "UIRect": {
+                "Position": [
+                    -800.0,
+                    -600.0
+                ],
+                "Size": [
+                    3200.0,
+                    2400.0
+                ],
+                "SourceResolutionWidth": 1600,
+                "SourceResolutionHeight": 1200,
+                "__type": "UiElementRect"
+            },
+            "Anchors": {
+                "Anchor": [
+                    0.5,
+                    0.5
+                ],
+                "__type": "AnchorSingle"
+            },
+            "IgnoreGlobalScale": true,
+            "__type": "UiPositionRect"
+        },
+        "Color": [
+            255,
+            255,
+            255,
+            210
+        ],
+        "TextureData": {
+            "mTextureName": "ASSETS/UX/EndOfGame/EoG_GradientMap.tex",
+            "mTextureSourceResolutionWidth": 256,
+            "mTextureSourceResolutionHeight": 16,
+            "mTextureUV": [
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "__type": "AtlasData"
+        },
+        "__type": "UiElementIconData"
+    },
+    "__linked": []
+}

@@ -1,0 +1,842 @@
+{
+    "{92d1be7d}": {
+        "championSkinName": "Order_Minion_Caster_Classic_Blue",
+        "metaDataTags": "class:minion",
+        "skinAudioProperties": {
+            "bankUnits": [
+                {
+                    "name": "NPC_Global_Minions_OrderRange_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/NPC_Global_Minions_OrderRange_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/NPC_Global_Minions_OrderRange_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "{bb1b7abc}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/SRU_OrderMinionRanged/Skins/Skin28/Blue_Minion_Wizard.project_jade.skl",
+            "simpleSkin": "ASSETS/Characters/SRU_OrderMinionRanged/Skins/Skin28/Blue_Minion_Wizard.project_jade.skn",
+            "ReducedBoneSkinning": true,
+            "texture": "ASSETS/Characters/SRU_OrderMinionRanged/Skins/Skin28/Blue_Minion_Wizard.project_jade.tex",
+            "skinScale": 0.7599999904632568,
+            "selfIllumination": 0.699999988079071,
+            "{9a817954}": [
+                {
+                    "category": "{e1043940}",
+                    "Submeshes": "Outline",
+                    "__type": "{993f8595}"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "mSpawnParticleName": "DATA/Particles/SRU_MinionSpawn_01.troy",
+        "iconCircle": "ASSETS/Characters/SRU_OrderMinionRanged/HUD/BlueRange_Circle_Classic.tex",
+        "iconSquare": "ASSETS/Characters/SRU_OrderMinionRanged/HUD/BlueRange_Square_Classic.tex",
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "mResourceResolver": "{a410f047}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{960f237a}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 60.0,
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.05000000074505806,
+                            1.0
+                        ],
+                        "values": [
+                            360.0,
+                            60.0,
+                            60.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.20000000298023224,
+                                    1.5
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.5
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 5.0,
+                "emitterName": "rays",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        10.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "particleColorTexture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/color-chaosshop.tex",
+                "colorLookUpScales": [
+                    1.0,
+                    0.20000000298023224
+                ],
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.0,
+                        10.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.2000000476837158
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                10.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                8.0,
+                                8.0,
+                                8.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/ball01.tex",
+                "startFrame": 1,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.03999999910593033,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    5.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.03999999910593033
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 5.0,
+                "emitterName": "bolts",
+                "importance": 3,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            5.0,
+                            5.0,
+                            5.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    5.0,
+                                    5.0,
+                                    5.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/color-hold.tex",
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.6000000238418579,
+                                    0.800000011920929,
+                                    1.2999999523162842
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                30.0,
+                                30.0,
+                                30.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/BlueWizBall.tex",
+                "frameRate": 20.0,
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 10.0,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 5.0,
+                "emitterName": "center",
+                "importance": 1,
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/color-hold.tex",
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/ShopFX.tex",
+                "startFrame": 2,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "SRU_OrderMinionRanged_Skin28_BlueWizBall",
+        "particlePath": "Characters/SRU_OrderMinionRanged/Skins/Skin28/Particles/SRU_OrderMinionRanged_Skin28_BlueWizBall",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{b18e9319}": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.30000001192092896,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "blastring",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            40.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/color-bluehit.tex",
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066
+                            ],
+                            [
+                                1.2000000476837158,
+                                1.2000000476837158,
+                                1.2000000476837158
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/GlobalTargetHit01.tex",
+                "numFrames": 6,
+                "texDiv": [
+                    2.0,
+                    3.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.0,
+                "emitterName": "outerring",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            40.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/color-rampdown.tex",
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        45.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.623199999332428,
+                                0.623199999332428,
+                                0.623199999332428
+                            ],
+                            [
+                                0.9490960240364075,
+                                0.9490960240364075,
+                                0.9490960240364075
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/GlobalTargetHit01.tex",
+                "numFrames": 6,
+                "startFrame": 4,
+                "texDiv": [
+                    2.0,
+                    3.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.20000000298023224,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.0,
+                "emitterName": "innerring",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            40.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/color-bluehit.tex",
+                "meshRenderFlags": 0,
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        130.0,
+                        130.0,
+                        130.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "constantValue": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.623199999332428,
+                                0.623199999332428,
+                                0.623199999332428
+                            ],
+                            [
+                                0.8008000254631042,
+                                0.8008000254631042,
+                                0.8008000254631042
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/SRU_ChaosMinionRanged/Skins/Skin28/Particles/GlobalTargetHit01.tex",
+                "numFrames": 6,
+                "startFrame": 3,
+                "texDiv": [
+                    2.0,
+                    3.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "SRU_OrderMinionRanged_Skin28_BlueWizardHit_tar",
+        "particlePath": "Characters/SRU_OrderMinionRanged/Skins/Skin28/Particles/SRU_OrderMinionRanged_Skin28_BlueWizardHit_tar",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "{a410f047}": {
+        "resourceMap": {
+            "{a7b6d3fb}": "{960f237a}",
+            "{e600803b}": "{b18e9319}"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/SRU_OrderMinionRanged/SRU_OrderMinionRanged.bin",
+        "DATA/Characters/SRU_OrderMinionRanged/Animations/Skin28.bin"
+    ]
+}

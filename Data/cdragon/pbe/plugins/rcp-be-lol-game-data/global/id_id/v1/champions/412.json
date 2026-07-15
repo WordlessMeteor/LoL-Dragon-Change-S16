@@ -1832,7 +1832,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Serangan Thresh disiapkan. Makin lama menunggu antara serangan, damage yang dihasilkan makin banyak. Saat diaktifkan, Thresh melibas rantainya, menghantam semua musuh yang terkena di arah libasan.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Serangan Thresh menghasilkan damage tambahan berdasarkan lama waktu sejak terakhir kali dia melancarkan Serangan. Serangan menghasilkan antara <magicDamage>@PAttackDamageMin@</magicDamage> hingga <magicDamage>@PAttackDamageMax@ magic damage</magicDamage>.<br><br><spellActive>Aktif:</spellActive> Thresh melecutkan rantainya, melakukan <status>Pull</status> atau <status>Push</status> pada musuh di arah lecutan. Musuh yang terlecut juga akan terkena <status>Slow</status> sebesar @Effect2Amount@% selama @Effect4Amount@ detik dan menerima <magicDamage>@TotalDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Serangan Thresh menghasilkan damage tambahan berdasarkan lama waktu sejak terakhir kali dia melancarkan Serangan. Serangan menghasilkan antara <magicDamage>@PAttackDamageMin@</magicDamage> hingga <magicDamage>@PAttackDamageMax@ magic damage</magicDamage>.<br><br><spellActive>Aktif:</spellActive> Thresh melecutkan rantai, melakukan <status>Pull</status> atau <status>Push</status> pada musuh di arah lecutan. Musuh yang terkena lecutan juga akan terkena <status>Slow</status> sebesar @ActiveSlowPercentage@% selama @SlowDuration@ detik dan menerima <magicDamage>@TotalDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1982,7 +1982,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Kurungan dinding yang jika hancur akan memberi efek slow dan menghasilkan damage.",
-            "dynamicDescription": "Thresh membuat penjara berdinding spektral, yang menerapkan <status>Slow</status> pada champion sebesar @Effect3Amount@% selama @Effect2Amount@ detik dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. Dinding hancur setelah satu tubrukan, dan saat satu sudah hancur, dinding lainnya tidak menghasilkan damage dan <status>Slow</status> selama setengah durasi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Thresh membuat penjara berdinding spektral, yang menerapkan <status>Slow</status> pada champion sebesar @SlowAmount@% selama @SlowDuration@ detik dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. Dinding hancur setelah satu tubrukan, dan saat satu sudah hancur, dinding lainnya tidak menghasilkan damage dan <status>Slow</status> selama setengah durasi.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

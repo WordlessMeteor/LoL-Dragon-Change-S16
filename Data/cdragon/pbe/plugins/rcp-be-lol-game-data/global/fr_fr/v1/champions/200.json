@@ -642,10 +642,10 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                1.0,
-                1.0,
-                1.0,
-                1.0,
+                4.0,
+                3.25,
+                2.5,
+                1.75,
                 1.0,
                 1.0
             ],
@@ -797,7 +797,7 @@
                 10.0,
                 9.0,
                 8.0,
-                8.0
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -942,12 +942,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                20.0,
-                19.0,
+                24.0,
+                21.0,
                 18.0,
-                17.0,
-                16.0,
-                16.0
+                15.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -1073,8 +1073,8 @@
             "abilityVideoImagePath": "champion-abilities/0200/ability_0200_R1.jpg",
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Bel'Veth consomme du corail du Néant ; elle prend alors sa véritable forme, ce qui augmente ses PV max, sa portée d'attaque, sa vitesse d'attaque et sa vitesse de déplacement en dehors des combats. Consommer du corail du Néant généré par un monstre épique du Néant prolonge la durée de son ultime et lui donne le pouvoir d'invoquer des rémoras du Néant.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> toutes les deux attaques contre une même cible, Bel'Veth inflige <trueDamage>@FinalOnHitDamage@ pts de dégâts bruts</trueDamage> supplémentaires (cumulable à l'infini). Participer à l'élimination de champions et de monstres épiques génère des coraux du Néant.<br><br><spellActive>Active :</spellActive> consommer un corail du Néant octroie <keywordMajor>@PassiveStacksOnDevour@ effet Lavande</keywordMajor> et active la véritable forme de Bel'Veth pendant @SteroidDuration@ sec. Les coraux du Néant générés par des monstres épiques du Néant augmentent la durée à @VoidDuration@ sec et transforment en rémoras du Néant les sbires tués à proximité. Pendant l'incantation, Bel'Veth <status>ralentit</status> les ennemis proches avant d'exploser, infligeant des <trueDamage>dégâts bruts équivalents à @TotalExplosionDamage@ + @MissingHealthDamage*100@% des PV manquants de la cible</trueDamage>.<br><br>Dans sa véritable forme, Bel'Veth gagne <healing>+@MaxHealthOnDevour@ PV max</healing>, <speed>+@OOCMS@ vitesse de déplacement</speed> en dehors des combats, +@BonusAARange@ portée d'attaque et <attackSpeed>+@TotalASMod*100@% de vitesse d'attaque totale</attackSpeed>, et <spellName>Charge du Néant</spellName> peut traverser les murs.<br><br><br>@SpellModifierDescriptionAppend@",
+            "description": "Spell_BelvethR_Summary",
+            "dynamicDescription": "Spell_BelvethR_Tooltip@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

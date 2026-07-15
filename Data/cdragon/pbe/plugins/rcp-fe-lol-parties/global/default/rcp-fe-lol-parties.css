@@ -1810,6 +1810,12 @@ body[data-locale=ru-RU] .parties-header-container .lobby-header-wrapper .lobby-h
     margin-left: 15px
 }
 
+.parties-header-container .lobby-header-wrapper.custom-header-wrapper .lobby-header-map-icon.game_map_453 {
+    background-image: url(/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Jade/img/game-select-mode-icon-selected.png);
+    background-position: 50%;
+    background-size: 30px 30px
+}
+
 .parties-debug-queues label {
     font-family: var(--font-display);
     -webkit-font-feature-settings: "kern" 1;
@@ -9127,6 +9133,10 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] .parties-voic
     background-image: url(/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/GameModeCommon/img/icon-v2.png)
 }
 
+.lobby-header-content .lobby-header-map-icon.game_map_453 {
+    background-image: url(/lol-game-data/assets/content/src/LeagueClient/GameModeAssets/Jade/img/game-select-mode-icon-selected.png)
+}
+
 .v2-lobby-root-component {
     height: 100%;
     margin-top: 2px;
@@ -15956,6 +15966,1323 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 
 .tft-loadout-menu-option .loadouts-icon .background-gradient span {
     margin-bottom: 19.22px
+}
+
+.jade-position-preference-modal lol-uikit-dialog-frame {
+    background: none;
+    border: none;
+    padding: 0
+}
+
+.jade-position-preference-modal .lol-uikit-modal-wrapper,
+.jade-position-preference-modal lol-uikit-content-block {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0
+}
+
+.jade-position-preference-modal .dialog-confirm-content-buttons,
+.jade-position-preference-modal .lol-uikit-dialog-buttons {
+    display: none
+}
+
+.jade-position-pref-modal {
+    background: linear-gradient(180deg, #152233, #090f18);
+    border: 1px solid #4d74a4;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    width: 760px
+}
+
+.jade-position-pref-heading {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%
+}
+
+.jade-position-pref-title {
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 18px;
+    white-space: nowrap
+}
+
+.jade-position-pref-close-btn {
+    align-items: center;
+    background: linear-gradient(0deg, #0c3360 37.5%, #2c66aa);
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    padding: 4px;
+    width: 32px
+}
+
+.jade-position-pref-close-btn:hover {
+    filter: brightness(1.2)
+}
+
+.jade-position-pref-close-btn:active {
+    filter: brightness(.9)
+}
+
+.jade-position-pref-close-icon {
+    height: 16px;
+    position: relative;
+    width: 16px
+}
+
+.jade-position-pref-close-icon:after,
+.jade-position-pref-close-icon:before {
+    background: #fff;
+    content: "";
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 14px
+}
+
+.jade-position-pref-close-icon:before {
+    transform: translate(-50%, -50%) rotate(45deg)
+}
+
+.jade-position-pref-close-icon:after {
+    transform: translate(-50%, -50%) rotate(-45deg)
+}
+
+.jade-position-pref-content {
+    align-items: center;
+    background: #040d16;
+    border: 1px solid #4d74a4;
+    border-radius: 2px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px 40px
+}
+
+.jade-position-pref-description {
+    color: #7d7d7d;
+    font-family: var(--font-body);
+    font-size: 14px;
+    text-align: center;
+    width: 100%
+}
+
+.jade-position-pref-positions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%
+}
+
+.jade-position-pref-rank-row {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    width: 100%
+}
+
+.jade-position-pref-rank-heading {
+    align-items: center;
+    background: linear-gradient(180deg, #1f3859, #132236);
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 1px;
+    display: flex;
+    justify-content: center;
+    width: 136px
+}
+
+.jade-position-pref-rank-heading span {
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 18px;
+    text-align: center;
+    width: 86px
+}
+
+.jade-position-pref-cards-row {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    justify-content: center
+}
+
+.jade-position-pref-card {
+    cursor: grab;
+    height: 200px;
+    position: relative;
+    transition: transform .15s ease, filter .15s ease;
+    user-select: none;
+    width: 136px
+}
+
+.jade-position-pref-card:active {
+    cursor: grabbing
+}
+
+.jade-position-pref-card.jade-position-pref-card--first .jade-position-pref-card-frame-main {
+    border-color: #c8aa6e
+}
+
+.jade-position-pref-card.jade-position-pref-card--first .jade-position-pref-card-frame-inner {
+    border-color: hsla(40, 45%, 61%, .4)
+}
+
+.jade-position-pref-card.jade-position-pref-card--grabbing {
+    cursor: grabbing
+}
+
+.jade-position-pref-card.jade-position-pref-card--grabbing .jade-position-pref-card-frame-main {
+    border-color: #fabe0a;
+    border-width: 4px;
+    box-shadow: 0 0 12px rgba(250, 190, 10, .5)
+}
+
+.jade-position-pref-card.jade-position-pref-card--grabbing .jade-position-pref-card-frame-inner {
+    border-color: rgba(250, 190, 10, .4)
+}
+
+.jade-position-pref-card.jade-position-pref-card--disabled {
+    cursor: default;
+    opacity: .4;
+    pointer-events: none
+}
+
+.jade-position-pref-cards-row.is-dragging .jade-position-pref-card:not(.jade-position-pref-card--grabbing):hover .jade-position-pref-card-frame-main {
+    border-color: #fabe0a;
+    transition: border-color .15s ease
+}
+
+.jade-position-pref-cards-row.is-dragging .jade-position-pref-card:not(.jade-position-pref-card--grabbing):hover .jade-position-pref-card-content {
+    background: linear-gradient(180deg, #4a4a4a, #1a1a1a);
+    transition: background .15s ease
+}
+
+.jade-position-pref-card-content {
+    align-items: center;
+    background: #000;
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    inset: 0;
+    justify-content: center;
+    padding: 20px;
+    position: absolute
+}
+
+.jade-position-pref-card-icon {
+    height: 80px;
+    object-fit: contain;
+    width: 80px
+}
+
+.jade-position-pref-card-name {
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 18px;
+    text-align: center;
+    white-space: nowrap
+}
+
+.jade-position-pref-card-frame {
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.jade-position-pref-card-frame-outer {
+    border: 1px solid #000;
+    inset: 0;
+    position: absolute
+}
+
+.jade-position-pref-card-frame-inner {
+    border: 1px solid rgba(34, 35, 36, .8);
+    inset: 3px;
+    position: absolute
+}
+
+.jade-position-pref-card-frame-main {
+    background: rgba(0, 0, 0, .5);
+    border: 2px solid #2c2c2c;
+    inset: 1px;
+    position: absolute
+}
+
+.jade-position-pref-any-row {
+    align-items: center;
+    background: linear-gradient(180deg, #1f3859, #132236);
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 1px;
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    height: 46px;
+    padding: 12px;
+    user-select: none;
+    width: 100%
+}
+
+.jade-position-pref-any-row:hover {
+    filter: brightness(1.1)
+}
+
+.jade-position-pref-checkbox {
+    align-items: center;
+    background: #1a1a2e;
+    border: 1px solid #0c3360;
+    border-radius: 1px;
+    display: flex;
+    flex-shrink: 0;
+    height: 16px;
+    justify-content: center;
+    width: 16px
+}
+
+.jade-position-pref-checkbox.jade-position-pref-checkbox--checked {
+    background: #d9d9d9
+}
+
+.jade-position-pref-checkmark {
+    height: 10px;
+    position: relative;
+    width: 10px
+}
+
+.jade-position-pref-checkmark:before {
+    border: solid #000;
+    border-width: 0 2px 2px 0;
+    content: "";
+    height: 7px;
+    left: 2px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 4px
+}
+
+.jade-position-pref-any-label {
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 18px;
+    white-space: nowrap
+}
+
+.jade-position-pref-valor-row {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    width: 100%
+}
+
+.jade-position-pref-valor-icon {
+    flex-shrink: 0;
+    height: 31.32px;
+    object-fit: contain;
+    width: 36.18px
+}
+
+.jade-position-pref-valor-text {
+    color: #9b9ea4;
+    font-family: Gill Sans MT Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal
+}
+
+.jade-position-pref-save-btn {
+    align-items: center;
+    background: linear-gradient(0deg, #c73e00 37.5%, #efa23a);
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    height: 44px;
+    justify-content: center;
+    padding: 19px 108px;
+    width: 218px
+}
+
+.jade-position-pref-save-btn:hover {
+    filter: brightness(1.15)
+}
+
+.jade-position-pref-save-btn:active {
+    filter: brightness(.9)
+}
+
+.jade-position-pref-save-btn span {
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 18px;
+    text-shadow: 0 0 2px #000;
+    white-space: nowrap
+}
+
+.jade-position-pref-unsaved {
+    align-items: center;
+    background: linear-gradient(180deg, #152233, #090f18);
+    border: 1px solid #4d74a4;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 40px;
+    width: 420px
+}
+
+.jade-position-pref-unsaved-text {
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.4;
+    text-align: center
+}
+
+.jade-position-pref-unsaved-buttons {
+    align-items: center;
+    display: flex;
+    gap: 12px
+}
+
+.jade-position-pref-unsaved-btn {
+    align-items: center;
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    height: 36px;
+    justify-content: center;
+    width: 120px
+}
+
+.jade-position-pref-unsaved-btn span {
+    color: #fff;
+    font-family: var(--font-display);
+    font-size: 14px;
+    white-space: nowrap
+}
+
+.jade-position-pref-unsaved-btn.jade-position-pref-unsaved-btn--yes {
+    background: linear-gradient(0deg, #c73e00 37.5%, #efa23a)
+}
+
+.jade-position-pref-unsaved-btn.jade-position-pref-unsaved-btn--yes:hover {
+    filter: brightness(1.15)
+}
+
+.jade-position-pref-unsaved-btn.jade-position-pref-unsaved-btn--no {
+    background: linear-gradient(0deg, #0c3360 37.5%, #2c66aa)
+}
+
+.jade-position-pref-unsaved-btn.jade-position-pref-unsaved-btn--no:hover {
+    filter: brightness(1.15)
+}
+
+.jade-progression-widget .next-reward-title,
+.jade-progression-widget.is-max-level .max-level-title {
+    font-family: var(--font-display)
+}
+
+.jade-progression-widget .next-reward-label,
+.jade-progression-widget .next-reward-xp-label,
+.jade-progression-widget.is-max-level .max-level-description {
+    font-family: var(--font-body)
+}
+
+.jade-progression-widget .next-reward-label,
+.jade-progression-widget .next-reward-title,
+.jade-progression-widget .next-reward-xp-label,
+.jade-progression-widget.is-max-level .max-level-description,
+.jade-progression-widget.is-max-level .max-level-title {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased
+}
+
+.jade-progression-widget .next-reward-title,
+.jade-progression-widget .next-reward-xp-label,
+.jade-progression-widget.is-max-level .max-level-title {
+    text-transform: uppercase
+}
+
+.jade-progression-widget .next-reward-title:lang(el-gr),
+.jade-progression-widget .next-reward-title:lang(ja-jp),
+.jade-progression-widget .next-reward-title:lang(ko-kr),
+.jade-progression-widget .next-reward-title:lang(th-th),
+.jade-progression-widget .next-reward-title:lang(tr-tr),
+.jade-progression-widget .next-reward-title:lang(zh-tw),
+.jade-progression-widget .next-reward-xp-label:lang(el-gr),
+.jade-progression-widget .next-reward-xp-label:lang(ja-jp),
+.jade-progression-widget .next-reward-xp-label:lang(ko-kr),
+.jade-progression-widget .next-reward-xp-label:lang(th-th),
+.jade-progression-widget .next-reward-xp-label:lang(tr-tr),
+.jade-progression-widget .next-reward-xp-label:lang(zh-tw),
+.jade-progression-widget.is-max-level .max-level-title:lang(el-gr),
+.jade-progression-widget.is-max-level .max-level-title:lang(ja-jp),
+.jade-progression-widget.is-max-level .max-level-title:lang(ko-kr),
+.jade-progression-widget.is-max-level .max-level-title:lang(th-th),
+.jade-progression-widget.is-max-level .max-level-title:lang(tr-tr),
+.jade-progression-widget.is-max-level .max-level-title:lang(zh-tw) {
+    text-transform: none
+}
+
+.jade-progression-widget .next-reward-title,
+.jade-progression-widget.is-max-level .max-level-title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.jade-progression-widget .next-reward-title:lang(ja-jp),
+.jade-progression-widget.is-max-level .max-level-title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.jade-progression-widget .next-reward-title:lang(ar-ae),
+.jade-progression-widget.is-max-level .max-level-title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.jade-progression-widget .next-reward-xp-label {
+    color: #ccc4b3;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: .02625em;
+    line-height: 16px
+}
+
+.jade-progression-widget .next-reward-xp-label:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.jade-progression-widget .next-reward-label,
+.jade-progression-widget.is-max-level .max-level-description {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.jade-progression-widget .next-reward-label:lang(ja-jp),
+.jade-progression-widget.is-max-level .max-level-description:lang(ja-jp) {
+    font-size: 13px
+}
+
+.jade-progression-widget .next-reward-label:lang(ar-ae),
+.jade-progression-widget.is-max-level .max-level-description:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.jade-progression-widget {
+    cursor: pointer;
+    padding: 8px 10px
+}
+
+.jade-progression-widget.is-level-zero .left-column .pass-progression-widget-level-reward-icon {
+    border: none;
+    box-shadow: none;
+    margin: 2px;
+    outline: none
+}
+
+.jade-progression-widget:not(.is-level-zero) .left-column .pass-progression-widget-level-reward-icon {
+    border-image: linear-gradient(#70603e, #2e230f);
+    border-image-slice: 1;
+    position: relative
+}
+
+.jade-progression-widget:not(.is-level-zero) .left-column .pass-progression-widget-level-reward-icon:after {
+    background-color: rgba(0, 0, 0, .5);
+    background-image: url(/fe/lol-static-assets/images/pass-progression-check-pip.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.jade-progression-widget.is-max-level {
+    align-items: center;
+    display: flex;
+    height: -webkit-fill-available
+}
+
+.jade-progression-widget.is-max-level .max-level-content {
+    align-items: center;
+    display: flex
+}
+
+.jade-progression-widget.is-max-level .max-level-content .pass-progression-widget-level {
+    flex-shrink: 0
+}
+
+.jade-progression-widget.is-max-level .max-level-text {
+    margin-left: 10px
+}
+
+[dir=rtl] .jade-progression-widget.is-max-level .max-level-text {
+    margin-left: 0;
+    margin-right: 10px
+}
+
+.jade-progression-widget.is-max-level .max-level-title {
+    color: #c89b3c
+}
+
+.jade-progression-widget.is-max-level .max-level-description {
+    color: #cac3b4
+}
+
+.jade-progression-widget .pass-progression-widget-rewards-content {
+    display: flex;
+    margin-bottom: 12px
+}
+
+.jade-progression-widget .pass-progression-widget-rewards-content .right-column {
+    display: flex;
+    flex-grow: 1
+}
+
+.jade-progression-widget .pass-progression-widget-level-reward-icon {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-image: linear-gradient(#c8aa6e, #785a28);
+    border-image-slice: 1;
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: inset 0 0 4px 1px #000;
+    height: 48px;
+    outline: 1px solid #010a13;
+    width: 48px
+}
+
+.jade-progression-widget .pass-progression-widget-next-reward-wrapper {
+    flex-grow: 1;
+    padding: 0 10px;
+    text-align: right
+}
+
+[dir=rtl] .jade-progression-widget .pass-progression-widget-next-reward-wrapper {
+    text-align: left
+}
+
+.jade-progression-widget .next-reward-title {
+    color: #c89b3c;
+    margin-bottom: 2px
+}
+
+.jade-progression-widget .next-reward-label {
+    color: #f0e6d2;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 144px
+}
+
+.jade-progression-widget .next-reward-xp-label span {
+    color: #0596aa
+}
+
+.jade-progression-widget .pass-progression-widget-level-progress {
+    display: flex
+}
+
+.jade-progression-widget .pass-progression-current-level-progress-fillbar {
+    background-color: #3c3c41;
+    background-image: linear-gradient(90deg, #005a82, #0a96aa 58.33%, #b2d9db);
+    background-repeat: no-repeat;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    border-top: 1px solid rgba(0, 0, 0, .5);
+    flex-grow: 1;
+    height: 4px;
+    margin-top: 2px
+}
+
+.jade-progression-widget .pass-progression-widget-level {
+    background: linear-gradient(0deg, #016588, #09c1b6);
+    clip-path: polygon(7.5px 0, calc(100% - 7.5px) 0, 100% 50%, calc(100% - 7.5px) 100%, 7.5px 100%, 0 50%);
+    height: 20px;
+    margin-bottom: -5px;
+    margin-top: -5px
+}
+
+.jade-progression-widget .pass-progression-widget-level:first-child {
+    margin-right: -3px
+}
+
+[dir=rtl] .jade-progression-widget .pass-progression-widget-level:first-child {
+    margin-left: -3px;
+    margin-right: 0
+}
+
+.jade-progression-widget .pass-progression-widget-level:last-child {
+    background: #3c3c41;
+    margin-left: -3px
+}
+
+[dir=rtl] .jade-progression-widget .pass-progression-widget-level:last-child {
+    margin-left: 0;
+    margin-right: -3px
+}
+
+.jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content {
+    background: transparent;
+    clip-path: none;
+    color: #fff;
+    font-family: FrizQuadrata Pro;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    width: 40px
+}
+
+.jade-progression-modal {
+    height: 606px;
+    overflow: hidden;
+    position: relative;
+    width: 1055px
+}
+
+.jade-progression-modal__backdrop {
+    align-items: center;
+    background: rgba(0, 0, 0, .7);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0
+}
+
+.jade-progression-modal__background {
+    background-image: url(/fe/lol-jade/images/bg_parchment.png);
+    background-position: 50%;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scaleX(-1);
+    width: 100%
+}
+
+.jade-progression-modal__header {
+    left: 54px;
+    position: absolute;
+    top: 41px;
+    width: 462px
+}
+
+[dir=rtl] .jade-progression-modal__header {
+    left: auto;
+    right: 54px
+}
+
+.jade-progression-modal__heading {
+    display: inline-block;
+    position: relative
+}
+
+.jade-progression-modal__heading-flame {
+    background-image: url(/fe/lol-jade/images/header_flame.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 40px;
+    left: 50%;
+    opacity: .6;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%
+}
+
+.jade-progression-modal__title {
+    color: #600;
+    font-family: FrizQuadrata Pro;
+    font-size: 18px;
+    line-height: 22px;
+    padding-top: 5px;
+    position: relative;
+    text-shadow: 0 0 2px rgba(0, 0, 0, .3)
+}
+
+.jade-progression-modal__subtitle {
+    color: #000;
+    font-family: FrizQuadrata Pro;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 5px
+}
+
+.jade-progression-modal__close-btn {
+    align-items: center;
+    background: linear-gradient(0deg, #0c3360 37.5%, #2c66aa);
+    border: 1px solid hsla(0, 0%, 100%, .2);
+    border-radius: 2px;
+    cursor: pointer;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    padding: 4px;
+    position: absolute;
+    right: 26px;
+    top: 10px;
+    width: 20px
+}
+
+[dir=rtl] .jade-progression-modal__close-btn {
+    left: 26px;
+    right: auto
+}
+
+.jade-progression-modal__close-btn:hover {
+    filter: brightness(1.3)
+}
+
+.jade-progression-modal__close-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none'%3E%3Cpath stroke='%23FABE0A' stroke-linecap='round' stroke-width='2' d='M18 6 6 18M6 6l12 12'/%3E%3C/svg%3E");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 24px;
+    width: 24px
+}
+
+.jade-progression-modal__selected-reward-area {
+    align-items: flex-start;
+    display: flex;
+    left: 453px;
+    position: absolute;
+    top: 170px
+}
+
+[dir=rtl] .jade-progression-modal__selected-reward-area {
+    flex-direction: row-reverse;
+    left: auto;
+    right: 453px
+}
+
+.jade-progression-modal__selected-reward-box {
+    background-color: #232323;
+    border: 1px solid #a27a2f;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, .8);
+    flex-shrink: 0;
+    height: 160px;
+    outline: .5px solid #000;
+    position: relative;
+    width: 160px
+}
+
+.jade-progression-modal__selected-reward-icon {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%
+}
+
+.jade-progression-modal__selected-reward-info {
+    font-family: FrizQuadrata Pro;
+    margin-left: 40px;
+    padding: 8px;
+    width: 300px
+}
+
+[dir=rtl] .jade-progression-modal__selected-reward-info {
+    margin-left: 0;
+    margin-right: 40px
+}
+
+.jade-progression-modal__selected-reward-type {
+    color: #000;
+    font-size: 12px;
+    line-height: 14px
+}
+
+.jade-progression-modal__selected-reward-name {
+    color: #600;
+    font-size: 18px;
+    line-height: 22px;
+    margin-top: 4px
+}
+
+.jade-progression-modal__selected-reward-desc {
+    color: #000;
+    font-size: 12px;
+    line-height: 14px;
+    margin-top: 4px
+}
+
+.jade-progression-modal__rewards-row {
+    display: flex;
+    gap: 44px;
+    left: 115px;
+    position: absolute;
+    top: 402px
+}
+
+[dir=rtl] .jade-progression-modal__rewards-row {
+    left: auto;
+    right: 115px
+}
+
+.jade-progression-modal__reward-box {
+    background-color: #232323;
+    border: 2px solid #a27a2f;
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, .8);
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 62px;
+    outline: .5px solid #000;
+    position: relative;
+    width: 62px
+}
+
+.jade-progression-modal__reward-box:hover {
+    border-color: #fabe0a;
+    filter: brightness(1.1)
+}
+
+.jade-progression-modal__reward-box--selected {
+    border-color: #fabe0a;
+    outline: .5px solid #000
+}
+
+.jade-progression-modal__reward-box--hidden {
+    pointer-events: none;
+    visibility: hidden
+}
+
+.jade-progression-modal__reward-box--claimed .jade-progression-modal__reward-icon {
+    opacity: .6
+}
+
+.jade-progression-modal__reward-icon {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    width: 100%
+}
+
+.jade-progression-modal__reward-claimed-overlay {
+    background-color: rgba(0, 0, 0, .5);
+    background-image: url(/fe/lol-static-assets/images/pass-progression-check-pip.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.jade-progression-modal__nav-next,
+.jade-progression-modal__nav-prev {
+    position: absolute;
+    top: 408px;
+    transform: scale(.75)
+}
+
+.jade-progression-modal__nav-next {
+    right: 30px
+}
+
+[dir=rtl] .jade-progression-modal__nav-next {
+    left: 30px;
+    right: auto
+}
+
+.jade-progression-modal__nav-prev {
+    left: 30px
+}
+
+[dir=rtl] .jade-progression-modal__nav-prev {
+    left: auto;
+    right: 30px
+}
+
+.jade-progression-modal__progress-bar {
+    height: 20px;
+    left: 125px;
+    position: absolute;
+    top: 485px;
+    width: 813px
+}
+
+[dir=rtl] .jade-progression-modal__progress-bar {
+    left: auto;
+    right: 125px
+}
+
+.jade-progression-modal__progress-track {
+    background-color: #3c3c41;
+    border: 1px solid #1e1e20;
+    height: 6px;
+    left: 21px;
+    position: absolute;
+    right: 21px;
+    top: 7px
+}
+
+.jade-progression-modal__progress-fill {
+    background: linear-gradient(90deg, #09bfd8 63%, #d3faff);
+    border: 1px solid #1e1e20;
+    height: 4px;
+    max-width: 100%;
+    transition: width .3s ease
+}
+
+[dir=rtl] .jade-progression-modal__progress-fill {
+    background: linear-gradient(270deg, #09bfd8 63%, #d3faff)
+}
+
+.jade-progression-modal__levels {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%
+}
+
+.jade-progression-modal__level-marker {
+    align-items: center;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    position: relative;
+    width: 42px
+}
+
+.jade-progression-modal__level-marker--claimed .jade-progression-modal__level-marker-shape,
+.jade-progression-modal__level-marker--current .jade-progression-modal__level-marker-shape {
+    background: linear-gradient(0deg, #016588, #09c1b6)
+}
+
+.jade-progression-modal__level-marker--selected {
+    cursor: pointer
+}
+
+.jade-progression-modal__level-marker--selected:before {
+    background: #ccc4b3;
+    content: "";
+    height: 24px;
+    left: -2px;
+    top: -2px;
+    width: 46px
+}
+
+.jade-progression-modal__level-marker--selected:before,
+.jade-progression-modal__level-marker-shape {
+    clip-path: polygon(7.5px 0, calc(100% - 7.5px) 0, 100% 50%, calc(100% - 7.5px) 100%, 7.5px 100%, 0 50%);
+    position: absolute
+}
+
+.jade-progression-modal__level-marker-shape {
+    background: #3c3c41;
+    height: 20px;
+    left: 0;
+    top: 0;
+    width: 42px
+}
+
+.jade-progression-modal__level-marker-text {
+    color: #fff;
+    font-family: FrizQuadrata Pro;
+    font-size: 12px;
+    line-height: 20px;
+    position: relative;
+    text-align: center
+}
+
+.jade-progression-modal__level-info {
+    align-items: center;
+    display: flex;
+    font-family: FrizQuadrata Pro;
+    gap: 4px;
+    left: 42px;
+    position: absolute;
+    top: 515px
+}
+
+[dir=rtl] .jade-progression-modal__level-info {
+    left: auto;
+    right: 42px
+}
+
+.jade-progression-modal__level-circle {
+    background: #0a0a14;
+    flex-shrink: 0;
+    height: 52px;
+    padding: 5px;
+    position: relative;
+    width: 52px
+}
+
+.jade-progression-modal__level-circle,
+.jade-progression-modal__level-circle-ring {
+    align-items: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center
+}
+
+.jade-progression-modal__level-circle-ring {
+    height: 100%;
+    padding: 3px;
+    width: 100%
+}
+
+.jade-progression-modal__level-circle-inner {
+    background: #0a0a14;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%
+}
+
+.jade-progression-modal__level-number {
+    color: #fff;
+    font-family: FrizQuadrata Pro;
+    font-size: 18px;
+    position: absolute;
+    text-align: center
+}
+
+.jade-progression-modal__xp-value {
+    color: #000;
+    font-size: 14px;
+    padding-left: 4px
+}
+
+[dir=rtl] .jade-progression-modal__xp-value {
+    padding-left: 0;
+    padding-right: 4px
+}
+
+.jade-progression-modal__xp-label {
+    color: #000;
+    font-size: 14px;
+    margin-left: 4px
+}
+
+[dir=rtl] .jade-progression-modal__xp-label {
+    margin-left: 0;
+    margin-right: 4px
+}
+
+.jade-eat .jade-eat__title {
+    font-family: var(--font-display);
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.jade-eat .jade-eat__title:lang(el-gr),
+.jade-eat .jade-eat__title:lang(ja-jp),
+.jade-eat .jade-eat__title:lang(ko-kr),
+.jade-eat .jade-eat__title:lang(th-th),
+.jade-eat .jade-eat__title:lang(tr-tr),
+.jade-eat .jade-eat__title:lang(zh-tw) {
+    text-transform: none
+}
+
+.jade-eat .jade-eat__title {
+    color: #f0e6d2;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .075em;
+    line-height: 16px
+}
+
+.jade-eat .jade-eat__title:lang(ja-jp) {
+    font-size: 13px
+}
+
+.jade-eat .jade-eat__title:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.jade-eat {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    pointer-events: auto;
+    width: 296px
+}
+
+.jade-eat .jade-eat__content {
+    align-items: stretch;
+    background-color: #c89b3c;
+    border-radius: 2px 2px 0 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 12px 16px 16px;
+    width: 100%
+}
+
+.jade-eat .jade-eat__header {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 4px
+}
+
+.jade-eat .jade-eat__close {
+    align-items: center;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    display: inline-flex;
+    height: 16px;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    width: 16px
+}
+
+.jade-eat .jade-eat__close-icon {
+    background-color: #785a28;
+    display: block;
+    height: 10px;
+    -webkit-mask-image: url(/fe/lol-jade/images/jade-uikit/eat-close.svg);
+    mask-image: url(/fe/lol-jade/images/jade-uikit/eat-close.svg);
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    width: 10px
+}
+
+.jade-eat .jade-eat__details {
+    align-items: flex-start;
+    display: flex;
+    gap: 16px;
+    width: 100%
+}
+
+.jade-eat .jade-eat__icon {
+    align-items: center;
+    background-color: #1e2328;
+    border-radius: 50%;
+    display: flex;
+    flex: 0 0 auto;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.jade-eat .jade-eat__icon-glyph {
+    background-color: #c89b3c;
+    display: block;
+    height: 20px;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    width: 20px
+}
+
+.jade-eat .jade-eat__text {
+    color: #32281e;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0
+}
+
+.jade-eat .jade-eat__title {
+    color: #32281e;
+    font-size: 14px;
+    letter-spacing: .42px;
+    line-height: 18px
+}
+
+.jade-eat .jade-eat__description {
+    color: #32281e;
+    font-size: 12px;
+    letter-spacing: .6px;
+    line-height: 16px
+}
+
+.jade-eat .jade-eat__pointer {
+    border-color: #c89b3c transparent transparent;
+    border-style: solid;
+    border-width: 9px 9px 0;
+    height: 0;
+    width: 0
+}
+
+.jade-rank-unlock-footer-content {
+    align-items: center;
+    background-color: #000;
+    border: 1px solid #3c3c41;
+    border-radius: 100px;
+    display: flex;
+    height: 22px;
+    justify-content: center;
+    padding: 4px 8px;
+    width: 54px
+}
+
+.jade-rank-unlock-footer-content .jade-rank-unock-lock-icon {
+    background-image: url(/fe/lol-jade/images/icon-lock-small.svg);
+    background-size: 100%;
+    height: 20px;
+    opacity: .5;
+    width: 20px
+}
+
+.jade-rank-unlock-footer-content .jade-rank-unlock-mini-crest {
+    height: 34px;
+    width: 34px
+}
+
+.jade-rank-unlock-footer-tooltip-content {
+    font-family: FrizQuadrata Pro;
+    font-size: 14px;
+    font-style: Roman;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 100%;
+    width: 350px
 }
 
 .tft-playbook-icon .button-container {

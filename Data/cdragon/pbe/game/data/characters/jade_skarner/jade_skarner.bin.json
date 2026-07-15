@@ -1,0 +1,2690 @@
+{
+    "{038db911}": {
+        "mRootSpell": "{ddd4d409}",
+        "mChildSpells": [
+            "{ddd4d409}"
+        ],
+        "mName": "Jade_SkarnerRAbility",
+        "mType": 2,
+        "AbilityTraits": 2562,
+        "__type": "AbilityObject"
+    },
+    "{0e228055}": {
+        "ObjectName": "Jade_SkarnerBasicAttack",
+        "mScriptName": "Jade_SkarnerBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_Skarner_ReworkBasicAttack",
+            "{11704a2b}": 0.3461499810218811,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRadius": [
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{ab1478f8}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_SkarnerBasicAttack_OnCast",
+                "13": "Play_sfx_SkarnerBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{32c10d76}": {
+        "mRootSpell": "{2532feb3}",
+        "mChildSpells": [
+            "{2532feb3}",
+            "{d70dbefc}"
+        ],
+        "mName": "Jade_SkarnerEAbility",
+        "AbilityTraits": 2560,
+        "__type": "AbilityObject"
+    },
+    "{2532feb3}": {
+        "ObjectName": "Jade_SkarnerE",
+        "mScriptName": "Jade_SkarnerE",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_DamageAbility"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        40.0,
+                        80.0,
+                        120.0,
+                        160.0,
+                        200.0,
+                        240.0,
+                        280.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealingAmount",
+                    "values": [
+                        15.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        75.0,
+                        90.0,
+                        105.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.699999988079071,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalHealing": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{f14be431}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.30000001192092896,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1_toss",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerFracture.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0
+                ],
+                "{0a3e0478}": 800.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mana": [
+                50.0,
+                55.0,
+                60.0,
+                65.0,
+                70.0,
+                70.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    55.0,
+                    60.0,
+                    65.0,
+                    70.0,
+                    70.0
+                ],
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_SkarnerQRockThrow_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SkarnerE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SkarnerE_Jade_Name",
+                        "keySummary": "Spell_SkarnerE_Jade_Summary",
+                        "keyTooltip": "Spell_SkarnerE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "HealingAmount",
+                                    "nameOverride": "Spell_ListType_Healing",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "endLocator": {
+                            "basePosition": 4,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                70.0,
+                                70.0,
+                                70.0,
+                                70.0,
+                                70.0,
+                                70.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_SkarnerE",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{d70dbefc}": {
+        "ObjectName": "Jade_SkarnerE_Missile",
+        "mScriptName": "Jade_SkarnerE_Missile",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_DamageAbility"
+            ],
+            "mAnimationName": "Spell3_Jade",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerFracture.project_jade.dds"
+            ],
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                23.0,
+                22.0,
+                21.0,
+                20.0,
+                19.0,
+                18.0,
+                18.0
+            ],
+            "Cooldown": {
+                "values": [
+                    23.0,
+                    22.0,
+                    21.0,
+                    20.0,
+                    19.0,
+                    18.0,
+                    18.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCanMoveWhileChanneling": true,
+            "mShowChannelBar": false,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0
+                ],
+                "{0a3e0478}": 800.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mMissileSpec": {
+                "mMissileWidth": 70.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1800.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "missileSpeed": 1800.0,
+            "mMissileEffectKey": "{dec87d16}",
+            "mTargetingTypeData": {
+                "__type": "TargetOrLocation"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_Skarner_SkarnerQThrow_hit"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SkarnerE_Missile",
+                    "mFormat": "{d7c27163}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_SkarnerE_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{2959969c}": {
+        "mRootSpell": "{f52b58c3}",
+        "mChildSpells": [
+            "{f52b58c3}"
+        ],
+        "mName": "Jade_SkarnerPassiveAbility",
+        "mType": 3,
+        "__type": "AbilityObject"
+    },
+    "{9ea6887a}": {
+        "mRootSpell": "{2efa3d13}",
+        "mChildSpells": [
+            "{2efa3d13}"
+        ],
+        "mName": "Jade_SkarnerQAbility",
+        "__type": "AbilityObject"
+    },
+    "{2efa3d13}": {
+        "ObjectName": "Jade_SkarnerQ",
+        "mScriptName": "Jade_SkarnerQ",
+        "mSpell": {
+            "flags": 4,
+            "mSpellTags": [
+                "Trait_AttackReset",
+                "Trait_DamageAbility"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        10.0,
+                        25.0,
+                        40.0,
+                        55.0,
+                        70.0,
+                        85.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ProcDamage",
+                    "values": [
+                        12.0,
+                        24.0,
+                        36.0,
+                        48.0,
+                        60.0,
+                        72.0,
+                        84.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        -0.15000000596046448,
+                        -0.20000000298023224,
+                        -0.25,
+                        -0.30000001192092896,
+                        -0.3499999940395355,
+                        -0.4000000059604645,
+                        -0.44999998807907104
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalBaseDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "OutputType": 2,
+                            "mCoefficient": 0.800000011920929,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalProcDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "ProcDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.4000000059604645,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1_Jade",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerVirulentSlash.project_jade.dds"
+            ],
+            "{11704a2b}": 0.3499999940395355,
+            "{f26881a0}": 0.3500000238418579,
+            "cooldownTime": [
+                3.5,
+                3.5,
+                3.5,
+                3.5,
+                3.5,
+                3.5,
+                3.5
+            ],
+            "Cooldown": {
+                "values": [
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5
+                ],
+                "{0a3e0478}": 3.5,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileWindingUpTargetingChampion": true,
+            "mChannelIsInterruptedByDisables": false,
+            "mChannelIsInterruptedByAttacking": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
+                ],
+                "{0a3e0478}": 350.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0
+            ],
+            "castRadius": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "mana": [
+                20.0,
+                22.0,
+                24.0,
+                26.0,
+                28.0,
+                30.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    20.0,
+                    22.0,
+                    24.0,
+                    26.0,
+                    28.0,
+                    30.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Skarner_SkarnerW_OnCast"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SkarnerQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SkarnerQ_Jade_Name",
+                        "keySummary": "Spell_SkarnerQ_Jade_Summary",
+                        "keyTooltip": "Spell_SkarnerQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ProcDamage",
+                                    "nameOverride": "Spell_ListType_BonusDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SlowPercent",
+                                    "multiplier": -100.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "centerLocator": {
+                            "distanceOffset": 50.0,
+                            "orientationType": 1,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/CircularRangeIndicator.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_SkarnerQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{56b7f331}": {
+        "ObjectName": "Jade_SkarnerQ_Slow",
+        "mScriptName": "Jade_SkarnerQ_Slow",
+        "mSpell": {
+            "flags": 4,
+            "mSpellTags": [
+                "Trait_AttackReset",
+                "Trait_DamageAbility"
+            ],
+            "mAnimationName": "Spell1_Jade",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerVirulentSlash.project_jade.dds"
+            ],
+            "{11704a2b}": 0.3499999940395355,
+            "{f26881a0}": 0.3500000238418579,
+            "cooldownTime": [
+                3.5,
+                3.5,
+                3.5,
+                3.5,
+                3.5,
+                3.5,
+                3.5
+            ],
+            "Cooldown": {
+                "values": [
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5
+                ],
+                "{0a3e0478}": 3.5,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileWindingUpTargetingChampion": true,
+            "mChannelIsInterruptedByDisables": false,
+            "mChannelIsInterruptedByAttacking": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
+                ],
+                "{0a3e0478}": 350.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "mana": [
+                20.0,
+                22.0,
+                24.0,
+                26.0,
+                28.0,
+                30.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    20.0,
+                    22.0,
+                    24.0,
+                    26.0,
+                    28.0,
+                    30.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_SkarnerQ_Slow_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{b7fdaf7b}": {
+        "ObjectName": "Jade_SkarnerQ_Energy1",
+        "mScriptName": "Jade_SkarnerQ_Energy1",
+        "mSpell": {
+            "flags": 4,
+            "mSpellTags": [
+                "Trait_AttackReset",
+                "Trait_DamageAbility"
+            ],
+            "mAnimationName": "Spell1_Jade",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerVirulentSlash.project_jade.dds"
+            ],
+            "{11704a2b}": 0.3499999940395355,
+            "{f26881a0}": 0.3500000238418579,
+            "cooldownTime": [
+                3.5,
+                3.5,
+                3.5,
+                3.5,
+                3.5,
+                3.5,
+                3.5
+            ],
+            "Cooldown": {
+                "values": [
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5
+                ],
+                "{0a3e0478}": 3.5,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileWindingUpTargetingChampion": true,
+            "mChannelIsInterruptedByDisables": false,
+            "mChannelIsInterruptedByAttacking": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
+                ],
+                "{0a3e0478}": 350.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "mana": [
+                20.0,
+                22.0,
+                24.0,
+                26.0,
+                28.0,
+                30.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    20.0,
+                    22.0,
+                    24.0,
+                    26.0,
+                    28.0,
+                    30.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_SkarnerQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{744ca46f}": {
+        "ObjectName": "Jade_SkarnerTurretAttack",
+        "mScriptName": "Jade_SkarnerTurretAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "TurretAttack1",
+            "{11704a2b}": 0.3461499810218811,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRadius": [
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "mHitEffectKey": "{ab1478f8}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_SkarnerBasicAttack_OnCast",
+                "13": "Play_sfx_SkarnerBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{7d35d076}": {
+        "ObjectName": "Jade_SkarnerAttackSequencer",
+        "mScriptName": "Jade_SkarnerAttackSequencer",
+        "__type": "SpellObject"
+    },
+    "{94db3ef7}": {
+        "ObjectName": "Jade_SkarnerR_Buff",
+        "mScriptName": "Jade_SkarnerR_Buff",
+        "mSpell": {
+            "mAffectsTypeFlags": 2,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_ImmobilizingCCSpell",
+                "Trait_DamageAbility"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        50.0,
+                        100.0,
+                        150.0,
+                        200.0,
+                        250.0,
+                        300.0,
+                        350.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{44692fb2}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.5,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4_channel",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerImpale.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 0.75,
+            "cooldownTime": [
+                120.0,
+                130.0,
+                120.0,
+                110.0,
+                110.0,
+                100.0,
+                100.0
+            ],
+            "Cooldown": {
+                "values": [
+                    120.0,
+                    130.0,
+                    120.0,
+                    110.0,
+                    110.0,
+                    100.0,
+                    100.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCasterPositionEndOfCastUpdate": 2,
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0
+                ],
+                "{0a3e0478}": 625.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mana": [
+                100.0,
+                125.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    125.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Skarner_SkarnerEMovement_footstep",
+                "19": "Play_sfx_Skarner_SkarnerR_buffdeactivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SkarnerR_Buff",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SkarnerR_Jade_Name",
+                        "keySummary": "Spell_SkarnerR_Jade_Summary",
+                        "keyTooltip": "Spell_SkarnerR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_SkarnerR_Buff_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{ddd4d409}": {
+        "ObjectName": "Jade_SkarnerR",
+        "mScriptName": "Jade_SkarnerR",
+        "mSpell": {
+            "mAffectsTypeFlags": 2,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_ImmobilizingCCSpell",
+                "Trait_DamageAbility"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        50.0,
+                        100.0,
+                        150.0,
+                        200.0,
+                        250.0,
+                        300.0,
+                        350.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{44692fb2}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.5,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4_channel",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerImpale.project_jade.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 0.75,
+            "cooldownTime": [
+                120.0,
+                130.0,
+                120.0,
+                110.0,
+                110.0,
+                100.0,
+                100.0
+            ],
+            "Cooldown": {
+                "values": [
+                    120.0,
+                    130.0,
+                    120.0,
+                    110.0,
+                    110.0,
+                    100.0,
+                    100.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCasterPositionEndOfCastUpdate": 2,
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                500.0,
+                500.0,
+                500.0,
+                500.0,
+                500.0,
+                500.0,
+                500.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "{0a3e0478}": 500.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mana": [
+                100.0,
+                125.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    125.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Skarner_SkarnerR_cast",
+                "13": "Play_sfx_Skarner_SkarnerR_hit"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SkarnerR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SkarnerR_Jade_Name",
+                        "keySummary": "Spell_SkarnerR_Jade_Summary",
+                        "keyTooltip": "Spell_SkarnerR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_SkarnerR_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{99317ce4}": {
+        "mRootSpell": "{b34d034b}",
+        "mChildSpells": [
+            "{b34d034b}"
+        ],
+        "mName": "Jade_SkarnerWAbility",
+        "AbilityTraits": 8,
+        "__type": "AbilityObject"
+    },
+    "{a7502225}": {
+        "ObjectName": "Jade_SkarnerBasicAttack2",
+        "mScriptName": "Jade_SkarnerBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_Skarner_ReworkBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.3461499810218811,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{ae147db1}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_SkarnerBasicAttack_OnCast",
+                "13": "Play_sfx_SkarnerBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b34d034b}": {
+        "ObjectName": "Jade_SkarnerW",
+        "mScriptName": "Jade_SkarnerW",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 8192,
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_Shield"
+            ],
+            "DataValues": [
+                {
+                    "name": "baseBlockDamage",
+                    "values": [
+                        25.0,
+                        70.0,
+                        115.0,
+                        160.0,
+                        205.0,
+                        250.0,
+                        295.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSBonus",
+                    "values": [
+                        0.12999999523162842,
+                        0.15000000596046448,
+                        0.17000000178813934,
+                        0.1899999976158142,
+                        0.20999999344348907,
+                        0.23000000417232513,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ASBonus",
+                    "values": [
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104,
+                        0.5,
+                        0.550000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{b7ea64af}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "{57dc56e4}",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.6000000238418579,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerExoskeleton.project_jade.dds"
+            ],
+            "{11704a2b}": 0.30000001192092896,
+            "{f26881a0}": 0.5,
+            "cooldownTime": [
+                18.0,
+                18.0,
+                18.0,
+                18.0,
+                18.0,
+                18.0,
+                18.0
+            ],
+            "Cooldown": {
+                "values": [
+                    18.0,
+                    18.0,
+                    18.0,
+                    18.0,
+                    18.0,
+                    18.0,
+                    18.0
+                ],
+                "{0a3e0478}": 18.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCasterPositionEndOfCastUpdate": 2,
+            "mCantCancelWhileWindingUp": true,
+            "mCanMoveWhileChanneling": true,
+            "useAnimatorFramerate": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "mMissileSpec": {
+                "mMissileWidth": 200.0,
+                "movementComponent": {
+                    "mStartBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1650.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mana": [
+                60.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0
+                ],
+                "{0a3e0478}": 60.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Skarner_E_warning_loop",
+                "19": "Play_sfx_Skarner_SkarnerR_buffdeactivate",
+                "12": "Play_sfx_SkarnerE_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SkarnerW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SkarnerW_Jade_Name",
+                        "keySummary": "Spell_SkarnerW_Jade_Summary",
+                        "keyTooltip": "Spell_SkarnerW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "baseBlockDamage",
+                                    "nameOverride": "Spell_ListType_ShieldAmount",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MSBonus",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MovementSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ASBonus",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_AttackSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_SkarnerW_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c4382325}": {
+        "ObjectName": "Jade_SkarnerCritAttack",
+        "mScriptName": "Jade_SkarnerCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_Skarner_ReworkCritAttack",
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.3461499810218811,
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "{1f64a06f}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_SkarnerCritAttack_OnCast",
+                "13": "Play_sfx_SkarnerCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f52b58c3}": {
+        "ObjectName": "Jade_SkarnerPassive",
+        "mScriptName": "Jade_SkarnerPassive",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerEnergize.project_jade.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SkarnerPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SkarnerPassive_Jade_Name",
+                        "keySummary": "Spell_SkarnerPassive_Jade_Summary",
+                        "keyTooltip": "Spell_SkarnerPassive_Jade_Tooltip",
+                        "keyTooltipExtended": "Spell_SkarnerPassive_Jade_BelowLine"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{6f39f249}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1103",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1102",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1101",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1054",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3084",
+                            "Items/3068",
+                            "Items/6664"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3742",
+                            "Items/3075",
+                            "Items/2504"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6665",
+                            "Items/3068",
+                            "Items/6664",
+                            "Items/6662",
+                            "Items/3083",
+                            "Items/3075",
+                            "Items/2504",
+                            "Items/3143",
+                            "Items/8020",
+                            "Items/3742",
+                            "Items/4401"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1011",
+                            "Items/1028",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2051",
+                            "Items/3070",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1001",
+                            "Items/2051",
+                            "Items/2031"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3068",
+                            "Items/6664",
+                            "Items/3084"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3119",
+                            "Items/3083",
+                            "Items/6662"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6665",
+                            "Items/3083",
+                            "Items/8020",
+                            "Items/6664",
+                            "Items/2504",
+                            "Items/2502",
+                            "Items/3190",
+                            "Items/3065",
+                            "Items/3109"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 30,
+                        "mModeNameStringId": "cherry",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/222051"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2050"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/223047",
+                            "Items/223111",
+                            "Items/223005"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/226662",
+                            "Items/223084",
+                            "Items/223068",
+                            "Items/220005"
+                        ],
+                        "MaxCompletedItems": 1,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223075",
+                            "Items/226665",
+                            "Items/223109",
+                            "Items/220005"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/222504",
+                            "Items/223075",
+                            "Items/224401",
+                            "Items/223143"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223193",
+                            "Items/223065",
+                            "Items/223075",
+                            "Items/223143",
+                            "Items/228001"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/224401",
+                            "Items/223190",
+                            "Items/226664",
+                            "Items/220005",
+                            "Items/228001",
+                            "Items/226662",
+                            "Items/223109",
+                            "Items/228020"
+                        ],
+                        "MaxCompletedItems": 5,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/2143",
+                            "Items/220000",
+                            "Items/220007"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 453,
+                        "mModeNameStringId": "{20426d6f}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "{4373a1bd}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "{c66c2131}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "{337149f6}",
+                            "{99a41f9d}",
+                            "{99a41f9d}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "{24591a28}",
+                            "{994f44fb}",
+                            "{aec400bf}"
+                        ],
+                        "{f71960ab}": "{71caf510}",
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{264a12c4}",
+                            "{23bea8c0}",
+                            "{9753bf03}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{3cbc9184}",
+                            "{2fba3e76}",
+                            "{944f3d1c}"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{b5c64a5b}",
+                            "{283d49f7}",
+                            "{24591a28}",
+                            "{9853c096}",
+                            "{34ab3bcb}",
+                            "{24beaa53}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 453,
+                        "mModeNameStringId": "{20426d6f}",
+                        "mPosition": "jungle",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "{3e715b47}",
+                            "{99a41f9d}",
+                            "{99a41f9d}",
+                            "{99a41f9d}",
+                            "{99a41f9d}",
+                            "{99a41f9d}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "{b8c88dab}",
+                            "{bd2529c6}",
+                            "{be252b59}"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "{f71960ab}": "{b873c9ba}",
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{264a12c4}",
+                            "{23bea8c0}",
+                            "{9753bf03}"
+                        ],
+                        "{f71960ab}": "{71caf510}",
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{24591a28}",
+                            "{994f44fb}",
+                            "{aec400bf}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{3cbc9184}",
+                            "{2fba3e76}",
+                            "{944f3d1c}"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{b5c64a5b}",
+                            "{283d49f7}",
+                            "{24591a28}",
+                            "{9853c096}",
+                            "{34ab3bcb}",
+                            "{24beaa53}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "{a9cf8650}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "jungle",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "Top",
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{aaae03d4}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{b0c184d1}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{dca6b58c}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 11,
+                "Position": "{ada7afdb}",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 12,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{7e12f4e0}": {
+        "ScriptName": "Jade_Charscript_Skarner",
+        "path": "{7e12f4e0}",
+        "sequences": {
+            "{bd909891}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "fe1d4e06-7033-4899-bc4b-fea179e43422",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{70954771}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 3,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{d576330f}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "3d2b23ae-397f-4a9f-a893-fdafbe9805c8",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{9b2f99b3}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 1,
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "4d9e5fb6-6da2-4818-a503-16cd8c64169b",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{9b2f99b3}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 1,
+                                        "Value2": null,
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "945e4d06-8beb-4a12-b887-77663fd4c3fe",
+                                                "Var": {
+                                                    "Var": "Target",
+                                                    "__type": "{622705af}"
+                                                },
+                                                "__type": "{851b8dc5}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "c7de20e4-a5f4-414c-9458-c1f8ad2fee4c",
+                                                "Condition": null,
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "078515d5-08c3-469a-b400-20e170b1f5d3",
+                                                            "Condition": null,
+                                                            "Invert": true,
+                                                            "Sequence": {
+                                                                "blocks": [
+                                                                    {
+                                                                        "{d851ffa3}": "59b04725-b67b-4dd3-be03-e4b4fb250195",
+                                                                        "Src": {
+                                                                            "__type": "IntGet"
+                                                                        },
+                                                                        "Dest": {
+                                                                            "Var": "newCooldown",
+                                                                            "__type": "ScriptTableSet"
+                                                                        },
+                                                                        "__type": "SetVarInTableBlock"
+                                                                    },
+                                                                    {
+                                                                        "{d851ffa3}": "faf89843-cf9e-4b71-9ffa-968cf07951d5",
+                                                                        "Src": {
+                                                                            "__type": "IntGet"
+                                                                        },
+                                                                        "Dest": {
+                                                                            "Var": "CDR",
+                                                                            "__type": "ScriptTableSet"
+                                                                        },
+                                                                        "__type": "SetVarInTableBlock"
+                                                                    },
+                                                                    {
+                                                                        "{d851ffa3}": "2d6730e0-ba97-4ee6-8427-2578dd8e9166",
+                                                                        "Condition": null,
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                {
+                                                                                    "{d851ffa3}": "ebd4530c-806d-4b16-a50f-13e0ca65e9dd",
+                                                                                    "Src": {
+                                                                                        "value": 1,
+                                                                                        "__type": "IntGet"
+                                                                                    },
+                                                                                    "Dest": {
+                                                                                        "Var": "CDR",
+                                                                                        "__type": "ScriptTableSet"
+                                                                                    },
+                                                                                    "__type": "SetVarInTableBlock"
+                                                                                }
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    },
+                                                                    {
+                                                                        "{d851ffa3}": "cf573f30-671c-4b40-8ed9-27c11f8178ea",
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                {
+                                                                                    "{d851ffa3}": "2c9916c1-2d8b-4c92-be55-04a33ff1f645",
+                                                                                    "Src": {
+                                                                                        "value": 0.5,
+                                                                                        "__type": "FloatGet"
+                                                                                    },
+                                                                                    "Dest": {
+                                                                                        "Var": "CDR",
+                                                                                        "__type": "ScriptTableSet"
+                                                                                    },
+                                                                                    "__type": "SetVarInTableBlock"
+                                                                                }
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    },
+                                                                    null,
+                                                                    {
+                                                                        "{d851ffa3}": "b7b78be8-f2d3-491c-add8-04e27dc81234",
+                                                                        "Condition": {
+                                                                            "Value1": {
+                                                                                "Var": "Cooldown",
+                                                                                "__type": "ScriptTableGet"
+                                                                            },
+                                                                            "Operation": 2,
+                                                                            "Value2": {
+                                                                                "__type": "IntGet"
+                                                                            },
+                                                                            "__type": "ComparisonScriptCondition"
+                                                                        },
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                {
+                                                                                    "{d851ffa3}": "9ec619d5-c1b0-445f-b310-ce2f263a5182",
+                                                                                    "Formula": "ptp.cooldown - ptp.CDR",
+                                                                                    "Dest": {
+                                                                                        "Var": "newCooldown",
+                                                                                        "__type": "ScriptTableSet"
+                                                                                    },
+                                                                                    "__type": "{15ebaa9c}"
+                                                                                },
+                                                                                null
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    },
+                                                                    null,
+                                                                    {
+                                                                        "{d851ffa3}": "3ce1a0f7-d686-439c-a313-4db302a73f9b",
+                                                                        "Condition": {
+                                                                            "Value1": {
+                                                                                "Var": "Cooldown",
+                                                                                "__type": "ScriptTableGet"
+                                                                            },
+                                                                            "Operation": 2,
+                                                                            "Value2": {
+                                                                                "__type": "IntGet"
+                                                                            },
+                                                                            "__type": "ComparisonScriptCondition"
+                                                                        },
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                {
+                                                                                    "{d851ffa3}": "f93d1d83-b545-49ba-9741-61a35c668cfc",
+                                                                                    "Formula": "ptp.cooldown - ptp.CDR",
+                                                                                    "Dest": {
+                                                                                        "Var": "newCooldown",
+                                                                                        "__type": "ScriptTableSet"
+                                                                                    },
+                                                                                    "__type": "{15ebaa9c}"
+                                                                                },
+                                                                                null
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    },
+                                                                    null,
+                                                                    {
+                                                                        "{d851ffa3}": "c57b4605-e729-4cbc-b1df-c6b60dc3861e",
+                                                                        "Condition": {
+                                                                            "Value1": {
+                                                                                "Var": "Cooldown",
+                                                                                "__type": "ScriptTableGet"
+                                                                            },
+                                                                            "Operation": 2,
+                                                                            "Value2": {
+                                                                                "__type": "IntGet"
+                                                                            },
+                                                                            "__type": "ComparisonScriptCondition"
+                                                                        },
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                {
+                                                                                    "{d851ffa3}": "e93b84b5-ae2e-4f2f-92fe-e54a328b8f31",
+                                                                                    "Formula": "ptp.cooldown - ptp.CDR",
+                                                                                    "Dest": {
+                                                                                        "Var": "newCooldown",
+                                                                                        "__type": "ScriptTableSet"
+                                                                                    },
+                                                                                    "__type": "{15ebaa9c}"
+                                                                                },
+                                                                                null
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    },
+                                                                    null,
+                                                                    {
+                                                                        "{d851ffa3}": "fe2fa76e-d807-42ce-ab2c-c6b0f264f1bd",
+                                                                        "Condition": {
+                                                                            "Value1": {
+                                                                                "Var": "Cooldown",
+                                                                                "__type": "ScriptTableGet"
+                                                                            },
+                                                                            "Operation": 2,
+                                                                            "Value2": {
+                                                                                "__type": "IntGet"
+                                                                            },
+                                                                            "__type": "ComparisonScriptCondition"
+                                                                        },
+                                                                        "Sequence": {
+                                                                            "blocks": [
+                                                                                {
+                                                                                    "{d851ffa3}": "dba52abc-8ced-4a76-8625-1744f221a703",
+                                                                                    "Formula": "ptp.cooldown - ptp.CDR",
+                                                                                    "Dest": {
+                                                                                        "Var": "newCooldown",
+                                                                                        "__type": "ScriptTableSet"
+                                                                                    },
+                                                                                    "__type": "{15ebaa9c}"
+                                                                                },
+                                                                                null
+                                                                            ],
+                                                                            "__type": "ScriptSequence"
+                                                                        },
+                                                                        "__type": "{e524b2fc}"
+                                                                    }
+                                                                ],
+                                                                "__type": "ScriptSequence"
+                                                            },
+                                                            "__type": "{e524b2fc}"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{6a7835b9}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "{d377aa04}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{d6bc1212}": {
+        "mCharacterName": "Jade_Skarner",
+        "baseHPModifiable": {
+            "baseValue": 536.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 96.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.6699999570846558,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.17000000178813934,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 85.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 245.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 40.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.3799999952316284,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.09000000357627869,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 58.29999923706055,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 4.199999809265137,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 22.799999237060547,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.799999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "{01262a25}": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 345.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.0999999046325684,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackTotalTime": 1.600000023841858,
+            "mAttackCastTime": 0.30000001192092896,
+            "mAttackProbability": 0.4000000059604645,
+            "__type": "AttackSlotData"
+        },
+        "spellNames": [
+            "Jade_SkarnerQAbility/Jade_SkarnerQ",
+            "Jade_SkarnerWAbility/Jade_SkarnerW",
+            "Jade_SkarnerEAbility/Jade_SkarnerE",
+            "Jade_SkarnerRAbility/Jade_SkarnerR"
+        ],
+        "spells": [
+            "{2efa3d13}",
+            "{b34d034b}",
+            "{2532feb3}",
+            "{ddd4d409}"
+        ],
+        "extraSpells": [
+            "Jade_SkarnerPassiveAttack",
+            "Jade_SkarnerTurretAttack",
+            "Jade_SkarnerQClawAttack",
+            "Jade_SkarnerQRockAttack",
+            "Jade_SkarnerQRockThrow",
+            "Jade_SkarnerECancel",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{d70dbefc}",
+            "{744ca46f}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{9ea6887a}",
+            "{99317ce4}",
+            "{32c10d76}",
+            "{038db911}",
+            "{2959969c}"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Skarner",
+        "passiveLuaName": "Jade_SkarnerPassive",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Skarner",
+        "passive1IconName": "ASSETS/Characters/Jade_Skarner/HUD/Icons2D/Jade_Skarner_Passive.project_jade.dds",
+        "name": "game_character_displayname_Jade_Skarner",
+        "weaponMaterials": [
+            "Jade_SkarnerBasicAttack"
+        ],
+        "mUseCCAnimations": true,
+        "selectionHeight": 150.0,
+        "selectionRadius": 130.0,
+        "pathfindingCollisionRadius": 50.0,
+        "overrideGameplayCollisionRadius": 80.0,
+        "{eb74898c}": 0.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1054,
+            "__type": "ToolEducationData"
+        },
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Cho'Gath consumes a unit in one gulp.  He gains a size level each time he kills a unit in this way, gaining health, ability power, and he can Feast on higher health units.",
+                    "displayName": "Feast",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Cho'Gath consumes a unit in one gulp.  He gains a size level each time he kills a unit in this way, gaining health, ability power, and he can Feast on higher health units.",
+                    "displayName": "Feast",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Cho'Gath consumes a unit in one gulp.  He gains a size level each time he kills a unit in this way, gaining health, ability power, and he can Feast on higher health units.",
+                    "displayName": "Feast",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Cho'Gath consumes a unit in one gulp.  He gains a size level each time he kills a unit in this way, gaining health, ability power, and he can Feast on higher health units.",
+                    "displayName": "Feast",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Skarner",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "tank",
+            "searchTagsSecondary": "fighter",
+            "championId": 60072,
+            "roles": "TANK",
+            "magicRank": 5,
+            "LevelSpellEffectiveness": 1.5,
+            "difficultyRank": 5,
+            "description": "game_character_description_Jade_Skarner",
+            "defenseRank": 8,
+            "ChasingAttackRangePercent": 0.5,
+            "attackRank": 7,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Resolve",
+        "mCharacterPassiveSpell": "{f52b58c3}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{7d35d076}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{7e12f4e0}",
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

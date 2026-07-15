@@ -690,6 +690,84 @@
                         5.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StackDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusAS",
+                    "values": [
+                        20.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TimerDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StackFalloffDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -793,8 +871,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 4,
+                                    "type": "BonusAS",
                                     "nameOverride": "Spell_ListType_AttackSpeed",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -5534,6 +5611,19 @@
                         40.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VisionDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -6395,6 +6485,23 @@
                 "__type": "RecSpellRankUpInfo"
             },
             {
+                "MapId": 11,
+                "Position": "utility",
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    1,
+                    0,
+                    2,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
                 "MapId": 12,
                 "Position": "{ada7afdb}",
                 "mDefaultPriority": [
@@ -6726,8 +6833,69 @@
                         "__type": "ItemRecOverrideRange"
                     }
                 ],
-                "mCoreItems": [
-                    "Items/3871"
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "{ad33a648}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "{2a3d4d1d}",
+                            "{ca6c277d}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "{c86c2457}",
+                            "{467823a4}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "{34714b89}",
+                            "{467823a4}"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "{a4561211}",
+                            "{294c5614}",
+                            "{a6404ee8}"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{9753bf03}",
+                            "{264a12c4}",
+                            "{23bea8c0}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "{a856185d}",
+                            "{274a1457}",
+                            "{a840520e}",
+                            "{3cbc9184}",
+                            "{27591ee1}",
+                            "{2fba3e76}"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
                 ],
                 "__type": "ItemRecommendationOverride"
             }

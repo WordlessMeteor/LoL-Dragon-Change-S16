@@ -782,14 +782,14 @@
                 (0, E.sendTelemetry)(t)
             };
             t.sendLCUTelemetryEvent = S;
-            const d = (e, t) => {
+            const N = (e, t) => {
                 r.datadogRum.proxy.addDurationVital(r.datadogRum.XP_STORE_ITEM_PURCHASE, t)
             };
-            t.sendStorefrontUIMetricEvent = d;
-            const N = (e, t) => {
+            t.sendStorefrontUIMetricEvent = N;
+            const d = (e, t) => {
                 (0, E.pageSessionStart)(t)
             };
-            t.sendTelemetryPageSessionStart = N;
+            t.sendTelemetryPageSessionStart = d;
             const O = (e, t) => {
                 (0, E.pageSessionUpdate)(t)
             };
@@ -980,20 +980,22 @@
             };
             t.navigateToLoot = Y;
             const w = {
-                    TFT: "tft"
+                    TFT: "tft",
+                    JADE: "jade"
                 },
                 z = {
-                    [w.TFT]: "rcp-fe-lol-tft"
+                    [w.TFT]: "rcp-fe-lol-tft",
+                    [w.JADE]: "rcp-fe-lol-jade"
+                },
+                V = (e, t) => {
+                    const n = t?.hubType?.toLowerCase(),
+                        a = t?.hubId,
+                        o = t?.queryParams || {};
+                    n && Object.values(w).includes(n) ? a ? (r.logger.info(`Received ${e} message with hub type '${n}' and hub id '${a}'`), r.Router.navigateTo(z[n], {
+                        page: a,
+                        queryParams: o
+                    })) : r.logger.error(`Received ${e} message with no hub id`) : r.logger.error(`Received ${e} message with invalid hub type '${n}'`)
                 };
-            const V = (e, t) => {
-                const n = t?.hubType?.toLowerCase(),
-                    a = t?.hubId,
-                    o = t?.queryParams || {};
-                n && Object.values(w).includes(n) ? a ? (r.logger.info(`Received ${e} message with hub type '${n}' and hub id '${a}'`), r.Router.navigateTo(z[n], {
-                    page: a,
-                    queryParams: o
-                })) : r.logger.error(`Received ${e} message with no hub id`) : r.logger.error(`Received ${e} message with invalid hub type '${n}'`)
-            };
             t.routeToHub = V;
             const K = (e, t) => {
                 const n = r.ComponentFactory.create("ShoppefrontContainerComponent", {
@@ -1037,8 +1039,8 @@
                 createSummonerNameChangeModalHandler: b,
                 createErrorModal: m,
                 sendLCUTelemetryEvent: S,
-                sendStorefrontUIMetricEvent: d,
-                sendTelemetryPageSessionStart: N,
+                sendStorefrontUIMetricEvent: N,
+                sendTelemetryPageSessionStart: d,
                 sendTelemetryPageSessionUpdate: O,
                 sendLCUErrorLog: p,
                 getAliasFreeEligibility: C,
@@ -1348,6 +1350,7 @@
                 CHERRY: "CHERRY",
                 CLASSIC: "CLASSIC",
                 CUSTOM: "CUSTOM",
+                JADE: "JADE",
                 KIWI: "KIWI",
                 KIWI_JADE: "KIWI_JADE",
                 PRACTICETOOL: "PRACTICETOOL",
@@ -1561,39 +1564,41 @@
                 a = "RANKED_FLEX_SR",
                 r = "RANKED_FLEX_TT",
                 o = "RANKED_PREMADE_5x5",
-                i = "CHERRY",
-                E = "RANKED_TFT",
-                _ = "RANKED_TFT_DOUBLE_UP",
-                s = "RANKED_TFT_TURBO",
-                T = "RANKED_TFT_PAIRS";
-            let l = [n, a, o];
-            const R = [...l, r],
-                u = [i],
-                I = [E, _],
-                c = [s, T],
-                A = [...I, ...c],
-                S = [...R, ...I],
-                d = [...c, ...u];
-            var N = {
+                i = "JADE_RANKED_SOLO_5x5",
+                E = "CHERRY",
+                _ = "RANKED_TFT",
+                s = "RANKED_TFT_DOUBLE_UP",
+                T = "RANKED_TFT_TURBO",
+                l = "RANKED_TFT_PAIRS",
+                R = [n, a, o, i],
+                u = [...R, r],
+                I = [E],
+                c = [_, s],
+                A = [T, l],
+                S = [...c, ...A],
+                N = [...u, ...c],
+                d = [...A, ...I];
+            var O = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
                 RANKED_FLEX_SR_QUEUE_TYPE: a,
                 RANKED_PREMADE_5X5_QUEUE_TYPE: o,
+                JADE_RANKED_SOLO_5x5: i,
                 RANKED_FLEX_TT_QUEUE_TYPE: r,
-                RANKED_CHERRY_QUEUE_TYPE: i,
-                RANKED_TFT_QUEUE_TYPE: E,
-                RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: _,
-                RANKED_TFT_TURBO_QUEUE_TYPE: s,
-                RANKED_TFT_PAIRS_QUEUE_TYPE: T,
-                RANKED_LOL_QUEUE_TYPES: R,
-                RANKED_SR_QUEUE_TYPES: l,
-                RANKED_TFT_QUEUE_TYPES: I,
-                RATED_TFT_QUEUE_TYPES: c,
-                RANKED_AND_RATED_TFT_QUEUE_TYPES: A,
-                ALL_RANKED_QUEUE_TYPES: S,
+                RANKED_CHERRY_QUEUE_TYPE: E,
+                RANKED_TFT_QUEUE_TYPE: _,
+                RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: s,
+                RANKED_TFT_TURBO_QUEUE_TYPE: T,
+                RANKED_TFT_PAIRS_QUEUE_TYPE: l,
+                RANKED_LOL_QUEUE_TYPES: u,
+                RANKED_SR_QUEUE_TYPES: R,
+                RANKED_TFT_QUEUE_TYPES: c,
+                RATED_TFT_QUEUE_TYPES: A,
+                RANKED_AND_RATED_TFT_QUEUE_TYPES: S,
+                ALL_RANKED_QUEUE_TYPES: N,
                 ALL_RATED_QUEUE_TYPES: d,
-                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...S, ...d]
+                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...N, ...d]
             };
-            t.default = N
+            t.default = O
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1601,8 +1606,8 @@
             }), t.default = void 0;
             const n = "UNRANKED",
                 a = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
-                r = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"];
-            const o = a[a.length - 1],
+                r = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
+                o = a[a.length - 1],
                 i = [o, "MASTER", "GRANDMASTER", "CHALLENGER"],
                 E = ["IV", "III", "II", "I"],
                 _ = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
@@ -1622,7 +1627,7 @@
                 APEX_TIERS: ["MASTER", "GRANDMASTER", "CHALLENGER"],
                 REGULAR_TIERS: a,
                 TIERS: r,
-                ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
+                ALL_TIERS: [n, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER", "SALT", "WOOD", "LEGEND"],
                 TIERS_WITH_NO_DIVISIONS: [n, "MASTER", "GRANDMASTER", "CHALLENGER"],
                 HIGHEST_TIER: o,
                 LOWEST_TIER: a[0],
@@ -1792,8 +1797,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "j0Kekg5Q",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-medium"],["flush-element"],["text","\\n"],["block",["if"],[["get",["transferring"]]],null,2,1],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","disabled",["unknown",["quitDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"quit"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","account_transfer_restart"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferred_out"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["transferred"]]],null,0]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferring_out"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","transferring-spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "RK3F01ct",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-component\\\\index.js\\" "],["text","\\n"],["open-element","lol-uikit-full-page-backdrop",[]],["flush-element"],["text","\\n  "],["open-element","lol-uikit-dialog-frame",[]],["flush-element"],["text","\\n    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","dialog-medium"],["flush-element"],["text","\\n"],["block",["if"],[["get",["transferring"]]],null,2,1],["text","    "],["close-element"],["text","\\n\\n    "],["open-element","lol-uikit-flat-button",[]],["dynamic-attr","disabled",["unknown",["quitDisabled"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"quit"],null],null],["flush-element"],["text","\\n      "],["append",["unknown",["tra","account_transfer_restart"]],false],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferred_out"]],false],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["transferred"]]],null,0]],"locals":[]},{"statements":[["text","        "],["open-element","h5",[]],["flush-element"],["append",["unknown",["tra","account_transferring_out"]],false],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","transferring-spinner"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -1811,8 +1816,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "B308JtM5",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_14\\\\LeagueClientContent_Release\\\\15690\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\index.js\\" "],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h1"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p1"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h2"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p2"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h3"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p3"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h4"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p4"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h5"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p5"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h6"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p6"]],true],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "1Mk52gSY",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15682\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-store\\\\src\\\\app\\\\account-transfer-conditions\\\\index.js\\" "],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h1"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p1"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h2"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p2"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h3"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p3"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h4"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p4"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h5"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p5"]],false],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","article",[]],["flush-element"],["text","\\n  "],["open-element","h6",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_h6"]],false],["close-element"],["text","\\n  "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","account_transfer_conditions_p6"]],true],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }],

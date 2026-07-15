@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Karthus menciptakan layar penyedot energi yang dapat dilewati. Setiap unit musuh yang berjalan melewati layar tersebut akan berkurang Move Speed dan Magic Resist-nya selama beberapa saat.",
-            "dynamicDescription": "Karthus membuat dinding yang bertahan selama @Effect4Amount@ detik. Musuh yang melewatinya akan kehilangan <scaleMR>@Effect1Amount@% Magic Resist</scaleMR> selama @Effect5Amount@ detik dan terkena <status>Slow</status> sebesar @Effect3Amount@% yang berkurang di sepanjang durasi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus membuat dinding yang bertahan selama @WallDuration@ detik. Musuh yang melewatinya akan kehilangan <scaleMR>@MagicResistShred@% Magic Resist</scaleMR> selama @DebuffDuration@ detik dan terkena <status>Slow</status> sebesar @SlowPercent@% yang melemah sepanjang durasi.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ Mana per Detik",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Karthus secara pasif mencuri energi dari korbannya, mendapatkan Mana setiap kali kill. Alternatifnya, Karthus bisa membuat jiwa mangsanya mengelilingi dirinya, menghasilkan damage pada musuh di sekitar, tetapi cepat menguras Mana-nya sendiri.",
-            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Saat menghabisi satu unit, Karthus memulihkan <scaleMana>@Effect2Amount@ Mana</scaleMana>.<br><br><toggle>Toggle: </toggle>Karthus menciptakan aura nekrotik, menghasilkan <magicDamage>@TotalDPS@ magic damage</magicDamage> per detik pada musuh di sekitar.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Saat menghabisi satu unit, Karthus memulihkan <scaleMana>@ManaRestoreOnKill@ Mana</scaleMana>.<br><br><toggle>Aktifkan/nonaktifkan: </toggle>Karthus menciptakan aura nekrotik, menghasilkan <magicDamage>@TotalDPS@ magic damage</magicDamage> per detik pada musuh di sekitar.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

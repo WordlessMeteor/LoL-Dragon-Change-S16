@@ -1,0 +1,5148 @@
+{
+    "{a74e85d2}": {
+        "mRootSpell": "{020215d7}",
+        "mChildSpells": [
+            "{020215d7}",
+            "{11ac70d3}"
+        ],
+        "mName": "Jade_VeigarBalefulStrikeAbility",
+        "__type": "AbilityObject"
+    },
+    "{020215d7}": {
+        "ObjectName": "Jade_VeigarBalefulStrike",
+        "mScriptName": "Jade_VeigarBalefulStrike",
+        "mSpell": {
+            "mAffectsTypeFlags": 22538,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}",
+                    "minion",
+                    "Monster"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        15.0,
+                        80.0,
+                        125.0,
+                        170.0,
+                        215.0,
+                        260.0,
+                        260.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APPerStack",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APPerKill",
+                    "values": [
+                        0.0,
+                        1.0,
+                        2.0,
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarBalefulStrike.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                8.0,
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                4.0
+            ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    4.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "L_hand",
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1200.0,
+            "mMissileEffectKey": "{4db10226}",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                80.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0,
+                    80.0,
+                    80.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Veigar_VeigarBalefulStrike_OnCast",
+                "13": "Play_sfx_Veigar_VeigarBalefulStrikeMis_OnHit",
+                "16": "Play_sfx_Veigar_VeigarBalefulStrikeMis_OnMissileLaunch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_VeigarBalefulStrike",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_VeigarBalefulStrike_Jade",
+                        "keySummary": "game_spell_description_VeigarBalefulStrike_Jade",
+                        "keyTooltip": "game_spell_tooltip_VeigarBalefulStrike_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "APPerKill",
+                                    "nameOverride": "Spell_ListType_VeigarJade_ApStacks",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 32768,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mNumber": 70.0,
+                                "__type": "NumberCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{11ac70d3}": {
+        "ObjectName": "Jade_VeigarBalefulStrikeOnKillBuff",
+        "mScriptName": "Jade_VeigarBalefulStrikeOnKillBuff",
+        "mSpell": {
+            "mAffectsTypeFlags": 14474,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        70.0,
+                        120.0,
+                        170.0,
+                        220.0,
+                        270.0,
+                        320.0,
+                        370.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.0,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarBalefulStrike.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 13.0,
+            "missileSpeed": 20.0,
+            "bHaveHitBone": true,
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "{020215d7}",
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 128,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{1bd841ff}": {
+        "ObjectName": "Jade_VeigarBalefulStrikeDisplay",
+        "mScriptName": "Jade_VeigarBalefulStrikeDisplay",
+        "mSpell": {
+            "mAffectsTypeFlags": 22538,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}",
+                    "minion",
+                    "Monster"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        15.0,
+                        80.0,
+                        125.0,
+                        170.0,
+                        215.0,
+                        260.0,
+                        260.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarBalefulStrike.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                8.0,
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                4.0
+            ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    4.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "L_hand",
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1200.0,
+            "mMissileEffectKey": "{4db10226}",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                80.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0,
+                    80.0,
+                    80.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Veigar_VeigarBalefulStrike_OnCast",
+                "13": "Play_sfx_Veigar_VeigarBalefulStrikeMis_OnHit",
+                "16": "Play_sfx_Veigar_VeigarBalefulStrikeMis_OnMissileLaunch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_VeigarBalefulStrikeDisplay",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_VeigarBalefulStrike_Jade",
+                        "keySummary": "game_spell_description_VeigarBalefulStrike_Jade",
+                        "keyTooltip": "game_spell_tooltip_VeigarBalefulStrike_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_Veigar_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 32768,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mNumber": 70.0,
+                                "__type": "NumberCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{5d9d96ec}": {
+        "mRootSpell": "{1859ba09}",
+        "mChildSpells": [
+            "{1859ba09}"
+        ],
+        "mName": "Jade_VeigarEventHorizonAbility",
+        "__type": "AbilityObject"
+    },
+    "{1859ba09}": {
+        "ObjectName": "Jade_VeigarEventHorizon",
+        "mScriptName": "Jade_VeigarEventHorizon",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_VeigarEventHorizon",
+            "mSpellTags": [
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25,
+                        2.5,
+                        2.75
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25,
+                        2.5,
+                        2.75
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "{f9c2333e}": {
+                "ARAM": {
+                    "value": [
+                        23.0,
+                        23.0,
+                        21.5,
+                        20.0,
+                        18.5,
+                        17.0,
+                        17.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                "cherry": {
+                    "value": [
+                        23.0,
+                        23.0,
+                        21.5,
+                        20.0,
+                        18.5,
+                        17.0,
+                        17.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                "{a110bc47}": {
+                    "value": [
+                        23.0,
+                        23.0,
+                        21.5,
+                        20.0,
+                        18.5,
+                        17.0,
+                        17.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                "{bffdf499}": {
+                    "value": [
+                        23.0,
+                        23.0,
+                        21.5,
+                        20.0,
+                        18.5,
+                        17.0,
+                        17.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
+            "mCoefficient": 0.20000000298023224,
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarEventHorizon.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                20.0,
+                20.0,
+                19.0,
+                18.0,
+                17.0,
+                16.0,
+                16.0
+            ],
+            "Cooldown": {
+                "values": [
+                    20.0,
+                    20.0,
+                    19.0,
+                    18.0,
+                    17.0,
+                    16.0,
+                    16.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                725.0,
+                725.0,
+                725.0,
+                725.0,
+                725.0,
+                725.0,
+                725.0
+            ],
+            "castRadius": [
+                390.0,
+                390.0,
+                390.0,
+                390.0,
+                390.0,
+                390.0,
+                390.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 20.15999984741211,
+            "missileSpeed": 20.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_HEAD_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mana": [
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                120.0,
+                120.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    90.0,
+                    100.0,
+                    110.0,
+                    120.0,
+                    120.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Veigar_VeigarEventHorizon_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_VeigarEventHorizon",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_VeigarEventHorizon_Jade",
+                        "keySummary": "game_spell_description_VeigarEventHorizon_Jade",
+                        "keyTooltip": "game_spell_tooltip_VeigarEventHorizon_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Effect%dAmount",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_StunDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{ec17e271}": [
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 1,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 1,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 2048,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{28145901}": {
+        "ObjectName": "Jade_VeigarSkin60Manager",
+        "mScriptName": "Jade_VeigarSkin60Manager",
+        "__type": "SpellObject"
+    },
+    "{29789b31}": {
+        "ObjectName": "Jade_VeigarBasicAttack2",
+        "mScriptName": "Jade_VeigarBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.4236000180244446,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "L_Hand",
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1100.0,
+            "mMissileEffectKey": "{bc47cd46}",
+            "mHitEffectKey": "{c97e5532}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Veigar_VeigarBasicAttack2_OnCast",
+                "16": "Play_sfx_Veigar_VeigarBasicAttack2_OnMissileLaunch",
+                "13": "Play_sfx_Veigar_VeigarBasicAttack2_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{2e48fe1d}": {
+        "mRootSpell": "{751923e7}",
+        "mChildSpells": [
+            "{751923e7}"
+        ],
+        "mName": "Jade_VeigarRAbility",
+        "__type": "AbilityObject"
+    },
+    "{61b79a1f}": {
+        "ObjectName": "Jade_VeigarBalefulStrikeMis",
+        "mScriptName": "Jade_VeigarBalefulStrikeMis",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "EzrealMysticShotMissile",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        30.0,
+                        70.0,
+                        110.0,
+                        150.0,
+                        190.0,
+                        230.0,
+                        270.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.0,
+                        1.0,
+                        2.0,
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.6000000238418579,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarBalefulStrike.project_jade.dds"
+            ],
+            "mCastTime": 0.25099998712539673,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0
+                ],
+                "{0a3e0478}": 1050.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 70.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "neck",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 7.53000020980835,
+            "missileSpeed": 2200.0,
+            "mMissileEffectKey": "{4db10226}",
+            "mLineWidth": 70.0,
+            "mHitEffectKey": "{586eb412}",
+            "mAfterEffectKey": "{586eb412}",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                70.0,
+                                70.0,
+                                70.0,
+                                70.0,
+                                70.0,
+                                70.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{6e5c8d5e}": {
+        "ObjectName": "Jade_VeigarEventHorizonStun",
+        "mScriptName": "Jade_VeigarEventHorizonStun",
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Stun",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{751923e7}": {
+        "ObjectName": "Jade_VeigarR",
+        "mScriptName": "Jade_VeigarR",
+        "mSpell": {
+            "mAffectsTypeFlags": 4106,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "name": "APRatio",
+                    "values": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        100.0,
+                        250.0,
+                        375.0,
+                        500.0,
+                        400.0,
+                        475.0,
+                        550.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxExecuteMult",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "MinDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxDamage": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "MinDamage",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarPrimordialBurst.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                130.0,
+                130.0,
+                110.0,
+                90.0,
+                90.0,
+                90.0,
+                90.0
+            ],
+            "Cooldown": {
+                "values": [
+                    130.0,
+                    130.0,
+                    110.0,
+                    90.0,
+                    90.0,
+                    90.0,
+                    90.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "L_hand",
+                    "mSpeed": 1400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.960000038146973,
+            "mMissileEffectKey": "{119f0f2f}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_LAYOUT_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mana": [
+                125.0,
+                175.0,
+                225.0,
+                500.0,
+                500.0,
+                500.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    125.0,
+                    175.0,
+                    225.0,
+                    500.0,
+                    500.0,
+                    500.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Veigar_VeigarR_OnCast",
+                "13": "Play_sfx_Veigar_VeigarR_OnHit",
+                "16": "Play_sfx_Veigar_VeigarR_OnMissileLaunch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_VeigarR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_VeigarPrimordialBurst_Jade",
+                        "keySummary": "game_spell_description_VeigarPrimordialBurst_Jade",
+                        "keyTooltip": "game_spell_tooltip_VeigarPrimordialBurst_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "MaxDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{9c26526b}": {
+        "ObjectName": "Jade_VeigarPhenomenalEvilPower",
+        "mScriptName": "Jade_VeigarPhenomenalEvilPower",
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_VeigarPhenomentalEvilPower",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mBuffAttributeFlag": 8,
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{9f541485}": {
+        "ObjectName": "Jade_VeigarStun",
+        "mScriptName": "Jade_VeigarStun",
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Stun",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{aa13d273}": {
+        "ObjectName": "Jade_VeigarEquilibrium",
+        "mScriptName": "Jade_VeigarEquilibrium",
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_VeigarEquilibrium",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c658065a}": {
+        "mRootSpell": "{f424ef49}",
+        "mChildSpells": [
+            "{f424ef49}"
+        ],
+        "mName": "Jade_VeigarDarkMatterAbility",
+        "__type": "AbilityObject"
+    },
+    "{c9889cd8}": {
+        "mRootSpell": "{e8ac51fb}",
+        "mChildSpells": [
+            "{e8ac51fb}"
+        ],
+        "mName": "Jade_VeigarPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{dc1afa99}": {
+        "ObjectName": "Jade_VeigarBasicAttack",
+        "mScriptName": "Jade_VeigarBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "{11704a2b}": 0.4236000180244446,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "L_Hand",
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1100.0,
+            "mMissileEffectKey": "{bc47cd46}",
+            "mHitEffectKey": "{c97e5532}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Veigar_VeigarBasicAttack_OnCast",
+                "13": "Play_sfx_Veigar_VeigarBasicAttack_OnHit",
+                "16": "Play_sfx_Veigar_VeigarBasicAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{dc969db0}": {
+        "ObjectName": "Jade_VeigarDarkMatterCastLockout",
+        "mScriptName": "Jade_VeigarDarkMatterCastLockout",
+        "mSpell": {
+            "mAffectsTypeFlags": 14474,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        70.0,
+                        120.0,
+                        170.0,
+                        220.0,
+                        270.0,
+                        320.0,
+                        370.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.0,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarDarkMatter.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 13.0,
+            "missileSpeed": 20.0,
+            "bHaveHitBone": true,
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "{f424ef49}",
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 128,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{e8ac51fb}": {
+        "ObjectName": "Jade_VeigarPassive",
+        "mScriptName": "Jade_VeigarPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "dQKillStacks",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "dAbilityStacks",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "dTakedownStacks",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "dQKillStacksLarge",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PStacksPerDarkMatterCDR",
+                    "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DarkMatterCDRIncrement",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "DataValuesModeOverride": {
+                "ARAM": {
+                    "SpellDataValues": [
+                        {
+                            "name": "dTakedownStacks",
+                            "values": [
+                                3.0,
+                                3.0,
+                                3.0,
+                                3.0,
+                                3.0,
+                                3.0,
+                                3.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                },
+                "{a110bc47}": {
+                    "SpellDataValues": [
+                        {
+                            "name": "dQKillStacks",
+                            "values": [
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "dAbilityStacks",
+                            "values": [
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "dTakedownStacks",
+                            "values": [
+                                10.0,
+                                10.0,
+                                10.0,
+                                10.0,
+                                10.0,
+                                10.0,
+                                10.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "dQKillStacksLarge",
+                            "values": [
+                                6.0,
+                                6.0,
+                                6.0,
+                                6.0,
+                                6.0,
+                                6.0,
+                                6.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                },
+                "{bffdf499}": {
+                    "SpellDataValues": [
+                        {
+                            "name": "dTakedownStacks",
+                            "values": [
+                                3.0,
+                                3.0,
+                                3.0,
+                                3.0,
+                                3.0,
+                                3.0,
+                                3.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
+            "mSpellCalculations": {
+                "APPerStack": {
+                    "mFormulaParts": [
+                        {
+                            "mNumber": 1.0,
+                            "__type": "NumberCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_Veigar_Entropy.project_jade.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_VeigarPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "game_character_passiveName_Veigar_Jade",
+                        "keySummary": "game_character_passiveDescription_Veigar_Jade",
+                        "keyTooltip": "game_character_passiveTooltip_Veigar_Jade"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_VeigarPassive",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f424ef49}": {
+        "ObjectName": "Jade_VeigarDarkMatter",
+        "mScriptName": "Jade_VeigarDarkMatter",
+        "mSpell": {
+            "mAffectsTypeFlags": 14474,
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "APRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        120.0,
+                        170.0,
+                        220.0,
+                        270.0,
+                        320.0,
+                        360.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarDarkMatter.project_jade.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0,
+                225.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 13.0,
+            "missileSpeed": 20.0,
+            "bHaveHitBone": true,
+            "mFloatVarsDecimals": [
+                -1,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                110.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    70.0,
+                    80.0,
+                    90.0,
+                    100.0,
+                    110.0,
+                    110.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Veigar_VeigarDarkMatter_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_VeigarDarkMatter",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_VeigarDarkMatter_Jade",
+                        "keySummary": "game_spell_description_VeigarDarkMatter_Jade",
+                        "keyTooltip": "game_spell_tooltip_VeigarDarkMatter_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 128,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f78a4019}": {
+        "ObjectName": "Jade_VeigarCritAttack",
+        "mScriptName": "Jade_VeigarCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.4236000180244446,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "root",
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1100.0,
+            "mMissileEffectKey": "{bc47cd46}",
+            "mHitEffectKey": "globalhit_physical_crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Veigar_VeigarCritAttack_OnCast",
+                "13": "Play_sfx_Veigar_VeigarCritAttack_OnHit",
+                "16": "Play_sfx_Veigar_VeigarCritAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{34607f97}": {
+        "mCooldown": 20.0,
+        "mSituations": {
+            "MoveOrder2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Long",
+                        "mConditions": [
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 2,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DLong",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Standard",
+                        "mConditions": [
+                            {
+                                "mDistance": 400.0,
+                                "mCompareOp": 3,
+                                "__type": "ContextualConditionMoveDistance"
+                            },
+                            {
+                                "mDistance": 2000.0,
+                                "mCompareOp": 5,
+                                "__type": "ContextualConditionMoveDistance"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Move2DStandard",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackChampion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Champion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Taunt": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt",
+                        "mAudioAction": {
+                            "mSelfEventName": "Taunt3DGeneral",
+                            "mAllyEventName": "Taunt3DGeneral",
+                            "mEnemyEventName": "Taunt3DGeneral",
+                            "mSpectatorEventName": "Taunt3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackNeutral2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Baron",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/SRU_Baron/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Attack2DBaron",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Neutral",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Joke": {
+                "mRules": [
+                    {
+                        "mRuleName": "Joke",
+                        "mAudioAction": {
+                            "mSelfEventName": "Joke3DGeneral",
+                            "mAllyEventName": "Joke3DGeneral",
+                            "mEnemyEventName": "Joke3DGeneral",
+                            "mSpectatorEventName": "Joke3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "RecallLeadIn": {
+                "mRules": [
+                    {
+                        "mRuleName": "Recall",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 10.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Recall3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Laugh": {
+                "mRules": [
+                    {
+                        "mRuleName": "Laugh",
+                        "mAudioAction": {
+                            "mSelfEventName": "Laugh3DGeneral",
+                            "mAllyEventName": "Laugh3DGeneral",
+                            "mEnemyEventName": "Laugh3DGeneral",
+                            "mSpectatorEventName": "Laugh3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "KillChampion": {
+                "mRules": [
+                    {
+                        "mRuleName": "Pentakill",
+                        "mConditions": [
+                            {
+                                "mMultikillSize": 5,
+                                "__type": "ContextualConditionMultikillSize"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DPenta",
+                            "mAllyEventName": "Kill3DPenta",
+                            "mEnemyEventName": "Kill3DPenta",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 200,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Annie",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{3066a655}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DAnnieSkin31",
+                            "mEnemyEventName": "Kill3DAnnieSkin31",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Draven",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Draven/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DDraven39",
+                            "mEnemyEventName": "Kill3DDraven39",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Nautilus",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Nautilus/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DNautilusSkin18",
+                            "mEnemyEventName": "Kill3DNautilusSkin18",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Nunu",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{1ee02272}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DNunuSkin44",
+                            "mEnemyEventName": "Kill3DNunuSkin44",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Pyke",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Pyke/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DPykeSkin64",
+                            "mEnemyEventName": "Kill3DPykeSkin64",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Renata",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Renata/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DRenataSkin10",
+                            "mEnemyEventName": "Kill3DRenataSkin10",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Shaco",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{53ef24d8}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DShacoSkin54",
+                            "mEnemyEventName": "Kill3DShacoSkin54",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Trundle",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Trundle/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DTrundleSkin12",
+                            "mEnemyEventName": "Kill3DTrundleSkin12",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Urgot",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Urgot/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DUrgotSkin23",
+                            "mEnemyEventName": "Kill3DUrgotSkin23",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Zeri",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Zeri/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DZeriSkin28",
+                            "mEnemyEventName": "Kill3DZeriSkin28",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fiddlesticks",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{d66d5ae5}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DFiddlesticks",
+                            "mEnemyEventName": "Kill3DFiddlesticks",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "General",
+                        "mAudioAction": {
+                            "mSelfEventName": "Kill3DGeneral",
+                            "mEnemyEventName": "Kill3DGeneral",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 30,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "TauntEndedNearby": {
+                "mRules": [
+                    {
+                        "mRuleName": "Taunt Response",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "TauntResponse3DGeneral",
+                            "mAllyEventName": "TauntResponse3DGeneral",
+                            "mEnemyEventName": "TauntResponse3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "EnemyEncounter": {
+                "mCoolDownTime": 15.0,
+                "mRules": [
+                    {
+                        "mRuleName": "Fright Night Nunu",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{1ee02272}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DNunuSkin44",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Pyke",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Pyke/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DPykeSkin64",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Shaco",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{53ef24d8}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DShacoSkin54",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fright Night Zeri",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "Characters/Zeri/CharacterRecords/Root"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "mCategory": "skinline",
+                                        "mData": "frightnight",
+                                        "__type": "ContextualConditionCharacterMetadata"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DZeriSkin28",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Fiddlesticks",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "mCharacters": [
+                                            "{d66d5ae5}"
+                                        ],
+                                        "__type": "ContextualConditionCharacterName"
+                                    },
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DFiddlesticks",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "General",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "__type": "{b6da23cb}"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "FirstEncounter3DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "Respawn2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Respawn",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 75,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Respawn2DGeneral",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "AttackMinion2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "Minion",
+                        "mAudioAction": {
+                            "mSelfEventName": "Attack2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "GotFirstBlood": {
+                "mRules": [
+                    {
+                        "mRuleName": "First Blood",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Kill3DFirst",
+                            "mEnemyEventName": "Kill3DFirst",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 130,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "KillTurret": {
+                "mRules": [
+                    {
+                        "mRuleName": "Kill Turret",
+                        "mAudioAction": {
+                            "mMaxOccurences": 4,
+                            "mSelfEventName": "Kill3DTurret",
+                            "mAllyEventName": "Kill3DTurret",
+                            "mWaitForAnnouncerQueue": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "ShopOpen": {
+                "mRules": [
+                    {
+                        "mRuleName": "Open",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Shop2DOpen",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "PingAssistMe": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ping",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Ping2DAssistMe",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "PingDanger": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ping",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Ping2DDanger",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "PingMissing": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ping",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Ping2DEnemyMissing",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "PingOnMyWay": {
+                "mRules": [
+                    {
+                        "mRuleName": "Ping",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            },
+                            {
+                                "mRuleCooldown": 30.0,
+                                "__type": "ContextualConditionRuleCooldown"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Ping2DOnMyWay",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "ReceiveHeal": {
+                "mRules": [
+                    {
+                        "mRuleName": "Heal",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "__type": "ContextualConditionIsSelf"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mPercentChanceToPlay": 20,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Receive3DBuff",
+                            "mAllyEventName": "Receive3DBuff",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "ReceiveShield": {
+                "mRules": [
+                    {
+                        "mRuleName": "Shield",
+                        "mConditions": [
+                            {
+                                "mCharacterType": 1,
+                                "mChildConditions": [
+                                    {
+                                        "__type": "ContextualConditionIsSelf"
+                                    }
+                                ],
+                                "__type": "ContextualConditionCharacter"
+                            },
+                            {
+                                "mPercentChanceToPlay": 20,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Receive3DBuff",
+                            "mAllyEventName": "Receive3DBuff",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellCast": {
+                "mRules": [
+                    {
+                        "mRuleName": "Basic 1",
+                        "mConditions": [
+                            {
+                                "mSpell": "{dc1afa99}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Basic 2",
+                        "mConditions": [
+                            {
+                                "mSpell": "{29789b31}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Crit",
+                        "mConditions": [
+                            {
+                                "mSpell": "{f78a4019}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DBasic",
+                            "mAllyEventName": "Spell3DBasic",
+                            "mEnemyEventName": "Spell3DBasic",
+                            "mSpectatorEventName": "Spell3DBasic",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Q",
+                        "mConditions": [
+                            {
+                                "mSpell": "{020215d7}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DQCast",
+                            "mAllyEventName": "Spell3DQCast",
+                            "mEnemyEventName": "Spell3DQCast",
+                            "mSpectatorEventName": "Spell3DQCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "W",
+                        "mConditions": [
+                            {
+                                "mSpell": "{f424ef49}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DWCast",
+                            "mAllyEventName": "Spell3DWCast",
+                            "mEnemyEventName": "Spell3DWCast",
+                            "mSpectatorEventName": "Spell3DWCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "E",
+                        "mConditions": [
+                            {
+                                "mSpell": "{1859ba09}",
+                                "__type": "ContextualConditionSpellName"
+                            },
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DECast",
+                            "mAllyEventName": "Spell3DECast",
+                            "mEnemyEventName": "Spell3DECast",
+                            "mSpectatorEventName": "Spell3DECast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "DontResetTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "R",
+                        "mConditions": [
+                            {
+                                "mSpell": "{751923e7}",
+                                "__type": "ContextualConditionSpellName"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DRCast",
+                            "mAllyEventName": "Spell3DRCast",
+                            "mEnemyEventName": "Spell3DRCast",
+                            "mSpectatorEventName": "Spell3DRCast",
+                            "{9449aa71}": true,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 100,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "FirstMove2D": {
+                "mRules": [
+                    {
+                        "mRuleName": "First Move",
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Move2DFirst",
+                            "mWaitTimeout": -1.0,
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "SpellLevelUp": {
+                "mRules": [
+                    {
+                        "mRuleName": "R Rank One",
+                        "mConditions": [
+                            {
+                                "mSpellLevel": 1,
+                                "__type": "ContextualConditionSpellLevel"
+                            },
+                            {
+                                "mSpellSlot": 3,
+                                "__type": "ContextualConditionSpellSlot"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 1,
+                            "mSelfEventName": "Spell2DRRankOne",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    },
+                    {
+                        "mRuleName": "Level Up",
+                        "mConditions": [
+                            {
+                                "mPercentChanceToPlay": 30,
+                                "__type": "ContextualConditionChanceToPlay"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mMaxOccurences": 4,
+                            "mSelfEventName": "LevelUp2DGeneral",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            },
+            "BuffCounterSet": {
+                "mRules": [
+                    {
+                        "mRuleName": "Passive stack",
+                        "mConditions": [
+                            {
+                                "mBuff": "{9c26526b}",
+                                "mCounterHighestReached": 200,
+                                "__type": "ContextualConditionBuffCounterReachedLimitFromZero"
+                            }
+                        ],
+                        "mAudioAction": {
+                            "mSelfEventName": "Spell3DPCast",
+                            "mAllyEventName": "Spell3DPCast",
+                            "mEnemyEventName": "Spell3DPCast",
+                            "mSpectatorEventName": "Spell3DPCast",
+                            "__type": "ContextualActionPlayVO"
+                        },
+                        "mPriority": 50,
+                        "CooldownModifications": {
+                            "IgnoreTimer": true,
+                            "__type": "ContextualActionCooldownModifications"
+                        },
+                        "__type": "ContextualRule"
+                    }
+                ],
+                "__type": "ContextualSituation"
+            }
+        },
+        "mObjectPath": "Characters/Jade_Veigar/CAC/Jade_Veigar_Skin60",
+        "__type": "ContextualActionData"
+    },
+    "{48df868c}": {
+        "mCharacterName": "Jade_Veigar",
+        "baseHPModifiable": {
+            "baseValue": 437.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 82.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.0299999713897705,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10000000149011612,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 90.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 305.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 55.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.5,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.11999999731779099,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 50.650001525878906,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 2.6500000953674316,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 15.75,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.75,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 340.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 525.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.0,
+            "__type": "ModifiableFloat"
+        },
+        "mAdaptiveForceToAbilityPowerWeight": 1.0,
+        "acquisitionRange": 525.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.10906250029802322,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_VeigarBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_VeigarBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.10906250029802322,
+                "mAttackName": "Jade_VeigarCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_VeigarBalefulStrikeAbility/Jade_VeigarBalefulStrike",
+            "Jade_VeigarDarkMatterAbility/Jade_VeigarDarkMatter",
+            "Jade_VeigarEventHorizonAbility/Jade_VeigarEventHorizon",
+            "Jade_VeigarRAbility/Jade_VeigarR"
+        ],
+        "spells": [
+            "{020215d7}",
+            "{f424ef49}",
+            "{1859ba09}",
+            "{751923e7}"
+        ],
+        "extraSpells": [
+            "Jade_VeigarBalefulStrikeMis",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{a74e85d2}",
+            "{c658065a}",
+            "{5d9d96ec}",
+            "{c9889cd8}",
+            "{2e48fe1d}"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Veigar",
+        "passiveLuaName": "",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Veigar",
+        "passiveSpell": "Jade_VeigarPassive",
+        "passive1IconName": "ASSETS/Characters/Jade_Veigar/HUD/Icons2D/Jade_VeigarEntropy.project_jade.dds",
+        "name": "game_character_displayname_Jade_Veigar",
+        "selectionHeight": 140.0,
+        "selectionRadius": 100.0,
+        "pathfindingCollisionRadius": 30.0,
+        "overrideGameplayCollisionRadius": 55.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1056,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            0,
+            16,
+            0
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Blasts target enemy champion, dealing Magic Damage plus 25% of the target's maximum Mana. If Primordial Burst deals a killing blow, Jade_Veigar regains Mana.",
+                    "displayName": "Primordial Burst",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Blasts target enemy champion, dealing Magic Damage plus 25% of the target's maximum Mana. If Primordial Burst deals a killing blow, Jade_Veigar regains Mana.",
+                    "displayName": "Primordial Burst",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Blasts target enemy champion, dealing Magic Damage plus 25% of the target's maximum Mana. If Primordial Burst deals a killing blow, Jade_Veigar regains Mana.",
+                    "displayName": "Primordial Burst",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Blasts target enemy champion, dealing Magic Damage plus 25% of the target's maximum Mana. If Primordial Burst deals a killing blow, Jade_Veigar regains Mana.",
+                    "displayName": "Primordial Burst",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "+40% Mana Point regeneration.",
+                "+60% Mana Point regeneration.",
+                "+80% Mana Point regeneration."
+            ],
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Veigar",
+                    "effect": [
+                        "0.2",
+                        "0.4",
+                        "0.6"
+                    ],
+                    "level": [
+                        1,
+                        9,
+                        17
+                    ],
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "mage",
+            "championId": 60045,
+            "roles": "MAGE",
+            "magicRank": 10,
+            "LevelSpellEffectiveness": 1.5,
+            "difficultyRank": 7,
+            "description": "game_character_description_Jade_Veigar",
+            "defenseRank": 2,
+            "classification": "Arcane",
+            "attackRank": 2,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "purchaseIdentities": [
+            "Ranged"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Sorcery",
+        "mCharacterPassiveSpell": "{e8ac51fb}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{e8ac51fb}",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{28145901}",
+                "SkinFilter": {
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{565bf63f}",
+        "__type": "CharacterRecord"
+    },
+    "{565bf63f}": {
+        "ScriptName": "charscriptJade_Veigar",
+        "path": "{565bf63f}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "d53349ec-8cbb-44eb-89f8-88296a4a0b84",
+                        "Src": {
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "APGain",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "53eb745e-0636-4b63-8ae2-c86fc3353d67",
+                        "Src": {
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "TotalBonus",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "5dbbe649-1378-474c-8f61-1266da032649",
+                        "Formula": "0 + cv.TotalBonus",
+                        "Dest": {
+                            "Var": "TotalBonus",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "{15ebaa9c}"
+                    },
+                    {
+                        "{d851ffa3}": "438efe3f-7aa7-4894-88a5-0b09046a9596",
+                        "Formula": "cv.APGain + cv.TotalBonus",
+                        "Dest": {
+                            "Var": "TotalBonus",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "{15ebaa9c}"
+                    },
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{6b1c1b08}": {
+                "blocks": [
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "ccb35a4f-7fc7-4e51-b8b8-4cefae550bb7",
+                        "Var": {
+                            "Var": "ChampionAPGain",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "{851b8dc5}"
+                    },
+                    {
+                        "{d851ffa3}": "b22d128a-e158-43c6-b40b-6b152dea18a3",
+                        "Var": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "TotalBonus",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "{851b8dc5}"
+                    },
+                    null,
+                    {
+                        "{d851ffa3}": "012a4a1e-c859-45ba-be9c-7ee3e33f5eb9",
+                        "Var": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "APGain",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "{851b8dc5}"
+                    },
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{b415ce8f}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "1bc71083-a240-4528-b993-324faa1da43f",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{70954771}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "c94f8222-8585-4f74-b8c4-bc72f4c9506a",
+                                    "Src": {
+                                        "value": 1,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "NextBuffVars"
+                                        },
+                                        "Var": "BonusAP",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "e5ff6f31-a567-4d49-b1b2-713ef1c11521",
+                                    "Src": {
+                                        "value": 9999,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "MaxBonus",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "blocks": [
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "ea7f3875-ace6-46e9-a332-4958966f5aa5",
+                        "Var": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "TotalBonus",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "{851b8dc5}"
+                    },
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{bd909891}": {
+                "blocks": [
+                    null,
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "b63b048e-020d-45fa-ac0b-8b6215d67b8e",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{f92c5c91}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "1ebefbcc-0e95-49ee-a545-d1efca9bc70b",
+                                    "Src": {
+                                        "__type": "BoolGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "VeigarAPQInstanceHasKilled",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "a5b91728-0cc4-42c5-827c-111aa2d38d9e",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{822e38a2}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "Jade_VeigarEventHorizon",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "35b8e09f-3837-4052-b2f4-bd5818182ea1",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 8,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "5707f765-680a-418a-b64b-e83e960a03d7",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{822e38a2}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "value": "Recall",
+                                            "__type": "StringGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "f0c3d701-0bf1-4a56-95d6-644c02a57e08",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{822e38a2}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "value": "RecallImproved",
+                                            "__type": "StringGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "f9893937-2b60-48a9-b835-5b08171ceed0",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{822e38a2}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "value": "OdinRecall",
+                                            "__type": "StringGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "d83c5320-f868-4b30-abbb-97b39c9e70af",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{822e38a2}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "value": "OdinRecallImproved",
+                                            "__type": "StringGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "type": 2,
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "6f219f7f-6bb4-497c-91c0-660c7bb1d5bb",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{822e38a2}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "value": "ARAMRecall",
+                                            "__type": "StringGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "type": 2,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "f6bd5cc0-2a6a-4351-a7ab-038f2b75417e",
+                                                "Var": {
+                                                    "Var": "Attacker",
+                                                    "__type": "{622705af}"
+                                                },
+                                                "__type": "{851b8dc5}"
+                                            },
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "{8b9cf756}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{8f15e482}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "bottom",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "middle",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "middle",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{d91966c3}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1056",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1082",
+                            "Items/2003",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6655",
+                            "Items/4644",
+                            "Items/6656"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3158",
+                            "Items/3111"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3089",
+                            "Items/4629"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089",
+                            "Items/3135"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4629",
+                            "Items/3165",
+                            "Items/4628",
+                            "Items/4645"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3112"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3802"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6655",
+                            "Items/6653",
+                            "Items/6656"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4628",
+                            "Items/3102",
+                            "Items/3165"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3102"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089",
+                            "Items/3135"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4629",
+                            "Items/3165",
+                            "Items/4637",
+                            "Items/3116",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4628"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "mPosition": "Support",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3850",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3858",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6655",
+                            "Items/6653",
+                            "Items/6656"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3111",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4628",
+                            "Items/3102",
+                            "Items/3165"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3102"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3089",
+                            "Items/3135"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/4629",
+                            "Items/3165",
+                            "Items/4637",
+                            "Items/3116",
+                            "Items/3157",
+                            "Items/3102",
+                            "Items/4628"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "{a0c9a9fa}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

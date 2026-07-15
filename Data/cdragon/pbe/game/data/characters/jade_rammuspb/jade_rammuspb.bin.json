@@ -1,0 +1,423 @@
+{
+    "{250fd4b2}": {
+        "ScriptName": "charscriptJade_RammusPB_Jade",
+        "path": "{250fd4b2}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "4d61b7e4-8518-4943-bea3-f2adcba23c33",
+                        "Src": {
+                            "value": 6,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "KillsPerArmor",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "75b58107-3467-4006-91c9-b8ce704214ff",
+                        "Src": {
+                            "value": 1,
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "ArmorPerChampionKill",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{97100bc2}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{6ac346f6}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "1ed61009-a7ae-4107-abee-e99790437066",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "f74e6057-7bd3-4a95-a11d-1dd67dc408fa",
+                                    "Condition": null,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "1c8f5201-dd36-405e-a9f3-88417ed2ab1b",
+                                                "Src": {
+                                                    "value": true,
+                                                    "__type": "BoolGet"
+                                                },
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "NextBuffVars"
+                                                    },
+                                                    "Var": "IsChampion",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "6975147f-fdc4-40ae-ac9a-95017b742010",
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "4b24ac09-4a1f-4794-8f5d-7d6eecc66069",
+                                                "Src": {
+                                                    "__type": "BoolGet"
+                                                },
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "NextBuffVars"
+                                                    },
+                                                    "Var": "IsChampion",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "21e90284-5782-4fd5-9f24-6b45004af5cc",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "ce7518d3-26f2-4266-9c17-e9bf32c294db",
+                                    "Src": {
+                                        "value": 1,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "NumMinionsKilled",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "7e8cd8ce-d15e-4701-9014-d5dfd0739558",
+                                    "Src": {
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "ScavengeArmorTotal",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{edb2eab3}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "4f761d70-31d7-43ed-9024-a092721c0aa9",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{e622d8b9}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 7,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "8b206efa-f4a0-45a5-b5c7-265a8819a00e",
+                                    "Src": {
+                                        "value": 5,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "KillsPerArmor",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "98dca5de-d6c0-4d9c-b793-6f01ce92f603",
+                                    "Src": {
+                                        "value": 2,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "ArmorPerChampionKill",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "a49e5f81-a829-4c86-87d6-d98e398130e1",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{e622d8b9}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 13,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "2478167c-7b8d-4ac4-8654-ee533d4d3fd6",
+                                    "Src": {
+                                        "value": 4,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "KillsPerArmor",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "ca3d02c7-617f-437b-8770-cedb82e7de7e",
+                                    "Src": {
+                                        "value": 3,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "ArmorPerChampionKill",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "{abb900d7}": {
+        "mCharacterName": "Jade_RammusPB",
+        "mFallbackCharacterName": "Jade_Rammus",
+        "baseHPModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 85.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 600.0,
+        "spellNames": [
+            "PowerBall",
+            "DefensiveBallCurl",
+            "PuncturingTaunt",
+            "Tremors2"
+        ],
+        "spells": [
+            "{eb9041a2}",
+            "{6629835a}",
+            "{50e209ba}",
+            "{fd494296}"
+        ],
+        "extraSpells": [
+            "ArmordilloRelentlessAssaultAttack",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{8f78e20b}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "passiveName": "game_character_passiveName_Rammus",
+        "passiveLuaName": "Spiked Shell",
+        "passiveToolTip": "game_character_passiveDescription_Jade_RammusPB",
+        "passive1IconName": "ASSETS/Characters/Rammus/HUD/Icons2D/Armordillo_ScavengeArmor.dds",
+        "name": "game_character_displayname_Rammus",
+        "weaponMaterials": [
+            "Amordillo_PBBasicAttack"
+        ],
+        "selectionHeight": 130.0,
+        "selectionRadius": 120.0,
+        "pathfindingCollisionRadius": 35.0,
+        "unitTagsString": "Champion",
+        "characterToolData": {
+            "recItems": [
+                "1054",
+                "3047",
+                "3105",
+                "3075",
+                "3068",
+                "3026"
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Rammus",
+                    "level": [
+                        1,
+                        7,
+                        13
+                    ],
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "Lore2": "As time passed, she became the cause of much trouble in Jugo. People became afraid of Annie because of the sudden fires that erupted when the little girl was in a bad mood. Several years later, she threw a temper tantrum over a dropped teddy bear, and completely incinerated her parents and her home. She has since drifted aimlessly from town to town, sometimes becoming angry over a trivial matter at which point great fire storms erupt leaving only a crying orphan girl in their wake. When the darkness inside of her felt the first call of Chaos, it discovered befitting and truly sinister use for the Dark Child.",
+            "description": "game_character_description_Rammus",
+            "classification": "Strong",
+            "__type": "CharacterToolData"
+        },
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "Script": "{250fd4b2}",
+        "__type": "CharacterRecord"
+    },
+    "{f6f5e11b}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

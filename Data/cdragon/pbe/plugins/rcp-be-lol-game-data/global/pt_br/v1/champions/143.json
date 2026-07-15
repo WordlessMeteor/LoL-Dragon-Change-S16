@@ -1752,7 +1752,7 @@
             "cost": "1 semente",
             "cooldown": "Sem Tempo de Recarga",
             "description": "Zyra planta uma semente com duração de 60s. Conjurar Farpas Mortais e Pântano das Raízes perto das sementes fará surgir plantas que lutam por Zyra. Zyra pode armazenar várias sementes ao mesmo tempo, e abater inimigos reduz o tempo de recarga de Crescimento Desenfreado.",
-            "dynamicDescription": "Zyra planta uma <keywordMajor>Semente</keywordMajor> que dura @Effect6Amount@s. Essas <keywordMajor>Sementes</keywordMajor> concedem <keywordStealth>Visão Mágica</keywordStealth> dos Campeões inimigos que pisarem nelas por @Effect3Amount@s, mas são destruídas.<br><br>A Habilidade tem 2 cargas e recarrega a cada @AmmoRechargeTime@s. Abater um monstro ou tropa inimiga reduz o tempo de recarga em @Effect1Amount*100@%. Eliminar Campeões reduz o tempo de recarga em @Effect2Amount*100@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra planta uma <keywordMajor>Semente</keywordMajor> que dura @SeedDuration@s. Essas <keywordMajor>Sementes</keywordMajor> concedem <keywordStealth>Visão Mágica</keywordStealth> dos Campeões inimigos que pisam nelas por @VisionGranted@s, mas são destruídas.<br><br>Esta Habilidade tem 2 cargas e @AmmoRechargeTime@s de Tempo de Recarga. Abater um monstro ou tropa inimiga reduz o tempo de recarga em @KillAmmoRefundMinion*100@%. Eliminar Campeões reduz o tempo de recarga em @KillAmmoRefundChamp*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Zyra lança vinhas pelo chão para prenderem seu alvo, causando dano e enraizando inimigos atingidos. Se conjurada próxima a uma semente, Pântano das Raízes faz surgir Vinhas Ásperas com ataques de curta distância que reduzem a Velocidade de Movimento do inimigo.",
-            "dynamicDescription": "Zyra lança vinhas à frente, <status>Enraizando</status> por @Effect5Amount@s e causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. <br><br>Se a Habilidade passar perto de uma <keywordMajor>Semente</keywordMajor>, a <keywordMajor>Semente</keywordMajor> se transformará em uma Vinha Áspera que causa <magicDamage>@spell.ZyraP:PlantDamage@ de Dano Mágico</magicDamage> e dura @spell.ZyraP:PlantDuration@s. Vinhas Ásperas têm 400 de alcance e seus Ataques causam @Effect2Amount@% de <status>Lentidão</status> por @Effect3Amount@s. A <status>Lentidão</status> causada por várias Vinhas Ásperas pode ser acumulada até @MaxSlowStacks@ vezes.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra lança vinhas à frente, <status>Enraizando</status> por @RootDuration@s e causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. <br><br>Se a Habilidade passar perto de uma <keywordMajor>Semente</keywordMajor>, a <keywordMajor>Semente</keywordMajor> se transforma em uma Vinha Áspera que causa <magicDamage>@spell.ZyraP:PlantDamage@ de Dano Mágico</magicDamage> e dura @spell.ZyraP:PlantDuration@s. Vinhas Ásperas têm 400 de alcance e seus Ataques causam @SlowAmountPlantAttack@% de <status>Lentidão</status> por @SlowDurationPlantAttack@s. A <status>Lentidão</status> causada por várias Vinhas Ásperas acumula até @MaxSlowStacks@ vezes.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Zyra invoca raízes retorcidas no local-alvo, causando dano a inimigos conforme elas se expandem e arremessando-os ao ar quando se contraem. Plantas ao alcance das raízes ficam enfurecidas.",
-            "dynamicDescription": "Zyra invoca a fúria da natureza e faz surgir uma grande raiz retorcida, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. A raiz rebate para cima depois de 2s, <status>Arremessando ao ar</status> por @Effect1Amount@s.<br><br>As plantas de Zyra dentro do alcance da raiz ficam enfurecidas, redefinindo suas durações, recebendo <healing>@Effect2Amount*100@% de Vida</healing> e causando @PlantDamageBonus@% de dano adicional.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra invoca a fúria da natureza e faz surgir uma grande raiz retorcida, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. Após 2 segundos, as vinhas rebatem para cima, <status>Arremessando ao Ar</status> por @KnockupDuration@s.<br><br>As plantas de Zyra dentro do alcance da raiz ficam enfurecidas, redefinindo suas durações, recebendo <healing>@EnragedBonusHealthPercent*100@% de Vida</healing> e causando @PlantDamageBonus@% de dano adicional.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
