@@ -2,7 +2,7 @@
     "Characters/Bard/Skins/Skin35": {
         "skinClassification": 1,
         "championSkinName": "BardSkin35",
-        "metaDataTags": "element:light,race:mythical,skinline:worldchampions2022",
+        "metaDataTags": "element:light,race:mythical,skinline:worldchampions,subskinline:t1",
         "loadscreen": {
             "image": "ASSETS/Characters/Bard/Skins/Skin35/BardLoadScreen_35.tex",
             "__type": "CensoredImage"
@@ -23303,6 +23303,11 @@
         "name": "Characters/Bard/Skins/Skin35/Materials/Body",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Bard/Skins/Skin35/Bard_Skin35_TX_CM.tex",
                 "addressV": 1,
@@ -23324,6 +23329,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -23446,6 +23455,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -23585,6 +23599,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

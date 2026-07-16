@@ -724,6 +724,53 @@
                     "__type": "{b09016f6}"
                 }
             ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 64,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
             "__type": "BotsSpellData"
         },
         "__type": "SpellObject"
@@ -1031,6 +1078,19 @@
                                 1.0
                             ],
                             "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "HarrierCooldown",
+                            "values": [
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0
+                            ],
+                            "__type": "SpellDataValue"
                         }
                     ],
                     "__type": "SpellDataValueVector"
@@ -1239,6 +1299,53 @@
                         "__type": "GameCalculation"
                     },
                     "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 64,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
                 }
             ],
             "__type": "BotsSpellData"
@@ -1587,7 +1694,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{929bc6f6}": {
+                "BonusMonsterDmg": {
                     "mFormulaParts": [
                         {
                             "mNumber": 75.0,
@@ -2012,6 +2119,20 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        11.0,
+                        10.0,
+                        9.0,
+                        8.0,
+                        7.0,
+                        6.0,
+                        5.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
@@ -2216,6 +2337,24 @@
                         "__type": "GameCalculation"
                     },
                     "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
                 }
             ],
             "__type": "BotsSpellData"
@@ -2424,7 +2563,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{a06afe5e}": {
+                "TotalDamageMonster": {
                     "mMultiplier": {
                         "mSubparts": [
                             {
@@ -2971,17 +3110,11 @@
                 "MapId": 11,
                 "Position": "jungle",
                 "IsDefaultRecommendation": true,
-                "mDefaultPriority": [
-                    3,
-                    1,
-                    0,
-                    2
-                ],
                 "mEarlyLevelOverrides": [
-                    2,
                     0,
+                    2,
                     1,
-                    1
+                    0
                 ],
                 "__type": "RecSpellRankUpInfo"
             },
@@ -3285,7 +3418,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnPMultihits",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3313,7 +3446,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnQBlinds",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3341,7 +3474,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnWDiscovers",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3397,7 +3530,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnRKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3425,7 +3558,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnPDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3453,7 +3586,7 @@
         "mDescriptionTraKey": "stat_stone_description_QuinnEDistance",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3496,7 +3629,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 229,
+                "EventToTrack": 230,
                 "__type": "StatStoneEventToTrack"
             }
         ],

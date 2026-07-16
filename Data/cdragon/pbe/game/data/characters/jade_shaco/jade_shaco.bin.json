@@ -1,8 +1,8 @@
 {
-    "{c71aea49}": {
-        "mRootSpell": "{cb52fef7}",
+    "Characters/Jade_Shaco/Spells/Jade_ShacoJackInTheBoxAbility": {
+        "mRootSpell": "Characters/Jade_Shaco/Spells/Jade_ShacoJackInTheBoxAbility/Jade_ShacoJackInTheBox",
         "mChildSpells": [
-            "{cb52fef7}",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoJackInTheBoxAbility/Jade_ShacoJackInTheBox",
             "{765b700e}",
             "{22a6dd5a}",
             "{01d89a34}",
@@ -102,8 +102,8 @@
             "mCastType": 1,
             "castFrame": 10.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{7bf4dd3c}",
-            "mHitEffectKey": "{33518d46}",
+            "mMissileEffectKey": "Jade_Shaco_W_Box_Mis",
+            "mHitEffectKey": "Jade_Shaco_W_box_hit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
             "SpellEventToAudioEventSuffix": {
@@ -143,7 +143,7 @@
         "mScriptName": "Jade_ShacoJackInTheBoxInternal",
         "__type": "SpellObject"
     },
-    "{cb52fef7}": {
+    "Characters/Jade_Shaco/Spells/Jade_ShacoJackInTheBoxAbility/Jade_ShacoJackInTheBox": {
         "ObjectName": "Jade_ShacoJackInTheBox",
         "mScriptName": "Jade_ShacoJackInTheBox",
         "mSpell": {
@@ -325,11 +325,11 @@
                 "{77ed806c}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{3e192121}",
+                            "mDataValue": "BoxBaseDamage_Jade",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{6f10418b}",
+                            "mDataValue": "BoxAPScaling_Jade",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -570,10 +570,10 @@
         },
         "__type": "SpellObject"
     },
-    "{5082605e}": {
-        "mRootSpell": "{4e7db2f1}",
+    "Characters/Jade_Shaco/Spells/Jade_ShacoDeceiveAbility": {
+        "mRootSpell": "Characters/Jade_Shaco/Spells/Jade_ShacoDeceiveAbility/Jade_ShacoDeceive",
         "mChildSpells": [
-            "{4e7db2f1}",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoDeceiveAbility/Jade_ShacoDeceive",
             "{02db0c40}"
         ],
         "mName": "Jade_ShacoDeceiveAbility",
@@ -701,7 +701,7 @@
         },
         "__type": "SpellObject"
     },
-    "{4e7db2f1}": {
+    "Characters/Jade_Shaco/Spells/Jade_ShacoDeceiveAbility/Jade_ShacoDeceive": {
         "ObjectName": "Jade_ShacoDeceive",
         "mScriptName": "Jade_ShacoDeceive",
         "mSpell": {
@@ -714,7 +714,10 @@
                 "__type": "ObjectTags"
             },
             "mSpellTags": [
-                "PositiveEffect_Teleport"
+                "PositiveEffect_Teleport",
+                "Trait_PlayerSelectedDashDirection",
+                "Trait_DamageAbility",
+                "Trait_Invisibility"
             ],
             "DataValues": [
                 {
@@ -862,7 +865,7 @@
                                     "__type": "StatByCoefficientCalculationPart"
                                 },
                                 {
-                                    "mDataValue": "{3ff0af5f}",
+                                    "mDataValue": "CritDamageBonus",
                                     "__type": "NamedDataValueCalculationPart"
                                 }
                             ],
@@ -1418,7 +1421,7 @@
         },
         "__type": "SpellObject"
     },
-    "{0d10c01d}": {
+    "Characters/Jade_Shaco/Spells/Jade_ShacoCritAttack": {
         "ObjectName": "Jade_ShacoCritAttack",
         "mScriptName": "Jade_ShacoCritAttack",
         "mSpell": {
@@ -1497,10 +1500,10 @@
         },
         "__type": "SpellObject"
     },
-    "{28a0c348}": {
-        "mRootSpell": "{4372373d}",
+    "Characters/Jade_Shaco/Spells/Jade_ShacoHallucinateFullAbility": {
+        "mRootSpell": "Characters/Jade_Shaco/Spells/Jade_ShacoHallucinateFullAbility/Jade_ShacoHallucinateFull",
         "mChildSpells": [
-            "{4372373d}",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoHallucinateFullAbility/Jade_ShacoHallucinateFull",
             "{67ad2ab0}"
         ],
         "mName": "Jade_ShacoHallucinateFullAbility",
@@ -1512,7 +1515,7 @@
         "mScriptName": "Jade_ShacoHallucinate",
         "__type": "SpellObject"
     },
-    "{4372373d}": {
+    "Characters/Jade_Shaco/Spells/Jade_ShacoHallucinateFullAbility/Jade_ShacoHallucinateFull": {
         "ObjectName": "Jade_ShacoHallucinateFull",
         "mScriptName": "Jade_ShacoHallucinateFull",
         "mSpell": {
@@ -2057,16 +2060,16 @@
         "mScriptName": "Jade_ShacoRPetRing",
         "__type": "SpellObject"
     },
-    "{bf208e3d}": {
-        "mRootSpell": "{44c2f6ab}",
+    "Characters/Jade_Shaco/Spells/Jade_ShacoTwoShivPoisonAbility": {
+        "mRootSpell": "Characters/Jade_Shaco/Spells/Jade_ShacoTwoShivPoisonAbility/Jade_ShacoTwoShivPoison",
         "mChildSpells": [
-            "{44c2f6ab}",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoTwoShivPoisonAbility/Jade_ShacoTwoShivPoison",
             "{d2c7cb84}"
         ],
         "mName": "Jade_ShacoTwoShivPoisonAbility",
         "__type": "AbilityObject"
     },
-    "{44c2f6ab}": {
+    "Characters/Jade_Shaco/Spells/Jade_ShacoTwoShivPoisonAbility/Jade_ShacoTwoShivPoison": {
         "ObjectName": "Jade_ShacoTwoShivPoison",
         "mScriptName": "Jade_ShacoTwoShivPoison",
         "mSpell": {
@@ -2294,9 +2297,9 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{86e02ce0}",
+            "mMissileEffectKey": "Jade_Shaco_E_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{c3f7bcac}",
+            "mHitEffectKey": "Jade_Shaco_E_tar",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -2483,8 +2486,8 @@
             "mCastType": 1,
             "castFrame": 10.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{7bf4dd3c}",
-            "mHitEffectKey": "{33518d46}",
+            "mMissileEffectKey": "Jade_Shaco_W_Box_Mis",
+            "mHitEffectKey": "Jade_Shaco_W_box_hit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
             "mClientData": {
@@ -2500,7 +2503,7 @@
         },
         "__type": "SpellObject"
     },
-    "{8bf8155d}": {
+    "Characters/Jade_Shaco/Spells/Jade_ShacoBasicAttack": {
         "ObjectName": "Jade_ShacoBasicAttack",
         "mScriptName": "Jade_ShacoBasicAttack",
         "mSpell": {
@@ -2589,7 +2592,7 @@
         },
         "__type": "SpellObject"
     },
-    "{c689bdbd}": {
+    "Characters/Jade_Shaco/Spells/Jade_ShacoBasicAttack2": {
         "ObjectName": "Jade_ShacoBasicAttack2",
         "mScriptName": "Jade_ShacoBasicAttack2",
         "mSpell": {
@@ -2964,7 +2967,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{53ef24d8}": {
+    "Characters/Jade_Shaco/CharacterRecords/Root": {
         "mCharacterName": "Jade_Shaco",
         "baseHPModifiable": {
             "baseValue": 525.0,
@@ -3076,10 +3079,10 @@
             "Jade_ShacoHallucinateFullAbility/Jade_ShacoHallucinateFull"
         ],
         "spells": [
-            "{4e7db2f1}",
-            "{cb52fef7}",
-            "{44c2f6ab}",
-            "{4372373d}"
+            "Characters/Jade_Shaco/Spells/Jade_ShacoDeceiveAbility/Jade_ShacoDeceive",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoJackInTheBoxAbility/Jade_ShacoJackInTheBox",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoTwoShivPoisonAbility/Jade_ShacoTwoShivPoison",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoHallucinateFullAbility/Jade_ShacoHallucinateFull"
         ],
         "extraSpells": [
             "Jade_Shaco_Hallucinate",
@@ -3118,11 +3121,11 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{5082605e}",
-            "{28a0c348}",
-            "{c71aea49}",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoDeceiveAbility",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoHallucinateFullAbility",
+            "Characters/Jade_Shaco/Spells/Jade_ShacoJackInTheBoxAbility",
             "{244d7ae4}",
-            "{bf208e3d}"
+            "Characters/Jade_Shaco/Spells/Jade_ShacoTwoShivPoisonAbility"
         ],
         "passiveName": "",
         "passiveLuaName": "Jade_ShacoPassive_Jade",
@@ -4116,7 +4119,7 @@
         },
         "__type": "CharScript"
     },
-    "{fc651dde}": {
+    "Characters/Jade_Shaco/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

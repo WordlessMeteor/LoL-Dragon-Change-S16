@@ -11909,7 +11909,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/bigglow02_2.TFT_Set15.tex",
+                "texture": "ASSETS/Shared/Particles/bigglow02_2.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -34126,7 +34126,7 @@
                     "__type": "ValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/Base_Mult_Windblast.TFT_Set15.tex",
+                    "textureMult": "ASSETS/Shared/Particles/Base_Mult_Windblast.tex",
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
@@ -34442,6 +34442,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

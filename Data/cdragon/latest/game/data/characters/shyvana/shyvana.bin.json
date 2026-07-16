@@ -1412,6 +1412,44 @@
             },
             "__type": "SpellDataResource"
         },
+        "BotData": {
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 512,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 32,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
         "__type": "SpellObject"
     },
     "{47b07c71}": {
@@ -1867,7 +1905,7 @@
                     "mPrecision": 1,
                     "__type": "GameCalculation"
                 },
-                "{bb85c3b6}": {
+                "Calc_Max_Health_Dragon_Damage": {
                     "mMultiplier": {
                         "mDataValue": "DamageDragonMod",
                         "__type": "NamedDataValueCalculationPart"
@@ -2533,7 +2571,7 @@
                     "mModifiedGameCalculation": "MoveSpeed",
                     "__type": "GameCalculationModified"
                 },
-                "{f468ef05}": {
+                "Calc_Missing_Health_Heal": {
                     "mFormulaParts": [
                         {
                             "mStartValue": 0.03999999910593033,
@@ -2544,7 +2582,7 @@
                     "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 },
-                "{b35447ff}": {
+                "Calc_Base_Heal": {
                     "mFormulaParts": [
                         {
                             "mStartValue": 60.0,
@@ -2650,6 +2688,32 @@
         "mBuff": {
             "mDescription": "game_buff_tooltip_ShyvanaW",
             "__type": "BuffData"
+        },
+        "BotData": {
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
         },
         "__type": "SpellObject"
     },
@@ -3449,7 +3513,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaEDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3477,7 +3541,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaQDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3505,7 +3569,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaRMultihits",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3547,7 +3611,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaPStacks",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3575,7 +3639,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaDragonEKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3603,7 +3667,7 @@
         "mDescriptionTraKey": "stat_stone_description_ShyvanaWDistance",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3757,7 +3821,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 229,
+                "EventToTrack": 230,
                 "__type": "StatStoneEventToTrack"
             }
         ],

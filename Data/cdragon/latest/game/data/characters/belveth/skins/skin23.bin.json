@@ -363,6 +363,11 @@
         "name": "Characters/Belveth/Skins/Skin23/Materials/Body_Specular_Fresnel_inst",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Belveth/Skins/Skin23/Belveth_Skin23_TX_CM.tex",
                 "addressU": 1,
@@ -385,6 +390,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -501,6 +510,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -640,6 +654,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -798,6 +817,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

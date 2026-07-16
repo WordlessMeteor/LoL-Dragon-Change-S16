@@ -752,147 +752,6 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "FacetFresnelColor",
-                    "driver": {
-                        "mDrivers": [
-                            {
-                                "driver": {
-                                    "mScriptName": "AhriR",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "colors": {
-                                    "times": [
-                                        0.0,
-                                        1.0
-                                    ],
-                                    "values": [
-                                        [
-                                            0.9873765707015991,
-                                            0.8039215803146362,
-                                            0.9647058844566345,
-                                            1.0
-                                        ],
-                                        [
-                                            0.42352941632270813,
-                                            0.6745098233222961,
-                                            1.0,
-                                            1.0
-                                        ]
-                                    ],
-                                    "__type": "VfxAnimatedColorVariableData"
-                                },
-                                "__type": "ColorGraphMaterialDriver"
-                            },
-                            {
-                                "driver": {
-                                    "mBoolDriver": {
-                                        "mAnimationNames": [
-                                            "Recall"
-                                        ],
-                                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
-                                    },
-                                    "mOnValue": 8.0,
-                                    "mTurnOnTimeSec": 7.5,
-                                    "mTurnOffTimeSec": 0.6000000238418579,
-                                    "__type": "LerpMaterialDriver"
-                                },
-                                "colors": {
-                                    "times": [
-                                        0.003322259057313204,
-                                        0.10499999672174454,
-                                        0.21666666865348816,
-                                        0.30666667222976685,
-                                        0.3933333456516266,
-                                        0.4883333444595337,
-                                        0.5916666388511658,
-                                        0.6866666674613953,
-                                        0.7766666412353516,
-                                        0.8666666746139526,
-                                        1.0
-                                    ],
-                                    "values": [
-                                        [
-                                            1.0,
-                                            0.8313725590705872,
-                                            1.0,
-                                            1.0
-                                        ],
-                                        [
-                                            1.0,
-                                            0.0,
-                                            0.9843137264251709,
-                                            1.0
-                                        ],
-                                        [
-                                            0.0,
-                                            1.0,
-                                            0.5490196347236633,
-                                            1.0
-                                        ],
-                                        [
-                                            0.0,
-                                            0.0,
-                                            1.0,
-                                            1.0
-                                        ],
-                                        [
-                                            1.0,
-                                            0.0,
-                                            0.3176470696926117,
-                                            1.0
-                                        ],
-                                        [
-                                            0.0,
-                                            1.0,
-                                            0.615686297416687,
-                                            1.0
-                                        ],
-                                        [
-                                            0.0,
-                                            0.615686297416687,
-                                            1.0,
-                                            1.0
-                                        ],
-                                        [
-                                            0.6431372761726379,
-                                            0.027450980618596077,
-                                            1.0,
-                                            1.0
-                                        ],
-                                        [
-                                            0.0,
-                                            1.0,
-                                            0.615686297416687,
-                                            1.0
-                                        ],
-                                        [
-                                            0.0,
-                                            0.7019608020782471,
-                                            1.0,
-                                            1.0
-                                        ],
-                                        [
-                                            1.0,
-                                            1.0,
-                                            1.0,
-                                            1.0
-                                        ]
-                                    ],
-                                    "__type": "VfxAnimatedColorVariableData"
-                                },
-                                "__type": "ColorGraphMaterialDriver"
-                            }
-                        ],
-                        "__type": "MinMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Leblanc/Skins/Skin59/Materials/Leblanc_Skin59_Cape_inst": {
@@ -1274,14 +1133,16 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
-        "dynamicMaterial": {
-            "__type": "DynamicMaterialDef"
-        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Leblanc/Skins/Skin59/Materials/Leblanc_Skin59_Rim_inst": {
         "name": "Characters/Leblanc/Skins/Skin59/Materials/Leblanc_Skin59_Rim_inst",
         "samplerValues": [
+            {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
             {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Leblanc/Skins/Skin59/Leblanc_Skin59_DLimbs_MaterialMask_TX_CM.SKINS_Leblanc_Skin59.tex",
@@ -1305,6 +1166,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -1421,6 +1286,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -1937,44 +1807,6 @@
                         "mElements": [
                             {
                                 "mCondition": {
-                                    "mScriptName": "AatroxR",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "BoolDriver": {
-                                        "mOperator": 1,
-                                        "mValueA": {
-                                            "__type": "FloatLiteralMaterialDriver"
-                                        },
-                                        "mValueB": {
-                                            "mDriver": {
-                                                "LoopDuration": 360.0,
-                                                "LoopTimeAsFraction": false,
-                                                "__type": "TimeMaterialDriver"
-                                            },
-                                            "mFrequency": 2.0,
-                                            "__type": "SineMaterialDriver"
-                                        },
-                                        "__type": "FloatComparisonMaterialDriver"
-                                    },
-                                    "OnValue": [
-                                        10.0,
-                                        0.0,
-                                        0.0,
-                                        0.0
-                                    ],
-                                    "OffValue": [
-                                        0.5,
-                                        0.0,
-                                        0.0,
-                                        0.0
-                                    ],
-                                    "__type": "LerpVec4LogicDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
                                     "__type": "IsDeadDynamicMaterialBoolDriver"
                                 },
                                 "mValue": {
@@ -1993,45 +1825,6 @@
                                     "mOnValue": 1.5,
                                     "mTurnOffTimeSec": 3.0,
                                     "__type": "LerpMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mScriptName": "AatroxInCombat",
-                                    "__type": "HasBuffDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "BoolDriver": {
-                                        "mOperator": 1,
-                                        "mValueA": {
-                                            "__type": "FloatLiteralMaterialDriver"
-                                        },
-                                        "mValueB": {
-                                            "mDriver": {
-                                                "LoopDuration": 360.0,
-                                                "LoopTimeAsFraction": false,
-                                                "__type": "TimeMaterialDriver"
-                                            },
-                                            "mFrequency": 5.0,
-                                            "__type": "SineMaterialDriver"
-                                        },
-                                        "__type": "FloatComparisonMaterialDriver"
-                                    },
-                                    "OnValue": [
-                                        10.0,
-                                        0.0,
-                                        0.0,
-                                        0.0
-                                    ],
-                                    "OffValue": [
-                                        0.0,
-                                        0.0,
-                                        0.0,
-                                        0.0
-                                    ],
-                                    "TurnOffTimeSec": 0.5,
-                                    "__type": "LerpVec4LogicDriver"
                                 },
                                 "__type": "SwitchMaterialDriverElement"
                             }
@@ -2105,22 +1898,6 @@
                                     "__type": "Float4LiteralMaterialDriver"
                                 },
                                 "__type": "SwitchMaterialDriverElement"
-                            },
-                            {
-                                "mCondition": {
-                                    "mGearIndex": 1,
-                                    "__type": "HasGearDynamicMaterialBoolDriver"
-                                },
-                                "mValue": {
-                                    "value": [
-                                        0.27000001072883606,
-                                        1.0,
-                                        0.8799999952316284,
-                                        0.0
-                                    ],
-                                    "__type": "Float4LiteralMaterialDriver"
-                                },
-                                "__type": "SwitchMaterialDriverElement"
                             }
                         ],
                         "mDefaultValue": {
@@ -2133,57 +1910,6 @@
                             "__type": "Float4LiteralMaterialDriver"
                         },
                         "__type": "SwitchMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "AdditiveScroll_ColorTint_R",
-                    "driver": {
-                        "BoolDriver": {
-                            "mGearIndex": 1,
-                            "__type": "HasGearDynamicMaterialBoolDriver"
-                        },
-                        "OnValue": [
-                            1.0,
-                            0.17000000178813934,
-                            0.44999998807907104,
-                            1.0
-                        ],
-                        "OffValue": [
-                            0.6700000166893005,
-                            0.0,
-                            0.0,
-                            1.0
-                        ],
-                        "TurnOnTimeSec": 1.5,
-                        "TurnOffTimeSec": 1.5,
-                        "__type": "LerpVec4LogicDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "AdditiveScroll_ColorTint_G",
-                    "Enabled": false,
-                    "driver": {
-                        "BoolDriver": {
-                            "mGearIndex": 1,
-                            "__type": "HasGearDynamicMaterialBoolDriver"
-                        },
-                        "OnValue": [
-                            1.0,
-                            0.17000000178813934,
-                            0.44999998807907104,
-                            1.0
-                        ],
-                        "OffValue": [
-                            0.0,
-                            0.6200000047683716,
-                            1.0,
-                            1.0
-                        ],
-                        "TurnOnTimeSec": 1.5,
-                        "TurnOffTimeSec": 1.5,
-                        "__type": "LerpVec4LogicDriver"
                     },
                     "__type": "DynamicMaterialParameterDef"
                 },
@@ -2254,19 +1980,6 @@
                         ],
                         "TurnOnTimeSec": 0.0,
                         "__type": "LerpVec4LogicDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                },
-                {
-                    "name": "Diffuse_Tex_BlendVlue",
-                    "driver": {
-                        "mBoolDriver": {
-                            "mGearIndex": 1,
-                            "__type": "HasGearDynamicMaterialBoolDriver"
-                        },
-                        "mTurnOnTimeSec": 0.5,
-                        "mTurnOffTimeSec": 0.5,
-                        "__type": "LerpMaterialDriver"
                     },
                     "__type": "DynamicMaterialParameterDef"
                 }
@@ -2739,9 +2452,6 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
-        "dynamicMaterial": {
-            "__type": "DynamicMaterialDef"
-        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Leblanc/Skins/Skin59/Materials/LeBlanc_Skin59_Water_ScrollingUVs_MultiLayer_Alpha_Bloom_Wobble_inst": {
@@ -3054,9 +2764,6 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
-        "dynamicMaterial": {
-            "__type": "DynamicMaterialDef"
-        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Leblanc/Skins/Skin59/Materials/Leblanc_Skin59_Dress_inst": {
@@ -3428,9 +3135,6 @@
                 "__type": "StaticMaterialChildTechniqueDef"
             }
         ],
-        "dynamicMaterial": {
-            "__type": "DynamicMaterialDef"
-        },
         "__type": "StaticMaterialDef"
     },
     "Characters/Leblanc/Skins/Skin59/Particles/Leblanc_Skin59_E_ShackleSelf_Idle_ShackleSelf01": {

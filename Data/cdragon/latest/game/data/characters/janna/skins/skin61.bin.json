@@ -28532,7 +28532,7 @@
                 },
                 "texAddressModeBase": 2,
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/Ahri_Skin28_SoftTrailGlow_1.TFT_Set14.tex",
+                    "textureMult": "ASSETS/Shared/Particles/Ahri_Skin28_SoftTrailGlow_1.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             1.0,
@@ -28809,7 +28809,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.tex",
+                "texture": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.SKINS_Yunara_Skin10.tex",
                 "frameRate": 25.0,
                 "numFrames": 9,
                 "uvScale": {
@@ -28820,7 +28820,7 @@
                     "__type": "ValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.tex",
+                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.SKINS_Yunara_Skin10.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             2.0,
@@ -30726,7 +30726,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.tex",
+                "texture": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.SKINS_Yunara_Skin10.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -30891,7 +30891,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.tex",
+                "texture": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.SKINS_Yunara_Skin10.tex",
                 "frameRate": 25.0,
                 "numFrames": 9,
                 "uvScale": {
@@ -31807,6 +31807,11 @@
         "name": "Characters/Janna/Skins/Skin61/Materials/JannaSkin56_Cloth",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Janna/Skins/Skin61/Janna_Skin61_TX_CM.tex",
                 "addressU": 1,
@@ -31829,6 +31834,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -31945,6 +31954,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -32149,6 +32163,11 @@
         "name": "Characters/Janna/Skins/Skin61/Materials/JannaSkin56_Ribbon1",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Janna/Skins/Skin61/Janna_Skin61_TX_CM.tex",
                 "addressU": 1,
@@ -32171,6 +32190,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -32288,6 +32311,11 @@
         ],
         "switches": [
             {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -32336,6 +32364,11 @@
         "name": "Characters/Janna/Skins/Skin61/Materials/Specular_Fresnel_Masked_JannaSkin56",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Janna/Skins/Skin61/Janna_Skin61_TX_CM.tex",
                 "addressU": 1,
@@ -32358,6 +32391,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -32475,6 +32512,11 @@
         ],
         "switches": [
             {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -32525,6 +32567,11 @@
         "name": "Characters/Janna/Skins/Skin61/Materials/JannaSkin51_Beads",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Janna/Skins/Skin61/Janna_Skin61_TX_CM.tex",
                 "addressU": 1,
@@ -32547,6 +32594,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -32669,6 +32720,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

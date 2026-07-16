@@ -1581,6 +1581,32 @@
                         0.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Damage_1_BAD_Ratio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Damage_2_BAD_Ratio",
+                    "values": [
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1609,6 +1635,32 @@
                                 0.042500000447034836,
                                 0.05000000074505806,
                                 0.057500001043081284
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "Damage_1_BAD_Ratio",
+                            "values": [
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "Damage_2_BAD_Ratio",
+                            "values": [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -1648,8 +1700,8 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.6000000238418579,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "Damage_1_BAD_Ratio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -1696,8 +1748,8 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.8999999761581421,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "Damage_2_BAD_Ratio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2050,6 +2102,12 @@
                         "__type": "GameCalculation"
                     },
                     "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
                 }
             ],
             "__type": "BotsSpellData"
@@ -3223,11 +3281,27 @@
                     "__type": "{150d1b92}"
                 },
                 {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
                     "{e38f54f7}": 2048,
                     "__type": "{150d1b92}"
                 },
                 {
                     "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
                     "__type": "{150d1b92}"
                 }
             ],
@@ -3546,6 +3620,13 @@
                     "__type": "{b09016f6}"
                 }
             ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
             "__type": "BotsSpellData"
         },
         "__type": "SpellObject"
@@ -3730,7 +3811,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 229,
+                "EventToTrack": 230,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3770,7 +3851,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmbessaRKills",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3798,7 +3879,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmbessaPDodging",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3826,7 +3907,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmbessaWTowershots",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3868,7 +3949,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmbessaPTiming",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3896,7 +3977,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmbessaQSweetspots",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -3924,7 +4005,7 @@
         "mDescriptionTraKey": "stat_stone_description_AmbessaEDamage",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],

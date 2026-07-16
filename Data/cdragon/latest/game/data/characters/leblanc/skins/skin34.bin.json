@@ -3394,7 +3394,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/Base_Qbv2_Gold.TFT_Set14.tex",
+                "texture": "ASSETS/Shared/Particles/Base_Qbv2_Gold.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -8173,6 +8173,11 @@
         "name": "Characters/Leblanc/Skins/Skin34/Materials/Specular_Fresnel_Masked_inst",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Leblanc/Skins/Skin34/Leblanc_Skin34_TX_CM_2.tex",
                 "addressU": 1,
@@ -8195,6 +8200,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -8317,6 +8326,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

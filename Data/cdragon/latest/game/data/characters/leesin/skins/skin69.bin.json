@@ -3,7 +3,7 @@
         "skinClassification": 2,
         "championSkinName": "LeeSinSkin69",
         "skinParent": 68,
-        "metaDataTags": "faction:ionia,gender:male,race:human,skinline:worldchampions2022",
+        "metaDataTags": "faction:ionia,gender:male,race:human,skinline:worldchampions,subskinline:t1",
         "{c3a944e7}": {
             "{1418c47f}": "{54eba930}",
             "{a2cb8e03}": {
@@ -749,6 +749,11 @@
         "name": "Characters/LeeSin/Skins/Skin69/Materials/Leesin_Skin69_Body",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/LeeSin/Skins/Skin69/LeeSin_Skin69_TX_CM.tex",
                 "addressU": 1,
@@ -771,6 +776,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -893,6 +902,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -1026,6 +1040,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

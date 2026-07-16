@@ -3,7 +3,7 @@
         "skinClassification": 2,
         "championSkinName": "JayceSkin37",
         "skinParent": 34,
-        "metaDataTags": "gender:male,faction:piltover,race:human,skinline:worldchampions2022",
+        "metaDataTags": "gender:male,faction:piltover,race:human,skinline:worldchampions,subskinline:t1",
         "{c3a944e7}": {
             "{1418c47f}": "{a0fe6b5e}",
             "{a2cb8e03}": {
@@ -686,6 +686,11 @@
         "name": "Characters/Jayce/Skins/Skin37/Materials/Jayce_Skin37_Body",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Jayce/Skins/Skin37/Jayce_Skin37_TX_CM.tex",
                 "addressU": 1,
@@ -708,6 +713,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -830,6 +839,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

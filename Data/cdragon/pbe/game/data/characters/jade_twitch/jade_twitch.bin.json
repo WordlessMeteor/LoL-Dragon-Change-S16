@@ -269,17 +269,38 @@
         },
         "__type": "SpellObject"
     },
-    "{2950adb3}": {
-        "mRootSpell": "{437075c6}",
+    "{d1650076}": {
+        "ObjectName": "Jade_Twitch_Rexpeita",
+        "mScriptName": "Jade_Twitch_Rexpeita",
+        "mSpell": {
+            "ImgIconPath": "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_Ambush.project_jade.dds",
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_Twitch_Rexpeita",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Jade_Twitch_Rexpeita_Name",
+                    "keyTooltip": "Buff_Jade_Twitch_Rexpeita_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Twitch/Spells/Jade_TwitchRAbility": {
+        "mRootSpell": "Characters/Jade_Twitch/Spells/Jade_TwitchRAbility/Jade_TwitchR",
         "mChildSpells": [
-            "{437075c6}",
+            "Characters/Jade_Twitch/Spells/Jade_TwitchRAbility/Jade_TwitchR",
             "{da2e76f2}",
             "{b7dcca83}"
         ],
         "mName": "Jade_TwitchRAbility",
         "__type": "AbilityObject"
     },
-    "{437075c6}": {
+    "Characters/Jade_Twitch/Spells/Jade_TwitchRAbility/Jade_TwitchR": {
         "ObjectName": "Jade_TwitchR",
         "mScriptName": "Jade_TwitchR",
         "mSpell": {
@@ -658,7 +679,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 4000.0,
-            "mMissileEffectKey": "{92867cce}",
+            "mMissileEffectKey": "Jade_Twitch_R_mis",
             "mLineWidth": 60.0,
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "{d17aa4da}",
@@ -692,24 +713,24 @@
         },
         "__type": "SpellObject"
     },
-    "{4a291068}": {
-        "mRootSpell": "{730ddad2}",
+    "Characters/Jade_Twitch/Spells/Jade_TwitchQAbility": {
+        "mRootSpell": "Characters/Jade_Twitch/Spells/Jade_TwitchQAbility/Jade_TwitchQ",
         "mChildSpells": [
-            "{730ddad2}",
+            "Characters/Jade_Twitch/Spells/Jade_TwitchQAbility/Jade_TwitchQ",
             "{b781a4fa}"
         ],
         "mName": "Jade_TwitchQAbility",
         "__type": "AbilityObject"
     },
-    "{cb0291c4}": {
-        "mRootSpell": "{54efe24a}",
+    "Characters/Jade_Twitch/Spells/Jade_TwitchEAbility": {
+        "mRootSpell": "Characters/Jade_Twitch/Spells/Jade_TwitchEAbility/Jade_TwitchE",
         "mChildSpells": [
-            "{54efe24a}"
+            "Characters/Jade_Twitch/Spells/Jade_TwitchEAbility/Jade_TwitchE"
         ],
         "mName": "Jade_TwitchEAbility",
         "__type": "AbilityObject"
     },
-    "{54efe24a}": {
+    "Characters/Jade_Twitch/Spells/Jade_TwitchEAbility/Jade_TwitchE": {
         "ObjectName": "Jade_TwitchE",
         "mScriptName": "Jade_TwitchE",
         "mSpell": {
@@ -1009,7 +1030,7 @@
         },
         "__type": "SpellObject"
     },
-    "{730ddad2}": {
+    "Characters/Jade_Twitch/Spells/Jade_TwitchQAbility/Jade_TwitchQ": {
         "ObjectName": "Jade_TwitchQ",
         "mScriptName": "Jade_TwitchQ",
         "mSpell": {
@@ -1378,15 +1399,15 @@
         },
         "__type": "SpellObject"
     },
-    "{ba888856}": {
-        "mRootSpell": "{8ca1c482}",
+    "Characters/Jade_Twitch/Spells/Jade_TwitchWAbility": {
+        "mRootSpell": "Characters/Jade_Twitch/Spells/Jade_TwitchWAbility/Jade_TwitchW",
         "mChildSpells": [
-            "{8ca1c482}"
+            "Characters/Jade_Twitch/Spells/Jade_TwitchWAbility/Jade_TwitchW"
         ],
         "mName": "Jade_TwitchWAbility",
         "__type": "AbilityObject"
     },
-    "{8ca1c482}": {
+    "Characters/Jade_Twitch/Spells/Jade_TwitchWAbility/Jade_TwitchW": {
         "ObjectName": "Jade_TwitchW",
         "mScriptName": "Jade_TwitchW",
         "mSpell": {
@@ -1465,7 +1486,7 @@
                         },
                         {
                             "mPart1": {
-                                "mDataValue": "{fe0108cc}",
+                                "mDataValue": "PassiveStackSlowPercent",
                                 "__type": "NamedDataValueCalculationPart"
                             },
                             "mPart2": {
@@ -1654,7 +1675,7 @@
         },
         "__type": "SpellObject"
     },
-    "{900c8417}": {
+    "Characters/Jade_Twitch/Spells/Jade_TwitchBasicAttack": {
         "ObjectName": "Jade_TwitchBasicAttack",
         "mScriptName": "Jade_TwitchBasicAttack",
         "mSpell": {
@@ -1741,9 +1762,9 @@
             "mCastType": 1,
             "castFrame": 12.739999771118164,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{6fc3f15e}",
+            "mMissileEffectKey": "Jade_Twitch_AA_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{4a4f568a}",
+            "mHitEffectKey": "Jade_Twitch_AA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1764,7 +1785,7 @@
         },
         "__type": "SpellObject"
     },
-    "{e7b404ac}": {
+    "Characters/Jade_Twitch/Spells/Jade_TwitchBasicAttack3": {
         "ObjectName": "Jade_TwitchBasicAttack3",
         "mScriptName": "Jade_TwitchBasicAttack3",
         "mSpell": {
@@ -1852,9 +1873,9 @@
             "mCastType": 1,
             "castFrame": 13.15999984741211,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{6fc3f15e}",
+            "mMissileEffectKey": "Jade_Twitch_AA_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{4a4f568a}",
+            "mHitEffectKey": "Jade_Twitch_AA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1875,7 +1896,7 @@
         },
         "__type": "SpellObject"
     },
-    "{e8b4063f}": {
+    "Characters/Jade_Twitch/Spells/Jade_TwitchBasicAttack2": {
         "ObjectName": "Jade_TwitchBasicAttack2",
         "mScriptName": "Jade_TwitchBasicAttack2",
         "mSpell": {
@@ -1963,9 +1984,9 @@
             "mCastType": 1,
             "castFrame": 13.15999984741211,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{6fc3f15e}",
+            "mMissileEffectKey": "Jade_Twitch_AA_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{4a4f568a}",
+            "mHitEffectKey": "Jade_Twitch_AA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1986,7 +2007,7 @@
         },
         "__type": "SpellObject"
     },
-    "{f6a68fcf}": {
+    "Characters/Jade_Twitch/Spells/Jade_TwitchCritAttack": {
         "ObjectName": "Jade_TwitchCritAttack",
         "mScriptName": "Jade_TwitchCritAttack",
         "mSpell": {
@@ -2074,7 +2095,7 @@
             "mCastType": 1,
             "castFrame": 12.739999771118164,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{6fc3f15e}",
+            "mMissileEffectKey": "Jade_Twitch_AA_mis",
             "mHitEffectKey": "{ea37fc3b}",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -2242,7 +2263,7 @@
         },
         "__type": "CharScript"
     },
-    "{28d79950}": {
+    "Characters/Jade_Twitch/CAC/Jade_Twitch_Skin07": {
         "mCooldown": 15.0,
         "mSituations": {
             "BuyItem": {
@@ -2691,7 +2712,7 @@
         "mObjectPath": "Characters/Jade_Twitch/CAC/Jade_Twitch_Skin07",
         "__type": "ContextualActionData"
     },
-    "{37d7b0ed}": {
+    "Characters/Jade_Twitch/CAC/Jade_Twitch_Skin08": {
         "mCooldown": 15.0,
         "mSituations": {
             "BuyItem": {
@@ -3144,7 +3165,7 @@
         "mObjectPath": "Characters/Jade_Twitch/CAC/Jade_Twitch_Skin08",
         "__type": "ContextualActionData"
     },
-    "{37d9ef84}": {
+    "Characters/Jade_Twitch/CAC/Jade_Twitch_Skin36": {
         "mCooldown": 15.0,
         "mSituations": {
             "BuyItem": {
@@ -3593,10 +3614,10 @@
         "mObjectPath": "Characters/Jade_Twitch/CAC/Jade_Twitch_Skin36",
         "__type": "ContextualActionData"
     },
-    "{434cfeb5}": {
+    "Characters/Jade_Twitch/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{9f85fa8d}": {
+    "Characters/Jade_Twitch/CharacterRecords/Root": {
         "mCharacterName": "Jade_Twitch",
         "baseHPModifiable": {
             "baseValue": 470.0,
@@ -3706,10 +3727,10 @@
             "Jade_TwitchRAbility/Jade_TwitchR"
         ],
         "spells": [
-            "{730ddad2}",
-            "{8ca1c482}",
-            "{54efe24a}",
-            "{437075c6}"
+            "Characters/Jade_Twitch/Spells/Jade_TwitchQAbility/Jade_TwitchQ",
+            "Characters/Jade_Twitch/Spells/Jade_TwitchWAbility/Jade_TwitchW",
+            "Characters/Jade_Twitch/Spells/Jade_TwitchEAbility/Jade_TwitchE",
+            "Characters/Jade_Twitch/Spells/Jade_TwitchRAbility/Jade_TwitchR"
         ],
         "extraSpells": [
             "",
@@ -3749,10 +3770,10 @@
         ],
         "mAbilities": [
             "{120f81fe}",
-            "{cb0291c4}",
-            "{2950adb3}",
-            "{4a291068}",
-            "{ba888856}"
+            "Characters/Jade_Twitch/Spells/Jade_TwitchEAbility",
+            "Characters/Jade_Twitch/Spells/Jade_TwitchRAbility",
+            "Characters/Jade_Twitch/Spells/Jade_TwitchQAbility",
+            "Characters/Jade_Twitch/Spells/Jade_TwitchWAbility"
         ],
         "passiveName": "Spell_Jade_TwitchDeadlyVenomMarker_Name",
         "passiveLuaName": "",

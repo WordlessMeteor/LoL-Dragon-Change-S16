@@ -9,18 +9,6 @@
                         "mIsLoop": false,
                         "__type": "SoundEventData"
                     },
-                    "{c54c52be}": {
-                        "mStartFrame": 15.0,
-                        "mJointNameToOverride": "GhostSword",
-                        "mJointNameToSnapTo": "Stool",
-                        "__type": "JointSnapEventData"
-                    },
-                    "{ecfc39c2}": {
-                        "mStartFrame": 12.0,
-                        "mJointNameToOverride": "Sword",
-                        "mJointNameToSnapTo": "Instrument",
-                        "__type": "JointSnapEventData"
-                    },
                     "Body_Fade": {
                         "mStartFrame": 15.0,
                         "mHideSubmeshList": [
@@ -33,7 +21,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Death_New.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Death_New.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -74,7 +62,7 @@
                 },
                 "mTickDuration": 0.01666666753590107,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/TFT16_Yone_Run.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/TFT16_Yone_Run.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -83,7 +71,7 @@
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.10000000149011612,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Idle01.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Idle01.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -91,7 +79,7 @@
             "Spell4": {
                 "mClipNameList": [
                     "Spell4_In",
-                    "{bf34cf4c}",
+                    "Spell4_Out_NotMoving",
                     "{663298ef}"
                 ],
                 "__type": "SequencerClipData"
@@ -101,7 +89,7 @@
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.03333299979567528,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell4_dash.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell4_dash.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -124,12 +112,12 @@
                 },
                 "mTickDuration": 0.01666666753590107,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell4_in.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell4_in.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
-            "{bf34cf4c}": {
+            "Spell4_Out_NotMoving": {
                 "mFlags": 4,
                 "mTrackDataName": "{3dddb9fd}",
                 "mEventDataMap": {
@@ -155,7 +143,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell4_out_notMoving.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell4_out_notMoving.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -164,14 +152,14 @@
                 "Updater": {
                     "__type": "IsMovingParametricUpdater"
                 },
-                "mTrueConditionClipName": "{656f208c}",
+                "mTrueConditionClipName": "Spell4_ToWalk",
                 "mFalseConditionClipName": "Spell4_ToIdle",
                 "__type": "ConditionBoolClipData"
             },
-            "{656f208c}": {
+            "Spell4_ToWalk": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell4_toWalk.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell4_toWalk.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -189,7 +177,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell4_out_toIdle.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell4_out_toIdle.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -213,7 +201,7 @@
                 },
                 "mTickDuration": 0.03333299979567528,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell3_end1.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell3_end1.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -246,7 +234,7 @@
                 },
                 "mTickDuration": 0.03333299979567528,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell3_end2.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Spell3_end2.anm",
                     "__type": "AnimationResourceData"
                 },
                 "EndFrame": 10.0,
@@ -283,7 +271,7 @@
             "{01777011}": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack01.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack01.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -291,7 +279,7 @@
             "Attack1_ToIdle": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack01_toIdle01.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack01_toIdle01.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -315,7 +303,7 @@
                 },
                 "mTickDuration": 0.03333299979567528,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack02.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack02.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -323,7 +311,7 @@
             "Attack2_ToIdle": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack02_toIdle01.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack02_toIdle01.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -332,7 +320,7 @@
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.03333299979567528,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack03.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack03.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -340,7 +328,7 @@
             "Attack3_ToIdle": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack03_toIdle01.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack03_toIdle01.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -357,7 +345,7 @@
                 },
                 "mTickDuration": 0.03333299979567528,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack04.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack04.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -365,7 +353,7 @@
             "Attack4_ToIdle": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack04_toIdle01.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Attack04_toIdle01.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -374,7 +362,7 @@
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Channel_loop.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/Yone_Channel_loop.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -389,7 +377,7 @@
             "Spell3_BodyIn": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/TFT16_Yone_Spell3_BodyIn.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/TFT16_Yone_Spell3_BodyIn.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -397,7 +385,7 @@
             "Spell3_BodyLoop": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/TFT16_Yone_Spell3_BodyLoop.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/TFT16_Yone_Spell3_BodyLoop.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -407,7 +395,7 @@
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.03333299979567528,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/TFT16_Yone_Spell3_dash.TFT_Set16.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT16_Yone/Skins/Base/Animations/TFT16_Yone_Spell3_dash.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -416,29 +404,6 @@
         "mMaskDataMap": {
             "Wind": {
                 "mWeightList": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
                     0.0,
                     0.0,
                     0.0,
@@ -722,29 +687,6 @@
                     0.0,
                     0.0,
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
                     0.0
                 ],
                 "__type": "MaskData"
@@ -752,29 +694,6 @@
             "{8f3b0f3d}": {
                 "mId": 2,
                 "mWeightList": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
                     0.0,
                     0.0,
                     0.0,
@@ -1057,35 +976,6 @@
                     1.0,
                     1.0,
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
                     0.0
                 ],
                 "__type": "MaskData"
@@ -1230,70 +1120,12 @@
                     1.0,
                     1.0,
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
                     0.0
                 ],
                 "__type": "MaskData"
             },
             "{7136e1bc}": {
                 "mWeightList": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
                     0.0,
                     0.0,
                     0.0,
@@ -1576,35 +1408,6 @@
                     0.0,
                     0.0,
                     0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
                     0.0
                 ],
                 "__type": "MaskData"
@@ -1748,29 +1551,6 @@
                     1.0,
                     1.0,
                     1.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
                     0.0,
                     0.0
                 ],

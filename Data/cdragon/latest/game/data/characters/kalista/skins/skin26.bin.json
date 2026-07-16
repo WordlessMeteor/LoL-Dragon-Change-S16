@@ -1108,7 +1108,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Shared/Particles/3026_Items_Einstein_01_mult.TFT_Set15.tex",
+                    "erosionMapName": "ASSETS/Shared/Particles/3026_Items_Einstein_01_mult.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "disableBackfaceCull": true,
@@ -23204,7 +23204,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Shared/Particles/3026_Items_Einstein_01_mult.TFT_Set15.tex",
+                    "erosionMapName": "ASSETS/Shared/Particles/3026_Items_Einstein_01_mult.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "disableBackfaceCull": true,
@@ -34021,7 +34021,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/3026_Items_ball32_02.TFT_Set14.tex",
+                "texture": "ASSETS/Shared/Particles/3026_Items_ball32_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -34802,7 +34802,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/3026_Items_ball32_02.TFT_Set14.tex",
+                "texture": "ASSETS/Shared/Particles/3026_Items_ball32_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -34877,7 +34877,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/3026_Items_ball32_02.TFT_Set14.tex",
+                "texture": "ASSETS/Shared/Particles/3026_Items_ball32_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -35622,6 +35622,11 @@
         "name": "Characters/Kalista/Skins/Skin26/Materials/Specular_Fresnel_Masked_inst",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Kalista/Skins/Skin26/Kalista_Skin26_TX_CM.tex",
                 "addressU": 1,
@@ -35644,6 +35649,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -35766,6 +35775,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

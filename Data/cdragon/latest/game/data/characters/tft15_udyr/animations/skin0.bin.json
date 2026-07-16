@@ -11,7 +11,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/Death_New.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/Death_New.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -19,7 +19,7 @@
             "Run": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Run.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Run.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -29,7 +29,7 @@
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.10000000149011612,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Idle1.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Idle1.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -61,7 +61,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_dance_intro.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_dance_intro.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -87,7 +87,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_dance_loop.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_dance_loop.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -95,23 +95,23 @@
             "Attack1_Start": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack1.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack1.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
-            "{dbc2c725}": {
+            "Attack1_IntoIdle": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack1_IntoIdle.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack1_IntoIdle.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
-            "{d650550a}": {
+            "Attack2_IntoIdle": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack2_IntoIdle.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack2_IntoIdle.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -119,7 +119,7 @@
             "Attack2_Start": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack2_Start.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack2_Start.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -127,7 +127,7 @@
             "Attack2": {
                 "mClipNameList": [
                     "Attack2_Start",
-                    "{d650550a}"
+                    "Attack2_IntoIdle"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -140,12 +140,12 @@
             },
             "{bd60ee38}": {
                 "mClipNameList": [
-                    "{990e84bf}",
-                    "{b23e7c6e}"
+                    "Attack1_Phoenix_Start",
+                    "Attack1_Phoenix_ToIdle"
                 ],
                 "__type": "SequencerClipData"
             },
-            "{990e84bf}": {
+            "Attack1_Phoenix_Start": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -156,12 +156,12 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack1_Phoenix_Start.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack1_Phoenix_Start.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
-            "{b23e7c6e}": {
+            "Attack1_Phoenix_ToIdle": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -198,19 +198,19 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack1_Phoenix_ToIdle.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack1_Phoenix_ToIdle.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
             "{fb3b2acd}": {
                 "mClipNameList": [
-                    "{7852b276}",
-                    "{6a911b21}"
+                    "Attack2_Phoenix_Start",
+                    "Attack2_Phoenix_ToIdle"
                 ],
                 "__type": "SequencerClipData"
             },
-            "{7852b276}": {
+            "Attack2_Phoenix_Start": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -221,12 +221,12 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack2_Phoenix_Start.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack2_Phoenix_Start.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
-            "{6a911b21}": {
+            "Attack2_Phoenix_ToIdle": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -263,12 +263,12 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack2_Phoenix_ToIdle.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack2_Phoenix_ToIdle.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
-            "{9208c037}": {
+            "Idle_Phoenix": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -279,12 +279,12 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Idle_Phoenix.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Idle_Phoenix.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
-            "{453a9302}": {
+            "Run_Phoenix": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -295,7 +295,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Run_Phoenix.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Run_Phoenix.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -322,12 +322,12 @@
                 },
                 "mTickDuration": 0.02857142873108387,
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Spell_Base.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Spell_Base.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
-            "{60193d7c}": {
+            "Spell_Transform_ToIdle": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -338,12 +338,12 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Spell_Transform_ToIdle.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Spell_Transform_ToIdle.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
-            "{9bbd1de5}": {
+            "Spell_Transform_Start": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{dc5e9f4a}": {
@@ -354,26 +354,26 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Spell_Transform_Start.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Spell_Transform_Start.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
             },
             "{3a0ecf8a}": {
                 "mClipNameList": [
-                    "{9bbd1de5}",
-                    "{60193d7c}"
+                    "Spell_Transform_Start",
+                    "Spell_Transform_ToIdle"
                 ],
                 "__type": "SequencerClipData"
             },
             "Attack1": {
                 "mClipNameList": [
                     "Attack1_Start",
-                    "{dbc2c725}"
+                    "Attack1_IntoIdle"
                 ],
                 "__type": "SequencerClipData"
             },
-            "{817454ff}": {
+            "Spell_Base_ToIdle": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -384,7 +384,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Spell_Base_toIdle.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Spell_Base_toIdle.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -392,14 +392,14 @@
             "Spell": {
                 "mClipNameList": [
                     "Spell_BASE",
-                    "{817454ff}"
+                    "Spell_Base_ToIdle"
                 ],
                 "__type": "SequencerClipData"
             },
             "Crit_Start": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Crit_Start.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Crit_Start.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -407,7 +407,7 @@
             "Crit_ToIdle": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Crit_toIdle.TFT_Set15.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Crit_toIdle.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"

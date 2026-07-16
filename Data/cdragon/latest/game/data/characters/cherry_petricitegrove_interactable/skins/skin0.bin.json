@@ -7826,6 +7826,11 @@
         "name": "Characters/Cherry_PetriciteGrove_Interactable/Skins/Skin0/Materials/Cherry_PetriciteGrove_Interactable_Skin0_Metal_inst",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Cherry_PetriciteGrove_Interactable/Skins/Base/Cherry_PetriciteGrove_Interactable_Base_TX_CM.Arena_2026_S2.tex",
                 "addressU": 1,
@@ -7848,6 +7853,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -7970,6 +7979,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

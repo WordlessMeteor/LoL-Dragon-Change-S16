@@ -1613,7 +1613,7 @@
                 },
                 "texture": "ASSETS/Characters/Sylas/Skins/Skin34/Particles/Sylas_Skin34_Q_GroundImpact01.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/3026_Items_Trail_Up.TFT_Set15.tex",
+                    "textureMult": "ASSETS/Shared/Particles/3026_Items_Trail_Up.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             1.0,
@@ -2663,7 +2663,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Shared/Particles/Aatrox_Base_SmokeErode.TFT_Set12.tex",
+                    "erosionMapName": "ASSETS/Shared/Particles/Aatrox_Base_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -14986,7 +14986,7 @@
                 "isUniformScale": 1,
                 "texture": "ASSETS/Characters/Sylas/Skins/Skin34/Particles/Sylas_Skin34_Recall_Body01.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.tex",
+                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.SKINS_Yunara_Skin10.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             3.0,
@@ -15116,7 +15116,7 @@
                     "__type": "ValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.tex",
+                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.SKINS_Yunara_Skin10.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             0.20000000298023224,
@@ -20090,7 +20090,7 @@
                 "isUniformScale": 1,
                 "texture": "ASSETS/Characters/Sylas/Skins/Skin34/Particles/Sylas_Skin34_Recall_chains01.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.tex",
+                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.SKINS_Yunara_Skin10.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             0.5,
@@ -20165,7 +20165,7 @@
                 "isUniformScale": 1,
                 "texture": "ASSETS/Characters/Sylas/Skins/Skin34/Particles/Sylas_Skin34_Recall_chains01.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.tex",
+                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.SKINS_Yunara_Skin10.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             -0.20000000298023224,
@@ -35844,7 +35844,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/3026_Items_ball32_02.TFT_Set14.tex",
+                "texture": "ASSETS/Shared/Particles/3026_Items_ball32_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -61722,7 +61722,7 @@
                 "isUniformScale": 1,
                 "texture": "ASSETS/Shared/Particles/DefaultColorOverlifetime.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.tex",
+                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.SKINS_Yunara_Skin10.tex",
                     "ParticleIntegratedUvScrollMult": {
                         "constantValue": [
                             1.0,
@@ -108910,7 +108910,7 @@
                 },
                 "texture": "ASSETS/Characters/Sylas/Skins/Skin34/Particles/Sylas_Skin34_Q_Glow06.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.tex",
+                    "textureMult": "ASSETS/Shared/Particles/3026_Base_Vertical_Mask_Wispy.SKINS_Yunara_Skin10.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             0.0,
@@ -109811,7 +109811,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.TFT_Set15.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -121594,6 +121594,11 @@
         "name": "Characters/Sylas/Skins/Skin34/Materials/Specular_Fresnel_Masked_inst",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Sylas/Skins/Skin34/Sylas_Skin34_TX_CM.tex",
                 "addressU": 1,
@@ -121616,6 +121621,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -121738,6 +121747,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -122008,6 +122022,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

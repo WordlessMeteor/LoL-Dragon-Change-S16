@@ -290,6 +290,41 @@
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "Spell": "{14a1d4d5}",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "BuffType": 10,
+                                "__type": "HasBuffOfTypeBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        }
+                    ],
+                    "__type": "AllTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Avatar",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "L_Weapon",
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Weapon_L",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "R_Weapon",
+                        "effectKey": "Ambessa_P_SpecialAttack_Ready_Weapon_R",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            },
+            {
+                "OwnerCondition": {
                     "mScriptName": "AmbessaSkin1EmpoweredState",
                     "__type": "HasBuffDynamicMaterialBoolDriver"
                 },
@@ -9195,6 +9230,7 @@
         "DATA/Characters/Ambessa/Ambessa_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7.bin",
         "DATA/Characters/Ambessa/Ambessa.bin",
         "DATA/Characters/Ambessa/Animations/Skin1.bin",
+        "DATA/Characters/Ambessa/Ambessa_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin10_Skins_Skin11_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin8_Skins_Skin9.bin",
         "DATA/Characters/Ambessa/Ambessa_Multi_Skins_Skin1_Skins_Skin2_Skins_Skin3_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7.bin"
     ]
 }

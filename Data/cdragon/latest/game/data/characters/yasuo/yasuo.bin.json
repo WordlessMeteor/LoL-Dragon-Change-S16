@@ -264,7 +264,8 @@
                 "Trait_RecastOrReplaceSpell",
                 "Trait_Strike",
                 "Trait_Target_Directional",
-                "Trait_AoE"
+                "Trait_AoE",
+                "Trait_NotBenefitFromHaste"
             ],
             "DataValues": [
                 {
@@ -2325,7 +2326,8 @@
             "mSpellTags": [
                 "PositiveEffect_MoveBlock",
                 "Trait_DamageAbility",
-                "Trait_Low_Damage"
+                "Trait_Low_Damage",
+                "Trait_NotBenefitFromHaste"
             ],
             "mEffectAmount": [
                 {
@@ -2641,6 +2643,24 @@
                         "__type": "GameCalculation"
                     },
                     "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
                 }
             ],
             "__type": "BotsSpellData"
@@ -3273,6 +3293,23 @@
                         "__type": "GameCalculation"
                     },
                     "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
                 }
             ],
             "__type": "BotsSpellData"
@@ -7557,6 +7594,31 @@
                 {
                     "{0717e686}": false,
                     "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 64,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
                 }
             ],
             "__type": "BotsSpellData"
@@ -7917,7 +7979,7 @@
         "mDescriptionTraKey": "stat_stone_description_YasuoWBlocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -7945,7 +8007,7 @@
         "mDescriptionTraKey": "stat_stone_description_YasuoRMulti",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -7973,7 +8035,7 @@
         "mDescriptionTraKey": "stat_stone_description_YasuoLongRangeQ3",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -8001,7 +8063,7 @@
         "mDescriptionTraKey": "stat_stone_description_YasuoEHits",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -8029,7 +8091,7 @@
         "mDescriptionTraKey": "stat_stone_description_YasuoPBlocks",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -8057,7 +8119,7 @@
         "mDescriptionTraKey": "stat_stone_description_YasuoEQCombos",
         "EventsToTrack": [
             {
-                "EventToTrack": 252,
+                "EventToTrack": 253,
                 "__type": "StatStoneEventToTrack"
             }
         ],
@@ -8210,7 +8272,7 @@
                 "__type": "StatStoneEventToTrack"
             },
             {
-                "EventToTrack": 229,
+                "EventToTrack": 230,
                 "__type": "StatStoneEventToTrack"
             }
         ],

@@ -190,31 +190,31 @@
                 "./condition-parameter/index.js": 75,
                 "./content-block/index.js": 77,
                 "./context-menu/index.js": 79,
-                "./dialog-frame/index.js": 84,
-                "./dropdown-optgroup/index.js": 87,
-                "./dropdown-option/index.js": 89,
-                "./flat-button-group/index.js": 93,
-                "./flat-button-secondary/index.js": 96,
+                "./dialog-frame/index.js": 93,
+                "./dropdown-optgroup/index.js": 96,
+                "./dropdown-option/index.js": 98,
+                "./flat-button-group/index.js": 102,
+                "./flat-button-secondary/index.js": 105,
                 "./flat-button/index.js": 32,
-                "./flat-checkbox/index.js": 99,
-                "./flat-dropdown/index.js": 101,
-                "./flat-input/index.js": 109,
-                "./flat-textarea/index.js": 111,
-                "./flyout-frame/index.js": 114,
-                "./framed-dropdown/index.js": 119,
-                "./full-page-backdrop/index.js": 121,
-                "./game-data-markup/index.js": 124,
-                "./hextech-ui-badge/index.js": 125,
-                "./info-icon/index.js": 128,
-                "./lottie/index.js": 134,
-                "./navigation-bar/index.js": 136,
-                "./navigation-item/index.js": 139,
-                "./parallax-background/Animation.js": 142,
-                "./parallax-background/Layer.js": 143,
-                "./parallax-background/Parallax.js": 144,
-                "./parallax-background/index.js": 145,
-                "./perfect-scrollable/index.js": 148,
-                "./player-name/index.js": 174,
+                "./flat-checkbox/index.js": 108,
+                "./flat-dropdown/index.js": 110,
+                "./flat-input/index.js": 118,
+                "./flat-textarea/index.js": 120,
+                "./flyout-frame/index.js": 123,
+                "./framed-dropdown/index.js": 128,
+                "./full-page-backdrop/index.js": 130,
+                "./game-data-markup/index.js": 133,
+                "./hextech-ui-badge/index.js": 134,
+                "./info-icon/index.js": 137,
+                "./lottie/index.js": 143,
+                "./navigation-bar/index.js": 145,
+                "./navigation-item/index.js": 148,
+                "./parallax-background/Animation.js": 151,
+                "./parallax-background/Layer.js": 152,
+                "./parallax-background/Parallax.js": 153,
+                "./parallax-background/index.js": 154,
+                "./perfect-scrollable/index.js": 157,
+                "./player-name/index.js": 183,
                 "./primary-magic-button/index.js": 186,
                 "./purchase-button/index.js": 189,
                 "./radial-progress/index.js": 192,
@@ -5284,21 +5284,22 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = s(n(80)),
-                i = s(n(37)),
-                a = n(81);
+                o = l(n(80)),
+                i = l(n(37)),
+                a = n(81),
+                s = l(n(82));
 
-            function s(e) {
+            function l(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            class l extends r.webComponents.ShadowElement {
+            class d extends r.webComponents.ShadowElement {
                 templateMarkup() {
-                    return n(82)
+                    return n(91)
                 }
                 stylesheetMarkup() {
-                    return n(83)
+                    return n(92)
                 }
                 constructor() {
                     super(), this.defaultOptions = {
@@ -5307,7 +5308,7 @@
                         rootMenuClass: "context-menu-root",
                         subMenuClass: null,
                         openSubmenuClass: "open"
-                    }, this.itemCount = 0, this.removed = !1, this.handleFocusOut = this.handleFocusOut.bind(this), this.styleElement = this.shadowRoot.firstElementChild, this.contextMenuElement = this.shadowRoot.lastElementChild, this.menuItemTemplate = this.contextMenuElement.firstElementChild, this.menuItemTemplate.remove(), this.contextMenuElement.addEventListener("click", this.handleClick.bind(this)), this.contextMenuElement.addEventListener("mouseover", this.handleMouseOver.bind(this)), this.contextMenuElement.addEventListener("mouseout", this.handleMouseOut.bind(this))
+                    }, this.itemCount = 0, this.removed = !1, this._tooltipElements = [], this.handleFocusOut = this.handleFocusOut.bind(this), this.styleElement = this.shadowRoot.firstElementChild, this.contextMenuElement = this.shadowRoot.lastElementChild, this.menuItemTemplate = this.contextMenuElement.firstElementChild, this.menuItemTemplate.remove(), this.contextMenuElement.addEventListener("click", this.handleClick.bind(this)), this.contextMenuElement.addEventListener("mouseover", this.handleMouseOver.bind(this)), this.contextMenuElement.addEventListener("mouseout", this.handleMouseOut.bind(this))
                 }
                 connectedCallback() {
                     super.connectedCallback(), this.style.position = "absolute", this.style.zIndex = a.Z_INDEX_CONSTANTS.CONTEXT_MENUS
@@ -5322,7 +5323,7 @@
                     this._setMenuItems(e, Object.assign({}, this.defaultOptions, t))
                 }
                 _setMenuItems(e, t) {
-                    e = l.filterVisible(e), this.itemCount = e.length, this.menuOptions = t, this._clearMenu(), this._setupMenu(e, t), this._setMenuCSS(t.css);
+                    e = d.filterVisible(e), this.itemCount = e.length, this.menuOptions = t, this._clearMenu(), this._setupMenu(e, t), this._setMenuCSS(t.css);
                     for (let t = 0; t < e.length; t++) {
                         const n = e[t],
                             r = this.contextMenuElement.children[t];
@@ -5336,10 +5337,39 @@
                             } else r.classList.remove("with-icon"), r.textContent = n.label;
                             n.class && r.classList.add(n.class)
                         }
+                        n.tooltip && this._assignTooltip(r, n.tooltip)
                     }
                 }
+                _assignTooltip(e, t) {
+                    const n = "string" == typeof t ? this._createTooltipElement(t) : t;
+                    s.default.assign(e, n, {}, {
+                        targetAnchor: {
+                            x: "right",
+                            y: "center"
+                        },
+                        tooltipAnchor: {
+                            x: "left",
+                            y: "center"
+                        },
+                        positioningStrategy: "flip",
+                        restrictArea: "safe-window",
+                        type: "system",
+                        showDelay: 300
+                    }), this._tooltipElements.push(e)
+                }
+                _createTooltipElement(e) {
+                    const t = this.ownerDocument.createElement("lol-uikit-tooltip"),
+                        n = this.ownerDocument.createElement("lol-uikit-content-block");
+                    n.setAttribute("type", "tooltip-system");
+                    const r = this.ownerDocument.createElement("p");
+                    return r.textContent = e, n.appendChild(r), t.appendChild(n), t
+                }
                 _clearMenu() {
-                    this.contextMenuElement.className = "context-menu", this.contextMenuElement.textContent = ""
+                    this._clearTooltips(), this.contextMenuElement.className = "context-menu", this.contextMenuElement.textContent = ""
+                }
+                _clearTooltips() {
+                    for (const e of this._tooltipElements) s.default.unassign(e);
+                    this._tooltipElements = []
                 }
                 _setupMenu(e, t) {
                     this.contextMenuElement.classList.add(t.menuClass), !this.parentContextMenu && t.rootMenuClass ? this.contextMenuElement.classList.add(t.rootMenuClass) : this.parentContextMenu && t.subMenuClass && this.contextMenuElement.classList.add(t.subMenuClass), this.openSubmenuClass = t.openSubmenuClass, this._setupMenuItems(e)
@@ -5402,7 +5432,7 @@
                 getContainer() {
                     const {
                         document: e
-                    } = l;
+                    } = d;
                     return window.testsSandbox || this.container || this.parentContextMenu && this.parentContextMenu.container || e.body
                 }
                 show() {
@@ -5410,7 +5440,7 @@
                     this.parentNode !== e && (e.appendChild(this), this.removed = !1)
                 }
                 close() {
-                    this.contextMenuElement.removeEventListener("blur", this.handleFocusOut.bind(this)), this.contextMenuChild && this.contextMenuChild.isOpen() && this.contextMenuChild.close(), this.isOpen() && (this.contextMenuElement.dispatchEvent(new Event("closeContextMenu", {
+                    this.contextMenuElement.removeEventListener("blur", this.handleFocusOut.bind(this)), this.contextMenuChild && this.contextMenuChild.isOpen() && this.contextMenuChild.close(), this.isOpen() && (this._clearTooltips(), this.contextMenuElement.dispatchEvent(new Event("closeContextMenu", {
                         bubbles: !0
                     })), this.lastActiveElement && this.lastActiveElement.focus(), this.target = null, this.lastActiveElement = null, this.removed = !0, this.contextMenuElement.removeEventListener("click", this.handleClick.bind(this)), this.contextMenuElement.removeEventListener("mouseover", this.handleMouseOver.bind(this)), this.contextMenuElement.removeEventListener("mouseout", this.handleMouseOut.bind(this)), this.remove())
                 }
@@ -5484,7 +5514,7 @@
                     }))
                 }
             }
-            t.default = l, l.tagName = "lol-uikit-context-menu"
+            t.default = d, d.tagName = "lol-uikit-context-menu"
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -5539,2751 +5569,13 @@
                 CELEBRATIONS_VIGNETTE: 9001,
                 CELEBRATIONS_MODAL: 9002
             }
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n  <div tabindex="-1">\r\n    <div class="menu-item"></div>\r\n  </div>\r\n</template>\r\n'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, ".context-menu {\n  user-select: none;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  min-width: 127px;\n  width: auto;\n  z-index: 10;\n  box-sizing: border-box;\n  background-color: #010a13;\n  box-shadow: 0 0 1px #000, 0 0 1px #000;\n  -webkit-user-select: none;\n/* if the width is changed, also change moveNearBoundingRect in popout-window.js to account for border size in the\n   alignment of subcontext menus */\n  border-width: 2px;\n  border-style: solid;\n  border-image: linear-gradient(to bottom, #463714, #785a28) 1;\n}\n.context-menu:focus {\n  outline: none;\n}\n.context-menu .menu-item {\n  font: 12px 'LoL Body', Arial, 'Helvetica Neue', Helvetica, sans-serif;\n  display: block;\n  outline: none;\n  min-width: 100%;\n  height: 29px;\n  line-height: 29px;\n  box-sizing: border-box;\n  border: none;\n  background: none;\n  color: #cdbe91;\n  white-space: nowrap;\n  overflow: visible;\n  text-overflow: ellipsis;\n  text-align: left;\n  cursor: default;\n  padding: 0 10px;\n}\n.context-menu .menu-item:lang(ar-ae) {\n  direction: rtl;\n  text-align: right;\n}\n.context-menu .menu-item.danger-text {\n  color: #ff2345;\n}\n.context-menu .menu-item.with-icon {\n  display: flex;\n  align-items: center;\n}\n.context-menu .menu-item .menu-item-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  margin-right: 8px;\n  flex: 0 0 auto;\n}\n.context-menu .menu-item .menu-item-label {\n  flex: 1 1 auto;\n  min-width: 0;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.context-menu .menu-item.has-submenu {\n  position: relative;\n  padding-right: 23px;\n}\n.context-menu .menu-item.has-submenu:after {\n/* right-arrow */\n  content: '';\n  display: block;\n  position: absolute;\n  top: 50%;\n  right: 6px;\n  margin-top: -3px;\n  border: 3px solid transparent;\n  border-left-color: #cdbe91;\n}\n.context-menu .menu-item:hover {\n  color: #f0e6d2;\n  background: #1e2328;\n}\n.context-menu .menu-item.danger-text:hover {\n  color: #ff4461;\n}\n.context-menu .menu-item:active {\n  color: #cdbe91;\n}\n.context-menu .menu-item.danger-text:active {\n  color: #ff062c;\n}\n.context-menu .menu-item.disabled,\n.context-menu .menu-item.disabled:hover,\n.context-menu .menu-item.disabled:active {\n  padding: 0 10px;\n  border-left-color: none;\n  border-right-color: none;\n  border-width: 0;\n  cursor: default;\n  color: #a09b8c;\n  background: none;\n  opacity: 0.55;\n/* to override the webkit-filter brightness in focus */\n  -webkit-filter: none;\n}\n.context-menu .menu-item.danger-text.disabled,\n.context-menu .menu-item.danger-text.disabled:hover,\n.context-menu .menu-item.danger-text.disabled:active {\n  color: #ff657d;\n}\n.context-menu-root {\n  min-width: 131px;\n  width: auto;\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/context-menu/component-style.styl"],
-                names: [],
-                mappings: "AAIA;EACE,iBAAa;EACb,gBAAY;EACZ,SAAQ;EACR,UAAS;EACT,gBAAW;EACX,WAAO;EACP,WAAS;EACT,sBAAY;EACZ,yBAAkB;EAClB,sCAAwB;EACxB,yBAAqB;AACrB;kCAHgC;EAKhC,iBAAc;EACd,mBAAc;EACd,4DAAc;AAHhB;AAMA;EACE,aAAS;AAJX;AAOA;EACE,qEAAqB;EACrB,cAAS;EACT,aAAS;EACT,eAAW;EACX,YAAQ;EACR,iBAAa;EACb,sBAAY;EACZ,YAAQ;EACR,gBAAY;EACZ,cAAO;EACP,mBAAa;EACb,iBAAU;EACV,uBAAe;EACf,gBAAY;EACZ,eAAQ;EACR,eAAS;AALX;AAME;EACE,cAAW;EACX,iBAAY;AAJhB;AAQA;EACE,cAAO;AANT;AASA;EACE,aAAS;EACT,mBAAa;AAPf;AAUA;EACE,oBAAS;EACT,mBAAa;EACb,uBAAiB;EACjB,iBAAc;EACd,cAAM;AARR;AAWA;EACE,cAAM;EACN,YAAW;EACX,gBAAU;EACV,uBAAe;EACf,mBAAa;AATf;AAYA;EACE,kBAAU;EACV,mBAAe;AAVjB;AAaA;AACE,gBAAA;EACA,WAAS;EACT,cAAS;EACT,kBAAU;EACV,QAAK;EACL,UAAO;EACP,gBAAY;EACZ,6BAAQ;EACR,0BAAmB;AAXrB;AAcA;EACE,cAAO;EACP,mBAAY;AAZd;AAeA;EACE,cAAO;AAbT;AAgBA;EACE,cAAO;AAdT;AAiBA;EACE,cAAO;AAfT;AAkBA;;;EACE,eAAS;EACT,uBAAmB;EACnB,wBAAoB;EACpB,eAAc;EACd,eAAQ;EACR,cAAO;EACP,gBAAY;EACZ,aAAS;AACT,sDAAA;EACA,oBAAgB;AAdlB;AAiBA;;;EACE,cAAO;AAbT;AAgBA;EACE,gBAAW;EACX,WAAO;AAdT",
-                sourcesContent: ["@require 'riotclient-lol-asset-csslib/styles/colors.styl';\r\n\r\n$danger_color = $colors_torchRed;\r\n\r\n.context-menu {\r\n  user-select: none;\r\n  list-style: none;\r\n  margin: 0;\r\n  padding: 0;\r\n  min-width: 127px;\r\n  width: auto;\r\n  z-index: 10;\r\n  box-sizing: border-box;\r\n  background-color: #010a13;\r\n  box-shadow: 0 0 1px #000, 0 0 1px #000;\r\n  -webkit-user-select: none;\r\n  /* if the width is changed, also change moveNearBoundingRect in popout-window.js to account for border size in the\r\n   alignment of subcontext menus */\r\n  border-width: 2px;\r\n  border-style: solid;\r\n  border-image: linear-gradient(to bottom, #463714, #785a28) 1;\r\n}\r\n\r\n.context-menu:focus {\r\n  outline: none;\r\n}\r\n\r\n.context-menu .menu-item {\r\n  font: 12px 'LoL Body', Arial, 'Helvetica Neue', Helvetica, sans-serif;\r\n  display: block;\r\n  outline: none;\r\n  min-width: 100%;\r\n  height: 29px;\r\n  line-height: 29px;\r\n  box-sizing: border-box;\r\n  border: none;\r\n  background: none;\r\n  color: #cdbe91;\r\n  white-space: nowrap;\r\n  overflow: visible;\r\n  text-overflow: ellipsis;\r\n  text-align: left;\r\n  cursor: default;\r\n  padding: 0 10px;\r\n  &:lang(ar-ae) {\r\n    direction: rtl;\r\n    text-align: right;\r\n  }\r\n}\r\n\r\n.context-menu .menu-item.danger-text {\r\n  color: $danger_color;\r\n}\r\n\r\n.context-menu .menu-item.with-icon {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.context-menu .menu-item .menu-item-icon {\r\n  display: inline-flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin-right: 8px;\r\n  flex: 0 0 auto;\r\n}\r\n\r\n.context-menu .menu-item .menu-item-label {\r\n  flex: 1 1 auto;\r\n  min-width: 0;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n  white-space: nowrap;\r\n}\r\n\r\n.context-menu .menu-item.has-submenu {\r\n  position: relative;\r\n  padding-right: 23px;\r\n}\r\n\r\n.context-menu .menu-item.has-submenu:after {\r\n  /* right-arrow */\r\n  content: '';\r\n  display: block;\r\n  position: absolute;\r\n  top: 50%;\r\n  right: 6px;\r\n  margin-top: -3px;\r\n  border: 3px solid transparent;\r\n  border-left-color: #cdbe91;\r\n}\r\n\r\n.context-menu .menu-item:hover {\r\n  color: #f0e6d2;\r\n  background: #1e2328;\r\n}\r\n\r\n.context-menu .menu-item.danger-text:hover {\r\n  color: lighten($danger_color, 15%);\r\n}\r\n\r\n.context-menu .menu-item:active {\r\n  color: #cdbe91;\r\n}\r\n\r\n.context-menu .menu-item.danger-text:active {\r\n  color: darken($danger_color, 10%);\r\n}\r\n\r\n.context-menu .menu-item.disabled, .context-menu .menu-item.disabled:hover, .context-menu .menu-item.disabled:active {\r\n  padding: 0 10px;\r\n  border-left-color: none;\r\n  border-right-color: none;\r\n  border-width: 0;\r\n  cursor: default;\r\n  color: #a09b8c;\r\n  background: none;\r\n  opacity: 0.55;\r\n  /* to override the webkit-filter brightness in focus */\r\n  -webkit-filter: none;\r\n}\r\n\r\n.context-menu .menu-item.danger-text.disabled, .context-menu .menu-item.danger-text.disabled:hover, .context-menu .menu-item.danger-text.disabled:active {\r\n  color: lighten($colors_torchRed, 30%);\r\n}\r\n\r\n.context-menu-root {\r\n  min-width: 131px;\r\n  width: auto;\r\n}\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(36)) && r.__esModule ? r : {
-                    default: r
-                },
-                a = n(81);
-            class s extends o.webComponents.ShadowElement {
-                static get observedAttributes() {
-                    return ["orientation", "appearance", "frame", "caret", "layer-position", "dismissable", "dismissable-type", "close-button"]
-                }
-                templateMarkup() {
-                    return n(85)
-                }
-                stylesheetMarkup() {
-                    return n(86)
-                }
-                constructor() {
-                    super(), this._closeEvent = this.dispatchCloseEvent.bind(this)
-                }
-                connectedCallback() {
-                    super.connectedCallback(), this.hasDismissableIcon() && (0, i.default)(this.shadowRoot).find(".lol-uikit-dialog-frame-toast-close-button")[0].addEventListener("click", this._closeEvent), this.hasDismissableButton() && (0, i.default)(this.shadowRoot).find(".lol-uikit-dialog-frame-close-button")[0].addEventListener("click", this._closeEvent), this.updateCssClasses()
-                }
-                disconnectedCallback() {
-                    super.disconnectedCallback(), this.hasDismissableIcon() && (0, i.default)(this.shadowRoot).find(".lol-uikit-dialog-frame-toast-close-button")[0].removeEventListener("click", this._closeEvent), this.hasDismissableButton() && (0, i.default)(this.shadowRoot).find(".lol-uikit-dialog-frame-close-button")[0].removeEventListener("click", this._closeEvent)
-                }
-                processAttributes() {
-                    this.shadowRoot.parentElement && this.updateCssClasses()
-                }
-                updateCssClasses() {
-                    (0, i.default)(this.shadowRoot).find(".lol-uikit-dialog-frame").removeClass("top bottom left right").addClass(this.getOrientation()).removeClass("bordered borderless").addClass(this.getFrame()).removeClass("enabled disabled").addClass(this.getAppearance()).toggleClass("dismissable-icon", this.hasDismissableIcon()).toggleClass("dismissable-close-button", this.hasDismissableButton()).toggleClass("dismissable-icon-background", this.hasDismissableIconBackground()).toggleClass("caret", this.hasCaret()).addClass(this.getCaretDirection()).toggleClass("node", this.hasNode()).addClass(this.getLayerPosition()), this.setZIndex()
-                }
-                getOrientation() {
-                    return this.getAttribute("orientation") || "bottom"
-                }
-                getAppearance() {
-                    return this.getAttribute("appearance") || "enabled"
-                }
-                hasCaret() {
-                    return this.hasAttribute("caret")
-                }
-                getFrame() {
-                    return this.getAttribute("frame") || "bordered"
-                }
-                hasDismissableIcon() {
-                    return "inside" === this.getAttribute("dismissable-type") && (this.hasAttribute("dismissable") || this.hasAttribute("close-button"))
-                }
-                hasDismissableButton() {
-                    return "inside" !== this.getAttribute("dismissable-type") && (this.hasAttribute("dismissable") || this.hasAttribute("close-button"))
-                }
-                hasDismissableIconBackground() {
-                    return this.hasDismissableIcon() && this.hasAttribute("dismissable-icon-background")
-                }
-                getCaretDirection() {
-                    return this.getAttribute("caret")
-                }
-                hasNode() {
-                    return this.hasAttribute("node")
-                }
-                getLayerPosition() {
-                    return this.getAttribute("layer-position") || "default"
-                }
-                setZIndex() {
-                    const e = this.getLayerPosition();
-                    this.style.zIndex = "above-vignette" === e ? a.Z_INDEX_CONSTANTS.CELEBRATIONS_MODAL : "above-menus" === e ? a.Z_INDEX_CONSTANTS.CONTEXT_MENUS : 0
-                }
-                dispatchCloseEvent() {
-                    this.dispatchEvent(new Event("dialogFrameDismissed", {
-                        bubbles: !0,
-                        composed: !0
-                    }))
-                }
-            }
-            s.tagName = "lol-uikit-dialog-frame";
-            var l = s;
-            t.default = l
-        }, e => {
-            "use strict";
-            e.exports = '<template id="lol-uikit-template-dialog-frame">\r\n  <div class="lol-uikit-dialog-frame">\r\n    <div class="lol-uikit-dialog-frame-sub-border"></div>\r\n    <div class="content-wrapper">\r\n      <slot></slot>\r\n    </div>\r\n    <div class="lol-uikit-dialog-frame-toast-close-button"></div>\r\n    <div class="lol-uikit-dialog-frame-close-button">\r\n      <lol-uikit-close-button></lol-uikit-close-button>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, ':host .lol-uikit-dialog-frame.left,\n:host .lol-uikit-dialog-frame.right {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to right, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.right {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to left, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.top,\n:host .lol-uikit-dialog-frame.bottom {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to top, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.top {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to bottom, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.top.disabled,\n:host .lol-uikit-dialog-frame.bottom.disabled {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to top, #39393e 0, #1e282d 5px, #1e282d 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.top.disabled > .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.bottom.disabled > .lol-uikit-dialog-frame-sub-border::before {\n  top: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-horizontal-disabled.png");\n}\n:host .lol-uikit-dialog-frame.top.disabled > .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.bottom.disabled > .lol-uikit-dialog-frame-sub-border::after {\n  bottom: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal-disabled.png");\n}\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.bottom .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.bottom .lol-uikit-dialog-frame-sub-border::after {\n  left: 12px;\n  width: calc(100% - 24px);\n  height: 0;\n  border-width: 4px 4px 0 4px;\n  border-image-width: 4px 4px 0 4px;\n  border-image-slice: 4 4 0 4;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.bottom .lol-uikit-dialog-frame-sub-border::before {\n  top: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-horizontal.png");\n}\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.bottom .lol-uikit-dialog-frame-sub-border::after {\n  bottom: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal.png");\n}\n:host .lol-uikit-dialog-frame.left.disabled,\n:host .lol-uikit-dialog-frame.right.disabled {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to right, #39393e 0, #1e282d 5px, #1e282d 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.left.disabled > .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.right.disabled > .lol-uikit-dialog-frame-sub-border::before {\n  left: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-vertical-disabled.png");\n}\n:host .lol-uikit-dialog-frame.left.disabled > .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.right.disabled > .lol-uikit-dialog-frame-sub-border::after {\n  right: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical-disabled.png");\n}\n:host .lol-uikit-dialog-frame.left .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.left .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::after {\n  top: 12px;\n  height: calc(100% - 24px);\n  width: 0;\n  border-width: 4px 4px 4px 0;\n  border-image-width: 4px 4px 4px 0;\n  border-image-slice: 4 4 4 0;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-dialog-frame.left .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::before {\n  left: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical.png");\n}\n:host .lol-uikit-dialog-frame.left .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::after {\n  right: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-vertical.png");\n}\nlol-uikit-dialog-frame {\n  z-index: 0;\n}\n:host .lol-uikit-dialog-frame {\n  position: relative;\n  background: #010a13;\n  box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\n}\n:host .lol-uikit-dialog-frame::before {\n  content: \'\';\n  position: absolute;\n  width: calc(100% + 4px);\n  height: calc(100% + 4px);\n  top: -2px;\n  left: -2px;\n  box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\n  pointer-events: none;\n}\n:host .lol-uikit-dialog-frame .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame .lol-uikit-dialog-frame-sub-border::after {\n  content: \'\';\n  position: absolute;\n  display: flex;\n  box-sizing: border-box;\n}\n:host .lol-uikit-dialog-frame.top.disabled > .lol-uikit-dialog-frame-sub-border::before {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal-disabled.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.top.disabled > .lol-uikit-dialog-frame-sub-border::after {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-horizontal-disabled.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::before {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::after {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-horizontal.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.right.disabled > .lol-uikit-dialog-frame-sub-border::before {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical-disabled.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.right.disabled > .lol-uikit-dialog-frame-sub-border::after {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-vertical-disabled.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::before {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-vertical.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::after {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.borderless .lol-uikit-dialog-frame-sub-border {\n  display: none;\n}\n:host .lol-uikit-dialog-frame .lol-uikit-dialog-frame-close-button {\n  display: none;\n}\n:host .lol-uikit-dialog-frame .lol-uikit-dialog-frame-close-button lol-uikit-close-button {\n  z-index: 10000000;\n}\n:host .lol-uikit-dialog-frame .lol-uikit-dialog-frame-uikit-close-button {\n  display: none;\n}\n:host .lol-uikit-dialog-frame.dismissable-icon .lol-uikit-dialog-frame-toast-close-button {\n  display: block;\n  height: 24px;\n  width: 24px;\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: url("/fe/lol-uikit/images/close.png"), rgba(0,0,0,0.5);\n  cursor: pointer;\n  border-radius: 4px;\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n/*\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\n        We might still do it later when we do a second pass.\n        At that time, we\'ll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\n        &:lang(ar-ae) {\n          right: auto;\n          left: 8px;\n        }\n        */\n}\n:host .lol-uikit-dialog-frame.dismissable-icon .lol-uikit-dialog-frame-toast-close-button:hover {\n  background: url("/fe/lol-uikit/images/close.png"), rgba(10,20,40,0.5);\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-dialog-frame.dismissable-icon.dismissable-icon-background .lol-uikit-dialog-frame-toast-close-button {\n  width: 24px;\n  height: 24px;\n  top: 8px;\n  right: 8px;\n  background-color: #0a1428;\n  background-size: 18px 18px;\n  background-position: center;\n  border-radius: 2px;\n  opacity: 0.8;\n  transition: opacity 0.05s ease-in-out;\n}\n:host .lol-uikit-dialog-frame.dismissable-icon.dismissable-icon-background .lol-uikit-dialog-frame-toast-close-button:hover {\n  opacity: 1;\n}\n:host .lol-uikit-dialog-frame.dismissable-close-button .lol-uikit-dialog-frame-close-button {\n  display: block;\n/*\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\n        We might still do it later when we do a second pass.\n        At that time, we\'ll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\n      &:lang(ar-ae)::before {\n        right: auto;\n        left: -22px;\n      }\n      */\n}\n:host .lol-uikit-dialog-frame.dismissable-close-button .lol-uikit-dialog-frame-close-button::before {\n  content: \'\';\n  position: absolute;\n  width: 38px;\n  height: 68px;\n  top: -22px;\n  right: -22px;\n  background-image: url("/fe/lol-uikit/images/frame-button-close-top-down.png");\n  background-size: 38px 68px;\n  pointer-events: none;\n}\n:host .lol-uikit-dialog-frame.dismissable-close-button .lol-uikit-dialog-frame-close-button lol-uikit-close-button {\n  display: block;\n  position: absolute;\n  top: -17px;\n  right: -17px;\n/*\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\n        We might still do it later when we do a second pass.\n        At that time, we\'ll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\n        &:lang(ar-ae) {\n          right: auto;\n          left: -17px;\n        }\n        */\n}\n:host .lol-uikit-dialog-frame.caret::after {\n  content: \'\';\n  position: absolute;\n  background: url("/fe/lol-uikit/images/caret.png") 50% no-repeat;\n}\n:host .lol-uikit-dialog-frame.caret.top::after {\n  height: 18px;\n  width: 100%;\n  top: -16px;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.caret.bottom::after {\n  height: 18px;\n  width: 100%;\n  bottom: -16px;\n}\n:host .lol-uikit-dialog-frame.caret.left::after {\n  height: 100%;\n  width: 32px;\n  top: 0;\n  left: -23px;\n  transform: rotate(90deg);\n}\n:host .lol-uikit-dialog-frame.caret.right::after {\n  height: 100%;\n  width: 32px;\n  top: 0;\n  right: -23px;\n  transform: rotate(-90deg);\n}\n', "", {
-                version: 3,
-                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/gradient-palette.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/dialog-frame/component-style.styl"],
-                names: [],
-                mappings: "AA6JA;;EACE,6BAAQ;EACR,uFAAc;AC3JhB;ADkKA;EACE,6BAAQ;EACR,sFAAc;AChKhB;ADuKA;;EACE,6BAAQ;EACR,qFAAc;ACpKhB;AD2KA;EACE,6BAAQ;EACR,wFAAc;ACzKhB;AATE;;EACE,6BAAQ;EACR,qFAAc;AAYlB;AATM;;EACE,SAAK;EACL,6FAA0F;AAYlG;AATM;;EACE,YAAQ;EACR,2FAAwF;AAYhG;AANI;;;;EACE,UAAM;EACN,wBAAO;EACP,SAAQ;EACR,2BAAc;EACd,iCAAoB;EACpB,2BAAoB;EACpB,4BAAqB;EACrB,mBAAc;AAWpB;AARI;;EACE,SAAK;EACL,oFAAiF;AAWvF;AARI;;EACE,YAAQ;EACR,kFAA+E;AAWrF;AAHE;;EACE,6BAAQ;EACR,uFAAc;AAMlB;AAHM;;EACE,UAAM;EACN,2FAAwF;AAMhG;AAHM;;EACE,WAAO;EACP,yFAAsF;AAM9F;AAAI;;;;EACE,SAAK;EACL,yBAAQ;EACR,QAAO;EACP,2BAAc;EACd,iCAAoB;EACpB,2BAAoB;EACpB,4BAAqB;EACrB,mBAAc;AAKpB;AAFI;;EACE,UAAM;EACN,gFAA6E;AAKnF;AAFI;;EACE,WAAO;EACP,kFAA+E;AAKrF;AAAA;EACE,UAAS;AAEX;AAIE;EACE,kBAAU;EACV,mBAAY;EACZ,wCAAY;AAFhB;AAII;EACE,WAAS;EACT,kBAAU;EACV,uBAAO;EACP,wBAAQ;EACR,SAAK;EACL,UAAM;EACN,wCAAY;EACZ,oBAAgB;AAFtB;AAMM;;EACE,WAAS;EACT,kBAAU;EACV,aAAS;EACT,sBAAY;AAHpB;AAcU;EACE,2FAAwF;EACxF,yBAAW;AAZvB;AAcU;EACE,6FAA0F;EAC1F,yBAAW;AAZvB;AAkBQ;EACE,kFAA+E;EAC/E,yBAAW;AAhBrB;AAkBQ;EACE,oFAAiF;EACjF,yBAAW;AAhBrB;AAoCU;EACE,yFAAsF;EACtF,yBAAW;AAlCvB;AAoCU;EACE,2FAAwF;EACxF,yBAAW;AAlCvB;AAwCQ;EACE,kFAA+E;EAC/E,yBAAW;AAtCrB;AAwCQ;EACE,gFAA6E;EAC7E,yBAAW;AAtCrB;AA4CM;EACE,aAAS;AA1CjB;AA8CI;EACE,aAAS;AA5Cf;AA8CM;EACE,iBAAS;AA5CjB;AAgDI;EACE,aAAS;AA9Cf;AAmDM;EACE,cAAS;EACT,YAAQ;EACR,WAAO;EACP,kBAAU;EACV,QAAK;EACL,UAAO;EACP,kEAA+C;EAC/C,eAAQ;EACR,kBAAe;EACf,mCAAwB;EACxB,2BAAqB;EACrB,4BAAmB;AACnB;;;;;;;;SA1CC;AACT;AAmDQ;EACE,qEAA+C;EACvC,mCAAwB;EAClC,2BAAqB;EACrB,4BAAmB;AAjD3B;AAqDM;EACE,WAAO;EACP,YAAQ;EACR,QAAK;EACL,UAAO;EACP,yBAAkB;EAClB,0BAAiB;EACjB,2BAAqB;EACrB,kBAAe;EACf,YAAS;EACT,qCAAY;AAnDpB;AAqDQ;EACE,UAAS;AAnDnB;AAyDI;EACE,cAAS;AAcT;;;;;;;;OA7DC;AACP;AAgDM;EACE,WAAS;EACT,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,UAAK;EACL,YAAO;EACP,6EAA0E;EAC1E,0BAAiB;EACjB,oBAAgB;AA9CxB;AA2DM;EACE,cAAS;EACT,kBAAU;EACV,UAAK;EACL,YAAO;AAEP;;;;;;;;SAnDC;AACT;AA+DM;EACE,WAAS;EACT,kBAAU;EACV,+DAA8C;AA7DtD;AAgEM;EACC,YAAQ;EACR,WAAO;EACP,UAAK;EACL,yBAAW;AA9DlB;AAiEM;EACE,YAAQ;EACR,WAAO;EACP,aAAQ;AA/DhB;AAkEM;EACE,YAAQ;EACR,WAAO;EACP,MAAK;EACL,WAAM;EACN,wBAAW;AAhEnB;AAmEM;EACE,YAAQ;EACR,WAAO;EACP,MAAK;EACL,YAAO;EACP,yBAAW;AAjEnB",
-                sourcesContent: ["// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}", "@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n@require '../../css/shared.styl';\r\n\r\n$vertical-bottom-dialog-frame {\r\n  @extends $gradient-dialog-border-top;\r\n\r\n  &.disabled {\r\n    border: 2px solid transparent;\r\n    border-image: linear-gradient(to top, #39393E 0, $color_palette_frameGrey 5px, $color_palette_frameGrey 100%) 1 stretch;\r\n\r\n    > .lol-uikit-dialog-frame-sub-border {\r\n      &::before {\r\n        top: -6px;\r\n        border-image-source: url($base-image-path + 'sub-border-secondary-horizontal-disabled.png');\r\n      }\r\n\r\n      &::after {\r\n        bottom: -6px;\r\n        border-image-source: url($base-image-path + 'sub-border-primary-horizontal-disabled.png');\r\n      }\r\n    }\r\n  }\r\n\r\n  .lol-uikit-dialog-frame-sub-border {\r\n    &::before, &::after {\r\n      left: 12px;\r\n      width: calc(100% - 24px);\r\n      height: 0;\r\n      border-width: 4px 4px 0 4px;\r\n      border-image-width: 4px 4px 0 4px;\r\n      border-image-slice: 4 4 0 4;\r\n      border-image-repeat: stretch;\r\n      border-style: solid;\r\n    }\r\n\r\n    &::before {\r\n      top: -6px;\r\n      border-image-source: url($base-image-path + 'sub-border-secondary-horizontal.png');\r\n    }\r\n\r\n    &::after {\r\n      bottom: -6px;\r\n      border-image-source: url($base-image-path + 'sub-border-primary-horizontal.png');\r\n    }\r\n  }\r\n}\r\n\r\n$horizontal-left-dialog-frame {\r\n  @extends $gradient-dialog-border-right;\r\n\r\n  &.disabled {\r\n    border: 2px solid transparent;\r\n    border-image: linear-gradient(to right, #39393E 0, $color_palette_frameGrey 5px, $color_palette_frameGrey 100%) 1 stretch;\r\n\r\n    > .lol-uikit-dialog-frame-sub-border {\r\n      &::before {\r\n        left: -6px;\r\n        border-image-source: url($base-image-path + 'sub-border-secondary-vertical-disabled.png');\r\n      }\r\n\r\n      &::after {\r\n        right: -6px;\r\n        border-image-source: url($base-image-path + 'sub-border-primary-vertical-disabled.png');\r\n      }\r\n    }\r\n  }\r\n\r\n  .lol-uikit-dialog-frame-sub-border {\r\n    &::before, &::after {\r\n      top: 12px;\r\n      height: calc(100% - 24px);\r\n      width: 0;\r\n      border-width: 4px 4px 4px 0;\r\n      border-image-width: 4px 4px 4px 0;\r\n      border-image-slice: 4 4 4 0;\r\n      border-image-repeat: stretch;\r\n      border-style: solid;\r\n    }\r\n\r\n    &::before {\r\n      left: -6px;\r\n      border-image-source: url($base-image-path + 'sub-border-primary-vertical.png');\r\n    }\r\n\r\n    &::after {\r\n      right: -6px;\r\n      border-image-source: url($base-image-path + 'sub-border-secondary-vertical.png');\r\n    }\r\n  }\r\n}\r\n\r\nlol-uikit-dialog-frame {\r\n  z-index: 0;\r\n}\r\n\r\n\r\n:host {\r\n\r\n  .lol-uikit-dialog-frame {\r\n    position: relative;\r\n    background: $color_palette_almostBlack;\r\n    box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\r\n\r\n    &::before {\r\n      content: '';\r\n      position: absolute;\r\n      width: calc(100% + 4px);\r\n      height: calc(100% + 4px);\r\n      top: -2px;\r\n      left: -2px;\r\n      box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\r\n      pointer-events: none;\r\n    }\r\n\r\n    .lol-uikit-dialog-frame-sub-border {\r\n      &::before, &::after {\r\n        content: '';\r\n        position: absolute;\r\n        display: flex;\r\n        box-sizing: border-box;\r\n      }\r\n    }\r\n\r\n    // reverse border and sub border gradients\r\n    &.top {\r\n      @extends $vertical-bottom-dialog-frame;\r\n      @extends $gradient-dialog-border-bottom;\r\n\r\n      &.disabled {\r\n        > .lol-uikit-dialog-frame-sub-border {\r\n          &::before {\r\n            border-image-source: url($base-image-path + 'sub-border-primary-horizontal-disabled.png');\r\n            transform: rotate(180deg);\r\n          }\r\n          &::after {\r\n            border-image-source: url($base-image-path + 'sub-border-secondary-horizontal-disabled.png');\r\n            transform: rotate(180deg);\r\n          }\r\n        }\r\n      }\r\n\r\n      .lol-uikit-dialog-frame-sub-border {\r\n        &::before {\r\n          border-image-source: url($base-image-path + 'sub-border-primary-horizontal.png');\r\n          transform: rotate(180deg);\r\n        }\r\n        &::after {\r\n          border-image-source: url($base-image-path + 'sub-border-secondary-horizontal.png');\r\n          transform: rotate(180deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.bottom {\r\n      @extends $vertical-bottom-dialog-frame;\r\n    }\r\n\r\n    &.left {\r\n      @extends $horizontal-left-dialog-frame;\r\n    }\r\n\r\n    // reverse border and sub border gradients\r\n    &.right {\r\n      @extends $horizontal-left-dialog-frame;\r\n      @extends $gradient-dialog-border-left;\r\n\r\n      &.disabled {\r\n        > .lol-uikit-dialog-frame-sub-border {\r\n          &::before {\r\n            border-image-source: url($base-image-path + 'sub-border-primary-vertical-disabled.png');\r\n            transform: rotate(180deg);\r\n          }\r\n          &::after {\r\n            border-image-source: url($base-image-path + 'sub-border-secondary-vertical-disabled.png');\r\n            transform: rotate(180deg);\r\n          }\r\n        }\r\n      }\r\n\r\n      .lol-uikit-dialog-frame-sub-border {\r\n        &::before {\r\n          border-image-source: url($base-image-path + 'sub-border-secondary-vertical.png');\r\n          transform: rotate(180deg);\r\n        }\r\n        &::after {\r\n          border-image-source: url($base-image-path + 'sub-border-primary-vertical.png');\r\n          transform: rotate(180deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.borderless {\r\n      .lol-uikit-dialog-frame-sub-border {\r\n        display: none;\r\n      }\r\n    }\r\n\r\n    .lol-uikit-dialog-frame-close-button {\r\n      display: none;\r\n\r\n      lol-uikit-close-button {\r\n        z-index: 10000000;\r\n      }\r\n    }\r\n\r\n    .lol-uikit-dialog-frame-uikit-close-button {\r\n      display: none;\r\n    }\r\n\r\n    // Show the x-icon close button if we have the class dismissable-icon for toasts\r\n    &.dismissable-icon {\r\n      .lol-uikit-dialog-frame-toast-close-button {\r\n        display: block;\r\n        height: 24px;\r\n        width: 24px;\r\n        position: absolute;\r\n        top: 8px;\r\n        right: 8px;\r\n        background: url($base-image-path + 'close.png'), rgba(0, 0, 0, .5);\r\n        cursor: pointer;\r\n        border-radius: 4px;\r\n        background-size: 75% 75%, 100% 100%;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        /*\r\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\r\n        We might still do it later when we do a second pass.\r\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\r\n        &:lang(ar-ae) {\r\n          right: auto;\r\n          left: 8px;\r\n        }\r\n        */\r\n\r\n        &:hover {\r\n          background: url($base-image-path + 'close.png'), rgba($color_palette_blue6, .5);\r\n                  background-size: 75% 75%, 100% 100%;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        }\r\n      }\r\n\r\n      &.dismissable-icon-background .lol-uikit-dialog-frame-toast-close-button{\r\n        width: 24px;\r\n        height: 24px;\r\n        top: 8px;\r\n        right: 8px;\r\n        background-color: $color_palette_blue6;\r\n        background-size: 18px 18px;\r\n        background-position: center;\r\n        border-radius: 2px;\r\n        opacity: 0.8;\r\n        transition: opacity 0.05s ease-in-out;\r\n\r\n        &:hover {\r\n          opacity: 1;\r\n        }\r\n      }\r\n    }\r\n\r\n    // Show the uikit close button if we have the dismissable-close-button class\r\n    &.dismissable-close-button .lol-uikit-dialog-frame-close-button {\r\n      display: block;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: 38px;\r\n        height: 68px;\r\n        top: -22px;\r\n        right: -22px;\r\n        background-image: url($base-image-path + 'frame-button-close-top-down.png');\r\n        background-size: 38px 68px;\r\n        pointer-events: none;\r\n      }\r\n\r\n      /*\r\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\r\n        We might still do it later when we do a second pass.\r\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\r\n      &:lang(ar-ae)::before {\r\n        right: auto;\r\n        left: -22px;\r\n      }\r\n      */\r\n\r\n      lol-uikit-close-button {\r\n        display: block;\r\n        position: absolute;\r\n        top: -17px;\r\n        right: -17px;\r\n\r\n        /*\r\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\r\n        We might still do it later when we do a second pass.\r\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\r\n        &:lang(ar-ae) {\r\n          right: auto;\r\n          left: -17px;\r\n        }\r\n        */\r\n      }\r\n    }\r\n\r\n    &.caret {\r\n      &::after {\r\n        content: '';\r\n        position: absolute;\r\n        background: url($base-image-path + 'caret.png') 50% no-repeat;\r\n      }\r\n\r\n      &.top::after {\r\n       height: 18px;\r\n       width: 100%;\r\n       top: -16px;\r\n       transform: rotate(180deg);\r\n      }\r\n\r\n      &.bottom::after {\r\n        height: 18px;\r\n        width: 100%;\r\n        bottom: -16px;\r\n      }\r\n\r\n      &.left::after {\r\n        height: 100%;\r\n        width: 32px;\r\n        top: 0;\r\n        left: -23px;\r\n        transform: rotate(90deg);\r\n      }\r\n\r\n      &.right::after {\r\n        height: 100%;\r\n        width: 32px;\r\n        top: 0;\r\n        right: -23px;\r\n        transform: rotate(-90deg);\r\n      }\r\n    }\r\n  }\r\n}\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1);
-            class o extends r.webComponents.ShadowElement {
-                templateMarkup() {
-                    return n(5)
-                }
-                stylesheetMarkup() {
-                    return n(88)
-                }
-            }
-            o.tagName = "lol-uikit-dropdown-optgroup";
-            var i = o;
-            t.default = i
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, ':host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  font-family: var(--font-display);\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  -webkit-user-select: none;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  text-transform: uppercase;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(ko-kr),\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(ja-jp),\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(tr-tr),\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(el-gr),\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(th-th),\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(zh-tw) {\n  text-transform: none;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  text-transform: none;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  letter-spacing: 0.0375em;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  --dropdown-optgroup-header-font-size: 12px;\n}\n:host {\n  display: flex;\n  flex-direction: row;\n  background-color: #010a13;\n}\n:host .ui-dropdown-optgroup {\n  width: 100%;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  font-size: var(--dropdown-optgroup-header-font-size);\n  padding: 0 10px;\n  color: #a09b8c;\n  height: 32px;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n', "", {
-                version: 3,
-                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/dropdown-optgroup/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
-                names: [],
-                mappings: "AAAA;EACE,gCAAa;ACCf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;ACyBA;EACE,yBAAgB;ADvBlB;ACwBE;;;;;;EAME,oBAAgB;ADtBpB;AC2CA;EACE,oBAAgB;ADzClB;ACmMA;EAIE,cAAO;EACP,eAAW;EAIX,gBAAa;EACb,iBAAa;EACb,uBAAgB;ADvMlB;ACkME;EACE,eAAW;ADhMf;ACqME;EACE,iBAAgB;ADnMpB;ACuMA;EAGE,wBAAgB;ADvMlB;ACwME;EACE,iBAAgB;ADtMpB;AAvCA;EACE,0CAAsC;AAyCxC;AArCA;EACE,aAAS;EACT,mBAAgB;EAChB,yBAAkB;AAuCpB;AArCE;EACE,WAAO;AAuCX;AArCI;EAEE,oDAAW;EACX,eAAS;EACT,cAAO;EACP,YAAQ;EACR,aAAS;EACT,mBAAgB;EAChB,mBAAa;AAsCnB",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --dropdown-optgroup-header-font-size: 12px;\r\n}\r\n\r\n\r\n:host {\r\n  display: flex;\r\n  flex-direction: row;\r\n  background-color: $color_palette_almostBlack;\r\n\r\n  .ui-dropdown-optgroup {\r\n    width: 100%;\r\n\r\n    .ui-dropdown-optgroup-header {\r\n      @extends $typekit_h6_preserve_case;\r\n      font-size: var(--dropdown-optgroup-header-font-size);\r\n      padding: 0 10px;\r\n      color: $color_palette_grey1;\r\n      height: 32px;\r\n      display: flex;\r\n      flex-direction: row;\r\n      align-items: center;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1),
-                o = s(n(36)),
-                i = s(n(37)),
-                a = n(35);
-
-            function s(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            class l extends r.webComponents.ShadowElement {
-                templateMarkup() {
-                    return n(4)
-                }
-                stylesheetMarkup() {
-                    return n(90)
-                }
-                constructor() {
-                    super(), this._optionSelectSound = this._createSound(i.default.dropdownOptionSelect)
-                }
-                connectedCallback() {
-                    super.connectedCallback();
-                    const e = this._ancestorDropdown();
-                    e && ("LOL-UIKIT-FRAMED-DROPDOWN" === e.tagName ? this.classList.toggle("framed-dropdown-type", !0) : "LOL-UIKIT-FLAT-DROPDOWN" === e.tagName && this.classList.toggle("flat-dropdown-type", !0))
-                }
-                static get observedAttributes() {
-                    return ["selected", "disabled", "draggable", "unselectable"]
-                }
-                processAttributes() {
-                    this._draggableCheck(), this._disableCheck(), this._unselectableCheck(), this._selectedCheck(), this._clickableCheck()
-                }
-                isSelected() {
-                    return (0, a.isAttrTruthy)("selected", this.getAttribute("selected"))
-                }
-                isDisabled() {
-                    return (0, a.isAttrTruthy)("disabled", this.getAttribute("disabled"))
-                }
-                isDraggable() {
-                    return (0, a.isAttrTruthy)("draggable", this.getAttribute("draggable"))
-                }
-                isUnselectable() {
-                    return (0, a.isAttrTruthy)("unselectable", this.getAttribute("unselectable"))
-                }
-                _ancestorDropdown() {
-                    return (0, o.default)(this).closest("lol-uikit-framed-dropdown,lol-uikit-flat-dropdown")[0]
-                }
-                _clickableCheck() {
-                    const e = !this.isDisabled() && !this.isUnselectable();
-                    e && !this._clickHandlerAttached && (this.addEventListener("click", this._handleClick), this._clickHandlerAttached = !0), !e && this._clickHandlerAttached && (this.removeEventListener("click", this._handleClick), this._clickHandlerAttached = !1)
-                }
-                _draggableCheck() {
-                    const e = this.shadowRoot.querySelector(".ui-dropdown-option");
-                    this.isDraggable() ? e.setAttribute("draggable", !0) : e.removeAttribute("draggable")
-                }
-                _disableCheck() {
-                    const e = this.shadowRoot.querySelector(".ui-dropdown-option");
-                    if (this.isDisabled() && this.isSelected()) {
-                        this.removeAttribute("selected");
-                        this._ancestorDropdown().dispatchEvent(new Event("reset"))
-                    }
-                    this.isDisabled() ? e.classList.add("ui-dropdown-option-disabled") : e.classList.remove("ui-dropdown-option-disabled")
-                }
-                _unselectableCheck() {
-                    const e = this.shadowRoot.querySelector(".ui-dropdown-option");
-                    if (this.isUnselectable() && this.isSelected()) {
-                        this.removeAttribute("selected");
-                        this._ancestorDropdown().dispatchEvent(new Event("reset"))
-                    }
-                    this.isUnselectable() ? e.classList.add("ui-dropdown-option-unselectable") : e.classList.remove("ui-dropdown-option-unselectable")
-                }
-                _selectedCheck() {
-                    const {
-                        classList: e
-                    } = this.shadowRoot.querySelector(".ui-dropdown-option");
-                    this.isSelected() ? e.add("ui-dropdown-option-selected") : e.remove("ui-dropdown-option-selected")
-                }
-                _handleClick(e) {
-                    e.button > 0 || (this._ancestorDropdown().selectOption(this), this._optionSelectSound.play())
-                }
-                playSound(e) {
-                    const t = e;
-                    (0, r.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").playSound(t)
-                }
-                _createSound(e) {
-                    return (0, r.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").createSound(e, {
-                        allowConcurrency: !1
-                    })
-                }
-            }
-            l.tagName = "lol-uikit-dropdown-option";
-            var d = l;
-            t.default = d
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27),
-                i = n(91),
-                a = n(92),
-                s = o(r),
-                l = i(a);
-            s.push([e.id, ':host(.flat-dropdown-type) .ui-dropdown-option {\n  font-family: var(--font-display);\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  -webkit-user-select: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  text-transform: uppercase;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ko-kr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ja-jp),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(tr-tr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(el-gr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(th-th),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(zh-tw) {\n  text-transform: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  text-transform: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  color: #f0e6d2;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 18px;\n  letter-spacing: 0.075em;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  letter-spacing: 0.0375em;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  --dropdown-option-flat-height: 40px;\n  --dropdown-option-flat-font-weight: 700;\n  --dropdown-option-flat-overflow: visible;\n  --dropdown-option-flat-text-overflow: clip;\n  --dropdown-option-flat-white-space: inherit;\n  --dropdown-option-direction-rtl: rtl;\n  --dropdown-option-framed-line-height: 30px;\n  --dropdown-option-framed-white-space: nowrap;\n  --dropdown-option-framed-overflow-wrap: unset;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  height: var(--dropdown-option-flat-height);\n  font-weight: var(--dropdown-option-flat-font-weight);\n  overflow: var(--dropdown-option-flat-overflow);\n  text-overflow: var(--dropdown-option-flat-text-overflow);\n  white-space: var(--dropdown-option-flat-white-space);\n  color: #cdbe91;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  position: relative;\n  border-bottom: thin solid #1e2328;\n  padding: 0 10px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  padding: 0 10px 0 30px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled {\n  color: #888;\n  cursor: default;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled:hover {\n  color: #888;\n  background-color: rgba(30,35,40,0);\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-unselectable {\n  border-bottom: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected::after {\n  background: url(' + l + ") center no-repeat;\n  width: 14px;\n  height: 11px;\n  position: absolute;\n  right: 10px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae)::after {\n  right: auto;\n  left: 10px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:hover {\n  color: #f0e6d2;\n  background-color: #1e2328;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:active {\n  color: #463714;\n  background-color: rgba(30,35,40,0.5);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option {\n  align-items: center;\n  border-top: thin solid #1f2123;\n  color: #cdbe91;\n  cursor: pointer;\n  display: block;\n  min-height: 30px;\n  line-height: var(--dropdown-option-framed-line-height);\n  margin: 0;\n  overflow: hidden;\n  padding: 2px 9px 2px 7px;\n  position: relative;\n  text-overflow: ellipsis;\n  white-space: var(--dropdown-option-framed-white-space);\n  overflow-wrap: var(--dropdown-option-framed-overflow-wrap);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  direction: var(--dropdown-option-direction-rtl);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled {\n  color: #888;\n  cursor: default;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled:hover {\n  color: #888;\n  background-color: rgba(30,35,40,0);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected {\n  padding-right: 31px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae) {\n  padding-right: 7px;\n  padding-left: 31px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected::after {\n  background: url(" + l + ") center no-repeat;\n  width: 14px;\n  height: 11px;\n  position: absolute;\n  right: 13px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae)::after {\n  right: auto;\n  left: 13px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:hover {\n  color: #f0e6d2;\n  background-color: #1e2328;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:active {\n  color: #463714;\n  background-color: rgba(30,35,40,0.5);\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/dropdown-option/component-style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
-                names: [],
-                mappings: "AAAA;EACE,gCAAa;ACCf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;ACyBA;EACE,yBAAgB;ADvBlB;ACwBE;;;;;;EAME,oBAAgB;ADtBpB;AC2CA;EACE,oBAAgB;ADzClB;ACuKA;EAIE,cAAO;EACP,eAAW;EACX,gBAAa;EACb,iBAAa;EACb,uBAAgB;ADxKlB;ACyKE;EACE,iBAAgB;ADvKpB;AC2KA;EAGE,wBAAgB;AD3KlB;AC4KE;EACE,iBAAgB;AD1KpB;AApCA;EACE,mCAA+B;EAC/B,uCAAoC;EACpC,wCAAiC;EACjC,0CAAsC;EACtC,2CAAoC;EACpC,oCAAiC;EACjC,0CAAsC;EACtC,4CAAsC;EACtC,6CAAwC;AAsC1C;AAjCE;EAEE,0CAAQ;EACR,oDAAa;EACb,8CAAU;EACV,wDAAe;EACf,oDAAa;EACb,cAAO;EACP,eAAQ;EACR,aAAS;EACT,mBAAgB;EAChB,mBAAa;EACb,kBAAU;EACV,iCAAe;EACf,eAAS;AAkCb;AAhCI;EAEE,sBAAS;AAiCf;AA9BI;EACE,WAAO;EACP,eAAQ;AAgCd;AA9BM;EACE,WAAO;EACP,kCAAkB;AAgC1B;AA5BI;EACE,mBAAe;AA8BrB;AA3BI;EACE,oEAAiD;EACjD,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,WAAO;EACP,QAAK;EACL,6BAAW;EACX,WAAS;AA6Bf;AA1BI;EACE,WAAO;EACP,UAAM;AA4BZ;AAzBI;EACE,cAAO;EACP,yBAAkB;AA2BxB;AAxBI;EACE,cAAO;EACP,oCAAkB;AA0BxB;AAnBE;EACE,mBAAa;EACb,8BAAY;EACZ,cAAO;EACP,eAAQ;EACR,cAAS;EACT,gBAAY;EACZ,sDAAa;EACb,SAAQ;EACR,gBAAU;EACV,wBAAS;EACT,kBAAU;EACV,uBAAe;EACf,sDAAa;EACb,0DAAe;AAqBnB;AAnBI;EACE,+CAAW;AAqBjB;AAlBI;EACE,WAAO;EACP,eAAQ;AAoBd;AAlBM;EACE,WAAO;EACP,kCAAkB;AAoB1B;AAhBI;EACE,mBAAe;AAkBrB;AAjBM;EACE,kBAAe;EACf,kBAAc;AAmBtB;AAfI;EACE,oEAAiD;EACjD,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,WAAO;EACP,QAAK;EACL,6BAAW;EACX,WAAS;AAiBf;AAfI;EACE,WAAO;EACP,UAAM;AAiBZ;AAdI;EACE,cAAO;EACP,yBAAkB;AAgBxB;AAbI;EACE,cAAO;EACP,oCAAkB;AAexB",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --dropdown-option-flat-height: 40px;\r\n  --dropdown-option-flat-font-weight: 700;\r\n  --dropdown-option-flat-overflow: visible;\r\n  --dropdown-option-flat-text-overflow: clip;\r\n  --dropdown-option-flat-white-space: inherit;\r\n  --dropdown-option-direction-rtl: rtl;\r\n  --dropdown-option-framed-line-height: 30px;\r\n  --dropdown-option-framed-white-space: nowrap;\r\n  --dropdown-option-framed-overflow-wrap: unset;\r\n}\r\n\r\n\r\n:host(.flat-dropdown-type) {\r\n  .ui-dropdown-option {\r\n    @extends $typekit_h5_preserve_case;\r\n    height: var(--dropdown-option-flat-height);\r\n    font-weight: var(--dropdown-option-flat-font-weight);\r\n    overflow: var(--dropdown-option-flat-overflow);\r\n    text-overflow: var(--dropdown-option-flat-text-overflow);\r\n    white-space: var(--dropdown-option-flat-white-space);\r\n    color: $color_palette_gold2;\r\n    cursor: pointer;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    position: relative;\r\n    border-bottom: thin solid $color_palette_grey3;\r\n    padding: 0 10px;\r\n\r\n    &:lang(ar-ae) {\r\n      // Preventing some longer arabic text from overlapping tick icon.\r\n      padding: 0 10px 0 30px;\r\n    }\r\n\r\n    &.ui-dropdown-option-disabled {\r\n      color: $colors_gray;\r\n      cursor: default;\r\n\r\n      &:hover {\r\n        color: $colors_gray;\r\n        background-color: rgba($color_palette_grey3, 0);\r\n      }\r\n    }\r\n\r\n    &.ui-dropdown-option-unselectable {\r\n      border-bottom: none;\r\n    }\r\n\r\n    &.ui-dropdown-option-selected::after {\r\n      background: url('../../images/dropdown-check.png') center no-repeat;\r\n      width: 14px;\r\n      height: 11px;\r\n      position: absolute;\r\n      right: 10px;\r\n      top: 50%;\r\n      transform: translate(0, -50%);\r\n      content: '';\r\n    }\r\n\r\n    &.ui-dropdown-option-selected:lang(ar-ae)::after {\r\n      right: auto;\r\n      left: 10px;\r\n    }\r\n\r\n    &:hover {\r\n      color: $color_palette_gold1;\r\n      background-color: $color_palette_grey3;\r\n    }\r\n\r\n    &:active {\r\n      color: $color_palette_gold6;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n    }\r\n  }\r\n}\r\n\r\n\r\n:host(.framed-dropdown-type) {\r\n  .ui-dropdown-option {\r\n    align-items: center;\r\n    border-top: thin solid #1f2123;\r\n    color: $color_palette_gold2;\r\n    cursor: pointer;\r\n    display: block;\r\n    min-height: 30px;\r\n    line-height: var(--dropdown-option-framed-line-height);\r\n    margin: 0;\r\n    overflow: hidden;\r\n    padding: 2px 9px 2px 7px;\r\n    position: relative;\r\n    text-overflow: ellipsis;\r\n    white-space: var(--dropdown-option-framed-white-space);\r\n    overflow-wrap: var(--dropdown-option-framed-overflow-wrap);\r\n\r\n    &:lang(ar-ae) {\r\n      direction: var(--dropdown-option-direction-rtl);\r\n    }\r\n\r\n    &.ui-dropdown-option-disabled {\r\n      color: $colors_gray;\r\n      cursor: default;\r\n\r\n      &:hover {\r\n        color: $colors_gray;\r\n        background-color: rgba($color_palette_grey3, 0);\r\n      }\r\n    }\r\n\r\n    &.ui-dropdown-option-selected {\r\n      padding-right: 31px;\r\n      &:lang(ar-ae) {\r\n        padding-right: 7px;\r\n        padding-left: 31px;\r\n      }\r\n    }\r\n\r\n    &.ui-dropdown-option-selected::after {\r\n      background: url('../../images/dropdown-check.png') center no-repeat;\r\n      width: 14px;\r\n      height: 11px;\r\n      position: absolute;\r\n      right: 13px;\r\n      top: 50%;\r\n      transform: translate(0, -50%);\r\n      content: '';\r\n    }\r\n    &.ui-dropdown-option-selected:lang(ar-ae)::after {\r\n      right: auto;\r\n      left: 13px;\r\n    }\r\n\r\n    &:hover {\r\n      color: $color_palette_gold1;\r\n      background-color: $color_palette_grey3;\r\n    }\r\n\r\n    &:active {\r\n      color: $color_palette_gold6;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
-                sourceRoot: ""
-            }]), e.exports = s
-        }, e => {
-            "use strict";
-            e.exports = function(e, t) {
-                return t || (t = {}), e ? (e = String(e.__esModule ? e.default : e), /^['"].*['"]$/.test(e) && (e = e.slice(1, -1)), t.hash && (e += t.hash), /["'() \t\n]|(%20)/.test(e) || t.needQuotes ? '"'.concat(e.replace(/"/g, '\\"').replace(/\n/g, "\\n"), '"') : e) : e
-            }
-        }, (e, t, n) => {
-            "use strict";
-            e.exports = n.p + "dropdown-check.png"
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1);
-            class o extends r.webComponents.ShadowElement {
-                templateMarkup() {
-                    return n(94)
-                }
-                stylesheetMarkup() {
-                    return n(95)
-                }
-            }
-            o.tagName = "lol-uikit-flat-button-group";
-            var i = o;
-            t.default = i
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n  <div class="lol-uikit-flat-button-group">\r\n    <slot></slot>\r\n  </div>\r\n</template>'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, ":host {\n  --flat-button-group-background-color: #010a13;\n}\n:host {\n  display: inline-flex;\n}\n:host(:not([type=dialog-frame])) .lol-uikit-flat-button-group {\n  border: thin solid #32281e;\n  border-image: $gradient-palette_button-click 1;\n  background-color: var(--flat-button-group-background-color);\n  padding: 5px;\n  display: flex;\n}\n:host([type=dialog-frame]) .lol-uikit-flat-button-group {\n  position: relative;\n  padding: 0 4px;\n  display: flex;\n}\n:host([type=dialog-frame]) .lol-uikit-flat-button-group::before,\n:host([type=dialog-frame]) .lol-uikit-flat-button-group::after {\n  content: '';\n  position: absolute;\n  height: 10px;\n}\n:host([type=dialog-frame]) .lol-uikit-flat-button-group::before {\n  left: 0;\n  bottom: 0;\n  border-right: 2px solid #614a1f;\n  border-top: 2px solid transparent;\n  height: 10px;\n}\n:host([type=dialog-frame]) .lol-uikit-flat-button-group::after {\n  right: 0;\n  bottom: 0;\n  border-left: 2px solid #614a1f;\n  border-top: 2px solid transparent;\n  height: 10px;\n}\n:host([type=window-popup]) .lol-uikit-flat-button-group {\n  border: none;\n  position: relative;\n  background-color: var(--flat-button-group-background-color);\n  padding: 0 4px;\n  display: flex;\n}\n:host([type=window-popup]) .lol-uikit-flat-button-group::before,\n:host([type=window-popup]) .lol-uikit-flat-button-group::after {\n  content: '';\n  position: absolute;\n  height: 10px;\n}\n:host([type=window-popup]) .lol-uikit-flat-button-group::before {\n  left: 0;\n  bottom: 0;\n  border-right: 2px solid #614a1f;\n  border-top: 2px solid transparent;\n  height: 10px;\n}\n:host([type=window-popup]) .lol-uikit-flat-button-group::after {\n  right: 0;\n  bottom: 0;\n  border-left: 2px solid #614a1f;\n  border-top: 2px solid transparent;\n  height: 10px;\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-button-group/component-style.styl"],
-                names: [],
-                mappings: "AAKA;EACE,6CAAsC;AAJxC;AAQA;EACE,oBAAS;AANX;AAYE;EACE,0BAAQ;EACR,8CAAc;EACd,2DAAkB;EAClB,YAAS;EACT,aAAS;AAVb;AAiBE;EACE,kBAAU;EACV,cAAS;EACT,aAAS;AAfb;AAiBI;;EACE,WAAS;EACT,kBAAU;EACV,YAAQ;AAdd;AAiBI;EACE,OAAM;EACN,SAAQ;EACR,+BAAc;EACd,iCAAY;EACZ,YAAQ;AAfd;AAkBI;EACE,QAAO;EACP,SAAQ;EACR,8BAAa;EACb,iCAAY;EACZ,YAAQ;AAhBd;AAuBE;EACE,YAAQ;EACR,kBAAU;EACV,2DAAkB;EAClB,cAAS;EACT,aAAS;AArBb;AAuBI;;EACE,WAAS;EACT,kBAAU;EACV,YAAQ;AApBd;AAuBI;EACE,OAAM;EACN,SAAQ;EACR,+BAAc;EACd,iCAAY;EACZ,YAAQ;AArBd;AAwBI;EACE,QAAO;EACP,SAAQ;EACR,8BAAa;EACb,iCAAY;EACZ,YAAQ;AAtBd",
-                sourcesContent: ["@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --flat-button-group-background-color: $color_palette_almostBlack;\r\n}\r\n\r\n\r\n:host {\r\n  display: inline-flex;\r\n}\r\n\r\n\r\n// <lol-uikit-flat-button-group>\r\n:host(:not([type=dialog-frame])) {\r\n  .lol-uikit-flat-button-group {\r\n    border: thin solid $color_palette_gold7;\r\n    border-image: $gradient-palette_button-click 1;\r\n    background-color: var(--flat-button-group-background-color);\r\n    padding: 5px;\r\n    display: flex;\r\n  }\r\n}\r\n\r\n\r\n// <lol-uikit-flat-button-group type=\"dialog-frame\">\r\n:host([type=dialog-frame]) {\r\n  .lol-uikit-flat-button-group {\r\n    position: relative;\r\n    padding: 0 4px;\r\n    display: flex;\r\n\r\n    &::before, &::after {\r\n      content: '';\r\n      position: absolute;\r\n      height: 10px;\r\n    }\r\n\r\n    &::before {\r\n      left: 0;\r\n      bottom: 0;\r\n      border-right: 2px solid #614a1f;\r\n      border-top: 2px solid transparent;\r\n      height: 10px;\r\n    }\r\n\r\n    &::after {\r\n      right: 0;\r\n      bottom: 0;\r\n      border-left: 2px solid #614a1f;\r\n      border-top: 2px solid transparent;\r\n      height: 10px;\r\n    }\r\n  }\r\n}\r\n\r\n\r\n:host([type=window-popup]) {\r\n  .lol-uikit-flat-button-group {\r\n    border: none;\r\n    position: relative;\r\n    background-color: var(--flat-button-group-background-color);\r\n    padding: 0 4px;\r\n    display: flex;\r\n\r\n    &::before, &::after {\r\n      content: '';\r\n      position: absolute;\r\n      height: 10px;\r\n    }\r\n\r\n    &::before {\r\n      left: 0;\r\n      bottom: 0;\r\n      border-right: 2px solid #614a1f;\r\n      border-top: 2px solid transparent;\r\n      height: 10px;\r\n    }\r\n\r\n    &::after {\r\n      right: 0;\r\n      bottom: 0;\r\n      border-left: 2px solid #614a1f;\r\n      border-top: 2px solid transparent;\r\n      height: 10px;\r\n    }\r\n  }\r\n}\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(35),
-                o = n(1);
-            const i = "default",
-                a = "over",
-                s = "down",
-                l = "click",
-                d = "disabled";
-            class c extends o.webComponents.ShadowElement {
-                templateMarkup() {
-                    return n(97)
-                }
-                stylesheetMarkup() {
-                    return n(98)
-                }
-                constructor() {
-                    super(), this._mouseOverEvent = this._mouseover.bind(this), this._mouseOutEvent = this._mouseout.bind(this), this._mouseDownEvent = this._mousedown.bind(this), this._clickEvent = this._click.bind(this)
-                }
-                connectedCallback() {
-                    super.connectedCallback(), this._addMouseEvents()
-                }
-                disconnectedCallback() {
-                    super.disconnectedCallback(), this._removeMouseEvents()
-                }
-                static get observedAttributes() {
-                    return ["disabled"]
-                }
-                processAttributes() {
-                    this._disabledCheck()
-                }
-                _disabledCheck() {
-                    this.isDisabled() ? (this._removeMouseEvents(), this._setMouseClass(d)) : (this._addMouseEvents(), this._setMouseClass(i))
-                }
-                isDisabled() {
-                    return (0, r.isAttrTruthy)("disabled", this.getAttribute("disabled"))
-                }
-                _addMouseEvents() {
-                    const e = this.shadowRoot;
-                    e && (e.addEventListener("mouseover", this._mouseOverEvent), e.addEventListener("mouseout", this._mouseOutEvent), e.addEventListener("mousedown", this._mouseDownEvent), e.addEventListener("click", this._clickEvent))
-                }
-                _removeMouseEvents() {
-                    const e = this.shadowRoot;
-                    e && (e.removeEventListener("mouseover", this._mouseOverEvent), e.removeEventListener("mouseout", this._mouseOutEvent), e.removeEventListener("mousedown", this._mouseDownEvent), e.removeEventListener("click", this._clickEvent))
-                }
-                _mouseover() {
-                    this._setMouseClass(a)
-                }
-                _mouseout() {
-                    this._setMouseClass(i)
-                }
-                _mousedown() {
-                    this._setMouseClass(s)
-                }
-                _click() {
-                    return this._setMouseClass(l), this._mouseAnimationTimeout(c._clickAnimationDurationMs)
-                }
-                _mouseAnimationTimeout(e) {
-                    return this._removeMouseEvents(), new Promise((t => {
-                        setTimeout((() => {
-                            this._disabledCheck(), t()
-                        }), e)
-                    }))
-                }
-                _setMouseClass(e) {
-                    const t = [i, a, s, l, d],
-                        n = e || i,
-                        r = this.shadowRoot,
-                        o = r.querySelector(".lol-uikit-flat-button-secondary-wrapper"),
-                        c = r.querySelector(".button-frame-container");
-                    t.forEach((e => {
-                        if (e !== n) {
-                            c.querySelector("." + e).style.opacity = 0, o.classList.remove(e)
-                        }
-                    }));
-                    c.querySelector("." + n).style.opacity = 1, o.classList.add(n)
-                }
-            }
-            c.tagName = "lol-uikit-flat-button-secondary", c._clickAnimationDurationMs = 250;
-            var p = c;
-            t.default = p
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n  <div class="lol-uikit-flat-button-secondary-wrapper">\r\n    <div class="button-frame-container">\r\n      <div class="default"></div>\r\n      <div class="over"></div>\r\n      <div class="down click"></div>\r\n      <div class="disabled"></div>\r\n    </div>\r\n    <div class="lol-uikit-flat-button-secondary-content">\r\n      <slot></slot>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, '.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content {\n  font-family: var(--font-body);\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content {\n  -webkit-user-select: none;\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content:lang(ja-jp) {\n  font-size: 13px;\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  display: block;\n}\n.lol-uikit-flat-button-secondary-wrapper {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  box-sizing: border-box;\n  min-width: 90px;\n  height: 100%;\n  min-height: 32px;\n  cursor: pointer;\n  -webkit-user-select: none;\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .default,\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .over,\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .down,\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .disabled {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  background: #1e2328;\n  box-shadow: 0 0 1px 1px #010a13, inset 0 0 1px 1px #010a13;\n  border: thin solid transparent;\n  border-image-slice: 1;\n  opacity: 0;\n  transition: opacity 200ms linear;\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .default {\n  opacity: 1;\n  border-image-source: linear-gradient(to top, #785b28 0%, #c89c3c 55%, #c8a355 71%, #c8aa6e 100%);\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .over {\n  background: linear-gradient(to bottom, #1e232a 0%, #1e232a 40%, rgba(118,97,51,0.8) 140%);\n  border-image-source: linear-gradient(to top, #c89c3c 0%, #dcc188 50%, #e1c998 71%, #f0e6d8 100%);\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .down,\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .click {\n  transition-duration: 100ms;\n  border-image-source: linear-gradient(to top, #6b5024, #463714);\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .disabled {\n  border-color: #5c5b57;\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content {\n  position: relative;\n  display: flex;\n  flex-basis: 100%;\n  align-items: center;\n  justify-content: center;\n  top: 1px;\n  padding: 1px 15px;\n  font-weight: 700;\n  white-space: nowrap;\n  color: transparent;\n  background-color: #cdbe91;\n  -webkit-background-clip: text;\n  transition: all 200ms linear;\n}\n.lol-uikit-flat-button-secondary-wrapper.over .lol-uikit-flat-button-secondary-content {\n  background-color: #f0e6d2;\n}\n.lol-uikit-flat-button-secondary-wrapper.down .lol-uikit-flat-button-secondary-content,\n.lol-uikit-flat-button-secondary-wrapper.click .lol-uikit-flat-button-secondary-content {\n  transition-duration: 100ms;\n  background-color: #785a28;\n}\n.lol-uikit-flat-button-secondary-wrapper.click {\n  pointer-events: none;\n}\n.lol-uikit-flat-button-secondary-wrapper.disabled {\n  pointer-events: none;\n}\n.lol-uikit-flat-button-secondary-wrapper.disabled .lol-uikit-flat-button-secondary-content {\n  background-color: #5c5b57;\n}\n', "", {
-                version: 3,
-                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-button-secondary/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
-                names: [],
-                mappings: "AAIA;EACE,6BAAa;ACHf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;AC8RA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,uBAAgB;EAIhB,4CAAwB;ADpS1B;AC2RE;EACE,eAAW;ADzRf;AC8RE;EACE,iBAAgB;AD5RpB;AApBA;EACE,cAAS;AAsBX;AAnBA;EACE,kBAAU;EACV,aAAS;EACT,mBAAa;EACb,uBAAiB;EACjB,sBAAY;EACZ,eAAW;EACX,YAAQ;EACR,gBAAY;EACZ,eAAQ;EACR,yBAAqB;AAqBvB;AAnBE;EACE,kBAAU;EACV,WAAO;EACP,YAAQ;AAqBZ;AAnBI;;;;EACE,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,sBAAY;EACZ,mBAAY;EACZ,0DAAkD;EAClD,8BAAQ;EACR,qBAAoB;EACpB,UAAS;EACT,gCAAY;AAwBlB;AArBI;EACE,UAAS;EACT,gGAAqB;AAuB3B;AApBI;EACE,yFAAY;EACZ,gGAAqB;AAsB3B;AAnBI;;EACE,0BAAqB;EACrB,8DAAqB;AAsB3B;AAnBI;EACE,qBAAc;AAqBpB;AAjBE;EACE,kBAAU;EACV,aAAS;EACT,gBAAY;EACZ,mBAAa;EACb,uBAAiB;EACjB,QAAK;EACL,iBAAS;EAET,gBAAa;EACb,mBAAa;EACb,kBAAO;EACP,yBAAkB;EAClB,6BAAyB;EACzB,4BAAY;AAkBhB;AAdI;EACE,yBAAkB;AAgBxB;AAXI;;EACE,0BAAqB;EACrB,yBAAkB;AAcxB;AAVE;EACE,oBAAgB;AAYpB;AATE;EACE,oBAAgB;AAWpB;AATI;EACE,yBAAkB;AAWxB",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n\r\n:host {\r\n  display: block;\r\n}\r\n\r\n.lol-uikit-flat-button-secondary-wrapper {\r\n  position: relative;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  box-sizing: border-box;\r\n  min-width: 90px;\r\n  height: 100%;\r\n  min-height: 32px;\r\n  cursor: pointer;\r\n  -webkit-user-select: none;\r\n\r\n  .button-frame-container {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n\r\n    .default, .over, .down, .disabled {\r\n      position: absolute;\r\n      width: 100%;\r\n      height: 100%;\r\n      box-sizing: border-box;\r\n      background: $color_palette_grey3;\r\n      box-shadow: 0 0 1px 1px $color_palette_almostBlack, inset 0 0 1px 1px $color_palette_almostBlack;\r\n      border: thin solid transparent;\r\n      border-image-slice: 1;\r\n      opacity: 0;\r\n      transition: opacity 200ms linear;\r\n    }\r\n\r\n    .default {\r\n      opacity: 1;\r\n      border-image-source: $gradient-palette_button-gold-border;\r\n    }\r\n\r\n    .over {\r\n      background: $gradient-palette_button-gold-bg;\r\n      border-image-source: $gradient-palette_button-gold-hover-border;\r\n    }\r\n\r\n    .down, .click {\r\n      transition-duration: 100ms;\r\n      border-image-source: linear-gradient(to top, rgb(107, 80, 36), rgb(70, 55, 20));\r\n    }\r\n\r\n    .disabled {\r\n      border-color: $color_palette_grey_disabled;\r\n    }\r\n  }\r\n\r\n  .lol-uikit-flat-button-secondary-content {\r\n    position: relative;\r\n    display: flex;\r\n    flex-basis: 100%;\r\n    align-items: center;\r\n    justify-content: center;\r\n    top: 1px;\r\n    padding: 1px 15px;\r\n    @extend $typekit_text_s;\r\n    font-weight: 700;\r\n    white-space: nowrap;\r\n    color: transparent;\r\n    background-color: $color_palette_gold2;\r\n    -webkit-background-clip: text;\r\n    transition: all 200ms linear;\r\n  }\r\n\r\n  &.over {\r\n    .lol-uikit-flat-button-secondary-content {\r\n      background-color: $color_palette_gold1;\r\n    }\r\n  }\r\n\r\n  &.down, &.click {\r\n    .lol-uikit-flat-button-secondary-content {\r\n      transition-duration: 100ms;\r\n      background-color: $color_palette_gold5;\r\n    }\r\n  }\r\n\r\n  &.click {\r\n    pointer-events: none;\r\n  }\r\n\r\n  &.disabled {\r\n    pointer-events: none;\r\n\r\n    .lol-uikit-flat-button-secondary-content {\r\n      background-color: $color_palette_grey_disabled;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r, o = n(1),
-                i = (r = n(37)) && r.__esModule ? r : {
-                    default: r
-                };
-            class a extends o.webComponents.ShadowElement {
-                templateMarkup() {
-                    return n(8)
-                }
-                stylesheetMarkup() {
-                    return n(100)
-                }
-                connectedCallback() {
-                    super.connectedCallback(), this._inputElementInitialized = !1, this._labelElementInitialized = !1, this.updateCheckedStateListener = this.updateCheckedStateListener || this._updateCheckedState.bind(this), this.toggleCheckedStateListener = this.toggleCheckedStateListener || this._toggleCheckedState.bind(this), this._initObserver = new MutationObserver(this._mutationCallback.bind(this)), this._initObserver.observe(this, {
-                        childList: !0
-                    });
-                    const e = this._getInput();
-                    e && this._initInputElement(e);
-                    const t = this._getLabel();
-                    t && this._initLabelElement(t), this.addEventListener("click", this.toggleCheckedStateListener)
-                }
-                _mutationCallback(e) {
-                    e.forEach((e => {
-                        if ("childList" === e.type) {
-                            Array.from(e.addedNodes).forEach((e => {
-                                "INPUT" === e.tagName && this._initInputElement(e), "LABEL" === e.tagName && this._initLabelElement(e)
-                            }))
-                        }
-                    }))
-                }
-                _initInputElement(e) {
-                    if (!this._inputElementInitialized) {
-                        const t = this,
-                            n = Object.getOwnPropertyDescriptor(e.__proto__, "checked"),
-                            r = n.set;
-                        n.set = function(e) {
-                            r.call(this, e), t._updateCheckedState()
-                        }, Object.defineProperty(e, "checked", n), e.addEventListener("change", this.updateCheckedStateListener), this._updateCheckedState(), e.addEventListener("click", (e => {
-                            e.stopPropagation()
-                        })), this._setUpDisabledAttributeObserver(), this._inputElementInitialized = !0
-                    }
-                    this._inputElementInitialized && this._labelElementInitialized && this._initObserver.disconnect()
-                }
-                _initLabelElement(e) {
-                    this._labelElementInitialized || (e.removeAttribute("for"), this._labelElementInitialized = !0), this._inputElementInitialized && this._labelElementInitialized && this._initObserver.disconnect()
-                }
-                _setUpDisabledAttributeObserver() {
-                    const e = this._getInput();
-                    if (!e) return;
-                    const t = new MutationObserver(this._observeDisabledAttribute.bind(this));
-                    t.observe(e, {
-                        attributes: !0,
-                        attributeFilter: ["disabled"]
-                    }), this.disabledAttributeObserver = t, this._observeDisabledAttribute()
-                }
-                disconnectedCallback() {
-                    super.disconnectedCallback();
-                    const e = this._getInput();
-                    e && e.removeEventListener("change", this.updateCheckedStateListener), this.disabledAttributeObserver && this.disabledAttributeObserver.disconnect()
-                }
-                _getInput() {
-                    return this.querySelector("input")
-                }
-                _getLabel() {
-                    return this.querySelector("label")
-                }
-                _getSpan() {
-                    return this.shadowRoot.querySelector("span")
-                }
-                _toggleCheckedState() {
-                    const e = this._getInput();
-                    if (e.click(), !e.disabled) {
-                        const t = new Event("checkboxToggle", {
-                            bubbles: !0
-                        });
-                        t.checked = e, this.dispatchEvent(t), this._playClickSound()
-                    }
-                }
-                _updateCheckedState() {
-                    this._getInput().checked ? this.classList.add("checked") : this.classList.remove("checked")
-                }
-                _observeDisabledAttribute() {
-                    const e = this._getInput();
-                    e && e.disabled ? this.classList.add("disabled") : this.classList.remove("disabled")
-                }
-                _playClickSound() {
-                    (0, o.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").playSound(i.default.flatCheckBoxClick)
-                }
-            }
-            a.tagName = "lol-uikit-flat-checkbox";
-            var s = a;
-            t.default = s
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, ':host ::slotted(label) {\n  font-family: var(--font-body);\n}\n:host ::slotted(label) {\n  -webkit-user-select: none;\n}\n:host ::slotted(label) {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host ::slotted(label) {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.1em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host ::slotted(label):lang(ja-jp) {\n  font-size: 13px;\n}\n:host ::slotted(label):lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n:host ::slotted(input) {\n  opacity: 0;\n  position: absolute;\n  pointer-events: none;\n}\n:host ::slotted(label) {\n  color: #a09b8c;\n  cursor: pointer;\n  margin: 1px 0 0 5px;\n}\n:host ::slotted(label):lang(ar-ae) {\n  direction: rtl;\n  margin: 1px 5px 0 0;\n}\n:host span.checkbox-span {\n  width: 14px;\n  height: 14px;\n  background: url("/fe/lol-uikit/images/checkbox-spritesheet.png") no-repeat;\n  cursor: pointer;\n  flex-shrink: 0;\n}\n:host ::slotted(input:checked) + span.checkbox-span {\n  background-position-y: -14px;\n}\n:host(.checked) span.checkbox-span {\n  background-position-y: -28px;\n}\n:host(.checked:hover:not(.disabled)) span.checkbox-span {\n  background-position-y: -42px;\n}\n:host(.disabled) {\n  -webkit-filter: brightness(0.5);\n  cursor: default;\n}\n:host(.disabled) span.checkbox-span,\n:host(.disabled):hover span.checkbox-span {\n  cursor: default;\n}\n:host(.disabled) ::slotted(label) {\n  color: #a09b8c;\n  cursor: default;\n}\n:host(:not(.disabled)) ::slotted(input:focus) + ::slotted(label) {\n  color: #f0e6d2;\n}\n:host(:not(.disabled):hover) span.checkbox-span {\n  background-position-y: -14px;\n}\n:host(:not(.disabled):hover) ::slotted(label) {\n  color: #f0e6d2;\n}\n:host(:lang(ar-ae)) {\n  direction: rtl;\n}\n', "", {
-                version: 3,
-                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-checkbox/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
-                names: [],
-                mappings: "AAIA;EACE,6BAAa;ACHf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;AC0WA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,qBAAgB;EAIhB,4CAAwB;ADhX1B;ACuWE;EACE,eAAW;ADrWf;AC0WE;EACE,iBAAgB;ADxWpB;AAnBA;EACE,aAAS;EACT,mBAAa;EACb,eAAQ;AAqBV;AAnBE;EACE,UAAS;EACT,kBAAU;EACV,oBAAgB;AAqBpB;AAlBE;EAEE,cAAO;EACP,eAAQ;EACR,mBAAQ;AAmBZ;AAjBI;EACE,cAAW;EACX,mBAAQ;AAmBd;AAfE;EACE,WAAO;EACP,YAAQ;EACR,0EAA+D;EAC/D,eAAQ;EACR,cAAa;AAiBjB;AAdE;EACE,4BAAuB;AAgB3B;AAXE;EACE,4BAAuB;AAa3B;AARE;EACE,4BAAuB;AAU3B;AANA;EACE,+BAAgB;EAChB,eAAQ;AAQV;AANE;;EACE,eAAQ;AASZ;AANE;EACE,cAAO;EACP,eAAQ;AAQZ;AAHE;EACE,cAAO;AAKX;AAAE;EACE,4BAAuB;AAE3B;AAAE;EACE,cAAO;AAEX;AAEA;EACE,cAAW;AAAb",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require '../../css/shared.styl';\r\n\r\n\r\n:host {\r\n  display: flex;\r\n  align-items: center;\r\n  cursor: pointer;\r\n\r\n  ::slotted(input) {\r\n    opacity: 0;\r\n    position: absolute;\r\n    pointer-events: none;\r\n  }\r\n\r\n  ::slotted(label) {\r\n    @extends $typekit_label;\r\n    color: $color_palette_grey1;\r\n    cursor: pointer;\r\n    margin: 1px 0 0 5px;\r\n\r\n    &:lang(ar-ae) {\r\n      direction: rtl;\r\n      margin: 1px 5px 0 0;\r\n    }\r\n  }\r\n\r\n  span.checkbox-span {\r\n    width: 14px;\r\n    height: 14px;\r\n    background: url('/fe/lol-uikit/images/checkbox-spritesheet.png') no-repeat;\r\n    cursor: pointer;\r\n    flex-shrink: 0;\r\n  }\r\n\r\n  ::slotted(input:checked) + span.checkbox-span {\r\n    background-position-y: -14px;\r\n  }\r\n}\r\n\r\n:host(.checked) {\r\n  span.checkbox-span {\r\n    background-position-y: -28px;\r\n  }\r\n}\r\n\r\n:host(.checked:hover:not(.disabled)) {\r\n  span.checkbox-span {\r\n    background-position-y: -42px;\r\n  }\r\n}\r\n\r\n:host(.disabled) {\r\n  -webkit-filter: brightness(0.5);\r\n  cursor: default;\r\n\r\n  span.checkbox-span, &:hover span.checkbox-span {\r\n    cursor: default;\r\n  }\r\n\r\n  ::slotted(label) {\r\n    color: $color_palette_grey1;\r\n    cursor: default;\r\n  }\r\n}\r\n\r\n:host(:not(.disabled)) {\r\n  ::slotted(input:focus) + ::slotted(label) {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n:host(:not(.disabled):hover) {\r\n  span.checkbox-span {\r\n    background-position-y: -14px;\r\n  }\r\n  ::slotted(label) {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n:host(:lang(ar-ae)) {\r\n  direction: rtl;\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = i(n(102)),
-                o = i(n(2));
-
-            function i(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            class a extends r.default {
-                templateMarkup() {
-                    return n(6)
-                }
-                stylesheetMarkup() {
-                    return n(106)
-                }
-                template() {
-                    return o.default.get().getElementById("lol-uikit-template-flat-dropdown")
-                }
-            }
-            a.tagName = "lol-uikit-flat-dropdown";
-            var s = a;
-            t.default = s
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(34),
-                o = n(1),
-                i = c(n(36)),
-                a = c(n(103)),
-                s = c(n(37)),
-                l = c(n(89)),
-                d = n(35);
-
-            function c(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            const p = ["close", "keyup", "mousedown", "blur"];
-            class A extends o.webComponents.ShadowElement {
-                template() {
-                    throw new Error("Must override this base class to get a dropdown element")
-                }
-                constructor() {
-                    super(), this.optionNodes = [], this.selected = !1, this.isDropdownOpen = !1, this.updateSelectedRequired = !0, this.currentElement = null, this.shadowContentElement = null, this.lightContentElement = null, this._dropdownSound = this._createSound(s.default.dropdownClick), this._handleClick = this._handleClick.bind(this), this._handleKeyUp = this._handleKeyUp.bind(this), this._handleDOMChange = this._handleDOMChange.bind(this), this._refreshSelected = () => {
-                        this.refreshSelected()
-                    }, this._handleClosableEvent = this._handleClosableEvent.bind(this)
-                }
-                connectedCallback() {
-                    super.connectedCallback();
-                    const e = this.getBoundingClientRect();
-                    this._windowHeight = window.innerHeight, this._windowScrollY = window.scrollY, this._elementOffsetTop = e.top + this._windowScrollY, this._offsetHeight = this.offsetHeight, this._findSelected(), this._updateSelected(), this._attachEvents(), this._updateClasses(), (0, a.default)(this).then((() => {
-                        this._checkOptionsRoom()
-                    })), this.tabIndex = 0
-                }
-                disconnectedCallback() {
-                    super.disconnectedCallback(), this._detachEvents()
-                }
-                _descendantOptions(e = "") {
-                    const t = ["lol-uikit-dropdown-option"].map((t => `${t}${e}`)).join(",");
-                    return Array.from(this.querySelectorAll(t))
-                }
-                _makeSelected(e) {
-                    this._descendantOptions().forEach((t => {
-                        t === e ? (t.removeAttribute("selected"), t.setAttribute("selected", !0)) : t.removeAttribute("selected")
-                    })), this.selected = e
-                }
-                select(e) {
-                    const t = this._descendantOptions();
-                    for (let n = 0; n < t.length; n++) {
-                        const r = t[n];
-                        if (!0 === ("function" == typeof e ? e(r) : r.getAttribute("value") === e)) return this.selectOption(r)
-                    }
-                }
-                selectOption(e) {
-                    if (e !== this.selected) {
-                        this._makeSelected(e);
-                        const t = new Event("selected", {
-                            composed: !0
-                        });
-                        t.selected = this.selected, this.dispatchEvent(t), this._updateSelected()
-                    }
-                    this.hasAttribute("data-should-stay-open") || this._close()
-                }
-                refreshSelected() {
-                    this.updateSelectedRequired = !0, this._findSelected(), this._updateSelected()
-                }
-                _checkOptionsRoom() {
-                    const e = this.shadowRoot.querySelector(".ui-dropdown"),
-                        t = this.shadowRoot.querySelector(".ui-dropdown-options-container lol-uikit-scrollable"),
-                        n = this.getAttribute("direction"),
-                        r = this._getTopOfDropdown(),
-                        o = this._getBottomOfDropdown();
-                    if ("upward" === n) return e.classList.add("opens-upward"), void this._constrainHeightToTop(t, r);
-                    if ("downward" === n) return void this._constrainHeightToBottom(t, o);
-                    const i = this._getWindowHeight();
-                    this._extendsBelowClient(t, o) && r >= i / 2 ? (e.classList.add("opens-upward"), this._constrainHeightToTop(t, r)) : (e.classList.remove("opens-upward"), this._constrainHeightToBottom(t, o))
-                }
-                _extendsBelowClient(e, t) {
-                    const n = this._getWindowHeight();
-                    return t + e.offsetHeight > n
-                }
-                _extendsAboveClient(e, t) {
-                    return t - e.offsetHeight < 10
-                }
-                _constrainHeightToTop(e, t) {
-                    if (this._extendsAboveClient(e, t)) {
-                        const n = Math.floor(t - 10);
-                        e.style.maxHeight = n + "px"
-                    }
-                }
-                _constrainHeightToBottom(e, t) {
-                    const n = this._getWindowHeight();
-                    if (this._extendsBelowClient(e, t)) {
-                        const r = Math.floor(n - t - 10);
-                        e.style.maxHeight = r + "px"
-                    }
-                }
-                _getWindowHeight() {
-                    return this._windowHeight - 10
-                }
-                _getBottomOfDropdown() {
-                    return this._windowScrollY + this._elementOffsetTop + this._offsetHeight
-                }
-                _getTopOfDropdown() {
-                    return this._windowScrollY + this._elementOffsetTop
-                }
-                _getOptionHeight(e) {
-                    return e.offsetHeight
-                }
-                _findSelected() {
-                    const e = this._descendantOptions("[selected]")[0];
-                    if (e) return void(this.selected = e);
-                    const t = this._descendantOptions(":not([unselectable]):not([disabled])")[0];
-                    t && (t.setAttribute("selected", !0), this.selected = t)
-                }
-                _updateSelected() {
-                    if (this.currentElement && this.updateSelectedRequired) {
-                        const e = this.getAttribute("staticDisplay");
-                        e ? (this.updateSelectedRequired = !1, this.currentElement.innerText !== e && (this.currentElement.innerText = e)) : this.selected && this.currentElement.innerHTML !== this.selected.innerHTML && (this.currentElement.innerHTML = this.selected.innerHTML)
-                    }
-                }
-                _attachEvents() {
-                    this.shadowRoot.querySelector(".ui-dropdown-current").addEventListener("click", this._handleClick), this.addEventListener("keyup", this._handleKeyUp), this.addEventListener("reset", this._refreshSelected), this._observer = new MutationObserver(this._handleDOMChange), this._observer.observe(this, {
-                        childList: !0,
-                        subtree: !0,
-                        characterData: !0,
-                        attributes: !0,
-                        attributeOldValue: !0
-                    })
-                }
-                _detachEvents() {
-                    this.shadowRoot.querySelector(".ui-dropdown-current").removeEventListener("click", this._handleClick), this.removeEventListener("keyup", this._handleKeyUp), this.removeEventListener("reset", this._refreshSelected), this._observer.disconnect(), this._observer = null
-                }
-                _handleDOMChange(e) {
-                    let t, n, r;
-                    e.forEach((e => {
-                        const {
-                            attributeName: o
-                        } = e, {
-                            oldValue: i
-                        } = e, {
-                            target: a
-                        } = e;
-                        if ("childList" === e.type) {
-                            Array.from(e.addedNodes).forEach((e => {
-                                e instanceof l.default && e.getAttribute("selected") && (r = e)
-                            })), this._checkOptionsRoom()
-                        }
-                        "disabled" === o ? (t = !(0, d.isAttrTruthy)("disabled", i), n = (0, d.isAttrTruthy)("disabled", a.getAttribute("disabled")), this.isDropdownOpen && t && n && this._close()) : "selected" === o && (0, d.isAttrTruthy)("selected", a.getAttribute("selected")) && this._descendantOptions().forEach((function(e) {
-                            e !== a && e.getAttribute("selected") && e.removeAttribute("selected")
-                        }))
-                    })), r && this._descendantOptions().forEach((function(e) {
-                        e !== r && e.getAttribute("selected") && e.removeAttribute("selected")
-                    })), this._updateClasses(), this.refreshSelected()
-                }
-                _handleKeyUp(e) {
-                    32 !== e.keyCode && 13 !== e.keyCode || this._toggleDropdown()
-                }
-                _handleClick() {
-                    this._toggleDropdown()
-                }
-                _toggleDropdown() {
-                    this._isDisabled() || (this.isDropdownOpen ? this._close() : this._open(), this._dropdownSound.play())
-                }
-                _createSound(e) {
-                    return (0, r.createSound)("sfx-ui", e, {
-                        allowConcurrency: !1
-                    })
-                }
-                _handleClosableEvent(e = {}) {
-                    const t = this === e.target,
-                        n = (0, i.default)(this).has(e.target).length > 0;
-                    t || n || this._close()
-                }
-                _open() {
-                    this._isDisabled() || (this.isDropdownOpen = !0, this.classList.add("active"), (0, i.default)(window).on(p.join(" "), this._handleClosableEvent), this._scrollToSelectedOption())
-                }
-                _close() {
-                    this.isDropdownOpen = !1, this.classList.remove("active"), (0, i.default)(window).off(p.join(" "), this._handleClosableEvent)
-                }
-                _isDisabled() {
-                    return (0, d.isAttrTruthy)("disabled", this.getAttribute("disabled"))
-                }
-                _updateContentElement() {
-                    this.isStylableContent = (0, d.isAttrTruthy)("stylablecontent", this.getAttribute("stylablecontent")), this.isStylableContent && !this.lightContentElement ? (this.lightContentElement = document.createElement("div"), this.lightContentElement.setAttribute("slot", ".ui-dropdown-current-content.light"), this.lightContentElement.classList.add("ui-dropdown-current-content"), this.lightContentElement.classList.add("light"), this.appendChild(this.lightContentElement)) : !this.isStylableContent && this.lightContentElement && (this.removeChild(this.lightContentElement), this.lightContentElement = null), this.shadowContentElement || (this.shadowContentElement = this.shadowRoot.querySelector(".ui-dropdown-current-content")), this.currentElement = this.isStylableContent ? this.lightContentElement : this.shadowContentElement
-                }
-                _updateClasses() {
-                    this.classList.toggle("disabled", this._isDisabled()), this._updateContentElement()
-                }
-                _scrollToSelectedOption() {
-                    const e = this.shadowRoot.querySelector("lol-uikit-scrollable");
-                    if (e && e.clientHeight < e.scrollHeight) {
-                        const t = this._descendantOptions()[0],
-                            n = this._descendantOptions("[selected]")[0];
-                        if (t && n) {
-                            const r = t.offsetTop,
-                                o = n.offsetTop;
-                            e.scrollTop = o - r
-                        }
-                    }
-                }
-            }
-            t.default = A
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = function(e) {
-                return new Promise((function(t) {
-                    setTimeout((function() {
-                        o(e) ? t(e) : document.body.contains(e) ? i(e, t) : function(e, t) {
-                            e.classList.add("uikit-added-to-dom"), e.addEventListener("animationstart", (function n(r) {
-                                "uikit-added-to-dom-animation" === r.animationName && (r.stopPropagation(), r.preventDefault(), e.classList.remove("uikit-added-to-dom"), e.removeEventListener("animationstart", n), o(e) ? t(e) : i(e, t))
-                            }))
-                        }(e, t)
-                    }), 0)
-                }))
-            }, n(104);
-            var r = n(105);
-
-            function o(e) {
-                const t = e.getBoundingClientRect();
-                return t.width > 0 || t.height > 0
-            }
-
-            function i(e, t) {
-                (0, r.addResizeListener)(e, (function n() {
-                    o(e) && ((0, r.removeResizeListener)(e, n), t(e))
-                }))
-            }
-        }, (e, t, n) => {
-            "use strict";
-            n.r(t)
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.addResizeListener = function(e, t) {
-                if (!e.__resizeListeners__) {
-                    e.__resizeListeners__ = [], "static" === getComputedStyle(e).position && (r.logger.trace("Calling addResizeListener on a DOM element with its CSS position property set to static will result in it automatically being changed to position: relative."), e.style.position = "relative");
-                    const t = e.__resizeTrigger__ = document.createElement("object");
-                    t.setAttribute("style", "display: block; position: absolute;top: 0; left: 0; height: 100%; width: 100%; overflow: hidden;pointer-events: none; z-index: -1;"), t.__resizeElement__ = e, t.classList.add("uikit-resize-detection-helper"), t.onload = i, t.type = "text/html", t.data = "about:blank", e.appendChild(t)
-                }
-                e.__resizeListeners__.push(t)
-            }, t.removeResizeListener = function(e, t) {
-                if (!e.__resizeListeners__ || 0 === e.__resizeListeners__.length) return;
-                e.__resizeListeners__.splice(e.__resizeListeners__.indexOf(t), 1), e.__resizeListeners__.length || (e.__resizeTrigger__.contentDocument.defaultView.removeEventListener("resize", o), e.__resizeTrigger__ = !e.removeChild(e.__resizeTrigger__))
-            };
-            var r = n(1);
-
-            function o(e) {
-                const t = e.target || e.srcElement;
-                t.__resizeRAF__ && t.cancelAnimationFrame(t.__resizeRAF__), t.__resizeRAF__ = t.requestAnimationFrame((function() {
-                    const n = t.__resizeTrigger__;
-                    n.__resizeListeners__.forEach((function(t) {
-                        t.call(n, e)
-                    }))
-                }))
-            }
-
-            function i() {
-                this.contentDocument.defaultView.__resizeTrigger__ = this.__resizeElement__, this.contentDocument.defaultView.addEventListener("resize", o)
-            }
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27),
-                i = n(91),
-                a = n(107),
-                s = n(108),
-                l = o(r),
-                d = i(a),
-                c = i(s);
-            l.push([e.id, ":host .ui-dropdown .ui-dropdown-current {\n  font-family: var(--font-display);\n}\n:host .ui-dropdown .ui-dropdown-current {\n  -webkit-user-select: none;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  text-transform: uppercase;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ko-kr),\n:host .ui-dropdown .ui-dropdown-current:lang(ja-jp),\n:host .ui-dropdown .ui-dropdown-current:lang(tr-tr),\n:host .ui-dropdown .ui-dropdown-current:lang(el-gr),\n:host .ui-dropdown .ui-dropdown-current:lang(th-th),\n:host .ui-dropdown .ui-dropdown-current:lang(zh-tw) {\n  text-transform: none;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host(.active) .ui-dropdown .ui-dropdown-options-container {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625, #463714) 1;\n}\n:host {\n  --flat-dropdown-current-height: 40px;\n  --flat-dropdown-scrollable-max-height: none;\n  --flat-dropdownactive-z-index: auto;\n  --flat-dropdownactive-max-width: none;\n  --flat-dropdownactive-current-display: flex;\n  --flat-dropdownactive-opens-upward-container-padding: 0 0 40px 0;\n  --flat-dropdownactive-opens-upward-container-margin: 0;\n  --flat-dropdown-current-content-display: block;\n  --flat-dropdown-current-content-max-width: none;\n  --flat-dropdown-current-content-text-transform: none;\n  --flat-dropdown-current-content-white-space: normal;\n  --flat-dropdown-current-content-text-overflow: clip;\n  --flat-dropdown-current-content-overflow: visible;\n  --flat-dropdown-current-content-color: #cdbe91;\n  --flat-dropdown-current-content-font-size: 18px;\n  --flat-dropdown-current-content-line-height: 22px;\n  --flat-dropdown-current-content-letter-spacing: 0.025em;\n  --flat-dropdown-direction-rtl: rtl;\n  --flat-dropdown-current-after-margin-rtl: 0 7px 0 0;\n}\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\n  display: none;\n}\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\n  display: none;\n}\n:host .ui-dropdown-current-content,\n:host ::slotted(.ui-dropdown-current-content) {\n  display: var(--flat-dropdown-current-content-display);\n  max-width: var(--flat-dropdown-current-content-max-width);\n  text-transform: var(--flat-dropdown-current-content-text-transform);\n  white-space: var(--flat-dropdown-current-content-white-space);\n  text-overflow: var(--flat-dropdown-current-content-text-overflow);\n  overflow: var(--flat-dropdown-current-content-overflow);\n  color: var(--flat-dropdown-current-content-color);\n  font-size: var(--flat-dropdown-current-content-font-size);\n  line-height: var(--flat-dropdown-current-content-line-height);\n  letter-spacing: var(--flat-dropdown-current-letter-spacing);\n}\n:host {\n  display: inline-flex;\n  flex-direction: column;\n  width: 100%;\n  height: 40px;\n  outline: 0;\n}\n:host .ui-dropdown {\n  display: inline-flex;\n  flex-direction: column;\n  box-sizing: border-box;\n  position: relative;\n  user-select: none;\n  margin: 0;\n  width: 100%;\n  padding: 0;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  direction: var(--flat-dropdown-direction-rtl);\n}\n:host .ui-dropdown .ui-dropdown-current {\n  display: flex;\n  flex-direction: row;\n  background: none;\n  position: absolute;\n  height: var(--flat-dropdown-current-height);\n  margin: 0;\n  align-items: center;\n  padding: 0 10px;\n  cursor: pointer;\n}\n:host .ui-dropdown .ui-dropdown-current:hover {\n  color: #f0e6d2;\n}\n:host .ui-dropdown .ui-dropdown-current:hover::after {\n  -webkit-filter: brightness(2.2);\n}\n:host .ui-dropdown .ui-dropdown-current::after {\n  content: '';\n  background: url(" + d + ") center no-repeat;\n  width: 13px;\n  height: 19px;\n  margin: 0 0 0 7px;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ar-ae)::after {\n  margin: var(--flat-dropdown-current-after-margin-rtl);\n}\n:host .ui-dropdown .ui-dropdown-options-container {\n  background-color: #010a13;\n  width: 100%;\n  opacity: 0;\n  position: absolute;\n  height: 0;\n  visibility: hidden;\n  transition: opacity 400ms;\n}\n:host .ui-dropdown .ui-dropdown-options-container lol-uikit-scrollable {\n  max-height: var(--flat-dropdown-scrollable-max-height);\n}\n:host .ui-dropdown.opens-upward .ui-dropdown-options-container {\n  bottom: 100%;\n  top: auto;\n  margin-bottom: -42px;\n}\n:host(.active) .ui-dropdown {\n  z-index: var(--flat-dropdownactive-z-index);\n  max-width: var(--flat-dropdownactive-max-width);\n}\n:host(.active) .ui-dropdown .ui-dropdown-current {\n  display: var(--flat-dropdownactive-current-display);\n  color: #785a28;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current:hover {\n  color: #785a28;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current:hover::after {\n  -webkit-filter: none;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current::after {\n  background-image: url(" + c + ");\n}\n:host(.active) .ui-dropdown .ui-dropdown-options-container {\n  border-width: 2px;\n  padding-top: 40px;\n  width: 100%;\n  opacity: 1;\n  height: auto;\n  transition: opacity 400ms;\n  visibility: visible;\n}\n:host(.active) .ui-dropdown.opens-upward .ui-dropdown-options-container {\n  padding: var(--flat-dropdownactive-opens-upward-container-padding);\n  margin: var(--flat-dropdownactive-opens-upward-container-margin);\n}\n:host(.disabled) {\n  cursor: default;\n  pointer-events: none;\n}\n:host(.disabled) .ui-dropdown .ui-dropdown-current {\n  color: #3c3c41;\n}\n:host(.disabled) .ui-dropdown .ui-dropdown-current::after {\n  -webkit-filter: grayscale(100%);\n  opacity: 0.35;\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-dropdown/component-style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/gradient-palette.styl"],
-                names: [],
-                mappings: "AAAA;EACE,gCAAa;ACCf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;ACyBA;EACE,yBAAgB;ADvBlB;ACwBE;;;;;;EAME,oBAAgB;ADtBpB;ACwIA;EAIE,cAAO;EACP,eAAW;EACX,gBAAa;EACb,iBAAa;EACb,sBAAgB;ADzIlB;AC0IE;EACE,iBAAgB;ADxIpB;AEoHA;EACE,8BAAQ;EACR,yDAAc;AFlHhB;AA5BA;EACE,oCAAgC;EAChC,2CAAuC;EACvC,mCAA+B;EAC/B,qCAAiC;EACjC,2CAAuC;EACvC,gEAAsD;EACtD,sDAAqD;EAErD,8CAAyC;EACzC,+CAA2C;EAC3C,oDAAgD;EAChD,mDAA6C;EAC7C,mDAA+C;EAC/C,iDAA0C;EAC1C,8CAAuC;EACvC,+CAA2C;EAC3C,iDAA6C;EAC7C,uDAAgD;EAChD,kCAA+B;EAC/B,mDAA0C;AA6B5C;AA1BA;EACE,aAAS;AA4BX;AA1BA;EACE,aAAS;AA4BX;AAzBA;;EAEE,qDAAS;EACT,yDAAW;EACX,mEAAgB;EAChB,6DAAa;EACb,iEAAe;EACf,uDAAU;EACV,iDAAO;EACP,yDAAW;EACX,6DAAa;EACb,2DAAgB;AA2BlB;AAvBA;EACE,oBAAS;EACT,sBAAgB;EAChB,WAAO;EACP,YAAQ;EACR,UAAS;AAyBX;AAvBE;EACE,oBAAS;EACT,sBAAgB;EAChB,sBAAY;EACZ,kBAAU;EACV,iBAAa;EACb,SAAQ;EACR,WAAO;EACP,UAAS;AAyBb;AAvBI;EACE,6CAAW;AAyBjB;AAtBI;EAEE,aAAS;EACT,mBAAgB;EAChB,gBAAY;EACZ,kBAAU;EACV,2CAAQ;EACR,SAAQ;EACR,mBAAa;EACb,eAAS;EACT,eAAQ;AAuBd;AArBM;EACE,cAAO;AAuBf;AAtBQ;EACE,+BAAgB;AAwB1B;AApBM;EACE,WAAS;EACT,oEAAgD;EAChD,WAAO;EACP,YAAQ;EACR,iBAAQ;AAsBhB;AApBM;EACE,qDAAQ;AAsBhB;AAlBI;EACE,yBAAkB;EAClB,WAAO;EACP,UAAS;EACT,kBAAU;EACV,SAAQ;EACR,kBAAY;EACZ,yBAAY;AAoBlB;AAnBM;EACE,sDAAY;AAqBpB;AAhBM;EACE,YAAQ;EACR,SAAK;EACL,oBAAe;AAkBvB;AAXI;EAEE,2CAAS;EACT,+CAAW;AAYjB;AAVM;EACE,mDAAS;EACT,cAAO;AAYf;AAVQ;EACE,cAAO;AAYjB;AAXU;EACE,oBAAgB;AAa5B;AATQ;EACE,yDAA6D;AAWvE;AAPM;EAEE,iBAAc;EACd,iBAAa;EACb,WAAO;EACP,UAAS;EACT,YAAQ;EACR,yBAAY;EACZ,mBAAY;AAQpB;AAJQ;EACE,kEAAS;EACT,gEAAQ;AAMlB;AAAE;EACE,eAAQ;EACR,oBAAgB;AAEpB;AAAM;EACE,cAAO;AAEf;AADQ;EACE,+BAAgB;EAChB,aAAS;AAGnB",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/ui-colors.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --flat-dropdown-current-height: 40px;\r\n  --flat-dropdown-scrollable-max-height: none;\r\n  --flat-dropdownactive-z-index: auto;\r\n  --flat-dropdownactive-max-width: none;\r\n  --flat-dropdownactive-current-display: flex;\r\n  --flat-dropdownactive-opens-upward-container-padding: 0 0 40px 0;\r\n  --flat-dropdownactive-opens-upward-container-margin: 0;\r\n\r\n  --flat-dropdown-current-content-display: block;\r\n  --flat-dropdown-current-content-max-width: none;\r\n  --flat-dropdown-current-content-text-transform: none;\r\n  --flat-dropdown-current-content-white-space: normal;\r\n  --flat-dropdown-current-content-text-overflow: clip;\r\n  --flat-dropdown-current-content-overflow: visible;\r\n  --flat-dropdown-current-content-color: $color_palette_gold2;\r\n  --flat-dropdown-current-content-font-size: 18px;\r\n  --flat-dropdown-current-content-line-height: 22px;\r\n  --flat-dropdown-current-content-letter-spacing: .025em;\r\n  --flat-dropdown-direction-rtl: rtl;\r\n  --flat-dropdown-current-after-margin-rtl: 0 7px 0 0;\r\n}\r\n\r\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\r\n  display: none;\r\n}\r\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\r\n  display: none;\r\n}\r\n\r\n:host .ui-dropdown-current-content,\r\n:host ::slotted(.ui-dropdown-current-content) {\r\n  display: var(--flat-dropdown-current-content-display);\r\n  max-width: var(--flat-dropdown-current-content-max-width);\r\n  text-transform: var(--flat-dropdown-current-content-text-transform);\r\n  white-space: var(--flat-dropdown-current-content-white-space);\r\n  text-overflow: var(--flat-dropdown-current-content-text-overflow);\r\n  overflow: var(--flat-dropdown-current-content-overflow);\r\n  color: var(--flat-dropdown-current-content-color);\r\n  font-size: var(--flat-dropdown-current-content-font-size);\r\n  line-height: var(--flat-dropdown-current-content-line-height);\r\n  letter-spacing: var(--flat-dropdown-current-letter-spacing);\r\n}\r\n\r\n\r\n:host {\r\n  display: inline-flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  height: 40px;\r\n  outline: 0;\r\n\r\n  .ui-dropdown {\r\n    display: inline-flex;\r\n    flex-direction: column;\r\n    box-sizing: border-box;\r\n    position: relative;\r\n    user-select: none;\r\n    margin: 0;\r\n    width: 100%;\r\n    padding: 0;\r\n\r\n    &:lang(ar-ae) {\r\n      direction: var(--flat-dropdown-direction-rtl);\r\n    }\r\n\r\n    .ui-dropdown-current {\r\n      @extends $typekit_h4;\r\n      display: flex;\r\n      flex-direction: row;\r\n      background: none;\r\n      position: absolute;\r\n      height: var(--flat-dropdown-current-height);\r\n      margin: 0;\r\n      align-items: center;\r\n      padding: 0 10px;\r\n      cursor: pointer;\r\n\r\n      &:hover {\r\n        color: $color_palette_gold1;\r\n        &::after {\r\n          -webkit-filter: brightness(2.2);\r\n        }\r\n      }\r\n\r\n      &::after {\r\n        content: '';\r\n        background: url('../../images/up-down-arrow.png') center no-repeat;\r\n        width: 13px;\r\n        height: 19px;\r\n        margin: 0 0 0 7px;\r\n      }\r\n      &:lang(ar-ae)::after {\r\n        margin: var(--flat-dropdown-current-after-margin-rtl);\r\n      }\r\n    }\r\n\r\n    .ui-dropdown-options-container {\r\n      background-color: $color_palette_almostBlack;\r\n      width: 100%;\r\n      opacity: 0;\r\n      position: absolute;\r\n      height: 0;\r\n      visibility: hidden;\r\n      transition: opacity 400ms;\r\n      lol-uikit-scrollable {\r\n        max-height: var(--flat-dropdown-scrollable-max-height);\r\n      }\r\n    }\r\n\r\n    &.opens-upward {\r\n      .ui-dropdown-options-container {\r\n        bottom: 100%;\r\n        top: auto;\r\n        margin-bottom: -42px;\r\n      }\r\n    }\r\n  }\r\n\r\n\r\n  &(.active) {\r\n    .ui-dropdown {\r\n\r\n      z-index: var(--flat-dropdownactive-z-index);\r\n      max-width: var(--flat-dropdownactive-max-width);\r\n\r\n      .ui-dropdown-current {\r\n        display: var(--flat-dropdownactive-current-display);\r\n        color: $color_palette_gold5;\r\n\r\n        &:hover {\r\n          color: $color_palette_gold5;\r\n          &::after {\r\n            -webkit-filter: none;\r\n          }\r\n        }\r\n\r\n        &::after {\r\n          background-image: url('../../images/up-down-arrow-locked.png');\r\n        }\r\n      }\r\n\r\n      .ui-dropdown-options-container {\r\n        @extends $gradient-palette_button-click-border;\r\n        border-width: 2px;\r\n        padding-top: 40px;\r\n        width: 100%;\r\n        opacity: 1;\r\n        height: auto;\r\n        transition: opacity 400ms;\r\n        visibility: visible;\r\n      }\r\n\r\n      &.opens-upward {\r\n        .ui-dropdown-options-container {\r\n          padding: var(--flat-dropdownactive-opens-upward-container-padding);\r\n          margin: var(--flat-dropdownactive-opens-upward-container-margin);\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  &(.disabled) {\r\n    cursor: default;\r\n    pointer-events: none;\r\n    .ui-dropdown {\r\n      .ui-dropdown-current {\r\n        color: $color_palette_grey2;\r\n        &::after {\r\n          -webkit-filter: grayscale(100%);\r\n          opacity: 0.35;\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n", "// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}"],
-                sourceRoot: ""
-            }]), e.exports = l
-        }, (e, t, n) => {
-            "use strict";
-            e.exports = n.p + "up-down-arrow.png"
-        }, (e, t, n) => {
-            "use strict";
-            e.exports = n.p + "up-down-arrow-locked.png"
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r, o = n(34),
-                i = n(1),
-                a = (r = n(37)) && r.__esModule ? r : {
-                    default: r
-                };
-            class s extends i.webComponents.ShadowElement {
-                templateMarkup() {
-                    return n(110)
-                }
-                connectedCallback() {
-                    super.connectedCallback();
-                    const e = this.shadowRoot;
-                    this.focusInEventHandler = this.focusInEventHandler.bind(this), e.addEventListener("focusin", this.focusInEventHandler), this._focusInSound = this._createSound(a.default.focus)
-                }
-                focusInEventHandler() {
-                    this._focusInSound && this._focusInSound.play()
-                }
-                _createSound(e) {
-                    return (0, o.createSound)("sfx-ui", e, {
-                        allowConcurrency: !1
-                    })
-                }
-            }
-            s.tagName = "lol-uikit-flat-input";
-            var l = s;
-            t.default = l
-        }, e => {
-            "use strict";
-            e.exports = "<template>\r\n  <slot>\x3c!-- input --\x3e</slot>\r\n</template>"
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1);
-            class o extends r.webComponents.ShadowElement {
-                static get observedAttributes() {
-                    return []
-                }
-                templateMarkup() {
-                    return n(112)
-                }
-                stylesheetMarkup() {
-                    return n(113)
-                }
-            }
-            o.tagName = "lol-uikit-flat-textarea";
-            var i = o;
-            t.default = i
-        }, e => {
-            "use strict";
-            e.exports = "<template>\r\n  <slot />\r\n</template>\r\n"
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, ':host ::slotted(textarea) {\n  font-family: var(--font-body);\n}\n:host ::slotted(textarea) {\n  -webkit-user-select: none;\n}\n:host ::slotted(textarea) {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host ::slotted(textarea) {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host ::slotted(textarea):lang(ja-jp) {\n  font-size: 13px;\n}\n:host ::slotted(textarea):lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  display: block;\n}\n:host ::slotted(textarea) {\n  display: block;\n  box-sizing: border-box;\n  width: 100%;\n  height: 100%;\n  margin-top: 2px;\n  font-size: 12px;\n  color: #f0e6d2;\n  border-color: #785a28;\n  border-width: 1px;\n  border-style: solid;\n  background-color: rgba(0,0,0,0.7);\n  vertical-align: middle;\n  padding: 8px 6px;\n  -webkit-appearance: none;\n  outline: none;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset, 0 0 0 1px rgba(0,0,0,0.25);\n  resize: none;\n}\n:host ::slotted(textarea):focus {\n  background: linear-gradient(to bottom, rgba(7,16,25,0.7), rgba(32,39,44,0.7));\n  border-image: linear-gradient(to bottom, #785a28, #c8aa6e) 1 stretch;\n}\n:host ::slotted(textarea):disabled {\n  background-color: #1e2328;\n  border-color: #3c3c41;\n}\n:host ::slotted(textarea)::-webkit-input-placeholder {\n  color: #a09b8c;\n  padding-left: 3px;\n  font-style: italic;\n}\n:host ::slotted(textarea)::-webkit-textfield-decoration-container {\n  position: relative;\n}\n', "", {
-                version: 3,
-                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-textarea/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
-                names: [],
-                mappings: "AAIA;EACE,6BAAa;ACHf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;AC8RA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,uBAAgB;EAIhB,4CAAwB;ADpS1B;AC2RE;EACE,eAAW;ADzRf;AC8RE;EACE,iBAAgB;AD5RpB;AAjBA;EACE,cAAS;AAmBX;AAjBE;EAEE,cAAS;EACT,sBAAY;EACZ,WAAO;EACP,YAAQ;EACR,eAAY;EACZ,eAAW;EACX,cAAO;EACP,qBAAc;EACd,iBAAc;EACd,mBAAc;EACd,iCAAkB;EAClB,sBAAgB;EAChB,gBAAS;EACT,wBAAoB;EACpB,aAAS;EACT,wEAA4C;EAC5C,YAAQ;AAkBZ;AAhBI;EACE,6EAAY;EACZ,oEAAc;AAkBpB;AAdI;EACE,yBAAkB;EAClB,qBAAc;AAgBpB;AAZI;EACE,cAAO;EACP,iBAAc;EACd,kBAAY;AAclB;AAXI;EACE,kBAAU;AAahB",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/sizes';\r\n\r\n$base-image-path = '/fe/lol-uikit/images/';\r\n\r\n@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit';\r\n\r\n:host {\r\n  display: block;\r\n\r\n  ::slotted(textarea) {\r\n    @extend $typekit_text_s;\r\n    display: block;\r\n    box-sizing: border-box;\r\n    width: 100%;\r\n    height: 100%;\r\n    margin-top: 2px;\r\n    font-size: 12px;\r\n    color: $color_palette_gold1;\r\n    border-color: $color_palette_gold5;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    background-color: rgba(0,0,0,0.7);\r\n    vertical-align: middle;\r\n    padding: 8px 6px;\r\n    -webkit-appearance: none;\r\n    outline: none;\r\n    box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset, 0 0 0 1px rgba(0,0,0,0.25);\r\n    resize: none;\r\n\r\n    &:focus {\r\n      background: linear-gradient(to bottom, rgba(7, 16, 25, 0.7),rgba(32, 39, 44, 0.7));\r\n      border-image: linear-gradient(to bottom, $color_palette_gold5, $color_palette_gold3) 1 stretch;\r\n    }\r\n\r\n    // We need to figure out the real styles for this\r\n    &:disabled {\r\n      background-color: $color_palette_grey3;\r\n      border-color: $color_palette_grey2;\r\n    }\r\n\r\n    // Placeholder text styling.\r\n    &::-webkit-input-placeholder {\r\n      color: $color_palette_grey1;\r\n      padding-left: 3px;\r\n      font-style: italic;\r\n    }\r\n\r\n    &::-webkit-textfield-decoration-container {\r\n      position: relative;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1);
-            class o extends r.webComponents.ShadowElement {
-                templateMarkup() {
-                    return n(115)
-                }
-                stylesheetMarkup() {
-                    return n(116)
-                }
-                static get observedAttributes() {
-                    return ["orientation", "show", "animated", "caretless", "borderless", "caretoffset", "dismissable", "dismissable-type", "close-event-name"]
-                }
-                connectedCallback() {
-                    if (super.connectedCallback(), this.hasDismissableIcon()) {
-                        const e = this.getAttribute("close-event-name");
-                        this.shadowRoot.querySelector(".lol-uikit-dialog-frame-toast-close-button").addEventListener("click", (() => {
-                            this.dispatchEvent(new Event(e, {
-                                bubbles: !0,
-                                composed: !0
-                            }))
-                        }))
-                    }
-                }
-                processAttributes() {
-                    this.processWrapper(), this.processBorders()
-                }
-                getOrientation() {
-                    return this.getAttribute("orientation") || "bottom"
-                }
-                processWrapper() {
-                    const e = this.shadowRoot.querySelector(".lol-uikit-flyout-frame-wrapper"),
-                        t = this.getOrientation(),
-                        n = this.getAttribute("show") || "true";
-                    e && (e.classList.remove("top", "bottom", "left", "right"), e.classList.add(t), this.setClosable(), "true" === n ? (e.classList.remove("idle", "animation", "closing"), this.setAnimated()) : e.classList.contains("idle") && (e.classList.remove("idle"), e.classList.add("closing")))
-                }
-                isVertical() {
-                    const e = this.getOrientation();
-                    return "top" === e || "bottom" === e
-                }
-                isHorizontal() {
-                    const e = this.getOrientation();
-                    return "left" === e || "right" === e
-                }
-                isAnimated() {
-                    return "true" === this.getAttribute("animated")
-                }
-                hasDismissableIcon() {
-                    return "inside" === this.getAttribute("dismissable-type") && "true" === this.getAttribute("dismissable")
-                }
-                processBorders() {
-                    const e = this.shadowRoot.querySelector(".caret"),
-                        t = this.shadowRoot.querySelector(".border"),
-                        n = this.shadowRoot.querySelector(".sub-border");
-                    if (!e || !t || !n) return;
-                    const r = "true" === this.getAttribute("caretless"),
-                        o = "true" === this.getAttribute("borderless"),
-                        i = o || r;
-                    if (e.style.visibility = r ? "hidden" : "visible", t.style.visibility = o ? "hidden" : "visible", n.style.visibility = i ? "hidden" : "visible", !r) {
-                        const t = parseInt(this.getAttribute("caretoffset")) || 0;
-                        e.style.left = null, e.style.top = null, this.isVertical() ? e.style.left = t + "px" : this.isHorizontal() && (e.style.top = t + "px")
-                    }
-                }
-                setClosable() {
-                    const e = this.shadowRoot,
-                        t = this.getAttribute("dismissable"),
-                        n = this.hasDismissableIcon(),
-                        r = e.querySelector(".lol-uikit-flyout-frame-wrapper");
-                    r.classList.remove("close-button"), r.classList.remove("dismissable-icon"), "true" !== t || n ? n && r.classList.add("dismissable-icon") : r.classList.add("close-button")
-                }
-                setAnimated() {
-                    const e = this.shadowRoot.querySelector(".lol-uikit-flyout-frame-wrapper");
-                    this.isAnimated() ? e.classList.add("animation") : e.classList.remove("animation"), setTimeout((function() {
-                        e.classList.add("idle")
-                    }), 50)
-                }
-            }
-            o.tagName = "lol-uikit-flyout-frame";
-            var i = o;
-            t.default = i
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n  <div class="lol-uikit-flyout-frame-wrapper">\r\n    <div class="border"></div>\r\n    <div class="sub-border"></div>\r\n    <div class="caret"></div>\r\n    <div class="lol-uikit-flyout-frame">\r\n      <slot></slot>\r\n    </div>\r\n    <div class="lol-uikit-dialog-frame-toast-close-button"></div>\r\n    <div class="close-button-container">\r\n      <lol-uikit-close-button/>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27),
-                i = n(91),
-                a = n(117),
-                s = n(118),
-                l = o(r),
-                d = i(a),
-                c = i(s);
-            l.push([e.id, ":host .lol-uikit-flyout-frame-wrapper.right .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to right, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to left, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to top, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to bottom, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host {\n  pointer-events: all;\n}\n:host .lol-uikit-flyout-frame-wrapper {\n  position: relative;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .border {\n  position: absolute;\n  box-sizing: border-box;\n  background-color: #010a13;\n  box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .border::before {\n  content: '';\n  position: absolute;\n  width: calc(100% + 4px);\n  height: calc(100% + 4px);\n  top: -2px;\n  left: -2px;\n  box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\n  pointer-events: none;\n}\n:host .lol-uikit-flyout-frame-wrapper .sub-border {\n  position: absolute;\n  display: flex;\n  box-sizing: border-box;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .sub-border::before {\n  content: '';\n  position: absolute;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-dialog-frame-uikit-close-button {\n  display: none;\n}\n:host .lol-uikit-flyout-frame-wrapper.dismissable-icon .lol-uikit-dialog-frame-toast-close-button {\n  display: block;\n  height: 24px;\n  width: 24px;\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: url(\"/fe/lol-uikit/images/close.png\"), rgba(0,0,0,0.5);\n  cursor: pointer;\n  border-radius: 4px;\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n/*\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\n        We might still do it later when we do a second pass.\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\n        &:lang(ar-ae) {\n          right: auto;\n          left: 8px;\n        }\n        */\n}\n:host .lol-uikit-flyout-frame-wrapper.dismissable-icon .lol-uikit-dialog-frame-toast-close-button:hover {\n  background: url(\"/fe/lol-uikit/images/close.png\"), rgba(10,20,40,0.5);\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-flyout-frame-wrapper .close-button-container {\n  display: none;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container {\n  display: block;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container::before {\n  content: '';\n  position: absolute;\n  width: 38px;\n  height: 68px;\n  top: -20px;\n  right: -20px;\n  background-image: url(\"/fe/lol-uikit/images/frame-button-close-top-down.png\");\n  background-size: 38px 68px;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container lol-uikit-close-button {\n  display: block;\n  position: absolute;\n  top: -15px;\n  right: -15px;\n}\n:host .lol-uikit-flyout-frame-wrapper .caret {\n  position: absolute;\n  display: flex;\n  justify-content: center;\n  box-sizing: border-box;\n  transition: top 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, left 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, right 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, bottom 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease;\n}\n:host .lol-uikit-flyout-frame-wrapper .caret::before {\n  content: '';\n  position: absolute;\n  width: 24px;\n  height: 16px;\n  background-image: url(" + d + ');\n  background-size: initial;\n  background-position: -312px;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-flyout-frame {\n  position: relative;\n  display: flex;\n  -webkit-mask-image: linear-gradient(to left, #000, #000);\n  -webkit-mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n  padding: 2px;\n  box-sizing: border-box;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99), 300ms opacity linear;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-flyout-frame:lang(ar-ae) {\n  direction: rtl;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .border,\n:host .lol-uikit-flyout-frame-wrapper.bottom .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border {\n  left: 8px;\n  width: calc(100% - 16px);\n  height: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border::before,\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border::before {\n  width: calc(100% - 8px);\n  height: 0;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal.png");\n  border-width: 4px 4px 0 4px;\n  border-image-width: 4px 4px 0 4px;\n  border-image-slice: 4 4 0 4;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret,\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret {\n  width: 100%;\n  height: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret::before,\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret::before {\n  left: calc(50% - 12px);\n  transform-origin: center center;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.bottom .lol-uikit-flyout-frame {\n  -webkit-mask-size: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .border,\n:host .lol-uikit-flyout-frame-wrapper.right .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border {\n  width: 0;\n  height: calc(100% - 16px);\n  top: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border::before,\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border::before {\n  height: calc(100% - 8px);\n  width: 0;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical.png");\n  border-width: 4px 4px 4px 0;\n  border-image-width: 4px 4px 4px 0;\n  border-image-slice: 4 4 4 0;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret,\n:host .lol-uikit-flyout-frame-wrapper.right .caret {\n  width: 0;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret::before,\n:host .lol-uikit-flyout-frame-wrapper.right .caret::before {\n  top: calc(50% + 12px);\n}\n:host .lol-uikit-flyout-frame-wrapper.left .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.right .lol-uikit-flyout-frame {\n  -webkit-mask-size: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border {\n  top: 0;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret {\n  top: 3px;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret::before {\n  bottom: 0;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border {\n  bottom: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret {\n  bottom: 3px;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border {\n  right: -4px;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret {\n  right: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret::before {\n  left: -3px;\n  transform-origin: top left;\n  transform: rotate(270deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border {\n  left: -4px;\n}\n:host .lol-uikit-flyout-frame-wrapper.right .caret {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.right .caret::before {\n  right: -3px;\n  transform-origin: top right;\n  transform: rotate(90deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation .caret::before {\n  background-position: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .border {\n  width: 50%;\n  left: 25%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .sub-border {\n  width: 30%;\n  left: calc(33% + 8px);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .lol-uikit-flyout-frame {\n  -webkit-mask-size: 50% 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .border {\n  height: 50%;\n  top: 25%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .sub-border {\n  height: 30%;\n  top: calc(33% + 8px);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .lol-uikit-flyout-frame {\n  opacity: 0;\n  -webkit-mask-size: 100% 50%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .caret::before {\n  animation: caretIntro 433ms steps(13, end) forwards;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .lol-uikit-flyout-frame {\n  opacity: 1;\n  -webkit-mask-size: 100% 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom {\n  top: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top border-glow,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom border-glow {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom .sub-border {\n  width: calc(100% - 16px);\n  left: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left border-glow,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right border-glow {\n  top: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right .sub-border {\n  height: calc(100% - 16px);\n  top: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .lol-uikit-flyout-frame {\n  transition: 133ms all cubic-bezier(1, 0, 1, 1);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .caret::before {\n  background-image: url(' + c + ");\n  animation: caretOutro 133ms steps(4, end) forwards;\n  transition: background 0;\n}\n@-moz-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-webkit-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-o-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-moz-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@-webkit-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@-o-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/gradient-palette.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flyout-frame/component-style.styl"],
-                names: [],
-                mappings: "AA6JA;EACE,6BAAQ;EACR,uFAAc;AC5JhB;ADmKA;EACE,6BAAQ;EACR,sFAAc;ACjKhB;ADwKA;EACE,6BAAQ;EACR,qFAAc;ACtKhB;AD6KA;EACE,6BAAQ;EACR,wFAAc;AC3KhB;AAIA;EACE,mBAAgB;AAFlB;AAIE;EACE,kBAAU;EACV,0DAAY;AAFhB;AAII;EACE,kBAAU;EACV,sBAAY;EACZ,yBAAkB;EAClB,wCAAY;EACZ,0DAAY;AAFlB;AAIM;EACE,WAAS;EACT,kBAAU;EACV,uBAAO;EACP,wBAAQ;EACR,SAAK;EACL,UAAM;EACN,wCAAY;EACZ,oBAAgB;AAFxB;AAMI;EACE,kBAAU;EACV,aAAS;EACT,sBAAY;EACZ,0DAAY;AAJlB;AAMM;EACE,WAAS;EACT,kBAAU;AAJlB;AAQI;EACE,aAAS;AANf;AAWM;EACE,cAAS;EACT,YAAQ;EACR,WAAO;EACP,kBAAU;EACV,QAAK;EACL,UAAO;EACP,kEAA+C;EAC/C,eAAQ;EACR,kBAAe;EACf,mCAAwB;EACxB,2BAAqB;EACrB,4BAAmB;AACnB;;;;;;;;SAFC;AACT;AAWQ;EACE,qEAA+C;EACvC,mCAAwB;EAClC,2BAAqB;EACrB,4BAAmB;AAT3B;AAcI;EACE,aAAS;AAZf;AAgBI;EACE,cAAS;AAdf;AAgBM;EACE,WAAS;EACT,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,UAAK;EACL,YAAO;EACP,6EAA0E;EAC1E,0BAAiB;AAdzB;AAiBM;EACE,cAAS;EACT,kBAAU;EACV,UAAK;EACL,YAAO;AAff;AAmBI;EACE,kBAAU;EACV,aAAS;EACT,uBAAiB;EACjB,sBAAY;EACZ,oPAAoC;AAjB1C;AAsBM;EACE,WAAS;EACT,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,yDAAqD;EACrD,wBAAiB;EACjB,2BAAqB;EACrB,4BAAmB;AApB3B;AAwBI;EACE,kBAAU;EACV,aAAS;EACT,wDAAoB;EACpB,8BAAqB;EACrB,6BAAuB;EACvB,YAAS;EACT,sBAAY;EACZ,gFAA2B;AAtBjC;AAuBM;EACE,cAAW;AArBnB;AA0BM;;EACE,WAAO;EACP,YAAQ;AAvBhB;AA0BM;;EACE,SAAM;EACN,wBAAO;EACP,SAAQ;AAvBhB;AAyBQ;;EACE,uBAAO;EACP,SAAQ;EACR,kFAA+E;EAC/E,2BAAc;EACd,iCAAoB;EACpB,2BAAoB;EACpB,4BAAqB;EACrB,mBAAc;AAtBxB;AA0BM;;EACE,WAAO;EACP,SAAQ;AAvBhB;AAyBQ;;EACE,sBAAM;EACN,+BAAkB;AAtB5B;AA0BM;;EACE,uBAAmB;AAvB3B;AA4BM;;EACE,WAAO;EACP,YAAQ;AAzBhB;AA4BM;;EACE,QAAO;EACP,yBAAQ;EACR,QAAK;AAzBb;AA2BQ;;EACE,wBAAQ;EACR,QAAO;EACP,gFAA6E;EAC7E,2BAAc;EACd,iCAAoB;EACpB,2BAAoB;EACpB,4BAAqB;EACrB,mBAAc;AAxBxB;AA4BM;;EACE,QAAO;EACP,YAAQ;AAzBhB;AA2BQ;;EACE,qBAAK;AAxBf;AA4BM;;EACE,uBAAmB;AAzB3B;AAkCM;EACE,MAAK;EACL,yBAAW;AAhCnB;AAmCM;EACE,QAAK;AAjCb;AAmCQ;EACE,SAAQ;EACR,yBAAW;AAjCrB;AA2CM;EACE,SAAQ;AAzChB;AA4CM;EACE,WAAQ;AA1ChB;AAmDM;EACE,WAAO;EACP,yBAAW;AAjDnB;AAoDM;EACE,QAAO;AAlDf;AAoDQ;EACE,UAAM;EACN,0BAAkB;EAClB,yBAAW;AAlDrB;AA4DM;EACE,UAAM;AA1Dd;AA6DM;EACE,OAAM;AA3Dd;AA6DQ;EACE,WAAO;EACP,2BAAkB;EAClB,wBAAW;AA3DrB;AAkEQ;EACE,sBAAqB;AAhE/B;AAqEQ;;EACE,UAAO;EACP,SAAM;AAlEhB;AAqEQ;;EACE,UAAO;EACP,qBAAM;AAlEhB;AAqEQ;;EACE,2BAAmB;AAlE7B;AAuEQ;;EACE,WAAQ;EACR,QAAK;AApEf;AAuEQ;;EACE,WAAQ;EACR,oBAAK;AApEf;AAuEQ;;EACE,UAAS;EACT,2BAAmB;AApE7B;AAyEQ;EACE,WAAO;EACP,YAAQ;AAvElB;AA2EU;EACE,mDAAW;AAzEvB;AA6EQ;EACE,UAAS;EACT,4BAAmB;AA3E7B;AA8EQ;;EACE,MAAK;AA3Ef;AA6EU;;;;EACE,OAAM;AAxElB;AA2EU;;EACE,wBAAO;EACP,SAAM;AAxElB;AA4EQ;;EACE,OAAM;AAzEhB;AA2EU;;;;EACE,MAAK;AAtEjB;AAyEU;;EACE,yBAAQ;EACR,QAAK;AAtEjB;AA4EQ;;;EACE,8CAAY;AAxEtB;AA4EU;EACE,yDAAqD;EACrD,kDAAW;EACX,wBAAY;AA1ExB;AA/TA;EACE;IAAM,sBAAqB;EAkU3B;EAjUA;IAAI,2BAAqB;EAoUzB;AACF;AAvUA;EACE;IAAM,sBAAqB;EA0U3B;EAzUA;IAAI,2BAAqB;EA4UzB;AACF;AA/UA;EACE;IAAM,sBAAqB;EAkV3B;EAjVA;IAAI,2BAAqB;EAoVzB;AACF;AAvVA;EACE;IAAM,sBAAqB;EA0V3B;EAzVA;IAAI,2BAAqB;EA4VzB;AACF;AA1VA;EACE;IAAM,sBAAqB;EA6V3B;EA5VA;IAAI,0BAAqB;EA+VzB;AACF;AAlWA;EACE;IAAM,sBAAqB;EAqW3B;EApWA;IAAI,0BAAqB;EAuWzB;AACF;AA1WA;EACE;IAAM,sBAAqB;EA6W3B;EA5WA;IAAI,0BAAqB;EA+WzB;AACF;AAlXA;EACE;IAAM,sBAAqB;EAqX3B;EApXA;IAAI,0BAAqB;EAuXzB;AACF",
-                sourcesContent: ["// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}", "@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n@require '../../css/shared.styl';\r\n\r\n$transitionRate = 250ms all cubic-bezier(.02,.85,.08,.99);\r\n\r\n\r\n@keyframes caretIntro {\r\n  from {background-position: 0;}\r\n  to {background-position: -312px;}\r\n}\r\n\r\n@keyframes caretOutro {\r\n  from {background-position: 0;}\r\n  to {background-position: -96px;}\r\n}\r\n\r\n\r\n:host {\r\n  pointer-events: all;\r\n\r\n  .lol-uikit-flyout-frame-wrapper {\r\n    position: relative;\r\n    transition: $transitionRate;\r\n\r\n    .border {\r\n      position: absolute;\r\n      box-sizing: border-box;\r\n      background-color: $color_palette_almostBlack;\r\n      box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\r\n      transition: $transitionRate;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: calc(100% + 4px);\r\n        height: calc(100% + 4px);\r\n        top: -2px;\r\n        left: -2px;\r\n        box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\r\n        pointer-events: none;\r\n      }\r\n    }\r\n\r\n    .sub-border {\r\n      position: absolute;\r\n      display: flex;\r\n      box-sizing: border-box;\r\n      transition: $transitionRate;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n      }\r\n    }\r\n\r\n    .lol-uikit-dialog-frame-uikit-close-button {\r\n      display: none;\r\n    }\r\n\r\n     // Show the x-icon close button if we have the class dismissable-icon for toasts\r\n    &.dismissable-icon {\r\n      .lol-uikit-dialog-frame-toast-close-button {\r\n        display: block;\r\n        height: 24px;\r\n        width: 24px;\r\n        position: absolute;\r\n        top: 8px;\r\n        right: 8px;\r\n        background: url($base-image-path + 'close.png'), rgba(0, 0, 0, .5);\r\n        cursor: pointer;\r\n        border-radius: 4px;\r\n        background-size: 75% 75%, 100% 100%;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        /*\r\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\r\n        We might still do it later when we do a second pass.\r\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\r\n        &:lang(ar-ae) {\r\n          right: auto;\r\n          left: 8px;\r\n        }\r\n        */\r\n\r\n        &:hover {\r\n          background: url($base-image-path + 'close.png'), rgba($color_palette_blue6, .5);\r\n                  background-size: 75% 75%, 100% 100%;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        }\r\n      }\r\n    }\r\n\r\n    .close-button-container {\r\n      display: none;\r\n    }\r\n\r\n    // Show the close button if we have the class close-button.\r\n    &.close-button .close-button-container {\r\n      display: block;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: 38px;\r\n        height: 68px;\r\n        top: -20px;\r\n        right: -20px;\r\n        background-image: url($base-image-path + 'frame-button-close-top-down.png');\r\n        background-size: 38px 68px;\r\n      }\r\n\r\n      lol-uikit-close-button {\r\n        display: block;\r\n        position: absolute;\r\n        top: -15px;\r\n        right: -15px;\r\n      }\r\n    }\r\n\r\n    .caret {\r\n      position: absolute;\r\n      display: flex;\r\n      justify-content: center;\r\n      box-sizing: border-box;\r\n      transition: top $transitionRate ease,\r\n                  left $transitionRate ease,\r\n                  right $transitionRate ease,\r\n                  bottom $transitionRate ease;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: 24px;\r\n        height: 16px;\r\n        background-image: url('./images/pointer-intro-01.png');\r\n        background-size: initial;\r\n        background-position: -312px;\r\n        background-repeat: no-repeat;\r\n      }\r\n    }\r\n\r\n    .lol-uikit-flyout-frame {\r\n      position: relative;\r\n      display: flex;\r\n      -webkit-mask-image: linear-gradient(to left, #000, #000);\r\n      -webkit-mask-repeat: no-repeat;\r\n      -webkit-mask-position: center;\r\n      padding: 2px;\r\n      box-sizing: border-box;\r\n      transition: $transitionRate, 300ms opacity linear;\r\n      &:lang(ar-ae) {\r\n        direction: rtl;\r\n      }\r\n    }\r\n\r\n    &.top, &.bottom {\r\n      .border {\r\n        width: 100%;\r\n        height: 100%;\r\n      }\r\n\r\n      .sub-border {\r\n        left: 8px;\r\n        width: calc(100% - 16px);\r\n        height: 0;\r\n\r\n        &::before {\r\n          width: calc(100% - 8px);\r\n          height: 0;\r\n          border-image-source: url($base-image-path + 'sub-border-primary-horizontal.png');\r\n          border-width: 4px 4px 0 4px;\r\n          border-image-width: 4px 4px 0 4px;\r\n          border-image-slice: 4 4 0 4;\r\n          border-image-repeat: stretch;\r\n          border-style: solid;\r\n        }\r\n      }\r\n\r\n      .caret {\r\n        width: 100%;\r\n        height: 0;\r\n\r\n        &::before {\r\n          left: calc(50% - 12px);\r\n          transform-origin: center center;\r\n        }\r\n      }\r\n\r\n      .lol-uikit-flyout-frame {\r\n        -webkit-mask-size: 100%;\r\n      }\r\n    }\r\n\r\n    &.left, &.right {\r\n      .border {\r\n        width: 100%;\r\n        height: 100%;\r\n      }\r\n\r\n      .sub-border {\r\n        width: 0;\r\n        height: calc(100% - 16px);\r\n        top: 8px;\r\n\r\n        &::before {\r\n          height: calc(100% - 8px);\r\n          width: 0;\r\n          border-image-source: url($base-image-path + 'sub-border-primary-vertical.png');\r\n          border-width: 4px 4px 4px 0;\r\n          border-image-width: 4px 4px 4px 0;\r\n          border-image-slice: 4 4 4 0;\r\n          border-image-repeat: stretch;\r\n          border-style: solid;\r\n        }\r\n      }\r\n\r\n      .caret {\r\n        width: 0;\r\n        height: 100%;\r\n\r\n        &::before {\r\n          top: calc(50% + 12px);\r\n        }\r\n      }\r\n\r\n      .lol-uikit-flyout-frame {\r\n        -webkit-mask-size: 100%;\r\n      }\r\n    }\r\n\r\n    &.bottom {\r\n      .border {\r\n        @extends $gradient-dialog-border-bottom;\r\n      }\r\n\r\n      .sub-border {\r\n        top: 0;\r\n        transform: rotate(180deg);\r\n      }\r\n\r\n      .caret {\r\n        top: 3px;\r\n\r\n        &::before {\r\n          bottom: 0;\r\n          transform: rotate(180deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.top {\r\n      .border {\r\n        @extends $gradient-dialog-border-top;\r\n      }\r\n\r\n      .sub-border {\r\n        bottom: 0;\r\n      }\r\n\r\n      .caret {\r\n        bottom: 3px;\r\n      }\r\n    }\r\n\r\n    &.left {\r\n      .border {\r\n        @extends $gradient-dialog-border-left;\r\n      }\r\n\r\n      .sub-border {\r\n        right: -4px;\r\n        transform: rotate(180deg);\r\n      }\r\n\r\n      .caret {\r\n        right: 0;\r\n\r\n        &::before {\r\n          left: -3px;\r\n          transform-origin: top left;\r\n          transform: rotate(270deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.right {\r\n      .border {\r\n        @extends $gradient-dialog-border-right;\r\n      }\r\n\r\n      .sub-border {\r\n        left: -4px;\r\n      }\r\n\r\n      .caret {\r\n        left: 0;\r\n\r\n        &::before {\r\n          right: -3px;\r\n          transform-origin: top right;\r\n          transform: rotate(90deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.animation {\r\n      .caret {\r\n        &::before {\r\n          background-position: 0;\r\n        }\r\n      }\r\n\r\n      &.top, &.bottom {\r\n        .border {\r\n          width: 50%;\r\n          left: 25%;\r\n        }\r\n\r\n        .sub-border {\r\n          width: 30%;\r\n          left: calc(33% + 8px);\r\n        }\r\n\r\n        .lol-uikit-flyout-frame {\r\n          -webkit-mask-size: 50% 100%;\r\n        }\r\n      }\r\n\r\n      &.left, &.right {\r\n        .border {\r\n          height: 50%;\r\n          top: 25%;\r\n        }\r\n\r\n        .sub-border {\r\n          height: 30%;\r\n          top: calc(33% + 8px);\r\n        }\r\n\r\n        .lol-uikit-flyout-frame {\r\n          opacity: 0;\r\n          -webkit-mask-size: 100% 50%;\r\n        }\r\n      }\r\n\r\n      &.idle {\r\n        .border {\r\n          width: 100%;\r\n          height: 100%;\r\n        }\r\n\r\n        .caret {\r\n          &::before {\r\n            animation: caretIntro 433ms steps(13, end) forwards;\r\n          }\r\n        }\r\n\r\n        .lol-uikit-flyout-frame {\r\n          opacity: 1;\r\n          -webkit-mask-size: 100% 100%;\r\n        }\r\n\r\n        &.top, &.bottom {\r\n          top: 0;\r\n\r\n          .border, border-glow {\r\n            left: 0;\r\n          }\r\n\r\n          .sub-border {\r\n            width: calc(100% - 16px);\r\n            left: 8px;\r\n          }\r\n        }\r\n\r\n        &.left, &.right {\r\n          left: 0;\r\n\r\n          .border, border-glow {\r\n            top: 0;\r\n          }\r\n\r\n          .sub-border {\r\n            height: calc(100% - 16px);\r\n            top: 8px;\r\n          }\r\n        }\r\n      }\r\n\r\n      &.closing {\r\n        .border, .sub-border, .lol-uikit-flyout-frame {\r\n          transition: 133ms all cubic-bezier(1, 0, 1, 1);\r\n        }\r\n\r\n        .caret {\r\n          &::before {\r\n            background-image: url('./images/pointer-outro-01.png');\r\n            animation: caretOutro 133ms steps(4, end) forwards;\r\n            transition: background 0;\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n"],
-                sourceRoot: ""
-            }]), e.exports = l
-        }, (e, t, n) => {
-            "use strict";
-            e.exports = n.p + "pointer-intro-01.png"
-        }, (e, t, n) => {
-            "use strict";
-            e.exports = n.p + "pointer-outro-01.png"
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = i(n(102)),
-                o = i(n(2));
-
-            function i(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            class a extends r.default {
-                templateMarkup() {
-                    return n(7)
-                }
-                stylesheetMarkup() {
-                    return n(120)
-                }
-                template() {
-                    return o.default.get().getElementById("lol-uikit-template-framed-dropdown")
-                }
-            }
-            a.tagName = "lol-uikit-framed-dropdown";
-            var s = a;
-            t.default = s
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27),
-                i = n(91),
-                a = n(107),
-                s = n(108),
-                l = o(r),
-                d = i(a),
-                c = i(s);
-            l.push([e.id, ':host .ui-dropdown {\n  font-family: var(--font-body);\n}\n:host .ui-dropdown {\n  -webkit-user-select: none;\n}\n:host .ui-dropdown {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .ui-dropdown {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .ui-dropdown:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .ui-dropdown dt.ui-dropdown-current {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625 0%, #a9852d 23%, #b88d35 93%, #c8aa6e 100%) 1;\n}\n:host(:not(.active):hover) dt.ui-dropdown-current,\n:host(:not(.active):focus) dt.ui-dropdown-current {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #c89b3c, #f0e6d2) 1;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625, #463714) 1;\n}\n:host {\n  --framed-dropdown-scrollable-max-height: 150px;\n  --framed-dropdown-current-content-padding: 0 20px 0 7px;\n  --framed-dropdown-current-content-padding-rtl: 0 7px 0 20px;\n  --framed-dropdown-opens-upward-height: auto;\n  --framed-dropdown-options-container-width: 100%;\n  --framed-dropdown-direction-rtl: rtl;\n}\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\n  display: none;\n}\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\n  display: none;\n}\n:host .ui-dropdown-current-content,\n:host .ui-dropdown-current-content.shadow {\n  width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  padding: var(--framed-dropdown-current-content-padding);\n}\n:host .ui-dropdown-current-content .ui-dropdown-option-only,\n:host .ui-dropdown-current-content.shadow .ui-dropdown-option-only {\n  display: none;\n}\n:host .ui-dropdown-current-content:lang(ar-ae),\n:host .ui-dropdown-current-content.shadow:lang(ar-ae) {\n  padding: var(--framed-dropdown-current-content-padding-rtl);\n}\n:host {\n  display: inline-flex;\n  flex-direction: column;\n  width: 100%;\n  outline: 0;\n}\n:host .ui-dropdown {\n  display: inline-flex;\n  flex-direction: column;\n  position: relative;\n  user-select: none;\n  margin: 0;\n  cursor: pointer;\n  width: 100%;\n  height: 100%;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  direction: var(--framed-dropdown-direction-rtl);\n  text-align: right;\n}\n:host .ui-dropdown dt.ui-dropdown-current {\n  display: flex;\n  box-sizing: border-box;\n  padding-bottom: 10px;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 7px 5px;\n  align-items: center;\n  background-color: rgba(30,35,40,0.5);\n}\n:host .ui-dropdown dt.ui-dropdown-current::after {\n  background: url(' + d + ") center no-repeat;\n  width: 13px;\n  height: 18px;\n  position: absolute;\n  right: 8px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host .ui-dropdown dt.ui-dropdown-current:lang(ar-ae)::after {\n  right: auto;\n  left: 8px;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container {\n  margin: 0;\n  opacity: 0;\n  display: flex;\n  padding: 0;\n  box-sizing: border-box;\n  width: var(--framed-dropdown-options-container-width);\n  position: absolute;\n  top: 100%;\n  max-height: 0;\n  transition: max-height 400ms;\n  z-index: 2;\n  overflow: hidden;\n  visibility: hidden;\n  background-color: rgba(30,35,40,0.5);\n}\n:host .ui-dropdown dd.ui-dropdown-options-container ul.ui-dropdown-options {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  min-width: 100%;\n  background: #010a13;\n  height: 100%;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container ul.ui-dropdown-options lol-uikit-scrollable {\n  max-height: var(--framed-dropdown-scrollable-max-height);\n}\n:host .ui-dropdown.opens-upward {\n  height: var(--framed-dropdown-opens-upward-height);\n}\n:host .ui-dropdown.opens-upward dd.ui-dropdown-options-container {\n  bottom: 100%;\n  top: auto;\n  margin-top: 1px;\n}\n:host(.disabled) {\n  cursor: default;\n  pointer-events: none;\n}\n:host(.disabled) .ui-dropdown dt.ui-dropdown-current {\n  border: thin solid #3c3c41;\n  color: #3c3c41;\n}\n:host(.disabled) .ui-dropdown dt.ui-dropdown-current::after {\n  -webkit-filter: grayscale(100%);\n  opacity: 0.35;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current {\n  border: thin solid #463714;\n  color: #463714;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current::after {\n  background-image: url(" + c + ");\n}\n:host(.active) .ui-dropdown dd.ui-dropdown-options-container {\n  opacity: 1;\n  max-height: 400px;\n  transition: max-height 400ms;\n  visibility: visible;\n}\n:host(:not(.active):hover) dt.ui-dropdown-current,\n:host(:not(.active):focus) dt.ui-dropdown-current {\n  background: linear-gradient(to top, rgba(88,83,66,0.5), rgba(30,35,40,0.5));\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/framed-dropdown/component-style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/gradient-palette.styl"],
-                names: [],
-                mappings: "AAIA;EACE,6BAAa;ACHf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;AC8RA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,uBAAgB;EAIhB,4CAAwB;ADpS1B;AC2RE;EACE,eAAW;ADzRf;AC8RE;EACE,iBAAgB;AD5RpB;AEiHA;EACE,8BAAQ;EACR,2FAAc;AF/GhB;AEkHA;;EACE,8BAAQ;EACR,yDAAc;AF/GhB;AEkHA;EACE,8BAAQ;EACR,yDAAc;AFhHhB;AA7BA;EACE,8CAAyC;EACzC,uDAA2C;EAC3C,2DAA+C;EAC/C,2CAAuC;EACvC,+CAA2C;EAC3C,oCAAiC;AA+BnC;AA5BA;EACE,aAAS;AA8BX;AA5BA;EACE,aAAS;AA8BX;AA3BA;;EAEE,WAAO;EACP,gBAAU;EACV,uBAAe;EACf,mBAAa;EAMb,uDAAS;AAwBX;AA5BE;;EACE,aAAS;AA+Bb;AA3BE;;EACE,2DAAS;AA8Bb;AAzBA;EACE,oBAAS;EACT,sBAAgB;EAChB,WAAO;EACP,UAAS;AA2BX;AAzBE;EAEE,oBAAS;EACT,sBAAgB;EAChB,kBAAU;EACV,iBAAa;EACb,SAAQ;EACR,eAAQ;EACR,WAAO;EACP,YAAQ;AA0BZ;AAxBI;EACE,+CAAW;EAGX,iBAAY;AAwBlB;AArBI;EAEE,aAAS;EACT,sBAAY;EACZ,oBAAgB;EAChB,WAAO;EACP,YAAQ;EACR,SAAQ;EACR,gBAAS;EACT,mBAAa;EACb,oCAAkB;AAsBxB;AApBM;EACE,oEAAgD;EAChD,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,UAAO;EACP,QAAK;EACL,6BAAW;EACX,WAAS;AAsBjB;AAnBI;EACE,WAAO;EACP,SAAM;AAqBZ;AAlBI;EAEE,SAAQ;EACR,UAAS;EACT,aAAS;EACT,UAAS;EACT,sBAAY;EACZ,qDAAO;EACP,kBAAU;EACV,SAAK;EACL,aAAY;EACZ,4BAAY;EACZ,UAAS;EACT,gBAAU;EACV,kBAAY;EACZ,oCAAkB;AAmBxB;AAjBM;EACE,gBAAY;EACZ,SAAQ;EACR,UAAS;EACT,sBAAY;EACZ,eAAW;EACX,mBAAY;EACZ,YAAQ;AAmBhB;AAlBQ;EACE,wDAAY;AAoBtB;AAfI;EACE,kDAAQ;AAiBd;AAhBM;EACE,YAAQ;EACR,SAAK;EACL,eAAY;AAkBpB;AAbE;EACE,eAAQ;EACR,oBAAgB;AAepB;AAbM;EACE,0BAAQ;EACR,cAAO;AAef;AAdQ;EACE,+BAAgB;EAChB,aAAS;AAgBnB;AARM;EACE,0BAAQ;EACR,cAAO;AAUf;AATQ;EACE,yDAA6D;AAWvE;AAPM;EACE,UAAS;EACT,iBAAY;EACZ,4BAAY;EACZ,mBAAY;AASpB;AAHI;;EAEE,2EAAY;AAKlB",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/colors.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/ui-colors.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --framed-dropdown-scrollable-max-height: 150px;\r\n  --framed-dropdown-current-content-padding: 0 20px 0 7px;\r\n  --framed-dropdown-current-content-padding-rtl: 0 7px 0 20px;\r\n  --framed-dropdown-opens-upward-height: auto;\r\n  --framed-dropdown-options-container-width: 100%;\r\n  --framed-dropdown-direction-rtl: rtl;\r\n}\r\n\r\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\r\n  display: none;\r\n}\r\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\r\n  display: none;\r\n}\r\n\r\n:host .ui-dropdown-current-content,\r\n:host .ui-dropdown-current-content.shadow {\r\n  width: 100%;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n  white-space: nowrap;\r\n\r\n  .ui-dropdown-option-only {\r\n    display: none;\r\n  }\r\n  \r\n  padding: var(--framed-dropdown-current-content-padding);\r\n  &:lang(ar-ae) {\r\n    padding: var(--framed-dropdown-current-content-padding-rtl);\r\n  }\r\n}\r\n\r\n\r\n:host {\r\n  display: inline-flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  outline: 0;\r\n\r\n  .ui-dropdown {\r\n    @extends $typekit_text_s;\r\n    display: inline-flex;\r\n    flex-direction: column;\r\n    position: relative;\r\n    user-select: none;\r\n    margin: 0;\r\n    cursor: pointer;\r\n    width: 100%;\r\n    height: 100%;\r\n\r\n    &:lang(ar-ae) {\r\n      direction: var(--framed-dropdown-direction-rtl);\r\n      // Only added for drop downs which has LTR content/text in RTL view\r\n      // UI/UX Design must be consistent in all drop downs\r\n      text-align: right;\r\n    }\r\n\r\n    dt.ui-dropdown-current {\r\n      @extends $gradient-palette_button-frame-border;\r\n      display: flex;\r\n      box-sizing: border-box;\r\n      padding-bottom: 10px;\r\n      width: 100%;\r\n      height: 100%;\r\n      margin: 0;\r\n      padding: 7px 5px;\r\n      align-items: center;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n\r\n      &::after {\r\n        background: url('../../images/up-down-arrow.png') center no-repeat;\r\n        width: 13px;\r\n        height: 18px;\r\n        position: absolute;\r\n        right: 8px;\r\n        top: 50%;\r\n        transform: translate(0, -50%);\r\n        content: '';\r\n      }\r\n    }\r\n    dt.ui-dropdown-current:lang(ar-ae)::after {\r\n      right: auto;\r\n      left: 8px;\r\n    }\r\n\r\n    dd.ui-dropdown-options-container {\r\n      @extends $gradient-palette_button-click-border;\r\n      margin: 0;\r\n      opacity: 0;\r\n      display: flex;\r\n      padding: 0;\r\n      box-sizing: border-box;\r\n      width: var(--framed-dropdown-options-container-width);\r\n      position: absolute;\r\n      top: 100%;\r\n      max-height: 0;\r\n      transition: max-height 400ms;\r\n      z-index: 2;\r\n      overflow: hidden;\r\n      visibility: hidden;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n\r\n      ul.ui-dropdown-options {\r\n        list-style: none;\r\n        margin: 0;\r\n        padding: 0;\r\n        box-sizing: border-box;\r\n        min-width: 100%;\r\n        background: $color_palette_almostBlack;\r\n        height: 100%;\r\n        lol-uikit-scrollable {\r\n          max-height: var(--framed-dropdown-scrollable-max-height);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.opens-upward {\r\n      height: var(--framed-dropdown-opens-upward-height);\r\n      dd.ui-dropdown-options-container {\r\n        bottom: 100%;\r\n        top: auto;\r\n        margin-top: 1px;\r\n      }\r\n    }\r\n  }\r\n\r\n  &(.disabled) {\r\n    cursor: default;\r\n    pointer-events: none;\r\n    .ui-dropdown {\r\n      dt.ui-dropdown-current {\r\n        border: thin solid $color_palette_grey2;\r\n        color: $color_palette_grey2;\r\n        &::after {\r\n          -webkit-filter: grayscale(100%);\r\n          opacity: 0.35;\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  &(.active) {\r\n    .ui-dropdown {\r\n      .ui-dropdown-current {\r\n        border: thin solid $color_palette_gold6;\r\n        color: $color_palette_gold6;\r\n        &::after {\r\n          background-image: url('../../images/up-down-arrow-locked.png');\r\n        }\r\n      }\r\n\r\n      dd.ui-dropdown-options-container {\r\n        opacity: 1;\r\n        max-height: 400px;\r\n        transition: max-height 400ms;\r\n        visibility: visible;\r\n      }\r\n    }\r\n  }\r\n\r\n  &(:not(.active):hover), &(:not(.active):focus) {\r\n    dt.ui-dropdown-current {\r\n      @extends $gradient-palette_button-hover-border;\r\n      background: $gradient-palette_button-backing-hover;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n", "// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}"],
-                sourceRoot: ""
-            }]), e.exports = l
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1);
-            class o extends r.webComponents.ShadowElement {
-                templateMarkup() {
-                    return n(122)
-                }
-                stylesheetMarkup() {
-                    return n(123)
-                }
-                constructor() {
-                    super(), this.addEventListener("cutout", (e => {
-                        const t = this.buildWebkitClipPath(e);
-                        this.style.webkitClipPath = t
-                    }))
-                }
-                buildWebkitClipPath(e) {
-                    return e && e.cutoutRect ? "polygon(0 0, " + e.cutoutRect.left + "px 0, " + e.cutoutRect.left + "px " + e.cutoutRect.bottom + "px, " + e.cutoutRect.right + "px " + e.cutoutRect.bottom + "px, " + e.cutoutRect.right + "px " + e.cutoutRect.top + "px, " + e.cutoutRect.left + "px " + e.cutoutRect.top + "px, " + e.cutoutRect.left + "px 0, 100% 0, 100% 100%, 0 100%)" : null
-                }
-            }
-            o.tagName = "lol-uikit-full-page-backdrop";
-            var i = o;
-            t.default = i
-        }, e => {
-            "use strict";
-            e.exports = "<template>\r\n  <slot></slot>\r\n</template>"
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, ":host {\n  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8) 93%);\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/full-page-backdrop/component-style.styl"],
-                names: [],
-                mappings: "AAAA;EACE,iEAAY;EACZ,kBAAU;EACV,OAAM;EACN,QAAO;EACP,MAAK;EACL,SAAQ;AACV",
-                sourcesContent: [":host {\r\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8) 93%);\r\n  position: absolute;\r\n  left: 0;\r\n  right: 0;\r\n  top: 0;\r\n  bottom: 0;\r\n}\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1);
-            const o = {
-                item: function(e) {
-                    return function(e, t) {
-                        for (const n of t) {
-                            const t = new RegExp(`<(${n})>`, "g");
-                            e = e.replace(t, '<span class="$1">');
-                            const r = new RegExp(`</${n}>`, "g");
-                            e = e.replace(r, "</span>")
-                        }
-                        return e
-                    }(e = function(e) {
-                        return e = e.replace(/<font color=['"](#?[a-z0-9]+)['"]>/gi, '<span style="color:$1;">'), e = e.replace(/<\/font>/g, "</span>"), e
-                    }(e), ["active", "aura", "consumable", "flavorText", "groupLimit", "levelLimit", "mana", "passive", "rules", "scaleLevel", "stats", "unique", "unlockedPassive"])
-                }
-            };
-            class i extends r.webComponents.ShadowElement {
-                templateMarkup() {
-                    return n(10)
-                }
-                connectedCallback() {
-                    this.processAttributes()
-                }
-                static get observedAttributes() {
-                    return ["type", "markup"]
-                }
-                processAttributes() {
-                    const e = this.getAttribute("type");
-                    let t = this.getAttribute("markup");
-                    e && t ? (o[e] && (t = o[e](t)), this.innerHTML = r.htmlSanitizer.sanitize(t)) : this.innerHTML = ""
-                }
-            }
-            i.tagName = "lol-uikit-game-data-markup";
-            var a = i;
-            t.default = a
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r, o = n(1),
-                i = (r = n(36)) && r.__esModule ? r : {
-                    default: r
-                };
-            class a extends o.webComponents.ShadowElement {
-                static ICON_ATTRIBUTE_KEY = "icon";
-                static ICONS = ["clock", "clock-dark", "riot-fistbump"];
-                static BACKGROUND_COLOR_ATTRIBUTE_KEY = "background-color";
-                static BACKGROUND_COLORS = ["white", "yellow", "grey", "red"];
-                static RADIUS_STYLE_ATTRIBUTE_KEY = "radius-style";
-                static RADIUS_STYLES = ["rounded", "square"];
-                static GLOW_COLOR_ATTRIBUTE_KEY = "glow";
-                static GLOW_COLORS = ["white", "yellow", "grey", "red"];
-                static SIZE_ATTRIBUTE_KEY = "size";
-                static SIZES = ["small", "medium"];
-                static get observedAttributes() {
-                    return [this.ICON_ATTRIBUTE_KEY, this.BACKGROUND_COLOR_ATTRIBUTE_KEY, this.RADIUS_STYLE_ATTRIBUTE_KEY, this.GLOW_COLOR_ATTRIBUTE_KEY, this.SIZE_ATTRIBUTE_KEY]
-                }
-                templateMarkup() {
-                    return n(126)
-                }
-                stylesheetMarkup() {
-                    return n(127)
-                }
-                $root() {
-                    return (0, i.default)(this.shadowRoot)
-                }
-                connectedCallback() {
-                    super.connectedCallback()
-                }
-                _badgeElement() {
-                    return (0, i.default)(this.shadowRoot.querySelector("div.hextech-ui-badge"))
-                }
-                _handleBackgroundColorAttribute() {
-                    const e = this._badgeElement(),
-                        t = this.getAttribute(this.constructor.BACKGROUND_COLOR_ATTRIBUTE_KEY);
-                    t && this.constructor.BACKGROUND_COLORS.includes(t) ? (e.removeClass("background-grey"), e.addClass(`background-${t}`)) : this.constructor.ICONS.forEach((t => e.removeClass(t)))
-                }
-                _handleIconAttribute() {
-                    const e = this._badgeElement(),
-                        t = this.getAttribute(this.constructor.ICON_ATTRIBUTE_KEY);
-                    t && this.constructor.ICONS.includes(t) ? e.addClass(t) : e.removeClass(t)
-                }
-                _handleRadiusStyleAttribute() {
-                    const e = this.constructor.RADIUS_STYLES[0],
-                        t = this._badgeElement(),
-                        n = this.getAttribute(this.constructor.RADIUS_STYLE_ATTRIBUTE_KEY);
-                    n ? t.addClass(n) : t.addClass(e)
-                }
-                _handleGlowAttribute() {
-                    const e = this._badgeElement(),
-                        t = this.getAttribute(this.constructor.GLOW_COLOR_ATTRIBUTE_KEY),
-                        n = `glow-${t}`;
-                    t && this.constructor.GLOW_COLORS.includes(t) ? e.addClass(n) : e.removeClass(n)
-                }
-                _handleSizeAttribute() {
-                    const e = this._badgeElement(),
-                        t = this.getAttribute(this.constructor.SIZE_ATTRIBUTE_KEY);
-                    t && this.constructor.SIZES.includes(t) ? e.addClass(t) : e.removeClass(t)
-                }
-                attributeChangedCallback() {
-                    this.processAttributes()
-                }
-                processAttributes() {
-                    this._handleBackgroundColorAttribute(), this._handleIconAttribute(), this._handleRadiusStyleAttribute(), this._handleGlowAttribute(), this._handleSizeAttribute()
-                }
-            }
-            a.tagName = "hextech-ui-badge";
-            var s = a;
-            t.default = s
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n    <div class="hextech-ui-badge">\r\n        <slot></slot>\r\n    </div>\r\n</template>'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, '::slotted(span) {\n  font-family: var(--font-body);\n}\n::slotted(span) {\n  font-size: 11px;\n  line-height: 14px;\n  font-weight: 400;\n  padding-top: 2px;\n}\n:host([font-size="large"]) ::slotted(span) {\n  font-size: 12px;\n  font-weight: 700;\n  padding-top: 2.5px;\n  padding-bottom: 2px;\n  padding-left: 1px;\n}\n.hextech-ui-badge.clock::before,\n.hextech-ui-badge.clock-dark::before,\n.hextech-ui-badge.riot-fistbump::before {\n  content: \'\';\n  display: inline-block;\n  margin: 1px 4px 2px -2px;\n}\n.hextech-ui-badge.clock::before,\n.hextech-ui-badge.clock-dark::before {\n  width: 13px;\n  height: 13px;\n  background-size: 13px 13px;\n  background-image: url("/fe/lol-static-assets/images/reset-timer-clock.svg");\n  background-repeat: no-repeat;\n}\n.hextech-ui-badge {\n  display: inline-flex;\n  text-align: center;\n  align-items: center;\n  direction: ltr;\n}\n.hextech-ui-badge.rounded {\n  border-radius: 25px;\n}\n.hextech-ui-badge.square {\n  border-radius: 3px;\n}\n.hextech-ui-badge.clock-dark::before {\n  filter: brightness(0);\n}\n.hextech-ui-badge.riot-fistbump::before {\n  width: 13px;\n  height: 13px;\n  background-size: 13px 13px;\n  background-image: url("/fe/lol-static-assets/images/ric-riot-logo-red.svg");\n  background-repeat: no-repeat;\n  margin-bottom: 0;\n}\n.hextech-ui-badge.background-red {\n  background: #ff2345;\n  color: #fff;\n}\n.hextech-ui-badge.background-grey {\n  background: #1e282d;\n  color: #f0e6d2;\n}\n.hextech-ui-badge.background-yellow {\n  background: #fabe0a;\n  color: #010a13;\n}\n.hextech-ui-badge.background-white {\n  background: #fff;\n  color: #010a13;\n}\n.hextech-ui-badge.glow-white {\n  box-shadow: 0 0 14px 2px #fff;\n}\n.hextech-ui-badge.glow-yellow {\n  box-shadow: 0 0 14px 2px #fabe0a;\n}\n.hextech-ui-badge.glow-red {\n  box-shadow: 0 0 14px 2px #ff2345;\n}\n.hextech-ui-badge.medium {\n  height: 21px;\n  padding: 0 8px;\n}\n.hextech-ui-badge.small {\n  height: 15px;\n  padding: 0 6px;\n}\n', "", {
-                version: 3,
-                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/hextech-ui-badge/component-style.styl"],
-                names: [],
-                mappings: "AAIA;EACE,6BAAa;ACHf;AACA;EAEE,eAAW;EACX,iBAAa;EACb,gBAAa;EACb,gBAAa;AAAf;AAIA;EACE,eAAW;EACX,gBAAa;EACb,kBAAa;EACb,mBAAgB;EAChB,iBAAc;AAFhB;AAKA;;;EACE,WAAQ;EACR,qBAAS;EACT,wBAAQ;AADV;AAKE;;EAEE,WAAO;EACP,YAAQ;EACR,0BAAiB;EACjB,2EAAyE;EACzE,4BAAkB;AAHtB;AAOA;EACE,oBAAS;EACT,kBAAY;EACZ,mBAAa;EACb,cAAW;AALb;AAQE;EACE,mBAAe;AANnB;AASE;EACE,kBAAe;AAPnB;AAgBG;EACE,qBAAQ;AAdb;AAmBI;EAEE,WAAO;EACP,YAAQ;EACR,0BAAgB;EAChB,2EAAyE;EACzE,4BAAkB;EAClB,gBAAe;AAlBrB;AAsBE;EACE,mBAAY;EACZ,WAAO;AApBX;AAuBE;EACE,mBAAY;EACZ,cAAM;AArBV;AAwBE;EACE,mBAAY;EACZ,cAAO;AAtBX;AAyBE;EACE,gBAAY;EACZ,cAAO;AAvBX;AA0BE;EACE,6BAAY;AAxBhB;AA2BE;EACE,gCAAY;AAzBhB;AA4BE;EACE,gCAAY;AA1BhB;AA6BE;EACE,YAAQ;EACR,cAAS;AA3Bb;AA8BE;EACE,YAAQ;EACR,cAAS;AA5Bb",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit';\r\n\r\n::slotted(span){\r\n  @extend $fonts_spiegel;\r\n  font-size: 11px;\r\n  line-height: 14px;\r\n  font-weight: 400;\r\n  padding-top: 2px;\r\n}\r\n\r\n\r\n:host([font-size=\"large\"]) ::slotted(span) {\r\n  font-size: 12px;\r\n  font-weight: 700;\r\n  padding-top: 2.5px;\r\n  padding-bottom: 2px;\r\n  padding-left: 1px;\r\n}\r\n\r\n$badge-icon {\r\n  content '';\r\n  display: inline-block;\r\n  margin: 1px 4px 2px -2px;\r\n }\r\n\r\n$clockIcon {\r\n  &::before {\r\n    @extend $badge-icon;\r\n    width: 13px;\r\n    height: 13px;\r\n    background-size: 13px 13px;\r\n    background-image url('/fe/lol-static-assets/images/reset-timer-clock.svg');\r\n    background-repeat no-repeat;\r\n  }\r\n}\r\n\r\n.hextech-ui-badge {\r\n  display: inline-flex;\r\n  text-align: center;\r\n  align-items: center;\r\n  direction: ltr;\r\n\r\n\r\n  &.rounded {\r\n    border-radius: 25px;\r\n  }\r\n\r\n  &.square {\r\n    border-radius: 3px;\r\n  }\r\n\r\n  &.clock {\r\n   @extend $clockIcon;\r\n  }\r\n\r\n  &.clock-dark {\r\n    @extend $clockIcon;\r\n   &::before{\r\n     filter: brightness(0);\r\n   }\r\n  }\r\n\r\n  &.riot-fistbump {\r\n    &::before {\r\n      @extend $badge-icon;\r\n      width: 13px;\r\n      height: 13px;\r\n      background-size 13px 13px\r\n      background-image url('/fe/lol-static-assets/images/ric-riot-logo-red.svg');\r\n      background-repeat no-repeat;\r\n      margin-bottom: 0;\r\n    }\r\n  }\r\n\r\n  &.background-red {\r\n    background: $color_palette_mage2;\r\n    color: white;\r\n  }\r\n\r\n  &.background-grey {\r\n    background: $color_palette_frameGrey;\r\n    color:$color_palette_gold1;\r\n  }\r\n\r\n  &.background-yellow {\r\n    background: $colors_amber;\r\n    color: $color_palette_almostBlack;\r\n  }\r\n\r\n  &.background-white {\r\n    background: white;\r\n    color: $color_palette_almostBlack;\r\n  }\r\n\r\n  &.glow-white {\r\n    box-shadow: 0 0 14px 2px white;\r\n  }\r\n\r\n  &.glow-yellow {\r\n    box-shadow: 0 0 14px 2px $colors_amber;\r\n  }\r\n\r\n  &.glow-red {\r\n    box-shadow: 0 0 14px 2px $color_palette_mage2;\r\n  }\r\n\r\n  &.medium {\r\n    height: 21px;\r\n    padding: 0 8px;\r\n  }\r\n\r\n  &.small {\r\n    height: 15px;\r\n    padding: 0 6px;\r\n  }\r\n}\r\n  \r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1),
-                o = a(n(36)),
-                i = a(n(37));
-
-            function a(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            class s extends r.webComponents.ShadowElement {
-                static get observedAttributes() {
-                    return ["disabled", "click-sfx-src", "hover-sfx-src"]
-                }
-                templateMarkup() {
-                    return n(129)
-                }
-                stylesheetMarkup() {
-                    return n(130)
-                }
-                setCustomSounds() {
-                    const e = this.getAttribute("hover-sfx-src"),
-                        t = this.getAttribute("click-sfx-src"),
-                        n = e || i.default.closeButtonHover,
-                        r = t || i.default.closeButtonClick;
-                    this._hoverSound = this._createSound(n), this._clickSound = this._createSound(r)
-                }
-                playSound(e) {
-                    e && (0, r.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").playSound(e)
-                }
-                _createSound(e) {
-                    return (0, r.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").createSound(e, {
-                        allowConcurrency: !1
-                    })
-                }
-                isDisabled() {
-                    return null !== this.getAttribute("disabled")
-                }
-                constructor() {
-                    super(), this.addEventListener("mouseenter", this), this.addEventListener("click", this)
-                }
-                processAttributes() {
-                    this.setCustomSounds()
-                }
-                _disabledCheck() {
-                    const e = this._buttonElement();
-                    this.isDisabled() ? e.addClass("disabled") : e.removeClass("disabled")
-                }
-                _buttonElement() {
-                    return (0, o.default)(this.shadowRoot.querySelector("div.lol-uikit-info-icon"))
-                }
-                handleEvent(e) {
-                    "MouseEvent" !== e.constructor.name && "PointerEvent" !== e.constructor.name || this.isDisabled() || ("mouseenter" === e.type && this._hoverSound ? this._hoverSound.play() : "click" === e.type && this._clickSound && this._clickSound.play())
-                }
-            }
-            s.tagName = "lol-uikit-info-icon";
-            var l = s;
-            t.default = l
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n  <div class="lol-uikit-info-icon"></div>\r\n</template>\r\n'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27),
-                i = n(91),
-                a = n(131),
-                s = n(132),
-                l = n(133),
-                d = o(r),
-                c = i(a),
-                p = i(s),
-                A = i(l);
-            d.push([e.id, ":host .lol-uikit-info-icon {\n  position: relative;\n  width: var(--uikit-info-icon-width, 18px);\n  height: var(--uikit-info-icon-height, 18px);\n  background-image: url(" + c + ");\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-info-icon:not(.disabled):hover {\n  background-image: url(" + p + ");\n}\n:host .lol-uikit-info-icon:not(.disabled):active {\n  background-image: url(" + A + ");\n}\n:host .lol-uikit-info-icon.disabled {\n  pointer: none;\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/info-icon/component-style.styl"],
-                names: [],
-                mappings: "AACE;EACE,kBAAU;EACV,yCAAO;EACP,2CAAQ;EACR,yDAA8C;EAC9C,wBAAiB;EACjB,2BAAqB;EACrB,4BAAmB;AAAvB;AAEI;EACE,yDAAoD;AAA1D;AAGI;EACE,yDAAsD;AAD5D;AAII;EACE,aAAS;AAFf",
-                sourcesContent: [":host {\r\n  .lol-uikit-info-icon {\r\n    position: relative;\r\n    width: var(--uikit-info-icon-width, 18px);\r\n    height: var(--uikit-info-icon-height, 18px);\r\n    background-image: url('./images/info-icon.svg');\r\n    background-size: contain;\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n\r\n    &:not(.disabled):hover {\r\n      background-image: url('./images/info-icon-hover.svg');\r\n    }\r\n\r\n    &:not(.disabled):active {\r\n      background-image: url('./images/info-icon-clicked.svg');\r\n    }\r\n\r\n    &.disabled {\r\n      pointer: none;\r\n    }\r\n  }\r\n}"],
-                sourceRoot: ""
-            }]), e.exports = d
-        }, (e, t, n) => {
-            "use strict";
-            e.exports = n.p + "info-icon.svg"
-        }, (e, t, n) => {
-            "use strict";
-            e.exports = n.p + "info-icon-hover.svg"
-        }, (e, t, n) => {
-            "use strict";
-            e.exports = n.p + "info-icon-clicked.svg"
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r, o = (r = n(36)) && r.__esModule ? r : {
-                    default: r
-                },
-                i = n(1);
-            const a = ["src", "image-path", "resize-to-fit", "fixed-width", "loop", "autoplay", "gds-object-id", "errortext", "param-current-exp", "param-new-exp", "param-level-up", "param-twitch", "param-green", "param-blue", "param-purple", "text-tierlabel", "param-display-division-1", "param-display-division-2", "param-display-division-3", "param-display-division-4", "param-display-split-reward-1", "param-display-split-reward-2", "param-display-split-reward-3", "param-display-previous-division-1", "param-display-next-division-4", "param-display-next-division-1", "param-display-split-reward-1", "param-display-split-reward-2", "param-display-split-reward-3", "param-display-division-2-to-1", "param-display-division-3-to-2", "param-display-division-4-to-3", "param-display-split-reward-1", "param-display-split-reward-2", "param-display-split-reward-3", "param-checkbox-control-1", "param-current-level-progress", "param-previous-level-progress", "param-bar-filler", "asset-segments", "asset-tier", "text-winstreak", "param-effect-control-1", "param-effect-control-2"];
-
-            function s(e) {
-                return e.split("{{")[0].trim().toLowerCase().replace(/ /g, "-")
-            }
-            let l = null,
-                d = null;
-            class c extends i.webComponents.ShadowElement {
-                static get observedAttributes() {
-                    return a
-                }
-                templateMarkup() {
-                    return n(135)
-                }
-                constructor() {
-                    super(), this.data = null, this.animation = null, this.animationParams = {}, this.animationReplacementImages = {}, this.animationReplacementText = {}, this.noCache = !1, this.onAnimationStart = null, this.onAnimationComplete = null, this._resetConnectedPromise(), this._reinitialize()
-                }
-                connectedCallback() {
-                    this._resolveConnectedPromise && (this._resolveConnectedPromise(), this._resolveConnectedPromise = null)
-                }
-                disconnectedCallback() {
-                    this._rejectConnectedPromise && (this._rejectConnectedPromise(), this._rejectConnectedPromise = null), this._resetConnectedPromise(), this.animation && (this.animation.destroy(), this.animation = null)
-                }
-                _resetConnectedPromise() {
-                    this._resolveConnectedPromise = null, this._rejectConnectedPromise = null, this._connectedPromise = new Promise(((e, t) => {
-                        this._resolveConnectedPromise = e, this._rejectConnectedPromise = t
-                    }))
-                }
-                _reinitialize() {
-                    this.animation && this.animation.destroy(), this.animation = null, this.loadingStarted = !1, this.loadingFinished = !1, this.loadPromise = new Promise(((e, t) => {
-                        this.resolveLoadPromise = e, this.rejectLoadPromise = t
-                    }))
-                }
-                reloadAnimation() {
-                    if (this.loadingStarted && this.loadingFinished) return this.animation && this.animation.destroy(), this.animation = null, this._loadAnimation()
-                }
-                _animationParameterChangedCallback(e, t) {
-                    let n = null;
-                    e.match(/^param-.+$/) ? n = this.animationParams : e.match(/^text-.+$/) ? n = this.animationReplacementText : e.match(/^asset-.+$/) && (n = this.animationReplacementImages);
-                    const r = e.match(/^(asset|param|text)-(.+)$/);
-                    if (r) {
-                        const e = r[2];
-                        return t ? n[e] = t : delete n[e], this.reloadAnimation()
-                    }
-                }
-                attributeChangedCallback(e, t, n) {
-                    super.attributeChangedCallback(), "src" === e ? this._srcAttributeChanged(n) : this._animationParameterChangedCallback(e, n)
-                }
-                async _srcAttributeChanged(e) {
-                    this.loadingStarted && !this.loadingFinished && this.rejectLoadPromise("src changed before loading was complete"), this._reinitialize(), e && (await this._loadAnimationJson(e), await this._loadAnimation(), this.resolveLoadPromise())
-                }
-                _setAnimationParameter(e, t) {
-                    const n = this.data.layers.find((e => "animation control layer" === e.nm.toLowerCase()));
-                    if (!n) throw new Error("Lottie animation has no animation control layer, but had parameters passed to it: " + this.getAttribute("src") + ", parameter is: " + e + "=" + t);
-                    const r = n.ef.filter((t => s(t.nm) === e));
-                    r.length && (t.match(/[0-9.]+/) && (t = parseFloat(t)), r.forEach((n => {
-                        const r = n.nm.match(/{{keyframe=([0-9]+)}}/);
-                        if (n.mn.match("Slider")) {
-                            if ("number" != typeof t) throw new Error("Lottie animation parameter value for a slider is not numeric: " + this.getAttribute("src") + ", parameter is: " + e + "=" + t);
-                            if (r) {
-                                const e = parseInt(r[1], 10) - 1;
-                                e > 0 && n.ef[0].v.k[e - 1].e && (n.ef[0].v.k[e - 1].e[0] = t), n.ef[0].v.k[e].s && (n.ef[0].v.k[e].s[0] = t)
-                            } else n.ef[0].v.k = t
-                        } else {
-                            if (r) throw new Error("Non-sliders in the control layer cannot have keyframes: " + this.getAttribute("src") + ", parameter is: " + e + "=" + t);
-                            n.mn.match("Checkbox") ? n.ef[0].v.k = "false" !== t.toLowerCase() && 0 !== t ? 1 : 0 : n.ef[0].v.k = t
-                        }
-                    })))
-                }
-                _setText(e, t) {
-                    const n = this.data.layers.filter((t => {
-                        const n = t.nm.match(/{{textKey=([a-zA-Z0-9\-_]+)}}/);
-                        return n && n[1] === e
-                    }));
-                    if (!n.length) throw new Error("Lottie animation had text subsitution, but target layer is not found. " + this.getAttribute("src") + ", textKey was: " + e + "=" + t);
-                    n.forEach((n => {
-                        if (!n.t) throw new Error("Lottie animation had text subsitution on a layer which is not a text layer. " + this.getAttribute("src") + ", textKey was: " + e + "=" + t);
-                        n.t.d.k[0].s.t = t
-                    }))
-                }
-                _loadGenericAssetsData() {
-                    d || (d = i.db.get("/lol-game-data/assets/v1/generic-assets.json").then((e => {
-                        l = e
-                    })).catch((e => {
-                        throw d = null, new Error(e)
-                    })))
-                }
-                _setImagePaths() {
-                    const e = this.getAttribute("gds-object-id"),
-                        t = this.getAttribute("image-path"),
-                        n = (this.getAttribute("src").match(/^(\/fe\/lol-[^/]+\/(assets\/)?)/) || [])[1],
-                        r = () => {
-                            this.data.layers.forEach((e => {
-                                const t = s(e.nm);
-                                if (this.animationReplacementImages[t]) {
-                                    const n = this.data.assets.find((t => t.id === e.refId)),
-                                        r = this.animationReplacementImages[t] + "_" + Math.random();
-                                    this.data.assets.push({
-                                        id: r,
-                                        p: this.animationReplacementImages[t].match(/[^/]+$/)[0],
-                                        u: this.animationReplacementImages[t].match(/^(.*?)[^/]+$/)[1],
-                                        w: n.w,
-                                        h: n.h
-                                    }), e.refId = r
-                                }
-                            })), this.data.assets.forEach((r => {
-                                if (r.p && (r.p = r.p.split("?")[0]), e && l && l[e] && l[e][r.p]) {
-                                    const t = l[e][r.p].match(/^(.*\/)(.*)$/);
-                                    r.u = t[1], r.p = t[2]
-                                } else t ? r.u = t : "images/" === r.u && (r.u = n + "lottie/images/");
-                                this.noCache && (r.p = r.p + "?" + Math.random())
-                            }))
-                        };
-                    return e ? d.then(r) : (r(), Promise.resolve())
-                }
-                _loadAnimationJson(e) {
-                    this.loadingStarted = !0, this.loadingFinished = !1;
-                    const t = e;
-                    return this.classList.remove("loading-error"), o.default.getJSON(e, (e => {
-                        t === this.getAttribute("src") && (this.data = e, this.loadingFinished = !0)
-                    })).fail((e => {
-                        t === this.getAttribute("src") && (this.data = null, this.loadingFinished = !0, this.classList.add("loading-error"), this.rejectLoadPromise(e))
-                    }))
-                }
-                _loadAnimation() {
-                    if (this.data && !this.animation) {
-                        let e;
-                        this.classList.remove("rendering-error");
-                        try {
-                            i.Lodash.forEach(this.animationParams, ((e, t) => {
-                                this._setAnimationParameter(t, e)
-                            })), i.Lodash.forEach(this.animationReplacementText, ((e, t) => {
-                                this._setText(t, e)
-                            })), this.getAttribute("gds-object-id") && this._loadGenericAssetsData(), e = this._setImagePaths()
-                        } catch (e) {
-                            throw this.classList.add("rendering-error"), this.setAttribute("errortext", "LOTTIE RENDERING ERROR: " + e.message), e
-                        }
-                        return Promise.all([this._connectedPromise, e]).then((() => {
-                            const e = i.Lottie.loadAnimation({
-                                container: this.shadowRoot.querySelector(".lottie-render-container"),
-                                renderer: "svg",
-                                loop: null !== this.getAttribute("loop"),
-                                autoplay: null === this.getAttribute("autoplay") || "false" !== this.getAttribute("autoplay"),
-                                animationData: this.data
-                            });
-                            this.animation && this.animation.destroy(), this.animation = e, e && this._addHooks(e), null === this.getAttribute("resize-to-fit") && "false" !== this.getAttribute("resize-to-fit") && (this.shadowRoot.querySelector("svg").style.height = "", this.shadowRoot.querySelector("svg").style.width = "")
-                        }))
-                    }
-                }
-                _addHooks(e) {
-                    e.onEnterFrame = () => {
-                        e.onEnterFrame = null, this.onAnimationStart && this.onAnimationStart(e)
-                    }, e.onComplete = () => {
-                        this.onAnimationComplete && this.onAnimationComplete()
-                    }
-                }
-                play() {
-                    this.loadPromise.then((() => {
-                        window.testsSandboxDoc && window.testsSandbox && this.animation?.setSpeed(1e6), this.animation?.play()
-                    }))
-                }
-                pause() {
-                    this.animation?.pause()
-                }
-                stop() {
-                    this.animation?.stop()
-                }
-            }
-            c.tagName = "lol-uikit-lottie";
-            var p = c;
-            t.default = p
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n  <style>\r\n    .lottie-render-container {\r\n      position: absolute;\r\n      left: 50%;\r\n      top: 50%;\r\n      transform: translate(-50%, -50%);\r\n    }\r\n\r\n    :host([resize-to-fit]) .lottie-render-container {\r\n      width: 100%;\r\n      height: 100%;\r\n    }\r\n\r\n    :host([fixed-width]) .lottie-render-container {\r\n      width: fit-content;\r\n      position: relative;\r\n    }\r\n  </style>\r\n  <div class="lottie-render-container"></div>\r\n</template>\r\n'
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1);
-            const o = "lol-uikit-navigation-item";
-            class i extends r.webComponents.ShadowElement {
-                static get observedAttributes() {
-                    return ["type", "selectedindex", "direction"]
-                }
-                templateMarkup() {
-                    return n(137)
-                }
-                stylesheetMarkup() {
-                    return n(138)
-                }
-                constructor() {
-                    super(), this.addEventListener("lol-uikit-navigation-item-click-event", (e => {
-                        const t = Array.from(this.getElementsByTagName(o)).indexOf(e.target);
-                        this.setAttribute("selectedindex", t), e.stopPropagation()
-                    }))
-                }
-                connectedCallback() {
-                    super.connectedCallback(), this.processAttributes()
-                }
-                processAttributes() {
-                    if (!this.shadowRoot.host.parentElement) return;
-                    const e = this.shadowRoot.querySelector(".navigation-bar"),
-                        t = this.getAttribute("direction") || "left";
-                    e && !e.classList.contains(t) && (e.classList.remove("up", "down", "left", "right"), e.classList.add(t)), this.getAttribute("type") || this.setAttribute("type", "nav-bar"), this.getAttribute("selectedindex") || this.setAttribute("selectedindex", 0);
-                    const n = parseInt(this.getAttribute("selectedindex"));
-                    this._updateActiveItem(n)
-                }
-                _updateActiveItem(e) {
-                    Array.from(this.getElementsByTagName(o)).forEach((function(t, n) {
-                        n === e ? t.setAttribute("active", "true") : t.removeAttribute("active")
-                    }))
-                }
-            }
-            i.tagName = "lol-uikit-navigation-bar";
-            var a = i;
-            t.default = a
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n  <nav class="navigation-bar">\r\n    <slot></slot>\r\n  </nav>\r\n</template>\r\n'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, ':host([type=nav-bar]) .navigation-bar {\n  font-family: var(--font-display);\n}\n:host([type=nav-bar]) .navigation-bar {\n  -webkit-user-select: none;\n}\n:host([type=nav-bar]) .navigation-bar {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host([type=nav-bar]) .navigation-bar {\n  text-transform: uppercase;\n}\n:host([type=nav-bar]) .navigation-bar:lang(ko-kr),\n:host([type=nav-bar]) .navigation-bar:lang(ja-jp),\n:host([type=nav-bar]) .navigation-bar:lang(tr-tr),\n:host([type=nav-bar]) .navigation-bar:lang(el-gr),\n:host([type=nav-bar]) .navigation-bar:lang(th-th),\n:host([type=nav-bar]) .navigation-bar:lang(zh-tw) {\n  text-transform: none;\n}\n:host([type=nav-bar]) .navigation-bar {\n  font-size: 12px;\n  font-weight: 500;\n  letter-spacing: 0.1em;\n  color: #cdbe91;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host([type=nav-bar]) .navigation-bar.active {\n  position: relative;\n  color: #f0e6d2;\n}\n:host([type=nav-bar]) .navigation-bar:lang(ja-jp) {\n  font-size: 13px;\n}\n:host([type=nav-bar]) .navigation-bar:lang(zh-tw) {\n  font-size: 14px;\n}\n:host([type=nav-bar]) .navigation-bar:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host([type=nav-bar]) .navigation-bar {\n  font-family: var(--font-display);\n}\n.navigation-bar {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n.navigation-bar.up,\n.navigation-bar.right {\n  justify-content: flex-end;\n}\n.navigation-bar.down,\n.navigation-bar.left {\n  justify-content: flex-start;\n}\n.navigation-bar.up {\n  flex-direction: column-reverse;\n}\n.navigation-bar.down {\n  flex-direction: column;\n}\n.navigation-bar.left {\n  flex-direction: row;\n}\n.navigation-bar.right {\n  flex-direction: row-reverse;\n}\n:host([type=nav-bar]) * {\n  margin: 0;\n  padding: 0;\n  border: 0;\n}\n:host([type=nav-bar]) .navigation-bar {\n  justify-content: space-between;\n  align-items: center;\n  height: auto;\n  flex: 6;\n}\n', "", {
-                version: 3,
-                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/navigation-bar/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
-                names: [],
-                mappings: "AAAA;EACE,gCAAa;ACCf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;ACyBA;EACE,yBAAgB;ADvBlB;ACwBE;;;;;;EAME,oBAAgB;ADtBpB;ACuUA;EAKE,eAAW;EAOX,gBAAa;EACb,qBAAgB;EAIhB,cAAO;EACP,4CAAwB;ADlV1B;AC4SE;EACE,kBAAU;EACV,cAAO;AD1SX;ACkUE;EACE,eAAW;ADhUf;ACkUE;EACE,eAAW;ADhUf;ACoUE;EACE,iBAAgB;ADlUpB;ADzCA;EACE,gCAAa;AC2Cf;AAvCA;EACE,aAAS;EACT,WAAO;EACP,YAAQ;AAyCV;AAvCE;;EACE,yBAAiB;AA0CrB;AAvCE;;EACE,2BAAiB;AA0CrB;AAvCE;EACE,8BAAgB;AAyCpB;AAtCE;EACE,sBAAgB;AAwCpB;AArCE;EACE,mBAAgB;AAuCpB;AApCE;EACE,2BAAgB;AAsCpB;AAjCE;EACE,SAAQ;EACR,UAAS;EACT,SAAQ;AAmCZ;AAhCE;EAGE,8BAAiB;EACjB,mBAAa;EACb,YAAQ;EACR,OAAM;AAgCV",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit';\r\n@require 'riotclient-lol-asset-csslib/styles/fonts';\r\n@require 'riotclient-lol-asset-csslib/styles/sizes';\r\n\r\n.navigation-bar {\r\n  display: flex;\r\n  width: 100%;\r\n  height: 100%;\r\n\r\n  &.up, &.right {\r\n    justify-content: flex-end;\r\n  }\r\n\r\n  &.down, &.left {\r\n    justify-content: flex-start;\r\n  }\r\n\r\n  &.up {\r\n    flex-direction: column-reverse;\r\n  }\r\n\r\n  &.down {\r\n    flex-direction: column;\r\n  }\r\n\r\n  &.left {\r\n    flex-direction: row;\r\n  }\r\n\r\n  &.right {\r\n    flex-direction: row-reverse;\r\n  }\r\n}\r\n\r\n:host([type=nav-bar]) {\r\n  * {\r\n    margin: 0;\r\n    padding: 0;\r\n    border: 0;\r\n  }\r\n\r\n  .navigation-bar {\r\n    @extends $typekit_nav_secondary;\r\n    @extends $fonts_lol_display;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    height: auto;\r\n    flex: 6;\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = l(n(36)),
-                o = n(1),
-                i = n(35),
-                a = n(34),
-                s = l(n(37));
-
-            function l(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            const d = "active",
-                c = "disabled",
-                p = "hover-sound-active",
-                A = [d, c, "alert", p],
-                u = ".section-glow";
-            class h extends o.webComponents.ShadowElement {
-                static get observedAttributes() {
-                    return A
-                }
-                templateMarkup() {
-                    return n(140)
-                }
-                stylesheetMarkup() {
-                    return n(141)
-                }
-                constructor() {
-                    super(), this._item, this._mainElement = (0, r.default)(this.shadowRoot.querySelector(".section")), this._navClickSound = this._createSound(s.default.navClick), this._navHoverSound = this._createSound(s.default.flatButtonHover), this._subNavClickSound = this._createSound(s.default.subnavClick), this.addEventListener("click", this._userClickedEvent.bind(this))
-                }
-                _handleMouseEnter() {
-                    this.isDisabled() || this._navHoverSound.play()
-                }
-                _handleMouseMove(e) {
-                    if (this.isDisabled()) return;
-                    const t = this.offsetWidth,
-                        n = this.shadowRoot.querySelector(u),
-                        r = t / 2,
-                        o = e.offsetX - r;
-                    n.style.transform = `translateX(${o/1.5}px)`, n.style.opacity = 1.3 - Math.abs(o / r)
-                }
-                _handleMouseOut() {
-                    if (this.isDisabled()) return;
-                    this.shadowRoot.querySelector(u).style.opacity = 0
-                }
-                connectedCallback() {
-                    super.connectedCallback(), A.forEach((e => {
-                        const t = this.getAttribute(e);
-                        this._addRemoveCssClass(e, (0, i.isAttrTruthy)(e, t))
-                    }));
-                    const e = this.closest("lol-uikit-navigation-bar");
-                    e && "nav-bar" === e.getAttribute("type") && (this.addEventListener("mousemove", this._handleMouseMove.bind(this)), this.addEventListener("mouseout", this._handleMouseOut.bind(this))), this.getAttribute(p) && this.addEventListener("mouseenter", this._handleMouseEnter.bind(this))
-                }
-                _createSound(e) {
-                    return (0, a.createSound)("sfx-ui", e, {
-                        allowConcurrency: !1
-                    })
-                }
-                _userClickedEvent() {
-                    if (this.isDisabled()) return;
-                    if (this.isActive()) return;
-                    const e = this.closest("lol-uikit-navigation-bar");
-                    e && "nav-bar-secondary" === e.getAttribute("type") || "tabbed" === e.getAttribute("type") ? this._subNavClickSound.play() : e && "nav-bar" === e.getAttribute("type") && this._navClickSound.play(), this.dispatchEvent(new CustomEvent("lol-uikit-navigation-item-click-event", {
-                        bubbles: !0,
-                        composed: !0,
-                        cancelable: !0,
-                        detail: {
-                            node: this
-                        }
-                    }))
-                }
-                attributeChangedCallback(e, t, n) {
-                    if (-1 === A.indexOf(e)) return;
-                    const r = (0, i.isAttrTruthy)(e, t),
-                        o = (0, i.isAttrTruthy)(e, n);
-                    !r && o ? this._addRemoveCssClass(e, !0) : r && !o && this._addRemoveCssClass(e, !1)
-                }
-                _addRemoveCssClass(e, t) {
-                    t ? this._mainElement.addClass(e) : this._mainElement.removeClass(e), this.dispatchEvent(new CustomEvent(t ? "lol-uikit-navigation-item-attr-set-event" : "lol-uikit-navigation-item-attr-remove-event", {
-                        bubbles: !0,
-                        composed: !0,
-                        cancelable: !0,
-                        detail: {
-                            node: this,
-                            attr: e
-                        }
-                    }))
-                }
-                isActive() {
-                    return this._mainElement.hasClass(d)
-                }
-                isDisabled() {
-                    return this._mainElement.hasClass(c)
-                }
-            }
-            h.tagName = "lol-uikit-navigation-item";
-            var g = h;
-            t.default = g
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n  <div class="section">\r\n    <span class="section-text">\r\n      <slot></slot>\r\n      <div class="alertImage"></div>\r\n    </span>\r\n    <div class="section-glow-container">\r\n      <div class="section-glow"></div>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, ":host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section,\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\n  font-family: var(--font-display);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section,\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\n  -webkit-user-select: none;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section,\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section {\n  text-transform: uppercase;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(ko-kr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(ko-kr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(ja-jp),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(ja-jp),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(tr-tr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(tr-tr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(el-gr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(el-gr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(th-th),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(th-th),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(zh-tw),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(zh-tw) {\n  text-transform: none;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section {\n  font-size: 14px;\n  font-weight: 700;\n  letter-spacing: 0.075em;\n  color: #cdbe91;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active {\n  position: relative;\n  color: #f0e6d2;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(ar-ae),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section {\n  font-size: 12px;\n  font-weight: 500;\n  letter-spacing: 0.1em;\n  color: #cdbe91;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active {\n  position: relative;\n  color: #f0e6d2;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(ja-jp) {\n  font-size: 13px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(zh-tw) {\n  font-size: 14px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\n  color: #c8aa6e;\n  font-size: 14px;\n  font-weight: 700;\n  letter-spacing: 0.0325em;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):hover {\n  color: #f0e6d2;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):disabled,\n:host-context(lol-uikit-navigation-bar[type=tabbed]):disabled:hover,\n:host-context(lol-uikit-navigation-bar[type=tabbed])[disabled='true'],\n:host-context(lol-uikit-navigation-bar[type=tabbed])[disabled='true']:hover {\n  color: #5c5b57;\n  cursor: default;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):active {\n  color: #785a28;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) {\n  display: flex;\n  position: relative;\n  cursor: pointer;\n  min-width: 28px;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]):last-of-type,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]):last-of-type {\n  margin-right: 0;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) *,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) * {\n  cursor: pointer;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  color: var(--default-color, #cdbe91);\n  border: none;\n  margin: 0;\n  text-decoration: none;\n  outline: none;\n  transition: text-shadow 0.3s ease-in-out, background 1.5s;\n  width: 100%;\n  height: 100%;\n  min-height: 20px;\n  cursor: pointer;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section *,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section * {\n  cursor: pointer;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .alertImage,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section .alertImage {\n  display: none;\n  position: absolute;\n  right: 0px;\n  top: -5px;\n  background-color: var(--default-color, #cdbe91);\n  border-radius: 50%;\n  width: 10px;\n  height: 10px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.alert .alertImage,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.alert .alertImage {\n  display: block;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section .section-text {\n  padding: 0px 12px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active {\n  cursor: default;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active::before,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active::before {\n  content: '';\n  height: 15px;\n  width: 100%;\n  position: absolute;\n  top: -1px;\n  left: 0;\n  background-image: url(\"/fe/lol-uikit/images/nav-pointer.png\");\n  background-repeat: no-repeat;\n  background-size: contain;\n  background-position: center;\n  pointer-events: none;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:hover:not(.disabled),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:hover:not(.disabled) {\n  color: var(--hover-color, #f0e6d2);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:hover:not(.disabled) .alertImage,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:hover:not(.disabled) .alertImage {\n  background-color: var(--hover-color, #f0e6d2);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active {\n  color: var(--active-color, #f0e6d2);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active .alertImage,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active .alertImage {\n  background-color: var(--active-color, #f0e6d2);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:not(.active):not(.disabled):active,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:not(.active):not(.disabled):active {\n  color: var(--click-color, #c89b3c);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.disabled,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.disabled {\n  color: var(--disabled-color, #888);\n  cursor: default;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.disabled:hover,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.disabled:hover,\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.disabled.active,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.disabled.active {\n  background: none;\n  text-shadow: none;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section .alertImage {\n  right: 5px;\n  top: -3px;\n  width: 6px;\n  height: 6px;\n  background-color: var(--default-color, #c89b3c);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active::before {\n  background-image: none;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active .section-glow {\n  height: 1px;\n  width: 100%;\n  position: absolute;\n  left: 0;\n  top: 20px;\n  margin: 0;\n  background: linear-gradient(to left, transparent, #cdbe91, transparent);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section {\n  height: 79px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active {\n  background-image: linear-gradient(0deg, rgba(205,190,145,0.15) 0%, rgba(31,37,38,0) 55%);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section::after {\n  content: '';\n  background-image: linear-gradient(0deg, rgba(205,190,145,0.2) 0%, rgba(31,37,38,0) 55%);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  opacity: 0;\n  transition: opacity 0.4s ease-in;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:not(.disabled):hover::after {\n  opacity: 1;\n  transition: opacity 0.1s ease-out;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-glow-container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-glow {\n  width: 100%;\n  height: 90px;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  background: url(\"/fe/lol-uikit/images/nav-highlight.png\") no-repeat;\n  background-position: bottom center;\n  background-size: 100% 32px;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.1s;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(zh-tw),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(zh-cn),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(zh-my) {\n  font-size: 16px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(ko-kr) {\n  font-size: 14px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(it-it),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(vi-VN),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(vn-VN) {\n  font-size: 12px;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\n  display: flex;\n  position: relative;\n  width: 100%;\n  height: 100%;\n  cursor: pointer;\n  padding-left: 12px;\n  text-align: left;\n  line-height: 30px;\n  vertical-align: middle;\n  transition: 300ms color;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) .section {\n  position: relative;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) .section .alertImage {\n  display: none;\n  position: absolute;\n  right: -12px;\n  top: 0px;\n  background-color: var(--default-color, #cdbe91);\n  border-radius: 50%;\n  width: 10px;\n  height: 10px;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) .section.alert .alertImage {\n  display: block;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) .section.active .alertImage {\n  background-color: var(--active-color, #f0e6d2);\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed])::before {\n  content: '';\n  position: absolute;\n  width: 3px;\n  height: 100%;\n  top: 0;\n  left: 1px;\n  background-image: linear-gradient(to bottom, #c89b3c, #c89b3c);\n  background-size: 100% 100%;\n  background-position: left center;\n  background-repeat: no-repeat;\n  opacity: 0;\n  transition: 400ms opacity;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):host {\n  cursor: pointer;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):host([active]) {\n  color: #f0e6d2;\n  cursor: default;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):host([active])::before {\n  opacity: 1;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):host([disabled]) {\n  color: #1e2328;\n  cursor: default;\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/navigation-item/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
-                names: [],
-                mappings: "AAAA;;;EACE,gCAAa;ACGf;ACMA;;;EACE,yBAAqB;ADFvB;ACcA;;;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADX1B;ACmBA;;EACE,yBAAgB;ADhBlB;ACiBE;;;;;;;;;;;;EAME,oBAAgB;ADTpB;AC4SA;;EAKE,eAAW;EACX,gBAAa;EACb,uBAAgB;EAIhB,cAAO;ADhTT;AC+RE;;EACE,kBAAU;EACV,cAAO;AD5RX;ACwSE;;EACE,iBAAgB;ADrSpB;AC0SA;EAKE,eAAW;EAOX,gBAAa;EACb,qBAAgB;EAIhB,cAAO;EACP,4CAAwB;ADrT1B;AC+QE;EACE,kBAAU;EACV,cAAO;AD7QX;ACqSE;EACE,eAAW;ADnSf;ACqSE;EACE,eAAW;ADnSf;ACuSE;EACE,iBAAgB;ADrSpB;ACmVA;EAGE,cAAO;EACP,eAAW;EACX,gBAAa;EACb,wBAAgB;ADnVlB;ACoVE;EACE,iBAAgB;ADlVpB;ACqVE;EACE,cAAO;ADnVX;ACsVE;;;;EACE,cAAO;EACP,eAAQ;ADjVZ;ACoVE;EACE,cAAO;ADlVX;AAtFA;;EACE,aAAS;EACT,kBAAU;EACV,eAAQ;EACR,eAAW;EACX,mBAAa;EACb,uBAAe;AAyFjB;AAvFE;;EACE,eAAc;AA0FlB;AAvFE;;EACE,eAAQ;AA0FZ;AAvFE;;EAEE,aAAS;EACT,mBAAa;EACb,uBAAiB;EAEjB,kBAAU;EACV,oCAAO;EACP,YAAQ;EACR,SAAQ;EACR,qBAAiB;EACjB,aAAS;EACT,yDAAwC;EACxC,WAAO;EACP,YAAQ;EACR,gBAAY;EACZ,eAAQ;AAwFZ;AAtFI;;EACE,eAAQ;AAyFd;AAtFI;;EACE,aAAS;EACT,kBAAU;EACV,UAAO;EACP,SAAK;EACL,+CAAkB;EAClB,kBAAe;EACf,WAAO;EACP,YAAQ;AAyFd;AArFM;;EACE,cAAS;AAwFjB;AApFI;;EACE,iBAAS;AAuFf;AApFI;;EACE,eAAQ;AAuFd;AArFM;;EACE,WAAS;EACT,YAAQ;EACR,WAAO;EACP,kBAAU;EACV,SAAK;EACL,OAAM;EACN,6DAA0D;EAC1D,4BAAmB;EACnB,wBAAiB;EACjB,2BAAqB;EACrB,oBAAgB;AAwFxB;AApFI;;EAIE,kCAAO;AAoFb;AAvFM;;EACE,6CAAkB;AA0F1B;AArFI;;EAIE,mCAAO;AAqFb;AAxFM;;EACE,8CAAkB;AA2F1B;AAtFI;;EACE,kCAAO;AAyFb;AAtFI;;EACE,kCAAO;EACP,eAAQ;AAyFd;AAvFM;;;;EAEE,gBAAY;EACZ,iBAAa;AA2FrB;AA9EI;EACE,UAAO;EACP,SAAK;EACL,UAAO;EACP,WAAQ;EACR,+CAAkB;AAgFxB;AA5EM;EACE,sBAAkB;AA8E1B;AA5EM;EACE,WAAQ;EACR,WAAO;EACP,kBAAU;EACV,OAAM;EACN,SAAK;EACL,SAAQ;EACR,uEAAY;AA8EpB;AAtEE;EACE,YAAQ;AAwEZ;AAvEI;EACE,wFAAkB;AAyExB;AAtEI;EACE,WAAS;EACT,uFAAkB;EAClB,kBAAU;EACV,MAAK;EACL,OAAM;EACN,QAAO;EACP,SAAQ;EACR,UAAS;EACT,gCAAY;AAwElB;AArEI;EACE,UAAS;EACT,iCAAY;AAuElB;AApEI;EACE,kBAAU;EACV,MAAK;EACL,OAAM;EACN,QAAO;EACP,SAAQ;EACR,gBAAU;AAsEhB;AAlEI;EACE,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,SAAQ;EACR,OAAM;EACN,mEAAsD;EACtD,kCAAqB;EACrB,0BAAiB;EACjB,oBAAgB;EAChB,UAAS;EACT,wBAAY;AAoElB;AA/DM;;;EAGE,eAAW;AAiEnB;AA9DM;EACE,eAAW;AAgEnB;AA9DM;;;EAGE,eAAW;AAgEnB;AA1DA;EACE,aAAS;EACT,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,eAAQ;EAGR,kBAAc;EACd,gBAAY;EACZ,iBAAa;EACb,sBAAgB;EAChB,uBAAY;AA0Dd;AAvDE;EACE,kBAAU;AAyDd;AAvDI;EACE,aAAS;EACT,kBAAU;EACV,YAAO;EACP,QAAK;EACL,+CAAkB;EAClB,kBAAe;EACf,WAAO;EACP,YAAQ;AAyDd;AArDM;EACE,cAAS;AAuDjB;AAlDM;EACE,8CAAkB;AAoD1B;AA9CE;EACE,WAAS;EACT,kBAAU;EACV,UAAO;EACP,YAAQ;EACR,MAAK;EACL,SAAM;EACN,8DAAkB;EAClB,0BAAiB;EACjB,gCAAqB;EACrB,4BAAmB;EACnB,UAAS;EACT,yBAAY;AAgDhB;AA7CE;EACE,eAAQ;AA+CZ;AA5CE;EACE,cAAO;EACP,eAAQ;AA8CZ;AA5CI;EACE,UAAS;AA8Cf;AA1CE;EACE,cAAO;EACP,eAAQ;AA4CZ",
-                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "\r\n@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit';\r\n\r\n$base-image-path = '/fe/lol-uikit/images/';\r\n\r\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) {\r\n  display: flex;\r\n  position: relative;\r\n  cursor: pointer;\r\n  min-width: 28px;\r\n  white-space: nowrap;\r\n  text-overflow: ellipsis;\r\n\r\n  &:last-of-type {\r\n    margin-right: 0;\r\n  }\r\n\r\n  & * {\r\n    cursor: pointer;\r\n  }\r\n\r\n  .section {\r\n    @extend $typekit_nav;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n\r\n    position: relative;\r\n    color: var(--default-color, $color_palette_gold2);\r\n    border: none;\r\n    margin: 0;\r\n    text-decoration: none;\r\n    outline: none;\r\n    transition: text-shadow 0.3s ease-in-out, background 1.5s;\r\n    width: 100%;\r\n    height: 100%;\r\n    min-height: 20px;\r\n    cursor: pointer;\r\n\r\n    & * {\r\n      cursor: pointer;\r\n    }\r\n\r\n    .alertImage {\r\n      display: none;\r\n      position: absolute;\r\n      right: 0px;\r\n      top: -5px;\r\n      background-color: var(--default-color, $color_palette_gold2);\r\n      border-radius: 50%;\r\n      width: 10px;\r\n      height: 10px;\r\n    }\r\n\r\n    &.alert {\r\n      .alertImage {\r\n        display: block;\r\n      }\r\n    }\r\n\r\n    .section-text {\r\n      padding: 0px 12px;\r\n    }\r\n\r\n    &.active {\r\n      cursor: default;\r\n      // arrow at top of active item\r\n      &::before {\r\n        content: '';\r\n        height: 15px;\r\n        width: 100%;\r\n        position: absolute;\r\n        top: -1px;\r\n        left: 0;\r\n        background-image: url($base-image-path + 'nav-pointer.png');\r\n        background-repeat: no-repeat;\r\n        background-size: contain;\r\n        background-position: center;\r\n        pointer-events: none;\r\n      }\r\n    }\r\n\r\n    &:hover:not(.disabled) {\r\n      .alertImage {\r\n        background-color: var(--hover-color, $color_palette_gold1);\r\n      }\r\n      color: var(--hover-color, $color_palette_gold1);\r\n    }\r\n\r\n    &.active {\r\n      .alertImage {\r\n        background-color: var(--active-color, $color_palette_gold1);\r\n      }\r\n      color: var(--active-color, $color_palette_gold1);\r\n    }\r\n\r\n    &:not(.active):not(.disabled):active {\r\n      color: var(--click-color, $color_palette_gold4);\r\n    }\r\n\r\n    &.disabled {\r\n      color: var(--disabled-color, $colors_gray);\r\n      cursor: default;\r\n\r\n      &:hover,\r\n      &.active {\r\n        background: none;\r\n        text-shadow: none;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n// use secondary navigation styling if sub-nav class is used\r\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) {\r\n  @extend :host-context(lol-uikit-navigation-bar[type=nav-bar])\r\n\r\n  .section {\r\n    @extend $typekit_nav_secondary;\r\n\r\n    .alertImage {\r\n      right: 5px;\r\n      top: -3px;\r\n      width: 6px;\r\n      height: 6px;\r\n      background-color: var(--default-color, $color_palette_gold4);\r\n    }\r\n\r\n    &.active {\r\n      &::before {\r\n        background-image: none;\r\n      }\r\n      .section-glow {\r\n        height: 1px;\r\n        width: 100%;\r\n        position: absolute;\r\n        left: 0;\r\n        top: 20px;\r\n        margin: 0;\r\n        background: linear-gradient(to left, transparent, $color_palette_gold2, transparent);\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n// main navigation only styles\r\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) {\r\n  .section {\r\n    height: 79px;\r\n    &.active {\r\n      background-image: linear-gradient(0deg, rgba(205,190,145,0.15) 0%, rgba(31,37,38,0) 55%);\r\n    }\r\n\r\n    &::after {\r\n      content: '';\r\n      background-image: linear-gradient(0deg, rgba(205,190,145,0.2) 0%, rgba(31,37,38,0) 55%);\r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      right: 0;\r\n      bottom: 0;\r\n      opacity: 0;\r\n      transition: opacity 0.4s ease-in;\r\n    }\r\n\r\n    &:not(.disabled):hover::after {\r\n      opacity: 1;\r\n      transition: opacity 0.1s ease-out;\r\n    }\r\n\r\n    .section-glow-container {\r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      right: 0;\r\n      bottom: 0;\r\n      overflow: hidden;\r\n    }\r\n\r\n    // highlight at bottom of active item\r\n    .section-glow {\r\n      width: 100%;\r\n      height: 90px;\r\n      position: absolute;\r\n      bottom: 0;\r\n      left: 0;\r\n      background: url($base-image-path + 'nav-highlight.png') no-repeat;\r\n      background-position: bottom center;\r\n      background-size: 100% 32px;\r\n      pointer-events: none;\r\n      opacity: 0;\r\n      transition: opacity 0.1s;\r\n    }\r\n\r\n    .section-text {\r\n      // Per CPAIN-53, these languages get larger font in nav\r\n      &:lang(zh-tw),\r\n      &:lang(zh-cn),\r\n      &:lang(zh-my) {\r\n        font-size: 16px;\r\n      }\r\n      // Per LOLBUG-224217, these languages need their size reduced for top nav space\r\n      &:lang(ko-kr) {\r\n        font-size: 14px;\r\n      }\r\n      &:lang(it-it),\r\n      &:lang(vi-VN),\r\n      &:lang(vn-VN) {\r\n        font-size: 12px;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\r\n  display: flex;\r\n  position: relative;\r\n  width: 100%;\r\n  height: 100%;\r\n  cursor: pointer;\r\n\r\n  @extend $typekit_button;\r\n  padding-left: 12px;\r\n  text-align: left;\r\n  line-height: 30px;\r\n  vertical-align: middle;\r\n  transition: 300ms color;\r\n\r\n\r\n  .section {\r\n    position: relative;\r\n\r\n    .alertImage {\r\n      display: none;\r\n      position: absolute;\r\n      right: -12px;\r\n      top: 0px;\r\n      background-color: var(--default-color, $color_palette_gold2);\r\n      border-radius: 50%;\r\n      width: 10px;\r\n      height: 10px;\r\n    }\r\n\r\n    &.alert {\r\n      .alertImage {\r\n        display: block;\r\n      }\r\n    }\r\n\r\n    &.active {\r\n      .alertImage {\r\n        background-color: var(--active-color, $color_palette_gold1);\r\n      }\r\n    }\r\n  }\r\n\r\n\r\n  &::before {\r\n    content: '';\r\n    position: absolute;\r\n    width: 3px;\r\n    height: 100%;\r\n    top: 0;\r\n    left: 1px;\r\n    background-image: linear-gradient(to bottom, $color_palette_gold4, $color_palette_gold4);\r\n    background-size: 100% 100%;\r\n    background-position: left center;\r\n    background-repeat: no-repeat;\r\n    opacity: 0;\r\n    transition: 400ms opacity;\r\n  }\r\n\r\n  &:host {\r\n    cursor: pointer;\r\n  }\r\n\r\n  &:host([active]) {\r\n    color: $color_palette_gold1;\r\n    cursor: default;\r\n\r\n    &::before {\r\n      opacity: 1;\r\n    }\r\n  }\r\n\r\n  &:host([disabled]) {\r\n    color: $color_palette_grey3\r\n    cursor: default;\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            const n = {
-                limitRange: 508.63361717427733,
-                fadeRange: 100,
-                scale1: 1.4382054002858877,
-                scale2: 1,
-                scale3: 1,
-                scale4: 1.1,
-                speed: .2630863537108331
-            };
-            var r = class {
-                constructor(e, t = {}, r = !0) {
-                    this._elements = e, this._config = Object.assign({}, n, t), this._init(), r && this.play()
-                }
-                _init() {}
-                play() {
-                    this._isPlaying = !0, this._loop()
-                }
-                pause() {
-                    this._isPlaying = !1
-                }
-                update() {}
-                _loop() {
-                    this.update(), this._isPlaying && window.requestAnimationFrame((() => this._loop()))
-                }
-                destroy() {
-                    this.pause()
-                }
-            };
-            t.default = r
-        }, (e, t) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var n = class {
-                constructor(e, t) {
-                    var n, r;
-                    this._element = e, this._x = 0, this._y = 0, this._speed = .2 * (r = 10, (n = 5) + Math.random() * (r - n)), this._config = t
-                }
-                update(e, t) {
-                    this._x -= this._speed * this._config.speed, this._x < -this._config.limitRange && (this._x += 2 * this._config.limitRange), this._updateCSS(e, t)
-                }
-                updateConfig(e) {
-                    Object.assign(this._config, e)
-                }
-                _updateCSS() {
-                    const {
-                        limitRange: e,
-                        fadeRange: t
-                    } = this._config;
-                    this._element.style.transform = `translate(${this._x}px, ${this._y}px)`;
-                    let n = 1;
-                    const r = Math.abs(this._x);
-                    r > e - t && (n = 1 - (r - e + t) / t), this._element.style.opacity = n
-                }
-            };
-            t.default = n
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = i(n(142)),
-                o = i(n(143));
-
-            function i(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            class a extends r.default {
-                constructor(e, t, n = !0) {
-                    super(e, t, n)
-                }
-                _init() {
-                    this._layers = [];
-                    const e = -this._config.limitRange,
-                        t = 2 * this._config.limitRange / this._elements.length;
-                    this._elements.forEach(((n, r) => {
-                        const i = (({
-                            limitRange: e,
-                            fadeRange: t,
-                            speed: n
-                        }) => ({
-                            limitRange: e,
-                            fadeRange: t,
-                            speed: n
-                        }))(this._config);
-                        i.scale = this._config[`scale${r+1}`];
-                        const a = new o.default(n, i);
-                        a.x = e + r * t, this._layers.push(a)
-                    }))
-                }
-                update() {
-                    this._layers.forEach((e => e.update()))
-                }
-                updateConfig(e) {
-                    this._config = Object.assign(this._config, e), this._layers.forEach(((e, t) => {
-                        const n = (({
-                            limitRange: e,
-                            fadeRange: t,
-                            speed: n
-                        }) => ({
-                            limitRange: e,
-                            fadeRange: t,
-                            speed: n
-                        }))(this._config);
-                        n.scale = this._config[`scale${t+1}`], e.updateConfig(n)
-                    }))
-                }
-            }
-            var s = a;
-            t.default = s
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r, o = (r = n(144)) && r.__esModule ? r : {
-                    default: r
-                },
-                i = n(1);
-            const a = ["/fe/lol-uikit/images/parallax-smoke1.png", "/fe/lol-uikit/images/parallax-smoke2.png", "/fe/lol-uikit/images/parallax-smoke3.png", "/fe/lol-uikit/images/parallax-smoke4.png"],
-                s = "parallax-layer";
-            class l extends i.webComponents.ShadowElement {
-                static get observedAttributes() {
-                    return ["animated", "parallax-config", "layer-image-paths", "background-path", "foreground-path"]
-                }
-                templateMarkup() {
-                    return n(146)
-                }
-                stylesheetMarkup() {
-                    return n(147)
-                }
-                connectedCallback() {
-                    super.connectedCallback();
-                    const e = "false" !== this.getAttribute("animated");
-                    this._animated = e;
-                    const t = JSON.parse(this.getAttribute("parallax-config"));
-                    this.parallaxConfig = t;
-                    const n = JSON.parse(this.getAttribute("layer-image-paths")) || a,
-                        r = this.getAttribute("background-path") || "/fe/lol-uikit/images/parallax-smoke-background.png",
-                        i = this.getAttribute("foreground-path") || "/fe/lol-uikit/images/parallax-smoke-foreground.png",
-                        s = this.shadowRoot.querySelector(".parallax-layer-container"),
-                        l = n.map((t => this.addParallaxLayer(s, t, "parallax-background-layer", e)));
-                    this.setBackgroundPaths(s, i, r), this._parallaxConfigObserver = new MutationObserver((() => {
-                        this.onParallaxConfigChanged()
-                    })), this._parallaxConfigObserver.observe(this, {
-                        attributeFilter: ["parallax-config"]
-                    }), this._animatedObserver = new MutationObserver((() => {
-                        this.onAnimatedChanged()
-                    })), this._animatedObserver.observe(this, {
-                        attributeFilter: ["animated"]
-                    }), this._parallax = new o.default(l, t, e)
-                }
-                disconnectedCallback() {
-                    super.disconnectedCallback(), this._parallaxConfigObserver.disconnect(), this._animatedObserver.disconnect(), this._parallax.destroy(), this.removeAllParallaxLayers()
-                }
-                addParallaxLayer(e, t, n, r) {
-                    const o = document.createElement("div");
-                    return o.classList.add(s), o.classList.add(n), o.style.backgroundImage = `url(${t})`, o.setAttribute("animated", Boolean(r)), e.appendChild(o), o
-                }
-                removeAllParallaxLayers() {
-                    const e = this.shadowRoot.querySelector(".parallax-layer-container"),
-                        t = this.shadowRoot.querySelectorAll("." + s);
-                    for (let n = 0; n < t.length; n++) e.removeChild(t[n])
-                }
-                setBackgroundPaths(e, t, n) {
-                    n && (e.style.backgroundImage = `url(${n})`), t && this.addParallaxLayer(e, t, "parallax-foreground-layer")
-                }
-                onParallaxConfigChanged() {
-                    const e = JSON.parse(this.getAttribute("parallax-config"));
-                    this._parallax.updateConfig(e)
-                }
-                onAnimatedChanged() {
-                    const e = "false" !== this.getAttribute("animated");
-                    this._animated !== e && (e ? this._parallax.play() : this._parallax.pause(), this._animated = e)
-                }
-            }
-            l.tagName = "lol-uikit-parallax-background";
-            var d = l;
-            t.default = d
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n  <div class="parallax-layer-container">\r\n  </div>\r\n</template>\r\n'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, "lol-uikit-parallax-background {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n}\n.parallax-layer-container {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  overflow: hidden;\n  background-size: cover;\n  background-position-y: 100%;\n  background-repeat: no-repeat;\n}\n.parallax-layer-container .parallax-layer {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  background-size: contain;\n  background-position-y: 100%;\n  backface-visibility: hidden;\n}\n.parallax-layer-container .parallax-background-layer {\n  background-repeat: no-repeat;\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/parallax-background/component-style.styl"],
-                names: [],
-                mappings: "AACA;EACE,WAAO;EACP,YAAQ;EACR,kBAAU;AAAZ;AAGA;EACE,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,gBAAU;EACV,sBAAiB;EACjB,2BAAuB;EACvB,4BAAmB;AADrB;AAGE;EACE,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,wBAAiB;EACjB,2BAAuB;EACvB,2BAAqB;AADzB;AAIE;EACE,4BAAmB;AAFvB",
-                sourcesContent: ["\r\nlol-uikit-parallax-background {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: absolute;\r\n}\r\n\r\n.parallax-layer-container {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: relative;\r\n  overflow: hidden;\r\n  background-size: cover;\r\n  background-position-y: 100%;\r\n  background-repeat: no-repeat;\r\n\r\n  .parallax-layer {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    background-size: contain;\r\n    background-position-y: 100%;\r\n    backface-visibility: hidden;\r\n  }\r\n\r\n  .parallax-background-layer {\r\n    background-repeat: no-repeat;\r\n  }\r\n}"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r = n(1),
-                o = s(n(149)),
-                i = s(n(170)),
-                a = s(n(171));
-
-            function s(e) {
-                return e && e.__esModule ? e : {
-                    default: e
-                }
-            }
-            class l extends r.webComponents.ShadowElement {
-                static get observedAttributes() {
-                    return []
-                }
-                templateMarkup() {
-                    return n(172)
-                }
-                stylesheetMarkup() {
-                    const e = n(173);
-                    return i.default+"\n" + e.toString()
-                }
-                connectedCallback() {
-                    if (super.connectedCallback(), this._initialized) return;
-                    this._initialized = !0;
-                    const e = this.shadowRoot.querySelector(".wrapper");
-                    o.default.initialize(e);
-                    const t = e.querySelector(".inner-wrapper");
-                    (0, a.default)(t, this.onElementResizeEvent)
-                }
-                onElementResizeEvent() {
-                    if (!this.shadowRoot) return;
-                    const e = this.shadowRoot.querySelector(".wrapper");
-                    e && o.default.update(e)
-                }
-                disconnectedCallback() {
-                    super.disconnectedCallback();
-                    const e = this.shadowRoot.querySelector(".wrapper"),
-                        t = e.querySelector(".inner-wrapper");
-                    a.default.unbind(t, this.onElementResizeEvent), o.default.destroy(e), this._initialized = !1
-                }
-            }
-            l.tagName = "lol-uikit-perfect-scrollable";
-            var d = l;
-            t.default = d
-        }, (e, t, n) => {
-            "use strict";
-            e.exports = n(150)
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(151),
-                o = n(159),
-                i = n(169);
-            e.exports = {
-                initialize: o,
-                update: i,
-                destroy: r
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(152),
-                o = n(154),
-                i = n(155);
-            e.exports = function(e) {
-                var t = i.get(e);
-                t && (t.event.unbindAll(), o.remove(t.scrollbarX), o.remove(t.scrollbarY), o.remove(t.scrollbarXRail), o.remove(t.scrollbarYRail), r.removePsClasses(e), i.remove(e))
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(153),
-                o = n(154),
-                i = t.toInt = function(e) {
-                    return parseInt(e, 10) || 0
-                },
-                a = t.clone = function(e) {
-                    if (e) {
-                        if (e.constructor === Array) return e.map(a);
-                        if ("object" == typeof e) {
-                            var t = {};
-                            for (var n in e) t[n] = a(e[n]);
-                            return t
-                        }
-                        return e
-                    }
-                    return null
-                };
-            t.extend = function(e, t) {
-                var n = a(e);
-                for (var r in t) n[r] = a(t[r]);
-                return n
-            }, t.isEditable = function(e) {
-                return o.matches(e, "input,[contenteditable]") || o.matches(e, "select,[contenteditable]") || o.matches(e, "textarea,[contenteditable]") || o.matches(e, "button,[contenteditable]")
-            }, t.removePsClasses = function(e) {
-                for (var t = r.list(e), n = 0; n < t.length; n++) {
-                    var o = t[n];
-                    0 === o.indexOf("ps-") && r.remove(e, o)
-                }
-            }, t.outerWidth = function(e) {
-                return i(o.css(e, "width")) + i(o.css(e, "paddingLeft")) + i(o.css(e, "paddingRight")) + i(o.css(e, "borderLeftWidth")) + i(o.css(e, "borderRightWidth"))
-            }, t.startScrolling = function(e, t) {
-                r.add(e, "ps-in-scrolling"), void 0 !== t ? r.add(e, "ps-" + t) : (r.add(e, "ps-x"), r.add(e, "ps-y"))
-            }, t.stopScrolling = function(e, t) {
-                r.remove(e, "ps-in-scrolling"), void 0 !== t ? r.remove(e, "ps-" + t) : (r.remove(e, "ps-x"), r.remove(e, "ps-y"))
-            }, t.env = {
-                isWebKit: "WebkitAppearance" in document.documentElement.style,
-                supportsTouch: "ontouchstart" in window || window.DocumentTouch && document instanceof window.DocumentTouch,
-                supportsIePointer: null !== window.navigator.msMaxTouchPoints
-            }
-        }, (e, t) => {
-            "use strict";
-            t.add = function(e, t) {
-                e.classList ? e.classList.add(t) : function(e, t) {
-                    var n = e.className.split(" ");
-                    n.indexOf(t) < 0 && n.push(t), e.className = n.join(" ")
-                }(e, t)
-            }, t.remove = function(e, t) {
-                e.classList ? e.classList.remove(t) : function(e, t) {
-                    var n = e.className.split(" "),
-                        r = n.indexOf(t);
-                    r >= 0 && n.splice(r, 1), e.className = n.join(" ")
-                }(e, t)
-            }, t.list = function(e) {
-                return e.classList ? Array.prototype.slice.apply(e.classList) : e.className.split(" ")
-            }
-        }, e => {
-            "use strict";
-            var t = {};
-            t.e = function(e, t) {
-                var n = document.createElement(e);
-                return n.className = t, n
-            }, t.appendTo = function(e, t) {
-                return t.appendChild(e), e
-            }, t.css = function(e, t, n) {
-                return "object" == typeof t ? function(e, t) {
-                    for (var n in t) {
-                        var r = t[n];
-                        "number" == typeof r && (r = r.toString() + "px"), e.style[n] = r
-                    }
-                    return e
-                }(e, t) : void 0 === n ? function(e, t) {
-                    return window.getComputedStyle(e)[t]
-                }(e, t) : function(e, t, n) {
-                    return "number" == typeof n && (n = n.toString() + "px"), e.style[t] = n, e
-                }(e, t, n)
-            }, t.matches = function(e, t) {
-                return void 0 !== e.matches ? e.matches(t) : void 0 !== e.matchesSelector ? e.matchesSelector(t) : void 0 !== e.webkitMatchesSelector ? e.webkitMatchesSelector(t) : void 0 !== e.mozMatchesSelector ? e.mozMatchesSelector(t) : void 0 !== e.msMatchesSelector ? e.msMatchesSelector(t) : void 0
-            }, t.remove = function(e) {
-                void 0 !== e.remove ? e.remove() : e.parentNode && e.parentNode.removeChild(e)
-            }, t.queryChildren = function(e, n) {
-                return Array.prototype.filter.call(e.childNodes, (function(e) {
-                    return t.matches(e, n)
-                }))
-            }, e.exports = t
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(152),
-                o = n(153),
-                i = n(156),
-                a = n(154),
-                s = n(157),
-                l = n(158),
-                d = {};
-
-            function c(e) {
-                var t, n, l = this;
-
-                function d() {
-                    o.add(e, "ps-focus")
-                }
-
-                function c() {
-                    o.remove(e, "ps-focus")
-                }
-                l.settings = r.clone(i), l.containerWidth = null, l.containerHeight = null, l.contentWidth = null, l.contentHeight = null, l.isRtl = "rtl" === a.css(e, "direction"), l.isNegativeScroll = (n = e.scrollLeft, e.scrollLeft = -1, t = e.scrollLeft < 0, e.scrollLeft = n, t), l.negativeScrollAdjustment = l.isNegativeScroll ? e.scrollWidth - e.clientWidth : 0, l.event = new s, l.ownerDocument = e.ownerDocument || document, l.scrollbarXRail = a.appendTo(a.e("div", "ps-scrollbar-x-rail"), e), l.scrollbarX = a.appendTo(a.e("div", "ps-scrollbar-x"), l.scrollbarXRail), l.scrollbarX.setAttribute("tabindex", 0), l.event.bind(l.scrollbarX, "focus", d), l.event.bind(l.scrollbarX, "blur", c), l.scrollbarXActive = null, l.scrollbarXWidth = null, l.scrollbarXLeft = null, l.scrollbarXBottom = r.toInt(a.css(l.scrollbarXRail, "bottom")), l.isScrollbarXUsingBottom = l.scrollbarXBottom == l.scrollbarXBottom, l.scrollbarXTop = l.isScrollbarXUsingBottom ? null : r.toInt(a.css(l.scrollbarXRail, "top")), l.railBorderXWidth = r.toInt(a.css(l.scrollbarXRail, "borderLeftWidth")) + r.toInt(a.css(l.scrollbarXRail, "borderRightWidth")), a.css(l.scrollbarXRail, "display", "block"), l.railXMarginWidth = r.toInt(a.css(l.scrollbarXRail, "marginLeft")) + r.toInt(a.css(l.scrollbarXRail, "marginRight")), a.css(l.scrollbarXRail, "display", ""), l.railXWidth = null, l.railXRatio = null, l.scrollbarYRail = a.appendTo(a.e("div", "ps-scrollbar-y-rail"), e), l.scrollbarY = a.appendTo(a.e("div", "ps-scrollbar-y"), l.scrollbarYRail), l.scrollbarY.setAttribute("tabindex", 0), l.event.bind(l.scrollbarY, "focus", d), l.event.bind(l.scrollbarY, "blur", c), l.scrollbarYActive = null, l.scrollbarYHeight = null, l.scrollbarYTop = null, l.scrollbarYRight = r.toInt(a.css(l.scrollbarYRail, "right")), l.isScrollbarYUsingRight = l.scrollbarYRight == l.scrollbarYRight, l.scrollbarYLeft = l.isScrollbarYUsingRight ? null : r.toInt(a.css(l.scrollbarYRail, "left")), l.scrollbarYOuterWidth = l.isRtl ? r.outerWidth(l.scrollbarY) : null, l.railBorderYWidth = r.toInt(a.css(l.scrollbarYRail, "borderTopWidth")) + r.toInt(a.css(l.scrollbarYRail, "borderBottomWidth")), a.css(l.scrollbarYRail, "display", "block"), l.railYMarginHeight = r.toInt(a.css(l.scrollbarYRail, "marginTop")) + r.toInt(a.css(l.scrollbarYRail, "marginBottom")), a.css(l.scrollbarYRail, "display", ""), l.railYHeight = null, l.railYRatio = null
-            }
-
-            function p(e) {
-                return e.getAttribute("data-ps-id")
-            }
-            t.add = function(e) {
-                var t = l();
-                return function(e, t) {
-                    e.setAttribute("data-ps-id", t)
-                }(e, t), d[t] = new c(e), d[t]
-            }, t.remove = function(e) {
-                delete d[p(e)],
-                    function(e) {
-                        e.removeAttribute("data-ps-id")
-                    }(e)
-            }, t.get = function(e) {
-                return d[p(e)]
-            }
-        }, e => {
-            "use strict";
-            e.exports = {
-                handlers: ["click-rail", "drag-scrollbar", "keyboard", "wheel", "touch"],
-                maxScrollbarLength: null,
-                minScrollbarLength: null,
-                scrollXMarginOffset: 0,
-                scrollYMarginOffset: 0,
-                suppressScrollX: !1,
-                suppressScrollY: !1,
-                swipePropagation: !0,
-                useBothWheelAxes: !1,
-                wheelPropagation: !1,
-                wheelSpeed: 1,
-                theme: "default"
-            }
-        }, e => {
-            "use strict";
-            var t = function(e) {
-                this.element = e, this.events = {}
-            };
-            t.prototype.bind = function(e, t) {
-                void 0 === this.events[e] && (this.events[e] = []), this.events[e].push(t), this.element.addEventListener(e, t, !1)
-            }, t.prototype.unbind = function(e, t) {
-                var n = void 0 !== t;
-                this.events[e] = this.events[e].filter((function(r) {
-                    return !(!n || r === t) || (this.element.removeEventListener(e, r, !1), !1)
-                }), this)
-            }, t.prototype.unbindAll = function() {
-                for (var e in this.events) this.unbind(e)
-            };
-            var n = function() {
-                this.eventElements = []
-            };
-            n.prototype.eventElement = function(e) {
-                var n = this.eventElements.filter((function(t) {
-                    return t.element === e
-                }))[0];
-                return void 0 === n && (n = new t(e), this.eventElements.push(n)), n
-            }, n.prototype.bind = function(e, t, n) {
-                this.eventElement(e).bind(t, n)
-            }, n.prototype.unbind = function(e, t, n) {
-                this.eventElement(e).unbind(t, n)
-            }, n.prototype.unbindAll = function() {
-                for (var e = 0; e < this.eventElements.length; e++) this.eventElements[e].unbindAll()
-            }, n.prototype.once = function(e, t, n) {
-                var r = this.eventElement(e),
-                    o = function(e) {
-                        r.unbind(t, o), n(e)
-                    };
-                r.bind(t, o)
-            }, e.exports = n
-        }, e => {
-            "use strict";
-            e.exports = function() {
-                function e() {
-                    return Math.floor(65536 * (1 + Math.random())).toString(16).substring(1)
-                }
-                return function() {
-                    return e() + e() + "-" + e() + "-" + e() + "-" + e() + "-" + e() + e() + e()
-                }
-            }()
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(152),
-                o = n(153),
-                i = n(155),
-                a = n(160),
-                s = {
-                    "click-rail": n(162),
-                    "drag-scrollbar": n(163),
-                    keyboard: n(164),
-                    wheel: n(165),
-                    touch: n(166),
-                    selection: n(167)
-                },
-                l = n(168);
-            e.exports = function(e, t) {
-                t = "object" == typeof t ? t : {}, o.add(e, "ps-container");
-                var n = i.add(e);
-                n.settings = r.extend(n.settings, t), o.add(e, "ps-theme-" + n.settings.theme), n.settings.handlers.forEach((function(t) {
-                    s[t](e)
-                })), l(e), a(e)
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(152),
-                o = n(153),
-                i = n(154),
-                a = n(155),
-                s = n(161);
-
-            function l(e, t) {
-                return e.settings.minScrollbarLength && (t = Math.max(t, e.settings.minScrollbarLength)), e.settings.maxScrollbarLength && (t = Math.min(t, e.settings.maxScrollbarLength)), t
-            }
-            e.exports = function(e) {
-                var t, n = a.get(e);
-                n.containerWidth = e.clientWidth, n.containerHeight = e.clientHeight, n.contentWidth = e.scrollWidth, n.contentHeight = e.scrollHeight, e.contains(n.scrollbarXRail) || ((t = i.queryChildren(e, ".ps-scrollbar-x-rail")).length > 0 && t.forEach((function(e) {
-                        i.remove(e)
-                    })), i.appendTo(n.scrollbarXRail, e)), e.contains(n.scrollbarYRail) || ((t = i.queryChildren(e, ".ps-scrollbar-y-rail")).length > 0 && t.forEach((function(e) {
-                        i.remove(e)
-                    })), i.appendTo(n.scrollbarYRail, e)), !n.settings.suppressScrollX && n.containerWidth + n.settings.scrollXMarginOffset < n.contentWidth ? (n.scrollbarXActive = !0, n.railXWidth = n.containerWidth - n.railXMarginWidth, n.railXRatio = n.containerWidth / n.railXWidth, n.scrollbarXWidth = l(n, r.toInt(n.railXWidth * n.containerWidth / n.contentWidth)), n.scrollbarXLeft = r.toInt((n.negativeScrollAdjustment + e.scrollLeft) * (n.railXWidth - n.scrollbarXWidth) / (n.contentWidth - n.containerWidth))) : n.scrollbarXActive = !1, !n.settings.suppressScrollY && n.containerHeight + n.settings.scrollYMarginOffset < n.contentHeight ? (n.scrollbarYActive = !0, n.railYHeight = n.containerHeight - n.railYMarginHeight, n.railYRatio = n.containerHeight / n.railYHeight, n.scrollbarYHeight = l(n, r.toInt(n.railYHeight * n.containerHeight / n.contentHeight)), n.scrollbarYTop = r.toInt(e.scrollTop * (n.railYHeight - n.scrollbarYHeight) / (n.contentHeight - n.containerHeight))) : n.scrollbarYActive = !1, n.scrollbarXLeft >= n.railXWidth - n.scrollbarXWidth && (n.scrollbarXLeft = n.railXWidth - n.scrollbarXWidth), n.scrollbarYTop >= n.railYHeight - n.scrollbarYHeight && (n.scrollbarYTop = n.railYHeight - n.scrollbarYHeight),
-                    function(e, t) {
-                        var n = {
-                            width: t.railXWidth
-                        };
-                        t.isRtl ? n.left = t.negativeScrollAdjustment + e.scrollLeft + t.containerWidth - t.contentWidth : n.left = e.scrollLeft, t.isScrollbarXUsingBottom ? n.bottom = t.scrollbarXBottom - e.scrollTop : n.top = t.scrollbarXTop + e.scrollTop, i.css(t.scrollbarXRail, n);
-                        var r = {
-                            top: e.scrollTop,
-                            height: t.railYHeight
-                        };
-                        t.isScrollbarYUsingRight ? t.isRtl ? r.right = t.contentWidth - (t.negativeScrollAdjustment + e.scrollLeft) - t.scrollbarYRight - t.scrollbarYOuterWidth : r.right = t.scrollbarYRight - e.scrollLeft : t.isRtl ? r.left = t.negativeScrollAdjustment + e.scrollLeft + 2 * t.containerWidth - t.contentWidth - t.scrollbarYLeft - t.scrollbarYOuterWidth : r.left = t.scrollbarYLeft + e.scrollLeft, i.css(t.scrollbarYRail, r), i.css(t.scrollbarX, {
-                            left: t.scrollbarXLeft,
-                            width: t.scrollbarXWidth - t.railBorderXWidth
-                        }), i.css(t.scrollbarY, {
-                            top: t.scrollbarYTop,
-                            height: t.scrollbarYHeight - t.railBorderYWidth
-                        })
-                    }(e, n), n.scrollbarXActive ? o.add(e, "ps-active-x") : (o.remove(e, "ps-active-x"), n.scrollbarXWidth = 0, n.scrollbarXLeft = 0, s(e, "left", 0)), n.scrollbarYActive ? o.add(e, "ps-active-y") : (o.remove(e, "ps-active-y"), n.scrollbarYHeight = 0, n.scrollbarYTop = 0, s(e, "top", 0))
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r, o, i = n(155),
-                a = function(e) {
-                    var t = document.createEvent("Event");
-                    return t.initEvent(e, !0, !0), t
-                };
-            e.exports = function(e, t, n) {
-                if (void 0 === e) throw "You must provide an element to the update-scroll function";
-                if (void 0 === t) throw "You must provide an axis to the update-scroll function";
-                if (void 0 === n) throw "You must provide a value to the update-scroll function";
-                "top" === t && n <= 0 && (e.scrollTop = n = 0, e.dispatchEvent(a("ps-y-reach-start"))), "left" === t && n <= 0 && (e.scrollLeft = n = 0, e.dispatchEvent(a("ps-x-reach-start")));
-                var s = i.get(e);
-                "top" === t && n >= s.contentHeight - s.containerHeight && ((n = s.contentHeight - s.containerHeight) - e.scrollTop <= 1 ? n = e.scrollTop : e.scrollTop = n, e.dispatchEvent(a("ps-y-reach-end"))), "left" === t && n >= s.contentWidth - s.containerWidth && ((n = s.contentWidth - s.containerWidth) - e.scrollLeft <= 1 ? n = e.scrollLeft : e.scrollLeft = n, e.dispatchEvent(a("ps-x-reach-end"))), r || (r = e.scrollTop), o || (o = e.scrollLeft), "top" === t && n < r && e.dispatchEvent(a("ps-scroll-up")), "top" === t && n > r && e.dispatchEvent(a("ps-scroll-down")), "left" === t && n < o && e.dispatchEvent(a("ps-scroll-left")), "left" === t && n > o && e.dispatchEvent(a("ps-scroll-right")), "top" === t && (e.scrollTop = r = n, e.dispatchEvent(a("ps-scroll-y"))), "left" === t && (e.scrollLeft = o = n, e.dispatchEvent(a("ps-scroll-x")))
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(155),
-                o = n(160),
-                i = n(161);
-            e.exports = function(e) {
-                ! function(e, t) {
-                    function n(e) {
-                        return e.getBoundingClientRect()
-                    }
-                    var r = function(e) {
-                        e.stopPropagation()
-                    };
-                    t.event.bind(t.scrollbarY, "click", r), t.event.bind(t.scrollbarYRail, "click", (function(r) {
-                        var a = r.pageY - window.pageYOffset - n(t.scrollbarYRail).top > t.scrollbarYTop ? 1 : -1;
-                        i(e, "top", e.scrollTop + a * t.containerHeight), o(e), r.stopPropagation()
-                    })), t.event.bind(t.scrollbarX, "click", r), t.event.bind(t.scrollbarXRail, "click", (function(r) {
-                        var a = r.pageX - window.pageXOffset - n(t.scrollbarXRail).left > t.scrollbarXLeft ? 1 : -1;
-                        i(e, "left", e.scrollLeft + a * t.containerWidth), o(e), r.stopPropagation()
-                    }))
-                }(e, r.get(e))
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(152),
-                o = n(154),
-                i = n(155),
-                a = n(160),
-                s = n(161);
-
-            function l(e, t) {
-                var n = null,
-                    i = null;
-                var l = function(o) {
-                        ! function(o) {
-                            var i = n + o * t.railXRatio,
-                                a = Math.max(0, t.scrollbarXRail.getBoundingClientRect().left) + t.railXRatio * (t.railXWidth - t.scrollbarXWidth);
-                            t.scrollbarXLeft = i < 0 ? 0 : i > a ? a : i;
-                            var l = r.toInt(t.scrollbarXLeft * (t.contentWidth - t.containerWidth) / (t.containerWidth - t.railXRatio * t.scrollbarXWidth)) - t.negativeScrollAdjustment;
-                            s(e, "left", l)
-                        }(o.pageX - i), a(e), o.stopPropagation(), o.preventDefault()
-                    },
-                    d = function() {
-                        r.stopScrolling(e, "x"), t.event.unbind(t.ownerDocument, "mousemove", l)
-                    };
-                t.event.bind(t.scrollbarX, "mousedown", (function(a) {
-                    i = a.pageX, n = r.toInt(o.css(t.scrollbarX, "left")) * t.railXRatio, r.startScrolling(e, "x"), t.event.bind(t.ownerDocument, "mousemove", l), t.event.once(t.ownerDocument, "mouseup", d), a.stopPropagation(), a.preventDefault()
-                }))
-            }
-
-            function d(e, t) {
-                var n = null,
-                    i = null;
-                var l = function(o) {
-                        ! function(o) {
-                            var i = n + o * t.railYRatio,
-                                a = Math.max(0, t.scrollbarYRail.getBoundingClientRect().top) + t.railYRatio * (t.railYHeight - t.scrollbarYHeight);
-                            t.scrollbarYTop = i < 0 ? 0 : i > a ? a : i;
-                            var l = r.toInt(t.scrollbarYTop * (t.contentHeight - t.containerHeight) / (t.containerHeight - t.railYRatio * t.scrollbarYHeight));
-                            s(e, "top", l)
-                        }(o.pageY - i), a(e), o.stopPropagation(), o.preventDefault()
-                    },
-                    d = function() {
-                        r.stopScrolling(e, "y"), t.event.unbind(t.ownerDocument, "mousemove", l)
-                    };
-                t.event.bind(t.scrollbarY, "mousedown", (function(a) {
-                    i = a.pageY, n = r.toInt(o.css(t.scrollbarY, "top")) * t.railYRatio, r.startScrolling(e, "y"), t.event.bind(t.ownerDocument, "mousemove", l), t.event.once(t.ownerDocument, "mouseup", d), a.stopPropagation(), a.preventDefault()
-                }))
-            }
-            e.exports = function(e) {
-                var t = i.get(e);
-                l(e, t), d(e, t)
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(152),
-                o = n(154),
-                i = n(155),
-                a = n(160),
-                s = n(161);
-
-            function l(e, t) {
-                var n = !1;
-                t.event.bind(e, "mouseenter", (function() {
-                    n = !0
-                })), t.event.bind(e, "mouseleave", (function() {
-                    n = !1
-                }));
-                var i = !1;
-                t.event.bind(t.ownerDocument, "keydown", (function(l) {
-                    if (!(l.isDefaultPrevented && l.isDefaultPrevented() || l.defaultPrevented)) {
-                        var d = o.matches(t.scrollbarX, ":focus") || o.matches(t.scrollbarY, ":focus");
-                        if (n || d) {
-                            var c = document.activeElement ? document.activeElement : t.ownerDocument.activeElement;
-                            if (c) {
-                                if ("IFRAME" === c.tagName) c = c.contentDocument.activeElement;
-                                else
-                                    for (; c.shadowRoot && c.shadowRoot.activeElement;) c = c.shadowRoot.activeElement;
-                                if (r.isEditable(c)) return
-                            }
-                            var p = 0,
-                                A = 0;
-                            switch (l.which) {
-                                case 37:
-                                    p = l.metaKey ? -t.contentWidth : l.altKey ? -t.containerWidth : -30;
-                                    break;
-                                case 38:
-                                    A = l.metaKey ? t.contentHeight : l.altKey ? t.containerHeight : 30;
-                                    break;
-                                case 39:
-                                    p = l.metaKey ? t.contentWidth : l.altKey ? t.containerWidth : 30;
-                                    break;
-                                case 40:
-                                    A = l.metaKey ? -t.contentHeight : l.altKey ? -t.containerHeight : -30;
-                                    break;
-                                case 33:
-                                    A = 90;
-                                    break;
-                                case 32:
-                                    A = l.shiftKey ? 90 : -90;
-                                    break;
-                                case 34:
-                                    A = -90;
-                                    break;
-                                case 35:
-                                    A = l.ctrlKey ? -t.contentHeight : -t.containerHeight;
-                                    break;
-                                case 36:
-                                    A = l.ctrlKey ? e.scrollTop : t.containerHeight;
-                                    break;
-                                default:
-                                    return
-                            }
-                            s(e, "top", e.scrollTop - A), s(e, "left", e.scrollLeft + p), a(e), i = function(n, r) {
-                                var o = e.scrollTop;
-                                if (0 === n) {
-                                    if (!t.scrollbarYActive) return !1;
-                                    if (0 === o && r > 0 || o >= t.contentHeight - t.containerHeight && r < 0) return !t.settings.wheelPropagation
-                                }
-                                var i = e.scrollLeft;
-                                if (0 === r) {
-                                    if (!t.scrollbarXActive) return !1;
-                                    if (0 === i && n < 0 || i >= t.contentWidth - t.containerWidth && n > 0) return !t.settings.wheelPropagation
-                                }
-                                return !0
-                            }(p, A), i && l.preventDefault()
-                        }
-                    }
-                }))
-            }
-            e.exports = function(e) {
-                l(e, i.get(e))
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(155),
-                o = n(160),
-                i = n(161);
-
-            function a(e, t) {
-                var n = !1;
-
-                function r(r) {
-                    var a = function(e) {
-                            var t = e.deltaX,
-                                n = -1 * e.deltaY;
-                            return void 0 !== t && void 0 !== n || (t = -1 * e.wheelDeltaX / 6, n = e.wheelDeltaY / 6), e.deltaMode && 1 === e.deltaMode && (t *= 10, n *= 10), t != t && n != n && (t = 0, n = e.wheelDelta), e.shiftKey ? [-n, -t] : [t, n]
-                        }(r),
-                        s = a[0],
-                        l = a[1];
-                    (function(t, n) {
-                        var r = e.querySelector("textarea:hover, select[multiple]:hover, .ps-child:hover");
-                        if (r) {
-                            if (!window.getComputedStyle(r).overflow.match(/(scroll|auto)/)) return !1;
-                            var o = r.scrollHeight - r.clientHeight;
-                            if (o > 0 && !(0 === r.scrollTop && n > 0 || r.scrollTop === o && n < 0)) return !0;
-                            var i = r.scrollLeft - r.clientWidth;
-                            if (i > 0 && !(0 === r.scrollLeft && t < 0 || r.scrollLeft === i && t > 0)) return !0
-                        }
-                        return !1
-                    })(s, l) || (n = !1, t.settings.useBothWheelAxes ? t.scrollbarYActive && !t.scrollbarXActive ? (i(e, "top", l ? e.scrollTop - l * t.settings.wheelSpeed : e.scrollTop + s * t.settings.wheelSpeed), n = !0) : t.scrollbarXActive && !t.scrollbarYActive && (i(e, "left", s ? e.scrollLeft + s * t.settings.wheelSpeed : e.scrollLeft - l * t.settings.wheelSpeed), n = !0) : (i(e, "top", e.scrollTop - l * t.settings.wheelSpeed), i(e, "left", e.scrollLeft + s * t.settings.wheelSpeed)), o(e), n = n || function(n, r) {
-                        var o = e.scrollTop;
-                        if (0 === n) {
-                            if (!t.scrollbarYActive) return !1;
-                            if (0 === o && r > 0 || o >= t.contentHeight - t.containerHeight && r < 0) return !t.settings.wheelPropagation
-                        }
-                        var i = e.scrollLeft;
-                        if (0 === r) {
-                            if (!t.scrollbarXActive) return !1;
-                            if (0 === i && n < 0 || i >= t.contentWidth - t.containerWidth && n > 0) return !t.settings.wheelPropagation
-                        }
-                        return !0
-                    }(s, l), n && (r.stopPropagation(), r.preventDefault()))
-                }
-                void 0 !== window.onwheel ? t.event.bind(e, "wheel", r) : void 0 !== window.onmousewheel && t.event.bind(e, "mousewheel", r)
-            }
-            e.exports = function(e) {
-                a(e, r.get(e))
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(152),
-                o = n(155),
-                i = n(160),
-                a = n(161);
-
-            function s(e, t, n, r) {
-                function s(t, n) {
-                    a(e, "top", e.scrollTop - n), a(e, "left", e.scrollLeft - t), i(e)
-                }
-                var l = {},
-                    d = 0,
-                    c = {},
-                    p = null,
-                    A = !1,
-                    u = !1;
-
-                function h() {
-                    A = !0
-                }
-
-                function g() {
-                    A = !1
-                }
-
-                function b(e) {
-                    return e.targetTouches ? e.targetTouches[0] : e
-                }
-
-                function m(e) {
-                    return !(!e.targetTouches || 1 !== e.targetTouches.length) || !(!e.pointerType || "mouse" === e.pointerType || e.pointerType === e.MSPOINTER_TYPE_MOUSE)
-                }
-
-                function f(e) {
-                    if (m(e)) {
-                        u = !0;
-                        var t = b(e);
-                        l.pageX = t.pageX, l.pageY = t.pageY, d = (new Date).getTime(), null !== p && clearInterval(p), e.stopPropagation()
-                    }
-                }
-
-                function _(n) {
-                    if (!u && t.settings.swipePropagation && f(n), !A && u && m(n)) {
-                        var r = b(n),
-                            o = {
-                                pageX: r.pageX,
-                                pageY: r.pageY
-                            },
-                            i = o.pageX - l.pageX,
-                            a = o.pageY - l.pageY;
-                        s(i, a), l = o;
-                        var p = (new Date).getTime(),
-                            h = p - d;
-                        h > 0 && (c.x = i / h, c.y = a / h, d = p),
-                            function(n, r) {
-                                var o = e.scrollTop,
-                                    i = e.scrollLeft,
-                                    a = Math.abs(n),
-                                    s = Math.abs(r);
-                                if (s > a) {
-                                    if (r < 0 && o === t.contentHeight - t.containerHeight || r > 0 && 0 === o) return !t.settings.swipePropagation
-                                } else if (a > s && (n < 0 && i === t.contentWidth - t.containerWidth || n > 0 && 0 === i)) return !t.settings.swipePropagation;
-                                return !0
-                            }(i, a) && (n.stopPropagation(), n.preventDefault())
-                    }
-                }
-
-                function y() {
-                    !A && u && (u = !1, clearInterval(p), p = setInterval((function() {
-                        o.get(e) && (c.x || c.y) ? Math.abs(c.x) < .01 && Math.abs(c.y) < .01 ? clearInterval(p) : (s(30 * c.x, 30 * c.y), c.x *= .8, c.y *= .8) : clearInterval(p)
-                    }), 10))
-                }
-                n ? (t.event.bind(window, "touchstart", h), t.event.bind(window, "touchend", g), t.event.bind(e, "touchstart", f), t.event.bind(e, "touchmove", _), t.event.bind(e, "touchend", y)) : r && (window.PointerEvent ? (t.event.bind(window, "pointerdown", h), t.event.bind(window, "pointerup", g), t.event.bind(e, "pointerdown", f), t.event.bind(e, "pointermove", _), t.event.bind(e, "pointerup", y)) : window.MSPointerEvent && (t.event.bind(window, "MSPointerDown", h), t.event.bind(window, "MSPointerUp", g), t.event.bind(e, "MSPointerDown", f), t.event.bind(e, "MSPointerMove", _), t.event.bind(e, "MSPointerUp", y)))
-            }
-            e.exports = function(e) {
-                (r.env.supportsTouch || r.env.supportsIePointer) && s(e, o.get(e), r.env.supportsTouch, r.env.supportsIePointer)
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(152),
-                o = n(155),
-                i = n(160),
-                a = n(161);
-
-            function s(e, t) {
-                var n = null,
-                    s = {
-                        top: 0,
-                        left: 0
-                    };
-
-                function l() {
-                    n && (clearInterval(n), n = null), r.stopScrolling(e)
-                }
-                var d = !1;
-                t.event.bind(t.ownerDocument, "selectionchange", (function() {
-                    var t;
-                    e.contains(0 === (t = window.getSelection ? window.getSelection() : document.getSelection ? document.getSelection() : "").toString().length ? null : t.getRangeAt(0).commonAncestorContainer) ? d = !0 : (d = !1, l())
-                })), t.event.bind(window, "mouseup", (function() {
-                    d && (d = !1, l())
-                })), t.event.bind(window, "keyup", (function() {
-                    d && (d = !1, l())
-                })), t.event.bind(window, "mousemove", (function(t) {
-                    if (d) {
-                        var c = {
-                                x: t.pageX,
-                                y: t.pageY
-                            },
-                            p = {
-                                left: e.offsetLeft,
-                                right: e.offsetLeft + e.offsetWidth,
-                                top: e.offsetTop,
-                                bottom: e.offsetTop + e.offsetHeight
-                            };
-                        c.x < p.left + 3 ? (s.left = -5, r.startScrolling(e, "x")) : c.x > p.right - 3 ? (s.left = 5, r.startScrolling(e, "x")) : s.left = 0, c.y < p.top + 3 ? (s.top = p.top + 3 - c.y < 5 ? -5 : -20, r.startScrolling(e, "y")) : c.y > p.bottom - 3 ? (s.top = c.y - p.bottom + 3 < 5 ? 5 : 20, r.startScrolling(e, "y")) : s.top = 0, 0 === s.top && 0 === s.left ? l() : n || (n = setInterval((function() {
-                            o.get(e) ? (a(e, "top", e.scrollTop + s.top), a(e, "left", e.scrollLeft + s.left), i(e)) : clearInterval(n)
-                        }), 50))
-                    }
-                }))
-            }
-            e.exports = function(e) {
-                s(e, o.get(e))
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(155),
-                o = n(160);
-            e.exports = function(e) {
-                ! function(e, t) {
-                    t.event.bind(e, "scroll", (function() {
-                        o(e)
-                    }))
-                }(e, r.get(e))
-            }
-        }, (e, t, n) => {
-            "use strict";
-            var r = n(152),
-                o = n(154),
-                i = n(155),
-                a = n(160),
-                s = n(161);
-            e.exports = function(e) {
-                var t = i.get(e);
-                t && (t.negativeScrollAdjustment = t.isNegativeScroll ? e.scrollWidth - e.clientWidth : 0, o.css(t.scrollbarXRail, "display", "block"), o.css(t.scrollbarYRail, "display", "block"), t.railXMarginWidth = r.toInt(o.css(t.scrollbarXRail, "marginLeft")) + r.toInt(o.css(t.scrollbarXRail, "marginRight")), t.railYMarginHeight = r.toInt(o.css(t.scrollbarYRail, "marginTop")) + r.toInt(o.css(t.scrollbarYRail, "marginBottom")), o.css(t.scrollbarXRail, "display", "none"), o.css(t.scrollbarYRail, "display", "none"), a(e), s(e, "top", e.scrollTop), s(e, "left", e.scrollLeft), o.css(t.scrollbarXRail, "display", ""), o.css(t.scrollbarYRail, "display", ""))
-            }
-        }, (e, t, n) => {
-            "use strict";
-            n.r(t), n.d(t, {
-                default: () => r
-            });
-            const r = "/* perfect-scrollbar v0.6.16 */\r\n.ps-container{-ms-touch-action:auto;touch-action:auto;overflow:hidden !important;-ms-overflow-style:none}@supports (-ms-overflow-style: none){.ps-container{overflow:auto !important}}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){.ps-container{overflow:auto !important}}.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block;background-color:transparent}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:.9}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999;height:11px}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:.9}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999;width:11px}.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;opacity:0;-webkit-transition:background-color .2s linear, opacity .2s linear;-o-transition:background-color .2s linear, opacity .2s linear;-moz-transition:background-color .2s linear, opacity .2s linear;transition:background-color .2s linear, opacity .2s linear;bottom:0px;height:15px}.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;-webkit-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, -webkit-border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, -webkit-border-radius .2s ease-in-out;-o-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;-moz-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -webkit-border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;bottom:2px;height:6px}.ps-container>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x,.ps-container>.ps-scrollbar-x-rail:active>.ps-scrollbar-x{height:11px}.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;opacity:0;-webkit-transition:background-color .2s linear, opacity .2s linear;-o-transition:background-color .2s linear, opacity .2s linear;-moz-transition:background-color .2s linear, opacity .2s linear;transition:background-color .2s linear, opacity .2s linear;right:0;width:15px}.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;-webkit-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, -webkit-border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, -webkit-border-radius .2s ease-in-out;-o-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;-moz-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -webkit-border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;right:2px;width:6px}.ps-container>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y,.ps-container>.ps-scrollbar-y-rail:active>.ps-scrollbar-y{width:11px}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:.9}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999;height:11px}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:.9}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999;width:11px}.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:.6}.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:.9}.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:.9}.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}\r\n"
-        }, e => {
-            function t(e) {
-                var t = e.target || e.srcElement;
-                t.__resizeRAF__ && cancelAnimationFrame(t.__resizeRAF__), t.__resizeRAF__ = requestAnimationFrame((function() {
-                    var n = t.__resizeTrigger__,
-                        r = n && n.__resizeListeners__;
-                    r && r.forEach((function(t) {
-                        t.call(n, e)
-                    }))
-                }))
-            }
-            var n = function(e, n) {
-                var r, o = this.document,
-                    i = o.attachEvent;
-                if ("undefined" != typeof navigator && (r = navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/Edge/)), !e.__resizeListeners__)
-                    if (e.__resizeListeners__ = [], i) e.__resizeTrigger__ = e, e.attachEvent("onresize", t);
-                    else {
-                        "static" === getComputedStyle(e).position && (e.style.position = "relative");
-                        var a = e.__resizeTrigger__ = o.createElement("object");
-                        a.setAttribute("style", "position: absolute; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none; z-index: -1; opacity: 0;"), a.setAttribute("class", "resize-sensor"), a.setAttribute("tabindex", "-1"), a.__resizeElement__ = e, a.onload = function() {
-                            this.contentDocument.defaultView.__resizeTrigger__ = this.__resizeElement__, this.contentDocument.defaultView.addEventListener("resize", t)
-                        }, a.type = "text/html", r && e.appendChild(a), a.data = "about:blank", r || e.appendChild(a)
-                    } e.__resizeListeners__.push(n)
-            };
-            e.exports = "undefined" == typeof window ? n : n.bind(window), e.exports.unbind = function(e, n) {
-                var r = document.attachEvent,
-                    o = e.__resizeListeners__ || [];
-                if (n) {
-                    var i = o.indexOf(n); - 1 !== i && o.splice(i, 1)
-                } else o = e.__resizeListeners__ = [];
-                if (!o.length) {
-                    if (r) e.detachEvent("onresize", t);
-                    else if (e.__resizeTrigger__) {
-                        var a = e.__resizeTrigger__.contentDocument,
-                            s = a && a.defaultView;
-                        s && (s.removeEventListener("resize", t), delete s.__resizeTrigger__), e.__resizeTrigger__ = !e.removeChild(e.__resizeTrigger__)
-                    }
-                    delete e.__resizeListeners__
-                }
-            }
-        }, e => {
-            "use strict";
-            e.exports = '<template>\r\n  <div class="wrapper use-for-higher-specificity">\r\n    <div class="inner-wrapper">\r\n      <slot></slot>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
-        }, (e, t, n) => {
-            var r = n(26),
-                o = n(27)(r);
-            o.push([e.id, ":host {\n  display: flex;\n  flex-direction: column;\n}\n.wrapper {\n  flex: 1;\n  position: relative;\n}\n.ps-container .ps-scrollbar-y-rail .ps-scrollbar-y {\n  background-color: #785a28;\n  margin-right: 2px;\n  border: thin solid #000;\n}\n.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {\n  background-color: transparent;\n}\n.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {\n  background-color: #463714;\n}\n.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {\n  background-color: transparent;\n}\n.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {\n  background-color: #cdbe91;\n}\n.ps-container:hover > .ps-scrollbar-y-rail:hover {\n  background-color: transparent;\n}\n.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {\n  background-color: #cdbe91;\n}\n.ps-scrollbar-y-rail {\n  margin: 5px 0;\n}\n:host .wrapper .inner-wrapper {\n  overflow: hidden;\n}\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps__scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail:hover .ps__scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover {\n  width: 4px;\n  opacity: 1;\n  right: 2px;\n}\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps__scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail:hover .ps__scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover:lang(ar-ae) {\n  right: auto;\n  left: 2px;\n}\n", "", {
-                version: 3,
-                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/perfect-scrollable/component-style.styl"],
-                names: [],
-                mappings: "AAGA;EACE,aAAS;EACT,sBAAgB;AAFlB;AAKA;EACE,OAAM;EACN,kBAAU;AAHZ;AAMA;EACE,yBAAkB;EAClB,iBAAc;EACd,uBAAQ;AAJV;AAMA;EACE,6BAAkB;AAJpB;AAMA;EACE,yBAAkB;AAJpB;AAMA;EACE,6BAAkB;AAJpB;AAMA;EACE,yBAAkB;AAJpB;AAMA;EACE,6BAAkB;AAJpB;AAMA;EACE,yBAAkB;AAJpB;AAMA;EACE,aAAQ;AAJV;AAUI;EACE,gBAAU;AARhB;AAeM;;;;;;;;;;;;;;;;;;EAkBE,UAAO;EACP,UAAS;EACT,UAAO;AAbf;AAcQ;;;;;;;;;;;;;;;;;;EACE,WAAO;EACP,SAAM;AAKhB",
-                sourcesContent: ["@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n\r\n\r\n:host {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.wrapper {\r\n  flex: 1;\r\n  position: relative;\r\n}\r\n\r\n.ps-container .ps-scrollbar-y-rail .ps-scrollbar-y {\r\n  background-color: $color_palette_gold5;\r\n  margin-right: 2px;\r\n  border: thin solid black;\r\n}\r\n.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {\r\n  background-color: transparent;\r\n}\r\n.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {\r\n  background-color: $color_palette_gold6;\r\n}\r\n.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {\r\n  background-color: transparent;\r\n}\r\n.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {\r\n  background-color: $color_palette_gold2;\r\n}\r\n.ps-container:hover > .ps-scrollbar-y-rail:hover {\r\n  background-color: transparent;\r\n}\r\n.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {\r\n  background-color: $color_palette_gold2;\r\n}\r\n.ps-scrollbar-y-rail {\r\n  margin: 5px 0;\r\n}\r\n\r\n\r\n:host {\r\n  .wrapper {\r\n    .inner-wrapper {\r\n      overflow: hidden;\r\n    }\r\n    // In order to override some styles set internally by the perfect scrollbar,\r\n    // we need higher specificity. To ensure that, we add more class selectors:\r\n    // - include ps-container, ps-theme-default, and use-for-higher-specificity\r\n    // - always select on ps-scrollbar-y via parent selector ps-scrollbar-y-rail \r\n    &.ps-container.ps-theme-default.use-for-higher-specificity {\r\n      .ps-scrollbar-y-rail .ps-scrollbar-y,\r\n      .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\r\n      .ps-scrollbar-y-rail,\r\n      .ps-scrollbar-y-rail:hover,\r\n      .ps-scrollbar-y-rail .ps__scrollbar-y,\r\n      .ps-scrollbar-y-rail:hover .ps__scrollbar-y,\r\n      &.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y,\r\n      &.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\r\n      &.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\r\n      &.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover,\r\n      &:hover .ps-scrollbar-y-rail .ps-scrollbar-y,\r\n      &:hover .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\r\n      &:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\r\n      &:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover,\r\n      &:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y,\r\n      &:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\r\n      &:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\r\n      &:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover {\r\n        width: 4px;\r\n        opacity: 1;\r\n        right: 2px;\r\n        &:lang(ar-ae) {\r\n          right: auto;\r\n          left: 2px;\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n"],
-                sourceRoot: ""
-            }]), e.exports = o
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r, o = n(1),
-                i = (r = n(175)) && r.__esModule ? r : {
-                    default: r
-                };
-            const {
-                RenderMode: a,
-                PlayerNameComputer: s
-            } = o.playerNameComponentLogic, l = {
-                BATCH: "batch",
-                FORMAT: "format",
-                PUUID: "puuid",
-                SUMMONER_ID: "summoner-id",
-                GAME_NAME: "game-name",
-                TAG_LINE: "tag-line",
-                RENDER_MODE_OVERRIDE: "render-mode",
-                RENDER_ALIAS_OVERRIDE: "render-alias"
-            }, d = Object.values(l), c = "player-name__game-name", p = "player-name__tag-line", A = "player-name__tooltip__game-name", u = "player-name__tooltip__tag-line", h = "player-name__error", g = "alias";
-            class b extends o.webComponents.ShadowElement {
-                static get observedAttributes() {
-                    return d
-                }
-                templateMarkup() {
-                    return n(184)
-                }
-                stylesheetMarkup() {
-                    return n(185)
-                }
-                constructor() {
-                    super(), this._tooltipTarget = null, this._tooltipElement = null, this._destroyCurrentPlayerObserver = null, this._computer = new s(o.playerNames), this._directionCharacter = o.localeDirectionOverrides.localeDirectionMark
-                }
-                connectedCallback() {
-                    this._destroyCurrentPlayerObserver || (this._destroyCurrentPlayerObserver = o.playerNames.observeCurrentPlayerName(this._updatePlayerNameFromCurrentSummonerUpdate.bind(this)).destroy), this._compute()
-                }
-                disconnectedCallback() {
-                    i.default.unassign(this._tooltipTarget), this._destroyCurrentPlayerObserver && (this._destroyCurrentPlayerObserver(), this._destroyCurrentPlayerObserver = null)
-                }
-                attributeChangedCallback(e, t, n) {
-                    super.attributeChangedCallback(e, t, n), this._compute()
-                }
-                _booleanAttribute(e) {
-                    if (this.hasAttribute(e)) {
-                        const t = this.getAttribute(e);
-                        return t && "false" !== t
-                    }
-                }
-                _compute() {
-                    this._computer.compute({
-                        batch: this.getAttribute(l.BATCH),
-                        puuid: this.getAttribute(l.PUUID),
-                        summonerId: this.getAttribute(l.SUMMONER_ID),
-                        gameName: this.getAttribute(l.GAME_NAME),
-                        tagLine: this.getAttribute(l.TAG_LINE),
-                        format: this.getAttribute(l.FORMAT),
-                        renderModeOverride: this.getAttribute(l.RENDER_MODE_OVERRIDE),
-                        renderAliasOverride: this._booleanAttribute(l.RENDER_ALIAS_OVERRIDE)
-                    }).then((e => this._updatePlayerName(e)))
-                }
-                _shouldUseCurrentSummonerObserver() {
-                    const e = this.getAttribute(l.PUUID),
-                        t = this.getAttribute(l.SUMMONER_ID),
-                        n = this.getAttribute(l.GAME_NAME),
-                        r = this.getAttribute(l.TAG_LINE),
-                        i = o.playerNames.currentSummonerPuuid;
-                    return !(n || r || e || t) || e === i
-                }
-                _updatePlayerNameFromCurrentSummonerUpdate(e) {
-                    if (!e || !this._shouldUseCurrentSummonerObserver()) return;
-                    const t = this._playerName || {};
-                    t.gameName = e.gameName, t.tagLine = e.tagLine, this._updatePlayerName(t)
-                }
-                _updatePlayerName(e) {
-                    if (e) switch (this._playerName = e, i.default.unassign(this._tooltipTarget), this._updateEnabled(this.shadowRoot, ".renderMode", (t => t.classList.contains(e.renderMode))), e.renderMode) {
-                        case a.FULL_ALIAS:
-                            this._applyGameNameAndTagLine(this.shadowRoot, e, !0);
-                            break;
-                        case a.GAME_NAME_ONLY:
-                            this._applyGameNameAndTagLine(this.shadowRoot, e, !1);
-                            break;
-                        case a.TAG_LINE_TOOLTIP:
-                            this._applyGameNameAndTagLine(this.shadowRoot, e, !1), this._assignTagLineTooltip(e);
-                            break;
-                        case a.COMPONENT:
-                            this._updateComponentElement();
-                            break;
-                        case a.ERROR:
-                            this._applyError()
-                    }
-                }
-                _updateEnabled(e, t, n) {
-                    e.querySelectorAll(t).forEach((e => {
-                        const t = n(e),
-                            r = !e.classList.contains("disabled");
-                        t && !r ? e.classList.remove("disabled") : !t && r && e.classList.add("disabled")
-                    }))
-                }
-                _applyGameNameAndTagLine(e, t, n) {
-                    e.querySelectorAll(`.${c}`).forEach((e => {
-                        e.textContent = t.gameName + (!1 === n ? this._directionCharacter : "")
-                    })), e.querySelectorAll(`.${A}`).forEach((e => {
-                        e.textContent = t.gameName
-                    })), e.querySelectorAll(`.${p},.${u}`).forEach((e => {
-                        e.textContent = t.tagLine + (!0 === n ? this._directionCharacter : "")
-                    }))
-                }
-                _assignTagLineTooltip(e) {
-                    if (this._prepareTooltipTarget(), this._prepareTooltipElement(), this._tooltipTarget && this._tooltipElement) {
-                        this._applyGameNameAndTagLine(this._tooltipElement, e, !0);
-                        const t = {
-                            type: "system",
-                            showDelay: 500,
-                            targetAnchor: {
-                                x: "center",
-                                y: "bottom"
-                            },
-                            tooltipAnchor: {
-                                x: "center",
-                                y: "top"
-                            },
-                            positioningStrategy: "flip",
-                            restrictArea: "safe-window"
-                        };
-                        i.default.assign(this._tooltipTarget, this._tooltipElement, {}, t)
-                    }
-                }
-                _prepareTooltipTarget() {
-                    this._tooltipTarget = this.shadowRoot.querySelector(`.${a.TAG_LINE_TOOLTIP} .${c}`)
-                }
-                _prepareTooltipElement() {
-                    this._tooltipElement || (this._tooltipElement = this.shadowRoot.querySelector("lol-uikit-tooltip"), this._tooltipElement && this._tooltipElement.parentNode.removeChild(this._tooltipElement))
-                }
-                _updateComponentElement() {
-                    if (!this._playerName) return;
-                    const e = this.shadowRoot.querySelector(`.${a.COMPONENT}`);
-                    if (e && e.hasChildNodes()) {
-                        const t = g;
-                        this._updateEnabled(e, "slot", (e => e.getAttribute("name") === t));
-                        const n = this._getComponentForActiveSlot(t);
-                        n && (n.playerName = this._playerName, n.setAttribute(l.GAME_NAME, this._playerName.gameName), n.setAttribute(l.TAG_LINE, this._playerName.tagLine))
-                    }
-                }
-                _getComponentForActiveSlot(e) {
-                    return Array.from(this.querySelectorAll("[slot]")).find((t => t.getAttribute("slot") === e))
-                }
-                _applyError() {
-                    this.shadowRoot.querySelectorAll(`.${h}`).forEach((e => {
-                        e.textContent = o.tra.get("player_name_unknown")
-                    }))
-                }
-            }
-            b.tagName = "lol-uikit-player-name";
-            var m = b;
-            t.default = m
-        }, (e, t, n) => {
-            "use strict";
-            Object.defineProperty(t, "__esModule", {
-                value: !0
-            }), t.default = void 0;
-            var r, o = n(1),
-                i = (r = n(176)) && r.__esModule ? r : {
+                i = (r = n(83)) && r.__esModule ? r : {
                     default: r
                 };
             var a = new class {
@@ -8315,10 +5607,10 @@
             t.default = a
         }, (e, t, n) => {
             "use strict";
-            var r = s(n(177)),
+            var r = s(n(84)),
                 o = n(1),
-                i = s(n(178)),
-                a = s(n(182));
+                i = s(n(85)),
+                a = s(n(89));
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -8650,11 +5942,11 @@
             t.default = i
         }, (e, t, n) => {
             "use strict";
-            var r, o = (r = n(179)) && r.__esModule ? r : {
+            var r, o = (r = n(86)) && r.__esModule ? r : {
                     default: r
                 },
-                i = l(n(180)),
-                a = l(n(181));
+                i = l(n(87)),
+                a = l(n(88));
 
             function s(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -8693,8 +5985,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = s(n(180)),
-                i = s(n(181));
+                o = s(n(87)),
+                i = s(n(88));
 
             function a(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -8876,7 +6168,7 @@
                             s && (s.get || s.set) ? Object.defineProperty(r, a, s) : r[a] = e[a]
                         } r.default = e, n && n.set(e, r);
                     return r
-                }(n(180));
+                }(n(87));
 
             function i(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -8920,8 +6212,8 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = a(n(178)),
-                i = a(n(183));
+                o = a(n(85)),
+                i = a(n(90));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -9030,6 +6322,2744 @@
             t.Screen = i;
             var a = new i;
             t.default = a
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n  <div tabindex="-1">\r\n    <div class="menu-item"></div>\r\n  </div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, ".context-menu {\n  user-select: none;\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  min-width: 127px;\n  width: auto;\n  z-index: 10;\n  box-sizing: border-box;\n  background-color: #010a13;\n  box-shadow: 0 0 1px #000, 0 0 1px #000;\n  -webkit-user-select: none;\n/* if the width is changed, also change moveNearBoundingRect in popout-window.js to account for border size in the\n   alignment of subcontext menus */\n  border-width: 2px;\n  border-style: solid;\n  border-image: linear-gradient(to bottom, #463714, #785a28) 1;\n}\n.context-menu:focus {\n  outline: none;\n}\n.context-menu .menu-item {\n  font: 12px 'LoL Body', Arial, 'Helvetica Neue', Helvetica, sans-serif;\n  display: block;\n  outline: none;\n  min-width: 100%;\n  height: 29px;\n  line-height: 29px;\n  box-sizing: border-box;\n  border: none;\n  background: none;\n  color: #cdbe91;\n  white-space: nowrap;\n  overflow: visible;\n  text-overflow: ellipsis;\n  text-align: left;\n  cursor: default;\n  padding: 0 10px;\n}\n.context-menu .menu-item:lang(ar-ae) {\n  direction: rtl;\n  text-align: right;\n}\n.context-menu .menu-item.danger-text {\n  color: #ff2345;\n}\n.context-menu .menu-item.with-icon {\n  display: flex;\n  align-items: center;\n}\n.context-menu .menu-item .menu-item-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: center;\n  margin-right: 8px;\n  flex: 0 0 auto;\n}\n.context-menu .menu-item .menu-item-label {\n  flex: 1 1 auto;\n  min-width: 0;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n}\n.context-menu .menu-item.has-submenu {\n  position: relative;\n  padding-right: 23px;\n}\n.context-menu .menu-item.has-submenu:after {\n/* right-arrow */\n  content: '';\n  display: block;\n  position: absolute;\n  top: 50%;\n  right: 6px;\n  margin-top: -3px;\n  border: 3px solid transparent;\n  border-left-color: #cdbe91;\n}\n.context-menu .menu-item:hover {\n  color: #f0e6d2;\n  background: #1e2328;\n}\n.context-menu .menu-item.danger-text:hover {\n  color: #ff4461;\n}\n.context-menu .menu-item:active {\n  color: #cdbe91;\n}\n.context-menu .menu-item.danger-text:active {\n  color: #ff062c;\n}\n.context-menu .menu-item.disabled,\n.context-menu .menu-item.disabled:hover,\n.context-menu .menu-item.disabled:active {\n  padding: 0 10px;\n  border-left-color: none;\n  border-right-color: none;\n  border-width: 0;\n  cursor: default;\n  color: #a09b8c;\n  background: none;\n  opacity: 0.55;\n/* to override the webkit-filter brightness in focus */\n  -webkit-filter: none;\n}\n.context-menu .menu-item.danger-text.disabled,\n.context-menu .menu-item.danger-text.disabled:hover,\n.context-menu .menu-item.danger-text.disabled:active {\n  color: #ff657d;\n}\n.context-menu-root {\n  min-width: 131px;\n  width: auto;\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/context-menu/component-style.styl"],
+                names: [],
+                mappings: "AAIA;EACE,iBAAa;EACb,gBAAY;EACZ,SAAQ;EACR,UAAS;EACT,gBAAW;EACX,WAAO;EACP,WAAS;EACT,sBAAY;EACZ,yBAAkB;EAClB,sCAAwB;EACxB,yBAAqB;AACrB;kCAHgC;EAKhC,iBAAc;EACd,mBAAc;EACd,4DAAc;AAHhB;AAMA;EACE,aAAS;AAJX;AAOA;EACE,qEAAqB;EACrB,cAAS;EACT,aAAS;EACT,eAAW;EACX,YAAQ;EACR,iBAAa;EACb,sBAAY;EACZ,YAAQ;EACR,gBAAY;EACZ,cAAO;EACP,mBAAa;EACb,iBAAU;EACV,uBAAe;EACf,gBAAY;EACZ,eAAQ;EACR,eAAS;AALX;AAME;EACE,cAAW;EACX,iBAAY;AAJhB;AAQA;EACE,cAAO;AANT;AASA;EACE,aAAS;EACT,mBAAa;AAPf;AAUA;EACE,oBAAS;EACT,mBAAa;EACb,uBAAiB;EACjB,iBAAc;EACd,cAAM;AARR;AAWA;EACE,cAAM;EACN,YAAW;EACX,gBAAU;EACV,uBAAe;EACf,mBAAa;AATf;AAYA;EACE,kBAAU;EACV,mBAAe;AAVjB;AAaA;AACE,gBAAA;EACA,WAAS;EACT,cAAS;EACT,kBAAU;EACV,QAAK;EACL,UAAO;EACP,gBAAY;EACZ,6BAAQ;EACR,0BAAmB;AAXrB;AAcA;EACE,cAAO;EACP,mBAAY;AAZd;AAeA;EACE,cAAO;AAbT;AAgBA;EACE,cAAO;AAdT;AAiBA;EACE,cAAO;AAfT;AAkBA;;;EACE,eAAS;EACT,uBAAmB;EACnB,wBAAoB;EACpB,eAAc;EACd,eAAQ;EACR,cAAO;EACP,gBAAY;EACZ,aAAS;AACT,sDAAA;EACA,oBAAgB;AAdlB;AAiBA;;;EACE,cAAO;AAbT;AAgBA;EACE,gBAAW;EACX,WAAO;AAdT",
+                sourcesContent: ["@require 'riotclient-lol-asset-csslib/styles/colors.styl';\r\n\r\n$danger_color = $colors_torchRed;\r\n\r\n.context-menu {\r\n  user-select: none;\r\n  list-style: none;\r\n  margin: 0;\r\n  padding: 0;\r\n  min-width: 127px;\r\n  width: auto;\r\n  z-index: 10;\r\n  box-sizing: border-box;\r\n  background-color: #010a13;\r\n  box-shadow: 0 0 1px #000, 0 0 1px #000;\r\n  -webkit-user-select: none;\r\n  /* if the width is changed, also change moveNearBoundingRect in popout-window.js to account for border size in the\r\n   alignment of subcontext menus */\r\n  border-width: 2px;\r\n  border-style: solid;\r\n  border-image: linear-gradient(to bottom, #463714, #785a28) 1;\r\n}\r\n\r\n.context-menu:focus {\r\n  outline: none;\r\n}\r\n\r\n.context-menu .menu-item {\r\n  font: 12px 'LoL Body', Arial, 'Helvetica Neue', Helvetica, sans-serif;\r\n  display: block;\r\n  outline: none;\r\n  min-width: 100%;\r\n  height: 29px;\r\n  line-height: 29px;\r\n  box-sizing: border-box;\r\n  border: none;\r\n  background: none;\r\n  color: #cdbe91;\r\n  white-space: nowrap;\r\n  overflow: visible;\r\n  text-overflow: ellipsis;\r\n  text-align: left;\r\n  cursor: default;\r\n  padding: 0 10px;\r\n  &:lang(ar-ae) {\r\n    direction: rtl;\r\n    text-align: right;\r\n  }\r\n}\r\n\r\n.context-menu .menu-item.danger-text {\r\n  color: $danger_color;\r\n}\r\n\r\n.context-menu .menu-item.with-icon {\r\n  display: flex;\r\n  align-items: center;\r\n}\r\n\r\n.context-menu .menu-item .menu-item-icon {\r\n  display: inline-flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  margin-right: 8px;\r\n  flex: 0 0 auto;\r\n}\r\n\r\n.context-menu .menu-item .menu-item-label {\r\n  flex: 1 1 auto;\r\n  min-width: 0;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n  white-space: nowrap;\r\n}\r\n\r\n.context-menu .menu-item.has-submenu {\r\n  position: relative;\r\n  padding-right: 23px;\r\n}\r\n\r\n.context-menu .menu-item.has-submenu:after {\r\n  /* right-arrow */\r\n  content: '';\r\n  display: block;\r\n  position: absolute;\r\n  top: 50%;\r\n  right: 6px;\r\n  margin-top: -3px;\r\n  border: 3px solid transparent;\r\n  border-left-color: #cdbe91;\r\n}\r\n\r\n.context-menu .menu-item:hover {\r\n  color: #f0e6d2;\r\n  background: #1e2328;\r\n}\r\n\r\n.context-menu .menu-item.danger-text:hover {\r\n  color: lighten($danger_color, 15%);\r\n}\r\n\r\n.context-menu .menu-item:active {\r\n  color: #cdbe91;\r\n}\r\n\r\n.context-menu .menu-item.danger-text:active {\r\n  color: darken($danger_color, 10%);\r\n}\r\n\r\n.context-menu .menu-item.disabled, .context-menu .menu-item.disabled:hover, .context-menu .menu-item.disabled:active {\r\n  padding: 0 10px;\r\n  border-left-color: none;\r\n  border-right-color: none;\r\n  border-width: 0;\r\n  cursor: default;\r\n  color: #a09b8c;\r\n  background: none;\r\n  opacity: 0.55;\r\n  /* to override the webkit-filter brightness in focus */\r\n  -webkit-filter: none;\r\n}\r\n\r\n.context-menu .menu-item.danger-text.disabled, .context-menu .menu-item.danger-text.disabled:hover, .context-menu .menu-item.danger-text.disabled:active {\r\n  color: lighten($colors_torchRed, 30%);\r\n}\r\n\r\n.context-menu-root {\r\n  min-width: 131px;\r\n  width: auto;\r\n}\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, o = n(1),
+                i = (r = n(36)) && r.__esModule ? r : {
+                    default: r
+                },
+                a = n(81);
+            class s extends o.webComponents.ShadowElement {
+                static get observedAttributes() {
+                    return ["orientation", "appearance", "frame", "caret", "layer-position", "dismissable", "dismissable-type", "close-button"]
+                }
+                templateMarkup() {
+                    return n(94)
+                }
+                stylesheetMarkup() {
+                    return n(95)
+                }
+                constructor() {
+                    super(), this._closeEvent = this.dispatchCloseEvent.bind(this)
+                }
+                connectedCallback() {
+                    super.connectedCallback(), this.hasDismissableIcon() && (0, i.default)(this.shadowRoot).find(".lol-uikit-dialog-frame-toast-close-button")[0].addEventListener("click", this._closeEvent), this.hasDismissableButton() && (0, i.default)(this.shadowRoot).find(".lol-uikit-dialog-frame-close-button")[0].addEventListener("click", this._closeEvent), this.updateCssClasses()
+                }
+                disconnectedCallback() {
+                    super.disconnectedCallback(), this.hasDismissableIcon() && (0, i.default)(this.shadowRoot).find(".lol-uikit-dialog-frame-toast-close-button")[0].removeEventListener("click", this._closeEvent), this.hasDismissableButton() && (0, i.default)(this.shadowRoot).find(".lol-uikit-dialog-frame-close-button")[0].removeEventListener("click", this._closeEvent)
+                }
+                processAttributes() {
+                    this.shadowRoot.parentElement && this.updateCssClasses()
+                }
+                updateCssClasses() {
+                    (0, i.default)(this.shadowRoot).find(".lol-uikit-dialog-frame").removeClass("top bottom left right").addClass(this.getOrientation()).removeClass("bordered borderless").addClass(this.getFrame()).removeClass("enabled disabled").addClass(this.getAppearance()).toggleClass("dismissable-icon", this.hasDismissableIcon()).toggleClass("dismissable-close-button", this.hasDismissableButton()).toggleClass("dismissable-icon-background", this.hasDismissableIconBackground()).toggleClass("caret", this.hasCaret()).addClass(this.getCaretDirection()).toggleClass("node", this.hasNode()).addClass(this.getLayerPosition()), this.setZIndex()
+                }
+                getOrientation() {
+                    return this.getAttribute("orientation") || "bottom"
+                }
+                getAppearance() {
+                    return this.getAttribute("appearance") || "enabled"
+                }
+                hasCaret() {
+                    return this.hasAttribute("caret")
+                }
+                getFrame() {
+                    return this.getAttribute("frame") || "bordered"
+                }
+                hasDismissableIcon() {
+                    return "inside" === this.getAttribute("dismissable-type") && (this.hasAttribute("dismissable") || this.hasAttribute("close-button"))
+                }
+                hasDismissableButton() {
+                    return "inside" !== this.getAttribute("dismissable-type") && (this.hasAttribute("dismissable") || this.hasAttribute("close-button"))
+                }
+                hasDismissableIconBackground() {
+                    return this.hasDismissableIcon() && this.hasAttribute("dismissable-icon-background")
+                }
+                getCaretDirection() {
+                    return this.getAttribute("caret")
+                }
+                hasNode() {
+                    return this.hasAttribute("node")
+                }
+                getLayerPosition() {
+                    return this.getAttribute("layer-position") || "default"
+                }
+                setZIndex() {
+                    const e = this.getLayerPosition();
+                    this.style.zIndex = "above-vignette" === e ? a.Z_INDEX_CONSTANTS.CELEBRATIONS_MODAL : "above-menus" === e ? a.Z_INDEX_CONSTANTS.CONTEXT_MENUS : 0
+                }
+                dispatchCloseEvent() {
+                    this.dispatchEvent(new Event("dialogFrameDismissed", {
+                        bubbles: !0,
+                        composed: !0
+                    }))
+                }
+            }
+            s.tagName = "lol-uikit-dialog-frame";
+            var l = s;
+            t.default = l
+        }, e => {
+            "use strict";
+            e.exports = '<template id="lol-uikit-template-dialog-frame">\r\n  <div class="lol-uikit-dialog-frame">\r\n    <div class="lol-uikit-dialog-frame-sub-border"></div>\r\n    <div class="content-wrapper">\r\n      <slot></slot>\r\n    </div>\r\n    <div class="lol-uikit-dialog-frame-toast-close-button"></div>\r\n    <div class="lol-uikit-dialog-frame-close-button">\r\n      <lol-uikit-close-button></lol-uikit-close-button>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, ':host .lol-uikit-dialog-frame.left,\n:host .lol-uikit-dialog-frame.right {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to right, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.right {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to left, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.top,\n:host .lol-uikit-dialog-frame.bottom {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to top, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.top {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to bottom, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.top.disabled,\n:host .lol-uikit-dialog-frame.bottom.disabled {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to top, #39393e 0, #1e282d 5px, #1e282d 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.top.disabled > .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.bottom.disabled > .lol-uikit-dialog-frame-sub-border::before {\n  top: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-horizontal-disabled.png");\n}\n:host .lol-uikit-dialog-frame.top.disabled > .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.bottom.disabled > .lol-uikit-dialog-frame-sub-border::after {\n  bottom: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal-disabled.png");\n}\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.bottom .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.bottom .lol-uikit-dialog-frame-sub-border::after {\n  left: 12px;\n  width: calc(100% - 24px);\n  height: 0;\n  border-width: 4px 4px 0 4px;\n  border-image-width: 4px 4px 0 4px;\n  border-image-slice: 4 4 0 4;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.bottom .lol-uikit-dialog-frame-sub-border::before {\n  top: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-horizontal.png");\n}\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.bottom .lol-uikit-dialog-frame-sub-border::after {\n  bottom: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal.png");\n}\n:host .lol-uikit-dialog-frame.left.disabled,\n:host .lol-uikit-dialog-frame.right.disabled {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to right, #39393e 0, #1e282d 5px, #1e282d 100%) 1 stretch;\n}\n:host .lol-uikit-dialog-frame.left.disabled > .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.right.disabled > .lol-uikit-dialog-frame-sub-border::before {\n  left: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-vertical-disabled.png");\n}\n:host .lol-uikit-dialog-frame.left.disabled > .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.right.disabled > .lol-uikit-dialog-frame-sub-border::after {\n  right: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical-disabled.png");\n}\n:host .lol-uikit-dialog-frame.left .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.left .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::after {\n  top: 12px;\n  height: calc(100% - 24px);\n  width: 0;\n  border-width: 4px 4px 4px 0;\n  border-image-width: 4px 4px 4px 0;\n  border-image-slice: 4 4 4 0;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-dialog-frame.left .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::before {\n  left: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical.png");\n}\n:host .lol-uikit-dialog-frame.left .lol-uikit-dialog-frame-sub-border::after,\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::after {\n  right: -6px;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-vertical.png");\n}\nlol-uikit-dialog-frame {\n  z-index: 0;\n}\n:host .lol-uikit-dialog-frame {\n  position: relative;\n  background: #010a13;\n  box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\n}\n:host .lol-uikit-dialog-frame::before {\n  content: \'\';\n  position: absolute;\n  width: calc(100% + 4px);\n  height: calc(100% + 4px);\n  top: -2px;\n  left: -2px;\n  box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\n  pointer-events: none;\n}\n:host .lol-uikit-dialog-frame .lol-uikit-dialog-frame-sub-border::before,\n:host .lol-uikit-dialog-frame .lol-uikit-dialog-frame-sub-border::after {\n  content: \'\';\n  position: absolute;\n  display: flex;\n  box-sizing: border-box;\n}\n:host .lol-uikit-dialog-frame.top.disabled > .lol-uikit-dialog-frame-sub-border::before {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal-disabled.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.top.disabled > .lol-uikit-dialog-frame-sub-border::after {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-horizontal-disabled.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::before {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.top .lol-uikit-dialog-frame-sub-border::after {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-horizontal.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.right.disabled > .lol-uikit-dialog-frame-sub-border::before {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical-disabled.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.right.disabled > .lol-uikit-dialog-frame-sub-border::after {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-vertical-disabled.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::before {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-secondary-vertical.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.right .lol-uikit-dialog-frame-sub-border::after {\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical.png");\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.borderless .lol-uikit-dialog-frame-sub-border {\n  display: none;\n}\n:host .lol-uikit-dialog-frame .lol-uikit-dialog-frame-close-button {\n  display: none;\n}\n:host .lol-uikit-dialog-frame .lol-uikit-dialog-frame-close-button lol-uikit-close-button {\n  z-index: 10000000;\n}\n:host .lol-uikit-dialog-frame .lol-uikit-dialog-frame-uikit-close-button {\n  display: none;\n}\n:host .lol-uikit-dialog-frame.dismissable-icon .lol-uikit-dialog-frame-toast-close-button {\n  display: block;\n  height: 24px;\n  width: 24px;\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: url("/fe/lol-uikit/images/close.png"), rgba(0,0,0,0.5);\n  cursor: pointer;\n  border-radius: 4px;\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n/*\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\n        We might still do it later when we do a second pass.\n        At that time, we\'ll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\n        &:lang(ar-ae) {\n          right: auto;\n          left: 8px;\n        }\n        */\n}\n:host .lol-uikit-dialog-frame.dismissable-icon .lol-uikit-dialog-frame-toast-close-button:hover {\n  background: url("/fe/lol-uikit/images/close.png"), rgba(10,20,40,0.5);\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-dialog-frame.dismissable-icon.dismissable-icon-background .lol-uikit-dialog-frame-toast-close-button {\n  width: 24px;\n  height: 24px;\n  top: 8px;\n  right: 8px;\n  background-color: #0a1428;\n  background-size: 18px 18px;\n  background-position: center;\n  border-radius: 2px;\n  opacity: 0.8;\n  transition: opacity 0.05s ease-in-out;\n}\n:host .lol-uikit-dialog-frame.dismissable-icon.dismissable-icon-background .lol-uikit-dialog-frame-toast-close-button:hover {\n  opacity: 1;\n}\n:host .lol-uikit-dialog-frame.dismissable-close-button .lol-uikit-dialog-frame-close-button {\n  display: block;\n/*\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\n        We might still do it later when we do a second pass.\n        At that time, we\'ll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\n      &:lang(ar-ae)::before {\n        right: auto;\n        left: -22px;\n      }\n      */\n}\n:host .lol-uikit-dialog-frame.dismissable-close-button .lol-uikit-dialog-frame-close-button::before {\n  content: \'\';\n  position: absolute;\n  width: 38px;\n  height: 68px;\n  top: -22px;\n  right: -22px;\n  background-image: url("/fe/lol-uikit/images/frame-button-close-top-down.png");\n  background-size: 38px 68px;\n  pointer-events: none;\n}\n:host .lol-uikit-dialog-frame.dismissable-close-button .lol-uikit-dialog-frame-close-button lol-uikit-close-button {\n  display: block;\n  position: absolute;\n  top: -17px;\n  right: -17px;\n/*\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\n        We might still do it later when we do a second pass.\n        At that time, we\'ll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\n        &:lang(ar-ae) {\n          right: auto;\n          left: -17px;\n        }\n        */\n}\n:host .lol-uikit-dialog-frame.caret::after {\n  content: \'\';\n  position: absolute;\n  background: url("/fe/lol-uikit/images/caret.png") 50% no-repeat;\n}\n:host .lol-uikit-dialog-frame.caret.top::after {\n  height: 18px;\n  width: 100%;\n  top: -16px;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-dialog-frame.caret.bottom::after {\n  height: 18px;\n  width: 100%;\n  bottom: -16px;\n}\n:host .lol-uikit-dialog-frame.caret.left::after {\n  height: 100%;\n  width: 32px;\n  top: 0;\n  left: -23px;\n  transform: rotate(90deg);\n}\n:host .lol-uikit-dialog-frame.caret.right::after {\n  height: 100%;\n  width: 32px;\n  top: 0;\n  right: -23px;\n  transform: rotate(-90deg);\n}\n', "", {
+                version: 3,
+                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/gradient-palette.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/dialog-frame/component-style.styl"],
+                names: [],
+                mappings: "AA6JA;;EACE,6BAAQ;EACR,uFAAc;AC3JhB;ADkKA;EACE,6BAAQ;EACR,sFAAc;AChKhB;ADuKA;;EACE,6BAAQ;EACR,qFAAc;ACpKhB;AD2KA;EACE,6BAAQ;EACR,wFAAc;ACzKhB;AATE;;EACE,6BAAQ;EACR,qFAAc;AAYlB;AATM;;EACE,SAAK;EACL,6FAA0F;AAYlG;AATM;;EACE,YAAQ;EACR,2FAAwF;AAYhG;AANI;;;;EACE,UAAM;EACN,wBAAO;EACP,SAAQ;EACR,2BAAc;EACd,iCAAoB;EACpB,2BAAoB;EACpB,4BAAqB;EACrB,mBAAc;AAWpB;AARI;;EACE,SAAK;EACL,oFAAiF;AAWvF;AARI;;EACE,YAAQ;EACR,kFAA+E;AAWrF;AAHE;;EACE,6BAAQ;EACR,uFAAc;AAMlB;AAHM;;EACE,UAAM;EACN,2FAAwF;AAMhG;AAHM;;EACE,WAAO;EACP,yFAAsF;AAM9F;AAAI;;;;EACE,SAAK;EACL,yBAAQ;EACR,QAAO;EACP,2BAAc;EACd,iCAAoB;EACpB,2BAAoB;EACpB,4BAAqB;EACrB,mBAAc;AAKpB;AAFI;;EACE,UAAM;EACN,gFAA6E;AAKnF;AAFI;;EACE,WAAO;EACP,kFAA+E;AAKrF;AAAA;EACE,UAAS;AAEX;AAIE;EACE,kBAAU;EACV,mBAAY;EACZ,wCAAY;AAFhB;AAII;EACE,WAAS;EACT,kBAAU;EACV,uBAAO;EACP,wBAAQ;EACR,SAAK;EACL,UAAM;EACN,wCAAY;EACZ,oBAAgB;AAFtB;AAMM;;EACE,WAAS;EACT,kBAAU;EACV,aAAS;EACT,sBAAY;AAHpB;AAcU;EACE,2FAAwF;EACxF,yBAAW;AAZvB;AAcU;EACE,6FAA0F;EAC1F,yBAAW;AAZvB;AAkBQ;EACE,kFAA+E;EAC/E,yBAAW;AAhBrB;AAkBQ;EACE,oFAAiF;EACjF,yBAAW;AAhBrB;AAoCU;EACE,yFAAsF;EACtF,yBAAW;AAlCvB;AAoCU;EACE,2FAAwF;EACxF,yBAAW;AAlCvB;AAwCQ;EACE,kFAA+E;EAC/E,yBAAW;AAtCrB;AAwCQ;EACE,gFAA6E;EAC7E,yBAAW;AAtCrB;AA4CM;EACE,aAAS;AA1CjB;AA8CI;EACE,aAAS;AA5Cf;AA8CM;EACE,iBAAS;AA5CjB;AAgDI;EACE,aAAS;AA9Cf;AAmDM;EACE,cAAS;EACT,YAAQ;EACR,WAAO;EACP,kBAAU;EACV,QAAK;EACL,UAAO;EACP,kEAA+C;EAC/C,eAAQ;EACR,kBAAe;EACf,mCAAwB;EACxB,2BAAqB;EACrB,4BAAmB;AACnB;;;;;;;;SA1CC;AACT;AAmDQ;EACE,qEAA+C;EACvC,mCAAwB;EAClC,2BAAqB;EACrB,4BAAmB;AAjD3B;AAqDM;EACE,WAAO;EACP,YAAQ;EACR,QAAK;EACL,UAAO;EACP,yBAAkB;EAClB,0BAAiB;EACjB,2BAAqB;EACrB,kBAAe;EACf,YAAS;EACT,qCAAY;AAnDpB;AAqDQ;EACE,UAAS;AAnDnB;AAyDI;EACE,cAAS;AAcT;;;;;;;;OA7DC;AACP;AAgDM;EACE,WAAS;EACT,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,UAAK;EACL,YAAO;EACP,6EAA0E;EAC1E,0BAAiB;EACjB,oBAAgB;AA9CxB;AA2DM;EACE,cAAS;EACT,kBAAU;EACV,UAAK;EACL,YAAO;AAEP;;;;;;;;SAnDC;AACT;AA+DM;EACE,WAAS;EACT,kBAAU;EACV,+DAA8C;AA7DtD;AAgEM;EACC,YAAQ;EACR,WAAO;EACP,UAAK;EACL,yBAAW;AA9DlB;AAiEM;EACE,YAAQ;EACR,WAAO;EACP,aAAQ;AA/DhB;AAkEM;EACE,YAAQ;EACR,WAAO;EACP,MAAK;EACL,WAAM;EACN,wBAAW;AAhEnB;AAmEM;EACE,YAAQ;EACR,WAAO;EACP,MAAK;EACL,YAAO;EACP,yBAAW;AAjEnB",
+                sourcesContent: ["// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}", "@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n@require '../../css/shared.styl';\r\n\r\n$vertical-bottom-dialog-frame {\r\n  @extends $gradient-dialog-border-top;\r\n\r\n  &.disabled {\r\n    border: 2px solid transparent;\r\n    border-image: linear-gradient(to top, #39393E 0, $color_palette_frameGrey 5px, $color_palette_frameGrey 100%) 1 stretch;\r\n\r\n    > .lol-uikit-dialog-frame-sub-border {\r\n      &::before {\r\n        top: -6px;\r\n        border-image-source: url($base-image-path + 'sub-border-secondary-horizontal-disabled.png');\r\n      }\r\n\r\n      &::after {\r\n        bottom: -6px;\r\n        border-image-source: url($base-image-path + 'sub-border-primary-horizontal-disabled.png');\r\n      }\r\n    }\r\n  }\r\n\r\n  .lol-uikit-dialog-frame-sub-border {\r\n    &::before, &::after {\r\n      left: 12px;\r\n      width: calc(100% - 24px);\r\n      height: 0;\r\n      border-width: 4px 4px 0 4px;\r\n      border-image-width: 4px 4px 0 4px;\r\n      border-image-slice: 4 4 0 4;\r\n      border-image-repeat: stretch;\r\n      border-style: solid;\r\n    }\r\n\r\n    &::before {\r\n      top: -6px;\r\n      border-image-source: url($base-image-path + 'sub-border-secondary-horizontal.png');\r\n    }\r\n\r\n    &::after {\r\n      bottom: -6px;\r\n      border-image-source: url($base-image-path + 'sub-border-primary-horizontal.png');\r\n    }\r\n  }\r\n}\r\n\r\n$horizontal-left-dialog-frame {\r\n  @extends $gradient-dialog-border-right;\r\n\r\n  &.disabled {\r\n    border: 2px solid transparent;\r\n    border-image: linear-gradient(to right, #39393E 0, $color_palette_frameGrey 5px, $color_palette_frameGrey 100%) 1 stretch;\r\n\r\n    > .lol-uikit-dialog-frame-sub-border {\r\n      &::before {\r\n        left: -6px;\r\n        border-image-source: url($base-image-path + 'sub-border-secondary-vertical-disabled.png');\r\n      }\r\n\r\n      &::after {\r\n        right: -6px;\r\n        border-image-source: url($base-image-path + 'sub-border-primary-vertical-disabled.png');\r\n      }\r\n    }\r\n  }\r\n\r\n  .lol-uikit-dialog-frame-sub-border {\r\n    &::before, &::after {\r\n      top: 12px;\r\n      height: calc(100% - 24px);\r\n      width: 0;\r\n      border-width: 4px 4px 4px 0;\r\n      border-image-width: 4px 4px 4px 0;\r\n      border-image-slice: 4 4 4 0;\r\n      border-image-repeat: stretch;\r\n      border-style: solid;\r\n    }\r\n\r\n    &::before {\r\n      left: -6px;\r\n      border-image-source: url($base-image-path + 'sub-border-primary-vertical.png');\r\n    }\r\n\r\n    &::after {\r\n      right: -6px;\r\n      border-image-source: url($base-image-path + 'sub-border-secondary-vertical.png');\r\n    }\r\n  }\r\n}\r\n\r\nlol-uikit-dialog-frame {\r\n  z-index: 0;\r\n}\r\n\r\n\r\n:host {\r\n\r\n  .lol-uikit-dialog-frame {\r\n    position: relative;\r\n    background: $color_palette_almostBlack;\r\n    box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\r\n\r\n    &::before {\r\n      content: '';\r\n      position: absolute;\r\n      width: calc(100% + 4px);\r\n      height: calc(100% + 4px);\r\n      top: -2px;\r\n      left: -2px;\r\n      box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\r\n      pointer-events: none;\r\n    }\r\n\r\n    .lol-uikit-dialog-frame-sub-border {\r\n      &::before, &::after {\r\n        content: '';\r\n        position: absolute;\r\n        display: flex;\r\n        box-sizing: border-box;\r\n      }\r\n    }\r\n\r\n    // reverse border and sub border gradients\r\n    &.top {\r\n      @extends $vertical-bottom-dialog-frame;\r\n      @extends $gradient-dialog-border-bottom;\r\n\r\n      &.disabled {\r\n        > .lol-uikit-dialog-frame-sub-border {\r\n          &::before {\r\n            border-image-source: url($base-image-path + 'sub-border-primary-horizontal-disabled.png');\r\n            transform: rotate(180deg);\r\n          }\r\n          &::after {\r\n            border-image-source: url($base-image-path + 'sub-border-secondary-horizontal-disabled.png');\r\n            transform: rotate(180deg);\r\n          }\r\n        }\r\n      }\r\n\r\n      .lol-uikit-dialog-frame-sub-border {\r\n        &::before {\r\n          border-image-source: url($base-image-path + 'sub-border-primary-horizontal.png');\r\n          transform: rotate(180deg);\r\n        }\r\n        &::after {\r\n          border-image-source: url($base-image-path + 'sub-border-secondary-horizontal.png');\r\n          transform: rotate(180deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.bottom {\r\n      @extends $vertical-bottom-dialog-frame;\r\n    }\r\n\r\n    &.left {\r\n      @extends $horizontal-left-dialog-frame;\r\n    }\r\n\r\n    // reverse border and sub border gradients\r\n    &.right {\r\n      @extends $horizontal-left-dialog-frame;\r\n      @extends $gradient-dialog-border-left;\r\n\r\n      &.disabled {\r\n        > .lol-uikit-dialog-frame-sub-border {\r\n          &::before {\r\n            border-image-source: url($base-image-path + 'sub-border-primary-vertical-disabled.png');\r\n            transform: rotate(180deg);\r\n          }\r\n          &::after {\r\n            border-image-source: url($base-image-path + 'sub-border-secondary-vertical-disabled.png');\r\n            transform: rotate(180deg);\r\n          }\r\n        }\r\n      }\r\n\r\n      .lol-uikit-dialog-frame-sub-border {\r\n        &::before {\r\n          border-image-source: url($base-image-path + 'sub-border-secondary-vertical.png');\r\n          transform: rotate(180deg);\r\n        }\r\n        &::after {\r\n          border-image-source: url($base-image-path + 'sub-border-primary-vertical.png');\r\n          transform: rotate(180deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.borderless {\r\n      .lol-uikit-dialog-frame-sub-border {\r\n        display: none;\r\n      }\r\n    }\r\n\r\n    .lol-uikit-dialog-frame-close-button {\r\n      display: none;\r\n\r\n      lol-uikit-close-button {\r\n        z-index: 10000000;\r\n      }\r\n    }\r\n\r\n    .lol-uikit-dialog-frame-uikit-close-button {\r\n      display: none;\r\n    }\r\n\r\n    // Show the x-icon close button if we have the class dismissable-icon for toasts\r\n    &.dismissable-icon {\r\n      .lol-uikit-dialog-frame-toast-close-button {\r\n        display: block;\r\n        height: 24px;\r\n        width: 24px;\r\n        position: absolute;\r\n        top: 8px;\r\n        right: 8px;\r\n        background: url($base-image-path + 'close.png'), rgba(0, 0, 0, .5);\r\n        cursor: pointer;\r\n        border-radius: 4px;\r\n        background-size: 75% 75%, 100% 100%;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        /*\r\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\r\n        We might still do it later when we do a second pass.\r\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\r\n        &:lang(ar-ae) {\r\n          right: auto;\r\n          left: 8px;\r\n        }\r\n        */\r\n\r\n        &:hover {\r\n          background: url($base-image-path + 'close.png'), rgba($color_palette_blue6, .5);\r\n                  background-size: 75% 75%, 100% 100%;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        }\r\n      }\r\n\r\n      &.dismissable-icon-background .lol-uikit-dialog-frame-toast-close-button{\r\n        width: 24px;\r\n        height: 24px;\r\n        top: 8px;\r\n        right: 8px;\r\n        background-color: $color_palette_blue6;\r\n        background-size: 18px 18px;\r\n        background-position: center;\r\n        border-radius: 2px;\r\n        opacity: 0.8;\r\n        transition: opacity 0.05s ease-in-out;\r\n\r\n        &:hover {\r\n          opacity: 1;\r\n        }\r\n      }\r\n    }\r\n\r\n    // Show the uikit close button if we have the dismissable-close-button class\r\n    &.dismissable-close-button .lol-uikit-dialog-frame-close-button {\r\n      display: block;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: 38px;\r\n        height: 68px;\r\n        top: -22px;\r\n        right: -22px;\r\n        background-image: url($base-image-path + 'frame-button-close-top-down.png');\r\n        background-size: 38px 68px;\r\n        pointer-events: none;\r\n      }\r\n\r\n      /*\r\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\r\n        We might still do it later when we do a second pass.\r\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\r\n      &:lang(ar-ae)::before {\r\n        right: auto;\r\n        left: -22px;\r\n      }\r\n      */\r\n\r\n      lol-uikit-close-button {\r\n        display: block;\r\n        position: absolute;\r\n        top: -17px;\r\n        right: -17px;\r\n\r\n        /*\r\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\r\n        We might still do it later when we do a second pass.\r\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\r\n        &:lang(ar-ae) {\r\n          right: auto;\r\n          left: -17px;\r\n        }\r\n        */\r\n      }\r\n    }\r\n\r\n    &.caret {\r\n      &::after {\r\n        content: '';\r\n        position: absolute;\r\n        background: url($base-image-path + 'caret.png') 50% no-repeat;\r\n      }\r\n\r\n      &.top::after {\r\n       height: 18px;\r\n       width: 100%;\r\n       top: -16px;\r\n       transform: rotate(180deg);\r\n      }\r\n\r\n      &.bottom::after {\r\n        height: 18px;\r\n        width: 100%;\r\n        bottom: -16px;\r\n      }\r\n\r\n      &.left::after {\r\n        height: 100%;\r\n        width: 32px;\r\n        top: 0;\r\n        left: -23px;\r\n        transform: rotate(90deg);\r\n      }\r\n\r\n      &.right::after {\r\n        height: 100%;\r\n        width: 32px;\r\n        top: 0;\r\n        right: -23px;\r\n        transform: rotate(-90deg);\r\n      }\r\n    }\r\n  }\r\n}\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1);
+            class o extends r.webComponents.ShadowElement {
+                templateMarkup() {
+                    return n(5)
+                }
+                stylesheetMarkup() {
+                    return n(97)
+                }
+            }
+            o.tagName = "lol-uikit-dropdown-optgroup";
+            var i = o;
+            t.default = i
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, ':host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  font-family: var(--font-display);\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  -webkit-user-select: none;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  text-transform: uppercase;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(ko-kr),\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(ja-jp),\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(tr-tr),\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(el-gr),\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(th-th),\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(zh-tw) {\n  text-transform: none;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  text-transform: none;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  color: #f0e6d2;\n  font-size: 12px;\n  font-weight: 700;\n  line-height: 16px;\n  letter-spacing: 0.075em;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  letter-spacing: 0.0375em;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  --dropdown-optgroup-header-font-size: 12px;\n}\n:host {\n  display: flex;\n  flex-direction: row;\n  background-color: #010a13;\n}\n:host .ui-dropdown-optgroup {\n  width: 100%;\n}\n:host .ui-dropdown-optgroup .ui-dropdown-optgroup-header {\n  font-size: var(--dropdown-optgroup-header-font-size);\n  padding: 0 10px;\n  color: #a09b8c;\n  height: 32px;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n}\n', "", {
+                version: 3,
+                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/dropdown-optgroup/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
+                names: [],
+                mappings: "AAAA;EACE,gCAAa;ACCf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;ACyBA;EACE,yBAAgB;ADvBlB;ACwBE;;;;;;EAME,oBAAgB;ADtBpB;AC2CA;EACE,oBAAgB;ADzClB;ACmMA;EAIE,cAAO;EACP,eAAW;EAIX,gBAAa;EACb,iBAAa;EACb,uBAAgB;ADvMlB;ACkME;EACE,eAAW;ADhMf;ACqME;EACE,iBAAgB;ADnMpB;ACuMA;EAGE,wBAAgB;ADvMlB;ACwME;EACE,iBAAgB;ADtMpB;AAvCA;EACE,0CAAsC;AAyCxC;AArCA;EACE,aAAS;EACT,mBAAgB;EAChB,yBAAkB;AAuCpB;AArCE;EACE,WAAO;AAuCX;AArCI;EAEE,oDAAW;EACX,eAAS;EACT,cAAO;EACP,YAAQ;EACR,aAAS;EACT,mBAAgB;EAChB,mBAAa;AAsCnB",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --dropdown-optgroup-header-font-size: 12px;\r\n}\r\n\r\n\r\n:host {\r\n  display: flex;\r\n  flex-direction: row;\r\n  background-color: $color_palette_almostBlack;\r\n\r\n  .ui-dropdown-optgroup {\r\n    width: 100%;\r\n\r\n    .ui-dropdown-optgroup-header {\r\n      @extends $typekit_h6_preserve_case;\r\n      font-size: var(--dropdown-optgroup-header-font-size);\r\n      padding: 0 10px;\r\n      color: $color_palette_grey1;\r\n      height: 32px;\r\n      display: flex;\r\n      flex-direction: row;\r\n      align-items: center;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1),
+                o = s(n(36)),
+                i = s(n(37)),
+                a = n(35);
+
+            function s(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            class l extends r.webComponents.ShadowElement {
+                templateMarkup() {
+                    return n(4)
+                }
+                stylesheetMarkup() {
+                    return n(99)
+                }
+                constructor() {
+                    super(), this._optionSelectSound = this._createSound(i.default.dropdownOptionSelect)
+                }
+                connectedCallback() {
+                    super.connectedCallback();
+                    const e = this._ancestorDropdown();
+                    e && ("LOL-UIKIT-FRAMED-DROPDOWN" === e.tagName ? this.classList.toggle("framed-dropdown-type", !0) : "LOL-UIKIT-FLAT-DROPDOWN" === e.tagName && this.classList.toggle("flat-dropdown-type", !0))
+                }
+                static get observedAttributes() {
+                    return ["selected", "disabled", "draggable", "unselectable"]
+                }
+                processAttributes() {
+                    this._draggableCheck(), this._disableCheck(), this._unselectableCheck(), this._selectedCheck(), this._clickableCheck()
+                }
+                isSelected() {
+                    return (0, a.isAttrTruthy)("selected", this.getAttribute("selected"))
+                }
+                isDisabled() {
+                    return (0, a.isAttrTruthy)("disabled", this.getAttribute("disabled"))
+                }
+                isDraggable() {
+                    return (0, a.isAttrTruthy)("draggable", this.getAttribute("draggable"))
+                }
+                isUnselectable() {
+                    return (0, a.isAttrTruthy)("unselectable", this.getAttribute("unselectable"))
+                }
+                _ancestorDropdown() {
+                    return (0, o.default)(this).closest("lol-uikit-framed-dropdown,lol-uikit-flat-dropdown")[0]
+                }
+                _clickableCheck() {
+                    const e = !this.isDisabled() && !this.isUnselectable();
+                    e && !this._clickHandlerAttached && (this.addEventListener("click", this._handleClick), this._clickHandlerAttached = !0), !e && this._clickHandlerAttached && (this.removeEventListener("click", this._handleClick), this._clickHandlerAttached = !1)
+                }
+                _draggableCheck() {
+                    const e = this.shadowRoot.querySelector(".ui-dropdown-option");
+                    this.isDraggable() ? e.setAttribute("draggable", !0) : e.removeAttribute("draggable")
+                }
+                _disableCheck() {
+                    const e = this.shadowRoot.querySelector(".ui-dropdown-option");
+                    if (this.isDisabled() && this.isSelected()) {
+                        this.removeAttribute("selected");
+                        this._ancestorDropdown().dispatchEvent(new Event("reset"))
+                    }
+                    this.isDisabled() ? e.classList.add("ui-dropdown-option-disabled") : e.classList.remove("ui-dropdown-option-disabled")
+                }
+                _unselectableCheck() {
+                    const e = this.shadowRoot.querySelector(".ui-dropdown-option");
+                    if (this.isUnselectable() && this.isSelected()) {
+                        this.removeAttribute("selected");
+                        this._ancestorDropdown().dispatchEvent(new Event("reset"))
+                    }
+                    this.isUnselectable() ? e.classList.add("ui-dropdown-option-unselectable") : e.classList.remove("ui-dropdown-option-unselectable")
+                }
+                _selectedCheck() {
+                    const {
+                        classList: e
+                    } = this.shadowRoot.querySelector(".ui-dropdown-option");
+                    this.isSelected() ? e.add("ui-dropdown-option-selected") : e.remove("ui-dropdown-option-selected")
+                }
+                _handleClick(e) {
+                    e.button > 0 || (this._ancestorDropdown().selectOption(this), this._optionSelectSound.play())
+                }
+                playSound(e) {
+                    const t = e;
+                    (0, r.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").playSound(t)
+                }
+                _createSound(e) {
+                    return (0, r.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").createSound(e, {
+                        allowConcurrency: !1
+                    })
+                }
+            }
+            l.tagName = "lol-uikit-dropdown-option";
+            var d = l;
+            t.default = d
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27),
+                i = n(100),
+                a = n(101),
+                s = o(r),
+                l = i(a);
+            s.push([e.id, ':host(.flat-dropdown-type) .ui-dropdown-option {\n  font-family: var(--font-display);\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  -webkit-user-select: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  text-transform: uppercase;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ko-kr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ja-jp),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(tr-tr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(el-gr),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(th-th),\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(zh-tw) {\n  text-transform: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  text-transform: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  color: #f0e6d2;\n  font-size: 14px;\n  font-weight: 700;\n  line-height: 18px;\n  letter-spacing: 0.075em;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  letter-spacing: 0.0375em;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  --dropdown-option-flat-height: 40px;\n  --dropdown-option-flat-font-weight: 700;\n  --dropdown-option-flat-overflow: visible;\n  --dropdown-option-flat-text-overflow: clip;\n  --dropdown-option-flat-white-space: inherit;\n  --dropdown-option-direction-rtl: rtl;\n  --dropdown-option-framed-line-height: 30px;\n  --dropdown-option-framed-white-space: nowrap;\n  --dropdown-option-framed-overflow-wrap: unset;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option {\n  height: var(--dropdown-option-flat-height);\n  font-weight: var(--dropdown-option-flat-font-weight);\n  overflow: var(--dropdown-option-flat-overflow);\n  text-overflow: var(--dropdown-option-flat-text-overflow);\n  white-space: var(--dropdown-option-flat-white-space);\n  color: #cdbe91;\n  cursor: pointer;\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  position: relative;\n  border-bottom: thin solid #1e2328;\n  padding: 0 10px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  padding: 0 10px 0 30px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled {\n  color: #888;\n  cursor: default;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled:hover {\n  color: #888;\n  background-color: rgba(30,35,40,0);\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-unselectable {\n  border-bottom: none;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected::after {\n  background: url(' + l + ") center no-repeat;\n  width: 14px;\n  height: 11px;\n  position: absolute;\n  right: 10px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host(.flat-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae)::after {\n  right: auto;\n  left: 10px;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:hover {\n  color: #f0e6d2;\n  background-color: #1e2328;\n}\n:host(.flat-dropdown-type) .ui-dropdown-option:active {\n  color: #463714;\n  background-color: rgba(30,35,40,0.5);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option {\n  align-items: center;\n  border-top: thin solid #1f2123;\n  color: #cdbe91;\n  cursor: pointer;\n  display: block;\n  min-height: 30px;\n  line-height: var(--dropdown-option-framed-line-height);\n  margin: 0;\n  overflow: hidden;\n  padding: 2px 9px 2px 7px;\n  position: relative;\n  text-overflow: ellipsis;\n  white-space: var(--dropdown-option-framed-white-space);\n  overflow-wrap: var(--dropdown-option-framed-overflow-wrap);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:lang(ar-ae) {\n  direction: var(--dropdown-option-direction-rtl);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled {\n  color: #888;\n  cursor: default;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-disabled:hover {\n  color: #888;\n  background-color: rgba(30,35,40,0);\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected {\n  padding-right: 31px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae) {\n  padding-right: 7px;\n  padding-left: 31px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected::after {\n  background: url(" + l + ") center no-repeat;\n  width: 14px;\n  height: 11px;\n  position: absolute;\n  right: 13px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host(.framed-dropdown-type) .ui-dropdown-option.ui-dropdown-option-selected:lang(ar-ae)::after {\n  right: auto;\n  left: 13px;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:hover {\n  color: #f0e6d2;\n  background-color: #1e2328;\n}\n:host(.framed-dropdown-type) .ui-dropdown-option:active {\n  color: #463714;\n  background-color: rgba(30,35,40,0.5);\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/dropdown-option/component-style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl"],
+                names: [],
+                mappings: "AAAA;EACE,gCAAa;ACCf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;ACyBA;EACE,yBAAgB;ADvBlB;ACwBE;;;;;;EAME,oBAAgB;ADtBpB;AC2CA;EACE,oBAAgB;ADzClB;ACuKA;EAIE,cAAO;EACP,eAAW;EACX,gBAAa;EACb,iBAAa;EACb,uBAAgB;ADxKlB;ACyKE;EACE,iBAAgB;ADvKpB;AC2KA;EAGE,wBAAgB;AD3KlB;AC4KE;EACE,iBAAgB;AD1KpB;AApCA;EACE,mCAA+B;EAC/B,uCAAoC;EACpC,wCAAiC;EACjC,0CAAsC;EACtC,2CAAoC;EACpC,oCAAiC;EACjC,0CAAsC;EACtC,4CAAsC;EACtC,6CAAwC;AAsC1C;AAjCE;EAEE,0CAAQ;EACR,oDAAa;EACb,8CAAU;EACV,wDAAe;EACf,oDAAa;EACb,cAAO;EACP,eAAQ;EACR,aAAS;EACT,mBAAgB;EAChB,mBAAa;EACb,kBAAU;EACV,iCAAe;EACf,eAAS;AAkCb;AAhCI;EAEE,sBAAS;AAiCf;AA9BI;EACE,WAAO;EACP,eAAQ;AAgCd;AA9BM;EACE,WAAO;EACP,kCAAkB;AAgC1B;AA5BI;EACE,mBAAe;AA8BrB;AA3BI;EACE,oEAAiD;EACjD,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,WAAO;EACP,QAAK;EACL,6BAAW;EACX,WAAS;AA6Bf;AA1BI;EACE,WAAO;EACP,UAAM;AA4BZ;AAzBI;EACE,cAAO;EACP,yBAAkB;AA2BxB;AAxBI;EACE,cAAO;EACP,oCAAkB;AA0BxB;AAnBE;EACE,mBAAa;EACb,8BAAY;EACZ,cAAO;EACP,eAAQ;EACR,cAAS;EACT,gBAAY;EACZ,sDAAa;EACb,SAAQ;EACR,gBAAU;EACV,wBAAS;EACT,kBAAU;EACV,uBAAe;EACf,sDAAa;EACb,0DAAe;AAqBnB;AAnBI;EACE,+CAAW;AAqBjB;AAlBI;EACE,WAAO;EACP,eAAQ;AAoBd;AAlBM;EACE,WAAO;EACP,kCAAkB;AAoB1B;AAhBI;EACE,mBAAe;AAkBrB;AAjBM;EACE,kBAAe;EACf,kBAAc;AAmBtB;AAfI;EACE,oEAAiD;EACjD,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,WAAO;EACP,QAAK;EACL,6BAAW;EACX,WAAS;AAiBf;AAfI;EACE,WAAO;EACP,UAAM;AAiBZ;AAdI;EACE,cAAO;EACP,yBAAkB;AAgBxB;AAbI;EACE,cAAO;EACP,oCAAkB;AAexB",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --dropdown-option-flat-height: 40px;\r\n  --dropdown-option-flat-font-weight: 700;\r\n  --dropdown-option-flat-overflow: visible;\r\n  --dropdown-option-flat-text-overflow: clip;\r\n  --dropdown-option-flat-white-space: inherit;\r\n  --dropdown-option-direction-rtl: rtl;\r\n  --dropdown-option-framed-line-height: 30px;\r\n  --dropdown-option-framed-white-space: nowrap;\r\n  --dropdown-option-framed-overflow-wrap: unset;\r\n}\r\n\r\n\r\n:host(.flat-dropdown-type) {\r\n  .ui-dropdown-option {\r\n    @extends $typekit_h5_preserve_case;\r\n    height: var(--dropdown-option-flat-height);\r\n    font-weight: var(--dropdown-option-flat-font-weight);\r\n    overflow: var(--dropdown-option-flat-overflow);\r\n    text-overflow: var(--dropdown-option-flat-text-overflow);\r\n    white-space: var(--dropdown-option-flat-white-space);\r\n    color: $color_palette_gold2;\r\n    cursor: pointer;\r\n    display: flex;\r\n    flex-direction: row;\r\n    align-items: center;\r\n    position: relative;\r\n    border-bottom: thin solid $color_palette_grey3;\r\n    padding: 0 10px;\r\n\r\n    &:lang(ar-ae) {\r\n      // Preventing some longer arabic text from overlapping tick icon.\r\n      padding: 0 10px 0 30px;\r\n    }\r\n\r\n    &.ui-dropdown-option-disabled {\r\n      color: $colors_gray;\r\n      cursor: default;\r\n\r\n      &:hover {\r\n        color: $colors_gray;\r\n        background-color: rgba($color_palette_grey3, 0);\r\n      }\r\n    }\r\n\r\n    &.ui-dropdown-option-unselectable {\r\n      border-bottom: none;\r\n    }\r\n\r\n    &.ui-dropdown-option-selected::after {\r\n      background: url('../../images/dropdown-check.png') center no-repeat;\r\n      width: 14px;\r\n      height: 11px;\r\n      position: absolute;\r\n      right: 10px;\r\n      top: 50%;\r\n      transform: translate(0, -50%);\r\n      content: '';\r\n    }\r\n\r\n    &.ui-dropdown-option-selected:lang(ar-ae)::after {\r\n      right: auto;\r\n      left: 10px;\r\n    }\r\n\r\n    &:hover {\r\n      color: $color_palette_gold1;\r\n      background-color: $color_palette_grey3;\r\n    }\r\n\r\n    &:active {\r\n      color: $color_palette_gold6;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n    }\r\n  }\r\n}\r\n\r\n\r\n:host(.framed-dropdown-type) {\r\n  .ui-dropdown-option {\r\n    align-items: center;\r\n    border-top: thin solid #1f2123;\r\n    color: $color_palette_gold2;\r\n    cursor: pointer;\r\n    display: block;\r\n    min-height: 30px;\r\n    line-height: var(--dropdown-option-framed-line-height);\r\n    margin: 0;\r\n    overflow: hidden;\r\n    padding: 2px 9px 2px 7px;\r\n    position: relative;\r\n    text-overflow: ellipsis;\r\n    white-space: var(--dropdown-option-framed-white-space);\r\n    overflow-wrap: var(--dropdown-option-framed-overflow-wrap);\r\n\r\n    &:lang(ar-ae) {\r\n      direction: var(--dropdown-option-direction-rtl);\r\n    }\r\n\r\n    &.ui-dropdown-option-disabled {\r\n      color: $colors_gray;\r\n      cursor: default;\r\n\r\n      &:hover {\r\n        color: $colors_gray;\r\n        background-color: rgba($color_palette_grey3, 0);\r\n      }\r\n    }\r\n\r\n    &.ui-dropdown-option-selected {\r\n      padding-right: 31px;\r\n      &:lang(ar-ae) {\r\n        padding-right: 7px;\r\n        padding-left: 31px;\r\n      }\r\n    }\r\n\r\n    &.ui-dropdown-option-selected::after {\r\n      background: url('../../images/dropdown-check.png') center no-repeat;\r\n      width: 14px;\r\n      height: 11px;\r\n      position: absolute;\r\n      right: 13px;\r\n      top: 50%;\r\n      transform: translate(0, -50%);\r\n      content: '';\r\n    }\r\n    &.ui-dropdown-option-selected:lang(ar-ae)::after {\r\n      right: auto;\r\n      left: 13px;\r\n    }\r\n\r\n    &:hover {\r\n      color: $color_palette_gold1;\r\n      background-color: $color_palette_grey3;\r\n    }\r\n\r\n    &:active {\r\n      color: $color_palette_gold6;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
+                sourceRoot: ""
+            }]), e.exports = s
+        }, e => {
+            "use strict";
+            e.exports = function(e, t) {
+                return t || (t = {}), e ? (e = String(e.__esModule ? e.default : e), /^['"].*['"]$/.test(e) && (e = e.slice(1, -1)), t.hash && (e += t.hash), /["'() \t\n]|(%20)/.test(e) || t.needQuotes ? '"'.concat(e.replace(/"/g, '\\"').replace(/\n/g, "\\n"), '"') : e) : e
+            }
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "dropdown-check.png"
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1);
+            class o extends r.webComponents.ShadowElement {
+                templateMarkup() {
+                    return n(103)
+                }
+                stylesheetMarkup() {
+                    return n(104)
+                }
+            }
+            o.tagName = "lol-uikit-flat-button-group";
+            var i = o;
+            t.default = i
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n  <div class="lol-uikit-flat-button-group">\r\n    <slot></slot>\r\n  </div>\r\n</template>'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, ":host {\n  --flat-button-group-background-color: #010a13;\n}\n:host {\n  display: inline-flex;\n}\n:host(:not([type=dialog-frame])) .lol-uikit-flat-button-group {\n  border: thin solid #32281e;\n  border-image: $gradient-palette_button-click 1;\n  background-color: var(--flat-button-group-background-color);\n  padding: 5px;\n  display: flex;\n}\n:host([type=dialog-frame]) .lol-uikit-flat-button-group {\n  position: relative;\n  padding: 0 4px;\n  display: flex;\n}\n:host([type=dialog-frame]) .lol-uikit-flat-button-group::before,\n:host([type=dialog-frame]) .lol-uikit-flat-button-group::after {\n  content: '';\n  position: absolute;\n  height: 10px;\n}\n:host([type=dialog-frame]) .lol-uikit-flat-button-group::before {\n  left: 0;\n  bottom: 0;\n  border-right: 2px solid #614a1f;\n  border-top: 2px solid transparent;\n  height: 10px;\n}\n:host([type=dialog-frame]) .lol-uikit-flat-button-group::after {\n  right: 0;\n  bottom: 0;\n  border-left: 2px solid #614a1f;\n  border-top: 2px solid transparent;\n  height: 10px;\n}\n:host([type=window-popup]) .lol-uikit-flat-button-group {\n  border: none;\n  position: relative;\n  background-color: var(--flat-button-group-background-color);\n  padding: 0 4px;\n  display: flex;\n}\n:host([type=window-popup]) .lol-uikit-flat-button-group::before,\n:host([type=window-popup]) .lol-uikit-flat-button-group::after {\n  content: '';\n  position: absolute;\n  height: 10px;\n}\n:host([type=window-popup]) .lol-uikit-flat-button-group::before {\n  left: 0;\n  bottom: 0;\n  border-right: 2px solid #614a1f;\n  border-top: 2px solid transparent;\n  height: 10px;\n}\n:host([type=window-popup]) .lol-uikit-flat-button-group::after {\n  right: 0;\n  bottom: 0;\n  border-left: 2px solid #614a1f;\n  border-top: 2px solid transparent;\n  height: 10px;\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-button-group/component-style.styl"],
+                names: [],
+                mappings: "AAKA;EACE,6CAAsC;AAJxC;AAQA;EACE,oBAAS;AANX;AAYE;EACE,0BAAQ;EACR,8CAAc;EACd,2DAAkB;EAClB,YAAS;EACT,aAAS;AAVb;AAiBE;EACE,kBAAU;EACV,cAAS;EACT,aAAS;AAfb;AAiBI;;EACE,WAAS;EACT,kBAAU;EACV,YAAQ;AAdd;AAiBI;EACE,OAAM;EACN,SAAQ;EACR,+BAAc;EACd,iCAAY;EACZ,YAAQ;AAfd;AAkBI;EACE,QAAO;EACP,SAAQ;EACR,8BAAa;EACb,iCAAY;EACZ,YAAQ;AAhBd;AAuBE;EACE,YAAQ;EACR,kBAAU;EACV,2DAAkB;EAClB,cAAS;EACT,aAAS;AArBb;AAuBI;;EACE,WAAS;EACT,kBAAU;EACV,YAAQ;AApBd;AAuBI;EACE,OAAM;EACN,SAAQ;EACR,+BAAc;EACd,iCAAY;EACZ,YAAQ;AArBd;AAwBI;EACE,QAAO;EACP,SAAQ;EACR,8BAAa;EACb,iCAAY;EACZ,YAAQ;AAtBd",
+                sourcesContent: ["@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --flat-button-group-background-color: $color_palette_almostBlack;\r\n}\r\n\r\n\r\n:host {\r\n  display: inline-flex;\r\n}\r\n\r\n\r\n// <lol-uikit-flat-button-group>\r\n:host(:not([type=dialog-frame])) {\r\n  .lol-uikit-flat-button-group {\r\n    border: thin solid $color_palette_gold7;\r\n    border-image: $gradient-palette_button-click 1;\r\n    background-color: var(--flat-button-group-background-color);\r\n    padding: 5px;\r\n    display: flex;\r\n  }\r\n}\r\n\r\n\r\n// <lol-uikit-flat-button-group type=\"dialog-frame\">\r\n:host([type=dialog-frame]) {\r\n  .lol-uikit-flat-button-group {\r\n    position: relative;\r\n    padding: 0 4px;\r\n    display: flex;\r\n\r\n    &::before, &::after {\r\n      content: '';\r\n      position: absolute;\r\n      height: 10px;\r\n    }\r\n\r\n    &::before {\r\n      left: 0;\r\n      bottom: 0;\r\n      border-right: 2px solid #614a1f;\r\n      border-top: 2px solid transparent;\r\n      height: 10px;\r\n    }\r\n\r\n    &::after {\r\n      right: 0;\r\n      bottom: 0;\r\n      border-left: 2px solid #614a1f;\r\n      border-top: 2px solid transparent;\r\n      height: 10px;\r\n    }\r\n  }\r\n}\r\n\r\n\r\n:host([type=window-popup]) {\r\n  .lol-uikit-flat-button-group {\r\n    border: none;\r\n    position: relative;\r\n    background-color: var(--flat-button-group-background-color);\r\n    padding: 0 4px;\r\n    display: flex;\r\n\r\n    &::before, &::after {\r\n      content: '';\r\n      position: absolute;\r\n      height: 10px;\r\n    }\r\n\r\n    &::before {\r\n      left: 0;\r\n      bottom: 0;\r\n      border-right: 2px solid #614a1f;\r\n      border-top: 2px solid transparent;\r\n      height: 10px;\r\n    }\r\n\r\n    &::after {\r\n      right: 0;\r\n      bottom: 0;\r\n      border-left: 2px solid #614a1f;\r\n      border-top: 2px solid transparent;\r\n      height: 10px;\r\n    }\r\n  }\r\n}\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(35),
+                o = n(1);
+            const i = "default",
+                a = "over",
+                s = "down",
+                l = "click",
+                d = "disabled";
+            class c extends o.webComponents.ShadowElement {
+                templateMarkup() {
+                    return n(106)
+                }
+                stylesheetMarkup() {
+                    return n(107)
+                }
+                constructor() {
+                    super(), this._mouseOverEvent = this._mouseover.bind(this), this._mouseOutEvent = this._mouseout.bind(this), this._mouseDownEvent = this._mousedown.bind(this), this._clickEvent = this._click.bind(this)
+                }
+                connectedCallback() {
+                    super.connectedCallback(), this._addMouseEvents()
+                }
+                disconnectedCallback() {
+                    super.disconnectedCallback(), this._removeMouseEvents()
+                }
+                static get observedAttributes() {
+                    return ["disabled"]
+                }
+                processAttributes() {
+                    this._disabledCheck()
+                }
+                _disabledCheck() {
+                    this.isDisabled() ? (this._removeMouseEvents(), this._setMouseClass(d)) : (this._addMouseEvents(), this._setMouseClass(i))
+                }
+                isDisabled() {
+                    return (0, r.isAttrTruthy)("disabled", this.getAttribute("disabled"))
+                }
+                _addMouseEvents() {
+                    const e = this.shadowRoot;
+                    e && (e.addEventListener("mouseover", this._mouseOverEvent), e.addEventListener("mouseout", this._mouseOutEvent), e.addEventListener("mousedown", this._mouseDownEvent), e.addEventListener("click", this._clickEvent))
+                }
+                _removeMouseEvents() {
+                    const e = this.shadowRoot;
+                    e && (e.removeEventListener("mouseover", this._mouseOverEvent), e.removeEventListener("mouseout", this._mouseOutEvent), e.removeEventListener("mousedown", this._mouseDownEvent), e.removeEventListener("click", this._clickEvent))
+                }
+                _mouseover() {
+                    this._setMouseClass(a)
+                }
+                _mouseout() {
+                    this._setMouseClass(i)
+                }
+                _mousedown() {
+                    this._setMouseClass(s)
+                }
+                _click() {
+                    return this._setMouseClass(l), this._mouseAnimationTimeout(c._clickAnimationDurationMs)
+                }
+                _mouseAnimationTimeout(e) {
+                    return this._removeMouseEvents(), new Promise((t => {
+                        setTimeout((() => {
+                            this._disabledCheck(), t()
+                        }), e)
+                    }))
+                }
+                _setMouseClass(e) {
+                    const t = [i, a, s, l, d],
+                        n = e || i,
+                        r = this.shadowRoot,
+                        o = r.querySelector(".lol-uikit-flat-button-secondary-wrapper"),
+                        c = r.querySelector(".button-frame-container");
+                    t.forEach((e => {
+                        if (e !== n) {
+                            c.querySelector("." + e).style.opacity = 0, o.classList.remove(e)
+                        }
+                    }));
+                    c.querySelector("." + n).style.opacity = 1, o.classList.add(n)
+                }
+            }
+            c.tagName = "lol-uikit-flat-button-secondary", c._clickAnimationDurationMs = 250;
+            var p = c;
+            t.default = p
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n  <div class="lol-uikit-flat-button-secondary-wrapper">\r\n    <div class="button-frame-container">\r\n      <div class="default"></div>\r\n      <div class="over"></div>\r\n      <div class="down click"></div>\r\n      <div class="disabled"></div>\r\n    </div>\r\n    <div class="lol-uikit-flat-button-secondary-content">\r\n      <slot></slot>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, '.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content {\n  font-family: var(--font-body);\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content {\n  -webkit-user-select: none;\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content:lang(ja-jp) {\n  font-size: 13px;\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  display: block;\n}\n.lol-uikit-flat-button-secondary-wrapper {\n  position: relative;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  box-sizing: border-box;\n  min-width: 90px;\n  height: 100%;\n  min-height: 32px;\n  cursor: pointer;\n  -webkit-user-select: none;\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .default,\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .over,\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .down,\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .disabled {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  box-sizing: border-box;\n  background: #1e2328;\n  box-shadow: 0 0 1px 1px #010a13, inset 0 0 1px 1px #010a13;\n  border: thin solid transparent;\n  border-image-slice: 1;\n  opacity: 0;\n  transition: opacity 200ms linear;\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .default {\n  opacity: 1;\n  border-image-source: linear-gradient(to top, #785b28 0%, #c89c3c 55%, #c8a355 71%, #c8aa6e 100%);\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .over {\n  background: linear-gradient(to bottom, #1e232a 0%, #1e232a 40%, rgba(118,97,51,0.8) 140%);\n  border-image-source: linear-gradient(to top, #c89c3c 0%, #dcc188 50%, #e1c998 71%, #f0e6d8 100%);\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .down,\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .click {\n  transition-duration: 100ms;\n  border-image-source: linear-gradient(to top, #6b5024, #463714);\n}\n.lol-uikit-flat-button-secondary-wrapper .button-frame-container .disabled {\n  border-color: #5c5b57;\n}\n.lol-uikit-flat-button-secondary-wrapper .lol-uikit-flat-button-secondary-content {\n  position: relative;\n  display: flex;\n  flex-basis: 100%;\n  align-items: center;\n  justify-content: center;\n  top: 1px;\n  padding: 1px 15px;\n  font-weight: 700;\n  white-space: nowrap;\n  color: transparent;\n  background-color: #cdbe91;\n  -webkit-background-clip: text;\n  transition: all 200ms linear;\n}\n.lol-uikit-flat-button-secondary-wrapper.over .lol-uikit-flat-button-secondary-content {\n  background-color: #f0e6d2;\n}\n.lol-uikit-flat-button-secondary-wrapper.down .lol-uikit-flat-button-secondary-content,\n.lol-uikit-flat-button-secondary-wrapper.click .lol-uikit-flat-button-secondary-content {\n  transition-duration: 100ms;\n  background-color: #785a28;\n}\n.lol-uikit-flat-button-secondary-wrapper.click {\n  pointer-events: none;\n}\n.lol-uikit-flat-button-secondary-wrapper.disabled {\n  pointer-events: none;\n}\n.lol-uikit-flat-button-secondary-wrapper.disabled .lol-uikit-flat-button-secondary-content {\n  background-color: #5c5b57;\n}\n', "", {
+                version: 3,
+                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-button-secondary/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
+                names: [],
+                mappings: "AAIA;EACE,6BAAa;ACHf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;AC8RA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,uBAAgB;EAIhB,4CAAwB;ADpS1B;AC2RE;EACE,eAAW;ADzRf;AC8RE;EACE,iBAAgB;AD5RpB;AApBA;EACE,cAAS;AAsBX;AAnBA;EACE,kBAAU;EACV,aAAS;EACT,mBAAa;EACb,uBAAiB;EACjB,sBAAY;EACZ,eAAW;EACX,YAAQ;EACR,gBAAY;EACZ,eAAQ;EACR,yBAAqB;AAqBvB;AAnBE;EACE,kBAAU;EACV,WAAO;EACP,YAAQ;AAqBZ;AAnBI;;;;EACE,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,sBAAY;EACZ,mBAAY;EACZ,0DAAkD;EAClD,8BAAQ;EACR,qBAAoB;EACpB,UAAS;EACT,gCAAY;AAwBlB;AArBI;EACE,UAAS;EACT,gGAAqB;AAuB3B;AApBI;EACE,yFAAY;EACZ,gGAAqB;AAsB3B;AAnBI;;EACE,0BAAqB;EACrB,8DAAqB;AAsB3B;AAnBI;EACE,qBAAc;AAqBpB;AAjBE;EACE,kBAAU;EACV,aAAS;EACT,gBAAY;EACZ,mBAAa;EACb,uBAAiB;EACjB,QAAK;EACL,iBAAS;EAET,gBAAa;EACb,mBAAa;EACb,kBAAO;EACP,yBAAkB;EAClB,6BAAyB;EACzB,4BAAY;AAkBhB;AAdI;EACE,yBAAkB;AAgBxB;AAXI;;EACE,0BAAqB;EACrB,yBAAkB;AAcxB;AAVE;EACE,oBAAgB;AAYpB;AATE;EACE,oBAAgB;AAWpB;AATI;EACE,yBAAkB;AAWxB",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n\r\n:host {\r\n  display: block;\r\n}\r\n\r\n.lol-uikit-flat-button-secondary-wrapper {\r\n  position: relative;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  box-sizing: border-box;\r\n  min-width: 90px;\r\n  height: 100%;\r\n  min-height: 32px;\r\n  cursor: pointer;\r\n  -webkit-user-select: none;\r\n\r\n  .button-frame-container {\r\n    position: absolute;\r\n    width: 100%;\r\n    height: 100%;\r\n\r\n    .default, .over, .down, .disabled {\r\n      position: absolute;\r\n      width: 100%;\r\n      height: 100%;\r\n      box-sizing: border-box;\r\n      background: $color_palette_grey3;\r\n      box-shadow: 0 0 1px 1px $color_palette_almostBlack, inset 0 0 1px 1px $color_palette_almostBlack;\r\n      border: thin solid transparent;\r\n      border-image-slice: 1;\r\n      opacity: 0;\r\n      transition: opacity 200ms linear;\r\n    }\r\n\r\n    .default {\r\n      opacity: 1;\r\n      border-image-source: $gradient-palette_button-gold-border;\r\n    }\r\n\r\n    .over {\r\n      background: $gradient-palette_button-gold-bg;\r\n      border-image-source: $gradient-palette_button-gold-hover-border;\r\n    }\r\n\r\n    .down, .click {\r\n      transition-duration: 100ms;\r\n      border-image-source: linear-gradient(to top, rgb(107, 80, 36), rgb(70, 55, 20));\r\n    }\r\n\r\n    .disabled {\r\n      border-color: $color_palette_grey_disabled;\r\n    }\r\n  }\r\n\r\n  .lol-uikit-flat-button-secondary-content {\r\n    position: relative;\r\n    display: flex;\r\n    flex-basis: 100%;\r\n    align-items: center;\r\n    justify-content: center;\r\n    top: 1px;\r\n    padding: 1px 15px;\r\n    @extend $typekit_text_s;\r\n    font-weight: 700;\r\n    white-space: nowrap;\r\n    color: transparent;\r\n    background-color: $color_palette_gold2;\r\n    -webkit-background-clip: text;\r\n    transition: all 200ms linear;\r\n  }\r\n\r\n  &.over {\r\n    .lol-uikit-flat-button-secondary-content {\r\n      background-color: $color_palette_gold1;\r\n    }\r\n  }\r\n\r\n  &.down, &.click {\r\n    .lol-uikit-flat-button-secondary-content {\r\n      transition-duration: 100ms;\r\n      background-color: $color_palette_gold5;\r\n    }\r\n  }\r\n\r\n  &.click {\r\n    pointer-events: none;\r\n  }\r\n\r\n  &.disabled {\r\n    pointer-events: none;\r\n\r\n    .lol-uikit-flat-button-secondary-content {\r\n      background-color: $color_palette_grey_disabled;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, o = n(1),
+                i = (r = n(37)) && r.__esModule ? r : {
+                    default: r
+                };
+            class a extends o.webComponents.ShadowElement {
+                templateMarkup() {
+                    return n(8)
+                }
+                stylesheetMarkup() {
+                    return n(109)
+                }
+                connectedCallback() {
+                    super.connectedCallback(), this._inputElementInitialized = !1, this._labelElementInitialized = !1, this.updateCheckedStateListener = this.updateCheckedStateListener || this._updateCheckedState.bind(this), this.toggleCheckedStateListener = this.toggleCheckedStateListener || this._toggleCheckedState.bind(this), this._initObserver = new MutationObserver(this._mutationCallback.bind(this)), this._initObserver.observe(this, {
+                        childList: !0
+                    });
+                    const e = this._getInput();
+                    e && this._initInputElement(e);
+                    const t = this._getLabel();
+                    t && this._initLabelElement(t), this.addEventListener("click", this.toggleCheckedStateListener)
+                }
+                _mutationCallback(e) {
+                    e.forEach((e => {
+                        if ("childList" === e.type) {
+                            Array.from(e.addedNodes).forEach((e => {
+                                "INPUT" === e.tagName && this._initInputElement(e), "LABEL" === e.tagName && this._initLabelElement(e)
+                            }))
+                        }
+                    }))
+                }
+                _initInputElement(e) {
+                    if (!this._inputElementInitialized) {
+                        const t = this,
+                            n = Object.getOwnPropertyDescriptor(e.__proto__, "checked"),
+                            r = n.set;
+                        n.set = function(e) {
+                            r.call(this, e), t._updateCheckedState()
+                        }, Object.defineProperty(e, "checked", n), e.addEventListener("change", this.updateCheckedStateListener), this._updateCheckedState(), e.addEventListener("click", (e => {
+                            e.stopPropagation()
+                        })), this._setUpDisabledAttributeObserver(), this._inputElementInitialized = !0
+                    }
+                    this._inputElementInitialized && this._labelElementInitialized && this._initObserver.disconnect()
+                }
+                _initLabelElement(e) {
+                    this._labelElementInitialized || (e.removeAttribute("for"), this._labelElementInitialized = !0), this._inputElementInitialized && this._labelElementInitialized && this._initObserver.disconnect()
+                }
+                _setUpDisabledAttributeObserver() {
+                    const e = this._getInput();
+                    if (!e) return;
+                    const t = new MutationObserver(this._observeDisabledAttribute.bind(this));
+                    t.observe(e, {
+                        attributes: !0,
+                        attributeFilter: ["disabled"]
+                    }), this.disabledAttributeObserver = t, this._observeDisabledAttribute()
+                }
+                disconnectedCallback() {
+                    super.disconnectedCallback();
+                    const e = this._getInput();
+                    e && e.removeEventListener("change", this.updateCheckedStateListener), this.disabledAttributeObserver && this.disabledAttributeObserver.disconnect()
+                }
+                _getInput() {
+                    return this.querySelector("input")
+                }
+                _getLabel() {
+                    return this.querySelector("label")
+                }
+                _getSpan() {
+                    return this.shadowRoot.querySelector("span")
+                }
+                _toggleCheckedState() {
+                    const e = this._getInput();
+                    if (e.click(), !e.disabled) {
+                        const t = new Event("checkboxToggle", {
+                            bubbles: !0
+                        });
+                        t.checked = e, this.dispatchEvent(t), this._playClickSound()
+                    }
+                }
+                _updateCheckedState() {
+                    this._getInput().checked ? this.classList.add("checked") : this.classList.remove("checked")
+                }
+                _observeDisabledAttribute() {
+                    const e = this._getInput();
+                    e && e.disabled ? this.classList.add("disabled") : this.classList.remove("disabled")
+                }
+                _playClickSound() {
+                    (0, o.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").playSound(i.default.flatCheckBoxClick)
+                }
+            }
+            a.tagName = "lol-uikit-flat-checkbox";
+            var s = a;
+            t.default = s
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, ':host ::slotted(label) {\n  font-family: var(--font-body);\n}\n:host ::slotted(label) {\n  -webkit-user-select: none;\n}\n:host ::slotted(label) {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host ::slotted(label) {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.1em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host ::slotted(label):lang(ja-jp) {\n  font-size: 13px;\n}\n:host ::slotted(label):lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  display: flex;\n  align-items: center;\n  cursor: pointer;\n}\n:host ::slotted(input) {\n  opacity: 0;\n  position: absolute;\n  pointer-events: none;\n}\n:host ::slotted(label) {\n  color: #a09b8c;\n  cursor: pointer;\n  margin: 1px 0 0 5px;\n}\n:host ::slotted(label):lang(ar-ae) {\n  direction: rtl;\n  margin: 1px 5px 0 0;\n}\n:host span.checkbox-span {\n  width: 14px;\n  height: 14px;\n  background: url("/fe/lol-uikit/images/checkbox-spritesheet.png") no-repeat;\n  cursor: pointer;\n  flex-shrink: 0;\n}\n:host ::slotted(input:checked) + span.checkbox-span {\n  background-position-y: -14px;\n}\n:host(.checked) span.checkbox-span {\n  background-position-y: -28px;\n}\n:host(.checked:hover:not(.disabled)) span.checkbox-span {\n  background-position-y: -42px;\n}\n:host(.disabled) {\n  -webkit-filter: brightness(0.5);\n  cursor: default;\n}\n:host(.disabled) span.checkbox-span,\n:host(.disabled):hover span.checkbox-span {\n  cursor: default;\n}\n:host(.disabled) ::slotted(label) {\n  color: #a09b8c;\n  cursor: default;\n}\n:host(:not(.disabled)) ::slotted(input:focus) + ::slotted(label) {\n  color: #f0e6d2;\n}\n:host(:not(.disabled):hover) span.checkbox-span {\n  background-position-y: -14px;\n}\n:host(:not(.disabled):hover) ::slotted(label) {\n  color: #f0e6d2;\n}\n:host(:lang(ar-ae)) {\n  direction: rtl;\n}\n', "", {
+                version: 3,
+                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-checkbox/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
+                names: [],
+                mappings: "AAIA;EACE,6BAAa;ACHf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;AC0WA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,qBAAgB;EAIhB,4CAAwB;ADhX1B;ACuWE;EACE,eAAW;ADrWf;AC0WE;EACE,iBAAgB;ADxWpB;AAnBA;EACE,aAAS;EACT,mBAAa;EACb,eAAQ;AAqBV;AAnBE;EACE,UAAS;EACT,kBAAU;EACV,oBAAgB;AAqBpB;AAlBE;EAEE,cAAO;EACP,eAAQ;EACR,mBAAQ;AAmBZ;AAjBI;EACE,cAAW;EACX,mBAAQ;AAmBd;AAfE;EACE,WAAO;EACP,YAAQ;EACR,0EAA+D;EAC/D,eAAQ;EACR,cAAa;AAiBjB;AAdE;EACE,4BAAuB;AAgB3B;AAXE;EACE,4BAAuB;AAa3B;AARE;EACE,4BAAuB;AAU3B;AANA;EACE,+BAAgB;EAChB,eAAQ;AAQV;AANE;;EACE,eAAQ;AASZ;AANE;EACE,cAAO;EACP,eAAQ;AAQZ;AAHE;EACE,cAAO;AAKX;AAAE;EACE,4BAAuB;AAE3B;AAAE;EACE,cAAO;AAEX;AAEA;EACE,cAAW;AAAb",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require '../../css/shared.styl';\r\n\r\n\r\n:host {\r\n  display: flex;\r\n  align-items: center;\r\n  cursor: pointer;\r\n\r\n  ::slotted(input) {\r\n    opacity: 0;\r\n    position: absolute;\r\n    pointer-events: none;\r\n  }\r\n\r\n  ::slotted(label) {\r\n    @extends $typekit_label;\r\n    color: $color_palette_grey1;\r\n    cursor: pointer;\r\n    margin: 1px 0 0 5px;\r\n\r\n    &:lang(ar-ae) {\r\n      direction: rtl;\r\n      margin: 1px 5px 0 0;\r\n    }\r\n  }\r\n\r\n  span.checkbox-span {\r\n    width: 14px;\r\n    height: 14px;\r\n    background: url('/fe/lol-uikit/images/checkbox-spritesheet.png') no-repeat;\r\n    cursor: pointer;\r\n    flex-shrink: 0;\r\n  }\r\n\r\n  ::slotted(input:checked) + span.checkbox-span {\r\n    background-position-y: -14px;\r\n  }\r\n}\r\n\r\n:host(.checked) {\r\n  span.checkbox-span {\r\n    background-position-y: -28px;\r\n  }\r\n}\r\n\r\n:host(.checked:hover:not(.disabled)) {\r\n  span.checkbox-span {\r\n    background-position-y: -42px;\r\n  }\r\n}\r\n\r\n:host(.disabled) {\r\n  -webkit-filter: brightness(0.5);\r\n  cursor: default;\r\n\r\n  span.checkbox-span, &:hover span.checkbox-span {\r\n    cursor: default;\r\n  }\r\n\r\n  ::slotted(label) {\r\n    color: $color_palette_grey1;\r\n    cursor: default;\r\n  }\r\n}\r\n\r\n:host(:not(.disabled)) {\r\n  ::slotted(input:focus) + ::slotted(label) {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n:host(:not(.disabled):hover) {\r\n  span.checkbox-span {\r\n    background-position-y: -14px;\r\n  }\r\n  ::slotted(label) {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n:host(:lang(ar-ae)) {\r\n  direction: rtl;\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = i(n(111)),
+                o = i(n(2));
+
+            function i(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            class a extends r.default {
+                templateMarkup() {
+                    return n(6)
+                }
+                stylesheetMarkup() {
+                    return n(115)
+                }
+                template() {
+                    return o.default.get().getElementById("lol-uikit-template-flat-dropdown")
+                }
+            }
+            a.tagName = "lol-uikit-flat-dropdown";
+            var s = a;
+            t.default = s
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(34),
+                o = n(1),
+                i = c(n(36)),
+                a = c(n(112)),
+                s = c(n(37)),
+                l = c(n(98)),
+                d = n(35);
+
+            function c(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            const p = ["close", "keyup", "mousedown", "blur"];
+            class A extends o.webComponents.ShadowElement {
+                template() {
+                    throw new Error("Must override this base class to get a dropdown element")
+                }
+                constructor() {
+                    super(), this.optionNodes = [], this.selected = !1, this.isDropdownOpen = !1, this.updateSelectedRequired = !0, this.currentElement = null, this.shadowContentElement = null, this.lightContentElement = null, this._dropdownSound = this._createSound(s.default.dropdownClick), this._handleClick = this._handleClick.bind(this), this._handleKeyUp = this._handleKeyUp.bind(this), this._handleDOMChange = this._handleDOMChange.bind(this), this._refreshSelected = () => {
+                        this.refreshSelected()
+                    }, this._handleClosableEvent = this._handleClosableEvent.bind(this)
+                }
+                connectedCallback() {
+                    super.connectedCallback();
+                    const e = this.getBoundingClientRect();
+                    this._windowHeight = window.innerHeight, this._windowScrollY = window.scrollY, this._elementOffsetTop = e.top + this._windowScrollY, this._offsetHeight = this.offsetHeight, this._findSelected(), this._updateSelected(), this._attachEvents(), this._updateClasses(), (0, a.default)(this).then((() => {
+                        this._checkOptionsRoom()
+                    })), this.tabIndex = 0
+                }
+                disconnectedCallback() {
+                    super.disconnectedCallback(), this._detachEvents()
+                }
+                _descendantOptions(e = "") {
+                    const t = ["lol-uikit-dropdown-option"].map((t => `${t}${e}`)).join(",");
+                    return Array.from(this.querySelectorAll(t))
+                }
+                _makeSelected(e) {
+                    this._descendantOptions().forEach((t => {
+                        t === e ? (t.removeAttribute("selected"), t.setAttribute("selected", !0)) : t.removeAttribute("selected")
+                    })), this.selected = e
+                }
+                select(e) {
+                    const t = this._descendantOptions();
+                    for (let n = 0; n < t.length; n++) {
+                        const r = t[n];
+                        if (!0 === ("function" == typeof e ? e(r) : r.getAttribute("value") === e)) return this.selectOption(r)
+                    }
+                }
+                selectOption(e) {
+                    if (e !== this.selected) {
+                        this._makeSelected(e);
+                        const t = new Event("selected", {
+                            composed: !0
+                        });
+                        t.selected = this.selected, this.dispatchEvent(t), this._updateSelected()
+                    }
+                    this.hasAttribute("data-should-stay-open") || this._close()
+                }
+                refreshSelected() {
+                    this.updateSelectedRequired = !0, this._findSelected(), this._updateSelected()
+                }
+                _checkOptionsRoom() {
+                    const e = this.shadowRoot.querySelector(".ui-dropdown"),
+                        t = this.shadowRoot.querySelector(".ui-dropdown-options-container lol-uikit-scrollable"),
+                        n = this.getAttribute("direction"),
+                        r = this._getTopOfDropdown(),
+                        o = this._getBottomOfDropdown();
+                    if ("upward" === n) return e.classList.add("opens-upward"), void this._constrainHeightToTop(t, r);
+                    if ("downward" === n) return void this._constrainHeightToBottom(t, o);
+                    const i = this._getWindowHeight();
+                    this._extendsBelowClient(t, o) && r >= i / 2 ? (e.classList.add("opens-upward"), this._constrainHeightToTop(t, r)) : (e.classList.remove("opens-upward"), this._constrainHeightToBottom(t, o))
+                }
+                _extendsBelowClient(e, t) {
+                    const n = this._getWindowHeight();
+                    return t + e.offsetHeight > n
+                }
+                _extendsAboveClient(e, t) {
+                    return t - e.offsetHeight < 10
+                }
+                _constrainHeightToTop(e, t) {
+                    if (this._extendsAboveClient(e, t)) {
+                        const n = Math.floor(t - 10);
+                        e.style.maxHeight = n + "px"
+                    }
+                }
+                _constrainHeightToBottom(e, t) {
+                    const n = this._getWindowHeight();
+                    if (this._extendsBelowClient(e, t)) {
+                        const r = Math.floor(n - t - 10);
+                        e.style.maxHeight = r + "px"
+                    }
+                }
+                _getWindowHeight() {
+                    return this._windowHeight - 10
+                }
+                _getBottomOfDropdown() {
+                    return this._windowScrollY + this._elementOffsetTop + this._offsetHeight
+                }
+                _getTopOfDropdown() {
+                    return this._windowScrollY + this._elementOffsetTop
+                }
+                _getOptionHeight(e) {
+                    return e.offsetHeight
+                }
+                _findSelected() {
+                    const e = this._descendantOptions("[selected]")[0];
+                    if (e) return void(this.selected = e);
+                    const t = this._descendantOptions(":not([unselectable]):not([disabled])")[0];
+                    t && (t.setAttribute("selected", !0), this.selected = t)
+                }
+                _updateSelected() {
+                    if (this.currentElement && this.updateSelectedRequired) {
+                        const e = this.getAttribute("staticDisplay");
+                        e ? (this.updateSelectedRequired = !1, this.currentElement.innerText !== e && (this.currentElement.innerText = e)) : this.selected && this.currentElement.innerHTML !== this.selected.innerHTML && (this.currentElement.innerHTML = this.selected.innerHTML)
+                    }
+                }
+                _attachEvents() {
+                    this.shadowRoot.querySelector(".ui-dropdown-current").addEventListener("click", this._handleClick), this.addEventListener("keyup", this._handleKeyUp), this.addEventListener("reset", this._refreshSelected), this._observer = new MutationObserver(this._handleDOMChange), this._observer.observe(this, {
+                        childList: !0,
+                        subtree: !0,
+                        characterData: !0,
+                        attributes: !0,
+                        attributeOldValue: !0
+                    })
+                }
+                _detachEvents() {
+                    this.shadowRoot.querySelector(".ui-dropdown-current").removeEventListener("click", this._handleClick), this.removeEventListener("keyup", this._handleKeyUp), this.removeEventListener("reset", this._refreshSelected), this._observer.disconnect(), this._observer = null
+                }
+                _handleDOMChange(e) {
+                    let t, n, r;
+                    e.forEach((e => {
+                        const {
+                            attributeName: o
+                        } = e, {
+                            oldValue: i
+                        } = e, {
+                            target: a
+                        } = e;
+                        if ("childList" === e.type) {
+                            Array.from(e.addedNodes).forEach((e => {
+                                e instanceof l.default && e.getAttribute("selected") && (r = e)
+                            })), this._checkOptionsRoom()
+                        }
+                        "disabled" === o ? (t = !(0, d.isAttrTruthy)("disabled", i), n = (0, d.isAttrTruthy)("disabled", a.getAttribute("disabled")), this.isDropdownOpen && t && n && this._close()) : "selected" === o && (0, d.isAttrTruthy)("selected", a.getAttribute("selected")) && this._descendantOptions().forEach((function(e) {
+                            e !== a && e.getAttribute("selected") && e.removeAttribute("selected")
+                        }))
+                    })), r && this._descendantOptions().forEach((function(e) {
+                        e !== r && e.getAttribute("selected") && e.removeAttribute("selected")
+                    })), this._updateClasses(), this.refreshSelected()
+                }
+                _handleKeyUp(e) {
+                    32 !== e.keyCode && 13 !== e.keyCode || this._toggleDropdown()
+                }
+                _handleClick() {
+                    this._toggleDropdown()
+                }
+                _toggleDropdown() {
+                    this._isDisabled() || (this.isDropdownOpen ? this._close() : this._open(), this._dropdownSound.play())
+                }
+                _createSound(e) {
+                    return (0, r.createSound)("sfx-ui", e, {
+                        allowConcurrency: !1
+                    })
+                }
+                _handleClosableEvent(e = {}) {
+                    const t = this === e.target,
+                        n = (0, i.default)(this).has(e.target).length > 0;
+                    t || n || this._close()
+                }
+                _open() {
+                    this._isDisabled() || (this.isDropdownOpen = !0, this.classList.add("active"), (0, i.default)(window).on(p.join(" "), this._handleClosableEvent), this._scrollToSelectedOption())
+                }
+                _close() {
+                    this.isDropdownOpen = !1, this.classList.remove("active"), (0, i.default)(window).off(p.join(" "), this._handleClosableEvent)
+                }
+                _isDisabled() {
+                    return (0, d.isAttrTruthy)("disabled", this.getAttribute("disabled"))
+                }
+                _updateContentElement() {
+                    this.isStylableContent = (0, d.isAttrTruthy)("stylablecontent", this.getAttribute("stylablecontent")), this.isStylableContent && !this.lightContentElement ? (this.lightContentElement = document.createElement("div"), this.lightContentElement.setAttribute("slot", ".ui-dropdown-current-content.light"), this.lightContentElement.classList.add("ui-dropdown-current-content"), this.lightContentElement.classList.add("light"), this.appendChild(this.lightContentElement)) : !this.isStylableContent && this.lightContentElement && (this.removeChild(this.lightContentElement), this.lightContentElement = null), this.shadowContentElement || (this.shadowContentElement = this.shadowRoot.querySelector(".ui-dropdown-current-content")), this.currentElement = this.isStylableContent ? this.lightContentElement : this.shadowContentElement
+                }
+                _updateClasses() {
+                    this.classList.toggle("disabled", this._isDisabled()), this._updateContentElement()
+                }
+                _scrollToSelectedOption() {
+                    const e = this.shadowRoot.querySelector("lol-uikit-scrollable");
+                    if (e && e.clientHeight < e.scrollHeight) {
+                        const t = this._descendantOptions()[0],
+                            n = this._descendantOptions("[selected]")[0];
+                        if (t && n) {
+                            const r = t.offsetTop,
+                                o = n.offsetTop;
+                            e.scrollTop = o - r
+                        }
+                    }
+                }
+            }
+            t.default = A
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = function(e) {
+                return new Promise((function(t) {
+                    setTimeout((function() {
+                        o(e) ? t(e) : document.body.contains(e) ? i(e, t) : function(e, t) {
+                            e.classList.add("uikit-added-to-dom"), e.addEventListener("animationstart", (function n(r) {
+                                "uikit-added-to-dom-animation" === r.animationName && (r.stopPropagation(), r.preventDefault(), e.classList.remove("uikit-added-to-dom"), e.removeEventListener("animationstart", n), o(e) ? t(e) : i(e, t))
+                            }))
+                        }(e, t)
+                    }), 0)
+                }))
+            }, n(113);
+            var r = n(114);
+
+            function o(e) {
+                const t = e.getBoundingClientRect();
+                return t.width > 0 || t.height > 0
+            }
+
+            function i(e, t) {
+                (0, r.addResizeListener)(e, (function n() {
+                    o(e) && ((0, r.removeResizeListener)(e, n), t(e))
+                }))
+            }
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t)
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.addResizeListener = function(e, t) {
+                if (!e.__resizeListeners__) {
+                    e.__resizeListeners__ = [], "static" === getComputedStyle(e).position && (r.logger.trace("Calling addResizeListener on a DOM element with its CSS position property set to static will result in it automatically being changed to position: relative."), e.style.position = "relative");
+                    const t = e.__resizeTrigger__ = document.createElement("object");
+                    t.setAttribute("style", "display: block; position: absolute;top: 0; left: 0; height: 100%; width: 100%; overflow: hidden;pointer-events: none; z-index: -1;"), t.__resizeElement__ = e, t.classList.add("uikit-resize-detection-helper"), t.onload = i, t.type = "text/html", t.data = "about:blank", e.appendChild(t)
+                }
+                e.__resizeListeners__.push(t)
+            }, t.removeResizeListener = function(e, t) {
+                if (!e.__resizeListeners__ || 0 === e.__resizeListeners__.length) return;
+                e.__resizeListeners__.splice(e.__resizeListeners__.indexOf(t), 1), e.__resizeListeners__.length || (e.__resizeTrigger__.contentDocument.defaultView.removeEventListener("resize", o), e.__resizeTrigger__ = !e.removeChild(e.__resizeTrigger__))
+            };
+            var r = n(1);
+
+            function o(e) {
+                const t = e.target || e.srcElement;
+                t.__resizeRAF__ && t.cancelAnimationFrame(t.__resizeRAF__), t.__resizeRAF__ = t.requestAnimationFrame((function() {
+                    const n = t.__resizeTrigger__;
+                    n.__resizeListeners__.forEach((function(t) {
+                        t.call(n, e)
+                    }))
+                }))
+            }
+
+            function i() {
+                this.contentDocument.defaultView.__resizeTrigger__ = this.__resizeElement__, this.contentDocument.defaultView.addEventListener("resize", o)
+            }
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27),
+                i = n(100),
+                a = n(116),
+                s = n(117),
+                l = o(r),
+                d = i(a),
+                c = i(s);
+            l.push([e.id, ":host .ui-dropdown .ui-dropdown-current {\n  font-family: var(--font-display);\n}\n:host .ui-dropdown .ui-dropdown-current {\n  -webkit-user-select: none;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  text-transform: uppercase;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ko-kr),\n:host .ui-dropdown .ui-dropdown-current:lang(ja-jp),\n:host .ui-dropdown .ui-dropdown-current:lang(tr-tr),\n:host .ui-dropdown .ui-dropdown-current:lang(el-gr),\n:host .ui-dropdown .ui-dropdown-current:lang(th-th),\n:host .ui-dropdown .ui-dropdown-current:lang(zh-tw) {\n  text-transform: none;\n}\n:host .ui-dropdown .ui-dropdown-current {\n  color: #f0e6d2;\n  font-size: 18px;\n  font-weight: 700;\n  line-height: 22px;\n  letter-spacing: 0.05em;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host(.active) .ui-dropdown .ui-dropdown-options-container {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625, #463714) 1;\n}\n:host {\n  --flat-dropdown-current-height: 40px;\n  --flat-dropdown-scrollable-max-height: none;\n  --flat-dropdownactive-z-index: auto;\n  --flat-dropdownactive-max-width: none;\n  --flat-dropdownactive-current-display: flex;\n  --flat-dropdownactive-opens-upward-container-padding: 0 0 40px 0;\n  --flat-dropdownactive-opens-upward-container-margin: 0;\n  --flat-dropdown-current-content-display: block;\n  --flat-dropdown-current-content-max-width: none;\n  --flat-dropdown-current-content-text-transform: none;\n  --flat-dropdown-current-content-white-space: normal;\n  --flat-dropdown-current-content-text-overflow: clip;\n  --flat-dropdown-current-content-overflow: visible;\n  --flat-dropdown-current-content-color: #cdbe91;\n  --flat-dropdown-current-content-font-size: 18px;\n  --flat-dropdown-current-content-line-height: 22px;\n  --flat-dropdown-current-content-letter-spacing: 0.025em;\n  --flat-dropdown-direction-rtl: rtl;\n  --flat-dropdown-current-after-margin-rtl: 0 7px 0 0;\n}\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\n  display: none;\n}\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\n  display: none;\n}\n:host .ui-dropdown-current-content,\n:host ::slotted(.ui-dropdown-current-content) {\n  display: var(--flat-dropdown-current-content-display);\n  max-width: var(--flat-dropdown-current-content-max-width);\n  text-transform: var(--flat-dropdown-current-content-text-transform);\n  white-space: var(--flat-dropdown-current-content-white-space);\n  text-overflow: var(--flat-dropdown-current-content-text-overflow);\n  overflow: var(--flat-dropdown-current-content-overflow);\n  color: var(--flat-dropdown-current-content-color);\n  font-size: var(--flat-dropdown-current-content-font-size);\n  line-height: var(--flat-dropdown-current-content-line-height);\n  letter-spacing: var(--flat-dropdown-current-letter-spacing);\n}\n:host {\n  display: inline-flex;\n  flex-direction: column;\n  width: 100%;\n  height: 40px;\n  outline: 0;\n}\n:host .ui-dropdown {\n  display: inline-flex;\n  flex-direction: column;\n  box-sizing: border-box;\n  position: relative;\n  user-select: none;\n  margin: 0;\n  width: 100%;\n  padding: 0;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  direction: var(--flat-dropdown-direction-rtl);\n}\n:host .ui-dropdown .ui-dropdown-current {\n  display: flex;\n  flex-direction: row;\n  background: none;\n  position: absolute;\n  height: var(--flat-dropdown-current-height);\n  margin: 0;\n  align-items: center;\n  padding: 0 10px;\n  cursor: pointer;\n}\n:host .ui-dropdown .ui-dropdown-current:hover {\n  color: #f0e6d2;\n}\n:host .ui-dropdown .ui-dropdown-current:hover::after {\n  -webkit-filter: brightness(2.2);\n}\n:host .ui-dropdown .ui-dropdown-current::after {\n  content: '';\n  background: url(" + d + ") center no-repeat;\n  width: 13px;\n  height: 19px;\n  margin: 0 0 0 7px;\n}\n:host .ui-dropdown .ui-dropdown-current:lang(ar-ae)::after {\n  margin: var(--flat-dropdown-current-after-margin-rtl);\n}\n:host .ui-dropdown .ui-dropdown-options-container {\n  background-color: #010a13;\n  width: 100%;\n  opacity: 0;\n  position: absolute;\n  height: 0;\n  visibility: hidden;\n  transition: opacity 400ms;\n}\n:host .ui-dropdown .ui-dropdown-options-container lol-uikit-scrollable {\n  max-height: var(--flat-dropdown-scrollable-max-height);\n}\n:host .ui-dropdown.opens-upward .ui-dropdown-options-container {\n  bottom: 100%;\n  top: auto;\n  margin-bottom: -42px;\n}\n:host(.active) .ui-dropdown {\n  z-index: var(--flat-dropdownactive-z-index);\n  max-width: var(--flat-dropdownactive-max-width);\n}\n:host(.active) .ui-dropdown .ui-dropdown-current {\n  display: var(--flat-dropdownactive-current-display);\n  color: #785a28;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current:hover {\n  color: #785a28;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current:hover::after {\n  -webkit-filter: none;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current::after {\n  background-image: url(" + c + ");\n}\n:host(.active) .ui-dropdown .ui-dropdown-options-container {\n  border-width: 2px;\n  padding-top: 40px;\n  width: 100%;\n  opacity: 1;\n  height: auto;\n  transition: opacity 400ms;\n  visibility: visible;\n}\n:host(.active) .ui-dropdown.opens-upward .ui-dropdown-options-container {\n  padding: var(--flat-dropdownactive-opens-upward-container-padding);\n  margin: var(--flat-dropdownactive-opens-upward-container-margin);\n}\n:host(.disabled) {\n  cursor: default;\n  pointer-events: none;\n}\n:host(.disabled) .ui-dropdown .ui-dropdown-current {\n  color: #3c3c41;\n}\n:host(.disabled) .ui-dropdown .ui-dropdown-current::after {\n  -webkit-filter: grayscale(100%);\n  opacity: 0.35;\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-dropdown/component-style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/gradient-palette.styl"],
+                names: [],
+                mappings: "AAAA;EACE,gCAAa;ACCf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;ACyBA;EACE,yBAAgB;ADvBlB;ACwBE;;;;;;EAME,oBAAgB;ADtBpB;ACwIA;EAIE,cAAO;EACP,eAAW;EACX,gBAAa;EACb,iBAAa;EACb,sBAAgB;ADzIlB;AC0IE;EACE,iBAAgB;ADxIpB;AEoHA;EACE,8BAAQ;EACR,yDAAc;AFlHhB;AA5BA;EACE,oCAAgC;EAChC,2CAAuC;EACvC,mCAA+B;EAC/B,qCAAiC;EACjC,2CAAuC;EACvC,gEAAsD;EACtD,sDAAqD;EAErD,8CAAyC;EACzC,+CAA2C;EAC3C,oDAAgD;EAChD,mDAA6C;EAC7C,mDAA+C;EAC/C,iDAA0C;EAC1C,8CAAuC;EACvC,+CAA2C;EAC3C,iDAA6C;EAC7C,uDAAgD;EAChD,kCAA+B;EAC/B,mDAA0C;AA6B5C;AA1BA;EACE,aAAS;AA4BX;AA1BA;EACE,aAAS;AA4BX;AAzBA;;EAEE,qDAAS;EACT,yDAAW;EACX,mEAAgB;EAChB,6DAAa;EACb,iEAAe;EACf,uDAAU;EACV,iDAAO;EACP,yDAAW;EACX,6DAAa;EACb,2DAAgB;AA2BlB;AAvBA;EACE,oBAAS;EACT,sBAAgB;EAChB,WAAO;EACP,YAAQ;EACR,UAAS;AAyBX;AAvBE;EACE,oBAAS;EACT,sBAAgB;EAChB,sBAAY;EACZ,kBAAU;EACV,iBAAa;EACb,SAAQ;EACR,WAAO;EACP,UAAS;AAyBb;AAvBI;EACE,6CAAW;AAyBjB;AAtBI;EAEE,aAAS;EACT,mBAAgB;EAChB,gBAAY;EACZ,kBAAU;EACV,2CAAQ;EACR,SAAQ;EACR,mBAAa;EACb,eAAS;EACT,eAAQ;AAuBd;AArBM;EACE,cAAO;AAuBf;AAtBQ;EACE,+BAAgB;AAwB1B;AApBM;EACE,WAAS;EACT,oEAAgD;EAChD,WAAO;EACP,YAAQ;EACR,iBAAQ;AAsBhB;AApBM;EACE,qDAAQ;AAsBhB;AAlBI;EACE,yBAAkB;EAClB,WAAO;EACP,UAAS;EACT,kBAAU;EACV,SAAQ;EACR,kBAAY;EACZ,yBAAY;AAoBlB;AAnBM;EACE,sDAAY;AAqBpB;AAhBM;EACE,YAAQ;EACR,SAAK;EACL,oBAAe;AAkBvB;AAXI;EAEE,2CAAS;EACT,+CAAW;AAYjB;AAVM;EACE,mDAAS;EACT,cAAO;AAYf;AAVQ;EACE,cAAO;AAYjB;AAXU;EACE,oBAAgB;AAa5B;AATQ;EACE,yDAA6D;AAWvE;AAPM;EAEE,iBAAc;EACd,iBAAa;EACb,WAAO;EACP,UAAS;EACT,YAAQ;EACR,yBAAY;EACZ,mBAAY;AAQpB;AAJQ;EACE,kEAAS;EACT,gEAAQ;AAMlB;AAAE;EACE,eAAQ;EACR,oBAAgB;AAEpB;AAAM;EACE,cAAO;AAEf;AADQ;EACE,+BAAgB;EAChB,aAAS;AAGnB",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/ui-colors.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --flat-dropdown-current-height: 40px;\r\n  --flat-dropdown-scrollable-max-height: none;\r\n  --flat-dropdownactive-z-index: auto;\r\n  --flat-dropdownactive-max-width: none;\r\n  --flat-dropdownactive-current-display: flex;\r\n  --flat-dropdownactive-opens-upward-container-padding: 0 0 40px 0;\r\n  --flat-dropdownactive-opens-upward-container-margin: 0;\r\n\r\n  --flat-dropdown-current-content-display: block;\r\n  --flat-dropdown-current-content-max-width: none;\r\n  --flat-dropdown-current-content-text-transform: none;\r\n  --flat-dropdown-current-content-white-space: normal;\r\n  --flat-dropdown-current-content-text-overflow: clip;\r\n  --flat-dropdown-current-content-overflow: visible;\r\n  --flat-dropdown-current-content-color: $color_palette_gold2;\r\n  --flat-dropdown-current-content-font-size: 18px;\r\n  --flat-dropdown-current-content-line-height: 22px;\r\n  --flat-dropdown-current-content-letter-spacing: .025em;\r\n  --flat-dropdown-direction-rtl: rtl;\r\n  --flat-dropdown-current-after-margin-rtl: 0 7px 0 0;\r\n}\r\n\r\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\r\n  display: none;\r\n}\r\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\r\n  display: none;\r\n}\r\n\r\n:host .ui-dropdown-current-content,\r\n:host ::slotted(.ui-dropdown-current-content) {\r\n  display: var(--flat-dropdown-current-content-display);\r\n  max-width: var(--flat-dropdown-current-content-max-width);\r\n  text-transform: var(--flat-dropdown-current-content-text-transform);\r\n  white-space: var(--flat-dropdown-current-content-white-space);\r\n  text-overflow: var(--flat-dropdown-current-content-text-overflow);\r\n  overflow: var(--flat-dropdown-current-content-overflow);\r\n  color: var(--flat-dropdown-current-content-color);\r\n  font-size: var(--flat-dropdown-current-content-font-size);\r\n  line-height: var(--flat-dropdown-current-content-line-height);\r\n  letter-spacing: var(--flat-dropdown-current-letter-spacing);\r\n}\r\n\r\n\r\n:host {\r\n  display: inline-flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  height: 40px;\r\n  outline: 0;\r\n\r\n  .ui-dropdown {\r\n    display: inline-flex;\r\n    flex-direction: column;\r\n    box-sizing: border-box;\r\n    position: relative;\r\n    user-select: none;\r\n    margin: 0;\r\n    width: 100%;\r\n    padding: 0;\r\n\r\n    &:lang(ar-ae) {\r\n      direction: var(--flat-dropdown-direction-rtl);\r\n    }\r\n\r\n    .ui-dropdown-current {\r\n      @extends $typekit_h4;\r\n      display: flex;\r\n      flex-direction: row;\r\n      background: none;\r\n      position: absolute;\r\n      height: var(--flat-dropdown-current-height);\r\n      margin: 0;\r\n      align-items: center;\r\n      padding: 0 10px;\r\n      cursor: pointer;\r\n\r\n      &:hover {\r\n        color: $color_palette_gold1;\r\n        &::after {\r\n          -webkit-filter: brightness(2.2);\r\n        }\r\n      }\r\n\r\n      &::after {\r\n        content: '';\r\n        background: url('../../images/up-down-arrow.png') center no-repeat;\r\n        width: 13px;\r\n        height: 19px;\r\n        margin: 0 0 0 7px;\r\n      }\r\n      &:lang(ar-ae)::after {\r\n        margin: var(--flat-dropdown-current-after-margin-rtl);\r\n      }\r\n    }\r\n\r\n    .ui-dropdown-options-container {\r\n      background-color: $color_palette_almostBlack;\r\n      width: 100%;\r\n      opacity: 0;\r\n      position: absolute;\r\n      height: 0;\r\n      visibility: hidden;\r\n      transition: opacity 400ms;\r\n      lol-uikit-scrollable {\r\n        max-height: var(--flat-dropdown-scrollable-max-height);\r\n      }\r\n    }\r\n\r\n    &.opens-upward {\r\n      .ui-dropdown-options-container {\r\n        bottom: 100%;\r\n        top: auto;\r\n        margin-bottom: -42px;\r\n      }\r\n    }\r\n  }\r\n\r\n\r\n  &(.active) {\r\n    .ui-dropdown {\r\n\r\n      z-index: var(--flat-dropdownactive-z-index);\r\n      max-width: var(--flat-dropdownactive-max-width);\r\n\r\n      .ui-dropdown-current {\r\n        display: var(--flat-dropdownactive-current-display);\r\n        color: $color_palette_gold5;\r\n\r\n        &:hover {\r\n          color: $color_palette_gold5;\r\n          &::after {\r\n            -webkit-filter: none;\r\n          }\r\n        }\r\n\r\n        &::after {\r\n          background-image: url('../../images/up-down-arrow-locked.png');\r\n        }\r\n      }\r\n\r\n      .ui-dropdown-options-container {\r\n        @extends $gradient-palette_button-click-border;\r\n        border-width: 2px;\r\n        padding-top: 40px;\r\n        width: 100%;\r\n        opacity: 1;\r\n        height: auto;\r\n        transition: opacity 400ms;\r\n        visibility: visible;\r\n      }\r\n\r\n      &.opens-upward {\r\n        .ui-dropdown-options-container {\r\n          padding: var(--flat-dropdownactive-opens-upward-container-padding);\r\n          margin: var(--flat-dropdownactive-opens-upward-container-margin);\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  &(.disabled) {\r\n    cursor: default;\r\n    pointer-events: none;\r\n    .ui-dropdown {\r\n      .ui-dropdown-current {\r\n        color: $color_palette_grey2;\r\n        &::after {\r\n          -webkit-filter: grayscale(100%);\r\n          opacity: 0.35;\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n", "// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}"],
+                sourceRoot: ""
+            }]), e.exports = l
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "up-down-arrow.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "up-down-arrow-locked.png"
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, o = n(34),
+                i = n(1),
+                a = (r = n(37)) && r.__esModule ? r : {
+                    default: r
+                };
+            class s extends i.webComponents.ShadowElement {
+                templateMarkup() {
+                    return n(119)
+                }
+                connectedCallback() {
+                    super.connectedCallback();
+                    const e = this.shadowRoot;
+                    this.focusInEventHandler = this.focusInEventHandler.bind(this), e.addEventListener("focusin", this.focusInEventHandler), this._focusInSound = this._createSound(a.default.focus)
+                }
+                focusInEventHandler() {
+                    this._focusInSound && this._focusInSound.play()
+                }
+                _createSound(e) {
+                    return (0, o.createSound)("sfx-ui", e, {
+                        allowConcurrency: !1
+                    })
+                }
+            }
+            s.tagName = "lol-uikit-flat-input";
+            var l = s;
+            t.default = l
+        }, e => {
+            "use strict";
+            e.exports = "<template>\r\n  <slot>\x3c!-- input --\x3e</slot>\r\n</template>"
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1);
+            class o extends r.webComponents.ShadowElement {
+                static get observedAttributes() {
+                    return []
+                }
+                templateMarkup() {
+                    return n(121)
+                }
+                stylesheetMarkup() {
+                    return n(122)
+                }
+            }
+            o.tagName = "lol-uikit-flat-textarea";
+            var i = o;
+            t.default = i
+        }, e => {
+            "use strict";
+            e.exports = "<template>\r\n  <slot />\r\n</template>\r\n"
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, ':host ::slotted(textarea) {\n  font-family: var(--font-body);\n}\n:host ::slotted(textarea) {\n  -webkit-user-select: none;\n}\n:host ::slotted(textarea) {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host ::slotted(textarea) {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host ::slotted(textarea):lang(ja-jp) {\n  font-size: 13px;\n}\n:host ::slotted(textarea):lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host {\n  display: block;\n}\n:host ::slotted(textarea) {\n  display: block;\n  box-sizing: border-box;\n  width: 100%;\n  height: 100%;\n  margin-top: 2px;\n  font-size: 12px;\n  color: #f0e6d2;\n  border-color: #785a28;\n  border-width: 1px;\n  border-style: solid;\n  background-color: rgba(0,0,0,0.7);\n  vertical-align: middle;\n  padding: 8px 6px;\n  -webkit-appearance: none;\n  outline: none;\n  box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset, 0 0 0 1px rgba(0,0,0,0.25);\n  resize: none;\n}\n:host ::slotted(textarea):focus {\n  background: linear-gradient(to bottom, rgba(7,16,25,0.7), rgba(32,39,44,0.7));\n  border-image: linear-gradient(to bottom, #785a28, #c8aa6e) 1 stretch;\n}\n:host ::slotted(textarea):disabled {\n  background-color: #1e2328;\n  border-color: #3c3c41;\n}\n:host ::slotted(textarea)::-webkit-input-placeholder {\n  color: #a09b8c;\n  padding-left: 3px;\n  font-style: italic;\n}\n:host ::slotted(textarea)::-webkit-textfield-decoration-container {\n  position: relative;\n}\n', "", {
+                version: 3,
+                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flat-textarea/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
+                names: [],
+                mappings: "AAIA;EACE,6BAAa;ACHf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;AC8RA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,uBAAgB;EAIhB,4CAAwB;ADpS1B;AC2RE;EACE,eAAW;ADzRf;AC8RE;EACE,iBAAgB;AD5RpB;AAjBA;EACE,cAAS;AAmBX;AAjBE;EAEE,cAAS;EACT,sBAAY;EACZ,WAAO;EACP,YAAQ;EACR,eAAY;EACZ,eAAW;EACX,cAAO;EACP,qBAAc;EACd,iBAAc;EACd,mBAAc;EACd,iCAAkB;EAClB,sBAAgB;EAChB,gBAAS;EACT,wBAAoB;EACpB,aAAS;EACT,wEAA4C;EAC5C,YAAQ;AAkBZ;AAhBI;EACE,6EAAY;EACZ,oEAAc;AAkBpB;AAdI;EACE,yBAAkB;EAClB,qBAAc;AAgBpB;AAZI;EACE,cAAO;EACP,iBAAc;EACd,kBAAY;AAclB;AAXI;EACE,kBAAU;AAahB",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/sizes';\r\n\r\n$base-image-path = '/fe/lol-uikit/images/';\r\n\r\n@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit';\r\n\r\n:host {\r\n  display: block;\r\n\r\n  ::slotted(textarea) {\r\n    @extend $typekit_text_s;\r\n    display: block;\r\n    box-sizing: border-box;\r\n    width: 100%;\r\n    height: 100%;\r\n    margin-top: 2px;\r\n    font-size: 12px;\r\n    color: $color_palette_gold1;\r\n    border-color: $color_palette_gold5;\r\n    border-width: 1px;\r\n    border-style: solid;\r\n    background-color: rgba(0,0,0,0.7);\r\n    vertical-align: middle;\r\n    padding: 8px 6px;\r\n    -webkit-appearance: none;\r\n    outline: none;\r\n    box-shadow: 0 0 0 1px rgba(0,0,0,0.25) inset, 0 0 0 1px rgba(0,0,0,0.25);\r\n    resize: none;\r\n\r\n    &:focus {\r\n      background: linear-gradient(to bottom, rgba(7, 16, 25, 0.7),rgba(32, 39, 44, 0.7));\r\n      border-image: linear-gradient(to bottom, $color_palette_gold5, $color_palette_gold3) 1 stretch;\r\n    }\r\n\r\n    // We need to figure out the real styles for this\r\n    &:disabled {\r\n      background-color: $color_palette_grey3;\r\n      border-color: $color_palette_grey2;\r\n    }\r\n\r\n    // Placeholder text styling.\r\n    &::-webkit-input-placeholder {\r\n      color: $color_palette_grey1;\r\n      padding-left: 3px;\r\n      font-style: italic;\r\n    }\r\n\r\n    &::-webkit-textfield-decoration-container {\r\n      position: relative;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1);
+            class o extends r.webComponents.ShadowElement {
+                templateMarkup() {
+                    return n(124)
+                }
+                stylesheetMarkup() {
+                    return n(125)
+                }
+                static get observedAttributes() {
+                    return ["orientation", "show", "animated", "caretless", "borderless", "caretoffset", "dismissable", "dismissable-type", "close-event-name"]
+                }
+                connectedCallback() {
+                    if (super.connectedCallback(), this.hasDismissableIcon()) {
+                        const e = this.getAttribute("close-event-name");
+                        this.shadowRoot.querySelector(".lol-uikit-dialog-frame-toast-close-button").addEventListener("click", (() => {
+                            this.dispatchEvent(new Event(e, {
+                                bubbles: !0,
+                                composed: !0
+                            }))
+                        }))
+                    }
+                }
+                processAttributes() {
+                    this.processWrapper(), this.processBorders()
+                }
+                getOrientation() {
+                    return this.getAttribute("orientation") || "bottom"
+                }
+                processWrapper() {
+                    const e = this.shadowRoot.querySelector(".lol-uikit-flyout-frame-wrapper"),
+                        t = this.getOrientation(),
+                        n = this.getAttribute("show") || "true";
+                    e && (e.classList.remove("top", "bottom", "left", "right"), e.classList.add(t), this.setClosable(), "true" === n ? (e.classList.remove("idle", "animation", "closing"), this.setAnimated()) : e.classList.contains("idle") && (e.classList.remove("idle"), e.classList.add("closing")))
+                }
+                isVertical() {
+                    const e = this.getOrientation();
+                    return "top" === e || "bottom" === e
+                }
+                isHorizontal() {
+                    const e = this.getOrientation();
+                    return "left" === e || "right" === e
+                }
+                isAnimated() {
+                    return "true" === this.getAttribute("animated")
+                }
+                hasDismissableIcon() {
+                    return "inside" === this.getAttribute("dismissable-type") && "true" === this.getAttribute("dismissable")
+                }
+                processBorders() {
+                    const e = this.shadowRoot.querySelector(".caret"),
+                        t = this.shadowRoot.querySelector(".border"),
+                        n = this.shadowRoot.querySelector(".sub-border");
+                    if (!e || !t || !n) return;
+                    const r = "true" === this.getAttribute("caretless"),
+                        o = "true" === this.getAttribute("borderless"),
+                        i = o || r;
+                    if (e.style.visibility = r ? "hidden" : "visible", t.style.visibility = o ? "hidden" : "visible", n.style.visibility = i ? "hidden" : "visible", !r) {
+                        const t = parseInt(this.getAttribute("caretoffset")) || 0;
+                        e.style.left = null, e.style.top = null, this.isVertical() ? e.style.left = t + "px" : this.isHorizontal() && (e.style.top = t + "px")
+                    }
+                }
+                setClosable() {
+                    const e = this.shadowRoot,
+                        t = this.getAttribute("dismissable"),
+                        n = this.hasDismissableIcon(),
+                        r = e.querySelector(".lol-uikit-flyout-frame-wrapper");
+                    r.classList.remove("close-button"), r.classList.remove("dismissable-icon"), "true" !== t || n ? n && r.classList.add("dismissable-icon") : r.classList.add("close-button")
+                }
+                setAnimated() {
+                    const e = this.shadowRoot.querySelector(".lol-uikit-flyout-frame-wrapper");
+                    this.isAnimated() ? e.classList.add("animation") : e.classList.remove("animation"), setTimeout((function() {
+                        e.classList.add("idle")
+                    }), 50)
+                }
+            }
+            o.tagName = "lol-uikit-flyout-frame";
+            var i = o;
+            t.default = i
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n  <div class="lol-uikit-flyout-frame-wrapper">\r\n    <div class="border"></div>\r\n    <div class="sub-border"></div>\r\n    <div class="caret"></div>\r\n    <div class="lol-uikit-flyout-frame">\r\n      <slot></slot>\r\n    </div>\r\n    <div class="lol-uikit-dialog-frame-toast-close-button"></div>\r\n    <div class="close-button-container">\r\n      <lol-uikit-close-button/>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27),
+                i = n(100),
+                a = n(126),
+                s = n(127),
+                l = o(r),
+                d = i(a),
+                c = i(s);
+            l.push([e.id, ":host .lol-uikit-flyout-frame-wrapper.right .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to right, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to left, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to top, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .border {\n  border: 2px solid transparent;\n  border-image: linear-gradient(to bottom, #785a28 0, #463714 50%, #463714 100%) 1 stretch;\n}\n:host {\n  pointer-events: all;\n}\n:host .lol-uikit-flyout-frame-wrapper {\n  position: relative;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .border {\n  position: absolute;\n  box-sizing: border-box;\n  background-color: #010a13;\n  box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .border::before {\n  content: '';\n  position: absolute;\n  width: calc(100% + 4px);\n  height: calc(100% + 4px);\n  top: -2px;\n  left: -2px;\n  box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\n  pointer-events: none;\n}\n:host .lol-uikit-flyout-frame-wrapper .sub-border {\n  position: absolute;\n  display: flex;\n  box-sizing: border-box;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99);\n}\n:host .lol-uikit-flyout-frame-wrapper .sub-border::before {\n  content: '';\n  position: absolute;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-dialog-frame-uikit-close-button {\n  display: none;\n}\n:host .lol-uikit-flyout-frame-wrapper.dismissable-icon .lol-uikit-dialog-frame-toast-close-button {\n  display: block;\n  height: 24px;\n  width: 24px;\n  position: absolute;\n  top: 8px;\n  right: 8px;\n  background: url(\"/fe/lol-uikit/images/close.png\"), rgba(0,0,0,0.5);\n  cursor: pointer;\n  border-radius: 4px;\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n/*\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\n        We might still do it later when we do a second pass.\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\n        &:lang(ar-ae) {\n          right: auto;\n          left: 8px;\n        }\n        */\n}\n:host .lol-uikit-flyout-frame-wrapper.dismissable-icon .lol-uikit-dialog-frame-toast-close-button:hover {\n  background: url(\"/fe/lol-uikit/images/close.png\"), rgba(10,20,40,0.5);\n  background-size: 75% 75%, 100% 100%;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-flyout-frame-wrapper .close-button-container {\n  display: none;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container {\n  display: block;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container::before {\n  content: '';\n  position: absolute;\n  width: 38px;\n  height: 68px;\n  top: -20px;\n  right: -20px;\n  background-image: url(\"/fe/lol-uikit/images/frame-button-close-top-down.png\");\n  background-size: 38px 68px;\n}\n:host .lol-uikit-flyout-frame-wrapper.close-button .close-button-container lol-uikit-close-button {\n  display: block;\n  position: absolute;\n  top: -15px;\n  right: -15px;\n}\n:host .lol-uikit-flyout-frame-wrapper .caret {\n  position: absolute;\n  display: flex;\n  justify-content: center;\n  box-sizing: border-box;\n  transition: top 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, left 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, right 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease, bottom 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99) ease;\n}\n:host .lol-uikit-flyout-frame-wrapper .caret::before {\n  content: '';\n  position: absolute;\n  width: 24px;\n  height: 16px;\n  background-image: url(" + d + ');\n  background-size: initial;\n  background-position: -312px;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-flyout-frame {\n  position: relative;\n  display: flex;\n  -webkit-mask-image: linear-gradient(to left, #000, #000);\n  -webkit-mask-repeat: no-repeat;\n  -webkit-mask-position: center;\n  padding: 2px;\n  box-sizing: border-box;\n  transition: 250ms all cubic-bezier(0.02, 0.85, 0.08, 0.99), 300ms opacity linear;\n}\n:host .lol-uikit-flyout-frame-wrapper .lol-uikit-flyout-frame:lang(ar-ae) {\n  direction: rtl;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .border,\n:host .lol-uikit-flyout-frame-wrapper.bottom .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border {\n  left: 8px;\n  width: calc(100% - 16px);\n  height: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border::before,\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border::before {\n  width: calc(100% - 8px);\n  height: 0;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-horizontal.png");\n  border-width: 4px 4px 0 4px;\n  border-image-width: 4px 4px 0 4px;\n  border-image-slice: 4 4 0 4;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret,\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret {\n  width: 100%;\n  height: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret::before,\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret::before {\n  left: calc(50% - 12px);\n  transform-origin: center center;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.bottom .lol-uikit-flyout-frame {\n  -webkit-mask-size: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .border,\n:host .lol-uikit-flyout-frame-wrapper.right .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border {\n  width: 0;\n  height: calc(100% - 16px);\n  top: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border::before,\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border::before {\n  height: calc(100% - 8px);\n  width: 0;\n  border-image-source: url("/fe/lol-uikit/images/sub-border-primary-vertical.png");\n  border-width: 4px 4px 4px 0;\n  border-image-width: 4px 4px 4px 0;\n  border-image-slice: 4 4 4 0;\n  border-image-repeat: stretch;\n  border-style: solid;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret,\n:host .lol-uikit-flyout-frame-wrapper.right .caret {\n  width: 0;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret::before,\n:host .lol-uikit-flyout-frame-wrapper.right .caret::before {\n  top: calc(50% + 12px);\n}\n:host .lol-uikit-flyout-frame-wrapper.left .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.right .lol-uikit-flyout-frame {\n  -webkit-mask-size: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .sub-border {\n  top: 0;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret {\n  top: 3px;\n}\n:host .lol-uikit-flyout-frame-wrapper.bottom .caret::before {\n  bottom: 0;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.top .sub-border {\n  bottom: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.top .caret {\n  bottom: 3px;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .sub-border {\n  right: -4px;\n  transform: rotate(180deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret {\n  right: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.left .caret::before {\n  left: -3px;\n  transform-origin: top left;\n  transform: rotate(270deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.right .sub-border {\n  left: -4px;\n}\n:host .lol-uikit-flyout-frame-wrapper.right .caret {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.right .caret::before {\n  right: -3px;\n  transform-origin: top right;\n  transform: rotate(90deg);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation .caret::before {\n  background-position: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .border {\n  width: 50%;\n  left: 25%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .sub-border {\n  width: 30%;\n  left: calc(33% + 8px);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.top .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.animation.bottom .lol-uikit-flyout-frame {\n  -webkit-mask-size: 50% 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .border {\n  height: 50%;\n  top: 25%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .sub-border {\n  height: 30%;\n  top: calc(33% + 8px);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.left .lol-uikit-flyout-frame,\n:host .lol-uikit-flyout-frame-wrapper.animation.right .lol-uikit-flyout-frame {\n  opacity: 0;\n  -webkit-mask-size: 100% 50%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .border {\n  width: 100%;\n  height: 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .caret::before {\n  animation: caretIntro 433ms steps(13, end) forwards;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle .lol-uikit-flyout-frame {\n  opacity: 1;\n  -webkit-mask-size: 100% 100%;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom {\n  top: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top border-glow,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom border-glow {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.top .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.bottom .sub-border {\n  width: calc(100% - 16px);\n  left: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right {\n  left: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left border-glow,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right border-glow {\n  top: 0;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.left .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.idle.right .sub-border {\n  height: calc(100% - 16px);\n  top: 8px;\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .border,\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .sub-border,\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .lol-uikit-flyout-frame {\n  transition: 133ms all cubic-bezier(1, 0, 1, 1);\n}\n:host .lol-uikit-flyout-frame-wrapper.animation.closing .caret::before {\n  background-image: url(' + c + ");\n  animation: caretOutro 133ms steps(4, end) forwards;\n  transition: background 0;\n}\n@-moz-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-webkit-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-o-keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@keyframes caretIntro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -312px;\n  }\n}\n@-moz-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@-webkit-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@-o-keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n@keyframes caretOutro {\n  from {\n    background-position: 0;\n  }\n  to {\n    background-position: -96px;\n  }\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/gradient-palette.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/flyout-frame/component-style.styl"],
+                names: [],
+                mappings: "AA6JA;EACE,6BAAQ;EACR,uFAAc;AC5JhB;ADmKA;EACE,6BAAQ;EACR,sFAAc;ACjKhB;ADwKA;EACE,6BAAQ;EACR,qFAAc;ACtKhB;AD6KA;EACE,6BAAQ;EACR,wFAAc;AC3KhB;AAIA;EACE,mBAAgB;AAFlB;AAIE;EACE,kBAAU;EACV,0DAAY;AAFhB;AAII;EACE,kBAAU;EACV,sBAAY;EACZ,yBAAkB;EAClB,wCAAY;EACZ,0DAAY;AAFlB;AAIM;EACE,WAAS;EACT,kBAAU;EACV,uBAAO;EACP,wBAAQ;EACR,SAAK;EACL,UAAM;EACN,wCAAY;EACZ,oBAAgB;AAFxB;AAMI;EACE,kBAAU;EACV,aAAS;EACT,sBAAY;EACZ,0DAAY;AAJlB;AAMM;EACE,WAAS;EACT,kBAAU;AAJlB;AAQI;EACE,aAAS;AANf;AAWM;EACE,cAAS;EACT,YAAQ;EACR,WAAO;EACP,kBAAU;EACV,QAAK;EACL,UAAO;EACP,kEAA+C;EAC/C,eAAQ;EACR,kBAAe;EACf,mCAAwB;EACxB,2BAAqB;EACrB,4BAAmB;AACnB;;;;;;;;SAFC;AACT;AAWQ;EACE,qEAA+C;EACvC,mCAAwB;EAClC,2BAAqB;EACrB,4BAAmB;AAT3B;AAcI;EACE,aAAS;AAZf;AAgBI;EACE,cAAS;AAdf;AAgBM;EACE,WAAS;EACT,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,UAAK;EACL,YAAO;EACP,6EAA0E;EAC1E,0BAAiB;AAdzB;AAiBM;EACE,cAAS;EACT,kBAAU;EACV,UAAK;EACL,YAAO;AAff;AAmBI;EACE,kBAAU;EACV,aAAS;EACT,uBAAiB;EACjB,sBAAY;EACZ,oPAAoC;AAjB1C;AAsBM;EACE,WAAS;EACT,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,yDAAqD;EACrD,wBAAiB;EACjB,2BAAqB;EACrB,4BAAmB;AApB3B;AAwBI;EACE,kBAAU;EACV,aAAS;EACT,wDAAoB;EACpB,8BAAqB;EACrB,6BAAuB;EACvB,YAAS;EACT,sBAAY;EACZ,gFAA2B;AAtBjC;AAuBM;EACE,cAAW;AArBnB;AA0BM;;EACE,WAAO;EACP,YAAQ;AAvBhB;AA0BM;;EACE,SAAM;EACN,wBAAO;EACP,SAAQ;AAvBhB;AAyBQ;;EACE,uBAAO;EACP,SAAQ;EACR,kFAA+E;EAC/E,2BAAc;EACd,iCAAoB;EACpB,2BAAoB;EACpB,4BAAqB;EACrB,mBAAc;AAtBxB;AA0BM;;EACE,WAAO;EACP,SAAQ;AAvBhB;AAyBQ;;EACE,sBAAM;EACN,+BAAkB;AAtB5B;AA0BM;;EACE,uBAAmB;AAvB3B;AA4BM;;EACE,WAAO;EACP,YAAQ;AAzBhB;AA4BM;;EACE,QAAO;EACP,yBAAQ;EACR,QAAK;AAzBb;AA2BQ;;EACE,wBAAQ;EACR,QAAO;EACP,gFAA6E;EAC7E,2BAAc;EACd,iCAAoB;EACpB,2BAAoB;EACpB,4BAAqB;EACrB,mBAAc;AAxBxB;AA4BM;;EACE,QAAO;EACP,YAAQ;AAzBhB;AA2BQ;;EACE,qBAAK;AAxBf;AA4BM;;EACE,uBAAmB;AAzB3B;AAkCM;EACE,MAAK;EACL,yBAAW;AAhCnB;AAmCM;EACE,QAAK;AAjCb;AAmCQ;EACE,SAAQ;EACR,yBAAW;AAjCrB;AA2CM;EACE,SAAQ;AAzChB;AA4CM;EACE,WAAQ;AA1ChB;AAmDM;EACE,WAAO;EACP,yBAAW;AAjDnB;AAoDM;EACE,QAAO;AAlDf;AAoDQ;EACE,UAAM;EACN,0BAAkB;EAClB,yBAAW;AAlDrB;AA4DM;EACE,UAAM;AA1Dd;AA6DM;EACE,OAAM;AA3Dd;AA6DQ;EACE,WAAO;EACP,2BAAkB;EAClB,wBAAW;AA3DrB;AAkEQ;EACE,sBAAqB;AAhE/B;AAqEQ;;EACE,UAAO;EACP,SAAM;AAlEhB;AAqEQ;;EACE,UAAO;EACP,qBAAM;AAlEhB;AAqEQ;;EACE,2BAAmB;AAlE7B;AAuEQ;;EACE,WAAQ;EACR,QAAK;AApEf;AAuEQ;;EACE,WAAQ;EACR,oBAAK;AApEf;AAuEQ;;EACE,UAAS;EACT,2BAAmB;AApE7B;AAyEQ;EACE,WAAO;EACP,YAAQ;AAvElB;AA2EU;EACE,mDAAW;AAzEvB;AA6EQ;EACE,UAAS;EACT,4BAAmB;AA3E7B;AA8EQ;;EACE,MAAK;AA3Ef;AA6EU;;;;EACE,OAAM;AAxElB;AA2EU;;EACE,wBAAO;EACP,SAAM;AAxElB;AA4EQ;;EACE,OAAM;AAzEhB;AA2EU;;;;EACE,MAAK;AAtEjB;AAyEU;;EACE,yBAAQ;EACR,QAAK;AAtEjB;AA4EQ;;;EACE,8CAAY;AAxEtB;AA4EU;EACE,yDAAqD;EACrD,kDAAW;EACX,wBAAY;AA1ExB;AA/TA;EACE;IAAM,sBAAqB;EAkU3B;EAjUA;IAAI,2BAAqB;EAoUzB;AACF;AAvUA;EACE;IAAM,sBAAqB;EA0U3B;EAzUA;IAAI,2BAAqB;EA4UzB;AACF;AA/UA;EACE;IAAM,sBAAqB;EAkV3B;EAjVA;IAAI,2BAAqB;EAoVzB;AACF;AAvVA;EACE;IAAM,sBAAqB;EA0V3B;EAzVA;IAAI,2BAAqB;EA4VzB;AACF;AA1VA;EACE;IAAM,sBAAqB;EA6V3B;EA5VA;IAAI,0BAAqB;EA+VzB;AACF;AAlWA;EACE;IAAM,sBAAqB;EAqW3B;EApWA;IAAI,0BAAqB;EAuWzB;AACF;AA1WA;EACE;IAAM,sBAAqB;EA6W3B;EA5WA;IAAI,0BAAqB;EA+WzB;AACF;AAlXA;EACE;IAAM,sBAAqB;EAqX3B;EApXA;IAAI,0BAAqB;EAuXzB;AACF",
+                sourcesContent: ["// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}", "@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n@require '../../css/shared.styl';\r\n\r\n$transitionRate = 250ms all cubic-bezier(.02,.85,.08,.99);\r\n\r\n\r\n@keyframes caretIntro {\r\n  from {background-position: 0;}\r\n  to {background-position: -312px;}\r\n}\r\n\r\n@keyframes caretOutro {\r\n  from {background-position: 0;}\r\n  to {background-position: -96px;}\r\n}\r\n\r\n\r\n:host {\r\n  pointer-events: all;\r\n\r\n  .lol-uikit-flyout-frame-wrapper {\r\n    position: relative;\r\n    transition: $transitionRate;\r\n\r\n    .border {\r\n      position: absolute;\r\n      box-sizing: border-box;\r\n      background-color: $color_palette_almostBlack;\r\n      box-shadow: 0 0 0 1px rgba(1,10,19,0.48);\r\n      transition: $transitionRate;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: calc(100% + 4px);\r\n        height: calc(100% + 4px);\r\n        top: -2px;\r\n        left: -2px;\r\n        box-shadow: 0 0 10px 1px rgba(0,0,0,0.5);\r\n        pointer-events: none;\r\n      }\r\n    }\r\n\r\n    .sub-border {\r\n      position: absolute;\r\n      display: flex;\r\n      box-sizing: border-box;\r\n      transition: $transitionRate;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n      }\r\n    }\r\n\r\n    .lol-uikit-dialog-frame-uikit-close-button {\r\n      display: none;\r\n    }\r\n\r\n     // Show the x-icon close button if we have the class dismissable-icon for toasts\r\n    &.dismissable-icon {\r\n      .lol-uikit-dialog-frame-toast-close-button {\r\n        display: block;\r\n        height: 24px;\r\n        width: 24px;\r\n        position: absolute;\r\n        top: 8px;\r\n        right: 8px;\r\n        background: url($base-image-path + 'close.png'), rgba(0, 0, 0, .5);\r\n        cursor: pointer;\r\n        border-radius: 4px;\r\n        background-size: 75% 75%, 100% 100%;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        /*\r\n        UX has adviced to not move the closing button on modal to the left for the MENA launch.\r\n        We might still do it later when we do a second pass.\r\n        At that time, we'll apply the rest of the fixes such as modal borders for other UIKIT dialogs/modals/flyouts.\r\n        &:lang(ar-ae) {\r\n          right: auto;\r\n          left: 8px;\r\n        }\r\n        */\r\n\r\n        &:hover {\r\n          background: url($base-image-path + 'close.png'), rgba($color_palette_blue6, .5);\r\n                  background-size: 75% 75%, 100% 100%;\r\n        background-position: center;\r\n        background-repeat: no-repeat;\r\n        }\r\n      }\r\n    }\r\n\r\n    .close-button-container {\r\n      display: none;\r\n    }\r\n\r\n    // Show the close button if we have the class close-button.\r\n    &.close-button .close-button-container {\r\n      display: block;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: 38px;\r\n        height: 68px;\r\n        top: -20px;\r\n        right: -20px;\r\n        background-image: url($base-image-path + 'frame-button-close-top-down.png');\r\n        background-size: 38px 68px;\r\n      }\r\n\r\n      lol-uikit-close-button {\r\n        display: block;\r\n        position: absolute;\r\n        top: -15px;\r\n        right: -15px;\r\n      }\r\n    }\r\n\r\n    .caret {\r\n      position: absolute;\r\n      display: flex;\r\n      justify-content: center;\r\n      box-sizing: border-box;\r\n      transition: top $transitionRate ease,\r\n                  left $transitionRate ease,\r\n                  right $transitionRate ease,\r\n                  bottom $transitionRate ease;\r\n\r\n      &::before {\r\n        content: '';\r\n        position: absolute;\r\n        width: 24px;\r\n        height: 16px;\r\n        background-image: url('./images/pointer-intro-01.png');\r\n        background-size: initial;\r\n        background-position: -312px;\r\n        background-repeat: no-repeat;\r\n      }\r\n    }\r\n\r\n    .lol-uikit-flyout-frame {\r\n      position: relative;\r\n      display: flex;\r\n      -webkit-mask-image: linear-gradient(to left, #000, #000);\r\n      -webkit-mask-repeat: no-repeat;\r\n      -webkit-mask-position: center;\r\n      padding: 2px;\r\n      box-sizing: border-box;\r\n      transition: $transitionRate, 300ms opacity linear;\r\n      &:lang(ar-ae) {\r\n        direction: rtl;\r\n      }\r\n    }\r\n\r\n    &.top, &.bottom {\r\n      .border {\r\n        width: 100%;\r\n        height: 100%;\r\n      }\r\n\r\n      .sub-border {\r\n        left: 8px;\r\n        width: calc(100% - 16px);\r\n        height: 0;\r\n\r\n        &::before {\r\n          width: calc(100% - 8px);\r\n          height: 0;\r\n          border-image-source: url($base-image-path + 'sub-border-primary-horizontal.png');\r\n          border-width: 4px 4px 0 4px;\r\n          border-image-width: 4px 4px 0 4px;\r\n          border-image-slice: 4 4 0 4;\r\n          border-image-repeat: stretch;\r\n          border-style: solid;\r\n        }\r\n      }\r\n\r\n      .caret {\r\n        width: 100%;\r\n        height: 0;\r\n\r\n        &::before {\r\n          left: calc(50% - 12px);\r\n          transform-origin: center center;\r\n        }\r\n      }\r\n\r\n      .lol-uikit-flyout-frame {\r\n        -webkit-mask-size: 100%;\r\n      }\r\n    }\r\n\r\n    &.left, &.right {\r\n      .border {\r\n        width: 100%;\r\n        height: 100%;\r\n      }\r\n\r\n      .sub-border {\r\n        width: 0;\r\n        height: calc(100% - 16px);\r\n        top: 8px;\r\n\r\n        &::before {\r\n          height: calc(100% - 8px);\r\n          width: 0;\r\n          border-image-source: url($base-image-path + 'sub-border-primary-vertical.png');\r\n          border-width: 4px 4px 4px 0;\r\n          border-image-width: 4px 4px 4px 0;\r\n          border-image-slice: 4 4 4 0;\r\n          border-image-repeat: stretch;\r\n          border-style: solid;\r\n        }\r\n      }\r\n\r\n      .caret {\r\n        width: 0;\r\n        height: 100%;\r\n\r\n        &::before {\r\n          top: calc(50% + 12px);\r\n        }\r\n      }\r\n\r\n      .lol-uikit-flyout-frame {\r\n        -webkit-mask-size: 100%;\r\n      }\r\n    }\r\n\r\n    &.bottom {\r\n      .border {\r\n        @extends $gradient-dialog-border-bottom;\r\n      }\r\n\r\n      .sub-border {\r\n        top: 0;\r\n        transform: rotate(180deg);\r\n      }\r\n\r\n      .caret {\r\n        top: 3px;\r\n\r\n        &::before {\r\n          bottom: 0;\r\n          transform: rotate(180deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.top {\r\n      .border {\r\n        @extends $gradient-dialog-border-top;\r\n      }\r\n\r\n      .sub-border {\r\n        bottom: 0;\r\n      }\r\n\r\n      .caret {\r\n        bottom: 3px;\r\n      }\r\n    }\r\n\r\n    &.left {\r\n      .border {\r\n        @extends $gradient-dialog-border-left;\r\n      }\r\n\r\n      .sub-border {\r\n        right: -4px;\r\n        transform: rotate(180deg);\r\n      }\r\n\r\n      .caret {\r\n        right: 0;\r\n\r\n        &::before {\r\n          left: -3px;\r\n          transform-origin: top left;\r\n          transform: rotate(270deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.right {\r\n      .border {\r\n        @extends $gradient-dialog-border-right;\r\n      }\r\n\r\n      .sub-border {\r\n        left: -4px;\r\n      }\r\n\r\n      .caret {\r\n        left: 0;\r\n\r\n        &::before {\r\n          right: -3px;\r\n          transform-origin: top right;\r\n          transform: rotate(90deg);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.animation {\r\n      .caret {\r\n        &::before {\r\n          background-position: 0;\r\n        }\r\n      }\r\n\r\n      &.top, &.bottom {\r\n        .border {\r\n          width: 50%;\r\n          left: 25%;\r\n        }\r\n\r\n        .sub-border {\r\n          width: 30%;\r\n          left: calc(33% + 8px);\r\n        }\r\n\r\n        .lol-uikit-flyout-frame {\r\n          -webkit-mask-size: 50% 100%;\r\n        }\r\n      }\r\n\r\n      &.left, &.right {\r\n        .border {\r\n          height: 50%;\r\n          top: 25%;\r\n        }\r\n\r\n        .sub-border {\r\n          height: 30%;\r\n          top: calc(33% + 8px);\r\n        }\r\n\r\n        .lol-uikit-flyout-frame {\r\n          opacity: 0;\r\n          -webkit-mask-size: 100% 50%;\r\n        }\r\n      }\r\n\r\n      &.idle {\r\n        .border {\r\n          width: 100%;\r\n          height: 100%;\r\n        }\r\n\r\n        .caret {\r\n          &::before {\r\n            animation: caretIntro 433ms steps(13, end) forwards;\r\n          }\r\n        }\r\n\r\n        .lol-uikit-flyout-frame {\r\n          opacity: 1;\r\n          -webkit-mask-size: 100% 100%;\r\n        }\r\n\r\n        &.top, &.bottom {\r\n          top: 0;\r\n\r\n          .border, border-glow {\r\n            left: 0;\r\n          }\r\n\r\n          .sub-border {\r\n            width: calc(100% - 16px);\r\n            left: 8px;\r\n          }\r\n        }\r\n\r\n        &.left, &.right {\r\n          left: 0;\r\n\r\n          .border, border-glow {\r\n            top: 0;\r\n          }\r\n\r\n          .sub-border {\r\n            height: calc(100% - 16px);\r\n            top: 8px;\r\n          }\r\n        }\r\n      }\r\n\r\n      &.closing {\r\n        .border, .sub-border, .lol-uikit-flyout-frame {\r\n          transition: 133ms all cubic-bezier(1, 0, 1, 1);\r\n        }\r\n\r\n        .caret {\r\n          &::before {\r\n            background-image: url('./images/pointer-outro-01.png');\r\n            animation: caretOutro 133ms steps(4, end) forwards;\r\n            transition: background 0;\r\n          }\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n"],
+                sourceRoot: ""
+            }]), e.exports = l
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "pointer-intro-01.png"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "pointer-outro-01.png"
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = i(n(111)),
+                o = i(n(2));
+
+            function i(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            class a extends r.default {
+                templateMarkup() {
+                    return n(7)
+                }
+                stylesheetMarkup() {
+                    return n(129)
+                }
+                template() {
+                    return o.default.get().getElementById("lol-uikit-template-framed-dropdown")
+                }
+            }
+            a.tagName = "lol-uikit-framed-dropdown";
+            var s = a;
+            t.default = s
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27),
+                i = n(100),
+                a = n(116),
+                s = n(117),
+                l = o(r),
+                d = i(a),
+                c = i(s);
+            l.push([e.id, ':host .ui-dropdown {\n  font-family: var(--font-body);\n}\n:host .ui-dropdown {\n  -webkit-user-select: none;\n}\n:host .ui-dropdown {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host .ui-dropdown {\n  color: #a09b8c;\n  font-size: 12px;\n  font-weight: normal;\n  line-height: 16px;\n  letter-spacing: 0.025em;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host .ui-dropdown:lang(ja-jp) {\n  font-size: 13px;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host .ui-dropdown dt.ui-dropdown-current {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625 0%, #a9852d 23%, #b88d35 93%, #c8aa6e 100%) 1;\n}\n:host(:not(.active):hover) dt.ui-dropdown-current,\n:host(:not(.active):focus) dt.ui-dropdown-current {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #c89b3c, #f0e6d2) 1;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container {\n  border: thin solid transparent;\n  border-image: linear-gradient(to top, #695625, #463714) 1;\n}\n:host {\n  --framed-dropdown-scrollable-max-height: 150px;\n  --framed-dropdown-current-content-padding: 0 20px 0 7px;\n  --framed-dropdown-current-content-padding-rtl: 0 7px 0 20px;\n  --framed-dropdown-opens-upward-height: auto;\n  --framed-dropdown-options-container-width: 100%;\n  --framed-dropdown-direction-rtl: rtl;\n}\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\n  display: none;\n}\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\n  display: none;\n}\n:host .ui-dropdown-current-content,\n:host .ui-dropdown-current-content.shadow {\n  width: 100%;\n  overflow: hidden;\n  text-overflow: ellipsis;\n  white-space: nowrap;\n  padding: var(--framed-dropdown-current-content-padding);\n}\n:host .ui-dropdown-current-content .ui-dropdown-option-only,\n:host .ui-dropdown-current-content.shadow .ui-dropdown-option-only {\n  display: none;\n}\n:host .ui-dropdown-current-content:lang(ar-ae),\n:host .ui-dropdown-current-content.shadow:lang(ar-ae) {\n  padding: var(--framed-dropdown-current-content-padding-rtl);\n}\n:host {\n  display: inline-flex;\n  flex-direction: column;\n  width: 100%;\n  outline: 0;\n}\n:host .ui-dropdown {\n  display: inline-flex;\n  flex-direction: column;\n  position: relative;\n  user-select: none;\n  margin: 0;\n  cursor: pointer;\n  width: 100%;\n  height: 100%;\n}\n:host .ui-dropdown:lang(ar-ae) {\n  direction: var(--framed-dropdown-direction-rtl);\n  text-align: right;\n}\n:host .ui-dropdown dt.ui-dropdown-current {\n  display: flex;\n  box-sizing: border-box;\n  padding-bottom: 10px;\n  width: 100%;\n  height: 100%;\n  margin: 0;\n  padding: 7px 5px;\n  align-items: center;\n  background-color: rgba(30,35,40,0.5);\n}\n:host .ui-dropdown dt.ui-dropdown-current::after {\n  background: url(' + d + ") center no-repeat;\n  width: 13px;\n  height: 18px;\n  position: absolute;\n  right: 8px;\n  top: 50%;\n  transform: translate(0, -50%);\n  content: '';\n}\n:host .ui-dropdown dt.ui-dropdown-current:lang(ar-ae)::after {\n  right: auto;\n  left: 8px;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container {\n  margin: 0;\n  opacity: 0;\n  display: flex;\n  padding: 0;\n  box-sizing: border-box;\n  width: var(--framed-dropdown-options-container-width);\n  position: absolute;\n  top: 100%;\n  max-height: 0;\n  transition: max-height 400ms;\n  z-index: 2;\n  overflow: hidden;\n  visibility: hidden;\n  background-color: rgba(30,35,40,0.5);\n}\n:host .ui-dropdown dd.ui-dropdown-options-container ul.ui-dropdown-options {\n  list-style: none;\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n  min-width: 100%;\n  background: #010a13;\n  height: 100%;\n}\n:host .ui-dropdown dd.ui-dropdown-options-container ul.ui-dropdown-options lol-uikit-scrollable {\n  max-height: var(--framed-dropdown-scrollable-max-height);\n}\n:host .ui-dropdown.opens-upward {\n  height: var(--framed-dropdown-opens-upward-height);\n}\n:host .ui-dropdown.opens-upward dd.ui-dropdown-options-container {\n  bottom: 100%;\n  top: auto;\n  margin-top: 1px;\n}\n:host(.disabled) {\n  cursor: default;\n  pointer-events: none;\n}\n:host(.disabled) .ui-dropdown dt.ui-dropdown-current {\n  border: thin solid #3c3c41;\n  color: #3c3c41;\n}\n:host(.disabled) .ui-dropdown dt.ui-dropdown-current::after {\n  -webkit-filter: grayscale(100%);\n  opacity: 0.35;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current {\n  border: thin solid #463714;\n  color: #463714;\n}\n:host(.active) .ui-dropdown .ui-dropdown-current::after {\n  background-image: url(" + c + ");\n}\n:host(.active) .ui-dropdown dd.ui-dropdown-options-container {\n  opacity: 1;\n  max-height: 400px;\n  transition: max-height 400ms;\n  visibility: visible;\n}\n:host(:not(.active):hover) dt.ui-dropdown-current,\n:host(:not(.active):focus) dt.ui-dropdown-current {\n  background: linear-gradient(to top, rgba(88,83,66,0.5), rgba(30,35,40,0.5));\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./node_modules/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/framed-dropdown/component-style.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/typekit.styl", "webpack://./node_modules/riotclient-lol-asset-csslib/styles/gradient-palette.styl"],
+                names: [],
+                mappings: "AAIA;EACE,6BAAa;ACHf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;AC8RA;EAGE,cAAO;EACP,eAAW;EAIX,mBAAa;EACb,iBAAa;EACb,uBAAgB;EAIhB,4CAAwB;ADpS1B;AC2RE;EACE,eAAW;ADzRf;AC8RE;EACE,iBAAgB;AD5RpB;AEiHA;EACE,8BAAQ;EACR,2FAAc;AF/GhB;AEkHA;;EACE,8BAAQ;EACR,yDAAc;AF/GhB;AEkHA;EACE,8BAAQ;EACR,yDAAc;AFhHhB;AA7BA;EACE,8CAAyC;EACzC,uDAA2C;EAC3C,2DAA+C;EAC/C,2CAAuC;EACvC,+CAA2C;EAC3C,oCAAiC;AA+BnC;AA5BA;EACE,aAAS;AA8BX;AA5BA;EACE,aAAS;AA8BX;AA3BA;;EAEE,WAAO;EACP,gBAAU;EACV,uBAAe;EACf,mBAAa;EAMb,uDAAS;AAwBX;AA5BE;;EACE,aAAS;AA+Bb;AA3BE;;EACE,2DAAS;AA8Bb;AAzBA;EACE,oBAAS;EACT,sBAAgB;EAChB,WAAO;EACP,UAAS;AA2BX;AAzBE;EAEE,oBAAS;EACT,sBAAgB;EAChB,kBAAU;EACV,iBAAa;EACb,SAAQ;EACR,eAAQ;EACR,WAAO;EACP,YAAQ;AA0BZ;AAxBI;EACE,+CAAW;EAGX,iBAAY;AAwBlB;AArBI;EAEE,aAAS;EACT,sBAAY;EACZ,oBAAgB;EAChB,WAAO;EACP,YAAQ;EACR,SAAQ;EACR,gBAAS;EACT,mBAAa;EACb,oCAAkB;AAsBxB;AApBM;EACE,oEAAgD;EAChD,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,UAAO;EACP,QAAK;EACL,6BAAW;EACX,WAAS;AAsBjB;AAnBI;EACE,WAAO;EACP,SAAM;AAqBZ;AAlBI;EAEE,SAAQ;EACR,UAAS;EACT,aAAS;EACT,UAAS;EACT,sBAAY;EACZ,qDAAO;EACP,kBAAU;EACV,SAAK;EACL,aAAY;EACZ,4BAAY;EACZ,UAAS;EACT,gBAAU;EACV,kBAAY;EACZ,oCAAkB;AAmBxB;AAjBM;EACE,gBAAY;EACZ,SAAQ;EACR,UAAS;EACT,sBAAY;EACZ,eAAW;EACX,mBAAY;EACZ,YAAQ;AAmBhB;AAlBQ;EACE,wDAAY;AAoBtB;AAfI;EACE,kDAAQ;AAiBd;AAhBM;EACE,YAAQ;EACR,SAAK;EACL,eAAY;AAkBpB;AAbE;EACE,eAAQ;EACR,oBAAgB;AAepB;AAbM;EACE,0BAAQ;EACR,cAAO;AAef;AAdQ;EACE,+BAAgB;EAChB,aAAS;AAgBnB;AARM;EACE,0BAAQ;EACR,cAAO;AAUf;AATQ;EACE,yDAA6D;AAWvE;AAPM;EACE,UAAS;EACT,iBAAY;EACZ,4BAAY;EACZ,mBAAY;AASpB;AAHI;;EAEE,2EAAY;AAKlB",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/typekit.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/colors.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/ui-colors.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/sizes.styl';\r\n@require 'riotclient-lol-asset-csslib/styles/gradient-palette.styl';\r\n\r\n\r\n// declare this component's CSS Custom Variables and defaults here\r\n:host {\r\n  --framed-dropdown-scrollable-max-height: 150px;\r\n  --framed-dropdown-current-content-padding: 0 20px 0 7px;\r\n  --framed-dropdown-current-content-padding-rtl: 0 7px 0 20px;\r\n  --framed-dropdown-opens-upward-height: auto;\r\n  --framed-dropdown-options-container-width: 100%;\r\n  --framed-dropdown-direction-rtl: rtl;\r\n}\r\n\r\n:host([stylablecontent]) .ui-dropdown-current-content.shadow {\r\n  display: none;\r\n}\r\n:host(:not([stylablecontent])) .ui-dropdown-current-content.light {\r\n  display: none;\r\n}\r\n\r\n:host .ui-dropdown-current-content,\r\n:host .ui-dropdown-current-content.shadow {\r\n  width: 100%;\r\n  overflow: hidden;\r\n  text-overflow: ellipsis;\r\n  white-space: nowrap;\r\n\r\n  .ui-dropdown-option-only {\r\n    display: none;\r\n  }\r\n  \r\n  padding: var(--framed-dropdown-current-content-padding);\r\n  &:lang(ar-ae) {\r\n    padding: var(--framed-dropdown-current-content-padding-rtl);\r\n  }\r\n}\r\n\r\n\r\n:host {\r\n  display: inline-flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n  outline: 0;\r\n\r\n  .ui-dropdown {\r\n    @extends $typekit_text_s;\r\n    display: inline-flex;\r\n    flex-direction: column;\r\n    position: relative;\r\n    user-select: none;\r\n    margin: 0;\r\n    cursor: pointer;\r\n    width: 100%;\r\n    height: 100%;\r\n\r\n    &:lang(ar-ae) {\r\n      direction: var(--framed-dropdown-direction-rtl);\r\n      // Only added for drop downs which has LTR content/text in RTL view\r\n      // UI/UX Design must be consistent in all drop downs\r\n      text-align: right;\r\n    }\r\n\r\n    dt.ui-dropdown-current {\r\n      @extends $gradient-palette_button-frame-border;\r\n      display: flex;\r\n      box-sizing: border-box;\r\n      padding-bottom: 10px;\r\n      width: 100%;\r\n      height: 100%;\r\n      margin: 0;\r\n      padding: 7px 5px;\r\n      align-items: center;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n\r\n      &::after {\r\n        background: url('../../images/up-down-arrow.png') center no-repeat;\r\n        width: 13px;\r\n        height: 18px;\r\n        position: absolute;\r\n        right: 8px;\r\n        top: 50%;\r\n        transform: translate(0, -50%);\r\n        content: '';\r\n      }\r\n    }\r\n    dt.ui-dropdown-current:lang(ar-ae)::after {\r\n      right: auto;\r\n      left: 8px;\r\n    }\r\n\r\n    dd.ui-dropdown-options-container {\r\n      @extends $gradient-palette_button-click-border;\r\n      margin: 0;\r\n      opacity: 0;\r\n      display: flex;\r\n      padding: 0;\r\n      box-sizing: border-box;\r\n      width: var(--framed-dropdown-options-container-width);\r\n      position: absolute;\r\n      top: 100%;\r\n      max-height: 0;\r\n      transition: max-height 400ms;\r\n      z-index: 2;\r\n      overflow: hidden;\r\n      visibility: hidden;\r\n      background-color: rgba($color_palette_grey3, 0.5);\r\n\r\n      ul.ui-dropdown-options {\r\n        list-style: none;\r\n        margin: 0;\r\n        padding: 0;\r\n        box-sizing: border-box;\r\n        min-width: 100%;\r\n        background: $color_palette_almostBlack;\r\n        height: 100%;\r\n        lol-uikit-scrollable {\r\n          max-height: var(--framed-dropdown-scrollable-max-height);\r\n        }\r\n      }\r\n    }\r\n\r\n    &.opens-upward {\r\n      height: var(--framed-dropdown-opens-upward-height);\r\n      dd.ui-dropdown-options-container {\r\n        bottom: 100%;\r\n        top: auto;\r\n        margin-top: 1px;\r\n      }\r\n    }\r\n  }\r\n\r\n  &(.disabled) {\r\n    cursor: default;\r\n    pointer-events: none;\r\n    .ui-dropdown {\r\n      dt.ui-dropdown-current {\r\n        border: thin solid $color_palette_grey2;\r\n        color: $color_palette_grey2;\r\n        &::after {\r\n          -webkit-filter: grayscale(100%);\r\n          opacity: 0.35;\r\n        }\r\n      }\r\n    }\r\n  }\r\n\r\n  &(.active) {\r\n    .ui-dropdown {\r\n      .ui-dropdown-current {\r\n        border: thin solid $color_palette_gold6;\r\n        color: $color_palette_gold6;\r\n        &::after {\r\n          background-image: url('../../images/up-down-arrow-locked.png');\r\n        }\r\n      }\r\n\r\n      dd.ui-dropdown-options-container {\r\n        opacity: 1;\r\n        max-height: 400px;\r\n        transition: max-height 400ms;\r\n        visibility: visible;\r\n      }\r\n    }\r\n  }\r\n\r\n  &(:not(.active):hover), &(:not(.active):focus) {\r\n    dt.ui-dropdown-current {\r\n      @extends $gradient-palette_button-hover-border;\r\n      background: $gradient-palette_button-backing-hover;\r\n    }\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n", "// Base on https://drive.google.com/a/riotgames.com/file/d/0BxsY3wbUNTH1b2k0WmxTUXotbGM\r\n@import 'color-palette';\r\n\r\n$gradient_palette_button_frame = linear-gradient(to top,\r\n  $colors_dallas 0%,\r\n  $colors_luxorGold 23%,\r\n  $colors_alpine 93%,\r\n  $color_palette_gold3 100%);\r\n\r\n$gradient_palette_button_hover = linear-gradient(to top,\r\n  $color_palette_gold4,\r\n  $color_palette_gold1);\r\n\r\n$gradient_palette_button_click = linear-gradient(to top,\r\n  $colors_dallas,\r\n  $color_palette_gold6);\r\n\r\n$gradient_palette_button_blue = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $color_palette_blue3 44%,\r\n  $color_palette_blue3 93%,\r\n  $color_palette_blue2 100%);\r\n\r\n$gradient_palette_button_blue_hover = linear-gradient(to top,\r\n  $colors_bostonBlue 0%,\r\n  $color_palette_blue2 49%,\r\n  $color_palette_blue1 100%);\r\n\r\n$gradient_palette_button_blue_click = linear-gradient(to top,\r\n  $color_palette_blue4 0%,\r\n  $colors_orient 83%,\r\n  $colors_orient 100%);\r\n\r\n$gradient-palette_button-backing-hover = linear-gradient(to top,\r\n  rgba($colors_finch, 0.5),\r\n  rgba($colors_shark, 0.5));\r\n\r\n$gradient_palette_button_toggle = linear-gradient(to top,\r\n  $color_palette_gold3 0%,\r\n  $color_palette_gold4 44%,\r\n  rgb(160,123,50) 59%,\r\n  $color_palette_gold5 100%);\r\n\r\n$gradient_palette_button_toggle_hover = linear-gradient(to top,\r\n  $color_palette_gold1 0%,\r\n  $color_palette_gold4 100%);\r\n\r\n$gradient_palette_timer_bar = linear-gradient(to right,\r\n  $colors_tiber 0%,\r\n  $colors_bondiBlue 75%,\r\n  $colors_robinsEggBlue 90%,\r\n  $colors_scandal 99%,\r\n  $colors_scandal 100%);\r\n\r\n$gradient_palette_fade_out = linear-gradient(to top,\r\n  $color_palette_almostBlack 0%,\r\n  rgba($color_palette_almostBlack, 0) 92%);\r\n\r\n$gradient_palette_button_primary_purple_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.3) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.8) 0%,\r\n  rgba(232, 216, 227, 0.8) 0.01%,\r\n  rgba(237, 153, 239, 0.8) 100%);\r\n\r\n$gradient_palette_button_purple_hover_border = linear-gradient(to bottom,\r\n  rgb(245, 155, 247) 0%,\r\n  rgb(232, 216, 227) 0.01%,\r\n  rgb(237, 153, 239) 100%);\r\n\r\n$gradient_palette_button_purple_hover_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.5) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_bg = linear-gradient(to bottom,\r\n  rgba(255, 44, 170, 0.2) 0%,\r\n  rgba(255, 44, 170, 0) 100%),\r\n  #1E2328;\r\n\r\n$gradient_palette_button_purple_down_border = linear-gradient(to bottom,\r\n  rgba(245, 155, 247, 0.4) 0%,\r\n  rgba(232, 216, 227, 0.4) 0.01%,\r\n  rgba(237, 153, 239, 0.4) 100%);\r\n\r\n$gradient-palette_button-primary-bg = linear-gradient(to bottom,\r\n  rgb(90,64,31) 0%,\r\n  rgb(51,39,23) 100%);\r\n\r\n$gradient-palette_button-primary-hover-bg = linear-gradient(to bottom,\r\n  rgb(96,69,34) 0%,\r\n  rgb(132,103,69) 100%);\r\n\r\n$gradient-palette_button-primary-down-bg = linear-gradient(to bottom,\r\n  rgb(54,39,21) 0%,\r\n  rgb(23,19,14) 100%);\r\n\r\n$gradient-palette_button-gold-bg = linear-gradient(to bottom,\r\n  rgba(30,35,42,1) 0%,\r\n  rgba(30,35,42,1) 40%,\r\n  rgba(118,97,51,.8) 140%);\r\n\r\n$gradient-palette_button-gold-border = linear-gradient(to top,\r\n  rgb(120,91,40) 0%,\r\n  rgb(200,156,60) 55%,\r\n  rgb(200,163,85) 71%,\r\n  rgb(200,170,110) 100%);\r\n\r\n$gradient-palette_button-gold-hover-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%,\r\n  rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-gold-down-border = linear-gradient(to bottom,\r\n  rgb(70,56,23) 0%,\r\n  rgb(105,79,39) 100%);\r\n\r\n$gradient-palette_button-gold-click-border-white = linear-gradient(to top,\r\n  rgb(255,255,255) 0%,\r\n  rgb(255,255,255) 33%,\r\n  rgb(255,255,255) 66%,\r\n  rgb(255,255,255) 100%);\r\n\r\n$gradient-palette_button-gold-click-border = linear-gradient(to top,\r\n  rgb(200,156,60) 0%, rgb(220,193,136) 50%,\r\n  rgb(225,201,152) 71%,\r\n  rgb(240,230,216) 100%);\r\n\r\n$gradient-palette_button-sheen-effect = linear-gradient(to bottom,\r\n  rgba(255,255,255,0) 0%,\r\n  rgba(255,255,255,.15) 92%,\r\n  rgba(255,255,255,0) 100%);\r\n\r\n$gradient-palette_button-frame-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_frame 1;\r\n}\r\n\r\n$gradient-palette_button-hover-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_hover 1;\r\n}\r\n\r\n$gradient-palette_button-click-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_click 1;\r\n}\r\n\r\n$gradient-palette_button-toggle-border {\r\n  border: thin solid transparent;\r\n  border-image: $gradient_palette_button_toggle 1;\r\n}\r\n\r\n$gradient-dialog-border-right {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to right,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-left {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to left,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_gold5 0,\r\n    $color_palette_gold6 50%,\r\n    $color_palette_gold6 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-top-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to top,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}\r\n\r\n$gradient-dialog-border-bottom-disabled {\r\n  border: 2px solid transparent;\r\n  border-image: linear-gradient(to bottom,\r\n    $color_palette_grey3 0,\r\n    $color_palette_frameGrey 5px,\r\n    $color_palette_frameGrey 100%\r\n  ) 1 stretch;\r\n}"],
+                sourceRoot: ""
+            }]), e.exports = l
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1);
+            class o extends r.webComponents.ShadowElement {
+                templateMarkup() {
+                    return n(131)
+                }
+                stylesheetMarkup() {
+                    return n(132)
+                }
+                constructor() {
+                    super(), this.addEventListener("cutout", (e => {
+                        const t = this.buildWebkitClipPath(e);
+                        this.style.webkitClipPath = t
+                    }))
+                }
+                buildWebkitClipPath(e) {
+                    return e && e.cutoutRect ? "polygon(0 0, " + e.cutoutRect.left + "px 0, " + e.cutoutRect.left + "px " + e.cutoutRect.bottom + "px, " + e.cutoutRect.right + "px " + e.cutoutRect.bottom + "px, " + e.cutoutRect.right + "px " + e.cutoutRect.top + "px, " + e.cutoutRect.left + "px " + e.cutoutRect.top + "px, " + e.cutoutRect.left + "px 0, 100% 0, 100% 100%, 0 100%)" : null
+                }
+            }
+            o.tagName = "lol-uikit-full-page-backdrop";
+            var i = o;
+            t.default = i
+        }, e => {
+            "use strict";
+            e.exports = "<template>\r\n  <slot></slot>\r\n</template>"
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, ":host {\n  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8) 93%);\n  position: absolute;\n  left: 0;\n  right: 0;\n  top: 0;\n  bottom: 0;\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/full-page-backdrop/component-style.styl"],
+                names: [],
+                mappings: "AAAA;EACE,iEAAY;EACZ,kBAAU;EACV,OAAM;EACN,QAAO;EACP,MAAK;EACL,SAAQ;AACV",
+                sourcesContent: [":host {\r\n  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8) 93%);\r\n  position: absolute;\r\n  left: 0;\r\n  right: 0;\r\n  top: 0;\r\n  bottom: 0;\r\n}\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1);
+            const o = {
+                item: function(e) {
+                    return function(e, t) {
+                        for (const n of t) {
+                            const t = new RegExp(`<(${n})>`, "g");
+                            e = e.replace(t, '<span class="$1">');
+                            const r = new RegExp(`</${n}>`, "g");
+                            e = e.replace(r, "</span>")
+                        }
+                        return e
+                    }(e = function(e) {
+                        return e = e.replace(/<font color=['"](#?[a-z0-9]+)['"]>/gi, '<span style="color:$1;">'), e = e.replace(/<\/font>/g, "</span>"), e
+                    }(e), ["active", "aura", "consumable", "flavorText", "groupLimit", "levelLimit", "mana", "passive", "rules", "scaleLevel", "stats", "unique", "unlockedPassive"])
+                }
+            };
+            class i extends r.webComponents.ShadowElement {
+                templateMarkup() {
+                    return n(10)
+                }
+                connectedCallback() {
+                    this.processAttributes()
+                }
+                static get observedAttributes() {
+                    return ["type", "markup"]
+                }
+                processAttributes() {
+                    const e = this.getAttribute("type");
+                    let t = this.getAttribute("markup");
+                    e && t ? (o[e] && (t = o[e](t)), this.innerHTML = r.htmlSanitizer.sanitize(t)) : this.innerHTML = ""
+                }
+            }
+            i.tagName = "lol-uikit-game-data-markup";
+            var a = i;
+            t.default = a
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, o = n(1),
+                i = (r = n(36)) && r.__esModule ? r : {
+                    default: r
+                };
+            class a extends o.webComponents.ShadowElement {
+                static ICON_ATTRIBUTE_KEY = "icon";
+                static ICONS = ["clock", "clock-dark", "riot-fistbump"];
+                static BACKGROUND_COLOR_ATTRIBUTE_KEY = "background-color";
+                static BACKGROUND_COLORS = ["white", "yellow", "grey", "red"];
+                static RADIUS_STYLE_ATTRIBUTE_KEY = "radius-style";
+                static RADIUS_STYLES = ["rounded", "square"];
+                static GLOW_COLOR_ATTRIBUTE_KEY = "glow";
+                static GLOW_COLORS = ["white", "yellow", "grey", "red"];
+                static SIZE_ATTRIBUTE_KEY = "size";
+                static SIZES = ["small", "medium"];
+                static get observedAttributes() {
+                    return [this.ICON_ATTRIBUTE_KEY, this.BACKGROUND_COLOR_ATTRIBUTE_KEY, this.RADIUS_STYLE_ATTRIBUTE_KEY, this.GLOW_COLOR_ATTRIBUTE_KEY, this.SIZE_ATTRIBUTE_KEY]
+                }
+                templateMarkup() {
+                    return n(135)
+                }
+                stylesheetMarkup() {
+                    return n(136)
+                }
+                $root() {
+                    return (0, i.default)(this.shadowRoot)
+                }
+                connectedCallback() {
+                    super.connectedCallback()
+                }
+                _badgeElement() {
+                    return (0, i.default)(this.shadowRoot.querySelector("div.hextech-ui-badge"))
+                }
+                _handleBackgroundColorAttribute() {
+                    const e = this._badgeElement(),
+                        t = this.getAttribute(this.constructor.BACKGROUND_COLOR_ATTRIBUTE_KEY);
+                    t && this.constructor.BACKGROUND_COLORS.includes(t) ? (e.removeClass("background-grey"), e.addClass(`background-${t}`)) : this.constructor.ICONS.forEach((t => e.removeClass(t)))
+                }
+                _handleIconAttribute() {
+                    const e = this._badgeElement(),
+                        t = this.getAttribute(this.constructor.ICON_ATTRIBUTE_KEY);
+                    t && this.constructor.ICONS.includes(t) ? e.addClass(t) : e.removeClass(t)
+                }
+                _handleRadiusStyleAttribute() {
+                    const e = this.constructor.RADIUS_STYLES[0],
+                        t = this._badgeElement(),
+                        n = this.getAttribute(this.constructor.RADIUS_STYLE_ATTRIBUTE_KEY);
+                    n ? t.addClass(n) : t.addClass(e)
+                }
+                _handleGlowAttribute() {
+                    const e = this._badgeElement(),
+                        t = this.getAttribute(this.constructor.GLOW_COLOR_ATTRIBUTE_KEY),
+                        n = `glow-${t}`;
+                    t && this.constructor.GLOW_COLORS.includes(t) ? e.addClass(n) : e.removeClass(n)
+                }
+                _handleSizeAttribute() {
+                    const e = this._badgeElement(),
+                        t = this.getAttribute(this.constructor.SIZE_ATTRIBUTE_KEY);
+                    t && this.constructor.SIZES.includes(t) ? e.addClass(t) : e.removeClass(t)
+                }
+                attributeChangedCallback() {
+                    this.processAttributes()
+                }
+                processAttributes() {
+                    this._handleBackgroundColorAttribute(), this._handleIconAttribute(), this._handleRadiusStyleAttribute(), this._handleGlowAttribute(), this._handleSizeAttribute()
+                }
+            }
+            a.tagName = "hextech-ui-badge";
+            var s = a;
+            t.default = s
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n    <div class="hextech-ui-badge">\r\n        <slot></slot>\r\n    </div>\r\n</template>'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, '::slotted(span) {\n  font-family: var(--font-body);\n}\n::slotted(span) {\n  font-size: 11px;\n  line-height: 14px;\n  font-weight: 400;\n  padding-top: 2px;\n}\n:host([font-size="large"]) ::slotted(span) {\n  font-size: 12px;\n  font-weight: 700;\n  padding-top: 2.5px;\n  padding-bottom: 2px;\n  padding-left: 1px;\n}\n.hextech-ui-badge.clock::before,\n.hextech-ui-badge.clock-dark::before,\n.hextech-ui-badge.riot-fistbump::before {\n  content: \'\';\n  display: inline-block;\n  margin: 1px 4px 2px -2px;\n}\n.hextech-ui-badge.clock::before,\n.hextech-ui-badge.clock-dark::before {\n  width: 13px;\n  height: 13px;\n  background-size: 13px 13px;\n  background-image: url("/fe/lol-static-assets/images/reset-timer-clock.svg");\n  background-repeat: no-repeat;\n}\n.hextech-ui-badge {\n  display: inline-flex;\n  text-align: center;\n  align-items: center;\n  direction: ltr;\n}\n.hextech-ui-badge.rounded {\n  border-radius: 25px;\n}\n.hextech-ui-badge.square {\n  border-radius: 3px;\n}\n.hextech-ui-badge.clock-dark::before {\n  filter: brightness(0);\n}\n.hextech-ui-badge.riot-fistbump::before {\n  width: 13px;\n  height: 13px;\n  background-size: 13px 13px;\n  background-image: url("/fe/lol-static-assets/images/ric-riot-logo-red.svg");\n  background-repeat: no-repeat;\n  margin-bottom: 0;\n}\n.hextech-ui-badge.background-red {\n  background: #ff2345;\n  color: #fff;\n}\n.hextech-ui-badge.background-grey {\n  background: #1e282d;\n  color: #f0e6d2;\n}\n.hextech-ui-badge.background-yellow {\n  background: #fabe0a;\n  color: #010a13;\n}\n.hextech-ui-badge.background-white {\n  background: #fff;\n  color: #010a13;\n}\n.hextech-ui-badge.glow-white {\n  box-shadow: 0 0 14px 2px #fff;\n}\n.hextech-ui-badge.glow-yellow {\n  box-shadow: 0 0 14px 2px #fabe0a;\n}\n.hextech-ui-badge.glow-red {\n  box-shadow: 0 0 14px 2px #ff2345;\n}\n.hextech-ui-badge.medium {\n  height: 21px;\n  padding: 0 8px;\n}\n.hextech-ui-badge.small {\n  height: 15px;\n  padding: 0 6px;\n}\n', "", {
+                version: 3,
+                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/hextech-ui-badge/component-style.styl"],
+                names: [],
+                mappings: "AAIA;EACE,6BAAa;ACHf;AACA;EAEE,eAAW;EACX,iBAAa;EACb,gBAAa;EACb,gBAAa;AAAf;AAIA;EACE,eAAW;EACX,gBAAa;EACb,kBAAa;EACb,mBAAgB;EAChB,iBAAc;AAFhB;AAKA;;;EACE,WAAQ;EACR,qBAAS;EACT,wBAAQ;AADV;AAKE;;EAEE,WAAO;EACP,YAAQ;EACR,0BAAiB;EACjB,2EAAyE;EACzE,4BAAkB;AAHtB;AAOA;EACE,oBAAS;EACT,kBAAY;EACZ,mBAAa;EACb,cAAW;AALb;AAQE;EACE,mBAAe;AANnB;AASE;EACE,kBAAe;AAPnB;AAgBG;EACE,qBAAQ;AAdb;AAmBI;EAEE,WAAO;EACP,YAAQ;EACR,0BAAgB;EAChB,2EAAyE;EACzE,4BAAkB;EAClB,gBAAe;AAlBrB;AAsBE;EACE,mBAAY;EACZ,WAAO;AApBX;AAuBE;EACE,mBAAY;EACZ,cAAM;AArBV;AAwBE;EACE,mBAAY;EACZ,cAAO;AAtBX;AAyBE;EACE,gBAAY;EACZ,cAAO;AAvBX;AA0BE;EACE,6BAAY;AAxBhB;AA2BE;EACE,gCAAY;AAzBhB;AA4BE;EACE,gCAAY;AA1BhB;AA6BE;EACE,YAAQ;EACR,cAAS;AA3Bb;AA8BE;EACE,YAAQ;EACR,cAAS;AA5Bb",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit';\r\n\r\n::slotted(span){\r\n  @extend $fonts_spiegel;\r\n  font-size: 11px;\r\n  line-height: 14px;\r\n  font-weight: 400;\r\n  padding-top: 2px;\r\n}\r\n\r\n\r\n:host([font-size=\"large\"]) ::slotted(span) {\r\n  font-size: 12px;\r\n  font-weight: 700;\r\n  padding-top: 2.5px;\r\n  padding-bottom: 2px;\r\n  padding-left: 1px;\r\n}\r\n\r\n$badge-icon {\r\n  content '';\r\n  display: inline-block;\r\n  margin: 1px 4px 2px -2px;\r\n }\r\n\r\n$clockIcon {\r\n  &::before {\r\n    @extend $badge-icon;\r\n    width: 13px;\r\n    height: 13px;\r\n    background-size: 13px 13px;\r\n    background-image url('/fe/lol-static-assets/images/reset-timer-clock.svg');\r\n    background-repeat no-repeat;\r\n  }\r\n}\r\n\r\n.hextech-ui-badge {\r\n  display: inline-flex;\r\n  text-align: center;\r\n  align-items: center;\r\n  direction: ltr;\r\n\r\n\r\n  &.rounded {\r\n    border-radius: 25px;\r\n  }\r\n\r\n  &.square {\r\n    border-radius: 3px;\r\n  }\r\n\r\n  &.clock {\r\n   @extend $clockIcon;\r\n  }\r\n\r\n  &.clock-dark {\r\n    @extend $clockIcon;\r\n   &::before{\r\n     filter: brightness(0);\r\n   }\r\n  }\r\n\r\n  &.riot-fistbump {\r\n    &::before {\r\n      @extend $badge-icon;\r\n      width: 13px;\r\n      height: 13px;\r\n      background-size 13px 13px\r\n      background-image url('/fe/lol-static-assets/images/ric-riot-logo-red.svg');\r\n      background-repeat no-repeat;\r\n      margin-bottom: 0;\r\n    }\r\n  }\r\n\r\n  &.background-red {\r\n    background: $color_palette_mage2;\r\n    color: white;\r\n  }\r\n\r\n  &.background-grey {\r\n    background: $color_palette_frameGrey;\r\n    color:$color_palette_gold1;\r\n  }\r\n\r\n  &.background-yellow {\r\n    background: $colors_amber;\r\n    color: $color_palette_almostBlack;\r\n  }\r\n\r\n  &.background-white {\r\n    background: white;\r\n    color: $color_palette_almostBlack;\r\n  }\r\n\r\n  &.glow-white {\r\n    box-shadow: 0 0 14px 2px white;\r\n  }\r\n\r\n  &.glow-yellow {\r\n    box-shadow: 0 0 14px 2px $colors_amber;\r\n  }\r\n\r\n  &.glow-red {\r\n    box-shadow: 0 0 14px 2px $color_palette_mage2;\r\n  }\r\n\r\n  &.medium {\r\n    height: 21px;\r\n    padding: 0 8px;\r\n  }\r\n\r\n  &.small {\r\n    height: 15px;\r\n    padding: 0 6px;\r\n  }\r\n}\r\n  \r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1),
+                o = a(n(36)),
+                i = a(n(37));
+
+            function a(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            class s extends r.webComponents.ShadowElement {
+                static get observedAttributes() {
+                    return ["disabled", "click-sfx-src", "hover-sfx-src"]
+                }
+                templateMarkup() {
+                    return n(138)
+                }
+                stylesheetMarkup() {
+                    return n(139)
+                }
+                setCustomSounds() {
+                    const e = this.getAttribute("hover-sfx-src"),
+                        t = this.getAttribute("click-sfx-src"),
+                        n = e || i.default.closeButtonHover,
+                        r = t || i.default.closeButtonClick;
+                    this._hoverSound = this._createSound(n), this._clickSound = this._createSound(r)
+                }
+                playSound(e) {
+                    e && (0, r.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").playSound(e)
+                }
+                _createSound(e) {
+                    return (0, r.getProvider)().get("rcp-fe-audio").getChannel("sfx-ui").createSound(e, {
+                        allowConcurrency: !1
+                    })
+                }
+                isDisabled() {
+                    return null !== this.getAttribute("disabled")
+                }
+                constructor() {
+                    super(), this.addEventListener("mouseenter", this), this.addEventListener("click", this)
+                }
+                processAttributes() {
+                    this.setCustomSounds()
+                }
+                _disabledCheck() {
+                    const e = this._buttonElement();
+                    this.isDisabled() ? e.addClass("disabled") : e.removeClass("disabled")
+                }
+                _buttonElement() {
+                    return (0, o.default)(this.shadowRoot.querySelector("div.lol-uikit-info-icon"))
+                }
+                handleEvent(e) {
+                    "MouseEvent" !== e.constructor.name && "PointerEvent" !== e.constructor.name || this.isDisabled() || ("mouseenter" === e.type && this._hoverSound ? this._hoverSound.play() : "click" === e.type && this._clickSound && this._clickSound.play())
+                }
+            }
+            s.tagName = "lol-uikit-info-icon";
+            var l = s;
+            t.default = l
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n  <div class="lol-uikit-info-icon"></div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27),
+                i = n(100),
+                a = n(140),
+                s = n(141),
+                l = n(142),
+                d = o(r),
+                c = i(a),
+                p = i(s),
+                A = i(l);
+            d.push([e.id, ":host .lol-uikit-info-icon {\n  position: relative;\n  width: var(--uikit-info-icon-width, 18px);\n  height: var(--uikit-info-icon-height, 18px);\n  background-image: url(" + c + ");\n  background-size: contain;\n  background-position: center;\n  background-repeat: no-repeat;\n}\n:host .lol-uikit-info-icon:not(.disabled):hover {\n  background-image: url(" + p + ");\n}\n:host .lol-uikit-info-icon:not(.disabled):active {\n  background-image: url(" + A + ");\n}\n:host .lol-uikit-info-icon.disabled {\n  pointer: none;\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/info-icon/component-style.styl"],
+                names: [],
+                mappings: "AACE;EACE,kBAAU;EACV,yCAAO;EACP,2CAAQ;EACR,yDAA8C;EAC9C,wBAAiB;EACjB,2BAAqB;EACrB,4BAAmB;AAAvB;AAEI;EACE,yDAAoD;AAA1D;AAGI;EACE,yDAAsD;AAD5D;AAII;EACE,aAAS;AAFf",
+                sourcesContent: [":host {\r\n  .lol-uikit-info-icon {\r\n    position: relative;\r\n    width: var(--uikit-info-icon-width, 18px);\r\n    height: var(--uikit-info-icon-height, 18px);\r\n    background-image: url('./images/info-icon.svg');\r\n    background-size: contain;\r\n    background-position: center;\r\n    background-repeat: no-repeat;\r\n\r\n    &:not(.disabled):hover {\r\n      background-image: url('./images/info-icon-hover.svg');\r\n    }\r\n\r\n    &:not(.disabled):active {\r\n      background-image: url('./images/info-icon-clicked.svg');\r\n    }\r\n\r\n    &.disabled {\r\n      pointer: none;\r\n    }\r\n  }\r\n}"],
+                sourceRoot: ""
+            }]), e.exports = d
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "info-icon.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "info-icon-hover.svg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "info-icon-clicked.svg"
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, o = (r = n(36)) && r.__esModule ? r : {
+                    default: r
+                },
+                i = n(1);
+            const a = ["src", "image-path", "resize-to-fit", "fixed-width", "loop", "autoplay", "gds-object-id", "errortext", "param-current-exp", "param-new-exp", "param-level-up", "param-twitch", "param-green", "param-blue", "param-purple", "text-tierlabel", "param-display-division-1", "param-display-division-2", "param-display-division-3", "param-display-division-4", "param-display-split-reward-1", "param-display-split-reward-2", "param-display-split-reward-3", "param-display-previous-division-1", "param-display-next-division-4", "param-display-next-division-1", "param-display-split-reward-1", "param-display-split-reward-2", "param-display-split-reward-3", "param-display-division-2-to-1", "param-display-division-3-to-2", "param-display-division-4-to-3", "param-display-split-reward-1", "param-display-split-reward-2", "param-display-split-reward-3", "param-checkbox-control-1", "param-current-level-progress", "param-previous-level-progress", "param-bar-filler", "asset-segments", "asset-tier", "text-winstreak", "param-effect-control-1", "param-effect-control-2"];
+
+            function s(e) {
+                return e.split("{{")[0].trim().toLowerCase().replace(/ /g, "-")
+            }
+            let l = null,
+                d = null;
+            class c extends i.webComponents.ShadowElement {
+                static get observedAttributes() {
+                    return a
+                }
+                templateMarkup() {
+                    return n(144)
+                }
+                constructor() {
+                    super(), this.data = null, this.animation = null, this.animationParams = {}, this.animationReplacementImages = {}, this.animationReplacementText = {}, this.noCache = !1, this.onAnimationStart = null, this.onAnimationComplete = null, this._resetConnectedPromise(), this._reinitialize()
+                }
+                connectedCallback() {
+                    this._resolveConnectedPromise && (this._resolveConnectedPromise(), this._resolveConnectedPromise = null)
+                }
+                disconnectedCallback() {
+                    this._rejectConnectedPromise && (this._rejectConnectedPromise(), this._rejectConnectedPromise = null), this._resetConnectedPromise(), this.animation && (this.animation.destroy(), this.animation = null)
+                }
+                _resetConnectedPromise() {
+                    this._resolveConnectedPromise = null, this._rejectConnectedPromise = null, this._connectedPromise = new Promise(((e, t) => {
+                        this._resolveConnectedPromise = e, this._rejectConnectedPromise = t
+                    }))
+                }
+                _reinitialize() {
+                    this.animation && this.animation.destroy(), this.animation = null, this.loadingStarted = !1, this.loadingFinished = !1, this.loadPromise = new Promise(((e, t) => {
+                        this.resolveLoadPromise = e, this.rejectLoadPromise = t
+                    }))
+                }
+                reloadAnimation() {
+                    if (this.loadingStarted && this.loadingFinished) return this.animation && this.animation.destroy(), this.animation = null, this._loadAnimation()
+                }
+                _animationParameterChangedCallback(e, t) {
+                    let n = null;
+                    e.match(/^param-.+$/) ? n = this.animationParams : e.match(/^text-.+$/) ? n = this.animationReplacementText : e.match(/^asset-.+$/) && (n = this.animationReplacementImages);
+                    const r = e.match(/^(asset|param|text)-(.+)$/);
+                    if (r) {
+                        const e = r[2];
+                        return t ? n[e] = t : delete n[e], this.reloadAnimation()
+                    }
+                }
+                attributeChangedCallback(e, t, n) {
+                    super.attributeChangedCallback(), "src" === e ? this._srcAttributeChanged(n) : this._animationParameterChangedCallback(e, n)
+                }
+                async _srcAttributeChanged(e) {
+                    this.loadingStarted && !this.loadingFinished && this.rejectLoadPromise("src changed before loading was complete"), this._reinitialize(), e && (await this._loadAnimationJson(e), await this._loadAnimation(), this.resolveLoadPromise())
+                }
+                _setAnimationParameter(e, t) {
+                    const n = this.data.layers.find((e => "animation control layer" === e.nm.toLowerCase()));
+                    if (!n) throw new Error("Lottie animation has no animation control layer, but had parameters passed to it: " + this.getAttribute("src") + ", parameter is: " + e + "=" + t);
+                    const r = n.ef.filter((t => s(t.nm) === e));
+                    r.length && (t.match(/[0-9.]+/) && (t = parseFloat(t)), r.forEach((n => {
+                        const r = n.nm.match(/{{keyframe=([0-9]+)}}/);
+                        if (n.mn.match("Slider")) {
+                            if ("number" != typeof t) throw new Error("Lottie animation parameter value for a slider is not numeric: " + this.getAttribute("src") + ", parameter is: " + e + "=" + t);
+                            if (r) {
+                                const e = parseInt(r[1], 10) - 1;
+                                e > 0 && n.ef[0].v.k[e - 1].e && (n.ef[0].v.k[e - 1].e[0] = t), n.ef[0].v.k[e].s && (n.ef[0].v.k[e].s[0] = t)
+                            } else n.ef[0].v.k = t
+                        } else {
+                            if (r) throw new Error("Non-sliders in the control layer cannot have keyframes: " + this.getAttribute("src") + ", parameter is: " + e + "=" + t);
+                            n.mn.match("Checkbox") ? n.ef[0].v.k = "false" !== t.toLowerCase() && 0 !== t ? 1 : 0 : n.ef[0].v.k = t
+                        }
+                    })))
+                }
+                _setText(e, t) {
+                    const n = this.data.layers.filter((t => {
+                        const n = t.nm.match(/{{textKey=([a-zA-Z0-9\-_]+)}}/);
+                        return n && n[1] === e
+                    }));
+                    if (!n.length) throw new Error("Lottie animation had text subsitution, but target layer is not found. " + this.getAttribute("src") + ", textKey was: " + e + "=" + t);
+                    n.forEach((n => {
+                        if (!n.t) throw new Error("Lottie animation had text subsitution on a layer which is not a text layer. " + this.getAttribute("src") + ", textKey was: " + e + "=" + t);
+                        n.t.d.k[0].s.t = t
+                    }))
+                }
+                _loadGenericAssetsData() {
+                    d || (d = i.db.get("/lol-game-data/assets/v1/generic-assets.json").then((e => {
+                        l = e
+                    })).catch((e => {
+                        throw d = null, new Error(e)
+                    })))
+                }
+                _setImagePaths() {
+                    const e = this.getAttribute("gds-object-id"),
+                        t = this.getAttribute("image-path"),
+                        n = (this.getAttribute("src").match(/^(\/fe\/lol-[^/]+\/(assets\/)?)/) || [])[1],
+                        r = () => {
+                            this.data.layers.forEach((e => {
+                                const t = s(e.nm);
+                                if (this.animationReplacementImages[t]) {
+                                    const n = this.data.assets.find((t => t.id === e.refId)),
+                                        r = this.animationReplacementImages[t] + "_" + Math.random();
+                                    this.data.assets.push({
+                                        id: r,
+                                        p: this.animationReplacementImages[t].match(/[^/]+$/)[0],
+                                        u: this.animationReplacementImages[t].match(/^(.*?)[^/]+$/)[1],
+                                        w: n.w,
+                                        h: n.h
+                                    }), e.refId = r
+                                }
+                            })), this.data.assets.forEach((r => {
+                                if (r.p && (r.p = r.p.split("?")[0]), e && l && l[e] && l[e][r.p]) {
+                                    const t = l[e][r.p].match(/^(.*\/)(.*)$/);
+                                    r.u = t[1], r.p = t[2]
+                                } else t ? r.u = t : "images/" === r.u && (r.u = n + "lottie/images/");
+                                this.noCache && (r.p = r.p + "?" + Math.random())
+                            }))
+                        };
+                    return e ? d.then(r) : (r(), Promise.resolve())
+                }
+                _loadAnimationJson(e) {
+                    this.loadingStarted = !0, this.loadingFinished = !1;
+                    const t = e;
+                    return this.classList.remove("loading-error"), o.default.getJSON(e, (e => {
+                        t === this.getAttribute("src") && (this.data = e, this.loadingFinished = !0)
+                    })).fail((e => {
+                        t === this.getAttribute("src") && (this.data = null, this.loadingFinished = !0, this.classList.add("loading-error"), this.rejectLoadPromise(e))
+                    }))
+                }
+                _loadAnimation() {
+                    if (this.data && !this.animation) {
+                        let e;
+                        this.classList.remove("rendering-error");
+                        try {
+                            i.Lodash.forEach(this.animationParams, ((e, t) => {
+                                this._setAnimationParameter(t, e)
+                            })), i.Lodash.forEach(this.animationReplacementText, ((e, t) => {
+                                this._setText(t, e)
+                            })), this.getAttribute("gds-object-id") && this._loadGenericAssetsData(), e = this._setImagePaths()
+                        } catch (e) {
+                            throw this.classList.add("rendering-error"), this.setAttribute("errortext", "LOTTIE RENDERING ERROR: " + e.message), e
+                        }
+                        return Promise.all([this._connectedPromise, e]).then((() => {
+                            const e = i.Lottie.loadAnimation({
+                                container: this.shadowRoot.querySelector(".lottie-render-container"),
+                                renderer: "svg",
+                                loop: null !== this.getAttribute("loop"),
+                                autoplay: null === this.getAttribute("autoplay") || "false" !== this.getAttribute("autoplay"),
+                                animationData: this.data
+                            });
+                            this.animation && this.animation.destroy(), this.animation = e, e && this._addHooks(e), null === this.getAttribute("resize-to-fit") && "false" !== this.getAttribute("resize-to-fit") && (this.shadowRoot.querySelector("svg").style.height = "", this.shadowRoot.querySelector("svg").style.width = "")
+                        }))
+                    }
+                }
+                _addHooks(e) {
+                    e.onEnterFrame = () => {
+                        e.onEnterFrame = null, this.onAnimationStart && this.onAnimationStart(e)
+                    }, e.onComplete = () => {
+                        this.onAnimationComplete && this.onAnimationComplete()
+                    }
+                }
+                play() {
+                    this.loadPromise.then((() => {
+                        window.testsSandboxDoc && window.testsSandbox && this.animation?.setSpeed(1e6), this.animation?.play()
+                    }))
+                }
+                pause() {
+                    this.animation?.pause()
+                }
+                stop() {
+                    this.animation?.stop()
+                }
+            }
+            c.tagName = "lol-uikit-lottie";
+            var p = c;
+            t.default = p
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n  <style>\r\n    .lottie-render-container {\r\n      position: absolute;\r\n      left: 50%;\r\n      top: 50%;\r\n      transform: translate(-50%, -50%);\r\n    }\r\n\r\n    :host([resize-to-fit]) .lottie-render-container {\r\n      width: 100%;\r\n      height: 100%;\r\n    }\r\n\r\n    :host([fixed-width]) .lottie-render-container {\r\n      width: fit-content;\r\n      position: relative;\r\n    }\r\n  </style>\r\n  <div class="lottie-render-container"></div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1);
+            const o = "lol-uikit-navigation-item";
+            class i extends r.webComponents.ShadowElement {
+                static get observedAttributes() {
+                    return ["type", "selectedindex", "direction"]
+                }
+                templateMarkup() {
+                    return n(146)
+                }
+                stylesheetMarkup() {
+                    return n(147)
+                }
+                constructor() {
+                    super(), this.addEventListener("lol-uikit-navigation-item-click-event", (e => {
+                        const t = Array.from(this.getElementsByTagName(o)).indexOf(e.target);
+                        this.setAttribute("selectedindex", t), e.stopPropagation()
+                    }))
+                }
+                connectedCallback() {
+                    super.connectedCallback(), this.processAttributes()
+                }
+                processAttributes() {
+                    if (!this.shadowRoot.host.parentElement) return;
+                    const e = this.shadowRoot.querySelector(".navigation-bar"),
+                        t = this.getAttribute("direction") || "left";
+                    e && !e.classList.contains(t) && (e.classList.remove("up", "down", "left", "right"), e.classList.add(t)), this.getAttribute("type") || this.setAttribute("type", "nav-bar"), this.getAttribute("selectedindex") || this.setAttribute("selectedindex", 0);
+                    const n = parseInt(this.getAttribute("selectedindex"));
+                    this._updateActiveItem(n)
+                }
+                _updateActiveItem(e) {
+                    Array.from(this.getElementsByTagName(o)).forEach((function(t, n) {
+                        n === e ? t.setAttribute("active", "true") : t.removeAttribute("active")
+                    }))
+                }
+            }
+            i.tagName = "lol-uikit-navigation-bar";
+            var a = i;
+            t.default = a
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n  <nav class="navigation-bar">\r\n    <slot></slot>\r\n  </nav>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, ':host([type=nav-bar]) .navigation-bar {\n  font-family: var(--font-display);\n}\n:host([type=nav-bar]) .navigation-bar {\n  -webkit-user-select: none;\n}\n:host([type=nav-bar]) .navigation-bar {\n  font-kerning: normal;\n  -webkit-font-feature-settings: "kern" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host([type=nav-bar]) .navigation-bar {\n  text-transform: uppercase;\n}\n:host([type=nav-bar]) .navigation-bar:lang(ko-kr),\n:host([type=nav-bar]) .navigation-bar:lang(ja-jp),\n:host([type=nav-bar]) .navigation-bar:lang(tr-tr),\n:host([type=nav-bar]) .navigation-bar:lang(el-gr),\n:host([type=nav-bar]) .navigation-bar:lang(th-th),\n:host([type=nav-bar]) .navigation-bar:lang(zh-tw) {\n  text-transform: none;\n}\n:host([type=nav-bar]) .navigation-bar {\n  font-size: 12px;\n  font-weight: 500;\n  letter-spacing: 0.1em;\n  color: #cdbe91;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host([type=nav-bar]) .navigation-bar.active {\n  position: relative;\n  color: #f0e6d2;\n}\n:host([type=nav-bar]) .navigation-bar:lang(ja-jp) {\n  font-size: 13px;\n}\n:host([type=nav-bar]) .navigation-bar:lang(zh-tw) {\n  font-size: 14px;\n}\n:host([type=nav-bar]) .navigation-bar:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host([type=nav-bar]) .navigation-bar {\n  font-family: var(--font-display);\n}\n.navigation-bar {\n  display: flex;\n  width: 100%;\n  height: 100%;\n}\n.navigation-bar.up,\n.navigation-bar.right {\n  justify-content: flex-end;\n}\n.navigation-bar.down,\n.navigation-bar.left {\n  justify-content: flex-start;\n}\n.navigation-bar.up {\n  flex-direction: column-reverse;\n}\n.navigation-bar.down {\n  flex-direction: column;\n}\n.navigation-bar.left {\n  flex-direction: row;\n}\n.navigation-bar.right {\n  flex-direction: row-reverse;\n}\n:host([type=nav-bar]) * {\n  margin: 0;\n  padding: 0;\n  border: 0;\n}\n:host([type=nav-bar]) .navigation-bar {\n  justify-content: space-between;\n  align-items: center;\n  height: auto;\n  flex: 6;\n}\n', "", {
+                version: 3,
+                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/navigation-bar/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
+                names: [],
+                mappings: "AAAA;EACE,gCAAa;ACCf;ACQA;EACE,yBAAqB;ADNvB;ACkBA;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADjB1B;ACyBA;EACE,yBAAgB;ADvBlB;ACwBE;;;;;;EAME,oBAAgB;ADtBpB;ACuUA;EAKE,eAAW;EAOX,gBAAa;EACb,qBAAgB;EAIhB,cAAO;EACP,4CAAwB;ADlV1B;AC4SE;EACE,kBAAU;EACV,cAAO;AD1SX;ACkUE;EACE,eAAW;ADhUf;ACkUE;EACE,eAAW;ADhUf;ACoUE;EACE,iBAAgB;ADlUpB;ADzCA;EACE,gCAAa;AC2Cf;AAvCA;EACE,aAAS;EACT,WAAO;EACP,YAAQ;AAyCV;AAvCE;;EACE,yBAAiB;AA0CrB;AAvCE;;EACE,2BAAiB;AA0CrB;AAvCE;EACE,8BAAgB;AAyCpB;AAtCE;EACE,sBAAgB;AAwCpB;AArCE;EACE,mBAAgB;AAuCpB;AApCE;EACE,2BAAgB;AAsCpB;AAjCE;EACE,SAAQ;EACR,UAAS;EACT,SAAQ;AAmCZ;AAhCE;EAGE,8BAAiB;EACjB,mBAAa;EACb,YAAQ;EACR,OAAM;AAgCV",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit';\r\n@require 'riotclient-lol-asset-csslib/styles/fonts';\r\n@require 'riotclient-lol-asset-csslib/styles/sizes';\r\n\r\n.navigation-bar {\r\n  display: flex;\r\n  width: 100%;\r\n  height: 100%;\r\n\r\n  &.up, &.right {\r\n    justify-content: flex-end;\r\n  }\r\n\r\n  &.down, &.left {\r\n    justify-content: flex-start;\r\n  }\r\n\r\n  &.up {\r\n    flex-direction: column-reverse;\r\n  }\r\n\r\n  &.down {\r\n    flex-direction: column;\r\n  }\r\n\r\n  &.left {\r\n    flex-direction: row;\r\n  }\r\n\r\n  &.right {\r\n    flex-direction: row-reverse;\r\n  }\r\n}\r\n\r\n:host([type=nav-bar]) {\r\n  * {\r\n    margin: 0;\r\n    padding: 0;\r\n    border: 0;\r\n  }\r\n\r\n  .navigation-bar {\r\n    @extends $typekit_nav_secondary;\r\n    @extends $fonts_lol_display;\r\n    justify-content: space-between;\r\n    align-items: center;\r\n    height: auto;\r\n    flex: 6;\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = l(n(36)),
+                o = n(1),
+                i = n(35),
+                a = n(34),
+                s = l(n(37));
+
+            function l(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            const d = "active",
+                c = "disabled",
+                p = "hover-sound-active",
+                A = [d, c, "alert", p],
+                u = ".section-glow";
+            class h extends o.webComponents.ShadowElement {
+                static get observedAttributes() {
+                    return A
+                }
+                templateMarkup() {
+                    return n(149)
+                }
+                stylesheetMarkup() {
+                    return n(150)
+                }
+                constructor() {
+                    super(), this._item, this._mainElement = (0, r.default)(this.shadowRoot.querySelector(".section")), this._navClickSound = this._createSound(s.default.navClick), this._navHoverSound = this._createSound(s.default.flatButtonHover), this._subNavClickSound = this._createSound(s.default.subnavClick), this.addEventListener("click", this._userClickedEvent.bind(this))
+                }
+                _handleMouseEnter() {
+                    this.isDisabled() || this._navHoverSound.play()
+                }
+                _handleMouseMove(e) {
+                    if (this.isDisabled()) return;
+                    const t = this.offsetWidth,
+                        n = this.shadowRoot.querySelector(u),
+                        r = t / 2,
+                        o = e.offsetX - r;
+                    n.style.transform = `translateX(${o/1.5}px)`, n.style.opacity = 1.3 - Math.abs(o / r)
+                }
+                _handleMouseOut() {
+                    if (this.isDisabled()) return;
+                    this.shadowRoot.querySelector(u).style.opacity = 0
+                }
+                connectedCallback() {
+                    super.connectedCallback(), A.forEach((e => {
+                        const t = this.getAttribute(e);
+                        this._addRemoveCssClass(e, (0, i.isAttrTruthy)(e, t))
+                    }));
+                    const e = this.closest("lol-uikit-navigation-bar");
+                    e && "nav-bar" === e.getAttribute("type") && (this.addEventListener("mousemove", this._handleMouseMove.bind(this)), this.addEventListener("mouseout", this._handleMouseOut.bind(this))), this.getAttribute(p) && this.addEventListener("mouseenter", this._handleMouseEnter.bind(this))
+                }
+                _createSound(e) {
+                    return (0, a.createSound)("sfx-ui", e, {
+                        allowConcurrency: !1
+                    })
+                }
+                _userClickedEvent() {
+                    if (this.isDisabled()) return;
+                    if (this.isActive()) return;
+                    const e = this.closest("lol-uikit-navigation-bar");
+                    e && "nav-bar-secondary" === e.getAttribute("type") || "tabbed" === e.getAttribute("type") ? this._subNavClickSound.play() : e && "nav-bar" === e.getAttribute("type") && this._navClickSound.play(), this.dispatchEvent(new CustomEvent("lol-uikit-navigation-item-click-event", {
+                        bubbles: !0,
+                        composed: !0,
+                        cancelable: !0,
+                        detail: {
+                            node: this
+                        }
+                    }))
+                }
+                attributeChangedCallback(e, t, n) {
+                    if (-1 === A.indexOf(e)) return;
+                    const r = (0, i.isAttrTruthy)(e, t),
+                        o = (0, i.isAttrTruthy)(e, n);
+                    !r && o ? this._addRemoveCssClass(e, !0) : r && !o && this._addRemoveCssClass(e, !1)
+                }
+                _addRemoveCssClass(e, t) {
+                    t ? this._mainElement.addClass(e) : this._mainElement.removeClass(e), this.dispatchEvent(new CustomEvent(t ? "lol-uikit-navigation-item-attr-set-event" : "lol-uikit-navigation-item-attr-remove-event", {
+                        bubbles: !0,
+                        composed: !0,
+                        cancelable: !0,
+                        detail: {
+                            node: this,
+                            attr: e
+                        }
+                    }))
+                }
+                isActive() {
+                    return this._mainElement.hasClass(d)
+                }
+                isDisabled() {
+                    return this._mainElement.hasClass(c)
+                }
+            }
+            h.tagName = "lol-uikit-navigation-item";
+            var g = h;
+            t.default = g
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n  <div class="section">\r\n    <span class="section-text">\r\n      <slot></slot>\r\n      <div class="alertImage"></div>\r\n    </span>\r\n    <div class="section-glow-container">\r\n      <div class="section-glow"></div>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, ":host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section,\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\n  font-family: var(--font-display);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section,\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\n  -webkit-user-select: none;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section,\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\n  font-kerning: normal;\n  -webkit-font-feature-settings: \"kern\" 1;\n  -webkit-font-smoothing: antialiased;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section {\n  text-transform: uppercase;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(ko-kr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(ko-kr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(ja-jp),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(ja-jp),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(tr-tr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(tr-tr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(el-gr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(el-gr),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(th-th),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(th-th),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(zh-tw),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(zh-tw) {\n  text-transform: none;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section {\n  font-size: 14px;\n  font-weight: 700;\n  letter-spacing: 0.075em;\n  color: #cdbe91;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active {\n  position: relative;\n  color: #f0e6d2;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:lang(ar-ae),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section {\n  font-size: 12px;\n  font-weight: 500;\n  letter-spacing: 0.1em;\n  color: #cdbe91;\n  -webkit-font-smoothing: subpixel-antialiased;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active {\n  position: relative;\n  color: #f0e6d2;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(ja-jp) {\n  font-size: 13px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(zh-tw) {\n  font-size: 14px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\n  color: #c8aa6e;\n  font-size: 14px;\n  font-weight: 700;\n  letter-spacing: 0.0325em;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):lang(ar-ae) {\n  letter-spacing: 0;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):hover {\n  color: #f0e6d2;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):disabled,\n:host-context(lol-uikit-navigation-bar[type=tabbed]):disabled:hover,\n:host-context(lol-uikit-navigation-bar[type=tabbed])[disabled='true'],\n:host-context(lol-uikit-navigation-bar[type=tabbed])[disabled='true']:hover {\n  color: #5c5b57;\n  cursor: default;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):active {\n  color: #785a28;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) {\n  display: flex;\n  position: relative;\n  cursor: pointer;\n  min-width: 28px;\n  white-space: nowrap;\n  text-overflow: ellipsis;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]):last-of-type,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]):last-of-type {\n  margin-right: 0;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) *,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) * {\n  cursor: pointer;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  position: relative;\n  color: var(--default-color, #cdbe91);\n  border: none;\n  margin: 0;\n  text-decoration: none;\n  outline: none;\n  transition: text-shadow 0.3s ease-in-out, background 1.5s;\n  width: 100%;\n  height: 100%;\n  min-height: 20px;\n  cursor: pointer;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section *,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section * {\n  cursor: pointer;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .alertImage,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section .alertImage {\n  display: none;\n  position: absolute;\n  right: 0px;\n  top: -5px;\n  background-color: var(--default-color, #cdbe91);\n  border-radius: 50%;\n  width: 10px;\n  height: 10px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.alert .alertImage,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.alert .alertImage {\n  display: block;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section .section-text {\n  padding: 0px 12px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active {\n  cursor: default;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active::before,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active::before {\n  content: '';\n  height: 15px;\n  width: 100%;\n  position: absolute;\n  top: -1px;\n  left: 0;\n  background-image: url(\"/fe/lol-uikit/images/nav-pointer.png\");\n  background-repeat: no-repeat;\n  background-size: contain;\n  background-position: center;\n  pointer-events: none;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:hover:not(.disabled),\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:hover:not(.disabled) {\n  color: var(--hover-color, #f0e6d2);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:hover:not(.disabled) .alertImage,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:hover:not(.disabled) .alertImage {\n  background-color: var(--hover-color, #f0e6d2);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active {\n  color: var(--active-color, #f0e6d2);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active .alertImage,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active .alertImage {\n  background-color: var(--active-color, #f0e6d2);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:not(.active):not(.disabled):active,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section:not(.active):not(.disabled):active {\n  color: var(--click-color, #c89b3c);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.disabled,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.disabled {\n  color: var(--disabled-color, #888);\n  cursor: default;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.disabled:hover,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.disabled:hover,\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.disabled.active,\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.disabled.active {\n  background: none;\n  text-shadow: none;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section .alertImage {\n  right: 5px;\n  top: -3px;\n  width: 6px;\n  height: 6px;\n  background-color: var(--default-color, #c89b3c);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active::before {\n  background-image: none;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) .section.active .section-glow {\n  height: 1px;\n  width: 100%;\n  position: absolute;\n  left: 0;\n  top: 20px;\n  margin: 0;\n  background: linear-gradient(to left, transparent, #cdbe91, transparent);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section {\n  height: 79px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section.active {\n  background-image: linear-gradient(0deg, rgba(205,190,145,0.15) 0%, rgba(31,37,38,0) 55%);\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section::after {\n  content: '';\n  background-image: linear-gradient(0deg, rgba(205,190,145,0.2) 0%, rgba(31,37,38,0) 55%);\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  opacity: 0;\n  transition: opacity 0.4s ease-in;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section:not(.disabled):hover::after {\n  opacity: 1;\n  transition: opacity 0.1s ease-out;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-glow-container {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-glow {\n  width: 100%;\n  height: 90px;\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  background: url(\"/fe/lol-uikit/images/nav-highlight.png\") no-repeat;\n  background-position: bottom center;\n  background-size: 100% 32px;\n  pointer-events: none;\n  opacity: 0;\n  transition: opacity 0.1s;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(zh-tw),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(zh-cn),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(zh-my) {\n  font-size: 16px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(ko-kr) {\n  font-size: 14px;\n}\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(it-it),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(vi-VN),\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) .section .section-text:lang(vn-VN) {\n  font-size: 12px;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\n  display: flex;\n  position: relative;\n  width: 100%;\n  height: 100%;\n  cursor: pointer;\n  padding-left: 12px;\n  text-align: left;\n  line-height: 30px;\n  vertical-align: middle;\n  transition: 300ms color;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) .section {\n  position: relative;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) .section .alertImage {\n  display: none;\n  position: absolute;\n  right: -12px;\n  top: 0px;\n  background-color: var(--default-color, #cdbe91);\n  border-radius: 50%;\n  width: 10px;\n  height: 10px;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) .section.alert .alertImage {\n  display: block;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]) .section.active .alertImage {\n  background-color: var(--active-color, #f0e6d2);\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed])::before {\n  content: '';\n  position: absolute;\n  width: 3px;\n  height: 100%;\n  top: 0;\n  left: 1px;\n  background-image: linear-gradient(to bottom, #c89b3c, #c89b3c);\n  background-size: 100% 100%;\n  background-position: left center;\n  background-repeat: no-repeat;\n  opacity: 0;\n  transition: 400ms opacity;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):host {\n  cursor: pointer;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):host([active]) {\n  color: #f0e6d2;\n  cursor: default;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):host([active])::before {\n  opacity: 1;\n}\n:host-context(lol-uikit-navigation-bar[type=tabbed]):host([disabled]) {\n  color: #1e2328;\n  cursor: default;\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./libs/riotclient-lol-asset-csslib/styles/fonts.styl", "webpack://./fe/rcp-fe-lol-uikit/src/elements/navigation-item/component-style.styl", "webpack://./libs/riotclient-lol-asset-csslib/styles/typekit.styl"],
+                names: [],
+                mappings: "AAAA;;;EACE,gCAAa;ACGf;ACMA;;;EACE,yBAAqB;ADFvB;ACcA;;;EAEE,oBAAc;EACd,uCAA+B;EAC/B,mCAAwB;ADX1B;ACmBA;;EACE,yBAAgB;ADhBlB;ACiBE;;;;;;;;;;;;EAME,oBAAgB;ADTpB;AC4SA;;EAKE,eAAW;EACX,gBAAa;EACb,uBAAgB;EAIhB,cAAO;ADhTT;AC+RE;;EACE,kBAAU;EACV,cAAO;AD5RX;ACwSE;;EACE,iBAAgB;ADrSpB;AC0SA;EAKE,eAAW;EAOX,gBAAa;EACb,qBAAgB;EAIhB,cAAO;EACP,4CAAwB;ADrT1B;AC+QE;EACE,kBAAU;EACV,cAAO;AD7QX;ACqSE;EACE,eAAW;ADnSf;ACqSE;EACE,eAAW;ADnSf;ACuSE;EACE,iBAAgB;ADrSpB;ACmVA;EAGE,cAAO;EACP,eAAW;EACX,gBAAa;EACb,wBAAgB;ADnVlB;ACoVE;EACE,iBAAgB;ADlVpB;ACqVE;EACE,cAAO;ADnVX;ACsVE;;;;EACE,cAAO;EACP,eAAQ;ADjVZ;ACoVE;EACE,cAAO;ADlVX;AAtFA;;EACE,aAAS;EACT,kBAAU;EACV,eAAQ;EACR,eAAW;EACX,mBAAa;EACb,uBAAe;AAyFjB;AAvFE;;EACE,eAAc;AA0FlB;AAvFE;;EACE,eAAQ;AA0FZ;AAvFE;;EAEE,aAAS;EACT,mBAAa;EACb,uBAAiB;EAEjB,kBAAU;EACV,oCAAO;EACP,YAAQ;EACR,SAAQ;EACR,qBAAiB;EACjB,aAAS;EACT,yDAAwC;EACxC,WAAO;EACP,YAAQ;EACR,gBAAY;EACZ,eAAQ;AAwFZ;AAtFI;;EACE,eAAQ;AAyFd;AAtFI;;EACE,aAAS;EACT,kBAAU;EACV,UAAO;EACP,SAAK;EACL,+CAAkB;EAClB,kBAAe;EACf,WAAO;EACP,YAAQ;AAyFd;AArFM;;EACE,cAAS;AAwFjB;AApFI;;EACE,iBAAS;AAuFf;AApFI;;EACE,eAAQ;AAuFd;AArFM;;EACE,WAAS;EACT,YAAQ;EACR,WAAO;EACP,kBAAU;EACV,SAAK;EACL,OAAM;EACN,6DAA0D;EAC1D,4BAAmB;EACnB,wBAAiB;EACjB,2BAAqB;EACrB,oBAAgB;AAwFxB;AApFI;;EAIE,kCAAO;AAoFb;AAvFM;;EACE,6CAAkB;AA0F1B;AArFI;;EAIE,mCAAO;AAqFb;AAxFM;;EACE,8CAAkB;AA2F1B;AAtFI;;EACE,kCAAO;AAyFb;AAtFI;;EACE,kCAAO;EACP,eAAQ;AAyFd;AAvFM;;;;EAEE,gBAAY;EACZ,iBAAa;AA2FrB;AA9EI;EACE,UAAO;EACP,SAAK;EACL,UAAO;EACP,WAAQ;EACR,+CAAkB;AAgFxB;AA5EM;EACE,sBAAkB;AA8E1B;AA5EM;EACE,WAAQ;EACR,WAAO;EACP,kBAAU;EACV,OAAM;EACN,SAAK;EACL,SAAQ;EACR,uEAAY;AA8EpB;AAtEE;EACE,YAAQ;AAwEZ;AAvEI;EACE,wFAAkB;AAyExB;AAtEI;EACE,WAAS;EACT,uFAAkB;EAClB,kBAAU;EACV,MAAK;EACL,OAAM;EACN,QAAO;EACP,SAAQ;EACR,UAAS;EACT,gCAAY;AAwElB;AArEI;EACE,UAAS;EACT,iCAAY;AAuElB;AApEI;EACE,kBAAU;EACV,MAAK;EACL,OAAM;EACN,QAAO;EACP,SAAQ;EACR,gBAAU;AAsEhB;AAlEI;EACE,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,SAAQ;EACR,OAAM;EACN,mEAAsD;EACtD,kCAAqB;EACrB,0BAAiB;EACjB,oBAAgB;EAChB,UAAS;EACT,wBAAY;AAoElB;AA/DM;;;EAGE,eAAW;AAiEnB;AA9DM;EACE,eAAW;AAgEnB;AA9DM;;;EAGE,eAAW;AAgEnB;AA1DA;EACE,aAAS;EACT,kBAAU;EACV,WAAO;EACP,YAAQ;EACR,eAAQ;EAGR,kBAAc;EACd,gBAAY;EACZ,iBAAa;EACb,sBAAgB;EAChB,uBAAY;AA0Dd;AAvDE;EACE,kBAAU;AAyDd;AAvDI;EACE,aAAS;EACT,kBAAU;EACV,YAAO;EACP,QAAK;EACL,+CAAkB;EAClB,kBAAe;EACf,WAAO;EACP,YAAQ;AAyDd;AArDM;EACE,cAAS;AAuDjB;AAlDM;EACE,8CAAkB;AAoD1B;AA9CE;EACE,WAAS;EACT,kBAAU;EACV,UAAO;EACP,YAAQ;EACR,MAAK;EACL,SAAM;EACN,8DAAkB;EAClB,0BAAiB;EACjB,gCAAqB;EACrB,4BAAmB;EACnB,UAAS;EACT,yBAAY;AAgDhB;AA7CE;EACE,eAAQ;AA+CZ;AA5CE;EACE,cAAO;EACP,eAAQ;AA8CZ;AA5CI;EACE,UAAS;AA8Cf;AA1CE;EACE,cAAO;EACP,eAAQ;AA4CZ",
+                sourcesContent: ["$fonts_lol_display {\r\n  font-family: var(--font-display);\r\n}\r\n\r\n$fonts_lol_body {\r\n  font-family: var(--font-body);\r\n}\r\n\r\n/**\r\n * Deprecated, keeping just to not break thiings abruptly.\r\n */\r\n\r\n$fonts_beaufort {\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n$fonts_spiegel {\r\n  @extend $fonts_lol_body;\r\n}\r\n", "\r\n@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n@require 'riotclient-lol-asset-csslib/styles/typekit';\r\n\r\n$base-image-path = '/fe/lol-uikit/images/';\r\n\r\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) {\r\n  display: flex;\r\n  position: relative;\r\n  cursor: pointer;\r\n  min-width: 28px;\r\n  white-space: nowrap;\r\n  text-overflow: ellipsis;\r\n\r\n  &:last-of-type {\r\n    margin-right: 0;\r\n  }\r\n\r\n  & * {\r\n    cursor: pointer;\r\n  }\r\n\r\n  .section {\r\n    @extend $typekit_nav;\r\n    display: flex;\r\n    align-items: center;\r\n    justify-content: center;\r\n\r\n    position: relative;\r\n    color: var(--default-color, $color_palette_gold2);\r\n    border: none;\r\n    margin: 0;\r\n    text-decoration: none;\r\n    outline: none;\r\n    transition: text-shadow 0.3s ease-in-out, background 1.5s;\r\n    width: 100%;\r\n    height: 100%;\r\n    min-height: 20px;\r\n    cursor: pointer;\r\n\r\n    & * {\r\n      cursor: pointer;\r\n    }\r\n\r\n    .alertImage {\r\n      display: none;\r\n      position: absolute;\r\n      right: 0px;\r\n      top: -5px;\r\n      background-color: var(--default-color, $color_palette_gold2);\r\n      border-radius: 50%;\r\n      width: 10px;\r\n      height: 10px;\r\n    }\r\n\r\n    &.alert {\r\n      .alertImage {\r\n        display: block;\r\n      }\r\n    }\r\n\r\n    .section-text {\r\n      padding: 0px 12px;\r\n    }\r\n\r\n    &.active {\r\n      cursor: default;\r\n      // arrow at top of active item\r\n      &::before {\r\n        content: '';\r\n        height: 15px;\r\n        width: 100%;\r\n        position: absolute;\r\n        top: -1px;\r\n        left: 0;\r\n        background-image: url($base-image-path + 'nav-pointer.png');\r\n        background-repeat: no-repeat;\r\n        background-size: contain;\r\n        background-position: center;\r\n        pointer-events: none;\r\n      }\r\n    }\r\n\r\n    &:hover:not(.disabled) {\r\n      .alertImage {\r\n        background-color: var(--hover-color, $color_palette_gold1);\r\n      }\r\n      color: var(--hover-color, $color_palette_gold1);\r\n    }\r\n\r\n    &.active {\r\n      .alertImage {\r\n        background-color: var(--active-color, $color_palette_gold1);\r\n      }\r\n      color: var(--active-color, $color_palette_gold1);\r\n    }\r\n\r\n    &:not(.active):not(.disabled):active {\r\n      color: var(--click-color, $color_palette_gold4);\r\n    }\r\n\r\n    &.disabled {\r\n      color: var(--disabled-color, $colors_gray);\r\n      cursor: default;\r\n\r\n      &:hover,\r\n      &.active {\r\n        background: none;\r\n        text-shadow: none;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n// use secondary navigation styling if sub-nav class is used\r\n:host-context(lol-uikit-navigation-bar[type=nav-bar-secondary]) {\r\n  @extend :host-context(lol-uikit-navigation-bar[type=nav-bar])\r\n\r\n  .section {\r\n    @extend $typekit_nav_secondary;\r\n\r\n    .alertImage {\r\n      right: 5px;\r\n      top: -3px;\r\n      width: 6px;\r\n      height: 6px;\r\n      background-color: var(--default-color, $color_palette_gold4);\r\n    }\r\n\r\n    &.active {\r\n      &::before {\r\n        background-image: none;\r\n      }\r\n      .section-glow {\r\n        height: 1px;\r\n        width: 100%;\r\n        position: absolute;\r\n        left: 0;\r\n        top: 20px;\r\n        margin: 0;\r\n        background: linear-gradient(to left, transparent, $color_palette_gold2, transparent);\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n// main navigation only styles\r\n:host-context(lol-uikit-navigation-bar[type=nav-bar]) {\r\n  .section {\r\n    height: 79px;\r\n    &.active {\r\n      background-image: linear-gradient(0deg, rgba(205,190,145,0.15) 0%, rgba(31,37,38,0) 55%);\r\n    }\r\n\r\n    &::after {\r\n      content: '';\r\n      background-image: linear-gradient(0deg, rgba(205,190,145,0.2) 0%, rgba(31,37,38,0) 55%);\r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      right: 0;\r\n      bottom: 0;\r\n      opacity: 0;\r\n      transition: opacity 0.4s ease-in;\r\n    }\r\n\r\n    &:not(.disabled):hover::after {\r\n      opacity: 1;\r\n      transition: opacity 0.1s ease-out;\r\n    }\r\n\r\n    .section-glow-container {\r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      right: 0;\r\n      bottom: 0;\r\n      overflow: hidden;\r\n    }\r\n\r\n    // highlight at bottom of active item\r\n    .section-glow {\r\n      width: 100%;\r\n      height: 90px;\r\n      position: absolute;\r\n      bottom: 0;\r\n      left: 0;\r\n      background: url($base-image-path + 'nav-highlight.png') no-repeat;\r\n      background-position: bottom center;\r\n      background-size: 100% 32px;\r\n      pointer-events: none;\r\n      opacity: 0;\r\n      transition: opacity 0.1s;\r\n    }\r\n\r\n    .section-text {\r\n      // Per CPAIN-53, these languages get larger font in nav\r\n      &:lang(zh-tw),\r\n      &:lang(zh-cn),\r\n      &:lang(zh-my) {\r\n        font-size: 16px;\r\n      }\r\n      // Per LOLBUG-224217, these languages need their size reduced for top nav space\r\n      &:lang(ko-kr) {\r\n        font-size: 14px;\r\n      }\r\n      &:lang(it-it),\r\n      &:lang(vi-VN),\r\n      &:lang(vn-VN) {\r\n        font-size: 12px;\r\n      }\r\n    }\r\n  }\r\n}\r\n\r\n:host-context(lol-uikit-navigation-bar[type=tabbed]) {\r\n  display: flex;\r\n  position: relative;\r\n  width: 100%;\r\n  height: 100%;\r\n  cursor: pointer;\r\n\r\n  @extend $typekit_button;\r\n  padding-left: 12px;\r\n  text-align: left;\r\n  line-height: 30px;\r\n  vertical-align: middle;\r\n  transition: 300ms color;\r\n\r\n\r\n  .section {\r\n    position: relative;\r\n\r\n    .alertImage {\r\n      display: none;\r\n      position: absolute;\r\n      right: -12px;\r\n      top: 0px;\r\n      background-color: var(--default-color, $color_palette_gold2);\r\n      border-radius: 50%;\r\n      width: 10px;\r\n      height: 10px;\r\n    }\r\n\r\n    &.alert {\r\n      .alertImage {\r\n        display: block;\r\n      }\r\n    }\r\n\r\n    &.active {\r\n      .alertImage {\r\n        background-color: var(--active-color, $color_palette_gold1);\r\n      }\r\n    }\r\n  }\r\n\r\n\r\n  &::before {\r\n    content: '';\r\n    position: absolute;\r\n    width: 3px;\r\n    height: 100%;\r\n    top: 0;\r\n    left: 1px;\r\n    background-image: linear-gradient(to bottom, $color_palette_gold4, $color_palette_gold4);\r\n    background-size: 100% 100%;\r\n    background-position: left center;\r\n    background-repeat: no-repeat;\r\n    opacity: 0;\r\n    transition: 400ms opacity;\r\n  }\r\n\r\n  &:host {\r\n    cursor: pointer;\r\n  }\r\n\r\n  &:host([active]) {\r\n    color: $color_palette_gold1;\r\n    cursor: default;\r\n\r\n    &::before {\r\n      opacity: 1;\r\n    }\r\n  }\r\n\r\n  &:host([disabled]) {\r\n    color: $color_palette_grey3\r\n    cursor: default;\r\n  }\r\n}\r\n", "\r\n@import 'fonts';\r\n@import 'color-palette';\r\n\r\n/*\r\n * User Interaction Macros\r\n */\r\n$user_selectable {\r\n  -webkit-user-select: all;\r\n}\r\n$user_unselectable {\r\n  -webkit-user-select: none;\r\n}\r\n$user_draggable {\r\n  -webkit-user-drag: element;\r\n}\r\n$user_undraggable {\r\n  -webkit-user-drag: none;\r\n}\r\n\r\n/*\r\n * Base Text Treatment\r\n */\r\n$typekit_base {\r\n  @extend $user_unselectable;\r\n  font-kerning: normal;\r\n  -webkit-font-feature-settings: \"kern\" 1;\r\n  -webkit-font-smoothing: antialiased;\r\n}\r\n\r\n/*\r\n * Uppercase Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-uppercase {\r\n  text-transform: uppercase;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n/*\r\n * Capitalized Text\r\n * text-transform macro should be extended to ensure that text-transform\r\n * doesn't get applied in locales which don't support it.\r\n */\r\n$text-transform-capitalize {\r\n  text-transform: capitalize;\r\n  &:lang(ko-kr),\r\n  &:lang(ja-jp),\r\n  &:lang(tr-tr),\r\n  &:lang(el-gr),\r\n  &:lang(th-th),\r\n  &:lang(zh-tw) {\r\n    text-transform: none;\r\n  }\r\n}\r\n\r\n$text-transform-none {\r\n  text-transform: none;\r\n}\r\n\r\n/*\r\n * Headings\r\n * by default, headings are always uppercase.\r\n * if text case must be preserved, use this the _preserve_case macros instead.\r\n */\r\n$typekit_h1 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 40px;\r\n  font-weight: 700;\r\n  line-height: 42px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_preserve_case {\r\n  @extend $typekit_h1;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h1_subhead {\r\n  @extend $typekit_h1;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h2 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 30px;\r\n  font-weight: 700;\r\n  line-height: 32px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_preserve_case {\r\n  @extend $typekit_h2;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h2_subhead {\r\n  @extend $typekit_h2;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h3 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  line-height: 28px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_preserve_case {\r\n  @extend $typekit_h3;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h3_subhead {\r\n  @extend $typekit_h3;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 18px;\r\n  font-weight: 700;\r\n  line-height: 22px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_preserve_case {\r\n  @extend $typekit_h4;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h4_subhead {\r\n  @extend $typekit_h4;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h4_italic {\r\n  @extend $typekit_h4_preserve_case;\r\n  font-style: italic;\r\n  font-weight: 500;\r\n}\r\n\r\n$typekit_h5 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  line-height: 18px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_preserve_case {\r\n  @extend $typekit_h5;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h5_subhead {\r\n  @extend $typekit_h5;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h6 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  color: $color_palette_gold1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 700;\r\n  line-height: 16px;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_preserve_case {\r\n  @extend $typekit_h6;\r\n  @extend $text-transform-none;\r\n  letter-spacing: .0375em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_h6_subhead {\r\n  @extend $typekit_h6;\r\n  color: $color_palette_grey1;\r\n}\r\n\r\n$typekit_h7 {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  @extend $text-transform-uppercase;\r\n  font-weight: 500;\r\n  color: $color_palette_grey0;\r\n  font-size: 12px;\r\n  line-height: 16px;\r\n  letter-spacing: 0.02625em;\r\n\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Body Text\r\n */\r\n$typekit_text_l {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_grey1;\r\n  font-size: 16px;\r\n  font-weight: normal;\r\n  line-height: 24px;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_m {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 14px;\r\n  font-weight: normal;\r\n  line-height: 20px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_s {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_text_small {\r\n  @extend $typekit_text_s;\r\n  font-weight: 400;\r\n  letter-spacing: .05em;\r\n}\r\n\r\n$typekit_text_small_bold {\r\n  @extend $typekit_text_small;\r\n  font-weight: 550;\r\n}\r\n\r\n/*\r\n * Navigation\r\n */\r\nnav-active($width, $height) {\r\n  &.active {\r\n    position: relative;\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_nav {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n}\r\n\r\n$typekit_nav_secondary {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  @extend $text-transform-uppercase;\r\n  nav-active(32px, 4px);\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  &:lang(zh-tw) {\r\n    font-size: 14px;\r\n  }\r\n  font-weight: 500;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  color: $color_palette_gold2;\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Labels\r\n */\r\n$typekit_label {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_label_bold {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_body;\r\n  color: $color_palette_grey1;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: 900;\r\n  line-height: 16px;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Button Text\r\n */\r\n$typekit_button {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  color: $color_palette_gold3;\r\n  font-size: 14px;\r\n  font-weight: 700;\r\n  letter-spacing: .0325em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n\r\n  &:hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n\r\n  &:disabled, &:disabled:hover, &[disabled='true'], &[disabled='true']:hover {\r\n    color: $color_palette_grey_disabled;\r\n    cursor: default;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_gold5;\r\n  }\r\n\r\n}\r\n\r\n$typekit_button_blue {\r\n  @extend $typekit_button;\r\n  color: $colors_ziggurat;\r\n\r\n  &:hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:active {\r\n    color: $color_palette_blue4;\r\n  }\r\n}\r\n\r\n$typekit_button_red {\r\n  @extend $typekit_button;\r\n  color: $color_palette_mage;\r\n\r\n  &:hover {\r\n    color: $color_palette_mage2;\r\n  }\r\n\r\n  &:active {\r\n    color: $colors_crownOfThorns;\r\n  }\r\n}\r\n\r\n/*\r\n * Links\r\n */\r\n$typekit_link_base {\r\n  @extend $typekit_base;\r\n  font-size: 12px;\r\n  &:lang(ja-jp) {\r\n    font-size: 13px;\r\n  }\r\n  font-weight: normal;\r\n  outline: 0;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_link_base_color {\r\n  color: $color_palette_gold2;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_gold1;\r\n  }\r\n}\r\n\r\n$typekit_link_external_base {\r\n  @extend $typekit_link_base;\r\n  color: $color_palette_blue3;\r\n  text-decoration: none;\r\n\r\n  &:hover, &.hover {\r\n    color: $color_palette_blue1;\r\n  }\r\n\r\n  &:after {\r\n    width: 9px;\r\n    height: 9px;\r\n    content: '';\r\n    display: inline-block;\r\n    vertical-align: middle;\r\n    -webkit-mask: url('../images/external-link-mask.png') no-repeat;\r\n    -webkit-mask-size: contain;\r\n    background-color: $color_palette_blue3;\r\n    margin: 0 0 0 5px;\r\n  }\r\n  &:lang(ar-ae):after {\r\n    margin: 0 5px 0 0;\r\n    transform: scaleX(-1);\r\n  }\r\n\r\n  &:hover:after {\r\n     background-color: $color_palette_blue1;\r\n  }\r\n}\r\n\r\n/* Internal links in Lol Body font */\r\n$typekit_link {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* Internal links in the Lol Display font */\r\n$typekit_link_display {\r\n  @extend $typekit_link_base;\r\n  @extend $typekit_link_base_color;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/* External links in Lol Body font */\r\n$typekit_link_external {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_body;\r\n}\r\n\r\n/* External links in Lol Display font */\r\n$typekit_link_external_display {\r\n  @extend $typekit_link_external_base;\r\n  @extend $fonts_lol_display;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n$typekit_footer {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 11px;\r\n  font-weight: 700;\r\n  letter-spacing: .1em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n/*\r\n * Numbers\r\n */\r\n$typekit_num {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  background: linear-gradient(to bottom, $color_palette_gold2 0%, $color_palette_gold3 35%, #765c29 100%);\r\n  -webkit-background-clip: text;\r\n  -webkit-text-fill-color: transparent;\r\n}\r\n\r\n$typekit_num_l {\r\n  @extend $typekit_num;\r\n  font-size: 60px;\r\n  font-weight: 500;\r\n  font-style: italic;\r\n  letter-spacing: .025em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_m {\r\n  @extend $typekit_num;\r\n  font-size: 24px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n$typekit_num_s {\r\n  @extend $typekit_num;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  font-style: italic;\r\n  letter-spacing: .075em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n  -webkit-font-smoothing: subpixel-antialiased;\r\n}\r\n\r\n$typekit_num_stats {\r\n  @extend $typekit_base;\r\n  @extend $fonts_lol_display;\r\n  font-size: 16px;\r\n  font-weight: 700;\r\n  letter-spacing: .05em;\r\n  &:lang(ar-ae) {\r\n    letter-spacing: 0;\r\n  }\r\n}\r\n\r\n/*\r\n * Text Modifiers\r\n * _modifier_ typekit rules semantically defines text alteration rules to convey specific meaning.\r\n * They modify simply typography rules (color, weight, style, etc)\r\n * They are indended to be used in combination with other typekit macros.\r\n */\r\n$typekit_modifier_highlight {\r\n  color: $color_palette_gold1;\r\n}\r\n$typekit_modifier_subhead {\r\n  color: $color_palette_grey1;\r\n}\r\n/*\r\n * TODO: Add other modifiers for specific types of highlights like\r\n *  - coloring for game values (ability power, attack power, armor penetration, etc)\r\n */\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            const n = {
+                limitRange: 508.63361717427733,
+                fadeRange: 100,
+                scale1: 1.4382054002858877,
+                scale2: 1,
+                scale3: 1,
+                scale4: 1.1,
+                speed: .2630863537108331
+            };
+            var r = class {
+                constructor(e, t = {}, r = !0) {
+                    this._elements = e, this._config = Object.assign({}, n, t), this._init(), r && this.play()
+                }
+                _init() {}
+                play() {
+                    this._isPlaying = !0, this._loop()
+                }
+                pause() {
+                    this._isPlaying = !1
+                }
+                update() {}
+                _loop() {
+                    this.update(), this._isPlaying && window.requestAnimationFrame((() => this._loop()))
+                }
+                destroy() {
+                    this.pause()
+                }
+            };
+            t.default = r
+        }, (e, t) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var n = class {
+                constructor(e, t) {
+                    var n, r;
+                    this._element = e, this._x = 0, this._y = 0, this._speed = .2 * (r = 10, (n = 5) + Math.random() * (r - n)), this._config = t
+                }
+                update(e, t) {
+                    this._x -= this._speed * this._config.speed, this._x < -this._config.limitRange && (this._x += 2 * this._config.limitRange), this._updateCSS(e, t)
+                }
+                updateConfig(e) {
+                    Object.assign(this._config, e)
+                }
+                _updateCSS() {
+                    const {
+                        limitRange: e,
+                        fadeRange: t
+                    } = this._config;
+                    this._element.style.transform = `translate(${this._x}px, ${this._y}px)`;
+                    let n = 1;
+                    const r = Math.abs(this._x);
+                    r > e - t && (n = 1 - (r - e + t) / t), this._element.style.opacity = n
+                }
+            };
+            t.default = n
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = i(n(151)),
+                o = i(n(152));
+
+            function i(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            class a extends r.default {
+                constructor(e, t, n = !0) {
+                    super(e, t, n)
+                }
+                _init() {
+                    this._layers = [];
+                    const e = -this._config.limitRange,
+                        t = 2 * this._config.limitRange / this._elements.length;
+                    this._elements.forEach(((n, r) => {
+                        const i = (({
+                            limitRange: e,
+                            fadeRange: t,
+                            speed: n
+                        }) => ({
+                            limitRange: e,
+                            fadeRange: t,
+                            speed: n
+                        }))(this._config);
+                        i.scale = this._config[`scale${r+1}`];
+                        const a = new o.default(n, i);
+                        a.x = e + r * t, this._layers.push(a)
+                    }))
+                }
+                update() {
+                    this._layers.forEach((e => e.update()))
+                }
+                updateConfig(e) {
+                    this._config = Object.assign(this._config, e), this._layers.forEach(((e, t) => {
+                        const n = (({
+                            limitRange: e,
+                            fadeRange: t,
+                            speed: n
+                        }) => ({
+                            limitRange: e,
+                            fadeRange: t,
+                            speed: n
+                        }))(this._config);
+                        n.scale = this._config[`scale${t+1}`], e.updateConfig(n)
+                    }))
+                }
+            }
+            var s = a;
+            t.default = s
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, o = (r = n(153)) && r.__esModule ? r : {
+                    default: r
+                },
+                i = n(1);
+            const a = ["/fe/lol-uikit/images/parallax-smoke1.png", "/fe/lol-uikit/images/parallax-smoke2.png", "/fe/lol-uikit/images/parallax-smoke3.png", "/fe/lol-uikit/images/parallax-smoke4.png"],
+                s = "parallax-layer";
+            class l extends i.webComponents.ShadowElement {
+                static get observedAttributes() {
+                    return ["animated", "parallax-config", "layer-image-paths", "background-path", "foreground-path"]
+                }
+                templateMarkup() {
+                    return n(155)
+                }
+                stylesheetMarkup() {
+                    return n(156)
+                }
+                connectedCallback() {
+                    super.connectedCallback();
+                    const e = "false" !== this.getAttribute("animated");
+                    this._animated = e;
+                    const t = JSON.parse(this.getAttribute("parallax-config"));
+                    this.parallaxConfig = t;
+                    const n = JSON.parse(this.getAttribute("layer-image-paths")) || a,
+                        r = this.getAttribute("background-path") || "/fe/lol-uikit/images/parallax-smoke-background.png",
+                        i = this.getAttribute("foreground-path") || "/fe/lol-uikit/images/parallax-smoke-foreground.png",
+                        s = this.shadowRoot.querySelector(".parallax-layer-container"),
+                        l = n.map((t => this.addParallaxLayer(s, t, "parallax-background-layer", e)));
+                    this.setBackgroundPaths(s, i, r), this._parallaxConfigObserver = new MutationObserver((() => {
+                        this.onParallaxConfigChanged()
+                    })), this._parallaxConfigObserver.observe(this, {
+                        attributeFilter: ["parallax-config"]
+                    }), this._animatedObserver = new MutationObserver((() => {
+                        this.onAnimatedChanged()
+                    })), this._animatedObserver.observe(this, {
+                        attributeFilter: ["animated"]
+                    }), this._parallax = new o.default(l, t, e)
+                }
+                disconnectedCallback() {
+                    super.disconnectedCallback(), this._parallaxConfigObserver.disconnect(), this._animatedObserver.disconnect(), this._parallax.destroy(), this.removeAllParallaxLayers()
+                }
+                addParallaxLayer(e, t, n, r) {
+                    const o = document.createElement("div");
+                    return o.classList.add(s), o.classList.add(n), o.style.backgroundImage = `url(${t})`, o.setAttribute("animated", Boolean(r)), e.appendChild(o), o
+                }
+                removeAllParallaxLayers() {
+                    const e = this.shadowRoot.querySelector(".parallax-layer-container"),
+                        t = this.shadowRoot.querySelectorAll("." + s);
+                    for (let n = 0; n < t.length; n++) e.removeChild(t[n])
+                }
+                setBackgroundPaths(e, t, n) {
+                    n && (e.style.backgroundImage = `url(${n})`), t && this.addParallaxLayer(e, t, "parallax-foreground-layer")
+                }
+                onParallaxConfigChanged() {
+                    const e = JSON.parse(this.getAttribute("parallax-config"));
+                    this._parallax.updateConfig(e)
+                }
+                onAnimatedChanged() {
+                    const e = "false" !== this.getAttribute("animated");
+                    this._animated !== e && (e ? this._parallax.play() : this._parallax.pause(), this._animated = e)
+                }
+            }
+            l.tagName = "lol-uikit-parallax-background";
+            var d = l;
+            t.default = d
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n  <div class="parallax-layer-container">\r\n  </div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, "lol-uikit-parallax-background {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n}\n.parallax-layer-container {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  overflow: hidden;\n  background-size: cover;\n  background-position-y: 100%;\n  background-repeat: no-repeat;\n}\n.parallax-layer-container .parallax-layer {\n  width: 100%;\n  height: 100%;\n  position: absolute;\n  background-size: contain;\n  background-position-y: 100%;\n  backface-visibility: hidden;\n}\n.parallax-layer-container .parallax-background-layer {\n  background-repeat: no-repeat;\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/parallax-background/component-style.styl"],
+                names: [],
+                mappings: "AACA;EACE,WAAO;EACP,YAAQ;EACR,kBAAU;AAAZ;AAGA;EACE,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,gBAAU;EACV,sBAAiB;EACjB,2BAAuB;EACvB,4BAAmB;AADrB;AAGE;EACE,WAAO;EACP,YAAQ;EACR,kBAAU;EACV,wBAAiB;EACjB,2BAAuB;EACvB,2BAAqB;AADzB;AAIE;EACE,4BAAmB;AAFvB",
+                sourcesContent: ["\r\nlol-uikit-parallax-background {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: absolute;\r\n}\r\n\r\n.parallax-layer-container {\r\n  width: 100%;\r\n  height: 100%;\r\n  position: relative;\r\n  overflow: hidden;\r\n  background-size: cover;\r\n  background-position-y: 100%;\r\n  background-repeat: no-repeat;\r\n\r\n  .parallax-layer {\r\n    width: 100%;\r\n    height: 100%;\r\n    position: absolute;\r\n    background-size: contain;\r\n    background-position-y: 100%;\r\n    backface-visibility: hidden;\r\n  }\r\n\r\n  .parallax-background-layer {\r\n    background-repeat: no-repeat;\r\n  }\r\n}"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r = n(1),
+                o = s(n(158)),
+                i = s(n(179)),
+                a = s(n(180));
+
+            function s(e) {
+                return e && e.__esModule ? e : {
+                    default: e
+                }
+            }
+            class l extends r.webComponents.ShadowElement {
+                static get observedAttributes() {
+                    return []
+                }
+                templateMarkup() {
+                    return n(181)
+                }
+                stylesheetMarkup() {
+                    const e = n(182);
+                    return i.default+"\n" + e.toString()
+                }
+                connectedCallback() {
+                    if (super.connectedCallback(), this._initialized) return;
+                    this._initialized = !0;
+                    const e = this.shadowRoot.querySelector(".wrapper");
+                    o.default.initialize(e);
+                    const t = e.querySelector(".inner-wrapper");
+                    (0, a.default)(t, this.onElementResizeEvent)
+                }
+                onElementResizeEvent() {
+                    if (!this.shadowRoot) return;
+                    const e = this.shadowRoot.querySelector(".wrapper");
+                    e && o.default.update(e)
+                }
+                disconnectedCallback() {
+                    super.disconnectedCallback();
+                    const e = this.shadowRoot.querySelector(".wrapper"),
+                        t = e.querySelector(".inner-wrapper");
+                    a.default.unbind(t, this.onElementResizeEvent), o.default.destroy(e), this._initialized = !1
+                }
+            }
+            l.tagName = "lol-uikit-perfect-scrollable";
+            var d = l;
+            t.default = d
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n(159)
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(160),
+                o = n(168),
+                i = n(178);
+            e.exports = {
+                initialize: o,
+                update: i,
+                destroy: r
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(161),
+                o = n(163),
+                i = n(164);
+            e.exports = function(e) {
+                var t = i.get(e);
+                t && (t.event.unbindAll(), o.remove(t.scrollbarX), o.remove(t.scrollbarY), o.remove(t.scrollbarXRail), o.remove(t.scrollbarYRail), r.removePsClasses(e), i.remove(e))
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(162),
+                o = n(163),
+                i = t.toInt = function(e) {
+                    return parseInt(e, 10) || 0
+                },
+                a = t.clone = function(e) {
+                    if (e) {
+                        if (e.constructor === Array) return e.map(a);
+                        if ("object" == typeof e) {
+                            var t = {};
+                            for (var n in e) t[n] = a(e[n]);
+                            return t
+                        }
+                        return e
+                    }
+                    return null
+                };
+            t.extend = function(e, t) {
+                var n = a(e);
+                for (var r in t) n[r] = a(t[r]);
+                return n
+            }, t.isEditable = function(e) {
+                return o.matches(e, "input,[contenteditable]") || o.matches(e, "select,[contenteditable]") || o.matches(e, "textarea,[contenteditable]") || o.matches(e, "button,[contenteditable]")
+            }, t.removePsClasses = function(e) {
+                for (var t = r.list(e), n = 0; n < t.length; n++) {
+                    var o = t[n];
+                    0 === o.indexOf("ps-") && r.remove(e, o)
+                }
+            }, t.outerWidth = function(e) {
+                return i(o.css(e, "width")) + i(o.css(e, "paddingLeft")) + i(o.css(e, "paddingRight")) + i(o.css(e, "borderLeftWidth")) + i(o.css(e, "borderRightWidth"))
+            }, t.startScrolling = function(e, t) {
+                r.add(e, "ps-in-scrolling"), void 0 !== t ? r.add(e, "ps-" + t) : (r.add(e, "ps-x"), r.add(e, "ps-y"))
+            }, t.stopScrolling = function(e, t) {
+                r.remove(e, "ps-in-scrolling"), void 0 !== t ? r.remove(e, "ps-" + t) : (r.remove(e, "ps-x"), r.remove(e, "ps-y"))
+            }, t.env = {
+                isWebKit: "WebkitAppearance" in document.documentElement.style,
+                supportsTouch: "ontouchstart" in window || window.DocumentTouch && document instanceof window.DocumentTouch,
+                supportsIePointer: null !== window.navigator.msMaxTouchPoints
+            }
+        }, (e, t) => {
+            "use strict";
+            t.add = function(e, t) {
+                e.classList ? e.classList.add(t) : function(e, t) {
+                    var n = e.className.split(" ");
+                    n.indexOf(t) < 0 && n.push(t), e.className = n.join(" ")
+                }(e, t)
+            }, t.remove = function(e, t) {
+                e.classList ? e.classList.remove(t) : function(e, t) {
+                    var n = e.className.split(" "),
+                        r = n.indexOf(t);
+                    r >= 0 && n.splice(r, 1), e.className = n.join(" ")
+                }(e, t)
+            }, t.list = function(e) {
+                return e.classList ? Array.prototype.slice.apply(e.classList) : e.className.split(" ")
+            }
+        }, e => {
+            "use strict";
+            var t = {};
+            t.e = function(e, t) {
+                var n = document.createElement(e);
+                return n.className = t, n
+            }, t.appendTo = function(e, t) {
+                return t.appendChild(e), e
+            }, t.css = function(e, t, n) {
+                return "object" == typeof t ? function(e, t) {
+                    for (var n in t) {
+                        var r = t[n];
+                        "number" == typeof r && (r = r.toString() + "px"), e.style[n] = r
+                    }
+                    return e
+                }(e, t) : void 0 === n ? function(e, t) {
+                    return window.getComputedStyle(e)[t]
+                }(e, t) : function(e, t, n) {
+                    return "number" == typeof n && (n = n.toString() + "px"), e.style[t] = n, e
+                }(e, t, n)
+            }, t.matches = function(e, t) {
+                return void 0 !== e.matches ? e.matches(t) : void 0 !== e.matchesSelector ? e.matchesSelector(t) : void 0 !== e.webkitMatchesSelector ? e.webkitMatchesSelector(t) : void 0 !== e.mozMatchesSelector ? e.mozMatchesSelector(t) : void 0 !== e.msMatchesSelector ? e.msMatchesSelector(t) : void 0
+            }, t.remove = function(e) {
+                void 0 !== e.remove ? e.remove() : e.parentNode && e.parentNode.removeChild(e)
+            }, t.queryChildren = function(e, n) {
+                return Array.prototype.filter.call(e.childNodes, (function(e) {
+                    return t.matches(e, n)
+                }))
+            }, e.exports = t
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(161),
+                o = n(162),
+                i = n(165),
+                a = n(163),
+                s = n(166),
+                l = n(167),
+                d = {};
+
+            function c(e) {
+                var t, n, l = this;
+
+                function d() {
+                    o.add(e, "ps-focus")
+                }
+
+                function c() {
+                    o.remove(e, "ps-focus")
+                }
+                l.settings = r.clone(i), l.containerWidth = null, l.containerHeight = null, l.contentWidth = null, l.contentHeight = null, l.isRtl = "rtl" === a.css(e, "direction"), l.isNegativeScroll = (n = e.scrollLeft, e.scrollLeft = -1, t = e.scrollLeft < 0, e.scrollLeft = n, t), l.negativeScrollAdjustment = l.isNegativeScroll ? e.scrollWidth - e.clientWidth : 0, l.event = new s, l.ownerDocument = e.ownerDocument || document, l.scrollbarXRail = a.appendTo(a.e("div", "ps-scrollbar-x-rail"), e), l.scrollbarX = a.appendTo(a.e("div", "ps-scrollbar-x"), l.scrollbarXRail), l.scrollbarX.setAttribute("tabindex", 0), l.event.bind(l.scrollbarX, "focus", d), l.event.bind(l.scrollbarX, "blur", c), l.scrollbarXActive = null, l.scrollbarXWidth = null, l.scrollbarXLeft = null, l.scrollbarXBottom = r.toInt(a.css(l.scrollbarXRail, "bottom")), l.isScrollbarXUsingBottom = l.scrollbarXBottom == l.scrollbarXBottom, l.scrollbarXTop = l.isScrollbarXUsingBottom ? null : r.toInt(a.css(l.scrollbarXRail, "top")), l.railBorderXWidth = r.toInt(a.css(l.scrollbarXRail, "borderLeftWidth")) + r.toInt(a.css(l.scrollbarXRail, "borderRightWidth")), a.css(l.scrollbarXRail, "display", "block"), l.railXMarginWidth = r.toInt(a.css(l.scrollbarXRail, "marginLeft")) + r.toInt(a.css(l.scrollbarXRail, "marginRight")), a.css(l.scrollbarXRail, "display", ""), l.railXWidth = null, l.railXRatio = null, l.scrollbarYRail = a.appendTo(a.e("div", "ps-scrollbar-y-rail"), e), l.scrollbarY = a.appendTo(a.e("div", "ps-scrollbar-y"), l.scrollbarYRail), l.scrollbarY.setAttribute("tabindex", 0), l.event.bind(l.scrollbarY, "focus", d), l.event.bind(l.scrollbarY, "blur", c), l.scrollbarYActive = null, l.scrollbarYHeight = null, l.scrollbarYTop = null, l.scrollbarYRight = r.toInt(a.css(l.scrollbarYRail, "right")), l.isScrollbarYUsingRight = l.scrollbarYRight == l.scrollbarYRight, l.scrollbarYLeft = l.isScrollbarYUsingRight ? null : r.toInt(a.css(l.scrollbarYRail, "left")), l.scrollbarYOuterWidth = l.isRtl ? r.outerWidth(l.scrollbarY) : null, l.railBorderYWidth = r.toInt(a.css(l.scrollbarYRail, "borderTopWidth")) + r.toInt(a.css(l.scrollbarYRail, "borderBottomWidth")), a.css(l.scrollbarYRail, "display", "block"), l.railYMarginHeight = r.toInt(a.css(l.scrollbarYRail, "marginTop")) + r.toInt(a.css(l.scrollbarYRail, "marginBottom")), a.css(l.scrollbarYRail, "display", ""), l.railYHeight = null, l.railYRatio = null
+            }
+
+            function p(e) {
+                return e.getAttribute("data-ps-id")
+            }
+            t.add = function(e) {
+                var t = l();
+                return function(e, t) {
+                    e.setAttribute("data-ps-id", t)
+                }(e, t), d[t] = new c(e), d[t]
+            }, t.remove = function(e) {
+                delete d[p(e)],
+                    function(e) {
+                        e.removeAttribute("data-ps-id")
+                    }(e)
+            }, t.get = function(e) {
+                return d[p(e)]
+            }
+        }, e => {
+            "use strict";
+            e.exports = {
+                handlers: ["click-rail", "drag-scrollbar", "keyboard", "wheel", "touch"],
+                maxScrollbarLength: null,
+                minScrollbarLength: null,
+                scrollXMarginOffset: 0,
+                scrollYMarginOffset: 0,
+                suppressScrollX: !1,
+                suppressScrollY: !1,
+                swipePropagation: !0,
+                useBothWheelAxes: !1,
+                wheelPropagation: !1,
+                wheelSpeed: 1,
+                theme: "default"
+            }
+        }, e => {
+            "use strict";
+            var t = function(e) {
+                this.element = e, this.events = {}
+            };
+            t.prototype.bind = function(e, t) {
+                void 0 === this.events[e] && (this.events[e] = []), this.events[e].push(t), this.element.addEventListener(e, t, !1)
+            }, t.prototype.unbind = function(e, t) {
+                var n = void 0 !== t;
+                this.events[e] = this.events[e].filter((function(r) {
+                    return !(!n || r === t) || (this.element.removeEventListener(e, r, !1), !1)
+                }), this)
+            }, t.prototype.unbindAll = function() {
+                for (var e in this.events) this.unbind(e)
+            };
+            var n = function() {
+                this.eventElements = []
+            };
+            n.prototype.eventElement = function(e) {
+                var n = this.eventElements.filter((function(t) {
+                    return t.element === e
+                }))[0];
+                return void 0 === n && (n = new t(e), this.eventElements.push(n)), n
+            }, n.prototype.bind = function(e, t, n) {
+                this.eventElement(e).bind(t, n)
+            }, n.prototype.unbind = function(e, t, n) {
+                this.eventElement(e).unbind(t, n)
+            }, n.prototype.unbindAll = function() {
+                for (var e = 0; e < this.eventElements.length; e++) this.eventElements[e].unbindAll()
+            }, n.prototype.once = function(e, t, n) {
+                var r = this.eventElement(e),
+                    o = function(e) {
+                        r.unbind(t, o), n(e)
+                    };
+                r.bind(t, o)
+            }, e.exports = n
+        }, e => {
+            "use strict";
+            e.exports = function() {
+                function e() {
+                    return Math.floor(65536 * (1 + Math.random())).toString(16).substring(1)
+                }
+                return function() {
+                    return e() + e() + "-" + e() + "-" + e() + "-" + e() + "-" + e() + e() + e()
+                }
+            }()
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(161),
+                o = n(162),
+                i = n(164),
+                a = n(169),
+                s = {
+                    "click-rail": n(171),
+                    "drag-scrollbar": n(172),
+                    keyboard: n(173),
+                    wheel: n(174),
+                    touch: n(175),
+                    selection: n(176)
+                },
+                l = n(177);
+            e.exports = function(e, t) {
+                t = "object" == typeof t ? t : {}, o.add(e, "ps-container");
+                var n = i.add(e);
+                n.settings = r.extend(n.settings, t), o.add(e, "ps-theme-" + n.settings.theme), n.settings.handlers.forEach((function(t) {
+                    s[t](e)
+                })), l(e), a(e)
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(161),
+                o = n(162),
+                i = n(163),
+                a = n(164),
+                s = n(170);
+
+            function l(e, t) {
+                return e.settings.minScrollbarLength && (t = Math.max(t, e.settings.minScrollbarLength)), e.settings.maxScrollbarLength && (t = Math.min(t, e.settings.maxScrollbarLength)), t
+            }
+            e.exports = function(e) {
+                var t, n = a.get(e);
+                n.containerWidth = e.clientWidth, n.containerHeight = e.clientHeight, n.contentWidth = e.scrollWidth, n.contentHeight = e.scrollHeight, e.contains(n.scrollbarXRail) || ((t = i.queryChildren(e, ".ps-scrollbar-x-rail")).length > 0 && t.forEach((function(e) {
+                        i.remove(e)
+                    })), i.appendTo(n.scrollbarXRail, e)), e.contains(n.scrollbarYRail) || ((t = i.queryChildren(e, ".ps-scrollbar-y-rail")).length > 0 && t.forEach((function(e) {
+                        i.remove(e)
+                    })), i.appendTo(n.scrollbarYRail, e)), !n.settings.suppressScrollX && n.containerWidth + n.settings.scrollXMarginOffset < n.contentWidth ? (n.scrollbarXActive = !0, n.railXWidth = n.containerWidth - n.railXMarginWidth, n.railXRatio = n.containerWidth / n.railXWidth, n.scrollbarXWidth = l(n, r.toInt(n.railXWidth * n.containerWidth / n.contentWidth)), n.scrollbarXLeft = r.toInt((n.negativeScrollAdjustment + e.scrollLeft) * (n.railXWidth - n.scrollbarXWidth) / (n.contentWidth - n.containerWidth))) : n.scrollbarXActive = !1, !n.settings.suppressScrollY && n.containerHeight + n.settings.scrollYMarginOffset < n.contentHeight ? (n.scrollbarYActive = !0, n.railYHeight = n.containerHeight - n.railYMarginHeight, n.railYRatio = n.containerHeight / n.railYHeight, n.scrollbarYHeight = l(n, r.toInt(n.railYHeight * n.containerHeight / n.contentHeight)), n.scrollbarYTop = r.toInt(e.scrollTop * (n.railYHeight - n.scrollbarYHeight) / (n.contentHeight - n.containerHeight))) : n.scrollbarYActive = !1, n.scrollbarXLeft >= n.railXWidth - n.scrollbarXWidth && (n.scrollbarXLeft = n.railXWidth - n.scrollbarXWidth), n.scrollbarYTop >= n.railYHeight - n.scrollbarYHeight && (n.scrollbarYTop = n.railYHeight - n.scrollbarYHeight),
+                    function(e, t) {
+                        var n = {
+                            width: t.railXWidth
+                        };
+                        t.isRtl ? n.left = t.negativeScrollAdjustment + e.scrollLeft + t.containerWidth - t.contentWidth : n.left = e.scrollLeft, t.isScrollbarXUsingBottom ? n.bottom = t.scrollbarXBottom - e.scrollTop : n.top = t.scrollbarXTop + e.scrollTop, i.css(t.scrollbarXRail, n);
+                        var r = {
+                            top: e.scrollTop,
+                            height: t.railYHeight
+                        };
+                        t.isScrollbarYUsingRight ? t.isRtl ? r.right = t.contentWidth - (t.negativeScrollAdjustment + e.scrollLeft) - t.scrollbarYRight - t.scrollbarYOuterWidth : r.right = t.scrollbarYRight - e.scrollLeft : t.isRtl ? r.left = t.negativeScrollAdjustment + e.scrollLeft + 2 * t.containerWidth - t.contentWidth - t.scrollbarYLeft - t.scrollbarYOuterWidth : r.left = t.scrollbarYLeft + e.scrollLeft, i.css(t.scrollbarYRail, r), i.css(t.scrollbarX, {
+                            left: t.scrollbarXLeft,
+                            width: t.scrollbarXWidth - t.railBorderXWidth
+                        }), i.css(t.scrollbarY, {
+                            top: t.scrollbarYTop,
+                            height: t.scrollbarYHeight - t.railBorderYWidth
+                        })
+                    }(e, n), n.scrollbarXActive ? o.add(e, "ps-active-x") : (o.remove(e, "ps-active-x"), n.scrollbarXWidth = 0, n.scrollbarXLeft = 0, s(e, "left", 0)), n.scrollbarYActive ? o.add(e, "ps-active-y") : (o.remove(e, "ps-active-y"), n.scrollbarYHeight = 0, n.scrollbarYTop = 0, s(e, "top", 0))
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r, o, i = n(164),
+                a = function(e) {
+                    var t = document.createEvent("Event");
+                    return t.initEvent(e, !0, !0), t
+                };
+            e.exports = function(e, t, n) {
+                if (void 0 === e) throw "You must provide an element to the update-scroll function";
+                if (void 0 === t) throw "You must provide an axis to the update-scroll function";
+                if (void 0 === n) throw "You must provide a value to the update-scroll function";
+                "top" === t && n <= 0 && (e.scrollTop = n = 0, e.dispatchEvent(a("ps-y-reach-start"))), "left" === t && n <= 0 && (e.scrollLeft = n = 0, e.dispatchEvent(a("ps-x-reach-start")));
+                var s = i.get(e);
+                "top" === t && n >= s.contentHeight - s.containerHeight && ((n = s.contentHeight - s.containerHeight) - e.scrollTop <= 1 ? n = e.scrollTop : e.scrollTop = n, e.dispatchEvent(a("ps-y-reach-end"))), "left" === t && n >= s.contentWidth - s.containerWidth && ((n = s.contentWidth - s.containerWidth) - e.scrollLeft <= 1 ? n = e.scrollLeft : e.scrollLeft = n, e.dispatchEvent(a("ps-x-reach-end"))), r || (r = e.scrollTop), o || (o = e.scrollLeft), "top" === t && n < r && e.dispatchEvent(a("ps-scroll-up")), "top" === t && n > r && e.dispatchEvent(a("ps-scroll-down")), "left" === t && n < o && e.dispatchEvent(a("ps-scroll-left")), "left" === t && n > o && e.dispatchEvent(a("ps-scroll-right")), "top" === t && (e.scrollTop = r = n, e.dispatchEvent(a("ps-scroll-y"))), "left" === t && (e.scrollLeft = o = n, e.dispatchEvent(a("ps-scroll-x")))
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(164),
+                o = n(169),
+                i = n(170);
+            e.exports = function(e) {
+                ! function(e, t) {
+                    function n(e) {
+                        return e.getBoundingClientRect()
+                    }
+                    var r = function(e) {
+                        e.stopPropagation()
+                    };
+                    t.event.bind(t.scrollbarY, "click", r), t.event.bind(t.scrollbarYRail, "click", (function(r) {
+                        var a = r.pageY - window.pageYOffset - n(t.scrollbarYRail).top > t.scrollbarYTop ? 1 : -1;
+                        i(e, "top", e.scrollTop + a * t.containerHeight), o(e), r.stopPropagation()
+                    })), t.event.bind(t.scrollbarX, "click", r), t.event.bind(t.scrollbarXRail, "click", (function(r) {
+                        var a = r.pageX - window.pageXOffset - n(t.scrollbarXRail).left > t.scrollbarXLeft ? 1 : -1;
+                        i(e, "left", e.scrollLeft + a * t.containerWidth), o(e), r.stopPropagation()
+                    }))
+                }(e, r.get(e))
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(161),
+                o = n(163),
+                i = n(164),
+                a = n(169),
+                s = n(170);
+
+            function l(e, t) {
+                var n = null,
+                    i = null;
+                var l = function(o) {
+                        ! function(o) {
+                            var i = n + o * t.railXRatio,
+                                a = Math.max(0, t.scrollbarXRail.getBoundingClientRect().left) + t.railXRatio * (t.railXWidth - t.scrollbarXWidth);
+                            t.scrollbarXLeft = i < 0 ? 0 : i > a ? a : i;
+                            var l = r.toInt(t.scrollbarXLeft * (t.contentWidth - t.containerWidth) / (t.containerWidth - t.railXRatio * t.scrollbarXWidth)) - t.negativeScrollAdjustment;
+                            s(e, "left", l)
+                        }(o.pageX - i), a(e), o.stopPropagation(), o.preventDefault()
+                    },
+                    d = function() {
+                        r.stopScrolling(e, "x"), t.event.unbind(t.ownerDocument, "mousemove", l)
+                    };
+                t.event.bind(t.scrollbarX, "mousedown", (function(a) {
+                    i = a.pageX, n = r.toInt(o.css(t.scrollbarX, "left")) * t.railXRatio, r.startScrolling(e, "x"), t.event.bind(t.ownerDocument, "mousemove", l), t.event.once(t.ownerDocument, "mouseup", d), a.stopPropagation(), a.preventDefault()
+                }))
+            }
+
+            function d(e, t) {
+                var n = null,
+                    i = null;
+                var l = function(o) {
+                        ! function(o) {
+                            var i = n + o * t.railYRatio,
+                                a = Math.max(0, t.scrollbarYRail.getBoundingClientRect().top) + t.railYRatio * (t.railYHeight - t.scrollbarYHeight);
+                            t.scrollbarYTop = i < 0 ? 0 : i > a ? a : i;
+                            var l = r.toInt(t.scrollbarYTop * (t.contentHeight - t.containerHeight) / (t.containerHeight - t.railYRatio * t.scrollbarYHeight));
+                            s(e, "top", l)
+                        }(o.pageY - i), a(e), o.stopPropagation(), o.preventDefault()
+                    },
+                    d = function() {
+                        r.stopScrolling(e, "y"), t.event.unbind(t.ownerDocument, "mousemove", l)
+                    };
+                t.event.bind(t.scrollbarY, "mousedown", (function(a) {
+                    i = a.pageY, n = r.toInt(o.css(t.scrollbarY, "top")) * t.railYRatio, r.startScrolling(e, "y"), t.event.bind(t.ownerDocument, "mousemove", l), t.event.once(t.ownerDocument, "mouseup", d), a.stopPropagation(), a.preventDefault()
+                }))
+            }
+            e.exports = function(e) {
+                var t = i.get(e);
+                l(e, t), d(e, t)
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(161),
+                o = n(163),
+                i = n(164),
+                a = n(169),
+                s = n(170);
+
+            function l(e, t) {
+                var n = !1;
+                t.event.bind(e, "mouseenter", (function() {
+                    n = !0
+                })), t.event.bind(e, "mouseleave", (function() {
+                    n = !1
+                }));
+                var i = !1;
+                t.event.bind(t.ownerDocument, "keydown", (function(l) {
+                    if (!(l.isDefaultPrevented && l.isDefaultPrevented() || l.defaultPrevented)) {
+                        var d = o.matches(t.scrollbarX, ":focus") || o.matches(t.scrollbarY, ":focus");
+                        if (n || d) {
+                            var c = document.activeElement ? document.activeElement : t.ownerDocument.activeElement;
+                            if (c) {
+                                if ("IFRAME" === c.tagName) c = c.contentDocument.activeElement;
+                                else
+                                    for (; c.shadowRoot && c.shadowRoot.activeElement;) c = c.shadowRoot.activeElement;
+                                if (r.isEditable(c)) return
+                            }
+                            var p = 0,
+                                A = 0;
+                            switch (l.which) {
+                                case 37:
+                                    p = l.metaKey ? -t.contentWidth : l.altKey ? -t.containerWidth : -30;
+                                    break;
+                                case 38:
+                                    A = l.metaKey ? t.contentHeight : l.altKey ? t.containerHeight : 30;
+                                    break;
+                                case 39:
+                                    p = l.metaKey ? t.contentWidth : l.altKey ? t.containerWidth : 30;
+                                    break;
+                                case 40:
+                                    A = l.metaKey ? -t.contentHeight : l.altKey ? -t.containerHeight : -30;
+                                    break;
+                                case 33:
+                                    A = 90;
+                                    break;
+                                case 32:
+                                    A = l.shiftKey ? 90 : -90;
+                                    break;
+                                case 34:
+                                    A = -90;
+                                    break;
+                                case 35:
+                                    A = l.ctrlKey ? -t.contentHeight : -t.containerHeight;
+                                    break;
+                                case 36:
+                                    A = l.ctrlKey ? e.scrollTop : t.containerHeight;
+                                    break;
+                                default:
+                                    return
+                            }
+                            s(e, "top", e.scrollTop - A), s(e, "left", e.scrollLeft + p), a(e), i = function(n, r) {
+                                var o = e.scrollTop;
+                                if (0 === n) {
+                                    if (!t.scrollbarYActive) return !1;
+                                    if (0 === o && r > 0 || o >= t.contentHeight - t.containerHeight && r < 0) return !t.settings.wheelPropagation
+                                }
+                                var i = e.scrollLeft;
+                                if (0 === r) {
+                                    if (!t.scrollbarXActive) return !1;
+                                    if (0 === i && n < 0 || i >= t.contentWidth - t.containerWidth && n > 0) return !t.settings.wheelPropagation
+                                }
+                                return !0
+                            }(p, A), i && l.preventDefault()
+                        }
+                    }
+                }))
+            }
+            e.exports = function(e) {
+                l(e, i.get(e))
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(164),
+                o = n(169),
+                i = n(170);
+
+            function a(e, t) {
+                var n = !1;
+
+                function r(r) {
+                    var a = function(e) {
+                            var t = e.deltaX,
+                                n = -1 * e.deltaY;
+                            return void 0 !== t && void 0 !== n || (t = -1 * e.wheelDeltaX / 6, n = e.wheelDeltaY / 6), e.deltaMode && 1 === e.deltaMode && (t *= 10, n *= 10), t != t && n != n && (t = 0, n = e.wheelDelta), e.shiftKey ? [-n, -t] : [t, n]
+                        }(r),
+                        s = a[0],
+                        l = a[1];
+                    (function(t, n) {
+                        var r = e.querySelector("textarea:hover, select[multiple]:hover, .ps-child:hover");
+                        if (r) {
+                            if (!window.getComputedStyle(r).overflow.match(/(scroll|auto)/)) return !1;
+                            var o = r.scrollHeight - r.clientHeight;
+                            if (o > 0 && !(0 === r.scrollTop && n > 0 || r.scrollTop === o && n < 0)) return !0;
+                            var i = r.scrollLeft - r.clientWidth;
+                            if (i > 0 && !(0 === r.scrollLeft && t < 0 || r.scrollLeft === i && t > 0)) return !0
+                        }
+                        return !1
+                    })(s, l) || (n = !1, t.settings.useBothWheelAxes ? t.scrollbarYActive && !t.scrollbarXActive ? (i(e, "top", l ? e.scrollTop - l * t.settings.wheelSpeed : e.scrollTop + s * t.settings.wheelSpeed), n = !0) : t.scrollbarXActive && !t.scrollbarYActive && (i(e, "left", s ? e.scrollLeft + s * t.settings.wheelSpeed : e.scrollLeft - l * t.settings.wheelSpeed), n = !0) : (i(e, "top", e.scrollTop - l * t.settings.wheelSpeed), i(e, "left", e.scrollLeft + s * t.settings.wheelSpeed)), o(e), n = n || function(n, r) {
+                        var o = e.scrollTop;
+                        if (0 === n) {
+                            if (!t.scrollbarYActive) return !1;
+                            if (0 === o && r > 0 || o >= t.contentHeight - t.containerHeight && r < 0) return !t.settings.wheelPropagation
+                        }
+                        var i = e.scrollLeft;
+                        if (0 === r) {
+                            if (!t.scrollbarXActive) return !1;
+                            if (0 === i && n < 0 || i >= t.contentWidth - t.containerWidth && n > 0) return !t.settings.wheelPropagation
+                        }
+                        return !0
+                    }(s, l), n && (r.stopPropagation(), r.preventDefault()))
+                }
+                void 0 !== window.onwheel ? t.event.bind(e, "wheel", r) : void 0 !== window.onmousewheel && t.event.bind(e, "mousewheel", r)
+            }
+            e.exports = function(e) {
+                a(e, r.get(e))
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(161),
+                o = n(164),
+                i = n(169),
+                a = n(170);
+
+            function s(e, t, n, r) {
+                function s(t, n) {
+                    a(e, "top", e.scrollTop - n), a(e, "left", e.scrollLeft - t), i(e)
+                }
+                var l = {},
+                    d = 0,
+                    c = {},
+                    p = null,
+                    A = !1,
+                    u = !1;
+
+                function h() {
+                    A = !0
+                }
+
+                function g() {
+                    A = !1
+                }
+
+                function b(e) {
+                    return e.targetTouches ? e.targetTouches[0] : e
+                }
+
+                function m(e) {
+                    return !(!e.targetTouches || 1 !== e.targetTouches.length) || !(!e.pointerType || "mouse" === e.pointerType || e.pointerType === e.MSPOINTER_TYPE_MOUSE)
+                }
+
+                function f(e) {
+                    if (m(e)) {
+                        u = !0;
+                        var t = b(e);
+                        l.pageX = t.pageX, l.pageY = t.pageY, d = (new Date).getTime(), null !== p && clearInterval(p), e.stopPropagation()
+                    }
+                }
+
+                function _(n) {
+                    if (!u && t.settings.swipePropagation && f(n), !A && u && m(n)) {
+                        var r = b(n),
+                            o = {
+                                pageX: r.pageX,
+                                pageY: r.pageY
+                            },
+                            i = o.pageX - l.pageX,
+                            a = o.pageY - l.pageY;
+                        s(i, a), l = o;
+                        var p = (new Date).getTime(),
+                            h = p - d;
+                        h > 0 && (c.x = i / h, c.y = a / h, d = p),
+                            function(n, r) {
+                                var o = e.scrollTop,
+                                    i = e.scrollLeft,
+                                    a = Math.abs(n),
+                                    s = Math.abs(r);
+                                if (s > a) {
+                                    if (r < 0 && o === t.contentHeight - t.containerHeight || r > 0 && 0 === o) return !t.settings.swipePropagation
+                                } else if (a > s && (n < 0 && i === t.contentWidth - t.containerWidth || n > 0 && 0 === i)) return !t.settings.swipePropagation;
+                                return !0
+                            }(i, a) && (n.stopPropagation(), n.preventDefault())
+                    }
+                }
+
+                function y() {
+                    !A && u && (u = !1, clearInterval(p), p = setInterval((function() {
+                        o.get(e) && (c.x || c.y) ? Math.abs(c.x) < .01 && Math.abs(c.y) < .01 ? clearInterval(p) : (s(30 * c.x, 30 * c.y), c.x *= .8, c.y *= .8) : clearInterval(p)
+                    }), 10))
+                }
+                n ? (t.event.bind(window, "touchstart", h), t.event.bind(window, "touchend", g), t.event.bind(e, "touchstart", f), t.event.bind(e, "touchmove", _), t.event.bind(e, "touchend", y)) : r && (window.PointerEvent ? (t.event.bind(window, "pointerdown", h), t.event.bind(window, "pointerup", g), t.event.bind(e, "pointerdown", f), t.event.bind(e, "pointermove", _), t.event.bind(e, "pointerup", y)) : window.MSPointerEvent && (t.event.bind(window, "MSPointerDown", h), t.event.bind(window, "MSPointerUp", g), t.event.bind(e, "MSPointerDown", f), t.event.bind(e, "MSPointerMove", _), t.event.bind(e, "MSPointerUp", y)))
+            }
+            e.exports = function(e) {
+                (r.env.supportsTouch || r.env.supportsIePointer) && s(e, o.get(e), r.env.supportsTouch, r.env.supportsIePointer)
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(161),
+                o = n(164),
+                i = n(169),
+                a = n(170);
+
+            function s(e, t) {
+                var n = null,
+                    s = {
+                        top: 0,
+                        left: 0
+                    };
+
+                function l() {
+                    n && (clearInterval(n), n = null), r.stopScrolling(e)
+                }
+                var d = !1;
+                t.event.bind(t.ownerDocument, "selectionchange", (function() {
+                    var t;
+                    e.contains(0 === (t = window.getSelection ? window.getSelection() : document.getSelection ? document.getSelection() : "").toString().length ? null : t.getRangeAt(0).commonAncestorContainer) ? d = !0 : (d = !1, l())
+                })), t.event.bind(window, "mouseup", (function() {
+                    d && (d = !1, l())
+                })), t.event.bind(window, "keyup", (function() {
+                    d && (d = !1, l())
+                })), t.event.bind(window, "mousemove", (function(t) {
+                    if (d) {
+                        var c = {
+                                x: t.pageX,
+                                y: t.pageY
+                            },
+                            p = {
+                                left: e.offsetLeft,
+                                right: e.offsetLeft + e.offsetWidth,
+                                top: e.offsetTop,
+                                bottom: e.offsetTop + e.offsetHeight
+                            };
+                        c.x < p.left + 3 ? (s.left = -5, r.startScrolling(e, "x")) : c.x > p.right - 3 ? (s.left = 5, r.startScrolling(e, "x")) : s.left = 0, c.y < p.top + 3 ? (s.top = p.top + 3 - c.y < 5 ? -5 : -20, r.startScrolling(e, "y")) : c.y > p.bottom - 3 ? (s.top = c.y - p.bottom + 3 < 5 ? 5 : 20, r.startScrolling(e, "y")) : s.top = 0, 0 === s.top && 0 === s.left ? l() : n || (n = setInterval((function() {
+                            o.get(e) ? (a(e, "top", e.scrollTop + s.top), a(e, "left", e.scrollLeft + s.left), i(e)) : clearInterval(n)
+                        }), 50))
+                    }
+                }))
+            }
+            e.exports = function(e) {
+                s(e, o.get(e))
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(164),
+                o = n(169);
+            e.exports = function(e) {
+                ! function(e, t) {
+                    t.event.bind(e, "scroll", (function() {
+                        o(e)
+                    }))
+                }(e, r.get(e))
+            }
+        }, (e, t, n) => {
+            "use strict";
+            var r = n(161),
+                o = n(163),
+                i = n(164),
+                a = n(169),
+                s = n(170);
+            e.exports = function(e) {
+                var t = i.get(e);
+                t && (t.negativeScrollAdjustment = t.isNegativeScroll ? e.scrollWidth - e.clientWidth : 0, o.css(t.scrollbarXRail, "display", "block"), o.css(t.scrollbarYRail, "display", "block"), t.railXMarginWidth = r.toInt(o.css(t.scrollbarXRail, "marginLeft")) + r.toInt(o.css(t.scrollbarXRail, "marginRight")), t.railYMarginHeight = r.toInt(o.css(t.scrollbarYRail, "marginTop")) + r.toInt(o.css(t.scrollbarYRail, "marginBottom")), o.css(t.scrollbarXRail, "display", "none"), o.css(t.scrollbarYRail, "display", "none"), a(e), s(e, "top", e.scrollTop), s(e, "left", e.scrollLeft), o.css(t.scrollbarXRail, "display", ""), o.css(t.scrollbarYRail, "display", ""))
+            }
+        }, (e, t, n) => {
+            "use strict";
+            n.r(t), n.d(t, {
+                default: () => r
+            });
+            const r = "/* perfect-scrollbar v0.6.16 */\r\n.ps-container{-ms-touch-action:auto;touch-action:auto;overflow:hidden !important;-ms-overflow-style:none}@supports (-ms-overflow-style: none){.ps-container{overflow:auto !important}}@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none){.ps-container{overflow:auto !important}}.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block;background-color:transparent}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:.9}.ps-container.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999;height:11px}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:.9}.ps-container.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999;width:11px}.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;opacity:0;-webkit-transition:background-color .2s linear, opacity .2s linear;-o-transition:background-color .2s linear, opacity .2s linear;-moz-transition:background-color .2s linear, opacity .2s linear;transition:background-color .2s linear, opacity .2s linear;bottom:0px;height:15px}.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;-webkit-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, -webkit-border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, -webkit-border-radius .2s ease-in-out;-o-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;-moz-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -webkit-border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;bottom:2px;height:6px}.ps-container>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x,.ps-container>.ps-scrollbar-x-rail:active>.ps-scrollbar-x{height:11px}.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;opacity:0;-webkit-transition:background-color .2s linear, opacity .2s linear;-o-transition:background-color .2s linear, opacity .2s linear;-moz-transition:background-color .2s linear, opacity .2s linear;transition:background-color .2s linear, opacity .2s linear;right:0;width:15px}.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;-webkit-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, -webkit-border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, -webkit-border-radius .2s ease-in-out;-o-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;-moz-transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out;transition:background-color .2s linear, height .2s linear, width .2s ease-in-out, border-radius .2s ease-in-out, -webkit-border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;right:2px;width:6px}.ps-container>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y,.ps-container>.ps-scrollbar-y-rail:active>.ps-scrollbar-y{width:11px}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail{background-color:#eee;opacity:.9}.ps-container:hover.ps-in-scrolling.ps-x>.ps-scrollbar-x-rail>.ps-scrollbar-x{background-color:#999;height:11px}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail{background-color:#eee;opacity:.9}.ps-container:hover.ps-in-scrolling.ps-y>.ps-scrollbar-y-rail>.ps-scrollbar-y{background-color:#999;width:11px}.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:.6}.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:.9}.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:.9}.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}\r\n"
+        }, e => {
+            function t(e) {
+                var t = e.target || e.srcElement;
+                t.__resizeRAF__ && cancelAnimationFrame(t.__resizeRAF__), t.__resizeRAF__ = requestAnimationFrame((function() {
+                    var n = t.__resizeTrigger__,
+                        r = n && n.__resizeListeners__;
+                    r && r.forEach((function(t) {
+                        t.call(n, e)
+                    }))
+                }))
+            }
+            var n = function(e, n) {
+                var r, o = this.document,
+                    i = o.attachEvent;
+                if ("undefined" != typeof navigator && (r = navigator.userAgent.match(/Trident/) || navigator.userAgent.match(/Edge/)), !e.__resizeListeners__)
+                    if (e.__resizeListeners__ = [], i) e.__resizeTrigger__ = e, e.attachEvent("onresize", t);
+                    else {
+                        "static" === getComputedStyle(e).position && (e.style.position = "relative");
+                        var a = e.__resizeTrigger__ = o.createElement("object");
+                        a.setAttribute("style", "position: absolute; top: 0; left: 0; height: 100%; width: 100%; pointer-events: none; z-index: -1; opacity: 0;"), a.setAttribute("class", "resize-sensor"), a.setAttribute("tabindex", "-1"), a.__resizeElement__ = e, a.onload = function() {
+                            this.contentDocument.defaultView.__resizeTrigger__ = this.__resizeElement__, this.contentDocument.defaultView.addEventListener("resize", t)
+                        }, a.type = "text/html", r && e.appendChild(a), a.data = "about:blank", r || e.appendChild(a)
+                    } e.__resizeListeners__.push(n)
+            };
+            e.exports = "undefined" == typeof window ? n : n.bind(window), e.exports.unbind = function(e, n) {
+                var r = document.attachEvent,
+                    o = e.__resizeListeners__ || [];
+                if (n) {
+                    var i = o.indexOf(n); - 1 !== i && o.splice(i, 1)
+                } else o = e.__resizeListeners__ = [];
+                if (!o.length) {
+                    if (r) e.detachEvent("onresize", t);
+                    else if (e.__resizeTrigger__) {
+                        var a = e.__resizeTrigger__.contentDocument,
+                            s = a && a.defaultView;
+                        s && (s.removeEventListener("resize", t), delete s.__resizeTrigger__), e.__resizeTrigger__ = !e.removeChild(e.__resizeTrigger__)
+                    }
+                    delete e.__resizeListeners__
+                }
+            }
+        }, e => {
+            "use strict";
+            e.exports = '<template>\r\n  <div class="wrapper use-for-higher-specificity">\r\n    <div class="inner-wrapper">\r\n      <slot></slot>\r\n    </div>\r\n  </div>\r\n</template>\r\n'
+        }, (e, t, n) => {
+            var r = n(26),
+                o = n(27)(r);
+            o.push([e.id, ":host {\n  display: flex;\n  flex-direction: column;\n}\n.wrapper {\n  flex: 1;\n  position: relative;\n}\n.ps-container .ps-scrollbar-y-rail .ps-scrollbar-y {\n  background-color: #785a28;\n  margin-right: 2px;\n  border: thin solid #000;\n}\n.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {\n  background-color: transparent;\n}\n.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {\n  background-color: #463714;\n}\n.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {\n  background-color: transparent;\n}\n.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {\n  background-color: #cdbe91;\n}\n.ps-container:hover > .ps-scrollbar-y-rail:hover {\n  background-color: transparent;\n}\n.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {\n  background-color: #cdbe91;\n}\n.ps-scrollbar-y-rail {\n  margin: 5px 0;\n}\n:host .wrapper .inner-wrapper {\n  overflow: hidden;\n}\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps__scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail:hover .ps__scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover {\n  width: 4px;\n  opacity: 1;\n  right: 2px;\n}\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail .ps__scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity .ps-scrollbar-y-rail:hover .ps__scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:lang(ar-ae),\n:host .wrapper.ps-container.ps-theme-default.use-for-higher-specificity:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover:lang(ar-ae) {\n  right: auto;\n  left: 2px;\n}\n", "", {
+                version: 3,
+                sources: ["webpack://./fe/rcp-fe-lol-uikit/src/elements/perfect-scrollable/component-style.styl"],
+                names: [],
+                mappings: "AAGA;EACE,aAAS;EACT,sBAAgB;AAFlB;AAKA;EACE,OAAM;EACN,kBAAU;AAHZ;AAMA;EACE,yBAAkB;EAClB,iBAAc;EACd,uBAAQ;AAJV;AAMA;EACE,6BAAkB;AAJpB;AAMA;EACE,yBAAkB;AAJpB;AAMA;EACE,6BAAkB;AAJpB;AAMA;EACE,yBAAkB;AAJpB;AAMA;EACE,6BAAkB;AAJpB;AAMA;EACE,yBAAkB;AAJpB;AAMA;EACE,aAAQ;AAJV;AAUI;EACE,gBAAU;AARhB;AAeM;;;;;;;;;;;;;;;;;;EAkBE,UAAO;EACP,UAAS;EACT,UAAO;AAbf;AAcQ;;;;;;;;;;;;;;;;;;EACE,WAAO;EACP,SAAM;AAKhB",
+                sourcesContent: ["@require 'riotclient-lol-asset-csslib/styles/color-palette';\r\n\r\n\r\n:host {\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n\r\n.wrapper {\r\n  flex: 1;\r\n  position: relative;\r\n}\r\n\r\n.ps-container .ps-scrollbar-y-rail .ps-scrollbar-y {\r\n  background-color: $color_palette_gold5;\r\n  margin-right: 2px;\r\n  border: thin solid black;\r\n}\r\n.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {\r\n  background-color: transparent;\r\n}\r\n.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {\r\n  background-color: $color_palette_gold6;\r\n}\r\n.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail {\r\n  background-color: transparent;\r\n}\r\n.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y {\r\n  background-color: $color_palette_gold2;\r\n}\r\n.ps-container:hover > .ps-scrollbar-y-rail:hover {\r\n  background-color: transparent;\r\n}\r\n.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y {\r\n  background-color: $color_palette_gold2;\r\n}\r\n.ps-scrollbar-y-rail {\r\n  margin: 5px 0;\r\n}\r\n\r\n\r\n:host {\r\n  .wrapper {\r\n    .inner-wrapper {\r\n      overflow: hidden;\r\n    }\r\n    // In order to override some styles set internally by the perfect scrollbar,\r\n    // we need higher specificity. To ensure that, we add more class selectors:\r\n    // - include ps-container, ps-theme-default, and use-for-higher-specificity\r\n    // - always select on ps-scrollbar-y via parent selector ps-scrollbar-y-rail \r\n    &.ps-container.ps-theme-default.use-for-higher-specificity {\r\n      .ps-scrollbar-y-rail .ps-scrollbar-y,\r\n      .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\r\n      .ps-scrollbar-y-rail,\r\n      .ps-scrollbar-y-rail:hover,\r\n      .ps-scrollbar-y-rail .ps__scrollbar-y,\r\n      .ps-scrollbar-y-rail:hover .ps__scrollbar-y,\r\n      &.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y,\r\n      &.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\r\n      &.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\r\n      &.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover,\r\n      &:hover .ps-scrollbar-y-rail .ps-scrollbar-y,\r\n      &:hover .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\r\n      &:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\r\n      &:hover .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover,\r\n      &:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y,\r\n      &:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail .ps-scrollbar-y:hover,\r\n      &:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y,\r\n      &:hover.ps--in-scrolling.ps--y .ps-scrollbar-y-rail:hover .ps-scrollbar-y:hover {\r\n        width: 4px;\r\n        opacity: 1;\r\n        right: 2px;\r\n        &:lang(ar-ae) {\r\n          right: auto;\r\n          left: 2px;\r\n        }\r\n      }\r\n    }\r\n  }\r\n}\r\n"],
+                sourceRoot: ""
+            }]), e.exports = o
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var r, o = n(1),
+                i = (r = n(82)) && r.__esModule ? r : {
+                    default: r
+                };
+            const {
+                RenderMode: a,
+                PlayerNameComputer: s
+            } = o.playerNameComponentLogic, l = {
+                BATCH: "batch",
+                FORMAT: "format",
+                PUUID: "puuid",
+                SUMMONER_ID: "summoner-id",
+                GAME_NAME: "game-name",
+                TAG_LINE: "tag-line",
+                RENDER_MODE_OVERRIDE: "render-mode",
+                RENDER_ALIAS_OVERRIDE: "render-alias"
+            }, d = Object.values(l), c = "player-name__game-name", p = "player-name__tag-line", A = "player-name__tooltip__game-name", u = "player-name__tooltip__tag-line", h = "player-name__error", g = "alias";
+            class b extends o.webComponents.ShadowElement {
+                static get observedAttributes() {
+                    return d
+                }
+                templateMarkup() {
+                    return n(184)
+                }
+                stylesheetMarkup() {
+                    return n(185)
+                }
+                constructor() {
+                    super(), this._tooltipTarget = null, this._tooltipElement = null, this._destroyCurrentPlayerObserver = null, this._computer = new s(o.playerNames), this._directionCharacter = o.localeDirectionOverrides.localeDirectionMark
+                }
+                connectedCallback() {
+                    this._destroyCurrentPlayerObserver || (this._destroyCurrentPlayerObserver = o.playerNames.observeCurrentPlayerName(this._updatePlayerNameFromCurrentSummonerUpdate.bind(this)).destroy), this._compute()
+                }
+                disconnectedCallback() {
+                    i.default.unassign(this._tooltipTarget), this._destroyCurrentPlayerObserver && (this._destroyCurrentPlayerObserver(), this._destroyCurrentPlayerObserver = null)
+                }
+                attributeChangedCallback(e, t, n) {
+                    super.attributeChangedCallback(e, t, n), this._compute()
+                }
+                _booleanAttribute(e) {
+                    if (this.hasAttribute(e)) {
+                        const t = this.getAttribute(e);
+                        return t && "false" !== t
+                    }
+                }
+                _compute() {
+                    this._computer.compute({
+                        batch: this.getAttribute(l.BATCH),
+                        puuid: this.getAttribute(l.PUUID),
+                        summonerId: this.getAttribute(l.SUMMONER_ID),
+                        gameName: this.getAttribute(l.GAME_NAME),
+                        tagLine: this.getAttribute(l.TAG_LINE),
+                        format: this.getAttribute(l.FORMAT),
+                        renderModeOverride: this.getAttribute(l.RENDER_MODE_OVERRIDE),
+                        renderAliasOverride: this._booleanAttribute(l.RENDER_ALIAS_OVERRIDE)
+                    }).then((e => this._updatePlayerName(e)))
+                }
+                _shouldUseCurrentSummonerObserver() {
+                    const e = this.getAttribute(l.PUUID),
+                        t = this.getAttribute(l.SUMMONER_ID),
+                        n = this.getAttribute(l.GAME_NAME),
+                        r = this.getAttribute(l.TAG_LINE),
+                        i = o.playerNames.currentSummonerPuuid;
+                    return !(n || r || e || t) || e === i
+                }
+                _updatePlayerNameFromCurrentSummonerUpdate(e) {
+                    if (!e || !this._shouldUseCurrentSummonerObserver()) return;
+                    const t = this._playerName || {};
+                    t.gameName = e.gameName, t.tagLine = e.tagLine, this._updatePlayerName(t)
+                }
+                _updatePlayerName(e) {
+                    if (e) switch (this._playerName = e, i.default.unassign(this._tooltipTarget), this._updateEnabled(this.shadowRoot, ".renderMode", (t => t.classList.contains(e.renderMode))), e.renderMode) {
+                        case a.FULL_ALIAS:
+                            this._applyGameNameAndTagLine(this.shadowRoot, e, !0);
+                            break;
+                        case a.GAME_NAME_ONLY:
+                            this._applyGameNameAndTagLine(this.shadowRoot, e, !1);
+                            break;
+                        case a.TAG_LINE_TOOLTIP:
+                            this._applyGameNameAndTagLine(this.shadowRoot, e, !1), this._assignTagLineTooltip(e);
+                            break;
+                        case a.COMPONENT:
+                            this._updateComponentElement();
+                            break;
+                        case a.ERROR:
+                            this._applyError()
+                    }
+                }
+                _updateEnabled(e, t, n) {
+                    e.querySelectorAll(t).forEach((e => {
+                        const t = n(e),
+                            r = !e.classList.contains("disabled");
+                        t && !r ? e.classList.remove("disabled") : !t && r && e.classList.add("disabled")
+                    }))
+                }
+                _applyGameNameAndTagLine(e, t, n) {
+                    e.querySelectorAll(`.${c}`).forEach((e => {
+                        e.textContent = t.gameName + (!1 === n ? this._directionCharacter : "")
+                    })), e.querySelectorAll(`.${A}`).forEach((e => {
+                        e.textContent = t.gameName
+                    })), e.querySelectorAll(`.${p},.${u}`).forEach((e => {
+                        e.textContent = t.tagLine + (!0 === n ? this._directionCharacter : "")
+                    }))
+                }
+                _assignTagLineTooltip(e) {
+                    if (this._prepareTooltipTarget(), this._prepareTooltipElement(), this._tooltipTarget && this._tooltipElement) {
+                        this._applyGameNameAndTagLine(this._tooltipElement, e, !0);
+                        const t = {
+                            type: "system",
+                            showDelay: 500,
+                            targetAnchor: {
+                                x: "center",
+                                y: "bottom"
+                            },
+                            tooltipAnchor: {
+                                x: "center",
+                                y: "top"
+                            },
+                            positioningStrategy: "flip",
+                            restrictArea: "safe-window"
+                        };
+                        i.default.assign(this._tooltipTarget, this._tooltipElement, {}, t)
+                    }
+                }
+                _prepareTooltipTarget() {
+                    this._tooltipTarget = this.shadowRoot.querySelector(`.${a.TAG_LINE_TOOLTIP} .${c}`)
+                }
+                _prepareTooltipElement() {
+                    this._tooltipElement || (this._tooltipElement = this.shadowRoot.querySelector("lol-uikit-tooltip"), this._tooltipElement && this._tooltipElement.parentNode.removeChild(this._tooltipElement))
+                }
+                _updateComponentElement() {
+                    if (!this._playerName) return;
+                    const e = this.shadowRoot.querySelector(`.${a.COMPONENT}`);
+                    if (e && e.hasChildNodes()) {
+                        const t = g;
+                        this._updateEnabled(e, "slot", (e => e.getAttribute("name") === t));
+                        const n = this._getComponentForActiveSlot(t);
+                        n && (n.playerName = this._playerName, n.setAttribute(l.GAME_NAME, this._playerName.gameName), n.setAttribute(l.TAG_LINE, this._playerName.tagLine))
+                    }
+                }
+                _getComponentForActiveSlot(e) {
+                    return Array.from(this.querySelectorAll("[slot]")).find((t => t.getAttribute("slot") === e))
+                }
+                _applyError() {
+                    this.shadowRoot.querySelectorAll(`.${h}`).forEach((e => {
+                        e.textContent = o.tra.get("player_name_unknown")
+                    }))
+                }
+            }
+            b.tagName = "lol-uikit-player-name";
+            var m = b;
+            t.default = m
         }, e => {
             "use strict";
             e.exports = '<template>\r\n\r\n  \x3c!-- Render components are activated via css class ("renderMode <RenderMode> disabled")\r\n       * <RenderMode> is defined in playerNameComponentLogic.RenderMode\r\n       * disabled is added/removed when the corresponding renderMode is activated\r\n       * player-name__<type> classes identify elements whose text is set to the respective player name\r\n    --\x3e\r\n\r\n  <span class="renderMode fullAlias disabled">\x3c!--\r\n --\x3e<span class="player-name__alias player-name__force-gamename-tagline-order">\x3c!--\r\n   --\x3e<span class="player-name__game-name player-name__force-locale-text-direction"></span>\x3c!--\r\n   --\x3e<span class="player-name__tag-line-separator player-name__force-gamename-tagline-order">#</span>\x3c!--\r\n   --\x3e<span class="player-name__tag-line player-name__force-locale-text-direction"></span>\x3c!--\r\n --\x3e</span>\x3c!--\r\n--\x3e</span>\r\n\r\n  <span class="renderMode gameNameOnly disabled">\x3c!--\r\n --\x3e<span class="player-name__alias">\x3c!--\r\n   --\x3e<span class="player-name__game-name player-name__force-locale-text-direction"></span>\x3c!--\r\n --\x3e</span>\x3c!--\r\n--\x3e</span>\r\n\r\n  <span class="renderMode tagLineTooltip disabled">\x3c!--\r\n --\x3e<span class="player-name__alias">\x3c!--\r\n   --\x3e<span class="player-name__game-name player-name__force-locale-text-direction"></span>\x3c!--\r\n --\x3e</span>\x3c!--\r\n\r\n --\x3e<lol-uikit-tooltip>\x3c!--\r\n   --\x3e<lol-uikit-content-block type="tooltip-system" class="player-name__tooltip__alias">\x3c!--\r\n     --\x3e<span class="player-name__force-gamename-tagline-order">\x3c!--\r\n       --\x3e<span class="player-name__tooltip__game-name player-name__force-locale-text-direction"></span>\x3c!--\r\n       --\x3e<span class="player-name__tooltip__tag-line-separator player-name__force-gamename-tagline-order">#</span>\x3c!--\r\n       --\x3e<span class="player-name__tooltip__tag-line player-name__force-locale-text-direction"></span>\x3c!--\r\n     --\x3e</span>\x3c!--\r\n   --\x3e</lol-uikit-content-block>\x3c!--\r\n --\x3e</lol-uikit-tooltip>\x3c!--\r\n--\x3e</span>\r\n\r\n  <span class="renderMode summonerName disabled">\x3c!--\r\n --\x3e<span class="player-name__summoner player-name__force-locale-text-direction"></span>\x3c!--\r\n--\x3e</span>\r\n\r\n  <span class="renderMode error disabled">\r\n    <span class="player-name__error"></span>\r\n  </span>\r\n\r\n  <span class="renderMode component disabled">\r\n    <slot class="disabled" name="alias"></slot>\r\n  </span>\r\n\r\n</template>\r\n'
@@ -9598,7 +9628,7 @@
         }, (e, t, n) => {
             var r = n(26),
                 o = n(27),
-                i = n(91),
+                i = n(100),
                 a = n(198),
                 s = o(r),
                 l = i(a);
@@ -9772,7 +9802,7 @@
             }), t.default = void 0;
             var r = n(1),
                 o = n(35),
-                i = n(181);
+                i = n(88);
             class a extends r.webComponents.ShadowElement {
                 templateMarkup() {
                     return n(206)
@@ -10049,7 +10079,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, o = (r = n(175)) && r.__esModule ? r : {
+            var r, o = (r = n(82)) && r.__esModule ? r : {
                     default: r
                 },
                 i = n(1);
@@ -10483,7 +10513,7 @@
                 value: !0
             }), t.default = void 0;
             var r, o = n(1),
-                i = (r = n(175)) && r.__esModule ? r : {
+                i = (r = n(82)) && r.__esModule ? r : {
                     default: r
                 };
             class a extends o.webComponents.ShadowElement {
@@ -11137,7 +11167,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, o = (r = n(177)) && r.__esModule ? r : {
+            var r, o = (r = n(84)) && r.__esModule ? r : {
                     default: r
                 },
                 i = function(e, t) {
@@ -11900,7 +11930,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = t.MAX_PIPS_PER_PAGE = void 0;
-            var r = l(n(177)),
+            var r = l(n(84)),
                 o = l(n(249)),
                 i = n(1),
                 a = l(n(37)),
@@ -12125,7 +12155,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = a(n(177)),
+                o = a(n(84)),
                 i = a(n(249));
 
             function a(e) {
@@ -12314,7 +12344,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = k(n(175)),
+                o = k(n(82)),
                 i = k(n(256)),
                 a = k(n(257)),
                 s = k(n(258)),
@@ -12325,7 +12355,7 @@
                 A = k(n(266)),
                 u = k(n(268)),
                 h = k(n(270)),
-                g = k(n(177)),
+                g = k(n(84)),
                 b = k(n(274)),
                 m = k(n(236)),
                 f = k(n(47)),
@@ -12525,7 +12555,7 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = d(n(177)),
+                o = d(n(84)),
                 i = d(n(249)),
                 a = n(33),
                 s = n(81),
@@ -12926,10 +12956,10 @@
                 value: !0
             }), t.default = void 0;
             var r = n(1),
-                o = d(n(177)),
+                o = d(n(84)),
                 i = d(n(236)),
-                a = d(n(182)),
-                s = d(n(178)),
+                a = d(n(89)),
+                s = d(n(85)),
                 l = d(n(249));
 
             function d(e) {
@@ -13170,7 +13200,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r, o = (r = n(177)) && r.__esModule ? r : {
+            var r, o = (r = n(84)) && r.__esModule ? r : {
                     default: r
                 },
                 i = function(e, t) {
@@ -13308,10 +13338,10 @@
             t.default = a
         }, (e, t, n) => {
             "use strict";
-            var r = s(n(177)),
-                o = s(n(103)),
+            var r = s(n(84)),
+                o = s(n(112)),
                 i = n(1),
-                a = s(n(178));
+                a = s(n(85));
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -13477,9 +13507,9 @@
                         } r.default = e, n && n.set(e, r);
                     return r
                 }(n(1)),
-                o = s(n(177)),
-                i = s(n(178)),
-                a = s(n(182));
+                o = s(n(84)),
+                i = s(n(85)),
+                a = s(n(89));
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -13648,7 +13678,7 @@
             }), t.default = void 0;
             var r = a(n(271)),
                 o = a(n(273)),
-                i = a(n(183));
+                i = a(n(90));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -13692,7 +13722,7 @@
             }), t.inChrome = t.default = t.MockedWindow = void 0;
             var r = n(1),
                 o = s(n(80)),
-                i = s(n(183)),
+                i = s(n(90)),
                 a = n(272);
 
             function s(e) {
@@ -14328,7 +14358,7 @@
                 value: !0
             }), t.default = void 0;
             var r = a(n(1)),
-                o = a(n(177)),
+                o = a(n(84)),
                 i = a(n(270));
 
             function a(e) {

@@ -169,23 +169,27 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{b2df7184}": {
-        "mRootSpell": "{16f47364}",
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility": {
+        "mRootSpell": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereE",
         "mChildSpells": [
-            "{16f47364}",
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereE",
             "{17e52b5e}"
         ],
         "mName": "Jade_TryndamereEAbility",
         "__type": "AbilityObject"
     },
-    "{16f47364}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereE": {
         "ObjectName": "Jade_TryndamereE",
         "mScriptName": "Jade_TryndamereE",
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 6154,
             "mSpellTags": [
-                "PositiveEffect_MoveBlock"
+                "PositiveEffect_MoveBlock",
+                "Trait_PlayerSelectedDashDirection",
+                "Trait_DamageAbility",
+                "Trait_SignatureSpell",
+                "Trait_AoE"
             ],
             "DataValues": [
                 {
@@ -588,16 +592,16 @@
         },
         "__type": "SpellObject"
     },
-    "{1ff44316}": {
-        "mRootSpell": "{d1a6c804}",
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility": {
+        "mRootSpell": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_TryndamereW",
         "mChildSpells": [
-            "{d1a6c804}",
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_TryndamereW",
             "{b8e06586}"
         ],
         "mName": "Jade_TryndamereWAbility",
         "__type": "AbilityObject"
     },
-    "{427e07d7}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereBasicAttack": {
         "ObjectName": "Jade_TryndamereBasicAttack",
         "mScriptName": "Jade_TryndamereBasicAttack",
         "mSpell": {
@@ -762,15 +766,15 @@
         },
         "__type": "SpellObject"
     },
-    "{f1792928}": {
-        "mRootSpell": "{891c72a4}",
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereQAbility": {
+        "mRootSpell": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereQAbility/Jade_TryndamereQ",
         "mChildSpells": [
-            "{891c72a4}"
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereQAbility/Jade_TryndamereQ"
         ],
         "mName": "Jade_TryndamereQAbility",
         "__type": "AbilityObject"
     },
-    "{891c72a4}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereQAbility/Jade_TryndamereQ": {
         "ObjectName": "Jade_TryndamereQ",
         "mScriptName": "Jade_TryndamereQ",
         "mSpell": {
@@ -921,7 +925,7 @@
             ],
             "castConeDistance": 100.0,
             "castFrame": 10.0,
-            "mHitEffectKey": "{99f49d02}",
+            "mHitEffectKey": "Jade_Tryndamere_Q_Heal_01",
             "mFloatVarsDecimals": [
                 2,
                 1,
@@ -1025,7 +1029,7 @@
         },
         "__type": "SpellObject"
     },
-    "{91666d7f}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereBasicAttack2": {
         "ObjectName": "Jade_TryndamereBasicAttack2",
         "mScriptName": "Jade_TryndamereBasicAttack2",
         "mSpell": {
@@ -1111,15 +1115,15 @@
         },
         "__type": "SpellObject"
     },
-    "{ce999d7e}": {
-        "mRootSpell": "{93f67304}",
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereUndyingRageAbility": {
+        "mRootSpell": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereUndyingRageAbility/Jade_TryndamereUndyingRage",
         "mChildSpells": [
-            "{93f67304}"
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereUndyingRageAbility/Jade_TryndamereUndyingRage"
         ],
         "mName": "Jade_TryndamereUndyingRageAbility",
         "__type": "AbilityObject"
     },
-    "{93f67304}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereUndyingRageAbility/Jade_TryndamereUndyingRage": {
         "ObjectName": "Jade_TryndamereUndyingRage",
         "mScriptName": "Jade_TryndamereUndyingRage",
         "mSpell": {
@@ -1343,7 +1347,7 @@
         },
         "__type": "SpellObject"
     },
-    "{d1a6c804}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_TryndamereW": {
         "ObjectName": "Jade_TryndamereW",
         "mScriptName": "Jade_TryndamereW",
         "mSpell": {
@@ -1592,7 +1596,7 @@
         },
         "__type": "SpellObject"
     },
-    "{dbbbec8f}": {
+    "Characters/Jade_Tryndamere/Spells/Jade_TryndamereCritAttack": {
         "ObjectName": "Jade_TryndamereCritAttack",
         "mScriptName": "Jade_TryndamereCritAttack",
         "mSpell": {
@@ -1678,10 +1682,10 @@
         },
         "__type": "SpellObject"
     },
-    "{2cd5a65b}": {
+    "Characters/Jade_Tryndamere/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{c8892a17}": {
+    "Characters/Jade_Tryndamere/CharacterRecords/Root": {
         "mCharacterName": "Jade_Tryndamere",
         "baseHPModifiable": {
             "baseValue": 559.0,
@@ -1788,10 +1792,10 @@
             "Jade_TryndamereUndyingRageAbility/Jade_TryndamereUndyingRage"
         ],
         "spells": [
-            "{891c72a4}",
-            "{d1a6c804}",
-            "{16f47364}",
-            "{93f67304}"
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereQAbility/Jade_TryndamereQ",
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_TryndamereW",
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereE",
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereUndyingRageAbility/Jade_TryndamereUndyingRage"
         ],
         "extraSpells": [
             "Jade_Tryndamere_slash",
@@ -1830,11 +1834,11 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{b2df7184}",
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility",
             "{5e3d26be}",
-            "{f1792928}",
-            "{1ff44316}",
-            "{ce999d7e}"
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereQAbility",
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility",
+            "Characters/Jade_Tryndamere/Spells/Jade_TryndamereUndyingRageAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Tryndamere",
         "passiveLuaName": "Jade_TryndamerePassive",

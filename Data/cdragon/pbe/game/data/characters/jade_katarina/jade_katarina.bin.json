@@ -1,8 +1,8 @@
 {
-    "{ebef1af8}": {
-        "mRootSpell": "{db9f80aa}",
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaQAbility": {
+        "mRootSpell": "Characters/Jade_Katarina/Spells/Jade_KatarinaQAbility/Jade_KatarinaQ",
         "mChildSpells": [
-            "{db9f80aa}",
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaQAbility/Jade_KatarinaQ",
             "{0051d695}"
         ],
         "mName": "Jade_KatarinaQAbility",
@@ -103,7 +103,7 @@
             "mCastType": 1,
             "castFrame": 12.0,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{b094ed2f}",
+            "mMissileEffectKey": "Jade_Katarina_Q_mis",
             "selectionPriority": 1,
             "SpellEventToAudioEventSuffix": {
                 "16": "Play_sfx_Katarina_KatarinaQdaggerarc2_OnMissileLaunch"
@@ -121,7 +121,7 @@
         },
         "__type": "SpellObject"
     },
-    "{db9f80aa}": {
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaQAbility/Jade_KatarinaQ": {
         "ObjectName": "Jade_KatarinaQ",
         "mScriptName": "Jade_KatarinaQ",
         "mSpell": {
@@ -382,7 +382,7 @@
             "mCastType": 1,
             "castFrame": 12.0,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{b094ed2f}",
+            "mMissileEffectKey": "Jade_Katarina_Q_mis",
             "mLineWidth": 60.0,
             "mFloatVarsDecimals": [
                 0,
@@ -468,10 +468,10 @@
         },
         "__type": "SpellObject"
     },
-    "{236bdda6}": {
-        "mRootSpell": "{57fb3816}",
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaWAbility": {
+        "mRootSpell": "Characters/Jade_Katarina/Spells/Jade_KatarinaWAbility/Jade_KatarinaW",
         "mChildSpells": [
-            "{57fb3816}"
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaWAbility/Jade_KatarinaW"
         ],
         "mName": "Jade_KatarinaWAbility",
         "__type": "AbilityObject"
@@ -499,10 +499,10 @@
         },
         "__type": "SpellObject"
     },
-    "{f952bd03}": {
-        "mRootSpell": "{3923a8e2}",
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaRAbility": {
+        "mRootSpell": "Characters/Jade_Katarina/Spells/Jade_KatarinaRAbility/Jade_KatarinaR",
         "mChildSpells": [
-            "{3923a8e2}",
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaRAbility/Jade_KatarinaR",
             "{fca07b3d}",
             "{f546d922}",
             "{e69e77e9}"
@@ -512,7 +512,7 @@
         "AbilityTraits": 2,
         "__type": "AbilityObject"
     },
-    "{3923a8e2}": {
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaRAbility/Jade_KatarinaR": {
         "ObjectName": "Jade_KatarinaR",
         "mScriptName": "Jade_KatarinaR",
         "mSpell": {
@@ -649,7 +649,7 @@
                 "DamageCalc": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{5481307b}",
+                            "mDataValue": "DamageInstance",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -670,18 +670,18 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{75e2c1b0}",
+                            "mDataValue": "TTDamage",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mDataValue": "{bb3e48ab}",
+                            "mDataValue": "TTADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         },
                         {
                             "mStatFormula": 2,
-                            "mDataValue": "{169545cf}",
+                            "mDataValue": "TTAPRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1257,7 +1257,7 @@
             "mCastType": 1,
             "castFrame": 13.34000015258789,
             "missileSpeed": 2400.0,
-            "mMissileEffectKey": "{eca6e026}",
+            "mMissileEffectKey": "Jade_Katarina_R_mis",
             "bHaveHitBone": true,
             "mHitBoneName": "pelvis",
             "selectionPriority": 1,
@@ -1281,7 +1281,7 @@
         },
         "__type": "SpellObject"
     },
-    "{57fb3816}": {
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaWAbility/Jade_KatarinaW": {
         "ObjectName": "Jade_KatarinaW",
         "mScriptName": "Jade_KatarinaW",
         "mSpell": {
@@ -1611,7 +1611,111 @@
         "mName": "Jade_KatarinaPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{62882087}": {
+    "{5eb856a2}": {
+        "ObjectName": "Jade_Katarina_Circo",
+        "mScriptName": "Jade_Katarina_Circo",
+        "mSpell": {
+            "ImgIconPath": "ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.tex",
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_Katarina_Circo",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Jade_Katarina_Circo_Name",
+                    "keyTooltip": "Buff_Jade_Katarina_Circo_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{a2efd9e6}": {
+        "ObjectName": "Jade_KatarinaPassive",
+        "mScriptName": "Jade_KatarinaPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "BonusGold",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity.project_jade.dds"
+            ],
+            "castRange": [
+                340.0,
+                340.0,
+                340.0,
+                340.0,
+                340.0,
+                340.0,
+                340.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    340.0,
+                    340.0,
+                    340.0,
+                    340.0,
+                    340.0,
+                    340.0,
+                    340.0
+                ],
+                "{0a3e0478}": 340.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_KatarinaPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_KatarinaPassive_Jade_Name",
+                        "keySummary": "Spell_KatarinaPassive_Jade_Summary",
+                        "keyTooltip": "Spell_KatarinaPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_KatarinaPassive",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaBasicAttack": {
         "ObjectName": "Jade_KatarinaBasicAttack",
         "mScriptName": "Jade_KatarinaBasicAttack",
         "mSpell": {
@@ -1674,7 +1778,7 @@
             "castConeDistance": 100.0,
             "castFrame": 6.578999996185303,
             "missileSpeed": 467.0,
-            "mHitEffectKey": "{d97b88cd}",
+            "mHitEffectKey": "Jade_Katarina_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1693,16 +1797,16 @@
         },
         "__type": "SpellObject"
     },
-    "{6a4e63b4}": {
-        "mRootSpell": "{921b11aa}",
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaEAbility": {
+        "mRootSpell": "Characters/Jade_Katarina/Spells/Jade_KatarinaEAbility/Jade_KatarinaE",
         "mChildSpells": [
-            "{921b11aa}",
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaEAbility/Jade_KatarinaE",
             "{fafc9867}"
         ],
         "mName": "Jade_KatarinaEAbility",
         "__type": "AbilityObject"
     },
-    "{8a7c243f}": {
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaCritAttack": {
         "ObjectName": "Jade_KatarinaCritAttack",
         "mScriptName": "Jade_KatarinaCritAttack",
         "mSpell": {
@@ -1767,7 +1871,7 @@
             "castConeDistance": 100.0,
             "castFrame": 6.578999996185303,
             "missileSpeed": 467.0,
-            "mHitEffectKey": "{29b0c7c4}",
+            "mHitEffectKey": "Jade_Katarina_Crit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1786,7 +1890,7 @@
         },
         "__type": "SpellObject"
     },
-    "{921b11aa}": {
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaEAbility/Jade_KatarinaE": {
         "ObjectName": "Jade_KatarinaE",
         "mScriptName": "Jade_KatarinaE",
         "mSpell": {
@@ -1819,13 +1923,13 @@
                 {
                     "name": "EAPRatio",
                     "values": [
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448,
-                        0.15000000596046448
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2111,7 +2215,7 @@
             "mCastType": 1,
             "castFrame": 9.5,
             "missileSpeed": 12000.0,
-            "mMissileEffectKey": "{bdfcbe14}",
+            "mMissileEffectKey": "Jade_Katarina_E_Trail_mis",
             "mHitEffectOrientType": 2,
             "selectionPriority": 1,
             "mTargetingTypeData": {
@@ -2158,95 +2262,12 @@
         "mScriptName": "Jade_KatarinaSkin29WeaponManager",
         "__type": "SpellObject"
     },
-    "{a2efd9e6}": {
-        "ObjectName": "Jade_KatarinaPassive",
-        "mScriptName": "Jade_KatarinaPassive",
-        "mSpell": {
-            "DataValues": [
-                {
-                    "name": "BonusGold",
-                    "values": [
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0
-                    ],
-                    "__type": "SpellDataValue"
-                }
-            ],
-            "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity.project_jade.dds"
-            ],
-            "castRange": [
-                340.0,
-                340.0,
-                340.0,
-                340.0,
-                340.0,
-                340.0,
-                340.0
-            ],
-            "{0e1136d1}": {
-                "values": [
-                    340.0,
-                    340.0,
-                    340.0,
-                    340.0,
-                    340.0,
-                    340.0,
-                    340.0
-                ],
-                "{0a3e0478}": 340.0,
-                "__type": "{0a0eddc9}"
-            },
-            "mClientData": {
-                "mTooltipData": {
-                    "mObjectName": "Jade_KatarinaPassive",
-                    "mFormat": "{476ec0b8}",
-                    "mLocKeys": {
-                        "keyName": "Spell_KatarinaPassive_Jade_Name",
-                        "keySummary": "Spell_KatarinaPassive_Jade_Summary",
-                        "keyTooltip": "Spell_KatarinaPassive_Jade_Tooltip"
-                    },
-                    "__type": "TooltipInstanceSpell"
-                },
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "mBuff": {
-            "mDescription": "game_buff_tooltip_Jade_KatarinaPassive",
-            "mFloatVarsDecimals": [
-                0,
-                0,
-                0,
-                0,
-                2,
-                2,
-                2,
-                2,
-                2,
-                2,
-                2,
-                2,
-                2,
-                2,
-                2,
-                2
-            ],
-            "__type": "BuffData"
-        },
-        "__type": "SpellObject"
-    },
     "{cf04987d}": {
         "ObjectName": "Jade_KatarinaRunCycleManager",
         "mScriptName": "Jade_KatarinaRunCycleManager",
         "__type": "SpellObject"
     },
-    "{d14b7cef}": {
+    "Characters/Jade_Katarina/Spells/Jade_KatarinaBasicAttack2": {
         "ObjectName": "Jade_KatarinaBasicAttack2",
         "mScriptName": "Jade_KatarinaBasicAttack2",
         "mSpell": {
@@ -2310,7 +2331,7 @@
             "castConeDistance": 100.0,
             "castFrame": 6.578999996185303,
             "missileSpeed": 467.0,
-            "mHitEffectKey": "{d97b88cd}",
+            "mHitEffectKey": "Jade_Katarina_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2329,7 +2350,7 @@
         },
         "__type": "SpellObject"
     },
-    "{2dc1b31d}": {
+    "Characters/Jade_Katarina/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{8290fb25}": {
@@ -2677,7 +2698,7 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{c36c1c78}"
+                            "Items/771056"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -2685,25 +2706,25 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{2abeb3c5}",
-                            "{9c53c6e2}",
-                            "{bbc89264}",
-                            "{3bba515a}",
-                            "{a4404bc2}",
-                            "{aab72e80}",
-                            "{b9c88f3e}",
-                            "{a7c1b723}",
-                            "{27591ee1}",
-                            "{3cbc9184}",
-                            "{29592207}",
-                            "{3aba4fc7}",
-                            "{36bc8812}",
-                            "{c76c22c4}",
-                            "{35738bb3}",
-                            "{c16c1952}",
-                            "{4373a1bd}",
-                            "{4275dec1}",
-                            "{467823a4}"
+                            "Items/773116",
+                            "Items/773001",
+                            "Items/773151",
+                            "Items/773135",
+                            "Items/773089",
+                            "Items/773128",
+                            "Items/773157",
+                            "Items/773165",
+                            "Items/773026",
+                            "Items/773102",
+                            "Items/773020",
+                            "Items/773136",
+                            "Items/773108",
+                            "Items/771052",
+                            "Items/771026",
+                            "Items/771058",
+                            "Items/771028",
+                            "Items/771011",
+                            "Items/771001"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
@@ -2929,7 +2950,7 @@
         },
         "__type": "CharScript"
     },
-    "{f0080945}": {
+    "Characters/Jade_Katarina/CharacterRecords/Root": {
         "mCharacterName": "Jade_Katarina",
         "baseHPModifiable": {
             "baseValue": 505.0,
@@ -3034,10 +3055,10 @@
             "Jade_KatarinaRAbility/Jade_KatarinaR"
         ],
         "spells": [
-            "{db9f80aa}",
-            "{57fb3816}",
-            "{921b11aa}",
-            "{3923a8e2}"
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaQAbility/Jade_KatarinaQ",
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaWAbility/Jade_KatarinaW",
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaEAbility/Jade_KatarinaE",
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaRAbility/Jade_KatarinaR"
         ],
         "extraSpells": [
             "Jade_KatarinaRMis",
@@ -3076,11 +3097,11 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{6a4e63b4}",
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaEAbility",
             "{5816152e}",
-            "{ebef1af8}",
-            "{f952bd03}",
-            "{236bdda6}"
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaQAbility",
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaRAbility",
+            "Characters/Jade_Katarina/Spells/Jade_KatarinaWAbility"
         ],
         "passiveName": "",
         "passiveLuaName": "Jade_KatarinaPassive_Jade",

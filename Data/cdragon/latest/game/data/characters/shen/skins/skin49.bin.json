@@ -39637,7 +39637,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.TFT_Set15.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -42138,7 +42138,7 @@
                     "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
                     "__type": "VfxFlexShapeDefinitionData"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.TFT_Set15.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -74872,7 +74872,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.TFT_Set15.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -74997,7 +74997,7 @@
                     "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
                     "__type": "VfxFlexShapeDefinitionData"
                 },
-                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.TFT_Set15.tex",
+                "particleColorTexture": "ASSETS/Shared/Particles/color-hold_2.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -85590,7 +85590,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/Base_Glow5.TFT_Set15.tex",
+                "texture": "ASSETS/Shared/Particles/Base_Glow5.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -130538,6 +130538,11 @@
         "name": "Characters/Shen/Skins/Skin49/Materials/Specular_Fresnel_Masked_inst",
         "samplerValues": [
             {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
                 "TextureName": "Diffuse_Color",
                 "texturePath": "ASSETS/Characters/Shen/Skins/Skin49/Shen_Skin49_TX_CM.tex",
                 "addressU": 1,
@@ -130560,6 +130565,10 @@
             }
         ],
         "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -130682,6 +130691,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
