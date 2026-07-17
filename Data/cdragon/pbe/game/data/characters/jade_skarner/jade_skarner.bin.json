@@ -1,8 +1,8 @@
 {
-    "{038db911}": {
-        "mRootSpell": "{ddd4d409}",
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility": {
+        "mRootSpell": "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility/Jade_SkarnerR",
         "mChildSpells": [
-            "{ddd4d409}"
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility/Jade_SkarnerR"
         ],
         "mName": "Jade_SkarnerRAbility",
         "mType": 2,
@@ -30,7 +30,7 @@
             "castConeDistance": 100.0,
             "castFrame": 10.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{ab1478f8}",
+            "mHitEffectKey": "Jade_Skarner_BA_tar_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -50,17 +50,17 @@
         },
         "__type": "SpellObject"
     },
-    "{32c10d76}": {
-        "mRootSpell": "{2532feb3}",
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility": {
+        "mRootSpell": "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE",
         "mChildSpells": [
-            "{2532feb3}",
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE",
             "{d70dbefc}"
         ],
         "mName": "Jade_SkarnerEAbility",
         "AbilityTraits": 2560,
         "__type": "AbilityObject"
     },
-    "{2532feb3}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE": {
         "ObjectName": "Jade_SkarnerE",
         "mScriptName": "Jade_SkarnerE",
         "mSpell": {
@@ -113,7 +113,7 @@
                 "TotalHealing": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{f14be431}",
+                            "mDataValue": "HealingAmount",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -332,7 +332,7 @@
             },
             "mCastType": 1,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{dec87d16}",
+            "mMissileEffectKey": "Jade_Skarner_P_Rock_2",
             "mTargetingTypeData": {
                 "__type": "TargetOrLocation"
             },
@@ -365,15 +365,15 @@
         "mType": 3,
         "__type": "AbilityObject"
     },
-    "{9ea6887a}": {
-        "mRootSpell": "{2efa3d13}",
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility": {
+        "mRootSpell": "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility/Jade_SkarnerQ",
         "mChildSpells": [
-            "{2efa3d13}"
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility/Jade_SkarnerQ"
         ],
         "mName": "Jade_SkarnerQAbility",
         "__type": "AbilityObject"
     },
-    "{2efa3d13}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility/Jade_SkarnerQ": {
         "ObjectName": "Jade_SkarnerQ",
         "mScriptName": "Jade_SkarnerQ",
         "mSpell": {
@@ -841,7 +841,7 @@
         },
         "__type": "SpellObject"
     },
-    "{744ca46f}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerTurretAttack": {
         "ObjectName": "Jade_SkarnerTurretAttack",
         "mScriptName": "Jade_SkarnerTurretAttack",
         "mSpell": {
@@ -861,7 +861,7 @@
             ],
             "castConeDistance": 100.0,
             "castFrame": 10.0,
-            "mHitEffectKey": "{ab1478f8}",
+            "mHitEffectKey": "Jade_Skarner_BA_tar_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1054,7 +1054,7 @@
         },
         "__type": "SpellObject"
     },
-    "{ddd4d409}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility/Jade_SkarnerR": {
         "ObjectName": "Jade_SkarnerR",
         "mScriptName": "Jade_SkarnerR",
         "mSpell": {
@@ -1137,17 +1137,28 @@
             ],
             "{0e1136d1}": {
                 "values": [
-                    500.0,
-                    500.0,
-                    500.0,
-                    500.0,
-                    500.0,
-                    500.0,
-                    500.0
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
                 ],
-                "{0a3e0478}": 500.0,
+                "{0a3e0478}": 350.0,
                 "__type": "{0a0eddc9}"
             },
+            "castRadius": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
             "mana": [
                 100.0,
                 125.0,
@@ -1221,10 +1232,10 @@
         },
         "__type": "SpellObject"
     },
-    "{99317ce4}": {
-        "mRootSpell": "{b34d034b}",
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerWAbility": {
+        "mRootSpell": "Characters/Jade_Skarner/Spells/Jade_SkarnerWAbility/Jade_SkarnerW",
         "mChildSpells": [
-            "{b34d034b}"
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerWAbility/Jade_SkarnerW"
         ],
         "mName": "Jade_SkarnerWAbility",
         "AbilityTraits": 8,
@@ -1243,7 +1254,7 @@
             "castConeDistance": 100.0,
             "castFrame": 10.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{ae147db1}",
+            "mHitEffectKey": "Jade_Skarner_BA_tar_02",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1263,7 +1274,7 @@
         },
         "__type": "SpellObject"
     },
-    "{b34d034b}": {
+    "Characters/Jade_Skarner/Spells/Jade_SkarnerWAbility/Jade_SkarnerW": {
         "ObjectName": "Jade_SkarnerW",
         "mScriptName": "Jade_SkarnerW",
         "mSpell": {
@@ -1318,7 +1329,7 @@
                 "{b7ea64af}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{57dc56e4}",
+                            "mDataValue": "baseBlockDamage",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -1500,7 +1511,7 @@
             "castConeDistance": 100.0,
             "castFrame": 10.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{1f64a06f}",
+            "mHitEffectKey": "Jade_Skarner_BA_tar_crit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1841,21 +1852,21 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{4373a1bd}"
+                            "Items/771028"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{c66c2131}"
+                            "Items/771055"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{337149f6}",
-                            "{99a41f9d}",
-                            "{99a41f9d}"
+                            "Items/771036",
+                            "Items/772003",
+                            "Items/772003"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -1863,38 +1874,38 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{24591a28}",
-                            "{994f44fb}",
-                            "{aec400bf}"
+                            "Items/773025",
+                            "Items/773068",
+                            "Items/773172"
                         ],
                         "{f71960ab}": "{71caf510}",
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{264a12c4}",
-                            "{23bea8c0}",
-                            "{9753bf03}"
+                            "Items/773047",
+                            "Items/773111",
+                            "Items/773006"
                         ],
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{3cbc9184}",
-                            "{2fba3e76}",
-                            "{944f3d1c}"
+                            "Items/773102",
+                            "Items/773139",
+                            "Items/773065"
                         ],
                         "MaxCompletedItems": 3,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{b5c64a5b}",
-                            "{283d49f7}",
-                            "{24591a28}",
-                            "{9853c096}",
-                            "{34ab3bcb}",
-                            "{24beaa53}"
+                            "Items/773143",
+                            "Items/773091",
+                            "Items/773025",
+                            "Items/773005",
+                            "Items/773190",
+                            "Items/773110"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
@@ -1913,12 +1924,12 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{3e715b47}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{99a41f9d}"
+                            "Items/771039",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/772003"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -1926,9 +1937,9 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{b8c88dab}",
-                            "{bd2529c6}",
-                            "{be252b59}"
+                            "Items/773154",
+                            "Items/773207",
+                            "Items/773206"
                         ],
                         "MaxCompletedItems": 0,
                         "{f71960ab}": "{b873c9ba}",
@@ -1936,38 +1947,38 @@
                     },
                     {
                         "items": [
-                            "{264a12c4}",
-                            "{23bea8c0}",
-                            "{9753bf03}"
+                            "Items/773047",
+                            "Items/773111",
+                            "Items/773006"
                         ],
                         "{f71960ab}": "{71caf510}",
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{24591a28}",
-                            "{994f44fb}",
-                            "{aec400bf}"
+                            "Items/773025",
+                            "Items/773068",
+                            "Items/773172"
                         ],
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{3cbc9184}",
-                            "{2fba3e76}",
-                            "{944f3d1c}"
+                            "Items/773102",
+                            "Items/773139",
+                            "Items/773065"
                         ],
                         "MaxCompletedItems": 3,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{b5c64a5b}",
-                            "{283d49f7}",
-                            "{24591a28}",
-                            "{9853c096}",
-                            "{34ab3bcb}",
-                            "{24beaa53}"
+                            "Items/773143",
+                            "Items/773091",
+                            "Items/773025",
+                            "Items/773005",
+                            "Items/773190",
+                            "Items/773110"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
@@ -2430,10 +2441,10 @@
         },
         "__type": "CharScript"
     },
-    "{d377aa04}": {
+    "Characters/Jade_Skarner/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{d6bc1212}": {
+    "Characters/Jade_Skarner/CharacterRecords/Root": {
         "mCharacterName": "Jade_Skarner",
         "baseHPModifiable": {
             "baseValue": 536.0,
@@ -2531,10 +2542,10 @@
             "Jade_SkarnerRAbility/Jade_SkarnerR"
         ],
         "spells": [
-            "{2efa3d13}",
-            "{b34d034b}",
-            "{2532feb3}",
-            "{ddd4d409}"
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility/Jade_SkarnerQ",
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerWAbility/Jade_SkarnerW",
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE",
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility/Jade_SkarnerR"
         ],
         "extraSpells": [
             "Jade_SkarnerPassiveAttack",
@@ -2556,7 +2567,7 @@
         ],
         "{c1984296}": [
             "{d70dbefc}",
-            "{744ca46f}",
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerTurretAttack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2573,10 +2584,10 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{9ea6887a}",
-            "{99317ce4}",
-            "{32c10d76}",
-            "{038db911}",
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility",
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerWAbility",
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility",
+            "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility",
             "{2959969c}"
         ],
         "passiveName": "game_character_passiveName_Jade_Skarner",

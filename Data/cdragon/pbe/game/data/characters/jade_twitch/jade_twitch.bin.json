@@ -404,7 +404,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "mCoefficient": 1.0,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_Clone.project_jade.dds"
@@ -420,14 +419,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    90.0,
+                    130.0,
                     120.0,
                     110.0,
                     100.0,
                     90.0,
-                    90.0,
-                    90.0
+                    80.0,
+                    70.0
                 ],
+                "{0a3e0478}": 130.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -495,10 +495,11 @@
                     100.0,
                     125.0,
                     150.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    175.0,
+                    200.0,
+                    225.0
                 ],
+                "{0a3e0478}": 100.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 1,
@@ -803,39 +804,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "bADRatioPerStack",
-                            "values": [
-                                0.4000000059604645,
-                                0.4000000059604645,
-                                0.4000000059604645,
-                                0.4000000059604645,
-                                0.4000000059604645,
-                                0.4000000059604645,
-                                0.4000000059604645
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "APRatioPerStack",
-                            "values": [
-                                0.3499999940395355,
-                                0.3499999940395355,
-                                0.3499999940395355,
-                                0.3499999940395355,
-                                0.3499999940395355,
-                                0.3499999940395355,
-                                0.3499999940395355
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mSpellCalculations": {
                 "{b8a38f76}": {
                     "{72c5c2a8}": 0,
@@ -881,8 +849,9 @@
                     10.0,
                     9.0,
                     8.0,
-                    8.0
+                    7.0
                 ],
+                "{0a3e0478}": 13.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1042,47 +1011,6 @@
                 ],
                 "__type": "ObjectTags"
             },
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "AttackSpeedMod",
@@ -1100,52 +1028,13 @@
                 {
                     "name": "AttackSpeedDuration",
                     "values": [
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "StealthDuration",
-                    "values": [
-                        0.0,
-                        10.0,
-                        20.0,
-                        30.0,
-                        40.0,
-                        50.0,
-                        60.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MaxFadeTime",
-                    "values": [
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "StealthDetectionRange",
-                    "values": [
-                        500.0,
-                        500.0,
-                        500.0,
-                        500.0,
-                        500.0,
-                        500.0,
-                        500.0
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1163,44 +1052,45 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MoveBonusRange",
+                    "name": "StealthDuration",
                     "values": [
-                        1000.0,
-                        1000.0,
-                        1000.0,
-                        1000.0,
-                        1000.0,
-                        1000.0,
-                        1000.0
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "HiddenSpeed",
+                    "name": "MaxFadeTime",
                     "values": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDelayTime",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
-            "mSpellCalculations": {
-                "{5ab32811}": {
-                    "tooltipOnly": true,
-                    "mFormulaParts": [
-                        {
-                            "mNumber": 10.0,
-                            "__type": "NumberCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                }
-            },
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_AlterEgo.project_jade.dds",
@@ -1218,15 +1108,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    11.0,
-                    11.0,
-                    11.0,
-                    11.0,
-                    11.0,
-                    11.0,
-                    11.0
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0
                 ],
-                "{0a3e0478}": 11.0,
+                "{0a3e0478}": 16.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1306,17 +1196,17 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
+                                    "type": "StealthDuration",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_TwitchQ_listtype_StealthDuration_Jade",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
                                     "type": "AttackSpeedMod",
                                     "typeIndex": 1,
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_AttackSpeed",
                                     "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "StealthDuration",
-                                    "typeIndex": 2,
-                                    "nameOverride": "Spell_TwitchQ_listtype_StealthDuration_Jade",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1325,24 +1215,6 @@
                     },
                     "__type": "TooltipInstanceSpell"
                 },
-                "mTargeterDefinitions": [
-                    {
-                        "overrideRadius": {
-                            "mPerLevelValues": [
-                                500.0,
-                                500.0,
-                                500.0,
-                                500.0,
-                                500.0,
-                                500.0
-                            ],
-                            "mValueType": 1,
-                            "__type": "FloatPerSpellLevel"
-                        },
-                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/CircularRangeIndicator_Dark.tex",
-                        "__type": "TargeterDefinitionAoe"
-                    }
-                ],
                 "__type": "SpellDataResourceClient"
             },
             "__type": "SpellDataResource"
@@ -1418,135 +1290,131 @@
                 ],
                 "__type": "ObjectTags"
             },
-            "mAlternateName": "Jade_TwitchDebilitatingPoison",
+            "mAlternateName": "TwitchVenomCask",
+            "mSpellTags": [
+                "Trait_Target_Area",
+                "Trait_AoE"
+            ],
             "DataValues": [
                 {
-                    "name": "SlowPercent",
+                    "name": "BaseSlowAmount",
                     "values": [
-                        -0.20000000298023224,
-                        -0.20000000298023224,
-                        -0.20000000298023224,
-                        -0.20000000298023224,
-                        -0.20000000298023224,
-                        -0.20000000298023224,
-                        -0.20000000298023224
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PassiveStackSlowPercent",
-                    "values": [
-                        -0.07999999821186066,
-                        -0.07999999821186066,
-                        -0.07999999821186066,
-                        -0.07999999821186066,
-                        -0.07999999821186066,
-                        -0.07999999821186066,
-                        -0.07999999821186066
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "Duration",
                     "values": [
-                        1.399999976158142,
-                        2.0,
-                        2.5999999046325684,
-                        3.200000047683716,
-                        3.799999952316284,
-                        4.400000095367432,
-                        5.0
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "AoERadius",
                     "values": [
-                        1200.0,
-                        1200.0,
-                        1200.0,
-                        1200.0,
-                        1200.0,
-                        1200.0,
-                        1200.0
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StacksAdded",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
-            "mSpellCalculations": {
-                "{de22a89f}": {
-                    "mMultiplier": {
-                        "mNumber": -1.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "SlowPercent",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mPart1": {
-                                "mDataValue": "PassiveStackSlowPercent",
-                                "__type": "NamedDataValueCalculationPart"
-                            },
-                            "mPart2": {
-                                "SourceObject": "{9831422a}",
-                                "{137cf12a}": "MaxStacks",
-                                "__type": "{9e9e2e5c}"
-                            },
-                            "__type": "ProductOfSubPartsCalculationPart"
-                        }
-                    ],
-                    "mDisplayAsPercent": true,
-                    "__type": "GameCalculation"
-                }
-            },
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_Fade.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.dds"
             ],
-            "mCastTime": 0.25,
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                14.0,
+                13.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                9.0
+            ],
+            "Cooldown": {
+                "values": [
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    9.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
             "mCantCancelWhileWindingUp": true,
             "mProjectTargetToCastRange": true,
             "mSpellRevealsChampion": false,
             "useAnimatorFramerate": true,
             "castRange": [
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "{0e1136d1}": {
                 "values": [
-                    1200.0,
-                    1200.0,
-                    1200.0,
-                    1200.0,
-                    1200.0,
-                    1200.0,
-                    1200.0
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
                 ],
-                "{0a3e0478}": 1200.0,
+                "{0a3e0478}": 950.0,
                 "__type": "{0a0eddc9}"
             },
             "castRadius": [
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0,
+                275.0
             ],
             "castConeDistance": 100.0,
             "castTargetAdditionalUnitsRadius": 325.0,
-            "castFrame": 12.03499984741211,
-            "missileSpeed": 601.0999755859375,
+            "castFrame": 8.5,
+            "missileSpeed": 1750.0,
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -1566,33 +1434,28 @@
                 2
             ],
             "mana": [
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                70.0,
+                70.0,
+                70.0,
+                70.0,
+                70.0,
+                70.0
             ],
             "{210f9ec0}": {
                 "values": [
-                    80.0,
-                    80.0,
-                    80.0,
-                    80.0,
-                    80.0,
-                    80.0
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0
                 ],
-                "{0a3e0478}": 80.0,
+                "{0a3e0478}": 50.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 1,
             "mTargetingTypeData": {
-                "__type": "SelfAoe"
-            },
-            "SpellEventToAudioEventSuffix": {
-                "12": "Play_sfx_Twitch_TwitchVenomCask_OnCast",
-                "13": "Play_sfx_Twitch_TwitchVenomCaskMissile_OnHitLocation",
-                "18": "Play_sfx_Twitch_TwitchVenomCaskMissile_OnMissileLaunch"
+                "__type": "Area"
             },
             "mCastingBreaksStealth": true,
             "mClientData": {
@@ -1609,8 +1472,13 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Duration",
-                                    "nameOverride": "Spell_ListType_Duration",
+                                    "type": "BaseSlowAmount",
+                                    "nameOverride": "Spell_ListType_MovementSpeedSlow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1623,6 +1491,13 @@
                     {
                         "useCasterBoundingBox": false,
                         "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
                     }
                 ],
                 "__type": "SpellDataResourceClient"
@@ -1672,6 +1547,116 @@
                 }
             ],
             "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{db34071e}": {
+        "ObjectName": "Jade_TwitchWMissile",
+        "mScriptName": "Jade_TwitchWMissile",
+        "mSpell": {
+            "flags": 4194304,
+            "mAffectsTypeFlags": 23567,
+            "mAlternateName": "TwitchVenomCask",
+            "mAnimationName": "Spell3",
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "castRange": [
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0,
+                1500.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0,
+                    1500.0
+                ],
+                "{0a3e0478}": 1500.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 120.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 60.0,
+                    "mOffsetInitialTargetHeight": 60.0,
+                    "mStartBoneName": "Root",
+                    "mSpeed": 1400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "mGravity": 4000.0,
+                    "__type": "GravityHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "{c195fba6}": true,
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.974999904632568,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "Jade_Twitch_W_Mis",
+            "mLineWidth": 120.0,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
     },
@@ -3752,7 +3737,7 @@
         ],
         "{c1984296}": [
             "{00000000}",
-            "Shared/Spells/BaseSpell",
+            "{db34071e}",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -3862,21 +3847,6 @@
             "Ranged"
         ],
         "mPreferredPerkStyle": "Perks/Styles/Precision",
-        "mPerkReplacements": {
-            "mReplacements": [
-                {
-                    "mReplaceTarget": "Perks/Styles/Resolve/Aftershock",
-                    "mReplaceWith": "Perks/Styles/Resolve/GraspOfTheUndying",
-                    "__type": "PerkReplacement"
-                },
-                {
-                    "mReplaceTarget": "Perks/Styles/Inspiration/GlacialAugment",
-                    "mReplaceWith": "Perks/Styles/Inspiration/FirstStrike",
-                    "__type": "PerkReplacement"
-                }
-            ],
-            "__type": "PerkReplacementList"
-        },
         "mCharacterPassiveSpell": "{9831422a}",
         "{c5c48b41}": 1,
         "Script": "{27a9af7f}",

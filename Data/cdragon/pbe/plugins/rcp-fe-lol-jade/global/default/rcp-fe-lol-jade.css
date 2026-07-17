@@ -1460,12 +1460,25 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 
 .jade-masteries-page .mastery-trees {
     align-items: flex-start;
-    background: url(/fe/lol-jade/masteries-background.png) 0 0 no-repeat;
-    background-size: contain;
+    direction: ltr;
     display: flex;
     flex: 1;
     justify-content: center;
+    position: relative;
     width: 880px
+}
+
+.jade-masteries-page .mastery-trees:before {
+    background: url(/fe/lol-jade/masteries-background.png) 0 0 no-repeat;
+    background-size: contain;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.jade-masteries-page .mastery-trees>* {
+    position: relative
 }
 
 .jade-masteries-page .page-action-buttons button[disabled] {
@@ -2268,7 +2281,7 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 .jade-battlepass-page .battlepass-preview-name {
     color: #d09a00;
     font-family: FrizQuadrata Pro, Beaufort for LOL, serif;
-    font-size: 32px
+    font-size: 24px
 }
 
 .jade-battlepass-page .battlepass-preview-description {
@@ -7238,6 +7251,7 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 .mastery-tooltip-content {
     background-color: rgba(0, 0, 0, .8);
     border: 1px solid #c9a23c;
+    direction: ltr;
     font-family: FrizQuadrata Pro, serif;
     max-width: 300px;
     min-width: 200px;
@@ -11527,12 +11541,8 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .jade-progression-widget.is-max-level .max-level-text {
-    margin-left: 10px
-}
-
-[dir=rtl] .jade-progression-widget.is-max-level .max-level-text {
-    margin-left: 0;
-    margin-right: 10px
+    margin-left: 10px;
+    margin-right: 0
 }
 
 .jade-progression-widget.is-max-level .max-level-title {
@@ -11571,10 +11581,6 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     flex-grow: 1;
     padding: 0 10px;
     text-align: right
-}
-
-[dir=rtl] .jade-progression-widget .pass-progression-widget-next-reward-wrapper {
-    text-align: left
 }
 
 .jade-progression-widget .next-reward-title {
@@ -11619,22 +11625,14 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .jade-progression-widget .pass-progression-widget-level:first-child {
+    margin-left: 0;
     margin-right: -3px
-}
-
-[dir=rtl] .jade-progression-widget .pass-progression-widget-level:first-child {
-    margin-left: -3px;
-    margin-right: 0
 }
 
 .jade-progression-widget .pass-progression-widget-level:last-child {
     background: #3c3c41;
-    margin-left: -3px
-}
-
-[dir=rtl] .jade-progression-widget .pass-progression-widget-level:last-child {
-    margin-left: 0;
-    margin-right: -3px
+    margin-left: -3px;
+    margin-right: 0
 }
 
 .jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content {
@@ -11682,13 +11680,10 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .jade-progression-modal__header {
     left: 54px;
     position: absolute;
+    right: auto;
+    text-align: left;
     top: 41px;
     width: 462px
-}
-
-[dir=rtl] .jade-progression-modal__header {
-    left: auto;
-    right: 54px
 }
 
 .jade-progression-modal__heading {
@@ -11738,16 +11733,12 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     display: flex;
     height: 20px;
     justify-content: center;
+    left: auto;
     padding: 4px;
     position: absolute;
     right: 26px;
     top: 10px;
     width: 20px
-}
-
-[dir=rtl] .jade-progression-modal__close-btn {
-    left: 26px;
-    right: auto
 }
 
 .jade-progression-modal__close-btn:hover {
@@ -11766,15 +11757,11 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .jade-progression-modal__selected-reward-area {
     align-items: flex-start;
     display: flex;
+    flex-direction: row;
     left: 453px;
     position: absolute;
+    right: auto;
     top: 170px
-}
-
-[dir=rtl] .jade-progression-modal__selected-reward-area {
-    flex-direction: row-reverse;
-    left: auto;
-    right: 453px
 }
 
 .jade-progression-modal__selected-reward-box {
@@ -11799,13 +11786,10 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .jade-progression-modal__selected-reward-info {
     font-family: FrizQuadrata Pro;
     margin-left: 40px;
+    margin-right: 0;
     padding: 8px;
+    text-align: left;
     width: 300px
-}
-
-[dir=rtl] .jade-progression-modal__selected-reward-info {
-    margin-left: 0;
-    margin-right: 40px
 }
 
 .jade-progression-modal__selected-reward-type {
@@ -11833,12 +11817,8 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     gap: 44px;
     left: 115px;
     position: absolute;
+    right: auto;
     top: 402px
-}
-
-[dir=rtl] .jade-progression-modal__rewards-row {
-    left: auto;
-    right: 115px
 }
 
 .jade-progression-modal__reward-box {
@@ -11901,34 +11881,22 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .jade-progression-modal__nav-next {
+    left: auto;
     right: 30px
-}
-
-[dir=rtl] .jade-progression-modal__nav-next {
-    left: 30px;
-    right: auto
 }
 
 .jade-progression-modal__nav-prev {
-    left: 30px
-}
-
-[dir=rtl] .jade-progression-modal__nav-prev {
-    left: auto;
-    right: 30px
+    left: 30px;
+    right: auto
 }
 
 .jade-progression-modal__progress-bar {
     height: 20px;
     left: 125px;
     position: absolute;
+    right: auto;
     top: 485px;
     width: 813px
-}
-
-[dir=rtl] .jade-progression-modal__progress-bar {
-    left: auto;
-    right: 125px
 }
 
 .jade-progression-modal__progress-track {
@@ -11947,10 +11915,6 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     height: 4px;
     max-width: 100%;
     transition: width .3s ease
-}
-
-[dir=rtl] .jade-progression-modal__progress-fill {
-    background: linear-gradient(270deg, #09bfd8 63%, #d3faff)
 }
 
 .jade-progression-modal__levels {
@@ -12017,12 +11981,8 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     gap: 4px;
     left: 42px;
     position: absolute;
+    right: auto;
     top: 515px
-}
-
-[dir=rtl] .jade-progression-modal__level-info {
-    left: auto;
-    right: 42px
 }
 
 .jade-progression-modal__level-circle {
@@ -12067,23 +12027,15 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 .jade-progression-modal__xp-value {
     color: #000;
     font-size: 14px;
-    padding-left: 4px
-}
-
-[dir=rtl] .jade-progression-modal__xp-value {
-    padding-left: 0;
-    padding-right: 4px
+    padding-left: 4px;
+    padding-right: 0
 }
 
 .jade-progression-modal__xp-label {
     color: #000;
     font-size: 14px;
-    margin-left: 4px
-}
-
-[dir=rtl] .jade-progression-modal__xp-label {
-    margin-left: 0;
-    margin-right: 4px
+    margin-left: 4px;
+    margin-right: 0
 }
 
 .battlepass-chase-modal__overlay {
@@ -16932,10 +16884,11 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 
 .jade-runes-page .rune-page-actions {
     bottom: 10px;
+    direction: ltr;
     display: flex;
     gap: 10px;
-    inset-inline-end: 10px;
-    position: absolute
+    position: absolute;
+    right: 10px
 }
 
 .jade-runes-page .clear-runes-btn,

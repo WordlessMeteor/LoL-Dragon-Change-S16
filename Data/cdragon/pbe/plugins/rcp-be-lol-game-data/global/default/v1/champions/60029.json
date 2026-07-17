@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Twitch becomes invisible for a short duration, while invisible Twitch gains movement speed. When leaving invisibility twitch gains Attack Speed for a short duration.",
-            "dynamicDescription": "<mainText>After @MaxFadeTime@ seconds, Twitch <keywordStealth>Camouflages</keywordStealth> for @StealthDuration@ seconds.<br><br>Twitch gains <attackSpeed>@AttackSpeedMod*100@% Attack Speed</attackSpeed> for @AttackSpeedDuration@ seconds after coming out of <keywordStealth>Camouflage.</keywordStealth>",
+            "description": "Twitch turns Invisible for several seconds, gaining Move Speed. He then gains Attack Speed after coming out of Invisibility.",
+            "dynamicDescription": "After @MaxFadeTime@ seconds of not taking damage or after @MaxDelayTime@ seconds, Twitch turns <keywordStealth>Invisible</keywordStealth> for @StealthDuration@ seconds, gaining <speed>@MoveSpeedMod*100@% Move Speed</speed>.<br><br>Twitch gains <attackSpeed>@AttackSpeedMod*100@% Attack Speed</attackSpeed> for @AttackSpeedDuration@ seconds after coming out of <keywordStealth>Invisibility</keywordStealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -853,12 +853,12 @@
                 60.0
             ],
             "cooldownCoefficients": [
-                11.0,
-                11.0,
-                11.0,
-                11.0,
-                11.0,
-                11.0
+                16.0,
+                16.0,
+                16.0,
+                16.0,
+                16.0,
+                16.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -920,13 +920,13 @@
                     0.0
                 ],
                 "Effect7Amount": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,
@@ -978,40 +978,40 @@
         },
         {
             "spellKey": "w",
-            "name": "Debilitating Poison",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_Fade.project_jade.png",
+            "name": "Venom Cask",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Twitch infects all nearby champions with Debilitating Poison, slowing their movement speed.",
-            "dynamicDescription": "Twitch <status>Slows</status> nearby enemy champions by @SlowPercent*-100@% for @Duration@ seconds, increased by @PassiveStackSlowPercent*-100@% per <keywordMajor>Deadly Venom</keywordMajor> stack (max: @MaxSlowTooltip@).<br><br>Adding more <keywordMajor>Deadly Venom</keywordMajor> stacks after the <status>Slow</status> is applied will further reduce their <speed>Movement Speed</speed>.@SpellModifierDescriptionAppend@",
+            "description": "Twitch hurls a cask of venom that explodes, inflicting Deadly Venom and slowing enemies in the area.",
+            "dynamicDescription": "Twitch hurls an exploding cask of venom, inflicting @StacksAdded@ stacks of <keywordMajor>Deadly Venom</keywordMajor> and <status>Slowing</status> enemies by @BaseSlowAmount@% for @Duration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0,
-                1200.0
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
             ],
             "costCoefficients": [
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0,
-                80.0
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0
             ],
             "cooldownCoefficients": [
+                13.0,
+                12.0,
+                11.0,
                 10.0,
-                10.0,
-                10.0,
-                10.0,
-                10.0,
-                10.0
+                9.0,
+                9.0
             ],
             "coefficients": {
-                "coefficient1": 0.0,
+                "coefficient1": 0.7,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "All nearby enemies secrete Twitch's toxic venoms from their bodies, dealing damage for each stack.",
-            "dynamicDescription": "<mainText>Twitch deals <physicalDamage>@BaseDamage@ physical damage</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> per stack of <keywordMajor>Deadly Venom</keywordMajor> to all marked nearby enemies, consuming all nearby stacks.",
+            "dynamicDescription": "Twitch deals <physicalDamage>@BaseDamage@ physical damage</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> per stack of <keywordMajor>Deadly Venom</keywordMajor> to all marked nearby enemies.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1158,7 +1158,7 @@
                 10.0,
                 9.0,
                 8.0,
-                8.0
+                7.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Twitch closes his eyes and fires his crossbow, rapidly spraying powerful piercing bolts ahead of him.",
-            "dynamicDescription": "<mainText>For @Duration@ seconds Twitch gains @BonusRange@ Attack Range, <physicalDamage>@BonusAD@ Attack Damage</physicalDamage> and his basic attacks become piercing bolts that deal @FallOffDamage*100@% less damage to subsequent targets down to a minimum of @MinimumFallOffDamage*100@%.",
+            "dynamicDescription": "For @Duration@ seconds Twitch gains @BonusRange@ Attack Range, <physicalDamage>@BonusAD@ Attack Damage</physicalDamage> and his basic attacks become piercing bolts that deal @FallOffDamage*100@% less damage to subsequent targets down to a minimum of @MinimumFallOffDamage*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1298,20 +1298,20 @@
                 100.0,
                 125.0,
                 150.0,
-                0.0,
-                0.0,
-                0.0
+                175.0,
+                200.0,
+                225.0
             ],
             "cooldownCoefficients": [
                 120.0,
                 110.0,
                 100.0,
                 90.0,
-                90.0,
-                90.0
+                80.0,
+                70.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {

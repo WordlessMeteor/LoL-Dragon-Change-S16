@@ -1883,7 +1883,7 @@
 		</tr>
 		<tr>
 			<td style="text-align:center;">2026-07-16 05-36-03</td>
-			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td style="text-align:center;">CDragon: 1/2/1<br>DDragon: 2/1</td>
 			<td>
 				CDragon: <br>
 					<ul style="list-style-type: disc; margin-left: 20px;">
@@ -1891,6 +1891,16 @@
 						<li>PBE: 16.15.795.4193 -> 16.15.795.7415</li>
 					</ul>
 				DDragon: 16.13.1 -> 16.14.1
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align:center;">2026-07-17 05-13-59</td>
+			<td style="text-align:center;">CDragon: 1/2/1</td>
+			<td>
+				CDragon: <br>
+					<ul style="list-style-type: disc; margin-left: 20px;">
+						<li>PBE: 16.15.795.7415 -> 16.15.796.1693</li>
+					</ul>
 			</td>
 		</tr>
 	</tbody>
