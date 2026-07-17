@@ -58017,7 +58017,7 @@
                             if (t.platform !== p) return !0;
                             {
                                 const t = this.get("systemInfo.operatingSystem.versionMajor");
-                                return (parseInt(t) || 0) > 7
+                                return (parseInt(t) || 0) >= 10
                             }
                         }
                         return !0

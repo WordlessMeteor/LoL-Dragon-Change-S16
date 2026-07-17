@@ -406,7 +406,7 @@
                     })), a.dataBinding.get("/riotclient/system-info/v1/basic-info").then((e => {
                         const t = e.operatingSystem.versionMajor,
                             n = parseInt(t) || 0,
-                            a = "Windows" === e.operatingSystem.platform && n > 7;
+                            a = "Windows" === e.operatingSystem.platform && n >= 10;
                         this.set("blockPartyInvites", !a), this.set("blockTFTMode", !a)
                     })), a.dataBinding.observe(i, this, (e => {
                         this.set("hasSeenBridgeTftTooltip", e?.data?.hasSeenBridgeTftTooltip ?? !1)

@@ -81,8 +81,8 @@
                 }
             }
             const M = n.dataBinding.bindTo(n.socket),
-                D = "tft-team-planner",
-                w = a(8);
+                w = "tft-team-planner",
+                D = a(8);
             t.default = class {
                 constructor() {
                     this._teamPlannerInstance = null, this._config = null, this._enabled = !1, this._registerComponents(), this._initObservers(), this.tftChampionsBySet = l.tftChampionsBySet, this.tftItemsByName = l.tftItemsByName, this.teamPlannerCSSJSON = l.teamPlannerCSSJSON, this.tftTraitsById = l.tftTraitsById, this.tftGameVariationsByAlias = l.tftGameVariationsByAlias, this.tftSets = l.tftSets, this.teamplannerSessionId = null, this.sessionStartTime_ms = 0, this.activatedFromSource = "", this.remindersClickedCount = 0, this.clearCount = 0, this.teamCodesImported = {}, this.teamCodesImportedCount = 0, this.teamCodesExported = {}, this.teamCodesExportedCount = 0, this.teamCodeErrors = [], this.teamCodeErrorsCount = 0, this.subViewSessionStartTime_ms = 0, this.totalTeamCount = 0, this.deletedTeamsCount = 0, this.currentTeamId = "", this.remindedTeamId = "", this.editedChampionsCount = 0, this.currentTeamChampionNames = [], this.undoCount = 0, this.maxUndoReachedCount = 0, this.traitFilterClearCount = 0, this.traitFilterToggleCount = 0, this.traitFilterUniqueTraitFilterTraits = [], this.activeSetToggleCount = 0, this.defaultSetName = "", this.eventSetName = null, this.maxTeamsObserverCallbackMap = new Map, this.visibilityObserverCallbacks = []
@@ -120,7 +120,7 @@
                         MyTeamsOptionsMenuComponent: E.default,
                         TeamImportRootComponent: I.default
                     };
-                    n.emberApplicationFactory.setFactoryDefinition(D, e)
+                    n.emberApplicationFactory.setFactoryDefinition(w, e)
                 }
                 _createTeamPlannerInstance() {
                     return this._componentState = n.Ember.Object.create({
@@ -130,7 +130,7 @@
                     }, {
                         importSourceEoG: !1
                     }), this._teamPlannerInstance = n.ComponentFactory.create({
-                        type: D,
+                        type: w,
                         data: this._componentState
                     }), this._teamPlannerInstance
                 }
@@ -144,7 +144,7 @@
                 show(e) {
                     if (!this._enabled || this._teamPlannerInstance && this._componentState.get("isVisible")) return;
                     (this._teamPlannerInstance ? Promise.resolve() : this._createTeamPlannerInstance().renderPromise).then((() => (n.LayerManager.addLayer(this._teamPlannerInstance.domNode), this.teamPlannerService.setStateFromPreviousContext()))).then((() => {
-                        this._componentState.set("isVisible", !0), this._notifyVisibilityObservers(!0), s.SFX.openFlyout.play(), this.teamplannerSessionId = w(), this.activatedFromSource = e, this.sessionStartTime_ms = Date.now(), this.subViewSessionStartTime_ms = Date.now()
+                        this._componentState.set("isVisible", !0), this._notifyVisibilityObservers(!0), s.SFX.openFlyout.play(), this.teamplannerSessionId = D(), this.activatedFromSource = e, this.sessionStartTime_ms = Date.now(), this.subViewSessionStartTime_ms = Date.now()
                     }))
                 }
                 _compareTeams(e, t) {
@@ -456,21 +456,22 @@
                         t = [];
                     return this.currentSetChampionsByAlias && this.currentlySelectedTeams ? (this.currentlySelectedTeams.forEach((a => {
                         if ("" === a.id) return;
-                        const n = {
+                        const l = {
                             id: a.id,
                             title: a.title,
                             champions: Array(10).fill({})
                         };
-                        let l = 0;
+                        let s = 0;
                         a.champions.forEach((t => {
                             if ("" === t.championId) return;
-                            e.get(t.championId).traits.forEach((e => {
+                            const a = e.get(t.championId);
+                            a ? (a.traits.forEach((e => {
                                 const t = this.get("tftTraitsById").get(e.id);
                                 e.iconPath = t.icon_path
-                            })), n.champions[l] = e.get(t.championId), ++l
+                            })), l.champions[s] = e.get(t.championId), ++s) : n.logger.warning(`No configuration found for champion with id: ${t.championId}`)
                         }));
-                        for (let e = this.maxChampionsOnTeam - n.champions.length; e > 0; --e) n.champions.push({});
-                        t.push(n)
+                        for (let e = this.maxChampionsOnTeam - l.champions.length; e > 0; --e) l.champions.push({});
+                        t.push(l)
                     })), t) : t
                 })),
                 maxTeamsCount: 40,
@@ -1048,7 +1049,7 @@
                         }));
                         const s = e.get(n);
                         Object.values(l).forEach((e => {
-                            e.sort(((e, t) => s.get(e).tier - s.get(t).tier))
+                            e.sort(((e, t) => s.get(e).tier === s.get(t).tier ? e.localeCompare(t) : s.get(e).tier - s.get(t).tier))
                         })), t[n] = l
                     })), t
                 },

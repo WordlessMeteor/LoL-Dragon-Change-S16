@@ -589,22 +589,22 @@
     ],
     "passive": {
         "name": "Voracity",
-        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity.project_jade.png",
+        "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Champion kills or assists grant Katarina extra gold and reduce her cooldowns by 15 seconds."
+        "description": "Champion kills or assists reduce Katarina's cooldowns by 15 seconds."
     },
     "spells": [
         {
             "spellKey": "q",
             "name": "Bouncing Blade",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Jade_Katarina_BouncingBlade.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_BouncingBlade.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Katarina throws a dagger that bounces from enemy to enemy, dealing magic damage.",
-            "dynamicDescription": "Throws a dagger dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>. The dagger bounces an additional @MaxBounces@ times dealing 10% less damage with each bounce.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Throws a dagger dealing <magicDamage>@TotalDamage@</magicDamage> magic damage. The dagger bounces to the @MaxBounces@ closest enemies dealing 10% less damage with each bounce.<br><br>Enemies hit are marked for @MarkDuration@ seconds. Katarina's basic attacks or spells will consume the mark dealing <magicDamage>@TotalDamageMark@</magicDamage> additional magic damage.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Killer Instincts",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Jade_Katarina_KillerInstincts.project_jade.png",
+            "name": "Sinister Steel",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Katarina's next basic spell gains an additional affect.",
-            "dynamicDescription": "<spellPassive>Passive</spellPassive>: Katarina's Abilities and Attacks deal an additional @TotalDamage@ damage.<br><br><spellActive>Active:</spellActive> Katarina's next basic Ability has a bonus effect.<li><spellName>Bouncing Blade</spellName>: Deals full damage to every target and applies <keyWord>Grievous Wounds</keyWord> for @QHealingReductionDuration@ seconds.<li><spellName>Shunpo</spellName>: Katarina gains @EDamageReduction@% damage reduction for @EDamageReductionDuration@ seconds.@SpellModifierDescriptionAppend@",
+            "description": "Katarina whirls her daggers around her, dealing magic damage to all enemies in the area. If she hits an enemy Champion, Katarina gains a burst of speed for a short duration.",
+            "dynamicDescription": "Whirls daggers in a circle dealing @TotalDamage@ magic damage. If she hits an enemy Champion, Katarina gains @Haste*100@%  <speed>Movement Speed</speed> for @BuffDuration@ second.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -772,12 +772,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                20.0,
-                18.0,
-                16.0,
-                14.0,
-                12.0,
-                12.0
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -898,13 +898,13 @@
         {
             "spellKey": "e",
             "name": "Shunpo",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Jade_Katarina_Shunpo.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Shunpo.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Katarina instantly moves to her target's location and takes reduced damage from enemies for a few seconds. If the target is an enemy, she deals damage.",
-            "dynamicDescription": "Moves to a target's location. Deals <magicDamage>@TotalDamage@ magic damage</magicDamage> if the target is an enemy.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Moves to a target's location. Deals <magicDamage>@TotalDamage@ magic damage</magicDamage> if the target is an enemy.<br><br>After using Shunpo, Katarina takes @DamageReduction@% reduced damage for @DamageReductionDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1048,13 +1048,13 @@
         {
             "spellKey": "r",
             "name": "Death Lotus",
-            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/JadeKatarina_DeathLotus.project_jade.png",
+            "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_DeathLotus.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "No Cost",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Katarina becomes a flurry of blades, throwing daggers with unrivaled speed at up to three nearby Champions.",
-            "dynamicDescription": "Becomes a flurry of blades, throwing daggers at the closest 3 enemy Champions dealing <magicDamage>@DamageCalcTooltipOnly@ magic damage</magicDamage> over 2 seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Becomes a flurry of blades, throwing daggers at the closest 3 enemy Champions dealing <magicDamage>@DamageCalcTooltipOnly@ magic damage</magicDamage> over 2.5 seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,
@@ -1073,8 +1073,8 @@
             ],
             "cooldownCoefficients": [
                 60.0,
-                55.0,
-                50.0,
+                52.5,
+                45.0,
                 0.0,
                 0.0,
                 0.0

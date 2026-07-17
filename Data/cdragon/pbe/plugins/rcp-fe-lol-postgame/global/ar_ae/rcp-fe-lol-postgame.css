@@ -11920,7 +11920,6 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 }
 
 .jade-postgame-component .postgame-footer .center-container .find-match-button-container {
-    font-family: var(--font-display);
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
@@ -11947,6 +11946,18 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 
 .jade-postgame-component .postgame-footer .center-container .find-match-button-container:lang(ar-ae) {
     letter-spacing: 0
+}
+
+.jade-postgame-component .postgame-footer .center-container .find-match-button-container {
+    font-family: var(--font-display)
+}
+
+.jade-postgame-component .jade-postgame-contents .jade-postgame-screens .jade-postgame-tabs-container .jade-postgame-tab {
+    font-family: var(--font-frizquadrata)
+}
+
+.jade-postgame-component .jade-postgame-contents .jade-postgame-screens .jade-postgame-tabs-container .jade-postgame-tab:lang(vi-VN) {
+    font-family: var(--font-display)
 }
 
 .jade-postgame-component {
@@ -12025,7 +12036,6 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
     border-top: 1px solid #3d4357;
     color: #fff;
     cursor: pointer;
-    font-family: FrizQuadrata Pro;
     font-size: 14px;
     font-style: Roman;
     font-weight: 400;
@@ -12649,15 +12659,6 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 }
 
 .jade-scoreboard-header-component .jade-scoreboard-header-content,
-.jade-scoreboard-header-component .jade-scoreboard-header-content .jade-scoreboard-header-team-name {
-    font-family: var(--font-display)
-}
-
-.jade-scoreboard-header-stat-icon-tooltip {
-    font-family: var(--font-body)
-}
-
-.jade-scoreboard-header-component .jade-scoreboard-header-content,
 .jade-scoreboard-header-component .jade-scoreboard-header-content .jade-scoreboard-header-team-name,
 .jade-scoreboard-header-stat-icon-tooltip {
     -webkit-font-feature-settings: "kern" 1;
@@ -12724,6 +12725,25 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
     letter-spacing: 0
 }
 
+.jade-scoreboard-header-component .jade-scoreboard-header-content,
+.jade-scoreboard-header-component .jade-scoreboard-header-content .jade-scoreboard-header-team-name {
+    font-family: var(--font-display)
+}
+
+.jade-scoreboard-header-stat-icon-tooltip {
+    font-family: var(--font-body)
+}
+
+.jade-scoreboard-header-component .jade-scoreboard-header-content .jade-scoreboard-header-stat-container,
+.jade-scoreboard-header-component .jade-scoreboard-header-content .jade-scoreboard-header-team-name {
+    font-family: var(--font-frizquadrata)
+}
+
+.jade-scoreboard-header-component .jade-scoreboard-header-content .jade-scoreboard-header-stat-container:lang(vi-VN),
+.jade-scoreboard-header-component .jade-scoreboard-header-content .jade-scoreboard-header-team-name:lang(vi-VN) {
+    font-family: var(--font-display)
+}
+
 .jade-scoreboard-header-component {
     display: flex;
     height: 47px;
@@ -12749,7 +12769,6 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
     align-items: center;
     color: #fff;
     display: flex;
-    font-family: FrizQuadrata Pro;
     font-size: 18px;
     font-style: Roman;
     font-weight: 400;
@@ -12775,7 +12794,6 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 .jade-scoreboard-header-component .jade-scoreboard-header-content .jade-scoreboard-header-stat-container {
     align-items: center;
     display: flex;
-    font-family: FrizQuadrata Pro;
     font-size: 18px;
     font-style: Roman;
     font-weight: 400;
@@ -12856,18 +12874,6 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
     height: 100%;
     justify-content: center;
     width: 28px
-}
-
-.jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-level-container .jade-scoreboard-row-in-game-level,
-.jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-name-and-champ-container .jade-scoreboard-row-player-name {
-    font-family: var(--font-display)
-}
-
-.jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-name-and-champ-container .jade-scoreboard-row-champ-name,
-.jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-name-and-champ-container .jade-scoreboard-row-is-system-muted,
-.jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-name-and-champ-container .jade-scoreboard-row-leaver-text,
-.jade-scoreboard-row-component .jade-scoreboard-row-content-container .scoreboard-row-stat-display-component .scoreboard-row-stat-sizer .scoreboard-row-stat-line-secondary {
-    font-family: var(--font-body)
 }
 
 .jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-level-container .jade-scoreboard-row-in-game-level,
@@ -12954,6 +12960,26 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 .jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-name-and-champ-container .jade-scoreboard-row-is-system-muted:lang(ar-ae),
 .jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-name-and-champ-container .jade-scoreboard-row-leaver-text:lang(ar-ae) {
     letter-spacing: 0
+}
+
+.jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-level-container .jade-scoreboard-row-in-game-level,
+.jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-name-and-champ-container .jade-scoreboard-row-player-name {
+    font-family: var(--font-display)
+}
+
+.jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-name-and-champ-container .jade-scoreboard-row-champ-name,
+.jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-name-and-champ-container .jade-scoreboard-row-is-system-muted,
+.jade-scoreboard-row-component .jade-scoreboard-row-content-container .jade-scoreboard-row-player-details-container .jade-scoreboard-row-details-content .jade-scoreboard-row-name-and-champ-container .jade-scoreboard-row-leaver-text,
+.jade-scoreboard-row-component .jade-scoreboard-row-content-container .scoreboard-row-stat-display-component .scoreboard-row-stat-sizer .scoreboard-row-stat-line-secondary {
+    font-family: var(--font-body)
+}
+
+.jade-scoreboard-row-component .jade-scoreboard-row-content-container .scoreboard-row-stat-display-component .scoreboard-row-stat-sizer .scoreboard-row-stat-line-primary {
+    font-family: var(--font-frizquadrata)
+}
+
+.jade-scoreboard-row-component .jade-scoreboard-row-content-container .scoreboard-row-stat-display-component .scoreboard-row-stat-sizer .scoreboard-row-stat-line-primary:lang(vi-VN) {
+    font-family: var(--font-display)
 }
 
 .jade-scoreboard-row-component .horizontal-flex-box {
@@ -13173,7 +13199,6 @@ lol-uikit-content-block.postgame-tft-piece-tooltip .postgame-tft-piece-tooltip-i
 
 .jade-scoreboard-row-component .jade-scoreboard-row-content-container .scoreboard-row-stat-display-component .scoreboard-row-stat-sizer .scoreboard-row-stat-line-primary {
     color: #fff;
-    font-family: FrizQuadrata Pro;
     font-size: 14px;
     font-style: Roman;
     font-weight: 400;

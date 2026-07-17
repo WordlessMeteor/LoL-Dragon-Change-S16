@@ -1011,6 +1011,7 @@
 
 .paw-modal-layout .paw-window .paw-content,
 .paw-modal-layout .paw-window .paw-content .aw-expiry-info,
+.paw-modal-layout .paw-window .paw-content .map-availability-info,
 .paw-modal-layout .paw-window .paw-content .title-text {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
@@ -1069,13 +1070,31 @@
     letter-spacing: 0
 }
 
+.paw-modal-layout .paw-window .paw-content .map-availability-info {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.paw-modal-layout .paw-window .paw-content .map-availability-info:lang(ja-jp) {
+    font-size: 13px
+}
+
+.paw-modal-layout .paw-window .paw-content .map-availability-info:lang(ar-ae) {
+    letter-spacing: 0
+}
+
 .paw-modal-layout .paw-window .paw-content .aw-expiry-info,
 .paw-modal-layout .paw-window .paw-content .title-text {
     font-family: var(--font-display)
 }
 
 .paw-modal-layout .paw-window .paw-content,
-.paw-modal-layout .paw-window .paw-content .aw-extension-info {
+.paw-modal-layout .paw-window .paw-content .aw-extension-info,
+.paw-modal-layout .paw-window .paw-content .map-availability-info {
     font-family: var(--font-body)
 }
 
@@ -1141,6 +1160,10 @@
 
 .paw-modal-layout .paw-window .paw-content .fade-out {
     -webkit-animation: fade-out .5s forwards
+}
+
+.paw-modal-layout .paw-window .paw-content .map-availability-info {
+    color: #5b5a56
 }
 
 .paw-modal-layout .paw-window .paw-content .aw-extension-info {
@@ -2967,6 +2990,10 @@
     margin: 5px
 }
 
+.paw-bundle-description-component .paw-bundle-description-container .paw-bundle-description-text .map-availability-info {
+    font-family: var(--font-display)
+}
+
 .paw-bundle-description-component {
     font-size: 12px;
     line-height: 16px;
@@ -2981,6 +3008,11 @@
     text-align: start;
     text-overflow: clip;
     transition: max-height .1s ease-out
+}
+
+.paw-bundle-description-component .paw-bundle-description-container .paw-bundle-description-text .map-availability-info {
+    color: #5b5a56;
+    font-weight: 1000
 }
 
 .paw-bundle-description-component .paw-bundle-description-container .paw-bundle-description-expand-container {

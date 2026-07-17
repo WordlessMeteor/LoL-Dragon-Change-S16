@@ -805,7 +805,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "经典 横行霸道 图奇",
+                    "name": "经典 图奇 (横行霸道)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -844,7 +844,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "图奇在短时间内隐身，隐身期间获得移动速度。脱离隐身状态时，图奇获得短时间内持续的攻击速度。",
-            "dynamicDescription": "<mainText>图奇在@MaxFadeTime@秒后进入持续@StealthDuration@秒的<keywordStealth>伪装</keywordStealth>状态。<br><br>脱离<keywordStealth>伪装</keywordStealth>状态时，图奇获得持续@AttackSpeedDuration@秒的<attackSpeed>@AttackSpeedMod*100@%攻击速度</attackSpeed>。",
+            "dynamicDescription": "在未承受伤害@MaxFadeTime@秒之后，或在@MaxDelayTime@秒之后，图奇进入持续@StealthDuration@秒的<keywordStealth>隐形</keywordStealth>状态，从而获得<speed>@MoveSpeedMod*100@%移动速度</speed>。<br><br>脱离<keywordStealth>隐形</keywordStealth>状态之后，图奇获得持续@AttackSpeedDuration@秒的<attackSpeed>@AttackSpeedMod*100@%攻击速度</attackSpeed>。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -987,14 +987,14 @@
         },
         {
             "spellKey": "w",
-            "name": "衰弱毒药",
+            "name": "剧毒之桶",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "图奇使附近所有的英雄感染衰弱毒药，从而降低其移动速度。",
-            "dynamicDescription": "图奇对附近的敌方英雄们造成持续@Duration@秒的@SlowPercent*-100@%<status>减速</status>，每层<keywordMajor>致命印记</keywordMajor>可使这个减速效果提高@PassiveStackSlowPercent*-100@%(最多叠加至@MaxSlowTooltip@)。<br><br>施加<status>减速</status>效果后，继续施加<keywordMajor>致命印记</keywordMajor>可进一步降低目标的<speed>移动速度</speed>。@SpellModifierDescriptionAppend@",
+            "description": "图奇扔出一个会爆炸的毒性之桶，从而对区域内的敌人施加死亡毒液并造成减速效果。",
+            "dynamicDescription": "图奇扔出一个会爆炸的毒性之桶，从而对区域内的敌人施加@StacksAdded@层<keywordMajor>死亡毒液</keywordMajor>并造成持续@Duration@秒的@BaseSlowAmount@%<status>减速</status>效果。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1020,7 +1020,7 @@
                 9.0
             ],
             "coefficients": {
-                "coefficient1": 0.7,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
@@ -1144,7 +1144,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "附近所有敌人会将图奇的毒液从他们的身体中排出，每层可造成伤害。",
-            "dynamicDescription": "<mainText>图奇对附近所有被标记的敌人造成<physicalDamage>@BaseDamage@物理伤害</physicalDamage>，每层<keywordMajor>死亡毒液</keywordMajor>额外造成<physicalDamage>@TotalStackDamage@</physicalDamage>，消耗附近所有的死亡毒液层数。",
+            "dynamicDescription": "图奇对附近感染了死亡毒液的所有敌人造成<physicalDamage>@BaseDamage@物理伤害</physicalDamage>，外加每层<keywordMajor>死亡毒液</keywordMajor><physicalDamage>@TotalStackDamage@</physicalDamage>伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1294,7 +1294,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "图奇闭上双眼扣下扳机，快速向前方射出强力贯穿弩箭。",
-            "dynamicDescription": "<mainText>@Duration@秒持续时间里，图奇获得@BonusRange@攻击距离和<physicalDamage>@BonusAD@攻击力</physicalDamage>，并且他的普通攻击附带贯穿效果，对后续目标造成的伤害减少@FallOffDamage*100@%，最低减少至@MinimumFallOffDamage*100@%。",
+            "dynamicDescription": "@Duration@秒持续时间里，图奇获得@BonusRange@攻击距离和<physicalDamage>@BonusAD@攻击力</physicalDamage>，并且他的普通攻击附带贯穿效果，对后续目标造成的伤害减少@FallOffDamage*100@%，最低减少至@MinimumFallOffDamage*100@%。@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

@@ -9238,7 +9238,21 @@ img.item-set-build-path-icon {
 
 .jade-emote-inventory .display-category-section-title .title-numbers,
 .jade-emote-inventory .display-category-section-title .title-text {
-    font-family: var(--font-display);
+    font-family: var(--font-display)
+}
+
+.jade-emote-inventory__tab-numbers,
+.jade-emote-inventory__tab-title {
+    font-family: var(--font-frizquadrata)
+}
+
+.jade-emote-inventory__tab-numbers:lang(vi-VN),
+.jade-emote-inventory__tab-title:lang(vi-VN) {
+    font-family: var(--font-display)
+}
+
+.jade-emote-inventory .display-category-section-title .title-numbers,
+.jade-emote-inventory .display-category-section-title .title-text {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
@@ -9326,13 +9340,11 @@ img.item-set-build-path-icon {
 
 .jade-emote-inventory__tab-title {
     color: #fff;
-    font-family: FrizQuadrata Pro;
     font-size: 14px
 }
 
 .jade-emote-inventory__tab-numbers {
     color: #7d7d7d;
-    font-family: FrizQuadrata Pro;
     font-size: 14px
 }
 
@@ -9970,6 +9982,14 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
     left: 8px
 }
 
+.jade-navigation-component__tab-label {
+    font-family: var(--font-frizquadrata)
+}
+
+.jade-navigation-component__tab-label:lang(vi-VN) {
+    font-family: var(--font-display)
+}
+
 .jade-navigation-component {
     height: 12px;
     position: absolute;
@@ -10015,7 +10035,6 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 
 .jade-navigation-component__tab-label {
     color: #fff;
-    font-family: FrizQuadrata Pro;
     font-size: 14px;
     text-align: center
 }
