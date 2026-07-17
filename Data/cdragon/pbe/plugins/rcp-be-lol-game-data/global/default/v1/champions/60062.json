@@ -531,7 +531,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Wukong's next attack gains extra range, deals bonus damage, and reduces the enemy's Armor.",
-            "dynamicDescription": "Wukong's next Attack has @BonusAttackRange@ bonus Attack Range, deals <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and reduces the enemy's <scaleArmor>Armor by @ArmorShredPercent*-100@%</scaleArmor> for @Duration@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Wukong's next Attack has @BonusAttackRange@ bonus Attack Range, deals <physicalDamage>@TotalDamage@ physical damage</physicalDamage> and reduces the enemy's <scaleArmor>Armor by @ArmorShredPercent*-100@%</scaleArmor> for @ShredDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 275.0,
@@ -849,12 +849,12 @@
                 65.0
             ],
             "cooldownCoefficients": [
-                10.0,
-                9.25,
-                8.5,
-                7.75,
-                7.0,
-                7.0
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

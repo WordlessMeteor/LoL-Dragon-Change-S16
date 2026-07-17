@@ -1,8 +1,8 @@
 {
-    "{207c64ac}": {
-        "mRootSpell": "{d07af2ba}",
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksEAbility": {
+        "mRootSpell": "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksEAbility/Jade_FiddlesticksE",
         "mChildSpells": [
-            "{d07af2ba}",
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksEAbility/Jade_FiddlesticksE",
             "{6e6d8e46}",
             "{0a22884d}"
         ],
@@ -97,7 +97,7 @@
             "mCastType": 1,
             "missileSpeed": 1800.0,
             "mMissileEffectKey": "{6aa69363}",
-            "mHitEffectKey": "{7d25ee77}",
+            "mHitEffectKey": "Jade_Fiddlesticks_Q_1_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
             "SpellEventToAudioEventSuffix": {
@@ -107,7 +107,7 @@
         },
         "__type": "SpellObject"
     },
-    "{d07af2ba}": {
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksEAbility/Jade_FiddlesticksE": {
         "ObjectName": "Jade_FiddlesticksE",
         "mScriptName": "Jade_FiddlesticksE",
         "mSpell": {
@@ -116,13 +116,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        40.0,
-                        55.0,
-                        70.0,
+                        45.0,
+                        65.0,
                         85.0,
-                        100.0,
-                        115.0,
-                        130.0
+                        105.0,
+                        125.0,
+                        145.0,
+                        165.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -142,39 +142,39 @@
                 {
                     "name": "SilenceDuration",
                     "values": [
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25,
-                        1.25
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "APRatio",
                     "values": [
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355,
-                        0.3499999940395355
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104,
+                        0.44999998807907104
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "MaxNumberOfBounces",
                     "values": [
-                        0.0,
-                        2.0,
                         4.0,
-                        6.0,
-                        8.0,
-                        10.0,
-                        12.0
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -309,7 +309,7 @@
             "castFrame": 6.400000095367432,
             "missileSpeed": 1800.0,
             "mMissileEffectKey": "{6aa69363}",
-            "mHitEffectKey": "{7d25ee77}",
+            "mHitEffectKey": "Jade_Fiddlesticks_Q_1_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
             "mana": [
@@ -356,11 +356,6 @@
                                 {
                                     "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "MaxNumberOfBounces",
-                                    "nameOverride": "Spell_ListType_Jade_FiddlesticksE_LevelUp",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -425,10 +420,10 @@
         },
         "__type": "SpellObject"
     },
-    "{96d4a65e}": {
-        "mRootSpell": "{fe4b510e}",
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksWAbility": {
+        "mRootSpell": "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksWAbility/Jade_FiddlesticksW",
         "mChildSpells": [
-            "{fe4b510e}",
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksWAbility/Jade_FiddlesticksW",
             "{0ace9222}",
             "{acb182ec}"
         ],
@@ -472,7 +467,7 @@
         },
         "__type": "SpellObject"
     },
-    "{fe4b510e}": {
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksWAbility/Jade_FiddlesticksW": {
         "ObjectName": "Jade_FiddlesticksW",
         "mScriptName": "Jade_FiddlesticksW",
         "mSpell": {
@@ -785,7 +780,7 @@
         },
         "__type": "SpellObject"
     },
-    "{1a605ed7}": {
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksCritAttack": {
         "ObjectName": "Jade_FiddlesticksCritAttack",
         "mScriptName": "Jade_FiddlesticksCritAttack",
         "mSpell": {
@@ -894,15 +889,15 @@
         },
         "__type": "SpellObject"
     },
-    "{c38f32d0}": {
-        "mRootSpell": "{24e0faba}",
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksQAbility": {
+        "mRootSpell": "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksQAbility/Jade_FiddlesticksQ",
         "mChildSpells": [
-            "{24e0faba}"
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksQAbility/Jade_FiddlesticksQ"
         ],
         "mName": "Jade_FiddlesticksQAbility",
         "__type": "AbilityObject"
     },
-    "{24e0faba}": {
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksQAbility/Jade_FiddlesticksQ": {
         "ObjectName": "Jade_FiddlesticksQ",
         "mScriptName": "Jade_FiddlesticksQ",
         "mSpell": {
@@ -1184,15 +1179,15 @@
         },
         "__type": "SpellObject"
     },
-    "{9ab0749b}": {
-        "mRootSpell": "{3152c43a}",
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksRAbility": {
+        "mRootSpell": "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksRAbility/Jade_FiddlesticksR",
         "mChildSpells": [
-            "{3152c43a}"
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksRAbility/Jade_FiddlesticksR"
         ],
         "mName": "Jade_FiddlesticksRAbility",
         "__type": "AbilityObject"
     },
-    "{3152c43a}": {
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksRAbility/Jade_FiddlesticksR": {
         "ObjectName": "Jade_FiddlesticksR",
         "mScriptName": "Jade_FiddlesticksR",
         "mSpell": {
@@ -1660,7 +1655,7 @@
         },
         "__type": "SpellObject"
     },
-    "{5e50c04f}": {
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksBasicAttack": {
         "ObjectName": "Jade_FiddlesticksBasicAttack",
         "mScriptName": "Jade_FiddlesticksBasicAttack",
         "mSpell": {
@@ -1772,7 +1767,7 @@
         },
         "__type": "SpellObject"
     },
-    "{f61f04c7}": {
+    "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksBasicAttack2": {
         "ObjectName": "Jade_FiddlesticksBasicAttack2",
         "mScriptName": "Jade_FiddlesticksBasicAttack2",
         "mSpell": {
@@ -2338,7 +2333,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{d66d5ae5}": {
+    "Characters/Jade_Fiddlesticks/CharacterRecords/Root": {
         "mCharacterName": "Jade_Fiddlesticks",
         "baseHPModifiable": {
             "baseValue": 470.0,
@@ -2446,10 +2441,10 @@
             "Jade_FiddlesticksRAbility/Jade_FiddlesticksR"
         ],
         "spells": [
-            "{24e0faba}",
-            "{fe4b510e}",
-            "{d07af2ba}",
-            "{3152c43a}"
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksQAbility/Jade_FiddlesticksQ",
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksWAbility/Jade_FiddlesticksW",
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksEAbility/Jade_FiddlesticksE",
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksRAbility/Jade_FiddlesticksR"
         ],
         "extraSpells": [
             "BaseSpell",
@@ -2489,10 +2484,10 @@
         ],
         "mAbilities": [
             "{9c34c496}",
-            "{c38f32d0}",
-            "{96d4a65e}",
-            "{207c64ac}",
-            "{9ab0749b}"
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksQAbility",
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksWAbility",
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksEAbility",
+            "Characters/Jade_Fiddlesticks/Spells/Jade_FiddlesticksRAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Fiddlesticks",
         "passiveLuaName": "Jade_FiddlesticksPassive_Jade",
@@ -2608,7 +2603,7 @@
         "Script": "{39d9f947}",
         "__type": "CharacterRecord"
     },
-    "{e016ae3d}": {
+    "Characters/Jade_Fiddlesticks/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

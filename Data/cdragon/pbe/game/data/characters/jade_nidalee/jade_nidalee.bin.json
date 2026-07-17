@@ -1,5 +1,5 @@
 {
-    "{0a3a7f7b}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeCougarTakedownAttack": {
         "ObjectName": "Jade_NidaleeCougarTakedownAttack",
         "mScriptName": "Jade_NidaleeCougarTakedownAttack",
         "mSpell": {
@@ -29,7 +29,7 @@
         },
         "__type": "SpellObject"
     },
-    "{0d089c14}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeCougarBasicAttack2": {
         "ObjectName": "Jade_NidaleeCougarBasicAttack2",
         "mScriptName": "Jade_NidaleeCougarBasicAttack2",
         "mSpell": {
@@ -62,7 +62,7 @@
             },
             "castConeDistance": 100.0,
             "castFrame": 9.0,
-            "mHitEffectKey": "{c5eab970}",
+            "mHitEffectKey": "Jade_Nidalee_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -81,10 +81,10 @@
         },
         "__type": "SpellObject"
     },
-    "{0dce4349}": {
-        "mRootSpell": "{336ecb93}",
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeBushwhackAbility": {
+        "mRootSpell": "Characters/Jade_Nidalee/Spells/Jade_NidaleeBushwhackAbility/Jade_NidaleeBushwhack",
         "mChildSpells": [
-            "{336ecb93}",
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleeBushwhackAbility/Jade_NidaleeBushwhack",
             "{3989e2c2}"
         ],
         "mName": "Jade_NidaleeBushwhackAbility",
@@ -100,94 +100,6 @@
                 "PositiveEffect_MoveBlock",
                 "Trait_PlayerSelectedDashDirection"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        10.0,
-                        60.0,
-                        110.0,
-                        160.0,
-                        210.0,
-                        210.0,
-                        260.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        3.5,
-                        3.0,
-                        2.5,
-                        2.0,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0,
-                        750.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        14.0,
-                        13.0,
-                        12.0,
-                        11.0,
-                        10.0,
-                        9.0,
-                        8.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.0,
-                        10.0,
-                        20.0,
-                        30.0,
-                        40.0,
-                        50.0,
-                        60.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.0,
-                        40.0,
-                        80.0,
-                        120.0,
-                        160.0,
-                        200.0,
-                        240.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
-            "mCoefficient": 0.30000001192092896,
-            "mCoefficient2": 0.20000000298023224,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_W2.dds"
@@ -205,15 +117,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0,
-                    6.0
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5,
+                    3.5
                 ],
-                "{0a3e0478}": 6.0,
+                "{0a3e0478}": 3.5,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -538,15 +450,15 @@
         },
         "__type": "SpellObject"
     },
-    "{2ce61114}": {
-        "mRootSpell": "{bad27de9}",
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeAspectOfTheCougarAbility": {
+        "mRootSpell": "Characters/Jade_Nidalee/Spells/Jade_NidaleeAspectOfTheCougarAbility/Jade_NidaleeAspectOfTheCougar",
         "mChildSpells": [
-            "{bad27de9}"
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleeAspectOfTheCougarAbility/Jade_NidaleeAspectOfTheCougar"
         ],
         "mName": "Jade_NidaleeAspectOfTheCougarAbility",
         "__type": "AbilityObject"
     },
-    "{336ecb93}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeBushwhackAbility/Jade_NidaleeBushwhack": {
         "ObjectName": "Jade_NidaleeBushwhack",
         "mScriptName": "Jade_NidaleeBushwhack",
         "mSpell": {
@@ -717,7 +629,7 @@
                 "DamagePerSecond": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{09e951d7}",
+                            "mDataValue": "DamagePerSecondData",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -946,15 +858,15 @@
         },
         "__type": "SpellObject"
     },
-    "{715c1b44}": {
-        "mRootSpell": "{401d3835}",
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleePrimalSurgeAbility": {
+        "mRootSpell": "Characters/Jade_Nidalee/Spells/Jade_NidaleePrimalSurgeAbility/Jade_NidaleePrimalSurge",
         "mChildSpells": [
-            "{401d3835}"
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleePrimalSurgeAbility/Jade_NidaleePrimalSurge"
         ],
         "mName": "Jade_NidaleePrimalSurgeAbility",
         "__type": "AbilityObject"
     },
-    "{401d3835}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleePrimalSurgeAbility/Jade_NidaleePrimalSurge": {
         "ObjectName": "Jade_NidaleePrimalSurge",
         "mScriptName": "Jade_NidaleePrimalSurge",
         "mSpell": {
@@ -1228,7 +1140,7 @@
         },
         "__type": "SpellObject"
     },
-    "{5b52811d}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeBasicAttack": {
         "ObjectName": "Jade_NidaleeBasicAttack",
         "mScriptName": "Jade_NidaleeBasicAttack",
         "mSpell": {
@@ -1316,9 +1228,9 @@
             "mCastType": 1,
             "castFrame": 18.290000915527344,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{d92b2534}",
+            "mMissileEffectKey": "Jade_Nidalee_BA_Mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{c5eab970}",
+            "mHitEffectKey": "Jade_Nidalee_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1399,7 +1311,7 @@
         },
         "__type": "SpellObject"
     },
-    "{6ddbd02e}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeCougarBasicAttack": {
         "ObjectName": "Jade_NidaleeCougarBasicAttack",
         "mScriptName": "Jade_NidaleeCougarBasicAttack",
         "mSpell": {
@@ -1431,7 +1343,7 @@
             },
             "castConeDistance": 100.0,
             "castFrame": 9.0,
-            "mHitEffectKey": "{c5eab970}",
+            "mHitEffectKey": "Jade_Nidalee_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1689,97 +1601,20 @@
         },
         "__type": "SpellObject"
     },
-    "{ceb5293f}": {
-        "mRootSpell": "{8373110b}",
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeJavelinTossAbility": {
+        "mRootSpell": "Characters/Jade_Nidalee/Spells/Jade_NidaleeJavelinTossAbility/Jade_NidaleeJavelinToss",
         "mChildSpells": [
-            "{8373110b}"
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleeJavelinTossAbility/Jade_NidaleeJavelinToss"
         ],
         "mName": "Jade_NidaleeJavelinTossAbility",
         "__type": "AbilityObject"
     },
-    "{8373110b}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeJavelinTossAbility/Jade_NidaleeJavelinToss": {
         "ObjectName": "Jade_NidaleeJavelinToss",
         "mScriptName": "Jade_NidaleeJavelinToss",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mAlternateName": "Jade_Nidalee_JavelinToss",
-            "mEffectAmount": [
-                {
-                    "value": [
-                        50.0,
-                        70.0,
-                        90.0,
-                        110.0,
-                        130.0,
-                        150.0,
-                        170.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        150.0,
-                        227.5,
-                        292.5,
-                        357.5,
-                        422.5,
-                        487.5,
-                        555.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158,
-                        1.2000000476837158
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        525.0,
-                        525.0,
-                        525.0,
-                        525.0,
-                        525.0,
-                        525.0,
-                        525.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "Damage",
@@ -1831,8 +1666,6 @@
                     "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 1.5,
-            "mCoefficient2": 0.5,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Nidalee_JavelinThrow.project_jade.dds"
@@ -1938,7 +1771,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 1300.0,
-            "mMissileEffectKey": "{4ef8e144}",
+            "mMissileEffectKey": "Jade_Nidalee_Q_Mis",
             "mLineWidth": 60.0,
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -2051,7 +1884,7 @@
         },
         "__type": "SpellObject"
     },
-    "{bad27de9}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeAspectOfTheCougarAbility/Jade_NidaleeAspectOfTheCougar": {
         "ObjectName": "Jade_NidaleeAspectOfTheCougar",
         "mScriptName": "Jade_NidaleeAspectOfTheCougar",
         "mSpell": {
@@ -2429,7 +2262,7 @@
         },
         "__type": "SpellObject"
     },
-    "{eb9cd66c}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeCougarCritAttack": {
         "ObjectName": "Jade_NidaleeCougarCritAttack",
         "mScriptName": "Jade_NidaleeCougarCritAttack",
         "mSpell": {
@@ -2462,7 +2295,7 @@
             },
             "castConeDistance": 100.0,
             "castFrame": 9.0,
-            "mHitEffectKey": "{70d7b749}",
+            "mHitEffectKey": "Jade_Nidalee_BA_Crit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2481,7 +2314,7 @@
         },
         "__type": "SpellObject"
     },
-    "{f1e15cfd}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeBasicAttack2": {
         "ObjectName": "Jade_NidaleeBasicAttack2",
         "mScriptName": "Jade_NidaleeBasicAttack2",
         "mSpell": {
@@ -2570,9 +2403,9 @@
             "mCastType": 1,
             "castFrame": 17.9950008392334,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{d92b2534}",
+            "mMissileEffectKey": "Jade_Nidalee_BA_Mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{c5eab970}",
+            "mHitEffectKey": "Jade_Nidalee_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2593,7 +2426,7 @@
         },
         "__type": "SpellObject"
     },
-    "{fa288fdd}": {
+    "Characters/Jade_Nidalee/Spells/Jade_NidaleeCritAttack": {
         "ObjectName": "Jade_NidaleeCritAttack",
         "mScriptName": "Jade_NidaleeCritAttack",
         "mSpell": {
@@ -2681,8 +2514,8 @@
             "mCastType": 1,
             "castFrame": 6.230000019073486,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{d92b2534}",
-            "mHitEffectKey": "{70d7b749}",
+            "mMissileEffectKey": "Jade_Nidalee_BA_Mis",
+            "mHitEffectKey": "Jade_Nidalee_BA_Crit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2976,27 +2809,27 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{c36c1c78}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{c846dc90}"
+                            "Items/771056",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/773340"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{34738a20}",
-                            "{92a41498}",
-                            "{99a41f9d}",
-                            "{c846dc90}"
+                            "Items/771027",
+                            "Items/772004",
+                            "Items/772003",
+                            "Items/773340"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{c76c22c4}",
-                            "{99a41f9d}",
-                            "{c846dc90}"
+                            "Items/771052",
+                            "Items/772003",
+                            "Items/773340"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -3004,41 +2837,41 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{2647d42d}",
-                            "{9a53c3bc}",
-                            "{244a0f9e}"
+                            "Items/773057",
+                            "Items/773003",
+                            "Items/773041"
                         ],
                         "MaxCompletedItems": 1,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{29592207}",
-                            "{29beb232}"
+                            "Items/773020",
+                            "Items/773117"
                         ],
                         "{f71960ab}": "{71caf510}",
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{bbc89264}",
-                            "{b9c88f3e}",
-                            "{3bba515a}",
-                            "{a4404bc2}",
-                            "{944f3d1c}"
+                            "Items/773151",
+                            "Items/773157",
+                            "Items/773135",
+                            "Items/773089",
+                            "Items/773065"
                         ],
                         "MaxCompletedItems": 2,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{3bba515a}",
-                            "{9c53c6e2}",
-                            "{a4404bc2}",
-                            "{b9c88f3e}",
-                            "{27591ee1}",
-                            "{3cbc9184}",
-                            "{944f3d1c}"
+                            "Items/773135",
+                            "Items/773001",
+                            "Items/773089",
+                            "Items/773157",
+                            "Items/773026",
+                            "Items/773102",
+                            "Items/773065"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
@@ -3057,12 +2890,12 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{3e715b47}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{99a41f9d}"
+                            "Items/771039",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/772003"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -3070,8 +2903,8 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{be252b59}",
-                            "{b8c88dab}"
+                            "Items/773206",
+                            "Items/773154"
                         ],
                         "MaxCompletedItems": 0,
                         "{f71960ab}": "{b873c9ba}",
@@ -3079,41 +2912,41 @@
                     },
                     {
                         "items": [
-                            "{29592207}",
-                            "{29beb232}"
+                            "Items/773020",
+                            "Items/773117"
                         ],
                         "{f71960ab}": "{71caf510}",
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{2647d42d}",
-                            "{9a53c3bc}",
-                            "{244a0f9e}"
+                            "Items/773057",
+                            "Items/773003",
+                            "Items/773041"
                         ],
                         "MaxCompletedItems": 1,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{bbc89264}",
-                            "{b9c88f3e}",
-                            "{3bba515a}",
-                            "{a4404bc2}",
-                            "{944f3d1c}"
+                            "Items/773151",
+                            "Items/773157",
+                            "Items/773135",
+                            "Items/773089",
+                            "Items/773065"
                         ],
                         "MaxCompletedItems": 2,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{3bba515a}",
-                            "{9c53c6e2}",
-                            "{a4404bc2}",
-                            "{b9c88f3e}",
-                            "{27591ee1}",
-                            "{3cbc9184}",
-                            "{944f3d1c}"
+                            "Items/773135",
+                            "Items/773001",
+                            "Items/773089",
+                            "Items/773157",
+                            "Items/773026",
+                            "Items/773102",
+                            "Items/773065"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
@@ -3261,7 +3094,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{2710c8a3}": {
+    "Characters/Jade_Nidalee/Portraits/Materials/UI_Splash_Foil_Non_Premium": {
         "name": "Characters/Jade_Nidalee/Portraits/Materials/UI_Splash_Foil_Non_Premium",
         "type": 3,
         "samplerValues": [
@@ -3596,7 +3429,7 @@
                 "name": "normal",
                 "passes": [
                     {
-                        "shader": "{01a6a6ea}",
+                        "shader": "Shaders/UI/UI_Splash_Foil",
                         "depthEnable": false,
                         "blendEnable": true,
                         "cullEnable": false,
@@ -3624,10 +3457,10 @@
             "image": "ASSETS/Characters/Jade_Nidalee/Skins/Base/Jade_NidaleeLoadScreen_ClassicReborn.project_jade.tex",
             "__type": "CensoredImage"
         },
-        "{cda5dc7f}": "{2710c8a3}",
+        "{cda5dc7f}": "Characters/Jade_Nidalee/Portraits/Materials/UI_Splash_Foil_Non_Premium",
         "__type": "{3018b0da}"
     },
-    "{4284d31c}": {
+    "Characters/Jade_Nidalee/CharacterRecords/Root": {
         "mCharacterName": "Jade_Nidalee",
         "baseHPModifiable": {
             "baseValue": 460.0,
@@ -3762,10 +3595,10 @@
             "Jade_NidaleeAspectOfTheCougarAbility/Jade_NidaleeAspectOfTheCougar"
         ],
         "spells": [
-            "{8373110b}",
-            "{336ecb93}",
-            "{401d3835}",
-            "{bad27de9}"
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleeJavelinTossAbility/Jade_NidaleeJavelinToss",
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleeBushwhackAbility/Jade_NidaleeBushwhack",
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleePrimalSurgeAbility/Jade_NidaleePrimalSurge",
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleeAspectOfTheCougarAbility/Jade_NidaleeAspectOfTheCougar"
         ],
         "extraSpells": [
             "Jade_NidaleeCougarTakedownAttack",
@@ -3786,7 +3619,7 @@
             "BaseSpell"
         ],
         "{c1984296}": [
-            "{0a3a7f7b}",
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleeCougarTakedownAttack",
             "{82527fb6}",
             "{20291ac1}",
             "{1f3eec17}",
@@ -3804,11 +3637,11 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{2ce61114}",
-            "{0dce4349}",
-            "{ceb5293f}",
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleeAspectOfTheCougarAbility",
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleeBushwhackAbility",
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleeJavelinTossAbility",
             "{9803832b}",
-            "{715c1b44}"
+            "Characters/Jade_Nidalee/Spells/Jade_NidaleePrimalSurgeAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Nidalee",
         "passiveLuaName": "Jade_NidaleeProwl_Jade",
@@ -3973,7 +3806,7 @@
         "Script": "{e8b7d137}",
         "__type": "CharacterRecord"
     },
-    "{5d252e0a}": {
+    "Characters/Jade_Nidalee/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{e8b7d137}": {

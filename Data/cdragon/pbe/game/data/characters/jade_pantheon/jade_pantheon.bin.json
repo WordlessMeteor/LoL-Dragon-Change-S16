@@ -351,10 +351,10 @@
         ],
         "__type": "JunglePathRecommendation"
     },
-    "{543cda17}": {
-        "mRootSpell": "{4257ad6e}",
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonRAbility": {
+        "mRootSpell": "Characters/Jade_Pantheon/Spells/Jade_PantheonRAbility/Jade_PantheonR",
         "mChildSpells": [
-            "{4257ad6e}"
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonRAbility/Jade_PantheonR"
         ],
         "mName": "Jade_PantheonRAbility",
         "__type": "AbilityObject"
@@ -370,7 +370,7 @@
         },
         "__type": "SpellObject"
     },
-    "{4257ad6e}": {
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonRAbility/Jade_PantheonR": {
         "ObjectName": "Jade_PantheonR",
         "mScriptName": "Jade_PantheonR",
         "mSpell": {
@@ -485,32 +485,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
-                        60.0,
-                        60.0,
-                        50.0,
-                        40.0,
-                        30.0,
-                        20.0,
-                        10.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                "{a110bc47}": {
-                    "value": [
-                        120.0,
-                        120.0,
-                        100.0,
-                        80.0,
-                        80.0,
-                        80.0,
-                        80.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
             "mSpellCalculations": {
                 "MaxDamage": {
                     "mFormulaParts": [
@@ -538,7 +512,6 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_GrandSkyFall.project_jade.dds"
             ],
-            "{f26881a0}": 0.0,
             "mChannelDuration": [
                 5.0,
                 5.0,
@@ -800,7 +773,7 @@
         "mScriptName": "Jade_PantheonRecallStartVFX",
         "__type": "SpellObject"
     },
-    "{37d3309b}": {
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonCritAttack": {
         "ObjectName": "Jade_PantheonCritAttack",
         "mScriptName": "Jade_PantheonCritAttack",
         "mSpell": {
@@ -889,10 +862,10 @@
         "mName": "Jade_PantheonPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{6094ff50}": {
-        "mRootSpell": "{92df09c2}",
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonEAbility": {
+        "mRootSpell": "Characters/Jade_Pantheon/Spells/Jade_PantheonEAbility/Jade_PantheonE",
         "mChildSpells": [
-            "{92df09c2}"
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonEAbility/Jade_PantheonE"
         ],
         "mName": "Jade_PantheonEAbility",
         "__type": "AbilityObject"
@@ -938,7 +911,7 @@
         },
         "__type": "SpellObject"
     },
-    "{92df09c2}": {
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonEAbility/Jade_PantheonE": {
         "ObjectName": "Jade_PantheonE",
         "mScriptName": "Jade_PantheonE",
         "mSpell": {
@@ -1153,16 +1126,16 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Cost",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1316,6 +1289,10 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Pantheon_AOZ.project_jade.dds"
             ],
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Pantheon_PantheonPassiveReady_OnBuffActivate",
+                "19": "Play_sfx_Pantheon_PantheonE_block_vfx"
+            },
             "__type": "SpellDataResource"
         },
         "mBuff": {
@@ -1419,15 +1396,15 @@
         },
         "__type": "SpellObject"
     },
-    "{bd82312c}": {
-        "mRootSpell": "{b949cbb2}",
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonQAbility": {
+        "mRootSpell": "Characters/Jade_Pantheon/Spells/Jade_PantheonQAbility/Jade_PantheonQ",
         "mChildSpells": [
-            "{b949cbb2}"
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonQAbility/Jade_PantheonQ"
         ],
         "mName": "Jade_PantheonQAbility",
         "__type": "AbilityObject"
     },
-    "{b949cbb2}": {
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonQAbility/Jade_PantheonQ": {
         "ObjectName": "Jade_PantheonQ",
         "mScriptName": "Jade_PantheonQ",
         "mSpell": {
@@ -1576,7 +1553,7 @@
             "mCastType": 1,
             "castFrame": 11.0,
             "missileSpeed": 1200.0,
-            "mMissileEffectKey": "{7735eb7e}",
+            "mMissileEffectKey": "Jade_Pantheon_Q_update_missile",
             "mLineWidth": 80.0,
             "mHitEffectOrientType": 2,
             "mFloatVarsDecimals": [
@@ -1661,10 +1638,10 @@
         },
         "__type": "SpellObject"
     },
-    "{c9445602}": {
-        "mRootSpell": "{e1e6b6fe}",
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonWAbility": {
+        "mRootSpell": "Characters/Jade_Pantheon/Spells/Jade_PantheonWAbility/Jade_PantheonW",
         "mChildSpells": [
-            "{e1e6b6fe}"
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonWAbility/Jade_PantheonW"
         ],
         "mName": "Jade_PantheonWAbility",
         "__type": "AbilityObject"
@@ -1674,7 +1651,7 @@
         "mScriptName": "Jade_PantheonAttackSequencer",
         "__type": "SpellObject"
     },
-    "{e1e6b6fe}": {
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonWAbility/Jade_PantheonW": {
         "ObjectName": "Jade_PantheonW",
         "mScriptName": "Jade_PantheonW",
         "mSpell": {
@@ -1966,7 +1943,7 @@
         },
         "__type": "SpellObject"
     },
-    "{ed956893}": {
+    "Characters/Jade_Pantheon/Spells/Jade_PantheonBasicAttack2": {
         "ObjectName": "Jade_PantheonBasicAttack2",
         "mScriptName": "Jade_PantheonBasicAttack2",
         "mSpell": {
@@ -2050,7 +2027,7 @@
         },
         "__type": "SpellObject"
     },
-    "{4db00207}": {
+    "Characters/Jade_Pantheon/CAC/Jade_Pantheon_Skin06": {
         "mCooldown": 15.0,
         "mSituations": {
             "FirstMove2D": {
@@ -3143,10 +3120,10 @@
         },
         "__type": "CharScript"
     },
-    "{71c5d145}": {
+    "Characters/Jade_Pantheon/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{e63bb49d}": {
+    "Characters/Jade_Pantheon/CharacterRecords/Root": {
         "mCharacterName": "Jade_Pantheon",
         "baseHPModifiable": {
             "baseValue": 520.0,
@@ -3257,10 +3234,10 @@
             "Jade_PantheonRAbility/Jade_PantheonR"
         ],
         "spells": [
-            "{b949cbb2}",
-            "{e1e6b6fe}",
-            "{92df09c2}",
-            "{4257ad6e}"
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonQAbility/Jade_PantheonQ",
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonWAbility/Jade_PantheonW",
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonEAbility/Jade_PantheonE",
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonRAbility/Jade_PantheonR"
         ],
         "extraSpells": [
             "BaseSpell",
@@ -3299,11 +3276,11 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{6094ff50}",
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonEAbility",
             "{3ef89ff2}",
-            "{bd82312c}",
-            "{543cda17}",
-            "{c9445602}"
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonQAbility",
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonRAbility",
+            "Characters/Jade_Pantheon/Spells/Jade_PantheonWAbility"
         ],
         "passiveName": "",
         "passiveLuaName": "Jade_PantheonPassive",

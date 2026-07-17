@@ -1,15 +1,15 @@
 {
-    "{3e4f9afa}": {
-        "mRootSpell": "{02e114ef}",
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankPowerFistAbility": {
+        "mRootSpell": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankPowerFistAbility/Jade_BlitzcrankPowerFist",
         "mChildSpells": [
-            "{02e114ef}",
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankPowerFistAbility/Jade_BlitzcrankPowerFist",
             "{78031576}",
             "{04308f67}"
         ],
         "mName": "Jade_BlitzcrankPowerFistAbility",
         "__type": "AbilityObject"
     },
-    "{02e114ef}": {
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankPowerFistAbility/Jade_BlitzcrankPowerFist": {
         "ObjectName": "Jade_BlitzcrankPowerFist",
         "mScriptName": "Jade_BlitzcrankPowerFist",
         "mSpell": {
@@ -320,8 +320,8 @@
             "castConeDistance": 100.0,
             "castFrame": 12.960000038146973,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{4460137e}",
-            "mAfterEffectKey": "{646a57f5}",
+            "mHitEffectKey": "Jade_Blitzcrank_E_tar_1",
+            "mAfterEffectKey": "Jade_Blitzcrank_E_tar_blood",
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
             "mTargetingTypeData": {
@@ -613,15 +613,38 @@
         },
         "__type": "SpellObject"
     },
-    "{6da1e409}": {
-        "mRootSpell": "{434fbcdf}",
+    "{36da259d}": {
+        "ObjectName": "Jade_Blitzcrank_GodOfGrab_Buff",
+        "mScriptName": "Jade_Blitzcrank_GodOfGrab_Buff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/ViW2.project_jade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_Blitzcrank_GodOfGrab_Buff",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Jade_Blitzcrank_GodOfGrab_Buff_Name",
+                    "keyTooltip": "Buff_Jade_Blitzcrank_GodOfGrab_Buff_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankOverdriveAbility": {
+        "mRootSpell": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankOverdriveAbility/Jade_BlitzcrankOverdrive",
         "mChildSpells": [
-            "{434fbcdf}"
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankOverdriveAbility/Jade_BlitzcrankOverdrive"
         ],
         "mName": "Jade_BlitzcrankOverdriveAbility",
         "__type": "AbilityObject"
     },
-    "{434fbcdf}": {
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankOverdriveAbility/Jade_BlitzcrankOverdrive": {
         "ObjectName": "Jade_BlitzcrankOverdrive",
         "mScriptName": "Jade_BlitzcrankOverdrive",
         "mSpell": {
@@ -966,7 +989,18 @@
         },
         "__type": "SpellObject"
     },
-    "{64c8d37d}": {
+    "{44e322e3}": {
+        "ObjectName": "Jade_Blitzcrank_GodOfGrab",
+        "mScriptName": "Jade_Blitzcrank_GodOfGrab",
+        "mSpell": {
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankCritAttack": {
         "ObjectName": "Jade_BlitzcrankCritAttack",
         "mScriptName": "Jade_BlitzcrankCritAttack",
         "mSpell": {
@@ -1030,7 +1064,7 @@
             "castConeDistance": 100.0,
             "castFrame": 12.824999809265137,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{2919958a}",
+            "mHitEffectKey": "Jade_Blitzcrank_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -1060,15 +1094,15 @@
         },
         "__type": "SpellObject"
     },
-    "{ea65d1a9}": {
-        "mRootSpell": "{790bed2f}",
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankStaticFieldAbility": {
+        "mRootSpell": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankStaticFieldAbility/Jade_BlitzcrankStaticField",
         "mChildSpells": [
-            "{790bed2f}"
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankStaticFieldAbility/Jade_BlitzcrankStaticField"
         ],
         "mName": "Jade_BlitzcrankStaticFieldAbility",
         "__type": "AbilityObject"
     },
-    "{790bed2f}": {
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankStaticFieldAbility/Jade_BlitzcrankStaticField": {
         "ObjectName": "Jade_BlitzcrankStaticField",
         "mScriptName": "Jade_BlitzcrankStaticField",
         "mSpell": {
@@ -1431,16 +1465,16 @@
         },
         "__type": "SpellObject"
     },
-    "{bc5acb8b}": {
-        "mRootSpell": "{7a5317af}",
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankRocketGrabAbility": {
+        "mRootSpell": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankRocketGrabAbility/Jade_BlitzcrankRocketGrab",
         "mChildSpells": [
-            "{7a5317af}",
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankRocketGrabAbility/Jade_BlitzcrankRocketGrab",
             "{bdc45b51}"
         ],
         "mName": "Jade_BlitzcrankRocketGrabAbility",
         "__type": "AbilityObject"
     },
-    "{7a5317af}": {
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankRocketGrabAbility/Jade_BlitzcrankRocketGrab": {
         "ObjectName": "Jade_BlitzcrankRocketGrab",
         "mScriptName": "Jade_BlitzcrankRocketGrab",
         "mSpell": {
@@ -1937,7 +1971,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{93b6a1ce}",
+            "mMissileEffectKey": "Jade_Blitzcrank_Q_mis",
             "mLineWidth": 70.0,
             "bHaveHitBone": true,
             "mHitBoneName": "root",
@@ -1982,7 +2016,7 @@
         },
         "__type": "SpellObject"
     },
-    "{f54c879d}": {
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankBasicAttack2": {
         "ObjectName": "Jade_BlitzcrankBasicAttack2",
         "mScriptName": "Jade_BlitzcrankBasicAttack2",
         "mSpell": {
@@ -2047,7 +2081,7 @@
             "castConeDistance": 100.0,
             "castFrame": 12.960000038146973,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{2919958a}",
+            "mHitEffectKey": "Jade_Blitzcrank_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -2079,7 +2113,7 @@
         },
         "__type": "SpellObject"
     },
-    "{fe07d03d}": {
+    "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankBasicAttack": {
         "ObjectName": "Jade_BlitzcrankBasicAttack",
         "mScriptName": "Jade_BlitzcrankBasicAttack",
         "mSpell": {
@@ -2143,7 +2177,7 @@
             "castConeDistance": 100.0,
             "castFrame": 12.960000038146973,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{2919958a}",
+            "mHitEffectKey": "Jade_Blitzcrank_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -2404,10 +2438,10 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{1a855256}": {
+    "Characters/Jade_Blitzcrank/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{2464ef80}": {
+    "Characters/Jade_Blitzcrank/CharacterRecords/Root": {
         "mCharacterName": "Jade_Blitzcrank",
         "baseHPModifiable": {
             "baseValue": 518.0,
@@ -2518,10 +2552,10 @@
             "Jade_BlitzcrankStaticFieldAbility/Jade_BlitzcrankStaticField"
         ],
         "spells": [
-            "{7a5317af}",
-            "{434fbcdf}",
-            "{02e114ef}",
-            "{790bed2f}"
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankRocketGrabAbility/Jade_BlitzcrankRocketGrab",
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankOverdriveAbility/Jade_BlitzcrankOverdrive",
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankPowerFistAbility/Jade_BlitzcrankPowerFist",
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankStaticFieldAbility/Jade_BlitzcrankStaticField"
         ],
         "extraSpells": [
             "Jade_Blitzcrank_RocketGrabMissile",
@@ -2561,10 +2595,10 @@
         ],
         "mAbilities": [
             "{dab682a2}",
-            "{6da1e409}",
-            "{3e4f9afa}",
-            "{bc5acb8b}",
-            "{ea65d1a9}"
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankOverdriveAbility",
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankPowerFistAbility",
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankRocketGrabAbility",
+            "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankStaticFieldAbility"
         ],
         "passiveName": "",
         "passiveLuaName": "Jade_Blitzcrank_ManaBarrierIcon",
@@ -2711,6 +2745,10 @@
                     "{6459c6bb}",
                     "{3464132a}"
                 ],
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{44e322e3}",
                 "__type": "CharacterPassiveData"
             }
         ],

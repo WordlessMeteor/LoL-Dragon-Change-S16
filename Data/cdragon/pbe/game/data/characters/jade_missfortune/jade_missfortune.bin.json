@@ -1,8 +1,8 @@
 {
-    "{e8522e0e}": {
-        "mRootSpell": "{d0112f56}",
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneRicochetShotAbility": {
+        "mRootSpell": "Characters/Jade_MissFortune/Spells/Jade_MissFortuneRicochetShotAbility/Jade_MissFortuneRicochetShot",
         "mChildSpells": [
-            "{d0112f56}",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneRicochetShotAbility/Jade_MissFortuneRicochetShot",
             "{d23259cb}",
             "{0e147027}"
         ],
@@ -231,7 +231,7 @@
             "mCastType": 3,
             "castFrame": 8.699999809265137,
             "missileSpeed": 400.0,
-            "mMissileEffectKey": "{f1fa51ef}",
+            "mMissileEffectKey": "Jade_MissFortune_Q_Mis_Dud",
             "mLineWidth": 60.0,
             "mFloatVarsDecimals": [
                 0,
@@ -282,7 +282,7 @@
         },
         "__type": "SpellObject"
     },
-    "{d0112f56}": {
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneRicochetShotAbility/Jade_MissFortuneRicochetShot": {
         "ObjectName": "Jade_MissFortuneRicochetShot",
         "mScriptName": "Jade_MissFortuneRicochetShot",
         "mSpell": {
@@ -315,13 +315,37 @@
                 },
                 {
                     "value": [
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
                     ],
                     "__type": "SpellEffectAmount"
                 },
@@ -339,37 +363,13 @@
                 },
                 {
                     "value": [
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0,
-                        40.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        55.0,
-                        55.0,
-                        55.0,
-                        55.0,
-                        55.0,
-                        55.0,
-                        55.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        80.0,
-                        80.0,
-                        80.0,
-                        80.0,
-                        80.0,
-                        80.0,
-                        80.0
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0
                     ],
                     "__type": "SpellEffectAmount"
                 },
@@ -482,7 +482,7 @@
                 },
                 "{ce5e078d}": {
                     "mMultiplier": {
-                        "mDataValue": "{b6832d6b}",
+                        "mDataValue": "RicochetBonus",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mModifiedGameCalculation": "TotalDamage",
@@ -593,7 +593,7 @@
             "mCastType": 1,
             "castFrame": 8.699999809265137,
             "missileSpeed": 1400.0,
-            "mMissileEffectKey": "{3b888305}",
+            "mMissileEffectKey": "Jade_MissFortune_Q_Mis",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -803,7 +803,7 @@
             "mCastType": 1,
             "castFrame": 8.699999809265137,
             "missileSpeed": 1400.0,
-            "mMissileEffectKey": "{3b888305}",
+            "mMissileEffectKey": "Jade_MissFortune_Q_Mis",
             "selectionPriority": 1,
             "SpellEventToAudioEventSuffix": {
                 "13": "Play_sfx_MissFortune_MissFortuneRShotExtra_OnHit",
@@ -822,10 +822,10 @@
         },
         "__type": "SpellObject"
     },
-    "{76e8e7da}": {
-        "mRootSpell": "{865a6ad2}",
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneBulletTimeAbility": {
+        "mRootSpell": "Characters/Jade_MissFortune/Spells/Jade_MissFortuneBulletTimeAbility/Jade_MissFortuneBulletTime",
         "mChildSpells": [
-            "{865a6ad2}",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneBulletTimeAbility/Jade_MissFortuneBulletTime",
             "{a8a066f8}",
             "{2996810a}"
         ],
@@ -843,6 +843,18 @@
                 "16": "Play_sfx_MissFortune_MissFortuneBulletEMPTY_OnMissileLaunch"
             },
             "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_MissFortuneBulletSound",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_MissFortuneR_Jade_Name",
+                    "keyTooltip": "Buff_Jade_MissFortuneR_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
         },
         "__type": "SpellObject"
     },
@@ -1020,7 +1032,7 @@
         },
         "__type": "SpellObject"
     },
-    "{865a6ad2}": {
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneBulletTimeAbility/Jade_MissFortuneBulletTime": {
         "ObjectName": "Jade_MissFortuneBulletTime",
         "mScriptName": "Jade_MissFortuneBulletTime",
         "mSpell": {
@@ -1127,7 +1139,7 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{2b98b069}",
+                            "mDataValue": "BaseDamagePerWave",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -1341,7 +1353,7 @@
             "castConeDistance": 1400.0,
             "castFrame": 7.849999904632568,
             "missileSpeed": 779.9000244140625,
-            "mMissileEffectKey": "{c7d19360}",
+            "mMissileEffectKey": "Jade_MissFortune_R_mis",
             "mLineWidth": 100.0,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "mFloatVarsDecimals": [
@@ -1596,7 +1608,7 @@
             "mCastType": 3,
             "castFrame": 2.8499999046325684,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{c7d19360}",
+            "mMissileEffectKey": "Jade_MissFortune_R_mis",
             "mLineWidth": 20.0,
             "bHaveHitBone": true,
             "selectionPriority": 1,
@@ -1622,7 +1634,7 @@
         },
         "__type": "SpellObject"
     },
-    "{325a9109}": {
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneCritAttack": {
         "ObjectName": "Jade_MissFortuneCritAttack",
         "mScriptName": "Jade_MissFortuneCritAttack",
         "mSpell": {
@@ -1710,7 +1722,7 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{4f2c2527}",
+            "mMissileEffectKey": "Jade_MissFortune_BA_mis",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1732,10 +1744,10 @@
         },
         "__type": "SpellObject"
     },
-    "{bb23d19a}": {
-        "mRootSpell": "{a6765c46}",
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneViciousStrikesAbility": {
+        "mRootSpell": "Characters/Jade_MissFortune/Spells/Jade_MissFortuneViciousStrikesAbility/Jade_MissFortuneViciousStrikes",
         "mChildSpells": [
-            "{a6765c46}",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneViciousStrikesAbility/Jade_MissFortuneViciousStrikes",
             "{8ae744b3}",
             "{38564619}"
         ],
@@ -1788,7 +1800,7 @@
         },
         "__type": "SpellObject"
     },
-    "{a6765c46}": {
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneViciousStrikesAbility/Jade_MissFortuneViciousStrikes": {
         "ObjectName": "Jade_MissFortuneViciousStrikes",
         "mScriptName": "Jade_MissFortuneViciousStrikes",
         "mSpell": {
@@ -1996,11 +2008,11 @@
                 "{7a5be266}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{0046a1e7}",
+                            "mDataValue": "DamageOnHItPerStack",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{573ab4bd}",
+                            "mDataValue": "DamageOnHitPerStackAPRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -2009,11 +2021,11 @@
                 "{9926de8a}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{2359dfa3}",
+                            "mDataValue": "MaximumDamageOnHItPerStack",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{3ee73141}",
+                            "mDataValue": "MaximumDamageOnHitPerStackAPRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -2194,16 +2206,16 @@
         },
         "__type": "SpellObject"
     },
-    "{729ef379}": {
-        "mRootSpell": "{485d4588}",
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneScattershotAbility": {
+        "mRootSpell": "Characters/Jade_MissFortune/Spells/Jade_MissFortuneScattershotAbility/Jade_MissFortuneScattershot",
         "mChildSpells": [
-            "{485d4588}",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneScattershotAbility/Jade_MissFortuneScattershot",
             "{6687be6d}"
         ],
         "mName": "Jade_MissFortuneScattershotAbility",
         "__type": "AbilityObject"
     },
-    "{485d4588}": {
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneScattershotAbility/Jade_MissFortuneScattershot": {
         "ObjectName": "Jade_MissFortuneScattershot",
         "mScriptName": "Jade_MissFortuneScattershot",
         "mSpell": {
@@ -2562,7 +2574,7 @@
         },
         "__type": "SpellObject"
     },
-    "{8b72d021}": {
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneBasicAttack2": {
         "ObjectName": "Jade_MissFortuneBasicAttack2",
         "mScriptName": "Jade_MissFortuneBasicAttack2",
         "mSpell": {
@@ -2650,7 +2662,7 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{4f2c2527}",
+            "mMissileEffectKey": "Jade_MissFortune_BA_mis",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2687,7 +2699,7 @@
         },
         "__type": "SpellObject"
     },
-    "{96e8c7c9}": {
+    "Characters/Jade_MissFortune/Spells/Jade_MissFortuneBasicAttack": {
         "ObjectName": "Jade_MissFortuneBasicAttack",
         "mScriptName": "Jade_MissFortuneBasicAttack",
         "mSpell": {
@@ -2774,7 +2786,7 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{4f2c2527}",
+            "mMissileEffectKey": "Jade_MissFortune_BA_mis",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2956,7 +2968,7 @@
         },
         "__type": "SpellObject"
     },
-    "{3277c5fd}": {
+    "Characters/Jade_MissFortune/CharacterRecords/Root": {
         "mCharacterName": "Jade_MissFortune",
         "baseHPModifiable": {
             "baseValue": 520.0,
@@ -3063,10 +3075,10 @@
             "Jade_MissFortuneBulletTimeAbility/Jade_MissFortuneBulletTime"
         ],
         "spells": [
-            "{d0112f56}",
-            "{a6765c46}",
-            "{485d4588}",
-            "{865a6ad2}"
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneRicochetShotAbility/Jade_MissFortuneRicochetShot",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneViciousStrikesAbility/Jade_MissFortuneViciousStrikes",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneScattershotAbility/Jade_MissFortuneScattershot",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneBulletTimeAbility/Jade_MissFortuneBulletTime"
         ],
         "extraSpells": [
             "Jade_MissFortuneRShotExtra",
@@ -3105,10 +3117,10 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{76e8e7da}",
-            "{729ef379}",
-            "{e8522e0e}",
-            "{bb23d19a}",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneBulletTimeAbility",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneScattershotAbility",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneRicochetShotAbility",
+            "Characters/Jade_MissFortune/Spells/Jade_MissFortuneViciousStrikesAbility",
             "{ba8eac88}"
         ],
         "passiveName": "Spell_Jade_MissFortunePassive_Name",
@@ -3219,7 +3231,7 @@
         "Script": "{e5c85859}",
         "__type": "CharacterRecord"
     },
-    "{4b82c6b0}": {
+    "Characters/Jade_MissFortune/CAC/Jade_MissFortune_Skin16": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -4756,7 +4768,7 @@
         "mObjectPath": "Characters/Jade_MissFortune/CAC/Jade_MissFortune_Skin16",
         "__type": "ContextualActionData"
     },
-    "{7dfad125}": {
+    "Characters/Jade_MissFortune/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{c23fb993}": {

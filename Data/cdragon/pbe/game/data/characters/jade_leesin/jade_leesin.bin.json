@@ -1,8 +1,8 @@
 {
-    "{e6813b0a}": {
-        "mRootSpell": "{774d77b3}",
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinEOneAbility": {
+        "mRootSpell": "Characters/Jade_LeeSin/Spells/Jade_LeeSinEOneAbility/Jade_LeeSinEOne",
         "mChildSpells": [
-            "{774d77b3}",
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinEOneAbility/Jade_LeeSinEOne",
             "{0c661bab}",
             "{b35d30d8}",
             "{aba11c1d}"
@@ -108,7 +108,7 @@
         },
         "__type": "SpellObject"
     },
-    "{774d77b3}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinEOneAbility/Jade_LeeSinEOne": {
         "ObjectName": "Jade_LeeSinEOne",
         "mScriptName": "Jade_LeeSinEOne",
         "mSpell": {
@@ -118,13 +118,13 @@
                 {
                     "name": "SlowAmount",
                     "values": [
-                        10.0,
-                        20.0,
+                        22.5,
                         30.0,
-                        40.0,
-                        50.0,
+                        37.5,
+                        45.0,
+                        52.5,
                         60.0,
-                        70.0
+                        67.5
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -231,6 +231,15 @@
                 "{0a3e0478}": 350.0,
                 "__type": "{0a0eddc9}"
             },
+            "castRangeDisplayOverride": [
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0,
+                425.0
+            ],
             "castRadius": [
                 350.0,
                 350.0,
@@ -312,7 +321,7 @@
                                 {
                                     "type": "SlowAmount",
                                     "typeIndex": 2,
-                                    "nameOverride": "Spell_ListType_LeeSinESlow",
+                                    "nameOverride": "Spell_ListType_Jade_LeeSinE_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -437,6 +446,15 @@
                 "{0a3e0478}": 575.0,
                 "__type": "{0a0eddc9}"
             },
+            "castRangeDisplayOverride": [
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0
+            ],
             "castRadius": [
                 575.0,
                 575.0,
@@ -537,10 +555,10 @@
         "mScriptName": "Jade_LeeSinEManager",
         "__type": "SpellObject"
     },
-    "{e65155b4}": {
-        "mRootSpell": "{697bf3ab}",
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinWOneAbility": {
+        "mRootSpell": "Characters/Jade_LeeSin/Spells/Jade_LeeSinWOneAbility/Jade_LeeSinWOne",
         "mChildSpells": [
-            "{697bf3ab}",
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinWOneAbility/Jade_LeeSinWOne",
             "{1c39d2c2}",
             "{5df00a05}",
             "{36b95290}",
@@ -600,7 +618,7 @@
                 {
                     "PersistentVfxs": [
                         {
-                            "effectKey": "{5dd03480}",
+                            "effectKey": "Jade_LeeSin_W_Dash_ToAlly_Trail",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -841,7 +859,7 @@
         },
         "__type": "SpellObject"
     },
-    "{697bf3ab}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinWOneAbility/Jade_LeeSinWOne": {
         "ObjectName": "Jade_LeeSinWOne",
         "mScriptName": "Jade_LeeSinWOne",
         "mSpell": {
@@ -864,13 +882,13 @@
                 {
                     "name": "LifestealAndSpellVamp",
                     "values": [
-                        0.0,
+                        1.0,
                         5.0,
-                        10.0,
-                        15.0,
-                        20.0,
-                        25.0,
-                        30.0
+                        9.0,
+                        13.0,
+                        17.0,
+                        21.0,
+                        25.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -942,13 +960,26 @@
                 {
                     "name": "LifestealAndSpellVampTime",
                     "values": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorBonus",
+                    "values": [
+                        5.0,
+                        10.0,
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1079,8 +1110,13 @@
                                 {
                                     "type": "LifestealAndSpellVamp",
                                     "typeIndex": 2,
-                                    "nameOverride": "Spell_ListType_LeeSinWLifesteal",
+                                    "nameOverride": "Spell_ListType_Jade_LeeSinW_Lifesteal",
                                     "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ArmorBonus",
+                                    "nameOverride": "Spell_ListType_Jade_LeeSinW_Armor",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1140,7 +1176,7 @@
         },
         "__type": "SpellObject"
     },
-    "{3ec366cd}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinCritAttack": {
         "ObjectName": "Jade_LeeSinCritAttack",
         "mScriptName": "Jade_LeeSinCritAttack",
         "mSpell": {
@@ -1205,7 +1241,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{3a3193ad}",
+            "mHitEffectKey": "Jade_LeeSin_BA_crit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1375,12 +1411,12 @@
                     "PersistentVfxs": [
                         {
                             "boneName": "L_hand",
-                            "effectKey": "{a2e59df6}",
+                            "effectKey": "Jade_LeeSin_P_buf_L",
                             "__type": "PersistentVfxData"
                         },
                         {
                             "boneName": "R_hand",
-                            "effectKey": "{9ce59484}",
+                            "effectKey": "Jade_LeeSin_P_buf_R",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -1391,7 +1427,7 @@
         },
         "__type": "SpellObject"
     },
-    "{4cf16b4d}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinBasicAttack": {
         "ObjectName": "Jade_LeeSinBasicAttack",
         "mScriptName": "Jade_LeeSinBasicAttack",
         "mSpell": {
@@ -1455,7 +1491,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{4c22ed66}",
+            "mHitEffectKey": "Jade_LeeSin_BA_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1485,7 +1521,7 @@
         "mScriptName": "Jade_LeeSinSkin31Manager",
         "__type": "SpellObject"
     },
-    "{990c2f7b}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinBasicAttack4": {
         "ObjectName": "Jade_LeeSinBasicAttack4",
         "mScriptName": "Jade_LeeSinBasicAttack4",
         "mSpell": {
@@ -1550,7 +1586,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{4c22ed66}",
+            "mHitEffectKey": "Jade_LeeSin_BA_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1570,7 +1606,7 @@
         },
         "__type": "SpellObject"
     },
-    "{9e0c375a}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinBasicAttack3": {
         "ObjectName": "Jade_LeeSinBasicAttack3",
         "mScriptName": "Jade_LeeSinBasicAttack3",
         "mSpell": {
@@ -1635,7 +1671,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{4c22ed66}",
+            "mHitEffectKey": "Jade_LeeSin_BA_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1655,7 +1691,7 @@
         },
         "__type": "SpellObject"
     },
-    "{9f0c38ed}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinBasicAttack2": {
         "ObjectName": "Jade_LeeSinBasicAttack2",
         "mScriptName": "Jade_LeeSinBasicAttack2",
         "mSpell": {
@@ -1720,7 +1756,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{4c22ed66}",
+            "mHitEffectKey": "Jade_LeeSin_BA_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1740,10 +1776,10 @@
         },
         "__type": "SpellObject"
     },
-    "{a138e219}": {
-        "mRootSpell": "{e41eb785}",
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinRAbility": {
+        "mRootSpell": "Characters/Jade_LeeSin/Spells/Jade_LeeSinRAbility/Jade_LeeSinR",
         "mChildSpells": [
-            "{e41eb785}"
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinRAbility/Jade_LeeSinR"
         ],
         "mName": "Jade_LeeSinRAbility",
         "__type": "AbilityObject"
@@ -1753,10 +1789,10 @@
         "mScriptName": "Jade_LeeSinSkin52Manager",
         "__type": "SpellObject"
     },
-    "{b7fd13ce}": {
-        "mRootSpell": "{d247652b}",
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinQOneAbility": {
+        "mRootSpell": "Characters/Jade_LeeSin/Spells/Jade_LeeSinQOneAbility/Jade_LeeSinQOne",
         "mChildSpells": [
-            "{d247652b}",
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinQOneAbility/Jade_LeeSinQOne",
             "{c6bb7b85}",
             "{bf2a5c10}",
             "{e14e71b5}"
@@ -1782,7 +1818,7 @@
                     },
                     "PersistentVfxs": [
                         {
-                            "effectKey": "{d09ca19b}",
+                            "effectKey": "Jade_LeeSin_Q_ResonatingStrike_Range_01",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -1932,7 +1968,7 @@
         },
         "__type": "SpellObject"
     },
-    "{d247652b}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinQOneAbility/Jade_LeeSinQOne": {
         "ObjectName": "Jade_LeeSinQOne",
         "mScriptName": "Jade_LeeSinQOne",
         "mSpell": {
@@ -2191,7 +2227,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{a54a0b2e}",
+            "mMissileEffectKey": "Jade_LeeSin_Q_mis_01",
             "mLineWidth": 60.0,
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
@@ -2317,7 +2353,7 @@
                 {
                     "PersistentVfxs": [
                         {
-                            "effectKey": "{2d10cb7e}",
+                            "effectKey": "Jade_LeeSin_Q_tar_indicator",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -2435,7 +2471,7 @@
             "castConeDistance": 100.0,
             "castFrame": 7.934999942779541,
             "missileSpeed": 2200.0,
-            "mHitEffectKey": "{8700bd78}",
+            "mHitEffectKey": "Jade_LeeSin_Q_tar",
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "selectionPriority": 1,
             "mClientData": {
@@ -2669,7 +2705,7 @@
         },
         "__type": "SpellObject"
     },
-    "{e41eb785}": {
+    "Characters/Jade_LeeSin/Spells/Jade_LeeSinRAbility/Jade_LeeSinR": {
         "ObjectName": "Jade_LeeSinR",
         "mScriptName": "Jade_LeeSinR",
         "mSpell": {
@@ -2810,7 +2846,7 @@
             "castFrame": 7.5,
             "missileSpeed": 1500.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{190ab9bc}",
+            "mHitEffectKey": "Jade_LeeSin_R_impact",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
             "mFloatVarsDecimals": [
@@ -2920,7 +2956,7 @@
                     "PersistentVfxs": [
                         {
                             "boneName": "C_Buffbone_Glb_Chest_Loc",
-                            "effectKey": "{b0c4b128}",
+                            "effectKey": "Jade_LeeSin_R_self_mis",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -3078,10 +3114,10 @@
     "{d45ed2f8}": {
         "__type": "ChampionRuneRecommendationsContext"
     },
-    "{5cdf8ca8}": {
+    "Characters/Jade_LeeSin/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{61c598de}": {
+    "Characters/Jade_LeeSin/CharacterRecords/Root": {
         "mCharacterName": "Jade_LeeSin",
         "baseHPModifiable": {
             "baseValue": 513.0,
@@ -3194,10 +3230,10 @@
             "Jade_LeeSinRAbility/Jade_LeeSinR"
         ],
         "spells": [
-            "{d247652b}",
-            "{697bf3ab}",
-            "{774d77b3}",
-            "{e41eb785}"
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinQOneAbility/Jade_LeeSinQOne",
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinWOneAbility/Jade_LeeSinWOne",
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinEOneAbility/Jade_LeeSinEOne",
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinRAbility/Jade_LeeSinR"
         ],
         "extraSpells": [
             "BaseSpell",
@@ -3236,11 +3272,11 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{e6813b0a}",
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinEOneAbility",
             "{ad637654}",
-            "{b7fd13ce}",
-            "{a138e219}",
-            "{e65155b4}"
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinQOneAbility",
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinRAbility",
+            "Characters/Jade_LeeSin/Spells/Jade_LeeSinWOneAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_LeeSin",
         "passiveLuaName": "Jade_LeeSinPassive_Jade",
@@ -3408,7 +3444,7 @@
         "Script": "{d2b87e4f}",
         "__type": "CharacterRecord"
     },
-    "{9e935943}": {
+    "Characters/Jade_LeeSin/CAC/Jade_LeeSin_Skin51": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -5038,7 +5074,7 @@
         "mObjectPath": "Characters/Jade_LeeSin/CAC/Jade_LeeSin_Skin51",
         "__type": "ContextualActionData"
     },
-    "{9f935ad6}": {
+    "Characters/Jade_LeeSin/CAC/Jade_LeeSin_Skin52": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -6948,7 +6984,7 @@
         "mObjectPath": "Characters/Jade_LeeSin/CAC/Jade_LeeSin_Skin52",
         "__type": "ContextualActionData"
     },
-    "{a2a26a19}": {
+    "Characters/Jade_LeeSin/CAC/Jade_LeeSin_Skin31": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {

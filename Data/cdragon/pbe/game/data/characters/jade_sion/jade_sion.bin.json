@@ -4,15 +4,15 @@
         "mScriptName": "Jade_SionAttackSequencer",
         "__type": "SpellObject"
     },
-    "{25c0d437}": {
-        "mRootSpell": "{135415a8}",
+    "Characters/Jade_Sion/Spells/Jade_SionRAbility": {
+        "mRootSpell": "Characters/Jade_Sion/Spells/Jade_SionRAbility/Jade_SionR",
         "mChildSpells": [
-            "{135415a8}"
+            "Characters/Jade_Sion/Spells/Jade_SionRAbility/Jade_SionR"
         ],
         "mName": "Jade_SionRAbility",
         "__type": "AbilityObject"
     },
-    "{135415a8}": {
+    "Characters/Jade_Sion/Spells/Jade_SionRAbility/Jade_SionR": {
         "ObjectName": "Jade_SionR",
         "mScriptName": "Jade_SionR",
         "mSpell": {
@@ -229,7 +229,7 @@
         "mScriptName": "Jade_SionRunCycleManager",
         "__type": "SpellObject"
     },
-    "{2574bfbb}": {
+    "Characters/Jade_Sion/Spells/Jade_SionCritAttack": {
         "ObjectName": "Jade_SionCritAttack",
         "mScriptName": "Jade_SionCritAttack",
         "mSpell": {
@@ -314,10 +314,10 @@
         },
         "__type": "SpellObject"
     },
-    "{2f9e9070}": {
-        "mRootSpell": "{942d832c}",
+    "Characters/Jade_Sion/Spells/Jade_SionEAbility": {
+        "mRootSpell": "Characters/Jade_Sion/Spells/Jade_SionEAbility/Jade_SionE",
         "mChildSpells": [
-            "{942d832c}"
+            "Characters/Jade_Sion/Spells/Jade_SionEAbility/Jade_SionE"
         ],
         "mName": "Jade_SionEAbility",
         "__type": "AbilityObject"
@@ -330,10 +330,10 @@
         "mName": "Jade_SionPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{984de722}": {
-        "mRootSpell": "{e2bce7dc}",
+    "Characters/Jade_Sion/Spells/Jade_SionWAbility": {
+        "mRootSpell": "Characters/Jade_Sion/Spells/Jade_SionWAbility/Jade_SionW",
         "mChildSpells": [
-            "{e2bce7dc}",
+            "Characters/Jade_Sion/Spells/Jade_SionWAbility/Jade_SionW",
             "{3977b07c}"
         ],
         "mName": "Jade_SionWAbility",
@@ -624,7 +624,7 @@
         },
         "__type": "SpellObject"
     },
-    "{e2bce7dc}": {
+    "Characters/Jade_Sion/Spells/Jade_SionWAbility/Jade_SionW": {
         "ObjectName": "Jade_SionW",
         "mScriptName": "Jade_SionW",
         "mSpell": {
@@ -983,15 +983,15 @@
         },
         "__type": "SpellObject"
     },
-    "{3b3bf84c}": {
-        "mRootSpell": "{8df36a74}",
+    "Characters/Jade_Sion/Spells/Jade_SionQAbility": {
+        "mRootSpell": "Characters/Jade_Sion/Spells/Jade_SionQAbility/Jade_SionQ",
         "mChildSpells": [
-            "{8df36a74}"
+            "Characters/Jade_Sion/Spells/Jade_SionQAbility/Jade_SionQ"
         ],
         "mName": "Jade_SionQAbility",
         "__type": "AbilityObject"
     },
-    "{c3d66fae}": {
+    "Characters/Jade_Sion/Spells/Jade_SionBasicAttackTower2": {
         "ObjectName": "Jade_SionBasicAttackTower2",
         "mScriptName": "Jade_SionBasicAttackTower2",
         "mSpell": {
@@ -1159,6 +1159,44 @@
         "ObjectName": "Jade_SionPassive",
         "mScriptName": "Jade_SionPassive",
         "mSpell": {
+            "DataValues": [
+                {
+                    "name": "PassiveBlockChance",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{6c3efacf}": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 30.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 7,
+                                    "mAdditionalBonusAtThisLevel": 10.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 13,
+                                    "mAdditionalBonusAtThisLevel": 10.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Sion_FeelNoPain.project_jade.dds"
             ],
@@ -1204,7 +1242,7 @@
         },
         "__type": "SpellObject"
     },
-    "{8df36a74}": {
+    "Characters/Jade_Sion/Spells/Jade_SionQAbility/Jade_SionQ": {
         "ObjectName": "Jade_SionQ",
         "mScriptName": "Jade_SionQ",
         "mSpell": {
@@ -1469,7 +1507,7 @@
         },
         "__type": "SpellObject"
     },
-    "{942d832c}": {
+    "Characters/Jade_Sion/Spells/Jade_SionEAbility/Jade_SionE": {
         "ObjectName": "Jade_SionE",
         "mScriptName": "Jade_SionE",
         "mSpell": {
@@ -1812,7 +1850,7 @@
         },
         "__type": "SpellObject"
     },
-    "{b506d8d3}": {
+    "Characters/Jade_Sion/Spells/Jade_SionBasicAttack": {
         "ObjectName": "Jade_SionBasicAttack",
         "mScriptName": "Jade_SionBasicAttack",
         "mSpell": {
@@ -1899,7 +1937,7 @@
         },
         "__type": "SpellObject"
     },
-    "{d9c768a0}": {
+    "Characters/Jade_Sion/Spells/Jade_SionBasicAttack3": {
         "ObjectName": "Jade_SionBasicAttack3",
         "mScriptName": "Jade_SionBasicAttack3",
         "mSpell": {
@@ -1987,7 +2025,7 @@
         },
         "__type": "SpellObject"
     },
-    "{dac76a33}": {
+    "Characters/Jade_Sion/Spells/Jade_SionBasicAttack2": {
         "ObjectName": "Jade_SionBasicAttack2",
         "mScriptName": "Jade_SionBasicAttack2",
         "mSpell": {
@@ -2386,204 +2424,14 @@
         "sequences": {
             "{6a7835b9}": {
                 "blocks": [
-                    null,
-                    null,
-                    null,
-                    {
-                        "{d851ffa3}": "49d711e2-b8dd-42ad-b651-8743511e77c3",
-                        "Src": {
-                            "value": 0.4000000059604645,
-                            "__type": "FloatGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "CharacterVars"
-                            },
-                            "Var": "BlockChance",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    },
-                    {
-                        "{d851ffa3}": "49911126-ffdc-4d31-b422-4d8a4e2dca02",
-                        "Src": {
-                            "value": 30,
-                            "__type": "IntGet"
-                        },
-                        "Dest": {
-                            "Table": {
-                                "__type": "CharacterVars"
-                            },
-                            "Var": "BaseBlockAmount",
-                            "__type": "ScriptTableSet"
-                        },
-                        "__type": "SetVarInTableBlock"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "{e22f9f8c}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "242d3f7b-3b02-419b-98fc-0fd09baee882",
-                        "Condition": null,
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "53fbd496-874e-4fe8-be9f-2a1504f74388",
-                                    "Condition": {
-                                        "Chance": {
-                                            "Table": {
-                                                "__type": "CharacterVars"
-                                            },
-                                            "Var": "{603cd14a}",
-                                            "__type": "FloatTableGet"
-                                        },
-                                        "__type": "RandomChanceScriptCondition"
-                                    },
-                                    "Sequence": {
-                                        "blocks": [
-                                            {
-                                                "{d851ffa3}": "6e60b754-72d3-460b-9411-3cc90b2dcfe6",
-                                                "Formula": "min(cv.BaseBlockAmount, ptp.DamageAmount)",
-                                                "Dest": {
-                                                    "Table": {
-                                                        "__type": "InstanceVars"
-                                                    },
-                                                    "Var": "BlockAmount",
-                                                    "__type": "ScriptTableSet"
-                                                },
-                                                "__type": "{15ebaa9c}"
-                                            },
-                                            {
-                                                "{d851ffa3}": "00b2ed5d-8176-42d0-ab30-f9af275e9dad",
-                                                "Formula": "ptp.DamageAmount - iv.BlockAmount",
-                                                "Dest": {
-                                                    "Table": {
-                                                        "__type": "InstanceVars"
-                                                    },
-                                                    "Var": "FinalDamage",
-                                                    "__type": "ScriptTableSet"
-                                                },
-                                                "__type": "{15ebaa9c}"
-                                            },
-                                            {
-                                                "{d851ffa3}": "b7470319-d2d5-4dcb-952d-05c58ae44988",
-                                                "Var": {
-                                                    "Var": "Target",
-                                                    "__type": "{622705af}"
-                                                },
-                                                "__type": "{851b8dc5}"
-                                            },
-                                            null,
-                                            {
-                                                "{d851ffa3}": "21dd292a-93f9-4b82-9e73-83f8120dcd9d",
-                                                "Src": {
-                                                    "Table": {
-                                                        "__type": "InstanceVars"
-                                                    },
-                                                    "Var": "FinalDamage",
-                                                    "__type": "ScriptTableGet"
-                                                },
-                                                "Dest": {
-                                                    "Var": "DamageAmount",
-                                                    "__type": "ScriptTableSet"
-                                                },
-                                                "__type": "SetVarInTableBlock"
-                                            }
-                                        ],
-                                        "__type": "ScriptSequence"
-                                    },
-                                    "__type": "{e524b2fc}"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "{edb2eab3}": {
-                "blocks": [
-                    null,
-                    {
-                        "{d851ffa3}": "02a4edc9-38c0-4f78-a62a-d5dd7b7daeae",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "Level",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": {
-                                "value": 7,
-                                "__type": "IntGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "41e7e4c0-d2ea-41f3-8313-4828a856d9c3",
-                                    "Src": {
-                                        "value": 40,
-                                        "__type": "IntGet"
-                                    },
-                                    "Dest": {
-                                        "Table": {
-                                            "__type": "CharacterVars"
-                                        },
-                                        "Var": "BaseBlockAmount",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "be53184e-a034-4cf9-a207-7e05e0c84122",
-                        "Condition": {
-                            "Value1": {
-                                "Var": "Level",
-                                "__type": "ScriptTableGet"
-                            },
-                            "Value2": {
-                                "value": 13,
-                                "__type": "IntGet"
-                            },
-                            "__type": "ComparisonScriptCondition"
-                        },
-                        "Sequence": {
-                            "blocks": [
-                                {
-                                    "{d851ffa3}": "09b3903b-233a-45d2-b465-4e7abbf37fb8",
-                                    "Src": {
-                                        "value": 50,
-                                        "__type": "IntGet"
-                                    },
-                                    "Dest": {
-                                        "Table": {
-                                            "__type": "CharacterVars"
-                                        },
-                                        "Var": "BaseBlockAmount",
-                                        "__type": "ScriptTableSet"
-                                    },
-                                    "__type": "SetVarInTableBlock"
-                                }
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
+                    null
                 ],
                 "__type": "RootScriptSequence"
             }
         },
         "__type": "CharScript"
     },
-    "{85d179bf}": {
+    "Characters/Jade_Sion/CharacterRecords/Root": {
         "mCharacterName": "Jade_Sion",
         "baseHPModifiable": {
             "baseValue": 507.0,
@@ -2700,10 +2548,10 @@
             "Jade_SionRAbility/Jade_SionR"
         ],
         "spells": [
-            "{8df36a74}",
-            "{e2bce7dc}",
-            "{942d832c}",
-            "{135415a8}"
+            "Characters/Jade_Sion/Spells/Jade_SionQAbility/Jade_SionQ",
+            "Characters/Jade_Sion/Spells/Jade_SionWAbility/Jade_SionW",
+            "Characters/Jade_Sion/Spells/Jade_SionEAbility/Jade_SionE",
+            "Characters/Jade_Sion/Spells/Jade_SionRAbility/Jade_SionR"
         ],
         "extraSpells": [
             "Jade_SionQDamage",
@@ -2734,7 +2582,7 @@
             "{00000000}",
             "{00000000}",
             "{54d5fb6c}",
-            "{c3d66fae}",
+            "Characters/Jade_Sion/Spells/Jade_SionBasicAttackTower2",
             "{00000000}",
             "{00000000}",
             "{00000000}",
@@ -2743,15 +2591,14 @@
         ],
         "mAbilities": [
             "{361df712}",
-            "{3b3bf84c}",
-            "{984de722}",
-            "{2f9e9070}",
-            "{25c0d437}"
+            "Characters/Jade_Sion/Spells/Jade_SionQAbility",
+            "Characters/Jade_Sion/Spells/Jade_SionWAbility",
+            "Characters/Jade_Sion/Spells/Jade_SionEAbility",
+            "Characters/Jade_Sion/Spells/Jade_SionRAbility"
         ],
         "passiveName": "Spell_Jade_SionPassive_Name",
-        "passiveLuaName": "",
+        "passiveLuaName": "Jade_SionPassive",
         "passiveToolTip": "Spell_Jade_SionPassive_Tooltip",
-        "passiveSpell": "Jade_SionPassive",
         "passive1IconName": "ASSETS/Characters/Jade_Sion/HUD/Icons2D/Jade_Sion_Passive1.project_jade.dds",
         "name": "game_character_displayname_Jade_Sion",
         "weaponMaterials": [
@@ -2837,6 +2684,10 @@
             },
             {
                 "mParentPassiveBuff": "{10964040}",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{641597ec}",
                 "__type": "CharacterPassiveData"
             }
         ],
@@ -3001,7 +2852,7 @@
         ],
         "__type": "ItemRecommendationOverrideSet"
     },
-    "{fe786df3}": {
+    "Characters/Jade_Sion/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

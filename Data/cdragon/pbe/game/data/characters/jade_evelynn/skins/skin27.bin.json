@@ -1,5 +1,5 @@
 {
-    "{f929b04a}": {
+    "Characters/Jade_Evelynn/Skins/Skin27": {
         "skinClassification": 2,
         "championSkinName": "Jade_EvelynnSkin27",
         "skinParent": 24,
@@ -166,7 +166,7 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{4e07ef4a}",
+            "animationGraphData": "Characters/Jade_Evelynn/Animations/Skin24",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
@@ -216,16 +216,6 @@
                 {
                     "texture": "ASSETS/Characters/Jade_Evelynn/Skins/Skin27/Jade_Evelynn_Skin27_Butterfly_TX_CM.project_jade.tex",
                     "submesh": "Butterfly_MAT",
-                    "__type": "SkinMeshDataProperties_MaterialOverride"
-                },
-                {
-                    "texture": "ASSETS/Characters/Jade_Evelynn/Skins/Skin27/Jade_Evelynn_Skin27_Shadow_TX_CM.project_jade.tex",
-                    "submesh": "Evelynn_Shadow_Lasher_Mask_Mat",
-                    "__type": "SkinMeshDataProperties_MaterialOverride"
-                },
-                {
-                    "Material": "{141d37b3}",
-                    "submesh": "Evelynn_Lashers_Mask_Mat",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
             ],
@@ -300,7 +290,7 @@
                 "__type": "SkinEmblem"
             }
         ],
-        "mResourceResolver": "{299b1858}",
+        "mResourceResolver": "Characters/Jade_Evelynn/Skins/Skin27/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -327,197 +317,7 @@
         ],
         "__type": "SkinCharacterDataProperties"
     },
-    "{141d37b3}": {
-        "name": "Characters/Jade_Evelynn/Skins/Skin27/Materials/Jade_EvelynnSkin27_Bloom_inst",
-        "samplerValues": [
-            {
-                "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Jade_Evelynn/Skins/Skin27/Jade_Evelynn_Skin27_TX_CM.project_jade.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            },
-            {
-                "TextureName": "Mask_Texture_red",
-                "texturePath": "ASSETS/Characters/Jade_Evelynn/Skins/Skin24/Particles/Jade_Evelynn_Skin24_Z_color-hold.project_jade.tex",
-                "addressU": 1,
-                "addressV": 1,
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "modelHeight",
-                "value": [
-                    275.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "rimOffset",
-                "value": [
-                    0.30000001192092896,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMax",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "albedoNewMin",
-                "value": [
-                    0.10000000149011612,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Bloom_Intensity",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Bloom_Color",
-                "value": [
-                    1.0,
-                    0.20000000298023224,
-                    0.11000228673219681,
-                    0.4000000059604645
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "Alpha_Bias",
-                "value": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "BLOOM_USE_DIFFUSE_COLOR",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALBEDO_REMAP",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_RIM",
-                "__type": "StaticMaterialSwitchDef"
-            },
-            {
-                "name": "USE_ALPHA",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "shaderMacros": {
-            "NUM_BLEND_WEIGHTS": "4"
-        },
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/SkinnedMesh/Diffuse_Bloom",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "childTechniques": [
-            {
-                "name": "transition",
-                "parentName": "normal",
-                "shaderMacros": {
-                    "TRANSITION": "1"
-                },
-                "__type": "StaticMaterialChildTechniqueDef"
-            }
-        ],
-        "dynamicMaterial": {
-            "parameters": [
-                {
-                    "name": "Bloom_Intensity",
-                    "driver": {
-                        "mBoolDriver": {
-                            "Spell": "{2dd7fabf}",
-                            "__type": "HasBuffDynamicMaterialBoolDriver"
-                        },
-                        "mOffValue": 0.30000001192092896,
-                        "mTurnOnTimeSec": 0.0,
-                        "mTurnOffTimeSec": 0.0,
-                        "__type": "LerpMaterialDriver"
-                    },
-                    "__type": "DynamicMaterialParameterDef"
-                }
-            ],
-            "textures": [
-                {
-                    "name": "Diffuse_Texture",
-                    "options": [
-                        {
-                            "driver": {
-                                "mDrivers": [
-                                    {
-                                        "Spell": "{2dd7fabf}",
-                                        "__type": "HasBuffDynamicMaterialBoolDriver"
-                                    },
-                                    {
-                                        "mAnimationNames": [
-                                            "Spell4"
-                                        ],
-                                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
-                                    }
-                                ],
-                                "__type": "OneTrueMaterialDriver"
-                            },
-                            "TextureName": "ASSETS/Characters/Jade_Evelynn/Skins/Skin52/Jade_Evelynn_Skin52_Shadow_TX_CM.project_jade.tex",
-                            "__type": "DynamicMaterialTextureSwapOption"
-                        }
-                    ],
-                    "__type": "DynamicMaterialTextureSwapDef"
-                }
-            ],
-            "__type": "DynamicMaterialDef"
-        },
-        "__type": "StaticMaterialDef"
-    },
-    "{1f9486bb}": {
+    "Characters/Jade_Evelynn/Skins/Skin27/Particles/Jade_Evelynn_Skin27_Q_HateSpike_Mis": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -4427,7 +4227,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{33156bab}": {
+    "Characters/Jade_Evelynn/Skins/Skin27/Particles/Jade_Evelynn_Skin27_E_EmpoweredBody": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -4672,83 +4472,83 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{c026c548}": {
+    "Characters/Jade_Evelynn/Skins/Skin27/Particles/Jade_Evelynn_Skin27_E_Empowered_L": {
         "particleName": "Jade_Evelynn_Skin27_E_Empowered_L",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin27/Particles/Jade_Evelynn_Skin27_E_Empowered_L",
         "__type": "VfxSystemDefinitionData"
     },
-    "{299b1858}": {
+    "Characters/Jade_Evelynn/Skins/Skin27/Resources": {
         "resourceMap": {
             "{9fb5596b}": "{231289b2}",
             "{838c7509}": "{c42aa432}",
             "{ec8b40c4}": "{6bde7a4b}",
-            "{511e0797}": "{c026c548}",
-            "{571e1109}": "{1b0fbbc4}",
-            "{68c221d1}": "{c7fda82e}",
-            "{66660e3c}": "{8bf12b8f}",
+            "Jade_Evelynn_E_Empowered_L": "Characters/Jade_Evelynn/Skins/Skin27/Particles/Jade_Evelynn_Skin27_E_Empowered_L",
+            "Jade_Evelynn_E_Empowered_R": "{1b0fbbc4}",
+            "Jade_Evelynn_R_Swipe": "{c7fda82e}",
+            "Jade_Evelynn_E_Swipe": "{8bf12b8f}",
             "{ca8442dd}": "{12206674}",
-            "{24740920}": "{59eb13a5}",
-            "{6730a680}": "{17ea6b7b}",
+            "Jade_Evelynn_P_CameraBoundVFX": "{59eb13a5}",
+            "Jade_Evelynn_P_Charm_buf": "{17ea6b7b}",
             "{cd0c3853}": "{e22ea3ee}",
             "{58863c21}": "{a001448a}",
-            "{77353434}": "{35e9c6eb}",
-            "{0145a2d5}": "{690fa9aa}",
-            "{b7204e98}": "{f4745813}",
-            "{881b7862}": "{4998dc19}",
+            "Jade_Evelynn_P_Pulse": "{35e9c6eb}",
+            "Jade_Evelynn_Q_Beam": "{690fa9aa}",
+            "Jade_Evelynn_Q_Beam_Return": "{f4745813}",
+            "Jade_Evelynn_Q_Hatespike_Cas": "{4998dc19}",
             "{725e92cb}": "{3185f448}",
-            "{c7f47aac}": "{1f9486bb}",
-            "{73c41898}": "{4eedcabd}",
+            "Jade_Evelynn_Q_HateSpike_Mis": "Characters/Jade_Evelynn/Skins/Skin27/Particles/Jade_Evelynn_Skin27_Q_HateSpike_Mis",
+            "Jade_Evelynn_R_Activate": "{4eedcabd}",
             "{b0575ad8}": "{aad18593}",
             "{0abd627c}": "{f2ef7961}",
             "{0057226d}": "{37912916}",
             "{31613763}": "{91921d0a}",
-            "{0afb67b2}": "{624e350d}",
-            "{7efc7136}": "{20cf2615}",
+            "Jade_Evelynn_W_Fizz_Mark_Decay": "{624e350d}",
+            "Jade_Evelynn_W_Mark_Cook": "{20cf2615}",
             "{68ae62a4}": "{eb72c197}",
             "{60853222}": "{ec72c32a}",
             "{a3ccbd83}": "{73629b1a}",
-            "{4489043d}": "{d631d4e6}",
-            "{a25a6368}": "{9cb24a27}",
+            "Jade_Evelynn_E_Tar": "{d631d4e6}",
+            "Jade_Evelynn_Q_HateSpike_tar": "{9cb24a27}",
             "{5fa05ace}": "{255ebdf5}",
             "{9ebb143c}": "{41ac53cb}",
             "{c8f00636}": "{0bf75e8c}",
-            "{f0fdc064}": "{7e9f0beb}",
+            "Jade_Evelynn_R_Tar": "{7e9f0beb}",
             "{1d894493}": "{a2ec0d62}",
-            "{e697829d}": "{bbe24f40}",
+            "Jade_Evelynn_Q_Mis": "{bbe24f40}",
             "{2a2a4a5c}": "{f1d096b9}",
             "{a8e63917}": "{0d1a6f82}",
             "{1b03dd45}": "{8bece688}",
             "{21fd9594}": "{854bfbab}",
             "{e5c133c1}": "{ff7f68a9}",
             "{86586a6b}": "{bba96b07}",
-            "{e18827c4}": "{83934297}",
+            "Jade_Evelynn_R_Landing": "{83934297}",
             "{9db8c0de}": "{c5427c45}",
             "{51aed331}": "{b0c2c1bc}",
-            "{e20de63f}": "{f296a830}",
-            "{ea5cf414}": "{730f4bd1}",
-            "{05d66465}": "{6056c100}",
-            "{7c71041d}": "{f36a9904}",
-            "{f34f462f}": "{2e79fb2e}",
-            "{12bb2041}": "{1d081810}",
+            "Jade_Evelynn_Q_Cas": "{f296a830}",
+            "Jade_Evelynn_W_Mark_Cook_Ground": "{730f4bd1}",
+            "Jade_Evelynn_Q_Mis_Linger": "{6056c100}",
+            "Jade_Evelynn_P_Stealth_Head": "{f36a9904}",
+            "Jade_Evelynn_P_Stealth_L_Hand": "{2e79fb2e}",
+            "Jade_Evelynn_P_Stealth_R_Hand": "{1d081810}",
             "{1bd1aa74}": "{7eec5929}",
             "{55285c8a}": "{d333f489}",
-            "{bc577932}": "{32dd9115}",
-            "{0cdb51ad}": "{e34ae024}",
+            "Jade_Evelynn_W_Directional_Indicator": "{32dd9115}",
+            "Jade_Evelynn_W_enemy_screen": "{e34ae024}",
             "{55774163}": "{a0292484}",
-            "{30945c67}": "{b6550222}",
+            "Jade_Evelynn_P_Stealth_Exit": "{b6550222}",
             "{8f61aa7b}": "{2a77c1d8}",
-            "{e9cea27f}": "{4172fd46}",
-            "{0dac605c}": "{6bf11f6b}",
-            "{8d9f63a8}": "{99a777ab}",
-            "{8dbd5e17}": "{967b8620}",
-            "{dbdb63b1}": "{339a039a}",
-            "{8e7ec18c}": "{0c105c97}",
+            "Jade_Evelynn_W_Tar": "{4172fd46}",
+            "Jade_Evelynn_E_BackflipSwipe": "{6bf11f6b}",
+            "Jade_Evelynn_E_Empowered_Tar": "{99a777ab}",
+            "Jade_Evelynn_E_Empowered_Trail": "{967b8620}",
+            "Jade_Evelynn_Q_Tar": "{339a039a}",
+            "Jade_Evelynn_W_Heart_Break": "{0c105c97}",
             "{49bb4744}": "{69f4c62f}",
             "{f7dbc10e}": "{e42136f1}",
             "{a95d6ee1}": "{85140c7d}",
-            "{86706315}": "{f467b352}",
-            "{2cda1b64}": "{5c83b367}",
-            "{7771a125}": "{4ec51434}",
+            "Jade_Evelynn_W_Cas_Mis": "{f467b352}",
+            "Jade_Evelynn_Passive_Hair": "{5c83b367}",
+            "Jade_Evelynn_Q_Sphere_Explode": "{4ec51434}",
             "{7d4a7dbe}": "{0c873231}",
             "{7cac0f57}": "{ea85062a}",
             "{dbd3456c}": "{83dca02f}",
@@ -4756,7 +4556,7 @@
             "{50928034}": "{c0c78477}",
             "{c8aa5806}": "{42ae0ad8}",
             "{2fb8d8b9}": "{cd8b42f4}",
-            "{3da713e0}": "{33156bab}",
+            "Jade_Evelynn_E_EmpoweredBody": "Characters/Jade_Evelynn/Skins/Skin27/Particles/Jade_Evelynn_Skin27_E_EmpoweredBody",
             "{3dafc3e1}": "{d6fe6e3c}",
             "{a643a301}": "{79767700}",
             "{55fe5c37}": "{2b59c93e}",

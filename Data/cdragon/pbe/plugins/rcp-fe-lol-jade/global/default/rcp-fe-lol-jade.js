@@ -12781,7 +12781,9 @@
                     CURRENCY: "jade_inventory_type_currency",
                     EMOTE: "jade_inventory_type_emote",
                     HEXTECH_CRAFTING: "jade_inventory_type_loot",
+                    JADE_RUNE_PAGE: "jade_inventory_type_rune_page",
                     JADE_RUNE_SLOT: "jade_inventory_type_rune_slot",
+                    PORTRAIT: "jade_inventory_type_portrait",
                     REGALIA_BANNER: "jade_inventory_type_banner",
                     SKIN_BORDER: "jade_inventory_type_skin_border",
                     SKIN_PERMANENT: "jade_inventory_type_champion_skin",
@@ -13879,10 +13881,10 @@
                     },
                     learnMore() {
                         o.MASTERY_SFX.buttonPress.play();
-                        const e = this.get("championData.name");
+                        const e = this.get("championData.id");
                         if (!e) return;
                         const t = document.documentElement.lang || "en_US";
-                        window.open("https://universe.leagueoflegends.com/" + t + "/champion/" + e + "/", "_blank")
+                        window.open("https://www.leagueoflegends.com/" + t + "/classic/champions/" + e + "/", "_blank")
                     },
                     prevSkin() {
                         const e = this.get("skins");
