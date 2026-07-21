@@ -350,7 +350,7 @@
                 },
                 {
                     "id": 60055050,
-                    "name": "妖精宮殿 卡特蓮娜(金黃)",
+                    "name": "妖精宮殿 卡特蓮娜(石英黃)",
                     "contentId": "82db7e0a-1ebc-4973-bdb2-dccf8ff8db22",
                     "relatedPrimeContentId": "b3d4167d-e3c4-48a7-bd04-2563f39a9ad3",
                     "relatedPrimeItemId": 55050,
@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "卡特蓮娜參與擊殺英雄時，獲得額外金錢，且冷卻時間縮短15秒。"
+        "description": "擊殺英雄或助攻可使卡特蓮娜的技能冷卻時間減少15秒。"
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡特蓮娜投擲一把匕首，匕首會在敵軍之間彈射，造成魔法傷害。",
-            "dynamicDescription": "投擲一把匕首，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。匕首會額外彈射@MaxBounces@次，每彈射一次，傷害降低10%。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "投擲一把匕首，造成<magicDamage>@TotalDamage@</magicDamage>魔法傷害。匕首會彈射至@MaxBounces@名最近的敵軍，每次彈射造成的傷害都會減少10%。<br><br>匕首命中的敵軍會被標記@MarkDuration@秒。卡特蓮娜的普攻或技能會消耗標記，造成<magicDamage>@TotalDamageMark@</magicDamage>額外魔法傷害。@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "殺手本能",
+            "name": "不祥氛圍",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "卡特蓮娜下一個基礎技能會獲得額外效果。",
-            "dynamicDescription": "<spellPassive>被動</spellPassive>：卡特蓮娜的技能和普攻會額外造成@TotalDamage@傷害。<br><br><spellActive>主動：</spellActive>卡特蓮娜下一次基礎技能會獲得額外效果。<li><spellName>彈射利刃</spellName>：對每個目標造成全額傷害，並施加<keyWord>重創</keyWord>，持續@QHealingReductionDuration@秒。<li><spellName>瞬步</spellName>：卡特蓮娜獲得@EDamageReduction@%傷害減免，持續@EDamageReductionDuration@秒。@SpellModifierDescriptionAppend@",
+            "description": "卡特蓮娜讓匕首旋繞周身，對範圍內所有敵軍造成魔法傷害。若命中敵方英雄，卡特蓮娜會在短時間內提升跑速。",
+            "dynamicDescription": "讓匕首旋繞周身，造成@TotalDamage@魔法傷害。若命中敵方英雄，卡特蓮娜增加@Haste*100@%<speed>跑速</speed>，持續@BuffDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡特蓮娜瞬移到目標的位置，並獲得數秒的傷害減免效果。若目標為敵軍，則會造成傷害。",
-            "dynamicDescription": "移動到目標的位置。若目標為敵軍，則造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "移動到目標的位置。若目標為敵軍，則造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br>卡特蓮娜施放瞬步後，@DamageReductionDuration@秒內承受的傷害減少@DamageReduction@%。@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "無消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡特蓮娜化身為刀刃旋風，最多對三名鄰近英雄迅速投擲匕首。",
-            "dynamicDescription": "化身為刀刃旋風，對最靠近的3名敵方英雄投擲匕首，2秒內造成<magicDamage>@DamageCalcTooltipOnly@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "化身為刀刃旋風，對最靠近的3名敵方英雄投擲匕首，2.5秒內造成<magicDamage>@DamageCalcTooltipOnly@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

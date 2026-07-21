@@ -7,6 +7,549 @@
         "mName": "Jade_SonaRAbility",
         "__type": "AbilityObject"
     },
+    "{0a9af1f7}": {
+        "ObjectName": "Jade_SonaRDamage",
+        "mScriptName": "Jade_SonaRDamage",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_Crescendo.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                170.0,
+                170.0,
+                150.0,
+                130.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
+            ],
+            "castRadius": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 170.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mTargetHeightAugment": -50.0,
+                    "mOffsetInitialTargetHeight": -50.0,
+                    "mStartBoneName": "WEAPON",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 8.5,
+            "missileSpeed": 2400.0,
+            "mMissileEffectKey": "Jade_Sona_R_Missile",
+            "mLineWidth": 140.0,
+            "mHitEffectKey": "Jade_Sona_R_tar_flash",
+            "bHaveHitBone": true,
+            "mHitBoneName": "head",
+            "mFloatVarsDecimals": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Sona_SonaR_OnCast",
+                "13": "Play_sfx_Sona_SonaR_OnHit",
+                "16": "Play_sfx_Sona_SonaR_OnMissileLaunch",
+                "18": "Play_sfx_Sona_SonaR_OnBuffActivate",
+                "19": "Play_sfx_Sona_SonaR_OnBuffDeactivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                170.0,
+                                170.0,
+                                170.0,
+                                170.0,
+                                170.0,
+                                170.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_SonaRDamage",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_SonaR_Jade_Name",
+                    "keyTooltip": "Buff_Jade_SonaRAbility_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Sona/Spells/Jade_SonaRAbility/Jade_SonaR": {
+        "ObjectName": "Jade_SonaR",
+        "mScriptName": "Jade_SonaR",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        50.0,
+                        150.0,
+                        250.0,
+                        350.0,
+                        450.0,
+                        550.0,
+                        650.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_Crescendo.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                170.0,
+                170.0,
+                150.0,
+                130.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "Cooldown": {
+                "values": [
+                    190.0,
+                    170.0,
+                    150.0,
+                    130.0,
+                    110.0,
+                    90.0,
+                    70.0
+                ],
+                "{0a3e0478}": 190.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
+            ],
+            "castRadius": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 170.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mTargetHeightAugment": -50.0,
+                    "mOffsetInitialTargetHeight": -50.0,
+                    "mStartBoneName": "WEAPON",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 8.5,
+            "missileSpeed": 2400.0,
+            "mMissileEffectKey": "Jade_Sona_R_Missile",
+            "mLineWidth": 140.0,
+            "mHitEffectKey": "Jade_Sona_R_tar_flash",
+            "bHaveHitBone": true,
+            "mHitBoneName": "head",
+            "mFloatVarsDecimals": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Sona_SonaR_OnCast",
+                "13": "Play_sfx_Sona_SonaR_OnHit",
+                "16": "Play_sfx_Sona_SonaR_OnMissileLaunch",
+                "18": "Play_sfx_Sona_SonaR_OnBuffActivate",
+                "19": "Play_sfx_Sona_SonaR_OnBuffDeactivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_SonaR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_SonaR_Jade_Name",
+                        "keySummary": "Spell_SonaR_Jade_Summary",
+                        "keyTooltip": "Spell_SonaR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                170.0,
+                                170.0,
+                                170.0,
+                                170.0,
+                                170.0,
+                                170.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_SonaR",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_SonaR_Jade_Name",
+                    "keyTooltip": "Buff_SonaR_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
     "Characters/Jade_Sona/Spells/Jade_SonaEAbility": {
         "mRootSpell": "Characters/Jade_Sona/Spells/Jade_SonaEAbility/Jade_SonaE",
         "mChildSpells": [
@@ -79,7 +622,7 @@
             ],
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_SongofDiscordGold.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_SongofDiscordGold.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -152,7 +695,7 @@
             "castConeDistance": 100.0,
             "castFrame": 8.5,
             "missileSpeed": 1500.0,
-            "mHitEffectKey": "{c1d3045b}",
+            "mHitEffectKey": "Jade_Sona_Z_tar_blue",
             "mFloatVarsDecimals": [
                 -1,
                 -1,
@@ -270,7 +813,7 @@
             "mAffectsTypeFlags": 8191,
             "mAnimationName": "Crit",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.project_jade.dds"
+                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.dds"
             ],
             "{11704a2b}": 0.4236000180244446,
             "cooldownTime": [
@@ -342,7 +885,7 @@
             "mCastType": 1,
             "castFrame": 11.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{3c1e9fb5}",
+            "mMissileEffectKey": "Jade_Sona_E_Powerchord_Mis",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -424,7 +967,7 @@
             ],
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_SongofDiscord.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_SongofDiscord.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -496,7 +1039,7 @@
             "castConeDistance": 100.0,
             "castFrame": 8.5,
             "missileSpeed": 1500.0,
-            "mHitEffectKey": "{c1d3045b}",
+            "mHitEffectKey": "Jade_Sona_Z_tar_blue",
             "mFloatVarsDecimals": [
                 -1,
                 -1,
@@ -611,7 +1154,7 @@
         "mScriptName": "Jade_SonaE_Haste",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_SongofDiscord.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_SongofDiscord.dds"
             ],
             "SpellEventToAudioEventSuffix": {
                 "18": "Play_sfx_Sona_SonaEHaste_buffactivate"
@@ -643,13 +1186,13 @@
                 {
                     "name": "MSBoost",
                     "values": [
-                        0.0,
-                        4.0,
+                        5.0,
                         8.0,
-                        12.0,
-                        16.0,
+                        11.0,
+                        14.0,
+                        17.0,
                         20.0,
-                        24.0
+                        23.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -667,22 +1210,22 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MoveSpeedMod",
+                    "name": "ActiveSpeedDuration",
                     "values": [
-                        0.05999999865889549,
-                        0.07999999821186066,
-                        0.10000000149011612,
-                        0.11999999731779099,
-                        0.14000000059604645,
-                        0.1599999964237213,
-                        0.18000000715255737
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_SongofDiscord.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_SongofDiscord.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -754,7 +1297,7 @@
             "castConeDistance": 100.0,
             "castFrame": 8.5,
             "missileSpeed": 1500.0,
-            "mHitEffectKey": "{c1d3045b}",
+            "mHitEffectKey": "Jade_Sona_Z_tar_blue",
             "mFloatVarsDecimals": [
                 -1,
                 -1,
@@ -999,7 +1542,7 @@
             "mAffectsTypeFlags": 8191,
             "mAnimationName": "Crit",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.project_jade.dds"
+                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.dds"
             ],
             "{11704a2b}": 0.4236000180244446,
             "cooldownTime": [
@@ -1071,7 +1614,7 @@
             "mCastType": 1,
             "castFrame": 11.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{3c1e9fb5}",
+            "mMissileEffectKey": "Jade_Sona_E_Powerchord_Mis",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "__type": "SpellDataResource"
@@ -1276,7 +1819,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChord.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChord.dds"
             ],
             "castRange": [
                 0.0,
@@ -1372,7 +1915,7 @@
             "flags": 4,
             "mAffectsTypeFlags": 8193,
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.project_jade.dds"
+                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.dds"
             ],
             "{11704a2b}": 0.42500001192092896,
             "{f26881a0}": 0.7999999523162842,
@@ -1456,172 +1999,8 @@
         "ObjectName": "Jade_SonaPassive_Debuff",
         "mScriptName": "Jade_SonaPassive_Debuff",
         "mSpell": {
-            "DataValues": [
-                {
-                    "name": "TempoDuration",
-                    "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PowerChordPassiveCountMax",
-                    "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "AccelerandoAHPerStack",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "AccelerandoCap",
-                    "values": [
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "AccelerandoUltCDR",
-                    "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellDataValue"
-                }
-            ],
-            "DataValuesModeOverride": {
-                "ARAM": {
-                    "SpellDataValues": [
-                        {
-                            "name": "AccelerandoCap",
-                            "values": [
-                                30.0,
-                                30.0,
-                                30.0,
-                                30.0,
-                                30.0,
-                                30.0,
-                                30.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "AccelerandoUltCDR",
-                            "values": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                },
-                "{bffdf499}": {
-                    "SpellDataValues": [
-                        {
-                            "name": "AccelerandoCap",
-                            "values": [
-                                30.0,
-                                30.0,
-                                30.0,
-                                30.0,
-                                30.0,
-                                30.0,
-                                30.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "AccelerandoUltCDR",
-                            "values": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
-            "mSpellCalculations": {
-                "PowerChordDamage": {
-                    "mFormulaParts": [
-                        {
-                            "mLevel1Value": 20.0,
-                            "mInitialBonusPerLevel": 10.0,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 9,
-                                    "mBonusPerLevelAtAndAfter": 15.0,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 0.20000000298023224,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "AccelerandoAHCurrent": {
-                    "mFormulaParts": [
-                        {
-                            "mBuffName": "{f6997c04}",
-                            "mDataValue": "AccelerandoAHPerStack",
-                            "__type": "BuffCounterByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                }
-            },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.dds"
             ],
             "castRange": [
                 0.0,
@@ -1663,19 +2042,6 @@
                 2,
                 2
             ],
-            "mClientData": {
-                "mTooltipData": {
-                    "mObjectName": "Jade_SonaPassive_Debuff",
-                    "mFormat": "{476ec0b8}",
-                    "mLocKeys": {
-                        "keyName": "Spell_SonaPassive_Jade_Name",
-                        "keySummary": "Spell_SonaPassive_Jade_Summary",
-                        "keyTooltip": "Spell_SonaPassive_Jade_Tooltip"
-                    },
-                    "__type": "TooltipInstanceSpell"
-                },
-                "__type": "SpellDataResourceClient"
-            },
             "__type": "SpellDataResource"
         },
         "mBuff": {
@@ -1708,19 +2074,6 @@
         "mSpell": {
             "DataValues": [
                 {
-                    "name": "TempoDuration",
-                    "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "PowerChordPassiveCountMax",
                     "values": [
                         3.0,
@@ -1734,41 +2087,54 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "AccelerandoAHPerStack",
+                    "name": "DamageDebuff",
                     "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "AccelerandoCap",
+                    "name": "DebuffDuration",
                     "values": [
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "AccelerandoUltCDR",
+                    "name": "GlobalCooldown",
                     "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AuraPersistDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1777,57 +2143,16 @@
                 "PowerChordDamage": {
                     "mFormulaParts": [
                         {
-                            "values": [
-                                12.0,
-                                24.0,
-                                36.0,
-                                48.0,
-                                60.0,
-                                72.0,
-                                84.0,
-                                96.0,
-                                108.0,
-                                120.0,
-                                132.0,
-                                144.0,
-                                156.0,
-                                168.0,
-                                180.0,
-                                192.0,
-                                204.0,
-                                216.0,
-                                228.0,
-                                240.0,
-                                252.0,
-                                264.0,
-                                276.0,
-                                288.0,
-                                300.0,
-                                312.0,
-                                324.0,
-                                336.0,
-                                348.0,
-                                360.0,
-                                372.0
-                            ],
-                            "__type": "ByCharLevelFormulaCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "AccelerandoAHCurrent": {
-                    "mFormulaParts": [
-                        {
-                            "mBuffName": "{f6997c04}",
-                            "mDataValue": "AccelerandoAHPerStack",
-                            "__type": "BuffCounterByNamedDataValueCalculationPart"
+                            "mStartValue": 36.0,
+                            "mEndValue": 240.0,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.dds"
             ],
             "castRange": [
                 0.0,
@@ -2077,7 +2402,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChord_green.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChord_green.dds"
             ],
             "castRange": [
                 0.0,
@@ -2180,7 +2505,7 @@
             "mAffectsTypeFlags": 8191,
             "mAnimationName": "Crit",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.project_jade.dds"
+                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.dds"
             ],
             "{11704a2b}": 0.4236000180244446,
             "cooldownTime": [
@@ -2285,7 +2610,7 @@
         "mScriptName": "Jade_SonaW_Shield",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_AriaofPerseverance.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_AriaofPerseverance.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -2382,7 +2707,7 @@
             },
             "mCastType": 1,
             "missileSpeed": 1300.0,
-            "mMissileEffectKey": "{c74b83e9}",
+            "mMissileEffectKey": "Jade_Sona_W_Mis",
             "selectionPriority": 1,
             "SpellEventToAudioEventSuffix": {
                 "16": "Play_sfx_Sona_SonaWMissile_OnMissileLaunch",
@@ -2400,7 +2725,7 @@
             "mAffectsTypeFlags": 8191,
             "mAnimationName": "Crit",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.project_jade.dds"
+                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.dds"
             ],
             "{11704a2b}": 0.4236000180244446,
             "cooldownTime": [
@@ -2565,7 +2890,7 @@
             },
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_AriaofPerseverance.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_AriaofPerseverance.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2774,19 +3099,6 @@
             ],
             "DataValues": [
                 {
-                    "name": "ARMRBoost",
-                    "values": [
-                        0.0,
-                        3.0,
-                        6.0,
-                        9.0,
-                        12.0,
-                        15.0,
-                        18.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "Heal",
                     "values": [
                         5.0,
@@ -2796,6 +3108,32 @@
                         105.0,
                         130.0,
                         155.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ARMRBoost",
+                    "values": [
+                        4.0,
+                        8.0,
+                        12.0,
+                        16.0,
+                        20.0,
+                        24.0,
+                        28.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -2808,8 +3146,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.5,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2817,7 +3155,7 @@
             },
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_AriaofPerseverance.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_AriaofPerseverance.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2908,14 +3246,14 @@
             ],
             "{210f9ec0}": {
                 "values": [
-                    60.0,
                     65.0,
                     70.0,
                     75.0,
                     80.0,
-                    85.0
+                    85.0,
+                    90.0
                 ],
-                "{0a3e0478}": 60.0,
+                "{0a3e0478}": 65.0,
                 "__type": "{630af303}"
             },
             "mTargetingTypeData": {
@@ -2941,18 +3279,13 @@
                             "Elements": [
                                 {
                                     "type": "ARMRBoost",
-                                    "typeIndex": 1,
+                                    "typeIndex": 4,
                                     "nameOverride": "Spell_ListType_SonaW_Jade_Tooltip",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "ARMRBoost",
-                                    "typeIndex": 4,
-                                    "nameOverride": "Spell_ListType_ArmorandMagicResist",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "Heal",
+                                    "nameOverride": "Spell_ListType_Heal",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -3090,7 +3423,7 @@
             },
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_AriaofPerseveranceGold.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_AriaofPerseveranceGold.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -3304,7 +3637,7 @@
             "mAffectsTypeFlags": 8127,
             "mAnimationName": "Crit",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.project_jade.dds"
+                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.dds"
             ],
             "{11704a2b}": 0.4236000180244446,
             "cooldownTime": [
@@ -3478,7 +3811,7 @@
             },
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_HymnofValor.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_HymnofValor.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -3540,8 +3873,8 @@
             "castConeDistance": 100.0,
             "castFrame": 8.5,
             "missileSpeed": 1500.0,
-            "mHitEffectKey": "{c1d3045b}",
-            "mAfterEffectKey": "{d029d14b}",
+            "mHitEffectKey": "Jade_Sona_Z_tar_blue",
+            "mAfterEffectKey": "Jade_Sona_Z_blood_slash",
             "mFloatVarsDecimals": [
                 -1,
                 -1,
@@ -3682,7 +4015,7 @@
             "mAffectsTypeFlags": 6154,
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Q.project_jade.dds"
+                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Q.dds"
             ],
             "{11704a2b}": 0.42500001192092896,
             "{f26881a0}": 0.7999999523162842,
@@ -3765,7 +4098,7 @@
             },
             "mCastType": 1,
             "missileSpeed": 1300.0,
-            "mMissileEffectKey": "{4c9f973f}",
+            "mMissileEffectKey": "Jade_Sona_Q_Mis",
             "mHitEffectKey": "Jade_Sona_Q_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
@@ -3852,7 +4185,7 @@
             },
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_HymnofValorGold.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_HymnofValorGold.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -3915,8 +4248,8 @@
             "castConeDistance": 100.0,
             "castFrame": 8.5,
             "missileSpeed": 1500.0,
-            "mHitEffectKey": "{c1d3045b}",
-            "mAfterEffectKey": "{d029d14b}",
+            "mHitEffectKey": "Jade_Sona_Z_tar_blue",
+            "mAfterEffectKey": "Jade_Sona_Z_blood_slash",
             "mFloatVarsDecimals": [
                 -1,
                 -1,
@@ -4057,7 +4390,7 @@
             "mAffectsTypeFlags": 8127,
             "mAnimationName": "Crit",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.project_jade.dds"
+                "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.dds"
             ],
             "{11704a2b}": 0.4236000180244446,
             "cooldownTime": [
@@ -4179,19 +4512,6 @@
             ],
             "DataValues": [
                 {
-                    "name": "APADBoost",
-                    "values": [
-                        0.0,
-                        4.0,
-                        8.0,
-                        12.0,
-                        16.0,
-                        20.0,
-                        24.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "DamageMissile",
                     "values": [
                         10.0,
@@ -4201,6 +4521,32 @@
                         210.0,
                         260.0,
                         310.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APADBoost",
+                    "values": [
+                        4.0,
+                        6.0,
+                        8.0,
+                        10.0,
+                        12.0,
+                        14.0,
+                        16.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -4218,20 +4564,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "{f9c2333e}": {
-                "ARAM": {
-                    "value": [
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
@@ -4240,8 +4572,8 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.5,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -4249,7 +4581,7 @@
             },
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_HymnofValor.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_HymnofValor.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -4313,8 +4645,8 @@
             "castConeDistance": 100.0,
             "castFrame": 8.5,
             "missileSpeed": 1500.0,
-            "mHitEffectKey": "{c1d3045b}",
-            "mAfterEffectKey": "{d029d14b}",
+            "mHitEffectKey": "Jade_Sona_Z_tar_blue",
+            "mAfterEffectKey": "Jade_Sona_Z_blood_slash",
             "mFloatVarsDecimals": [
                 -1,
                 -1,
@@ -4343,14 +4675,14 @@
             ],
             "{210f9ec0}": {
                 "values": [
-                    60.0,
                     65.0,
                     70.0,
                     75.0,
                     80.0,
-                    85.0
+                    85.0,
+                    90.0
                 ],
-                "{0a3e0478}": 60.0,
+                "{0a3e0478}": 65.0,
                 "__type": "{630af303}"
             },
             "mTargetingTypeData": {
@@ -4466,341 +4798,6 @@
         },
         "__type": "SpellObject"
     },
-    "Characters/Jade_Sona/Spells/Jade_SonaRAbility/Jade_SonaR": {
-        "ObjectName": "Jade_SonaR",
-        "mScriptName": "Jade_SonaR",
-        "mSpell": {
-            "mAffectsTypeFlags": 6154,
-            "mSpellTags": [
-                "Trait_Ultimate",
-                "Trait_ImmobilizingCCSpell"
-            ],
-            "DataValues": [
-                {
-                    "name": "BaseDamage",
-                    "values": [
-                        50.0,
-                        150.0,
-                        250.0,
-                        350.0,
-                        450.0,
-                        550.0,
-                        650.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "StunDuration",
-                    "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellDataValue"
-                }
-            ],
-            "mSpellCalculations": {
-                "TotalDamage": {
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "BaseDamage",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mCoefficient": 0.699999988079071,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                }
-            },
-            "mAnimationName": "Spell4",
-            "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Sona_Crescendo.project_jade.dds"
-            ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
-            "cooldownTime": [
-                170.0,
-                170.0,
-                150.0,
-                130.0,
-                100.0,
-                100.0,
-                100.0
-            ],
-            "Cooldown": {
-                "values": [
-                    170.0,
-                    170.0,
-                    150.0,
-                    130.0,
-                    100.0,
-                    100.0,
-                    100.0
-                ],
-                "__type": "{0a0eddc9}"
-            },
-            "mCantCancelWhileWindingUp": true,
-            "bHaveHitEffect": true,
-            "castRange": [
-                1000.0,
-                1000.0,
-                1000.0,
-                1000.0,
-                1000.0,
-                1000.0,
-                1000.0
-            ],
-            "{0e1136d1}": {
-                "values": [
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0,
-                    1000.0
-                ],
-                "{0a3e0478}": 1000.0,
-                "__type": "{0a0eddc9}"
-            },
-            "castRangeDisplayOverride": [
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0,
-                900.0
-            ],
-            "castRadius": [
-                600.0,
-                600.0,
-                600.0,
-                600.0,
-                600.0,
-                600.0,
-                600.0
-            ],
-            "castConeDistance": 100.0,
-            "mMissileSpec": {
-                "mMissileWidth": 170.0,
-                "movementComponent": {
-                    "mUseHeightOffsetAtEnd": true,
-                    "mTracksTarget": false,
-                    "mTargetHeightAugment": -50.0,
-                    "mOffsetInitialTargetHeight": -50.0,
-                    "mStartBoneName": "WEAPON",
-                    "mProjectTargetToCastRange": true,
-                    "mSpeed": 2400.0,
-                    "__type": "FixedSpeedMovement"
-                },
-                "heightSolver": {
-                    "__type": "BlendedLinearHeightSolver"
-                },
-                "verticalFacing": {
-                    "__type": "VerticalFacingFaceTarget"
-                },
-                "behaviors": [
-                    {
-                        "__type": "CastOnHit"
-                    },
-                    {
-                        "__type": "DestroyOnMovementComplete"
-                    }
-                ],
-                "__type": "MissileSpecification"
-            },
-            "mCastType": 3,
-            "castFrame": 8.5,
-            "missileSpeed": 2400.0,
-            "mMissileEffectKey": "Jade_Sona_R_Missile",
-            "mLineWidth": 140.0,
-            "mHitEffectKey": "{b1a639a7}",
-            "bHaveHitBone": true,
-            "mHitBoneName": "head",
-            "mFloatVarsDecimals": [
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1,
-                -1
-            ],
-            "mana": [
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0
-            ],
-            "{210f9ec0}": {
-                "values": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
-                ],
-                "{0a3e0478}": 100.0,
-                "__type": "{630af303}"
-            },
-            "mTargetingTypeData": {
-                "__type": "Direction"
-            },
-            "SpellEventToAudioEventSuffix": {
-                "12": "Play_sfx_Sona_SonaR_OnCast",
-                "13": "Play_sfx_Sona_SonaR_OnHit",
-                "16": "Play_sfx_Sona_SonaR_OnMissileLaunch",
-                "18": "Play_sfx_Sona_SonaR_OnBuffActivate",
-                "19": "Play_sfx_Sona_SonaR_OnBuffDeactivate"
-            },
-            "mCastingBreaksStealth": true,
-            "mClientData": {
-                "mTooltipData": {
-                    "mObjectName": "Jade_SonaR",
-                    "mFormat": "{d7c27163}",
-                    "mLocKeys": {
-                        "keyName": "Spell_SonaR_Jade_Name",
-                        "keySummary": "Spell_SonaR_Jade_Summary",
-                        "keyTooltip": "Spell_SonaR_Jade_Tooltip"
-                    },
-                    "mLists": {
-                        "LevelUp": {
-                            "levelCount": 3,
-                            "Elements": [
-                                {
-                                    "type": "BaseDamage",
-                                    "typeIndex": 1,
-                                    "nameOverride": "Spell_ListType_Damage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "Cooldown",
-                                    "__type": "TooltipInstanceListElement"
-                                }
-                            ],
-                            "__type": "TooltipInstanceList"
-                        }
-                    },
-                    "__type": "TooltipInstanceSpell"
-                },
-                "mTargeterDefinitions": [
-                    {
-                        "hideWithLineIndicator": true,
-                        "useCasterBoundingBox": false,
-                        "__type": "TargeterDefinitionRange"
-                    },
-                    {
-                        "endLocator": {
-                            "basePosition": 3,
-                            "__type": "DrawablePositionLocator"
-                        },
-                        "lineStopsAtEndPosition": false,
-                        "lineWidth": {
-                            "mPerLevelValues": [
-                                170.0,
-                                170.0,
-                                170.0,
-                                170.0,
-                                170.0,
-                                170.0
-                            ],
-                            "mValueType": 2,
-                            "__type": "FloatPerSpellLevel"
-                        },
-                        "__type": "TargeterDefinitionLine"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
-        },
-        "mBuff": {
-            "mTooltipData": {
-                "mObjectName": "Jade_SonaR",
-                "mFormat": "{b34f999a}",
-                "mLocKeys": {
-                    "keyName": "Spell_SonaR_Jade_Name",
-                    "keyTooltip": "Buff_SonaR_Jade_Tooltip"
-                },
-                "__type": "TooltipInstanceBuff"
-            },
-            "__type": "BuffData"
-        },
-        "BotData": {
-            "DamageTag": 1,
-            "{6d548702}": {
-                "mFormulaParts": [
-                    {
-                        "mSpellCalculationKey": "TotalDamage",
-                        "__type": "{f3cbe7b2}"
-                    }
-                ],
-                "__type": "GameCalculation"
-            },
-            "{ec17e271}": [
-                {
-                    "EffectTag": 16384,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mDataValue": "StunDuration",
-                                "__type": "NamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                },
-                {
-                    "EffectTag": 4096,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mDataValue": "StunDuration",
-                                "__type": "NamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                },
-                {
-                    "EffectTag": 2048,
-                    "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mDataValue": "StunDuration",
-                                "__type": "NamedDataValueCalculationPart"
-                            }
-                        ],
-                        "__type": "GameCalculation"
-                    },
-                    "__type": "{b09016f6}"
-                }
-            ],
-            "__type": "BotsSpellData"
-        },
-        "__type": "SpellObject"
-    },
     "Characters/Jade_Sona/Spells/Jade_SonaBasicAttack": {
         "ObjectName": "Jade_SonaBasicAttack",
         "mScriptName": "Jade_SonaBasicAttack",
@@ -4889,7 +4886,7 @@
             "mCastType": 1,
             "castFrame": 11.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{a13ea139}",
+            "mMissileEffectKey": "Jade_Sona_BA_Mis",
             "mHitEffectKey": "Jade_Sona_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -5070,7 +5067,7 @@
             "mCastType": 1,
             "castFrame": 11.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{a13ea139}",
+            "mMissileEffectKey": "Jade_Sona_BA_Mis",
             "mHitEffectKey": "Jade_Sona_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -5178,7 +5175,7 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{4f9d4766}",
+            "mMissileEffectKey": "Jade_Sona_CritAttack_Cas",
             "mHitEffectKey": "Jade_Sona_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -5204,68 +5201,10 @@
         "ScriptName": "charscriptJade_Sona",
         "path": "{0a307363}",
         "sequences": {
-            "{eb530788}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "28c2144e-e617-4689-9fed-a31b906bebbc",
-                        "Condition": null,
-                        "Invert": true,
-                        "Sequence": {
-                            "blocks": [
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
-                ],
-                "__type": "RootScriptSequence"
-            },
             "{6a7835b9}": {
                 "blocks": [
                     null,
                     null
-                ],
-                "__type": "RootScriptSequence"
-            },
-            "{edb2eab3}": {
-                "blocks": [
-                    {
-                        "{d851ffa3}": "59b50104-af14-441d-b1e5-505e45eeecf5",
-                        "Condition": null,
-                        "Sequence": {
-                            "blocks": [
-                                null,
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "fd4b36d5-43b8-4a61-b023-49b4aa0b3dc0",
-                        "Condition": null,
-                        "Sequence": {
-                            "blocks": [
-                                null,
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    },
-                    {
-                        "{d851ffa3}": "c83b2937-571c-4b24-b860-5f9c175c8963",
-                        "Condition": null,
-                        "Sequence": {
-                            "blocks": [
-                                null,
-                                null
-                            ],
-                            "__type": "ScriptSequence"
-                        },
-                        "__type": "{e524b2fc}"
-                    }
                 ],
                 "__type": "RootScriptSequence"
             },
@@ -5357,9 +5296,6 @@
                         "__type": "{e524b2fc}"
                     }
                 ],
-                "__type": "RootScriptSequence"
-            },
-            "{78e4e28e}": {
                 "__type": "RootScriptSequence"
             }
         },
@@ -7989,7 +7925,7 @@
         "passiveLuaName": "",
         "passiveToolTip": "Spell_Jade_SonaPassive_Tooltip",
         "passiveSpell": "Jade_SonaPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Sona/HUD/Icons2D/Jade_Sona_Passive_Charged.dds",
         "name": "game_character_displayname_Jade_Sona",
         "selectionHeight": 145.0,
         "selectionRadius": 110.0,

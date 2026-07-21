@@ -160,7 +160,7 @@
                     "id": 114
                 }
             ],
-            "description": "ทวิสช์เป็นนักฆ่ารับจ้างที่อาศัยอยู่ใต้ป้อมปราการแห่งซอน เขาเป็นอาชญากรที่น่าขยะแขยง ผู้ที่ทำให้เป้าหมายของเขาตกอยู่ในขยะเปียกมีพิษ เขาเฝ้ารอการจ้างอย่างใจจดใจจ่อ แทบรอไม่ไหวที่จะได้ฆ่า ขโมยและทำลายให้ได้มากที่สุดเท่าที่เขาจะทำได้"
+            "description": "Twitch เป็นนักฆ่ารับจ้างที่อาศัยอยู่ใต้ป้อมปราการแห่งซอน เขาเป็นอาชญากรที่น่าขยะแขยง ผู้ที่ทำให้เป้าหมายของเขาตกอยู่ในขยะ‍เปียกมีพิษ เขาเฝ้ารอการจ้างอย่างใจจดใจจ่อ แทบรอไม่ไหวที่จะได้ฆ่า ขโมยและทำลายให้ได้มากที่สุดเท่าที่เขาจะทำได้"
         },
         {
             "id": 60029004,
@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Classic Twitch (Vandal)",
+                    "name": "Classic Twitch (Kingpin)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Twitch จะล่องหนเป็นเวลาสั้น ๆ และได้รับความเร็วเคลื่อนที่เพิ่มขึ้นขณะที่ล่องหน โดย Twitch จะได้รับความเร็วโจมตีเป็นเวลาสั้น ๆ เมื่อออกจากการล่องหน",
-            "dynamicDescription": "<mainText>หลังจากผ่านไป @MaxFadeTime@ วินาที Twitch จะ<keywordStealth>ล่องหน</keywordStealth> เป็นเวลา @StealthDuration@ วินาที<br><br>Twitch จะได้รับ<attackSpeed>ความเร็วโจมตี @AttackSpeedMod*100@%</attackSpeed> เป็นเวลา @AttackSpeedDuration@ วินาทีหลังออกจากการ<keywordStealth>พรางตัว</keywordStealth>",
+            "description": "Twitch ล่องหนเป็นเวลาหลายวินาที และได้รับความเร็วเคลื่อนที่เพิ่มขึ้น จากนั้นเขาจะได้รับความเร็วโจมตีหลังจากที่ออกจากการล่องหน",
+            "dynamicDescription": "หลังจากไม่ได้รับความเสียหายเป็นเวลา @MaxFadeTime@ วินาที หรือหลังจากผ่านไป @MaxDelayTime@ วินาที Twitch จะ<keywordStealth>ล่องหน</keywordStealth>เป็นเวลา @StealthDuration@ วินาที และได้รับ <speed>ความเร็วเคลื่อนที่ @MoveSpeedMod*100@%</speed><br><br>Twitch ได้รับ<attackSpeed>ความเร็วโจมตี @AttackSpeedMod*100@%</attackSpeed> เป็นเวลา @AttackSpeedDuration@ วินาทีหลัง<keywordStealth>หายตัว</keywordStealth>@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Debilitating Poison",
+            "name": "Venom Cask",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Twitch แพร่เชื้อ Debilitating Poison ใส่แชมเปี้ยนใกล้เคียงทุกตัวเพื่อสโลว์พวกเขา",
-            "dynamicDescription": "Twitch <status>สโลว์</status>แชมเปี้ยนศัตรูใกล้เคียง @SlowPercent*-100@% เป็นเวลา @Duration@ วินาที และจะสโลว์เพิ่มขึ้น @PassiveStackSlowPercent*-100@% ต่อแต่ละสแตคของ <keywordMajor>Deadly Venom</keywordMajor> (สูงสุด: @MaxSlowTooltip@)<br><br>การเพิ่มสแตค <keywordMajor>Deadly Venom</keywordMajor> หลังจากติดสถานะ<status>สโลว์</status> จะลด<speed>ความเร็วเคลื่อนที่</speed>ของเป้าหมายมากขึ้น@SpellModifierDescriptionAppend@",
+            "description": "Twitch ขว้างถังพิษที่เมื่อระเบิดออกจะติด Deadly Venom และสโลว์ศัตรูในพื้นที่",
+            "dynamicDescription": "Twitch ขว้างถังพิษที่เมื่อระเบิดออกจะติด <keywordMajor>Deadly Venom</keywordMajor> @StacksAdded@ สแตค และ <status>สโลว์</status> ศัตรู @BaseSlowAmount@% เป็นเวลา @Duration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ศัตรูใกล้เคียงทั้งหมดจะขับพิษร้ายของ Twitch ออกจากร่างกาย สร้างความเสียหายตามจำนวนสแตค",
-            "dynamicDescription": "<mainText>Twitch สร้าง<physicalDamage>ความเสียหายกายภาพ @BaseDamage@ หน่วย</physicalDamage> บวกกับ <physicalDamage>@TotalStackDamage@ หน่วย</physicalDamage>ต่อสแตคของ <keywordMajor>Deadly Venom</keywordMajor> ให้กับศัตรูใกล้เคียงทั้งหมดที่ติดเครื่องหมาย และใช้สแตคทั้งหมดใส่ศัตรูใกล้เคียง",
+            "dynamicDescription": "Twitch สร้าง<physicalDamage>ความเสียหายกายภาพ @BaseDamage@ หน่วย</physicalDamage> บวกกับ <physicalDamage>@TotalStackDamage@</physicalDamage> หน่วยต่อสแตคของ <keywordMajor>Deadly Venom</keywordMajor> ให้กับศัตรูใกล้เคียงทั้งหมดที่ติดเครื่องหมาย@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Twitch หลับตาและยิงหน้าไม้ออกไปข้างหน้าอย่างรวดเร็วด้วยลูกศรทรงพลังที่สามารถทะลุศัตรูได้",
-            "dynamicDescription": "<mainText>Twitch ได้รับระยะโจมตีเพิ่มขึ้น @BonusRange@ หน่วย <physicalDamage>พลังโจมตี @BonusAD@ หน่วย</physicalDamage> และการโจมตีปกติจะทะลุศัตรูโดยจะสร้างความเสียหายน้อยลง @FallOffDamage*100@% กับทุกเป้าหมายที่ลูกศรทะลวงผ่าน เป็นเวลา @Duration@ วินาที ลดสูงสุดที่ @MinimumFallOffDamage*100@%",
+            "dynamicDescription": "Twitch ได้รับระยะโจมตีเพิ่มขึ้น @BonusRange@ หน่วย <physicalDamage>พลังโจมตี @BonusAD@ หน่วย</physicalDamage> และการโจมตีปกติจะทะลุศัตรูโดยจะสร้างความเสียหายน้อยลง @FallOffDamage*100@% กับทุกเป้าหมายที่ลูกศรทะลวงผ่าน เป็นเวลา @Duration@ วินาที ลดสูงสุดที่ @MinimumFallOffDamage*100@%@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

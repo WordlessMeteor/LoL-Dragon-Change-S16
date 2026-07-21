@@ -14,7 +14,7 @@
         "mScriptName": "Jade_AnniePassive_StunBuildupBuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive2.project_jade.dds"
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive2.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -37,7 +37,7 @@
         "mScriptName": "Jade_AnniePassive_StunReadyBuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive.project_jade.dds"
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -90,7 +90,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive.project_jade.dds"
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive.dds"
             ],
             "mTargetingTypeData": {
                 "__type": "Self"
@@ -128,7 +128,7 @@
         },
         "__type": "SpellObject"
     },
-    "{16b6f5c9}": {
+    "Characters/Jade_Annie/Spells/Jade_AnnieCritAttack": {
         "ObjectName": "Jade_AnnieCritAttack",
         "mScriptName": "Jade_AnnieCritAttack",
         "mSpell": {
@@ -215,8 +215,8 @@
             "mCastType": 1,
             "castFrame": 11.0,
             "missileSpeed": 1200.0,
-            "mMissileEffectKey": "{ef760acf}",
-            "mHitEffectKey": "{b5c08754}",
+            "mMissileEffectKey": "Jade_Annie_BA_mis",
+            "mHitEffectKey": "Jade_Annie_BA_crit_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
             "selectionPriority": 1,
@@ -238,18 +238,18 @@
         },
         "__type": "SpellObject"
     },
-    "{3ba453f8}": {
-        "mRootSpell": "{f5ca624a}",
+    "Characters/Jade_Annie/Spells/Jade_AnnieWAbility": {
+        "mRootSpell": "Characters/Jade_Annie/Spells/Jade_AnnieWAbility/Jade_AnnieW",
         "mChildSpells": [
-            "{f5ca624a}"
+            "Characters/Jade_Annie/Spells/Jade_AnnieWAbility/Jade_AnnieW"
         ],
         "mName": "Jade_AnnieWAbility",
         "__type": "AbilityObject"
     },
-    "{4d157f6d}": {
-        "mRootSpell": "{4aa76d8c}",
+    "Characters/Jade_Annie/Spells/Jade_AnnieRAbility": {
+        "mRootSpell": "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_AnnieR",
         "mChildSpells": [
-            "{4aa76d8c}",
+            "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_AnnieR",
             "{4914638d}",
             "{8ed4e0a4}",
             "{9664479d}"
@@ -391,7 +391,7 @@
             "mCoefficient2": 0.10000000149011612,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R2.project_jade.dds"
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R2.dds"
             ],
             "cooldownTime": [
                 0.0,
@@ -478,7 +478,7 @@
         },
         "__type": "SpellObject"
     },
-    "{4aa76d8c}": {
+    "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_AnnieR": {
         "ObjectName": "Jade_AnnieR",
         "mScriptName": "Jade_AnnieR",
         "mSpell": {
@@ -613,7 +613,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R1.project_jade.dds"
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R1.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -816,7 +816,7 @@
         "mScriptName": "Jade_Annie_InfernalGuardianTimer",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R2.project_jade.dds"
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R2.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -831,7 +831,7 @@
         "mScriptName": "Jade_Annie_infernalguardianburning_jade",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R2.project_jade.dds"
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_R2.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -849,7 +849,7 @@
         },
         "__type": "SpellObject"
     },
-    "{4bb54789}": {
+    "Characters/Jade_Annie/Spells/Jade_AnnieBasicAttack": {
         "ObjectName": "Jade_AnnieBasicAttack",
         "mScriptName": "Jade_AnnieBasicAttack",
         "mSpell": {
@@ -935,8 +935,8 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1200.0,
-            "mMissileEffectKey": "{ef760acf}",
-            "mHitEffectKey": "{e2dd53a3}",
+            "mMissileEffectKey": "Jade_Annie_BA_mis",
+            "mHitEffectKey": "Jade_Annie_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
             "selectionPriority": 1,
@@ -958,15 +958,15 @@
         },
         "__type": "SpellObject"
     },
-    "{732116a6}": {
-        "mRootSpell": "{6926a2a2}",
+    "Characters/Jade_Annie/Spells/Jade_AnnieQAbility": {
+        "mRootSpell": "Characters/Jade_Annie/Spells/Jade_AnnieQAbility/Jade_AnnieQ",
         "mChildSpells": [
-            "{6926a2a2}"
+            "Characters/Jade_Annie/Spells/Jade_AnnieQAbility/Jade_AnnieQ"
         ],
         "mName": "Jade_AnnieQAbility",
         "__type": "AbilityObject"
     },
-    "{6926a2a2}": {
+    "Characters/Jade_Annie/Spells/Jade_AnnieQAbility/Jade_AnnieQ": {
         "ObjectName": "Jade_AnnieQ",
         "mScriptName": "Jade_AnnieQ",
         "mSpell": {
@@ -1018,7 +1018,7 @@
             "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Q.project_jade.dds"
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Q.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1100,7 +1100,7 @@
             "mCastType": 1,
             "castFrame": 8.699999809265137,
             "missileSpeed": 1400.0,
-            "mMissileEffectKey": "{82ef5c7d}",
+            "mMissileEffectKey": "Jade_Annie_Q_mis",
             "mana": [
                 60.0,
                 65.0,
@@ -1203,10 +1203,10 @@
         },
         "__type": "SpellObject"
     },
-    "{b5ca2aca}": {
-        "mRootSpell": "{f2e121aa}",
+    "Characters/Jade_Annie/Spells/Jade_AnnieEAbility": {
+        "mRootSpell": "Characters/Jade_Annie/Spells/Jade_AnnieEAbility/Jade_AnnieE",
         "mChildSpells": [
-            "{f2e121aa}"
+            "Characters/Jade_Annie/Spells/Jade_AnnieEAbility/Jade_AnnieE"
         ],
         "mName": "Jade_AnnieEAbility",
         "__type": "AbilityObject"
@@ -1220,7 +1220,7 @@
         },
         "__type": "SpellObject"
     },
-    "{e95feb61}": {
+    "Characters/Jade_Annie/Spells/Jade_AnnieBasicAttack2": {
         "ObjectName": "Jade_AnnieBasicAttack2",
         "mScriptName": "Jade_AnnieBasicAttack2",
         "mSpell": {
@@ -1307,8 +1307,8 @@
             "mCastType": 1,
             "castFrame": 8.5,
             "missileSpeed": 1200.0,
-            "mMissileEffectKey": "{ef760acf}",
-            "mHitEffectKey": "{e2dd53a3}",
+            "mMissileEffectKey": "Jade_Annie_BA_mis",
+            "mHitEffectKey": "Jade_Annie_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
             "selectionPriority": 1,
@@ -1330,7 +1330,7 @@
         },
         "__type": "SpellObject"
     },
-    "{f2e121aa}": {
+    "Characters/Jade_Annie/Spells/Jade_AnnieEAbility/Jade_AnnieE": {
         "ObjectName": "Jade_AnnieE",
         "mScriptName": "Jade_AnnieE",
         "mSpell": {
@@ -1477,7 +1477,7 @@
             "mCoefficient": 0.20000000298023224,
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_E.project_jade.dds"
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_E.dds"
             ],
             "mCantCancelWhileWindingUp": true,
             "castRange": [
@@ -1633,7 +1633,7 @@
         },
         "__type": "SpellObject"
     },
-    "{f5ca624a}": {
+    "Characters/Jade_Annie/Spells/Jade_AnnieWAbility/Jade_AnnieW": {
         "ObjectName": "Jade_AnnieW",
         "mScriptName": "Jade_AnnieW",
         "mSpell": {
@@ -1685,7 +1685,7 @@
             "mCoefficient": 0.8500000238418579,
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_W.project_jade.dds"
+                "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_W.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -2168,7 +2168,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{3066a655}": {
+    "Characters/Jade_Annie/CharacterRecords/Root": {
         "mCharacterName": "Jade_Annie",
         "baseHPModifiable": {
             "baseValue": 460.0,
@@ -2297,10 +2297,10 @@
             "Jade_AnnieRAbility/Jade_AnnieR"
         ],
         "spells": [
-            "{6926a2a2}",
-            "{f5ca624a}",
-            "{f2e121aa}",
-            "{4aa76d8c}"
+            "Characters/Jade_Annie/Spells/Jade_AnnieQAbility/Jade_AnnieQ",
+            "Characters/Jade_Annie/Spells/Jade_AnnieWAbility/Jade_AnnieW",
+            "Characters/Jade_Annie/Spells/Jade_AnnieEAbility/Jade_AnnieE",
+            "Characters/Jade_Annie/Spells/Jade_AnnieRAbility/Jade_AnnieR"
         ],
         "extraSpells": [
             "Jade_Annie_InfernalGuardianGuide",
@@ -2339,17 +2339,17 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{b5ca2aca}",
+            "Characters/Jade_Annie/Spells/Jade_AnnieEAbility",
             "{ce7fc548}",
-            "{732116a6}",
-            "{4d157f6d}",
-            "{3ba453f8}"
+            "Characters/Jade_Annie/Spells/Jade_AnnieQAbility",
+            "Characters/Jade_Annie/Spells/Jade_AnnieRAbility",
+            "Characters/Jade_Annie/Spells/Jade_AnnieWAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Annie",
         "passiveLuaName": "Jade_AnniePassive_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Annie",
         "passiveSpell": "Jade_AnniePassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive.dds",
         "name": "game_character_displayname_Jade_Annie",
         "mUseCCAnimations": true,
         "selectionHeight": 85.0,
@@ -2464,12 +2464,12 @@
         },
         "globalProperties": {
             "buffName": "Jade_AnniePassive_Jade",
-            "buffTextureName": "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive2.project_jade.dds",
+            "buffTextureName": "ASSETS/Characters/Jade_Annie/HUD/Icons2D/Jade_Annie_Passive2.dds",
             "__type": "ScriptGlobalProperties"
         },
         "__type": "CharScript"
     },
-    "{da6561ad}": {
+    "Characters/Jade_Annie/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

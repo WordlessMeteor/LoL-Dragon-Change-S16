@@ -16,7 +16,7 @@
         "mScriptName": "Jade_KogmawPassiveSound",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_IcathianSurprise.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_IcathianSurprise.dds"
             ],
             "SpellEventToAudioEventSuffix": {
                 "18": "Play_sfx_KogMaw_KogMawIcathianSurprise_OnBuffActivate"
@@ -127,7 +127,7 @@
             "mCoefficient": 0.699999988079071,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_IcathianSurprise.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_IcathianSurprise.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -211,8 +211,8 @@
             "mCastType": 1,
             "castFrame": 10.050000190734863,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{6d1b0d06}",
-            "mHitEffectKey": "{7a5194f2}",
+            "mMissileEffectKey": "Jade_KogMaw_Q_mis",
+            "mHitEffectKey": "Jade_KogMaw_Q_tar",
             "mana": [
                 70.0,
                 70.0,
@@ -327,7 +327,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_IcathianSurprise.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_IcathianSurprise.dds"
             ],
             "castRange": [
                 0.0,
@@ -369,7 +369,7 @@
         },
         "__type": "SpellObject"
     },
-    "{151ccb95}": {
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawBasicAttack2": {
         "ObjectName": "Jade_KogMawBasicAttack2",
         "mScriptName": "Jade_KogMawBasicAttack2",
         "mSpell": {
@@ -425,9 +425,9 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{132f8e26}",
+            "mMissileEffectKey": "Jade_KogMaw_BA_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{1ded4012}",
+            "mHitEffectKey": "Jade_KogMaw_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -448,15 +448,15 @@
         },
         "__type": "SpellObject"
     },
-    "{a065d18a}": {
-        "mRootSpell": "{213df577}",
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawQAbility": {
+        "mRootSpell": "Characters/Jade_KogMaw/Spells/Jade_KogMawQAbility/Jade_KogMawQ",
         "mChildSpells": [
-            "{213df577}"
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawQAbility/Jade_KogMawQ"
         ],
         "mName": "Jade_KogMawQAbility",
         "__type": "AbilityObject"
     },
-    "{213df577}": {
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawQAbility/Jade_KogMawQ": {
         "ObjectName": "Jade_KogMawQ",
         "mScriptName": "Jade_KogMawQ",
         "mSpell": {
@@ -628,7 +628,7 @@
             "mCoefficient": 0.699999988079071,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_CausticSpittle.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_CausticSpittle.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -716,10 +716,10 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{6d1b0d06}",
-            "mHitEffectKey": "{7a5194f2}",
+            "mMissileEffectKey": "Jade_KogMaw_Q_mis",
+            "mHitEffectKey": "Jade_KogMaw_Q_tar",
             "bHaveHitBone": true,
-            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mHitBoneName": "C_BUFFBONE_GLB_LAYOUT_LOC",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -819,7 +819,7 @@
         "mScriptName": "Jade_KogMawQPassive",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_CausticSpittle.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_CausticSpittle.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -830,7 +830,7 @@
         "mScriptName": "Jade_KogMawQDebuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_CausticSpittle.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_CausticSpittle.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -848,19 +848,19 @@
         },
         "__type": "SpellObject"
     },
-    "{21ae0a66}": {
-        "mRootSpell": "{4573e757}",
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawEAbility": {
+        "mRootSpell": "Characters/Jade_KogMaw/Spells/Jade_KogMawEAbility/Jade_KogMawE",
         "mChildSpells": [
-            "{4573e757}",
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawEAbility/Jade_KogMawE",
             "{aacb7ca9}"
         ],
         "mName": "Jade_KogMawEAbility",
         "__type": "AbilityObject"
     },
-    "{9ea419a1}": {
-        "mRootSpell": "{35496037}",
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawRAbility": {
+        "mRootSpell": "Characters/Jade_KogMaw/Spells/Jade_KogMawRAbility/Jade_KogMawR",
         "mChildSpells": [
-            "{35496037}",
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawRAbility/Jade_KogMawR",
             "{a91f617c}"
         ],
         "mName": "Jade_KogMawRAbility",
@@ -868,7 +868,7 @@
         "AbilityTraits": 256,
         "__type": "AbilityObject"
     },
-    "{35496037}": {
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawRAbility/Jade_KogMawR": {
         "ObjectName": "Jade_KogMawR",
         "mScriptName": "Jade_KogMawR",
         "mSpell": {
@@ -1058,7 +1058,7 @@
                 },
                 "{5d79b569}": {
                     "mMultiplier": {
-                        "mDataValue": "{8ba8e5d8}",
+                        "mDataValue": "ChampionDamageMultiplier",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "{72c5c2a8}": 1,
@@ -1083,7 +1083,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_LivingArtillery.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_LivingArtillery.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1146,7 +1146,7 @@
             "castFrame": 7.5,
             "missileSpeed": 20.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{2a17f863}",
+            "mHitEffectKey": "Jade_KogMaw_R_tar",
             "bHaveHitBone": true,
             "mFloatVarsDecimals": [
                 0,
@@ -1281,7 +1281,7 @@
         "mScriptName": "Jade_KogMawRCost",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_LivingArtillery.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_LivingArtillery.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1304,7 +1304,7 @@
         "mScriptName": "Jade_KogMawRSight",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_LivingArtillery.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_LivingArtillery.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1322,7 +1322,7 @@
         },
         "__type": "SpellObject"
     },
-    "{4573e757}": {
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawEAbility/Jade_KogMawE": {
         "ObjectName": "Jade_KogMawE",
         "mScriptName": "Jade_KogMawE",
         "mSpell": {
@@ -1435,7 +1435,7 @@
             },
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_VoidOoze.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_VoidOoze.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1706,7 +1706,7 @@
             "mCoefficient": 1.0,
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_VoidOoze.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_VoidOoze.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1797,7 +1797,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 1400.0,
-            "mMissileEffectKey": "{c4e8cb12}",
+            "mMissileEffectKey": "Jade_KogMaw_E_mis",
             "mLineWidth": 120.0,
             "bHaveHitBone": true,
             "mHitBoneName": "root",
@@ -1847,7 +1847,7 @@
         "mScriptName": "Jade_KogMawEMarker",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_VoidOoze.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_VoidOoze.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1858,7 +1858,7 @@
         "mScriptName": "Jade_KogMawEDebuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_VoidOoze.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_VoidOoze.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1876,16 +1876,16 @@
         },
         "__type": "SpellObject"
     },
-    "{4e616f74}": {
-        "mRootSpell": "{f26ee267}",
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawWAbility": {
+        "mRootSpell": "Characters/Jade_KogMaw/Spells/Jade_KogMawWAbility/Jade_KogMawW",
         "mChildSpells": [
-            "{f26ee267}",
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawWAbility/Jade_KogMawW",
             "{c126eecf}"
         ],
         "mName": "Jade_KogMawWAbility",
         "__type": "AbilityObject"
     },
-    "{4ebfc555}": {
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawCritAttack": {
         "ObjectName": "Jade_KogMawCritAttack",
         "mScriptName": "Jade_KogMawCritAttack",
         "mSpell": {
@@ -1940,7 +1940,7 @@
             "mCastType": 1,
             "castFrame": 8.5,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{132f8e26}",
+            "mMissileEffectKey": "Jade_KogMaw_BA_mis",
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
                 "12": "Play_sfx_KogMaw_KogMawBasicAttack_OnCast",
@@ -1960,7 +1960,7 @@
         },
         "__type": "SpellObject"
     },
-    "{564ed705}": {
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawBasicAttack": {
         "ObjectName": "Jade_KogMawBasicAttack",
         "mScriptName": "Jade_KogMawBasicAttack",
         "mSpell": {
@@ -2015,9 +2015,9 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{132f8e26}",
+            "mMissileEffectKey": "Jade_KogMaw_BA_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{1ded4012}",
+            "mHitEffectKey": "Jade_KogMaw_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2046,7 +2046,7 @@
             "mAlternateName": "Jade_KogMawBioArcaneBarrageAttack",
             "mAnimationName": "Spell2_Attack1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_BioArcaneBarrage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_BioArcaneBarrage.dds"
             ],
             "{11704a2b}": 0.3888999819755554,
             "{f26881a0}": 1.333400011062622,
@@ -2137,12 +2137,12 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1800.0,
-            "mMissileEffectKey": "{2c29ed64}",
+            "mMissileEffectKey": "Jade_KogMaw_W_mis",
             "mLineWidth": 100.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{b3e48100}",
+            "mHitEffectKey": "Jade_KogMaw_W_tar",
             "bHaveHitBone": true,
-            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mHitBoneName": "C_BUFFBONE_GLB_LAYOUT_LOC",
             "SpellEventToAudioEventSuffix": {
                 "12": "Play_sfx_KogMaw_KogMawBioArcaneBarrageAttack_OnCast",
                 "16": "Play_sfx_KogMaw_KogMawBioArcaneBarrageAttack_OnMissileLaunch",
@@ -2161,7 +2161,7 @@
         },
         "__type": "SpellObject"
     },
-    "{f26ee267}": {
+    "Characters/Jade_KogMaw/Spells/Jade_KogMawWAbility/Jade_KogMawW": {
         "ObjectName": "Jade_KogMawW",
         "mScriptName": "Jade_KogMawW",
         "mSpell": {
@@ -2267,7 +2267,7 @@
             },
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_BioArcaneBarrage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/KogMaw_BioArcaneBarrage.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2794,7 +2794,7 @@
     "{ab9fa2e2}": {
         "__type": "ChampionRuneRecommendationsContext"
     },
-    "{9b959250}": {
+    "Characters/Jade_KogMaw/CharacterRecords/Root": {
         "mCharacterName": "Jade_KogMaw",
         "baseHPModifiable": {
             "baseValue": 524.0,
@@ -2902,10 +2902,10 @@
             "Jade_KogMawRAbility/Jade_KogMawR"
         ],
         "spells": [
-            "{213df577}",
-            "{f26ee267}",
-            "{4573e757}",
-            "{35496037}"
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawQAbility/Jade_KogMawQ",
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawWAbility/Jade_KogMawW",
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawEAbility/Jade_KogMawE",
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawRAbility/Jade_KogMawR"
         ],
         "extraSpells": [
             "Jade_KogMawBioArcaneBarrageAttack",
@@ -2944,16 +2944,16 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{a065d18a}",
-            "{4e616f74}",
-            "{21ae0a66}",
-            "{9ea419a1}",
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawQAbility",
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawWAbility",
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawEAbility",
+            "Characters/Jade_KogMaw/Spells/Jade_KogMawRAbility",
             "{e6dab24c}"
         ],
         "passiveName": "game_character_passiveName_Jade_KogMaw",
         "passiveLuaName": "Jade_KogmawPassive",
         "passiveToolTip": "game_character_passiveDescription_Jade_KogMaw",
-        "passive1IconName": "ASSETS/Characters/Jade_KogMaw/HUD/Icons2D/Jade_KogMaw_IcathianSurprise.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_KogMaw/HUD/Icons2D/Jade_KogMaw_IcathianSurprise.dds",
         "name": "game_character_displayname_Jade_KogMaw",
         "selectionHeight": 150.0,
         "selectionRadius": 130.0,
@@ -3107,7 +3107,7 @@
         },
         "__type": "CharScript"
     },
-    "{d5c11e66}": {
+    "Characters/Jade_KogMaw/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

@@ -1,5 +1,5 @@
 {
-    "{018ff597}": {
+    "Characters/Jade_DrMundo/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{beb59620}": {
@@ -29,7 +29,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.dds"
             ],
             "cooldownTime": [
                 0.0,
@@ -97,15 +97,15 @@
         },
         "__type": "SpellObject"
     },
-    "{3f1618b2}": {
-        "mRootSpell": "{185718f0}",
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility": {
+        "mRootSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility/Jade_DrMundoE",
         "mChildSpells": [
-            "{185718f0}"
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility/Jade_DrMundoE"
         ],
         "mName": "Jade_DrMundoEAbility",
         "__type": "AbilityObject"
     },
-    "{185718f0}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility/Jade_DrMundoE": {
         "ObjectName": "Jade_DrMundoE",
         "mScriptName": "Jade_DrMundoE",
         "mSpell": {
@@ -157,7 +157,7 @@
                 }
             ],
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_Masochism.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_Masochism.dds"
             ],
             "mCastTime": 1.0,
             "{11704a2b}": 1.0,
@@ -273,10 +273,10 @@
         },
         "__type": "SpellObject"
     },
-    "{6fc7686e}": {
-        "mRootSpell": "{db9f8258}",
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility": {
+        "mRootSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ",
         "mChildSpells": [
-            "{db9f8258}",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ",
             "{3486c2c3}"
         ],
         "mName": "Jade_DrMundoQAbility",
@@ -433,7 +433,7 @@
             },
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_InfectedCleaver.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_InfectedCleaver.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -535,7 +535,7 @@
             "mCastType": 3,
             "castFrame": 10.920000076293945,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{051fb583}",
+            "mMissileEffectKey": "Jade_DrMundo_Q_mis_01",
             "mLineWidth": 60.0,
             "mHitEffectOrientType": 2,
             "mFloatVarsDecimals": [
@@ -716,7 +716,7 @@
         },
         "__type": "SpellObject"
     },
-    "{db9f8258}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ": {
         "ObjectName": "Jade_DrMundoQ",
         "mScriptName": "Jade_DrMundoQ",
         "mSpell": {
@@ -816,7 +816,7 @@
             },
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_InfectedCleaver.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_InfectedCleaver.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1022,7 +1022,7 @@
         },
         "__type": "SpellObject"
     },
-    "{40adbb96}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack3": {
         "ObjectName": "Jade_DrMundoBasicAttack3",
         "mScriptName": "Jade_DrMundoBasicAttack3",
         "mSpell": {
@@ -1067,7 +1067,7 @@
             "castFrame": 7.829999923706055,
             "missileSpeed": 0.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{460d0d20}",
+            "mHitEffectKey": "Jade_DrMundo_BA_tar_02",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -1099,7 +1099,7 @@
         },
         "__type": "SpellObject"
     },
-    "{41adbd29}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack2": {
         "ObjectName": "Jade_DrMundoBasicAttack2",
         "mScriptName": "Jade_DrMundoBasicAttack2",
         "mSpell": {
@@ -1144,7 +1144,7 @@
             "castFrame": 9.829999923706055,
             "missileSpeed": 0.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{460d0d20}",
+            "mHitEffectKey": "Jade_DrMundo_BA_tar_02",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -1176,15 +1176,15 @@
         },
         "__type": "SpellObject"
     },
-    "{677f2e75}": {
-        "mRootSpell": "{4c3b7cea}",
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility": {
+        "mRootSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility/Jade_DrMundoR",
         "mChildSpells": [
-            "{4c3b7cea}"
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility/Jade_DrMundoR"
         ],
         "mName": "Jade_DrMundoRAbility",
         "__type": "AbilityObject"
     },
-    "{4c3b7cea}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility/Jade_DrMundoR": {
         "ObjectName": "Jade_DrMundoR",
         "mScriptName": "Jade_DrMundoR",
         "mSpell": {
@@ -1252,7 +1252,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 12,
-                            "mDataValue": "{f0e18cc6}",
+                            "mDataValue": "FactorTT",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1261,7 +1261,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_Sadism.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_Sadism.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1552,7 +1552,7 @@
         },
         "__type": "SpellObject"
     },
-    "{82a0cd51}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoCritAttack": {
         "ObjectName": "Jade_DrMundoCritAttack",
         "mScriptName": "Jade_DrMundoCritAttack",
         "mSpell": {
@@ -1595,7 +1595,7 @@
             "castConeDistance": 100.0,
             "castFrame": 7.965000152587891,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{0bfe0264}",
+            "mHitEffectKey": "Jade_DrMundo_BA_tar_crit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -1625,15 +1625,15 @@
         },
         "__type": "SpellObject"
     },
-    "{ea93b7a0}": {
-        "mRootSpell": "{a019d560}",
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility": {
+        "mRootSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility/Jade_DrMundoW",
         "mChildSpells": [
-            "{a019d560}"
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility/Jade_DrMundoW"
         ],
         "mName": "Jade_DrMundoWAbility",
         "__type": "AbilityObject"
     },
-    "{a019d560}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility/Jade_DrMundoW": {
         "ObjectName": "Jade_DrMundoW",
         "mScriptName": "Jade_DrMundoW",
         "mSpell": {
@@ -1712,7 +1712,7 @@
             },
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_BurningAgony.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_BurningAgony.dds"
             ],
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
@@ -1894,7 +1894,7 @@
         },
         "__type": "SpellObject"
     },
-    "{ac6c6be1}": {
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack": {
         "ObjectName": "Jade_DrMundoBasicAttack",
         "mScriptName": "Jade_DrMundoBasicAttack",
         "mSpell": {
@@ -1937,7 +1937,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.694999694824219,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{490d11d9}",
+            "mHitEffectKey": "Jade_DrMundo_BA_tar_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -2143,7 +2143,7 @@
         },
         "__type": "CharScript"
     },
-    "{ae0e3ccb}": {
+    "Characters/Jade_DrMundo/CharacterRecords/Root": {
         "mCharacterName": "Jade_DrMundo",
         "baseHPModifiable": {
             "baseValue": 522.0,
@@ -2251,10 +2251,10 @@
             "Jade_DrMundoRAbility/Jade_DrMundoR"
         ],
         "spells": [
-            "{db9f8258}",
-            "{a019d560}",
-            "{185718f0}",
-            "{4c3b7cea}"
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility/Jade_DrMundoW",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility/Jade_DrMundoE",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility/Jade_DrMundoR"
         ],
         "extraSpells": [
             "",
@@ -2294,16 +2294,16 @@
         ],
         "mAbilities": [
             "{beb59620}",
-            "{6fc7686e}",
-            "{ea93b7a0}",
-            "{3f1618b2}",
-            "{677f2e75}"
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_DrMundo",
         "passiveLuaName": "Jade_DrMundoP",
         "passiveToolTip": "game_character_passiveDescription_Jade_DrMundo",
         "passiveSpell": "Jade_DrMundoP",
-        "passive1IconName": "ASSETS/Characters/Jade_DrMundo/HUD/Icons2D/Jade_DrMundo_P.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_DrMundo/HUD/Icons2D/Jade_DrMundo_P.dds",
         "name": "game_character_displayname_Jade_DrMundo",
         "weaponMaterials": [
             "Jade_DrMundoBasicAttack"

@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Убийства и участия в убийствах чемпионов дают Катарине доп. золото и сокращают перезарядку ее умений на 15 сек."
+        "description": "Убийства чемпионов и содействия сокращают время перезарядки умений Катарины на 15 сек."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Катарина мечет во врага кинжал, рикошетом поражающий еще несколько целей, нанося маг. урон.",
-            "dynamicDescription": "Мечет кинжал, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>. Кинжал отскакивает еще @MaxBounces@ р., нанося на 10% меньше урона за отскок.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Мечет кинжал, нанося <magicDamage>@TotalDamage@</magicDamage> ед. маг. урона. Кинжал отскакивает еще @MaxBounces@ р., нанося на 10% меньше урона за отскок.<br><br>Пораженные враги получают метку на @MarkDuration@ сек. Автоатаки и умения Катарины снимают метку, дополнительно нанося <magicDamage>@TotalDamageMark@</magicDamage> ед. маг. урона.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Инстинкт убийцы",
+            "name": "Зловещая сталь",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Следующее баз. умение Катарины получает доп. эффект.",
-            "dynamicDescription": "<spellPassive>Пассивно</spellPassive>: автоатаки и умения Катарины дополнительно наносят @TotalDamage@ ед. урона.<br><br><spellActive>Активно:</spellActive> следующее баз. умение Катарины наносит доп. урон.<li><spellName>Танцующий клинок</spellName>: наносит полный урон всем целям и накладывает <keyWord>Страшные раны</keyWord> на @QHealingReductionDuration@ сек.<li><spellName>Шунпо</spellName>: снижает получаемый Катариной урон на @EDamageReduction@% на @EDamageReductionDuration@ сек.@SpellModifierDescriptionAppend@",
+            "description": "Катарина создает вокруг себя вихрь клинков, нанося маг. урон всем врагам поблизости. Поразив вражеского чемпиона, она ненадолго получает скорость передвижения.",
+            "dynamicDescription": "Создает вокруг себя вихрь клинков, нанося @TotalDamage@ ед. маг. урона врагам вокруг. Поразив вражеского чемпиона, она получит @Haste*100@% <speed>скорости передвижения</speed> на @BuffDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Катарина телепортируется к цели, в течение некоторого времени после этого получая сниженный урон. Если целью окажется враг, она нанесет ему урон.",
-            "dynamicDescription": "Телепортируется к цели, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>, если целью оказывается враг.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Телепортируется к цели, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>, если целью оказывается враг.<br><br>После применения умения Шунпо, Катарина получает на @DamageReduction@% меньше урона в течение @DamageReductionDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Катарина становится вихрем клинков и с непостижимой скоростью начинает метать кинжалы в 3 вражеских чемпионов поблизости.",
-            "dynamicDescription": "Становится вихрем клинков и с непостижимой скоростью начинает метать их в 3 вражеских чемпионов поблизости, нанося <magicDamage>@DamageCalcTooltipOnly@ ед. маг. урона</magicDamage> в течение 2 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Становится вихрем клинков и с непостижимой скоростью начинает метать их в 3 вражеских чемпионов поблизости, нанося <magicDamage>@DamageCalcTooltipOnly@ ед. маг. урона</magicDamage> в течение 2,5 сек.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Katarina bónusz aranyhoz jut a hősök elleni gyilkosságokból és asszisztokból, valamint ezek 15 másodperccel csökkentik a képességei töltési idejét."
+        "description": "A hősgyilkosságok és az asszisztok 15 másodperccel csökkentik Katarina töltési idejét."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Nincs költsége",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Katarina eldob egy tőrt, ami ellenfélről ellenfélre pattan, miközben varázssebzést okoz.",
-            "dynamicDescription": "Elhajít egy tőrt, <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okozva. A tőr további @MaxBounces@ alkalommal pattan tovább, és találatonként 10%-kal csökken a sebzése.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Elhajít egy tőrt, <magicDamage>@TotalDamage@</magicDamage> varázssebzést okozva. A tőr továbbpattan a legközelebbi @MaxBounces@ ellenfélre, és minden ugrás után 10%-kal csökken a sebzése.<br><br>Az eltalált ellenfelek @MarkDuration@ másodpercre meg lesznek jelölve. Katarina alaptámadásai vagy varázslatai felhasználják ezeket a jeleket, ezzel <magicDamage>@TotalDamageMark@</magicDamage> további varázssebzést okozva a célpontnak.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Gyilkos ösztön",
+            "name": "Baljós acél",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Nincs költsége",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Katarina következő alapvarázslata egy további hatással egészül ki.",
-            "dynamicDescription": "<spellPassive>Passzív</spellPassive>: Katarina képességei és támadásai további @TotalDamage@ sebzést okoznak.<br><br><spellActive>Aktív:</spellActive> Katarina következő alapképessége egy bónusz hatással egészül ki.<li><spellName>Pattogó penge</spellName>: minden célpontnak teljes sebzést okoz, és @QHealingReductionDuration@ másodpercre <keyWord>Súlyos seb</keyWord> hatást alkalmaz.<li><spellName>Villámlépés</spellName>: Katarina @EDamageReductionDuration@ másodpercre @EDamageReduction@% sebzéscsökkentésre tesz szert.@SpellModifierDescriptionAppend@",
+            "description": "Katarina maga körül pörgeti a tőreit, varázssebzést okozva az összes közeli ellenfélnek. Ha eltalál egy ellenséges hőst, Katarina rövid időre felgyorsul.",
+            "dynamicDescription": "Katarina a tőreit pörgetve @TotalDamage@ varázssebzést okoz kör alakban. Ha eltalál egy ellenséges hőst, @BuffDuration@ másodpercig @Haste*100@% <speed>mozgási sebességre</speed> tesz szert.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Nincs költsége",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Katarina azonnal a célterületre mozog, és néhány másodpercig csökkentett sebzést szenved el az ellenfelektől. Ha a célpont egy ellenfél, Katarina megsebzi őt.",
-            "dynamicDescription": "A kijelölt helyre mozog. Ha a célpont egy ellenfél, <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz neki.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "A kijelölt helyre mozog. Ha a célpont egy ellenfél, <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz neki.<br><br>A Villámlépés használata után Katarina @DamageReductionDuration@ másodpercig @DamageReduction@%-kal kevesebb sebzést szenved el.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Nincs költsége",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Katarina valóságos pengehurrikánná alakul, és elképesztő tempóban dobálja a tőreit legfeljebb három közeli hősre.",
-            "dynamicDescription": "Tőrzáport zúdít a 3 legközelebbi ellenséges hősre, 2 másodperc alatt <magicDamage>@DamageCalcTooltipOnly@ varázssebzést</magicDamage> okozva.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tőrzáport zúdít a legközelebbi 3 ellenséges hősre, 2,5 másodperc alatt <magicDamage>@DamageCalcTooltipOnly@ varázssebzést</magicDamage> okozva.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

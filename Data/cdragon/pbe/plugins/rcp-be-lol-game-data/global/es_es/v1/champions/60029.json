@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Twitch clásico (vándalo)",
+                    "name": "Twitch clásico (jefazo)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Twitch se vuelve invisible durante un breve periodo de tiempo y, mientras está en ese estado, obtiene velocidad de movimiento. Tras abandonar la invisibilidad, Twitch obtiene velocidad de ataque durante un breve periodo de tiempo.",
-            "dynamicDescription": "<mainText>Tras @MaxFadeTime@ s, Twitch se <keywordStealth>camufla</keywordStealth> durante @StealthDuration@ s.<br><br>Twitch obtiene un <attackSpeed>@AttackSpeedMod*100@% de velocidad de ataque</attackSpeed> durante @AttackSpeedDuration@ s tras abandonar el <keywordStealth>camuflaje</keywordStealth>.",
+            "description": "Twitch se vuelve invisible durante varios segundos y obtiene velocidad de movimiento. Después, obtiene velocidad de ataque al dejar de ser invisible.",
+            "dynamicDescription": "Tras @MaxFadeTime@ s sin recibir daño o después de @MaxDelayTime@ s, Twitch se vuelve <keywordStealth>invisible</keywordStealth> durante @StealthDuration@ s y obtiene un <speed>@MoveSpeedMod*100@% de velocidad de movimiento</speed>.<br><br>Twitch obtiene un <attackSpeed>@AttackSpeedMod*100@% de velocidad de ataque</attackSpeed> durante @AttackSpeedDuration@ s tras dejar de ser <keywordStealth>invisible</keywordStealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Veneno debilitante",
+            "name": "Tonel de veneno",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "Twitch infecta a todos los campeones cercanos con Veneno debilitante y reduce su velocidad de movimiento.",
-            "dynamicDescription": "Twitch <status>ralentiza</status> un @SlowPercent*-100@% a los campeones enemigos cercanos durante @Duration@ s, lo que aumenta un @PassiveStackSlowPercent*-100@% por cada acumulación de <keywordMajor>Veneno mortal</keywordMajor> (máximo: @MaxSlowTooltip@).<br><br>Las acumulaciones adicionales de <keywordMajor>Veneno mortal</keywordMajor> después de aplicar la <status>ralentización</status> reducirán aún más su <speed>velocidad de movimiento</speed>.@SpellModifierDescriptionAppend@",
+            "description": "Twitch lanza un tonel de veneno que explota, lo que aplica Veneno mortal y ralentiza a los enemigos de la zona.",
+            "dynamicDescription": "Twitch lanza un tonel de veneno que explota, aplica @StacksAdded@ acumulaciones de <keywordMajor>Veneno mortal</keywordMajor> y <status>ralentiza</status> a los enemigos un @BaseSlowAmount@% durante @Duration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Todos los enemigos cercanos segregan el veneno tóxico de Twitch, lo que inflige daño por cada acumulación.",
-            "dynamicDescription": "<mainText>Twitch inflige <physicalDamage>@BaseDamage@ de daño físico</physicalDamage> más <physicalDamage>@TotalStackDamage@</physicalDamage> por cada acumulación de <keywordMajor>Veneno mortal</keywordMajor> a todos los enemigos cercanos marcados y consume todas las acumulaciones cercanas.",
+            "dynamicDescription": "Twitch inflige <physicalDamage>@BaseDamage@ de daño físico</physicalDamage> + <physicalDamage>@TotalStackDamage@</physicalDamage> por cada acumulación de <keywordMajor>Veneno mortal</keywordMajor> a todos los enemigos cercanos marcados.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Twitch cierra los ojos y dispara su ballesta, con lo que lanza una ráfaga de potentes proyectiles perforantes frente a él.",
-            "dynamicDescription": "<mainText>Durante @Duration@ s, Twitch obtiene @BonusRange@ de alcance de ataque, <physicalDamage>@BonusAD@ de daño de ataque</physicalDamage> y sus ataques básicos se convierten en proyectiles perforantes que infligirán un @FallOffDamage*100@% menos de daño a cada enemigo que se encuentre detrás de su objetivo principal, hasta un mínimo de un @MinimumFallOffDamage*100@%.",
+            "dynamicDescription": "Durante @Duration@ s, Twitch obtiene @BonusRange@ de alcance de ataque, <physicalDamage>@BonusAD@ de daño de ataque</physicalDamage> y sus ataques básicos se convierten en proyectiles perforantes que infligirán un @FallOffDamage*100@% menos de daño a cada enemigo que se encuentre detrás de su objetivo principal, hasta un mínimo del @MinimumFallOffDamage*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

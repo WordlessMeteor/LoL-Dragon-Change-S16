@@ -1,10 +1,10 @@
 {
-    "{3d0b1834}": {
+    "Characters/Jade_Kassadin/Skins/Skin4": {
         "skinClassification": 1,
         "championSkinName": "DarkBladeJade_Kassadin",
         "metaDataTags": "faction:void,gender:male,element:dark,skinline:legacy",
         "loadscreen": {
-            "image": "ASSETS/Characters/Jade_Kassadin/Skins/Skin04/Jade_KassadinLoadScreen_4.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Kassadin/Skins/Skin04/Jade_KassadinLoadScreen_4.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -71,13 +71,13 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{736d89b9}",
+            "animationGraphData": "Characters/Jade_Kassadin/Animations/Skin0",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/Jade_Kassadin/Skins/Skin04/Jade_Kassadin_Skin04.project_jade.skl",
-            "simpleSkin": "ASSETS/Characters/Jade_Kassadin/Skins/Skin04/Jade_Kassadin_Skin04.project_jade.skn",
-            "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Skin04/Jade_Kassadin_Skin04_TX_CM.project_jade.tex",
+            "skeleton": "ASSETS/Characters/Jade_Kassadin/Skins/Skin04/Jade_Kassadin_Skin04.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Kassadin/Skins/Skin04/Jade_Kassadin_Skin04.skn",
+            "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Skin04/Jade_Kassadin_Skin04_TX_CM.tex",
             "skinScale": 0.8500000238418579,
             "selfIllumination": 0.699999988079071,
             "reflectionFresnelColor": [
@@ -98,19 +98,19 @@
         "armorMaterial": "Flesh",
         "idleParticlesEffects": [
             {
-                "effectKey": "{d679372f}",
+                "effectKey": "Jade_Kassadin_idle_lines",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
         ],
-        "mContextualActionData": "{1622ef71}",
-        "iconCircle": "ASSETS/Characters/Jade_Kassadin/HUD/Jade_Kassadin_Circle_301_Classic.project_jade.tex",
-        "iconSquare": "ASSETS/Characters/Jade_Kassadin/HUD/Jade_Kassadin_Square_301_Classic.project_jade.tex",
-        "iconAvatar": "ASSETS/Characters/Jade_Kassadin/HUD/Jade_Kassadin_Circle_4.project_jade.tex",
+        "mContextualActionData": "Characters/Jade_Kassadin/CAC/Jade_Kassadin_Base",
+        "iconCircle": "ASSETS/Characters/Jade_Kassadin/HUD/Jade_Kassadin_Circle_301_Classic.tex",
+        "iconSquare": "ASSETS/Characters/Jade_Kassadin/HUD/Jade_Kassadin_Square_301_Classic.tex",
+        "iconAvatar": "ASSETS/Characters/Jade_Kassadin/HUD/Jade_Kassadin_Circle_4.tex",
         "healthBarData": {
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{f52bf6b6}",
+        "mResourceResolver": "Characters/Jade_Kassadin/Skins/Skin4/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -128,7 +128,7 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "BUFFBONE_GLB_WEAPON_1",
-                        "effectKey": "{6675543e}",
+                        "effectKey": "Jade_Kassadin_idle_blade",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -154,17 +154,17 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "BUFFBONE_GLB_WEAPON_1",
-                        "effectKey": "{44342c64}",
+                        "effectKey": "Jade_Kassadin_W_buf",
                         "__type": "PersistentVfxData"
                     },
                     {
                         "boneName": "weapon",
-                        "effectKey": "{3a9fa342}",
+                        "effectKey": "Jade_Kassadin_W_buf_Sword",
                         "__type": "PersistentVfxData"
                     },
                     {
                         "boneName": "head",
-                        "effectKey": "{1ca781e8}",
+                        "effectKey": "Jade_Kassadin_W_buf_Face",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -173,7 +173,7 @@
         ],
         "__type": "SkinCharacterDataProperties"
     },
-    "{39f8da00}": {
+    "Characters/Jade_Kassadin/Skins/Skin4/Particles/Jade_Kassadin_Skin04_W_buf": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -201,7 +201,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_skin04_blademesh.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_skin04_blademesh.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -209,7 +209,7 @@
                 "blendMode": 1,
                 "pass": 15,
                 "particleIsLocalOrientation": 1,
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_W_blade_void.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_W_blade_void.tex",
                 "uvMode": 1,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -242,7 +242,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_base_w_blademesh.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_base_w_blademesh.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -389,7 +389,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_W_blade_swirls.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_W_blade_swirls.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -452,7 +452,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/common_color-ironstylus.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/common_color-ironstylus.tex",
                 "birthColor": {
                     "constantValue": [
                         1.0,
@@ -481,7 +481,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/OrbGlow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/OrbGlow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -801,7 +801,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_W_buf_sparks.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_W_buf_sparks.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -835,7 +835,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_skin04_blademesh.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_skin04_blademesh.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -929,7 +929,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/color-hold.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/color-hold.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.5,
@@ -1192,7 +1192,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_W_blade_void.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_W_blade_void.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         1.0,
@@ -1248,7 +1248,7 @@
                     2.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_Q_ChargeMask.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_Q_ChargeMask.tex",
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
@@ -1282,7 +1282,7 @@
                     "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
                     "__type": "VfxFlexShapeDefinitionData"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/color-rampdown.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/color-rampdown.tex",
                 "pass": 1,
                 "meshRenderFlags": 0,
                 "miscRenderFlags": 1,
@@ -1399,7 +1399,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/voidslash.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/voidslash.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -1407,7 +1407,7 @@
         "particlePath": "Characters/Jade_Kassadin/Skins/Skin4/Particles/Jade_Kassadin_Skin04_W_buf",
         "__type": "VfxSystemDefinitionData"
     },
-    "{98c26ffa}": {
+    "Characters/Jade_Kassadin/Skins/Skin4/Particles/Jade_Kassadin_Skin04_idle_blade": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1435,7 +1435,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_skin04_blademesh.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_skin04_blademesh.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -1444,7 +1444,7 @@
                 "pass": 10,
                 "disableBackfaceCull": true,
                 "particleIsLocalOrientation": 1,
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_Z_VoidBackground_04.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_Base_Z_VoidBackground_04.tex",
                 "uvMode": 1,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -1714,7 +1714,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_base_idle_blade.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_base_idle_blade.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -1748,7 +1748,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_skin04_blademesh.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin_skin04_blademesh.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -1844,7 +1844,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/color-hold.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/color-hold.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.5,
@@ -1994,7 +1994,7 @@
                     ],
                     "__type": "VfxShapeLegacy"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin-darkflame-purple.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/Jade_Kassadin-darkflame-purple.tex",
                 "meshRenderFlags": 0,
                 "isUniformScale": 1,
                 "isRandomStartFrame": 1,
@@ -2083,7 +2083,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/EveFlames01.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Kassadin/Skins/Base/Particles/EveFlames01.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -2096,31 +2096,31 @@
         "particlePath": "Characters/Jade_Kassadin/Skins/Skin4/Particles/Jade_Kassadin_Skin04_idle_blade",
         "__type": "VfxSystemDefinitionData"
     },
-    "{f52bf6b6}": {
+    "Characters/Jade_Kassadin/Skins/Skin4/Resources": {
         "resourceMap": {
-            "{c03c3512}": "{0438d4a6}",
-            "{ae8d7395}": "{a374b751}",
-            "{af5a8164}": "{af8d7c40}",
-            "{b25a861d}": "{b28d80f9}",
-            "{e252530a}": "{4bb773f6}",
-            "{70784876}": "{d442ab12}",
-            "{7efb4b22}": "{76e4fc2e}",
-            "{6501eb5e}": "{f7532882}",
-            "{988602a4}": "{538696b8}",
-            "{6675543e}": "{98c26ffa}",
-            "{d679372f}": "{c7b2317b}",
-            "{8bababa4}": "{6ae21770}",
-            "{fd74b86c}": "{2be22890}",
-            "{94971675}": "{8949afb9}",
-            "{15e0a840}": "{474a14dc}",
-            "{23a3a053}": "{41f1f327}",
-            "{4dcdd5c3}": "{e2dbe677}",
-            "{0d28f3b1}": "{cef0e7bd}",
-            "{44342c64}": "{39f8da00}",
-            "{1ca781e8}": "{68933324}",
-            "{3a9fa342}": "{69cbc37e}",
-            "{088ccd32}": "{76cf1656}",
-            "{74479d82}": "{15cf4ab6}"
+            "Jade_Kassadin_BA_tar_01": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_BA_tar_01",
+            "Jade_Kassadin_BA_tar_Crit": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_BA_tar_Crit",
+            "Jade_Kassadin_BA_Trail01": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_BA_Trail01",
+            "Jade_Kassadin_BA_Trail02": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_BA_Trail02",
+            "Jade_Kassadin_E_buf": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_E_buf",
+            "Jade_Kassadin_E_cas": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_E_cas",
+            "Jade_Kassadin_E_GlowChild": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_E_GlowChild",
+            "Jade_Kassadin_E_ready_buf": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_E_ready_buf",
+            "Jade_Kassadin_E_tar": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_E_tar",
+            "Jade_Kassadin_idle_blade": "Characters/Jade_Kassadin/Skins/Skin4/Particles/Jade_Kassadin_Skin04_idle_blade",
+            "Jade_Kassadin_idle_lines": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_idle_lines",
+            "Jade_Kassadin_Q_mis": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_Q_mis",
+            "Jade_Kassadin_Q_Shield": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_Q_Shield",
+            "Jade_Kassadin_Q_ShieldOn": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_Q_ShieldOn",
+            "Jade_Kassadin_Q_tar": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_Q_tar",
+            "Jade_Kassadin_R_appear": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_R_appear",
+            "Jade_Kassadin_R_cas": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_R_cas",
+            "Jade_Kassadin_R_vanish": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_R_vanish",
+            "Jade_Kassadin_W_buf": "Characters/Jade_Kassadin/Skins/Skin4/Particles/Jade_Kassadin_Skin04_W_buf",
+            "Jade_Kassadin_W_buf_Face": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_W_buf_Face",
+            "Jade_Kassadin_W_buf_Sword": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_W_buf_Sword",
+            "Jade_Kassadin_W_tar": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_W_tar",
+            "Jade_Kassadin_W_Mana_Gain": "Characters/Jade_Kassadin/Skins/Skin0/Particles/Jade_Kassadin_Base_W_Mana_Gain"
         },
         "__type": "ResourceResolver"
     },

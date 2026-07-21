@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "参与击杀或助攻会为卡特莲娜提供额外金钱，并使她的技能冷却时间缩短15秒。"
+        "description": "英雄的击杀或助攻使卡特莲娜的冷却时间缩短15秒。"
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡特莲娜投掷一把匕首，匕首会在敌人之间弹跳，造成魔法伤害。",
-            "dynamicDescription": "投掷一把匕首，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。匕首会额外弹跳@MaxBounces@次，每次弹跳造成的伤害会递减10%。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "投掷一把匕首，造成<magicDamage>@TotalDamage@</magicDamage>魔法伤害。匕首会弹跳至@MaxBounces@最近的敌人，每次弹跳造成的伤害会递减10%。<br><br>命中的敌人会被标记@MarkDuration@秒。卡特莲娜的普通攻击或技能会消耗印记，造成 <magicDamage>@TotalDamageMark@</magicDamage> 额外魔法伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "杀手本能",
+            "name": "不祥钢刃",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "卡特莲娜的下一个基础技能将获得额外效果。",
-            "dynamicDescription": "<spellPassive>被动</spellPassive>：卡特莲娜的技能和普攻会造成额外@TotalDamage@伤害。<br><br><spellActive>主动：</spellActive>卡特莲娜的下一个基础技能将获得额外效果。<li><spellName>弹射利刃</spellName>：对每个目标造成全额伤害，并施加<keyWord>重创</keyWord>效果，持续@QHealingReductionDuration@秒。<li><spellName>瞬步</spellName>：卡特莲娜获得@EDamageReduction@%伤害减免，持续@EDamageReductionDuration@秒。@SpellModifierDescriptionAppend@",
+            "description": "卡特莲娜身边的匕首，对范围内的所有敌人造成魔法伤害。如果命中一名敌方英雄，卡特莲娜会短暂获得爆发性移速加成。",
+            "dynamicDescription": "环绕自身挥舞匕首，造成@TotalDamage@魔法伤害。如果命中一名敌方英雄，卡特莲娜就会获得@Haste*100@%<speed>移动速度</speed>，持续@BuffDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡特莲娜瞬间移动到目标位置，并在接下来的数秒内降低来自敌人的伤害。如果目标是敌人，则会造成伤害。",
-            "dynamicDescription": "移动到目标位置。如果目标是敌人，则会造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "移动到目标位置。如果目标是敌人，则会造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br>使用瞬步后，卡特莲娜在@DamageReductionDuration@秒内受到的伤害降低 @DamageReduction@%。@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡特莲娜化作刀刃风暴，以无与伦比的速度向附近最多三名英雄投掷匕首。",
-            "dynamicDescription": "化作刀刃风暴，朝距离最近的3名敌方英雄投掷匕首，在2秒内造成<magicDamage>@DamageCalcTooltipOnly@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "化作刀刃风暴，朝距离最近的3名敌方英雄投掷匕首，在2.5秒内造成<magicDamage>@DamageCalcTooltipOnly@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

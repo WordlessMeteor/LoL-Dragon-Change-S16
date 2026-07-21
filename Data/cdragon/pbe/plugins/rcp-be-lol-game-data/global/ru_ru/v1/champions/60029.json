@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Твич ненадолго получает невидимость и бонус к скорости передвижения. Когда Твич выходит из невидимости, он ненадолго получает скорость атаки.",
-            "dynamicDescription": "<mainText>Через @MaxFadeTime@ сек. Твич получает <keywordStealth>маскировку</keywordStealth> на @StealthDuration@ сек.<br><br>Твич получает <attackSpeed>@AttackSpeedMod*100@% скорости атаки</attackSpeed> на @AttackSpeedDuration@ сек., когда лишается <keywordStealth>маскировки</keywordStealth>.",
+            "description": "На несколько секунд Твич получает невидимость и скорость передвижения. Выходя из невидимости, он получает скорость атаки.",
+            "dynamicDescription": "Через @MaxFadeTime@ сек. (если не получает урона) или через @MaxDelayTime@ сек. Твич получает <keywordStealth>невидимость</keywordStealth> и <speed>@MoveSpeedMod*100@% скорости передвижения</speed> на @StealthDuration@ сек.<br><br>Твич получает <attackSpeed>@AttackSpeedMod*100@% скорости атаки</attackSpeed> на @AttackSpeedDuration@ сек., когда выходит из <keywordStealth>невидимости</keywordStealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Тлетворный яд",
+            "name": "Склянка с ядом",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Твич отравляет всех вражеских чемпионов поблизости Тлетворным ядом, снижая их скорость передвижения.",
-            "dynamicDescription": "Твич <status>замедляет</status> вражеских чемпионов поблизости на @SlowPercent*-100@% на @Duration@ сек. Эффект усилен на @PassiveStackSlowPercent*-100@% за каждый заряд <keywordMajor>Смертоносного яда</keywordMajor> (макс. @MaxSlowTooltip@).<br><br>При наложении новых зарядов <keywordMajor>Смертоносного яда</keywordMajor> после активации <status>замедления</status> <speed>скорость передвижения</speed> цели снижается сильнее.@SpellModifierDescriptionAppend@",
+            "description": "Твич бросает склянку с ядом, отравляя всех врагов в зоне поражения Смертельным ядом и замедляя их.",
+            "dynamicDescription": "Твич бросает взрывающуюся склянку с ядом, накладывая на пораженных врагов @StacksAdded@ зар. <keywordMajor>Смертельного яда</keywordMajor> и <status>замедляя</status> их на @BaseSlowAmount@% на @Duration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Все враги рядом с Твичем исторгают из своих тел Смертельный яд, получая урон за каждый его заряд.",
-            "dynamicDescription": "<mainText>Твич наносит всем врагам с меткой поблизости <physicalDamage>@BaseDamage@ ед. физ. урона</physicalDamage> плюс <physicalDamage>@TotalStackDamage@</physicalDamage> за заряд <keywordMajor>Смертельного яда</keywordMajor>, поглощая все его заряды на целях.",
+            "dynamicDescription": "Твич наносит всем врагам с меткой поблизости <physicalDamage>@BaseDamage@ ед. физ. урона</physicalDamage> плюс <physicalDamage>@TotalStackDamage@</physicalDamage> за заряд <keywordMajor>Смертельного яда</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Твич закрывает глаза и начинает стрелять перед собой мощными, пробивающими все на своем пути стрелами.",
-            "dynamicDescription": "<mainText>В течение @Duration@ сек. дальность атаки Твича растет на @BonusRange@, он получает <physicalDamage>@BonusAD@ силы атаки</physicalDamage> и начинает стрелять пробивающими все на пути стрелами, наносящими на @FallOffDamage*100@% меньше урона последующим целям (мин. @MinimumFallOffDamage*100@%).",
+            "dynamicDescription": "В течение @Duration@ сек. дальность атаки Твича растет на @BonusRange@, он получает <physicalDamage>@BonusAD@ силы атаки</physicalDamage> и начинает стрелять пробивающими все на пути стрелами, наносящими на @FallOffDamage*100@% меньше урона последующим целям (мин. @MinimumFallOffDamage*100@%).@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

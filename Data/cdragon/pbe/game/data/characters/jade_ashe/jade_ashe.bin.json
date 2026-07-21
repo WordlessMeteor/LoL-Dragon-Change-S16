@@ -9,16 +9,16 @@
         "mName": "Jade_AshePassiveAbility",
         "__type": "AbilityObject"
     },
-    "{12736574}": {
-        "mRootSpell": "{7cf217b6}",
+    "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility": {
+        "mRootSpell": "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility/Jade_AsheEnchantedCrystalArrow",
         "mChildSpells": [
-            "{7cf217b6}",
+            "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility/Jade_AsheEnchantedCrystalArrow",
             "{d411f3ba}"
         ],
         "mName": "Jade_AsheEnchantedCrystalArrowAbility",
         "__type": "AbilityObject"
     },
-    "{1a9df483}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheBasicAttack": {
         "ObjectName": "Jade_AsheBasicAttack",
         "mScriptName": "Jade_AsheBasicAttack",
         "mSpell": {
@@ -113,8 +113,8 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{b72e3c57}",
-            "mHitEffectKey": "{273d53c5}",
+            "mMissileEffectKey": "Jade_Ashe_Q_mis",
+            "mHitEffectKey": "Jade_Ashe_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -135,17 +135,17 @@
         },
         "__type": "SpellObject"
     },
-    "{c2f7d348}": {
-        "mRootSpell": "{387299d6}",
+    "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility": {
+        "mRootSpell": "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolley",
         "mChildSpells": [
-            "{387299d6}",
+            "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolley",
             "{d441b182}",
             "{956bd2cd}"
         ],
         "mName": "Jade_AsheVolleyAbility",
         "__type": "AbilityObject"
     },
-    "{387299d6}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolley": {
         "ObjectName": "Jade_AsheVolley",
         "mScriptName": "Jade_AsheVolley",
         "mSpell": {
@@ -236,7 +236,7 @@
             },
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_Volley.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_Volley.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -962,9 +962,9 @@
             "mCastType": 3,
             "castFrame": 15.074999809265137,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{4cfdf561}",
+            "mMissileEffectKey": "Jade_Ashe_W_mis",
             "mLineWidth": 20.0,
-            "mHitEffectKey": "{403e2ec5}",
+            "mHitEffectKey": "Jade_Ashe_W_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "selectionPriority": 1,
@@ -1004,15 +1004,15 @@
         },
         "__type": "SpellObject"
     },
-    "{647159fb}": {
-        "mRootSpell": "{3cc16c4e}",
+    "Characters/Jade_Ashe/Spells/Jade_AsheSpiritOfTheHawkAbility": {
+        "mRootSpell": "Characters/Jade_Ashe/Spells/Jade_AsheSpiritOfTheHawkAbility/Jade_AsheSpiritOfTheHawk",
         "mChildSpells": [
-            "{3cc16c4e}"
+            "Characters/Jade_Ashe/Spells/Jade_AsheSpiritOfTheHawkAbility/Jade_AsheSpiritOfTheHawk"
         ],
         "mName": "Jade_AsheSpiritOfTheHawkAbility",
         "__type": "AbilityObject"
     },
-    "{3cc16c4e}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheSpiritOfTheHawkAbility/Jade_AsheSpiritOfTheHawk": {
         "ObjectName": "Jade_AsheSpiritOfTheHawk",
         "mScriptName": "Jade_AsheSpiritOfTheHawk",
         "mSpell": {
@@ -1137,7 +1137,7 @@
             "mCoefficient": 0.75,
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_Hawkshot.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_Hawkshot.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1247,7 +1247,7 @@
             "mCastType": 3,
             "castFrame": 11.3100004196167,
             "missileSpeed": 1400.0,
-            "mMissileEffectKey": "{ec815f03}",
+            "mMissileEffectKey": "Jade_Ashe_E_mis",
             "bHaveHitBone": true,
             "mFloatVarsDecimals": [
                 0,
@@ -1329,7 +1329,7 @@
         "mScriptName": "Jade_AsheCritChanceReady",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_BullsEye.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_BullsEye.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1438,7 +1438,7 @@
                 }
             ],
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_BullsEye.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_BullsEye.dds"
             ],
             "castRange": [
                 0.0,
@@ -1502,7 +1502,7 @@
         "mScriptName": "Jade_AsheCritChance",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_BullsEyeStack.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_BullsEyeStack.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1512,16 +1512,16 @@
         },
         "__type": "SpellObject"
     },
-    "{6f51f95c}": {
-        "mRootSpell": "{87a7b3a6}",
+    "Characters/Jade_Ashe/Spells/Jade_AsheQAbility": {
+        "mRootSpell": "Characters/Jade_Ashe/Spells/Jade_AsheQAbility/Jade_AsheQ",
         "mChildSpells": [
-            "{87a7b3a6}",
+            "Characters/Jade_Ashe/Spells/Jade_AsheQAbility/Jade_AsheQ",
             "{e40c2a3c}"
         ],
         "mName": "Jade_AsheQAbility",
         "__type": "AbilityObject"
     },
-    "{7cf217b6}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility/Jade_AsheEnchantedCrystalArrow": {
         "ObjectName": "Jade_AsheEnchantedCrystalArrow",
         "mScriptName": "Jade_AsheEnchantedCrystalArrow",
         "mSpell": {
@@ -1646,7 +1646,7 @@
                 },
                 "{6b932875}": {
                     "mMultiplier": {
-                        "mDataValue": "{3c2c4814}",
+                        "mDataValue": "AoE",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mFormulaParts": [
@@ -1672,9 +1672,9 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_EnchantedArrow.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_EnchantedArrow.dds"
             ],
-            "mMinimapIconName": "ASSETS/Characters/Jade_Ashe/HUD/Icons2D/Bowmaster_EnchantedArrow_Circle.project_jade.tex",
+            "mMinimapIconName": "ASSETS/Characters/Jade_Ashe/HUD/Icons2D/Bowmaster_EnchantedArrow_Circle.tex",
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
             "cooldownTime": [
@@ -1775,7 +1775,7 @@
             "mCastType": 3,
             "castFrame": 7.5,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{53490a8e}",
+            "mMissileEffectKey": "Jade_Ashe_R_mis",
             "mLineWidth": 130.0,
             "mana": [
                 150.0,
@@ -1955,7 +1955,7 @@
         "mScriptName": "Jade_AsheChilled",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_EnchantedArrow.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_EnchantedArrow.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1965,7 +1965,7 @@
         },
         "__type": "SpellObject"
     },
-    "{87a7b3a6}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheQAbility/Jade_AsheQ": {
         "ObjectName": "Jade_AsheQ",
         "mScriptName": "Jade_AsheQ",
         "mSpell": {
@@ -2128,8 +2128,8 @@
             "mCoefficient2": 1.25,
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_IceArrow.project_jade.dds",
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_IceArrow.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_IceArrow.dds",
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_IceArrow.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2239,7 +2239,7 @@
         "mScriptName": "Jade_AsheFrostArrow",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_IceArrow.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_IceArrow.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -2249,7 +2249,7 @@
         },
         "__type": "SpellObject"
     },
-    "{97a832a3}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheBasicAttack2": {
         "ObjectName": "Jade_AsheBasicAttack2",
         "mScriptName": "Jade_AsheBasicAttack2",
         "mSpell": {
@@ -2344,8 +2344,8 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{33fd1a61}",
-            "mHitEffectKey": "{273d53c5}",
+            "mMissileEffectKey": "Jade_Ashe_BA_mis",
+            "mHitEffectKey": "Jade_Ashe_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2366,7 +2366,7 @@
         },
         "__type": "SpellObject"
     },
-    "{ceeb4d2b}": {
+    "Characters/Jade_Ashe/Spells/Jade_AsheCritAttack": {
         "ObjectName": "Jade_AsheCritAttack",
         "mScriptName": "Jade_AsheCritAttack",
         "mSpell": {
@@ -2461,8 +2461,8 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 2500.0,
-            "mMissileEffectKey": "{33fd1a61}",
-            "mHitEffectKey": "{52c7feb6}",
+            "mMissileEffectKey": "Jade_Ashe_BA_mis",
+            "mHitEffectKey": "Jade_Ashe_BA_Crit_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -3318,7 +3318,7 @@
         },
         "__type": "CharScript"
     },
-    "{879aae91}": {
+    "Characters/Jade_Ashe/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{8cc82e45}": {
@@ -3332,7 +3332,7 @@
         "{55bb9b57}": 4,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Ashe/Skins/Base/Jade_AsheLoadScreen_Feeney.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Ashe/Skins/Base/Jade_AsheLoadScreen_Feeney.tex",
             "__type": "CensoredImage"
         },
         "__type": "{3018b0da}"
@@ -3348,12 +3348,12 @@
         "{55bb9b57}": 3,
         "{ff3c9ff8}": "{e15eb251}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Ashe/Skins/Base/Jade_AsheLoadScreen_LoR_01.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Ashe/Skins/Base/Jade_AsheLoadScreen_LoR_01.tex",
             "__type": "CensoredImage"
         },
         "__type": "{3018b0da}"
     },
-    "{bbf6c914}": {
+    "Characters/Jade_Ashe/CAC/Jade_Ashe_Skin76": {
         "mCooldown": 15.0,
         "mSituations": {
             "SpellCast": {
@@ -4959,7 +4959,7 @@
         "mObjectPath": "Characters/Jade_Ashe/CAC/Jade_Ashe_Skin76",
         "__type": "ContextualActionData"
     },
-    "{c2d67321}": {
+    "Characters/Jade_Ashe/CharacterRecords/Root": {
         "mCharacterName": "Jade_Ashe",
         "baseHPModifiable": {
             "baseValue": 474.0,
@@ -5067,10 +5067,10 @@
             "Jade_AsheEnchantedCrystalArrowAbility/Jade_AsheEnchantedCrystalArrow"
         ],
         "spells": [
-            "{87a7b3a6}",
-            "{387299d6}",
-            "{3cc16c4e}",
-            "{7cf217b6}"
+            "Characters/Jade_Ashe/Spells/Jade_AsheQAbility/Jade_AsheQ",
+            "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility/Jade_AsheVolley",
+            "Characters/Jade_Ashe/Spells/Jade_AsheSpiritOfTheHawkAbility/Jade_AsheSpiritOfTheHawk",
+            "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility/Jade_AsheEnchantedCrystalArrow"
         ],
         "extraSpells": [
             "Jade_Ashe_VolleyAttack",
@@ -5110,15 +5110,15 @@
         ],
         "mAbilities": [
             "{0d4fc342}",
-            "{6f51f95c}",
-            "{647159fb}",
-            "{12736574}",
-            "{c2f7d348}"
+            "Characters/Jade_Ashe/Spells/Jade_AsheQAbility",
+            "Characters/Jade_Ashe/Spells/Jade_AsheSpiritOfTheHawkAbility",
+            "Characters/Jade_Ashe/Spells/Jade_AsheEnchantedCrystalArrowAbility",
+            "Characters/Jade_Ashe/Spells/Jade_AsheVolleyAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Ashe",
         "passiveLuaName": "Jade_AsheFocus_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Ashe",
-        "passive1IconName": "ASSETS/Characters/Jade_Ashe/HUD/Icons2D/Jade_Ashe_P.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Ashe/HUD/Icons2D/Jade_Ashe_P.dds",
         "name": "game_character_displayname_Jade_Ashe",
         "selectionHeight": 155.0,
         "selectionRadius": 120.0,

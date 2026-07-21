@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Wenn Katarina einen Champion tötet oder eine Unterstützung erzielt, erhält sie zusätzliches Gold und ihre Abklingzeiten werden um 15 Sekunden verringert."
+        "description": "Champion-Kills oder -Assists verringern die Abklingzeiten von Katarina um 15 Sekunden."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Katarina wirft einen Dolch, der von Gegner zu Gegner springt und dabei magischen Schaden verursacht.",
-            "dynamicDescription": "Wirft einen Dolch, der <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> verursacht. Der Dolch springt zusätzlich @MaxBounces@-mal über und verursacht mit jedem Sprung 10 % weniger Schaden.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Wirft einen Dolch, der <magicDamage>@TotalDamage@</magicDamage> magischen Schaden verursacht. Der Dolch springt zu den @MaxBounces@ nächstbefindlichen Gegnern und verursacht mit jedem Sprung 10 % weniger Schaden.<br><br>Getroffene Gegner werden @MarkDuration@ Sekunden lang markiert. Katarinas normale Angriffe oder Fähigkeiten verbrauchen die Markierung und verursachen <magicDamage>@TotalDamageMark@</magicDamage> zusätzlichen magischen Schaden.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Killerinstinkt",
+            "name": "Unheimlicher Stahl",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Katarinas nächste Grundfähigkeit erhält einen zusätzlichen Effekt.",
-            "dynamicDescription": "<spellPassive>Passiv</spellPassive>: Katarinas Fähigkeiten und Angriffe verursachen @TotalDamage@ zusätzlichen Schaden.<br><br><spellActive>Aktiv:</spellActive> Katarinas nächste Grundfähigkeit erhält einen zusätzlichen Effekt.<li><spellName>Tanzende Klinge</spellName>: Verursacht vollen Schaden an jedem Ziel und belegt es @QHealingReductionDuration@ Sekunden lang mit <keyWord>Klaffende Wunden</keyWord>.<li><spellName>Blitzschritt</spellName>: Katarina erhält @EDamageReductionDuration@ Sekunden lang @EDamageReduction@ % Schadensverringerung.@SpellModifierDescriptionAppend@",
+            "description": "Katarina wirbelt mit ihren Dolchen um sich und verursacht dabei magischen Schaden an allen Gegnern im Wirkbereich. Trifft sie einen gegnerischen Champion, erhält Katarina für kurze Zeit einen Lauftemposchub.",
+            "dynamicDescription": "Wirbelt Dolche in einem kreisförmigen Bereich und verursacht @TotalDamage@ magischen Schaden. Trifft sie einen gegnerischen Champion, erhält Katarina @BuffDuration@ Sekunde lang @Haste*100@ % <speed>Lauftempo</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Katarina bewegt sich sofort zum gewählten Ziel und erleidet einige Sekunden lang weniger Schaden von Gegnern. Wenn das Ziel ein Gegner ist, fügt sie ihm Schaden zu.",
-            "dynamicDescription": "Bewegt sich zum gewählten Ziel. Verursacht <magicDamage>@TotalDamage@ magischen Schaden</magicDamage>, wenn das Ziel ein Gegner ist.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Bewegt sich zum gewählten Ziel. Verursacht <magicDamage>@TotalDamage@ magischen Schaden</magicDamage>, wenn das Ziel ein Gegner ist.<br><br>Nach dem Einsatz von Blitzschritt erleidet Katarina @DamageReductionDuration@ Sekunden lang @DamageReduction@ % weniger Schaden.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Katarina wird zu einem Wirbel aus Klingen und wirft Dolche mit unglaublicher Geschwindigkeit auf bis zu drei gegnerische Champions in der Nähe.",
-            "dynamicDescription": "Katarina wird zu einem Wirbel aus Klingen, wirft Dolche auf die 3 nächstbefindlichen gegnerischen Champions und fügt ihnen über 2 Sekunden hinweg <magicDamage>@DamageCalcTooltipOnly@ magischen Schaden</magicDamage> zu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Katarina wird zu einem Wirbel aus Klingen, wirft Dolche auf die 3 nächstbefindlichen gegnerischen Champions und fügt ihnen über 2,5 Sekunden hinweg <magicDamage>@DamageCalcTooltipOnly@ magischen Schaden</magicDamage> zu.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

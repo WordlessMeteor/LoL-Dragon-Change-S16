@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Le uccisioni o gli assist sui campioni forniscono a Katarina oro extra e riducono i suoi tempi di ricarica di 15 secondi."
+        "description": "Le uccisioni o gli assist contro i campioni riducono i tempi di ricarica di Katarina di 15 secondi."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Katarina lancia un pugnale che rimbalza da un nemico all'altro, infliggendo danni magici.",
-            "dynamicDescription": "Lancia un pugnale che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>. Il pugnale rimbalza per altre @MaxBounces@ volte, infliggendo il 10% di danni in meno a ogni rimbalzo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lancia un pugnale che infligge <magicDamage>@TotalDamage@</magicDamage> danni magici. Il pugnale rimbalza sui @MaxBounces@ nemici più vicini, infliggendo il 10% di danni in meno a ogni rimbalzo.<br><br>I nemici colpiti vengono marchiati per @MarkDuration@ secondo/i. Gli attacchi base o le abilità di Katarina consumano il marchio, infliggendo <magicDamage>@TotalDamageMark@</magicDamage> danni magici aggiuntivi.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Istinti omicidi",
+            "name": "Acciaio sinistro",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "La prossima abilità base di Katarina ottiene un effetto aggiuntivo.",
-            "dynamicDescription": "<spellPassive>Passiva</spellPassive>: le abilità e gli attacchi di Katarina infliggono @TotalDamage@ danni aggiuntivi.<br><br><spellActive>Attiva:</spellActive> la prossima abilità base di Katarina ottiene un effetto bonus.<li><spellName>Lame danzanti</spellName>: infligge danni completi a ogni bersaglio e applica <keyWord>Ferita grave</keyWord> per @QHealingReductionDuration@ secondi.<li><spellName>Shunpo</spellName>: Katarina ottiene una riduzione danni di un @EDamageReduction@% per @EDamageReductionDuration@ secondi.@SpellModifierDescriptionAppend@",
+            "description": "Katarina fa roteare i suoi pugnali intorno a sé, infliggendo danni magici a tutti i nemici nell'area. Se colpisce un campione nemico, Katarina ottiene un'improvvisa accelerazione per un breve periodo.",
+            "dynamicDescription": "Fa roteare i pugnali in cerchio infliggendo @TotalDamage@ danni magici. Se colpisce un campione nemico, Katarina ottiene @Haste*100@% <speed>velocità di movimento</speed> per @BuffDuration@ secondo.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Katarina si sposta istantaneamente sulla posizione del bersaglio e subisce danni ridotti dai nemici per alcuni secondi. Se il bersaglio è un nemico, infligge danni.",
-            "dynamicDescription": "Si sposta verso la posizione di un bersaglio. Infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> se il bersaglio è un nemico.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Si sposta verso la posizione di un bersaglio. Infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> se il bersaglio è un nemico.<br><br>Dopo aver usato Shunpo, Katarina subisce @DamageReduction@% danni in meno per @DamageReductionDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Katarina diventa un turbinio di lame, lanciando pugnali a velocità senza pari verso un massimo di tre campioni nelle vicinanze.",
-            "dynamicDescription": "Diventa un turbinio di lame, lanciando pugnali contro i 3 campioni nemici più vicini e infliggendo <magicDamage>@DamageCalcTooltipOnly@ danni magici</magicDamage> nell'arco di 2 secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Diventa un turbinio di lame, lanciando pugnali contro i 3 campioni nemici più vicini e infliggendo <magicDamage>@DamageCalcTooltipOnly@ danni magici</magicDamage> nell'arco di 2,5 secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

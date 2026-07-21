@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Klasický Twitch (Vandal)",
+                    "name": "Klasický Twitch (Král stoky)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Twitch se na krátkou dobu zneviditelní a po tuto dobu získá bonus k rychlosti pohybu. Po ukončení neviditelnosti získá na krátkou dobu bonus k rychlosti útoků.",
-            "dynamicDescription": "<mainText>Po uplynutí @MaxFadeTime@&nbsp;sek. se Twitch na @StealthDuration@&nbsp;sek. <keywordStealth>zamaskuje</keywordStealth>.<br><br>Poté, co působení <keywordStealth>Přepadení</keywordStealth> ukončí, získá na @AttackSpeedDuration@&nbsp;sek. <attackSpeed>@AttackSpeedMod*100@&nbsp;% k rychlosti útoků</attackSpeed>.",
+            "description": "Twitch se na několik sekund zneviditelní a získá bonus k rychlosti pohybu. Poté, co působení neviditelnosti skončí, získá bonus k rychlosti útoků.",
+            "dynamicDescription": "Po uplynutí @MaxFadeTime@ sek., kdy není Twitchovi způsobeno žádné poškození, nebo po @MaxDelayTime@ sek. se na @StealthDuration@ sek. <keywordStealth>zneviditelní</keywordStealth> a získá <speed>@MoveSpeedMod*100@ % k rychlosti pohybu</speed>.<br><br>Poté, co působení <keywordStealth>neviditelnosti</keywordStealth> skončí, získá na @AttackSpeedDuration@ sek. <attackSpeed>@AttackSpeedMod*100@ % k rychlosti útoků</attackSpeed>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Ochromující jed",
+            "name": "Soudek s jedem",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Twitch nakazí všechny okolní šampiony Ochromujícím jedem a sníží jim rychlost pohybu.",
-            "dynamicDescription": "Twitch na @Duration@&nbsp;sek. <status>zpomalí</status> okolní nepřátelské šampiony o @SlowPercent*-100@&nbsp;%. Toto zpomalení se zvyšuje o @PassiveStackSlowPercent*-100@&nbsp;% za každý stupeň <keywordMajor>Smrtícího jedu</keywordMajor> (max.: @MaxSlowTooltip@).<br><br>Pokud po způsobení <status>zpomalení</status> umístí na cíle další stupně <keywordMajor>Smrtícího jedu</keywordMajor>, klesne jim <speed>rychlost pohybu</speed> ještě výrazněji.@SpellModifierDescriptionAppend@",
+            "description": "Twitch vrhne soudek s jedem, jehož výbuch zpomalí nepřátele v zasažené oblasti a umístí na ně Smrtící jed.",
+            "dynamicDescription": "Twitch vrhne výbušný soudek s jedem, který na zasažené jednotky umístí sadu @StacksAdded@ stupňů <keywordMajor>Smrtícího jedu</keywordMajor> a na @Duration@ sek. je <status>zpomalí</status> o @BaseSlowAmount@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Všichni okolní nepřátelé začnou vylučovat Twitchův jedovatý plyn a každý stupeň jim způsobí poškození.",
-            "dynamicDescription": "<mainText>Twitch způsobí všem okolním označeným nepřátelům <physicalDamage>@BaseDamage@ bodů fyzického poškození</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> b. za každý stupeň <keywordMajor>Smrtícího jedu</keywordMajor>.",
+            "dynamicDescription": "Twitch způsobí všem okolním označeným nepřátelům <physicalDamage>@BaseDamage@ bodů fyzického poškození</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> b. za každý stupeň <keywordMajor>Smrtícího jedu</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Twitch zavře oči a začne před sebe střílet mocné průrazné šipky ze své kuše.",
-            "dynamicDescription": "<mainText>Twitch na @Duration@&nbsp;sek. získá @BonusRange@ k dosahu útoků a <physicalDamage>@BonusAD@ k útočnému poškození</physicalDamage> a jeho základní útoky se na tuto dobu změní na průrazné šipky, jejichž způsobované poškození se s každým následujícím zasaženým nepřítelem snižuje o @FallOffDamage*100@&nbsp;%, a to až na @MinimumFallOffDamage*100@&nbsp;%.",
+            "dynamicDescription": "Twitch na @Duration@ sek. získá @BonusRange@ k dosahu útoků a <physicalDamage>@BonusAD@ k útočnému poškození</physicalDamage> a jeho základní útoky se na tuto dobu změní na průrazné šipky, jejichž způsobované poškození se s každým následujícím zasaženým nepřítelem snižuje o @FallOffDamage*100@ %, a to až na @MinimumFallOffDamage*100@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

@@ -1,5 +1,5 @@
 {
-    "{008e12ea}": {
+    "Characters/Jade_Karthus/CharacterRecords/Root": {
         "mCharacterName": "Jade_Karthus",
         "baseHPModifiable": {
             "baseValue": 465.0,
@@ -107,10 +107,10 @@
             "Jade_KarthusFallenOneAbility/Jade_KarthusFallenOne"
         ],
         "spells": [
-            "{ff58fa19}",
-            "{bfab5cd9}",
-            "{8d2609e5}",
-            "{51200261}"
+            "Characters/Jade_Karthus/Spells/Jade_KarthusLayWasteAbility/Jade_KarthusLayWaste",
+            "Characters/Jade_Karthus/Spells/Jade_KarthusWallOfPainAbility/Jade_KarthusWallOfPain",
+            "Characters/Jade_Karthus/Spells/Jade_KarthusDefileAbility/Jade_KarthusDefile",
+            "Characters/Jade_Karthus/Spells/Jade_KarthusFallenOneAbility/Jade_KarthusFallenOne"
         ],
         "extraSpells": [
             "Jade_KarthusLayWasteExtra",
@@ -150,15 +150,15 @@
         ],
         "mAbilities": [
             "{bf2b6464}",
-            "{cffb70f2}",
-            "{f5e85c35}",
-            "{deca8411}",
-            "{8b5de0ae}"
+            "Characters/Jade_Karthus/Spells/Jade_KarthusDefileAbility",
+            "Characters/Jade_Karthus/Spells/Jade_KarthusFallenOneAbility",
+            "Characters/Jade_Karthus/Spells/Jade_KarthusLayWasteAbility",
+            "Characters/Jade_Karthus/Spells/Jade_KarthusWallOfPainAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Karthus",
         "passiveLuaName": "Jade_KarthusDeathDefied_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Karthus",
-        "passive1IconName": "ASSETS/Characters/Jade_Karthus/HUD/Icons2D/Jade_Karthus_Passive.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Karthus/HUD/Icons2D/Jade_Karthus_Passive.dds",
         "name": "game_character_displayname_Jade_Karthus",
         "selectionHeight": 150.0,
         "selectionRadius": 100.0,
@@ -286,7 +286,7 @@
         "Script": "{d5f27517}",
         "__type": "CharacterRecord"
     },
-    "{0e86e94c}": {
+    "Characters/Jade_Karthus/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{118ce9a9}": {
@@ -641,8 +641,8 @@
             "mCastType": 1,
             "castFrame": 16.5,
             "missileSpeed": 1200.0,
-            "mMissileEffectKey": "{a0de3f7b}",
-            "mHitEffectKey": "{f923797f}",
+            "mMissileEffectKey": "Jade_Karthus_Crit_Mis",
+            "mHitEffectKey": "Jade_Karthus_Crit_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "mClientData": {
@@ -657,7 +657,7 @@
         },
         "__type": "SpellObject"
     },
-    "{2e921f55}": {
+    "Characters/Jade_Karthus/Spells/Jade_KarthusBasicAttack": {
         "ObjectName": "Jade_KarthusBasicAttack",
         "mScriptName": "Jade_KarthusBasicAttack",
         "mSpell": {
@@ -712,8 +712,8 @@
             "mCastType": 1,
             "castFrame": 14.0,
             "missileSpeed": 1200.0,
-            "mMissileEffectKey": "{068c6f25}",
-            "mHitEffectKey": "{2bff76f9}",
+            "mMissileEffectKey": "Jade_Karthus_AA_Mis",
+            "mHitEffectKey": "Jade_Karthus_AA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -734,10 +734,10 @@
         },
         "__type": "SpellObject"
     },
-    "{f5e85c35}": {
-        "mRootSpell": "{51200261}",
+    "Characters/Jade_Karthus/Spells/Jade_KarthusFallenOneAbility": {
+        "mRootSpell": "Characters/Jade_Karthus/Spells/Jade_KarthusFallenOneAbility/Jade_KarthusFallenOne",
         "mChildSpells": [
-            "{51200261}",
+            "Characters/Jade_Karthus/Spells/Jade_KarthusFallenOneAbility/Jade_KarthusFallenOne",
             "{8c3a02b4}"
         ],
         "mName": "Jade_KarthusFallenOneAbility",
@@ -745,7 +745,7 @@
         "AbilityTraits": 3,
         "__type": "AbilityObject"
     },
-    "{51200261}": {
+    "Characters/Jade_Karthus/Spells/Jade_KarthusFallenOneAbility/Jade_KarthusFallenOne": {
         "ObjectName": "Jade_KarthusFallenOne",
         "mScriptName": "Jade_KarthusFallenOne",
         "mSpell": {
@@ -863,7 +863,7 @@
             "mAnimationLoopName": "Spell4_Loop",
             "mAnimationWinddownName": "Spell4_Winddown",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_DeathRay.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_DeathRay.dds"
             ],
             "mCastTime": 0.25,
             "cooldownTime": [
@@ -1068,7 +1068,7 @@
         "mScriptName": "Jade_KarthusFallenOneTarget",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_DeathRay.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_DeathRay.dds"
             ],
             "SpellEventToAudioEventSuffix": {
                 "18": "Play_sfx_Karthus_KarthusFallenOneTarget_OnBuffActivate"
@@ -1089,10 +1089,10 @@
         },
         "__type": "SpellObject"
     },
-    "{8b5de0ae}": {
-        "mRootSpell": "{bfab5cd9}",
+    "Characters/Jade_Karthus/Spells/Jade_KarthusWallOfPainAbility": {
+        "mRootSpell": "Characters/Jade_Karthus/Spells/Jade_KarthusWallOfPainAbility/Jade_KarthusWallOfPain",
         "mChildSpells": [
-            "{bfab5cd9}",
+            "Characters/Jade_Karthus/Spells/Jade_KarthusWallOfPainAbility/Jade_KarthusWallOfPain",
             "{84635985}",
             "{5f55a42c}"
         ],
@@ -1104,7 +1104,7 @@
         "mScriptName": "Jade_KarthusWallOfPainTarget",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_WallOfPain.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_WallOfPain.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1127,7 +1127,7 @@
         "mScriptName": "Jade_KarthusWallOfPainExtra",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_WallOfPain.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_WallOfPain.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1145,7 +1145,7 @@
         },
         "__type": "SpellObject"
     },
-    "{bfab5cd9}": {
+    "Characters/Jade_Karthus/Spells/Jade_KarthusWallOfPainAbility/Jade_KarthusWallOfPain": {
         "ObjectName": "Jade_KarthusWallOfPain",
         "mScriptName": "Jade_KarthusWallOfPain",
         "mSpell": {
@@ -1312,7 +1312,7 @@
             "mCoefficient": 1.0,
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_WallOfPain.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_WallOfPain.dds"
             ],
             "mCastTime": 0.25,
             "cooldownTime": [
@@ -1531,16 +1531,16 @@
         "mScriptName": "Jade_KarthusAttackSequencer",
         "__type": "SpellObject"
     },
-    "{cffb70f2}": {
-        "mRootSpell": "{8d2609e5}",
+    "Characters/Jade_Karthus/Spells/Jade_KarthusDefileAbility": {
+        "mRootSpell": "Characters/Jade_Karthus/Spells/Jade_KarthusDefileAbility/Jade_KarthusDefile",
         "mChildSpells": [
-            "{8d2609e5}",
+            "Characters/Jade_Karthus/Spells/Jade_KarthusDefileAbility/Jade_KarthusDefile",
             "{9409dd6e}"
         ],
         "mName": "Jade_KarthusDefileAbility",
         "__type": "AbilityObject"
     },
-    "{8d2609e5}": {
+    "Characters/Jade_Karthus/Spells/Jade_KarthusDefileAbility/Jade_KarthusDefile": {
         "ObjectName": "Jade_KarthusDefile",
         "mScriptName": "Jade_KarthusDefile",
         "mSpell": {
@@ -1681,7 +1681,7 @@
             "mCoefficient": 0.20000000298023224,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defile.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defile.dds"
             ],
             "mCastTime": 0.25,
             "cooldownTime": [
@@ -1961,7 +1961,7 @@
             "mCoefficient": 0.20000000298023224,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defile.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defile.dds"
             ],
             "mCastTime": 0.25,
             "cooldownTime": [
@@ -2055,7 +2055,7 @@
         },
         "__type": "SpellObject"
     },
-    "{b7076f25}": {
+    "Characters/Jade_Karthus/Spells/Jade_KarthusBasicAttack2": {
         "ObjectName": "Jade_KarthusBasicAttack2",
         "mScriptName": "Jade_KarthusBasicAttack2",
         "mSpell": {
@@ -2111,8 +2111,8 @@
             "mCastType": 1,
             "castFrame": 14.0,
             "missileSpeed": 1200.0,
-            "mMissileEffectKey": "{068c6f25}",
-            "mHitEffectKey": "{2bff76f9}",
+            "mMissileEffectKey": "Jade_Karthus_AA_Mis",
+            "mHitEffectKey": "Jade_Karthus_AA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2149,7 +2149,7 @@
         "mScriptName": "Jade_KarthusDeathDefiedBuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.dds"
             ],
             "SpellEventToAudioEventSuffix": {
                 "18": "Play_sfx_Karthus_KarthusDeathDefiedBuff_OnBuffActivate",
@@ -2230,7 +2230,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_Defied.dds"
             ],
             "castRange": [
                 0.0,
@@ -2272,15 +2272,15 @@
         },
         "__type": "SpellObject"
     },
-    "{deca8411}": {
-        "mRootSpell": "{ff58fa19}",
+    "Characters/Jade_Karthus/Spells/Jade_KarthusLayWasteAbility": {
+        "mRootSpell": "Characters/Jade_Karthus/Spells/Jade_KarthusLayWasteAbility/Jade_KarthusLayWaste",
         "mChildSpells": [
-            "{ff58fa19}"
+            "Characters/Jade_Karthus/Spells/Jade_KarthusLayWasteAbility/Jade_KarthusLayWaste"
         ],
         "mName": "Jade_KarthusLayWasteAbility",
         "__type": "AbilityObject"
     },
-    "{f2096825}": {
+    "Characters/Jade_Karthus/Spells/Jade_KarthusCritAttack": {
         "ObjectName": "Jade_KarthusCritAttack",
         "mScriptName": "Jade_KarthusCritAttack",
         "mSpell": {
@@ -2334,8 +2334,8 @@
             "mCastType": 1,
             "castFrame": 16.5,
             "missileSpeed": 1200.0,
-            "mMissileEffectKey": "{a0de3f7b}",
-            "mHitEffectKey": "{f923797f}",
+            "mMissileEffectKey": "Jade_Karthus_Crit_Mis",
+            "mHitEffectKey": "Jade_Karthus_Crit_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2355,7 +2355,7 @@
         },
         "__type": "SpellObject"
     },
-    "{ff58fa19}": {
+    "Characters/Jade_Karthus/Spells/Jade_KarthusLayWasteAbility/Jade_KarthusLayWaste": {
         "ObjectName": "Jade_KarthusLayWaste",
         "mScriptName": "Jade_KarthusLayWaste",
         "mSpell": {
@@ -2504,8 +2504,8 @@
             "mCoefficient": 0.3499999940395355,
             "mAnimationName": "Spell1_a",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_LayWaste.project_jade.dds",
-                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_LayWaste.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_LayWaste.dds",
+                "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_LayWaste.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.0,

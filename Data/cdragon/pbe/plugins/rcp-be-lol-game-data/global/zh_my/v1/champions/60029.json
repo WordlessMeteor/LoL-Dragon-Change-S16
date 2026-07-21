@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "经典图奇（野蛮庞克）",
+                    "name": "经典 | 黑帮老大 图奇",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "图奇短暂进入隐形状态，隐形时获得移速加成。脱离隐形状态时，图奇会短暂获得攻击速度。",
-            "dynamicDescription": "<mainText>@MaxFadeTime@秒后，图奇会进入<keywordStealth>伪装</keywordStealth>状态，持续@StealthDuration@秒。<br><br>脱离<keywordStealth>伪装</keywordStealth>状态后，图奇获得<attackSpeed>@AttackSpeedMod*100@%攻击速度</attackSpeed>，持续@AttackSpeedDuration@秒。",
+            "description": "图奇进入隐形状态，持续数秒，获得移动速度。他在解除隐身后会获得攻速。",
+            "dynamicDescription": "如果在@MaxFadeTime@秒内未承受伤害或@MaxDelayTime@秒后，图奇进入<keywordStealth>隐形</keywordStealth>状态，持续@StealthDuration@秒，获得<speed>@MoveSpeedMod*100@%移速</speed>。<br><br>脱离<keywordStealth>隐形</keywordStealth>状态后，图奇获得<attackSpeed>@AttackSpeedMod*100@%攻击速度</attackSpeed>，持续@AttackSpeedDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "衰弱毒素",
+            "name": "虚弱之毒",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "图奇使用衰弱毒素感染附近所有英雄，并降低其移动速度。",
-            "dynamicDescription": "图奇使附近敌方英雄<status>减速</status>@SlowPercent*-100@%，持续@Duration@秒，每层<keywordMajor>死亡毒液</keywordMajor>都会使减速效果提升@PassiveStackSlowPercent*-100@%（上限为@MaxSlowTooltip@）。<br><br>在施加<status>减速</status>效果后，叠加<keywordMajor>死亡毒液</keywordMajor>层数会进一步降低其<speed>移动速度</speed>。@SpellModifierDescriptionAppend@",
+            "description": "图奇投掷一桶毒液，爆炸后对区域内的敌人施加死亡毒液并造成减速效果。",
+            "dynamicDescription": "图奇投掷一桶爆炸毒液，对敌人施加 @StacksAdded@层<keywordMajor>死亡毒液</keywordMajor> ，并使其<status>减速</status> @BaseSlowAmount@%，持续@Duration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "附近所有敌人会从体内渗出图奇的剧毒毒液，每层毒液都会造成伤害。",
-            "dynamicDescription": "<mainText>图奇对所有被标记的附近敌人造成<physicalDamage>@BaseDamage@物理伤害</physicalDamage>，并根据每层<keywordMajor>死亡毒液</keywordMajor>额外造成<physicalDamage>@TotalStackDamage@</physicalDamage>，同时消耗附近所有层数。",
+            "dynamicDescription": "图奇对所有被标记的附近敌人造成<physicalDamage>@BaseDamage@物理伤害</physicalDamage>，并根据每层<keywordMajor>死亡毒液</keywordMajor>额外造成<physicalDamage>@TotalStackDamage@</physicalDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "图奇闭上双眼，挥动弩弓，朝前方迅速射出强力穿透箭矢。",
-            "dynamicDescription": "<mainText>在@Duration@秒内，图奇获得@BonusRange@攻击距离、<physicalDamage>@BonusAD@物理攻击</physicalDamage>，且他的普攻会变为穿透箭矢，对后续目标造成的伤害降低@FallOffDamage*100@%，最低降至@MinimumFallOffDamage*100@%。",
+            "dynamicDescription": "在@Duration@秒内，图奇获得@BonusRange@攻击距离、<physicalDamage>@BonusAD@物理攻击</physicalDamage>，且他的普攻会变为穿透箭矢，对后续目标造成的伤害降低@FallOffDamage*100@%，最低降至@MinimumFallOffDamage*100@%。@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

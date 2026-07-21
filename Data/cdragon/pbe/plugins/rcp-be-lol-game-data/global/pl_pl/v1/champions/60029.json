@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Klasyczny Twitch (Wandal)",
+                    "name": "Klasyczny Twitch (szef mafii)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Twitch na krótki czas staje się niewidzialny i zyskuje bonus do prędkości ruchu. Gdy Twitch kończy niewidzialność, zyskuje prędkość ataku na krótki czas.",
-            "dynamicDescription": "<mainText>Po @MaxFadeTime@ sek. Twitch zyskuje <keywordStealth>kamuflaż</keywordStealth> na @StealthDuration@ sek.<br><br>Po opuszczeniu <keywordStealth>kamuflażu</keywordStealth> Twitch zyskuje <attackSpeed>@AttackSpeedMod*100@% prędkości ataku</attackSpeed> na @AttackSpeedDuration@ sek.",
+            "description": "Twitch staje się niewidzialny na kilka sekund i zyskuje prędkość ruchu. Następnie zyskuje prędkość ataku po wyjściu z ukrycia.",
+            "dynamicDescription": "Po @MaxFadeTime@ sek. bez otrzymania obrażeń lub po @MaxDelayTime@ sek. Twitch staje się <keywordStealth>niewidzialny</keywordStealth> na @StealthDuration@ sek., zyskując <speed>@MoveSpeedMod*100@% prędkości ruchu</speed>.<br><br>Po wyjściu z <keywordStealth>ukrycia</keywordStealth> Twitch zyskuje <attackSpeed>@AttackSpeedMod*100@% prędkości ataku</attackSpeed> na @AttackSpeedDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Osłabiająca Trucizna",
+            "name": "Beczka Jadu",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Twitch zaraża wszystkich pobliskich bohaterów Osłabiającą Trucizną, spowalniając ich prędkość ruchu.",
-            "dynamicDescription": "Twitch <status>spowalnia</status> pobliskich wrogich bohaterów o @SlowPercent*-100@% na @Duration@ sek., a wartość ta jest zwiększana o @PassiveStackSlowPercent*-100@% za każdy ładunek <keywordMajor>Śmiertelnego Jadu</keywordMajor> (maks.: @MaxSlowTooltip@).<br><br>Nałożenie kolejnych ładunków <keywordMajor>Śmiertelnego Jadu</keywordMajor> po zastosowaniu <status>spowolnienia</status> dodatkowo zmniejsza <speed>prędkość ruchu</speed> celu.@SpellModifierDescriptionAppend@",
+            "description": "Twitch rzuca beczką jadu, która wybucha, nakładając Śmiertelny Jad i spowalniając wrogów na danym obszarze.",
+            "dynamicDescription": "Twitch rzuca wybuchającą beczką jadu, nakładając następującą liczbę ładunków: @StacksAdded@ <keywordMajor>Śmiertelnego Jadu</keywordMajor> i <status>spowalniając</status> wrogów o @BaseSlowAmount@% na @Duration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Wszyscy pobliscy wrogowie wydzielają ze swoich ciał toksyczny jad Twitcha, który zadaje obrażenia za każdy ładunek.",
-            "dynamicDescription": "<mainText>Twitch zadaje <physicalDamage>@BaseDamage@ pkt. obrażeń fizycznych</physicalDamage> plus <physicalDamage>@TotalStackDamage@ pkt.</physicalDamage> za każdy ładunek <keywordMajor>Śmiertelnego Jadu</keywordMajor> wszystkim oznaczonym pobliskim wrogom, zużywając wszystkie pobliskie ładunki.",
+            "dynamicDescription": "Twitch zadaje <physicalDamage>@BaseDamage@ pkt. obrażeń fizycznych</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> pkt. za każdy ładunek <keywordMajor>Śmiertelnego Jadu</keywordMajor> wszystkim oznaczonym pobliskim wrogom.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Twitch zamyka oczy i strzela z kuszy, gwałtownie rozrzucając przed sobą potężne, przeszywające bełty.",
-            "dynamicDescription": "<mainText>Na @Duration@ sek. Twitch otrzymuje @BonusRange@ jedn. zasięgu ataku oraz <physicalDamage>@BonusAD@ pkt. obrażeń od ataku</physicalDamage>, a jego ataki podstawowe zamieniają się w przebijające pociski, które zadają każdemu kolejnemu wrogowi na linii strzału o @FallOffDamage*100@% mniej obrażeń, aż do minimalnej ilości @MinimumFallOffDamage*100@% obrażeń.",
+            "dynamicDescription": "Na @Duration@ sek. Twitch otrzymuje @BonusRange@ jedn. zasięgu ataku oraz <physicalDamage>@BonusAD@ pkt. obrażeń od ataku</physicalDamage>, a jego ataki podstawowe zamieniają się w przebijające pociski, które zadają każdemu kolejnemu wrogowi na linii strzału o @FallOffDamage*100@% mniej obrażeń, aż do minimalnej ilości @MinimumFallOffDamage*100@% obrażeń.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

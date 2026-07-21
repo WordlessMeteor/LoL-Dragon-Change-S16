@@ -174,7 +174,7 @@
         "{55bb9b57}": 19,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Chogath/skins/base/Jade_ChogathLoadScreen_Feeney.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Chogath/skins/base/Jade_ChogathLoadScreen_Feeney.tex",
             "__type": "CensoredImage"
         },
         "__type": "{3018b0da}"
@@ -190,23 +190,23 @@
         "{55bb9b57}": 5,
         "{ff3c9ff8}": "{79c259f7}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Chogath/skins/base/Jade_ChoGathLoadScreen_Portrait_Legacy_02.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Chogath/skins/base/Jade_ChoGathLoadScreen_Portrait_Legacy_02.tex",
             "__type": "CensoredImage"
         },
         "__type": "{3018b0da}"
     },
-    "{1667f5a4}": {
-        "mRootSpell": "{e910f7c5}",
+    "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility": {
+        "mRootSpell": "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility/Jade_ChogathW",
         "mChildSpells": [
-            "{e910f7c5}"
+            "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility/Jade_ChogathW"
         ],
         "mName": "Jade_ChogathWAbility",
         "__type": "AbilityObject"
     },
-    "{415716d1}": {
-        "mRootSpell": "{ed64bf6b}",
+    "Characters/Jade_Chogath/Spells/Jade_ChogathRAbility": {
+        "mRootSpell": "Characters/Jade_Chogath/Spells/Jade_ChogathRAbility/Jade_ChogathR",
         "mChildSpells": [
-            "{ed64bf6b}",
+            "Characters/Jade_Chogath/Spells/Jade_ChogathRAbility/Jade_ChogathR",
             "{1a3e2dae}",
             "{5fd1889a}",
             "{170410e9}"
@@ -219,7 +219,7 @@
         "mScriptName": "Jade_ChogathRMarker",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_Feast.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_Feast.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -230,7 +230,7 @@
         "mScriptName": "Jade_ChogathRVisualManager",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_Feast.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_Feast.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -241,13 +241,13 @@
         "mScriptName": "Jade_ChogathRInternal",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_Feast.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_Feast.dds"
             ],
             "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
     },
-    "{ed64bf6b}": {
+    "Characters/Jade_Chogath/Spells/Jade_ChogathRAbility/Jade_ChogathR": {
         "ObjectName": "Jade_ChogathR",
         "mScriptName": "Jade_ChogathR",
         "mSpell": {
@@ -384,7 +384,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{bc247563}",
+                            "mDataValue": "RMonsterAPRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -407,7 +407,7 @@
             },
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_Feast.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_Feast.dds"
             ],
             "mCastTime": 0.25,
             "cooldownTime": [
@@ -466,7 +466,7 @@
             "castConeDistance": 100.0,
             "castFrame": 5.800000190734863,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{471d93f1}",
+            "mHitEffectKey": "Jade_Chogath_R_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "mFloatVarsDecimals": [
@@ -572,7 +572,7 @@
         },
         "__type": "SpellObject"
     },
-    "{319c3ce5}": {
+    "Characters/Jade_Chogath/Spells/Jade_ChogathCritAttack": {
         "ObjectName": "Jade_ChogathCritAttack",
         "mScriptName": "Jade_ChogathCritAttack",
         "mSpell": {
@@ -582,7 +582,7 @@
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 14.125,
-            "mHitEffectKey": "{97cce7c5}",
+            "mHitEffectKey": "Jade_Chogath_BA_Crit_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -601,10 +601,10 @@
         },
         "__type": "SpellObject"
     },
-    "{c8f8dc3a}": {
-        "mRootSpell": "{6ddfb9f9}",
+    "Characters/Jade_Chogath/Spells/Jade_ChogathQAbility": {
+        "mRootSpell": "Characters/Jade_Chogath/Spells/Jade_ChogathQAbility/Jade_ChogathQ",
         "mChildSpells": [
-            "{6ddfb9f9}",
+            "Characters/Jade_Chogath/Spells/Jade_ChogathQAbility/Jade_ChogathQ",
             "{35931e52}",
             "{7d12934c}"
         ],
@@ -616,7 +616,7 @@
         "mScriptName": "Jade_ChogathQLaunch",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_SpikeSlam.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_SpikeSlam.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -626,7 +626,7 @@
         },
         "__type": "SpellObject"
     },
-    "{6ddfb9f9}": {
+    "Characters/Jade_Chogath/Spells/Jade_ChogathQAbility/Jade_ChogathQ": {
         "ObjectName": "Jade_ChogathQ",
         "mScriptName": "Jade_ChogathQ",
         "mSpell": {
@@ -815,7 +815,7 @@
             "mCoefficient": 1.0,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_SpikeSlam.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_SpikeSlam.dds"
             ],
             "cooldownTime": [
                 9.0,
@@ -998,7 +998,7 @@
         "mScriptName": "Jade_ChogathQTarget",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_SpikeSlam.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_SpikeSlam.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1008,10 +1008,10 @@
         },
         "__type": "SpellObject"
     },
-    "{f53bde36}": {
-        "mRootSpell": "{457d8d71}",
+    "Characters/Jade_Chogath/Spells/Jade_ChogathEAbility": {
+        "mRootSpell": "Characters/Jade_Chogath/Spells/Jade_ChogathEAbility/Jade_ChogathE",
         "mChildSpells": [
-            "{457d8d71}",
+            "Characters/Jade_Chogath/Spells/Jade_ChogathEAbility/Jade_ChogathE",
             "{4381c24f}",
             "{c2452ac7}",
             "{be45247b}",
@@ -1031,7 +1031,7 @@
             "mAlternateName": "Jade_Chogath_VorpalSpikes",
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
             "{11704a2b}": 0.3888999819755554,
             "{f26881a0}": 1.333400011062622,
@@ -1120,7 +1120,7 @@
             "mCastType": 3,
             "castFrame": 10.0,
             "missileSpeed": 1475.0,
-            "mMissileEffectKey": "{7ba4aaa4}",
+            "mMissileEffectKey": "Jade_Chogath_E_mis",
             "mLineWidth": 170.0,
             "bHaveHitBone": true,
             "mHitBoneName": "head",
@@ -1164,7 +1164,7 @@
         },
         "__type": "SpellObject"
     },
-    "{457d8d71}": {
+    "Characters/Jade_Chogath/Spells/Jade_ChogathEAbility/Jade_ChogathE": {
         "ObjectName": "Jade_ChogathE",
         "mScriptName": "Jade_ChogathE",
         "mSpell": {
@@ -1228,7 +1228,7 @@
             },
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
             "{11704a2b}": 0.3812499940395355,
             "{f26881a0}": 1.5399999618530273,
@@ -1415,7 +1415,7 @@
             "mAlternateName": "Jade_Chogath_VorpalSpikes",
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
             "{11704a2b}": 0.3888999819755554,
             "{f26881a0}": 1.333400011062622,
@@ -1504,7 +1504,7 @@
             "mCastType": 3,
             "castFrame": 10.0,
             "missileSpeed": 1475.0,
-            "mMissileEffectKey": "{363883d6}",
+            "mMissileEffectKey": "Jade_Chogath_E_mis6",
             "mLineWidth": 235.0,
             "bHaveHitBone": true,
             "mHitBoneName": "head",
@@ -1556,7 +1556,7 @@
             "mAlternateName": "Jade_Chogath_VorpalSpikes",
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
             "{11704a2b}": 0.3888999819755554,
             "{f26881a0}": 1.333400011062622,
@@ -1645,7 +1645,7 @@
             "mCastType": 3,
             "castFrame": 10.0,
             "missileSpeed": 1475.0,
-            "mMissileEffectKey": "{35388243}",
+            "mMissileEffectKey": "Jade_Chogath_E_mis5",
             "mLineWidth": 220.0,
             "bHaveHitBone": true,
             "mHitBoneName": "head",
@@ -1697,7 +1697,7 @@
             "mAlternateName": "Jade_Chogath_VorpalSpikes",
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
             "{11704a2b}": 0.3888999819755554,
             "{f26881a0}": 1.333400011062622,
@@ -1786,7 +1786,7 @@
             "mCastType": 3,
             "castFrame": 10.0,
             "missileSpeed": 1475.0,
-            "mMissileEffectKey": "{343880b0}",
+            "mMissileEffectKey": "Jade_Chogath_E_mis4",
             "mLineWidth": 205.0,
             "bHaveHitBone": true,
             "mHitBoneName": "head",
@@ -1838,7 +1838,7 @@
             "mAlternateName": "Jade_Chogath_VorpalSpikes",
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
             "{11704a2b}": 0.3888999819755554,
             "{f26881a0}": 1.333400011062622,
@@ -1927,7 +1927,7 @@
             "mCastType": 3,
             "castFrame": 10.0,
             "missileSpeed": 1475.0,
-            "mMissileEffectKey": "{3b388bb5}",
+            "mMissileEffectKey": "Jade_Chogath_E_mis3",
             "mLineWidth": 190.0,
             "bHaveHitBone": true,
             "mHitBoneName": "head",
@@ -1979,7 +1979,7 @@
             "mAlternateName": "Jade_Chogath_VorpalSpikes",
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
             "{11704a2b}": 0.3888999819755554,
             "{f26881a0}": 1.333400011062622,
@@ -2068,7 +2068,7 @@
             "mCastType": 3,
             "castFrame": 10.0,
             "missileSpeed": 1475.0,
-            "mMissileEffectKey": "{3a388a22}",
+            "mMissileEffectKey": "Jade_Chogath_E_mis2",
             "mLineWidth": 185.0,
             "bHaveHitBone": true,
             "mHitBoneName": "head",
@@ -2111,7 +2111,7 @@
         },
         "__type": "SpellObject"
     },
-    "{9f382215}": {
+    "Characters/Jade_Chogath/Spells/Jade_ChogathBasicAttack": {
         "ObjectName": "Jade_ChogathBasicAttack",
         "mScriptName": "Jade_ChogathBasicAttack",
         "mSpell": {
@@ -2122,7 +2122,7 @@
             "castConeDistance": 100.0,
             "castFrame": 14.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{c3e63fcc}",
+            "mHitEffectKey": "Jade_Chogath_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2234,7 +2234,7 @@
             },
             "mCastType": 3,
             "missileSpeed": 1250.0,
-            "mMissileEffectKey": "{54541bdd}",
+            "mMissileEffectKey": "Jade_Chogath_R_mis",
             "mLineWidth": 25.0,
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
@@ -2242,7 +2242,7 @@
         },
         "__type": "SpellObject"
     },
-    "{cc5dc365}": {
+    "Characters/Jade_Chogath/Spells/Jade_ChogathBasicAttack2": {
         "ObjectName": "Jade_ChogathBasicAttack2",
         "mScriptName": "Jade_ChogathBasicAttack2",
         "mSpell": {
@@ -2254,7 +2254,7 @@
             "castConeDistance": 100.0,
             "castFrame": 14.25,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{c3e63fcc}",
+            "mHitEffectKey": "Jade_Chogath_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2378,7 +2378,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_TailSpike.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_TailSpike.dds"
             ],
             "castRange": [
                 0.0,
@@ -2423,7 +2423,7 @@
         },
         "__type": "SpellObject"
     },
-    "{e910f7c5}": {
+    "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility/Jade_ChogathW": {
         "ObjectName": "Jade_ChogathW",
         "mScriptName": "Jade_ChogathW",
         "mSpell": {
@@ -2539,7 +2539,7 @@
             "mCoefficient": 0.699999988079071,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_FeralScream.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_FeralScream.dds"
             ],
             "cooldownTime": [
                 13.0,
@@ -2602,7 +2602,7 @@
             "castConeDistance": 650.0,
             "castFrame": 19.25,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{1d0903be}",
+            "mHitEffectKey": "Jade_Chogath_W_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "mana": [
@@ -2711,7 +2711,7 @@
         },
         "__type": "SpellObject"
     },
-    "{1ff1e04a}": {
+    "Characters/Jade_Chogath/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{327e550f}": {
@@ -2857,7 +2857,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{c315305c}": {
+    "Characters/Jade_Chogath/CharacterRecords/Root": {
         "mCharacterName": "Jade_Chogath",
         "baseHPModifiable": {
             "baseValue": 520.0,
@@ -2971,10 +2971,10 @@
             "Jade_ChogathRAbility/Jade_ChogathR"
         ],
         "spells": [
-            "{6ddfb9f9}",
-            "{e910f7c5}",
-            "{457d8d71}",
-            "{ed64bf6b}"
+            "Characters/Jade_Chogath/Spells/Jade_ChogathQAbility/Jade_ChogathQ",
+            "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility/Jade_ChogathW",
+            "Characters/Jade_Chogath/Spells/Jade_ChogathEAbility/Jade_ChogathE",
+            "Characters/Jade_Chogath/Spells/Jade_ChogathRAbility/Jade_ChogathR"
         ],
         "extraSpells": [
             "Jade_Chogath_VorpalSpikesMissle",
@@ -3014,15 +3014,15 @@
         ],
         "mAbilities": [
             "{e2a9235c}",
-            "{415716d1}",
-            "{1667f5a4}",
-            "{c8f8dc3a}",
-            "{f53bde36}"
+            "Characters/Jade_Chogath/Spells/Jade_ChogathRAbility",
+            "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility",
+            "Characters/Jade_Chogath/Spells/Jade_ChogathQAbility",
+            "Characters/Jade_Chogath/Spells/Jade_ChogathEAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Chogath",
         "passiveLuaName": "Jade_Chogath_Carnivore",
         "passiveToolTip": "game_character_passiveDescription_Jade_Chogath",
-        "passive1IconName": "ASSETS/Characters/Jade_Chogath/HUD/Icons2D/GreenTerror_TailSpike.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Chogath/HUD/Icons2D/GreenTerror_TailSpike.dds",
         "name": "game_character_displayname_Jade_Chogath",
         "weaponMaterials": [
             "GreenTerrorBasicAttack"
@@ -3145,7 +3145,7 @@
         "Script": "{e2144e17}",
         "__type": "CharacterRecord"
     },
-    "{daed5da3}": {
+    "Characters/Jade_Chogath/CAC/Jade_Chogath_Skin02": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {

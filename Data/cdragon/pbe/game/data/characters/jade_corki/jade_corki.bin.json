@@ -1,5 +1,5 @@
 {
-    "{0a4481b1}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiCritAttack": {
         "ObjectName": "Jade_CorkiCritAttack",
         "mScriptName": "Jade_CorkiCritAttack",
         "mSpell": {
@@ -86,8 +86,8 @@
             "mCastType": 1,
             "castFrame": 5.5,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{e89a5031}",
-            "mHitEffectKey": "{417c2e35}",
+            "mMissileEffectKey": "Jade_Corki_BA_mis_crit",
+            "mHitEffectKey": "Jade_Corki_BA_tar_crit",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "selectionPriority": 1,
@@ -109,10 +109,10 @@
         },
         "__type": "SpellObject"
     },
-    "{0e6494d5}": {
-        "mRootSpell": "{8acf872b}",
+    "Characters/Jade_Corki/Spells/Jade_CorkiRAbility": {
+        "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR",
         "mChildSpells": [
-            "{8acf872b}",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR",
             "{111cf174}",
             "{f48f518f}",
             "{b3a1b264}",
@@ -121,10 +121,10 @@
         "mName": "Jade_CorkiRAbility",
         "__type": "AbilityObject"
     },
-    "{67978b12}": {
-        "mRootSpell": "{b1449075}",
+    "Characters/Jade_Corki/Spells/Jade_CorkiEAbility": {
+        "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE",
         "mChildSpells": [
-            "{b1449075}",
+            "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE",
             "{64e9dcb0}",
             "{0f4b80df}"
         ],
@@ -246,7 +246,7 @@
             "castConeDistance": 685.0,
             "castFrame": 8.84000015258789,
             "missileSpeed": 1500.0,
-            "mHitEffectKey": "{4e49b684}",
+            "mHitEffectKey": "Jade_Corki_E_tar",
             "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
             "selectionPriority": 1,
             "mTargetingTypeData": {
@@ -276,7 +276,7 @@
         "mScriptName": "Jade_CorkiE_Debuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_GatlingGun.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_GatlingGun.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -286,7 +286,7 @@
         },
         "__type": "SpellObject"
     },
-    "{b1449075}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE": {
         "ObjectName": "Jade_CorkiE",
         "mScriptName": "Jade_CorkiE",
         "mSpell": {
@@ -368,7 +368,7 @@
             },
             "mAnimationName": "Attack2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_GatlingGun.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_GatlingGun.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -601,7 +601,7 @@
         "mScriptName": "Jade_CorkiR_Check",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/CorkiMissileBarrageBig.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/CorkiMissileBarrageBig.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -774,7 +774,7 @@
             "mCastType": 3,
             "castFrame": 5.550000190734863,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{3b5099b4}",
+            "mMissileEffectKey": "Jade_Corki_R_mis_big",
             "mLineWidth": 40.0,
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
@@ -818,7 +818,7 @@
         },
         "__type": "SpellObject"
     },
-    "{8acf872b}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR": {
         "ObjectName": "Jade_CorkiR",
         "mScriptName": "Jade_CorkiR",
         "mSpell": {
@@ -873,8 +873,8 @@
             },
             "mAnimationName": "Idle1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_MissileBarrage.project_jade.dds",
-                "ASSETS/UX/Jade/S3Icons/SameSized/CorkiMissileBarrageBig.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_MissileBarrage.dds",
+                "ASSETS/UX/Jade/S3Icons/SameSized/CorkiMissileBarrageBig.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -964,7 +964,7 @@
             "castFrame": 5.170000076293945,
             "missileSpeed": 828.5,
             "mLineWidth": 40.0,
-            "mHitEffectKey": "{bda48775}",
+            "mHitEffectKey": "Jade_Corki_R_MB_tar_01",
             "mFloatVarsDecimals": [
                 0,
                 0,
@@ -1271,7 +1271,7 @@
             "mCastType": 3,
             "castFrame": 6.0,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{d75da6d9}",
+            "mMissileEffectKey": "Jade_Corki_R_mis",
             "mLineWidth": 40.0,
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
@@ -1320,7 +1320,7 @@
         "mScriptName": "Jade_CorkiR_NC",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/CorkiMissileBarrageNormal.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/CorkiMissileBarrageNormal.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1330,16 +1330,16 @@
         },
         "__type": "SpellObject"
     },
-    "{13139700}": {
-        "mRootSpell": "{167c1285}",
+    "Characters/Jade_Corki/Spells/Jade_CorkiWAbility": {
+        "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW",
         "mChildSpells": [
-            "{167c1285}",
+            "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW",
             "{bb1744cd}"
         ],
         "mName": "Jade_CorkiWAbility",
         "__type": "AbilityObject"
     },
-    "{167c1285}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW": {
         "ObjectName": "Jade_CorkiW",
         "mScriptName": "Jade_CorkiW",
         "mSpell": {
@@ -1433,7 +1433,7 @@
             },
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_Valkyrie.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_Valkyrie.dds"
             ],
             "cooldownTime": [
                 26.0,
@@ -1657,7 +1657,7 @@
         "mScriptName": "Jade_CorkiW_Sound",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_Valkyrie.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_Valkyrie.dds"
             ],
             "SpellEventToAudioEventSuffix": {
                 "18": "Play_sfx_Corki_ValkyrieSound_OnBuffActivate",
@@ -1671,7 +1671,7 @@
         },
         "__type": "SpellObject"
     },
-    "{32067bc1}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiBasicAttack": {
         "ObjectName": "Jade_CorkiBasicAttack",
         "mScriptName": "Jade_CorkiBasicAttack",
         "mSpell": {
@@ -1757,8 +1757,8 @@
             "mCastType": 1,
             "castFrame": 5.5,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{9d56fbf4}",
-            "mHitEffectKey": "{8a169030}",
+            "mMissileEffectKey": "Jade_Corki_BA_mis",
+            "mHitEffectKey": "Jade_Corki_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "selectionPriority": 1,
@@ -1797,10 +1797,10 @@
         },
         "__type": "SpellObject"
     },
-    "{ee86aece}": {
-        "mRootSpell": "{ec810b0d}",
+    "Characters/Jade_Corki/Spells/Jade_CorkiQAbility": {
+        "mRootSpell": "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ",
         "mChildSpells": [
-            "{ec810b0d}",
+            "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ",
             "{57214631}"
         ],
         "mName": "Jade_CorkiQAbility",
@@ -1811,7 +1811,7 @@
         "mScriptName": "Jade_CorkiQ_Blind",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_PhosphorusBomb.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_PhosphorusBomb.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1821,7 +1821,7 @@
         },
         "__type": "SpellObject"
     },
-    "{ec810b0d}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ": {
         "ObjectName": "Jade_CorkiQ",
         "mScriptName": "Jade_CorkiQ",
         "mSpell": {
@@ -1872,7 +1872,7 @@
             },
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_PhosphorusBomb.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_PhosphorusBomb.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2046,7 +2046,7 @@
         },
         "__type": "SpellObject"
     },
-    "{b3351f89}": {
+    "Characters/Jade_Corki/Spells/Jade_CorkiBasicAttack2": {
         "ObjectName": "Jade_CorkiBasicAttack2",
         "mScriptName": "Jade_CorkiBasicAttack2",
         "mSpell": {
@@ -2133,8 +2133,8 @@
             "mCastType": 1,
             "castFrame": 5.5,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{9d56fbf4}",
-            "mHitEffectKey": "{8a169030}",
+            "mMissileEffectKey": "Jade_Corki_BA_mis",
+            "mHitEffectKey": "Jade_Corki_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "selectionPriority": 1,
@@ -2240,7 +2240,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_RapidReload.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Corki_RapidReload.dds"
             ],
             "castRange": [
                 0.0,
@@ -2662,28 +2662,28 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{c66c2131}",
-                            "{c846dc90}"
+                            "Items/771055",
+                            "Items/773340"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{467823a4}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{c846dc90}"
+                            "Items/771001",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/773340"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{337149f6}",
-                            "{99a41f9d}",
-                            "{99a41f9d}",
-                            "{c846dc90}"
+                            "Items/771036",
+                            "Items/772003",
+                            "Items/772003",
+                            "Items/773340"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -2691,38 +2691,38 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{a4561211}",
-                            "{294c5614}",
-                            "{274a1457}"
+                            "Items/773031",
+                            "Items/773072",
+                            "Items/773046"
                         ],
                         "MaxCompletedItems": 1,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{9753bf03}",
-                            "{a453d37a}"
+                            "Items/773006",
+                            "Items/773009"
                         ],
                         "{f71960ab}": "{71caf510}",
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{a840520e}",
-                            "{234c4ca2}",
-                            "{a856185d}"
+                            "Items/773085",
+                            "Items/773078",
+                            "Items/773035"
                         ],
                         "MaxCompletedItems": 2,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{a4561211}",
-                            "{294c5614}",
-                            "{3cbc9184}",
-                            "{27591ee1}",
-                            "{2fba3e76}",
-                            "{a856185d}"
+                            "Items/773031",
+                            "Items/773072",
+                            "Items/773102",
+                            "Items/773026",
+                            "Items/773139",
+                            "Items/773035"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
@@ -3013,10 +3013,10 @@
         },
         "__type": "CharScript"
     },
-    "{313e681e}": {
+    "Characters/Jade_Corki/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{cdfd7918}": {
+    "Characters/Jade_Corki/CharacterRecords/Root": {
         "mCharacterName": "Jade_Corki",
         "baseHPModifiable": {
             "baseValue": 457.0,
@@ -3146,10 +3146,10 @@
             "Jade_CorkiRAbility/Jade_CorkiR"
         ],
         "spells": [
-            "{ec810b0d}",
-            "{167c1285}",
-            "{b1449075}",
-            "{8acf872b}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiQAbility/Jade_CorkiQ",
+            "Characters/Jade_Corki/Spells/Jade_CorkiWAbility/Jade_CorkiW",
+            "Characters/Jade_Corki/Spells/Jade_CorkiEAbility/Jade_CorkiE",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility/Jade_CorkiR"
         ],
         "extraSpells": [
             "Jade_Corki_GGSpray",
@@ -3189,15 +3189,15 @@
         ],
         "mAbilities": [
             "{40c3de80}",
-            "{ee86aece}",
-            "{13139700}",
-            "{67978b12}",
-            "{0e6494d5}"
+            "Characters/Jade_Corki/Spells/Jade_CorkiQAbility",
+            "Characters/Jade_Corki/Spells/Jade_CorkiWAbility",
+            "Characters/Jade_Corki/Spells/Jade_CorkiEAbility",
+            "Characters/Jade_Corki/Spells/Jade_CorkiRAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Corki",
         "passiveLuaName": "Jade_Corki_RapidReload",
         "passiveToolTip": "game_character_passiveDescription_Jade_Corki",
-        "passive1IconName": "ASSETS/Characters/Jade_Corki/HUD/Icons2D/Jade_Corki_RapidReload.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Corki/HUD/Icons2D/Jade_Corki_RapidReload.dds",
         "name": "game_character_displayname_Jade_Corki",
         "selectionHeight": 170.0,
         "selectionRadius": 135.0,

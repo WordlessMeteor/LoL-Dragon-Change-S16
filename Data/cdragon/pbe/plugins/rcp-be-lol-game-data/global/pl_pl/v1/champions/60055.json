@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Zabijanie bohaterów lub asystowanie w zabójstwach zapewnia Katarinie dodatkowe złoto i skraca jej czasy odnowienia o 15 sek."
+        "description": "Zabójstwa i asysty bohatera skracają czas odnowienia umiejętności Katariny o 15 sekund."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Darmowa",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Katarina rzuca sztyletem, który odbija się od kilku wrogów, zadając im obrażenia magiczne.",
-            "dynamicDescription": "Rzuca sztyletem, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. Sztylet odbija się dodatkowo @MaxBounces@ razy, z każdym odbiciem zadając o 10% mniej obrażeń.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Rzuca sztyletem, zadając <magicDamage>@TotalDamage@</magicDamage> pkt. obrażeń magicznych. Sztylet odbija się od @MaxBounces@ najbliższych wrogów, zadając o 10% mniej obrażeń z każdym odbiciem.<br><br>Trafieni wrogowie zostają oznaczeni na @MarkDuration@ sek. Podstawowe ataki lub zaklęcia Katariny zużywają znak, zadając <magicDamage>@TotalDamageMark@</magicDamage> dodatkowych pkt. obrażeń magicznych.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Instynkt Zabójcy",
+            "name": "Złowieszcza Stal",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Darmowa",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Następna podstawowa umiejętność Katariny zyskuje dodatkowy efekt.",
-            "dynamicDescription": "<spellPassive>Biernie</spellPassive>: Umiejętności i ataki Katariny zadają dodatkowo @TotalDamage@ pkt. obrażeń.<br><br><spellActive>Użycie:</spellActive> Następna podstawowa umiejętność Katariny zyskuje dodatkowy efekt.<li><spellName>Skaczące Ostrze</spellName>: Zadaje pełne obrażenia każdemu celowi i nakłada <keyWord>Głębokie Rany</keyWord> na @QHealingReductionDuration@ sek.<li><spellName>Shunpo</spellName>: Katarina zyskuje @EDamageReduction@% redukcji obrażeń na @EDamageReductionDuration@ sek.@SpellModifierDescriptionAppend@",
+            "description": "Katarina kręci wokół siebie sztyletami, zadając obrażenia magiczne pobliskim wrogom. Jeśli trafi wrogiego bohatera, Katarina zyska na chwilę premię do prędkości.",
+            "dynamicDescription": "Zatacza sztyletami okrąg, zadając @TotalDamage@ pkt. obrażeń magicznych. Jeśli trafi wrogiego bohatera, Katarina zyskuje @Haste*100@% <speed>prędkości ruchu</speed> na @BuffDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Darmowa",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Katarina natychmiast teleportuje się do celu i przez kilka sekund otrzymuje od wrogów mniejsze obrażenia. Jeśli celem jest wróg, Katarina zadaje mu obrażenia.",
-            "dynamicDescription": "Teleportuje się do celu. Jeśli celem jest wróg, Katarina zadaje mu <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Teleportuje się do celu. Jeśli celem jest wróg, Katarina zadaje mu <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>.<br><br>Po użyciu umiejętności Shunpo Katarina otrzymuje o @DamageReduction@% zmniejszone obrażenia przez @DamageReductionDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Darmowa",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Katarina wyrzuca sztylety z zawrotną prędkością, raniąc do trzech bohaterów znajdujących się w pobliżu.",
-            "dynamicDescription": "Tworzy grad ataków, rzucając sztyletami w 3 najbliższych wrogich bohaterów i zadając im <magicDamage>@DamageCalcTooltipOnly@ pkt. obrażeń magicznych</magicDamage> w ciągu 2 sekund.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tworzy grad ataków, rzucając sztyletami w 3 najbliższych wrogich bohaterów i zadając im <magicDamage>@DamageCalcTooltipOnly@ pkt. obrażeń magicznych</magicDamage> w ciągu 2,5 sekund.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

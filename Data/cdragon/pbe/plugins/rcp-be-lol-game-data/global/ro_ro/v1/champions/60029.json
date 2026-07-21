@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Twitch clasic (Vandal)",
+                    "name": "Twitch clasic (Escroc)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Twitch devine invizibil pentru o scurtă perioadă și câștigă viteză de mișcare cât timp este invizibil. La ieșirea din starea de invizibilitate, Twitch câștigă viteză de atac pentru o scurtă durată.",
-            "dynamicDescription": "<mainText>După @MaxFadeTime@ secunde, Twitch se <keywordStealth>camuflează</keywordStealth> timp de @StealthDuration@ secunde.<br><br>Twitch primește <attackSpeed>@AttackSpeedMod*100@% viteză de atac</attackSpeed> timp de @AttackSpeedDuration@ secunde după ce iese din <keywordStealth>camuflaj</keywordStealth>.",
+            "description": "Twitch devine invizibil timp de câteva secunde, câștigând viteză de mișcare. Apoi primește viteză de atac după ce iese din invizibilitate.",
+            "dynamicDescription": "După @MaxFadeTime@ secunde în care nu suferă daune sau după @MaxDelayTime@ secunde, Twitch devine <keywordStealth>invizibil</keywordStealth> timp de @StealthDuration@ secunde, primind <speed>@MoveSpeedMod*100@% viteză de mișcare</speed>.<br><br>Twitch primește <attackSpeed>@AttackSpeedMod*100@% viteză de atac</attackSpeed> timp de @AttackSpeedDuration@ secunde după ce iese din <keywordStealth>invizibilitate</keywordStealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Otravă paralizantă",
+            "name": "Butoi cu venin",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Twitch îi infectează pe toți campionii din apropiere cu ''Otravă paralizantă'', reducându-le viteza de mișcare.",
-            "dynamicDescription": "Twitch <status>încetinește</status> campionii inamici din apropiere cu @SlowPercent*-100@% timp de @Duration@ secunde, efectul crescând cu @PassiveStackSlowPercent*-100@% pentru fiecare cumul de <keywordMajor>''Otravă letală''</keywordMajor> (maximum: @MaxSlowTooltip@).<br><br>Adăugarea mai multor cumuluri de <keywordMajor>''Otravă letală''</keywordMajor> după aplicarea <status>încetinirii</status> va reduce și mai mult <speed>viteza de mișcare</speed> a acestora.@SpellModifierDescriptionAppend@",
+            "description": "Twitch aruncă un butoi cu venin care explodează, aplicând ''Otravă letală'' și încetinind inamicii din zonă.",
+            "dynamicDescription": "Twitch aruncă un butoi cu venin care explodează, aplicând @StacksAdded@ cumuluri de <keywordMajor>''Otravă letală''</keywordMajor> și <status>încetinind</status> inamicii cu @BaseSlowAmount@% timp de @Duration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Toți inamicii din apropiere secretă veninurile toxice ale lui Twitch din corpurile lor, provocând daune pentru fiecare cumul.",
-            "dynamicDescription": "<mainText>Twitch provoacă <physicalDamage>@BaseDamage@ daune fizice</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> pentru fiecare cumul de <keywordMajor>''Otravă letală''</keywordMajor> tuturor inamicilor însemnați din apropiere, consumând toate cumulurile din apropiere.",
+            "dynamicDescription": "Twitch provoacă <physicalDamage>@BaseDamage@ daune fizice</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> pentru fiecare cumul de <keywordMajor>''Otravă letală''</keywordMajor> tuturor inamicilor însemnați din apropiere.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Twitch închide ochii și își folosește arbaleta, trăgând rapid cu săgeți puternice care străpung totul în fața lui.",
-            "dynamicDescription": "<mainText>Timp de @Duration@ secunde, Twitch primește @BonusRange@ rază de atac, <physicalDamage>@BonusAD@ daune din atac</physicalDamage>, iar atacurile lui de bază devin săgeți ascuțite, care provoacă cu @FallOffDamage*100@% mai puține daune țintelor următoare, până la un minimum de @MinimumFallOffDamage*100@% daune.",
+            "dynamicDescription": "Timp de @Duration@ secunde, Twitch primește @BonusRange@ rază de atac, <physicalDamage>@BonusAD@ daune din atac</physicalDamage>, iar atacurile lui de bază devin săgeți ascuțite, care provoacă cu @FallOffDamage*100@% mai puține daune țintelor următoare, până la un minimum de @MinimumFallOffDamage*100@% daune.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

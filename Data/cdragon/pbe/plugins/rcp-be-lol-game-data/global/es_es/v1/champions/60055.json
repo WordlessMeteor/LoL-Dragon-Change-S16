@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Los asesinatos de campeones o las asistencias otorgan a Katarina oro adicional y reducen sus enfriamientos 15 s."
+        "description": "Las asistencias o asesinatos de campeones reducen los enfriamientos de Katarina en 15 s."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Katarina lanza una daga que rebota de un enemigo a otro, lo que inflige daño mágico.",
-            "dynamicDescription": "Lanza una daga que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>. La daga rebota @MaxBounces@ veces más e inflige un 10% menos de daño con cada rebote.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Lanza una daga que inflige <magicDamage>@TotalDamage@</magicDamage> de daño mágico. La daga rebota hacia los @MaxBounces@ enemigos más cercanos e inflige un 10% menos de daño con cada rebote.<br><br>Los enemigos golpeados quedan marcados durante @MarkDuration@ s. Los ataques básicos o habilidades de Katarina consumen la marca, lo que inflige <magicDamage>@TotalDamageMark@</magicDamage> de daño mágico adicional.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Instinto asesino",
+            "name": "Acero siniestro",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
-            "description": "La siguiente habilidad básica de Katarina obtiene un efecto adicional.",
-            "dynamicDescription": "<spellPassive>Pasiva</spellPassive>: Las habilidades y los ataques de Katarina infligen @TotalDamage@ de daño adicional.<br><br><spellActive>Activa</spellActive>: La siguiente habilidad básica de Katarina obtiene un efecto adicional.<li><spellName>Hoja rebotante</spellName>: Inflige el daño completo a todos los objetivos y aplica <keyWord>heridas graves</keyWord> durante @QHealingReductionDuration@ s.<li><spellName>Velocidad del rayo</spellName>: Katarina obtiene un @EDamageReduction@% de reducción de daño durante @EDamageReductionDuration@ s.@SpellModifierDescriptionAppend@",
+            "description": "Katarina hace girar sus dagas a su alrededor, lo que inflige daño mágico a todos los enemigos en la zona. Si golpea a un campeón enemigo, Katarina obtiene una mejora de velocidad durante un breve periodo de tiempo.",
+            "dynamicDescription": "Ataca con sus dagas en un círculo e inflige @TotalDamage@ de daño mágico. Si golpea a un campeón enemigo, Katarina obtiene un @Haste*100@% de <speed>velocidad de movimiento</speed> durante @BuffDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Katarina se mueve al instante hasta la ubicación de su objetivo y recibe daño reducido de los enemigos durante unos segundos. Si el objetivo es un enemigo, le inflige daño.",
-            "dynamicDescription": "Se desplaza a la ubicación de un objetivo. Inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> si el objetivo es un enemigo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Se desplaza a la ubicación de un objetivo. Inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> si el objetivo es un enemigo.<br><br>Tras usar Velocidad del rayo, Katarina recibe un @DamageReduction@% menos de daño durante @DamageReductionDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Katarina se convierte en un torbellino de cuchillas que lanza dagas a una velocidad sin igual a hasta tres campeones cercanos.",
-            "dynamicDescription": "Se convierte en un torbellino de cuchillas que lanza dagas a los 3 campeones enemigos más cercanos e inflige <magicDamage>@DamageCalcTooltipOnly@ de daño mágico</magicDamage> durante 2 s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Se convierte en un torbellino de cuchillas que lanza dagas a los 3 campeones enemigos más cercanos e inflige <magicDamage>@DamageCalcTooltipOnly@ de daño mágico</magicDamage> durante 2,5 s.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

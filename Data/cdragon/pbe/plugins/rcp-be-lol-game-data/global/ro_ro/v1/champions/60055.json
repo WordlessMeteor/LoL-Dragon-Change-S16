@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "După uciderea unui campion sau participarea la uciderea unui campion, Katarina primește aur suplimentar și își reduce timpii de reactivare cu 15 secunde."
+        "description": "După uciderea unui campion sau participarea la uciderea sa, timpul de reactivare pentru Katarina este redus cu 15 secunde."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Katarina aruncă un pumnal care sare de la un inamic la altul, provocând daune magice.",
-            "dynamicDescription": "Aruncă un pumnal care provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage>. Pumnalul ricoșează de încă @MaxBounces@ ori, provocând cu 10% mai puține daune la fiecare ricoșeu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Aruncă un pumnal care provoacă <magicDamage>@TotalDamage@</magicDamage> daune magice. Pumnalul ricoșează către cei mai apropiați @MaxBounces@ inamici, provocând cu 10% mai puține daune la fiecare ricoșeu.<br><br>Inamicii atinși sunt însemnați timp de @MarkDuration@ secunde. Atacurile de bază sau vrăjile Katarinei vor consuma însemnul, provocând <magicDamage>@TotalDamageMark@</magicDamage> daune magice suplimentare.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Instincte de prădător",
+            "name": "Oțel sinistru",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Următoarea vrajă de bază a Katarinei primește un efect suplimentar.",
-            "dynamicDescription": "<spellPassive>Pasivă</spellPassive>: abilitățile și atacurile Katarinei provoacă @TotalDamage@ daune suplimentare.<br><br><spellActive>Activă:</spellActive> următoarea abilitate de bază a Katarinei are un efect bonus.<li><spellName>''Pumnal cu ricoșeu''</spellName>: provoacă daune complete fiecărei ținte și aplică <keyWord>''Răni grave''</keyWord> timp de @QHealingReductionDuration@ secunde.<li><spellName>''Shunpo''</spellName>: Katarina primește @EDamageReduction@% reducerea daunelor timp de @EDamageReductionDuration@ secunde.@SpellModifierDescriptionAppend@",
+            "description": "Katarina își învârte pumnalele de jur împrejur, provocând daune magice tuturor inamicilor aflați în apropiere. Dacă lovește un campion inamic, Katarina primește un bonus de viteză pentru scurt timp.",
+            "dynamicDescription": "Învârte pumnalele într-un cerc, provocând @TotalDamage@ daune magice. Dacă lovește un campion inamic, Katarina primește @Haste*100@% <speed>viteză de mișcare</speed> timp de @BuffDuration@ secundă.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Katarina se deplasează instantaneu până în locația țintei sale și suferă daune reduse din partea inamicilor timp de câteva secunde. Dacă ținta este un inamic, ea îi provoacă daune.",
-            "dynamicDescription": "Se deplasează către locația țintei. Provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> dacă ținta este un inamic.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Se deplasează către locația țintei. Provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> dacă ținta este un inamic.<br><br>După ce folosește ''Shunpo'', Katarina primește cu @DamageReduction@% mai puține daune timp de @DamageReductionDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Fără cost",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Katarina intră într-o stare de concentrare extremă, aruncând cu o viteză nemaiîntâlnită pumnale spre maxim trei campioni din apropiere.",
-            "dynamicDescription": "Devine un vârtej de tăișuri, aruncând cu pumnale spre cei mai apropiați 3 campioni inamici și provocând <magicDamage>@DamageCalcTooltipOnly@ daune magice</magicDamage> de-a lungul a 2 secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Devine un vârtej de tăișuri, aruncând cu pumnale spre cei mai apropiați 3 campioni inamici și provocând <magicDamage>@DamageCalcTooltipOnly@ daune magice</magicDamage> de-a lungul a 2,5 secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

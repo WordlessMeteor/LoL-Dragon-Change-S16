@@ -10,7 +10,7 @@
         "{55bb9b57}": 21,
         "{ff3c9ff8}": "{e15eb251}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Morgana/Skins/Base/Jade_MorganaLoadScreen_LoR_01.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Morgana/Skins/Base/Jade_MorganaLoadScreen_LoR_01.tex",
             "__type": "CensoredImage"
         },
         "__type": "{3018b0da}"
@@ -26,7 +26,7 @@
         "{55bb9b57}": 27,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Morgana/Skins/Base/Jade_MorganaLoadScreen_Feeney.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Morgana/Skins/Base/Jade_MorganaLoadScreen_Feeney.tex",
             "__type": "CensoredImage"
         },
         "__type": "{3018b0da}"
@@ -369,23 +369,23 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{c36c1c78}",
-                            "{99a41f9d}",
-                            "{99a41f9d}"
+                            "Items/771056",
+                            "Items/772003",
+                            "Items/772003"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{34738a20}",
-                            "{92a41498}",
-                            "{99a41f9d}"
+                            "Items/771027",
+                            "Items/772004",
+                            "Items/772003"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{4373a1bd}"
+                            "Items/771028"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -393,17 +393,17 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{9a53c3bc}",
-                            "{bbc89264}",
-                            "{26591d4e}"
+                            "Items/773003",
+                            "Items/773151",
+                            "Items/773027"
                         ],
                         "MaxCompletedItems": 1,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{29592207}",
-                            "{b4c8875f}"
+                            "Items/773020",
+                            "Items/773158"
                         ],
                         "MaxCompletedItems": 1,
                         "{f71960ab}": "{71caf510}",
@@ -411,25 +411,25 @@
                     },
                     {
                         "items": [
-                            "{bbc89264}",
-                            "{a4404bc2}",
-                            "{b9c88f3e}",
-                            "{2abeb3c5}",
-                            "{aab72e80}",
-                            "{9c53c6e2}"
+                            "Items/773151",
+                            "Items/773089",
+                            "Items/773157",
+                            "Items/773116",
+                            "Items/773128",
+                            "Items/773001"
                         ],
                         "MaxCompletedItems": 2,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{3bba515a}",
-                            "{9c53c6e2}",
-                            "{2abeb3c5}",
-                            "{b9c88f3e}",
-                            "{bbc89264}",
-                            "{3cbc9184}",
-                            "{aab72e80}"
+                            "Items/773135",
+                            "Items/773001",
+                            "Items/773116",
+                            "Items/773157",
+                            "Items/773151",
+                            "Items/773102",
+                            "Items/773128"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
@@ -565,7 +565,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{1ef7795f}": {
+    "Characters/Jade_Morgana/CAC/Jade_Morgana_Skin80": {
         "mCooldown": 15.0,
         "mSituations": {
             "SpellBuffCast": {
@@ -2743,7 +2743,7 @@
         "mObjectPath": "Characters/Jade_Morgana/CAC/Jade_Morgana_Skin80",
         "__type": "ContextualActionData"
     },
-    "{5cfad9bf}": {
+    "Characters/Jade_Morgana/CAC/Jade_Morgana_Conversation_Base": {
         "mCooldown": 9.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -2942,10 +2942,10 @@
         "mScriptName": "Jade_MorganaSkin80CCTracker",
         "__type": "SpellObject"
     },
-    "{ae94898d}": {
-        "mRootSpell": "{b27add2a}",
+    "Characters/Jade_Morgana/Spells/Jade_MorganaRAbility": {
+        "mRootSpell": "Characters/Jade_Morgana/Spells/Jade_MorganaRAbility/Jade_MorganaR",
         "mChildSpells": [
-            "{b27add2a}",
+            "Characters/Jade_Morgana/Spells/Jade_MorganaRAbility/Jade_MorganaR",
             "{6cd6b5da}",
             "{3927e935}"
         ],
@@ -3052,7 +3052,7 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 600.0,
-            "mMissileEffectKey": "{6b1344b9}",
+            "mMissileEffectKey": "Jade_Morgana_R_Initial_Mis",
             "selectionPriority": 1,
             "__type": "SpellDataResource"
         },
@@ -3063,7 +3063,7 @@
         "mScriptName": "Jade_MorganaR_Owner",
         "__type": "SpellObject"
     },
-    "{b27add2a}": {
+    "Characters/Jade_Morgana/Spells/Jade_MorganaRAbility/Jade_MorganaR": {
         "ObjectName": "Jade_MorganaR",
         "mScriptName": "Jade_MorganaR",
         "mSpell": {
@@ -3164,7 +3164,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_Purgatory.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_Purgatory.dds"
             ],
             "{11704a2b}": 0.3499999940395355,
             "{f26881a0}": 1.399999976158142,
@@ -3430,7 +3430,7 @@
         },
         "__type": "SpellObject"
     },
-    "{47a9dee9}": {
+    "Characters/Jade_Morgana/Spells/Jade_MorganaCritAttack": {
         "ObjectName": "Jade_MorganaCritAttack",
         "mScriptName": "Jade_MorganaCritAttack",
         "mSpell": {
@@ -3517,8 +3517,8 @@
             "mCastType": 1,
             "castFrame": 8.0,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{200017ce}",
-            "mHitEffectKey": "{7366faf1}",
+            "mMissileEffectKey": "Jade_Morgana_BA_Crit",
+            "mHitEffectKey": "Jade_Morgana_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -3539,16 +3539,16 @@
         },
         "__type": "SpellObject"
     },
-    "{edee68c6}": {
-        "mRootSpell": "{48f3f270}",
+    "Characters/Jade_Morgana/Spells/Jade_MorganaQAbility": {
+        "mRootSpell": "Characters/Jade_Morgana/Spells/Jade_MorganaQAbility/Jade_MorganaQ",
         "mChildSpells": [
-            "{48f3f270}",
+            "Characters/Jade_Morgana/Spells/Jade_MorganaQAbility/Jade_MorganaQ",
             "{56333a6f}"
         ],
         "mName": "Jade_MorganaQAbility",
         "__type": "AbilityObject"
     },
-    "{48f3f270}": {
+    "Characters/Jade_Morgana/Spells/Jade_MorganaQAbility/Jade_MorganaQ": {
         "ObjectName": "Jade_MorganaQ",
         "mScriptName": "Jade_MorganaQ",
         "mSpell": {
@@ -3616,7 +3616,7 @@
             },
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_DarkBinding.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_DarkBinding.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -3721,9 +3721,9 @@
             "mCastType": 3,
             "castFrame": 4.545000076293945,
             "missileSpeed": 1200.0,
-            "mMissileEffectKey": "{0bbd6dbb}",
+            "mMissileEffectKey": "Jade_Morgana_Q_mis",
             "mLineWidth": 80.0,
-            "mHitEffectKey": "{61883ebf}",
+            "mHitEffectKey": "Jade_Morgana_Q_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "root",
             "mana": [
@@ -3881,7 +3881,7 @@
         "mScriptName": "Jade_MorganaQ_Debuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_DarkBinding.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_DarkBinding.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -3978,8 +3978,8 @@
             "mCastType": 1,
             "castFrame": 7.0,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{f2731f19}",
-            "mHitEffectKey": "{7366faf1}",
+            "mMissileEffectKey": "Jade_Morgana_BA__one_Mis",
+            "mHitEffectKey": "Jade_Morgana_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -4000,24 +4000,24 @@
         },
         "__type": "SpellObject"
     },
-    "{643f7018}": {
-        "mRootSpell": "{d8a4adfc}",
+    "Characters/Jade_Morgana/Spells/Jade_MorganaWAbility": {
+        "mRootSpell": "Characters/Jade_Morgana/Spells/Jade_MorganaWAbility/Jade_MorganaW",
         "mChildSpells": [
-            "{d8a4adfc}",
+            "Characters/Jade_Morgana/Spells/Jade_MorganaWAbility/Jade_MorganaW",
             "{a78c8d33}"
         ],
         "mName": "Jade_MorganaWAbility",
         "__type": "AbilityObject"
     },
-    "{6ca62fea}": {
-        "mRootSpell": "{6ce00dd8}",
+    "Characters/Jade_Morgana/Spells/Jade_MorganaEAbility": {
+        "mRootSpell": "Characters/Jade_Morgana/Spells/Jade_MorganaEAbility/Jade_MorganaE",
         "mChildSpells": [
-            "{6ce00dd8}"
+            "Characters/Jade_Morgana/Spells/Jade_MorganaEAbility/Jade_MorganaE"
         ],
         "mName": "Jade_MorganaEAbility",
         "__type": "AbilityObject"
     },
-    "{6ce00dd8}": {
+    "Characters/Jade_Morgana/Spells/Jade_MorganaEAbility/Jade_MorganaE": {
         "ObjectName": "Jade_MorganaE",
         "mScriptName": "Jade_MorganaE",
         "mSpell": {
@@ -4078,7 +4078,7 @@
             },
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_BlackShield.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_BlackShield.dds"
             ],
             "{11704a2b}": 0.48500001430511475,
             "{f26881a0}": 1.2660000324249268,
@@ -4273,7 +4273,7 @@
         "mScriptName": "Jade_MorganaW_Debuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_TormentedSoil.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_TormentedSoil.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -4288,7 +4288,7 @@
         "mScriptName": "Jade_MorganaW_Damage",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_TormentedSoil.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_TormentedSoil.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -4298,7 +4298,7 @@
         },
         "__type": "SpellObject"
     },
-    "{d8a4adfc}": {
+    "Characters/Jade_Morgana/Spells/Jade_MorganaWAbility/Jade_MorganaW": {
         "ObjectName": "Jade_MorganaW",
         "mScriptName": "Jade_MorganaW",
         "mSpell": {
@@ -4372,7 +4372,7 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{9c15a20f}": {
+                "MRShredTooltip": {
                     "mMultiplier": {
                         "mNumber": -1.0,
                         "__type": "NumberCalculationPart"
@@ -4389,7 +4389,7 @@
             },
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_TormentedSoil.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_TormentedSoil.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -4523,7 +4523,7 @@
         },
         "__type": "SpellObject"
     },
-    "{bf72c881}": {
+    "Characters/Jade_Morgana/Spells/Jade_MorganaBasicAttack2": {
         "ObjectName": "Jade_MorganaBasicAttack2",
         "mScriptName": "Jade_MorganaBasicAttack2",
         "mSpell": {
@@ -4611,8 +4611,8 @@
             "mCastType": 1,
             "castFrame": 7.0,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{809d82dd}",
-            "mHitEffectKey": "{7366faf1}",
+            "mMissileEffectKey": "Jade_Morgana_BA_Mis",
+            "mHitEffectKey": "Jade_Morgana_BA_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -4693,7 +4693,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_Empathize.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Morgana_Empathize.dds"
             ],
             "cooldownTime": [
                 0.0,
@@ -4756,7 +4756,7 @@
         },
         "__type": "SpellObject"
     },
-    "{3e53dc93}": {
+    "Characters/Jade_Morgana/CharacterRecords/Root": {
         "mCharacterName": "Jade_Morgana",
         "baseHPModifiable": {
             "baseValue": 489.0,
@@ -4863,10 +4863,10 @@
             "Jade_MorganaRAbility/Jade_MorganaR"
         ],
         "spells": [
-            "{48f3f270}",
-            "{d8a4adfc}",
-            "{6ce00dd8}",
-            "{b27add2a}"
+            "Characters/Jade_Morgana/Spells/Jade_MorganaQAbility/Jade_MorganaQ",
+            "Characters/Jade_Morgana/Spells/Jade_MorganaWAbility/Jade_MorganaW",
+            "Characters/Jade_Morgana/Spells/Jade_MorganaEAbility/Jade_MorganaE",
+            "Characters/Jade_Morgana/Spells/Jade_MorganaRAbility/Jade_MorganaR"
         ],
         "extraSpells": [
             "",
@@ -4905,17 +4905,17 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{6ca62fea}",
+            "Characters/Jade_Morgana/Spells/Jade_MorganaEAbility",
             "{c8d1e468}",
-            "{edee68c6}",
-            "{ae94898d}",
-            "{643f7018}"
+            "Characters/Jade_Morgana/Spells/Jade_MorganaQAbility",
+            "Characters/Jade_Morgana/Spells/Jade_MorganaRAbility",
+            "Characters/Jade_Morgana/Spells/Jade_MorganaWAbility"
         ],
         "passiveName": "Spell_Jade_MorganaPassive_Name",
         "passiveLuaName": "Jade_MorganaPassive",
         "passiveToolTip": "Spell_Jade_MorganaPassive_Summary",
         "passiveSpell": "Jade_MorganaPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Morgana/HUD/Icons2D/FallenAngel_Empathize.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Morgana/HUD/Icons2D/FallenAngel_Empathize.dds",
         "name": "game_character_displayname_Jade_Morgana",
         "selectionHeight": 145.0,
         "selectionRadius": 120.0,
@@ -5014,7 +5014,7 @@
         "Script": "{87b3ebb9}",
         "__type": "CharacterRecord"
     },
-    "{8111eacf}": {
+    "Characters/Jade_Morgana/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{87b3ebb9}": {

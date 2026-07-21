@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Όταν σκοτώνει ή συμμετέχει στην εκτέλεση Ηρώων, η Καταρίνα αποκτά επιπλέον Χρυσό και μειώνει τους Χρόνους Επαναφόρτισής της κατά 15 δευτερόλεπτα."
+        "description": "Οι εκτελέσεις ηρώων και οι βοήθειες μειώνουν το χρόνο επαναφόρτισης της Καταρίνα κατά 15 δευτ."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Χωρίς κόστος",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Καταρίνα πετάει ένα μαχαίρι που αναπηδά από τον έναν εχθρό στον άλλο, προκαλώντας Μαγική Ζημιά.",
-            "dynamicDescription": "Ρίχνει ένα μαχαίρι που προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>. Το μαχαίρι αναπηδά @MaxBounces@ επιπλέον φορές, προκαλώντας 10% λιγότερη ζημιά με κάθε αναπήδηση.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ρίχνει ένα μαχαίρι που προκαλεί <magicDamage>@TotalDamage@</magicDamage> Μαγική Ζημιά. Το μαχαίρι αναπηδά στους @MaxBounces@ πλησιέστερους εχθρούς, προκαλώντας 10% λιγότερη ζημιά με κάθε αναπήδηση.<br><br>Οι αντίπαλοι που χτυπιούνται σημαδεύονται για @MarkDuration@ δευτ. Οι βασικές επιθέσεις ή οι ικανότητες της Καταρίνα θα καταναλώσουν το σημάδι, προκαλώντας <magicDamage>@TotalDamageMark@</magicDamage> επιπλέον Μαγική Ζημιά.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Φονικά Ένστικτα",
+            "name": "Ύπουλο Ατσάλι",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Χωρίς κόστος",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Η επόμενη βασική ικανότητα της Καταρίνα αποκτά μία επιπλέον επίδραση.",
-            "dynamicDescription": "<spellPassive>Παθητική</spellPassive>: Οι ικανότητες και οι επιθέσεις της Καταρίνα προκαλούν επιπλέον @TotalDamage@ ζημιά.<br><br><spellActive>Ενεργή:</spellActive> Η επόμενη βασική ικανότητα της Καταρίνα έχει μία επιπλέον επίδραση.<li><spellName>Λεπίδα Αναπήδησης</spellName>: Προκαλεί πλήρη ζημιά σε κάθε στόχο και εφαρμόζει <keyWord>Βαριά Τραύματα</keyWord> για @QHealingReductionDuration@ δευτερόλεπτα.<li><spellName>Σούνπο</spellName>: Η Καταρίνα αποκτά @EDamageReduction@% Μείωση Ζημιάς για @EDamageReductionDuration@ δευτερόλεπτα.@SpellModifierDescriptionAppend@",
+            "description": "Η Καταρίνα στροβιλίζει τα μαχαίρια της γύρω της, προκαλώντας Μαγική Ζημιά σε όλους τους εχθρούς στην περιοχή. Αν χτυπήσει έναν αντίπαλο Ήρωα, η Καταρίνα αποκτά μια έκρηξη ταχύτητας για μικρό χρονικό διάστημα.",
+            "dynamicDescription": "Περιστρέφει μαχαίρια σε κύκλο, προκαλώντας @TotalDamage@ Μαγική Ζημιά. Αν χτυπήσει έναν αντίπαλο Ήρωα, η Καταρίνα αποκτά @Haste*100@% <speed>Ταχύτητα Κίνησης</speed> για @BuffDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Χωρίς κόστος",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Καταρίνα μεταφέρεται αμέσως στην τοποθεσία του στόχου της και δέχεται μειωμένη ζημιά από τους εχθρούς για μερικά δευτ. Αν ο στόχος είναι εχθρός, του προκαλεί ζημιά.",
-            "dynamicDescription": "Μετακινείται στη θέση ενός στόχου. Προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> αν ο στόχος είναι εχθρός.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Μετακινείται στη θέση ενός στόχου. Προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> αν ο στόχος είναι εχθρός.<br><br>Αφού χρησιμοποιήσει το Σούνπο, η Καταρίνα δέχεται @DamageReduction@% μειωμένη ζημιά για @DamageReductionDuration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Χωρίς κόστος",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Καταρίνα μετατρέπεται σε στρόβιλο λεπίδων, πετώντας μαχαίρια με απίστευτη ταχύτητα σε έως και τρεις κοντινούς Ήρωες.",
-            "dynamicDescription": "Μεταμορφώνεται σε στρόβιλο λεπίδων, εκτοξεύοντας μαχαίρια στους 3 πλησιέστερους αντίπαλους Ήρωες και προκαλώντας <magicDamage>@DamageCalcTooltipOnly@ Μαγική Ζημιά</magicDamage> σε διάστημα 2 δευτερολέπτων.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Μεταμορφώνεται σε στρόβιλο λεπίδων, εκτοξεύοντας μαχαίρια στους 3 πλησιέστερους αντίπαλους Ήρωες και προκαλώντας <magicDamage>@DamageCalcTooltipOnly@ Μαγική Ζημιά</magicDamage> σε διάστημα 2,5 δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

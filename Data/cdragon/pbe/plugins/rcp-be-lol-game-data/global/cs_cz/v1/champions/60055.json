@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Při zabití šampiona či asistenci získá Katarina bonusové zlaťáky a přebíjecí doby se jí zkrátí o 15&nbsp;sekund."
+        "description": "Když Katarina zabije nějakého šampiona nebo si připíše asistenci, zkrátí se jí přebíjecí doby o 15 sek."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Bez ceny pro seslání",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Katarina hodí svou dýku, která se bude odrážet od nepřítele k nepříteli, přičemž jim způsobí magické poškození.",
-            "dynamicDescription": "Hodí dýku, která způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Dýka se odrazí ještě @MaxBounces@x, přičemž při každém odrazu se způsobované poškození sníží o 10&nbsp;%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hodí dýku, která způsobí <magicDamage>@TotalDamage@</magicDamage> bodů magického poškození. Dýka se odrazí ke @MaxBounces@ nejbližším nepřátelům, způsobované poškození se s každým odrazem sníží o 10 %.<br><br>Zasažení protivníci budou na @MarkDuration@ sek. označeni. Katarininy základní útoky a schopnosti tuto značku spotřebují a způsobí <magicDamage>@TotalDamageMark@</magicDamage> bodů dodatečného magického poškození.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Instinkt zabijáka",
+            "name": "Zákeřná ocel",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Bez ceny pro seslání",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Příští Katarinina základní schopností získá dodatečný efekt.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt</spellPassive>: Katarininy schopnosti a útoky způsobují dodatečných @TotalDamage@ bodů poškození.<br><br><spellActive>Aktivace:</spellActive> Příští základní schopnost, kterou Katarina použije, získá bonusový efekt.<li><spellName>Odražená čepel</spellName>: Způsobí každému cíli plné poškození a na @QHealingReductionDuration@&nbsp;sek. na ně umístí <keyWord>Vážné rány</keyWord>.<li><spellName>Šunpo</spellName>: Katarina získá na @EDamageReductionDuration@&nbsp;sek. @EDamageReduction@&nbsp;% ke snížení utrpěného poškození.@SpellModifierDescriptionAppend@",
+            "description": "Katarina kolem sebe roztočí své dýky, čímž způsobí magické poškození všem nepřátelům v okolí. Pokud zasáhne nepřátelského šampiona, získá na krátkou dobu bonus k rychlosti.",
+            "dynamicDescription": "Zavíří dýkami kolem sebe a způsobí jimi @TotalDamage@ bodů magického poškození. Pokud zasáhne nepřátelského šampiona, získá Katarina na @BuffDuration@ sek. @Haste*100@ % k <speed>rychlosti pohybu</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Bez ceny pro seslání",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Katarina se okamžitě přesune ke svému cíli a po dobu pár sekund jí nepřátelé způsobují snížené poškození. Pokud je cílem přesunu nepřítel, uštědří mu poškození.",
-            "dynamicDescription": "Přesune se k cíli. Jedná-li se o nepřítele, způsobí mu <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Přesune se k cíli. Jedná-li se o nepřítele, způsobí mu <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.<br><br>Po dobu @DamageReductionDuration@ sek. od použití schopnosti Šunpo bude Katarině způsobováno o @DamageReduction@ % nižší poškození.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Bez ceny pro seslání",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Katarina se promění ve změť čepelí a nesmírnou rychlostí vrhne dýky na až tři okolní šampiony.",
-            "dynamicDescription": "Promění se ve vír čepelí a vrhne dýky po 3 nejbližších nepřátelských šampionech, kterým tak způsobí <magicDamage>@DamageCalcTooltipOnly@ bodů magického poškození</magicDamage> rozloženého do 2&nbsp;sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Promění se ve vír čepelí a vrhne dýky po 3 nejbližších nepřátelských šampionech, kterým tak způsobí <magicDamage>@DamageCalcTooltipOnly@ bodů magického poškození</magicDamage> rozloženého do 2,5 sek.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

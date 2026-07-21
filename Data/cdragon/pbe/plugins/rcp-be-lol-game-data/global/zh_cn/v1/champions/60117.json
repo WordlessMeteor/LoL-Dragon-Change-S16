@@ -637,7 +637,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "皮克斯是一个陪伴着璐璐的狂野仙灵。皮克斯会向璐璐攻击的目标发射一连串魔法能量弹。"
+        "description": "每当皮克斯正在跟随的英雄进行攻击时，皮克斯就会发射魔法飞弹。这些飞弹会自动寻敌，但也会被其它单位所拦截。"
     },
     "spells": [
         {
@@ -649,7 +649,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "璐璐和皮克斯各自发射一束穿刺飞弹，对命中的敌人造成重度减速效果。一个敌人只会受到一个飞弹的伤害。",
-            "dynamicDescription": "<mainText>璐璐和皮克斯各自发射一束穿刺飞弹，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，命中的敌人会被<status>减速</status>@SlowAmount*-100@%，持续@SlowDuration@秒。该减速效果会随时间持续衰减，最低可降至@MinMoveSpeedMod@%（最低为80%）。<br><br>每个敌人只会受到一个飞弹的伤害。",
+            "dynamicDescription": "璐璐和皮克斯各自发射一束贯穿飞弹，对命中的敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>以及在@SlowDuration@秒里持续衰减的@SlowAmount*-100@%<status>减速</status>。<br><br>每个敌人只会受到一个飞弹的伤害。@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -825,18 +825,18 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 0.05
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -848,49 +848,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    -60.0,
-                    -60.0,
-                    -60.0,
-                    -60.0,
-                    -60.0,
-                    -60.0,
-                    -60.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.75,
-                    3.0,
-                    3.25,
-                    3.5,
-                    3.75,
-                    4.0,
-                    4.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.01,
-                    0.01,
-                    0.01,
-                    0.01,
-                    0.01,
-                    0.01,
-                    0.01
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    0.2,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.3
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,

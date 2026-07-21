@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Kill atau assist terhadap champion memberi Katarina gold bonus dan mengurangi cooldown miliknya sebanyak 15 detik."
+        "description": "Kill atau assist terhadap champion mengurangi cooldown Katarina sebesar 15 detik."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Katarina melempar dagger yang memantul dari satu musuh ke musuh lain, menghasilkan magic damage.",
-            "dynamicDescription": "Melempar dagger yang menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. Dagger memantul lagi sebanyak @MaxBounces@ kali dan menghasilkan 10% lebih sedikit damage pada setiap pantulan.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Melempar dagger yang menghasilkan <magicDamage>@TotalDamage@</magicDamage> magic damage. Dagger memantul ke @MaxBounces@ musuh terdekat dan menghasilkan 10% lebih sedikit damage pada setiap pantulan.<br><br>Musuh yang terkena akan ditandai selama @MarkDuration@ detik. Basic attack atau spell Katarina akan mengonsumsi mark tersebut, menghasilkan <magicDamage>@TotalDamageMark@</magicDamage> magic damage tambahan.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Killer Instincts",
+            "name": "Sinister Steel",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Spell dasar berikutnya dari Katarina mendapatkan efek tambahan.",
-            "dynamicDescription": "<spellPassive>Pasif</spellPassive>: Ability dan Serangan Katarina menghasilkan @TotalDamage@ damage tambahan.<br><br><spellActive>Aktif:</spellActive> Ability dasar Katarina berikutnya mendapatkan efek bonus.<li><spellName>Bouncing Blade</spellName>: Menghasilkan damage penuh pada setiap target dan menerapkan <keyWord>Grievous Wounds</keyWord> selama @QHealingReductionDuration@ detik.<li><spellName>Shunpo</spellName>: Katarina mendapatkan pengurangan damage sebesar @EDamageReduction@% selama @EDamageReductionDuration@ detik.@SpellModifierDescriptionAppend@",
+            "description": "Katarina memutar dagger di sekelilingnya, menghasilkan magic damage ke semua musuh di area tersebut. Jika mengenai Champion musuh, Katarina mendapatkan lonjakan Movement Speed selama beberapa saat.",
+            "dynamicDescription": "Memutar dagger membentuk lingkaran dan menghasilkan @TotalDamage@ magic damage. Jika mengenai Champion musuh, Katarina mendapatkan @Haste*100@% <speed>Movement Speed</speed> selama @BuffDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Katarina langsung berpindah ke lokasi targetnya dan menerima lebih sedikit damage dari musuh selama beberapa detik. Jika target adalah musuh, Katarina menghasilkan damage.",
-            "dynamicDescription": "Berpindah ke lokasi target. Menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> jika target adalah musuh.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Berpindah ke lokasi target. Menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> jika target adalah musuh.<br><br>Setelah menggunakan Shunpo, Katarina menerima @DamageReduction@% damage lebih sedikit selama @DamageReductionDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Katarina berubah menjadi flurry of blade, melemparkan dagger dengan kecepatan luar biasa ke maksimum tiga Champion di sekitar.",
-            "dynamicDescription": "Berubah menjadi flurry of blade, melemparkan dagger ke 3 Champion musuh terdekat dan menghasilkan <magicDamage>@DamageCalcTooltipOnly@ magic damage</magicDamage> selama 2 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Berubah menjadi flurry of blade, melemparkan dagger ke 3 Champion musuh terdekat dan menghasilkan <magicDamage>@DamageCalcTooltipOnly@ magic damage</magicDamage> selama 2,5 detik.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

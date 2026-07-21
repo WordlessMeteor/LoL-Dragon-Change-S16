@@ -9,7 +9,7 @@
             "__type": "{e7ee4f28}"
         },
         "loadscreen": {
-            "image": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Jade_TaricLoadscreen_4.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Jade_TaricLoadscreen_4.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -164,14 +164,14 @@
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Jade_Taric_Skin04.project_jade.skl",
-            "simpleSkin": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Jade_Taric_Skin04.project_jade.skn",
-            "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
-            "glossTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Jade_Taric_Base_TX_GM.project_jade.tex",
+            "skeleton": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Jade_Taric_Skin04.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Jade_Taric_Skin04.skn",
+            "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
+            "glossTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Jade_Taric_Base_TX_GM.tex",
             "skinScale": 0.949999988079071,
             "selfIllumination": 1.0,
             "usesSkinVO": true,
-            "reflectionMap": "ASSETS/Characters/Jade_Taric/Skins/Base/Jade_Taric_Base_CubeMap.project_jade.dds",
+            "reflectionMap": "ASSETS/Characters/Jade_Taric/Skins/Base/Jade_Taric_Base_CubeMap.dds",
             "reflectionOpacityDirect": 1.0,
             "reflectionOpacityGlancing": 0.5,
             "reflectionFresnel": 0.5,
@@ -185,13 +185,13 @@
             "{9a817954}": [
                 {
                     "category": "{e1043940}",
-                    "materialOverride": "{4e89edff}",
+                    "materialOverride": "Characters/Jade_Taric/Skins/Skin4/Materials/Jade_Taric_Skin4_Body_CharacterOutline_inst",
                     "Submeshes": "Taric_Pool_Party_MAT",
                     "__type": "{993f8595}"
                 },
                 {
                     "category": "{e1043940}",
-                    "materialOverride": "{4e89edff}",
+                    "materialOverride": "Characters/Jade_Taric/Skins/Skin4/Materials/Jade_Taric_Skin4_Body_CharacterOutline_inst",
                     "Submeshes": "Taric_Pool_Party_Body_Jacket_MAT",
                     "__type": "{993f8595}"
                 },
@@ -209,15 +209,15 @@
         ],
         "idleParticlesEffects": [
             {
-                "effectKey": "{7ce4a1c2}",
+                "effectKey": "Jade_Taric_Idle_GemLifeRing",
                 "boneName": "Buffbone_L_Gem2",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
         ],
-        "mContextualActionData": "{038bcc9b}",
-        "iconCircle": "ASSETS/Characters/Jade_Taric/HUD/Jade_Taric_Circle_301.project_jade.tex",
-        "iconSquare": "ASSETS/Characters/Jade_Taric/HUD/Jade_Taric_Square_301.project_jade.tex",
-        "iconAvatar": "ASSETS/Characters/Jade_Taric/HUD/Jade_Taric_Circle_4.project_jade.tex",
+        "mContextualActionData": "Characters/Jade_Taric/CAC/Jade_Taric_Base",
+        "iconCircle": "ASSETS/Characters/Jade_Taric/HUD/Jade_Taric_Circle_301.tex",
+        "iconSquare": "ASSETS/Characters/Jade_Taric/HUD/Jade_Taric_Square_301.tex",
+        "iconAvatar": "ASSETS/Characters/Jade_Taric/HUD/Jade_Taric_Circle_4.tex",
         "healthBarData": {
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
@@ -238,17 +238,17 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "R_Gem2",
-                        "effectKey": "{65a220d2}",
+                        "effectKey": "Jade_Taric_Idle_Gem",
                         "__type": "PersistentVfxData"
                     },
                     {
                         "boneName": "R_Gem3",
-                        "effectKey": "{e139c559}",
+                        "effectKey": "Jade_Taric_Idle_Gem1",
                         "__type": "PersistentVfxData"
                     },
                     {
                         "boneName": "R_Gem1",
-                        "effectKey": "{de39c0a0}",
+                        "effectKey": "Jade_Taric_Idle_Gem2",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -257,7 +257,7 @@
         ],
         "__type": "SkinCharacterDataProperties"
     },
-    "{0cdc3383}": {
+    "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_R_Cas": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -299,7 +299,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -412,9 +412,9 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_beam_mult.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_beam_mult.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_E_beam_mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_E_beam_mult.tex",
                     "UvRotationMult": {
                         "constantValue": 90.0,
                         "__type": "ValueFloat"
@@ -482,7 +482,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -595,7 +595,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.tex",
                 "uvMode": 2,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -646,7 +646,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -767,7 +767,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.tex",
                 "uvMode": 2,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -818,7 +818,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -939,7 +939,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.tex",
                 "uvMode": 2,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -1360,7 +1360,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_little_spark.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_little_spark.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1375,11 +1375,11 @@
                 "lifetime": 0.20000000298023224,
                 "isSingleParticle": 1,
                 "emitterName": "distort",
-                "particleColorTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_alpha_rampdown.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_alpha_rampdown.tex",
                 "blendMode": 1,
                 "distortionDefinition": {
                     "distortion": 0.15000000596046448,
-                    "normalMapTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_BA_distort_tex.project_jade.tex",
+                    "normalMapTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_BA_distort_tex.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -1420,7 +1420,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_Idle_glow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_Idle_glow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1551,7 +1551,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/common_TreelineLanternLockComplete3P.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/common_TreelineLanternLockComplete3P.tex",
                 "numFrames": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -1588,7 +1588,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_bellcurve.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_bellcurve.tex",
                 "blendMode": 1,
                 "colorLookUpScales": [
                     0.6000000238418579,
@@ -1600,7 +1600,7 @@
                 ],
                 "distortionDefinition": {
                     "distortion": 0.03500000014901161,
-                    "normalMapTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_Passive_Sona_Base_Q_Tar_DistortionRipples.project_jade.tex",
+                    "normalMapTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_Passive_Sona_Base_Q_Tar_DistortionRipples.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
                 "isUniformScale": 1,
@@ -1655,7 +1655,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_Idle_glow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_Idle_glow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2453,7 +2453,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/common_SRU_Baron_WaterSplash_anim.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/common_SRU_Baron_WaterSplash_anim.tex",
                 "frameRate": 30.0,
                 "numFrames": 16,
                 "texDiv": [
@@ -2587,7 +2587,7 @@
                     },
                     "erosionFeatherIn": 0.4000000059604645,
                     "erosionFeatherOut": 0.20000000298023224,
-                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Z_WaterSpikes.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Z_WaterSpikes.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -2682,7 +2682,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Z_WaterSpikes.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Z_WaterSpikes.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -2832,7 +2832,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_R_Aoe_Ring_mesh2.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_R_Aoe_Ring_mesh2.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -2931,7 +2931,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_R_mesh_space.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_R_mesh_space.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -2983,7 +2983,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -3153,7 +3153,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.10000000149011612,
@@ -3166,7 +3166,7 @@
                     1.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring_Mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring_Mult.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             1.0,
@@ -3220,7 +3220,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -3398,7 +3398,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         -0.10000000149011612,
@@ -3411,7 +3411,7 @@
                     1.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring_Mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring_Mult.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             1.0,
@@ -3664,7 +3664,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_01.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_01.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -3781,7 +3781,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4017,7 +4017,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_03.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_03.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -4120,7 +4120,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4226,7 +4226,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_E_Water_Mesh_01.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_E_Water_Mesh_01.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -4320,7 +4320,7 @@
                     "erosionFeatherIn": 0.30000001192092896,
                     "erosionFeatherOut": 0.30000001192092896,
                     "erosionSliceWidth": 1.2000000476837158,
-                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Splash_Mesh_Erosion.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Splash_Mesh_Erosion.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -4346,7 +4346,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Splash_Ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Splash_Ring.tex",
                 "birthUVOffset": {
                     "constantValue": [
                         0.0,
@@ -4498,7 +4498,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_E_Water_Mesh_01.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_E_Water_Mesh_01.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -4592,7 +4592,7 @@
                     "erosionFeatherIn": 0.30000001192092896,
                     "erosionFeatherOut": 0.30000001192092896,
                     "erosionSliceWidth": 1.2000000476837158,
-                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Splash_Mesh_Erosion.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Splash_Mesh_Erosion.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -4618,7 +4618,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Splash_Ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Splash_Ring.tex",
                 "birthUVOffset": {
                     "constantValue": [
                         0.0,
@@ -4852,7 +4852,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Particles_1_9.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Particles_1_9.tex",
                 "numFrames": 4,
                 "startFrame": 3,
                 "texDiv": [
@@ -5122,7 +5122,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Bokeh_Dots_4x4.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Bokeh_Dots_4x4.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -5321,7 +5321,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_6655_Items_Noise_02.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_6655_Items_Noise_02.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -5434,7 +5434,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Rework_Skin48_BA_skirt.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Rework_Skin48_BA_skirt.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -5908,9 +5908,9 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_T_VFX_Star_Flare_02.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_T_VFX_Star_Flare_02.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_rainbow_01.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_rainbow_01.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             0.5,
@@ -6169,7 +6169,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_BA_LinearSplashes_02_Dissolve.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_BA_LinearSplashes_02_Dissolve.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -6281,7 +6281,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Test_Water3.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin48_Test_Water3.tex",
                 "numFrames": 3,
                 "texDiv": [
                     2.0,
@@ -6677,7 +6677,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_R_star.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_R_star.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -6914,7 +6914,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -7031,7 +7031,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -7039,7 +7039,7 @@
         "particlePath": "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_R_Cas",
         "__type": "VfxSystemDefinitionData"
     },
-    "{4ef6210b}": {
+    "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_Idle_Gem": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7064,7 +7064,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -7082,7 +7082,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -7454,7 +7454,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Mis_Sparkles.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Mis_Sparkles.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -7463,7 +7463,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{8cabe928}": {
+    "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_W_Cas": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -7505,7 +7505,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -7618,9 +7618,9 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_beam_mult.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_beam_mult.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_E_beam_mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_E_beam_mult.tex",
                     "UvRotationMult": {
                         "constantValue": 90.0,
                         "__type": "ValueFloat"
@@ -7688,7 +7688,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -7801,7 +7801,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.tex",
                 "uvMode": 2,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -7852,7 +7852,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -7973,7 +7973,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.tex",
                 "uvMode": 2,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -8024,7 +8024,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -8145,7 +8145,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_W_ally_ring.tex",
                 "uvMode": 2,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -8566,7 +8566,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_little_spark.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_little_spark.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -8581,11 +8581,11 @@
                 "lifetime": 0.20000000298023224,
                 "isSingleParticle": 1,
                 "emitterName": "distort",
-                "particleColorTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_alpha_rampdown.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_alpha_rampdown.tex",
                 "blendMode": 1,
                 "distortionDefinition": {
                     "distortion": 0.15000000596046448,
-                    "normalMapTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_BA_distort_tex.project_jade.tex",
+                    "normalMapTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_BA_distort_tex.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -8626,7 +8626,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_Idle_glow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_Idle_glow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -8757,7 +8757,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/common_TreelineLanternLockComplete3P.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/common_TreelineLanternLockComplete3P.tex",
                 "numFrames": 2,
                 "__type": "VfxEmitterDefinitionData"
             },
@@ -8794,7 +8794,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_bellcurve.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_bellcurve.tex",
                 "blendMode": 1,
                 "colorLookUpScales": [
                     0.6000000238418579,
@@ -8806,7 +8806,7 @@
                 ],
                 "distortionDefinition": {
                     "distortion": 0.03500000014901161,
-                    "normalMapTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_Passive_Sona_Base_Q_Tar_DistortionRipples.project_jade.tex",
+                    "normalMapTexture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_Passive_Sona_Base_Q_Tar_DistortionRipples.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
                 "isUniformScale": 1,
@@ -8861,7 +8861,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_Idle_glow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_Idle_glow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -9659,7 +9659,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/common_SRU_Baron_WaterSplash_anim.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/common_SRU_Baron_WaterSplash_anim.tex",
                 "frameRate": 30.0,
                 "numFrames": 16,
                 "texDiv": [
@@ -9793,7 +9793,7 @@
                     },
                     "erosionFeatherIn": 0.4000000059604645,
                     "erosionFeatherOut": 0.20000000298023224,
-                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Z_WaterSpikes.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Z_WaterSpikes.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -9888,7 +9888,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Z_WaterSpikes.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Z_WaterSpikes.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -10038,7 +10038,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_R_Aoe_Ring_mesh2.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_R_Aoe_Ring_mesh2.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -10137,7 +10137,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_R_mesh_space.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_R_mesh_space.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -10189,7 +10189,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -10359,7 +10359,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.10000000149011612,
@@ -10372,7 +10372,7 @@
                     1.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring_Mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring_Mult.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             1.0,
@@ -10426,7 +10426,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_base_W_ally_ring_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -10604,7 +10604,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         -0.10000000149011612,
@@ -10617,7 +10617,7 @@
                     1.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring_Mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_W_ally_ring_Mult.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             1.0,
@@ -10727,7 +10727,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_01.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_01.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -10844,7 +10844,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -10937,7 +10937,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -11030,7 +11030,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -11038,7 +11038,7 @@
         "particlePath": "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_W_Cas",
         "__type": "VfxSystemDefinitionData"
     },
-    "{d785240f}": {
+    "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_Idle_GemLifeRing": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -11062,7 +11062,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_01.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_01.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -11080,7 +11080,7 @@
                     "__type": "ValueVector3"
                 },
                 "isLocalOrientation": 0,
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11447,7 +11447,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Mis_Sparkles.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Mis_Sparkles.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -11456,7 +11456,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{ebc437a6}": {
+    "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_Buoy_Idle_02": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -11476,7 +11476,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_02.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_02.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -11509,7 +11509,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11623,7 +11623,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -11633,7 +11633,7 @@
         "flags": 199,
         "__type": "VfxSystemDefinitionData"
     },
-    "{ecc43939}": {
+    "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_Buoy_Idle_03": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -11752,7 +11752,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_add_glow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Base/Particles/Jade_Taric_Base_z_add_glow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11774,7 +11774,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_01.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Taric/Skins/Skin04/Particles/Jade_Taric_Skin04_Buoy_Idle_01.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -11799,7 +11799,7 @@
                     "__type": "ValueVector3"
                 },
                 "isLocalOrientation": 0,
-                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Taric/Skins/Skin08/Jade_Taric_Skin08_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -11811,65 +11811,65 @@
     },
     "{ddb91bf3}": {
         "resourceMap": {
-            "{f5e0066d}": "{b17577da}",
-            "{f2e001b4}": "{b0757647}",
-            "{f3e00347}": "{af7574b4}",
-            "{8ff0cf26}": "{0b31fd15}",
-            "{0d961b11}": "{324f33da}",
-            "{c5efd39d}": "{96b186dc}",
-            "{47f0a2bb}": "{a90339b0}",
-            "{3e988656}": "{e1d0f273}",
-            "{1de362db}": "{8a6c330e}",
-            "{51b302b6}": "{5fa11a8f}",
-            "{dccb8d5d}": "{e799e11e}",
-            "{cfe54283}": "{32a3283c}",
-            "{ea9b43b0}": "{b3bdcd13}",
-            "{ed9b4869}": "{b4bdcea6}",
-            "{ec9b46d6}": "{b5bdd039}",
-            "{65a220d2}": "{4ef6210b}",
-            "{e139c559}": "{6ca8b1f6}",
-            "{de39c0a0}": "{6ba8b063}",
-            "{870e9993}": "{eb4d0d78}",
-            "{a693c90e}": "{815f8b15}",
-            "{5192ced1}": "{899ce04c}",
-            "{4e92ca18}": "{8c9ce505}",
-            "{87e319f2}": "{db33ff3b}",
-            "{86e3185f}": "{dc3400ce}",
-            "{4ec7cf53}": "{e3088998}",
-            "{af579a8d}": "{329ed526}",
-            "{bad86dec}": "{a021e1d1}",
-            "{45dcfa51}": "{c2149472}",
-            "{eefea37d}": "{c40e283e}",
-            "{ebfe9ec4}": "{c30e26ab}",
-            "{ecfea057}": "{c20e2518}",
-            "{be1769b3}": "{08d88d22}",
-            "{bf176b46}": "{07d88b8f}",
-            "{d288d476}": "{8588e825}",
-            "{c0176cd9}": "{06d889fc}",
-            "{26e49549}": "{4ac1f198}",
-            "{ec3863df}": "{1f363262}",
-            "{a9b18aa6}": "{2173b049}",
-            "{6a1a87a8}": "{9ea87c57}",
-            "{e26b0e6c}": "{0cdc3383}",
-            "{f2f13816}": "{c4ea2f59}",
-            "{c733de44}": "{4ecd6d03}",
-            "{a08910d1}": "{e9ede556}",
-            "{00d1a247}": "{2fd4ecbc}",
-            "{824136c7}": "{3d37fadc}",
-            "{c4dd1dc9}": "{ab6aea58}",
-            "{447a238d}": "{e00a7d1c}",
-            "{06e93af1}": "{5889e208}",
-            "{d854a8a2}": "{aad8b9c3}",
-            "{c7221d3d}": "{58d9dc1e}",
-            "{b27e96a6}": "{8cabe928}",
-            "{f3a978b5}": "{5db18de9}",
-            "{f0a973fc}": "{5ab18930}",
-            "{f1a9758f}": "{5bb18ac3}",
-            "{4644b15a}": "{d1523feb}",
-            "{4544afc7}": "{ebc437a6}",
-            "{4444ae34}": "{ecc43939}",
-            "{2be6b7d5}": "{2c10b816}",
-            "{7ce4a1c2}": "{d785240f}"
+            "Jade_Taric_BA_Tar_01": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_BA_Tar_01",
+            "Jade_Taric_BA_Tar_02": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_BA_Tar_02",
+            "Jade_Taric_BA_Tar_03": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_BA_Tar_03",
+            "Jade_Taric_Death": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Death",
+            "Jade_Taric_Death_Chestglow": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Death_Chestglow",
+            "Jade_Taric_Emote_Joke_close_Sound": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Emote_Joke_close_Sound",
+            "Jade_Taric_Emote_Joke_open_Sound": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Emote_Joke_open_Sound",
+            "Jade_Taric_Emote_Joke_Sound": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Emote_Joke_Sound",
+            "Jade_Taric_E_Cast": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_E_Cast",
+            "Jade_Taric_E_Gem_Idle": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_E_Gem_Idle",
+            "Jade_Taric_E_Indicator": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_E_Indicator",
+            "Jade_Taric_E_Tar": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_E_Tar",
+            "Jade_Taric_Gem_Idle_01": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Gem_Idle_01",
+            "Jade_Taric_Gem_Idle_02": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Gem_Idle_02",
+            "Jade_Taric_Gem_Idle_03": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Gem_Idle_03",
+            "Jade_Taric_Idle_Gem": "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_Idle_Gem",
+            "Jade_Taric_Idle_Gem1": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Idle_Gem1",
+            "Jade_Taric_Idle_Gem2": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Idle_Gem2",
+            "Jade_Taric_Idle_Weapon": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Idle_Weapon",
+            "Jade_Taric_P_Buf": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_P_Buf",
+            "Jade_Taric_P_swipe_01": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_P_swipe_01",
+            "Jade_Taric_P_swipe_02": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_P_swipe_02",
+            "Jade_Taric_P_Tar_01": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_P_Tar_01",
+            "Jade_Taric_P_Tar_02": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_P_Tar_02",
+            "Jade_Taric_Q_AoE": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Q_AoE",
+            "Jade_Taric_Q_AoE_Jade_Taric_only": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Q_AoE_Jade_Taric_only",
+            "Jade_Taric_Q_cas_Gem_Idle": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Q_cas_Gem_Idle",
+            "Jade_Taric_Q_cas": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Q_cas",
+            "Jade_Taric_Q_hand_01": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Q_hand_01",
+            "Jade_Taric_Q_hand_02": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Q_hand_02",
+            "Jade_Taric_Q_hand_03": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Q_hand_03",
+            "Jade_Taric_Q_tar_01": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Q_tar_01",
+            "Jade_Taric_Q_tar_02": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Q_tar_02",
+            "Jade_Taric_Q_tar_child": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Q_tar_child",
+            "Jade_Taric_Q_tar_03": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Q_tar_03",
+            "Jade_Taric_Recall": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Recall",
+            "Jade_Taric_R_Ally_Indicator": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_R_Ally_Indicator",
+            "Jade_Taric_R_AoE": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_R_AoE",
+            "Jade_Taric_R_buf": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_R_buf",
+            "Jade_Taric_R_cas": "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_R_Cas",
+            "Jade_Taric_R_Delay": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_R_Delay",
+            "Jade_Taric_R_Indicator": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_R_Indicator",
+            "Jade_Taric_Taunt_flash": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_Taunt_flash",
+            "Jade_Taric_W_buff_beam": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_W_buff_beam",
+            "Jade_Taric_W_buff_beam_break": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_W_buff_beam_break",
+            "Jade_Taric_W_buff_indicator": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_W_buff_indicator",
+            "Jade_Taric_W_buf_Shield": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_W_buf_Shield",
+            "Jade_Taric_W_directional_ring": "Characters/Jade_Taric/Skins/Skin0/Particles/Jade_Taric_Base_W_directional_ring",
+            "Jade_Taric_W_mis_connection": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_W_mis_connection",
+            "Jade_Taric_W_Mis": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_W_Mis",
+            "Jade_Taric_z_Gem_Pop": "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_W_Cas",
+            "{f3a978b5}": "Characters/Jade_Taric/Skins/Skin0/Particles/JADE/Jade_Taric_Base_JADE_W_Idle_Gem_01",
+            "{f0a973fc}": "Characters/Jade_Taric/Skins/Skin0/Particles/JADE/Jade_Taric_Base_JADE_W_Idle_Gem_02",
+            "{f1a9758f}": "Characters/Jade_Taric/Skins/Skin0/Particles/JADE/Jade_Taric_Base_JADE_W_Idle_Gem_03",
+            "Jade_Taric_Buoy_Idle_01": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_Buoy_Idle_01",
+            "Jade_Taric_Buoy_Idle_02": "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_Buoy_Idle_02",
+            "Jade_Taric_Buoy_Idle_03": "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_Buoy_Idle_03",
+            "Jade_Taric_DeathSplash": "Characters/Jade_Taric/Skins/Skin4/Particles/Jade_Taric_Skin04_DeathSplash",
+            "Jade_Taric_Idle_GemLifeRing": "Characters/Jade_Taric/Skins/Skin8/Particles/Jade_Taric_Skin08_Idle_GemLifeRing"
         },
         "__type": "ResourceResolver"
     },

@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix is a wild Faerie that accompanies Lulu. Pix will fire a barrage of magical energy at targets that Lulu attacks."
+        "description": "Pix fires magical bolts of energy whenever the champion he's following attacks another enemy unit. These bolts are homing, but can be intercepted by other units."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Pix and Lulu each fire a bolt of magical energy that heavily slows all enemies it hits. An enemy can only be damaged by one bolt.",
-            "dynamicDescription": "<mainText>Lulu and Pix each fire a piercing bolt dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>, enemies hit are <status>Slowed</status> by @SlowAmount*-100@% for @SlowDuration@ second(s). This slow decays over time to a minimum of @MinMoveSpeedMod@% (Minimum is capped at 80%).<br><br>An enemy can only be damaged by one bolt.",
+            "dynamicDescription": "Lulu and Pix each fire a piercing bolt dealing <magicDamage>@TotalDamage@ magic damage</magicDamage>, enemies hit are <status>Slowed</status> by @SlowAmount*-100@%, decaying over @SlowDuration@ seconds.<br><br>An enemy can only be damaged by one bolt.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,
@@ -816,18 +816,18 @@
                 12.0
             ],
             "coefficients": {
-                "coefficient1": 0.6,
-                "coefficient2": 0.05
+                "coefficient1": 0.0,
+                "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25,
-                    0.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
                     0.0,
@@ -839,49 +839,49 @@
                     0.0
                 ],
                 "Effect3Amount": [
-                    1.0,
-                    1.5,
-                    1.75,
-                    2.0,
-                    2.25,
-                    2.5,
-                    2.2
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    -60.0,
-                    -60.0,
-                    -60.0,
-                    -60.0,
-                    -60.0,
-                    -60.0,
-                    -60.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    2.75,
-                    3.0,
-                    3.25,
-                    3.5,
-                    3.75,
-                    4.0,
-                    4.25
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    0.01,
-                    0.01,
-                    0.01,
-                    0.01,
-                    0.01,
-                    0.01,
-                    0.01
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    0.2,
-                    0.2,
-                    0.225,
-                    0.25,
-                    0.275,
-                    0.3,
-                    0.3
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,

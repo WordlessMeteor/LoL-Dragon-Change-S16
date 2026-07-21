@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Hạ gục hoặc hỗ trợ hạ gục tướng địch sẽ giúp Katarina nhận thêm vàng và giảm thời gian hồi chiêu của cô ấy đi 15 giây."
+        "description": "Hạ gục hoặc hỗ trợ hạ gục tướng giúp giảm thời gian hồi chiêu của Katarina đi 15 giây."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Không Tiêu hao",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Katarina ném một chiếc dao găm nảy từ kẻ địch này sang kẻ địch khác, gây sát thương phép.",
-            "dynamicDescription": "Ném một chiếc dao găm gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>. Dao găm nảy thêm @MaxBounces@ lần, gây ít đi 10% sát thương với mỗi lần nảy.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ném một chiếc dao găm gây <magicDamage>@TotalDamage@</magicDamage> sát thương phép. Dao găm nảy sang @MaxBounces@ kẻ địch gần nhất, gây ít đi 10% sát thương với mỗi lần nảy.<br><br>Kẻ địch trúng chiêu sẽ bị đánh dấu trong @MarkDuration@ giây. Đòn đánh thường hoặc kỹ năng của Katarina sẽ tiêu thụ dấu ấn, gây thêm <magicDamage>@TotalDamageMark@</magicDamage> sát thương phép.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Bản Năng Sát Thủ",
+            "name": "Ác Kiếm",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Không Tiêu hao",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Kỹ năng cơ bản tiếp theo của Katarina nhận thêm một hiệu ứng.",
-            "dynamicDescription": "<spellPassive>Nội Tại</spellPassive>: Kỹ Năng và Đòn Đánh của Katarina gây thêm @TotalDamage@ sát thương.<br><br><spellActive>Kích Hoạt:</spellActive> Kỹ Năng cơ bản tiếp theo của Katarina nhận thêm hiệu ứng.<li><spellName>Phi Dao</spellName>: Gây 100% sát thương lên mọi mục tiêu và áp dụng <keyWord>Vết Thương Sâu</keyWord> trong @QHealingReductionDuration@ giây.<li><spellName>Ám Sát</spellName>: Katarina nhận @EDamageReduction@% giảm sát thương trong @EDamageReductionDuration@ giây.@SpellModifierDescriptionAppend@",
+            "description": "Katarina xoay những lưỡi dao quanh mình, gây sát thương phép lên tất cả kẻ địch trong vùng ảnh hưởng. Nếu đánh trúng Tướng địch, Katarina tăng mạnh tốc độ di chuyển trong thời gian ngắn.",
+            "dynamicDescription": "Xoay dao găm thành vòng tròn, gây @TotalDamage@ sát thương phép. Nếu đánh trúng Tướng địch, Katarina được tăng @Haste*100@% <speed>Tốc Độ Di Chuyển</speed> trong @BuffDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Không Tiêu hao",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Katarina lập tức di chuyển đến vị trí của mục tiêu và giảm sát thương nhận vào từ kẻ địch trong vài giây. Nếu mục tiêu là kẻ địch, cô ấy sẽ gây sát thương.",
-            "dynamicDescription": "Di chuyển đến vị trí của mục tiêu. Gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> nếu mục tiêu là kẻ địch.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Di chuyển đến vị trí của mục tiêu. Gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> nếu mục tiêu là kẻ địch.<br><br>Sau khi sử dụng Ám Sát, Katarina được giảm @DamageReduction@% sát thương nhận vào trong @DamageReductionDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Không Tiêu hao",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Katarina tạo thành một cơn lốc phi dao, phóng dao găm với tốc độ vô song vào tối đa 3 Tướng địch gần đó.",
-            "dynamicDescription": "Tạo thành một cơn lốc phi dao, phóng dao găm vào 3 Tướng địch gần nhất, gây <magicDamage>@DamageCalcTooltipOnly@ sát thương phép</magicDamage> trong 2 giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Tạo thành một cơn lốc phi dao, phóng dao găm vào 3 Tướng địch gần nhất, gây <magicDamage>@DamageCalcTooltipOnly@ sát thương phép</magicDamage> trong 2,5 giây.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

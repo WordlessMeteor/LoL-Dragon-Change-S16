@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Abates ou assistências de Campeões concedem ouro adicional a Katarina e reduzem os Tempos de Recarga dela em 15s."
+        "description": "Abates ou assistências de Campeões reduzem os Tempos de Recarga de Katarina em 15s."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Katarina arremessa uma adaga que ricocheteia de um inimigo a outro causando Dano Mágico.",
-            "dynamicDescription": "Arremessa uma adaga que causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. A adaga ricocheteia mais @MaxBounces@ vezes, causando 10% a menos de dano a cada ricochete.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Arremessa uma adaga que causa <magicDamage>@TotalDamage@</magicDamage> de Dano Mágico. A adaga ricocheteia nos @MaxBounces@ inimigos mais próximos, causando 10% a menos de dano a cada ricochete.<br><br>Inimigos atingidos são marcados por @MarkDuration@s. Os Ataques básicos ou Habilidades de Katarina consomem a marca, causando <magicDamage>@TotalDamageMark@</magicDamage> de Dano Mágico adicional.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Instintos Assassinos",
+            "name": "Ciclone das Adagas",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "A próxima Habilidade básica de Katarina recebe um efeito adicional.",
-            "dynamicDescription": "<spellPassive>Passivo</spellPassive>: as Habilidades e os Ataques de Katarina causam @TotalDamage@ de dano adicional.<br><br><spellActive>Ativo:</spellActive> a próxima Habilidade básica de Katarina tem um efeito adicional.<li><spellName>Lâmina Saltitante</spellName>: causa dano máximo a todos os alvos e aplica <keyWord>Feridas Dolorosas</keyWord> por @QHealingReductionDuration@s.<li><spellName>Shunpo</spellName>: Katarina recebe @EDamageReduction@% de redução de dano sofrido por @EDamageReductionDuration@s.@SpellModifierDescriptionAppend@",
+            "description": "Katarina gira as adagas ao redor de si, causando Dano Mágico a todos os inimigos na área. Ao atingir um Campeão inimigo, Katarina recebe um impulso de velocidade por um breve período.",
+            "dynamicDescription": "Gira adagas em um círculo, causando @TotalDamage@ de Dano Mágico. Se atingir um Campeão inimigo, Katarina recebe @Haste*100@% de <speed>Velocidade de Movimento</speed> por @BuffDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Katarina se move instantaneamente para o local do alvo e sofre menos dano de inimigos por alguns segundos. Se o alvo for um inimigo, ela causa dano.",
-            "dynamicDescription": "Vai para o local do alvo. Causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> se o alvo for um inimigo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vai para o local do alvo. Causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> se o alvo for um inimigo.<br><br>Após usar Shunpo, Katarina sofre dano reduzido em @DamageReduction@% por @DamageReductionDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Katarina se transforma em uma rajada de lâminas, arremessando adagas com velocidade inigualável contra até três Campeões próximos.",
-            "dynamicDescription": "Transforma-se em uma rajada de lâminas, arremessando adagas contra os 3 Campeões inimigos mais próximos e causando <magicDamage>@DamageCalcTooltipOnly@ de Dano Mágico</magicDamage> ao longo de 2s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Transforma-se em uma rajada de lâminas, arremessando adagas nos 3 Campeões inimigos mais próximos e causando <magicDamage>@DamageCalcTooltipOnly@ de Dano Mágico</magicDamage> ao longo de 2,5s.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -2357,11 +2357,26 @@ lol-uikit-content-block[type=tooltip-medium].rcp-fe-lol-emote-inventory-tooltip 
 }
 
 .jade-battlepass-page .battlepass-actions {
-    bottom: 10px;
+    bottom: 37px;
     display: flex;
     flex-direction: row;
     gap: 10px;
     position: absolute
+}
+
+.jade-battlepass-page .battlepass-disclaimer {
+    color: #a09b8c;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    line-height: 16px;
+    max-width: 410px;
+    text-align: start
+}
+
+.jade-battlepass-page .battlepass-disclaimer .digital-goods-disclaimer-url {
+    color: #0a96aa
 }
 
 .jade-battlepass-page .battlepass-upgrade-section {
@@ -13135,6 +13150,12 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     object-fit: cover;
     object-position: center top;
     width: 100%
+}
+
+.jade-champion-modal__ability-section .jade-champion-modal-ability-section-shroud {
+    left: 0;
+    position: absolute;
+    top: 0
 }
 
 .jade-champion-modal__video-overlay {

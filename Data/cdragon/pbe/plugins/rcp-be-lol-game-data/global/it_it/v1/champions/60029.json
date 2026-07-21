@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Twitch Classic (Vandalo)",
+                    "name": "Twitch Classic (Re del Crimine)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Twitch diventa invisibile per un breve periodo; mentre è invisibile, ottiene velocità di movimento. Quando esce dall'invisibilità, Twitch ottiene velocità d'attacco per un breve periodo.",
-            "dynamicDescription": "<mainText>Dopo @MaxFadeTime@ secondo/i, Twitch si <keywordStealth>mimetizza</keywordStealth> per @StealthDuration@ secondo/i.<br><br>Twitch ottiene un <attackSpeed>@AttackSpeedMod*100@% di velocità d'attacco</attackSpeed> per @AttackSpeedDuration@ secondo/i dopo essere uscito da <keywordStealth>mimesi</keywordStealth>.",
+            "description": "Twitch diventa invisibile per alcuni secondi, ottenendo velocità di movimento. Dopodiché, ottiene velocità d'attacco dopo essere uscito dall'Invisibilità.",
+            "dynamicDescription": "Dopo @MaxFadeTime@ secondo/i trascorsi senza subire danni o dopo @MaxDelayTime@ secondi, Twitch diventa <keywordStealth>invisibile</keywordStealth> per @StealthDuration@ secondo/i, ottenendo <speed>@MoveSpeedMod*100@% velocità di movimento</speed>.<br><br>Twitch ottiene un <attackSpeed>@AttackSpeedMod*100@% di velocità d'attacco</attackSpeed> per @AttackSpeedDuration@ secondo/i dopo essere uscito dall'<keywordStealth>Invisibilità</keywordStealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Veleno debilitante",
+            "name": "Barile di veleno",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Twitch infetta tutti i campioni vicini con Veleno debilitante, rallentando la loro velocità di movimento.",
-            "dynamicDescription": "Twitch <status>rallenta</status> i campioni nemici vicini di un @SlowPercent*-100@% per @Duration@ secondo/i, più un @PassiveStackSlowPercent*-100@% per ogni carica di <keywordMajor>Veleno mortale</keywordMajor> (massimo @MaxSlowTooltip@).<br><br>Aggiungere altre cariche di <keywordMajor>Veleno mortale</keywordMajor> dopo che il <status>rallentamento</status> è stato applicato riduce ulteriormente la <speed>velocità di movimento</speed>.@SpellModifierDescriptionAppend@",
+            "description": "Twitch scaglia un barilotto di veleno che esplode in un'area, rallentando i nemici e infliggendo loro Veleno mortale.",
+            "dynamicDescription": "Twitch lancia un barilotto di veleno che esplode, applicando @StacksAdded@ cariche di <keywordMajor>Veleno mortale</keywordMajor> e <status>rallentando</status> i nemici di un @BaseSlowAmount@% per @Duration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Tutti i nemici vicini secernono i veleni tossici di Twitch dai loro corpi, subendo danni per ogni carica.",
-            "dynamicDescription": "<mainText>Twitch infligge <physicalDamage>@BaseDamage@ danni fisici</physicalDamage> più <physicalDamage>@TotalStackDamage@</physicalDamage> per ogni carica di <keywordMajor>Veleno mortale</keywordMajor> a tutti i nemici contrassegnati nelle vicinanze, consumando tutte le cariche vicine.",
+            "dynamicDescription": "Twitch infligge <physicalDamage>@BaseDamage@ danni fisici</physicalDamage> più <physicalDamage>@TotalStackDamage@</physicalDamage> per ogni carica di <keywordMajor>Veleno mortale</keywordMajor> a tutti i nemici marchiati nelle vicinanze.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Twitch chiude gli occhi e spara con la sua balestra, scagliando rapidamente potenti dardi perforanti davanti a sé.",
-            "dynamicDescription": "<mainText>Per @Duration@ secondi, Twitch ottiene @BonusRange@ di gittata d'attacco e <physicalDamage>@BonusAD@ attacco fisico</physicalDamage>, e i suoi attacchi base diventano dei dardi penetranti che infliggono un @FallOffDamage*100@% dei danni in meno ai bersagli successivi fino a un minimo di un @MinimumFallOffDamage*100@% dei danni.",
+            "dynamicDescription": "Per @Duration@ secondo/i, Twitch ottiene @BonusRange@ di gittata d'attacco e <physicalDamage>@BonusAD@ attacco fisico</physicalDamage>, e i suoi attacchi base diventano dei dardi penetranti che infliggono un @FallOffDamage*100@% dei danni in meno ai bersagli successivi fino a un minimo di un @MinimumFallOffDamage*100@% dei danni.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

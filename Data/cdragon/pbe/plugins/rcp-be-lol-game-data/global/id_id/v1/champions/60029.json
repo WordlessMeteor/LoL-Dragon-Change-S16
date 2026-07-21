@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Classic Twitch (Vandal)",
+                    "name": "Classic Twitch (Kingpin)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Twitch menjadi invisible untuk sementara waktu. Saat invisible, Twitch mendapatkan movement speed. Saat keluar dari invisibility, Twitch mendapatkan Attack Speed selama beberapa saat.",
-            "dynamicDescription": "<mainText>Setelah @MaxFadeTime@ detik, Twitch memasuki <keywordStealth>Camouflage</keywordStealth> selama @StealthDuration@ detik.<br><br>Twitch mendapatkan <attackSpeed>@AttackSpeedMod*100@% Attack Speed</attackSpeed> selama @AttackSpeedDuration@ detik setelah keluar dari <keywordStealth>Camouflage.</keywordStealth>",
+            "description": "Twitch menjadi Invisible selama beberapa detik dan mendapatkan Move Speed. Setelah keluar dari Invisibility, Twitch mendapatkan Attack Speed.",
+            "dynamicDescription": "Setelah @MaxFadeTime@ detik tanpa menerima damage atau setelah @MaxDelayTime@ detik berlalu, Twitch menjadi <keywordStealth>Invisible</keywordStealth> selama @StealthDuration@ detik dan mendapatkan <speed>@MoveSpeedMod*100@% Move Speed</speed>.<br><br>Twitch mendapatkan <attackSpeed>@AttackSpeedMod*100@% Attack Speed</attackSpeed> selama @AttackSpeedDuration@ detik setelah keluar dari <keywordStealth>Invisibility</keywordStealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Debilitating Poison",
+            "name": "Venom Cask",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Twitch menginfeksi semua champion di sekitar dengan Debilitating Poison, mengurangi movement speed mereka.",
-            "dynamicDescription": "Twitch menerapkan <status>Slow</status> pada champion musuh di sekitar sebesar @SlowPercent*-100@% selama @Duration@ detik, meningkat sebesar @PassiveStackSlowPercent*-100@% per stack <keywordMajor>Deadly Venom</keywordMajor> (maksimum: @MaxSlowTooltip@).<br><br>Menambahkan lebih banyak stack <keywordMajor>Deadly Venom</keywordMajor> setelah efek <status>Slow</status> diterapkan akan makin mengurangi <speed>Movement Speed</speed> mereka.@SpellModifierDescriptionAppend@",
+            "description": "Twitch melempar tong berisi racun yang meledak, memberikan efek Deadly Venom dan menerapkan slow ke musuh di area tersebut.",
+            "dynamicDescription": "Twitch melempar tong berisi racun yang meledak, memberikan @StacksAdded@ stack <keywordMajor>Deadly Venom</keywordMajor> dan menerapkan <status>Slow</status> ke musuh sebesar @BaseSlowAmount@% selama @Duration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Semua musuh di sekitar mengeluarkan racun mematikan milik Twitch dari tubuh mereka, menghasilkan damage untuk setiap stack.",
-            "dynamicDescription": "<mainText>Twitch menghasilkan <physicalDamage>@BaseDamage@ physical damage</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> per stack <keywordMajor>Deadly Venom</keywordMajor> ke semua musuh terdekat yang ditandai, sekaligus mengonsumsi semua stack di sekitar.",
+            "dynamicDescription": "Twitch menghasilkan <physicalDamage>@BaseDamage@ physical damage</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> per stack <keywordMajor>Deadly Venom</keywordMajor> ke semua musuh di sekitar yang ditandai.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Twitch memejamkan mata dan menembakkan crossbow miliknya, menghujani secara cepat area di depannya dengan piercing bolt yang kuat.",
-            "dynamicDescription": "<mainText>Selama @Duration@ detik, Twitch mendapatkan @BonusRange@ Attack Range, <physicalDamage>@BonusAD@ Attack Damage</physicalDamage>, dan basic attack-nya berubah menjadi piercing bolt yang menghasilkan @FallOffDamage*100@% lebih sedikit damage ke target berikutnya hingga minimum @MinimumFallOffDamage*100@%.",
+            "dynamicDescription": "Selama @Duration@ detik, Twitch mendapatkan @BonusRange@ Attack Range, <physicalDamage>@BonusAD@ Attack Damage</physicalDamage>, dan basic attack-nya berubah menjadi piercing bolt yang menghasilkan @FallOffDamage*100@% lebih sedikit damage ke target berikutnya hingga minimum @MinimumFallOffDamage*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

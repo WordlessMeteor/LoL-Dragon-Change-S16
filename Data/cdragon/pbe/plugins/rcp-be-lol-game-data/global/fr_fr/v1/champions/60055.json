@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Les éliminations ou assistances de champion octroient à Katarina des PO supplémentaires et réduisent ses délais de récupération de 15 sec."
+        "description": "Les éliminations de champion ou assistances réduisent les délais de récupération de Katarina de 15 sec."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Katarina lance une dague qui rebondit d'ennemi en ennemi, infligeant des dégâts magiques.",
-            "dynamicDescription": "Katarina lance une dague, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>. La dague rebondit @MaxBounces@ fois supplémentaires, infligeant 10% de dégâts en moins à chaque rebond.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Katarina lance une dague, infligeant <magicDamage>@TotalDamage@</magicDamage> pts de dégâts magiques. La dague rebondit vers les @MaxBounces@ ennemis les plus proches, infligeant 10% de dégâts en moins à chaque rebond.<br><br>Les ennemis touchés sont marqués pendant @MarkDuration@ sec. Les attaques de base ou les compétences de Katarina consomment la marque, infligeant <magicDamage>@TotalDamageMark@</magicDamage> pts de dégâts magiques bonus.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Instincts meurtriers",
+            "name": "Acier sinistre",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "La prochaine compétence de base de Katarina bénéficie d'un effet supplémentaire.",
-            "dynamicDescription": "<spellPassive>Passif</spellPassive> : les compétences et attaques de Katarina infligent @TotalDamage@ pts de dégâts bonus.<br><br><spellActive>Actif :</spellActive> la prochaine compétence de base de Katarina bénéficie d'un effet bonus.<li><spellName>Lame rebondissante</spellName> : inflige les dégâts complets à chaque cible et inflige <keyWord>Hémorragie</keyWord> pendant @QHealingReductionDuration@ sec.<li><spellName>Shunpo</spellName> : Katarina bénéficie de @EDamageReduction@% de réduction des dégâts pendant @EDamageReductionDuration@ sec.@SpellModifierDescriptionAppend@",
+            "description": "Katarina frappe autour d'elle avec ses dagues, infligeant des dégâts magiques à tous les ennemis dans la zone. Si elle touche un champion ennemi, la vitesse de déplacement de Katarina augmente pendant une courte durée.",
+            "dynamicDescription": "Katarina fait tournoyer des dagues en cercle, infligeant @TotalDamage@ pts de dégâts magiques. Si elle touche un champion ennemi, Katarina gagne @Haste*100@% de <speed>vitesse de déplacement</speed> pendant @BuffDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Katarina se téléporte instantanément près de sa cible et subit des dégâts réduits pendant quelques secondes. Si la cible est un ennemi, elle lui inflige des dégâts.",
-            "dynamicDescription": "Katarina se déplace vers l'emplacement de la cible. Si la cible est un ennemi, elle lui inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Katarina se déplace vers l'emplacement de la cible. Si la cible est un ennemi, elle lui inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>.<br><br>Après avoir utilisé Shunpo, Katarina subit @DamageReduction@% de dégâts en moins pendant @DamageReductionDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Katarina tournoie et projette des dagues à une vitesse incroyable sur trois champions proches maximum.",
-            "dynamicDescription": "Katarina tournoie et projette des dagues sur les 3 champions ennemis les plus proches, infligeant <magicDamage>@DamageCalcTooltipOnly@ pts de dégâts magiques</magicDamage> en 2 sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Katarina tournoie et projette des dagues sur les 3 champions ennemis les plus proches, infligeant <magicDamage>@DamageCalcTooltipOnly@ pts de dégâts magiques</magicDamage> en 2.5 sec.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

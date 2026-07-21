@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Şampiyon skorları veya asistleri Katarina'ya fazladan altın kazandırır ve bekleme sürelerini 15 saniye azaltır."
+        "description": "Şampiyon katletmek veya asistler Katarina'nın bekleme sürelerini 15 saniye azaltır."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Katarina rakipten rakibe sekerek büyü hasarı veren bir bıçak fırlatır.",
-            "dynamicDescription": "<magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren bir bıçak fırlatır. Bıçak @MaxBounces@ kez daha seker ve her sekmede %10 daha az hasar verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<magicDamage>@TotalDamage@</magicDamage> Büyü Hasarı veren bir bıçak fırlatır. Bıçak en yakındaki @MaxBounces@ rakibe daha seker ve her sekmede %10 daha az hasar verir.<br><br>İsabet alan rakipler @MarkDuration@ saniyeliğine işaretlenir. Katarina'nın normal saldırıları veya yetenekleri işareti tüketerek fazladan <magicDamage>@TotalDamageMark@</magicDamage> Büyü Hasarı verir.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Ölümcül Dürtüler",
+            "name": "Açgözlü",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Katarina'nın bir sonraki temel yeteneği ilave bir etki kazanır.",
-            "dynamicDescription": "<spellPassive>Pasif</spellPassive>: Katarina'nın yetenekleri ve saldırıları fazladan @TotalDamage@ Hasar verir.<br><br><spellActive>Aktif:</spellActive> Katarina'nın bir sonraki temel yeteneği ilave bir etki kazanır.<li><spellName>Sıçrayan Bıçak</spellName>: Her hedefe tam hasar verir ve @QHealingReductionDuration@ saniyeliğine <keyWord>Ağır Yara</keyWord> uygular.<li><spellName>Shunpo</spellName>: Katarina @EDamageReductionDuration@ saniyeliğine %@EDamageReduction@ Hasar Azaltma kazanır.@SpellModifierDescriptionAppend@",
+            "description": "Katarina bıçaklarını etrafında döndürerek alandaki tüm rakiplere büyü hasarı verir. Bir rakip şampiyona bıçak isabet ettirirse kısa süreliğine hız artışı kazanır.",
+            "dynamicDescription": "Bıçakları çember şeklinde döndürerek @TotalDamage@ Büyü Hasarı verir. Katarina bir rakip şampiyona bıçak isabet ettirirse @BuffDuration@ saniyeliğine %@Haste*100@ <speed>Hareket Hızı</speed> kazanır.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Katarina anında hedefinin konumuna hareket eder ve birkaç saniye boyunca rakiplerden daha az hasar alır. Hedef bir rakipse hasar verir.",
-            "dynamicDescription": "Hedefin konumuna hareket eder. Hedef bir rakipse <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Hedefin konumuna hareket eder. Hedef bir rakipse <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.<br><br>Katarina Shunpo yeteneğini kullandıktan sonra @DamageReductionDuration@ saniye boyunca %@DamageReduction@ daha az hasar alır.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "Bedelsiz",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Katarina yakındaki en fazla üç şampiyona benzersiz bir hızla bıçak fırlatır.",
-            "dynamicDescription": "En yakındaki 3 rakip şampiyona benzersiz bir hızla bıçak fırlatarak 2 saniye içinde <magicDamage>@DamageCalcTooltipOnly@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "En yakındaki 3 rakip şampiyona benzersiz bir hızla bıçak fırlatarak 2,5 saniye içinde <magicDamage>@DamageCalcTooltipOnly@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

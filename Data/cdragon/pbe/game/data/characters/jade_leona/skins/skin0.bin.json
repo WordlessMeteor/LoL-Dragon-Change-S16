@@ -4,7 +4,7 @@
         "championSkinName": "Jade_Leona-base",
         "metaDataTags": "faction:mttargon,subfaction:solari,gender:female,race:aspect,element:light",
         "loadscreen": {
-            "image": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_LeonaLoadScreen.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_LeonaLoadScreen.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -97,13 +97,13 @@
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_Leona.project_jade.skl",
-            "simpleSkin": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_Leona.project_jade.skn",
-            "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_Leona_base_TX_CM.project_jade.tex",
-            "glossTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_Leona_base_TX_GM.project_jade.tex",
+            "skeleton": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_Leona.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_Leona.skn",
+            "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_Leona_base_TX_CM_classic.tex",
+            "glossTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_Leona_base_TX_GM.tex",
             "skinScale": 1.3700000047683716,
             "selfIllumination": 1.0,
-            "reflectionMap": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_Leona_base_CubeMap.project_jade.dds",
+            "reflectionMap": "ASSETS/Characters/Jade_Leona/Skins/Base/Jade_Leona_base_CubeMap.dds",
             "reflectionOpacityDirect": 0.699999988079071,
             "reflectionFresnel": 0.30000001192092896,
             "reflectionFresnelColor": [
@@ -115,7 +115,7 @@
             "{9a817954}": [
                 {
                     "category": "{e1043940}",
-                    "materialOverride": "{87160348}",
+                    "materialOverride": "Characters/Jade_Leona/Skins/Skin0/Materials/Jade_Leona_CharacterOutline_inst",
                     "Submeshes": "leona_base_mesh_lambert",
                     "__type": "{993f8595}"
                 }
@@ -128,19 +128,19 @@
         ],
         "idleParticlesEffects": [
             {
-                "effectKey": "{2aa78b3e}",
+                "effectKey": "Jade_Leona_Idle_Sword",
                 "boneName": "BUFFBONE_GLB_WEAPON_1",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "{d4295ec8}",
+                "effectKey": "Jade_Leona_Idle_Shield",
                 "boneName": "BUFFBONE_CSTM_SHIELD_TOP",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
         ],
-        "mContextualActionData": "{6599427b}",
-        "iconCircle": "ASSETS/Characters/Jade_Leona/HUD/Jade_Leona_Circle.project_jade.tex",
-        "iconSquare": "ASSETS/Characters/Jade_Leona/HUD/Jade_Leona_Square.project_jade.tex",
+        "mContextualActionData": "Characters/Jade_Leona/CAC/Jade_Leona_Base",
+        "iconCircle": "ASSETS/Characters/Jade_Leona/HUD/Jade_Leona_Circle.tex",
+        "iconSquare": "ASSETS/Characters/Jade_Leona/HUD/Jade_Leona_Square.tex",
         "healthBarData": {
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
@@ -166,7 +166,7 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-rampdown.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-rampdown.tex",
                 "meshRenderFlags": 0,
                 "isUniformScale": 1,
                 "birthScale0": {
@@ -210,7 +210,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_lens-halo-sun.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_lens-halo-sun.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -225,7 +225,7 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-bellramp.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-bellramp.tex",
                 "meshRenderFlags": 0,
                 "colorLookUpTypeY": 3,
                 "colorLookUpScales": [
@@ -290,7 +290,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_pinwheel.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_pinwheel.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -305,7 +305,7 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-bellramp.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-bellramp.tex",
                 "meshRenderFlags": 0,
                 "colorLookUpTypeY": 3,
                 "colorLookUpScales": [
@@ -370,7 +370,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_pinwheel.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_pinwheel.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -385,7 +385,7 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-bellcurve.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-bellcurve.tex",
                 "meshRenderFlags": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
@@ -476,7 +476,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_flare-Fire.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_flare-Fire.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -496,7 +496,7 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-rampdown.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-rampdown.tex",
                 "meshRenderFlags": 0,
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
@@ -587,7 +587,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_flare-Fire.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_flare-Fire.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -662,7 +662,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_sowflash.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_sowflash.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -964,7 +964,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/common_color-hold.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/common_color-hold.tex",
                 "pass": 100,
                 "meshRenderFlags": 0,
                 "isUniformScale": 1,
@@ -1093,7 +1093,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/common_solar_tag.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/common_solar_tag.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1198,7 +1198,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/common_color-sharpfade.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/common_color-sharpfade.tex",
                 "pass": 1000,
                 "meshRenderFlags": 0,
                 "colorLookUpTypeY": 3,
@@ -1341,7 +1341,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/common_sunray2way.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/common_sunray2way.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1353,7 +1353,7 @@
                 "lifetime": 1.0,
                 "emitterName": "Change-base",
                 "importance": 3,
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/common_color-buildingflash.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/common_color-buildingflash.tex",
                 "blendMode": 1,
                 "meshRenderFlags": 0,
                 "colorLookUpScales": [
@@ -1363,8 +1363,8 @@
                 "isUniformScale": 1,
                 "materialOverrideDefinitions": [
                     {
-                        "baseTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_dead32.project_jade.tex",
-                        "transitionTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/trans-Jade_Leona.project_jade.tex",
+                        "baseTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_dead32.tex",
+                        "transitionTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/trans-Jade_Leona.tex",
                         "transitionSample": 0.125,
                         "__type": "VfxMaterialOverrideDefinitionData"
                     }
@@ -1401,7 +1401,7 @@
                     ],
                     "__type": "{ee39916f}"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-rampdown32.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-rampdown32.tex",
                 "blendMode": 4,
                 "pass": 1,
                 "miscRenderFlags": 1,
@@ -1413,7 +1413,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_sundisc32.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_sundisc32.tex",
                 "uvMode": 2,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -1456,7 +1456,7 @@
                     ],
                     "__type": "{ee39916f}"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-solar-corona.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-solar-corona.tex",
                 "pass": 1,
                 "meshRenderFlags": 0,
                 "miscRenderFlags": 1,
@@ -1469,7 +1469,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_solar-corona.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_solar-corona.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1498,7 +1498,7 @@
                     ],
                     "__type": "{ee39916f}"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-bellcurve.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-bellcurve.tex",
                 "pass": 1,
                 "meshRenderFlags": 0,
                 "isUniformScale": 1,
@@ -1510,7 +1510,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_eclipse-bead.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_eclipse-bead.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -1574,7 +1574,7 @@
                     ],
                     "__type": "{ee39916f}"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-solar-corona-reverse.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_color-solar-corona-reverse.tex",
                 "pass": 1,
                 "meshRenderFlags": 0,
                 "depthBiasFactors": [
@@ -1590,7 +1590,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_solar-corona.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Z_solar-corona.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -1677,7 +1677,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_color-hold.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_color-hold.tex",
                 "pass": 100,
                 "meshRenderFlags": 0,
                 "isUniformScale": 1,
@@ -1806,7 +1806,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_solar_tag.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_solar_tag.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1911,7 +1911,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_color-sharpfade.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_color-sharpfade.tex",
                 "pass": 1000,
                 "meshRenderFlags": 0,
                 "colorLookUpTypeY": 3,
@@ -2019,7 +2019,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_sunray2way.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_sunray2way.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2031,7 +2031,7 @@
                 "lifetime": 1.0,
                 "emitterName": "Change-base",
                 "importance": 3,
-                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_color-buildingflash.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_color-buildingflash.tex",
                 "blendMode": 1,
                 "meshRenderFlags": 0,
                 "colorLookUpScales": [
@@ -2041,8 +2041,8 @@
                 "isUniformScale": 1,
                 "materialOverrideDefinitions": [
                     {
-                        "baseTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Dead32.project_jade.tex",
-                        "transitionTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Trans-Jade_Leona.project_jade.tex",
+                        "baseTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Dead32.tex",
+                        "transitionTexture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_Trans-Jade_Leona.tex",
                         "transitionSample": 0.125,
                         "__type": "VfxMaterialOverrideDefinitionData"
                     }
@@ -2126,9 +2126,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_SwordMask.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_SwordMask.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_buf_Mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_buf_Mult.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             0.20000000298023224,
@@ -2224,9 +2224,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_Buf_SwordGlow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_Buf_SwordGlow.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_buf_Mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_buf_Mult.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             -0.10000000149011612,
@@ -2365,9 +2365,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_Buf_SwordGlow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_Buf_SwordGlow.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_buf_Mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_buf_Mult.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             0.20000000298023224,
@@ -2546,43 +2546,43 @@
     },
     "Characters/Jade_Leona/Skins/Skin0/Resources": {
         "resourceMap": {
-            "{317b8afb}": "{8581f2a8}",
-            "{484655ad}": "{ef45a346}",
+            "DoomBots_Jade_Leona_W_cas_minions": "Characters/Jade_Leona/Skins/Skin0/Particles/DoomBots_Jade_Leona_Base_W_cas_minions",
+            "Jade_Leona_BA_hit": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_BA_hit",
             "Jade_Leona_Death": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Death",
             "Jade_Leona_Death_pfx_01": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Death_pfx_01",
-            "{9b46f61a}": "{ffaa105d}",
-            "{a1bb6e58}": "{b7ebc09d}",
-            "{212150b0}": "{b6f19527}",
-            "{e176c28e}": "{db351347}",
-            "{699efaca}": "{143a368d}",
-            "{7a0bd301}": "{b2e9668e}",
-            "{ad593437}": "{654dfa08}",
-            "Jade_Leona_E_mis_dash": "{2dd126bd}",
+            "Jade_Leona_Death_sfx_01": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Death_sfx_01",
+            "Jade_Leona_Death_Sound": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Death_Sound",
+            "Jade_Leona_Emote_Dance_sfx_01": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Emote_Dance_sfx_01",
+            "Jade_Leona_Emote_Joke_sfx_01": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Emote_Joke_sfx_01",
+            "Jade_Leona_Emote_Laugh_sfx_01": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Emote_Laugh_sfx_01",
+            "Jade_Leona_Emote_Taunt_sfx_01": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Emote_Taunt_sfx_01",
+            "Jade_Leona_E_cas_arrive": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_E_cas_arrive",
+            "Jade_Leona_E_mis_dash": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_E_mis_dash",
             "Jade_Leona_E_mis_weapon": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_E_mis_weapon",
-            "{51f6a9f1}": "{b0f8055c}",
-            "{30ff8db8}": "{69d301c5}",
-            "{92e1915c}": "{7d9011b5}",
-            "{c805d0b4}": "{8f327791}",
-            "{d3530e94}": "{3cf7850d}",
+            "Jade_Leona_E_tar": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_E_tar",
+            "Jade_Leona_E_ZB_sfx_01": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_E_ZB_sfx_01",
+            "Jade_Leona_P_tar_buf": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_P_tar_buf",
+            "Jade_Leona_P_tar_buf_champ": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_P_tar_buf_champ",
+            "Jade_Leona_P_tar_hit": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_P_tar_hit",
             "Jade_Leona_Q_cas": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Q_cas",
-            "{e95c317d}": "{bd348738}",
+            "Jade_Leona_Q_tar": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Q_tar",
             "Jade_Leona_R_buf": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_R_buf",
-            "{1498ff5a}": "{65b8a85b}",
-            "{8f4e4146}": "{f3faa2e7}",
-            "{d49cc866}": "{53ec651b}",
-            "{052ea0f9}": "{07169bda}",
-            "{10b2bd40}": "{4900e755}",
+            "Jade_Leona_R_cas": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_R_cas",
+            "Jade_Leona_R_hit_aoe_green": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_R_hit_aoe_green",
+            "Jade_Leona_R_hit_aoe_red": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_R_hit_aoe_red",
+            "Jade_Leona_R_hit_impact": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_R_hit_impact",
+            "Jade_Leona_R_tar": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_R_tar",
             "Jade_Leona_W_buf_1": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_W_buf_1",
             "Jade_Leona_W_buf_2": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_W_buf_2",
-            "{e3943956}": "{0f8ba475}",
-            "{f5eb3a07}": "{530bb102}",
-            "{9b4f404f}": "{90ddd536}",
-            "{975c94a3}": "{7fd50aea}",
-            "{45cd43bf}": "{89178a61}",
-            "{cb80199c}": "{0b5f4243}",
+            "Jade_Leona_W_cas_fail": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_W_cas_fail",
+            "Jade_Leona_W_cas_hit": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_W_cas_hit",
+            "Jade_Leona_W_DoomBot_Exp_Ind_ally_01": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_W_DoomBot_Exp_Ind_ally_01",
+            "Jade_Leona_W_tar": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_W_tar",
+            "Jade_Leona_Skin04_Death_Sound_BV2": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Skin04_Death_Sound",
+            "Jade_Leona_Moon_R_Cas": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Moon_R_Cas",
             "{ef0da96c}": "{00000000}",
-            "{2aa78b3e}": "{680ae695}",
-            "{d4295ec8}": "{bcac823d}"
+            "Jade_Leona_Idle_Sword": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Idle_Sword",
+            "Jade_Leona_Idle_Shield": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Idle_Shield"
         },
         "__type": "ResourceResolver"
     },

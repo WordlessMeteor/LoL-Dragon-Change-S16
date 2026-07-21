@@ -875,7 +875,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "在用技能命中敌人后，阿狸会获得一层摄魂夺魄的充能（一个技能最多可获得3层充能）。达到9层充能后，下一个技能获得35%法术吸血。"
+        "description": "每当用技能命中敌人时获得一层摄魂夺魄的充能。达到9层充能后，下一个技能会回复阿狸的生命值。"
     },
     "spells": [
         {
@@ -887,7 +887,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "阿狸放出并收回她的宝珠，在放出时会沿途对敌人造成魔法伤害，在收回时则会沿途对敌人造成真实伤害。",
-            "dynamicDescription": "放出宝珠，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，随后将其收回，造成<trueDamage>@TotalDamage@真实伤害</trueDamage>。阿狸在技能飞行期间获得<speed>@FlatMovementSpeedMod@移动速度</speed>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿狸放出然后收回宝珠，往程时造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>并且返程时造成<trueDamage>@TotalDamage@真实伤害</trueDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1037,7 +1037,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "阿狸放出三团狐火，锁定附近的敌人进行攻击。",
-            "dynamicDescription": "释放三团狐火锁定附近的敌人（英雄优先），并造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。在命中同一目标时，每个额外的狐火会造成<magicDamage>@HalfDamage@魔法伤害</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿狸释放三团狐火锁定附近的敌人（英雄优先），并造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，命中同一目标的每个后续狐火会造成<magicDamage>@HalfDamage@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1186,8 +1186,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "阿狸献出红唇热吻，对命中的第一个敌人造成伤害，并施加魅惑效果，让敌人毫无恶意地走向阿狸。",
-            "dynamicDescription": "阿狸献出红唇热吻，对命中的第一个敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>，并施加<status>魅惑</status>效果，让敌人在@CharmDuration@秒里毫无恶意地走向阿狸。@SpellModifierDescriptionAppend@",
+            "description": "阿狸献出红唇热吻，对命中的第一个敌人造成伤害和魅惑效果。该敌人所受的来自阿狸技能的伤害也会提升。",
+            "dynamicDescription": "阿狸献出红唇热吻，对命中的第一个敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>和@CharmDuration@秒<status>魅惑</status>效果。该敌人所受的来自阿狸技能的伤害也会提升@DamageAmp@%，持续@DamageAmpDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1337,7 +1337,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "阿狸向前猛冲，并放出元气弹，对周围的3个敌人（英雄优先）造成伤害。灵魄突袭在进入冷却以前最多可被施放三次。",
-            "dynamicDescription": "阿狸灵巧妖媚地向前冲锋，向周围的敌人（英雄优先）发射3枚元气弹，造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<br><br>在进入冷却阶段前的10秒内，可<recast>再次施放</recast>2次。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿狸灵巧妖媚地向前冲锋，向周围的敌人（英雄优先）发射3枚元气弹。这些元气弹每枚造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>。<spellName>灵魄突袭</spellName>在10秒内可<recast>再次施放</recast>至多2次。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

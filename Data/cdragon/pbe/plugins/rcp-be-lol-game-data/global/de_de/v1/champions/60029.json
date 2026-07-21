@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Vandalen-Twitch (Klassisch)",
+                    "name": "Gangsterboss-Twitch (Klassisch)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Twitch wird kurzzeitig unsichtbar und erhält währenddessen Lauftempo. Wenn Twitch die Unsichtbarkeit verlässt, erhält er kurzzeitig zusätzliches Angriffstempo.",
-            "dynamicDescription": "<mainText>Nach @MaxFadeTime@ Sekunden setzt Twitch für @StealthDuration@ Sekunden <keywordStealth>Camouflage</keywordStealth> ein.<br><br>Wenn Twitch <keywordStealth>Camouflage</keywordStealth> beendet, erhält er @AttackSpeedDuration@ Sekunden lang <attackSpeed>@AttackSpeedMod*100@ % Angriffstempo</attackSpeed>.",
+            "description": "Twitch wird mehrere Sekunden lang unsichtbar und erhält erhöhtes Lauftempo. Wenn er seine Unsichtbarkeit verlässt, erhält er Angriffstempo.",
+            "dynamicDescription": "Nachdem Twitch @MaxFadeTime@ Sekunden lang keinen Schaden erlitten hat oder nach @MaxDelayTime@ Sekunden, wird er @StealthDuration@ Sekunden lang <keywordStealth>unsichtbar</keywordStealth> und erhält <speed>@MoveSpeedMod*100@ % Lauftempo</speed>.<br><br>Wenn Twitch seine <keywordStealth>Unsichtbarkeit</keywordStealth> verlässt, erhält er @AttackSpeedDuration@ Sekunden lang <attackSpeed>@AttackSpeedMod*100@ % Angriffstempo</attackSpeed>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Schwächendes Gift",
+            "name": "Giftflasche",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Twitch infiziert alle Champions in der Nähe mit „Schwächendes Gift“ und verlangsamt ihr Lauftempo.",
-            "dynamicDescription": "Twitch <status>verlangsamt</status> gegnerische Champions in der Nähe @Duration@ Sekunden lang um @SlowPercent*-100@ %, erhöht um @PassiveStackSlowPercent*-100@ % pro Steigerung von <keywordMajor>Tödliches Gift</keywordMajor> (max. @MaxSlowTooltip@).<br><br>Weitere Steigerungen von <keywordMajor>Tödliches Gift</keywordMajor> nach dem <status>Verlangsamen</status> verringern ihr <speed>Lauftempo</speed> weiter.@SpellModifierDescriptionAppend@",
+            "description": "Twitch wirft eine explodierende Giftflasche, die Gegnern im Wirkungsbereich „Tödliches Gift“ zufügt und sie verlangsamt.",
+            "dynamicDescription": "Twitch wirft ein explodierende Giftflasche, die Gegnern @StacksAdded@ Steigerungen von <keywordMajor>Tödliches Gift</keywordMajor> zufügt und sie @Duration@ Sekunden lang um @BaseSlowAmount@ % <status>verlangsamt</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Alle Gegner in der Nähe scheiden Twitchs giftige Toxine aus ihren Körpern aus und erleiden für jede Steigerung Schaden.",
-            "dynamicDescription": "<mainText>Twitch fügt allen markierten Gegnern in der Nähe <physicalDamage>@BaseDamage@ normalen Schaden</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> pro Steigerung von <keywordMajor>Tödliches Gift</keywordMajor> zu und verbraucht dabei alle Steigerungen in der Nähe.",
+            "dynamicDescription": "Twitch fügt allen markierten Gegnern in der Nähe <physicalDamage>@BaseDamage@ normalen Schaden</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> pro Steigerung von <keywordMajor>Tödliches Gift</keywordMajor> zu.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Twitch schließt seine Augen und verschießt mit seiner Armbrust mächtige, durchdringende Bolzen.",
-            "dynamicDescription": "<mainText>Twitch erhält @Duration@ Sekunden lang @BonusRange@ Angriffsreichweite und <physicalDamage>@BonusAD@ zusätzlichen Angriffsschaden</physicalDamage>. Seine normalen Angriffe werden zu durchdringenden Bolzen, die bei weiteren Treffern jeweils @FallOffDamage*100@ % weniger Schaden verursachen, mindestens jedoch @MinimumFallOffDamage*100@ %.",
+            "dynamicDescription": "Twitch erhält @Duration@ Sekunden lang @BonusRange@ Angriffsreichweite und <physicalDamage>@BonusAD@ zusätzlichen Angriffsschaden</physicalDamage>. Seine normalen Angriffe werden zu durchdringenden Bolzen, die bei weiteren Treffern jeweils @FallOffDamage*100@ % weniger Schaden verursachen, mindestens jedoch @MinimumFallOffDamage*100@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

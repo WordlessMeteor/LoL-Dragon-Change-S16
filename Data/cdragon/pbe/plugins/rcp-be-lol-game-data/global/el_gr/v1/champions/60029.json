@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Κλασικός Τουίτς (Βάνδαλος)",
+                    "name": "Κλασικός Τουίτς (Νονός της Νύχτας)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Ο Τουίτς γίνεται αόρατος για ένα σύντομο χρονικό διάστημα, ενώ όσο είναι αόρατος, ο Τουίτς αποκτά Ταχύτητα Κίνησης. Όταν βγαίνει από την κατάσταση αορατότητας, ο Τουίτς αποκτά Ταχύτητα Επίθεσης για μικρό χρονικό διάστημα.",
-            "dynamicDescription": "<mainText>Μετά από @MaxFadeTime@ δευτερόλεπτα, ο Τουίτς αποκτά <keywordStealth>Καμουφλάζ</keywordStealth> για @StealthDuration@ δευτερόλεπτα.<br><br>Ο Τουίτς αποκτά <attackSpeed>@AttackSpeedMod*100@% Ταχύτητα Επίθεσης</attackSpeed> για @AttackSpeedDuration@ δευτ., αφού βγει από το <keywordStealth>Καμουφλάζ</keywordStealth>.",
+            "description": "Ο Τουίτς γίνεται Αόρατος για μερικά δευτ. και αποκτά Ταχύτητα Κίνησης. Στη συνέχεια, αποκτά Ταχύτητα Επίθεσης αφού σταματήσει να είναι Αόρατος.",
+            "dynamicDescription": "Αφού περάσουν @MaxFadeTime@ δευτερόλεπτα χωρίς να δεχτεί ζημιά ή αφού περάσουν @MaxDelayTime@ δευτ., ο Τουίτς γίνεται <keywordStealth>Αόρατος</keywordStealth> για @StealthDuration@ δευτ., αποκτώντας <speed>@MoveSpeedMod*100@% Ταχύτητα Κίνησης</speed>.<br><br>Ο Τουίτς αποκτά <attackSpeed>@AttackSpeedMod*100@% Ταχύτητα Επίθεσης</attackSpeed> για @AttackSpeedDuration@ δευτ., από τη στιγμή που σταματήσει να είναι <keywordStealth>Αόρατος</keywordStealth>.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Εξουθενωτικό Δηλητήριο",
+            "name": "Δηλητηριώδες βαρέλι",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
-            "description": "Ο Τουίτς μολύνει όλους τους κοντινούς Ήρωες με Εξουθενωτικό Δηλητήριο, μειώνοντας την Ταχύτητα Κίνησής τους.",
-            "dynamicDescription": "Ο Τουίτς <status>Επιβραδύνει</status> τους κοντινούς εχθρικούς Ήρωες κατά @SlowPercent*-100@% για @Duration@ δευτερόλεπτα, με την Επιβράδυνση να αυξάνεται κατά @PassiveStackSlowPercent*-100@% για κάθε στοίβα <keywordMajor>Θανατηφόρου Δηλητηρίου</keywordMajor> (μεγ.: @MaxSlowTooltip@).<br><br>Η προσθήκη περισσότερων στοιβών <keywordMajor>Θανατηφόρου Δηλητηρίου</keywordMajor> μετά την εφαρμογή της <status>Επιβράδυνσης</status> θα μειώσει περαιτέρω την <speed>Ταχύτητα Κίνησής</speed> τους.@SpellModifierDescriptionAppend@",
+            "description": "Ο Τουίτς πετάει ένα βαρέλι με δηλητήριο που εκρήγνυται, προκαλώντας Θανατηφόρο Δηλητήριο και επιβραδύνοντας τους εχθρούς στην περιοχή.",
+            "dynamicDescription": "Ο Τουίτς πετάει ένα βαρέλι με δηλητήριο που εκρήγνυται, προσθέτοντας @StacksAdded@ στοίβες <keywordMajor>Θανατηφόρου Δηλητηρίου</keywordMajor> και <status>Επιβραδύνοντας</status> τους εχθρούς κατά @BaseSlowAmount@% για @Duration@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Όλοι οι κοντινοί εχθροί εκκρίνουν τα τοξικά δηλητήρια του Τουίτς από τα σώματά τους, προκαλώντας ζημιά για κάθε στοίβα.",
-            "dynamicDescription": "<mainText>Ο Τουίτς προκαλεί <physicalDamage>@BaseDamage@ Σωματική Ζημιά</physicalDamage> συν <physicalDamage>@TotalStackDamage@</physicalDamage> ανά στοίβα <keywordMajor>Θανατηφόρου Δηλητηρίου</keywordMajor> σε όλους τους σημαδεμένους κοντινούς εχθρούς, καταναλώνοντας όλες τις κοντινές στοίβες.",
+            "dynamicDescription": "Ο Τουίτς προκαλεί <physicalDamage>@BaseDamage@ Σωματική Ζημιά</physicalDamage> συν <physicalDamage>@TotalStackDamage@</physicalDamage> ανά στοίβα <keywordMajor>Θανατηφόρου Δηλητηρίου</keywordMajor> σε όλους τους σημαδεμένους κοντινούς εχθρούς.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Τουίτς κλείνει τα μάτια του και πυροβολεί με τη βαλλίστρα του, εκτοξεύοντας γρήγορα πανίσχυρα διατρητικά βέλη μπροστά του.",
-            "dynamicDescription": "<mainText>Για @Duration@ δευτ., ο Τουίτς κερδίζει @BonusRange@ Εμβέλεια επίθεσης, <physicalDamage>@BonusAD@ Ζημιά Επίθεσης</physicalDamage> και οι βασικές του επιθέσεις γίνονται διαπεραστικές βολές που προκαλούν @FallOffDamage*100@% λιγότερη ζημιά σε κάθε επόμενο στόχο, έως @MinimumFallOffDamage*100@% ελάχιστη ζημιά.",
+            "dynamicDescription": "Για @Duration@ δευτ., ο Τουίτς κερδίζει @BonusRange@ Εμβέλεια επίθεσης, <physicalDamage>@BonusAD@ Ζημιά Επίθεσης</physicalDamage> και οι βασικές του επιθέσεις γίνονται διαπεραστικές βολές που προκαλούν @FallOffDamage*100@% λιγότερη ζημιά σε κάθε επόμενο στόχο, έως @MinimumFallOffDamage*100@% ελάχιστη ζημιά.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

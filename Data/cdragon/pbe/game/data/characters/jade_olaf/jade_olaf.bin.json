@@ -28,7 +28,7 @@
                 }
             ],
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Olaf_Passive.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Olaf_Passive.dds"
             ],
             "cooldownTime": [
                 0.0,
@@ -118,7 +118,7 @@
         },
         "__type": "SpellObject"
     },
-    "{137fcb35}": {
+    "Characters/Jade_Olaf/Spells/Jade_OlafCritAttack": {
         "ObjectName": "Jade_OlafCritAttack",
         "mScriptName": "Jade_OlafCritAttack",
         "mSpell": {
@@ -183,7 +183,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{825ba029}",
+            "mHitEffectKey": "Jade_Olaf_BA_tar_crit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -202,15 +202,15 @@
         },
         "__type": "SpellObject"
     },
-    "{e5328c54}": {
-        "mRootSpell": "{19defee9}",
+    "Characters/Jade_Olaf/Spells/Jade_OlafWAbility": {
+        "mRootSpell": "Characters/Jade_Olaf/Spells/Jade_OlafWAbility/Jade_OlafW",
         "mChildSpells": [
-            "{19defee9}"
+            "Characters/Jade_Olaf/Spells/Jade_OlafWAbility/Jade_OlafW"
         ],
         "mName": "Jade_OlafWAbility",
         "__type": "AbilityObject"
     },
-    "{19defee9}": {
+    "Characters/Jade_Olaf/Spells/Jade_OlafWAbility/Jade_OlafW": {
         "ObjectName": "Jade_OlafW",
         "mScriptName": "Jade_OlafW",
         "mSpell": {
@@ -296,7 +296,7 @@
             "mCoefficient": 1.0,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/OlafViciousStrikes.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/OlafViciousStrikes.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -463,10 +463,10 @@
         },
         "__type": "SpellObject"
     },
-    "{ee4fe66a}": {
-        "mRootSpell": "{250be79d}",
+    "Characters/Jade_Olaf/Spells/Jade_OlafQAbility": {
+        "mRootSpell": "Characters/Jade_Olaf/Spells/Jade_OlafQAbility/Jade_OlafQ",
         "mChildSpells": [
-            "{250be79d}",
+            "Characters/Jade_Olaf/Spells/Jade_OlafQAbility/Jade_OlafQ",
             "{e39046b7}",
             "{947a7ff6}"
         ],
@@ -478,13 +478,13 @@
         "mScriptName": "Jade_OlafQDebuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/OlafAxeThrow.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/OlafAxeThrow.dds"
             ],
             "__type": "SpellDataResource"
         },
         "__type": "SpellObject"
     },
-    "{250be79d}": {
+    "Characters/Jade_Olaf/Spells/Jade_OlafQAbility/Jade_OlafQ": {
         "ObjectName": "Jade_OlafQ",
         "mScriptName": "Jade_OlafQ",
         "mSpell": {
@@ -581,7 +581,7 @@
             "mCoefficient2": 0.5,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/OlafAxeThrow.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/OlafAxeThrow.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -871,7 +871,7 @@
             "mCoefficient2": 0.5,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Olaf/HUD/Icons2D/Jade_OlafQ.project_jade.dds"
+                "ASSETS/Characters/Jade_Olaf/HUD/Icons2D/Jade_OlafQ.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -938,7 +938,7 @@
             "mCastType": 3,
             "castFrame": 7.0,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{9b970d8c}",
+            "mMissileEffectKey": "Jade_Olaf_Q_mis",
             "mLineWidth": 90.0,
             "bHaveHitBone": true,
             "mHitBoneName": "pelvis",
@@ -1032,7 +1032,7 @@
             "mCoefficient2": 0.5,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Olaf/HUD/Icons2D/Jade_OlafQ.project_jade.dds"
+                "ASSETS/Characters/Jade_Olaf/HUD/Icons2D/Jade_OlafQ.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1121,7 +1121,7 @@
             "mCastType": 3,
             "castFrame": 7.0,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{9b970d8c}",
+            "mMissileEffectKey": "Jade_Olaf_Q_mis",
             "mLineWidth": 90.0,
             "bHaveHitBone": true,
             "mHitBoneName": "pelvis",
@@ -1182,17 +1182,17 @@
         },
         "__type": "SpellObject"
     },
-    "{32186181}": {
-        "mRootSpell": "{c81bb3c9}",
+    "Characters/Jade_Olaf/Spells/Jade_OlafRAbility": {
+        "mRootSpell": "Characters/Jade_Olaf/Spells/Jade_OlafRAbility/Jade_OlafR",
         "mChildSpells": [
-            "{c81bb3c9}"
+            "Characters/Jade_Olaf/Spells/Jade_OlafRAbility/Jade_OlafR"
         ],
         "mName": "Jade_OlafRAbility",
         "mType": 2,
         "AbilityTraits": 32,
         "__type": "AbilityObject"
     },
-    "{54340162}": {
+    "Characters/Jade_Olaf/Spells/Jade_OlafBasicAttack3": {
         "ObjectName": "Jade_OlafBasicAttack3",
         "mScriptName": "Jade_OlafBasicAttack3",
         "mSpell": {
@@ -1257,7 +1257,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{f5df958a}",
+            "mHitEffectKey": "Jade_Olaf_BA_tar_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1277,7 +1277,7 @@
         },
         "__type": "SpellObject"
     },
-    "{553402f5}": {
+    "Characters/Jade_Olaf/Spells/Jade_OlafBasicAttack2": {
         "ObjectName": "Jade_OlafBasicAttack2",
         "mScriptName": "Jade_OlafBasicAttack2",
         "mSpell": {
@@ -1342,7 +1342,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{f5df958a}",
+            "mHitEffectKey": "Jade_Olaf_BA_tar_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1362,15 +1362,15 @@
         },
         "__type": "SpellObject"
     },
-    "{6f981f46}": {
-        "mRootSpell": "{6161dfd5}",
+    "Characters/Jade_Olaf/Spells/Jade_OlafEAbility": {
+        "mRootSpell": "Characters/Jade_Olaf/Spells/Jade_OlafEAbility/Jade_OlafE",
         "mChildSpells": [
-            "{6161dfd5}"
+            "Characters/Jade_Olaf/Spells/Jade_OlafEAbility/Jade_OlafE"
         ],
         "mName": "Jade_OlafEAbility",
         "__type": "AbilityObject"
     },
-    "{6161dfd5}": {
+    "Characters/Jade_Olaf/Spells/Jade_OlafEAbility/Jade_OlafE": {
         "ObjectName": "Jade_OlafE",
         "mScriptName": "Jade_OlafE",
         "mSpell": {
@@ -1491,7 +1491,7 @@
             "mCoefficient": 0.5,
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/OlafRecklessSwing.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/OlafRecklessSwing.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 0.25,
@@ -1698,7 +1698,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{825ba029}",
+            "mHitEffectKey": "Jade_Olaf_BA_tar_crit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1717,7 +1717,7 @@
         },
         "__type": "SpellObject"
     },
-    "{c81bb3c9}": {
+    "Characters/Jade_Olaf/Spells/Jade_OlafRAbility/Jade_OlafR": {
         "ObjectName": "Jade_OlafR",
         "mScriptName": "Jade_OlafR",
         "mSpell": {
@@ -1778,7 +1778,7 @@
             ],
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/OlafRagnarok.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/OlafRagnarok.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1973,7 +1973,7 @@
         "mScriptName": "Jade_OlafAttackSequencer",
         "__type": "SpellObject"
     },
-    "{ed92de65}": {
+    "Characters/Jade_Olaf/Spells/Jade_OlafBasicAttack": {
         "ObjectName": "Jade_OlafBasicAttack",
         "mScriptName": "Jade_OlafBasicAttack",
         "mSpell": {
@@ -2037,7 +2037,7 @@
             "castConeDistance": 100.0,
             "castFrame": 9.0,
             "missileSpeed": 347.79998779296875,
-            "mHitEffectKey": "{f5df958a}",
+            "mHitEffectKey": "Jade_Olaf_BA_tar_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2206,7 +2206,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{6e1ec7c4}": {
+    "Characters/Jade_Olaf/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{8c67f45f}": {
@@ -2219,7 +2219,7 @@
         },
         "__type": "CharScript"
     },
-    "{ff29a4d2}": {
+    "Characters/Jade_Olaf/CharacterRecords/Root": {
         "mCharacterName": "Jade_Olaf",
         "baseHPModifiable": {
             "baseValue": 534.0,
@@ -2334,10 +2334,10 @@
             "Jade_OlafRAbility/Jade_OlafR"
         ],
         "spells": [
-            "{250be79d}",
-            "{19defee9}",
-            "{6161dfd5}",
-            "{c81bb3c9}"
+            "Characters/Jade_Olaf/Spells/Jade_OlafQAbility/Jade_OlafQ",
+            "Characters/Jade_Olaf/Spells/Jade_OlafWAbility/Jade_OlafW",
+            "Characters/Jade_Olaf/Spells/Jade_OlafEAbility/Jade_OlafE",
+            "Characters/Jade_Olaf/Spells/Jade_OlafRAbility/Jade_OlafR"
         ],
         "extraSpells": [
             "Jade_OlafAxeThrow",
@@ -2376,16 +2376,16 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{ee4fe66a}",
-            "{e5328c54}",
-            "{6f981f46}",
-            "{32186181}",
+            "Characters/Jade_Olaf/Spells/Jade_OlafQAbility",
+            "Characters/Jade_Olaf/Spells/Jade_OlafWAbility",
+            "Characters/Jade_Olaf/Spells/Jade_OlafEAbility",
+            "Characters/Jade_Olaf/Spells/Jade_OlafRAbility",
             "{6e7f352c}"
         ],
         "passiveName": "game_character_passiveName_Jade_Olaf",
         "passiveLuaName": "Jade_OlafBerzerkerRage",
         "passiveToolTip": "game_character_passiveDescription_Jade_Olaf",
-        "passive1IconName": "ASSETS/Characters/Jade_Olaf/HUD/Icons2D/Jade_Olaf_Passive.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Olaf/HUD/Icons2D/Jade_Olaf_Passive.dds",
         "name": "game_character_displayname_Jade_Olaf",
         "weaponMaterials": [
             "Jade_OlafBasicAttack"

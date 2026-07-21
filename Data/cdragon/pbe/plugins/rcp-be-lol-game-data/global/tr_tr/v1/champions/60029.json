@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Klasik Twitch (Vandal)",
+                    "name": "Klasik Twitch (Suç Baronu)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Twitch kısa süreliğine görünmez olur ve görünmezken hareket hızı kazanır. Twitch görünmezlikten çıktığında kısa süreliğine saldırı hızı kazanır.",
-            "dynamicDescription": "<mainText>@MaxFadeTime@ saniye sonra Twitch @StealthDuration@ saniyeliğine <keywordStealth>kamuflaja bürünür</keywordStealth>.<br><br>Twitch, <keywordStealth>kamuflajdan</keywordStealth> çıktıktan sonraki @AttackSpeedDuration@ saniye boyunca <attackSpeed>%@AttackSpeedMod*100@ Saldırı Hızı</attackSpeed> kazanır.",
+            "description": "Twitch birkaç saniyeliğine görünmez olur ve hareket hızı kazanır. Ardından görünmezlikten çıktıktan sonra saldırı hızı kazanır.",
+            "dynamicDescription": "Twitch @MaxFadeTime@ saniye boyunca hasar almazsa veya @MaxDelayTime@ saniyenin ardından @StealthDuration@ saniyeliğine <keywordStealth>görünmez</keywordStealth> olur ve <speed>%@MoveSpeedMod*100@ Hareket Hızı</speed> kazanır.<br><br>Twitch <keywordStealth>görünmezlikten</keywordStealth> çıktıktan sonraki @AttackSpeedDuration@ saniye boyunca <attackSpeed>%@AttackSpeedMod*100@ Saldırı Hızı</attackSpeed> kazanır.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Halsizlik Zehri",
+            "name": "Zehir Şişesi",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Twitch yakındaki tüm şampiyonlara Halsizlik Zehri bulaştırarak hareket hızlarını azaltır.",
-            "dynamicDescription": "Twitch yakındaki rakip şampiyonları @Duration@ saniyeliğine %@SlowPercent*-100@ <status>yavaşlatır</status>. Yavaşlatma miktarı her <keywordMajor>Ölümcül Zehir</keywordMajor> yükü başına %@PassiveStackSlowPercent*-100@ artar (en fazla @MaxSlowTooltip@).<br><br><status>Yavaşlatma</status> uygulandıktan sonra daha fazla <keywordMajor>Ölümcül Zehir</keywordMajor> yükü eklemek, hedeflerin <speed>hareket hızını</speed> daha da azaltır.@SpellModifierDescriptionAppend@",
+            "description": "Twitch'in fırlattığı zehir şişesi belli bir alanda patlayarak rakiplere Ölümcül Zehir uygular ve onları onları yavaşlatır.",
+            "dynamicDescription": "Twitch patlayan bir zehir şişesi fırlatarak rakiplere @StacksAdded@ yük <keywordMajor>Ölümcül Zehir</keywordMajor> uygular ve onları @Duration@ saniyeliğine % @BaseSlowAmount@ <status>yavaşlatır</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Twitch'in zehri tüm yakındaki birimlerin vücuduna nüfuz ederek yük başına hasar verir.",
-            "dynamicDescription": "<mainText>Twitch yakındaki tüm yükleri tüketerek yakınındaki tüm işaretli rakiplere üstlerinde bulunan <keywordMajor>Ölümcül Zehir</keywordMajor> yükü başına <physicalDamage>@BaseDamage@ Fiziksel Hasar</physicalDamage> artı <physicalDamage>@TotalStackDamage@</physicalDamage> Hasar verir.",
+            "dynamicDescription": "Twitch yakınındaki tüm işaretli rakiplere üstlerinde bulunan <keywordMajor>Ölümcül Zehir</keywordMajor> yükü başına <physicalDamage>@TotalStackDamage@</physicalDamage> artı <physicalDamage>@BaseDamage@ Fiziksel Hasar</physicalDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Twitch gözlerini yumar ve arbaletini ateşleyerek ileriye doğru hızla güçlü ve delici oklar gönderir.",
-            "dynamicDescription": "<mainText>Twitch @Duration@ saniyeliğine @BonusRange@ Saldırı Menzili ve <physicalDamage>@BonusAD@ Saldırı Gücü</physicalDamage> kazanır. Ayrıca normal saldırıları hedefini deşip geçerek arkadaki rakiplere de hasar verir. Her ardışık birime verilen hasar %@FallOffDamage*100@ azalır, her bir atış en az %@MinimumFallOffDamage*100@ Hasar verebilir.",
+            "dynamicDescription": "Twitch @Duration@ saniyeliğine @BonusRange@ Saldırı Menzili ve <physicalDamage>@BonusAD@ Saldırı Gücü</physicalDamage> kazanır. Ayrıca normal saldırıları hedefini deşip geçerek arkadaki rakiplere de hasar verir. Her ardışık birime verilen hasar %@FallOffDamage*100@ azalır, her bir atış en az %@MinimumFallOffDamage*100@ Hasar verebilir.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

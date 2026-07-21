@@ -1,5 +1,5 @@
 {
-    "{6dfc0293}": {
+    "Characters/Jade_Singed/Skins/Skin21": {
         "skinClassification": 2,
         "championSkinName": "Jade_SingedSkin21",
         "skinParent": 19,
@@ -9,7 +9,11 @@
             "__type": "{e7ee4f28}"
         },
         "loadscreen": {
-            "image": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Jade_SingedLoadscreen_19.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Jade_SingedLoadscreen_19.tex",
+            "__type": "CensoredImage"
+        },
+        "loadscreenVintage": {
+            "image": "ASSETS/Characters/Jade_Singed/Skins/Base/Jade_SingedLoadScreen_0_LE.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -81,13 +85,13 @@
             "__type": "SkinAudioProperties"
         },
         "skinAnimationProperties": {
-            "animationGraphData": "{76a0b6cb}",
+            "animationGraphData": "Characters/Jade_Singed/Animations/Skin19",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Jade_Singed_Skin19.project_jade.skl",
-            "simpleSkin": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Jade_Singed_Skin19.project_jade.skn",
-            "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_TX_CM.project_jade.tex",
+            "skeleton": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Jade_Singed_Skin19.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Jade_Singed_Skin19.skn",
+            "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_TX_CM.tex",
             "skinScale": 1.5,
             "selfIllumination": 1.0,
             "reflectionFresnelColor": [
@@ -100,27 +104,27 @@
             "submeshRenderOrder": "Body MeepBack Shield Glass GlassShield GlassHead",
             "materialOverride": [
                 {
-                    "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_Meep_TX_CM.project_jade.tex",
+                    "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_Meep_TX_CM.tex",
                     "submesh": "Meep",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_Asteroids_TX_CM.project_jade.tex",
+                    "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_Asteroids_TX_CM.tex",
                     "submesh": "Asteroids1",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_Asteroids_TX_CM.project_jade.tex",
+                    "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_Asteroids_TX_CM.tex",
                     "submesh": "Asteroids2",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{9896b732}",
+                    "Material": "Characters/Jade_Singed/Skins/Skin21/Materials/Fresnel_Glass_inst",
                     "submesh": "Glass",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{f6c4a455}",
+                    "Material": "Characters/Jade_Singed/Skins/Skin21/Materials/Fresnel_Glass_Head_inst",
                     "submesh": "GlassHead",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -186,26 +190,26 @@
         ],
         "idleParticlesEffects": [
             {
-                "effectKey": "{6304da8d}",
+                "effectKey": "Jade_Singed_Idle_01",
                 "boneName": "VFXMeep",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             },
             {
-                "effectKey": "{219e1a12}",
+                "effectKey": "Jade_Singed_Idle_Radar",
                 "boneName": "VFXShield",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
         ],
-        "mContextualActionData": "{38dc5c1d}",
-        "iconCircle": "ASSETS/Characters/Jade_Singed/HUD/Jade_Singed_Circle_Classic.project_jade.tex",
-        "iconSquare": "ASSETS/Characters/Jade_Singed/HUD/Jade_Singed_Square_0.project_jade.tex",
-        "iconAvatar": "ASSETS/Characters/Jade_Singed/HUD/Jade_Singed_Circle_19.project_jade.tex",
+        "mContextualActionData": "Characters/Jade_Singed/CAC/Jade_Singed_Base",
+        "iconCircle": "ASSETS/Characters/Jade_Singed/HUD/Jade_Singed_Circle_Classic.tex",
+        "iconSquare": "ASSETS/Characters/Jade_Singed/HUD/Jade_Singed_Square_0.tex",
+        "iconAvatar": "ASSETS/Characters/Jade_Singed/HUD/Jade_Singed_Circle_19.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_Healthbar",
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
-        "mResourceResolver": "{84451641}",
+        "mResourceResolver": "Characters/Jade_Singed/Skins/Skin21/Resources",
         "PersistentEffectConditions": [
             {
                 "OwnerCondition": {
@@ -215,22 +219,22 @@
                 "PersistentVfxs": [
                     {
                         "boneName": "bag_a",
-                        "effectKey": "{47fb6001}",
+                        "effectKey": "Jade_Singed_R_mesh",
                         "__type": "PersistentVfxData"
                     },
                     {
                         "boneName": "C_BUFFBONE_GLB_HEAD_LOC",
-                        "effectKey": "{bd827fe1}",
+                        "effectKey": "Jade_Singed_R_buf",
                         "__type": "PersistentVfxData"
                     },
                     {
                         "boneName": "Root",
-                        "effectKey": "{d4522720}",
+                        "effectKey": "Jade_Singed_R_trail",
                         "__type": "PersistentVfxData"
                     },
                     {
                         "boneName": "BUFFBONE_GLB_GROUND_LOC",
-                        "effectKey": "{e0da6915}",
+                        "effectKey": "Jade_Singed_R_buf_ground",
                         "__type": "PersistentVfxData"
                     }
                 ],
@@ -239,7 +243,7 @@
         ],
         "__type": "SkinCharacterDataProperties"
     },
-    "{1a153c64}": {
+    "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_Idle_footprint_R": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -336,7 +340,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Flare.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Flare.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -463,7 +467,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Noise2.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Noise2.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -486,7 +490,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_FootPrint.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_FootPrint.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -575,7 +579,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Noise2.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Noise2.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -620,9 +624,9 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/3161Glow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/3161Glow.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Corki_Skin26_W_ground_burn_moontest.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Corki_Skin26_W_ground_burn_moontest.tex",
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
@@ -829,7 +833,7 @@
                     "erosionFeatherIn": 0.15000000596046448,
                     "erosionFeatherOut": 0.5,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -969,14 +973,14 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Base_W_Smoke_01.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Base_W_Smoke_01.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
                     2.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Base_Z_explosion_smoke_mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Base_Z_explosion_smoke_mult.tex",
                     "texDivMult": [
                         2.0,
                         2.0
@@ -1156,7 +1160,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_FootPrint.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_FootPrint.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -1165,7 +1169,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{63ae201a}": {
+    "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_Idle_Radar": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -1409,7 +1413,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/common_ball01.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/common_ball01.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1473,7 +1477,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Idle_Ring_TargetSweep.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Idle_Ring_TargetSweep.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1528,7 +1532,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Ring_Radar.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Ring_Radar.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1584,7 +1588,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Radar.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Radar.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -1593,7 +1597,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{71fa2943}": {
+    "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_W_red_pool": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.05000000074505806,
@@ -1689,7 +1693,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionFeatherOut": 0.30000001192092896,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/AlphaSlice_1.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/AlphaSlice_1.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -1713,7 +1717,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Jade_Singed_Experiment_Glue.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Jade_Singed_Experiment_Glue.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1825,9 +1829,9 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.project_jade.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.project_jade.skl",
-                        "mAnimationName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.project_jade.anm",
+                        "mMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.skl",
+                        "mAnimationName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.anm",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -1905,7 +1909,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -1977,7 +1981,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_Meep_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_Meep_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2075,7 +2079,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionFeatherOut": 0.30000001192092896,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -2141,7 +2145,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Pool_Decal.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Pool_Decal.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2255,7 +2259,7 @@
                     },
                     "erosionFeatherOut": 0.5,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -2399,7 +2403,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Poison.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Poison.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -2685,7 +2689,7 @@
                     },
                     "erosionFeatherOut": 0.5,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -2849,7 +2853,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Poison.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Poison.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -2924,7 +2928,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_splash_ring.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_splash_ring.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -2991,7 +2995,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionFeatherOut": 0.20000000298023224,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_57.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_57.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -3094,7 +3098,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Water_40.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Water_40.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -3223,7 +3227,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Mur.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Mur.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -3393,7 +3397,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Material.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Material.tex",
                 "frameRate": 2.0,
                 "numFrames": 4,
                 "__type": "VfxEmitterDefinitionData"
@@ -3590,9 +3594,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_glow_mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_glow_mult.tex",
                     "texDivMult": [
                         2.0,
                         2.0
@@ -3838,7 +3842,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Cas_aoering_01.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Cas_aoering_01.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4194,7 +4198,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Maokai_Skin24_Small_Mote.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Maokai_Skin24_Small_Mote.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4319,7 +4323,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Soft_Glow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Soft_Glow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4461,7 +4465,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_hit_flash_02.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_hit_flash_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4705,7 +4709,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Flare.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Flare.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4763,7 +4767,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_AoE_waves.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_AoE_waves.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -4909,7 +4913,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_trail.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_trail.tex",
                 "birthUVOffset": {
                     "constantValue": [
                         0.0,
@@ -4942,7 +4946,7 @@
                     "__type": "IntegratedValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_trail.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_trail.tex",
                     "ParticleIntegratedUvScrollMult": {
                         "constantValue": [
                             0.0,
@@ -5015,7 +5019,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/common_sru_baron_acidball_poolsphere.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/common_sru_baron_acidball_poolsphere.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -5167,7 +5171,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Recall_poolsphere.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Recall_poolsphere.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -5210,7 +5214,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/common_color-rampdown32.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/common_color-rampdown32.tex",
                 "blendMode": 1,
                 "pass": 1000,
                 "meshRenderFlags": 0,
@@ -5221,7 +5225,7 @@
                 ],
                 "distortionDefinition": {
                     "distortion": 0.10000000149011612,
-                    "normalMapTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/distort-pinch.project_jade.tex",
+                    "normalMapTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/distort-pinch.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
                 "depthBiasFactors": [
@@ -5259,7 +5263,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Aura_Self.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Aura_Self.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -5322,7 +5326,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_CometSwirlMesh.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_CometSwirlMesh.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -5396,7 +5400,7 @@
                     },
                     "erosionFeatherIn": 0.30000001192092896,
                     "erosionFeatherOut": 0.20000000298023224,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_BA_SphereErode.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_BA_SphereErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             0.0,
@@ -5520,7 +5524,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_E_Trail03.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_E_Trail03.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.5,
@@ -5609,7 +5613,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_RingMesh.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_RingMesh.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -5731,7 +5735,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_RingMesh_Texture.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_RingMesh_Texture.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         -0.800000011920929,
@@ -5967,9 +5971,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.tex",
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Gradient.project_jade.tex",
+                    "paletteTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Gradient.tex",
                     "paletteSelector": {
                         "constantValue": [
                             13.0,
@@ -6090,7 +6094,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionFeatherOut": 0.3499999940395355,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_399.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_399.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -6122,9 +6126,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Decal.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Decal.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             0.5,
@@ -6259,7 +6263,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionFeatherOut": 0.3499999940395355,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_399.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_399.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -6291,9 +6295,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Decal.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Decal.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/AlphaSlice_1.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/AlphaSlice_1.tex",
                     "birthUvRotateRateMult": {
                         "constantValue": 100.0,
                         "__type": "ValueFloat"
@@ -6493,7 +6497,7 @@
                         "__type": "ValueFloat"
                     },
                     "UseLingerErosionDriveCurve": true,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -6557,7 +6561,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -6578,7 +6582,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/sru_baron_acidball_poolgeo.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/sru_baron_acidball_poolgeo.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -6656,7 +6660,7 @@
                     "erosionFeatherIn": 0.30000001192092896,
                     "erosionFeatherOut": 0.30000001192092896,
                     "erosionSliceWidth": 1.7999999523162842,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -6712,7 +6716,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Acid_Purple.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Acid_Purple.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -6768,7 +6772,7 @@
                     2.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_glow_mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_glow_mult.tex",
                     "texDivMult": [
                         0.20000000298023224,
                         0.20000000298023224
@@ -7120,7 +7124,7 @@
                     "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
                     "__type": "VfxFlexShapeDefinitionData"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/color-feathers.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/color-feathers.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -7337,10 +7341,10 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_AOE_petals.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_AOE_petals.tex",
                 "numFrames": 4,
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Gradient.project_jade.tex",
+                    "paletteTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Gradient.tex",
                     "paletteCount": 16,
                     "__type": "VfxPaletteDefinitionData"
                 },
@@ -7355,7 +7359,7 @@
         "particlePath": "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_W_red_pool",
         "__type": "VfxSystemDefinitionData"
     },
-    "{7626c333}": {
+    "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_W_green_pool": {
         "complexEmitterDefinitionData": [
             {
                 "timeBeforeFirstEmission": 0.05000000074505806,
@@ -7451,7 +7455,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionFeatherOut": 0.30000001192092896,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/AlphaSlice_1.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/AlphaSlice_1.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -7475,7 +7479,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Jade_Singed_Experiment_Glue.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Jade_Singed_Experiment_Glue.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -7587,9 +7591,9 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.project_jade.skn",
-                        "mMeshSkeletonName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.project_jade.skl",
-                        "mAnimationName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.project_jade.anm",
+                        "mMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.skn",
+                        "mMeshSkeletonName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.skl",
+                        "mAnimationName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Meep_Anim.anm",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -7667,7 +7671,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -7739,7 +7743,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_Meep_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_Meep_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -7837,7 +7841,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionFeatherOut": 0.30000001192092896,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -7903,7 +7907,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Pool_Decal.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Pool_Decal.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -8017,7 +8021,7 @@
                     },
                     "erosionFeatherOut": 0.5,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -8161,7 +8165,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Poison.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Poison.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -8447,7 +8451,7 @@
                     },
                     "erosionFeatherOut": 0.5,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Wave_Foam_Stylized_BK_White.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -8611,7 +8615,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Poison.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Poison.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -8686,7 +8690,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_splash_ring.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_splash_ring.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -8753,7 +8757,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionFeatherOut": 0.20000000298023224,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_57.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_57.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -8856,7 +8860,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Water_40.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Water_40.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -8985,7 +8989,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Mur.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Mur.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -9155,7 +9159,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Material.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Material.tex",
                 "frameRate": 2.0,
                 "numFrames": 4,
                 "__type": "VfxEmitterDefinitionData"
@@ -9352,9 +9356,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_glow_mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_glow_mult.tex",
                     "texDivMult": [
                         2.0,
                         2.0
@@ -9600,7 +9604,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Cas_aoering_01.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Cas_aoering_01.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -9956,7 +9960,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Maokai_Skin24_Small_Mote.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Maokai_Skin24_Small_Mote.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -10081,7 +10085,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Soft_Glow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Soft_Glow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -10223,7 +10227,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_hit_flash_02.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_hit_flash_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -10467,7 +10471,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Flare.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Flare.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -10525,7 +10529,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_AoE_waves.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_AoE_waves.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -10671,7 +10675,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_trail.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_trail.tex",
                 "birthUVOffset": {
                     "constantValue": [
                         0.0,
@@ -10704,7 +10708,7 @@
                     "__type": "IntegratedValueVector2"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_trail.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_trail.tex",
                     "ParticleIntegratedUvScrollMult": {
                         "constantValue": [
                             0.0,
@@ -10777,7 +10781,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/common_sru_baron_acidball_poolsphere.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/common_sru_baron_acidball_poolsphere.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -10929,7 +10933,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Recall_poolsphere.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Recall_poolsphere.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -10972,7 +10976,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/common_color-rampdown32.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/common_color-rampdown32.tex",
                 "blendMode": 1,
                 "pass": 1000,
                 "meshRenderFlags": 0,
@@ -10983,7 +10987,7 @@
                 ],
                 "distortionDefinition": {
                     "distortion": 0.10000000149011612,
-                    "normalMapTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/distort-pinch.project_jade.tex",
+                    "normalMapTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/distort-pinch.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
                 "depthBiasFactors": [
@@ -11021,7 +11025,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Aura_Self.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Aura_Self.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -11084,7 +11088,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_CometSwirlMesh.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_CometSwirlMesh.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -11158,7 +11162,7 @@
                     },
                     "erosionFeatherIn": 0.30000001192092896,
                     "erosionFeatherOut": 0.20000000298023224,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_BA_SphereErode.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_BA_SphereErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             0.0,
@@ -11282,7 +11286,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_E_Trail03.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_E_Trail03.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.5,
@@ -11371,7 +11375,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_RingMesh.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_RingMesh.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -11493,7 +11497,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_RingMesh_Texture.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_RingMesh_Texture.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         -0.800000011920929,
@@ -11729,9 +11733,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.tex",
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Gradient.project_jade.tex",
+                    "paletteTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Gradient.tex",
                     "paletteSelector": {
                         "constantValue": [
                             13.0,
@@ -11852,7 +11856,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionFeatherOut": 0.3499999940395355,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_399.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_399.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -11884,9 +11888,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Decal.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Decal.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.tex",
                     "uvScaleMult": {
                         "constantValue": [
                             0.5,
@@ -12021,7 +12025,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionFeatherOut": 0.3499999940395355,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_399.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Particles_1_399.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -12053,9 +12057,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Decal.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Decal.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/AlphaSlice_1.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/AlphaSlice_1.tex",
                     "birthUvRotateRateMult": {
                         "constantValue": 100.0,
                         "__type": "ValueFloat"
@@ -12255,7 +12259,7 @@
                         "__type": "ValueFloat"
                     },
                     "UseLingerErosionDriveCurve": true,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -12319,9 +12323,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Indicator.tex",
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Gradient.project_jade.tex",
+                    "paletteTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Gradient.tex",
                     "paletteSelector": {
                         "constantValue": [
                             13.0,
@@ -12353,7 +12357,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/sru_baron_acidball_poolgeo.project_jade.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/sru_baron_acidball_poolgeo.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -12431,7 +12435,7 @@
                     "erosionFeatherIn": 0.30000001192092896,
                     "erosionFeatherOut": 0.30000001192092896,
                     "erosionSliceWidth": 1.7999999523162842,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -12487,7 +12491,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Acid_Purple.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Acid_Purple.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -12543,7 +12547,7 @@
                     2.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_glow_mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_glow_mult.tex",
                     "texDivMult": [
                         0.20000000298023224,
                         0.20000000298023224
@@ -12895,7 +12899,7 @@
                     "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
                     "__type": "VfxFlexShapeDefinitionData"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/color-feathers.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/color-feathers.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -13112,10 +13116,10 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_AOE_petals.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_AOE_petals.tex",
                 "numFrames": 4,
                 "paletteDefinition": {
-                    "paletteTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Gradient.project_jade.tex",
+                    "paletteTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Gradient.tex",
                     "paletteCount": 16,
                     "__type": "VfxPaletteDefinitionData"
                 },
@@ -13131,7 +13135,7 @@
         "soundOnCreateDefault": "Play_sfx_SingedSkin19_MegaAdhesive_OnBuffActivate",
         "__type": "VfxSystemDefinitionData"
     },
-    "{936adfdc}": {
+    "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_Z_Hide_Shield": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -13221,7 +13225,7 @@
                     },
                     "erosionFeatherIn": 0.0,
                     "erosionFeatherOut": 0.0,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Base_Scan_Tar.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Base_Scan_Tar.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -13260,7 +13264,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -13336,7 +13340,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -13421,7 +13425,7 @@
                     },
                     "erosionFeatherIn": 0.0,
                     "erosionFeatherOut": 0.0,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Base_Scan_Tar.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Base_Scan_Tar.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -13444,7 +13448,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_TX_CM.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin21/Jade_Singed_Skin21_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -13536,7 +13540,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_P_13.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_P_13.tex",
                 "uvMode": 1,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -13636,7 +13640,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/FN_Universal_Praxis_Red_001.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/FN_Universal_Praxis_Red_001.tex",
                 "uvMode": 1,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -13855,7 +13859,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_tar_flipbook.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_tar_flipbook.tex",
                 "frameRate": 1.0,
                 "birthFrameRate": {
                     "constantValue": 18.0,
@@ -13896,7 +13900,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{c8317195}": {
+    "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_Idle_footprint": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -14100,7 +14104,7 @@
                     "erosionFeatherIn": 0.15000000596046448,
                     "erosionFeatherOut": 0.5,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -14240,14 +14244,14 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Base_W_Smoke_01.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Base_W_Smoke_01.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
                     2.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Base_Z_explosion_smoke_mult.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Base_Z_explosion_smoke_mult.tex",
                     "texDivMult": [
                         2.0,
                         2.0
@@ -14431,7 +14435,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Flare.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Flare.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -14558,7 +14562,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Noise2.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Noise2.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -14581,7 +14585,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_FootPrint.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_FootPrint.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -14675,7 +14679,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_FootPrint.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_FootPrint.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -14764,7 +14768,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Noise2.project_jade.tex",
+                    "erosionMapName": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Noise2.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -14809,9 +14813,9 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/3161Glow.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/3161Glow.tex",
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Corki_Skin26_W_ground_burn_moontest.project_jade.tex",
+                    "textureMult": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Corki_Skin26_W_ground_burn_moontest.tex",
                     "__type": "VfxTextureMultDefinitionData"
                 },
                 "__type": "VfxEmitterDefinitionData"
@@ -14822,7 +14826,7 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{dbdeb1a5}": {
+    "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_Idle_01": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -14996,7 +15000,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Flicker_04.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Flicker_04.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -15222,7 +15226,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Skin15_Bokeh_Dots_4x4.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Skin15_Bokeh_Dots_4x4.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -15402,7 +15406,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Flicker_04.project_jade.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Flicker_04.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -15632,7 +15636,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Water_10.project_jade.tex",
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Water_10.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -15731,50 +15735,51 @@
         "flags": 197,
         "__type": "VfxSystemDefinitionData"
     },
-    "{84451641}": {
+    "Characters/Jade_Singed/Skins/Skin21/Resources": {
         "resourceMap": {
-            "{7dcb11bb}": "{701f3025}",
-            "{8e64130a}": "{73e4b06c}",
-            "{b831af63}": "{b28f560d}",
-            "{5ff14c95}": "{090d11f3}",
-            "{6304da8d}": "{dbdeb1a5}",
-            "{7d892801}": "{ba322d0b}",
-            "{d82fe43b}": "{9eb37265}",
-            "{cd2962cc}": "{e58f0c46}",
-            "{0ac6b207}": "{2f8c1ec1}",
-            "{d45a6a59}": "{dd69684b}",
-            "{82673e9e}": "{8882f5f0}",
-            "{bd827fe1}": "{72b4eeab}",
-            "{47fb6001}": "{2c78368b}",
-            "{7183f7f4}": "{06dbd18a}",
-            "{d4522720}": "{a60b96b6}",
-            "{6f9262ac}": "{c2e28ebe}",
-            "{2155133b}": "{7626c333}",
-            "{8eb7fe3b}": "{71fa2943}",
-            "{00b86389}": "{d69d320b}",
-            "{5af055e5}": "{2a3f6f4f}",
-            "{87defa18}": "{7f8648be}",
-            "{605f4e2c}": "{e8e78fa0}",
-            "{e2707d62}": "{ec77b664}",
-            "{4f1de428}": "{a83ad16a}",
-            "{2f52f46d}": "{c8317195}",
-            "{53ca128c}": "{1a153c64}",
-            "{219e1a12}": "{63ae201a}",
-            "{d78017dd}": "{ba496297}",
-            "{d4801324}": "{bb49642a}",
-            "{07888460}": "{e164b1a2}",
-            "{8ada0c17}": "{b88d4e95}",
-            "{4a8f3054}": "{34172252}",
-            "{de073697}": "{36649f8d}",
-            "{b0a0e45e}": "{bd13b72c}",
-            "{03b41dd1}": "{af97f367}",
-            "{16d7759b}": "{81a730b1}",
-            "{82ccbdb4}": "{936adfdc}",
-            "{e0da6915}": "{5a8ca6cf}"
+            "Jade_Singed_BA_crit_tar": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_BA_crit_tar",
+            "Jade_Singed_BA_tar": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_BA_tar",
+            "Jade_Singed_E_tar_Fling_01": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_E_tar_Fling_01",
+            "Jade_Singed_E_tar_fling_land": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_E_tar_fling_land",
+            "Jade_Singed_Idle_01": "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_Idle_01",
+            "Jade_Singed_P_Sound": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_P_Sound",
+            "Jade_Singed_P_timer": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_P_timer",
+            "Jade_Singed_Q_Cast": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Q_Cast",
+            "Jade_Singed_Q_Cast_enemy": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Q_Cast_enemy",
+            "Jade_Singed_Q_Trail": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Q_Trail",
+            "Jade_Singed_Q_Trail_enemy": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Q_Trail_enemy",
+            "Jade_Singed_R_buf": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_buf",
+            "Jade_Singed_R_mesh": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_mesh",
+            "Jade_Singed_R_steam": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_steam",
+            "Jade_Singed_R_trail": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_trail",
+            "Jade_Singed_W_cas_01": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_cas_01",
+            "Jade_Singed_W_green_pool": "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_W_green_pool",
+            "Jade_Singed_W_red_pool": "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_W_red_pool",
+            "Jade_Singed_W_Root": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Root",
+            "Jade_Singed_W_Root_01": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Root_01",
+            "Jade_Singed_W_RunePrison_tar_01": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_RunePrison_tar_01",
+            "{605f4e2c}": "Characters/Jade_Singed/Skins/Skin19/Particles/JADE/Jade_Singed_Skin19_JADE_W_Cas",
+            "Jade_Singed_W_Bubble_Child": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Bubble_Child",
+            "{61331158}": "{142f64ca}",
+            "Jade_Singed_W_Root_Child": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_W_Root_Child",
+            "Jade_Singed_Idle_footprint": "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_Idle_footprint",
+            "Jade_Singed_Idle_footprint_R": "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_Idle_footprint_R",
+            "Jade_Singed_Idle_Radar": "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_Idle_Radar",
+            "Jade_Singed_Z_Rock_1": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Rock_1",
+            "Jade_Singed_Z_Rock_2": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Rock_2",
+            "Jade_Singed_Z_Radar": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Radar",
+            "Jade_Singed_Z_Ground": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Ground",
+            "Jade_Singed_Z_Poison": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Poison",
+            "Jade_Singed_Z_Meep": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Meep",
+            "Jade_Singed_Z_Meep_2": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Meep_2",
+            "Jade_Singed_Z_Meep_Avatar": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Meep_Avatar",
+            "Jade_Singed_Z_Rock_end": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_Z_Rock_end",
+            "Jade_Singed_Z_Hide_Shield": "Characters/Jade_Singed/Skins/Skin21/Particles/Jade_Singed_Skin21_Z_Hide_Shield",
+            "Jade_Singed_R_buf_ground": "Characters/Jade_Singed/Skins/Skin19/Particles/Jade_Singed_Skin19_R_buf_ground"
         },
         "__type": "ResourceResolver"
     },
-    "{9896b732}": {
+    "Characters/Jade_Singed/Skins/Skin21/Materials/Fresnel_Glass_inst": {
         "name": "Characters/Jade_Singed/Skins/Skin21/Materials/Fresnel_Glass_inst",
         "samplerValues": [
             {
@@ -16332,7 +16337,7 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{f6c4a455}": {
+    "Characters/Jade_Singed/Skins/Skin21/Materials/Fresnel_Glass_Head_inst": {
         "name": "Characters/Jade_Singed/Skins/Skin21/Materials/Fresnel_Glass_Head_inst",
         "samplerValues": [
             {
@@ -16894,6 +16899,7 @@
     "__linked": [
         "DATA/Characters/Jade_Singed/Animations/Skin19.bin",
         "DATA/Characters/Jade_Singed/Jade_Singed.bin",
+        "DATA/Characters/Jade_Singed/Jade_Singed_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin5_Skins_Skin6_Skins_Skin9.bin",
         "DATA/Characters/Jade_Singed/Jade_Singed_Multi_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin5_Skins_Skin6_Skins_Skin9.bin",
         "DATA/Characters/Jade_Singed/Jade_Singed_Multi_Skins_Skin19_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27.bin"
     ]

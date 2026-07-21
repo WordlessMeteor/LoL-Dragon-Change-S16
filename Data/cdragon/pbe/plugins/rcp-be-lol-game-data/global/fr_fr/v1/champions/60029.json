@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "Twitch Classic (vandale)",
+                    "name": "Twitch Classic (le boss)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Twitch devient invisible pendant un court instant et sa vitesse de déplacement est augmentée. Quand il redevient visible, la vitesse d'attaque de Twitch est augmentée pendant un court instant.",
-            "dynamicDescription": "<mainText>Après @MaxFadeTime@ sec, Twitch se <keywordStealth>camoufle</keywordStealth> pendant @StealthDuration@ sec.<br><br>Quand Twitch quitte le <keywordStealth>camouflage</keywordStealth>, il gagne <attackSpeed>@AttackSpeedMod*100@% de vitesse d'attaque</attackSpeed> pendant @AttackSpeedDuration@ sec.",
+            "description": "Twitch devient invisible pendant plusieurs secondes, gagnant en vitesse de déplacement. Lorsqu'il sort de l'invisibilité, il gagne de la vitesse d'attaque.",
+            "dynamicDescription": "Au bout de @MaxFadeTime@ sec (s'il ne subit pas de dégâts) ou de @MaxDelayTime@ sec, Twitch devient <keywordStealth>invisible</keywordStealth> pendant @StealthDuration@ sec, gagnant <speed>@MoveSpeedMod*100@% de vitesse de déplacement</speed>.<br><br>Une fois que Twitch sort de l'<keywordStealth>invisibilité</keywordStealth>, il gagne <attackSpeed>@AttackSpeedMod*100@% de vitesse d'attaque</attackSpeed> pendant @AttackSpeedDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Poison affaiblissant",
+            "name": "Dose de venin",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Twitch inocule un poison affaiblissant à tous les champions ennemis proches, réduisant leur vitesse de déplacement.",
-            "dynamicDescription": "Twitch <status>ralentit</status> la vitesse de déplacement des champions ennemis proches de @SlowPercent*-100@% pendant @Duration@ sec. Le ralentissement augmente de @PassiveStackSlowPercent*-100@% par effet cumulé de <keywordMajor>Venin mortel</keywordMajor> (maximum @MaxSlowTooltip@).<br><br>Appliquer des effets de <keywordMajor>Venin mortel</keywordMajor> après l'application du <status>ralentissement</status> réduit davantage la <speed>vitesse de déplacement</speed>.@SpellModifierDescriptionAppend@",
+            "description": "Twitch lance une dose de venin qui explose, infligeant Venin mortel et ralentissant les ennemis dans la zone.",
+            "dynamicDescription": "Twitch projette une dose de venin qui explose, infligeant @StacksAdded@ effets cumulés de <keywordMajor>Venin mortel</keywordMajor> et <status>ralentissant</status> les ennemis de @BaseSlowAmount@% pendant @Duration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Le venin toxique de Twitch s'active dans le corps de tous les ennemis proches, infligeant des dégâts pour chaque effet cumulé.",
-            "dynamicDescription": "<mainText>Twitch inflige à tous les ennemis proches <physicalDamage>@BaseDamage@ pts de dégâts physiques</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> par effet de <keywordMajor>Venin mortel</keywordMajor> cumulé. Tous les effets cumulés proches sont consommés.",
+            "dynamicDescription": "Twitch inflige à tous les ennemis marqués proches <physicalDamage>@BaseDamage@ pts de dégâts physiques</physicalDamage> plus <physicalDamage>@TotalStackDamage@</physicalDamage> par effet de <keywordMajor>Venin mortel</keywordMajor> cumulé.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Twitch ferme les yeux et tire avec son arbalète, tirant rapidement de puissants carreaux perforants devant lui.",
-            "dynamicDescription": "<mainText>Pendant @Duration@ sec, Twitch gagne un bonus de @BonusRange@ en portée d'attaque, de <physicalDamage>@BonusAD@ en dégâts d'attaque</physicalDamage> et ses attaques de base deviennent des carreaux perforants qui infligent @FallOffDamage*100@% de dégâts en moins aux cibles subséquentes, jusqu'à un minimum de @MinimumFallOffDamage*100@% des dégâts.",
+            "dynamicDescription": "Pendant @Duration@ sec, Twitch gagne un bonus de @BonusRange@ en portée d'attaque, de <physicalDamage>@BonusAD@ dégâts d'attaque</physicalDamage> et ses attaques de base deviennent des carreaux perforants qui infligent @FallOffDamage*100@% de dégâts en moins aux cibles subséquentes, jusqu'à un minimum de @MinimumFallOffDamage*100@% des dégâts.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

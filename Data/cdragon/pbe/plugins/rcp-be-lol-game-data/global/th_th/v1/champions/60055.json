@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "การโค่นล้มแชมเปี้ยนจะมอบทองพิเศษให้ Katarina และลดคูลดาวน์ของเธอลง 15 วินาที"
+        "description": "การสังหารหรือช่วยสังหารแชมเปี้ยนจะลดคูลดาวน์สกิลของ Katarina ลง 15 วินาที"
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Katarina ปามีดที่สามารถชิ่งไปโดนศัตรูหลายตัว สร้างความเสียหายเวท",
-            "dynamicDescription": "ปามีดที่สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> โดยมีดสามารถชิ่งได้ @MaxBounces@ ครั้ง สร้างความเสียหายลดลง 10% ในแต่ละครั้งที่ชิ่ง@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ปามีดที่สร้างความเสียหายเวท <magicDamage>@TotalDamage@</magicDamage> หน่วย มีดจะชิ่งไปยังศัตรูที่อยู่ใกล้ที่สุด @MaxBounces@ ตัว โดยความเสียหายจะลดลง 10% ในแต่ละครั้งที่ชิ่ง<br><br>ศัตรูที่โดนโจมตีจะถูกทำเครื่องหมายไว้เป็นเวลา @MarkDuration@ วินาที การโจมตีปกติหรือสกิลของ Katarina จะใช้งานเครื่องหมายเพื่อสร้างความเสียหายเวทเพิ่มเติม <magicDamage>@TotalDamageMark@</magicDamage> หน่วย@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "Killer Instinct",
+            "name": "Sinister Steel",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "สกิลพื้นฐานครั้งถัดไปของ Katarina จะได้รับเอฟเฟกต์เพิ่มเติม",
-            "dynamicDescription": "<spellPassive>ติดตัว</spellPassive>: การโจมตีและสกิลของ Katarina สร้างความเสียหายเพิ่มเติม @TotalDamage@ หน่วย<br><br><spellActive>กดใช้:</spellActive> สกิลพื้นฐานครั้งถัดไปของ Katarina จะได้รับโบนัสเอฟเฟกต์<li><spellName>Bouncing Blade</spellName>: สร้างความเสียหายเต็มจำนวนแก่เป้าหมายทุกตัว และติดสถานะ <keyWord>Grievous Wounds</keyWord> เป็นเวลา @QHealingReductionDuration@ วินาที<li><spellName>Shunpo</spellName>: Katarina ได้รับความเสียหายลดลง @EDamageReduction@% เป็นเวลา @EDamageReductionDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "description": "Katarina ควงมีดของเธอไปรอบ ๆ เพื่อสร้างความเสียหายเวทให้กับศัตรูทั้งหมดในพื้นที่ หากโดนแชมเปี้ยนศัตรู Katarina จะได้รับความเร็วเคลื่อนที่เพิ่มขึ้นชั่วขณะ",
+            "dynamicDescription": "ควงมีดเป็นวงกลม สร้างความเสียหายเวท @TotalDamage@ หน่วย หากโดนแชมเปี้ยนศัตรู Katarina จะได้รับ<speed>ความเร็วเคลื่อนที่</speed> @Haste*100@% เป็นเวลา @BuffDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Katarina จะเคลื่อนที่ไปยังตำแหน่งเป้าหมายทันที และได้รับความเสียหายจากศัตรูลดลงเป็นเวลาสั้น ๆ หากเป้าหมายเป็นศัตรู เธอจะสร้างความเสียหาย",
-            "dynamicDescription": "เคลื่อนที่ไปยังตำแหน่งเป้าหมาย สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> หากเป้าหมายเป็นศัตรู@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "เคลื่อนที่ไปยังตำแหน่งเป้าหมาย สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>หากเป้าหมายเป็นศัตรู<br><br>หลังจากใช้ Shunpo Katarina จะได้รับความเสียหายลดลง @DamageReduction@% เป็นเวลา @DamageReductionDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "ไม่เสียอะไรเลย",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Katarina หมุนตัวเป็นพายุมีด โดยเธอจะปามีดอย่างรวดเร็วใส่แชมเปี้ยนใกล้เคียงสูงสุดสามตัว",
-            "dynamicDescription": "หมุนตัวเป็นพายุมีด เพื่อปามีดใส่แชมเปี้ยนศัตรูที่อยู่ใกล้ที่สุด 3 ตัว สร้าง<magicDamage>ความเสียหายเวท @DamageCalcTooltipOnly@ หน่วย</magicDamage>เป็นเวลา 2 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "หมุนตัวเป็นพายุมีด เพื่อปามีดใส่แชมเปี้ยนศัตรูที่อยู่ใกล้ที่สุด 3 ตัว สร้าง<magicDamage>ความเสียหายเวท @DamageCalcTooltipOnly@ หน่วย</magicDamage>เป็นเวลา 2.5 วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

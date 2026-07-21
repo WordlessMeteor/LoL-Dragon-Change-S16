@@ -46,7 +46,8 @@
             "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sona/Skins/Base/Images/Jade_Sona_splash_centered_0.project_jade.jpg",
             "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sona/Skins/Base/Images/Jade_Sona_splash_uncentered_0.project_jade.jpg",
             "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sona/Skins/Base/Images/Jade_Sona_splash_tile_0.project_jade.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sona/Skins/Base/Jade_SonaLoadScreen.project_jade.jpg",
+            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sona/Skins/Base/Jade_SonaLoadScreen_0.project_jade.jpg",
+            "loadScreenVintagePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Sona/Skins/Base/Jade_SonaLoadScreen_0_LE.project_jade.jpg",
             "skinType": "",
             "rarity": "kNoRarity",
             "isLegacy": false,
@@ -736,7 +737,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "施放3次技能后，娑娜的下一次攻击造成额外魔法伤害。"
+        "description": "施放3次技能后，娑娜的下一次攻击造成额外魔法伤害并降低她的目标在若干秒内造成的伤害。"
     },
     "spells": [
         {
@@ -748,7 +749,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "娑娜演奏英勇赞美诗，为附近的友方英雄提供额外伤害和法术强度。此外，施放该技能会射出音波，对相距最近的两名敌方英雄或野怪造成魔法伤害。",
-            "dynamicDescription": "<keywordMajor>持续光环：</keywordMajor>使附近友方英雄的<physicalDamage>攻击力</physicalDamage>和<magicDamage>法术强度</magicDamage>提升@APADBoost@。<br><br><spellActive>主动：</spellActive>对相距最近的两名敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>(优先瞄准英雄)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>持续光环：</keywordMajor>为附近的友方英雄提供@APADBoost@<physicalDamage>攻击力</physicalDamage>和<magicDamage>法术强度</magicDamage>。<br><br><spellActive>主动：</spellActive>对相距最近的@EnemiesToHit@名敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>(优先瞄准英雄)。@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -758,12 +759,12 @@
                 825.0
             ],
             "costCoefficients": [
-                60.0,
                 65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0
+                85.0,
+                90.0
             ],
             "cooldownCoefficients": [
                 7.0,
@@ -898,7 +899,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "娑娜演奏坚毅咏叹调，为附近的友方英雄提供额外护甲和额外魔法抗性。此外，施放该技能会弹奏疗愈旋律，为娑娜和附近一位受伤的友军提供治疗。",
-            "dynamicDescription": "<keywordMajor>持续光环：</keywordMajor>为附近的友方英雄提供@ARMRBoost@额外<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>。<br><br><spellActive>主动：</spellActive>为娑娜和附近受伤最重的友军英雄回复<healing>@Healing@生命值</healing>，并获得持续3秒的@ARMRBoost@额外<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>持续光环：</keywordMajor>为附近的友方英雄提供@ARMRBoost@<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>。<br><br><spellActive>主动：</spellActive>为娑娜和附近受伤最重的友军英雄治疗<healing>@Healing@生命值</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -908,12 +909,12 @@
                 1000.0
             ],
             "costCoefficients": [
-                60.0,
                 65.0,
                 70.0,
                 75.0,
                 80.0,
-                85.0
+                85.0,
+                90.0
             ],
             "cooldownCoefficients": [
                 7.0,
@@ -1048,7 +1049,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "娑娜弹奏迅捷奏鸣曲，为附近的友方英雄提供额外移动速度。此外，施放该技能可为附近的友军提供一次速度爆发。",
-            "dynamicDescription": "<keywordMajor>持续光环：</keywordMajor>为附近的友方英雄提供<speed>@MSBoost@额外移动速度</speed>。<br><br><spellActive>主动：</spellActive>使附近的友军获得<speed>@MoveSpeedMod*100@%移动速度</speed>，持续1.5秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>持续光环：</keywordMajor>为附近的友方英雄提供<speed>@MSBoost@额外移动速度</speed>。<br><br><spellActive>主动：</spellActive>使附近的友军获得持续@ActiveSpeedDuration@秒的<speed>@MoveSpeedMod*100@%移动速度</speed>。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1219,9 +1220,9 @@
                 170.0,
                 150.0,
                 130.0,
-                100.0,
-                100.0,
-                100.0
+                110.0,
+                90.0,
+                70.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,

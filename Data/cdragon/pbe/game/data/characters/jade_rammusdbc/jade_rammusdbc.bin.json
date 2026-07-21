@@ -125,7 +125,7 @@
             "mCoefficient": 0.25,
             "mAnimationName": "Idle1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Rammus_ShellBash.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -263,8 +263,8 @@
             "castConeDistance": 100.0,
             "castFrame": 13.125,
             "missileSpeed": 0.0,
-            "mHitEffectKey": "{bdea2498}",
-            "mAfterEffectKey": "{aa6a009f}",
+            "mHitEffectKey": "Jade_Rammus_W_RAA_tar_01",
+            "mAfterEffectKey": "Jade_Rammus_Q_tar_01",
             "mClientData": {
                 "mTargeterDefinitions": [
                     {
@@ -277,7 +277,7 @@
         },
         "__type": "SpellObject"
     },
-    "{5110e85c}": {
+    "Characters/Jade_RammusDBC/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{5fc995db}": {
@@ -534,7 +534,7 @@
         },
         "__type": "CharScript"
     },
-    "{63b9fbfa}": {
+    "Characters/Jade_RammusDBC/CharacterRecords/Root": {
         "mCharacterName": "Jade_RammusDBC",
         "mFallbackCharacterName": "Jade_Rammus",
         "baseHPModifiable": {
@@ -588,10 +588,10 @@
             "Tremors2"
         ],
         "spells": [
-            "{eb9041a2}",
+            "Characters/Jade_Rammus/Spells/Jade_RammusQAbility/Jade_RammusQ",
             "{2b161c35}",
-            "{50e209ba}",
-            "{fd494296}"
+            "Characters/Jade_Rammus/Spells/Jade_RammusEAbility/Jade_RammusE",
+            "Characters/Jade_Rammus/Spells/Jade_RammusRAbility/Jade_RammusR"
         ],
         "extraSpells": [
             "Jade_RammusDBC_ArmordilloRelentlessAssaultAttack",
@@ -630,7 +630,7 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{d38d11d6}"
+            "Characters/Jade_Rammus/Spells/Jade_RammusWAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_RammusDBC",
         "passiveLuaName": "Spiked Shell",

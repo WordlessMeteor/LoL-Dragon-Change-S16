@@ -1,13 +1,13 @@
 {
-    "{948df8d9}": {
-        "mRootSpell": "{02d0e875}",
+    "Characters/Jade_Teemo/Spells/Jade_TeemoRAbility": {
+        "mRootSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoRAbility/Jade_TeemoR",
         "mChildSpells": [
-            "{02d0e875}"
+            "Characters/Jade_Teemo/Spells/Jade_TeemoRAbility/Jade_TeemoR"
         ],
         "mName": "Jade_TeemoRAbility",
         "__type": "AbilityObject"
     },
-    "{02d0e875}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoRAbility/Jade_TeemoR": {
         "ObjectName": "Jade_TeemoR",
         "mScriptName": "Jade_TeemoR",
         "mSpell": {
@@ -19,19 +19,6 @@
             ],
             "DataValues": [
                 {
-                    "name": "TriggerRadius",
-                    "values": [
-                        160.0,
-                        160.0,
-                        160.0,
-                        160.0,
-                        160.0,
-                        160.0,
-                        160.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "MaxAmmo",
                     "values": [
                         3.0,
@@ -41,19 +28,6 @@
                         3.0,
                         3.0,
                         3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MaxBounceDistance",
-                    "values": [
-                        360.0,
-                        360.0,
-                        440.0,
-                        550.0,
-                        550.0,
-                        550.0,
-                        550.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -136,19 +110,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "ExplosionRadius",
-                    "values": [
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0,
-                        450.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "MaxTraps",
                     "values": [
                         25000.0,
@@ -158,71 +119,6 @@
                         25000.0,
                         25000.0,
                         25000.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MinTossDistanceBounceThreshold",
-                    "values": [
-                        150.0,
-                        220.0,
-                        500.0,
-                        500.0,
-                        500.0,
-                        500.0,
-                        500.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "VisionRadius",
-                    "values": [
-                        210.0,
-                        210.0,
-                        210.0,
-                        210.0,
-                        210.0,
-                        210.0,
-                        210.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PickUpDuration",
-                    "values": [
-                        45.0,
-                        45.0,
-                        45.0,
-                        45.0,
-                        45.0,
-                        45.0,
-                        45.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PickUpAmmoRefundPercent",
-                    "values": [
-                        0.30000001192092896,
-                        0.4000000059604645,
-                        0.5,
-                        0.6000000238418579,
-                        0.699999988079071,
-                        0.800000011920929,
-                        0.8999999761581421
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PickUpRadius",
-                    "values": [
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -242,10 +138,9 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ashe_ArchersMark.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -328,7 +223,7 @@
             "castTargetAdditionalUnitsRadius": 135.0,
             "castFrame": 19.5,
             "missileSpeed": 1450.0,
-            "mMissileEffectKey": "{046ef00f}",
+            "mMissileEffectKey": "Jade_Teemo_R_mis",
             "mLineWidth": 120.0,
             "mFloatVarsDecimals": [
                 1,
@@ -358,13 +253,14 @@
             ],
             "{210f9ec0}": {
                 "values": [
-                    75.0,
-                    100.0,
-                    125.0,
-                    50.0,
-                    50.0,
-                    0.0
+                    35.0,
+                    31.0,
+                    27.0,
+                    23.0,
+                    19.0,
+                    15.0
                 ],
+                "{0a3e0478}": 35.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 1,
@@ -405,6 +301,11 @@
                                 {
                                     "type": "Cost",
                                     "nameOverride": "Spell_ListType_ManaCost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "AmmoRechargeTime",
+                                    "nameOverride": "Spell_ListType_AmmoRecharge",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -509,25 +410,8 @@
                 "BonusAttackSpeed": {
                     "mFormulaParts": [
                         {
-                            "mLevel1Value": 0.20000000298023224,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 5,
-                                    "mAdditionalBonusAtThisLevel": 0.20000000298023224,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 10,
-                                    "mAdditionalBonusAtThisLevel": 0.20000000298023224,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 15,
-                                    "mAdditionalBonusAtThisLevel": 0.20000000298023224,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                            "mNumber": 0.4000000059604645,
+                            "__type": "NumberCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -535,7 +419,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.dds"
             ],
             "castRange": [
                 0.0,
@@ -589,7 +473,7 @@
         "mScriptName": "Jade_TeemoPAttackSpeedBuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -661,7 +545,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.dds"
             ],
             "castRange": [
                 0.0,
@@ -724,7 +608,7 @@
         "mScriptName": "Jade_TeemoPassive_StealthBuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_Camouflage.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -734,12 +618,12 @@
                 {
                     "PersistentVfxs": [
                         {
-                            "effectKey": "{4002fd0f}",
+                            "effectKey": "Jade_Teemo_P_cas",
                             "__type": "PersistentVfxData"
                         },
                         {
                             "boneName": "Goggles",
-                            "effectKey": "{f0a1fadb}",
+                            "effectKey": "Jade_Teemo_P_Buf",
                             "__type": "PersistentVfxData"
                         }
                     ],
@@ -750,16 +634,16 @@
         },
         "__type": "SpellObject"
     },
-    "{18e4b09e}": {
-        "mRootSpell": "{6783dfbf}",
+    "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility": {
+        "mRootSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility/Jade_TeemoE",
         "mChildSpells": [
-            "{6783dfbf}",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility/Jade_TeemoE",
             "{601e987c}"
         ],
         "mName": "Jade_TeemoEAbility",
         "__type": "AbilityObject"
     },
-    "{1a68330d}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoBasicAttack": {
         "ObjectName": "Jade_TeemoBasicAttack",
         "mScriptName": "Jade_TeemoBasicAttack",
         "mSpell": {
@@ -849,9 +733,9 @@
             "mCastType": 1,
             "castFrame": 10.829999923706055,
             "missileSpeed": 1300.0,
-            "mMissileEffectKey": "{782980a6}",
+            "mMissileEffectKey": "Jade_Teemo_BA_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{82e73292}",
+            "mHitEffectKey": "Jade_Teemo_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -876,24 +760,24 @@
         },
         "__type": "SpellObject"
     },
-    "{264371c2}": {
-        "mRootSpell": "{c97b43ef}",
+    "Characters/Jade_Teemo/Spells/Jade_TeemoQAbility": {
+        "mRootSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoQAbility/Jade_TeemoQ",
         "mChildSpells": [
-            "{c97b43ef}"
+            "Characters/Jade_Teemo/Spells/Jade_TeemoQAbility/Jade_TeemoQ"
         ],
         "mName": "Jade_TeemoQAbility",
         "__type": "AbilityObject"
     },
-    "{5a87d2ec}": {
-        "mRootSpell": "{47ddebef}",
+    "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility": {
+        "mRootSpell": "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility/Jade_TeemoW",
         "mChildSpells": [
-            "{47ddebef}",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility/Jade_TeemoW",
             "{6b9f3e30}"
         ],
         "mName": "Jade_TeemoWAbility",
         "__type": "AbilityObject"
     },
-    "{47ddebef}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility/Jade_TeemoW": {
         "ObjectName": "Jade_TeemoW",
         "mScriptName": "Jade_TeemoW",
         "mSpell": {
@@ -959,10 +843,9 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "mCoefficient": 1.0,
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.dds"
             ],
             "{11704a2b}": 0.5286999940872192,
             "cooldownTime": [
@@ -1036,8 +919,9 @@
                     40.0,
                     40.0,
                     40.0,
-                    0.0
+                    40.0
                 ],
+                "{0a3e0478}": 40.0,
                 "__type": "{630af303}"
             },
             "mTargetingTypeData": {
@@ -1071,7 +955,9 @@
                                 },
                                 {
                                     "type": "ActiveMoveSpeedBonus",
+                                    "multiplier": 100.0,
                                     "nameOverride": "SpellList_TeemoW_Jade_Active",
+                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -1090,7 +976,7 @@
                 {
                     "PersistentVfxs": [
                         {
-                            "effectKey": "{5af1fee4}",
+                            "effectKey": "Jade_Teemo_W_buf2",
                             "SpecificTeam": 100,
                             "__type": "PersistentVfxData"
                         }
@@ -1142,7 +1028,7 @@
         "mScriptName": "Jade_TeemoWPassive",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1254,9 +1140,9 @@
             "mCastType": 1,
             "castFrame": 10.0,
             "missileSpeed": 1300.0,
-            "mMissileEffectKey": "{92a89e92}",
+            "mMissileEffectKey": "Jade_Teemo_E_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{6f109bfe}",
+            "mHitEffectKey": "Jade_Teemo_E_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_center_LOC",
             "selectionPriority": 1,
@@ -1286,7 +1172,7 @@
         },
         "__type": "SpellObject"
     },
-    "{6783dfbf}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility/Jade_TeemoE": {
         "ObjectName": "Jade_TeemoE",
         "mScriptName": "Jade_TeemoE",
         "mSpell": {
@@ -1452,7 +1338,7 @@
             ],
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_PoisonedDart.dds"
             ],
             "cooldownTime": [
                 0.0,
@@ -1597,7 +1483,7 @@
         },
         "__type": "SpellObject"
     },
-    "{ac58558d}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoCritAttack": {
         "ObjectName": "Jade_TeemoCritAttack",
         "mScriptName": "Jade_TeemoCritAttack",
         "mSpell": {
@@ -1693,9 +1579,9 @@
             "mCastType": 1,
             "castFrame": 10.829999923706055,
             "missileSpeed": 1300.0,
-            "mMissileEffectKey": "{782980a6}",
+            "mMissileEffectKey": "Jade_Teemo_BA_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{82e73292}",
+            "mHitEffectKey": "Jade_Teemo_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1720,7 +1606,7 @@
         },
         "__type": "SpellObject"
     },
-    "{c97b43ef}": {
+    "Characters/Jade_Teemo/Spells/Jade_TeemoQAbility/Jade_TeemoQ": {
         "ObjectName": "Jade_TeemoQ",
         "mScriptName": "Jade_TeemoQ",
         "mSpell": {
@@ -1779,67 +1665,8 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MinionMonsterDurationMod",
-                    "values": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "BaseDamage",
-                            "values": [
-                                30.0,
-                                70.0,
-                                110.0,
-                                150.0,
-                                190.0,
-                                230.0,
-                                270.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "APRatio",
-                            "values": [
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "BlindDuration",
-                            "values": [
-                                1.25,
-                                1.5,
-                                1.75,
-                                2.0,
-                                2.25,
-                                2.5,
-                                2.75
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mSpellCalculations": {
                 "CalculatedDamage": {
                     "mFormulaParts": [
@@ -1853,25 +1680,11 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "{0f87e4ba}": {
-                    "mMultiplier": {
-                        "mDataValue": "MinionMonsterDurationMod",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "BlindDuration",
-                            "__type": "NamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_TranquilizingShot.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1957,9 +1770,9 @@
             "mCastType": 1,
             "castFrame": 14.789999961853027,
             "missileSpeed": 1500.0,
-            "mMissileEffectKey": "{3adae086}",
+            "mMissileEffectKey": "Jade_Teemo_Q_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{48116872}",
+            "mHitEffectKey": "Jade_Teemo_Q_tar",
             "mHitBoneName": "head",
             "mana": [
                 70.0,
@@ -1976,8 +1789,9 @@
                     90.0,
                     100.0,
                     110.0,
-                    0.0
+                    120.0
                 ],
+                "{0a3e0478}": 70.0,
                 "__type": "{630af303}"
             },
             "SpellEventToAudioEventSuffix": {
@@ -2000,7 +1814,9 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Cost",
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -2010,9 +1826,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "BaseDamage",
-                                    "typeIndex": 1,
-                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2070,7 +1884,7 @@
         "mScriptName": "Jade_Teemo_Calculations_Buff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick2.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Teemo_MoveQuick2.dds"
             ],
             "castRange": [
                 0.0,
@@ -2431,7 +2245,7 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{c36c1c78}"
+                            "Items/771056"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -2439,27 +2253,27 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{28beb09f}",
-                            "{bbc89264}",
-                            "{27beaf0c}",
-                            "{a4404bc2}",
-                            "{283d49f7}",
-                            "{3bba515a}",
-                            "{b9c88f3e}",
-                            "{3cbc9184}",
-                            "{27591ee1}",
-                            "{9753bf03}",
-                            "{3aba4fc7}",
-                            "{36bc8812}",
-                            "{3fbc963d}",
-                            "{c76c22c4}",
-                            "{35738bb3}",
-                            "{c16c1952}",
-                            "{b16e3eb9}",
-                            "{b06e3d26}",
-                            "{387151d5}",
-                            "{c46c1e0b}",
-                            "{467823a4}"
+                            "Items/773114",
+                            "Items/773151",
+                            "Items/773115",
+                            "Items/773089",
+                            "Items/773091",
+                            "Items/773135",
+                            "Items/773157",
+                            "Items/773102",
+                            "Items/773026",
+                            "Items/773006",
+                            "Items/773136",
+                            "Items/773108",
+                            "Items/773101",
+                            "Items/771052",
+                            "Items/771026",
+                            "Items/771058",
+                            "Items/771042",
+                            "Items/771043",
+                            "Items/771033",
+                            "Items/771057",
+                            "Items/771001"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
@@ -2827,7 +2641,7 @@
         },
         "__type": "CharScript"
     },
-    "{6bdda986}": {
+    "Characters/Jade_Teemo/CAC/Jade_Teemo_Skin63": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -4377,7 +4191,7 @@
         "mObjectPath": "Characters/Jade_Teemo/CAC/Jade_Teemo_Skin63",
         "__type": "ContextualActionData"
     },
-    "{ffd88254}": {
+    "Characters/Jade_Teemo/CAC/Jade_Teemo_Skin47": {
         "mCooldown": 15.0,
         "mSituations": {
             "MoveOrder2D": {
@@ -5670,7 +5484,7 @@
         "mObjectPath": "Characters/Jade_Teemo/CAC/Jade_Teemo_Skin47",
         "__type": "ContextualActionData"
     },
-    "{a2f80b0e}": {
+    "Characters/Jade_Teemo/CharacterRecords/Root": {
         "mCharacterName": "Jade_Teemo",
         "baseHPModifiable": {
             "baseValue": 460.0,
@@ -5771,10 +5585,10 @@
             "Jade_TeemoRAbility/Jade_TeemoR"
         ],
         "spells": [
-            "{c97b43ef}",
-            "{47ddebef}",
-            "{6783dfbf}",
-            "{02d0e875}"
+            "Characters/Jade_Teemo/Spells/Jade_TeemoQAbility/Jade_TeemoQ",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility/Jade_TeemoW",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility/Jade_TeemoE",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoRAbility/Jade_TeemoR"
         ],
         "extraSpells": [
             "Jade_TeemoEAttack",
@@ -5813,16 +5627,16 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{264371c2}",
-            "{5a87d2ec}",
-            "{18e4b09e}",
-            "{948df8d9}",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoQAbility",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoWAbility",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoEAbility",
+            "Characters/Jade_Teemo/Spells/Jade_TeemoRAbility",
             "{bdbce814}"
         ],
         "passiveName": "game_character_passiveName_Jade_Teemo",
         "passiveLuaName": "Jade_TeemoPassive_Jade",
         "passiveToolTip": "game_character_passiveDescription_Jade_Teemo",
-        "passive1IconName": "ASSETS/Characters/Jade_Teemo/HUD/Icons2D/Jade_TeemoPassive.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Teemo/HUD/Icons2D/Jade_TeemoPassive.dds",
         "name": "game_character_displayname_Jade_Teemo",
         "mUseCCAnimations": true,
         "selectionHeight": 100.0,
@@ -5963,7 +5777,7 @@
         "Script": "{34f45ed7}",
         "__type": "CharacterRecord"
     },
-    "{bc92d018}": {
+    "Characters/Jade_Teemo/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "__linked": []

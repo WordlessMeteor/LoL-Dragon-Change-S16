@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "تؤدي عمليات القتل أو المساعدة في القتل إلى منح كاتارينا ذهبًا إضافيًا، كما تقلص فترات تبريد قدراتها بمقدار 15 ثانية."
+        "description": "تقلص عمليات قتل الأبطال أو المساعدة في القتل فترات تبريد كاتارينا بمقدار 15ث."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ترمي كاتارينا خنجرًا يرتد من عدو إلى آخر، ملحقًا ضرر سحر.",
-            "dynamicDescription": "ترمي خنجرًا يلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>. يرتد الخنجر @MaxBounces@ من المرات الإضافية، ملحقًا ضررًا أقل بنسبة 10% مع كل ارتداد.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ترمي خنجرًا يلحق <magicDamage>@TotalDamage@</magicDamage> ضرر سحر. يرتد الخنجر إلى أقرب @MaxBounces@ من الأعداء الأقرب، ملحقًا ضررًا أقل بنسبة 10% مع كل ارتداد.<br><br>يتم وسم الأعداء المصابين لمدة @MarkDuration@ث. تستهلك هجمات كاتارينا الأساسية أو تعويذاتها الوسم، فتلحق <magicDamage>@TotalDamageMark@</magicDamage> ضرر سحر إضافي.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "غرائز القاتل",
+            "name": "الفولاذ المشؤوم",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تكسب تعويذة كاترينا الأساسية التالية تأثيرًا إضافيًا.",
-            "dynamicDescription": "<spellPassive>تأثير كامن</spellPassive>: تلحق قدرات كاتارينا وهجماتها @TotalDamage@ ضرر إضافي.<br><br><spellActive>تأثير نشط:</spellActive> تمتلك تعويذة كاترينا الأساسية التالية تأثيرًا إضافيًا.<li><spellName>النصل المرتد</spellName>: تلحق كامل الضرر بكل هدف ويطبق <keyWord>الجراح الخطيرة</keyWord> لمدة @QHealingReductionDuration@ث.<li><spellName>سرعة البرق</spellName>: تكسب كاتارينا تقليصًا للضرر بنسبة @EDamageReduction@% لمدة @EDamageReductionDuration@ث.@SpellModifierDescriptionAppend@",
+            "description": "تدوّر كاتارينا خناجرها حولها، فتلحق ضرر سحر بجميع الأعداء في المنطقة. إذا أصابت بطلًا عدوًا، تكسب كاتارينا دفقة سرعة لفترة قصيرة.",
+            "dynamicDescription": "تدوّر الخناجر في دائرة، فتلحق @TotalDamage@ ضرر سحر. إذا أصابت بطلًا معاديًا، تكسب كاتارينا @Haste*100@% <speed>سرعة حركة</speed> لمدة @BuffDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تنتقل كاتارينا فورًا إلى موقع هدفها وتتلقى ضررًا مقلصًا من الأعداء لبضع ثوانٍ. إذا كان الهدف معاديًا، تُلحق به الضرر.",
-            "dynamicDescription": "تتحرك إلى موقع الهدف. تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> إذا كان الهدف معاديًا.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تتحرك إلى موقع الهدف. تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> إذا كان الهدف معاديًا.<br><br>بعد استخدام سرعة البرق، تتلقى كاتارينا ضررًا مخفضًا بنسبة @DamageReduction@% لمدة @DamageReductionDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تصبح كاتارينا أشبه بوابلٍ من النصال، فترمي الخناجر بسرعة لا مثيل لها على ما يصل إلى ثلاثة أبطال قريبين.",
-            "dynamicDescription": "تصبح كاتارينا أشبه بوابلٍ من النصال، فترمي الخناجر على أقرب 3 أبطال معادين، مما يلحق <magicDamage>@DamageCalcTooltipOnly@ ضرر سحر</magicDamage> على مدار ثانيتين.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تصبح أشبه بوابلٍ من النصال، فترمي الخناجر على أقرب 3 أبطال معادين، مما يلحق <magicDamage>@DamageCalcTooltipOnly@ ضرر سحر</magicDamage> على مدار 2.5ث.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

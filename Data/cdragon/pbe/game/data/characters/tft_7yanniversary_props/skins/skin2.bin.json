@@ -1,13 +1,13 @@
 {
-    "{2df847af}": {
+    "Characters/TFT_7yAnniversary_Props/Skins/Skin2": {
         "championSkinName": "TFT_7yAnniversary_Props",
         "skinAnimationProperties": {
-            "animationGraphData": "{ea05e1c4}",
+            "animationGraphData": "Characters/TFT_7yAnniversary_Props/Animations/Skin2",
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7yAnniversary_Props_Skin02.TFT_ArenaSkin_7yAnniversary.skl",
-            "simpleSkin": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7yAnniversary_Props_Skin02.TFT_ArenaSkin_7yAnniversary.skn",
+            "skeleton": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7yAnniversary_Props_Skin02.skl",
+            "simpleSkin": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7yAnniversary_Props_Skin02.skn",
             "selfIllumination": 2.0,
             "overrideBoundingBox": [
                 500.0,
@@ -17,22 +17,22 @@
             "submeshRenderOrder": "Duckbill_Body Duckbill_Eyes Duckbill_Cup_B Duckbill_Cup_A",
             "materialOverride": [
                 {
-                    "Material": "{ccd511e2}",
+                    "Material": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Body",
                     "submesh": "Duckbill_Body",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{734d90fc}",
+                    "Material": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Eyes",
                     "submesh": "Duckbill_Eyes",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{d6397d93}",
+                    "Material": "Characters/TFT_7yAnniversary_Props/Skins/Skin3/Materials/7yAnniversary_AnimProp_Mat_Cup",
                     "submesh": "Duckbill_Cup_A",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "Material": "{a9200632}",
+                    "Material": "Characters/TFT_7yAnniversary_Props/Skins/Skin3/Materials/7yAnniversary_AnimProp_Mat_Cup_B",
                     "submesh": "Duckbill_Cup_B",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
@@ -42,23 +42,23 @@
         "armorMaterial": "Metal",
         "idleParticlesEffects": [
             {
-                "effectKey": "{97d601da}",
+                "effectKey": "7yAnniversary_Skin2_Idle",
                 "boneName": "Spine2",
                 "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
             }
         ],
         "emoteBuffbone": "",
         "godrayFXbone": "",
-        "mResourceResolver": "{259728a5}",
+        "mResourceResolver": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Resources",
         "__type": "SkinCharacterDataProperties"
     },
-    "{259728a5}": {
+    "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Resources": {
         "resourceMap": {
-            "{97d601da}": "{6766fcff}"
+            "7yAnniversary_Skin2_Idle": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Particles/7yAnniversary_Skin2_Idle"
         },
         "__type": "ResourceResolver"
     },
-    "{6766fcff}": {
+    "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Particles/7yAnniversary_Skin2_Idle": {
         "complexEmitterDefinitionData": [
             {
                 "rate": {
@@ -111,7 +111,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/TFT_7yAnniversary_Props_Skin02_Idle_Skin22_common_ball32_Gradient.TFT_ArenaSkin_7yAnniversary.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/TFT_7yAnniversary_Props_Skin02_Idle_Skin22_common_ball32_Gradient.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -426,7 +426,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/TFT_7yAnniversary_Props_Skin02_Idle_TFT_Journeys_Sparkles_2x2.TFT_ArenaSkin_7yAnniversary.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/TFT_7yAnniversary_Props_Skin02_Idle_TFT_Journeys_Sparkles_2x2.tex",
                 "frameRate": 2.0,
                 "numFrames": 2,
                 "texDiv": [
@@ -550,7 +550,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/TFT_7yAnniversary_Props_Base_Idle_Aura_Self.TFT_ArenaSkin_7yAnniversary.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/TFT_7yAnniversary_Props_Base_Idle_Aura_Self.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -571,7 +571,7 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{0a364d82}"
+                            "Duckbill_Body"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -627,7 +627,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/color-hold.TFT_ArenaSkin_7yAnniversary.tex",
+                "texture": "ASSETS/Maps/Particles/TFT/set17_7YAnniversary/color-hold.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -637,12 +637,12 @@
         "flags": 213,
         "__type": "VfxSystemDefinitionData"
     },
-    "{734d90fc}": {
+    "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Eyes": {
         "name": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Eyes",
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7YAnniversary_PetDuckbill_Eyes_Tx.TFT_ArenaSkin_7yAnniversary.tex",
+                "texturePath": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7YAnniversary_PetDuckbill_Eyes_Tx.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -746,12 +746,12 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "{ccd511e2}": {
+    "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Body": {
         "name": "Characters/TFT_7yAnniversary_Props/Skins/Skin2/Materials/7yAnniversary_AnimProp_Mat_Body",
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7YAnniversary_PetDuckbill_Tx.TFT_ArenaSkin_7yAnniversary.tex",
+                "texturePath": "ASSETS/Characters/TFT_7yAnniversary_Props/Skins/Skin02/TFT_7YAnniversary_PetDuckbill_Tx.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }

@@ -26,92 +26,6 @@
                 "PositiveEffect_Boon",
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.5,
-                        1.75,
-                        2.0,
-                        2.25,
-                        2.5,
-                        2.200000047683716
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        -60.0,
-                        -60.0,
-                        -60.0,
-                        -60.0,
-                        -60.0,
-                        -60.0,
-                        -60.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.75,
-                        3.0,
-                        3.25,
-                        3.5,
-                        3.75,
-                        4.0,
-                        4.25
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.22499999403953552,
-                        0.25,
-                        0.2750000059604645,
-                        0.30000001192092896,
-                        0.30000001192092896
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "APBoost",
@@ -182,11 +96,9 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.6000000238418579,
-            "mCoefficient2": 0.05000000074505806,
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Whimsy.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Whimsy.dds"
             ],
             "{11704a2b}": 0.17500001192092896,
             "{f26881a0}": 0.7000000476837158,
@@ -278,6 +190,11 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
+                                    "type": "APBoost",
+                                    "nameOverride": "Spell_ListType_LuluW_Jade_BonusAP",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
                                     "type": "PolymorphDuration",
                                     "typeIndex": 3,
                                     "nameOverride": "Spell_ListType_LuluWPolymorphDuration",
@@ -289,11 +206,6 @@
                                 },
                                 {
                                     "type": "Cost",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "APBoost",
-                                    "nameOverride": "Spell_ListType_LuluW_Jade_BonusAP",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -364,7 +276,7 @@
         "mScriptName": "Jade_LuluWBuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Whimsy.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Whimsy.dds"
             ],
             "SpellEventToAudioEventSuffix": {
                 "12": "Play_sfx_Lulu_LuluWBuff_OnCast",
@@ -557,7 +469,7 @@
             "castFrame": 7.5,
             "missileSpeed": 2250.0,
             "mMissileEffectKey": "Jade_Lulu_W_Mis",
-            "mHitEffectKey": "{6a93acbc}",
+            "mHitEffectKey": "Jade_Lulu_W_tar_01",
             "selectionPriority": 1,
             "SpellEventToAudioEventSuffix": {
                 "12": "Play_sfx_Lulu_LuluWTwo_OnCast",
@@ -762,7 +674,7 @@
             "castFrame": 7.5,
             "missileSpeed": 2250.0,
             "mMissileEffectKey": "Jade_Lulu_W_Mis",
-            "mHitEffectKey": "{6a93acbc}",
+            "mHitEffectKey": "Jade_Lulu_W_tar_01",
             "selectionPriority": 1,
             "SpellEventToAudioEventSuffix": {
                 "12": "Play_sfx_Lulu_LuluWTwo_OnCast",
@@ -979,7 +891,7 @@
             },
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_CommandPix.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_CommandPix.dds"
             ],
             "{11704a2b}": 0.17500001192092896,
             "{f26881a0}": 0.7000000476837158,
@@ -1138,7 +1050,7 @@
         "mScriptName": "Jade_LuluFaerieBurn",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_CommandPix.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_CommandPix.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1153,7 +1065,7 @@
         "mScriptName": "Jade_LuluFaerieShield",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_CommandPix.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_CommandPix.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1181,52 +1093,65 @@
                 "{7816c04b}": {
                     "mFormulaParts": [
                         {
-                            "values": [
-                                0.0,
-                                1.2999999523162842,
-                                3.0,
-                                6.0,
-                                6.0,
-                                9.0,
-                                9.0,
-                                12.0,
-                                12.0,
-                                15.0,
-                                15.0,
-                                18.0,
-                                18.0,
-                                21.0,
-                                21.0,
-                                24.0,
-                                24.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0,
-                                27.0
+                            "mLevel1Value": 3.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 3,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 5,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 7,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 9,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 13,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 15,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 17,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                }
                             ],
-                            "__type": "ByCharLevelFormulaCalculationPart"
-                        },
-                        {
-                            "mStatFormula": 2,
-                            "mCoefficient": 0.05000000074505806,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "TotalDamageCalc": {
+                    "mMultiplier": {
+                        "mNumber": 3.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "{7816c04b}",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.dds"
             ],
             "castRange": [
                 0.0,
@@ -1257,8 +1182,7 @@
                     "mLocKeys": {
                         "keyName": "game_character_passiveName_Lulu_Jade",
                         "keySummary": "game_character_passiveDescription_Lulu_Jade",
-                        "keyTooltip": "game_character_passiveTooltip_Lulu_Jade",
-                        "keyTooltipExtended": "game_character_passiveTooltipExt_Lulu_Jade"
+                        "keyTooltip": "game_character_passiveTooltip_Lulu_Jade"
                     },
                     "__type": "TooltipInstanceSpell"
                 },
@@ -1332,7 +1256,7 @@
             "mCoefficient": 1.2000000476837158,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.dds"
             ],
             "mCastTime": 0.25099998712539673,
             "{11704a2b}": 0.25,
@@ -1438,10 +1362,10 @@
             "mCastType": 3,
             "castFrame": 3.0,
             "missileSpeed": 900.0,
-            "mMissileEffectKey": "{bbd46c76}",
+            "mMissileEffectKey": "Jade_Lulu_Pix_BA_mis",
             "mLineWidth": 30.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{65e0f902}",
+            "mHitEffectKey": "Jade_Lulu_Pix_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "root",
             "selectionPriority": 2,
@@ -1620,7 +1544,7 @@
             "mCastType": 3,
             "castFrame": 3.0,
             "missileSpeed": 1000.0,
-            "mMissileEffectKey": "{4cfd1561}",
+            "mMissileEffectKey": "Jade_Lulu_P_Faerie_Flash_01",
             "mLineWidth": 1.0,
             "mHitEffectOrientType": 2,
             "bHaveHitBone": true,
@@ -1754,7 +1678,7 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{78ff4c94}",
+            "mMissileEffectKey": "Jade_Lulu_BA_mis",
             "mHitEffectOrientType": 2,
             "mHitEffectName": "doesnotexist.troy",
             "bHaveHitBone": true,
@@ -1865,9 +1789,9 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1450.0,
-            "mMissileEffectKey": "{78ff4c94}",
+            "mMissileEffectKey": "Jade_Lulu_BA_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{65c073d0}",
+            "mHitEffectKey": "Jade_Lulu_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "selectionPriority": 1,
@@ -1910,7 +1834,7 @@
         "mScriptName": "Jade_LuluQSlow",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Glitterbolt.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Glitterbolt.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -1934,28 +1858,15 @@
             "mAlternateName": "Jade_LuluQ",
             "DataValues": [
                 {
-                    "name": "MinionMod",
+                    "name": "BaseDamage",
                     "values": [
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071,
-                        0.699999988079071
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "DoubleHitBonus",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        35.0,
+                        80.0,
+                        125.0,
+                        170.0,
+                        215.0,
+                        260.0,
+                        305.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1969,19 +1880,6 @@
                         0.5,
                         0.5,
                         0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "BaseDamage",
-                    "values": [
-                        25.0,
-                        80.0,
-                        125.0,
-                        170.0,
-                        215.0,
-                        260.0,
-                        235.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2001,44 +1899,14 @@
                 {
                     "name": "SlowDuration",
                     "values": [
-                        2.0,
+                        0.75,
                         1.0,
                         1.25,
                         1.5,
                         1.75,
                         2.0,
-                        2.0
+                        2.25
                     ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "SlowDecayTicks",
-                    "values": [
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0,
-                        8.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MaxTicks",
-                    "values": [
-                        3.0,
-                        4.0,
-                        5.0,
-                        6.0,
-                        7.0,
-                        8.0,
-                        9.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "AttactkSpeedMod",
                     "__type": "SpellDataValue"
                 }
             ],
@@ -2055,38 +1923,11 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "BonusMissileDamage": {
-                    "mMultiplier": {
-                        "mDataValue": "DoubleHitBonus",
-                        "__type": "NamedDataValueCalculationPart"
-                    },
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "BaseDamage",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mDataValue": "APRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "{5c9388bf}": {
-                    "mFormulaParts": [
-                        {
-                            "mStatFormula": 2,
-                            "mCoefficient": 0.15000000596046448,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
                 }
             },
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Glitterbolt.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Glitterbolt.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2223,12 +2064,12 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Cost",
+                                    "type": "SlowDuration",
+                                    "nameOverride": "Spell_ListType_SlowDuration",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "SlowDuration",
-                                    "nameOverride": "Spell_ListType_SlowDuration",
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2871,7 +2712,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_GiantGrowth.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_GiantGrowth.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -3115,7 +2956,7 @@
         "mScriptName": "Jade_LuluRBoom",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_GiantGrowth.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_GiantGrowth.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -3139,7 +2980,7 @@
         "mScriptName": "Jade_LuluRSlow",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_GiantGrowth.project_jade.dds"
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_GiantGrowth.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -3236,9 +3077,9 @@
             "mCastType": 1,
             "castFrame": 7.5,
             "missileSpeed": 1450.0,
-            "mMissileEffectKey": "{78ff4c94}",
+            "mMissileEffectKey": "Jade_Lulu_BA_mis",
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{65c073d0}",
+            "mHitEffectKey": "Jade_Lulu_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "selectionPriority": 1,
@@ -3712,7 +3553,7 @@
         "passiveLuaName": "",
         "passiveToolTip": "Spell_Jade_LuluPassive_Summary",
         "passiveSpell": "Jade_LuluPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.dds",
         "name": "game_character_displayname_Jade_Lulu",
         "selectionHeight": 85.0,
         "selectionRadius": 100.0,

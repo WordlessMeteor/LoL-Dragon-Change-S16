@@ -329,7 +329,7 @@
         "mScriptName": "Jade_EzrealWDebuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_EssenceFlux.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_EssenceFlux.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -387,13 +387,13 @@
                 {
                     "name": "AttackSpeed",
                     "values": [
-                        17.0,
+                        0.0,
+                        5.0,
+                        10.0,
+                        15.0,
                         20.0,
-                        23.0,
-                        26.0,
-                        29.0,
-                        32.0,
-                        35.0
+                        25.0,
+                        30.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -476,7 +476,7 @@
             },
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_EssenceFlux.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_EssenceFlux.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -724,7 +724,7 @@
             "mCoefficient2": 1.0,
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_EssenceFlux.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_EssenceFlux.dds"
             ],
             "{11704a2b}": 1.0,
             "{f26881a0}": 1.0,
@@ -1225,9 +1225,9 @@
             "mCoefficient2": 1.0,
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_TrueshotBarrage.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_TrueshotBarrage.dds"
             ],
-            "mMinimapIconName": "ASSETS/Characters/Jade_Ezreal/HUD/Jade_Ezreal_TrueshotBarrage_Circle.project_jade.tex",
+            "mMinimapIconName": "ASSETS/Characters/Jade_Ezreal/HUD/Jade_Ezreal_TrueshotBarrage_Circle.tex",
             "{11704a2b}": 1.0,
             "{f26881a0}": 1.0,
             "cooldownTime": [
@@ -1475,12 +1475,12 @@
                     "name": "BaseDamage",
                     "values": [
                         15.0,
-                        35.0,
-                        55.0,
-                        75.0,
-                        95.0,
+                        40.0,
+                        65.0,
+                        90.0,
                         115.0,
-                        135.0
+                        140.0,
+                        165.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1500,13 +1500,13 @@
                 {
                     "name": "BaseDamageADRatio",
                     "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158,
+                        1.2000000476837158
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1608,7 +1608,7 @@
             "mCoefficient2": 0.15000000596046448,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_MysticShot.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_MysticShot.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1712,7 +1712,7 @@
             },
             "mCastType": 3,
             "castFrame": 1.9800000190734863,
-            "mMissileEffectKey": "{36aad493}",
+            "mMissileEffectKey": "Jade_Ezreal_Q_mis",
             "mLineWidth": 60.0,
             "mHitEffectOrientType": 2,
             "mHitEffectKey": "Jade_Ezreal_Q_tar",
@@ -2120,7 +2120,7 @@
             "mCoefficient": 0.75,
             "mAnimationName": "Spell3",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_ArcaneShift.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_ArcaneShift.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -2458,10 +2458,10 @@
             "mCastType": 1,
             "castFrame": 4.050000190734863,
             "missileSpeed": 2000.0,
-            "mMissileEffectKey": "{f23ec107}",
+            "mMissileEffectKey": "Jade_Ezreal_E_mis",
             "mLineWidth": 80.0,
             "mHitEffectOrientType": 2,
-            "mHitEffectKey": "{b527313b}",
+            "mHitEffectKey": "Jade_Ezreal_E_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_buffbone_GLB_Center_loc",
             "selectionPriority": 2,
@@ -2582,7 +2582,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.dds"
             ],
             "castRange": [
                 0.0,
@@ -2633,7 +2633,7 @@
         "mScriptName": "Jade_EzrealPassiveStacks",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Ezreal_RisingSpellForce.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -2800,7 +2800,7 @@
         "passiveName": "Spell_Jade_EzrealPassive_Name",
         "passiveToolTip": "Spell_Jade_EzrealPassive_Summary",
         "passiveSpell": "Jade_EzrealPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Ezreal/HUD/Icons2D/Jade_Ezreal_RisingSpellForce.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Ezreal/HUD/Icons2D/Jade_Ezreal_RisingSpellForce.dds",
         "name": "game_character_displayname_Jade_Ezreal",
         "selectionHeight": 170.0,
         "selectionRadius": 115.0,
@@ -2923,7 +2923,7 @@
         "samplerValues": [
             {
                 "TextureName": "Base_Mask",
-                "texturePath": "ASSETS/Characters/Jade_Ezreal/Portraits/Materials/EZ_classic_portrait_M.project_jade.tex",
+                "texturePath": "ASSETS/Characters/Jade_Ezreal/Portraits/Materials/EZ_classic_portrait_M.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -3282,7 +3282,7 @@
         "{55bb9b57}": 15,
         "{ff3c9ff8}": "{da1d5efa}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Ezreal/Portraits/Materials/Jade_Ezreal_Portrait_Classic_Reborn.project_jade.tex",
+            "image": "ASSETS/Characters/Jade_Ezreal/Portraits/Materials/Jade_Ezreal_Portrait_Classic_Reborn.tex",
             "__type": "CensoredImage"
         },
         "{cda5dc7f}": "Characters/Jade_Ezreal/Portraits/Materials/UI_Splash_Foil_Premium",

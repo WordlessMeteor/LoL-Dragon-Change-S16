@@ -1,5 +1,5 @@
 {
-    "{08edb4d5}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaCritAttack": {
         "ObjectName": "Jade_TristanaCritAttack",
         "mScriptName": "Jade_TristanaCritAttack",
         "mSpell": {
@@ -85,7 +85,7 @@
             "mCastType": 1,
             "castFrame": 6.462500095367432,
             "missileSpeed": 2250.0,
-            "mMissileEffectKey": "{10531e82}",
+            "mMissileEffectKey": "Jade_Tristana_BA_mis2",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -106,16 +106,16 @@
         },
         "__type": "SpellObject"
     },
-    "{27f38de6}": {
-        "mRootSpell": "{6bc1ff79}",
+    "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility": {
+        "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE",
         "mChildSpells": [
-            "{6bc1ff79}",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE",
             "{990d44ac}"
         ],
         "mName": "Jade_TristanaEAbility",
         "__type": "AbilityObject"
     },
-    "{35170715}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaBasicAttack2": {
         "ObjectName": "Jade_TristanaBasicAttack2",
         "mScriptName": "Jade_TristanaBasicAttack2",
         "mSpell": {
@@ -201,7 +201,7 @@
             "mCastType": 1,
             "castFrame": 6.462500095367432,
             "missileSpeed": 2250.0,
-            "mMissileEffectKey": "{77a60084}",
+            "mMissileEffectKey": "Jade_Tristana_BA_mis",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -222,24 +222,24 @@
         },
         "__type": "SpellObject"
     },
-    "{54a6f2f4}": {
-        "mRootSpell": "{a3f9a931}",
+    "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility": {
+        "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW",
         "mChildSpells": [
-            "{a3f9a931}",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW",
             "{fbb089bb}"
         ],
         "mName": "Jade_TristanaWAbility",
         "__type": "AbilityObject"
     },
-    "{a6ab550a}": {
-        "mRootSpell": "{5abea549}",
+    "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility": {
+        "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility/Jade_TristanaQ",
         "mChildSpells": [
-            "{5abea549}"
+            "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility/Jade_TristanaQ"
         ],
         "mName": "Jade_TristanaQAbility",
         "__type": "AbilityObject"
     },
-    "{5abea549}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility/Jade_TristanaQ": {
         "ObjectName": "Jade_TristanaQ",
         "mScriptName": "Jade_TristanaQ",
         "mSpell": {
@@ -284,7 +284,7 @@
             ],
             "mAnimationName": "Idle1",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_HeadShot.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_HeadShot.dds"
             ],
             "{f26881a0}": 1.399999976158142,
             "cooldownTime": [
@@ -454,7 +454,7 @@
         },
         "__type": "SpellObject"
     },
-    "{6bc1ff79}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE": {
         "ObjectName": "Jade_TristanaE",
         "mScriptName": "Jade_TristanaE",
         "mSpell": {
@@ -543,7 +543,7 @@
                 "{fd502790}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{d613336a}",
+                            "mDataValue": "ActiveDot",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -557,7 +557,7 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{80142f04}",
+                            "mDataValue": "ActiveDotTotal",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -570,7 +570,7 @@
             },
             "mAnimationName": "Crit",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_ExplosiveShot.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_ExplosiveShot.dds"
             ],
             "cooldownTime": [
                 16.0,
@@ -657,8 +657,8 @@
             "mCastType": 1,
             "castFrame": 6.0,
             "missileSpeed": 1400.0,
-            "mMissileEffectKey": "{ce6d1848}",
-            "mHitEffectKey": "{769e9f94}",
+            "mMissileEffectKey": "Jade_Tristana_E_mis",
+            "mHitEffectKey": "Jade_Tristana_E_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
             "mFloatVarsDecimals": [
@@ -771,7 +771,7 @@
         "mScriptName": "Jade_TristanaE_Debuff",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_DetonatingShot.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_DetonatingShot.dds"
             ],
             "__type": "SpellDataResource"
         },
@@ -781,15 +781,15 @@
         },
         "__type": "SpellObject"
     },
-    "{a4e99d21}": {
-        "mRootSpell": "{9da250e9}",
+    "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility": {
+        "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility/Jade_TristanaR",
         "mChildSpells": [
-            "{9da250e9}"
+            "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility/Jade_TristanaR"
         ],
         "mName": "Jade_TristanaRAbility",
         "__type": "AbilityObject"
     },
-    "{9da250e9}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility/Jade_TristanaR": {
         "ObjectName": "Jade_TristanaR",
         "mScriptName": "Jade_TristanaR",
         "mSpell": {
@@ -843,7 +843,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_BusterShot.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_BusterShot.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -936,7 +936,7 @@
             "mCastType": 1,
             "castFrame": 10.260000228881836,
             "missileSpeed": 1600.0,
-            "mMissileEffectKey": "{e3dac6e9}",
+            "mMissileEffectKey": "Jade_Tristana_R_mis",
             "mana": [
                 100.0,
                 100.0,
@@ -1059,7 +1059,7 @@
         },
         "__type": "SpellObject"
     },
-    "{a3f9a931}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW": {
         "ObjectName": "Jade_TristanaW",
         "mScriptName": "Jade_TristanaW",
         "mSpell": {
@@ -1113,7 +1113,7 @@
             },
             "mAnimationName": "Spell2_In",
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_RendingShot.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_RendingShot.dds"
             ],
             "{11704a2b}": 0.25,
             "{f26881a0}": 1.0,
@@ -1393,7 +1393,7 @@
         "mName": "Jade_TristanaPassiveAbility",
         "__type": "AbilityObject"
     },
-    "{ec9edd85}": {
+    "Characters/Jade_Tristana/Spells/Jade_TristanaBasicAttack": {
         "ObjectName": "Jade_TristanaBasicAttack",
         "mScriptName": "Jade_TristanaBasicAttack",
         "mSpell": {
@@ -1478,7 +1478,7 @@
             "mCastType": 1,
             "castFrame": 6.462500095367432,
             "missileSpeed": 2250.0,
-            "mMissileEffectKey": "{77a60084}",
+            "mMissileEffectKey": "Jade_Tristana_BA_mis",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1515,7 +1515,7 @@
                 }
             },
             "mImgIconName": [
-                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_DrawAbead.project_jade.dds"
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_DrawAbead.dds"
             ],
             "cooldownTime": [
                 0.0,
@@ -1583,7 +1583,7 @@
         },
         "__type": "SpellObject"
     },
-    "{27de4704}": {
+    "Characters/Jade_Tristana/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
     "{835de583}": {
@@ -2089,7 +2089,7 @@
     "{9505e2d4}": {
         "__type": "ChampionRuneRecommendationsContext"
     },
-    "{c113f112}": {
+    "Characters/Jade_Tristana/CharacterRecords/Root": {
         "mCharacterName": "Jade_Tristana",
         "baseHPModifiable": {
             "baseValue": 497.0,
@@ -2197,10 +2197,10 @@
             "Jade_TristanaRAbility/Jade_TristanaR"
         ],
         "spells": [
-            "{5abea549}",
-            "{a3f9a931}",
-            "{6bc1ff79}",
-            "{9da250e9}"
+            "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility/Jade_TristanaQ",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility/Jade_TristanaR"
         ],
         "{c1984296}": [
             "Shared/Spells/BaseSpell",
@@ -2222,16 +2222,16 @@
         ],
         "mAbilities": [
             "{bbd819cc}",
-            "{a6ab550a}",
-            "{54a6f2f4}",
-            "{27f38de6}",
-            "{a4e99d21}"
+            "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Tristana",
         "passiveLuaName": "",
         "passiveToolTip": "game_character_passiveDescription_Jade_Tristana",
         "passiveSpell": "Jade_TristanaPassive",
-        "passive1IconName": "ASSETS/Characters/Jade_Tristana/HUD/Icons2D/Jade_Tristana_Passive.project_jade.dds",
+        "passive1IconName": "ASSETS/Characters/Jade_Tristana/HUD/Icons2D/Jade_Tristana_Passive.dds",
         "name": "game_character_displayname_Jade_Tristana",
         "mUseCCAnimations": true,
         "selectionHeight": 110.0,
