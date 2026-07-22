@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix è una Fata selvaggia che accompagna Lulu. Pix spara una raffica di energia magica ai bersagli che Lulu attacca."
+        "description": "Pix spara dei dardi magici di energia ogni volta che il campione che sta seguendo attacca un'altra unità. Questi dardi sono guidati, ma possono essere intercettati da altre unità."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Pix e Lulu sparano entrambe un dardo di energia magica che rallenta in maniera considerevole tutti i nemici che colpisce. Un nemico può essere colpito da un solo dardo.",
-            "dynamicDescription": "<mainText>Sia Lulu che Pix sparano un dardo perforante che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>; i nemici colpiti subiscono <status>rallentamento</status> di un @SlowAmount*-100@% per @SlowDuration@ secondo/i. Questo rallentamento si riduce nel tempo fino a un minimo di un @MinMoveSpeedMod@% (il minimo è fissato all'80%).<br><br>Un nemico può essere colpito da un solo dardo.",
+            "dynamicDescription": "Sia Lulu che Pix sparano un dardo perforante che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>; i nemici colpiti subiscono un @SlowAmount*-100@% di <status>rallentamento</status> che decade nell'arco di @SlowDuration@ secondi.<br><br>Un nemico può essere colpito da un solo dardo.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

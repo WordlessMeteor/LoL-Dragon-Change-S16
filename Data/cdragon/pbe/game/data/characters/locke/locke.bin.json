@@ -1455,6 +1455,26 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "CooldownReduction",
+                            "values": [
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
@@ -1845,8 +1865,93 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealCapAPRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealCapLevel1Value",
+                    "values": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealCapLevel18Value",
+                    "values": [
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "BaseDamageRestoreAmount",
+                            "values": [
+                                20.0,
+                                80.0,
+                                140.0,
+                                200.0,
+                                260.0,
+                                320.0,
+                                380.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "HealCapLevel1Value",
+                            "values": [
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "HealCapLevel18Value",
+                            "values": [
+                                675.0,
+                                675.0,
+                                675.0,
+                                675.0,
+                                675.0,
+                                675.0,
+                                675.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "MoveSpeed": {
                     "mFormulaParts": [
@@ -1898,13 +2003,13 @@
                 "MaxHealingThreshold": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 150.0,
-                            "mEndValue": 450.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "{0589a59c}": "{ac95ccf9}",
+                            "{0b65bc23}": "{8a4b3f41}",
+                            "__type": "{ee18a47b}"
                         },
                         {
-                            "mCoefficient": 0.6000000238418579,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "{7c4e2ec3}",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -3127,13 +3232,126 @@
         "ObjectName": "LockePassive",
         "mScriptName": "LockePassive",
         "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinOnHitStartValue",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinOnHitEndValue",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxOnHitStartValue",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxOnHitEndValue",
+                    "values": [
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "MinOnHitStartValue",
+                            "values": [
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MinOnHitEndValue",
+                            "values": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MaxOnHitStartValue",
+                            "values": [
+                                15.0,
+                                15.0,
+                                15.0,
+                                15.0,
+                                15.0,
+                                15.0,
+                                15.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MaxOnHitEndValue",
+                            "values": [
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "MinOnHitDamage": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 5.0,
-                            "mEndValue": 40.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "{0589a59c}": "{9d53349e}",
+                            "{0b65bc23}": "{120e4ec1}",
+                            "__type": "{ee18a47b}"
                         },
                         {
                             "mCoefficient": 0.10000000149011612,
@@ -3145,9 +3363,9 @@
                 "MaxOnHitDamage": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 10.0,
-                            "mEndValue": 80.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "{0589a59c}": "{2513b118}",
+                            "{0b65bc23}": "{39bb71bf}",
+                            "__type": "{ee18a47b}"
                         },
                         {
                             "mCoefficient": 0.20000000298023224,

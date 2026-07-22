@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Dopo aver lanciato 3 abilità, il prossimo attacco di Sona infligge danni magici bonus."
+        "description": "Dopo aver lanciato 3 abilità, il prossimo attacco di Sona infligge danni magici bonus e fa in modo che il bersaglio infligga danni ridotti per alcuni secondi."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Sona suona l'Inno al valore, conferendo ai campioni alleati vicini danni bonus e potere magico. Inoltre, lanciare questa abilità emette dei dardi di suono che infliggono danni magici ai due campioni nemici o mostri più vicini.",
-            "dynamicDescription": "<keywordMajor>Aura persistente:</keywordMajor> aumenta l'<physicalDamage>attacco fisico</physicalDamage> e il <magicDamage>potere magico</magicDamage> dei campioni alleati vicini di @APADBoost@.<br><br><spellActive>Attiva:</spellActive> infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> ai due nemici più vicini, dando la priorità ai campioni.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aura persistente:</keywordMajor> conferisce ai campioni alleati vicini @APADBoost@ <physicalDamage>attacco fisico</physicalDamage> e <magicDamage>potere magico</magicDamage>.<br><br><spellActive>Attiva:</spellActive> infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> ai @EnemiesToHit@ nemici più vicini, dando la priorità ai campioni.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Sona suona l'Aria della perseveranza, conferendo ai campioni alleati vicini armatura e resistenza magica bonus. Inoltre, lanciare questa abilità sprigiona melodie curative che rigenerano Sona e un alleato ferito nelle vicinanze.",
-            "dynamicDescription": "<keywordMajor>Aura persistente:</keywordMajor> fornisce ai campioni alleati vicini @ARMRBoost@ <scaleArmor>armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR> bonus.<br><br><spellActive>Attiva:</spellActive> cura Sona e il campione alleato più ferito nelle vicinanze di <healing>@Healing@ salute</healing> e fornisce @ARMRBoost@ <scaleArmor>armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR> aggiuntive per 3 secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aura persistente:</keywordMajor> conferisce ai campioni alleati vicini @ARMRBoost@ <scaleArmor>armatura</scaleArmor> e <scaleMR>resistenza magica</scaleMR>.<br><br><spellActive>Attiva:</spellActive> cura Sona e il campione alleato ferito più vicino di <healing>@Healing@ salute</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Sona suona l'Ode alla celerità, conferendo velocità di movimento bonus ai campioni alleati nelle vicinanze. Inoltre, lanciare questa abilità energizza gli alleati vicini con una raffica di velocità.",
-            "dynamicDescription": "<keywordMajor>Aura persistente:</keywordMajor> fornisce ai campioni alleati vicini <speed>@MSBoost@ velocità di movimento bonus</speed>.<br><br><spellActive>Attiva:</spellActive> fornisce agli alleati vicini <speed>@MoveSpeedMod*100@% velocità di movimento</speed> per 1,5 secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aura persistente:</keywordMajor> conferisce ai campioni alleati vicini <speed>@MSBoost@ velocità di movimento</speed>.<br><br><spellActive>Attiva:</spellActive> conferisce ai campioni alleati vicini <speed>@MoveSpeedMod*100@% velocità di movimento</speed> per @ActiveSpeedDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

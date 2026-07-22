@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix est une fée sauvage qui accompagne Lulu. Pix tire un barrage d'énergie magique sur les cibles que Lulu attaque."
+        "description": "Pix tire des projectiles magiques quand le champion qu'il suit attaque une autre unité ennemie. Ces tirs sont guidés, mais ils peuvent être interceptés par d'autres unités."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Pix et Lulu tirent chacun un projectile magique qui blesse et ralentit grandement les ennemis touchés. Un ennemi ne peut être blessé que par un seul projectile.",
-            "dynamicDescription": "<mainText>Lulu et Pix tirent chacun un projectile perforant qui inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>. Les ennemis touchés sont <status>ralentis</status> @SlowAmount*-100@% pendant @SlowDuration@ sec. Le ralentissement diminue petit à petit jusqu'à un minimum de @MinMoveSpeedMod@% (le minimum est limité à 80%).<br><br>Un ennemi ne peut être blessé que par un seul projectile.",
+            "dynamicDescription": "Lulu et Pix tirent chacun un projectile perforant qui inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>. Les ennemis touchés sont <status>ralentis</status> de @SlowAmount*-100@%, (ce ralentissement diminue en @SlowDuration@ sec).<br><br>Un ennemi ne peut être blessé que par un seul projectile.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

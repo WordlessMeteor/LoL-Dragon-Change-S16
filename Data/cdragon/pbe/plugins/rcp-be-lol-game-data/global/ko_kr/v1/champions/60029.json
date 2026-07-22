@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "트위치가 짧은 시간 동안 투명 상태가 되고 이동 속도를 얻습니다. 투명 상태에서 벗어나면 잠시 공격 속도가 증가합니다.",
-            "dynamicDescription": "<mainText>@MaxFadeTime@초 후, 트위치가 @StealthDuration@초 동안 <keywordStealth>위장</keywordStealth> 상태가 됩니다.<br><br><keywordStealth>위장</keywordStealth> 상태에서 벗어나면 @AttackSpeedDuration@초간 <attackSpeed>@AttackSpeedMod*100@%의 공격 속도</attackSpeed>를 얻습니다.",
+            "description": "트위치가 몇 초 동안 투명해지고 이동 속도가 증가합니다. 투명 상태에서 벗어나면 공격 속도를 얻습니다.",
+            "dynamicDescription": "트위치가 @MaxFadeTime@초 동안 피해를 받지 않거나, @MaxDelayTime@초가 경과하면 @StealthDuration@초간 <keywordStealth>투명</keywordStealth> 상태가 되고 <speed>이동 속도가 @MoveSpeedMod*100@%</speed> 증가합니다.<br><br><keywordStealth>투명</keywordStealth> 상태에서 벗어나면 @AttackSpeedDuration@초간 <attackSpeed>@AttackSpeedMod*100@%의 공격 속도</attackSpeed>를 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "쇠약의 독",
+            "name": "독약 병",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "트위치가 쇠약의 독으로 주변의 모든 챔피언을 중독시켜, 이동 속도를 둔화시킵니다.",
-            "dynamicDescription": "트위치가 주변 적 챔피언을 @Duration@초 동안 @SlowPercent*-100@% <status>둔화</status>시킵니다. 둔화율은 <keywordMajor>맹독</keywordMajor> 중첩 1회당 @PassiveStackSlowPercent*-100@%씩 증가합니다.(최대 @MaxSlowTooltip@)<br><br><status>둔화</status>를 적용한 뒤에 <keywordMajor>맹독</keywordMajor> 중첩을 쌓으면 <speed>이동 속도</speed>가 추가로 감소합니다.@SpellModifierDescriptionAppend@",
+            "description": "트위치가 폭발하는 독약 병을 던져, 범위 내의 적에게 맹독을 적용하고 둔화시킵니다.",
+            "dynamicDescription": "트위치가 폭발하는 독약 병을 던져, 적에게 @StacksAdded@회의 <keywordMajor>맹독</keywordMajor> 중첩을 적용하고 @Duration@초 동안 @BaseSlowAmount@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "트위치가 주변의 모든 적이 몸에서 맹독을 분출하게 해, 중첩 수에 비례하는 피해를 입힙니다.",
-            "dynamicDescription": "<mainText>트위치가 주변의 중첩이 남은 모든 적에게 <physicalDamage>@BaseDamage@</physicalDamage>+<keywordMajor>맹독</keywordMajor> 중첩당 <physicalDamage>@TotalStackDamage@</physicalDamage>의 물리 피해를 입히고 중첩을 전부 소모합니다.",
+            "dynamicDescription": "트위치가 주변의 중첩이 남은 모든 적에게 <physicalDamage>@BaseDamage@</physicalDamage>+<keywordMajor>맹독</keywordMajor> 중첩당 <physicalDamage>@TotalStackDamage@</physicalDamage>의 물리 피해를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "트위치가 눈을 감은 채 석궁을 발사해 전방에 강력한 관통 화살을 퍼붓습니다.",
-            "dynamicDescription": "<mainText>트위치가 @Duration@초 동안 @BonusRange@의 공격 사거리, <physicalDamage>@BonusAD@의 공격력</physicalDamage>을 얻습니다. 그동안 기본 공격 시 관통 화살을 발사하여, 대상을 추가로 맞힐 때마다 @FallOffDamage*100@%씩 감소한 피해를 입힙니다. (최소 @MinimumFallOffDamage*100@%)",
+            "dynamicDescription": "트위치가 @Duration@초 동안 @BonusRange@의 공격 사거리, <physicalDamage>@BonusAD@의 공격력</physicalDamage>을 얻습니다. 그동안 기본 공격 시 관통 화살을 발사하여, 대상을 추가로 맞힐 때마다 @FallOffDamage*100@%씩 감소한 피해를 입힙니다. (최소 @MinimumFallOffDamage*100@%)@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

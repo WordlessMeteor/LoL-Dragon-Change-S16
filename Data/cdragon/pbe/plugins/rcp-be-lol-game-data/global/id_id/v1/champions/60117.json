@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix adalah Faerie liar yang menemani Lulu. Pix akan menembakkan rentetan energi magis pada target yang diserang Lulu."
+        "description": "Pix menembakkan bolt energy magis setiap kali champion yang diikutinya menyerang unit musuh lain. Bolt ini akan mengejar target, tetapi bisa dihadang oleh unit lain."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Pix dan Lulu sama-sama menembakkan bolt energy magis yang menerapkan slow besar ke semua musuh yang terkena. Musuh hanya bisa menerima damage dari satu bolt.",
-            "dynamicDescription": "<mainText>Lulu dan Pix menembakkan piercing bolt, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>, menerapkan <status>Slow</status> sebesar @SlowAmount*-100@% selama @SlowDuration@ detik pada musuh yang terkena. Efek slow ini akan berkurang seiring waktu hingga minimum @MinMoveSpeedMod@% (Minimum dibatasi hingga 80%).<br><br>Musuh hanya bisa menerima damage dari satu bolt.",
+            "dynamicDescription": "Lulu dan Pix menembakkan piercing bolt, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>, menerapkan <status>Slow</status> pada musuh yang terkena sebesar @SlowAmount*-100@%, yang berkurang selama @SlowDuration@ detik.<br><br>Musuh hanya bisa menerima damage dari satu bolt.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

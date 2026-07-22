@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "ルルの周囲には、いたずら好きの妖精ピックスが飛び回っている。ルルが通常攻撃を行うと、その対象を魔法のビームで追撃する。"
+        "description": "ピックスがくっついているチャンピオンが敵ユニットを攻撃するたびに、ピックスも魔法のビームで援護する。このビームは対象に追従するが、射線に別のユニットが割り込むと、そのユニットに遮られる。"
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ピックスとルルが同時に魔法のビームを発射し、命中したすべての敵に強力なスロウ効果を付与する。2本のビームが命中しても、ダメージは1本分のみ。",
-            "dynamicDescription": "<mainText>ルルとピックスがそれぞれ貫通するビームを放ち、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。命中した敵には、@SlowDuration@秒間@SlowAmount*-100@%の<status>スロウ効果</status>が付与される。このスロウ効果は時間経過と共に減衰し、最小で@MinMoveSpeedMod@%になる(下限は80%)。<br><br>2本のビームが命中しても、ダメージは1本分のみ。",
+            "dynamicDescription": "ルルとピックスがそれぞれ貫通するビームを放ち、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。命中した敵には、@SlowAmount*-100@%の<status>スロウ効果</status>が付与される。このスロウ効果は@SlowDuration@秒かけて元に戻る。<br><br>2本のビームが命中しても、ダメージは1本分のみ。@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

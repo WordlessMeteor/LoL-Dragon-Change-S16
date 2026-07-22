@@ -2844,18 +2844,18 @@
             },
             "dataValues": {
                 "APRatio": [
-                    0.20000000298023224,
-                    0.20000000298023224,
                     0.30000001192092896,
+                    0.30000001192092896,
+                    0.4000000059604645,
                     0.4000000059604645,
                     0.4000000059604645,
                     0.4000000059604645,
                     0.4000000059604645
                 ],
                 "BonusADRatio": [
-                    1.4500000476837158,
-                    1.4500000476837158,
                     1.649999976158142,
+                    1.649999976158142,
+                    1.850000023841858,
                     1.850000023841858,
                     1.850000023841858,
                     1.850000023841858,
@@ -2908,13 +2908,13 @@
                     100.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaxLevelMultiCastDelay": [
                     0.5,
@@ -3854,70 +3854,6 @@
             "tooltip": "{{Cherry_Dematerialize_Summary}}"
         },
         {
-            "apiName": "SlowAndSteady",
-            "calculations": {
-                "ADPerAS": {
-                    "__type": "GameCalculation",
-                    "mFormulaParts": [
-                        {
-                            "__type": "NamedDataValueCalculationPart",
-                            "mDataValue": "ASMultiplier"
-                        }
-                    ],
-                    "mMultiplier": {
-                        "__type": "NumberCalculationPart",
-                        "mNumber": 0.009999999776482582
-                    },
-                    "mPrecision": 2
-                }
-            },
-            "dataValues": {
-                "ASMultiplier": [
-                    75.0,
-                    75.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
-                ],
-                "MaxLevel": [
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0,
-                    2.0
-                ],
-                "StaticRatio": [
-                    0.6499999761581421,
-                    0.6499999761581421,
-                    0.6499999761581421,
-                    0.6499999761581421,
-                    0.6499999761581421,
-                    0.6499999761581421,
-                    0.6499999761581421
-                ],
-                "Vamp": [
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896,
-                    0.30000001192092896
-                ]
-            },
-            "desc": "你的<speed>攻击速度</speed>无法超过@StaticRatio@。所有<speed>攻击速度</speed>加成会被转化为<scaleAD>攻击力</scaleAD>。<br>",
-            "iconLarge": "assets/ux/cherry/augments/icons/slowandsteady_large.png",
-            "iconSmall": "assets/ux/cherry/augments/icons/slowandsteady_small.png",
-            "id": 250,
-            "name": "一板一眼",
-            "rarity": 1,
-            "tooltip": "你的<speed>攻击速度</speed>无法超过@StaticRatio@。所有<speed>攻击速度</speed>加成会被转化为<scaleAD>攻击力</scaleAD> (每<speed>1%攻击速度</speed>转化为<scaleAD>@ADPerAS@攻击力</scaleAD>)。<br><br>当前获得：@f1@ <scaleAD>攻击力</scaleAD>"
-        },
-        {
             "apiName": "FrostWraith",
             "calculations": {},
             "dataValues": {
@@ -4565,13 +4501,13 @@
                     300.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaxLevelMultiCastDelay": [
                     1.0,
@@ -7890,15 +7826,6 @@
                     0.2199999988079071,
                     0.2199999988079071
                 ],
-                "BonusCastCount": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
-                ],
                 "BonusPerLevel": [
                     9.5,
                     9.5,
@@ -7934,6 +7861,24 @@
                     2.0,
                     2.0,
                     2.0
+                ],
+                "Missiles": [
+                    1.0,
+                    1.0,
+                    2.0,
+                    3.0,
+                    2.0,
+                    2.0,
+                    2.0
+                ],
+                "Range": [
+                    1450.0,
+                    1450.0,
+                    1450.0,
+                    1450.0,
+                    1450.0,
+                    1450.0,
+                    1450.0
                 ]
             },
             "desc": "每@Cooldown@秒朝着一个附近的敌人<keywordMajor>自动施放</keywordMajor>投掷一个回力镖。",
@@ -8010,9 +7955,8 @@
                         },
                         {
                             "__type": "StatByCoefficientCalculationPart",
-                            "mCoefficient": 0.20000000298023224,
-                            "mStat": 2,
-                            "mStatFormula": 2
+                            "mCoefficient": 0.25,
+                            "mStat": 2
                         }
                     ],
                     "{72c5c2a8}": 1
@@ -8093,12 +8037,12 @@
                 ],
                 "StartingBees": [
                     0.0,
-                    1.0,
                     2.0,
-                    3.0,
                     4.0,
-                    5.0,
-                    6.0
+                    6.0,
+                    8.0,
+                    10.0,
+                    12.0
                 ]
             },
             "desc": "每回合开始时有@StartingBees@只【小蜜蜂】。通过收集花朵来获得额外的【小蜜蜂】。伤害一个敌方英雄时，将派出一只【小蜜蜂】，它在抵达后的@DebuffDuration@秒里持续造成<magicDamage>@BeeDamage@魔法伤害</magicDamage>，然后会折返。<br>",
@@ -8891,13 +8835,13 @@
                     0.0010000000474974513
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ]
             },
             "desc": "你的攻击会为你提供<speed>@MSPerHit@移动速度</speed> {{ Item_Keyword_OnHit }}。<br><br>获得等同于你<speed>移动速度</speed>@MSToASConversion*10000@%的<attackSpeed>攻击速度</attackSpeed>。",
@@ -11888,20 +11832,20 @@
                 "LaserLength": [
                     600.0,
                     600.0,
-                    800.0,
+                    1000.0,
                     1000.0,
                     1000.0,
                     1000.0,
                     1000.0
                 ],
                 "MaxLevel": [
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0,
-                    3.0
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0,
+                    2.0
                 ],
                 "MaxLevelGrowthDuration": [
                     0.6000000238418579,

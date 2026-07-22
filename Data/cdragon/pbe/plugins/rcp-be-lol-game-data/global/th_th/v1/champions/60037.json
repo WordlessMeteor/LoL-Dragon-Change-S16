@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "เมื่อร่ายสกิลครบ 3 ครั้ง การโจมตีครั้งถัดไปของ Sona จะสร้างโบนัสความเสียหายเวท"
+        "description": "เมื่อร่ายสกิลครบ 3 ครั้ง การโจมตีครั้งถัดไปของ Sona จะสร้างโบนัสความเสียหายเวท และทำให้เป้าหมายของเธอสร้างความเสียหายได้น้อยลงเป็นเวลาสั้น ๆ"
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Sona เล่นบทเพลง Hymn of Valor ซึ่งมอบโบนัสพลังโจมตีและพลังเวทให้กับแชมเปี้ยนร่วมทีมใกล้เคียง อีกทั้งการร่ายสกิลนี้จะปล่อยคลื่นเสียงออกไป และสร้างความเสียหายเวทแก่แชมเปี้ยนศัตรูหรือมอนสเตอร์ที่อยู่ใกล้สุด 2 ตัว",
-            "dynamicDescription": "<keywordMajor>ออร่าต่อเนื่อง:</keywordMajor> เพิ่ม<physicalDamage>พลังโจมตี</physicalDamage>และ<magicDamage>พลังเวท</magicDamage> @APADBoost@ หน่วยให้กับแชมเปี้ยนร่วมทีมใกล้เคียง<br><br><spellActive>กดใช้:</spellActive> สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรู 2 ตัวที่อยู่ใกล้สุด (เล็งแชมเปี้ยนก่อน)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>ออร่าต่อเนื่อง:</keywordMajor> มอบ<physicalDamage>พลังโจมตี</physicalDamage>และ<magicDamage>พลังเวท</magicDamage> @APADBoost@ หน่วยให้กับแชมเปี้ยนร่วมทีมใกล้เคียง<br><br><spellActive>กดใช้:</spellActive> สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>แก่ศัตรู @EnemiesToHit@ ตัวที่อยู่ใกล้สุด โดยจะเล็งแชมเปี้ยนก่อน@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Sona เล่นบทเพลง Aria of Perseverance ซึ่งมอบโบนัสเกราะและต้านทานเวทให้กับแชมเปี้ยนร่วมทีมใกล้เคียง อีกทั้งการร่ายสกิลนี้จะส่งท่วงทำนองแห่งการรักษาออกไป ฟื้นฟูพลังชีวิต Sona และเพื่อนร่วมทีมใกล้เคียงที่ได้รับความเสียหาย",
-            "dynamicDescription": "<keywordMajor>ออร่าต่อเนื่อง:</keywordMajor> มอบโบนัส<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR> @ARMRBoost@ หน่วยให้กับแชมเปี้ยนร่วมทีมใกล้เคียง<br><br><spellActive>กดใช้:</spellActive> Sona ฮีลตัวเองและแชมเปี้ยนร่วมทีมใกล้เคียงที่ได้รับความเสียหายมากสุดเป็นจำนวน <healing>@Healing@ หน่วย</healing> รวมถึงมอบ<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR>เพิ่มเติม @ARMRBoost@ หน่วยเป็นเวลา 3 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>ออร่าต่อเนื่อง:</keywordMajor> มอบ<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR> @ARMRBoost@ หน่วยให้กับแชมเปี้ยนร่วมทีมใกล้เคียง<br><br><spellActive>กดใช้:</spellActive> Sona ฮีลตัวเองและแชมเปี้ยนร่วมทีมใกล้เคียงที่ได้รับความเสียหายมากสุดเป็นจำนวน <healing>@Healing@ หน่วย</healing>@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Sona เล่นบทเพลง Song of Celerity ซึ่งมอบโบนัสความเร็วเคลื่อนที่ให้กับแชมเปี้ยนร่วมทีมใกล้เคียง โดยการร่ายสกิลนี้จะมอบความเร็วเคลื่อนที่ชั่วครู่ให้กับเพื่อนร่วมทีมที่อยู่ใกล้ ๆ",
-            "dynamicDescription": "<keywordMajor>ออร่าต่อเนื่อง:</keywordMajor> มอบ<speed>โบนัสความเร็วเคลื่อนที่ @MSBoost@ หน่วย</speed>ให้กับแชมเปี้ยนร่วมทีมใกล้เคียง<br><br><spellActive>กดใช้:</spellActive> มอบ<speed>ความเร็วเคลื่อนที่ @MoveSpeedMod*100@%</speed> ให้กับเพื่อนร่วมทีมที่อยู่ใกล้ ๆ เป็นเวลา 1.5 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>ออร่าต่อเนื่อง:</keywordMajor> มอบ<speed>ความเร็วเคลื่อนที่ @MSBoost@ หน่วย</speed>ให้กับแชมเปี้ยนร่วมทีมใกล้เคียง<br><br><spellActive>กดใช้:</spellActive> มอบ<speed>ความเร็วเคลื่อนที่ @MoveSpeedMod*100@%</speed> ให้กับแชมเปี้ยนร่วมทีมใกล้เคียงเป็นเวลา @ActiveSpeedDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

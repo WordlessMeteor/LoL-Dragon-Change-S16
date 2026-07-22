@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Sau khi tung 3 kỹ năng, đòn đánh tiếp theo của Sona gây thêm sát thương phép."
+        "description": "Sau khi tung 3 kỹ năng, đòn đánh tiếp theo của Sona gây thêm sát thương phép và khiến mục tiêu gây ít sát thương hơn trong vài giây."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Sona chơi Anh Hùng Ca, tăng Sát Thương và Sức Mạnh Phép Thuật cho các tướng đồng minh lân cận. Ngoài ra, sử dụng kỹ năng này sẽ phóng ra các tia âm thanh, gây sát thương phép lên 2 tướng địch hoặc quái gần nhất.",
-            "dynamicDescription": "<keywordMajor>Hào Quang Bền Bỉ:</keywordMajor> Tăng <physicalDamage>Sức Mạnh Công Kích</physicalDamage> và <magicDamage>Sức Mạnh Phép Thuật</magicDamage> cho các Tướng đồng minh lân cận thêm @APADBoost@.<br><br><spellActive>Kích Hoạt:</spellActive> Gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên 2 kẻ địch gần nhất (ưu tiên Tướng).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Hào Quang Bền Bỉ:</keywordMajor> Tăng cho các Tướng đồng minh ở gần @APADBoost@ <physicalDamage>Sức Mạnh Công Kích</physicalDamage> và <magicDamage>Sức Mạnh Phép Thuật</magicDamage>.<br><br><spellActive>Kích Hoạt:</spellActive> Gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên @EnemiesToHit@ kẻ địch gần nhất, ưu tiên Tướng.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Sona chơi Giai Điệu Khích Lệ, tăng thêm Giáp và Kháng Phép cho các tướng đồng minh ở gần. Ngoài ra, sử dụng kỹ năng này sẽ phát ra những giai điệu hồi phục, hồi máu cho Sona và 1 đồng minh bị thương gần đó.",
-            "dynamicDescription": "<keywordMajor>Hào Quang Bền Bỉ:</keywordMajor> Tăng cho các Tướng đồng minh gần đó thêm @ARMRBoost@ <scaleArmor>Giáp</scaleArmor> và <scaleMR>Kháng Phép</scaleMR>.<br><br><spellActive>Kích Hoạt:</spellActive> Hồi cho Sona và Tướng đồng minh gần đó đang bị thương nặng nhất <healing>@Healing@ Máu</healing> và tăng thêm @ARMRBoost@ <scaleArmor>Giáp</scaleArmor> & <scaleMR>Kháng Phép</scaleMR> trong 3 giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Hào Quang Bền Bỉ:</keywordMajor> Tăng cho các Tướng đồng minh ở gần thêm @ARMRBoost@ <scaleArmor>Giáp</scaleArmor> và <scaleMR>Kháng Phép</scaleMR>.<br><br><spellActive>Kích Hoạt:</spellActive> Hồi cho Sona và Tướng đồng minh gần đó đang bị thương nặng nhất <healing>@Healing@ Máu</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Sona tấu lên Bản Nhạc Tốc Độ, tăng Tốc Độ Di Chuyển cho tướng đồng minh xung quanh. Ngoài ra, sử dụng kỹ năng này sẽ tiếp thêm năng lượng cho đồng minh xung quanh để tăng tốc cho họ.",
-            "dynamicDescription": "<keywordMajor>Hào Quang Bền Bỉ:</keywordMajor> Tăng cho các Tướng đồng minh gần đó <speed>@MSBoost@ Tốc Độ Di Chuyển cộng thêm</speed>.<br><br><spellActive>Kích Hoạt:</spellActive> Tăng cho đồng minh xung quanh <speed>@MoveSpeedMod*100@% Tốc Độ Di Chuyển</speed> trong 1,5 giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Hào Quang Bền Bỉ:</keywordMajor> Tăng cho các Tướng đồng minh gần đó <speed>@MSBoost@ Tốc Độ Di Chuyển</speed>.<br><br><spellActive>Kích Hoạt:</spellActive> Tăng <speed>@MoveSpeedMod*100@% Tốc Độ Di Chuyển</speed> cho các Tướng đồng minh ở gần trong@ActiveSpeedDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

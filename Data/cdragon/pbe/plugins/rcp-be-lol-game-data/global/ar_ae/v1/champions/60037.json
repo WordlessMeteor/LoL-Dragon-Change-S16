@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "بعد إلقاء 3 تعويذات، يلحق هجوم سونا التالي ضرر سحر إضافيًا."
+        "description": "بعد إلقاء 3 تعويذات، يلحق هجوم سونا التالي ضرر سحر إضافيًا ويجعل هدفها يلحق ضررًا أقل لبضع ثوانٍ."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تعزف سونا نشيد البسالة، فتمنح الأبطال الحلفاء المجاورين ضررًا وقوة قدرة إضافيين. بالإضافة إلى ذلك، يؤدي إلقاء هذه القدرة إلى إطلاق صواعق صوتية، تلحق ضرر سحر بأقرب اثنين من الأبطال المعادين أو الوحوش.",
-            "dynamicDescription": "<keywordMajor>هالة مستمرة:</keywordMajor> تزيد <physicalDamage>ضرر الهجوم</physicalDamage> و <magicDamage>قوة القدرة</magicDamage> للأبطال الحلفاء المجاورين بمقدار @APADBoost@.<br><br><spellActive>تأثير نشط: </spellActive>تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بأقرب عدوين (مع منح الأولوية للأبطال).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>هالة مستمرة:</keywordMajor> تمنح الأبطال الحلفاء القريبين @APADBoost@ <physicalDamage>ضرر هجوم</physicalDamage> و<magicDamage>قوة قدرة</magicDamage>.<br><br><spellActive>تأثير نشط: </spellActive>تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> بأقرب @EnemiesToHit@ من الأعداء، وتعطي الأولوية للأبطال.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تعزف سونا لحن المثابرة، فتمنح الأبطال الحلفاء المجاورين دروعًا ومقاومة سحر إضافية. بالإضافة إلى ذلك، يطلق إلقاء هذه القدرة ألحانًا علاجية تعالج سونا وحليفًا مصابًا قريبًا.",
-            "dynamicDescription": "<keywordMajor>هالة مستمرة:</keywordMajor> تمنح الأبطال الحلفاء المجاورين @ARMRBoost@ <scaleArmor>دروعًا</scaleArmor> و <scaleMR>مقاومة سحر</scaleMR> إضافية.<br><br><spellActive>تأثير نشط:</spellActive> تعالج سونا والبطل الحليف القريب الأكثر تضررًا بمقدار <healing>@Healing@ صحة</healing> وتمنح @ARMRBoost@ المزيد من <scaleArmor>الدروع</scaleArmor> و <scaleMR>مقاومة السحر</scaleMR> لمدة 3ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>هالة مستمرة:</keywordMajor> تمنح الأبطال الحلفاء القريبين @ARMRBoost@ <scaleArmor>دروع</scaleArmor> و<scaleMR>مقاومة سحر</scaleMR>.<br><br><spellActive>تأثير نشط:</spellActive> تستعيد سونا والبطل الحليف المجاور الأكثر إصابة <healing>@Healing@ صحة</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تعزف سونا ترنيمة السرعة، فتمنح الحلفاء المجاورين سرعة حركة إضافية. بالإضافة إلى ذلك، يمد إلقاء هذه القدرة الحلفاء المجاورين بدفقة سرعة.",
-            "dynamicDescription": "<keywordMajor>هالة مستمرة:</keywordMajor> تمنح الأبطال الحلفاء المجاورين <speed>@MSBoost@ سرعة حركة إضافية</speed>.<br><br><spellActive>تأثير نشط:</spellActive> تمنح الحلفاء المجاورين <speed>@MoveSpeedMod*100@% سرعة حركة</speed> لمدة 1.5ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>هالة مستمرة:</keywordMajor> تمنح الأبطال الحلفاء القريبين <speed>@MSBoost@ سرعة حركة</speed>.<br><br><spellActive>تأثير نشط:</spellActive> تمنح الحلفاء في الجوار <speed>@MoveSpeedMod*100@% سرعة حركة</speed> لمدة @ActiveSpeedDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

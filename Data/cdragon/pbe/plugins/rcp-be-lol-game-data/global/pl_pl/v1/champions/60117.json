@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix to dziki duszek, który towarzyszy Lulu. Strzela salwami magicznej energii w cele, które atakuje Lulu."
+        "description": "Pix strzela magicznymi pociskami energii, ilekroć bohater, za którym podąża, zaatakuje wroga. Namierzają one cel, jednak mogą trafić po drodze inną jednostkę."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Pix i Lulu wystrzeliwują pociski magicznej energii, które znacznie spowalniają trafionych wrogów. Wróg może otrzymać obrażenia tylko od jednego pocisku.",
-            "dynamicDescription": "<mainText>Lulu i Pix wystrzeliwują przebijający pocisk, który zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. Trafieni wrogowie otrzymują <status>Spowolnienie</status> o @SlowAmount*-100@% na @SlowDuration@ sek. To spowolnienie z czasem zanika do minimum @MinMoveSpeedMod@% (minimalna wartość jest ograniczona do 80%).<br><br>Wróg może otrzymać obrażenia tylko od jednego pocisku.",
+            "dynamicDescription": "Lulu i Pix wystrzeliwują przebijający pocisk, który zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. Trafieni wrogowie otrzymują <status>Spowolnienie</status> o @SlowAmount*-100@%, zanikające w ciągu @SlowDuration@ sek.<br><br>Wróg może otrzymać obrażenia tylko od jednego pocisku.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

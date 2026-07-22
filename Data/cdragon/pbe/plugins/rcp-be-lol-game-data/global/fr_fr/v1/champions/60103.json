@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Octroie une charge de Vol essentiel à chaque fois qu'une compétence touche un ennemi (max : 3 charges par compétence). Avec 9 charges, la prochaine compétence d'Ahri reçoit 35% de sort vampirique."
+        "description": "Octroie une charge de Vol essentiel à chaque fois qu'une compétence touche un ennemi. Lorsque le nombre de charges maximum est atteint, Ahri récupère des PV lors de sa prochaine compétence."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Ahri lance son orbe et le ramène vers elle, infligeant des dégâts magiques à l'aller et des dégâts bruts au retour.",
-            "dynamicDescription": "L'orbe inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> à l'aller, puis <trueDamage>@TotalDamage@ pts de dégâts bruts</trueDamage> au retour. Ahri gagne <speed>@FlatMovementSpeedMod@ vitesse de déplacement</speed> tant que l'orbe est en vol.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri lance son orbe et le ramène vers elle, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> à l'aller et <trueDamage>@TotalDamage@ pts de dégâts bruts</trueDamage> au retour.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Ahri libère trois lucioles qui verrouillent et attaquent les ennemis proches.",
-            "dynamicDescription": "Ahri libère trois lucioles qui cherchent des ennemis proches (les champions en priorité) pour leur infliger <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>. Les ennemis touchés par plusieurs lucioles subissent <magicDamage>@HalfDamage@ pts de dégâts magiques</magicDamage> pour chaque luciole supplémentaire.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri libère 3 lucioles qui cherchent des ennemis proches pour leur infliger <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>, et ces dégâts sont réduits à <magicDamage>@HalfDamage@</magicDamage> au-delà de la première luciole.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
-            "description": "Ahri envoie un baiser qui inflige des dégâts et charme le premier ennemi qu'il touche, le faisant marcher docilement vers elle.",
-            "dynamicDescription": "Ahri envoie un baiser qui inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> et <status>charme</status> un ennemi, le faisant marcher docilement vers Ahri pendant @CharmDuration@ sec.@SpellModifierDescriptionAppend@",
+            "description": "Ahri envoie un baiser qui inflige des dégâts et charme le premier ennemi touché. Cet ennemi subit également plus de dégâts de la part d'Ahri pendant plusieurs secondes.",
+            "dynamicDescription": "Ahri envoie un baiser qui inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> et <status>charme</status> le premier ennemi touché pendant @CharmDuration@ sec. Elle inflige @DamageAmp@% de dégâts bonus à cet ennemi pendant @DamageAmpDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Ahri se jette en avant et tire des traits spirituels, infligeant des dégâts à 3 ennemis proches (les champions en priorité). Assaut spirituel peut être lancé jusqu'à 3 fois avant d'entrer en récupération.",
-            "dynamicDescription": "Ahri fonce vers l'avant et tire 3 traits spirituels sur les ennemis proches (les champions en priorité), infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>.<br><br>Cette compétence peut être <recast>réactivée</recast> jusqu'à 2 fois supplémentaires dans les 10 sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri se rue dans une direction en tirant 3 projectiles essentiels sur les ennemis proches (les champions en priorité). Ces projectiles infligent <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> chacun. <spellName>Assaut spirituel</spellName> peut être <recast>réactivé</recast> jusqu'à 2 fois supplémentaires dans les 10 sec.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

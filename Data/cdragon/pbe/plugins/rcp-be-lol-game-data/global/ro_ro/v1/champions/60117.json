@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix e o zână a pădurii care o însoțește pe Lulu. Pix va trage cu o rafală de energie magică spre țintele atacate de Lulu."
+        "description": "Pix trage cu fulgere magice de energie când campionul pe care îl urmărește atacă altă unitate inamică. Aceste fulgere își urmăresc ținta, dar pot fi blocate de alte unități."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Pix și Lulu lansează fiecare câte un fulger de energie magică care îi încetinește foarte tare pe inamicii loviți. Un inamic poate fi rănit doar de un singur fulger.",
-            "dynamicDescription": "<mainText>Lulu și Pix aruncă fiecare câte un fulger, care provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> și <status>încetinește</status> inamicii loviți cu @SlowAmount*-100@% timp de @SlowDuration@ sec. Această încetinire scade treptat până la un minimum de @MinMoveSpeedMod@% (minimumul este limitat la 80%).<br><br>Un inamic poate fi rănit doar de un singur fulger.",
+            "dynamicDescription": "Lulu și Pix aruncă fiecare câte un fulger, care provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> și <status>încetinește</status> inamicii loviți cu @SlowAmount*-100@%, valoare ce scade de-a lungul a @SlowDuration@ secunde.<br><br>Un inamic poate fi rănit doar de un singur fulger.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

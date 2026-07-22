@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "จิ้งจอกเก้าหาง",
-    "shortBio": "- Orb of Deception (Q) จะมอบความเร็วเคลื่อนที่เมื่อลอยอยู่กลางอากาศ<br>- Essence Theft (ติดตัว) จะสะสมสแตคเมื่อสร้างความเสียหายแก่ศัตรู<br>- Spirit Rush (R) จะไม่รีเซ็ต",
+    "shortBio": "- Essence Theft (P) จะสแตคเมื่อสร้างความเสียหายแก่ศัตรู<br>- Spirit Rush (R) จะไม่รีเซ็ต",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "ได้รับสแตค Essence Theft เมื่อใช้สกิลโดนศัตรู (สูงสุด: 3 สแตคต่อสกิล) เมื่อสะสมครบ 9 สแตค สกิลถัดไปจะได้รับดูดเลือดเวท 35%"
+        "description": "ได้รับสแตค Essence Theft เมื่อใช้สกิลโดนศัตรู เมื่อสะสมสแตคจนเต็ม สกิลถัดไปของ Ahri จะฟื้นฟูพลังชีวิตของเธอ"
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Ahri ปล่อยลูกแก้วออกไปและดึงกลับมา สามารถสร้างความเสียหายเวทตอนที่ลอยออกไป และสร้างความเสียหายจริงเมื่อดึงกลับ",
-            "dynamicDescription": "สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>เมื่อพุ่งออกไป และ<trueDamage>ความเสียหายจริง @TotalDamage@ หน่วย</trueDamage>เมื่อพุ่งกลับมา Ahri ได้รับ<speed>ความเร็วเคลื่อนที่ @FlatMovementSpeedMod@ หน่วย</speed>ขณะที่สกิลกำลังลอยอยู่@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri โยนลูกแก้วแล้วดึงกลับมา สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ตอนขาไป และสร้าง<trueDamage>ความเสียหายจริง @TotalDamage@ หน่วย</trueDamage>ตอนขากลับ@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Ahri ปล่อยเปลวไฟจิ้งจอกออกมา 3 ลูก ซึ่งมันจะล็อกเป้าหมายและลอยไปโจมตีศัตรูใกล้เคียง",
-            "dynamicDescription": "ปล่อยเปลวไฟจิ้งจอกสามลูกที่จะล็อกเป้าใส่ศัตรูใกล้เคียง (จะเล็งแชมเปี้ยนก่อน) สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> ศัตรูที่โดน Fox-Fire หลายครั้งจะได้รับ<magicDamage>ความเสียหายเวท @HalfDamage@ หน่วย</magicDamage>จาก Fox-Fire แต่ละครั้งที่โดนเพิ่ม@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri ปล่อยลูกไฟจิ้งจอก 3 ลูกใส่ศัตรูใกล้เคียง และสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> ลดลงเหลือ <magicDamage>@HalfDamage@ หน่วย</magicDamage>หลังจากที่เป้าหมายโดนลูกไฟลูกแรก@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Ahri ส่งจูบออกไป สร้างความเสียหายและสะกดศัตรูที่โดน ทำให้พวกเขาเดินเข้ามาหาเธอ",
-            "dynamicDescription": "ส่งจูบออกไป<magicDamage>สร้างความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และ<status>สะกด</status>ศัตรูให้เดินเข้ามาหา Ahri เป็นเวลา @CharmDuration@ วินาที@SpellModifierDescriptionAppend@",
+            "description": "Ahri ส่งจูบออกไป สร้างความเสียหายและสะกดศัตรูตัวแรกที่โดน อีกทั้งพวกเขาจะได้รับความเสียหายจากเธอมากขึ้นเป็นเวลาหลายวินาทีอีกด้วย",
+            "dynamicDescription": "Ahri ส่งจูบออกไป สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และ<status>สะกด</status>ศัตรูตัวแรกที่โดนเป็นเวลา @CharmDuration@ วินาที อีกทั้งพวกเขายังได้รับความเสียหายจากเธอมากขึ้น @DamageAmp@% เป็นเวลา @DamageAmpDuration@ วินาทีด้วย@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Ahri พุ่งไปด้านหน้าและปล่อยกระสุนวิญญาณ สร้างความเสียหายให้กับศัตรูใกล้เคียง 3 ตัว (เล็งแชมเปี้ยนก่อน) สามารถร่าย Spirit Rush ได้สูงสุด 3 ครั้งก่อนที่จะติดคูลดาวน์",
-            "dynamicDescription": "พุ่งไปข้างหน้าอย่างรวดเร็วพร้อมยิงกระสุนวิญญาณ 3 ลูกใส่ศัตรูใกล้เคียง (เล็งเป้าหมายที่แชมเปี้ยนก่อน) สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage><br><br>สามารถ<recast>กดใช้ซ้ำ</recast>ได้อีก 2 ครั้งภายใน 10 วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri พุ่งไปข้างหน้า และยิงกระสุนวิญญาณ 3 ลูกใส่ศัตรูใกล้เคียง โดยจะเล็งที่แชมเปี้ยนก่อนเสมอ กระสุนวิญญาณเหล่านี้สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ต่อลูก <spellName>Spirit Rush</spellName> สามารถ<recast>กดใช้ซ้ำ</recast>ได้อีก 2 ครั้งภายใน 10 วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

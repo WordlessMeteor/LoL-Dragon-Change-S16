@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Após conjurar 3 Habilidades, o próximo Ataque de Sona causa Dano Mágico adicional."
+        "description": "Após conjurar 3 Habilidades, o próximo Ataque básico de Sona causa Dano Mágico adicional e faz com que o alvo dela cause dano reduzido por alguns segundos."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sona toca o Hino do Valor, que concede dano e Poder de Habilidade adicionais a Campeões aliados próximos. Conjurar a Habilidade também emite rajadas sonoras que causam Dano Mágico aos dois Campeões ou monstros inimigos mais próximos.",
-            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> aumenta em @APADBoost@ o <physicalDamage>Dano de Ataque</physicalDamage> e o <magicDamage>Poder de Habilidade</magicDamage> de Campeões aliados próximos.<br><br><spellActive>Ativo:</spellActive> causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> aos dois inimigos mais próximos (prioriza Campeões).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> concede @APADBoost@ <physicalDamage>de Dano de Ataque</physicalDamage> e <magicDamage> Poder de Habilidade</magicDamage> a Campeões aliados próximos.<br><br><spellActive>Ativo:</spellActive> causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> aos @EnemiesToHit@ inimigos mais próximos, priorizando Campeões.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sona toca a Ária da Perseverança, que concede Armadura e Resistência Mágica adicionais a Campeões aliados próximos. Conjurar a Habilidade também emite melodias que curam Sona e um aliado próximo ferido.",
-            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> concede @ARMRBoost@ de <scaleArmor>Armadura</scaleArmor> e de <scaleMR>Resistência Mágica</scaleMR> a Campeões aliados próximos.<br><br><spellActive>Ativo:</spellActive> cura <healing>@Healing@ da Vida</healing> de Sona e do Campeão aliado próximo mais ferido, além de conceder @ARMRBoost@ de <scaleArmor>Armadura</scaleArmor> e de <scaleMR>Resistência Mágica</scaleMR> adicionais por 3s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> concede @ARMRBoost@ <scaleArmor>de Armadura</scaleArmor> e <scaleMR>Resistência Mágica</scaleMR> a Campeões aliados próximos.<br><br><spellActive>Ativo:</spellActive> Sona cura <healing>@Healing@ da própria Vida</healing> e da do Campeão aliado próximo com a Vida mais baixa.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sona toca a Canção da Celeridade, que concede Velocidade de Movimento adicional a Campeões aliados próximos. Conjurar a Habilidade também energiza aliados próximos, que recebem um impulso de velocidade.",
-            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> concede <speed>@MSBoost@ de Velocidade de Movimento adicional</speed> a Campeões aliados próximos.<br><br><spellActive>Ativo:</spellActive> concede <speed>@MoveSpeedMod*100@% de Velocidade de Movimento</speed> a aliados próximos por 1,5s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> concede <speed>@MSBoost@ de Velocidade de Movimento</speed> a Campeões aliados próximos.<br><br><spellActive>Ativo:</spellActive> concede <speed>@MoveSpeedMod*100@% de Velocidade de Movimento</speed> a Campeões aliados próximos por @ActiveSpeedDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

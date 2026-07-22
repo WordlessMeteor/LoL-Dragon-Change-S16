@@ -86,7 +86,7 @@
             "chromas": [
                 {
                     "id": 60103052,
-                    "name": "Ahri Hàn Triều (Ahri Sinh Nhật)",
+                    "name": "Ahri Hàn Triều (Sinh Nhật Ahri)",
                     "contentId": "58992eb8-aca3-4ff1-b9dc-b8ca42e4561e",
                     "relatedPrimeContentId": "23e9a9df-0604-4e74-bfc0-abfd004b7d9a",
                     "relatedPrimeItemId": 103052,
@@ -146,7 +146,7 @@
             "chromas": [
                 {
                     "id": 60103053,
-                    "name": "Ahri Bóng Đêm (Ahri Sinh Nhật)",
+                    "name": "Ahri Bóng Đêm (Sinh Nhật Ahri)",
                     "contentId": "d83c2d27-bc48-48fb-967a-c31eca86b674",
                     "relatedPrimeContentId": "9fff377c-6bc3-45c4-830d-bcf1b245727d",
                     "relatedPrimeItemId": 103053,
@@ -316,7 +316,7 @@
                 },
                 {
                     "id": 60103062,
-                    "name": "Ahri Chiêu Hồn Thiên Hồ (Ahri Sinh Nhật)",
+                    "name": "Ahri Chiêu Hồn Thiên Hồ (Sinh Nhật Ahri)",
                     "contentId": "0b0e1a1c-9012-4216-8899-d11ca8126b47",
                     "relatedPrimeContentId": "c50abfe9-4e95-42ec-9098-4bafa7df7e33",
                     "relatedPrimeItemId": 103062,
@@ -350,7 +350,7 @@
                     "id": 171
                 }
             ],
-            "description": "Có người tin rằng Người Giữ Cửa khoác lên mình hình hài của một con hồ ly. Kẻ thì thấy muôn hình muôn vẻ, nhưng dù ở câu chuyện nào, vai trò của nàng vẫn không hề đổi thay. Tinh linh xinh đẹp nhưng thất thường này xem định mệnh nhân loại như một trò chơi đuổi bắt, và mở ra con đường cứu rỗi để được an nghĩ vĩnh hằng... nhưng cô sẽ không can thiệp nếu họ lạc lối khỏi con đường của mình."
+            "description": "Có người tin rằng Người Giữ Cửa khoác lên mình hình hài của một con hồ ly. Kẻ thì thấy muôn hình muôn vẻ, nhưng dù ở câu chuyện nào, vai trò của nàng vẫn không hề đổi thay. Tinh linh xinh đẹp nhưng thất thường này xem định mệnh nhân loại như một trò chơi đuổi bắt, và mở ra con đường cứu rỗi để được an nghỉ vĩnh hằng... nhưng cô sẽ không can thiệp nếu họ lạc lối khỏi con đường của mình."
         },
         {
             "id": 60103028,
@@ -538,7 +538,7 @@
                 },
                 {
                     "id": 60103063,
-                    "name": "K/DA ALL OUT Ahri (Ahri Sinh Nhật)",
+                    "name": "K/DA ALL OUT Ahri (Sinh Nhật Ahri)",
                     "contentId": "20627ef3-d602-4d44-a2e1-7b4006f03ed4",
                     "relatedPrimeContentId": "d9df6983-d2b5-456e-8736-0a183eedb7c3",
                     "relatedPrimeItemId": 103063,
@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Nhận một điểm cộng dồn Hút Hồn mỗi khi có một chiêu thức trúng một kẻ địch (tối đa 3 điểm cộng dồn mỗi chiêu). Khi đạt 9 cộng dồn, kỹ năng tiếp theo có 35% Hút Máu Phép."
+        "description": "Nhận một điểm cộng dồn Hút Hồn mỗi khi có kỹ năng trúng kẻ địch. Khi đạt tối đa số cộng dồn, kỹ năng tiếp theo sẽ hồi Máu cho Ahri."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Ahri phóng ra rồi thu hồi quả cầu của mình, gây sát thương phép trên đường bay ra và sát thương chuẩn trên đường thu về.",
-            "dynamicDescription": "Gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trên đường bay ra, và <trueDamage>@TotalDamage@ sát thương chuẩn</trueDamage> trên đường thu về. Ahri nhận được <speed>@FlatMovementSpeedMod@ Tốc Độ Di Chuyển</speed> khi quả cầu đang bay.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri phóng ra rồi thu hồi quả cầu của mình, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> trên đường phóng đi và <trueDamage>@TotalDamage@ sát thương chuẩn</trueDamage> trên đường thu về.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Ahri tung ra ba ngọn lửa hồ ly, chúng sẽ tự khóa mục tiêu và tấn công những kẻ địch cạnh bên.",
-            "dynamicDescription": "Phóng thích ra ba ngọn lửa hồ ly bay vào các kẻ địch gần đó (ưu tiên Tướng) gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>. Kẻ địch trúng nhiều lửa hồ ly sẽ chịu <magicDamage>@HalfDamage@ sát thương phép</magicDamage> từ mỗi lửa hồ ly bổ sung.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri phóng ra 3 ngọn lửa hồ ly, tự động tìm kiếm kẻ địch gần đó và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>, giảm xuống còn <magicDamage>@HalfDamage@ sát thương</magicDamage> sau mục tiêu đầu tiên.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
-            "description": "Ahri hôn gió, gây sát thương và mê hoặc kẻ địch trúng phải, khiến kẻ đó đi về phía cô một cách vô hại.",
-            "dynamicDescription": "Hôn gió, gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> và <status>Mê Hoặc</status> kẻ địch, khiến kẻ đó đi về phía cô một cách vô hại trong @CharmDuration@ giây.@SpellModifierDescriptionAppend@",
+            "description": "Ahri hôn gió gây sát thương và Mê Hoặc kẻ địch đầu tiên trúng phải. Kẻ địch cũng chịu thêm sát thương từ cô trong vài giây.",
+            "dynamicDescription": "Ahri hôn gió gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> và <status>Mê Hoặc</status> kẻ địch đầu tiên trúng chiêu trong @CharmDuration@ giây. Kẻ địch đồng thời nhận thêm @DamageAmp@% sát thương từ cô trong @DamageAmpDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Ahri lướt tới trước và bắn ra các luồng sét gây sát thương lên 3 kẻ địch gần đó (ưu tiên Tướng). Phi Hồ có thể được thi triển tối đa 3 lần trước khi bắt đầu hồi chiêu.",
-            "dynamicDescription": "Linh hoạt lướt về phía trước, bắn ra 3 luồng sét vào các kẻ địch gần đó (ưu tiên Tướng), gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>.<br><br>Có thể <recast>Tái Kích Hoạt</recast> thêm 2 lần nữa trong vòng 10 giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri lướt tới, bắn ra 3 luồng năng lượng vào các kẻ địch gần đó, ưu tiên tướng. Mỗi luồng năng lượng gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>. <spellName>Phi Hồ</spellName> có thể <recast>Tái Kích Hoạt</recast> thêm 2 lần nữa trong vòng 10 giây.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

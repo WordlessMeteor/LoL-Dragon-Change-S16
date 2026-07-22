@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Otrzymuje ładunek Kradzieży Esencji, kiedy trafi wroga zaklęciem (maks. 3 ładunki na zaklęcie). Po zgromadzeniu 9 ładunków następne zaklęcie będzie miało 35% wampiryzmu zaklęć."
+        "description": "Otrzymuje ładunek Kradzieży Esencji, kiedy trafi wroga zaklęciem. Po osiągnięciu maksymalnej liczby ładunków następne zaklęcie przywraca Ahri zdrowie."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ahri wypuszcza kulę, która następnie wraca do niej. Kula zadaje obrażenia magiczne w drodze do celu i obrażenia nieuchronne w drodze powrotnej.",
-            "dynamicDescription": "Zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> w drodze do celu i <trueDamage>@TotalDamage@ pkt. obrażeń nieuchronnych</trueDamage> w drodze powrotnej. Ahri zyskuje <speed>@FlatMovementSpeedMod@ jedn. prędkości ruchu</speed>, gdy zaklęcie jest w locie.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri wypuszcza kulę, którą następnie przyciąga z powrotem do siebie, zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> w drodze do celu i <trueDamage>@TotalDamage@ pkt. obrażeń nieuchronnych</trueDamage> w drodze powrotnej.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ahri wypuszcza trzy ogniki, które namierzają i atakują pobliskich wrogów.",
-            "dynamicDescription": "Wypuszcza trzy ogniki, które namierzają pobliskich wrogów (priorytetowo traktując bohaterów) i zadają <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. Wrogowie trafieni wieloma ognikami otrzymują <magicDamage>@HalfDamage@ pkt. obrażeń magicznych</magicDamage> od każdego kolejnego ognika.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri wypuszcza 3 Ogniki, które szukają pobliskich wrogów i zadają <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>, zmniejszonych do <magicDamage>@HalfDamage@ pkt. obrażeń</magicDamage> poza pierwszym trafieniem.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Ahri posyła całusa, który zadaje obrażenia i urzeka pierwszego trafionego wroga. Trafiony wróg następnie idzie bezbronny w stronę Ahri.",
-            "dynamicDescription": "Ahri posyła całusa, który zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> i <status>urzeka</status> pierwszego trafionego wroga. Trafiony wróg następnie idzie bezbronny w stronę Ahri przez @CharmDuration@ sek.@SpellModifierDescriptionAppend@",
+            "description": "Ahri posyła całusa, który zadaje obrażenia i urzeka pierwszego trafionego wroga. Przez kilka sekund ten wróg otrzymuje od niej również zwiększone obrażenia.",
+            "dynamicDescription": "Ahri posyła całusa, który zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> i <status>urzeka</status> pierwszego trafionego wroga na @CharmDuration@ sek. Dodatkowo otrzymuje on o @DamageAmp@% więcej obrażeń od Ahri przez @DamageAmpDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ahri doskakuje do przodu i wystrzeliwuje pociski esencji, zadając obrażenia 3 pobliskim wrogom (priorytetowo traktując bohaterów). Widmowej Szarży można użyć do trzech razy, zanim zacznie się odnawiać.",
-            "dynamicDescription": "Doskakuje do przodu i wystrzeliwuje 3 pociski esencji w stronę pobliskich wrogów (priorytetowo traktując bohaterów), zadając <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>.<br><br>Można <recast>użyć ponownie</recast> jeszcze 2 razy w ciągu 10 sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri zwinnie doskakuje, wystrzeliwując 3 pociski esencji w stronę pobliskich wrogów (priorytetowo traktując bohaterów). Każdy pocisk zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage>. <spellName>Widmowej Szarży</spellName> można <recast>użyć ponownie</recast> jeszcze 2 razy w ciągu 10 sek.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

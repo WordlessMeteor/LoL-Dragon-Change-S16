@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix es un hada silvestre que acompaña a Lulu y dispara proyectiles de energía mágica a los enemigos que la campeona ataque."
+        "description": "Pix dispara proyectiles mágicos de energía cuando el campeón al que sigue ataca a una unidad enemiga. Los proyectiles persiguen al objetivo, pero las demás unidades pueden interceptarlos."
     },
     "spells": [
         {
@@ -639,8 +639,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Pix y Lulu disparan cada uno un proyectil de energía mágica que ralentiza considerablemente a todos los enemigos impactados. Un objetivo no puede recibir daño de más de un proyectil.",
-            "dynamicDescription": "<mainText>Lulu y Pix disparan cada uno un proyectil perforante que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y <status>ralentiza</status> un @SlowAmount*-100@% a los enemigos impactados durante @SlowDuration@ seg. La ralentización decae con el tiempo hasta un mínimo de @MinMoveSpeedMod@% (con un límite de un 80%).<br><br>Un objetivo no puede recibir daño de más de un proyectil.",
+            "description": "Pix y Lulu disparan cada uno un proyectil de energía mágica que ralentiza considerablemente a todos los enemigos impactados. Un mismo objetivo no puede recibir daño de más de un proyectil.",
+            "dynamicDescription": "Lulu y Pix disparan cada uno un proyectil perforante que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los enemigos impactados y los <status>ralentiza</status> un @SlowAmount*-100@% durante @SlowDuration@ seg.<br><br>Un mismo objetivo no puede recibir daño de más de un proyectil.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

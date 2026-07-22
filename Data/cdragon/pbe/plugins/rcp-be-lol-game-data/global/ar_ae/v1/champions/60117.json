@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "بيكس رفيق العجيب بصحبة لولو. يطلق بيكس وابلًا من الطاقة السحرية على الأهداف التي تهاجمها لولو."
+        "description": "يطلق بيكس صواعق سحرية من الطاقة كلما هاجم البطل الذي يتبعه وحدة معادية أخرى. تكون هذه الصواعق موجهة، ولكن يمكن اعتراضها من قبل الوحدات الأخرى."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يطلق كل من بيكس ولولو صاعقة من الطاقة السحرية التي تبطئ جميع الأعداء الذين تصيبهم بشدة. لا يتلقى العدو الضرر إلا من صاعقة واحدة.",
-            "dynamicDescription": "<mainText>يطلق كل من بيكس ولولو صاعقة ثاقبة تلحق<magicDamage>@TotalDamage@ ضرر سحر</magicDamage>، ويخضع الأعداء المصابون لتأثير <status>الإبطاء</status> بنسبة @SlowAmount*-100@% لمدة @SlowDuration@ث. ويتلاشى هذا الإبطاء مع الوقت حتى يصل إلى حد أدنى يبلغ @MinMoveSpeedMod@% (سقف الحد الأدنى 80%).<br><br>لا يتلقى العدو الضرر إلا من صاعقة واحدة.",
+            "dynamicDescription": "يطلق كلٌ من بيكس ولولو صاعقة ثاقبة تلحق<magicDamage>@TotalDamage@ ضرر سحر</magicDamage>، ويخضع الأعداء المصابون لتأثير <status>الإبطاء</status> بنسبة @SlowAmount*-100@%، يتلاشى خلال @SlowDuration@ث.<br><br>لا يتلقى العدو الضرر إلا من صاعقة واحدة.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

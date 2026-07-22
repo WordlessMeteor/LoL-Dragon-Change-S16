@@ -6,7 +6,7 @@
     "name": "آري",
     "alias": "Jade_Ahri",
     "title": "الثعلبة ذات التسعة ذيول",
-    "shortBio": "- تمنح كرة الخداع (Q) سرعة الحركة أثناء وجودها في الهواء<br>- تتكدس سرقة الجوهر (كامن) عند إلحاق الضرر بالأعداء<br>- لا تتم إعادة ضبط اندفاع الروح (R)",
+    "shortBio": "- يتكدس تأثير سرقة الجوهر (كامن) عند إلحاق الضرر بالأعداء<br>- لا تتم إعادة ضبط قدرة اندفاع الروح (R)",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -831,7 +831,7 @@
             "regionRarityId": 0,
             "rarityGemPath": null,
             "skinLines": null,
-            "description": "اندفعت آري بروحها إلى الريفت كبطلة مسار أوسط شهيرة في 14 ديسمبر 2011. استُوحيت آري في البداية من الثعلب الأسطوري ذي الذيول التسعة، لتقدم أسلوب لعب فاتن وأنيق كمزيج بين دوري الساحر والقاتل. وبعد أن أصبحت الآن عنصرًا أساسيًا في الطابور الفردي، واختيارًا مفضلًا في اللعب الاحترافي، ومحبوبة المشجعين، وجدت آري طريقها إلى قلوب اللاعبين في مختلف أنحاء العالم."
+            "description": "اندفعت آري بروحها إلى الريفت كبطلة مسار أوسط شهيرة في 14 ديسمبر 2011. استُوحيت آري في البداية من الثعلب الأسطوري ذي الذيول التسعة، لتقدم أسلوب لعب فاتن وأنيق كمزيج من دوري الساحر والقاتل. وبعد أن أصبحت الآن عنصرًا أساسيًا في الطابور الفردي، واختيارًا مفضلًا في اللعب الاحترافي، ومحبوبة المشجعين، وجدت آري طريقها إلى قلوب اللاعبين في مختلف أنحاء العالم."
         }
     ],
     "passive": {
@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "تكسب شحنة من سرقة الجوهر كلما أصابت تعويذة عدوًا (الحد الأقصى: 3 شحنات لكل تعويذة). عند الوصول إلى 9 شحنات، تكسب التعويذة التالية 35% من العلاج بضرر التعويذة."
+        "description": "تكسب شحنة من سرقة الجوهر كلما أصابت تعويذة عدوًا. عند الوصول إلى العدد الأقصى من الشحنات، تسترد التعويذة التالية صحة آري."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ترسل آري كرتها ثم تجذبها إليها، فتلحق ضرر سحر في طريق الذهاب وضررًا حقيقيًا في طريق العودة.",
-            "dynamicDescription": "تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> في طريق الذهاب و <trueDamage>@TotalDamage@ ضرر حقيقي</trueDamage> في طريق العودة. تكسب آري <speed>@FlatMovementSpeedMod@ سرعة حركة</speed> عندما تكون التعويذة في الجو.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ترمي آري كرتها ثم تسحبها لتعود إليها، فتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> في طريق خروجها و <trueDamage>@TotalDamage@ ضرر حقيقي</trueDamage> في طريق عودتها.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تطلق آري ثلاثة ألسنة نار ثعلبة تستهدف الأعداء في الجوار وتهاجمهم.",
-            "dynamicDescription": "تطلق ثلاثة ألسنة نار ثعلبة تستهدف الأعداء في الجوار (تعطي الأولوية للأبطال) وتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>. يتلقى الأعداء المصابون بألسنة نار ثعلبة متعددة <magicDamage>@HalfDamage@ ضرر سحر</magicDamage> من كل تعويذة نار ثعلبة إضافية.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تطلق آري 3 قذائف من نار الثعلبة تسعى وراء الأعداء في الجوار وتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>، يتقلص إلى <magicDamage>@HalfDamage@ ضرر</magicDamage> بعد القذيفة الأولى.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "ترمي آري قبلة تلحق الضرر وتسحر عدوًا تصادفه، مما يجعله يمشي تجاهها دون إلحاق الأذى بها.",
-            "dynamicDescription": "ترمي قبلة تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> و<status>تفتن</status> عدوًا مما يجعله يسير باتجاه آري دون إلحاق الأذى بها لمدة @CharmDuration@ث.@SpellModifierDescriptionAppend@",
+            "description": "ترمي آري بقبلة تلحق ضررًا وتفتن أول عدو تصيبه. كما يتلقى المزيد من الضرر منها لعدة ثوانٍ.",
+            "dynamicDescription": "ترمي آري بقبلة تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> كما <status>تفتن</status> أول عدو تصيبه لمدة @CharmDuration@ث. ويتلقى أيضًا ضررًا أكبر منها بنسبة @DamageAmp@% لمدة @DamageAmpDuration@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تندفع آري إلى الأمام وتطلق صواعق جوهر فتلحق الضرر بثلاثة من الأعداء في الجوار (تعطي الأولوية للأبطال). يمكن إلقاء تعويذة اندفاع الروح حتى ثلاث مرات قبل دخولها في فترة التبريد.",
-            "dynamicDescription": "تندفع برشاقة إلى الأمام وتطلق 3 صواعق جوهر على الأعداء في الجوار (تعطي الأولوية للأبطال) فتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>.<br><br>يمكن <recast>إعادة الإلقاء</recast> مرتين كحد أقصى خلال 10 ثوان.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تندفع آري برشاقة إلى الأمام، مطلقة 3 صواعق جوهر على الأعداء في الجوار، وتعطي الأولوية للأبطال. تلحق هذه الصواعق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> لكل منها. يمكن <recast>إعادة إلقاء</recast> <spellName>اندفاع الروح</spellName> مرتين كحد أقصى خلال 10 ثوان.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Ο Πιξ είναι μια ανεξάρτητη νεράιδα που συνοδεύει τη Λούλου. Ο Πιξ εξαπολύει βολές μαγικής ενέργειας ενάντια σε όλους τους στόχους της Λούλου."
+        "description": "Ο Πιξ εξαπολύει μαγικές βολές ενέργειας όταν ο Ήρωας που ακολουθεί επιτίθεται σε άλλη εχθρική μονάδα. Αυτές οι βολές ακολουθούν τον στόχο, αλλά μπορούν να μπλοκαριστούν από άλλες μονάδες."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Πιξ και η Λούλου εξαπολύουν ο καθένας από μια βολή μαγικής ενέργειας, που επιβραδύνει κατά πολύ όλους τους εχθρούς που χτυπά. Ένας εχθρός μπορεί να δεχθεί ζημιά μόνο από μία βολή.",
-            "dynamicDescription": "<mainText>Η Λούλου και ο Πιξ εξαπολύουν από μία διεισδυτική βολή, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage>, οι εχθροί που χτυπούν <status>Επιβραδύνονται</status> κατά @SlowAmount*-100@% για @SlowDuration@ δευτ. Αυτή η επιβράδυνση μειώνεται με το πέρασμα του χρόνου, φτάνοντας μέχρι και το @MinMoveSpeedMod@% (Το ελάχιστο όριο είναι 80%).<br><br>Ένας εχθρός μπορεί να δεχθεί ζημιά μόνο από μία βολή.",
+            "dynamicDescription": "Η Λούλου και ο Πιξ εξαπολύουν από μία διεισδυτική βολή, προκαλώντας <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> και <status>Επιβράδυνση</status> κατά @SlowAmount*-100@% στους εχθρούς που χτυπούν, η οποία μειώνεται σταδιακά επί @SlowDuration@ δευτ.<br><br>Ένας εχθρός μπορεί να δεχθεί ζημιά μόνο από μία βολή.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

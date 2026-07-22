@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix egy vad tündér, aki Lulut kíséri. Pix mágikus energiát lő azokra a célpontokra, akiket Lulu megtámad."
+        "description": "Pix mágikus energianyilat lő ki, valahányszor az általa követett hős megtámad egy ellenséges egységet. Ezek a nyilak célkövetők, de más egységek felfoghatják őket."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Pix és Lulu is kilő egy-egy mágikus energianyilat, amely jelentősen lelassítja az eltalált ellenséges egységeket. Egy ellenfelet csak egy nyíl sebezhet meg.",
-            "dynamicDescription": "<mainText>Lulu és Pix is egy-egy átütő nyílvesszőt lő ki, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz, és @SlowDuration@ másodpercre @SlowAmount*-100@%-kal <status>lelassítja</status> az eltalált ellenfeleket. A lassítás fokozatosan lecsökken a minimális értékre, vagyis @MinMoveSpeedMod@%-ra (a minimális érték korlátja 80%).<br><br>Egy ellenfelet csak egy nyíl sebezhet meg.",
+            "dynamicDescription": "Lulu és Pix is egy-egy átütő nyílvesszőt lő ki, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz, és @SlowDuration@ másodpercre @SlowAmount*-100@%-kal <status>lelassítja</status> az eltalált ellenfeleket.<br><br>Egy ellenfelet csak egy nyíl sebezhet meg.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

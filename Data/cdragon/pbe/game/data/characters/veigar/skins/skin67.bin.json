@@ -252,6 +252,13 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
+        "mEmblems": [
+            {
+                "mEmblemData": "Emblems/51",
+                "mLoadingScreenAnchor": 1,
+                "__type": "SkinEmblem"
+            }
+        ],
         "mResourceResolver": "Characters/Veigar/Skins/Skin67/Resources",
         "PersistentEffectConditions": [
             {
@@ -277,6 +284,27 @@
                                     "Death"
                                 ],
                                 "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Cassiopeia/Spells/CassiopeiaRAbility/CassiopeiaRStun",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Shared/Spells/ZhonyasRingShield",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
+                            },
+                            "__type": "NotMaterialDriver"
+                        },
+                        {
+                            "mDriver": {
+                                "Spell": "Characters/Bard/Spells/BardRAbility/BardRStasis",
+                                "__type": "HasBuffDynamicMaterialBoolDriver"
                             },
                             "__type": "NotMaterialDriver"
                         }
@@ -48205,6 +48233,11 @@
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alpha_Multiplier_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
@@ -48864,6 +48897,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
+                "on": false,
+                "Group": "Alpha",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
                 "on": false,

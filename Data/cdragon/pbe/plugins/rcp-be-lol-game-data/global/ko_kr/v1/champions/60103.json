@@ -6,7 +6,7 @@
     "name": "아리",
     "alias": "Jade_Ahri",
     "title": "구미호",
-    "shortBio": "- 현혹의 구슬(Q)이 날아가는 동안 이동 속도를 부여합니다.<br>- 적에게 피해를 입히면 정기 흡수(P) 중첩이 쌓입니다.<br>- 혼령 질주(R)의 재사용 대기시간이 초기화되지 않습니다.",
+    "shortBio": "- 적에게 피해를 입히면 정기 흡수 (P) 중첩이 쌓입니다.<br>- 혼령 질주(R)의 재사용 대기시간이 초기화되지 않습니다.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "적에게 스킬을 맞힐 때마다 정기 흡수 충전을 얻습니다. (스킬 사용 한 번당 최대 3회) 9회 충전 시 다음 스킬에 35%의 주문 흡혈이 적용됩니다."
+        "description": "적에게 스킬을 맞힐 때마다 정기 흡수 충전을 얻습니다. 최대 충전 시 다음 스킬이 아리의 체력을 회복시킵니다."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "아리가 구슬을 던지고 다시 받습니다. 던질 때는 마법 피해를 입히고 돌아올 때는 고정 피해를 입힙니다.",
-            "dynamicDescription": "구슬을 던져 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고, 돌아올 때 <trueDamage>@TotalDamage@의 고정 피해</trueDamage>를 입힙니다. 아리가 스킬을 사용하는 동안 <speed>@FlatMovementSpeedMod@의 이동 속도</speed>를 얻습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "아리가 구슬을 던지고 다시 받습니다. 던질 때는 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 돌아올 때는 <trueDamage>@TotalDamage@의 고정 피해</trueDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "아리가 여우불 세 개를 생성해, 근처의 적을 추적하여 공격하게 합니다.",
-            "dynamicDescription": "근처의 적(챔피언 우선)을 추적해 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히는 여우불 3개를 생성합니다. 다수의 여우불에 맞은 적은 여우불이 추가로 적중할 때마다 <magicDamage>@HalfDamage@의 마법 피해</magicDamage>를 받습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "아리가 근처의 적을 추적하는 여우불 3개를 방출합니다. 여우불은 각각 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히며, 추가로 적중 시 감소한 <magicDamage>@HalfDamage@의 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "아리가 입맞춤을 날려 적중한 적에게 피해를 입히고 매혹합니다. 매혹당한 적은 아리를 향해 무작정 걸어옵니다.",
-            "dynamicDescription": "입맞춤을 날려 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 <status>매혹</status>합니다. 매혹당한 적은 @CharmDuration@초 동안 아리를 향해 무작정 걸어옵니다.@SpellModifierDescriptionAppend@",
+            "description": "아리가 입맞춤을 날려 처음 맞은 적에게 피해를 입히고 매혹합니다. 매혹당한 대상은 몇 초 동안 아리에게 받는 피해가 증가합니다.",
+            "dynamicDescription": "아리가 입맞춤을 날려 처음 맞은 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @CharmDuration@초 동안 <status>매혹</status>합니다. 매혹당한 대상은 아리에게 받는 피해가 @DamageAmpDuration@초간 @DamageAmp@% 증가합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "아리가 전방으로 돌진하며 혼령의 정기를 발사해, 근처에 있는 적 최대 3명(챔피언 우선)에게 피해를 입힙니다. 혼령 질주는 재사용 대기에 돌입하기 전까지 최대 3회 사용할 수 있습니다.",
-            "dynamicDescription": "전방으로 민첩하게 질주하며 근처에 있는 적(챔피언 우선)에게 혼령의 정기 3개를 발사해 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>10초 내로 최대 2회 <recast>재사용</recast>할 수 있습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "아리가 민첩하게 질주하며 근처에 있는 적에게 혼령의 정기 3개를 발사합니다. (챔피언 우선) 정기는 각각 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. <spellName>혼령 질주</spellName>는 10초 내로 최대 2회 <recast>재사용</recast>할 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

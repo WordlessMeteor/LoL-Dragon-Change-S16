@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Después de lanzar 3 hechizos, el siguiente ataque de Sona inflige daño mágico adicional."
+        "description": "Tras lanzar 3 hechizos, el siguiente ataque de Sona inflige daño mágico adicional. El enemigo impactado inflige daño reducido durante cierto tiempo."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Sona toca el Himno del Valor, lo que otorga daño de ataque y poder de habilidad adicionales a los campeones aliados cercanos. Además, al lanzar esta habilidad, emite ondas de sonido que infligen daño mágico a los dos campeones enemigos o monstruos más cercanos.",
-            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> Aumenta el <physicalDamage>Daño de ataque</physicalDamage> y el <magicDamage>Poder de Habilidad</magicDamage> de los campeones aliados cercanos en @APADBoost@.<br><br><spellActive>Activa:</spellActive> Inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los dos enemigos más cercanos (prioriza a los campeones).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> Otorga @APADBoost@ de <physicalDamage>Daño de ataque</physicalDamage> y <magicDamage>Poder de Habilidad</magicDamage> a los campeones aliados cercanos.<br><br><spellActive>Activa:</spellActive> Inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los @EnemiesToHit@ enemigos más cercanos. La habilidad prioriza a los campeones.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Sona toca el Aria de la Perseverancia, lo que otorga armadura y resistencia mágica adicionales a los campeones aliados cercanos. Además, al lanzar esta habilidad, emite melodías sanadoras que la curan a ella y a un aliado herido cercano.",
-            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> Otorga @ARMRBoost@ de <scaleArmor>Armadura</scaleArmor> y <scaleMR>Resistencia Mágica</scaleMR> adicionales a los campeones aliados cercanos.<br><br><spellActive>Activa:</spellActive> Sona se cura <healing>@Healing@ de Vida</healing> a sí misma y al campeón aliado cercano más herido y otorga @ARMRBoost@ de <scaleArmor>Armadura</scaleArmor> y <scaleMR>Resistencia Mágica</scaleMR> adicionales durante 3 seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> Otorga @ARMRBoost@ de <scaleArmor>Armadura</scaleArmor> y <scaleMR>Resistencia Mágica</scaleMR> a los campeones aliados cercanos.<br><br><spellActive>Activa:</spellActive> Sona y el campeón aliado cercano con menor cantidad de vida recuperan <healing>@Healing@ de Vida</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Sona toca la Canción de la Celeridad, lo que otorga velocidad de movimiento adicional a los campeones aliados cercanos. Además, al lanzar esta habilidad, otorga a los aliados cercanos un aumento súbito de velocidad.",
-            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> Otorga <speed>@MSBoost@ de Velocidad de Movimiento</speed> adicional a los campeones aliados cercanos.<br><br><spellActive>Activa:</spellActive> Otorga un <speed>@MoveSpeedMod*100@% de Velocidad de Movimiento</speed> a los aliados cercanos durante 1.5 seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aura Persistente:</keywordMajor> Otorga <speed>@MSBoost@ de Velocidad de Movimiento</speed> a los campeones aliados cercanos.<br><br><spellActive>Activa:</spellActive> Otorga a los campeones aliados cercanos un <speed>@MoveSpeedMod*100@% de Velocidad de Movimiento</speed> durante @ActiveSpeedDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

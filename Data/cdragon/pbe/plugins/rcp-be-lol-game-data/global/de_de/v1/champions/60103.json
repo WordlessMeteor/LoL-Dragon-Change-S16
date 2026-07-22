@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Erhält 1 Aufladung von „Essenzdieb“, wenn eine Fähigkeit einen Gegner trifft (max. 3 Aufladungen pro Fähigkeit). Sobald 9 Aufladungen erreicht sind, erhält die nächste Fähigkeit 35 % Zaubervampir."
+        "description": "Gewährt eine Aufladung von Essenzdieb, wenn eine Fähigkeit einen Gegner trifft. Wenn die maximale Anzahl an Aufladungen erreicht ist, stellt die nächste Fähigkeit Ahris Leben wieder her."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Ahri entsendet ihre Kugel und holt sie daraufhin wieder zurück, wobei sie auf dem Hinweg magischen Schaden und auf dem Rückweg absoluten Schaden verursacht.",
-            "dynamicDescription": "Sie verursacht auf dem Hinweg <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> und auf dem Rückweg <trueDamage>@TotalDamage@ absoluten Schaden</trueDamage>. Ahri erhält <speed>@FlatMovementSpeedMod@ Lauftempo</speed>, während die Fähigkeit unterwegs ist.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri sendet ihre Kugel aus und holt sie wieder zurück, wobei sie auf dem Hinweg <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> und auf dem Rückweg <trueDamage>@TotalDamage@ absoluten Schaden</trueDamage> verursacht.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Ahri beschwört 3 Fuchsfeuer, die nahe Gegner suchen und diese angreifen.",
-            "dynamicDescription": "Entfesselt 3 Fuchsfeuer, die sich nahe Gegner suchen und treffen. Sie priorisieren Champions und verursachen <magicDamage>@TotalDamage@ magischen Schaden</magicDamage>. Von mehreren Fuchsfeuern getroffene Gegner erleiden <magicDamage>@HalfDamage@ magischen Schaden</magicDamage> durch jedes weitere Fuchsfeuer.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri entfesselt 3 Fuchsfeuer, die nahe Gegner suchen und <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> verursachen. Nach dem ersten Fuchsfeuer verursacht jedes weitere <magicDamage>@HalfDamage@ Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
-            "description": "Ahri wirft einen Handkuss, der Schaden an einem getroffenen Gegner verursacht und ihn bezaubert. Bezauberte Gegner torkeln wehrlos auf Ahri zu.",
-            "dynamicDescription": "Wirft einen Handkuss, der <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> an einem getroffenen Gegner verursacht und diesen <status>bezaubert</status>. Bezauberte Gegner torkeln @CharmDuration@ Sekunde(n) lang wehrlos auf Ahri zu.@SpellModifierDescriptionAppend@",
+            "description": "Ahri wirft einen Kuss, der dem ersten getroffenen Gegner Schaden zufügt und ihn bezaubert. Außerdem erleidet er einige Sekunden lang erhöhten Schaden durch sie.",
+            "dynamicDescription": "Ahri wirft einen Kuss, der dem ersten getroffenen Gegner <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> zufügt und ihn @CharmDuration@ Sekunden lang <status>bezaubert</status>. Außerdem erleidet er @DamageAmpDuration@ Sekunden lang @DamageAmp@ mehr Schaden durch sie.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Ahri springt nach vorn und feuert Essenzgeschosse ab, die an 3 nahen Gegnern Schaden verursachen (Champions werden dabei priorisiert). „Geisterhast“ kann bis zu 3-mal aktiviert werden, bevor sie abklingt.",
-            "dynamicDescription": "Springt nach vorn und feuert 3 Essenzgeschosse ab, die <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> an Gegnern in der Nähe verursachen und dabei Champions priorisieren.<br><br>Kann innerhalb von 10 Sekunden bis zu 2-mal <recast>reaktiviert</recast> werden.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri springt flink in Zielrichtung und feuert 3 Essenzgeschosse auf nahe Gegner ab. Champions werden dabei priorisiert. Diese Geschosse verursachen jeweils <magicDamage>@TotalDamage@ magischen Schaden</magicDamage>. <spellName>Geisterhast</spellName> kann innerhalb von 10 Sekunden bis zu 2-mal <recast>reaktiviert</recast> werden.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

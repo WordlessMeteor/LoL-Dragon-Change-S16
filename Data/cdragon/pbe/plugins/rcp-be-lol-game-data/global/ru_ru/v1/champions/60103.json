@@ -6,7 +6,7 @@
     "name": "Ари",
     "alias": "Jade_Ahri",
     "title": "Девятихвостая лиса",
-    "shortBio": "– Сфера обмана [Q] дает скорость передвижения, пока летит<br>– Похищение сущности (пасс. умение) суммируется при нанесении урона врагам<br>– Призрачный рывок [R] не сбрасывается",
+    "shortBio": "– Похищение сущности (пасс. умение) суммируется при нанесении урона врагам<br>– Призрачный рывок [R] не сбрасывается",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Получает заряд Похищения сущности, поражая врага умением (макс. 3 зар. за умение). После накопления 9 зар. следующее умение получает 35% маг. вампиризма."
+        "description": "Получает заряд Похищения сущности, поражая врага умением. После накопления макс. зар. следующее умение восстанавливает здоровье Ари."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Ари выпускает сферу, наносящую маг. урон всем врагам на пути, пока летит вперед, и чистый урон по пути назад.",
-            "dynamicDescription": "Выпускает сферу, наносящую <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>, когда летит вперед, и <trueDamage>@TotalDamage@ ед. чистого урона</trueDamage> на пути назад. Пока сфера в полете, Ари получает <speed>@FlatMovementSpeedMod@ скор. передвижения</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ари выпускает сферу, наносящую <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем врагам на пути, пока летит от Ари, и <trueDamage>@TotalDamage@ ед. чистого урона</trueDamage> по пути назад.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Ари выпускает 3 огонька, нацеливающихся на ближайших врагов и атакующих их.",
-            "dynamicDescription": "Ари выпускает 3 огонька, нацеливающихся на ближайших врагов (приоритет чемпионам) и атакующих их, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>. Последующие попадания по тому же врагу наносят <magicDamage>@HalfDamage@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ари выпускает 3 огонька, стремящиеся к ближайшим врагам и наносящие им <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> (все огоньки после первого наносят <magicDamage>@HalfDamage@ ед. урона</magicDamage>).@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
-            "description": "Ари посылает воздушный поцелуй, наносящий маг. урон и очаровывающий врага, заставляя его завороженно идти к ней.",
-            "dynamicDescription": "Ари посылает воздушный поцелуй, наносящий <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> и <status>очаровывающий</status> врага, заставляя его завороженно идти к ней в течение @CharmDuration@ сек.@SpellModifierDescriptionAppend@",
+            "description": "Ари посылает воздушный поцелуй, наносящий урон и очаровывающий первого пораженного врага. Цель ненадолго получает больше урона от Ари.",
+            "dynamicDescription": "Ари посылает воздушный поцелуй, наносящий <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> и <status>очаровывающий</status> первого пораженного врага на @CharmDuration@ сек. Цель получает на @DamageAmp@% больше урона от Ари в течение @DamageAmpDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Ари совершает рывок вперед и стреляет молниями душ, нанося урон 3 ближайшим врагам (приоритет чемпионам). Призрачный рывок можно использовать до 3 р. до перезарядки умения.",
-            "dynamicDescription": "Проворно совершает рывок вперед, поражая молниями душ 3 ближайших врагов (приоритет чемпионам), нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>.<br><br>Умение можно <recast>применять повторно</recast> до 2 р. в течение 10 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ари проворно совершает рывок, поражая молниями душ 3 ближайших врагов (приоритет чемпионам). Каждая наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>. <spellName>Призрачный рывок</spellName> можно <recast>применять повторно</recast> до 2 р. в течение 10 сек.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

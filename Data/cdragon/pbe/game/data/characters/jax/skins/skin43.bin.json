@@ -296,6 +296,13 @@
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
         },
+        "mEmblems": [
+            {
+                "mEmblemData": "Emblems/51",
+                "mLoadingScreenAnchor": 1,
+                "__type": "SkinEmblem"
+            }
+        ],
         "mResourceResolver": "Characters/Jax/Skins/Skin43/Resources",
         "PersistentEffectConditions": [
             {
@@ -467,6 +474,11 @@
             },
             {
                 "TextureName": "DeformMask",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alpha_Multiplier_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1116,6 +1128,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
+                "on": false,
+                "Group": "Alpha",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
                 "on": false,

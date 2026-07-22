@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix, Lulu'ya yoldaşlık yapan bir yabani Peri'dir. Pix, Lulu'nun saldırdığı hedeflere bir büyü enerjisi dalgası ateşler."
+        "description": "Takip ettiği şampiyon bir rakip birime her saldırdığında Pix de enerji yüklü büyülü oklar atar. Bu oklar güdümlüdür ama başka birimler okların önüne geçebilir."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Pix ve Lulu isabet ettiği bütün rakipleri büyük ölçüde yavaşlatan, büyü enerjisi yüklü birer ok gönderir. Bir rakip yalnızca tek bir oktan hasar alabilir.",
-            "dynamicDescription": "<mainText>Lulu ve Pix her biri <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren ve isabet alan rakipleri @SlowDuration@ saniyeliğine %@SlowAmount*-100@ <status>yavaşlatan</status> iki deşen ok fırlatır. Bu yavaşlatma etkisi zamanla azalarak en az %@MinMoveSpeedMod@ değerine düşer. (En az %80 olabilir.)<br><br>Bir rakip yalnızca tek bir oktan hasar alabilir.",
+            "dynamicDescription": "Lulu ve Pix her biri <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren ve isabet alan rakipleri @SlowDuration@ saniye içinde azalarak kaybolacak şekilde %@SlowAmount*-100@ <status>yavaşlatan</status> iki deşen ok fırlatır.<br><br>Bir rakip yalnızca tek bir oktan hasar alabilir.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

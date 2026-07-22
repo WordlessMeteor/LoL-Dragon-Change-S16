@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Po rzuceniu 3 zaklęć następny atak Sony zada dodatkowe obrażenia magiczne."
+        "description": "Po rzuceniu 3 zaklęć następny atak Sony zada dodatkowe obrażenia magiczne i sprawi, że jej cel będzie zadawał zmniejszone obrażenia przez kilka sekund."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Sona gra Hymn Odwagi, zapewniając pobliskim sojuszniczym bohaterom dodatkowe obrażenia i moc umiejętności. Dodatkowo użycie tej umiejętności wysyła pociski dźwiękowe, co zadaje obrażenia magiczne dwóm najbliższym wrogim bohaterom lub potworom.",
-            "dynamicDescription": "<keywordMajor>Trwała Aura:</keywordMajor> Zwiększa <physicalDamage>obrażenia od ataku</physicalDamage> i <magicDamage>moc umiejętności</magicDamage> pobliskich sojuszniczych bohaterów o @APADBoost@ pkt.<br><br><spellActive>Użycie:</spellActive> Zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> dwóm najbliższym wrogom (traktując priorytetowo bohaterów).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Trwała aura:</keywordMajor> Zapewnia pobliskim sojuszniczym bohaterom @APADBoost@ pkt. <physicalDamage>obrażeń od ataku</physicalDamage> i <magicDamage>mocy umiejętności</magicDamage>.<br><br><spellActive>Użycie:</spellActive> Zadaje <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> @EnemiesToHit@ najbliższym wrogom (traktując priorytetowo bohaterów).@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Sona gra Arię Wytrwałości, zapewniając pobliskim sojuszniczym bohaterom dodatkowy pancerz i odporność na magię. Dodatkowo użycie tej umiejętności wysyła uzdrawiające melodie, które leczą Sonę i pobliskiego rannego sojusznika.",
-            "dynamicDescription": "<keywordMajor>Trwała aura:</keywordMajor> Zapewnia pobliskim sojuszniczym bohaterom @ARMRBoost@ pkt. dodatkowego <scaleArmor>pancerza</scaleArmor> i <scaleMR>odporności na magię</scaleMR>.<br><br><spellActive>Użycie:</spellActive> Leczy Sonę i najbardziej rannego z pobliskich sojuszniczych bohaterów, przywracając <healing>@Healing@ pkt. zdrowia</healing>. Oprócz tego zapewnia na 3 sekundy @ARMRBoost@ pkt. dodatkowego <scaleArmor>pancerza</scaleArmor> i <scaleMR>odporności na magię</scaleMR>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Trwała aura:</keywordMajor> Zapewnia pobliskim sojuszniczym bohaterom @ARMRBoost@ pkt. <scaleArmor>pancerza</scaleArmor> i <scaleMR>odporności na magię</scaleMR>.<br><br><spellActive>Użycie:</spellActive> Leczy Sonę i najbardziej rannego z pobliskich bohaterów za <healing>@Healing@ pkt. zdrowia</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Sona gra Pieśń Prędkości, zapewniając pobliskim sojuszniczym bohaterom dodatkową prędkość ruchu. Oprócz tego użycie tej umiejętności zapewnia pobliskim sojusznikom krótkie zwiększenie tej prędkości.",
-            "dynamicDescription": "<keywordMajor>Trwała aura:</keywordMajor> Zapewnia pobliskim sojuszniczym bohaterom <speed>@MSBoost@ jedn. dodatkowej prędkości ruchu</speed>.<br><br><spellActive>Użycie:</spellActive> Zapewnia pobliskim sojusznikom <speed>@MoveSpeedMod*100@% prędkości ruchu</speed> na 1,5 sekundy.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Trwała aura:</keywordMajor> Zapewnia pobliskim sojuszniczym bohaterom <speed>@MSBoost@ jedn. prędkości ruchu</speed>.<br><br><spellActive>Użycie:</spellActive> Zapewnia pobliskim sojuszniczym bohaterom <speed>@MoveSpeedMod*100@% prędkości ruchu</speed> na @ActiveSpeedDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

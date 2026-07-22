@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "スキルを3回使用すると、次の通常攻撃が追加魔法ダメージを与える。"
+        "description": "スキルを3回使用すると、次の通常攻撃が追加魔法ダメージを与え、数秒間対象が与えるダメージを減少させる。"
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "「ヒム・オブ・ヴァロー」を演奏して周囲の味方チャンピオンの魔力が増加し、追加ダメージを与えるようになる。さらに、このスキルを発動すると音波が放たれ、最も近くにいる2体の敵チャンピオンかモンスターに魔法ダメージを与える。",
-            "dynamicDescription": "<keywordMajor>オーラ(永続):</keywordMajor> 周囲の味方チャンピオンの<physicalDamage>攻撃力</physicalDamage>と<magicDamage>魔力</magicDamage>を@APADBoost@増加させる。<br><br><spellActive>発動効果:</spellActive> 最も近くにいる敵2体(チャンピオンを優先)に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>オーラ(永続):</keywordMajor> 周囲の味方チャンピオンの<physicalDamage>攻撃力</physicalDamage>と<magicDamage>魔力</magicDamage>を@APADBoost@増加させる。<br><br><spellActive>発動効果:</spellActive> 最も近くにいる敵@EnemiesToHit@体(チャンピオンを優先)に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "「パーセヴァランス」を奏で、周囲の味方チャンピオンの物理防御と魔法防御を増加させる。さらに、このスキルを発動すると回復効果のある旋律が放たれ、ソナと近くの1体の負傷した味方の体力が回復する。",
-            "dynamicDescription": "<keywordMajor>オーラ(永続):</keywordMajor> 周囲の味方チャンピオンの<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>を@ARMRBoost@増加させる。<br><br><spellActive>発動効果:</spellActive> 自身と周囲で最も体力が低下した味方チャンピオン1体の<healing>体力を@Healing@</healing>回復し、3秒間、<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>を追加で@ARMRBoost@増加させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>オーラ(永続):</keywordMajor> 周囲の味方チャンピオンの<scaleArmor>物理防御</scaleArmor>と<scaleMR>魔法防御</scaleMR>を@ARMRBoost@増加させる。<br><br><spellActive>発動効果:</spellActive> 自身と周囲で最も体力が低下した味方チャンピオン1体の<healing>体力を@Healing@</healing>回復する。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "「セレリティ」を演奏して周囲の味方チャンピオンの移動速度を増加させる。さらに、このスキルを使用すると周囲の味方を元気づけて、瞬間的に移動速度を増加させる。",
-            "dynamicDescription": "<keywordMajor>オーラ(永続):</keywordMajor> 周囲の味方チャンピオンの<speed>移動速度を@MSBoost@</speed>増加させる。<br><br><spellActive>発動効果:</spellActive> 1.5秒間、周囲の味方の<speed>移動速度を@MoveSpeedMod*100@%</speed>増加させる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>オーラ(永続):</keywordMajor> 周囲の味方チャンピオンの<speed>移動速度を@MSBoost@</speed>増加させる。<br><br><spellActive>発動効果:</spellActive> @ActiveSpeedDuration@秒間、周囲の味方チャンピオンの<speed>移動速度を@MoveSpeedMod*100@%</speed>増加させる。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

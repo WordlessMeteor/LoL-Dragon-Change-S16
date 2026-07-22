@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "소나는 스킬을 3회 사용한 뒤 다음 기본 공격을 가하면 추가 마법 피해를 입힙니다."
+        "description": "소나는 스킬을 3회 사용한 뒤 다음 기본 공격을 가하면 추가 마법 피해를 입히고, 대상이 입히는 피해를 몇 초 동안 감소시킵니다."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "소나가 용맹의 찬가를 연주하여, 주변 아군 챔피언에게 추가 공격력 및 주문력을 부여합니다. 또한 이 스킬을 사용하면 강렬한 선율을 발사해, 가장 가까운 적 챔피언 또는 몬스터 둘에게 마법 피해를 입힙니다.",
-            "dynamicDescription": "<keywordMajor>지속 오라:</keywordMajor> 주변 아군 챔피언의 <physicalDamage>공격력</physicalDamage>과 <magicDamage>주문력</magicDamage>을 @APADBoost@만큼 증가시킵니다.<br><br><spellActive>사용 시:</spellActive> 가장 가까운 적 둘(챔피언 우선)에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>지속 오라:</keywordMajor> 주변 아군 챔피언에게 @APADBoost@의 <physicalDamage>공격력</physicalDamage>과 <magicDamage>주문력</magicDamage>을 부여합니다.<br><br><spellActive>사용 시:</spellActive> 가장 가까운 적 @EnemiesToHit@명(챔피언 우선)에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "소나가 인내의 아리아를 연주하여, 주변 아군 챔피언에게 추가 방어력 및 마법 저항력을 부여합니다. 또한 이 스킬을 사용하면 치유의 선율이 퍼져나가, 소나와 근처의 부상당한 아군이 체력을 회복합니다.",
-            "dynamicDescription": "<keywordMajor>지속 오라:</keywordMajor> 주변 아군 챔피언에게 @ARMRBoost@의 추가 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>을 부여합니다.<br><br><spellActive>사용 시:</spellActive> 소나와 근처의 피해를 가장 많이 받은 아군 챔피언이 <healing>@Healing@의 체력</healing>을 회복하고, 3초 동안 @ARMRBoost@의 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>을 추가로 얻습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>지속 오라:</keywordMajor> 주변 아군 챔피언에게 @ARMRBoost@의 <scaleArmor>방어력</scaleArmor>과 <scaleMR>마법 저항력</scaleMR>을 부여합니다.<br><br><spellActive>사용 시:</spellActive> 소나와 근처의 피해를 가장 많이 받은 아군 챔피언이 <healing>@Healing@의 체력</healing>을 회복합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "소나가 기민함의 노래를 연주하여, 주변 아군 챔피언에게 추가 이동 속도를 부여합니다. 또한 이 스킬을 사용하면 근처 아군의 이동 속도가 일시적으로 증가합니다.",
-            "dynamicDescription": "<keywordMajor>지속 오라:</keywordMajor> 주변 아군 챔피언에게 <speed>@MSBoost@의 추가 이동 속도</speed>를 부여합니다.<br><br><spellActive>사용 시:</spellActive> 근처의 아군에게 1.5초 동안 <speed>@MoveSpeedMod*100@%의 이동 속도</speed>를 부여합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>지속 오라:</keywordMajor> 주변 아군 챔피언에게 <speed>@MSBoost@의 이동 속도</speed>를 부여합니다.<br><br><spellActive>사용 시:</spellActive> 주변 아군 챔피언에게 @ActiveSpeedDuration@초 동안 <speed>@MoveSpeedMod*100@%의 이동 속도</speed>를 부여합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

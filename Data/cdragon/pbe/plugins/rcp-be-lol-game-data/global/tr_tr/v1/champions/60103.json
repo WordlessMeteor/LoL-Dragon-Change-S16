@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "Dokuz Kuyruklu Tilki",
-    "shortBio": "- Aldatan Küre (Q) havadayken hareket hızı sağlar.<br>- Öz Hırsızı (P) rakiplere hasar verildiğinde yük biriktirir.<br>- Ruh Saldırısı (R) sıfırlanmaz.",
+    "shortBio": "- Öz Hırsızı (P) rakiplere hasar verildiğinde yük biriktirir.<br>- Ruh Saldırısı (R) sıfırlanmaz.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Rakibe isabet eden her büyü bir Öz Hırsızı yükü kazandırır (büyü başına en fazla 3 yük). 9 yüke ulaştığında bir sonraki yetenek %35 Can Emme kazanır."
+        "description": "Yetenekleri rakiplere her isabet ettiğinde bir Öz Hırsızı yükü kazanır. Azami yüke ulaşıldığında bir sonraki yeteneği Ahri'nin canını yeniler."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Ahri küresini ileri fırlatıp geri çeker. Küre giderken büyü hasarı, dönerken de gerçek hasar verir.",
-            "dynamicDescription": "Giderken <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage>, dönerken <trueDamage>@TotalDamage@ Gerçek Hasar</trueDamage> verir. Ahri, yetenek havadayken <speed>@FlatMovementSpeedMod@ Hareket Hızı</speed> kazanır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri küresini ileri fırlatıp geri çeker; küre giderken <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage>, dönerken de <trueDamage>@TotalDamage@ Gerçek Hasar</trueDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Ahri'nin oluşturduğu üç tilki ateşi, yakındaki hedeflere kilitlenip saldırır.",
-            "dynamicDescription": "Yakınındaki rakiplere kilitlenen üç tilki ateşi göndererek <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. Atışlar şampiyonlara öncelik verir. Birden fazla tilki ateşi isabet eden rakipler, ilave her bir tilki ateşinden <magicDamage>@HalfDamage@ Büyü Hasarı</magicDamage> alır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri yakındaki rakiplerin peşine düşen ve <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren üç tilki ateşi gönderir. Birden fazla tilki ateşinden isabet alan rakiplerin aldığı hasar azalarak <magicDamage>@HalfDamage@</magicDamage> olur.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
-            "description": "Ahri'nin gönderdiği öpücük, isabet ettiği rakibe hasar verir ve rakibi ayartarak uslu uslu Ahri'ye doğru yürümesini sağlar.",
-            "dynamicDescription": "Rakibin <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> alarak <status>ayartılmasına</status> ve @CharmDuration@ saniye boyunca uslu uslu Ahri'ye doğru yürümesine neden olan bir öpücük gönderir.@SpellModifierDescriptionAppend@",
+            "description": "Ahri isabet ettiği ilk rakibe hasar veren ve onu ayartan bir öpücük gönderir. Ayrıca isabet alan rakip birkaç saniye boyunca Ahri'den daha fazla hasar alır.",
+            "dynamicDescription": "Ahri isabet alan ilk rakibe <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren ve onu @CharmDuration@ saniyeliğine <status>ayartan</status> bir öpücük gönderir. Ayrıca isabet alan rakip @DamageAmpDuration@ saniye boyunca Ahri'den %@DamageAmp@ daha fazla hasar alır.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Ahri ileri atılarak yakınındaki 3 rakibe hasar veren öz ışınları fırlatır. Bu atışlar şampiyonlara öncelik verir. Ruh Saldırısı bekleme süresine girmeden önce üç defa kullanılabilir.",
-            "dynamicDescription": "Kıvrakça ileri atılarak yakındaki rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren 3 öz ışını fırlatır. Bu atışlar şampiyonlara öncelik verir.<br><br>10 saniye içinde 2 defaya kadar daha <recast>yeniden kullanılabilir </recast>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri kıvrakça ileri atılarak yakındaki rakiplere 3 öz ışını fırlatır. Bu atışlar şampiyonlara öncelik verir. Işınların her biri <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir. <spellName>Ruh Saldırısı</spellName> 10 saniye içinde 2 defaya kadar daha <recast>yeniden kullanılabilir</recast>.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

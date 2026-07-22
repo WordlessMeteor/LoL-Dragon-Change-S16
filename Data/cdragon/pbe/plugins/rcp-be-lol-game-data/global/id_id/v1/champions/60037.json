@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Setelah cast 3 spell, serangan Sona berikutnya menghasilkan magic damage bonus."
+        "description": "Setelah cast 3 spell, serangan Sona berikutnya menghasilkan magic damage bonus dan menyebabkan targetnya menghasilkan damage yang lebih sedikit selama beberapa detik."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Sona memainkan Hymn of Valor, memberikan bonus Damage dan Ability Power ke champion sekutu di sekitar. Selain itu, cast ability ini akan mengirimkan kilat suara yang menghasilkan magic damage pada dua champion musuh atau monster terdekat.",
-            "dynamicDescription": "<keywordMajor>Persistent Aura:</keywordMajor> Meningkatkan <physicalDamage>Attack Damage</physicalDamage> dan <magicDamage>Ability Power</magicDamage> Champion sekutu di sekitar sebesar @APADBoost@.<br><br><spellActive>Aktif:</spellActive> Menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> pada dua musuh terdekat (memprioritaskan Champion).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Persistent Aura:</keywordMajor> Memberikan @APADBoost@ <physicalDamage>Attack Damage</physicalDamage> dan <magicDamage>Ability Power</magicDamage> ke champion sekutu di sekitar.<br><br><spellActive>Aktif:</spellActive> Menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> ke @EnemiesToHit@ musuh terdekat, memprioritaskan champion.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Sona memainkan Aria of Perseverance, memberikan bonus Armor dan Magic Resist ke champion sekutu di sekitar. Selain itu, cast ability ini akan mengirimkan melodi penyembuh, memberi heal pada Sona dan satu sekutu di sekitar yang Health-nya rendah.",
-            "dynamicDescription": "<keywordMajor>Persistent Aura:</keywordMajor> Memberikan @ARMRBoost@ bonus <scaleArmor>Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> ke Champion sekutu di sekitar.<br><br><spellActive>Aktif:</spellActive> Memberi heal kepada Sona dan Champion sekutu di sekitar yang paling kritis sebesar <healing>@Healing@ health</healing> serta memberikan @ARMRBoost@ <scaleArmor>Armor</scaleArmor> tambahan dan <scaleMR>Magic Resist</scaleMR> selama 3 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Persistent Aura:</keywordMajor> Memberikan @ARMRBoost@ <scaleArmor>Armor</scaleArmor> dan <scaleMR>Magic Resist</scaleMR> ke champion sekutu di sekitar.<br><br><spellActive>Aktif:</spellActive> Heal Sona dan champion sekutu di sekitar yang paling terluka sebesar <healing>@Healing@ Health</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Sona memainkan Song of Celerity yang memberikan bonus Movement Speed ke champion sekutu di sekitar. Selain itu, cast ability ini akan memberikan peningkatan kecepatan kepada sekutu di sekitar.",
-            "dynamicDescription": "<keywordMajor>Persistent Aura:</keywordMajor> Memberikan Champion sekutu di sekitar <speed>@MSBoost@ Movement Speed bonus</speed>.<br><br><spellActive>Aktif:</spellActive> Memberikan <speed>@MoveSpeedMod*100@% Movement Speed</speed> ke sekutu di sekitar selama 1,5 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Persistent Aura:</keywordMajor> Memberikan <speed>@MSBoost@ Move Speed</speed> ke champion sekutu di sekitar.<br><br><spellActive>Aktif:</spellActive> Memberikan <speed>@MoveSpeedMod*100@% Move Speed</speed> ke champion sekutu di sekitar selama @ActiveSpeedDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

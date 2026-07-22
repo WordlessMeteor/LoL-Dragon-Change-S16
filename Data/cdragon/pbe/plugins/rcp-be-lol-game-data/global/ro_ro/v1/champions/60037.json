@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "După ce folosește 3 vrăji, următorul atac al Sonei provoacă daune magice bonus."
+        "description": "După ce folosește 3 vrăji, următorul atac al Sonei provoacă daune magice bonus și reduce daunele provocate de țintă timp de câteva secunde."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Sona cântă ''Imnul vitejiei'' și le oferă campionilor aliați din apropiere daune și puterea abilităților bonus. În plus, activarea acestei abilități trimite proiectile sonore care le provoacă daune magice celor mai apropiați doi campioni inamici sau monștri.",
-            "dynamicDescription": "<keywordMajor>Aură persistentă:</keywordMajor> crește <physicalDamage>daunele din atac</physicalDamage> și <magicDamage>puterea abilităților</magicDamage> pentru campionii aliați din apropiere cu @APADBoost@.<br><br><spellActive>Activă:</spellActive> le provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> celor mai apropiați doi inamici (țintind cu prioritate campionii).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aură persistentă:</keywordMajor> le oferă campionilor aliați din apropiere @APADBoost@ <physicalDamage>daune din atac</physicalDamage> și <magicDamage>puterea abilităților</magicDamage>.<br><br><spellActive>Activă:</spellActive> le provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> celor mai apropiați @EnemiesToHit@ inamici, țintind cu prioritate campionii.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Sona cântă ''Aria perseverenței'' și le oferă campionilor aliați din apropiere armură și rezistență la magie. În plus, activarea acestei abilități trimite melodii vindecătoare, care o vindecă pe Sona și pe un aliat rănit din apropiere.",
-            "dynamicDescription": "<keywordMajor>Aură persistentă:</keywordMajor> le oferă campionilor aliați din apropiere @ARMRBoost@ <scaleArmor>armură</scaleArmor> și <scaleMR>rezistență la magie</scaleMR> bonus.<br><br><spellActive>Activă:</spellActive> o vindecă pe Sona și pe campionul aliat cel mai rănit din apropiere în valoare de <healing>@Healing@ viață</healing> și oferă încă @ARMRBoost@ <scaleArmor>armură</scaleArmor> și <scaleMR>rezistență la magie</scaleMR> timp de 3 secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aură persistentă:</keywordMajor> le oferă campionilor aliați din apropiere @ARMRBoost@ <scaleArmor>armură</scaleArmor> și <scaleMR>rezistență la magie</scaleMR>.<br><br><spellActive>Activă:</spellActive> o vindecă pe Sona și pe campionul aliat cel mai rănit din apropiere în valoare de <healing>@Healing@ viață</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Sona cântă ''Cântecul celerității'' și le oferă campionilor aliați din apropiere un bonus la viteza de mișcare. În plus, folosirea acestei abilități energizează aliații din apropiere cu bonus de viteză.",
-            "dynamicDescription": "<keywordMajor>Aură persistentă:</keywordMajor> le oferă campionilor aliați din apropiere <speed>@MSBoost@ viteză de mișcare bonus</speed>.<br><br><spellActive>Activă:</spellActive> le oferă aliaților din apropiere <speed>@MoveSpeedMod*100@% viteză de mișcare</speed> timp de 1,5 secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Aură persistentă:</keywordMajor> le oferă campionilor aliați din apropiere <speed>@MSBoost@ viteză de mișcare</speed>.<br><br><spellActive>Activă:</spellActive> aliații din apropiere primesc <speed>@MoveSpeedMod*100@% viteză de mișcare</speed> timp de @ActiveSpeedDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

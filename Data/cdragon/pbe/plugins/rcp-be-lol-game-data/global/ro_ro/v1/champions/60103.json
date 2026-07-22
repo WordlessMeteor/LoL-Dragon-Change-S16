@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Primește un cumul de ''Furt de esență'' de fiecare dată când o vrajă lovește un inamic (maximum 3 cumuluri per vrajă). Când ajunge la 9 cumuluri, următoarea vrajă are 35% vampirism magic."
+        "description": "Primește un cumul de ''Furt de esență'' de fiecare dată când o vrajă lovește un inamic. Când ajunge la numărul maxim de cumuluri, următoarea vrajă îi reface viața lui Ahri."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Ahri își aruncă și apoi își recheamă sfera, care provoacă daune magice la dus și daune reale la întoarcere.",
-            "dynamicDescription": "Provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> la dus și <trueDamage>@TotalDamage@ daune reale</trueDamage> la întors. Ahri primește <speed>@FlatMovementSpeedMod@ viteză de mișcare</speed> cât timp vraja este în zbor.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri își aruncă și apoi își recheamă sfera, care provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> la dus și <trueDamage>@TotalDamage@ daune reale</trueDamage> la întoarcere.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Ahri lansează trei flăcări magice, care urmăresc și atacă inamicii din apropiere.",
-            "dynamicDescription": "Lansează trei flăcări magice care țintesc inamicii din apropiere (țintind cu prioritate campionii) și le provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage>. Inamicii loviți de mai multe flăcări magice suferă <magicDamage>@HalfDamage@ daune magice</magicDamage> de la fiecare flacără magică suplimentară.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri lansează 3 flăcări magice care caută inamicii din apropiere și provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage>, valoare redusă la <magicDamage>@HalfDamage@ daune</magicDamage> pentru inamicii loviți ulterior.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
-            "description": "Ahri trimite un sărut care seduce primul inamic pe care-l atinge și îi provoacă daune, forțându-l să se apropie de ea fără a o putea ataca.",
-            "dynamicDescription": "Trimite un sărut care provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> și <status>seduce</status> un inamic, făcându-l să se apropie de Ahri fără a putea ataca timp de @CharmDuration@ sec.@SpellModifierDescriptionAppend@",
+            "description": "Ahri trimite un sărut care provoacă daune și seduce primul inamic lovit. În plus, acesta suferă mai multe daune din partea ei timp de câteva secunde.",
+            "dynamicDescription": "Ahri trimite un sărut care provoacă <magicDamage>@TotalDamage@ daune magice</magicDamage> și <status>seduce</status> primul inamic lovit timp de @CharmDuration@ secunde. În plus, acesta suferă cu @DamageAmp@% mai multe daune din partea ei timp de @DamageAmpDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Ahri se năpustește în față și lansează fulgere, provocând daune împotriva a 3 inamici din apropiere (țintind cu prioritate campionii). ''Goana spiritului'' poate fi folosită de maximum trei ori înainte să intre în perioada de reactivare.",
-            "dynamicDescription": "Ahri se năpustește înainte și lansează 3 fulgere către inamicii din apropiere (țintind cu prioritate campionii), provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage>.<br><br>Poate fi <recast>refolosită</recast> de încă 2 ori în decurs de 10 secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri se năpustește și lansează 3 fulgere către inamicii din apropiere, alegând prioritar campionii. Fulgerele provoacă fiecare <magicDamage>@TotalDamage@ daune magice</magicDamage>. <spellName>''Goana spiritului''</spellName> poate fi <recast>refolosită</recast> de încă 2 ori în decurs de 10 secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

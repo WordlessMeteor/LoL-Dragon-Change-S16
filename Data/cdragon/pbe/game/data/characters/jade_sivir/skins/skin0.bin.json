@@ -166,7 +166,6 @@
                     "__type": "ValueFloat"
                 },
                 "emitterName": "BlurryWeapon",
-                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -330,16 +329,146 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_W_Mis_BlurryWeapon.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_W_mis_BlurryWeapon.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
                 "rate": {
-                    "constantValue": 10.0,
+                    "constantValue": 200.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.4000000059604645,
+                    "constantValue": 0.5,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "period": 1.0,
+                "timeActiveDuringPeriod": 1.0,
+                "emitterName": "Blade_Base_trail",
+                "birthDrag": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 1000.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                600.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveArbitraryTrail"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            0.6000000238418579,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.30000001192092896
+                            ],
+                            [
+                                0.0,
+                                0.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "miscRenderFlags": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        80.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_W_mis_Trail.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.20000000298023224,
+                        0.0
+                    ],
                     "dynamics": {
                         "probabilityTables": [
                             {
@@ -348,9 +477,12 @@
                                     1.0
                                 ],
                                 "keyValues": [
-                                    0.5,
-                                    1.0
+                                    0.30000001192092896,
+                                    1.5
                                 ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
                                 "__type": "VfxProbabilityTableData"
                             }
                         ],
@@ -358,15 +490,28 @@
                             0.0
                         ],
                         "values": [
-                            0.4000000059604645
+                            [
+                                0.20000000298023224,
+                                0.0
+                            ]
                         ],
-                        "__type": "VfxAnimatedFloatVariableData"
+                        "__type": "VfxAnimatedVector2fVariableData"
                     },
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 30.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.4000000059604645,
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 0.20000000298023224,
                 "emitterName": "BladeTrail",
-                "importance": 3,
                 "birthVelocity": {
                     "constantValue": [
                         0.0,
@@ -380,12 +525,15 @@
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        50.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            50.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
@@ -462,7 +610,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_W_Mis_Glow.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_W_mis_Glow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -479,6 +627,9 @@
                 "bindWeight": {
                     "constantValue": 0.10000000149011612,
                     "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
@@ -596,7 +747,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_W_Mis_BlurryWeapon.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_W_mis_BlurryWeapon.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -614,29 +765,23 @@
                 "lifetime": 1.2999999523162842,
                 "isSingleParticle": 1,
                 "emitterName": "blade",
-                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        75.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
                 "blendMode": 1,
-                "pass": 30,
+                "pass": 3,
                 "birthRotationalVelocity0": {
                     "constantValue": [
                         0.0,
                         0.0,
-                        800.0
+                        620.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -648,7 +793,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_weapon_blur.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/sivir_weapon_blur.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -662,14 +807,9 @@
                 },
                 "particleLinger": 10.300000190734863,
                 "emitterLinger": 1.0,
-                "emitterName": "Bladetrail2",
+                "emitterName": "Bladetrail",
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        75.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "mTrail": {
@@ -749,7 +889,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_Q_Mis_Trail.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_Q_mis_Trail.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -757,7 +897,6 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 1.2999999523162842,
                 "isSingleParticle": 1,
                 "emitterName": "Shadow",
                 "bindWeight": {
@@ -765,32 +904,18 @@
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        75.0,
-                        -90.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
-                    "__type": "VfxPrimitiveArbitraryQuad"
+                    "__type": "VfxPrimitivePlanarProjection"
                 },
                 "blendMode": 1,
-                "Color": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.547996997833252
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": -300,
+                "pass": 3,
                 "birthRotationalVelocity0": {
                     "constantValue": [
                         0.0,
                         0.0,
-                        800.0
+                        620.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -802,158 +927,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_Q_Mis_Shadow.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 200.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.23000000417232513,
-                    "__type": "ValueFloat"
-                },
-                "particleLinger": 1.0,
-                "period": 1.0,
-                "timeActiveDuringPeriod": 1.0,
-                "emitterName": "bladespark",
-                "birthDrag": {
-                    "constantValue": [
-                        0.0,
-                        0.0,
-                        1.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        75.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "primitive": {
-                    "mTrail": {
-                        "mMode": 1,
-                        "mCutoff": 1500.0,
-                        "mBirthTilingSize": {
-                            "constantValue": [
-                                600.0,
-                                0.0,
-                                0.0
-                            ],
-                            "__type": "ValueVector3"
-                        },
-                        "__type": "VfxTrailDefinitionData"
-                    },
-                    "__type": "VfxPrimitiveArbitraryTrail"
-                },
-                "Color": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.20000000298023224,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedColorVariableData"
-                    },
-                    "__type": "ValueColor"
-                },
-                "miscRenderFlags": 1,
-                "birthScale0": {
-                    "constantValue": [
-                        65.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.5,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                1.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                0.8500000238418579,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                0.699999988079071,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_BA_Mis_Trail.tex",
-                "birthUvScrollRate": {
-                    "constantValue": [
-                        0.20000000298023224,
-                        0.0
-                    ],
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "keyTimes": [
-                                    0.0,
-                                    1.0
-                                ],
-                                "keyValues": [
-                                    0.30000001192092896,
-                                    1.5
-                                ],
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0
-                        ],
-                        "values": [
-                            [
-                                0.20000000298023224,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector2fVariableData"
-                    },
-                    "__type": "ValueVector2"
-                },
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_Q_mis_Shadow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -961,19 +935,18 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 1.0,
+                "particleLifetime": {
+                    "constantValue": 1.7999999523162842,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.0,
                 "emitterName": "bluelight",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        75.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "__type": "VfxShapeLegacy"
                 },
                 "pass": 5,
                 "meshRenderFlags": 0,
@@ -987,7 +960,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_Q_bluelight.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_Q_bluelight.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -1005,29 +978,23 @@
                 "lifetime": 1.2999999523162842,
                 "isSingleParticle": 1,
                 "emitterName": "blade",
-                "importance": 3,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        -75.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
                 "blendMode": 1,
-                "pass": 30,
+                "pass": 3,
                 "birthRotationalVelocity0": {
                     "constantValue": [
                         0.0,
                         0.0,
-                        800.0
+                        620.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -1039,7 +1006,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_weapon_blur.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/sivir_weapon_blur.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1053,14 +1020,9 @@
                 },
                 "particleLinger": 10.300000190734863,
                 "emitterLinger": 1.0,
-                "emitterName": "Bladetrail2",
+                "emitterName": "Bladetrail",
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        -75.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "mTrail": {
@@ -1140,7 +1102,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_Q_Mis_Trail.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_Q_mis_Trail.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1148,7 +1110,6 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 1.2999999523162842,
                 "isSingleParticle": 1,
                 "emitterName": "Shadow",
                 "bindWeight": {
@@ -1156,32 +1117,18 @@
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        -75.0,
-                        -90.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
-                    "__type": "VfxPrimitiveArbitraryQuad"
+                    "__type": "VfxPrimitivePlanarProjection"
                 },
                 "blendMode": 1,
-                "Color": {
-                    "constantValue": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        0.5589990019798279
-                    ],
-                    "__type": "ValueColor"
-                },
-                "pass": -300,
+                "pass": 3,
                 "birthRotationalVelocity0": {
                     "constantValue": [
                         0.0,
                         0.0,
-                        800.0
+                        620.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -1193,22 +1140,62 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_Q_Mis_Shadow.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_Q_mis_Shadow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.7999999523162842,
+                    "__type": "ValueFloat"
+                },
+                "lifetime": 2.0,
+                "emitterName": "bluelight",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "pass": 5,
+                "meshRenderFlags": 0,
+                "miscRenderFlags": 1,
+                "isUniformScale": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        35.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_Q_bluelight.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Sivir_Base_Q_mis",
+        "particlePath": "Characters/Jade_Sivir/Skins/Skin0/Particles/Jade_Sivir_Base_Q_mis",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Jade_Sivir/Skins/Skin0/Particles/Jade_Sivir_Base_basicattack_mis": {
+        "complexEmitterDefinitionData": [
             {
                 "rate": {
                     "constantValue": 200.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.23000000417232513,
+                    "constantValue": 0.15000000596046448,
                     "__type": "ValueFloat"
                 },
                 "particleLinger": 1.0,
                 "period": 1.0,
                 "timeActiveDuringPeriod": 1.0,
-                "emitterName": "bladespark",
+                "emitterName": "bladetrail",
                 "birthDrag": {
                     "constantValue": [
                         0.0,
@@ -1217,18 +1204,29 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        -75.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "mTrail": {
                         "mMode": 1,
-                        "mCutoff": 1500.0,
+                        "mCutoff": 1000.0,
                         "mBirthTilingSize": {
                             "constantValue": [
                                 600.0,
@@ -1245,7 +1243,8 @@
                     "dynamics": {
                         "times": [
                             0.0,
-                            0.20000000298023224,
+                            0.30000001192092896,
+                            0.6000000238418579,
                             1.0
                         ],
                         "values": [
@@ -1259,7 +1258,13 @@
                                 1.0,
                                 1.0,
                                 1.0,
-                                1.0
+                                0.699999988079071
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.30000001192092896
                             ],
                             [
                                 1.0,
@@ -1295,12 +1300,12 @@
                                 0.0
                             ],
                             [
-                                0.8500000238418579,
+                                0.699999988079071,
                                 0.0,
                                 0.0
                             ],
                             [
-                                0.699999988079071,
+                                0.5,
                                 0.0,
                                 0.0
                             ]
@@ -1309,7 +1314,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_BA_Mis_Trail.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_basicattack_mis_Trail.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.20000000298023224,
@@ -1349,47 +1354,6 @@
             },
             {
                 "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "emitterName": "bluelight",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        -75.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "pass": 5,
-                "meshRenderFlags": 0,
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthScale0": {
-                    "constantValue": [
-                        35.0,
-                        35.0,
-                        35.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_Q_bluelight.tex",
-                "__type": "VfxEmitterDefinitionData"
-            }
-        ],
-        "particleName": "Jade_Sivir_Base_Q_mis",
-        "particlePath": "Characters/Jade_Sivir/Skins/Skin0/Particles/Jade_Sivir_Base_Q_mis",
-        "__type": "VfxSystemDefinitionData"
-    },
-    "Characters/Jade_Sivir/Skins/Skin0/Particles/Jade_Sivir_Base_basicattack_mis": {
-        "complexEmitterDefinitionData": [
-            {
-                "rate": {
                     "constantValue": 15.0,
                     "__type": "ValueFloat"
                 },
@@ -1397,8 +1361,7 @@
                     "constantValue": 0.30000001192092896,
                     "__type": "ValueFloat"
                 },
-                "emitterName": "blade",
-                "importance": 3,
+                "emitterName": "blade1",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
@@ -1484,6 +1447,7 @@
                 "pass": 1,
                 "particleIsLocalOrientation": 1,
                 "isUniformScale": 1,
+                "doesCastShadow": 1,
                 "birthRotationalVelocity0": {
                     "constantValue": [
                         0.0,
@@ -1541,11 +1505,6 @@
                     "__type": "ValueVector3"
                 },
                 "scale0": {
-                    "constantValue": [
-                        0.800000011920929,
-                        0.800000011920929,
-                        0.800000011920929
-                    ],
                     "dynamics": {
                         "times": [
                             0.0,
@@ -1553,13 +1512,13 @@
                         ],
                         "values": [
                             [
-                                0.800000011920929,
-                                0.800000011920929,
+                                1.0,
+                                1.0,
                                 0.0
                             ],
                             [
-                                0.800000011920929,
-                                0.800000011920929,
+                                1.0,
+                                1.0,
                                 0.0
                             ]
                         ],
@@ -1567,7 +1526,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_BA_Mis_BlurryWeapon.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_basicattack_mis_BlurryWeapon.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -1586,9 +1545,11 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "lifetime": 4.0,
-                "emitterName": "trail1",
-                "importance": 1,
+                "particleLinger": 1.0,
+                "lifetime": 3.0,
+                "period": 1.0,
+                "timeActiveDuringPeriod": 1.0,
+                "emitterName": "trail",
                 "birthDrag": {
                     "constantValue": [
                         0.0,
@@ -1597,9 +1558,28 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
                 "bindWeight": {
                     "constantValue": 0.20000000298023224,
                     "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "mTrail": {
@@ -1699,7 +1679,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_W_Buf_Trail.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_R_Buf_Trail.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.20000000298023224,
@@ -1746,8 +1726,10 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "emitterName": "trail2",
-                "importance": 1,
+                "particleLinger": 1.0,
+                "period": 1.0,
+                "timeActiveDuringPeriod": 1.0,
+                "emitterName": "trail1",
                 "birthDrag": {
                     "constantValue": [
                         0.0,
@@ -1756,9 +1738,28 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
                 "bindWeight": {
                     "constantValue": 0.20000000298023224,
                     "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "mTrail": {
@@ -1850,7 +1851,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_W_Buf_Trail.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_R_Buf_Trail.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.20000000298023224,
@@ -1896,33 +1897,349 @@
     "Characters/Jade_Sivir/Skins/Skin0/Particles/Jade_Sivir_Base_basicattack_mis_right": {
         "complexEmitterDefinitionData": [
             {
-                "isSingleParticle": 1,
-                "emitterName": "blade-blue",
+                "rate": {
+                    "constantValue": 200.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.15000000596046448,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 1.0,
+                "period": 1.0,
+                "timeActiveDuringPeriod": 1.0,
+                "emitterName": "bladetrail",
+                "birthDrag": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        1.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "primitive": {
+                    "mTrail": {
+                        "mMode": 1,
+                        "mCutoff": 1000.0,
+                        "mBirthTilingSize": {
+                            "constantValue": [
+                                600.0,
+                                0.0,
+                                0.0
+                            ],
+                            "__type": "ValueVector3"
+                        },
+                        "__type": "VfxTrailDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveArbitraryTrail"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            0.6000000238418579,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.699999988079071
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.30000001192092896
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "miscRenderFlags": 1,
+                "birthScale0": {
+                    "constantValue": [
+                        65.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.699999988079071,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_basicattack_mis_Trail.tex",
+                "birthUvScrollRate": {
+                    "constantValue": [
+                        0.20000000298023224,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    1.5
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.20000000298023224,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector2fVariableData"
+                    },
+                    "__type": "ValueVector2"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 15.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.30000001192092896,
+                    "__type": "ValueFloat"
+                },
+                "emitterName": "blade",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            5.0,
+                            0.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        -1.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    0.0,
+                                    5.0,
+                                    0.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
                 "blendMode": 1,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.20000000298023224,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "pass": 1,
+                "particleIsLocalOrientation": 1,
+                "isUniformScale": 1,
+                "doesCastShadow": 1,
                 "birthRotationalVelocity0": {
                     "constantValue": [
                         0.0,
                         0.0,
-                        -720.0
+                        -1000.0
                     ],
                     "__type": "ValueVector3"
                 },
                 "birthScale0": {
                     "constantValue": [
-                        65.0,
-                        65.0,
-                        65.0
+                        75.0,
+                        75.0,
+                        0.0
                     ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.800000011920929,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                75.0,
+                                75.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_weapon_base_BA.tex",
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_basicattack_mis_BlurryWeapon.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -1945,10 +2262,12 @@
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "turnon",
-                "importance": 1,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "mMesh": {
@@ -2034,13 +2353,13 @@
                 "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
-                        3.0,
-                        3.0,
-                        3.0
+                        2.299999952316284,
+                        2.0,
+                        2.299999952316284
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_R_buf_explosion_geoCone.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_R_buf_explosion_geoCone.tex",
                 "uvMode": 2,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -2060,19 +2379,22 @@
                     "constantValue": 0.30000001192092896,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.5,
+                "lifetime": 5.5,
                 "emitterName": "airswooshys",
                 "bindWeight": {
                     "constantValue": 0.949999988079071,
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        50.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            50.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
@@ -2153,8 +2475,8 @@
                 "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
-                        90.0,
-                        90.0,
+                        80.0,
+                        80.0,
                         0.0
                     ],
                     "__type": "ValueVector3"
@@ -2181,7 +2503,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_R_Buf_cresent.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_R_Buf_cresent.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2228,9 +2550,8 @@
                     },
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.5,
-                "emitterName": "Jade_Sivirtrail",
-                "importance": 3,
+                "lifetime": 6.0,
+                "emitterName": "sivirtrail",
                 "SpawnShape": {
                     "emitOffset": {
                         "constantValue": [
@@ -2329,12 +2650,12 @@
                     "emitRotationAxes": [
                         [
                             0.0,
-                            1.0000001192092896,
+                            1.0,
                             0.0
                         ],
                         [
                             0.0,
-                            1.0000001192092896,
+                            1.0,
                             0.0
                         ]
                     ],
@@ -2426,7 +2747,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_R_buf_speedlines.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_R_buf_speedlines.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -2438,12 +2759,14 @@
                     "constantValue": 0.5,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.5,
+                "lifetime": 6.0,
                 "emitterName": "cloudring",
-                "importance": 3,
                 "bindWeight": {
-                    "constantValue": 0.5,
+                    "constantValue": 1.0,
                     "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
                 },
                 "EmitterPosition": {
                     "constantValue": [
@@ -2487,7 +2810,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_base_r_buf_auramesh3.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/sivir_Base_R_buf_auramesh3.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -2514,14 +2837,14 @@
                                 0.5
                             ],
                             [
-                                0.0,
-                                0.0,
+                                1.0,
+                                1.0,
                                 1.0,
                                 0.5
                             ],
                             [
-                                0.0,
-                                0.0,
+                                1.0,
+                                1.0,
                                 1.0,
                                 0.0
                             ]
@@ -2583,9 +2906,9 @@
                 "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
-                        7.0,
-                        7.0,
-                        7.0
+                        6.0,
+                        6.0,
+                        6.0
                     ],
                     "dynamics": {
                         "probabilityTables": [
@@ -2612,16 +2935,16 @@
                         ],
                         "values": [
                             [
-                                7.0,
-                                7.0,
-                                7.0
+                                6.0,
+                                6.0,
+                                6.0
                             ]
                         ],
                         "__type": "VfxAnimatedVector3fVariableData"
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_R_Buff_Mesh2_sparks.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_R_Buff_Mesh2_sparks.tex",
                 "uvMode": 2,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -2649,6 +2972,9 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
@@ -2659,7 +2985,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_base_r_buf_cloudring.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/sivir_Base_R_buf_cloudring.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -2699,9 +3025,9 @@
                 "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
-                        4.0,
-                        4.0,
-                        4.0
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -2727,7 +3053,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_R_buf_cloudring.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_R_buf_cloudring.tex",
                 "uvMode": 2,
                 "birthUvScrollRate": {
                     "constantValue": [
@@ -2748,10 +3074,11 @@
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
+                "particleLinger": 1.0,
+                "lifetime": 6.0,
                 "period": 1.0,
                 "timeActiveDuringPeriod": 1.0,
-                "emitterName": "trail2",
-                "importance": 1,
+                "emitterName": "trail",
                 "birthDrag": {
                     "constantValue": [
                         0.0,
@@ -2760,17 +3087,36 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "worldAcceleration": {
+                    "dynamics": {
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "IntegratedValueVector3"
+                },
                 "bindWeight": {
                     "constantValue": 0.20000000298023224,
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        100.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            100.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
                 },
                 "FlexShapeDefinition": {
                     "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
@@ -2874,7 +3220,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_W_Buf_Trail.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_R_Buf_Trail.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.20000000298023224,
@@ -2918,121 +3264,34 @@
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
-                    "constantValue": 0.30000001192092896,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "flash",
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        80.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "FlexShapeDefinition": {
-                    "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
-                    "__type": "VfxFlexShapeDefinitionData"
-                },
-                "primitive": {
-                    "__type": "VfxPrimitiveArbitraryQuad"
-                },
-                "particleColorTexture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_color-hold.tex",
-                "pass": 5,
-                "birthRotation0": {
-                    "constantValue": [
-                        -90.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "birthRotationalVelocity0": {
-                    "constantValue": [
-                        0.0,
-                        200.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "isLocalOrientation": 0,
-                "birthScale0": {
-                    "constantValue": [
-                        380.0,
-                        380.0,
-                        0.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "times": [
-                            0.0,
-                            0.20000000298023224,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_E_spark.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
                     "constantValue": 0.5,
                     "__type": "ValueFloat"
                 },
                 "lifetime": 1.0,
                 "isSingleParticle": 1,
                 "emitterName": "distort",
-                "importance": 1,
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_R_buf_distort.tex",
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_R_buf_distort.tex",
                 "blendMode": 1,
                 "meshRenderFlags": 0,
                 "distortionDefinition": {
                     "distortion": 0.019999999552965164,
-                    "normalMapTexture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_distort-shockwave.tex",
+                    "normalMapTexture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/sivir_distort-shockwave.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
                 "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "birthScale0": {
                     "constantValue": [
-                        250.0,
-                        250.0,
-                        250.0
+                        200.0,
+                        200.0,
+                        200.0
                     ],
                     "__type": "ValueVector3"
                 },
@@ -3080,26 +3339,29 @@
             },
             {
                 "rate": {
-                    "constantValue": 10.0,
+                    "constantValue": 8.0,
                     "__type": "ValueFloat"
                 },
                 "particleLifetime": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
-                "particleLinger": 0.5,
+                "lifetime": 5.0,
                 "emitterName": "flashring",
                 "bindWeight": {
                     "constantValue": 1.0,
                     "__type": "ValueFloat"
                 },
                 "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        50.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            50.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
                 },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
@@ -3227,92 +3489,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_R_buf_shockwave.tex",
-                "__type": "VfxEmitterDefinitionData"
-            },
-            {
-                "rate": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "particleLifetime": {
-                    "constantValue": 0.5,
-                    "__type": "ValueFloat"
-                },
-                "lifetime": 1.0,
-                "isSingleParticle": 1,
-                "emitterName": "distort1",
-                "importance": 1,
-                "bindWeight": {
-                    "constantValue": 1.0,
-                    "__type": "ValueFloat"
-                },
-                "SpawnShape": {
-                    "emitOffset": [
-                        0.0,
-                        30.0,
-                        0.0
-                    ],
-                    "__type": "{ee39916f}"
-                },
-                "particleColorTexture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Base_R_buf_distort.tex",
-                "blendMode": 1,
-                "meshRenderFlags": 0,
-                "distortionDefinition": {
-                    "distortion": 0.029999999329447746,
-                    "normalMapTexture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_distort-shockwave.tex",
-                    "__type": "VfxDistortionDefinitionData"
-                },
-                "miscRenderFlags": 1,
-                "isUniformScale": 1,
-                "birthScale0": {
-                    "constantValue": [
-                        250.0,
-                        250.0,
-                        250.0
-                    ],
-                    "__type": "ValueVector3"
-                },
-                "scale0": {
-                    "dynamics": {
-                        "probabilityTables": [
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            },
-                            {
-                                "__type": "VfxProbabilityTableData"
-                            }
-                        ],
-                        "times": [
-                            0.0,
-                            0.4000000059604645,
-                            1.0
-                        ],
-                        "values": [
-                            [
-                                0.0,
-                                0.0,
-                                0.0
-                            ],
-                            [
-                                0.800000011920929,
-                                0.800000011920929,
-                                0.800000011920929
-                            ],
-                            [
-                                1.0,
-                                1.0,
-                                1.0
-                            ]
-                        ],
-                        "__type": "VfxAnimatedVector3fVariableData"
-                    },
-                    "__type": "ValueVector3"
-                },
-                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Jade_Sivir_Aura_Self.tex",
+                "texture": "ASSETS/Characters/Jade_Sivir/Skins/Base/Particles/Sivir_Base_R_buf_shockwave.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

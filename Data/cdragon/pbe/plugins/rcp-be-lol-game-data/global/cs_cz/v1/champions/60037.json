@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Po seslání 3 schopností způsobí příští Sonin útok bonusové magické poškození."
+        "description": "Po seslání 3 schopností způsobí příští Sonin útok bonusové magické poškození, jejímu cíli se na několik sekund způsobované poškození naopak sníží."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Sona zahraje Hymnu chrabrosti, čímž okolním spojeneckým šampionům poskytne bonus k útočnému poškození a síle schopností. Použitím této schopnosti navíc vyšle zvukové výboje, které způsobí magické poškození dvěma nejbližším nepřátelským šampionům nebo příšerám.",
-            "dynamicDescription": "<keywordMajor>Trvalá aura:</keywordMajor> Zvyšuje o @APADBoost@ <physicalDamage>útočné poškození</physicalDamage> a <magicDamage>sílu schopností</magicDamage> okolních spojeneckých šampionů.<br><br><spellActive>Aktivace:</spellActive> Způsobí dvěma nejbližším nepřátelům (přednost mají šampioni) <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Trvalá aura:</keywordMajor> Uděluje okolním spojeneckým šampionům @APADBoost@ k <physicalDamage>útočnému poškození</physicalDamage> a <magicDamage>síle schopností</magicDamage>.<br><br><spellActive>Aktivace:</spellActive> Způsobí @EnemiesToHit@ nejbližším nepřátelům (zaměřuje primárně šampiony) <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Sona hraje Árii vytrvalosti, která okolním spojeneckým šampionům poskytuje bonus k brnění a odolnosti vůči magii. Seslání této schopnosti navíc vyšle uklidňující melodie, které vyléčí Sonu a jednoho nedalekého zraněného spojence.",
-            "dynamicDescription": "<keywordMajor>Trvalá aura:</keywordMajor> Udělí okolním spojeneckým šampionům +@ARMRBoost@ k hodnotám <scaleArmor>brnění</scaleArmor> a <scaleMR>odolnosti vůči magii</scaleMR>.<br><br><spellActive>Aktivace:</spellActive> Vyléčí Soně a nejzraněnějšímu nedalekému spojeneckému šampionovi <healing>@Healing@ zdraví</healing> a na 3&nbsp;sek. jim oběma poskytne +@ARMRBoost@ k <scaleArmor>brnění</scaleArmor> a <scaleMR>odolnosti vůči magii</scaleMR>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Trvalá aura:</keywordMajor> Uděluje okolním spojeneckým šampionům @ARMRBoost@ k <scaleArmor>brnění</scaleArmor> a <scaleMR>odolnosti vůči magii</scaleMR>.<br><br><spellActive>Aktivace:</spellActive> Obnoví sobě a nejzraněnějšímu spojeneckému šampionovi v okolí <healing>@Healing@ zdraví</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Sona zahraje Píseň rychlosti, čímž okolním spojeneckým šampionům zvýší rychlost pohybu. Při seslání této schopnosti navíc dodá okolním spojencům nárazové zrychlení.",
-            "dynamicDescription": "<keywordMajor>Trvalá aura:</keywordMajor> Uděluje okolním spojeneckým šampionům <speed>@MSBoost@ k rychlosti pohybu</speed>.<br><br><spellActive>Aktivace:</spellActive> Udělí okolním spojencům na 1,5&nbsp;sek. <speed>@MoveSpeedMod*100@&nbsp;%</speed> k rychlosti pohybu.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Trvalá aura:</keywordMajor> Uděluje okolním spojeneckým šampionům <speed>@MSBoost@ k rychlosti pohybu</speed>.<br><br><spellActive>Aktivace:</spellActive> Poskytne okolním spojencům na @ActiveSpeedDuration@ sek. <speed>@MoveSpeedMod*100@ % k rychlosti pohybu</speed>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

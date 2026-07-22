@@ -796,7 +796,7 @@
             "chromas": [
                 {
                     "id": 60029302,
-                    "name": "クラシック トゥイッチ (アウトロー)",
+                    "name": "クラシック トゥイッチ (ネズミの親玉)",
                     "contentId": "6c8e7f56-4dac-4f95-8374-f43e26f9982d",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -834,8 +834,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "少しの間、インビジブル状態になり、その間は移動速度が増加する。インビジブル状態が解除されると、少しの間、攻撃速度が増加する。",
-            "dynamicDescription": "<mainText>@MaxFadeTime@秒後、@StealthDuration@秒間、<keywordStealth>カモフラージュ状態</keywordStealth>になる。<br><br><keywordStealth>カモフラージュ状態</keywordStealth>が解除されると、@AttackSpeedDuration@秒間、<attackSpeed>攻撃速度が@AttackSpeedMod*100@%</attackSpeed>増加する。",
+            "description": "数秒間インビジブル状態になり、移動速度が増加する。インビジブル状態が解除されると、攻撃速度が増加する。",
+            "dynamicDescription": "@MaxFadeTime@秒間ダメージを受けずにいるか@MaxDelayTime@秒後、@StealthDuration@秒間<keywordStealth>インビジブル状態</keywordStealth>になり、<speed>移動速度が@MoveSpeedMod*100@%</speed>増加する。<br><br><keywordStealth>インビジブル状態</keywordStealth>が解除されると、@AttackSpeedDuration@秒間、<attackSpeed>攻撃速度が@AttackSpeedMod*100@%</attackSpeed>増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 20.0,
                 20.0,
@@ -978,14 +978,14 @@
         },
         {
             "spellKey": "w",
-            "name": "衰弱の霧",
+            "name": "コイツを食らエ！",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "周囲のすべての敵チャンピオンに「衰弱の霧」を付与し、対象の移動速度を低下させる。",
-            "dynamicDescription": "@Duration@秒間、周囲の敵チャンピオンに@SlowPercent*-100@%の<status>スロウ効果</status>を付与する。この効果は<keywordMajor>「スゴイ毒ダ！」</keywordMajor>のスタックごとに@PassiveStackSlowPercent*-100@%増加する (最大で@MaxSlowTooltip@)。<br><br><status>スロウ効果</status>適用後に<keywordMajor>「スゴイ毒ダ！」</keywordMajor>のスタックを追加すると、<speed>移動速度</speed>がさらに低下する。@SpellModifierDescriptionAppend@",
+            "description": "毒物が入った容器を投げて破裂させ、効果範囲内の敵に「スゴイ毒ダ！」とスロウ効果を付与する。",
+            "dynamicDescription": "毒物が入った容器を投げて破裂させ、効果範囲内の敵に<keywordMajor>「スゴイ毒ダ！」</keywordMajor>を@StacksAdded@スタックと、@Duration@秒間@BaseSlowAmount@%の<status>スロウ効果</status>を付与する。@SpellModifierDescriptionAppend@",
             "range": [
                 950.0,
                 950.0,
@@ -1135,7 +1135,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "周囲のすべての敵の体からトゥイッチの毒が分泌されて、スタックごとにダメージを与える。",
-            "dynamicDescription": "<mainText>周囲のマークされたすべての敵に<physicalDamage>@BaseDamage@の物理ダメージ</physicalDamage>を与え、さらに周囲の<keywordMajor>「スゴイ毒ダ！」</keywordMajor>のスタックをすべて消費して、スタックごとに<physicalDamage>@TotalStackDamage@</physicalDamage>のダメージを与える。",
+            "dynamicDescription": "周囲のマークされたすべての敵に、<physicalDamage>@BaseDamage@の物理ダメージ</physicalDamage>に加えて<keywordMajor>「スゴイ毒ダ！」</keywordMajor>のスタックごとに<physicalDamage>@TotalStackDamage@</physicalDamage>のダメージを与える。@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,
@@ -1285,7 +1285,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "目を閉じてクロスボウを撃ちまくり、前方に強力な貫通矢を高速で連射する。",
-            "dynamicDescription": "<mainText>@Duration@秒間、射程距離が@BonusRange@、<physicalDamage>攻撃力が@BonusAD@</physicalDamage>増加し、通常攻撃が敵を貫通するようになるが、敵に命中するたびにダメージが@FallOffDamage*100@%低下する(最小で@MinimumFallOffDamage*100@%まで低下)。",
+            "dynamicDescription": "@Duration@秒間、射程距離が@BonusRange@、<physicalDamage>攻撃力が@BonusAD@</physicalDamage>増加し、通常攻撃が敵を貫通するようになるが、敵に命中するたびにダメージが@FallOffDamage*100@%低下する(最小で@MinimumFallOffDamage*100@%まで低下)。@SpellModifierDescriptionAppend@",
             "range": [
                 1200.0,
                 1200.0,

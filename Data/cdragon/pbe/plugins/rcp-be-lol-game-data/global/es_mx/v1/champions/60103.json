@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "La Vastaya de Nueve Colas",
-    "shortBio": "- Orbe del Engaño (Q) otorga velocidad de movimiento mientras el orbe esté en el aire<br>- Ladrona de Esencias (P) se acumula al infligir daño a enemigos<br>- Impulso Espiritual (R) no se restablece",
+    "shortBio": "- Ladrona de Esencias (P) se acumula al infligir daño a enemigos<br>- Impulso Espiritual (R) no se reinicia",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Ahri obtiene una carga de Ladrona de Esencias cada vez que impacta a un enemigo con un hechizo (máx.: 3 cargas por hechizo). Al reunir 9 cargas, el siguiente hechizo de Ahri tiene un 35% de Vampirismo de Hechizo."
+        "description": "Ahri obtiene una carga de Ladrona de Esencias cada vez que impacta a un enemigo con un hechizo. Tras reunir el máximo de cargas, Ahri recuperará vida al lanzar su siguiente hechizo."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Ahri lanza y recupera su orbe, el cual inflige daño mágico de ida y daño verdadero de regreso.",
-            "dynamicDescription": "Ahri lanza y recupera un orbe, el cual inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> de ida y <trueDamage>@TotalDamage@ de daño verdadero</trueDamage> de vuelta. Además, obtiene <speed>@FlatMovementSpeedMod@ de Velocidad de Movimiento</speed> mientras el orbe esté en el aire.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri lanza y recupera su orbe, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> de ida y <trueDamage>@TotalDamage@ de daño verdadero</trueDamage> de vuelta.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Ahri lanza tres fuegos zorrunos que siguen a los enemigos cercanos para atacarlos.",
-            "dynamicDescription": "Ahri lanza tres fuegos zorrunos que siguen a los enemigos cercanos y les infligen <magicDamage>@TotalDamage@ de daño mágico</magicDamage>. La habilidad prioriza a los campeones. Los enemigos impactados con varios fuegos zorrunos reciben <magicDamage>@HalfDamage@ de daño mágico</magicDamage> por cada fuego zorruno después del primero.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri lanza 3 fuegos zorrunos que siguen a los enemigos cercanos e infligen <magicDamage>@TotalDamage@ de daño mágico</magicDamage>. Tras el primer impacto, los proyectiles infligen <magicDamage>@HalfDamage@ de daño</magicDamage> a un mismo objetivo.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
-            "description": "Ahri lanza un beso que inflige daño y deja encantado al enemigo, lo que lo hace caminar inofensivamente hacia ella.",
-            "dynamicDescription": "Ahri lanza un beso que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y <status>deja encantado</status> al enemigo, lo que lo hace caminar inofensivamente hacia ella durante @CharmDuration@ seg.@SpellModifierDescriptionAppend@",
+            "description": "Ahri lanza un beso que inflige daño y encanta al primer enemigo impactado. Los enemigos encantados reciben más daño de Ahri durante cierto tiempo.",
+            "dynamicDescription": "Ahri lanza un beso que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y <status>encanta</status> durante @CharmDuration@ seg al primer enemigo impactado. Los enemigos encantados reciben un @DamageAmp@% de daño adicional de Ahri durante @DamageAmpDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Ahri se desplaza hacia adelante y dispara rayos de esencia que infligen daño a tres enemigos cercanos (prioriza a los campeones). Impulso Espiritual se puede lanzar hasta tres veces antes de entrar en enfriamiento.",
-            "dynamicDescription": "Ahri se desplaza hacia adelante con agilidad y dispara tres proyectiles de esencia a los enemigos cercanos, lo que les inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>. La habilidad prioriza a los campeones.<br><br>La habilidad se puede <recast>volver a lanzar</recast> hasta dos veces más en un lapso de 10 seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri se desplaza con agilidad y dispara 3 proyectiles de esencia a los enemigos cercanos. La habilidad prioriza a los campeones. Cada proyectil inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>. <spellName>Impulso Espiritual</spellName> se puede <recast>volver a lanzar</recast> hasta dos veces más en un lapso de 10 seg.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix ist eine wilde Fee, die Lulu begleitet. Pix greift Lulus Ziele mit magischer Energie an."
+        "description": "Pix feuert magische Geschosse aus Energie, wenn der Champion, dem er folgt, eine gegnerische Einheit angreift. Diese Geschosse verfolgen ihr Ziel, können aber von anderen Einheiten abgefangen werden."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Pix und Lulu feuern jeweils einen Stoß magischer Energie ab, der getroffenen Gegnern Schaden zufügt und sie stark verlangsamt. Ein Gegner kann nur von einem Blitz Schaden erleiden.",
-            "dynamicDescription": "<mainText>Lulu und Pix feuern jeweils einen durchdringenden Blitz ab, der <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> verursacht. Getroffene Gegner werden @SlowDuration@ Sekunde(n) lang um @SlowAmount*-100@ % <status>verlangsamt</status>. Diese Verlangsamung lässt mit der Zeit bis auf ein Minimum von @MinMoveSpeedMod@ % nach (das Minimum ist auf 80 % begrenzt).<br><br>Ein Gegner kann nur von einem Blitz Schaden erleiden.",
+            "dynamicDescription": "Lulu und Pix feuern jeweils ein durchdringendes Geschoss ab, das <magicDamage>@TotalDamage@ magischen Schaden</magicDamage> verursacht. Getroffene Gegner werden über @SlowDuration@ Sekunden hinweg mit einer abfallenden <status>Verlangsamung</status> in Höhe von @SlowAmount*-100@ % belegt.<br><br>Ein Gegner kann nur von einem Geschoss Schaden erleiden.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

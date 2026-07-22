@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "3 yetenek kullandıktan sonra Sona'nın bir sonraki saldırısı ilave büyü hasarı verir."
+        "description": "3 yetenek kullandıktan sonra Sona'nın bir sonraki saldırısı ilave büyü hasarı verir ve hedefinin birkaç saniyeliğine daha az hasar vermesini sağlar."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Sona'nın çaldığı Cesaret İlahisi yakındaki takım arkadaşlarına ilave hasar ve yetenek gücü kazandırır. Ayrıca bu yeteneği kullanmak ses okları göndererek en yakındaki iki rakip şampiyona veya canavara büyü hasarı verir.",
-            "dynamicDescription": "<keywordMajor>Kalıcı Hare:</keywordMajor> Yakındaki takım arkadaşlarının <physicalDamage>saldırı gücü</physicalDamage> ve <magicDamage>yetenek gücünü</magicDamage> @APADBoost@ arttırır.<br><br><spellActive>Aktif:</spellActive> En yakınındaki iki rakibe (Şampiyonlara öncelik verir.) <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Kalıcı Hare:</keywordMajor> Yakınındaki takım arkadaşlarına @APADBoost@ <physicalDamage>Saldırı Gücü</physicalDamage> ve <magicDamage>Yetenek Gücü</magicDamage> kazandırır.<br><br><spellActive>Aktif:</spellActive> En yakınındaki @EnemiesToHit@ rakibe (Şampiyonlara öncelik verir.) <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Sona'nın çaldığı Metanet Aryası yakındaki takım arkadaşlarına ilave zırh ve büyü direnci kazandırır. Ayrıca bu yeteneği kullanmak şifalı melodiler yayarak Sona ve yakınındaki yaralı bir takım arkadaşını iyileştirir.",
-            "dynamicDescription": "<keywordMajor>Kalıcı Hare:</keywordMajor> Yakındaki takım arkadaşlarına @ARMRBoost@ İlave <scaleArmor>Zırh</scaleArmor> ve <scaleMR>Büyü Direnci</scaleMR> kazandırır.<br><br><spellActive>Aktif:</spellActive> Sona'yı ve yakındaki en az cana sahip takım arkadaşını <healing>@Healing@ Can</healing> iyileştirir ve 3 saniyeliğine @ARMRBoost@ İlave <scaleArmor>Zırh</scaleArmor> ile <scaleMR>Büyü Direnci</scaleMR> kazandırır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Kalıcı Hare:</keywordMajor> Yakınındaki takım arkadaşlarına @ARMRBoost@ <scaleArmor>Zırh</scaleArmor> ve <scaleMR>Büyü Direnci</scaleMR> sağlar.<br><br><spellActive>Aktif:</spellActive> Sona'yı ve yakındaki en az cana sahip takım arkadaşını <healing>@Healing@ Can</healing> iyileştirir.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Sona'nın çaldığı Sürat Şarkısı yakındaki takım arkadaşlarına ilave hareket hızı kazandırır. Ayrıca bu yeteneği kullanmak yakındaki takım arkadaşlarına enerji vererek hız artışı sağlar.",
-            "dynamicDescription": "<keywordMajor>Kalıcı Hare:</keywordMajor> Yakındaki takım arkadaşlarına <speed>@MSBoost@ İlave Hareket Hızı</speed> kazandırır.<br><br><spellActive>Aktif:</spellActive> Yakındaki takım arkadaşlarına 1,5 saniyeliğine <speed>%@MoveSpeedMod*100@ Hareket Hızı</speed> kazandırır.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Kalıcı Hare:</keywordMajor> Yakınındaki takım arkadaşlarına <speed>@MSBoost@ Hareket Hızı</speed> kazandırır.<br><br><spellActive>Aktif:</spellActive> Yakınındaki takım arkadaşlarına @ActiveSpeedDuration@ saniyeliğine <speed>%@MoveSpeedMod*100@ Hareket Hızı</speed> kazandırırsın.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

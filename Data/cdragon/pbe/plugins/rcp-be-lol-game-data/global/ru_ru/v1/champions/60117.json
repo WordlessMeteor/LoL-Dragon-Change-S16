@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Пикс – волшебный спутник Лулу. При каждой ее автоатаке он выпускает по ее цели залп магической энергии."
+        "description": "Пикс выпускает магические заряды при каждой автоатаке чемпиона, за которым он следует. Заряды наводятся на цель, но могут быть блокированы другими бойцами."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Пикс и Лулу выпускают по заряду магической энергии, сильно замедляя всех пораженных противников. Враг может получить урон только от одного заряда.",
-            "dynamicDescription": "<mainText>Лулу и Пикс выпускают по заряду магической энергии, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем пораженным врагам и <status>замедляя</status> их на @SlowAmount*-100@% на @SlowDuration@ сек. Замедление ослабевает со временем, вплоть до @MinMoveSpeedMod@% (минимум 80%).<br><br>Враг может получить урон только от 1 заряда.",
+            "dynamicDescription": "Лулу и Пикс выпускают по заряду магической энергии, нанося <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> всем пораженным врагам и <status>замедляя</status> их на @SlowAmount*-100@% (ослабевает в течение @SlowDuration@ сек.).<br><br>Враг может получить урон только от 1 заряда.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

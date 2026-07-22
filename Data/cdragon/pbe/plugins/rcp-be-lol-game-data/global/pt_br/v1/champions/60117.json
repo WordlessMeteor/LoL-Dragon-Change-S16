@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix é um silfo travesso que acompanha a Lulu. Pix dispara uma barragem de energia mágica nos alvos que Lulu ataca."
+        "description": "Pix dispara raios de energia mágica sempre que o Campeão que ele está seguindo ataca outra unidade inimiga. Os raios seguem o inimigo, mas podem ser interceptados por outras unidades."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Pix e Lulu disparam um raio de energia mágica que causa muita Lentidão aos inimigos atingidos. Cada inimigo só pode sofrer dano de um raio.",
-            "dynamicDescription": "<mainText>Lulu e Pix disparam, cada um, um raio perfurante que causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. Inimigos atingidos sofrem @SlowAmount*-100@% de <status>Lentidão</status> por @SlowDuration@s. Essa Lentidão decai ao longo do tempo até um mínimo de @MinMoveSpeedMod@% (limitado a 80%).<br><br>Cada inimigo só pode sofrer dano de um raio.",
+            "dynamicDescription": "Lulu e Pix disparam, cada um, um raio perfurante que causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. Inimigos atingidos sofrem @SlowAmount*-100@% de <status>Lentidão</status> que decai por @SlowDuration@s.<br><br>Cada inimigo só pode sofrer dano de um raio.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

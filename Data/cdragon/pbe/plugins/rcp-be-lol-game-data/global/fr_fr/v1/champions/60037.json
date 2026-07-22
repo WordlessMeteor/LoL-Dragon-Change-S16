@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Après l'utilisation de 3 compétences, la prochaine attaque de Sona inflige des dégâts magiques bonus."
+        "description": "Après avoir lancé 3 compétences, la prochaine attaque de Sona inflige des dégâts magiques bonus et réduit les dégâts infligés par sa cible pendant quelques secondes."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Sona joue l'Hymne à la bravoure, conférant aux champions alliés à proximité un bonus de dégâts et de puissance. De plus, lancer cette compétence envoie des ondes sonores, qui infligent des dégâts magiques aux deux champions ennemis ou monstres les plus proches.",
-            "dynamicDescription": "<keywordMajor>Halo persistant :</keywordMajor> augmente de @APADBoost@ les <physicalDamage>dégâts d'attaque</physicalDamage> et la <magicDamage>puissance</magicDamage> des champions alliés à proximité.<br><br><spellActive>Actif :</spellActive> inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux deux ennemis les plus proches (priorité aux champions).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Halo persistant :</keywordMajor> octroie aux champions alliés proches @APADBoost@ <physicalDamage>dégâts d'attaque</physicalDamage> et <magicDamage>puissance</magicDamage>.<br><br><spellActive>Actif :</spellActive> inflige <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux @EnemiesToHit@ ennemis les plus proches (priorité aux champions).@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Sona joue l'Aria de persévérance, octroyant aux champions alliés à proximité de l'armure et de la résistance magique bonus. De plus, lancer cette compétence joue des mélodies protectrices, soignant Sona ainsi qu'un allié blessé proche.",
-            "dynamicDescription": "<keywordMajor>Halo persistant :</keywordMajor> octroie @ARMRBoost@ <scaleArmor>armure</scaleArmor> et <scaleMR>résistance magique</scaleMR> bonus aux champions alliés proches.<br><br><spellActive>Actif :</spellActive> cette compétence soigne Sona et le champion allié le plus gravement blessé à proximité en leur rendant <healing>@Healing@ PV</healing> et en leur octroyant @ARMRBoost@ <scaleArmor>armure</scaleArmor> et <scaleMR>résistance magique</scaleMR> bonus pendant 3 sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Halo persistant :</keywordMajor> octroie @ARMRBoost@ <scaleArmor>armure</scaleArmor> et <scaleMR>résistance magique</scaleMR> aux champions alliés proches.<br><br><spellActive>Actif :</spellActive> cette compétence soigne Sona et le champion allié le plus gravement blessé à proximité en leur rendant <healing>@Healing@ PV</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Sona joue la Mélodie de vélocité, ce qui confère aux champions alliés proches un bonus en vitesse de déplacement. De plus, lancer cette compétence renforce les alliés à proximité grâce à un bonus en vitesse de déplacement.",
-            "dynamicDescription": "<keywordMajor>Halo persistant :</keywordMajor> octroie aux champions alliés à proximité <speed>@MSBoost@ vitesse de déplacement bonus</speed>.<br><br><spellActive>Actif :</spellActive> les alliés proches gagnent <speed>@MoveSpeedMod*100@% de vitesse de déplacement</speed> pendant 1.5 sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Halo persistant :</keywordMajor> octroie aux champions alliés à proximité <speed>@MSBoost@ vitesse de déplacement</speed>.<br><br><spellActive>Actif :</spellActive> octroie aux champions alliés proches <speed>@MoveSpeedMod*100@% vitesse de déplacement</speed> pendant @ActiveSpeedDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

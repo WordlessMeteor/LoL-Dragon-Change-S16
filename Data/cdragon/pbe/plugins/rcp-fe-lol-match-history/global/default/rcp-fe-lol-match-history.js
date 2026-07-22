@@ -710,7 +710,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.STRAWBERRY_GAME_MODE = t.KIWI_JADE_GAME_MODE = t.KIWI_GAME_MODE = t.GAME_MODES_WITH_AUGMENTS = t.GAME_MODES_WITHOUT_CS = t.CHERRY_SUBTEAM_SIZE_3 = t.CHERRY_SUBTEAM_SIZE = t.CHERRY_SUBTEAM_DISPLAY_DATA = t.CHERRY_SIZE_3_QUEUES = t.CHERRY_SIZE_3_NUM_TEAMS = t.CHERRY_NUM_TEAMS = t.CHERRY_GAME_MODE = void 0;
+            }), t.STRAWBERRY_GAME_MODE = t.KIWI_JADE_GAME_MODE = t.KIWI_GAME_MODE = t.JADE_GAME_MODE = t.GAME_MODES_WITH_AUGMENTS = t.GAME_MODES_WITHOUT_CS = t.CHERRY_SUBTEAM_SIZE_3 = t.CHERRY_SUBTEAM_SIZE = t.CHERRY_SUBTEAM_DISPLAY_DATA = t.CHERRY_SIZE_3_QUEUES = t.CHERRY_SIZE_3_NUM_TEAMS = t.CHERRY_NUM_TEAMS = t.CHERRY_GAME_MODE = void 0;
             const a = "CHERRY";
             t.CHERRY_GAME_MODE = a;
             t.CHERRY_NUM_TEAMS = 8;
@@ -777,6 +777,7 @@
             }];
             const n = "STRAWBERRY";
             t.STRAWBERRY_GAME_MODE = n;
+            t.JADE_GAME_MODE = "JADE";
             const s = "KIWI";
             t.KIWI_GAME_MODE = s;
             const l = "KIWI_JADE";
@@ -1053,20 +1054,21 @@
                 })),
                 actions: {
                     displayMatchDetails(e) {
+                        const t = e?.gameMode === l.JADE_GAME_MODE ? ["overview", "scoreboard", "stats", "graph"] : ["overview", "scoreboard", "stats", "graph", "runes"];
                         if (e && e.gameId && e.gameMode !== l.STRAWBERRY_GAME_MODE) {
                             s.SFX.gridClick.play();
                             const {
-                                gameId: t
+                                gameId: a
                             } = e, {
-                                participant: a
+                                participant: l
                             } = e, {
-                                additionalInfo: l
+                                additionalInfo: o
                             } = e;
                             this.get("isThirdPersonView") ? n.MatchApi.displayMatchDetails({
-                                gameId: t,
-                                summonerId: a.player.summonerId,
+                                gameId: a,
+                                summonerId: l.player.summonerId,
                                 defaultSection: "scoreboard",
-                                sections: ["overview", "scoreboard", "stats", "graph", "runes"],
+                                sections: t,
                                 dataSource: "legs",
                                 closeModalCallback: e => {
                                     this.isDestroying || this.isDestroyed || this.element.dispatchEvent(new Event(e, {
@@ -1074,11 +1076,11 @@
                                     }))
                                 }
                             }) : n.MatchApi.displayMatchDetails({
-                                gameId: t,
-                                summonerId: a.player.summonerId,
-                                additionalInfo: l,
+                                gameId: a,
+                                summonerId: l.player.summonerId,
+                                additionalInfo: o,
                                 defaultSection: "scoreboard",
-                                sections: ["overview", "scoreboard", "stats", "graph", "runes"],
+                                sections: t,
                                 dataSource: "legs"
                             })
                         }

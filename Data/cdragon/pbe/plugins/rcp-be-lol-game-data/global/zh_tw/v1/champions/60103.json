@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "技能命中敵軍時，獲得1層銷魂(每個技能最多累加3層)。達9層時，下次施放的技能獲得35%技能吸血。"
+        "description": "技能命中敵軍時，獲得1層銷魂。充能滿層時，下次施放技能會回復阿璃的生命。"
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "阿璃擊出幻玉後再召回，擊出時造成魔法傷害，召回時造成真實傷害。",
-            "dynamicDescription": "擊出時造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，召回時造成<trueDamage>@TotalDamage@真實傷害</trueDamage>。阿璃在幻玉飛行期間增加<speed>@FlatMovementSpeedMod@跑速</speed>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿璃擲出她的幻玉後再召回，飛出時造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。折返時造成<trueDamage>@TotalDamage@真實傷害</trueDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "阿璃釋放三股狐火，鎖定並攻擊鄰近敵軍。",
-            "dynamicDescription": "釋放三股狐火，鎖定鄰近敵軍(優先鎖定英雄)，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。敵軍若遭多股狐火命中，每多一股狐火，額外受到<magicDamage>@HalfDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿璃釋放出3股狐火來追蹤鄰近敵軍並造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，第一發之後的狐火降低至<magicDamage>@HalfDamage@傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
-            "description": "阿璃送出飛吻，對命中的敵軍造成傷害和魅惑效果，使其毫無抵抗地走向阿璃。",
-            "dynamicDescription": "阿璃送出飛吻，對敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>和<status>魅惑</status>效果，使其毫無抵抗地走向阿璃，持續@CharmDuration@秒。@SpellModifierDescriptionAppend@",
+            "description": "阿璃送出飛吻，魅惑命中的首位敵軍，並對其造成傷害。接下來數秒內，阿璃對目標造成的傷害還會提升。",
+            "dynamicDescription": "阿璃送出飛吻，<status>魅惑</status>命中的首位敵軍@CharmDuration@秒，並對其造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。接下來@DamageAmpDuration@秒內，阿璃對目標造成的傷害還會提升@DamageAmp@%。@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "阿璃向前衝刺並發射魔法彈，對3名鄰近敵軍造成傷害(優先鎖定英雄)。飛仙在進入冷卻前最多可施放三次。",
-            "dynamicDescription": "敏捷地向前衝刺並對鄰近敵軍(優先鎖定英雄)發射3枚魔法彈，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br>10秒內最多可<recast>重施技能</recast>2次。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿璃敏捷地衝刺，對鄰近敵軍發射3枚魔法彈，優先攻擊英雄。每發魔法彈造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<spellName>飛仙</spellName>10秒內最多可<recast>重施</recast>2次。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

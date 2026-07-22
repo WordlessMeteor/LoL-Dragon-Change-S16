@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "После применения 3 умений следующая автоатака Соны наносит доп. маг. урон."
+        "description": "После применения 3 умений следующая автоатака Соны наносит доп. маг. урон и ненадолго снижает наносимый целью урон."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Сона исполняет гимн доблести, нанося маг. урон 2 чемпионам или монстрам поблизости. Также Сона получает временную ауру, повышающую урон и силу умений союзных чемпионов в области действия.",
-            "dynamicDescription": "<keywordMajor>Аура:</keywordMajor> дает союзным чемпионам поблизости @APADBoost@ <physicalDamage>силы атаки</physicalDamage> и <magicDamage>силы умений</magicDamage>.<br><br><spellActive>Активно:</spellActive> наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> 2 ближайшим врагам (приоритет чемпионам).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Аура:</keywordMajor> дает союзным чемпионам поблизости @APADBoost@ <physicalDamage>силы атаки</physicalDamage> и <magicDamage>силы умений</magicDamage>.<br><br><spellActive>Активно:</spellActive> наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> @EnemiesToHit@ ближайшим врагам (приоритет чемпионам).@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Сона исполняет арию стойкости, восстанавливая здоровье себе и союзнику с недост. здоровьем рядом. Также Сона получает временную ауру, дающую броню и сопр. магии союзным чемпионам в области действия.",
-            "dynamicDescription": "<keywordMajor>Аура:</keywordMajor> дает союзным чемпионам поблизости @ARMRBoost@ <scaleArmor>брони</scaleArmor> и <scaleMR>сопр. магии</scaleMR>.<br><br><spellActive>Активно:</spellActive> восстанавливает Соне и союзному чемпиону с наименьшим здоровьем поблизости <healing>@Healing@ здоровья</healing> и дает @ARMRBoost@ <scaleArmor>брони</scaleArmor> и <scaleMR>сопр. магии</scaleMR> на 3 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Аура:</keywordMajor> дает союзным чемпионам поблизости @ARMRBoost@ <scaleArmor>брони</scaleArmor> и <scaleMR>сопр. магии</scaleMR>.<br><br><spellActive>Активно:</spellActive> восстанавливает Соне и союзному чемпиону с наименьшим здоровьем поблизости <healing>@Healing@ здоровья</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Сона исполняет песнь стремительности, давая скорость передвижения союзным чемпионам поблизости. Также Сона получает временную ауру, дающую скорость передвижения союзникам в области действия.",
-            "dynamicDescription": "<keywordMajor>Аура:</keywordMajor> дает союзным чемпионам поблизости <speed>@MSBoost@ скорости передвижения</speed>.<br><br><spellActive>Активно:</spellActive> дает союзникам поблизости <speed>@MoveSpeedMod*100@% скорости передвижения</speed> на 1.5 сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Аура:</keywordMajor> дает союзным чемпионам поблизости <speed>@MSBoost@ скорости передвижения</speed>.<br><br><spellActive>Активно:</spellActive> дает союзным чемпионам поблизости <speed>@MoveSpeedMod*100@% скорости передвижения</speed> на @ActiveSpeedDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

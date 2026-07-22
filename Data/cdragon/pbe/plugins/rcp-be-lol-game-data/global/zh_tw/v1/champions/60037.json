@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "索娜施放3次技能後，她的下一次普攻會造成額外魔法傷害。"
+        "description": "索娜施放3次技能後，她的下一次普攻會造成額外魔法傷害，並降低目標造成的傷害，持續數秒。"
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "索娜演奏英勇讚美詩，賦予鄰近友方英雄額外傷害和魔攻。此外，施放此技能會發射聲音箭矢，對最靠近的兩名敵方英雄或野怪造成魔法傷害。",
-            "dynamicDescription": "<keywordMajor>持續靈氣：</keywordMajor>提升鄰近友方英雄的<physicalDamage>物攻</physicalDamage>與<magicDamage>魔攻</magicDamage>@APADBoost@。<br><br><spellActive>主動：</spellActive>對最靠近的兩名敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>(優先攻擊英雄)。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>持續靈氣：</keywordMajor>使鄰近友方英雄增加@APADBoost@<physicalDamage>物攻</physicalDamage>與<magicDamage>魔攻</magicDamage>。<br><br><spellActive>主動：</spellActive>對最靠近的@EnemiesToHit@名敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，優先攻擊英雄。@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "索娜演奏堅毅詠嘆調，賦予鄰近友方英雄額外雙防。此外，施放此技能會釋放治癒旋律，治療索娜和附近一名受傷友軍。",
-            "dynamicDescription": "<keywordMajor>持續靈氣：</keywordMajor>使鄰近友方英雄獲得@ARMRBoost@額外<scaleArmor>物防</scaleArmor>與<scaleMR>魔防</scaleMR>。<br><br><spellActive>主動：</spellActive>為索娜和附近生命最低的友方英雄回復<healing>@Healing@生命</healing>，並賦予@ARMRBoost@額外<scaleArmor>物防</scaleArmor>和<scaleMR>魔防</scaleMR>，持續3秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>持續靈氣：</keywordMajor>使鄰近友方英雄增加@ARMRBoost@<scaleArmor>物防</scaleArmor>與<scaleMR>魔防</scaleMR>。<br><br><spellActive>主動：</spellActive>為索娜和失去最多生命的鄰近友方英雄回復<healing>@Healing@生命</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "索娜演奏迅捷奏鳴曲，增加鄰近友方英雄跑速。此外，施放此技能會使鄰近友軍跑速激增。",
-            "dynamicDescription": "<keywordMajor>持續靈氣：</keywordMajor>使鄰近友方英雄獲得<speed>@MSBoost@額外跑速</speed>。<br><br><spellActive>主動：</spellActive>使鄰近友軍獲得<speed>@MoveSpeedMod*100@%跑速</speed>，持續1.5秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>持續靈氣：</keywordMajor>使鄰近友方英雄增加<speed>@MSBoost@跑速</speed>。<br><br><spellActive>主動：</spellActive>賦予鄰近友方英雄<speed>@MoveSpeedMod*100@%跑速</speed>，持續@ActiveSpeedDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

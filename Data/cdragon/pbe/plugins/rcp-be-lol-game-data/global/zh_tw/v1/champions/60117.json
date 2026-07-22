@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "皮克斯是陪伴在露璐身邊的野生妖精。他會朝著露璐所攻擊的目標，進行充滿魔法能量的火力支援。"
+        "description": "皮克斯附身的英雄攻擊其他敵方單位時，皮克斯會用魔法彈進行火力支援。魔法彈會自動追蹤目標，但可以被其他單位阻擋。"
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "皮克斯與露璐各自發射一枚魔法彈，對所有命中的敵軍造成大幅緩速。每位敵軍只能被一枚魔法彈傷害。",
-            "dynamicDescription": "<mainText>露璐和皮克斯各自發射一枚穿透魔法彈，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，命中的敵軍會<status>緩速</status>@SlowAmount*-100@%，持續@SlowDuration@秒。緩速效果會隨時間衰減至@MinMoveSpeedMod@% (此數值上限為80%)。<br><br>每位敵軍只能被一枚魔法彈傷害。",
+            "dynamicDescription": "露璐和皮克斯各自發射一枚穿透魔法彈，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，命中的敵軍會<status>緩速</status>@SlowAmount*-100@%，效果在@SlowDuration@秒內衰減至失效。<br><br>每位敵軍只能被一枚魔法彈傷害。@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

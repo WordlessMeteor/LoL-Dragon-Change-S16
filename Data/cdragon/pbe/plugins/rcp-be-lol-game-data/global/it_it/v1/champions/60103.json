@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Ottiene una carica di Furto d'essenza ogni volta che un'abilità colpisce un nemico (massimo 3 cariche per abilità). Al raggiungimento di 9 cariche, la prossima abilità fornisce il 35% di rubavita magico."
+        "description": "Ottiene una carica di Furto d'essenza ogni volta che un'abilità colpisce un nemico. Al massimo delle cariche, la prossima abilità rigenera la salute di Ahri."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Ahri lancia e riprende il suo globo, infliggendo danni magici all'andata e danni puri al ritorno.",
-            "dynamicDescription": "Infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> all'andata e <trueDamage>@TotalDamage@ danni puri</trueDamage> al ritorno. Ahri ottiene <speed>@FlatMovementSpeedMod@ velocità di movimento</speed> mentre l'abilità è in volo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri lancia e poi riprende il suo globo, infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> all'andata e <trueDamage>@TotalDamage@ danni puri</trueDamage> al ritorno.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Ahri libera tre volpi di fuoco che localizzano e attaccano i nemici nelle vicinanze.",
-            "dynamicDescription": "Rilascia tre volpi di fuoco che agganciano i nemici nelle vicinanze (priorità ai campioni), infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage>. I nemici colpiti da più volpi di fuoco subiscono <magicDamage>@HalfDamage@ danni magici</magicDamage> da ogni volpe di fuoco aggiuntiva.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri lancia 3 volpi di fuoco che danno la caccia ai nemici vicini e infliggono <magicDamage>@TotalDamage@ danni magici</magicDamage>, ridotti a <magicDamage>@HalfDamage@ danni</magicDamage> dopo il primo.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Ahri manda un bacio che danneggia e ammalia un nemico, facendolo camminare, inerme, verso di lei.",
-            "dynamicDescription": "Manda un bacio che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> e <status>ammalia</status> un nemico, facendolo avanzare inerme verso Ahri per @CharmDuration@ secondo/i.@SpellModifierDescriptionAppend@",
+            "description": "Ahri manda un bacio che danneggia e ammalia il primo nemico colpito, che inoltre subisce anche più danni da lei per alcuni secondi.",
+            "dynamicDescription": "Ahri manda un bacio che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage> e <status>ammalia</status> il primo nemico colpito per @CharmDuration@ secondo/i. Quel nemico subisce anche un @DamageAmp@% di danni aggiuntivi da lei per @DamageAmpDuration@ secondo/i.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Ahri scatta in avanti e scaglia dardi di essenza, danneggiando 3 nemici nelle vicinanze (con priorità ai campioni). Assalto spirituale può essere lanciato tre volte prima di entrare in ricarica.",
-            "dynamicDescription": "Scatta con agilità in avanti, scagliando 3 dardi di essenza ai nemici nelle vicinanze (priorità ai campioni) infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage>.<br><br>Può essere <recast>rilanciato</recast> fino ad altre 2 volte entro 10 secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri scatta con agilità, scagliando 3 dardi di essenza ai nemici vicini, dando la priorità ai campioni. I dardi infliggono <magicDamage>@TotalDamage@ danni magici</magicDamage> ciascuno. <spellName>Assalto spirituale</spellName> può essere <recast>rilanciato</recast> fino ad altre 2 volte entro 10 secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

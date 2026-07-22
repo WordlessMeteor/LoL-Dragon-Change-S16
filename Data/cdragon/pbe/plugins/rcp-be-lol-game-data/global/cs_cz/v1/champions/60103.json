@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pokaždé, když nějaké kouzlo zasáhne protivníka, získá Uloupení esence o stupeň navíc (max. 3 stupně za kouzlo). Po nasbírání 9 stupňů má další kouzlo 35% vysávání života."
+        "description": "Kdykoliv zasáhne Ahri protivníka nějakou schopností, získá tím jeden stupeň Uloupení esence. Po dosažení maximálního počtu stupňů si Ahri příští schopností obnoví část zdraví."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ahri vyšle a opět zpátky stáhne své oko, které způsobí magické poškození na cestě tam a přímé poškození na cestě zpět.",
-            "dynamicDescription": "Oko cestou od ní způsobuje <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>, při návratu pak <trueDamage>@TotalDamage@ bodů přímého poškození</trueDamage>. Dokud kouzlo letí, získá Ahri <speed>@FlatMovementSpeedMod@ k rychlosti pohybu</speed>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri vyšle a poté stáhne zpět svou kouli. Ta způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> při cestě tam a <trueDamage>@TotalDamage@ bodů přímého poškození</trueDamage> při cestě zpět.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ahri vyšle tři plamínky, které se zaměří na nedaleké nepřátele a zaútočí na ně.",
-            "dynamicDescription": "Vyšle tři plamínky, které se zaměří na nedaleké nepřátele (dávají přednost šampionům) a způsobí jim <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Nepřátelé zasažení několika plamínky utrpí za každý další plamínek <magicDamage>@HalfDamage@ bodů magického poškození</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri vyšle 3 plamínky, které vyhledají okolní nepřátele a způsobí jim <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>, u opakovaných zásahů téhož cíle se tato hodnota snižuje na <magicDamage>@HalfDamage@ bodů poškození</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
-            "description": "Ahri pošle polibek, který poškodí a okouzlí nepřítele, což jej přinutí vydat se pokojně jejím směrem.",
-            "dynamicDescription": "Pošle polibek, který způsobí <magicDamage>@TotalDamage@ bodů magického poškození </magicDamage> a <status>očaruje</status> nepřítele, čímž ho přiměje, aby se bezbranně vydal po dobu @CharmDuration@&nbsp;sek. směrem k Ahri.@SpellModifierDescriptionAppend@",
+            "description": "Ahri vyšle polibek, který okouzlí prvního zasaženého nepřítele a způsobí mu poškození. Zároveň pak cíli po dobu několika sekund způsobuje zvýšené poškození.",
+            "dynamicDescription": "Ahri vyšle polibek, který prvnímu zasaženému nepříteli způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na @CharmDuration@ sek. ho <status>okouzlí</status>. Po dobu @DamageAmpDuration@ sek. mu pak Ahri navíc způsobuje o @DamageAmp@ % vyšší poškození.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Ahri se vrhne kupředu a vypálí výboje esence, čímž poškodí 3 okolní nepřátele (přednost dává šampionům). Příval duší lze seslat až třikrát, než mu začne plynout přebíjecí doba.",
-            "dynamicDescription": "Po krátkém zasprintování vystřelí po nedalekých nepřátelích (přednost dává šampionům) 3 energetické výboje, jež způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>.<br><br>Schopnost lze <recast>opětovně seslat</recast> ještě až 2x během 10&nbsp;sekund.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri krátce popoběhne a vystřelí po nedalekých nepřátelích 3 energetické výboje, primárně se jimi snaží zaměřit šampiony. Každý z těchto výbojů způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. <spellName>Příval duší</spellName> lze <recast>opětovně seslat</recast> ještě až 2x během 10 sekund.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

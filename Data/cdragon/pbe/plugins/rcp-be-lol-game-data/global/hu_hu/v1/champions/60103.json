@@ -812,7 +812,7 @@
             "chromas": [
                 {
                     "id": 60103302,
-                    "name": "Classic Éjúrnő Ahri",
+                    "name": "Klasszikus Éjúrnő Ahri",
                     "contentId": "171b7384-4eaa-4997-af52-ed6a37304865",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Az Esszencialopás minden alkalommal töltődik, amikor egy varázslat eltalál egy ellenfelet (legfeljebb 3 töltés varázslatonként). 9 töltés után a soron következő varázslat 35%-os életvarázzsal rendelkezik."
+        "description": "Az Esszencialopás minden alkalommal töltődik, amikor egy varázslat eltalál egy ellenfelet. A maximális töltésszám elérésekor a következő varázslat visszatölti Ahri életerejét."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Ahri kiküldi, majd visszahúzza magához a gömbjét, amely odafelé varázssebzést, visszafelé tényleges sebzést okoz.",
-            "dynamicDescription": "Kiküldésekor <magicDamage>@TotalDamage@ varázssebzést</magicDamage>, visszatéréskor pedig <trueDamage>@TotalDamage@ tényleges sebzést</trueDamage> okoz. Ahri <speed>@FlatMovementSpeedMod@ mozgási sebességet</speed> kap, amíg a lövedék a levegőben van.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri eldobja, majd visszahúzza magához a gömbjét, amely odafelé <magicDamage>@TotalDamage@ varázssebzést</magicDamage>, visszafelé <trueDamage>@TotalDamage@ tényleges sebzést</trueDamage> okoz.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Ahri elindít három Rókatüzet, amelyek célba veszik és megtámadják a közelben tartózkodó ellenfeleket.",
-            "dynamicDescription": "Három rókatüzet bocsát útjára, amelyek célba veszik a közeli ellenfeleket (elsősorban hősöket), és <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak nekik. Azok az ellenfelek, akiket több rókatűz is eltalál, az első után minden további rókatűztől <magicDamage>@HalfDamage@ varázssebzést</magicDamage> szenvednek el.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri 3 rókatüzet enged útjára, amelyek célba veszik a közeli ellenfeleket, és találatkor <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak. Az elsőt követő találatok <magicDamage>@HalfDamage@ sebzést</magicDamage> okoznak.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
-            "description": "Ahri egy csókot dob, amely megsebzi és elbűvöli az eltalált ellenfelet, aki így ártalmatlanul a rókalány felé kezd sétálni.",
-            "dynamicDescription": "Egy csókot dob, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz, és <status>elcsábít</status> egy ellenfelet, aki @CharmDuration@ másodpercig ártalmatlanul Ahri felé sétál.@SpellModifierDescriptionAppend@",
+            "description": "Ahri egy csókot dob, amely megsebzi és elcsábítja az első eltalált ellenfelet. Ezenkívül az ellenfél több másodpercig megnövelt sebzést szenved el tőle.",
+            "dynamicDescription": "Ahri egy csókot dob, amely <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz, és @CharmDuration@ másodpercre <status>elcsábítja</status> az első eltalált ellenfelet. Ezenkívül az ellenfél @DamageAmpDuration@ másodpercig @DamageAmp@%-kal megnövelt sebzést szenved el tőle.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Ahri előretör, és energialövedékeket bocsát ki, amelyek megsebzik a közelben tartózkodó 3 ellenfelet (elsősorban a hősöket). A Lélekroham háromszor alkalmazható, mielőtt elkezdene újratöltődni.",
-            "dynamicDescription": "Ahri fürgén előretör, és 3 energialövedéket bocsát a közelben tartózkodó ellenfelekre (elsősorban a hősökre), amivel <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz nekik.<br><br>Még legfeljebb 2 alkalommal <recast>süthető el újra</recast> 10 másodpercen belül.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri fürgén előretör, és 3 energialövedéket lő ki, amelyek elsősorban hősöket céloznak meg. A lövedékek egyenként <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoznak. A <spellName>Lélekroham</spellName> még legfeljebb 2 alkalommal <recast>süthető el újra</recast> 10 másodpercen belül.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

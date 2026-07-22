@@ -2302,6 +2302,19 @@
                         110.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2312,8 +2325,36 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.699999988079071,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{50a3f8e1}": {
+                    "mFormulaParts": [
+                        {
+                            "mBuffName": "{f791e40e}",
+                            "mDataValue": "Damage",
+                            "__type": "BuffCounterByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{40d36ab1}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "Damage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mBuffName": "{f791e40e}",
+                            "mDataValue": "Damage",
+                            "__type": "BuffCounterByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -2806,7 +2847,7 @@
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 17.200000762939453,
+            "baseValue": 21.200000762939453,
             "__type": "ModifiableFloat"
         },
         "armorPerLevelModifiable": {

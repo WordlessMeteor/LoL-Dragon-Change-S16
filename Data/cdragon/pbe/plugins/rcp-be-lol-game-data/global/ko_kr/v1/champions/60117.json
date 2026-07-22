@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "픽스는 룰루와 함께 다니는 악동 요정으로, 룰루가 기본 공격을 가하는 대상에게 마법 광선을 발사합니다."
+        "description": "픽스는 현재 따라다니고 있는 챔피언이 적 유닛에게 기본 공격을 가할 때마다 함께 마법 광선을 발사합니다. 이 광선은 대상을 추적하지만 다른 유닛에 막힐 수 있습니다."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "픽스와 룰루가 각각 마법 광선을 발사하여 적중한 모든 적을 대폭 둔화시킵니다. 각 광선은 한 명의 적에게만 피해를 입힙니다.",
-            "dynamicDescription": "<mainText>룰루와 픽스가 각자 관통하는 광선을 발사하여 적중한 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초 동안 @SlowAmount*-100@% <status>둔화</status>시킵니다. 둔화율은 시간이 지남에 따라 최소 @MinMoveSpeedMod@%까지 감소합니다. (최솟값의 한도는 80%입니다.)<br><br>각 광선은 한 명의 적에게만 피해를 입힙니다.",
+            "dynamicDescription": "룰루와 픽스가 각자 관통하는 광선을 발사하여 적중한 적에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @SlowDuration@초에 걸쳐 점차 감소하는 @SlowAmount*-100@%의 <status>둔화</status>를 적용합니다.<br><br>각 광선은 한 명의 적에게만 피해를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

@@ -6,7 +6,7 @@
     "name": "카타리나",
     "alias": "Jade_Katarina",
     "title": "사악한 칼날",
-    "shortBio": "- 살인적 본능(W)은 다른 기본 스킬을 강화합니다.<br>- 탐욕(P)이 적을 처치할 때마다 골드를 제공하고 재사용 대기시간을 감소시킵니다.",
+    "shortBio": "- 단검 투척(Q)은 적에게 피해를 입히고 표식을 남깁니다. 이 표식은 카타리나의 스킬이나 기본 공격으로 소모해 추가 마법 피해를 입힐 수 있습니다.<br>- 사악한 검무(W)는 카타리나 주변에 피해를 입히고, 챔피언을 맞혔다면 이동 속도를 얻습니다.<br>- 순보(E)는 대상에게 순간이동한 뒤 피해를 입힙니다. 이후 카타리나가 피해량 감소를 얻습니다.",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "카타리나가 킬 또는 어시스트를 기록하면 추가 골드를 얻고 스킬의 재사용 대기시간이 15초 감소합니다."
+        "description": "챔피언 킬 또는 어시스트를 기록하면 카타리나의 재사용 대기시간이 15초 감소합니다."
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "카타리나가 적 사이를 튕기는 단검을 던져 마법 피해를 입힙니다.",
-            "dynamicDescription": "단검을 던져 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다. 단검은 @MaxBounces@회 추가로 튕기며, 튕길 때마다 10% 감소한 피해를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "단검을 던져 <magicDamage>@TotalDamage@</magicDamage>의 마법 피해를 입힙니다. 단검은 가장 가까운 적 @MaxBounces@명에게 튕기며, 튕길 때마다 10% 감소한 피해를 입힙니다.<br><br>적중한 적에게는 @MarkDuration@초 동안 표식이 남습니다. 카타리나는 기본 공격 또는 스킬로 표식을 소모하여 <magicDamage>@TotalDamageMark@</magicDamage>의 마법 피해를 추가로 입힐 수 있습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "살인적 본능",
+            "name": "사악한 검무",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
-            "description": "카타리나가 다음에 사용하는 기본 스킬에 추가 효과가 적용됩니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과</spellPassive>: 카타리나의 스킬과 기본 공격이 @TotalDamage@의 피해를 추가로 입힙니다.<br><br><spellActive>사용 시:</spellActive> 카타리나가 다음에 사용하는 기본 스킬에 추가 효과가 적용됩니다.<li><spellName>단검 투척</spellName>: 모든 대상에게 온전한 피해를 입히고 @QHealingReductionDuration@초 동안 <keyWord>고통스러운 상처</keyWord>를 적용합니다.<li><spellName>순보</spellName>: 카타리나가 @EDamageReductionDuration@초 동안 @EDamageReduction@%의 피해량 감소를 얻습니다.@SpellModifierDescriptionAppend@",
+            "description": "카타리나가 주위에 단검을 휘둘러, 범위 내의 모든 적에게 마법 피해를 입힙니다. 적 챔피언을 맞히면 카타리나가 잠시 이동 속도를 얻습니다.",
+            "dynamicDescription": "단검을 원형으로 휘둘러 @TotalDamage@의 마법 피해를 입힙니다. 적 챔피언을 맞히면 카타리나가 @BuffDuration@초간 @Haste*100@%의 <speed>이동 속도</speed>를 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "카타리나가 대상의 위치로 순간이동하고, 몇 초 동안 적에게 받는 피해가 감소합니다. 대상이 적이라면 피해를 입힙니다.",
-            "dynamicDescription": "대상의 위치로 이동합니다. 대상이 적이라면 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "대상의 위치로 이동합니다. 대상이 적이라면 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.<br><br>순보 사용 후 카타리나가 @DamageReductionDuration@초 동안 @DamageReduction@% 감소한 피해를 받습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "카타리나가 칼날의 돌풍을 일으켜, 최대 3명의 주변 적 챔피언에게 엄청난 속도로 단검을 던집니다.",
-            "dynamicDescription": "칼날의 돌풍을 일으켜, 가장 가까운 적 챔피언 3명에게 단검을 던지며 2초에 걸쳐 <magicDamage>@DamageCalcTooltipOnly@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "칼날의 돌풍을 일으켜, 가장 가까운 적 챔피언 3명에게 단검을 던지며 2.5초에 걸쳐 <magicDamage>@DamageCalcTooltipOnly@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

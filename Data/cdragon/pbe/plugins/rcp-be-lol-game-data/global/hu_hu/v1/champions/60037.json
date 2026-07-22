@@ -719,7 +719,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Sona_PowerChordCharged.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "3 varázslat elsütése után Sona következő támadása bónusz varázssebzést okoz."
+        "description": "3 varázslat elsütése után Sona következő támadása bónusz varázssebzést okoz, és a célpontja néhány másodpercig csökkentett sebzést okoz."
     },
     "spells": [
         {
@@ -731,7 +731,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Sona eljátssza a Bátorság himnuszát, amellyel bónusz sebzést és varázserőt biztosít a közelben tartózkodó szövetséges hősöknek. Ezenkívül a képesség elsütése hanghullámokat kelt, amelyek varázssebzést okoznak a két legközelebbi ellenséges hősnek vagy szörnynek.",
-            "dynamicDescription": "<keywordMajor>Tartós aura:</keywordMajor> a közeli szövetséges hősöknek @APADBoost@ <physicalDamage>sebzést</physicalDamage> és <magicDamage>varázserőt</magicDamage> biztosít.<br><br><spellActive>Aktív:</spellActive> <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a két legközelebbi ellenséges célpontnak, elsősorban hősöknek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Tartós aura:</keywordMajor> a közeli szövetséges hősöknek @APADBoost@ <physicalDamage>sebzést</physicalDamage> és <magicDamage>varázserőt</magicDamage> nyújt.<br><br><spellActive>Aktív:</spellActive> <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okoz a legközelebbi @EnemiesToHit@ ellenséges célpontnak, elsősorban hősöknek.@SpellModifierDescriptionAppend@",
             "range": [
                 825.0,
                 825.0,
@@ -881,7 +881,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Sona eljátssza a Kitartás áriáját, amivel bónusz páncélt és varázsellenállást biztosít a közelben tartózkodó szövetséges hősöknek. Ezenkívül a képesség elsütésekor gyógyító dallamok csendülnek fel, amelyek gyógyítják Sonát és egy közeli, sérült szövetségest.",
-            "dynamicDescription": "<keywordMajor>Tartós aura:</keywordMajor> a közeli szövetséges hősöknek @ARMRBoost@ bónusz <scaleArmor>páncélt</scaleArmor> és <scaleMR>varázsellenállást</scaleMR> biztosít.<br><br><spellActive>Aktív:</spellActive> Sona és a leginkább sérült közeli szövetséges hős <healing>@Healing@ életerőt</healing> nyer vissza, valamint 3 másodpercre @ARMRBoost@ bónusz <scaleArmor>páncélt</scaleArmor> és <scaleMR>varázsellenállást</scaleMR> kap.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Tartós aura:</keywordMajor> a közeli szövetséges hősöknek @ARMRBoost@ <scaleArmor>páncélt</scaleArmor> és <scaleMR>varázsellenállást</scaleMR> biztosít.<br><br><spellActive>Aktív:</spellActive> Sona és a leginkább sérült közeli szövetséges hős <healing>@Healing@ életerőt</healing> nyer vissza.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1031,7 +1031,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Sona a Fürgeség dalát játssza, amivel bónusz mozgási sebességet biztosít a közeli szövetséges hősöknek. Ezenkívül a képesség elsütése sebességlöketet ad a közeli szövetségeseknek.",
-            "dynamicDescription": "<keywordMajor>Tartós aura:</keywordMajor> a közeli szövetséges hősöknek <speed>@MSBoost@ bónusz mozgási sebességet</speed> nyújt.<br><br><spellActive>Aktív:</spellActive> 1,5 másodpercre <speed>@MoveSpeedMod*100@% mozgási sebességet</speed> biztosít a közeli szövetségeseknek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<keywordMajor>Tartós aura:</keywordMajor> a közeli szövetséges hősöknek <speed>@MSBoost@ mozgási sebességet</speed> nyújt.<br><br><spellActive>Aktív:</spellActive> @ActiveSpeedDuration@ másodpercre <speed>@MoveSpeedMod*100@% mozgási sebességet</speed> biztosít a közeli szövetséges hősöknek.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

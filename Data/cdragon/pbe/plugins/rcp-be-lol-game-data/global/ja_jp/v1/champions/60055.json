@@ -6,7 +6,7 @@
     "name": "カタリナ",
     "alias": "Jade_Katarina",
     "title": "凶兆の刃",
-    "shortBio": "- 「殺しの本能」(W)は他の通常スキルを強化する<br>- 「貪欲なる暗殺者」(P)はキル時にゴールドを獲得し、クールダウンを短縮する",
+    "shortBio": "- 「バウンドナイフ(Q)」はダメージを与えて敵にマークを付与する。スキルか通常攻撃でマークを消費して追加魔法ダメージを与える。<br>- 「スティンガーロール(W)」は周囲にダメージを与え、チャンピオンに命中すると自身の移動速度が増加する。<br>- 「瞬歩(E)」は対象の位置までブリンクしてダメージを与え、その後、被ダメージ軽減効果を獲得する。",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -592,7 +592,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_Voracity2.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "チャンピオンからキルまたはアシストを奪うと、カタリナは追加ゴールドを獲得し、クールダウンが15秒短縮される。"
+        "description": "チャンピオンからキルまたはアシストを獲得すると、スキルのクールダウンが15秒短縮される。"
     },
     "spells": [
         {
@@ -604,7 +604,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "短剣を投げる。短剣は敵から敵へと跳ね返って魔法ダメージを与える。",
-            "dynamicDescription": "<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える短剣を投げる。短剣が追加で@MaxBounces@回跳ね返り、跳ね返るたびにダメージが10%減少する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<magicDamage>@TotalDamage@</magicDamage>の魔法ダメージを与える短剣を投げる。短剣が近くの敵@MaxBounces@体に跳ね返り、跳ね返るたびにダメージが10%減少する。<br><br>命中した敵に@MarkDuration@秒間マークを付与する。マークはカタリナの通常攻撃またはスキルで消費され、<magicDamage>@TotalDamageMark@</magicDamage>の追加魔法ダメージを与える。@SpellModifierDescriptionAppend@",
             "range": [
                 675.0,
                 675.0,
@@ -747,14 +747,14 @@
         },
         {
             "spellKey": "w",
-            "name": "殺しの本能",
+            "name": "スティンガーロール",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Katarina_KillerInstincts.project_jade.png",
             "abilityVideoPath": "",
             "abilityVideoImagePath": "",
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "次の通常スキルが追加効果を与える。",
-            "dynamicDescription": "<spellPassive>自動効果</spellPassive>: スキルと通常攻撃が追加で@TotalDamage@のダメージを与える。<br><br><spellActive>発動効果:</spellActive> 次の通常スキルに追加効果が付与される。<li><spellName>バウンドナイフ</spellName>: すべての対象に最大のダメージを与え、@QHealingReductionDuration@秒間、<keyWord>重傷</keyWord>を付与する。<li><spellName>瞬歩</spellName>: @EDamageReductionDuration@秒間、@EDamageReduction@%のダメージ軽減効果を獲得する。@SpellModifierDescriptionAppend@",
+            "description": "短剣を振り回し、範囲内のすべての敵に魔法ダメージを与える。敵チャンピオンに命中すると、少しの間、カタリナの移動速度が瞬間的に増加する。",
+            "dynamicDescription": "円を描くように短剣を振り回し、@TotalDamage@の魔法ダメージを与える。敵チャンピオンに命中すると、@BuffDuration@秒間、カタリナの<speed>移動速度</speed>が@Haste*100@%増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,
@@ -904,7 +904,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "瞬時に対象の位置まで移動し、数秒間、敵から受けるダメージが減少する。対象が敵の場合、ダメージを与える。",
-            "dynamicDescription": "対象の位置まで移動する。対象が敵の場合、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "対象の位置まで移動する。対象が敵の場合、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>「瞬歩」を使用後@DamageReductionDuration@秒間、受けるダメージが@DamageReduction@%軽減される。@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1054,7 +1054,7 @@
             "cost": "コスト無し",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "刃の嵐と化し、周囲にいる敵チャンピオン(最大3体)に目にも止まらぬ速さで短剣を投げる。",
-            "dynamicDescription": "刃の嵐と化し、最も近くにいる敵チャンピオン3体に短剣を投げ、2秒間かけて<magicDamage>@DamageCalcTooltipOnly@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "刃の嵐と化し、最も近くにいる敵チャンピオン3体に短剣を投げ、2.5秒間かけて<magicDamage>@DamageCalcTooltipOnly@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

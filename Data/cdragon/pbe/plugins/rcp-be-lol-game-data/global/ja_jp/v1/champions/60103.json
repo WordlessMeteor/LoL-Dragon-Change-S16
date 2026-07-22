@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "スキルが敵に命中するたびに、「生気吸引」をチャージする(1回のスキル発動での上限は3)。9回チャージが完了すると、次のスキル命中で35%のスペルヴァンプの効果が発生する。"
+        "description": "スキルが敵に命中するたびに、「生気吸引」をチャージする。最大スタックに達すると、次のスキルでアーリの体力が回復する。"
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "往復するオーブを放ち、命中した敵に魔法ダメージを与える。戻る時に与えるダメージは確定ダメージになる。",
-            "dynamicDescription": "<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、戻ってくるときには<trueDamage>@TotalDamage@の確定ダメージ</trueDamage>を与える。オーブが飛んでいる間は、<speed>移動速度が@FlatMovementSpeedMod@</speed>増加する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "往復するオーブを放ち、命中した敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。戻る時に与えるダメージは<trueDamage>@TotalDamage@の確定ダメージ</trueDamage>になる。@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "近くにいる敵を自動的に攻撃する、3つの狐火を放つ。",
-            "dynamicDescription": "近くにいる敵(チャンピオンを優先)を自動で狙う狐火を放ち、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。複数の狐火が1体の敵に当たった場合、2つ目以降は<magicDamage>@HalfDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "近くにいる敵を自動で狙う3つの狐火を放ち、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。複数の狐火が1体の敵に当たった場合、2つ目以降はダメージが<magicDamage>@HalfDamage@</magicDamage>に低下する。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
-            "description": "投げキッスを放ち、最初に触れた敵にダメージとチャーム効果を与える。チャームされた敵は何もできなくなってアーリに引き寄せられる。",
-            "dynamicDescription": "投げキッスを放ち、最初に触れた敵に<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、@CharmDuration@秒間<status>チャーム</status>を付与する。チャームされた敵は何もできなくなってアーリに引き寄せられる。@SpellModifierDescriptionAppend@",
+            "description": "投げキッスを放ち、最初に触れた敵にチャーム効果を与える。数秒間、対象はアーリから受けるダメージが増加する。",
+            "dynamicDescription": "投げキッスを放ち、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、最初に触れた敵に@CharmDuration@秒間<status>チャーム効果</status>を付与する。@DamageAmpDuration@秒間、対象はアーリから受けるダメージが@DamageAmp@%増加する。@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ダッシュしてエネルギーを放ち、周囲にいる敵3体にダメージを与える(チャンピオンを優先)。「スピリットラッシュ」はクールダウンに入るまでの間に、最大3回使用できる。",
-            "dynamicDescription": "すばやくダッシュして周囲の敵(チャンピオンを優先)に3個のエネルギーを放ち、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>10秒以内に最大2回まで<recast>再発動</recast>できる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "すばやくダッシュして周囲の敵(チャンピオン優先)に3個のエネルギーを放つ。エネルギーはそれぞれが<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<spellName>「スピリットラッシュ」</spellName>は10秒以内に最大2回まで<recast>再発動</recast>できる。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

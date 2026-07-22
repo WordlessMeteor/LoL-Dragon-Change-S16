@@ -15779,7 +15779,8 @@
                     if (r) {
                         const e = s.pawApi.createPAWModal({
                             itemId: r,
-                            inventoryType: t
+                            inventoryType: t,
+                            isJadeStore: !0
                         }, "collections", null, null, n, i);
                         this.set("isPAWOpen", e)
                     }

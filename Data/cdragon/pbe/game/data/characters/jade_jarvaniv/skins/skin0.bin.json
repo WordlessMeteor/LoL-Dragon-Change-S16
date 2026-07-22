@@ -96,9 +96,9 @@
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Jade_JarvanIV.skl",
-            "simpleSkin": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Jade_JarvanIV.skn",
-            "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Jade_JarvanIV_base_TX_CM.tex",
+            "skeleton": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/jarvanIV_classic.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/jarvanIV_classic.skn",
+            "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Jade_JarvanIV_base_TX_CM_Classic.tex",
             "skinScale": 1.159999966621399,
             "selfIllumination": 1.0,
             "overrideBoundingBox": [
@@ -109,7 +109,7 @@
             "{9a817954}": [
                 {
                     "category": "{e1043940}",
-                    "Submeshes": "lambert3",
+                    "Submeshes": "lambert2",
                     "__type": "{993f8595}"
                 }
             ],
@@ -123,6 +123,8 @@
         "iconCircle": "ASSETS/Characters/Jade_JarvanIV/HUD/Jade_JarvanIV_Circle_Classic.tex",
         "iconSquare": "ASSETS/Characters/Jade_JarvanIV/HUD/Jade_JarvanIV_Square_0.tex",
         "iconAvatar": "ASSETS/Characters/Jade_JarvanIV/HUD/Jade_JarvanIV_Circle_0.tex",
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
         "healthBarData": {
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
@@ -153,17 +155,20 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/Jade_JarvanIV_weapon.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/jarvan_weapon.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/Jade_JarvanIV_color-hold.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/color-hold.tex",
                 "blendMode": 3,
                 "isLocalOrientation": 0,
-                "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Jade_JarvanIV_base_TX_CM.tex",
+                "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/jarvanIV_Base_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -196,6 +201,9 @@
                     ],
                     "__type": "ValueVector3"
                 },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
                 "EmitterPosition": {
                     "constantValue": [
                         0.0,
@@ -206,13 +214,14 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/Jade_JarvanIV_weapon.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/jarvan_weapon.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/Jade_JarvanIV_color-hold.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/color-hold.tex",
                 "blendMode": 3,
+                "doesCastShadow": 1,
                 "birthRotation0": {
                     "constantValue": [
                         180.0,
@@ -222,7 +231,7 @@
                     "__type": "ValueVector3"
                 },
                 "isLocalOrientation": 0,
-                "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Jade_JarvanIV_base_TX_CM.tex",
+                "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/jarvanIV_Base_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -240,10 +249,13 @@
                 "emitterLinger": 1.0,
                 "emitterName": "teamcircle-red",
                 "importance": 3,
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/Jade_JarvanIV_color-teams32.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/color-teams32.tex",
                 "blendMode": 1,
                 "pass": -10,
                 "meshRenderFlags": 0,
@@ -273,7 +285,6 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
                         300.0,
@@ -315,7 +326,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/Jade_JarvanIV_fivedotcircle32.tex",
+                "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/fivedotcircle32.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -341,6 +352,12 @@
                 "isSingleParticle": 1,
                 "emitterName": "Weapon",
                 "importance": 3,
+                "Filtering": {
+                    "keywordsExcluded": [
+                        "DragoonJarvanIV"
+                    ],
+                    "__type": "VfxEmitterFiltering"
+                },
                 "birthVelocity": {
                     "constantValue": [
                         0.0,
@@ -348,6 +365,9 @@
                         0.0
                     ],
                     "__type": "ValueVector3"
+                },
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
                 },
                 "EmitterPosition": {
                     "constantValue": [
@@ -359,13 +379,14 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/Jade_JarvanIV_weapon.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/jarvan_weapon.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/Jade_JarvanIV_color-hold.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/color-hold.tex",
                 "blendMode": 3,
+                "doesCastShadow": 1,
                 "birthRotation0": {
                     "constantValue": [
                         180.0,
@@ -375,7 +396,7 @@
                     "__type": "ValueVector3"
                 },
                 "isLocalOrientation": 0,
-                "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Jade_JarvanIV_base_TX_CM.tex",
+                "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/jarvanIV_Base_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -393,10 +414,13 @@
                 "emitterLinger": 1.0,
                 "emitterName": "teamcircle-green",
                 "importance": 3,
+                "SpawnShape": {
+                    "__type": "VfxShapeLegacy"
+                },
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/Jade_JarvanIV_color-teams32.tex",
+                "particleColorTexture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/color-teams32.tex",
                 "blendMode": 1,
                 "pass": -10,
                 "meshRenderFlags": 0,
@@ -426,7 +450,6 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "isLocalOrientation": 0,
                 "birthScale0": {
                     "constantValue": [
                         300.0,
@@ -468,7 +491,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/Jade_JarvanIV_fivedotcircle32.tex",
+                "texture": "ASSETS/Characters/Jade_JarvanIV/Skins/Base/Particles/fivedotcircle32.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

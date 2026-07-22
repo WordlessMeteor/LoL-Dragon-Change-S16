@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "The Nine-Tailed Fox",
-    "shortBio": "- Orb of Deception (Q) memberikan movement speed saat berada di udara<br>- Essence Theft (P) akan di-stack saat memberikan damage ke musuh<br>- Spirit Rush (R) tidak tereset",
+    "shortBio": "- Essence Theft (P) akan di-stack saat memberikan damage ke musuh<br>- Spirit Rush (R) tidak akan reset",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Mendapatkan charge Essence Theft tiap kali spell mengenai musuh (maksimum 3 charge per spell). Setelah mencapai 9 charge, spell berikutnya memiliki 35% Spell Vamp."
+        "description": "Mendapatkan charge Essence Theft tiap kali spell mengenai musuh. Saat mencapai charge maksimum, spell berikutnya memulihkan Health Ahri."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Ahri mengirim dan menarik orb-nya kembali, menghasilkan magic damage saat keluar dan true damage saat kembali.",
-            "dynamicDescription": "Menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> saat keluar, dan <trueDamage>@TotalDamage@ true damage</trueDamage> saat kembali. Ahri mendapatkan <speed>@FlatMovementSpeedMod@ Movement Speed</speed> saat spell ini sedang terbang.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri melemparkan lalu menarik orb-nya kembali, menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> saat keluar dan <trueDamage>@TotalDamage@ true damage</trueDamage> saat kembali.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Ahri mengeluarkan tiga fox-fire yang mengunci para musuh di dekatnya, lalu menyerang ke musuh di sekitar.",
-            "dynamicDescription": "Mengeluarkan tiga fox-fire yang mengunci para musuh di sekitar (memprioritaskan Champion) dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. Musuh yang terkena beberapa fox-fire akan menerima <magicDamage>@HalfDamage@ magic damage</magicDamage> dari tiap fox-fire tambahan.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri melepaskan 3 fox fire yang mencari musuh di sekitar dan memberikan <magicDamage>@TotalDamage@ magic damage</magicDamage>, berkurang hingga <magicDamage>@HalfDamage@ damage</magicDamage> setelah yang pertama.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Ahri meniupkan ciuman yang memberikan damage dan efek charm ke musuh yang terkena, menyebabkan mereka berjalan tanpa sadar ke arahnya.",
-            "dynamicDescription": "Meniupkan ciuman, memberikan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan efek <status>Charm</status> ke musuh, menyebabkan mereka berjalan tanpa sadar ke Ahri selama @CharmDuration@ detik.@SpellModifierDescriptionAppend@",
+            "description": "Ahri meniupkan ciuman yang menghasilkan damage dan menerapkan efek Charm ke musuh pertama yang terkena. Musuh tersebut juga menerima damage lebih banyak dari Ahri selama beberapa detik.",
+            "dynamicDescription": "Ahri meniupkan ciuman yang menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan menerapkan efek <status>Charm</status> ke musuh pertama yang terkena selama @CharmDuration@ detik. Musuh tersebut juga menerima @DamageAmp@% damage lebih banyak dari Ahri selama @DamageAmpDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Ahri dash ke depan dan menembakkan essence bolt, memberi damage ke 3 musuh di sekitar (memprioritaskan Champion). Spirit Rush bisa di-cast hingga tiga kali sebelum memasuki cooldown.",
-            "dynamicDescription": "Dengan lincah melakukan dash ke depan sambil menembakkan 3 essence bolt ke musuh di sekitar (memprioritaskan Champion), menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>.<br><br>Bisa di-<recast>Recast</recast> hingga 2 kali lagi dalam 10 detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri dengan lincah melakukan dash, menembakkan 3 essence bolt ke musuh di sekitar, memprioritaskan champion. Masing-masing bolt menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. <spellName>Spirit Rush</spellName> bisa di-<recast>Recast</recast> hingga 2 kali lagi dalam 10 detik.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

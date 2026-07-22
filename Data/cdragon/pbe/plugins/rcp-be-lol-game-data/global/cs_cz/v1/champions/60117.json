@@ -628,7 +628,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Pix je divoká víla, která Lulu doprovází. Na cíle, na něž Lulu útočí, vypálí Pix salvu magické energie."
+        "description": "Pix vystřelí výboje magické energie, kdykoliv šampion, jehož sleduje, zaútočí na nepřátelskou jednotku. Tyto výboje jsou naváděné, ale mohou se zarazit o jiné jednotky."
     },
     "spells": [
         {
@@ -640,7 +640,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Pix a Lulu vystřelí po jednom výboji magické energie, který výrazně zpomalí všechny zasažené nepřátele. Každý nepřítel může být poškozen pouze jedním výbojem.",
-            "dynamicDescription": "<mainText>Lulu a Pix vyšlou průrazný výboj, který způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a zasažené nepřátele na @SlowDuration@&nbsp;sek. <status>zpomalí</status> o @SlowAmount*-100@&nbsp;%. Toto zpomalení postupem času slábne až na minimálně @MinMoveSpeedMod@&nbsp;% (minimum je omezeno na 80&nbsp;%).<br><br>Každý nepřítel může být poškozen pouze jedním výbojem.",
+            "dynamicDescription": "Lulu a Pix vyšlou průrazný výboj, který způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a zasažené nepřátele <status>zpomalí</status> o @SlowAmount*-100@ %, tento postih během @SlowDuration@ sek. postupně odeznívá.<br><br>Každý nepřítel může být poškozen pouze jedním výbojem.@SpellModifierDescriptionAppend@",
             "range": [
                 925.0,
                 925.0,

@@ -2242,23 +2242,6 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
-                "name": "Alpha_Multiplier",
-                "data": [
-                    1.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "logicalParameters": [
-                    {
-                        "name": "Alpha_Multiplier",
-                        "fields": 1,
-                        "__type": "ShaderLogicalParameter"
-                    }
-                ],
-                "__type": "ShaderPhysicalParameter"
-            },
-            {
                 "name": "FBM_Alpha_Smoothstep",
                 "data": [
                     0.5,
@@ -2286,6 +2269,23 @@
                 "logicalParameters": [
                     {
                         "name": "FBM_Alpha_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Alpha_Multiplier",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Alpha_Multiplier",
                         "fields": 1,
                         "__type": "ShaderLogicalParameter"
                     }
@@ -2413,6 +2413,10 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "USE_BLOOM_TINT_COLOR",
                 "__type": "ShaderStaticSwitch"
             },
@@ -2505,6 +2509,11 @@
             {
                 "name": "Lightness_Adjustment_Texture",
                 "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Alpha_Multiplier_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "ShaderTexture"
             },
             {

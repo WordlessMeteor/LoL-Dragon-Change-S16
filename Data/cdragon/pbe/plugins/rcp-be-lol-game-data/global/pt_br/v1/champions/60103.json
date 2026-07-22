@@ -6,7 +6,7 @@
     "name": "Ahri",
     "alias": "Jade_Ahri",
     "title": "A Raposa de Nove Caudas",
-    "shortBio": "– Orbe da Ilusão (Q) concede Velocidade de Movimento quando está no ar.<br>– Furto de Essência (P) recebe acúmulos ao causar dano a inimigos.<br>– Ímpeto Espiritual (R) não é redefinida.",
+    "shortBio": "- Furto de Essência (P) é acumulado ao causar dano a inimigos<br>- Ímpeto Espiritual (R) não é redefinido",
     "isVisibleInClient": true,
     "tacticalInfo": {
         "style": 10,
@@ -839,7 +839,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Ahri_SoulEater.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "Recebe uma carga de Furto de Essência sempre que uma Habilidade atinge um inimigo (até 3 cargas por Habilidade). Com 9 cargas, a próxima Habilidade recebe 35% de Vampirismo Mágico."
+        "description": "Recebe uma carga de Furto de Essência sempre que uma Habilidade atinge um inimigo. Depois de obter o máximo de acúmulos, a próxima Habilidade restaura a Vida de Ahri."
     },
     "spells": [
         {
@@ -851,7 +851,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Ahri lança e puxa de volta seu orbe, causando Dano Mágico na ida e Dano Verdadeiro na volta.",
-            "dynamicDescription": "Causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> na ida e <trueDamage>@TotalDamage@ de Dano Verdadeiro</trueDamage> na volta. Ahri recebe <speed>@FlatMovementSpeedMod@ de Velocidade de Movimento</speed> enquanto a Habilidade está no ar.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri lança e puxa de volta seu orbe, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> na ida e <trueDamage>@TotalDamage@ de Dano Verdadeiro</trueDamage> na volta.@SpellModifierDescriptionAppend@",
             "range": [
                 970.0,
                 970.0,
@@ -1001,7 +1001,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Ahri dispara três Fogos de Raposa que perseguem e atacam inimigos próximos.",
-            "dynamicDescription": "Dispara três Fogos de Raposa que perseguem inimigos próximos (priorizam Campeões), causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. Inimigos atingidos por vários Fogos de Raposa recebem <magicDamage>@HalfDamage@ de Dano Mágico</magicDamage> de cada Fogo de Raposa adicional.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri invoca 3 Fogos de Raposa que perseguem inimigos próximos e causam <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>, reduzido a <magicDamage>@HalfDamage@ do dano</magicDamage> após o primeiro.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,
@@ -1150,8 +1150,8 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Ahri manda um beijo que causa dano e encanta um inimigo, fazendo com que ele ande inofensivamente na direção dela.",
-            "dynamicDescription": "Manda um beijo que causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e <status>Encanta</status> um inimigo, fazendo com que ele ande inofensivamente em direção a Ahri por @CharmDuration@s.@SpellModifierDescriptionAppend@",
+            "description": "Ahri manda um beijo que causa dano e Encanta o primeiro inimigo atingido, que também sofre mais dano dela por vários segundos.",
+            "dynamicDescription": "Ahri manda um beijo que <status>Encanta</status> o primeiro inimigo atingido por @CharmDuration@s e causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. O inimigo também sofre @DamageAmp@% a mais de dano dela por @DamageAmpDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 975.0,
                 975.0,
@@ -1301,7 +1301,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Ahri avança e dispara raios de essência, causando dano a 3 inimigos próximos (prioriza Campeões). Ímpeto Espiritual pode ser conjurada até três vezes antes de entrar em Tempo de Recarga.",
-            "dynamicDescription": "Avança com agilidade e dispara 3 projéteis de essência em inimigos próximos (prioriza Campeões), causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>.<br><br>Pode ser <recast>Reconjurada</recast> mais 2x em até 10s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ahri avança rapidamente, disparando 3 raios de essência em inimigos próximos, priorizando Campeões. Cada raio causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage>. <spellName>Ímpeto Espiritual</spellName> pode ser <recast>reconjurada</recast> mais 2x em até 10s.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
