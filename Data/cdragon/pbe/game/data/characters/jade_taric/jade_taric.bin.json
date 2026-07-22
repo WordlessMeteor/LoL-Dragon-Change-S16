@@ -1374,7 +1374,7 @@
                                 },
                                 {
                                     "type": "DamageIncrease",
-                                    "nameOverride": "Spell_ListType_AbilityPower",
+                                    "nameOverride": "jade_stat_ability_power",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -2354,117 +2354,96 @@
                                                 "__type": "{851b8dc5}"
                                             },
                                             {
-                                                "{d851ffa3}": "ace4e6fc-0085-4f70-ae5b-2ccf48337f47",
+                                                "{d851ffa3}": "8c8fd735-4b7f-4c96-8e52-b89c67ee7ddf",
+                                                "Src": {
+                                                    "__type": "IntGet"
+                                                },
+                                                "Dest": {
+                                                    "Var": "newCooldown",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            {
+                                                "{d851ffa3}": "a5194a0f-e219-4f6c-93d5-0c09f9c56795",
+                                                "Src": {
+                                                    "__type": "IntGet"
+                                                },
+                                                "Dest": {
+                                                    "Var": "CDR",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            {
+                                                "{d851ffa3}": "80d65ebb-95e2-49f9-9b0a-2d40f09400f6",
                                                 "Condition": null,
                                                 "Sequence": {
                                                     "blocks": [
                                                         {
-                                                            "{d851ffa3}": "8525fe44-b3b3-4187-bf2d-855e10e3242e",
-                                                            "Condition": null,
-                                                            "Invert": true,
-                                                            "Sequence": {
-                                                                "blocks": [
-                                                                    {
-                                                                        "{d851ffa3}": "8c8fd735-4b7f-4c96-8e52-b89c67ee7ddf",
-                                                                        "Src": {
-                                                                            "__type": "IntGet"
-                                                                        },
-                                                                        "Dest": {
-                                                                            "Var": "newCooldown",
-                                                                            "__type": "ScriptTableSet"
-                                                                        },
-                                                                        "__type": "SetVarInTableBlock"
-                                                                    },
-                                                                    {
-                                                                        "{d851ffa3}": "a5194a0f-e219-4f6c-93d5-0c09f9c56795",
-                                                                        "Src": {
-                                                                            "__type": "IntGet"
-                                                                        },
-                                                                        "Dest": {
-                                                                            "Var": "CDR",
-                                                                            "__type": "ScriptTableSet"
-                                                                        },
-                                                                        "__type": "SetVarInTableBlock"
-                                                                    },
-                                                                    {
-                                                                        "{d851ffa3}": "80d65ebb-95e2-49f9-9b0a-2d40f09400f6",
-                                                                        "Condition": null,
-                                                                        "Sequence": {
-                                                                            "blocks": [
-                                                                                {
-                                                                                    "{d851ffa3}": "88b57905-cd60-4d0b-a26c-15e5cbd4a422",
-                                                                                    "Src": {
-                                                                                        "value": 3,
-                                                                                        "__type": "IntGet"
-                                                                                    },
-                                                                                    "Dest": {
-                                                                                        "Var": "CDR",
-                                                                                        "__type": "ScriptTableSet"
-                                                                                    },
-                                                                                    "__type": "SetVarInTableBlock"
-                                                                                }
-                                                                            ],
-                                                                            "__type": "ScriptSequence"
-                                                                        },
-                                                                        "__type": "{e524b2fc}"
-                                                                    },
-                                                                    {
-                                                                        "{d851ffa3}": "870e89e2-9c18-436d-96d8-f47906739252",
-                                                                        "Sequence": {
-                                                                            "blocks": [
-                                                                                {
-                                                                                    "{d851ffa3}": "b53171c0-b14f-428b-b04f-823399a94880",
-                                                                                    "Src": {
-                                                                                        "value": 1,
-                                                                                        "__type": "IntGet"
-                                                                                    },
-                                                                                    "Dest": {
-                                                                                        "Var": "CDR",
-                                                                                        "__type": "ScriptTableSet"
-                                                                                    },
-                                                                                    "__type": "SetVarInTableBlock"
-                                                                                }
-                                                                            ],
-                                                                            "__type": "ScriptSequence"
-                                                                        },
-                                                                        "__type": "{e524b2fc}"
-                                                                    },
-                                                                    null,
-                                                                    {
-                                                                        "{d851ffa3}": "647d23a9-865e-420b-be19-13f6b4033f90",
-                                                                        "Condition": {
-                                                                            "Value1": {
-                                                                                "Var": "Cooldown",
-                                                                                "__type": "ScriptTableGet"
-                                                                            },
-                                                                            "Operation": 2,
-                                                                            "Value2": {
-                                                                                "__type": "IntGet"
-                                                                            },
-                                                                            "__type": "ComparisonScriptCondition"
-                                                                        },
-                                                                        "Sequence": {
-                                                                            "blocks": [
-                                                                                {
-                                                                                    "{d851ffa3}": "6b158993-4677-49b0-824a-366181de57c0",
-                                                                                    "Formula": "ptp.cooldown - ptp.CDR",
-                                                                                    "Dest": {
-                                                                                        "Var": "newCooldown",
-                                                                                        "__type": "ScriptTableSet"
-                                                                                    },
-                                                                                    "__type": "{15ebaa9c}"
-                                                                                },
-                                                                                null
-                                                                            ],
-                                                                            "__type": "ScriptSequence"
-                                                                        },
-                                                                        "__type": "{e524b2fc}"
-                                                                    }
-                                                                ],
-                                                                "__type": "ScriptSequence"
+                                                            "{d851ffa3}": "88b57905-cd60-4d0b-a26c-15e5cbd4a422",
+                                                            "Src": {
+                                                                "value": 3,
+                                                                "__type": "IntGet"
                                                             },
-                                                            "__type": "{e524b2fc}"
+                                                            "Dest": {
+                                                                "Var": "CDR",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "SetVarInTableBlock"
                                                         }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "870e89e2-9c18-436d-96d8-f47906739252",
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "b53171c0-b14f-428b-b04f-823399a94880",
+                                                            "Src": {
+                                                                "value": 1,
+                                                                "__type": "IntGet"
+                                                            },
+                                                            "Dest": {
+                                                                "Var": "CDR",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "SetVarInTableBlock"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            null,
+                                            {
+                                                "{d851ffa3}": "647d23a9-865e-420b-be19-13f6b4033f90",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "Cooldown",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Operation": 2,
+                                                    "Value2": {
+                                                        "__type": "IntGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
+                                                },
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "6b158993-4677-49b0-824a-366181de57c0",
+                                                            "Formula": "ptp.cooldown - ptp.CDR",
+                                                            "Dest": {
+                                                                "Var": "newCooldown",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "{15ebaa9c}"
+                                                        },
+                                                        null
                                                     ],
                                                     "__type": "ScriptSequence"
                                                 },

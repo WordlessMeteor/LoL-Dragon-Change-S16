@@ -16462,24 +16462,35 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     width: 20px
 }
 
-.rcp-fe-lol-jade-battlepass-reward-celebration {
+.battlepass-reward-celebration-component {
     align-items: center;
-    box-sizing: border-box;
     display: flex;
     height: 100%;
     justify-content: center;
-    padding: 40px;
     width: 100%
 }
 
-.rcp-fe-lol-jade-battlepass-reward-celebration .rewards-container {
+.battlepass-reward-celebration-component .battlepass-reward-celebration-background {
+    background-image: url(/fe/lol-jade/images/old_sr_illustration.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 512px;
+    opacity: .5;
+    position: absolute;
+    top: 104px;
+    width: 1280px
+}
+
+.battlepass-reward-celebration-component .rewards-container {
     align-items: center;
     display: flex;
     flex-direction: column;
-    gap: 20px
+    gap: 20px;
+    position: absolute
 }
 
-.rcp-fe-lol-jade-battlepass-reward-celebration .reward {
+.battlepass-reward-celebration-component .reward {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -16487,7 +16498,7 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     text-align: center
 }
 
-.rcp-fe-lol-jade-battlepass-reward-celebration .reward-icon {
+.battlepass-reward-celebration-component .reward-icon {
     align-items: center;
     background-color: #1e1e1e;
     border-radius: 4px;
@@ -16499,10 +16510,37 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     padding: 10px
 }
 
-.rcp-fe-lol-jade-battlepass-reward-celebration .reward-icon img {
+.battlepass-reward-celebration-component .reward-icon img {
     height: 220px;
     object-fit: cover;
     width: 220px
+}
+
+.battlepass-reward-celebration-component .battlepass-reward-next-button {
+    align-items: center;
+    background: linear-gradient(0deg, #c73e00 37.5%, #efa23a);
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    height: 48px;
+    justify-content: center;
+    line-height: normal;
+    position: absolute;
+    text-shadow: 0 0 2px #000;
+    top: 645px;
+    white-space: nowrap;
+    width: 174px
+}
+
+.battlepass-reward-celebration-component .battlepass-reward-next-button:hover {
+    background: linear-gradient(0deg, #d94800 37.5%, #f5b04a)
+}
+
+.battlepass-reward-celebration-component .battlepass-reward-next-button:active {
+    background: linear-gradient(0deg, #a83500 37.5%, #d48a2e)
 }
 
 .jade-rp-topup__container {

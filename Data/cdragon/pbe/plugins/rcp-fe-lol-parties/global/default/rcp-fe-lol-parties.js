@@ -21339,11 +21339,13 @@
                 };
             n(483);
             const a = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
-                r = 30,
-                l = 100 / 7,
-                c = "calc(27px - " + l + "%)",
-                m = (0, o.getProvider)().getSocket(),
-                u = {
+                r = "0724e93d-6b74-449f-abef-8785262c3890",
+                l = "[jade-progression-widget]",
+                c = 30,
+                m = 100 / 7,
+                u = "calc(27px - " + m + "%)",
+                d = (0, o.getProvider)().getSocket(),
+                p = {
                     ACHIEVEMENT_TITLE: "jade_inventory_type_achievement_title",
                     BOOST: "jade_inventory_type_boost",
                     CHAMPION_PERMANENT: "jade_inventory_type_champion",
@@ -21360,12 +21362,13 @@
                     SUMMONER_ICON: "jade_inventory_type_icon",
                     WARD_SKIN: "jade_inventory_type_ward_skin"
                 };
-            var d = o.Ember.Component.extend({
+            var h = o.Ember.Component.extend({
                 layout: n(484),
                 classNames: ["jade-progression-widget"],
                 classNameBindings: ["isLevelZero:is-level-zero", "isMaxLevel:is-max-level"],
                 summonersJourneyService: o.Ember.inject.service("summoners-journey"),
                 dataLoaded: !1,
+                loadError: !1,
                 isModalOpen: !1,
                 _instanceData: null,
                 _configuration: null,
@@ -21378,44 +21381,57 @@
                 _modalOriginalNextSibling: null,
                 didInsertElement() {
                     this._super(...arguments), this._initProgressionData(), this._onWidgetClick = () => {
-                        this.get("dataLoaded") && !this.get("isModalOpen") && (this.set("modalCurrentPage", Math.floor(this.get("currentLevel") / 8)), this.set("modalSelectedRewardLevel", Math.max(1, this.get("currentLevel"))), this.set("isModalOpen", !0), o.Ember.run.scheduleOnce("afterRender", this, this._initModalBackdrop))
+                        if (this.get("dataLoaded") && !this.get("isModalOpen")) {
+                            const e = this.get("currentLevel");
+                            this.set("modalCurrentPage", Math.floor(e / 8)), this.set("modalSelectedRewardLevel", Math.max(1, e)), this.set("isModalOpen", !0), o.Ember.run.scheduleOnce("afterRender", this, this._initModalBackdrop)
+                        }
                     }, this.element.addEventListener("click", this._onWidgetClick)
                 },
                 willDestroyElement() {
-                    this._super(...arguments), this._onWidgetClick && this.element.removeEventListener("click", this._onWidgetClick), this._cleanupModalBackdrop(), (0, o.dataBinding)("/lol-progression", m).unobserve(`/v1/groups/${a}/instanceData`, this)
+                    this._super(...arguments), this._onWidgetClick && this.element.removeEventListener("click", this._onWidgetClick), this._cleanupModalBackdrop(), (0, o.dataBinding)("/lol-progression", d).unobserve(`/v1/groups/${a}/instanceData`, this)
                 },
                 _initProgressionData() {
-                    (0, o.dataBinding)("/lol-progression", m).get(`/v1/groups/${a}/configuration`).then((e => {
-                        !e || this.isDestroying || this.isDestroyed || (this.set("_configuration", e), this._checkDataLoaded(), this._fetchRewardGroups(e))
-                    })), this._fetchRewardTrackItems(), (0, o.dataBinding)("/lol-progression", m).observe(`/v1/groups/${a}/instanceData`, this, (e => {
+                    this._loadProgressionFetches(), (0, o.dataBinding)("/lol-progression", d).observe(`/v1/groups/${a}/instanceData`, this, (e => {
                         !e || this.isDestroying || this.isDestroyed || (this.set("_instanceData", e), this._checkDataLoaded())
                     }))
+                },
+                _loadProgressionFetches() {
+                    (0, o.dataBinding)("/lol-progression", d).get(`/v1/groups/${a}/configuration`).then((e => {
+                        this.isDestroying || this.isDestroyed || (e ? (this.set("_configuration", e), this._checkDataLoaded(), this._fetchRewardGroups(e)) : this._handleLoadError("configuration response empty"))
+                    })).catch((e => {
+                        this._handleLoadError("configuration fetch FAILED for TRACK_ID: " + a, e)
+                    })), this._fetchRewardTrackItems()
+                },
+                _handleLoadError(e, t) {
+                    o.logger.error(l, "load error:", e, t || ""), this.isDestroying || this.isDestroyed || this.set("loadError", !0)
                 },
                 _fetchRewardGroups(e) {
                     const t = [].concat(e.milestones || [], e.repeat && e.repeat.milestones || []),
                         n = [...new Set(t.map((e => e.properties && e.properties.REWARD_GROUP_ID)).filter(Boolean))];
-                    if (!n.length) return this.set("_rewardGroupMap", {}), void this._checkDataLoaded();
+                    if (!n.length) return o.logger.warning(l, "no REWARD_GROUP_IDs found in config milestones; reward group is empty"), this.set("_rewardGroupMap", {}), void this._checkDataLoaded();
                     (0, o.dataBinding)("/lol-rewards").get("/v1/groups").then((e => {
-                        if (!e || this.isDestroying || this.isDestroyed) return;
+                        if (this.isDestroying || this.isDestroyed) return;
+                        if (!e) return void this._handleLoadError("/lol-rewards/v1/groups response empty");
                         const t = {};
                         n.forEach((n => {
                             const i = e.find((e => e.id === n));
-                            i && (t[n] = i)
+                            i ? t[n] = i : o.logger.warning(l, "REWARD_GROUP_ID not found in /lol-rewards/v1/groups:", n)
                         })), this.set("_rewardGroupMap", t), this._checkDataLoaded()
-                    })).catch((() => {
-                        this.set("_rewardGroupMap", {}), this._checkDataLoaded()
+                    })).catch((e => {
+                        this._handleLoadError("/lol-rewards/v1/groups fetch FAILED", e)
                     }))
                 },
                 _fetchRewardTrackItems() {
-                    (0, o.dataBinding)("/lol-event-hub/v1").get("/events/0724e93d-6b74-449f-abef-8785262c3890/reward-track/items").then((e => {
-                        if (!e || !Array.isArray(e) || this.isDestroying || this.isDestroyed) return;
+                    (0, o.dataBinding)("/lol-event-hub/v1").get(`/events/${r}/reward-track/items`).then((e => {
+                        if (this.isDestroying || this.isDestroyed) return;
+                        if (!e || !Array.isArray(e) || 0 === e.length) return void this._handleLoadError("reward-track items missing/empty/not-array. items: " + JSON.stringify(e));
                         const t = {};
                         e.forEach((e => {
                             const n = parseInt(e.threshold, 10);
                             isNaN(n) || (t[n] = e)
                         })), this.set("_rewardTrackItemMap", t), this._checkDataLoaded()
-                    })).catch((() => {
-                        this.set("_rewardTrackItemMap", {}), this._checkDataLoaded()
+                    })).catch((e => {
+                        this._handleLoadError("reward-track/items fetch FAILED for EVENT_ID: " + r, e)
                     }))
                 },
                 _milestoneForLevel(e) {
@@ -21440,7 +21456,7 @@
                     return this.get("currentLevel") + 1
                 })),
                 isMaxLevel: o.Ember.computed("currentLevel", (function() {
-                    return this.get("currentLevel") >= r
+                    return this.get("currentLevel") >= c
                 })),
                 currentLevelXP: o.Ember.computed.alias("summonersJourneyService.currentLevelXp"),
                 totalLevelXP: o.Ember.computed.alias("summonersJourneyService.xpForNextLevel"),
@@ -21449,7 +21465,7 @@
                         t = this.get("summonersJourneyService.xpTotal") || 0;
                     let n = 0;
                     for (let i = 0; i < e.length && t >= e[i]; i++) n = i + 1;
-                    return Math.min(r, n)
+                    return Math.min(c, n)
                 })),
                 isLevelZero: o.Ember.computed("currentLevel", (function() {
                     return 0 === this.get("currentLevel")
@@ -21499,7 +21515,7 @@
                     if (!t) return "";
                     const n = t.rewardInventoryTypes;
                     if (!n || !n.length) return "";
-                    const i = u[n[0]];
+                    const i = p[n[0]];
                     return i ? o.tra.get(i) : n[0]
                 },
                 _descriptionFromTrackItem(e) {
@@ -21515,7 +21531,7 @@
                         n = [];
                     for (let i = 0; i < 8; i++) {
                         const o = e + i;
-                        if (o > r) break;
+                        if (o > c) break;
                         const s = o > 0 ? this._rewardGroupForLevel(o) : null;
                         n.push({
                             level: o,
@@ -21539,22 +21555,22 @@
                         t = 8 * this.get("modalCurrentPage"),
                         n = this.get("_modalPageLevelCount"),
                         i = this.get("hasModalPrevPage"),
-                        o = t + n - 1 >= r,
+                        o = t + n - 1 >= c,
                         s = o ? n - 1 : n,
                         a = s + (i ? 1 : 0);
                     if (a <= 0) return 0;
-                    let l = 0;
-                    if (e >= t + n) l = a;
+                    let r = 0;
+                    if (e >= t + n) r = a;
                     else if (e >= t) {
                         const n = e - t,
                             a = this._xpFraction(),
-                            r = !o && n >= s - 1 ? 2 : 1;
-                        l = (i ? 1 : 0) + Math.min(s, n + a * r)
+                            l = !o && n >= s - 1 ? 2 : 1;
+                        r = (i ? 1 : 0) + Math.min(s, n + a * l)
                     } else if (i && e === t - 1) {
                         const e = this._xpFraction();
-                        l = Math.max(0, 2 * (e - .5))
+                        r = Math.max(0, 2 * (e - .5))
                     }
-                    return Math.min(100, l / a * 100)
+                    return Math.min(100, r / a * 100)
                 })),
                 _xpFraction() {
                     const e = this.get("totalLevelXP");
@@ -21568,7 +21584,7 @@
                 })),
                 _modalPageLevelCount: o.Ember.computed("modalCurrentPage", (function() {
                     const e = 8 * this.get("modalCurrentPage");
-                    return Math.min(8, r - e + 1)
+                    return Math.min(8, c - e + 1)
                 })),
                 _trackFormulaParts: o.Ember.computed("_modalPageLevelCount", "modalLevelsScale", (function() {
                     const e = this.get("_modalPageLevelCount"),
@@ -21589,10 +21605,10 @@
                         pct: e,
                         px: t
                     } = this.get("_trackFormulaParts");
-                    return this.get("hasModalPrevPage") ? e + l + "% - " + (t + 6) + "px" : e + "% - " + t + "px"
+                    return this.get("hasModalPrevPage") ? e + m + "% - " + (t + 6) + "px" : e + "% - " + t + "px"
                 })),
                 modalTrackLeftStyle: o.Ember.computed("hasModalPrevPage", (function() {
-                    return this.get("hasModalPrevPage") ? c : "21px"
+                    return this.get("hasModalPrevPage") ? u : "21px"
                 })),
                 modalLevelsScale: o.Ember.computed("_modalPageLevelCount", (function() {
                     const e = this.get("_modalPageLevelCount");
@@ -21600,7 +21616,7 @@
                 })),
                 _initModalBackdrop() {
                     const e = this.element.querySelector(".jade-progression-modal__backdrop");
-                    if (!e) return;
+                    if (!e) return void o.logger.warning(l, "modal backdrop not found in DOM");
                     this._modalOriginalParent = e.parentNode, this._modalOriginalNextSibling = e.nextSibling;
                     (document.getElementById("lol-uikit-layer-manager-wrapper") || document.getElementById("lol-uikit-layer-manager") || document.body).appendChild(e), this._onBackdropClick = t => {
                         t.target === e && this._closeModal()
@@ -21616,6 +21632,9 @@
                     closeProgressionModal() {
                         this._closeModal()
                     },
+                    retryProgressionData() {
+                        this.set("loadError", !1), this.set("_configuration", null), this.set("_rewardGroupMap", null), this.set("_rewardTrackItemMap", null), this._loadProgressionFetches()
+                    },
                     selectModalReward(e) {
                         this.set("modalSelectedRewardLevel", e), s.default.playSound("sfx-ui", "/fe/lol-champion-details/audio/sfx-champselect-button-arrowfwd-click.ogg")
                     },
@@ -21627,15 +21646,15 @@
                     }
                 }
             });
-            t.default = d
+            t.default = h
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const i = n(1).Ember;
             e.exports = i.HTMLBars.template({
-                id: "wQWuGXOc",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-progression-widget\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-progression-widget\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-progression-widget\\\\index.js\\" "],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],14],["block",["if"],[["get",["dataLoaded"]]],null,13]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-progression-modal__level-marker\\n                ",["helper",["if"],[["helper",["eq"],[["get",["reward","level"]],["get",["modalSelectedRewardLevel"]]],null],"jade-progression-modal__level-marker--selected"],null],"\\n                ",["helper",["if"],[["helper",["eq"],[["get",["reward","level"]],["get",["currentLevel"]]],null],"jade-progression-modal__level-marker--current"],null],"\\n                ",["helper",["if"],[["get",["reward","isClaimed"]],"jade-progression-modal__level-marker--claimed"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectModalReward",["get",["reward","level"]]],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-marker-shape"],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-marker-text"],["flush-element"],["append",["unknown",["reward","level"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["reward"]},{"statements":[["text","          "],["open-element","lol-uikit-arrow-button",[]],["static-attr","direction","right"],["static-attr","class","jade-progression-modal__nav-next"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"nextModalPage"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-arrow-button",[]],["static-attr","direction","left"],["static-attr","class","jade-progression-modal__nav-prev"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"prevModalPage"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__reward-claimed-overlay"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__reward-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["reward","iconPath"]],"\');"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-progression-modal__reward-box\\n              ",["helper",["if"],[["helper",["eq"],[["get",["reward","level"]],0],null],"jade-progression-modal__reward-box--hidden"],null],"\\n              ",["helper",["if"],[["helper",["eq"],[["get",["reward","level"]],["get",["modalSelectedRewardLevel"]]],null],"jade-progression-modal__reward-box--selected"],null],"\\n              ",["helper",["if"],[["get",["reward","isClaimed"]],"jade-progression-modal__reward-box--claimed"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectModalReward",["get",["reward","level"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["reward","iconPath"]]],null,4],["block",["if"],[["get",["reward","isClaimed"]]],null,3],["text","            "],["close-element"],["text","\\n"]],"locals":["reward"]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-desc"],["flush-element"],["append",["unknown",["modalSelectedReward","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-type"],["flush-element"],["append",["unknown",["modalSelectedReward","type"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["modalSelectedReward","type"]]],null,7],["text","              "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-name"],["flush-element"],["append",["unknown",["modalSelectedReward","name"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["modalSelectedReward","description"]]],null,6],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["modalSelectedReward","iconPath"]],"\');"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-progression-modal__backdrop"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-progression-modal"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__background"],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__heading"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__heading-flame"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__title"],["flush-element"],["append",["unknown",["tra","jade_progression_modal_title"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__subtitle"],["flush-element"],["append",["unknown",["tra","jade_progression_modal_subtitle"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__close-btn"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"closeProgressionModal"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__close-icon"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-area"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-box"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasModalSelectedReward"]]],null,9],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasModalSelectedReward"]]],null,8],["text","        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__rewards-row"],["flush-element"],["text","\\n"],["block",["each"],[["get",["modalPageRewards"]]],null,5],["text","        "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["hasModalPrevPage"]]],null,2],["block",["if"],[["get",["hasModalNextPage"]]],null,1],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__progress-bar"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__progress-track"],["dynamic-attr","style",["concat",["left: ",["unknown",["modalTrackLeftStyle"]],"; width: calc(",["unknown",["modalProgressTrackWidth"]],");"]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__progress-fill"],["dynamic-attr","style",["concat",["width: ",["unknown",["modalProgressFillPercentage"]],"%;"]]],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__levels"],["dynamic-attr","style",["concat",["width: ",["unknown",["modalLevelsScale"]],"%;"]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["modalPageRewards"]]],null,0],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-info"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-circle"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-circle-ring"],["dynamic-attr","style",["concat",["background: conic-gradient(from 180deg, #0ac1b6 ",["unknown",["progressBarPercentage"]],"%, #3c3c41 ",["unknown",["progressBarPercentage"]],"%);"]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-circle-inner"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-number"],["flush-element"],["append",["unknown",["currentLevel"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","jade-progression-modal__xp-value"],["flush-element"],["append",["unknown",["modalXPDisplay"]],false],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","jade-progression-modal__xp-label"],["flush-element"],["append",["unknown",["tra","jade_progression_modal_xp_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","pass-progression-widget-rewards-content"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","left-column"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-reward-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["currentLevelRewardIconPath"]],"\');"]]],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","right-column"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-next-reward-wrapper"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","next-reward-title"],["flush-element"],["append",["unknown",["tra","pass_progression_widget_next_reward"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","next-reward-label"],["flush-element"],["append",["unknown",["nextLevelRewardLabel"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","next-reward-xp-label"],["flush-element"],["append",["unknown",["currentLevelXPLabel"]],true],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-reward-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["nextLevelRewardIconPath"]],"\');"]]],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-progress"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-content"],["flush-element"],["append",["unknown",["currentLevel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","pass-progression-current-level-progress-fillbar"],["dynamic-attr","style",["concat",["background-size: ",["unknown",["progressBarPercentage"]],"%;"]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-content"],["flush-element"],["append",["unknown",["nextLevel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","max-level-content"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-content"],["flush-element"],["append",["unknown",["currentLevel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","max-level-text"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","max-level-title"],["flush-element"],["append",["unknown",["tra","demacia_progression_max_level_title"]],false],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","max-level-description"],["flush-element"],["append",["unknown",["tra","demacia_progression_max_level_description"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isMaxLevel"]]],null,12,11],["text","\\n"],["block",["if"],[["get",["isModalOpen"]]],null,10]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","demacia_progression_tooltip"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "asCDU6AS",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-progression-widget\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-progression-widget\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-progression-widget\\\\index.js\\" "],["text","\\n"],["block",["uikit-tooltip"],null,[["tooltipPosition","type"],["top","system"]],16],["block",["if"],[["get",["loadError"]]],null,15,14]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-progression-modal__level-marker\\n                ",["helper",["if"],[["helper",["eq"],[["get",["reward","level"]],["get",["modalSelectedRewardLevel"]]],null],"jade-progression-modal__level-marker--selected"],null],"\\n                ",["helper",["if"],[["helper",["eq"],[["get",["reward","level"]],["get",["currentLevel"]]],null],"jade-progression-modal__level-marker--current"],null],"\\n                ",["helper",["if"],[["get",["reward","isClaimed"]],"jade-progression-modal__level-marker--claimed"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectModalReward",["get",["reward","level"]]],null],null],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-marker-shape"],["flush-element"],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-marker-text"],["flush-element"],["append",["unknown",["reward","level"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["reward"]},{"statements":[["text","          "],["open-element","lol-uikit-arrow-button",[]],["static-attr","direction","right"],["static-attr","class","jade-progression-modal__nav-next"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"nextModalPage"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-arrow-button",[]],["static-attr","direction","left"],["static-attr","class","jade-progression-modal__nav-prev"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"prevModalPage"],null],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__reward-claimed-overlay"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__reward-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["reward","iconPath"]],"\');"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-progression-modal__reward-box\\n              ",["helper",["if"],[["helper",["eq"],[["get",["reward","level"]],0],null],"jade-progression-modal__reward-box--hidden"],null],"\\n              ",["helper",["if"],[["helper",["eq"],[["get",["reward","level"]],["get",["modalSelectedRewardLevel"]]],null],"jade-progression-modal__reward-box--selected"],null],"\\n              ",["helper",["if"],[["get",["reward","isClaimed"]],"jade-progression-modal__reward-box--claimed"],null]]]],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectModalReward",["get",["reward","level"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["reward","iconPath"]]],null,4],["block",["if"],[["get",["reward","isClaimed"]]],null,3],["text","            "],["close-element"],["text","\\n"]],"locals":["reward"]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-desc"],["flush-element"],["append",["unknown",["modalSelectedReward","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-type"],["flush-element"],["append",["unknown",["modalSelectedReward","type"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-info"],["flush-element"],["text","\\n"],["block",["if"],[["get",["modalSelectedReward","type"]]],null,7],["text","              "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-name"],["flush-element"],["append",["unknown",["modalSelectedReward","name"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["modalSelectedReward","description"]]],null,6],["text","            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["modalSelectedReward","iconPath"]],"\');"]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-progression-modal__backdrop"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-progression-modal"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__background"],["flush-element"],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__header"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__heading"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__heading-flame"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__title"],["flush-element"],["append",["unknown",["tra","jade_progression_modal_title"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__subtitle"],["flush-element"],["append",["unknown",["tra","jade_progression_modal_subtitle"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__close-btn"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"closeProgressionModal"],null],null],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__close-icon"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-area"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__selected-reward-box"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasModalSelectedReward"]]],null,9],["text","          "],["close-element"],["text","\\n"],["block",["if"],[["get",["hasModalSelectedReward"]]],null,8],["text","        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__rewards-row"],["flush-element"],["text","\\n"],["block",["each"],[["get",["modalPageRewards"]]],null,5],["text","        "],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["hasModalPrevPage"]]],null,2],["block",["if"],[["get",["hasModalNextPage"]]],null,1],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__progress-bar"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__progress-track"],["dynamic-attr","style",["concat",["left: ",["unknown",["modalTrackLeftStyle"]],"; width: calc(",["unknown",["modalProgressTrackWidth"]],");"]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__progress-fill"],["dynamic-attr","style",["concat",["width: ",["unknown",["modalProgressFillPercentage"]],"%;"]]],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__levels"],["dynamic-attr","style",["concat",["width: ",["unknown",["modalLevelsScale"]],"%;"]]],["flush-element"],["text","\\n"],["block",["each"],[["get",["modalPageRewards"]]],null,0],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-info"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-circle"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-circle-ring"],["dynamic-attr","style",["concat",["background: conic-gradient(from 180deg, #0ac1b6 ",["unknown",["progressBarPercentage"]],"%, #3c3c41 ",["unknown",["progressBarPercentage"]],"%);"]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-circle-inner"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-progression-modal__level-number"],["flush-element"],["append",["unknown",["currentLevel"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","jade-progression-modal__xp-value"],["flush-element"],["append",["unknown",["modalXPDisplay"]],false],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","jade-progression-modal__xp-label"],["flush-element"],["append",["unknown",["tra","jade_progression_modal_xp_label"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","pass-progression-widget-rewards-content"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","left-column"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-reward-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["currentLevelRewardIconPath"]],"\');"]]],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","right-column"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-next-reward-wrapper"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","next-reward-title"],["flush-element"],["append",["unknown",["tra","pass_progression_widget_next_reward"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","next-reward-label"],["flush-element"],["append",["unknown",["nextLevelRewardLabel"]],false],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","next-reward-xp-label"],["flush-element"],["append",["unknown",["currentLevelXPLabel"]],true],["close-element"],["text","\\n                "],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-reward-icon"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["nextLevelRewardIconPath"]],"\');"]]],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-progress"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-content"],["flush-element"],["append",["unknown",["currentLevel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","pass-progression-current-level-progress-fillbar"],["dynamic-attr","style",["concat",["background-size: ",["unknown",["progressBarPercentage"]],"%;"]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-content"],["flush-element"],["append",["unknown",["nextLevel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","max-level-content"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","pass-progression-widget-level-content"],["flush-element"],["append",["unknown",["currentLevel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","max-level-text"],["flush-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","max-level-title"],["flush-element"],["append",["unknown",["tra","demacia_progression_max_level_title"]],false],["close-element"],["text","\\n                "],["open-element","div",[]],["static-attr","class","max-level-description"],["flush-element"],["append",["unknown",["tra","demacia_progression_max_level_description"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isMaxLevel"]]],null,12,11],["text","\\n"],["block",["if"],[["get",["isModalOpen"]]],null,10]],"locals":[]},{"statements":[["block",["if"],[["get",["dataLoaded"]]],null,13]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-progression-widget__error"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-progression-widget__error-text"],["flush-element"],["append",["unknown",["tra","jade_progression_error_message"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","lol-uikit-content-block",[]],["static-attr","type","tooltip-small"],["flush-element"],["text","\\n        "],["open-element","p",[]],["flush-element"],["append",["unknown",["tra","demacia_progression_tooltip"]],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

@@ -1765,13 +1765,13 @@
                 {
                     "name": "BaseMoveSpeed",
                     "values": [
-                        0.3499999940395355,
                         0.4000000059604645,
-                        0.44999998807907104,
-                        0.5,
-                        0.550000011920929,
-                        0.6000000238418579,
-                        0.6499999761581421
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1804,13 +1804,13 @@
                 {
                     "name": "BaseDamageRestoreAmount",
                     "values": [
-                        10.0,
+                        20.0,
                         40.0,
-                        70.0,
+                        60.0,
+                        80.0,
                         100.0,
-                        130.0,
-                        160.0,
-                        190.0
+                        120.0,
+                        140.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2003,12 +2003,12 @@
                 "MaxHealingThreshold": {
                     "mFormulaParts": [
                         {
-                            "{0589a59c}": "{ac95ccf9}",
-                            "{0b65bc23}": "{8a4b3f41}",
+                            "{0589a59c}": "HealCapLevel1Value",
+                            "{0b65bc23}": "HealCapLevel18Value",
                             "__type": "{ee18a47b}"
                         },
                         {
-                            "mDataValue": "{7c4e2ec3}",
+                            "mDataValue": "HealCapAPRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -2185,13 +2185,6 @@
                                 {
                                     "type": "BaseDamageRestoreAmount",
                                     "nameOverride": "Spell_ListType_DamageRestored",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "BaseMoveSpeed",
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_ListType_MovementSpeed",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -2550,13 +2543,13 @@
                 {
                     "name": "BaseMissileDamage",
                     "values": [
-                        42.0,
-                        50.0,
-                        58.0,
-                        66.0,
-                        74.0,
-                        82.0,
-                        90.0
+                        32.0,
+                        40.0,
+                        48.0,
+                        56.0,
+                        64.0,
+                        72.0,
+                        80.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3349,8 +3342,8 @@
                 "MinOnHitDamage": {
                     "mFormulaParts": [
                         {
-                            "{0589a59c}": "{9d53349e}",
-                            "{0b65bc23}": "{120e4ec1}",
+                            "{0589a59c}": "MinOnHitStartValue",
+                            "{0b65bc23}": "MinOnHitEndValue",
                             "__type": "{ee18a47b}"
                         },
                         {
@@ -3363,8 +3356,8 @@
                 "MaxOnHitDamage": {
                     "mFormulaParts": [
                         {
-                            "{0589a59c}": "{2513b118}",
-                            "{0b65bc23}": "{39bb71bf}",
+                            "{0589a59c}": "MaxOnHitStartValue",
+                            "{0b65bc23}": "MaxOnHitEndValue",
                             "__type": "{ee18a47b}"
                         },
                         {
@@ -4187,7 +4180,7 @@
     "Characters/Locke/CharacterRecords/Root": {
         "mCharacterName": "Locke",
         "baseHPModifiable": {
-            "baseValue": 655.0,
+            "baseValue": 620.0,
             "__type": "ModifiableFloat"
         },
         "hpPerLevelModifiable": {

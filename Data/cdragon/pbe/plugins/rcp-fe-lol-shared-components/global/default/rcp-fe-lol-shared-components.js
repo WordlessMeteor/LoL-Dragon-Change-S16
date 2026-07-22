@@ -13781,14 +13781,20 @@
                 })),
                 digitalGoodsDisclaimerText: r.Ember.computed("textOverride", (function() {
                     return this.get("textOverride") ? this.get("textOverride") : this.get("tra.digital_goods_disclaimer_text")
+                })),
+                digitalGoodsDislaimerLink: r.Ember.computed("linkOverride", (function() {
+                    return this.get("linkOverride") ? this.get("linkOverride") : this.get("tra.digital_goods_disclaimer_url")
+                })),
+                digitalGoodsDislaimerLearnMoreText: r.Ember.computed("learnMoreTextOverride", (function() {
+                    return this.get("learnMoreTextOverride") ? this.get("learnMoreTextOverride") : this.get("tra.digital_goods_disclaimer_learn_more")
                 }))
             });
             t.default = l
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "YCdl6y3Z",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\digital-goods-disclaimer\\\\addon\\\\templates\\\\digital-goods-disclaimer.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\digital-goods-disclaimer\\\\addon\\\\styles\\\\digital-goods-disclaimer.styl\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["showDisclaimer"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["unknown",["digitalGoodsDisclaimerText"]],false],["text","\\n  "],["open-element","a",[]],["static-attr","class","digital-goods-disclaimer-url"],["dynamic-attr","href",["unknown",["tra","digital_goods_disclaimer_url"]],null],["static-attr","target","_blank"],["flush-element"],["text","\\n    "],["append",["unknown",["tra","digital_goods_disclaimer_learn_more"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "zeEJK7Ms",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\digital-goods-disclaimer\\\\addon\\\\templates\\\\digital-goods-disclaimer.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-shared-components\\\\src\\\\lib\\\\digital-goods-disclaimer\\\\addon\\\\styles\\\\digital-goods-disclaimer.styl\\" js-path=\\"null\\" "],["text","\\n"],["block",["if"],[["get",["showDisclaimer"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["unknown",["digitalGoodsDisclaimerText"]],false],["text","\\n  "],["open-element","a",[]],["static-attr","class","digital-goods-disclaimer-url"],["dynamic-attr","href",["unknown",["digitalGoodsDislaimerLink"]],null],["static-attr","target","_blank"],["flush-element"],["text","\\n    "],["append",["unknown",["digitalGoodsDislaimerLearnMoreText"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

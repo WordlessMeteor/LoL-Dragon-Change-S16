@@ -226,7 +226,7 @@
                 return Boolean(e?.votingSessionID) && Boolean(e?.votingStartDate) && Boolean(e?.votingEndDate)
             }
             t.BLADES_COMPONENT_TYPES = R;
-            const O = {
+            const D = {
                 HOME: "home",
                 RUNES: "runes",
                 MASTERIES: "masteries",
@@ -234,15 +234,15 @@
                 STORE: "store",
                 BATTLEPASS: "battlepass"
             };
-            t.JADE_NAV_ROUTES = O;
-            const D = {
-                HOME: O.HOME,
+            t.JADE_NAV_ROUTES = D;
+            const O = {
+                HOME: D.HOME,
                 VOTING: "voting",
-                BATTLEPASS: O.BATTLEPASS
+                BATTLEPASS: D.BATTLEPASS
             };
-            t.JADE_HOME_TAB_IDS = D;
+            t.JADE_HOME_TAB_IDS = O;
             t.JADE_NAV_ROUTES_CONFIG_PATH = "/lol-client-config/v3/client-config/lol.client_settings.jade.navRoutes";
-            const j = Object.fromEntries(Object.entries(O).map((([e, t]) => [t, {
+            const j = Object.fromEntries(Object.entries(D).map((([e, t]) => [t, {
                 key: e,
                 enabled: !0
             }])));
@@ -1035,7 +1035,8 @@
                     }), e.setFactoryDefinition("rcp-fe-lol-jade-battlepass-reward-celebration", {
                         tra: s,
                         ComponentFactory: a.default.ComponentFactory,
-                        RewardCelebrationComponent: n(309).default
+                        RewardCelebrationComponent: n(309).default,
+                        DigitalGoodsDisclaimerComponent: a.default.SharedEmberComponents.DigitalGoodsDisclaimerComponent
                     }), e.setFactoryDefinition({
                         name: "JadeRpTopupModalComponent",
                         tra: s,
@@ -1080,11 +1081,28 @@
                         "components/demacia-swap-dialog": n(233),
                         "components/demacia-ban-showcase": n(236),
                         "components/demacia-progression-widget": n(239),
-                        "components/view-abilities-pane": n(247)
+                        "components/view-abilities-pane": n(247),
+                        "components/purchase-modal": n(303),
+                        "components/purchase-modal-payment-options": n(304),
+                        "components/purchase-modal-prerequisites": n(305),
+                        "components/dialog-modal": n(306)
                     });
                     return Object.assign(e, {
+                        ShoppefrontService: a.default.ShoppefrontComponents.ShoppefrontService,
+                        ShoppefrontCatalogItemEnricherService: a.default.ShoppefrontComponents.ShoppefrontCatalogItemEnricherService,
+                        ShoppefrontLootService: a.default.ShoppefrontComponents.ShoppefrontLootService,
+                        ShoppefrontLolInventoryService: a.default.ShoppefrontComponents.ShoppefrontLolInventoryService,
+                        GameDataMapperService: a.default.ShoppefrontComponents.GameDataMapperService,
+                        ConfirmToastService: n(318).default,
+                        EventHubService: n(121).default,
+                        RegionInfoService: n(124).default,
+                        PurchaseModalComponent: a.default.ShoppefrontComponents.PurchaseModalComponent,
+                        PurchaseModalPaymentOptionsComponent: a.default.ShoppefrontComponents.PurchaseModalPaymentOptionsComponent,
+                        PurchaseModalPrerequisitesComponent: a.default.ShoppefrontComponents.PurchaseModalPrerequisitesComponent,
+                        DialogModalComponent: a.default.ShoppefrontComponents.DialogModalComponent,
+                        DigitalGoodsDisclaimerComponent: a.default.SharedEmberComponents.DigitalGoodsDisclaimerComponent,
                         JadeSelectComponent: n(44).default,
-                        DemaciaEmotesEditComponent: n(318),
+                        DemaciaEmotesEditComponent: n(319),
                         DemaciaLoadoutsEditComponent: n(163).default,
                         MasteryTreeComponent: n(139).default,
                         MasteryNodeComponent: n(142).default,
@@ -1098,8 +1116,8 @@
                         ChampionsPaneComponent: n(169).default,
                         SkinsPaneComponent: n(176).default,
                         DemaciaTimerStatusComponent: n(179).default,
-                        DemaciaSummonerArrayComponent: n(323).default,
-                        DemaciaSummonerObjectComponent: n(326).default,
+                        DemaciaSummonerArrayComponent: n(324).default,
+                        DemaciaSummonerObjectComponent: n(327).default,
                         ViewAbilitiesPaneComponent: n(245).default,
                         DemaciaSummonerSpellPopupComponent: n(204).default,
                         DemaciaSummonerSpellSelectComponent: n(197).default,
@@ -1119,10 +1137,10 @@
                         MasteryPagesService: n(99).default,
                         RunePagesService: n(118).default,
                         SummonersJourneyService: n(120).default,
-                        AndHelper: n(328).default,
-                        EqHelper: n(329).default,
-                        NotHelper: n(330).default,
-                        AddHelper: n(331).default,
+                        AndHelper: n(329).default,
+                        EqHelper: n(330).default,
+                        NotHelper: n(331).default,
+                        AddHelper: n(332).default,
                         TEMPLATES: t
                     })
                 }
@@ -2618,7 +2636,7 @@
                     this.get("isTencentRegion") && this.get("isTencentReady") && this._loadPageContent()
                 })),
                 init() {
-                    this._super(...arguments), this.set("state", a.JADE_HOME_STATES.LOADING_ACTIVITY);
+                    this._super(...arguments), this._setupWalletComputed(), this.addObserver("shoppefrontService.uniquePaymentOptions", this, this._setupWalletComputed), this._fetchFiatPricePoints(), this.set("state", a.JADE_HOME_STATES.LOADING_ACTIVITY);
                     const e = this.get("isTencentRegion");
                     (e && this.get("isTencentReady") || !e && this.get("isFoundationReady")) && this._loadPageContent(), this._checkHomeFtux(), this._setupDevForceError()
                 },
@@ -2752,6 +2770,7 @@
                     shoppefrontService: i.inject.service("shoppefront"),
                     lolInventoryService: i.inject.service("shoppefront-lol-inventory"),
                     eventHubService: i.inject.service("event-hub"),
+                    gameDataMapperService: i.inject.service("game-data-mapper"),
                     tra: i.inject.service(),
                     passBundles: i.computed.alias("eventHubService.bundles"),
                     showUpgradeModal: !1,
@@ -2790,31 +2809,48 @@
                         const e = this.get("tra");
                         return e ? e.get("shoppefront_error_no_longer_available") : this.get("catalogItemErrorText")
                     })),
+                    _ensureCurrencyIconData() {
+                        const e = this.get("gameDataMapperService");
+                        return e && e.get("currenciesByName") ? Promise.resolve() : s.db.get("/lol-game-data/assets/v1/lolcurrency.json").then((t => {
+                            if (!e || e.get("currenciesByName")) return;
+                            const n = Object.fromEntries((t || []).map((e => [e.lolCurrencyId, e])));
+                            e.setProperties({
+                                gameDataCurrencies: t,
+                                currenciesByName: n
+                            })
+                        })).catch((() => {}))
+                    },
                     _openPurchaseModal(e, t = !1, n = {}) {
-                        const {
-                            modalItem: s,
-                            errorText: l
-                        } = (0, a.buildPurchaseModalData)(e, {
-                            ownedItemInstanceIds: this.get("lolInventoryService.ownedItemInstanceIds") || new Set,
-                            ownedInventoryContent: this.get("lolInventoryService.ownedInventoryContent") || {},
-                            currencyCount: this.get("lolInventoryService.currencyCount") || {},
-                            shoppefrontId: this.get("shoppefrontService.shoppefrontId"),
-                            tra: this.get("tra"),
-                            videoPath: n.videoPath
-                        });
-                        this.setProperties({
-                            purchaseModalItem: s,
-                            catalogItemErrorText: l,
-                            showClassicExclusiveFlagInModal: t
-                        })
+                        this._ensureCurrencyIconData().then((() => {
+                            if (this.isDestroyed || this.isDestroying) return;
+                            const {
+                                modalItem: s,
+                                errorText: l
+                            } = (0, a.buildPurchaseModalData)(e, {
+                                ownedItemInstanceIds: this.get("lolInventoryService.ownedItemInstanceIds") || new Set,
+                                ownedInventoryContent: this.get("lolInventoryService.ownedInventoryContent") || {},
+                                currencyCount: this.get("lolInventoryService.currencyCount") || {},
+                                shoppefrontId: this.get("shoppefrontService.shoppefrontId"),
+                                tra: this.get("tra"),
+                                videoPath: n.videoPath
+                            });
+                            this.setProperties({
+                                purchaseModalItem: s,
+                                catalogItemErrorText: l,
+                                showClassicExclusiveFlagInModal: t
+                            })
+                        }))
                     },
                     actions: {
                         openShopItemPurchase(e) {
                             const t = e.catalogItem;
-                            !e.isOwned && t && (l.BATTLEPASS_SFX.openStore.play(), e.hasFiatPrice || t.inventoryTypeId === r.EVENT_PASS ? this.setProperties({
+                            if (e.isOwned || !t) return;
+                            l.BATTLEPASS_SFX.openStore.play();
+                            const n = (t.purchaseUnits || []).length > 1;
+                            e.hasFiatPrice || n || t.inventoryTypeId === r.EVENT_PASS ? this.setProperties({
                                 fiatPurchaseItem: e,
                                 isFiatPurchaseModalOpen: !0
-                            }) : this._openPurchaseModal(t))
+                            }) : this._openPurchaseModal(t)
                         },
                         updatePurchaseModal(e, t) {
                             this.setProperties({
@@ -5500,10 +5536,10 @@
                     runeInventoryCounts: C,
                     holoFoilByContentId: w,
                     tra: T
-                } = n, A = (0, l.getItemCost)(e), R = a.get(e.id), M = R ? R.toUpperCase() : null, O = M ? d[M] : null;
+                } = n, A = (0, l.getItemCost)(e), R = a.get(e.id), M = R ? R.toUpperCase() : null, D = M ? d[M] : null;
                 if (null == A && !M) return null;
-                const D = (0, l.getPricesWithIcons)(e, h),
-                    j = D.length > 0 ? D : r.get(R) || [],
+                const O = (0, l.getPricesWithIcons)(e, h),
+                    j = O.length > 0 ? O : r.get(R) || [],
                     L = j.find((e => e.currency !== p)),
                     N = L?.currency ?? j[0]?.currency ?? (0, l.getItemCurrency)(e),
                     B = h[N],
@@ -5512,9 +5548,9 @@
                     H = F.includes(u.PORTRAITS?.ID),
                     V = e.overrideTileSize || (H ? "tall-tile" : null),
                     q = e.purchaseUnits?.[0]?.fulfillment,
-                    Y = q?.itemId || q?.itemInstanceId || null,
-                    G = H && w && Y && w.get(Y) || "",
-                    W = !!G,
+                    G = q?.itemId || q?.itemInstanceId || null,
+                    Y = H && w && G && w.get(G) || "",
+                    W = !!Y,
                     K = (0, o.getRequirementText)(e, P),
                     J = E.has(e.inventoryTypeId),
                     $ = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_PAGE,
@@ -5548,8 +5584,8 @@
                         discountLabel: le
                     } = (0, l.getDiscountInfo)(j),
                     oe = (0, i.getDisplayType)(e, T),
-                    ie = !!O,
-                    re = O ? (0, l.formatFiatPrice)(O.realAmountCents, O.realCurrencyCode) : null,
+                    ie = !!D,
+                    re = D ? (0, l.formatFiatPrice)(D.realAmountCents, D.realCurrencyCode) : null,
                     ce = (e.purchaseUnits || []).length > 1,
                     me = ce ? (0, l.getBundleTotalCost)(e, N) : null,
                     de = _(e.id, T) || (ce ? e.name || e.traTitle || e.itemName : null),
@@ -5573,7 +5609,7 @@
                     iconUrl: g(e.id) || e.tilePath || e.splashPath || null,
                     tileSize: V,
                     tileSizeClass: V ? "jade-tile-" + V : "",
-                    holoFoilPath: G,
+                    holoFoilPath: Y,
                     hasHoloFoil: W,
                     isPortrait: H,
                     isOwned: te,
@@ -5597,9 +5633,9 @@
                     costBE: (j.find((e => e.currency === p)) || {}).cost || 0,
                     hasFiatPrice: ie,
                     fiatPriceFormatted: re,
-                    fiatPricePointId: O ? O.id : null,
-                    fiatAmountCents: O ? O.realAmountCents : null,
-                    fiatCurrencyCode: O ? O.realCurrencyCode : null
+                    fiatPricePointId: D ? D.id : null,
+                    fiatAmountCents: D ? D.realAmountCents : null,
+                    fiatCurrencyCode: D ? D.realCurrencyCode : null
                 }
             }, t.enrichItemWithLimitedBadge = function(e, t, n) {
                 const s = e.catalogItem && e.catalogItem.endTime;
@@ -5825,10 +5861,9 @@
                 d = n(102);
             const u = "chase:",
                 p = "sku:",
-                h = "lol_jade_skin_token",
-                g = ["lol_jade_random_champ", "lol_jade_random_rune", "lol_jade_random_skin_1350", "lol_jade_random_skin_1350orless", "lol_jade_random_ward"],
-                _ = "client.xp.jade.battlepass.drop_autospend",
-                f = [{
+                h = ["lol_jade_random_champ", "lol_jade_random_rune", "lol_jade_random_skin_1350", "lol_jade_random_skin_1350orless", "lol_jade_random_ward"],
+                g = "client.xp.jade.battlepass.drop_autospend",
+                _ = [{
                     number: 1,
                     categoryId: "BP_TIER_1",
                     requiredMilestone: 0
@@ -5854,11 +5889,11 @@
                     requiredMilestone: 5
                 }];
 
-            function v(e) {
+            function f(e) {
                 return e?.purchaseUnits?.[0]?.fulfillment?.dropTableId || null
             }
 
-            function b(e, t, n, s) {
+            function v(e, t, n, s) {
                 const a = t && t.nameTraKey;
                 if (a && n && n.exists && n.exists(a)) return n.get(a);
                 const l = e && e.name || "";
@@ -5869,17 +5904,17 @@
                 }(l, s) || l
             }
 
-            function y(e, t, n, s, a, l, o) {
+            function b(e, t, n, s, a, l, o) {
                 const i = e.nodes || {},
                     r = e.nodeHierarchy || {},
                     c = e.nodeTraKeys || {},
                     m = i[t] || {},
                     d = l.concat(t),
-                    u = (r[t] && r[t].edges || []).filter((e => -1 === d.indexOf(e.targetNodeId))).map((t => y(e, t.targetNodeId, t.odds, s, a, d, o)));
+                    u = (r[t] && r[t].edges || []).filter((e => -1 === d.indexOf(e.targetNodeId))).map((t => b(e, t.targetNodeId, t.odds, s, a, d, o)));
                 let p = 1;
                 return "number" == typeof n && (p = s ? n : n / 100), {
                     lootId: t,
-                    label: b(m, c[t], a, o),
+                    label: v(m, c[t], a, o),
                     dropRate: p,
                     quantity: m.rewardQuantity || 1,
                     displayPriority: m.displayPriority || 0,
@@ -5887,7 +5922,7 @@
                 }
             }
 
-            function E(e, t, n) {
+            function y(e, t, n) {
                 if (!e || !e.rootNodeId) return null;
                 const s = e.nodeHierarchy || {},
                     a = function(e) {
@@ -5901,12 +5936,12 @@
                     }(e);
                 return {
                     guaranteedToContain: [],
-                    chanceToContain: (s[e.rootNodeId] && s[e.rootNodeId].edges || []).map((s => y(e, s.targetNodeId, s.odds, a, t, [e.rootNodeId], n))),
+                    chanceToContain: (s[e.rootNodeId] && s[e.rootNodeId].edges || []).map((s => b(e, s.targetNodeId, s.odds, a, t, [e.rootNodeId], n))),
                     checksOwnership: !1,
                     hasPityRules: !1
                 }
             }
-            var x = s.Ember.Controller.extend(l.PurchaseModalMixin, o.KrPurchaseConfirmMixin, {
+            var E = s.Ember.Controller.extend(l.PurchaseModalMixin, o.KrPurchaseConfirmMixin, {
                 gameDataMapperService: s.Ember.inject.service("game-data-mapper"),
                 catalogItemEnricher: s.Ember.inject.service("shoppefront-catalog-item-enricher"),
                 noDisclaimerRegions: [],
@@ -6029,12 +6064,6 @@
                 showTokenBank: s.Ember.computed("passUpgraded", (function() {
                     return !this.get("passUpgraded")
                 })),
-                skinTokenBalance: s.Ember.computed(`lolInventoryService.currencyCount.${h}`, (function() {
-                    return this.get(`lolInventoryService.currencyCount.${h}`) || 0
-                })),
-                skinTokenIconPath: s.Ember.computed("gameDataMapperService.gameDataCurrencies", (function() {
-                    return (0, i.getCurrencyIconPath)(h, this.get("gameDataMapperService.gameDataCurrencies"))
-                })),
                 coinsTooltipCount: s.Ember.computed("tokenBalance", "tra", (function() {
                     return this.get("tra").formatString("battlepass_currency_coins_tooltip_count", {
                         count: this.get("tokenBalance") || 0
@@ -6043,11 +6072,6 @@
                 bankedTooltipCount: s.Ember.computed("lockedTokenCount", "tra", (function() {
                     return this.get("tra").formatString("battlepass_currency_banked_tooltip_count", {
                         count: this.get("lockedTokenCount") || 0
-                    })
-                })),
-                skinTokenTooltipCount: s.Ember.computed("skinTokenBalance", "tra", (function() {
-                    return this.get("tra").formatString("battlepass_currency_skin_token_tooltip_count", {
-                        count: this.get("skinTokenBalance") || 0
                     })
                 })),
                 _redeemableState: null,
@@ -6081,12 +6105,12 @@
                     s.Ember.run.scheduleOnce("afterRender", this, this._maybeSpendAllRedeemables)
                 })),
                 _maybeSpendAllRedeemables() {
-                    this.isDestroying || this.isDestroyed || !this._redeemableState || g.forEach((e => {
+                    this.isDestroying || this.isDestroyed || !this._redeemableState || h.forEach((e => {
                         this._maybeSpendRedeemable(e)
                     }))
                 },
                 _resumeOtherRedeemables(e) {
-                    this.isDestroying || this.isDestroyed || !this._redeemableState || g.forEach((t => {
+                    this.isDestroying || this.isDestroyed || !this._redeemableState || h.forEach((t => {
                         t !== e && this._maybeSpendRedeemable(t)
                     }))
                 },
@@ -6105,7 +6129,7 @@
                     if (i < 1) return;
                     t.autoSpending = !0;
                     const c = this.get("tra");
-                    s.datadogRum.startOperation(_, {
+                    s.datadogRum.startOperation(g, {
                         currency: e,
                         quantity: i
                     }), (0, r.executeBulkPurchase)({
@@ -6116,22 +6140,22 @@
                         tra: c,
                         observerCtx: this,
                         onSuccess: n => {
-                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, t.retryCount = 0, s.datadogRum.stopOperationWithOk(_, {
+                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, t.retryCount = 0, s.datadogRum.stopOperationWithOk(g, {
                                 currency: e
                             }), this._celebrateRollResults(n && n.rollResults || []), this._maybeSpendAllRedeemables())
                         },
                         onError: n => {
-                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Failed to auto-spend ${e}:`, n), s.datadogRum.stopOperationWithError(_, n instanceof Error ? n : new Error(String(n)), {
+                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Failed to auto-spend ${e}:`, n), s.datadogRum.stopOperationWithError(g, n instanceof Error ? n : new Error(String(n)), {
                                 currency: e
                             }), t.retryCount < 5 ? (t.retryCount += 1, s.logger.info(`[Battlepass] Retrying ${e} auto-spend (attempt ${t.retryCount}/5) in 2000ms.`), s.Ember.run.later(this, this._maybeSpendRedeemable, e, 2e3)) : (s.logger.warning(`[Battlepass] Giving up ${e} auto-spend after max retries.`), t.retryCount = 0, this._resumeOtherRedeemables(e)))
                         }
                     }).then((n => {
-                        n || this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.datadogRum.stopOperationWithAbort(_, {
+                        n || this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.datadogRum.stopOperationWithAbort(g, {
                             currency: e,
                             reason: "not_submitted"
                         }), this._resumeOtherRedeemables(e))
                     })).catch((n => {
-                        this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Error auto-spending ${e}:`, n), s.datadogRum.stopOperationWithError(_, n, {
+                        this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Error auto-spending ${e}:`, n), s.datadogRum.stopOperationWithError(g, n, {
                             currency: e
                         }), this._resumeOtherRedeemables(e))
                     }))
@@ -6177,7 +6201,7 @@
                 _eventPassCatalogEntry: null,
                 _eventPassSku: null,
                 _observeRedeemableWallets() {
-                    this._redeemableState = {}, g.forEach((e => {
+                    this._redeemableState = {}, h.forEach((e => {
                         const t = `/lol-inventory/v1/wallet/${e}`,
                             n = {
                                 balance: 0,
@@ -6217,7 +6241,7 @@
                         n = this.get("_milestoneLevel"),
                         s = this.get("_rewardTrackItems") || [],
                         a = this.get("_rewardTrackProgress.passProgress") || 0;
-                    return f.map(((l, o) => {
+                    return _.map(((l, o) => {
                         const i = e.find((e => e.categoryId === l.categoryId)),
                             r = n < l.requiredMilestone;
                         let c = null;
@@ -6292,19 +6316,19 @@
                                 T = (0, c.isVotingPowerGrant)(e),
                                 A = T && (I.delta || I.finalDelta) || 0,
                                 R = e.traTitle || u.get("battlepass_unknown_item");
-                            let M, O = R;
-                            C && w ? O = u.formatString("battlepass_currency_reward_name", {
+                            let M, D = R;
+                            C && w ? D = u.formatString("battlepass_currency_reward_name", {
                                 amount: w,
                                 name: R
-                            }) : T && (O = u.formatString("battlepass_currency_reward_name", {
+                            }) : T && (D = u.formatString("battlepass_currency_reward_name", {
                                 amount: A,
                                 name: u.get("battlepass_inventory_type_voting_power")
                             })), M = T ? u.get("battlepass_inventory_type_voting_power") : C ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
-                            const D = (0, c.getLocalTypeImage)(e);
+                            const O = (0, c.getLocalTypeImage)(e);
                             return {
                                 id: e.id,
                                 catalogItem: e,
-                                name: O,
+                                name: D,
                                 type: M,
                                 description: e.itemDescription,
                                 cost: x,
@@ -6324,8 +6348,8 @@
                                 tileVideoPath: d && !E && _[P || ""] ? "/fe/lol-jade/videos/battlepass/" + _[P || ""] : null,
                                 purchaseLimitReached: y,
                                 canAfford: k,
-                                iconUrl: D || e.tilePath || null,
-                                previewUrl: D || e.splashPath || e.tilePath || null,
+                                iconUrl: O || e.tilePath || null,
+                                previewUrl: O || e.splashPath || e.tilePath || null,
                                 hasFullScreenSplash: (0, c.hasFullScreenSplash)(e)
                             }
                         })),
@@ -6378,15 +6402,15 @@
                 selectedItemDropTableId: s.Ember.computed("selectedItem.catalogItem", "shoppefrontService.categories.[]", "shoppefrontService.stores.[]", "gameDataMapperService.gameDataCurrencies", (function() {
                     const e = this.get("selectedItem.catalogItem");
                     if (!e) return null;
-                    const t = v(e);
+                    const t = f(e);
                     if (t) return t;
                     const n = this._grantedCurrencyName(e);
-                    return n ? v(this._resolveDropCatalogItem(n)) : null
+                    return n ? f(this._resolveDropCatalogItem(n)) : null
                 })),
                 selectedItemHasDropRates: s.Ember.computed.notEmpty("selectedItemDropTableId"),
                 selectedItemOddsTree: null,
                 selectedItemLootOddsData: s.Ember.computed("selectedItemOddsTree", "tra", "gameDataMapperService.gameDataCurrencies", (function() {
-                    return E(this.get("selectedItemOddsTree"), this.get("tra"), this.get("gameDataMapperService.gameDataCurrencies"))
+                    return y(this.get("selectedItemOddsTree"), this.get("tra"), this.get("gameDataMapperService.gameDataCurrencies"))
                 })),
                 _observeDropTableOdds(e) {
                     if (this._unobserveDropTableOdds(), !e) return;
@@ -6554,37 +6578,42 @@
                 _grantsRedeemableCurrency(e) {
                     const t = e && e.catalogItem || e,
                         n = t?.purchaseUnits?.[0]?.fulfillment;
-                    return !!n && g.includes(n.name)
+                    return !!n && h.includes(n.name)
                 },
                 _celebrateRewardClaim(e) {
                     if (e && !this._grantsRedeemableCurrency(e)) try {
-                        const t = s.ComponentFactory.create({
+                        const t = "jade-battlepass-reward-" + Date.now(),
+                            n = s.ComponentFactory.create({
                                 type: "rcp-fe-lol-jade-battlepass-reward-celebration",
                                 data: s.Ember.Object.create({
                                     name: e.name || "",
-                                    iconUrl: e.previewUrl || e.iconUrl || ""
+                                    iconUrl: e.previewUrl || e.iconUrl || "",
+                                    vignetteId: t,
+                                    isKREnv: this.get("isKREnv")
                                 })
                             }),
-                            n = this.get("tra"),
-                            a = n.get("battlepass_celebrate_title"),
-                            l = n.formatString("battlepass_celebrate_subtitle", {
+                            a = this.get("tra"),
+                            l = a.get("battlepass_celebrate_title"),
+                            o = a.formatString("battlepass_celebrate_subtitle", {
                                 name: e.name
                             }),
-                            o = n.get("battlepass_celebrate_button");
+                            i = a.get("battlepass_celebrate_button");
                         s.VignetteCelebrationManager.add({
                             type: "VignetteCelebration",
                             ComponentFactory: s.ComponentFactory,
-                            id: "jade-battlepass-reward-" + Date.now(),
+                            id: t,
                             data: {
                                 header: {
-                                    title: a,
-                                    titleSubtext: l
+                                    title: l,
+                                    titleSubtext: o
                                 },
-                                nextButtonText: o
+                                nextButtonText: i,
+                                nextButtonShown: !1
                             },
-                            height: "SMALL",
+                            customClassName: "demacia-vignette",
+                            height: "LARGE",
                             timing: "INFINITE",
-                            content: t
+                            content: n
                         })
                     } catch (e) {
                         s.logger.error("[Battlepass] Error showing celebration:", e)
@@ -6648,7 +6677,7 @@
                     }
                 }
             });
-            t.default = x
+            t.default = E
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -10726,11 +10755,13 @@
             var a, l = n(2),
                 o = (a = n(105)) && a.__esModule ? a : {
                     default: a
-                };
-            const i = "left",
-                r = "right",
-                c = 1e3;
-            var m = s.Ember.Component.extend({
+                },
+                i = n(82);
+            const r = "JADE_SHOP",
+                c = "left",
+                m = "right",
+                d = 1e3;
+            var u = s.Ember.Component.extend(i.PurchaseModalMixin, {
                 layout: n(178),
                 classNames: ["skins-pane"],
                 skinPurchaseService: s.Ember.inject.service("skin-purchase"),
@@ -10756,7 +10787,13 @@
                     this._fetchSkinInfo()
                 })),
                 init() {
-                    this._super(...arguments), this.set("parentSkinIdToSelectedChromaIdMap", {}), this._handleUxSettingsChanged = this._handleUxSettingsChanged.bind(this), this.initDataBindings(), this.set("flyoutSettings", {
+                    this._super(...arguments), this.set("parentSkinIdToSelectedChromaIdMap", {}), this._handleUxSettingsChanged = this._handleUxSettingsChanged.bind(this), this._buildStoreSkinIdMap(), this.initDataBindings();
+                    try {
+                        this._loadShoppefrontStore(), this._registerPurchaseSuccessHandler()
+                    } catch (e) {
+                        s.logger.warning("[skins-pane] shoppefront purchase-modal unavailable; using PAW fallback", e)
+                    }
+                    this.set("flyoutSettings", {
                         targetAnchor: {
                             x: "center",
                             y: "bottom"
@@ -10778,13 +10815,68 @@
                     const e = this.get("viewSkin");
                     if (!e) return void this.set("skinInfo", null);
                     if (e.unlocked) return void this.set("skinInfo", null);
-                    const t = e.parentSkinId || e.id;
+                    const t = this._resolveStoreSkinId(e);
                     t ? s.db.get(`/lol-store/v1/skins/${t}`).then((e => {
                         const n = this.get("viewSkin");
-                        (n?.parentSkinId || n?.id) !== t || this.isDestroyed || this.isDestroying || this.set("skinInfo", e)
+                        this._resolveStoreSkinId(n) !== t || this.isDestroyed || this.isDestroying || this.set("skinInfo", e)
                     })).catch((() => {
                         this.set("skinInfo", null)
                     })) : this.set("skinInfo", null)
+                },
+                _loadShoppefrontStore() {
+                    const e = this.get("shoppefrontService");
+                    e && e.loadStores(r)
+                },
+                _findCatalogItemByStoreId(e) {
+                    if (null == e) return null;
+                    const t = this.get("shoppefrontService.categories") || [];
+                    for (const n of t)
+                        for (const t of n.items || [])
+                            if (t && t.itemId === e) return t;
+                    return null
+                },
+                _registerPurchaseSuccessHandler() {
+                    const e = this.get("shoppefrontService");
+                    if (!e) return;
+                    const t = e.getCustomizations(r) || {};
+                    e.addCustomizations(r, Object.assign({}, t, {
+                        onModalCloseAfterPurchaseSuccess: () => this._onChromaPurchaseSuccess()
+                    }))
+                },
+                _onChromaPurchaseSuccess() {
+                    if (this.isDestroyed || this.isDestroying) return;
+                    const e = this._openPurchaseSkin;
+                    e && s.Ember.set(e, "unlocked", !0), this._fetchSkinInfo(), s.db.post("/lol-champ-select/v1/session/simple-inventory").catch((() => {})).then((() => {
+                        this.isDestroyed || this.isDestroying || !e || (s.db.patch("/lol-champ-select/v1/session/my-selection", {
+                            selectedSkinId: e.id
+                        }), this.set("selectedSkinId", e.id))
+                    }))
+                },
+                _resolveStoreSkinId(e) {
+                    if (!e) return null;
+                    const t = this.get("storeSkinIdMap");
+                    return t && t[e.id] || e.id
+                },
+                _buildStoreSkinIdMap() {
+                    s.db.get("/lol-login/v1/session").then((e => {
+                        const t = e && e.summonerId;
+                        return t ? s.db.get(`/lol-champions/v1/inventories/${t}/4310/champions-per-queue`, {
+                            skipCache: !0
+                        }) : null
+                    })).then((e => {
+                        if (!e || this.isDestroyed || this.isDestroying) return;
+                        const t = {},
+                            n = e => {
+                                if (!e) return;
+                                const n = e.relatedPrimeItemId || e.relatedPrimeContentId;
+                                n && (t[e.id] = n)
+                            };
+                        (e || []).forEach((e => {
+                            (e.skins || []).forEach((e => {
+                                n(e), (e.chromas || []).forEach(n)
+                            }))
+                        })), this.set("storeSkinIdMap", t), this._fetchSkinInfo()
+                    })).catch((() => {}))
                 },
                 viewSkinBaseSkinId: s.Ember.computed("viewSkin.id", "viewSkin.parentSkinId", (function() {
                     return this.get("viewSkin.parentSkinId") || this.get("viewSkin.id")
@@ -10798,9 +10890,9 @@
                 isCurrentSkinViewedDisabled: s.EmberHelpers.computedGate("viewSkin.id", "viewSkin.parentSkinId", "skinInfo.active", "invalidPriceData", "viewSkin.isChampionUnlocked", "jmxSettings.LcuChampionSelect.SkinPurchaseEnabled", "jmxSettings.LcuChampionSelect.SkinPurchaseTime", "timeRemaining", "inFinalizationPhase", "invalidSkinInfoTag", (function() {
                     return !this.get("jmxSettings.LcuChampionSelect.SkinPurchaseEnabled") || !!(!this.get("viewSkin.isChampionUnlocked") || !this.get("skinInfo.active") || this.get("timeRemaining") < this.get("jmxSettings.LcuChampionSelect.SkinPurchaseTime") && this.get("inFinalizationPhase") || this.get("invalidSkinInfoTag") || this.get("invalidPriceData"))
                 })),
-                invalidPriceData: s.Ember.computed("viewSkin.id", "viewSkin.parentSkinId", "skinInfo", "skinInfo.itemId", "skinInfo.prices", "skinInfo.sale", "skinInfo.sale.prices", (function() {
+                invalidPriceData: s.Ember.computed("viewSkin.id", "storeSkinIdMap", "skinInfo", "skinInfo.itemId", "skinInfo.prices", "skinInfo.sale", "skinInfo.sale.prices", (function() {
                     const e = this.get("skinInfo"),
-                        t = this.get("viewSkin.parentSkinId") || this.get("viewSkin.id");
+                        t = this._resolveStoreSkinId(this.get("viewSkin"));
                     if (!e || e.itemId !== t) return !0;
                     const n = this._getPricesFromSkinInfo(e);
                     return !n || 0 === n.length
@@ -10863,7 +10955,10 @@
                     }
                 })),
                 willDestroyElement() {
-                    this._super(...arguments), this._champSelectBinding && (this._champSelectBinding.unobserve("/v1/skin-selector-info", this), this._champSelectBinding.unobserve("/v1/skin-carousel-skins", this)), s.UXSettings.removeObserver(this._handleUxSettingsChanged)
+                    this._super(...arguments), this._champSelectBinding && (this._champSelectBinding.unobserve("/v1/skin-selector-info", this), this._champSelectBinding.unobserve("/v1/skin-carousel-skins", this)), s.UXSettings.removeObserver(this._handleUxSettingsChanged), this.setProperties({
+                        purchaseModalItem: null,
+                        catalogItemErrorText: null
+                    })
                 },
                 initDataBindings() {
                     s.db.get("/lol-platform-config/v1/namespaces").then((e => {
@@ -10875,9 +10970,9 @@
                 },
                 _classicSkinNumberForChampion: e => 60010 === e ? 302 : 301,
                 isClassicSkin(e) {
-                    return !(!e || "number" != typeof e.id) && e.id % c === this._classicSkinNumberForChampion(e.championId)
+                    return !(!e || "number" != typeof e.id) && e.id % d === this._classicSkinNumberForChampion(e.championId)
                 },
-                isBaseDefaultSkin: e => !(!e || "number" != typeof e.id) && e.id % c == 0,
+                isBaseDefaultSkin: e => !(!e || "number" != typeof e.id) && e.id % d == 0,
                 getDefaultSkin(e) {
                     const t = e || this.get("carouselSkins") || [];
                     return t.find((e => this.isClassicSkin(e))) || t[0] || null
@@ -10893,7 +10988,7 @@
                 persistDefaultSkin(e) {
                     e && e.unlocked && this.get("allowSkinSelection") && this.requestSetSkin(e)
                 },
-                _shouldReplacePersistedSelection: e => "number" == typeof e && e % c == 0,
+                _shouldReplacePersistedSelection: e => "number" == typeof e && e % d == 0,
                 handleSkinCarouselSkins(e) {
                     const t = (e || []).filter((e => !e.disabled)),
                         n = t.some((e => this.isClassicSkin(e))) ? t.filter((e => !this.isBaseDefaultSkin(e))) : t;
@@ -10963,7 +11058,7 @@
                     if (t.length <= 5) return;
                     const n = this.get("centerIndex");
                     let s = n;
-                    e === r && n < t.length - 1 ? s = n + 1 : e === i && n > 0 && (s = n - 1), this.set("centerIndex", s)
+                    e === m && n < t.length - 1 ? s = n + 1 : e === c && n > 0 && (s = n - 1), this.set("centerIndex", s)
                 },
                 _injectFlyoutStyles() {
                     s.Ember.run.scheduleOnce("afterRender", this, (function() {
@@ -10986,6 +11081,21 @@
                     chromaButtonClicked(e) {
                         this.set("baseSkin", e), this.set("isFlyoutOpen", !0), s.Ember.run.scheduleOnce("afterRender", this, "_injectFlyoutStyles")
                     },
+                    openChromaPurchaseModal(e) {
+                        if (!e) return;
+                        const t = this._resolveStoreSkinId(e);
+                        let n = null;
+                        try {
+                            n = this._findCatalogItemByStoreId(t)
+                        } catch (e) {
+                            n = null
+                        }
+                        if (n) return this._openPurchaseSkin = e, void this._openPurchaseModal(n);
+                        const s = this.get("skinPurchaseService");
+                        s && s.openPAWModal && s.openPAWModal({
+                            itemId: t
+                        }, this.recordDidRequestSucceed)
+                    },
                     hideChromaFlyout() {
                         this.set("isFlyoutOpen", !1), this.set("baseSkin", null)
                     },
@@ -10998,13 +11108,13 @@
                     selectSkin(e) {
                         if (!this.get("allowSkinSelection")) return;
                         if (0 === (this.get("carouselSkins") || []).length) return;
-                        if (o.default?.playSound("sfx-ui", `${l.JADE_AUDIO_PATH}sfx-ui-jade-champselect-browse-skins.ogg`), e === r) {
-                            this.scrollCarousel(r);
+                        if (o.default?.playSound("sfx-ui", `${l.JADE_AUDIO_PATH}sfx-ui-jade-champselect-browse-skins.ogg`), e === m) {
+                            this.scrollCarousel(m);
                             let e = this.get("centerSkin");
                             return e = this.getSelectedChromaForSkin(e), void(e && e?.unlocked && (this.setViewSkin(e), this.requestSetSkin(e)))
                         }
-                        if (e === i) {
-                            this.scrollCarousel(i);
+                        if (e === c) {
+                            this.scrollCarousel(c);
                             let e = this.get("centerSkin");
                             return e = this.getSelectedChromaForSkin(e), void(e && e?.unlocked && (this.setViewSkin(e), this.requestSetSkin(e)))
                         }
@@ -11016,15 +11126,15 @@
                     }
                 }
             });
-            t.default = m
+            t.default = u
         }, (e, t, n) => {
             "use strict";
             n.r(t)
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "RJTBTCJs",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\skins-pane\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\skins-pane\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\skins-pane\\\\index.js\\" "],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","skins-pane__content"],["flush-element"],["text","\\n"],["block",["each"],[["get",["visibleSkins"]]],null,8],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isFlyoutOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"hideChromaFlyout"],null],null],["dynamic-attr","uiKitOptionOverrides",["unknown",["flyoutSettings"]],null],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["append",["helper",["demacia-skin-chroma-modal"],null,[["selectedSkinId","timeRemaining","inFinalizationPhase","disabledChromas","currentMapChromaPath","baseSkin","jmxSettings","setSkinThroughChromaModal"],[["get",["selectedSkinId"]],["get",["timeRemaining"]],["get",["inFinalizationPhase"]],["get",["disabledChromas"]],["get",["currentMapChromaPath"]],["get",["baseSkin"]],["get",["jmxSettings"]],["helper",["action"],[["get",[null]],"setSkinThroughChromaModal"],null]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["skins-pane__arrow skins-pane__arrow--left ",["helper",["unless"],[["get",["canScrollLeft"]],"skins-pane__arrow--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectSkin","left"],null],null],["flush-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["skins-pane__arrow skins-pane__arrow--right ",["helper",["unless"],[["get",["canScrollRight"]],"skins-pane__arrow--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectSkin","right"],null],null],["flush-element"],["text","\\n"],["close-element"],["text","\\n"],["comment"," Footer "],["text","\\n"],["open-element","div",[]],["static-attr","class","skins-pane__footer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","skins-pane__skin-title"],["flush-element"],["append",["unknown",["viewSkin","name"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["skins-pane__sub-title ",["helper",["if"],[["get",["viewSkin","unlocked"]],"skins-pane__sub-title--unlocked"],null]]]],["flush-element"],["append",["unknown",["centerSkinText"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","skins-pane__carousel-pip-squares-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["carouselSkins"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","skins-pane__carousel-pip-square-active"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","skins-pane__carousel-pip-square"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectSkin",["get",["skin"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["helper",["eq"],[["get",["skin","id"]],["get",["viewSkinBaseSkinId"]]],null]],null,0],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["skin","isPlaceholder"]]],null,1]],"locals":["skin","index"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","skins-pane__locked-overlay"],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["skins-pane__locked-icon ",["helper",["if"],[["helper",["eq"],[["get",["skin","id"]],["get",["viewSkinBaseSkinId"]]],null],"skins-pane__locked-icon--selected"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showSkinPurchaseModal",["get",["skin"]]],null],null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","content"],["dynamic-attr","style",["concat",["background: ",["unknown",["skin","selectedChromaStyle"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-framed-icon"],null,[["disabled","class","onclick","interactive","borderWidth"],[["get",["isUILockedForGameStart"]],["helper",["if"],[["helper",["eq"],[["get",["skin","id"]],["get",["viewSkinBaseSkinId"]]],null],"chroma-button selected","chroma-button"],null],["helper",["action"],[["get",[null]],"chromaButtonClicked",["get",["skin"]]],null],true,2]],4]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["skins-pane__skin-card \\n      ",["helper",["if"],[["helper",["eq"],[["get",["skin","id"]],["get",["viewSkinBaseSkinId"]]],null],"skins-pane__skin-card--center-tile"],null]," \\n      ",["helper",["if"],[["helper",["eq"],[["get",["skin","id"]],["get",["selectedBaseSkinId"]]],null],"skins-pane__skin-card--selected-skin"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectSkin",["get",["skin"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["helper",["and"],[["get",["skin","unlocked"]],["get",["skin","chromaPreviewPath"]]],null]],null,5],["block",["if"],[["helper",["not"],[["get",["skin","unlocked"]]],null]],null,3],["text","        "],["open-element","img",[]],["static-attr","class","skins-pane__skin-image"],["dynamic-attr","src",["unknown",["skin","splashPath"]],null],["dynamic-attr","alt",["unknown",["skin","name"]],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","skins-pane__skin-card skins-pane__skin-card--placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["skin","isPlaceholder"]]],null,7,6]],"locals":["skin","index"]}],"hasPartials":false}',
+                id: "dzB/JhaZ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\skins-pane\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\skins-pane\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\skins-pane\\\\index.js\\" "],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","skins-pane__content"],["flush-element"],["text","\\n"],["block",["each"],[["get",["visibleSkins"]]],null,9],["close-element"],["text","\\n\\n"],["open-element","lc-flyout",[]],["dynamic-attr","open",["unknown",["isFlyoutOpen"]],null],["dynamic-attr","onHide",["helper",["action"],[["get",[null]],"hideChromaFlyout"],null],null],["dynamic-attr","uiKitOptionOverrides",["unknown",["flyoutSettings"]],null],["flush-element"],["text","\\n  "],["open-element","lc-flyout-content",[]],["flush-element"],["text","\\n    "],["append",["helper",["demacia-skin-chroma-modal"],null,[["selectedSkinId","timeRemaining","inFinalizationPhase","disabledChromas","currentMapChromaPath","baseSkin","jmxSettings","storeSkinIdMap","setSkinThroughChromaModal","onChromaPurchase"],[["get",["selectedSkinId"]],["get",["timeRemaining"]],["get",["inFinalizationPhase"]],["get",["disabledChromas"]],["get",["currentMapChromaPath"]],["get",["baseSkin"]],["get",["jmxSettings"]],["get",["storeSkinIdMap"]],["helper",["action"],[["get",[null]],"setSkinThroughChromaModal"],null],["helper",["action"],[["get",[null]],"openChromaPurchaseModal"],null]]]],false],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,3],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["skins-pane__arrow skins-pane__arrow--left ",["helper",["unless"],[["get",["canScrollLeft"]],"skins-pane__arrow--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectSkin","left"],null],null],["flush-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["skins-pane__arrow skins-pane__arrow--right ",["helper",["unless"],[["get",["canScrollRight"]],"skins-pane__arrow--disabled"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectSkin","right"],null],null],["flush-element"],["text","\\n"],["close-element"],["text","\\n"],["comment"," Footer "],["text","\\n"],["open-element","div",[]],["static-attr","class","skins-pane__footer"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","skins-pane__skin-title"],["flush-element"],["append",["unknown",["viewSkin","name"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["dynamic-attr","class",["concat",["skins-pane__sub-title ",["helper",["if"],[["get",["viewSkin","unlocked"]],"skins-pane__sub-title--unlocked"],null]]]],["flush-element"],["append",["unknown",["centerSkinText"]],false],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","skins-pane__carousel-pip-squares-container"],["flush-element"],["text","\\n"],["block",["each"],[["get",["carouselSkins"]]],null,2],["text","  "],["close-element"],["text","\\n"],["close-element"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","skins-pane__carousel-pip-square-active"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","skins-pane__carousel-pip-square"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectSkin",["get",["skin"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["helper",["eq"],[["get",["skin","id"]],["get",["viewSkinBaseSkinId"]]],null]],null,0],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["skin","isPlaceholder"]]],null,1]],"locals":["skin","index"]},{"statements":[["text","  "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","skins-pane__locked-overlay"],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["skins-pane__locked-icon ",["helper",["if"],[["helper",["eq"],[["get",["skin","id"]],["get",["viewSkinBaseSkinId"]]],null],"skins-pane__locked-icon--selected"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"showSkinPurchaseModal",["get",["skin"]]],null],null],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","content"],["dynamic-attr","style",["concat",["background: ",["unknown",["skin","selectedChromaStyle"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-framed-icon"],null,[["disabled","class","onclick","interactive","borderWidth"],[["get",["isUILockedForGameStart"]],["helper",["if"],[["helper",["eq"],[["get",["skin","id"]],["get",["viewSkinBaseSkinId"]]],null],"chroma-button selected","chroma-button"],null],["helper",["action"],[["get",[null]],"chromaButtonClicked",["get",["skin"]]],null],true,2]],5]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["skins-pane__skin-card \\n      ",["helper",["if"],[["helper",["eq"],[["get",["skin","id"]],["get",["viewSkinBaseSkinId"]]],null],"skins-pane__skin-card--center-tile"],null]," \\n      ",["helper",["if"],[["helper",["eq"],[["get",["skin","id"]],["get",["selectedBaseSkinId"]]],null],"skins-pane__skin-card--selected-skin"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectSkin",["get",["skin"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["helper",["and"],[["get",["skin","unlocked"]],["get",["skin","chromaPreviewPath"]]],null]],null,6],["block",["if"],[["helper",["not"],[["get",["skin","unlocked"]]],null]],null,4],["text","        "],["open-element","img",[]],["static-attr","class","skins-pane__skin-image"],["dynamic-attr","src",["unknown",["skin","splashPath"]],null],["dynamic-attr","alt",["unknown",["skin","name"]],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","skins-pane__skin-card skins-pane__skin-card--placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["skin","isPlaceholder"]]],null,8,7]],"locals":["skin","index"]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -11195,30 +11305,32 @@
                     if (null === e || "object" != typeof e && "function" != typeof e) return {
                         default: e
                     };
-                    var n = o(t);
+                    var n = r(t);
                     if (n && n.has(e)) return n.get(e);
                     var s = {},
                         a = Object.defineProperty && Object.getOwnPropertyDescriptor;
                     for (var l in e)
                         if ("default" !== l && Object.prototype.hasOwnProperty.call(e, l)) {
-                            var i = a ? Object.getOwnPropertyDescriptor(e, l) : null;
-                            i && (i.get || i.set) ? Object.defineProperty(s, l, i) : s[l] = e[l]
+                            var o = a ? Object.getOwnPropertyDescriptor(e, l) : null;
+                            o && (o.get || o.set) ? Object.defineProperty(s, l, o) : s[l] = e[l]
                         } s.default = e, n && n.set(e, s);
                     return s
                 }(n(1)),
                 a = n(101),
-                l = n(83);
+                l = n(83),
+                o = n(103),
+                i = n(102);
 
-            function o(e) {
+            function r(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return (o = function(e) {
+                return (r = function(e) {
                     return e ? n : t
                 })(e)
             }
             n(183);
-            var i = s.Ember.Component.extend({
+            var c = s.Ember.Component.extend({
                 classNames: ["jade-home-shop-grid"],
                 layout: n(184),
                 shoppefrontService: s.Ember.inject.service("shoppefront"),
@@ -11234,48 +11346,68 @@
                         return this.get("lolInventoryService.currencyCount") || {}
                     })))
                 },
-                shopItems: s.Ember.computed("shoppefrontService.categories.[]", "gameDataMapperService.currenciesByName", "lolInventoryService.ownedInventoryContent", "lolInventoryService.ownedItemInstanceIds", (function() {
+                shopItems: s.Ember.computed("shoppefrontService.categories.[]", "shoppefrontService.stores.[]", "gameDataMapperService.currenciesByName", "lolInventoryService.ownedInventoryContent", "lolInventoryService.ownedItemInstanceIds", "fiatPricePoints", (function() {
                     const e = (this.get("shoppefrontService.categories") || []).find((e => "HOME_PAGE" === e.categoryId));
                     if (!e) return [];
                     const t = this.get("gameDataMapperService.currenciesByName") || {},
                         n = this.get("lolInventoryService.ownedInventoryContent") || {},
-                        s = this.get("lolInventoryService.ownedItemInstanceIds") || new Set;
+                        s = this.get("lolInventoryService.ownedItemInstanceIds") || new Set,
+                        r = this.get("tra"),
+                        c = this.get("shoppefrontService.stores") || [],
+                        m = (0, i.buildSkuByItemId)(c, "sku:"),
+                        d = this.get("fiatPricePoints") || {};
                     return e.items.map((e => {
-                        const o = (0, a.getItemCost)(e),
-                            i = (0, a.getItemCurrency)(e),
-                            r = t[i],
-                            c = e.overrideTileSize || null,
-                            m = (0, l.isItemOwned)(e, s),
-                            d = !m && !(0, l.hasUnsatisfiedPrerequisite)(e),
-                            u = (0, l.getRequirementText)(e, n),
-                            p = (0, a.getPricesWithIcons)(e, t),
+                        const i = (0, a.getItemCost)(e),
+                            c = (0, a.getItemCurrency)(e),
+                            u = t[c],
+                            p = e.overrideTileSize || null,
+                            h = (0, l.isItemOwned)(e, s),
+                            g = !h && !(0, l.hasUnsatisfiedPrerequisite)(e),
+                            _ = (0, l.getRequirementText)(e, n),
+                            f = (0, a.getPricesWithIcons)(e, t),
                             {
-                                hasDiscount: h,
-                                discountPercent: g,
-                                discountLabel: _
-                            } = (0, a.getDiscountInfo)(p);
+                                hasDiscount: v,
+                                discountPercent: b,
+                                discountLabel: y
+                            } = (0, a.getDiscountInfo)(f),
+                            E = m.get(e.id),
+                            x = E ? E.toUpperCase() : null,
+                            S = x ? d[x] : null,
+                            k = !!S,
+                            P = (e.purchaseUnits || []).length > 1,
+                            I = P ? (0, a.getBundleTotalCost)(e, c) : null,
+                            C = P ? e.name || e.traTitle || e.itemName : null,
+                            w = null != I ? I : i;
                         return {
                             id: e.id,
-                            name: e.traTitle || e.itemName,
+                            name: C || e.traTitle || e.itemName,
                             description: e.itemDescription,
-                            cost: o,
-                            currency: i,
-                            currencyIconPath: r ? r.iconPath : null,
-                            prices: p.length > 1 ? p : null,
-                            hasMultiplePrices: p.length > 1,
-                            hasDiscount: h,
-                            discountPercent: g,
-                            discountLabel: _,
-                            salePrices: h ? p : null,
+                            contentType: (0, o.getDisplayType)(e, r),
+                            cost: w,
+                            originalCost: null != I ? I : f[0] && f[0].originalCost || i,
+                            currency: c,
+                            currencyIconPath: u ? u.iconPath : null,
+                            prices: f.length > 1 ? f : null,
+                            hasMultiplePrices: f.length > 1,
+                            hasDiscount: v,
+                            discountPercent: b,
+                            discountLabel: y,
+                            salePrices: v ? f : null,
                             iconUrl: e.tilePath || e.splashPath || null,
-                            tileSize: c,
-                            tileSizeClass: c ? "jade-tile-" + c : "",
-                            isOwned: m,
-                            isPurchasable: d,
-                            _prereqKey: u,
-                            catalogItem: e
+                            tileSize: p,
+                            tileSizeClass: p ? "jade-tile-" + p : "",
+                            isOwned: h,
+                            isPurchasable: g,
+                            isBundle: P,
+                            _prereqKey: _,
+                            catalogItem: e,
+                            hasFiatPrice: k,
+                            fiatPriceFormatted: S ? (0, a.formatFiatPrice)(S.realAmountCents, S.realCurrencyCode) : null,
+                            fiatPricePointId: S ? S.id : null,
+                            fiatAmountCents: S ? S.realAmountCents : null,
+                            fiatCurrencyCode: S ? S.realCurrencyCode : null
                         }
-                    })).filter((e => null != e.cost)).slice(0, this.get("maxItems") || 2)
+                    })).filter((e => null != e.cost || e.hasFiatPrice)).slice(0, this.get("maxItems") || 2)
                 })),
                 displayShopItems: s.Ember.computed("shopItems.[]", "_walletBalance", (function() {
                     const e = this.get("shopItems") || [],
@@ -11295,7 +11427,7 @@
                     }
                 }
             });
-            t.default = i
+            t.default = c
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -11375,8 +11507,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "rswwhJ9b",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-skin-chroma-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-skin-chroma-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-skin-chroma-modal\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["doesSkinHaveChromas"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["demacia-skin-chroma-button"],null,[["skin","selectedSkinId","baseSkin","onClick","onEnter","onLeave","setSkin","showPreview","closePreview","jmxSettings","timeRemaining","inFinalizationPhase"],[["get",["chroma"]],["get",["selectedSkinId"]],["get",["skin"]],["helper",["action"],[["get",[null]],"setSkin"],null],["helper",["action"],[["get",[null]],"showPreview"],null],["helper",["action"],[["get",[null]],"closePreview"],null],"setSkin","showPreview","closePreview",["get",["jmxSettings"]],["get",["timeRemaining"]],["get",["inFinalizationPhase"]]]]],false],["text","\\n"]],"locals":["chroma"]},{"statements":[["text","  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","chroma-selection"],["static-attr","overflow-masks","false"],["static-attr","direction","horizontal"],["flush-element"],["text","\\n    "],["append",["helper",["demacia-skin-chroma-button"],null,[["skin","selectedSkinId","onClick","onEnter","onLeave","setSkin","showPreview","closePreview","jmxSettings","timeRemaining","inFinalizationPhase"],[["get",["baseSkin"]],["get",["selectedSkinId"]],["helper",["action"],[["get",[null]],"setSkin"],null],["helper",["action"],[["get",[null]],"showPreview"],null],["helper",["action"],[["get",[null]],"closePreview"],null],"setSkin","showPreview","closePreview",["get",["jmxSettings"]],["get",["timeRemaining"]],["get",["inFinalizationPhase"]]]]],false],["text","\\n"],["block",["each"],[["get",["sortedChromas"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","chroma-information"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","chroma-information-image"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["displayedSkin","chromaPreviewPath"]],"\')"]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","child-skin-name"],["flush-element"],["text","\\n      "],["append",["unknown",["displayedSkin","name"]],false],["text","\\n      "],["open-element","div",[]],["static-attr","class","child-skin-disabled-notification"],["flush-element"],["append",["helper",["if"],[["get",["displayedSkin","disabled"]],["get",["tra","skin_unselectable_because_disabled"]]],null],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "MHUmKo4i",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-skin-chroma-modal\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-skin-chroma-modal\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-skin-chroma-modal\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["doesSkinHaveChromas"]]],null,1]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","      "],["append",["helper",["demacia-skin-chroma-button"],null,[["skin","selectedSkinId","baseSkin","onClick","onEnter","onLeave","onPurchase","setSkin","showPreview","closePreview","jmxSettings","timeRemaining","inFinalizationPhase","storeSkinIdMap"],[["get",["chroma"]],["get",["selectedSkinId"]],["get",["skin"]],["helper",["action"],[["get",[null]],"setSkin"],null],["helper",["action"],[["get",[null]],"showPreview"],null],["helper",["action"],[["get",[null]],"closePreview"],null],["get",["onChromaPurchase"]],"setSkin","showPreview","closePreview",["get",["jmxSettings"]],["get",["timeRemaining"]],["get",["inFinalizationPhase"]],["get",["storeSkinIdMap"]]]]],false],["text","\\n"]],"locals":["chroma"]},{"statements":[["text","  "],["open-element","lol-uikit-scrollable",[]],["static-attr","class","chroma-selection"],["static-attr","overflow-masks","false"],["static-attr","direction","horizontal"],["flush-element"],["text","\\n    "],["append",["helper",["demacia-skin-chroma-button"],null,[["skin","selectedSkinId","onClick","onEnter","onLeave","onPurchase","setSkin","showPreview","closePreview","jmxSettings","timeRemaining","inFinalizationPhase","storeSkinIdMap"],[["get",["baseSkin"]],["get",["selectedSkinId"]],["helper",["action"],[["get",[null]],"setSkin"],null],["helper",["action"],[["get",[null]],"showPreview"],null],["helper",["action"],[["get",[null]],"closePreview"],null],["get",["onChromaPurchase"]],"setSkin","showPreview","closePreview",["get",["jmxSettings"]],["get",["timeRemaining"]],["get",["inFinalizationPhase"]],["get",["storeSkinIdMap"]]]]],false],["text","\\n"],["block",["each"],[["get",["sortedChromas"]]],null,0],["text","  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","chroma-information"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","chroma-information-image"],["dynamic-attr","style",["concat",["background-image: url(\'",["unknown",["displayedSkin","chromaPreviewPath"]],"\')"]]],["flush-element"],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","child-skin-name"],["flush-element"],["text","\\n      "],["append",["unknown",["displayedSkin","name"]],false],["text","\\n      "],["open-element","div",[]],["static-attr","class","child-skin-disabled-notification"],["flush-element"],["append",["helper",["if"],[["get",["displayedSkin","disabled"]],["get",["tra","skin_unselectable_because_disabled"]]],null],false],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -11391,19 +11523,16 @@
                 {
                     EmberHelpers: i
                 } = l;
-            n(192);
-            const r = l.EmberDataBinding({
-                Ember: o,
-                websocket: l.getProvider().getSocket(),
-                boundProperties: {
-                    skinInfo: "/lol-store/v1/skins/{{skin.id}}"
-                }
-            });
-            e.exports = o.Component.extend(r, {
+            n(192), e.exports = o.Component.extend({
                 tagName: "div",
                 layout: n(193),
                 skinPurchaseService: o.inject.service("skin-purchase"),
                 meetsChampionRequirement: o.computed.alias("skin.isChampionUnlocked"),
+                purchaseItemId: o.computed("skin.id", "storeSkinIdMap", (function() {
+                    const e = this.get("skin.id"),
+                        t = this.get("storeSkinIdMap");
+                    return t && t[e] || e
+                })),
                 isSelected: o.computed("skin.id", "selectedSkinId", (function() {
                     return this.get("skin.id") === this.get("selectedSkinId")
                 })),
@@ -11412,15 +11541,8 @@
                         t = this.get("baseSkin.ownership.owned");
                     return !e || t
                 })),
-                invalidPriceData: o.computed("skin.id", "skinInfo", "skinInfo.itemId", "skinInfo.prices", "skinInfo.sale", "skinInfo.sale.prices", (function() {
-                    const e = this.get("skinInfo"),
-                        t = this.get("skin.id");
-                    if (!e || e.get("itemId") !== t) return !0;
-                    const n = this._getPricesFromSkinInfo(e);
-                    return !n || 0 === Object.getOwnPropertyNames(n).length
-                })),
-                purchaseDisabled: i.computedGate("jmxSettings.LcuChampionSelect.SkinPurchaseEnabled", "meetsChampionRequirement", "meetsBaseSkinRequirement", "timeRemaining", "jmxSettings.LcuChampionSelect.SkinPurchaseTime", "inFinalizationPhase", "skinInfo.active", "invalidPriceData", (function() {
-                    return !this.get("jmxSettings.LcuChampionSelect.SkinPurchaseEnabled") || !(this.get("meetsChampionRequirement") && this.get("meetsBaseSkinRequirement") && !(this.get("timeRemaining") < this.get("jmxSettings.LcuChampionSelect.SkinPurchaseTime") && this.get("inFinalizationPhase")) && this.get("skinInfo.active") && !this.get("invalidPriceData"))
+                purchaseDisabled: i.computedGate("jmxSettings.LcuChampionSelect.SkinPurchaseEnabled", "meetsChampionRequirement", "meetsBaseSkinRequirement", "timeRemaining", "jmxSettings.LcuChampionSelect.SkinPurchaseTime", "inFinalizationPhase", (function() {
+                    return !this.get("jmxSettings.LcuChampionSelect.SkinPurchaseEnabled") || (!this.get("meetsChampionRequirement") || (!this.get("meetsBaseSkinRequirement") || !!(this.get("timeRemaining") < this.get("jmxSettings.LcuChampionSelect.SkinPurchaseTime") && this.get("inFinalizationPhase"))))
                 })),
                 color: o.computed("skin.colors.[]", (function() {
                     const e = this.get("skin.colors");
@@ -11437,17 +11559,10 @@
                         if (this.get("skin.unlocked")) a.default.playSound("sfx-ui", "/fe/lol-champ-select/sounds/sfx-uikit-grid-click.ogg"), this.get("onClick")(this.get("skin"));
                         else if (!this.get("purchaseDisabled")) {
                             a.default.playSound("sfx-ui", "/fe/lol-champ-select/sounds/sfx-uikit-grid-click.ogg");
-                            const e = this.get("skinInfo");
-                            this.get("skinPurchaseService").openPAWModal(e, this.recordDidRequestSucceed)
+                            const e = this.get("onPurchase");
+                            e && e(this.get("skin"))
                         }
                     }
-                },
-                _getPricesFromSkinInfo: function(e) {
-                    if (!e) return {};
-                    const t = e.sale && e.sale.prices || [],
-                        n = (e, t) => (e.cost && e.cost > 0 && e.currency && (t[e.currency] = e.cost), t),
-                        s = (e.prices || []).reduce(n, {});
-                    return t.reduce(n, s)
                 }
             })
         }, (e, t, n) => {
@@ -13985,22 +14100,24 @@
                     })), this.notifyPropertyChange("championData"), this.notifyPropertyChange("selectedSkin"))
                 },
                 _openClassicExclusiveSkinPurchase(e, t) {
-                    this._openPurchaseSkin = e, this._openPurchaseCatalogItem = t;
-                    const {
-                        modalItem: n,
-                        errorText: s
-                    } = (0, r.buildPurchaseModalData)(t, {
-                        ownedItemInstanceIds: this.get("lolInventoryService.ownedItemInstanceIds") || new Set,
-                        ownedInventoryContent: this._ownedContentWithChampion(t),
-                        currencyCount: this.get("lolInventoryService.currencyCount") || {},
-                        shoppefrontId: this.get("shoppefrontService.shoppefrontId"),
-                        tra: this.get("tra")
-                    });
-                    this.setProperties({
-                        purchaseModalItem: n,
-                        catalogItemErrorText: s,
-                        showClassicExclusiveFlagInModal: !0
-                    })
+                    this._openPurchaseSkin = e, this._openPurchaseCatalogItem = t, this._ensureCurrencyIconData().then((() => {
+                        if (this.isDestroyed || this.isDestroying) return;
+                        const {
+                            modalItem: e,
+                            errorText: n
+                        } = (0, r.buildPurchaseModalData)(t, {
+                            ownedItemInstanceIds: this.get("lolInventoryService.ownedItemInstanceIds") || new Set,
+                            ownedInventoryContent: this._ownedContentWithChampion(t),
+                            currencyCount: this.get("lolInventoryService.currencyCount") || {},
+                            shoppefrontId: this.get("shoppefrontService.shoppefrontId"),
+                            tra: this.get("tra")
+                        });
+                        this.setProperties({
+                            purchaseModalItem: e,
+                            catalogItemErrorText: n,
+                            showClassicExclusiveFlagInModal: !0
+                        })
+                    }))
                 },
                 _ownedContentWithChampion(e) {
                     const t = this.get("lolInventoryService.ownedInventoryContent") || {};
@@ -16163,8 +16280,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "2y9f3/n1",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\home.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home__top-nav-bg"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home__home-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isError"]]],null,8,7],["text","\\n"],["block",["if"],[["get",["votingTileError"]]],null,6,5],["text","  "],["open-element","div",[]],["static-attr","class","jade-home__shop-grid"],["flush-element"],["text","\\n    "],["append",["helper",["jade-home-shop-grid"],null,[["maxItems","onShopItemPurchase","shopLoadFailed","forceShopError"],[2,["helper",["action"],[["get",[null]],"openShopItemPurchase"],null],["get",["shopLoadFailed"]],["get",["forceShopError"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-home__play-button"],["flush-element"],["text","\\n    "],["open-element","button",[]],["static-attr","class","jade-home__play-button-img"],["dynamic-attr","disabled",["unknown",["patcher","isPlayButtonDisabled"]],null],["modifier",["action"],[["get",[null]],"createRegularGame"]],["flush-element"],["text","\\n      "],["append",["unknown",["tra","jade_home_play_game"]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["patcher","playButtonTooltip"]]],null,3],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["voting-system"],null,[["showModal","votingData","votingPower","onVoteChanged","onResultsViewed"],[["get",["showVotingModal"]],["get",["votingDataModel"]],["get",["votingPower"]],["helper",["action"],[["get",[null]],"onVoteChanged"],null],["helper",["action"],[["get",[null]],"onResultsViewed"],null]]]],false],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,2],["text","\\n"],["block",["if"],[["get",["showUpgradeModal"]]],null,1],["text","\\n"],["block",["jade-ftux-parchment-modal"],null,[["showModal","onClose","buttonText","onButtonClick"],[["get",["showHomeFtux"]],["helper",["action"],[["get",[null]],"closeHomeFtux"],null],["get",["tra","jade_ftux_home_explore"]],["helper",["action"],[["get",[null]],"exploreHomeFtux"],null]]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-ftux-heading"],["flush-element"],["text","\\n    "],["open-element","h1",[]],["static-attr","class","jade-ftux-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_title"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","jade-ftux-subtitle"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_subtitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-ftux-columns jade-ftux-columns"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-gameplay.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col2_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col2_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-champions.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col3_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col3_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-loadouts.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col1_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col1_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-bundles-modal"],null,[["bundles","showPurchaseModal"],[["get",["passBundles"]],["get",["showUpgradeModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home__play-button-tooltip"],["flush-element"],["text","\\n        "],["append",["unknown",["patcher","playButtonTooltip"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["jade-home-voting-card"],null,[["votingData","hasVoted","isVotingActive","showPip","votingPower","onOpenVotingSystem"],[["get",["votingDataModel"]],["get",["hasVoted"]],["get",["votingDataModel","isVotingActive"]],["get",["votingDataModel","showPip"]],["get",["votingPower"]],["helper",["action"],[["get",[null]],"openVotingSystem"],null]]]],false],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["votingData"]]],null,4]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-home__voting-card jade-home__voting-card--error"],["flush-element"],["text","\\n      "],["open-element","svg",[]],["static-attr","class","jade-home__voting-error-icon"],["static-attr","width","20"],["static-attr","height","20"],["static-attr","viewBox","0 0 20 20"],["static-attr","fill","none"],["static-attr","aria-hidden","true"],["flush-element"],["text","\\n        "],["open-element","path",[]],["static-attr","d","M8.79 2.4 1.3 15.1a1.4 1.4 0 0 0 1.21 2.1h14.98a1.4 1.4 0 0 0 1.21-2.1L11.21 2.4a1.4 1.4 0 0 0-2.42 0Z"],["static-attr","fill","#ff2345"],["flush-element"],["close-element"],["text","\\n        "],["open-element","path",[]],["static-attr","d","M10 7v4"],["static-attr","stroke","#0a0e12"],["static-attr","stroke-width","1.6"],["static-attr","stroke-linecap","round"],["flush-element"],["close-element"],["text","\\n        "],["open-element","circle",[]],["static-attr","cx","10"],["static-attr","cy","13.8"],["static-attr","r","1"],["static-attr","fill","#0a0e12"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","jade-home__voting-error-text"],["flush-element"],["append",["unknown",["tra","jade_home_error_tile"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-promo-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["jade-default-template"],null,[["data"],[["get",["selectedPage"]]]]],false],["text","\\n    "],["append",["helper",["jade-pagination"],null,[["totalItems","activeIndex","onPageChange"],[["get",["pages","length"]],["get",["selectedPageIndex"]],["helper",["action"],[["get",[null]],"selectPage"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["jade-home-error"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "694ER/xd",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\home.hbs\\" style-path=\\"null\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home__top-nav-bg"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-home__home-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isError"]]],null,9,8],["text","\\n"],["block",["if"],[["get",["votingTileError"]]],null,7,6],["text","  "],["open-element","div",[]],["static-attr","class","jade-home__shop-grid"],["flush-element"],["text","\\n    "],["append",["helper",["jade-home-shop-grid"],null,[["maxItems","onShopItemPurchase","shopLoadFailed","forceShopError","fiatPricePoints"],[2,["helper",["action"],[["get",[null]],"openShopItemPurchase"],null],["get",["shopLoadFailed"]],["get",["forceShopError"]],["get",["_fiatPricePointsBySku"]]]]],false],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-home__play-button"],["flush-element"],["text","\\n    "],["open-element","button",[]],["static-attr","class","jade-home__play-button-img"],["dynamic-attr","disabled",["unknown",["patcher","isPlayButtonDisabled"]],null],["modifier",["action"],[["get",[null]],"createRegularGame"]],["flush-element"],["text","\\n      "],["append",["unknown",["tra","jade_home_play_game"]],false],["text","\\n    "],["close-element"],["text","\\n"],["block",["if"],[["get",["patcher","playButtonTooltip"]]],null,4],["text","  "],["close-element"],["text","\\n"],["close-element"],["text","\\n\\n"],["append",["helper",["voting-system"],null,[["showModal","votingData","votingPower","onVoteChanged","onResultsViewed"],[["get",["showVotingModal"]],["get",["votingDataModel"]],["get",["votingPower"]],["helper",["action"],[["get",[null]],"onVoteChanged"],null],["helper",["action"],[["get",[null]],"onResultsViewed"],null]]]],false],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,3],["text","\\n"],["block",["if"],[["get",["showUpgradeModal"]]],null,2],["text","\\n"],["block",["if"],[["get",["isFiatPurchaseModalOpen"]]],null,1],["text","\\n"],["block",["jade-ftux-parchment-modal"],null,[["showModal","onClose","buttonText","onButtonClick"],[["get",["showHomeFtux"]],["helper",["action"],[["get",[null]],"closeHomeFtux"],null],["get",["tra","jade_ftux_home_explore"]],["helper",["action"],[["get",[null]],"exploreHomeFtux"],null]]],0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-ftux-heading"],["flush-element"],["text","\\n    "],["open-element","h1",[]],["static-attr","class","jade-ftux-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_title"]],false],["close-element"],["text","\\n    "],["open-element","p",[]],["static-attr","class","jade-ftux-subtitle"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_subtitle"]],false],["close-element"],["text","\\n  "],["close-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-ftux-columns jade-ftux-columns"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-gameplay.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col2_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col2_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-champions.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col3_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col3_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","jade-ftux-column"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-image"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","src","/fe/lol-jade/images/ftux/ftux-home-col-loadouts.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-ftux-column-text"],["flush-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-title"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col1_title"]],false],["close-element"],["text","\\n        "],["open-element","p",[]],["static-attr","class","jade-ftux-column-desc"],["flush-element"],["append",["unknown",["tra","jade_ftux_home_col1_desc"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["jade-fiat-purchase-modal"],null,[["item","itemDescription","wallet","ownedItemInstanceIds","onClose","onRpPurchase"],[["get",["fiatPurchaseItem"]],["get",["fiatPurchaseDescription"]],["get",["_walletBalance"]],["get",["lolInventoryService","ownedItemInstanceIds"]],["helper",["action"],[["get",[null]],"closeFiatModal"],null],["helper",["action"],[["get",[null]],"rpFallbackPurchase"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-bundles-modal"],null,[["bundles","showPurchaseModal"],[["get",["passBundles"]],["get",["showUpgradeModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-home__play-button-tooltip"],["flush-element"],["text","\\n        "],["append",["unknown",["patcher","playButtonTooltip"]],false],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["jade-home-voting-card"],null,[["votingData","hasVoted","isVotingActive","showPip","votingPower","onOpenVotingSystem"],[["get",["votingDataModel"]],["get",["hasVoted"]],["get",["votingDataModel","isVotingActive"]],["get",["votingDataModel","showPip"]],["get",["votingPower"]],["helper",["action"],[["get",[null]],"openVotingSystem"],null]]]],false],["text","\\n  "]],"locals":[]},{"statements":[["block",["if"],[["get",["votingData"]]],null,5]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-home__voting-card jade-home__voting-card--error"],["flush-element"],["text","\\n      "],["open-element","svg",[]],["static-attr","class","jade-home__voting-error-icon"],["static-attr","width","20"],["static-attr","height","20"],["static-attr","viewBox","0 0 20 20"],["static-attr","fill","none"],["static-attr","aria-hidden","true"],["flush-element"],["text","\\n        "],["open-element","path",[]],["static-attr","d","M8.79 2.4 1.3 15.1a1.4 1.4 0 0 0 1.21 2.1h14.98a1.4 1.4 0 0 0 1.21-2.1L11.21 2.4a1.4 1.4 0 0 0-2.42 0Z"],["static-attr","fill","#ff2345"],["flush-element"],["close-element"],["text","\\n        "],["open-element","path",[]],["static-attr","d","M10 7v4"],["static-attr","stroke","#0a0e12"],["static-attr","stroke-width","1.6"],["static-attr","stroke-linecap","round"],["flush-element"],["close-element"],["text","\\n        "],["open-element","circle",[]],["static-attr","cx","10"],["static-attr","cy","13.8"],["static-attr","r","1"],["static-attr","fill","#0a0e12"],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","span",[]],["static-attr","class","jade-home__voting-error-text"],["flush-element"],["append",["unknown",["tra","jade_home_error_tile"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-promo-frame"],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["helper",["jade-default-template"],null,[["data"],[["get",["selectedPage"]]]]],false],["text","\\n    "],["append",["helper",["jade-pagination"],null,[["totalItems","activeIndex","onPageChange"],[["get",["pages","length"]],["get",["selectedPageIndex"]],["helper",["action"],[["get",[null]],"selectPage"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["append",["unknown",["jade-home-error"]],false],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -16184,8 +16301,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "GPGMQ544",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\battlepass.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\styles\\\\battlepass.styl\\" js-path=\\"null\\" "],["text","\\n"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-battlepass-page ",["helper",["if"],[["get",["showEmptyState"]],"is-empty"],null]]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["_eventDataLoaded"]]],null,50,49],["close-element"],["text","\\n\\n"],["append",["helper",["battlepass-chase-modal"],null,[["isVisible","chaseCategoryId","claimedIds","passUpgraded","onClose","onItemClaimed"],[["get",["showChaseModal"]],["get",["chaseCategoryId"]],["get",["_claimedIds"]],["get",["passUpgraded"]],["helper",["action"],[["get",[null]],"closeChaseModal"],null],["helper",["action"],[["get",[null]],"onChaseItemClaimed"],null]]]],false],["text","\\n\\n"],["block",["if"],[["get",["purchaseError"]]],null,6],["text","\\n"],["block",["if"],[["get",["showKrPurchaseConfirm"]]],null,4],["text","\\n"],["block",["if"],[["get",["isFiatPurchaseModalOpen"]]],null,2],["text","\\n"],["block",["if"],[["get",["showDropRatesModal"]]],null,1],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["jade-drop-rates-modal"],null,[["oddsData","title"],[["get",["selectedItemLootOddsData"]],["get",["selectedItem","name"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType","onClose","show"],["DialogDismiss","inside",["helper",["action"],[["get",[null]],"closeDropRatesModal"],null],true]],0]],"locals":[]},{"statements":[["text","  "],["append",["helper",["jade-fiat-purchase-modal"],null,[["item","bundles","itemDescription","wallet","onClose","onRpPurchase"],[["get",["fiatPurchaseItem"]],["get",["passBundles"]],["get",["fiatPurchaseDescription"]],["get",["_walletBalance"]],["helper",["action"],[["get",[null]],"closeFiatModal"],null],["helper",["action"],[["get",[null]],"rpFallbackPurchase"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal__title"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_title"]],false],["close-element"],["text","\\n      "],["open-element","ul",[]],["static-attr","class","battlepass-kr-confirm-modal__list"],["flush-element"],["text","\\n        "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_1"]],false],["close-element"],["text","\\n        "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_2"]],false],["close-element"],["text","\\n        "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["krRefundAgreementText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal__actions"],["flush-element"],["text","\\n        "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","battlepass-kr-confirm-modal__btn"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"cancelKrPurchase"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","battlepass_kr_purchase_confirm_cancel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","battlepass-kr-confirm-modal__btn"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmKrPurchase"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","battlepass_kr_purchase_confirm_accept"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissible","dismissibleType","onClose"],["DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"cancelKrPurchase"],null]]],3]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","battlepass-error-modal"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-title"],["flush-element"],["append",["unknown",["tra","battlepass_purchase_failed_title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-message"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-actions"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"dismissPurchaseError"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","battlepass_purchase_ok"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissible","dismissibleType","onClose"],["DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"dismissPurchaseError"],null]]],5]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","battlepass-empty__text"],["flush-element"],["append",["unknown",["emptyStateText","full"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","battlepass-empty__text"],["flush-element"],["append",["unknown",["emptyStateText","before"]],false],["open-element","span",[]],["static-attr","class","battlepass-empty__date"],["flush-element"],["append",["unknown",["emptyStateText","date"]],false],["close-element"],["append",["unknown",["emptyStateText","after"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-empty"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","battlepass-empty__image"],["static-attr","src","/fe/lol-jade/images/battlepass/battlepass-image.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["emptyStateText","hasDate"]]],null,8,7],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                        "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_requires_premium_pass"]],false],["close-element"],["text","\\n                      "],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","hasUnmetPrerequisites"]]],null,10],["text","                  "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"upgradeBattlepass"],null],null],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-upgrade-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/premium-pass-icon.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_button_upgrade_pass"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","battlepass-premium-unlocked"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown"],["static-attr","src","/fe/lol-jade/images/battlepass/crown.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","battlepass-premium-label"],["flush-element"],["append",["unknown",["tra","battlepass_button_upgraded"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-action-btn is-purchase ",["helper",["if"],[["get",["purchasingItem"]],"is-loading"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchaseItem"],null],null],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-loading-spinner"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-coin-icon"],["dynamic-attr","src",["concat",[["unknown",["selectedItem","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-insufficient"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-coin-icon"],["dynamic-attr","src",["concat",[["unknown",["selectedItem","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["cannotAffordSelectedItem"]]],null,14,13]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-claim-section"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_unlock_spend_tokens"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-locked"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","isLocked"]]],null,16,15]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-claim-section"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_requires_premium_pass"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-premium-locked"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","hasUnmetPrerequisites"]]],null,18,17]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-claimed"],["flush-element"],["text","\\n                  "],["open-element","svg",[]],["static-attr","class","battlepass-owned-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                    "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#1E282D"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_button_owned"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","battlepass-preview-placeholder"],["flush-element"],["append",["unknown",["tra","battlepass_item_preview"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","battlepass-preview-drop-rates"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDropRatesModal"],null],null],["flush-element"],["append",["unknown",["tra","battlepass_view_drop_rates"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","battlepass-preview-description"],["flush-element"],["append",["unknown",["selectedItem","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","battlepass-preview-placeholder"],["flush-element"],["append",["unknown",["tra","battlepass_item_preview"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["selectedItem","previewUrl"]]],null,24],["text","              "],["open-element","div",[]],["static-attr","class","battlepass-preview-info"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","battlepass-preview-type"],["flush-element"],["append",["unknown",["selectedItem","type"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","battlepass-preview-name"],["flush-element"],["append",["unknown",["selectedItem","name"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["selectedItem","description"]]],null,23],["block",["if"],[["get",["selectedItemHasDropRates"]]],null,22],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-frame"],["flush-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-tl"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-left.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-tr"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-right.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-br"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-right.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-bl"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-left.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/crown-muted.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/crown-blue.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-lock-overlay"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passUpgraded"]]],null,28,27],["text","                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-cost-coin"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","battlepass-cost-lock"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-item-cost ",["helper",["unless"],[["get",["item","canAfford"]],"is-insufficient"],null]," ",["helper",["if"],[["get",["item","isLocked"]],"is-locked"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","isLocked"]]],null,31,30],["text","                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-claimed"],["flush-element"],["text","\\n                      "],["open-element","svg",[]],["static-attr","class","battlepass-claimed-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                        "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#E9E2D2"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","video",[]],["static-attr","class","battlepass-item-video"],["dynamic-attr","src",["concat",[["unknown",["item","tileVideoPath"]]]]],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","img",[]],["static-attr","class","battlepass-item-icon"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-item ",["unknown",["item","tileSizeClass"]]," ",["helper",["if"],[["get",["item","isSelected"]],"is-selected"],null]," ",["helper",["if"],[["get",["item","hasUnmetPrerequisites"]],"has-prereqs"],null]," ",["helper",["if"],[["get",["item","isPremiumUnlocked"]],"is-premium-unlocked"],null]," ",["helper",["if"],[["get",["item","isClaimed"]],"is-claimed"],null]," ",["helper",["if"],[["get",["item","isLocked"]],"is-locked"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectItem",["get",["item"]]],null],null],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-item-bg"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,35],["text","                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","tileVideoPath"]]],null,34],["block",["if"],[["get",["item","isClaimed"]]],null,33,32],["block",["if"],[["get",["item","isPassGated"]]],null,29,26],["text","                "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","                  "],["open-element","svg",[]],["static-attr","class","battlepass-claimed-counter-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                    "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#00A741"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-claimed-counter ",["helper",["if"],[["get",["allClaimed"]],"is-all-claimed"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["allClaimed"]]],null,37],["text","                "],["open-element","span",[]],["flush-element"],["append",["unknown",["claimedCountText"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","battlepass-unlock-progress"],["flush-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["unlockProgressParts","beforeCoin"]],false],["close-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","battlepass-unlock-coin"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["unlockProgressParts","afterCoin"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","span",[]],["static-attr","class","battlepass-tier-number"],["flush-element"],["append",["unknown",["tier","number"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-tier-btn ",["helper",["if"],[["get",["tier","isSelected"]],"is-selected"],null]," ",["helper",["if"],[["get",["tier","isLocked"]],"is-locked"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTier",["get",["tier"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["tier","isLocked"]]],null,41,40],["text","                "],["close-element"],["text","\\n"]],"locals":["tier"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-content"],["flush-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-left-panel"],["flush-element"],["text","\\n\\n"],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-tier-section"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-tier-buttons"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tiers"]]],null,42],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n\\n"],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-items-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedTier","isLocked"]]],null,39,38],["text","            "],["open-element","div",[]],["static-attr","class","battlepass-items-grid"],["flush-element"],["text","\\n"],["block",["each"],[["get",["items"]]],null,36],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-right-panel"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-preview"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedItem"]]],null,25,21],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-actions-wrapper"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-actions"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedItem","isClaimed"]]],null,20,19],["text","              "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passUpgraded"]]],null,12,11],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["append",["helper",["digital-goods-disclaimer"],null,[["class","textOverride","noDisclaimerRegions"],["battlepass-disclaimer",["get",["digitalGoodsDisclaimerTextOverride"]],["get",["noDisclaimerRegions"]]]]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","battlepass-currency battlepass-currency--banked"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["lockedTokenCount"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_banked_tooltip_desc"]],false],["close-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["bankedTooltipCount"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","battlepass-title-timer"],["flush-element"],["text","\\n          "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer","transparentBackground"],[["get",["_passEndTimeMs"]],true,false,false,false,true,1," ","{{remainingTime}}",true,true]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-title-container"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","battlepass-title-name"],["flush-element"],["append",["unknown",["battlepassName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["_passEndTimeMs"]]],null,45],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-currencies"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showTokenBank"]]],null,44],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-currency"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["tokenBalance"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_coins_tooltip_desc"]],false],["close-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["coinsTooltipCount"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-currency"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["skinTokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["skinTokenBalance"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_skin_token_tooltip_desc"]],false],["close-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["skinTokenTooltipCount"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-preview-backdrop"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["battlepass-preview-backdrop-image ",["helper",["if"],[["get",["selectedItem","hasFullScreenSplash"]],"has-full-screen-splash"],null]]]],["dynamic-attr","src",["concat",[["unknown",["selectedItem","previewUrl"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","previewUrl"]]],null,47]],"locals":[]},{"statements":[["block",["if"],[["get",["hasActiveEvent"]]],null,48],["text","  "],["open-element","div",[]],["static-attr","class","jade-battlepass-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","battlepass-main-container"],["flush-element"],["text","\\n\\n"],["block",["if"],[["get",["hasActiveEvent"]]],null,46],["text","\\n"],["block",["if"],[["get",["hasActiveEvent"]]],null,43,9],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","battlepass-loading"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["50px","50px"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "q9pTmDMF",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\battlepass.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\styles\\\\battlepass.styl\\" js-path=\\"null\\" "],["text","\\n"],["text","\\n"],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-battlepass-page ",["helper",["if"],[["get",["showEmptyState"]],"is-empty"],null]]]],["flush-element"],["text","\\n"],["block",["unless"],[["get",["_eventDataLoaded"]]],null,50,49],["close-element"],["text","\\n\\n"],["append",["helper",["battlepass-chase-modal"],null,[["isVisible","chaseCategoryId","claimedIds","passUpgraded","onClose","onItemClaimed"],[["get",["showChaseModal"]],["get",["chaseCategoryId"]],["get",["_claimedIds"]],["get",["passUpgraded"]],["helper",["action"],[["get",[null]],"closeChaseModal"],null],["helper",["action"],[["get",[null]],"onChaseItemClaimed"],null]]]],false],["text","\\n\\n"],["block",["if"],[["get",["purchaseError"]]],null,6],["text","\\n"],["block",["if"],[["get",["showKrPurchaseConfirm"]]],null,4],["text","\\n"],["block",["if"],[["get",["isFiatPurchaseModalOpen"]]],null,2],["text","\\n"],["block",["if"],[["get",["showDropRatesModal"]]],null,1],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","    "],["append",["helper",["jade-drop-rates-modal"],null,[["oddsData","title"],[["get",["selectedItemLootOddsData"]],["get",["selectedItem","name"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissibleType","onClose","show"],["DialogDismiss","inside",["helper",["action"],[["get",[null]],"closeDropRatesModal"],null],true]],0]],"locals":[]},{"statements":[["text","  "],["append",["helper",["jade-fiat-purchase-modal"],null,[["item","bundles","itemDescription","wallet","onClose","onRpPurchase"],[["get",["fiatPurchaseItem"]],["get",["passBundles"]],["get",["fiatPurchaseDescription"]],["get",["_walletBalance"]],["helper",["action"],[["get",[null]],"closeFiatModal"],null],["helper",["action"],[["get",[null]],"rpFallbackPurchase"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal__title"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_title"]],false],["close-element"],["text","\\n      "],["open-element","ul",[]],["static-attr","class","battlepass-kr-confirm-modal__list"],["flush-element"],["text","\\n        "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_1"]],false],["close-element"],["text","\\n        "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["tra","battlepass_kr_refund_criteria_2"]],false],["close-element"],["text","\\n        "],["open-element","li",[]],["static-attr","class","battlepass-kr-confirm-modal__item"],["flush-element"],["append",["unknown",["krRefundAgreementText"]],false],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-kr-confirm-modal__actions"],["flush-element"],["text","\\n        "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","battlepass-kr-confirm-modal__btn"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"cancelKrPurchase"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","battlepass_kr_purchase_confirm_cancel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","battlepass-kr-confirm-modal__btn"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"confirmKrPurchase"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","battlepass_kr_purchase_confirm_accept"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissible","dismissibleType","onClose"],["DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"cancelKrPurchase"],null]]],3]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","battlepass-error-modal"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-title"],["flush-element"],["append",["unknown",["tra","battlepass_purchase_failed_title"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-message"],["flush-element"],["append",["unknown",["purchaseError"]],false],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","battlepass-error-modal-actions"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"dismissPurchaseError"],null],null],["flush-element"],["text","\\n          "],["append",["unknown",["tra","battlepass_purchase_ok"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["uikit-modal"],null,[["type","dismissible","dismissibleType","onClose"],["DialogAlert",true,"inside",["helper",["action"],[["get",[null]],"dismissPurchaseError"],null]]],5]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","battlepass-empty__text"],["flush-element"],["append",["unknown",["emptyStateText","full"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","p",[]],["static-attr","class","battlepass-empty__text"],["flush-element"],["append",["unknown",["emptyStateText","before"]],false],["open-element","span",[]],["static-attr","class","battlepass-empty__date"],["flush-element"],["append",["unknown",["emptyStateText","date"]],false],["close-element"],["append",["unknown",["emptyStateText","after"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-empty"],["flush-element"],["text","\\n        "],["open-element","img",[]],["static-attr","class","battlepass-empty__image"],["static-attr","src","/fe/lol-jade/images/battlepass/battlepass-image.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"],["block",["if"],[["get",["emptyStateText","hasDate"]]],null,8,7],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                        "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_requires_premium_pass"]],false],["close-element"],["text","\\n                      "],["close-element"],["text","\\n                      "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","hasUnmetPrerequisites"]]],null,10],["text","                  "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-primary"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"upgradeBattlepass"],null],null],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-upgrade-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/premium-pass-icon.svg"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_button_upgrade_pass"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","battlepass-premium-unlocked"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown"],["static-attr","src","/fe/lol-jade/images/battlepass/crown.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","battlepass-premium-label"],["flush-element"],["append",["unknown",["tra","battlepass_button_upgraded"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-action-btn is-purchase ",["helper",["if"],[["get",["purchasingItem"]],"is-loading"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"purchaseItem"],null],null],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-loading-spinner"],["flush-element"],["close-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-coin-icon"],["dynamic-attr","src",["concat",[["unknown",["selectedItem","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n              "]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-insufficient"],["flush-element"],["text","\\n                  "],["open-element","img",[]],["static-attr","class","battlepass-coin-icon"],["dynamic-attr","src",["concat",[["unknown",["selectedItem","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["cannotAffordSelectedItem"]]],null,14,13]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-claim-section"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_unlock_spend_tokens"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-locked"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","isLocked"]]],null,16,15]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-claim-section"],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-tooltip"],["flush-element"],["text","\\n                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_requires_premium_pass"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-required-arrow"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-purchase is-premium-locked"],["flush-element"],["text","\\n                    "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["flush-element"],["append",["unknown",["selectedItem","cost"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","hasUnmetPrerequisites"]]],null,18,17]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","battlepass-action-btn is-claimed"],["flush-element"],["text","\\n                  "],["open-element","svg",[]],["static-attr","class","battlepass-owned-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                    "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#1E282D"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","span",[]],["flush-element"],["append",["unknown",["tra","battlepass_button_owned"]],false],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","battlepass-preview-placeholder"],["flush-element"],["append",["unknown",["tra","battlepass_item_preview"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","battlepass-preview-drop-rates"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"openDropRatesModal"],null],null],["flush-element"],["append",["unknown",["tra","battlepass_view_drop_rates"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","span",[]],["static-attr","class","battlepass-preview-description"],["flush-element"],["append",["unknown",["selectedItem","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","battlepass-preview-placeholder"],["flush-element"],["append",["unknown",["tra","battlepass_item_preview"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["unless"],[["get",["selectedItem","previewUrl"]]],null,24],["text","              "],["open-element","div",[]],["static-attr","class","battlepass-preview-info"],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","battlepass-preview-type"],["flush-element"],["append",["unknown",["selectedItem","type"]],false],["close-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","battlepass-preview-name"],["flush-element"],["append",["unknown",["selectedItem","name"]],true],["close-element"],["text","\\n"],["block",["if"],[["get",["selectedItem","description"]]],null,23],["block",["if"],[["get",["selectedItemHasDropRates"]]],null,22],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-frame"],["flush-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-tl"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-left.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-tr"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-right.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-br"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-right.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                      "],["open-element","img",[]],["static-attr","class","battlepass-item-corner is-bl"],["static-attr","src","/fe/lol-jade/images/battlepass/frame-corner-left.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/crown-muted.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-premium-crown-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/crown-blue.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-lock-overlay"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passUpgraded"]]],null,28,27],["text","                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","battlepass-cost-coin"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","battlepass-cost-lock"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-item-cost ",["helper",["unless"],[["get",["item","canAfford"]],"is-insufficient"],null]," ",["helper",["if"],[["get",["item","isLocked"]],"is-locked"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","isLocked"]]],null,31,30],["text","                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","battlepass-item-claimed"],["flush-element"],["text","\\n                      "],["open-element","svg",[]],["static-attr","class","battlepass-claimed-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                        "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#E9E2D2"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                      "],["close-element"],["text","\\n                    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","video",[]],["static-attr","class","battlepass-item-video"],["dynamic-attr","src",["concat",[["unknown",["item","tileVideoPath"]]]]],["static-attr","autoplay",""],["static-attr","loop",""],["static-attr","muted",""],["static-attr","playsinline",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                      "],["open-element","img",[]],["static-attr","class","battlepass-item-icon"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-item ",["unknown",["item","tileSizeClass"]]," ",["helper",["if"],[["get",["item","isSelected"]],"is-selected"],null]," ",["helper",["if"],[["get",["item","hasUnmetPrerequisites"]],"has-prereqs"],null]," ",["helper",["if"],[["get",["item","isPremiumUnlocked"]],"is-premium-unlocked"],null]," ",["helper",["if"],[["get",["item","isClaimed"]],"is-claimed"],null]," ",["helper",["if"],[["get",["item","isLocked"]],"is-locked"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectItem",["get",["item"]]],null],null],["flush-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","battlepass-item-bg"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,35],["text","                  "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","tileVideoPath"]]],null,34],["block",["if"],[["get",["item","isClaimed"]]],null,33,32],["block",["if"],[["get",["item","isPassGated"]]],null,29,26],["text","                "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","                  "],["open-element","svg",[]],["static-attr","class","battlepass-claimed-counter-check"],["static-attr","viewBox","0 0 48 48"],["static-attr","fill","none"],["static-attr","xmlns","http://www.w3.org/2000/svg","http://www.w3.org/2000/xmlns/"],["flush-element"],["text","\\n                    "],["open-element","path",[]],["static-attr","d","M12 25L21 34L37 15"],["static-attr","stroke","#00A741"],["static-attr","stroke-width","6"],["static-attr","stroke-linecap","square"],["static-attr","stroke-linejoin","miter"],["flush-element"],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-claimed-counter ",["helper",["if"],[["get",["allClaimed"]],"is-all-claimed"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["allClaimed"]]],null,37],["text","                "],["open-element","span",[]],["flush-element"],["append",["unknown",["claimedCountText"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","battlepass-unlock-progress"],["flush-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["unlockProgressParts","beforeCoin"]],false],["close-element"],["text","\\n                "],["open-element","img",[]],["static-attr","class","battlepass-unlock-coin"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n                "],["open-element","span",[]],["flush-element"],["append",["unknown",["unlockProgressParts","afterCoin"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","span",[]],["static-attr","class","battlepass-tier-number"],["flush-element"],["append",["unknown",["tier","number"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","battlepass-lock-icon"],["static-attr","src","/fe/lol-jade/images/battlepass/lock-closed.png"],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["battlepass-tier-btn ",["helper",["if"],[["get",["tier","isSelected"]],"is-selected"],null]," ",["helper",["if"],[["get",["tier","isLocked"]],"is-locked"],null]]]],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectTier",["get",["tier"]]],null],null],["flush-element"],["text","\\n"],["block",["if"],[["get",["tier","isLocked"]]],null,41,40],["text","                "],["close-element"],["text","\\n"]],"locals":["tier"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-content"],["flush-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-left-panel"],["flush-element"],["text","\\n\\n"],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-tier-section"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-tier-buttons"],["flush-element"],["text","\\n"],["block",["each"],[["get",["tiers"]]],null,42],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n\\n"],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-items-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedTier","isLocked"]]],null,39,38],["text","            "],["open-element","div",[]],["static-attr","class","battlepass-items-grid"],["flush-element"],["text","\\n"],["block",["each"],[["get",["items"]]],null,36],["text","            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n"],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-right-panel"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-preview"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedItem"]]],null,25,21],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","battlepass-actions-wrapper"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-actions"],["flush-element"],["text","\\n"],["block",["if"],[["get",["selectedItem","isClaimed"]]],null,20,19],["text","              "],["open-element","div",[]],["static-attr","class","battlepass-upgrade-section"],["flush-element"],["text","\\n"],["block",["if"],[["get",["passUpgraded"]]],null,12,11],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["append",["helper",["digital-goods-disclaimer"],null,[["class","textOverride","noDisclaimerRegions"],["battlepass-disclaimer",["get",["digitalGoodsDisclaimerTextOverride"]],["get",["noDisclaimerRegions"]]]]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","battlepass-currency battlepass-currency--banked"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n              "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["lockedTokenCount"]],false],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_banked_tooltip_desc"]],false],["close-element"],["text","\\n                "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["bankedTooltipCount"]],false],["close-element"],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","battlepass-title-timer"],["flush-element"],["text","\\n          "],["append",["helper",["reset-timer"],null,[["endDate","showDays","showHours","showMinutes","showSeconds","showUnits","digits","separator","timerText","showContainer","transparentBackground"],[["get",["_passEndTimeMs"]],true,false,false,false,true,1," ","{{remainingTime}}",true,true]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-title-container"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","battlepass-title-name"],["flush-element"],["append",["unknown",["battlepassName"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["_passEndTimeMs"]]],null,45],["text","        "],["open-element","div",[]],["static-attr","class","battlepass-currencies"],["flush-element"],["text","\\n"],["block",["if"],[["get",["showTokenBank"]]],null,44],["text","          "],["open-element","div",[]],["static-attr","class","battlepass-currency"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"positionCurrencyTooltip"],null],null],["flush-element"],["text","\\n            "],["open-element","img",[]],["static-attr","class","battlepass-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["tokenIconPath"]]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","battlepass-currency-balance"],["flush-element"],["append",["unknown",["tokenBalance"]],false],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","battlepass-currency-tooltip"],["flush-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__desc"],["flush-element"],["append",["unknown",["tra","battlepass_currency_coins_tooltip_desc"]],false],["close-element"],["text","\\n              "],["open-element","p",[]],["static-attr","class","battlepass-currency-tooltip__count"],["flush-element"],["append",["unknown",["coinsTooltipCount"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","battlepass-preview-backdrop"],["flush-element"],["text","\\n        "],["open-element","img",[]],["dynamic-attr","class",["concat",["battlepass-preview-backdrop-image ",["helper",["if"],[["get",["selectedItem","hasFullScreenSplash"]],"has-full-screen-splash"],null]]]],["dynamic-attr","src",["concat",[["unknown",["selectedItem","previewUrl"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["selectedItem","previewUrl"]]],null,47]],"locals":[]},{"statements":[["block",["if"],[["get",["hasActiveEvent"]]],null,48],["text","  "],["open-element","div",[]],["static-attr","class","jade-battlepass-container"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","battlepass-main-container"],["flush-element"],["text","\\n\\n"],["block",["if"],[["get",["hasActiveEvent"]]],null,46],["text","\\n"],["block",["if"],[["get",["hasActiveEvent"]]],null,43,9],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","battlepass-loading"],["flush-element"],["text","\\n    "],["append",["helper",["uikit-spinner"],null,[["width","height"],["50px","50px"]]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -16280,10 +16397,18 @@
             var s = n(1);
             n(310);
             var a = s.Ember.Component.extend({
-                classNames: ["rcp-fe-lol-jade-battlepass-reward-celebration"],
+                classNames: ["battlepass-reward-celebration-component"],
                 layout: n(311),
                 name: null,
-                iconUrl: null
+                iconUrl: null,
+                actions: {
+                    onNextButtonClicked() {
+                        const e = this.get("vignetteId");
+                        s.VignetteCelebrationManager.remove({
+                            id: e
+                        })
+                    }
+                }
             });
             t.default = a
         }, (e, t, n) => {
@@ -16292,8 +16417,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "SbaGiARk",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","rewards-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reward"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reward-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["iconUrl"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["dynamic-attr","alt",["unknown",["name"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "Sr+fPYzb",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Release\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","battlepass-reward-celebration-background"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","rewards-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reward"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reward-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["iconUrl"]]],null,1],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","digital-goods-disclaimer-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isKREnv"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","battlepass-reward-next-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onNextButtonClicked"],null],null],["flush-element"],["append",["unknown",["tra","battlepass_celebrate_button"]],false],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["digital-goods-disclaimer"],null,[["class","textOverride","linkOverride","learnMoreTextOverride"],["battlepass-disclaimer",["get",["tra","battlepass_kr_celebration_digital_goods_disclaimer"]],["get",["tra","battlepass_kr_refund_criteria_disclosures_link"]],["get",["tra","battlepass_kr_celebration_digital_goods_disclaimer_learn_more_override"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["dynamic-attr","alt",["unknown",["name"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -16347,14 +16472,55 @@
             })
         }, (e, t, n) => {
             "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
+            }), t.default = void 0;
+            var s = n(1),
+                a = s.Ember.Service.extend({
+                    displayConfirmationToast: function(e, t) {
+                        if (!e || !t) return;
+                        const n = this.get("tra"),
+                            a = n && n.get && n.get("shoppefront_confirm_toast_body") || "",
+                            l = document.createElement("div");
+                        l.innerHTML = `\n      <div class="shoppefont-confirm-toast">\n        <div class="icon-container" style="background-image: url('${t}');">\n          <div class="border permanent"></div>\n        </div>\n        <div class="context">\n          <div class="title">${e}</div>\n          <div class="body">${a}</div>\n        </div>\n      </div>`;
+                        const o = {
+                            displayNameLocKey: "navbar_collection",
+                            show: function() {}
+                        };
+                        (0, s.getProvider)().getOptional("rcp-fe-lol-navigation").then((e => {
+                            e.showContextualNotification(o, l, {
+                                dismissOtherNotifications: !0,
+                                target: {
+                                    domNode: null,
+                                    anchor: {
+                                        x: "center",
+                                        y: "bottom"
+                                    }
+                                },
+                                orientation: "bottom",
+                                anchor: {
+                                    x: "center",
+                                    y: "top"
+                                },
+                                offset: {
+                                    x: 0,
+                                    y: 4
+                                }
+                            })
+                        }), (e => s.logger.error("Provider getOptional failure", e)))
+                    }
+                });
+            t.default = a
+        }, (e, t, n) => {
+            "use strict";
             var s, a = n(1),
                 l = (s = n(105)) && s.__esModule ? s : {
                     default: s
                 },
-                o = n(319),
-                i = n(321),
+                o = n(320),
+                i = n(322),
                 r = n(2);
-            n(322);
+            n(323);
             const {
                 DomMixin: c
             } = a.EmberAddons.EmberLifeline, m = a.UiKitPlugin.getLayerManager(), d = a.ViewportPlugin.fullScreen().getScreenRoot("rcp-fe-lol-champ-select");
@@ -16454,7 +16620,7 @@
                 })
             };
             var s = n(1);
-            n(320);
+            n(321);
             s.ComponentFactory.setFactory("FullScreenModal", (function(e) {
                 const t = document.createElement("div");
                 t.className = e.elementClassName;
@@ -16507,10 +16673,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(324),
+                a = n(325),
                 l = n(2),
                 o = n(231);
-            n(325);
+            n(326);
             const {
                 RunMixin: i
             } = s.EmberAddons.EmberLifeline, r = s.UiKitPlugin.getTemplateHelper();
@@ -16702,7 +16868,7 @@
             var s = n(1),
                 a = n(2),
                 l = n(231);
-            n(327);
+            n(328);
             var o = s.Ember.Component.extend({
                 layout: n(317),
                 classNames: ["jade-summoner-object"],
@@ -16867,7 +17033,7 @@
                 return e ? n : t
             })(e)
         }
-        n(332);
+        n(333);
         const o = document.currentScript.ownerDocument;
         const i = window.getPluginAnnounceEventName("rcp-fe-lol-jade");
         o.addEventListener(i, (function(e) {

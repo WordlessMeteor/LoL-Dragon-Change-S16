@@ -254,7 +254,7 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "BonusMonsterDamage",
+                    "name": "TotalMonsterDamage",
                     "values": [
                         200.0,
                         260.0,
@@ -295,7 +295,6 @@
             ],
             "mSpellCalculations": {
                 "TotalDamage": {
-                    "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseDamage",
@@ -308,10 +307,14 @@
                     ],
                     "__type": "GameCalculation"
                 },
-                "{fa0ccfe4}": {
+                "MonsterDamageCalc": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "BonusMonsterDamage",
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "{fa0ccfe4}",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
@@ -484,7 +487,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "BonusMonsterDamage",
+                                    "type": "TotalMonsterDamage",
                                     "typeIndex": 3,
                                     "nameOverride": "Spell_AlphaStrike_BonusMinionMonsterDamage",
                                     "__type": "TooltipInstanceListElement"

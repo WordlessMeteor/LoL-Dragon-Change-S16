@@ -20814,6 +20814,13 @@
         ],
         "__type": "GameMutatorExpansions"
     },
+    "{c4253304}": {
+        "mExpandedMutator": "WriteSNRWithMLEGSValidation",
+        "mMutators": [
+            "WriteSNRWithMLEGSValidation"
+        ],
+        "__type": "GameMutatorExpansions"
+    },
     "{c53fb552}": {
         "mExpandedMutator": "TFT3_SetVariation_Bonanza",
         "mMutators": [
@@ -23487,6 +23494,7 @@
             "{d52647e8}",
             "{b55e5cff}",
             "{359bec10}",
+            "{73c392f2}",
             "{de9ddf30}",
             "{becbf88f}",
             "{5c15ec98}",
@@ -24314,8 +24322,35 @@
                     "effect": "{024d0c5e}",
                     "__type": "StealthVfxInstance"
                 },
-                "DamageShimmerEffect": {
-                    "effect": "{b2be2816}",
+                "__type": "StealthData"
+            },
+            {
+                "StealthName": "BasicInvisibility_Jade",
+                "RevealFlags": {
+                    "OnPerceptionBubbleReveal": true,
+                    "InRangeOfTower": true,
+                    "__type": "StealthBreakFlags"
+                },
+                "UnSelectableByEnemies": true,
+                "HideVfxFromEnemies": true,
+                "HideModelFromEnemies": true,
+                "HideHealthBarFromEnemies": true,
+                "Ghosted": true,
+                "ScreenFade": "{d02c1921}",
+                "CharacterFadeInstance": {
+                    "fade": "{ed81496c}",
+                    "__type": "StealthCharacterFadeInstance"
+                },
+                "EnterStealthEffect": {
+                    "effect": "{1306dc84}",
+                    "__type": "StealthVfxInstance"
+                },
+                "PersistentStealthEffect": {
+                    "effect": "{435d432b}",
+                    "__type": "StealthVfxInstance"
+                },
+                "ExitStealthEffect": {
+                    "effect": "{024d0c5e}",
                     "__type": "StealthVfxInstance"
                 },
                 "__type": "StealthData"
