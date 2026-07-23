@@ -270,7 +270,7 @@
                 "__type": "X3DSharedTextureDef"
             }
         ],
-        "{e0540d74}": [
+        "samplers": [
             "{a6bded4f}",
             "{b40cd67c}",
             "{51bfd9ae}",
@@ -280,7 +280,7 @@
             "{3359c942}",
             "{14725299}"
         ],
-        "{08f782f8}": [
+        "dataBuffers": [
             {
                 "name": "LightRegionInfo",
                 "{a1d375b5}": 2,
@@ -320,19 +320,19 @@
     },
     "{21026ca5}": {
         "objectPath": "{21026ca5}",
-        "__type": "{c94926c6}"
+        "__type": "ParticleQuadLitShadingModel"
     },
     "{3c6ecc43}": {
         "objectPath": "{3c6ecc43}",
-        "__type": "{6cd105a4}"
+        "__type": "ParticleMeshLitShadingModel"
     },
     "{3edb76d0}": {
         "objectPath": "{3edb76d0}",
-        "__type": "{3d98a8d3}"
+        "__type": "ParticleQuadPbrShadingModel"
     },
     "{515496de}": {
         "objectPath": "{515496de}",
-        "__type": "{49c67a21}"
+        "__type": "ParticleMeshPbrShadingModel"
     },
     "{517a2639}": {
         "objectPath": "{517a2639}",
@@ -340,7 +340,7 @@
     },
     "{583e91d4}": {
         "objectPath": "{583e91d4}",
-        "__type": "{66a573df}"
+        "__type": "ParticleQuadUnlitShadingModel"
     },
     "{62b174c9}": {
         "objectPath": "{62b174c9}",
@@ -372,55 +372,55 @@
     },
     "{0df3cfcb}": {
         "name": "CharacterClamp",
-        "{b6887851}": 4,
-        "__type": "{429c75be}"
+        "maxAnisotropy": 4,
+        "__type": "X3DSharedSamplerDef"
     },
     "{14725299}": {
         "name": "Clamp_Linear_Mip",
-        "__type": "{429c75be}"
+        "__type": "X3DSharedSamplerDef"
     },
     "{3359c942}": {
         "name": "EnvironmentWrap",
-        "{82ab734b}": 0,
-        "{83ab74de}": 0,
-        "{84ab7671}": 0,
-        "{b6887851}": 4,
-        "__type": "{429c75be}"
+        "addressModeU": 0,
+        "addressModeV": 0,
+        "addressModeW": 0,
+        "maxAnisotropy": 4,
+        "__type": "X3DSharedSamplerDef"
     },
     "{4826710d}": {
         "name": "EnvironmentClamp",
-        "{b6887851}": 4,
-        "__type": "{429c75be}"
+        "maxAnisotropy": 4,
+        "__type": "X3DSharedSamplerDef"
     },
     "{51bfd9ae}": {
         "name": "Mirror",
-        "{82ab734b}": 2,
-        "{83ab74de}": 2,
-        "{84ab7671}": 2,
-        "{21bafb31}": -1,
-        "__type": "{429c75be}"
+        "addressModeU": 2,
+        "addressModeV": 2,
+        "addressModeW": 2,
+        "mipLodBias": -1,
+        "__type": "X3DSharedSamplerDef"
     },
     "{a6bded4f}": {
         "name": "Clamp_No_Mip",
         "register": 15,
-        "{650eb4bb}": 0,
-        "__type": "{429c75be}"
+        "mipFilter": 0,
+        "__type": "X3DSharedSamplerDef"
     },
     "{a7d7f4a0}": {
         "name": "CharacterWrap",
-        "{82ab734b}": 0,
-        "{83ab74de}": 0,
-        "{84ab7671}": 0,
-        "{b6887851}": 4,
-        "__type": "{429c75be}"
+        "addressModeU": 0,
+        "addressModeV": 0,
+        "addressModeW": 0,
+        "maxAnisotropy": 4,
+        "__type": "X3DSharedSamplerDef"
     },
     "{b40cd67c}": {
         "name": "Wrap_No_Mip",
-        "{82ab734b}": 0,
-        "{83ab74de}": 0,
-        "{84ab7671}": 0,
-        "{650eb4bb}": 0,
-        "__type": "{429c75be}"
+        "addressModeU": 0,
+        "addressModeV": 0,
+        "addressModeW": 0,
+        "mipFilter": 0,
+        "__type": "X3DSharedSamplerDef"
     },
     "{2fa9e31a}": {
         "name": "PerFrameVertexCB",
