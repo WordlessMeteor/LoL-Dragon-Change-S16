@@ -44,7 +44,7 @@
             }), t.VOTING_PREFS_PATH = t.VOTING_PCO_PATH = t.VOTING_PCO_CATEGORY = t.TIMER_PHASES = t.SWAP_TYPES = t.SWAP_SESSION_SERVICE_CALL_PATHS = t.STANDARD_MAX_TEAM_SIZE = t.SOUNDS_PATH = t.SFX_CHANNEL = t.SCREENS = t.RANDOM_CHAMP = t.POSITION_TOP = t.POSITION_SUPPORT = t.POSITION_NONE = t.POSITION_MIDDLE = t.POSITION_JUNGLE = t.POSITION_ICON_PATHS = t.POSITION_BOTTOM = t.POSITION_ANY = t.POSITIONS = t.PLUGIN_NAME = t.PANE_STATES = t.PANES = t.NONE_CHAMP = t.MASTERY_WARNING_ICON = t.MASTERY_TREE_ICONS = t.MASTERY_PREREQ_BARS = t.JADE_SCREEN_NAME = t.JADE_QUEUE_ID = t.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS = t.JADE_NAV_ROUTES_CONFIG_PATH = t.JADE_NAV_ROUTES = t.JADE_MAP_ID = t.JADE_HOME_TEMPLATE_TYPES = t.JADE_HOME_TAB_IDS = t.JADE_HOME_STATES = t.JADE_GAME_MODE = t.JADE_CONSTANTS = t.JADE_CHAMPION_SWAP_ONLY_QUEUE_IDS = t.JADE_AUDIO_PATH = t.INVENTORY_TYPES = t.INVALID_SWAP_ID = t.INVALID_SPELL_ID = t.INVALID_SKIN_ID = t.DEFAULT_PANE_TABS = t.DEFAULT_JADE_NAV_ROUTES_CONFIG = t.BLADES_COMPONENT_TYPES = void 0, t.formatBlades = function(e = []) {
                 const t = [],
                     n = {};
-                for (const s of e) s?.type === A.MASTHEAD_CONTENT_BLOCK ? t.push(s) : s?.type === A.VOTING_CONTENT_BLOCK && (O(s) ? n.voting = s : n.votingError = !0);
+                for (const s of e) s?.type === A.MASTHEAD_CONTENT_BLOCK ? t.push(s) : s?.type === A.VOTING_CONTENT_BLOCK && (D(s) ? n.voting = s : n.votingError = !0);
                 return n.mastheadBlades = t, n
             }, t.getInventoryTypeUuidToPaw = function() {
                 if (!y) {
@@ -222,11 +222,11 @@
                 VOTING_CONTENT_BLOCK: "votingContentBlock"
             };
 
-            function O(e) {
+            function D(e) {
                 return Boolean(e?.votingSessionID) && Boolean(e?.votingStartDate) && Boolean(e?.votingEndDate)
             }
             t.BLADES_COMPONENT_TYPES = A;
-            const D = {
+            const O = {
                 HOME: "home",
                 RUNES: "runes",
                 MASTERIES: "masteries",
@@ -234,15 +234,15 @@
                 STORE: "store",
                 BATTLEPASS: "battlepass"
             };
-            t.JADE_NAV_ROUTES = D;
+            t.JADE_NAV_ROUTES = O;
             const M = {
-                HOME: D.HOME,
+                HOME: O.HOME,
                 VOTING: "voting",
-                BATTLEPASS: D.BATTLEPASS
+                BATTLEPASS: O.BATTLEPASS
             };
             t.JADE_HOME_TAB_IDS = M;
             t.JADE_NAV_ROUTES_CONFIG_PATH = "/lol-client-config/v3/client-config/lol.client_settings.jade.navRoutes";
-            const j = Object.fromEntries(Object.entries(D).map((([e, t]) => [t, {
+            const j = Object.fromEntries(Object.entries(O).map((([e, t]) => [t, {
                 key: e,
                 enabled: !0
             }])));
@@ -2164,7 +2164,7 @@
                 setupController(e) {
                     this._super(...arguments);
                     const t = e.get("shoppefrontService");
-                    t && t.loadStores("JADE_SHOP");
+                    t && t.loadStores("JADE_SHOP"), e.refreshWalletBadgesOnEnter();
                     const n = e.get("eventHubService");
                     (0, a.ensurePassEventActive)(n)
                 },
@@ -2280,7 +2280,9 @@
                     }))
                 },
                 _fetchQueueChampions(e) {
-                    (0, s.dataBinding)("/lol-champions", s.socket).get(this._championsQueuePath).then((t => {
+                    (0, s.dataBinding)("/lol-champions", s.socket).get(this._championsQueuePath, {
+                        skipCache: !0
+                    }).then((t => {
                         if (t && Array.isArray(t)) {
                             this._lastRawChampions = t;
                             const n = this._enrichChampions(t);
@@ -2793,6 +2795,17 @@
                         i.defineProperty(this, "_walletBalance", i.computed(...e, (function() {
                             return this.get("lolInventoryService.currencyCount") || {}
                         })))
+                    },
+                    _refreshWalletBalances() {
+                        const e = this.get("shoppefrontService.uniquePaymentOptions") || [],
+                            t = this.get("lolInventoryService");
+                        t && e.forEach((e => {
+                            s.db.get(`/lol-inventory/v1/wallet/${e}`, {
+                                skipCache: !0
+                            }).then((n => {
+                                this.isDestroying || this.isDestroyed || !n || t.set(`currencyCount.${e}`, n[e] || 0)
+                            })).catch((() => {}))
+                        }))
                     },
                     isPurchaseModalItemActive: i.computed("purchaseModalItem", "shoppefrontService.categories.[]", (function() {
                         const e = this.get("purchaseModalItem");
@@ -5540,32 +5553,32 @@
                     sharedPricesBySku: r,
                     fiatMap: d,
                     currenciesByName: h,
-                    ownedItemInstanceIds: P,
-                    ownedInventoryContent: k,
-                    classicExclusiveChampionSkinItemIds: C,
-                    runeInventoryCounts: w,
-                    holoFoilByContentId: T,
-                    tra: I
-                } = n, R = (0, l.getItemCost)(e), A = a.get(e.id), O = A ? A.toUpperCase() : null, D = O ? d[O] : null;
-                if (null == R && !O) return null;
-                const M = (0, l.getPricesWithIcons)(e, h),
-                    j = M.length > 0 ? M : r.get(A) || [],
-                    L = j.find((e => e.currency !== p)),
-                    N = L?.currency ?? j[0]?.currency ?? (0, l.getItemCurrency)(e),
-                    B = h[N],
-                    U = L?.cost ?? R ?? j[0]?.cost ?? null,
-                    F = [...s.get(e.id) || []],
-                    H = F.includes(u.PORTRAITS?.ID),
-                    V = e.overrideTileSize || (H ? "tall-tile" : null),
-                    q = e.purchaseUnits?.[0]?.fulfillment,
-                    Y = q?.itemId || q?.itemInstanceId || null,
-                    G = H && T && Y && T.get(Y) || "",
-                    W = !!G,
-                    K = (0, o.getRequirementText)(e, k),
-                    J = E.has(e.inventoryTypeId),
-                    $ = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_PAGE,
-                    X = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_QUINTESSENCE,
-                    z = J || $ ? function(e, t, n = {}) {
+                    ownedItemInstanceIds: k,
+                    ownedInventoryContent: C,
+                    classicExclusiveChampionSkinItemIds: w,
+                    runeInventoryCounts: T,
+                    holoFoilByContentId: I,
+                    tra: R
+                } = n, A = (0, l.getItemCost)(e), D = a.get(e.id), O = D ? D.toUpperCase() : null, M = O ? d[O] : null;
+                if (null == A && !O) return null;
+                const j = (0, l.getPricesWithIcons)(e, h),
+                    L = j.length > 0 ? j : r.get(D) || [],
+                    N = L.find((e => e.currency !== p)),
+                    B = N?.currency ?? L[0]?.currency ?? (0, l.getItemCurrency)(e),
+                    F = h[B],
+                    U = N?.cost ?? A ?? L[0]?.cost ?? null,
+                    H = [...s.get(e.id) || []],
+                    V = H.includes(u.PORTRAITS?.ID),
+                    q = e.overrideTileSize || (V ? "tall-tile" : null),
+                    Y = e.purchaseUnits?.[0]?.fulfillment,
+                    G = Y?.itemId || Y?.itemInstanceId || null,
+                    W = V && I && G && I.get(G) || "",
+                    K = !!W,
+                    J = (0, o.getRequirementText)(e, C),
+                    $ = E.has(e.inventoryTypeId),
+                    X = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_PAGE,
+                    z = e.inventoryTypeId === c.RUNE_INVENTORY_TYPE_IDS.JADE_RUNE_QUINTESSENCE,
+                    Q = $ || X ? function(e, t, n = {}) {
                         let s = 0;
                         const a = _[e.inventoryTypeId];
                         if (t) {
@@ -5575,77 +5588,79 @@
                             s = (n[a] || {})[e.itemId] || 0
                         }
                         return s
-                    }(e, $, w) : 0,
-                    Q = function(e, t, n, s) {
+                    }(e, X, T) : 0,
+                    Z = function(e, t, n, s) {
                         const a = e && e.purchaseUnits && e.purchaseUnits[0] && e.purchaseUnits[0].fulfillment,
                             l = a && "number" == typeof a.maxQuantity ? a.maxQuantity : 0;
                         if (l > 0) return l;
                         if (s) return y;
                         if (t) return n ? v : b;
                         return
-                    }(e, J, X, $),
-                    Z = x.has(e.inventoryTypeId),
-                    ee = z === Q,
-                    te = (0, o.isItemOwned)(e, P) || Z && ee,
-                    ne = !te && !(0, o.hasUnsatisfiedPrerequisite)(e),
+                    }(e, $, z, X),
+                    ee = x.has(e.inventoryTypeId),
+                    te = Q === Z,
+                    ne = (0, o.isItemOwned)(e, k) || ee && te,
+                    se = !ne && !(0, o.hasUnsatisfiedPrerequisite)(e),
                     {
-                        hasDiscount: se,
-                        discountPercent: ae,
-                        discountLabel: le
-                    } = (0, l.getDiscountInfo)(j),
-                    oe = (0, i.getDisplayType)(e, I),
-                    ie = !!D,
-                    re = D ? (0, l.formatFiatPrice)(D.realAmountCents, D.realCurrencyCode) : null,
-                    ce = (e.purchaseUnits || []).length > 1,
-                    me = ce ? (0, l.getBundleTotalCost)(e, N) : null,
-                    de = f(e.id, I) || (ce ? e.name || e.traTitle || e.itemName : null),
-                    ue = null != me ? me : U;
+                        hasDiscount: ae,
+                        discountPercent: le,
+                        discountLabel: oe
+                    } = (0, l.getDiscountInfo)(L),
+                    ie = (0, i.getDisplayType)(e, R),
+                    re = !!M,
+                    ce = M ? (0, l.formatFiatPrice)(M.realAmountCents, M.realCurrencyCode) : null,
+                    me = (e.purchaseUnits || []).length > 1,
+                    de = f(e.id, R) || (me ? e.name || e.traTitle || e.itemName : null),
+                    ue = me ? (0, l.getBundleTotalCost)(e, B) : null,
+                    pe = me ? P(e, k) : 0,
+                    he = null != ue ? ue - pe : U;
                 return {
                     id: e.id,
                     name: de || e.traTitle || e.itemName,
                     formattedName: de || e.formattedName || e.traTitle || e.itemName,
                     description: e.itemDescription,
                     index: t,
-                    cost: ue,
-                    originalCost: null != me ? me : L?.originalCost ?? j[0]?.originalCost ?? U,
-                    currency: N,
-                    currencyIconPath: B ? B.iconPath : null,
-                    prices: j.length > 1 ? j : null,
-                    hasMultiplePrices: j.length > 1,
-                    hasDiscount: se,
-                    discountPercent: ae,
-                    discountLabel: le,
-                    salePrices: se ? j : null,
+                    cost: he,
+                    originalCost: null != ue ? ue : N?.originalCost ?? L[0]?.originalCost ?? U,
+                    bundleSavings: pe,
+                    currency: B,
+                    currencyIconPath: F ? F.iconPath : null,
+                    prices: L.length > 1 ? L : null,
+                    hasMultiplePrices: L.length > 1,
+                    hasDiscount: ae,
+                    discountPercent: le,
+                    discountLabel: oe,
+                    salePrices: ae ? L : null,
                     iconUrl: g(e.id) || e.tilePath || e.splashPath || null,
-                    tileSize: V,
-                    tileSizeClass: V ? "jade-tile-" + V : "",
-                    holoFoilPath: G,
-                    hasHoloFoil: W,
-                    isPortrait: H,
-                    isOwned: te,
-                    isPurchasable: ne,
-                    _prereqKey: K,
+                    tileSize: q,
+                    tileSizeClass: q ? "jade-tile-" + q : "",
+                    holoFoilPath: W,
+                    hasHoloFoil: K,
+                    isPortrait: V,
+                    isOwned: ne,
+                    isPurchasable: se,
+                    _prereqKey: J,
                     catalogItem: e,
-                    shopCategories: F,
-                    contentType: oe,
-                    isBundle: ce,
-                    isQuantityPurchasable: Z,
-                    isRune: J,
-                    isRunePage: $,
-                    isQuintessence: X,
-                    maxOwnable: Q,
-                    quantityPurchasableItemCount: z,
-                    isMaxQuantityOwned: ee,
+                    shopCategories: H,
+                    contentType: ie,
+                    isBundle: me,
+                    isQuantityPurchasable: ee,
+                    isRune: $,
+                    isRunePage: X,
+                    isQuintessence: z,
+                    maxOwnable: Z,
+                    quantityPurchasableItemCount: Q,
+                    isMaxQuantityOwned: te,
                     runeType: e.inventoryTypeId || null,
-                    showClassicExclusiveFlag: S(e, C),
+                    showClassicExclusiveFlag: S(e, w),
                     needsSkinPrereq: !(!e.isChroma || !(e.prerequisites || []).some((e => "NOT_SATISFIED" === e.status))),
-                    hasBlueEssencePrice: j.some((e => e.currency === p)),
-                    costBE: (j.find((e => e.currency === p)) || {}).cost || 0,
-                    hasFiatPrice: ie,
-                    fiatPriceFormatted: re,
-                    fiatPricePointId: D ? D.id : null,
-                    fiatAmountCents: D ? D.realAmountCents : null,
-                    fiatCurrencyCode: D ? D.realCurrencyCode : null
+                    hasBlueEssencePrice: L.some((e => e.currency === p)),
+                    costBE: (L.find((e => e.currency === p)) || {}).cost || 0,
+                    hasFiatPrice: re,
+                    fiatPriceFormatted: ce,
+                    fiatPricePointId: M ? M.id : null,
+                    fiatAmountCents: M ? M.realAmountCents : null,
+                    fiatCurrencyCode: M ? M.realCurrencyCode : null
                 }
             }, t.enrichItemWithLimitedBadge = function(e, t, n) {
                 const s = e.catalogItem && e.catalogItem.endTime;
@@ -5657,7 +5672,7 @@
                     limitedBadgeText: (0, r.formatDuration)(a, n),
                     limitedBadgeUrgent: a < r.MS_PER_WEEK
                 })
-            }, t.getStoreItemImageOverride = g, t.getStoreItemTitleOverride = f, t.sortStoreItems = function(e, t) {
+            }, t.getBundleSavings = P, t.getStoreItemImageOverride = g, t.getStoreItemTitleOverride = f, t.sortStoreItems = function(e, t) {
                 return e.slice().sort(((e, n) => {
                     let s;
                     return s = "name" === t.field ? (n.name || "").localeCompare(e.name || "") : "cost" === t.field || "costBE" === t.field ? (n[t.field] || 0) - (e[t.field] || 0) : (n.index || 0) - (e.index || 0), t.asc ? s : -s
@@ -5701,6 +5716,20 @@
             function S(e, t) {
                 const n = e.inventoryTypeId;
                 return !!x.has(n) || n === d.CHAMPION_SKIN && (!!t && t.has(e.itemId))
+            }
+
+            function P(e, t) {
+                const n = (e && e.purchaseUnits || []).map(((e, n) => {
+                    const s = e && e.fulfillment || {};
+                    return {
+                        owned: !!(s.itemId && t && t.has && t.has(s.itemId)),
+                        price: Math.abs(e && e.paymentOptions?.[0]?.payments?.[0]?.finalDelta || 0)
+                    }
+                }));
+                let s = 0;
+                return n.forEach((e => {
+                    e.owned && (s += e.price)
+                })), s
             }
         }, (e, t, n) => {
             "use strict";
@@ -5871,9 +5900,17 @@
                 d = n(102);
             const u = "chase:",
                 p = "sku:",
-                h = ["lol_jade_random_champ", "lol_jade_random_rune", "lol_jade_random_skin_1350", "lol_jade_random_skin_1350orless", "lol_jade_random_ward"],
-                g = "client.xp.jade.battlepass.drop_autospend",
-                f = [{
+                h = "/lol-game-data-inventory/v1/items/contentIds",
+                g = {
+                    Champions: "jade_nav_champions",
+                    "1350 Skins": "shoppefront_category_skins",
+                    "Random Rune": "jade_nav_runes",
+                    "Ward Skins": "shoppefront_category_ward_skins",
+                    Fallback: "loot_odds_generic_desc"
+                },
+                f = ["lol_jade_random_champ", "lol_jade_random_rune", "lol_jade_random_skin_1350", "lol_jade_random_skin_1350orless", "lol_jade_random_ward"],
+                _ = "client.xp.jade.battlepass.drop_autospend",
+                v = [{
                     number: 1,
                     categoryId: "BP_TIER_1",
                     requiredMilestone: 0
@@ -5899,43 +5936,56 @@
                     requiredMilestone: 5
                 }];
 
-            function _(e) {
+            function b(e) {
                 return e?.purchaseUnits?.[0]?.fulfillment?.dropTableId || null
             }
 
-            function v(e, t, n, s) {
-                const a = t && t.nameTraKey;
-                if (a && n && n.exists && n.exists(a)) return n.get(a);
-                const l = e && e.name || "";
-                return function(e, t) {
+            function y(e) {
+                return e && (e.gipName || e.title || e.name || e.formattedName || e.statName) || null
+            }
+
+            function E(e, t, n, s, a, l) {
+                const o = t && t.nameTraKey;
+                if (o && n && n.exists && n.exists(o)) return n.get(o);
+                const i = e && e.name || "",
+                    r = g[i];
+                if (r && n && n.exists && n.exists(r)) return n.get(r);
+                const c = function(e, t) {
                     if (!e || !t) return null;
                     const n = (Array.isArray(t) ? t : Object.values(t)).find((t => t.lolCurrencyId === e));
                     return n && (n.title || n.name) || null
-                }(l, s) || l
+                }(i, s);
+                if (c) return c;
+                const m = y(e && a && a[e.sourceId]);
+                if (m) return m;
+                return function(e) {
+                    const t = Object.values(e && e.localizations || {}).find((e => e && e.name));
+                    return t && t.name || null
+                }(e && l && l[e.sourceId]) || i
             }
 
-            function b(e, t, n, s, a, l, o) {
-                const i = e.nodes || {},
-                    r = e.nodeHierarchy || {},
-                    c = e.nodeTraKeys || {},
-                    m = i[t] || {},
-                    d = l.concat(t),
-                    u = (r[t] && r[t].edges || []).filter((e => -1 === d.indexOf(e.targetNodeId))).map((t => b(e, t.targetNodeId, t.odds, s, a, d, o)));
-                let p = 1;
-                return "number" == typeof n && (p = s ? n : n / 100), {
+            function x(e, t, n, s, a, l, o, i, r) {
+                const c = e.nodes || {},
+                    m = e.nodeHierarchy || {},
+                    d = e.nodeTraKeys || {},
+                    u = c[t] || {},
+                    p = l.concat(t),
+                    h = (m[t] && m[t].edges || []).filter((e => -1 === p.indexOf(e.targetNodeId))).map((t => x(e, t.targetNodeId, t.odds, s, a, p, o, i, r)));
+                let g = 1;
+                return "number" == typeof n && (g = s ? n : n / 100), {
                     lootId: t,
-                    label: v(m, c[t], a, o),
-                    dropRate: p,
-                    quantity: m.rewardQuantity || 1,
-                    displayPriority: m.displayPriority || 0,
-                    children: u
+                    label: E(u, d[t], a, o, i, r),
+                    dropRate: g,
+                    quantity: u.rewardQuantity || 1,
+                    displayPriority: u.displayPriority || 0,
+                    children: h
                 }
             }
 
-            function y(e, t, n) {
+            function S(e, t, n, s, a) {
                 if (!e || !e.rootNodeId) return null;
-                const s = e.nodeHierarchy || {},
-                    a = function(e) {
+                const l = e.nodeHierarchy || {},
+                    o = function(e) {
                         const t = e.nodeHierarchy || {};
                         let n = 0;
                         return Object.keys(t).forEach((e => {
@@ -5946,12 +5996,12 @@
                     }(e);
                 return {
                     guaranteedToContain: [],
-                    chanceToContain: (s[e.rootNodeId] && s[e.rootNodeId].edges || []).map((s => b(e, s.targetNodeId, s.odds, a, t, [e.rootNodeId], n))),
+                    chanceToContain: (l[e.rootNodeId] && l[e.rootNodeId].edges || []).map((l => x(e, l.targetNodeId, l.odds, o, t, [e.rootNodeId], n, s, a))),
                     checksOwnership: !1,
                     hasPityRules: !1
                 }
             }
-            var E = s.Ember.Controller.extend(l.PurchaseModalMixin, o.KrPurchaseConfirmMixin, {
+            var P = s.Ember.Controller.extend(l.PurchaseModalMixin, o.KrPurchaseConfirmMixin, {
                 gameDataMapperService: s.Ember.inject.service("game-data-mapper"),
                 catalogItemEnricher: s.Ember.inject.service("shoppefront-catalog-item-enricher"),
                 noDisclaimerRegions: [],
@@ -6115,12 +6165,12 @@
                     s.Ember.run.scheduleOnce("afterRender", this, this._maybeSpendAllRedeemables)
                 })),
                 _maybeSpendAllRedeemables() {
-                    this.isDestroying || this.isDestroyed || !this._redeemableState || h.forEach((e => {
+                    this.isDestroying || this.isDestroyed || !this._redeemableState || f.forEach((e => {
                         this._maybeSpendRedeemable(e)
                     }))
                 },
                 _resumeOtherRedeemables(e) {
-                    this.isDestroying || this.isDestroyed || !this._redeemableState || h.forEach((t => {
+                    this.isDestroying || this.isDestroyed || !this._redeemableState || f.forEach((t => {
                         t !== e && this._maybeSpendRedeemable(t)
                     }))
                 },
@@ -6139,7 +6189,7 @@
                     if (i < 1) return;
                     t.autoSpending = !0;
                     const c = this.get("tra");
-                    s.datadogRum.startOperation(g, {
+                    s.datadogRum.startOperation(_, {
                         currency: e,
                         quantity: i
                     }), (0, r.executeBulkPurchase)({
@@ -6150,22 +6200,22 @@
                         tra: c,
                         observerCtx: this,
                         onSuccess: n => {
-                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, t.retryCount = 0, s.datadogRum.stopOperationWithOk(g, {
+                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, t.retryCount = 0, s.datadogRum.stopOperationWithOk(_, {
                                 currency: e
                             }), this._celebrateRollResults(n && n.rollResults || []), this._maybeSpendAllRedeemables())
                         },
                         onError: n => {
-                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Failed to auto-spend ${e}:`, n), s.datadogRum.stopOperationWithError(g, n instanceof Error ? n : new Error(String(n)), {
+                            this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Failed to auto-spend ${e}:`, n), s.datadogRum.stopOperationWithError(_, n instanceof Error ? n : new Error(String(n)), {
                                 currency: e
                             }), t.retryCount < 5 ? (t.retryCount += 1, s.logger.info(`[Battlepass] Retrying ${e} auto-spend (attempt ${t.retryCount}/5) in 2000ms.`), s.Ember.run.later(this, this._maybeSpendRedeemable, e, 2e3)) : (s.logger.warning(`[Battlepass] Giving up ${e} auto-spend after max retries.`), t.retryCount = 0, this._resumeOtherRedeemables(e)))
                         }
                     }).then((n => {
-                        n || this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.datadogRum.stopOperationWithAbort(g, {
+                        n || this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.datadogRum.stopOperationWithAbort(_, {
                             currency: e,
                             reason: "not_submitted"
                         }), this._resumeOtherRedeemables(e))
                     })).catch((n => {
-                        this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Error auto-spending ${e}:`, n), s.datadogRum.stopOperationWithError(g, n, {
+                        this.isDestroying || this.isDestroyed || (t.autoSpending = !1, s.logger.error(`[Battlepass] Error auto-spending ${e}:`, n), s.datadogRum.stopOperationWithError(_, n, {
                             currency: e
                         }), this._resumeOtherRedeemables(e))
                     }))
@@ -6198,7 +6248,7 @@
                 },
                 _celebrateInventoryItem(e) {
                     const t = e.itemId || e.itemInstanceId;
-                    t && s.db.get(`/lol-game-data-inventory/v1/items/contentIds/${t}`).then((e => {
+                    t && s.db.get(`${h}/${t}`).then((e => {
                         if (this.isDestroying || this.isDestroyed || !e) return;
                         const t = e.gipImage || e.splashPath || "";
                         this._celebrateRewardClaim({
@@ -6211,7 +6261,7 @@
                 _eventPassCatalogEntry: null,
                 _eventPassSku: null,
                 _observeRedeemableWallets() {
-                    this._redeemableState = {}, h.forEach((e => {
+                    this._redeemableState = {}, f.forEach((e => {
                         const t = `/lol-inventory/v1/wallet/${e}`,
                             n = {
                                 balance: 0,
@@ -6251,7 +6301,7 @@
                         n = this.get("_milestoneLevel"),
                         s = this.get("_rewardTrackItems") || [],
                         a = this.get("_rewardTrackProgress.passProgress") || 0;
-                    return f.map(((l, o) => {
+                    return v.map(((l, o) => {
                         const i = e.find((e => e.categoryId === l.categoryId)),
                             r = n < l.requiredMilestone;
                         let c = null;
@@ -6326,20 +6376,20 @@
                                 I = (0, c.isVotingPowerGrant)(e),
                                 R = I && (C.delta || C.finalDelta) || 0,
                                 A = e.traTitle || u.get("battlepass_unknown_item");
-                            let O, D = A;
-                            w && T ? D = u.formatString("battlepass_currency_reward_name", {
+                            let D, O = A;
+                            w && T ? O = u.formatString("battlepass_currency_reward_name", {
                                 amount: T,
                                 name: A
-                            }) : I && (D = u.formatString("battlepass_currency_reward_name", {
+                            }) : I && (O = u.formatString("battlepass_currency_reward_name", {
                                 amount: R,
                                 name: u.get("battlepass_inventory_type_voting_power")
-                            })), O = I ? u.get("battlepass_inventory_type_voting_power") : w ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
+                            })), D = I ? u.get("battlepass_inventory_type_voting_power") : w ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
                             const M = (0, c.getLocalTypeImage)(e);
                             return {
                                 id: e.id,
                                 catalogItem: e,
-                                name: D,
-                                type: O,
+                                name: O,
+                                type: D,
                                 description: e.itemDescription,
                                 cost: x,
                                 currencyKey: S,
@@ -6412,22 +6462,61 @@
                 selectedItemDropTableId: s.Ember.computed("selectedItem.catalogItem", "shoppefrontService.categories.[]", "shoppefrontService.stores.[]", "gameDataMapperService.gameDataCurrencies", (function() {
                     const e = this.get("selectedItem.catalogItem");
                     if (!e) return null;
-                    const t = _(e);
+                    const t = b(e);
                     if (t) return t;
                     const n = this._grantedCurrencyName(e);
-                    return n ? _(this._resolveDropCatalogItem(n)) : null
+                    return n ? b(this._resolveDropCatalogItem(n)) : null
                 })),
                 selectedItemHasDropRates: s.Ember.computed.notEmpty("selectedItemDropTableId"),
                 selectedItemOddsTree: null,
-                selectedItemLootOddsData: s.Ember.computed("selectedItemOddsTree", "tra", "gameDataMapperService.gameDataCurrencies", (function() {
-                    return y(this.get("selectedItemOddsTree"), this.get("tra"), this.get("gameDataMapperService.gameDataCurrencies"))
+                _gameDataItemsByContentId: null,
+                _gameDataItemsPromise: null,
+                _storeItemsByInstanceId: null,
+                _storeItemsPromise: null,
+                selectedItemLootOddsData: s.Ember.computed("selectedItemOddsTree", "tra", "gameDataMapperService.gameDataCurrencies", "_gameDataItemsByContentId", "_storeItemsByInstanceId", (function() {
+                    return S(this.get("selectedItemOddsTree"), this.get("tra"), this.get("gameDataMapperService.gameDataCurrencies"), this.get("_gameDataItemsByContentId"), this.get("_storeItemsByInstanceId"))
                 })),
+                _loadGameDataItems() {
+                    return this.get("_gameDataItemsByContentId") ? Promise.resolve() : (this._gameDataItemsPromise || (this._gameDataItemsPromise = s.db.get(h).then((e => {
+                        this._gameDataItemsPromise = null, this.isDestroying || this.isDestroyed || this.set("_gameDataItemsByContentId", e || {})
+                    })).catch((e => {
+                        this._gameDataItemsPromise = null, s.logger.warning("[Battlepass] Failed to fetch game data item names", e)
+                    }))), this._gameDataItemsPromise)
+                },
+                _loadStoreItems(e) {
+                    if (this._storeItemsPromise) return;
+                    const t = this.get("_gameDataItemsByContentId") || {},
+                        n = this.get("_storeItemsByInstanceId") || {},
+                        a = [...new Set(Object.values(e.nodes || {}).filter((e => "ENTITLEMENT_CREATE" === e.type && e.sourceId)).map((e => e.sourceId)))].filter((e => !n[e] && !y(t[e])));
+                    if (!a.length) return;
+                    const l = [];
+                    for (let e = 0; e < a.length; e += 50) {
+                        const t = a.slice(e, e + 50);
+                        l.push(s.db.get(`/lol-store/v1/catalogByInstanceIds?instanceIds=${encodeURIComponent(JSON.stringify(t))}`))
+                    }
+                    this._storeItemsPromise = Promise.all(l).then((e => {
+                        if (this._storeItemsPromise = null, this.isDestroying || this.isDestroyed) return;
+                        const t = {
+                            ...this.get("_storeItemsByInstanceId") || {}
+                        };
+                        e.forEach((e => {
+                            (e || []).forEach((e => {
+                                t[e.itemInstanceId] = e
+                            }))
+                        })), this.set("_storeItemsByInstanceId", t)
+                    })).catch((e => {
+                        this._storeItemsPromise = null, s.logger.warning("[Battlepass][DropRates] Failed to fetch localized Store item names", e)
+                    }))
+                },
                 _observeDropTableOdds(e) {
                     if (this._unobserveDropTableOdds(), !e) return;
                     this.set("selectedItemOddsTree", null);
-                    const t = `/lol-shoppefront/v1/drop-tables/${e}/odds`;
-                    this._dropOddsPath = t, s.db.observe(t, this, (e => {
-                        this.isDestroying || this.isDestroyed || this._dropOddsPath !== t || e && e.rootNodeId && this.set("selectedItemOddsTree", e)
+                    const t = this._loadGameDataItems(),
+                        n = `/lol-shoppefront/v1/drop-tables/${e}/odds`;
+                    this._dropOddsPath = n, s.db.observe(n, this, (e => {
+                        this.isDestroying || this.isDestroyed || this._dropOddsPath !== n || e && e.rootNodeId && (this.set("selectedItemOddsTree", e), t.then((() => {
+                            this.isDestroying || this.isDestroyed || this._dropOddsPath !== n || this._loadStoreItems(e)
+                        })))
                     }))
                 },
                 _unobserveDropTableOdds() {
@@ -6572,7 +6661,7 @@
                             tra: t,
                             observerCtx: this,
                             onSuccess: () => {
-                                this.isDestroying || this.isDestroyed || (this.get("_claimedIds").pushObject(e.catalogItem.id), this.set("purchaseError", null), this.set("purchasingItem", !1), this._celebrateRewardClaim(e))
+                                this.isDestroying || this.isDestroyed || (this.get("_claimedIds").pushObject(e.catalogItem.id), this.set("purchaseError", null), this.set("purchasingItem", !1), this._celebrateRewardClaim(e), this._refreshWalletBalances())
                             },
                             onError: e => {
                                 this.isDestroying || this.isDestroyed || (this.set("purchaseError", e), this.set("purchasingItem", !1))
@@ -6588,7 +6677,7 @@
                 _grantsRedeemableCurrency(e) {
                     const t = e && e.catalogItem || e,
                         n = t?.purchaseUnits?.[0]?.fulfillment;
-                    return !!n && h.includes(n.name)
+                    return !!n && f.includes(n.name)
                 },
                 _celebrateRewardClaim(e) {
                     if (e && !this._grantsRedeemableCurrency(e)) try {
@@ -6687,7 +6776,7 @@
                     }
                 }
             });
-            t.default = E
+            t.default = P
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -10011,6 +10100,16 @@
                 utilityTreeWithUnlock: s.Ember.computed("utilityTree", "editingMasteryPage.masteries", (function() {
                     return this._createTreeWithUnlock("utility")
                 })),
+                _readMasteryPageFromLoadout(e, t) {
+                    const n = {};
+                    if (!e) return n;
+                    for (let s = 1; s <= 30; s++) {
+                        const a = `MASTERY_PAGE_${t}_MASTERY_${s}`,
+                            l = e.get ? e.get(a) : e[a];
+                        l && l.itemId > 0 && (n[l.itemId] = (n[l.itemId] || 0) + 1)
+                    }
+                    return n
+                },
                 actions: {
                     selectJadeRunePage(e) {
                         this.send("hideTooltip");
@@ -10034,7 +10133,11 @@
                             }),
                             n = this.get("loadoutsService");
                         n.refreshMasteryLoadoutFromRemote();
-                        const a = n.getMasteryPage(e) || {};
+                        let a = n.getMasteryPage(e) || {};
+                        if (0 === Object.keys(a).length) {
+                            const t = this._readMasteryPageFromLoadout(this.get("accountLoadout.loadout"), e);
+                            Object.keys(t).length > 0 && (a = t)
+                        }
                         this.set("_originalMasteries", {
                             ...a
                         }), this.set("editingMasteryPage", {
@@ -10133,15 +10236,10 @@
                     showMasteryPageSummaryTooltip(e, t) {
                         const n = this.get("tooltipComponent");
                         if (!n || !e) return;
-                        const s = this.get("accountLoadout.loadout"),
-                            a = {};
-                        if (s)
-                            for (let t = 1; t <= 30; t++) {
-                                const n = `MASTERY_PAGE_${e.id}_MASTERY_${t}`,
-                                    l = s.get ? s.get(n) : s[n];
-                                l && l.itemId > 0 && (a[l.itemId] = (a[l.itemId] || 0) + 1)
-                            }
-                        const l = this.get("masteryPagesService"),
+                        const s = this.get("loadoutsService");
+                        s.refreshMasteryLoadoutFromRemote();
+                        const a = s.getMasteryPage(e.id) || {},
+                            l = this.get("masteryPagesService"),
                             i = e.name || l.getDefaultPageName(e?.id),
                             r = l.getPointsInTreeForMasteryPage(o.MASTERY_TREE_NAMES.offense, a),
                             c = l.getPointsInTreeForMasteryPage(o.MASTERY_TREE_NAMES.defense, a),
@@ -11064,9 +11162,8 @@
                     }), this.set("selectedSkinId", e.id))
                 },
                 scrollCarousel(e) {
-                    const t = this.get("carouselSkins") || [];
-                    if (t.length <= 5) return;
-                    const n = this.get("centerIndex");
+                    const t = this.get("carouselSkins") || [],
+                        n = this.get("centerIndex");
                     let s = n;
                     e === m && n < t.length - 1 ? s = n + 1 : e === c && n > 0 && (s = n - 1), this.set("centerIndex", s)
                 },
@@ -11389,18 +11486,20 @@
                             C = !!k,
                             w = (e.purchaseUnits || []).length > 1,
                             T = w ? (0, a.getBundleTotalCost)(e, p) : null,
-                            I = (0, i.getStoreItemTitleOverride)(e.id, r) || (w ? e.name || e.traTitle || e.itemName : null),
-                            R = null != T ? T : m,
-                            A = e.inventoryTypeId === c.PORTRAIT;
+                            I = w ? (0, i.getBundleSavings)(e, s) : 0,
+                            R = (0, i.getStoreItemTitleOverride)(e.id, r) || (w ? e.name || e.traTitle || e.itemName : null),
+                            A = null != T ? T - I : m,
+                            D = e.inventoryTypeId === c.PORTRAIT;
                         return {
                             id: e.id,
-                            name: I || e.traTitle || e.itemName,
-                            formattedName: I || e.formattedName || e.traTitle || e.itemName,
-                            isPortrait: A,
+                            name: R || e.traTitle || e.itemName,
+                            formattedName: R || e.formattedName || e.traTitle || e.itemName,
+                            isPortrait: D,
                             description: e.itemDescription,
                             contentType: (0, o.getDisplayType)(e, r),
-                            cost: R,
+                            cost: A,
                             originalCost: null != T ? T : b[0] && b[0].originalCost || m,
+                            bundleSavings: I,
                             currency: p,
                             currencyIconPath: h ? h.iconPath : null,
                             prices: b.length > 1 ? b : null,
@@ -11450,8 +11549,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "LD+s8olK",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_15\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-components\\\\jade-home-shop-grid\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_15\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-components\\\\jade-home-shop-grid\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_15\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-components\\\\jade-home-shop-grid\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showShopError"]]],null,11,9]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-shop-loading-spinner"],["flush-element"],["text","\\n    "],["append",["unknown",["uikit-spinner"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","img",[]],["static-attr","class","jade-shop-grid__currency-icon"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__item-price"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","currencyIconPath"]]],null,1],["text","            "],["open-element","span",[]],["static-attr","class","jade-shop-grid__item-cost"],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","span",[]],["static-attr","class","jade-shop-grid__item-owned"],["flush-element"],["append",["unknown",["tra","jade_home_owned"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["append",["unknown",["item","name"]],false]],"locals":[]},{"statements":[["append",["unknown",["item","formattedName"]],true]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","jade-shop-grid__image"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["item","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-shop-grid__item ",["helper",["unless"],[["get",["item","isOwned"]],"jade-shop-grid__item--clickable"],null]," ",["helper",["if"],[["get",["item","isOwned"]],"jade-shop-grid__item--owned"],null]]]],["modifier",["action"],[["get",[null]],"openShopItemPurchase",["get",["item"]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-shop-grid__image-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,6],["text","        "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-inner"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-main"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-outer"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-shop-grid__label"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","jade-shop-grid__item-name"],["flush-element"],["block",["if"],[["get",["item","isPortrait"]]],null,5,4],["close-element"],["text","\\n"],["block",["if"],[["get",["item","isOwned"]]],null,3,2],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["block",["each"],[["get",["displayShopItems"]]],null,7]],"locals":[]},{"statements":[["block",["if"],[["get",["displayShopItems","length"]]],null,8,0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-shop-grid__item jade-shop-grid__item--error"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-shop-grid__image-wrapper"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-shop-grid__error-content"],["flush-element"],["text","\\n          "],["open-element","svg",[]],["static-attr","class","jade-shop-grid__error-icon"],["static-attr","width","20"],["static-attr","height","20"],["static-attr","viewBox","0 0 20 20"],["static-attr","fill","none"],["static-attr","aria-hidden","true"],["flush-element"],["text","\\n            "],["open-element","path",[]],["static-attr","d","M8.79 2.4 1.3 15.1a1.4 1.4 0 0 0 1.21 2.1h14.98a1.4 1.4 0 0 0 1.21-2.1L11.21 2.4a1.4 1.4 0 0 0-2.42 0Z"],["static-attr","fill","#ff2345"],["flush-element"],["close-element"],["text","\\n            "],["open-element","path",[]],["static-attr","d","M10 7v4"],["static-attr","stroke","#0a0e12"],["static-attr","stroke-width","1.6"],["static-attr","stroke-linecap","round"],["flush-element"],["close-element"],["text","\\n            "],["open-element","circle",[]],["static-attr","cx","10"],["static-attr","cy","13.8"],["static-attr","r","1"],["static-attr","fill","#0a0e12"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","jade-shop-grid__error-text"],["flush-element"],["append",["unknown",["tra","jade_home_error_tile"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-inner"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-main"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-outer"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["each"],[["get",["errorTiles"]]],null,10]],"locals":[]}],"hasPartials":false}',
+                id: "xY4Jr49R",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_15\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-components\\\\jade-home-shop-grid\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_15\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-components\\\\jade-home-shop-grid\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_15\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-home-components\\\\jade-home-shop-grid\\\\index.js\\" "],["text","\\n"],["block",["if"],[["get",["showShopError"]]],null,12,10]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["open-element","div",[]],["static-attr","class","jade-shop-loading-spinner"],["flush-element"],["text","\\n    "],["append",["unknown",["uikit-spinner"]],false],["text","\\n  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","span",[]],["static-attr","class","jade-shop-grid__item-cost original-cost"],["flush-element"],["append",["unknown",["item","originalCost"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","img",[]],["static-attr","class","jade-shop-grid__currency-icon"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__item-price"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","currencyIconPath"]]],null,2],["text","            "],["open-element","span",[]],["static-attr","class","jade-shop-grid__item-cost"],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["item","bundleSavings"]]],null,1],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","span",[]],["static-attr","class","jade-shop-grid__item-owned"],["flush-element"],["append",["unknown",["tra","jade_home_owned"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["append",["unknown",["item","name"]],false]],"locals":[]},{"statements":[["append",["unknown",["item","formattedName"]],true]],"locals":[]},{"statements":[["text","          "],["open-element","img",[]],["static-attr","class","jade-shop-grid__image"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["item","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-shop-grid__item ",["helper",["unless"],[["get",["item","isOwned"]],"jade-shop-grid__item--clickable"],null]," ",["helper",["if"],[["get",["item","isOwned"]],"jade-shop-grid__item--owned"],null]]]],["modifier",["action"],[["get",[null]],"openShopItemPurchase",["get",["item"]]]],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-shop-grid__image-wrapper"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,7],["text","        "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-inner"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-main"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-outer"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-shop-grid__label"],["flush-element"],["text","\\n        "],["open-element","span",[]],["static-attr","class","jade-shop-grid__item-name"],["flush-element"],["block",["if"],[["get",["item","isPortrait"]]],null,6,5],["close-element"],["text","\\n"],["block",["if"],[["get",["item","isOwned"]]],null,4,3],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["block",["each"],[["get",["displayShopItems"]]],null,8]],"locals":[]},{"statements":[["block",["if"],[["get",["displayShopItems","length"]]],null,9,0]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-shop-grid__item jade-shop-grid__item--error"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","jade-shop-grid__image-wrapper"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-shop-grid__error-content"],["flush-element"],["text","\\n          "],["open-element","svg",[]],["static-attr","class","jade-shop-grid__error-icon"],["static-attr","width","20"],["static-attr","height","20"],["static-attr","viewBox","0 0 20 20"],["static-attr","fill","none"],["static-attr","aria-hidden","true"],["flush-element"],["text","\\n            "],["open-element","path",[]],["static-attr","d","M8.79 2.4 1.3 15.1a1.4 1.4 0 0 0 1.21 2.1h14.98a1.4 1.4 0 0 0 1.21-2.1L11.21 2.4a1.4 1.4 0 0 0-2.42 0Z"],["static-attr","fill","#ff2345"],["flush-element"],["close-element"],["text","\\n            "],["open-element","path",[]],["static-attr","d","M10 7v4"],["static-attr","stroke","#0a0e12"],["static-attr","stroke-width","1.6"],["static-attr","stroke-linecap","round"],["flush-element"],["close-element"],["text","\\n            "],["open-element","circle",[]],["static-attr","cx","10"],["static-attr","cy","13.8"],["static-attr","r","1"],["static-attr","fill","#0a0e12"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","span",[]],["static-attr","class","jade-shop-grid__error-text"],["flush-element"],["append",["unknown",["tra","jade_home_error_tile"]],false],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-inner"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-main"],["flush-element"],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-shop-grid__frame-outer"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["each"],[["get",["errorTiles"]]],null,11]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -13903,28 +14002,30 @@
                 _legacyCatalogMap: null,
                 _splashOnlyTimeout: null,
                 _onSplashOnlyMouseMove: null,
+                _abilityVideoBasePath: v,
                 _tencentLearnMoreUrl: null,
-                abilities: s.Ember.computed("championData", "tra", (function() {
+                abilities: s.Ember.computed("championData", "tra", "_abilityVideoBasePath", (function() {
                     const e = this.get("championData");
                     if (!e) return [];
-                    const t = [];
-                    return e.passive && t.push({
+                    const t = this.get("_abilityVideoBasePath"),
+                        n = [];
+                    return e.passive && n.push({
                         name: e.passive.name,
                         description: e.passive.description,
                         iconPath: e.passive.abilityIconPath,
-                        videoUrl: e.passive.abilityVideoPath ? v + e.passive.abilityVideoPath : "",
-                        videoImageUrl: e.passive.abilityVideoImagePath ? v + e.passive.abilityVideoImagePath : "",
+                        videoUrl: e.passive.abilityVideoPath ? t + e.passive.abilityVideoPath : "",
+                        videoImageUrl: e.passive.abilityVideoImagePath ? t + e.passive.abilityVideoImagePath : "",
                         key: this.get("tra.champion_ability_key_passive")
-                    }), e.spells && e.spells.forEach(((e, n) => {
-                        t.push({
+                    }), e.spells && e.spells.forEach(((e, s) => {
+                        n.push({
                             name: e.name,
                             description: e.description,
                             iconPath: e.abilityIconPath,
-                            videoUrl: e.abilityVideoPath ? v + e.abilityVideoPath : "",
-                            videoImageUrl: e.abilityVideoImagePath ? v + e.abilityVideoImagePath : "",
-                            key: this.get(`tra.${_[n+1]}`)
+                            videoUrl: e.abilityVideoPath ? t + e.abilityVideoPath : "",
+                            videoImageUrl: e.abilityVideoImagePath ? t + e.abilityVideoImagePath : "",
+                            key: this.get(`tra.${_[s+1]}`)
                         })
-                    })), t
+                    })), n
                 })),
                 selectedAbility: s.Ember.computed("abilities", "selectedAbilityIndex", (function() {
                     return this.get("abilities")[this.get("selectedAbilityIndex")]
@@ -14087,7 +14188,7 @@
                     this._originalParent = this.element.parentNode, this._originalNextSibling = this.element.nextSibling;
                     (document.getElementById("lol-uikit-layer-manager-wrapper") || document.getElementById("lol-uikit-layer-manager") || document.body).appendChild(this.element), this._onBackdropClick = t => {
                         t.target === e && this._close()
-                    }, e.addEventListener("click", this._onBackdropClick), this._backdropEl = e, this.set("activeTab", "overview"), this.set("isLoading", !0), this._observeGameflow(), this._observeTencentLearnMoreUrl(), this._storeLoadPromise = this._loadShoppefrontStore(), this._registerPurchaseSuccessHandler(), this.addObserver("lolInventoryService.ownedInventoryContent", this, this._onInventoryChanged), this._fetchChampionData()
+                    }, e.addEventListener("click", this._onBackdropClick), this._backdropEl = e, this.set("activeTab", "overview"), this.set("isLoading", !0), this._observeGameflow(), this._fetchAbilityVideoBasePath(), this._observeTencentLearnMoreUrl(), this._storeLoadPromise = this._loadShoppefrontStore(), this._registerPurchaseSuccessHandler(), this.addObserver("lolInventoryService.ownedInventoryContent", this, this._onInventoryChanged), this._fetchChampionData()
                 },
                 _loadShoppefrontStore() {
                     const e = this.get("shoppefrontService");
@@ -14426,6 +14527,7 @@
                         selectedSkinIndex: 0,
                         isLoading: !1,
                         isSplashOnly: !1,
+                        _abilityVideoBasePath: v,
                         purchaseModalItem: null,
                         catalogItemErrorText: null
                     })
@@ -14455,6 +14557,13 @@
                 },
                 _unobserveGameflow() {
                     s.db.unobserve(`/lol-gameflow/${f}`, this)
+                },
+                _fetchAbilityVideoBasePath() {
+                    this.get("isTencentRegion") && s.db.get("/data-store/v1/system-settings/web_assets_base_path").then((e => {
+                        !this._backdropEl || this.isDestroyed || this.isDestroying || (e || s.logger.warning("[JadeChampionModal] No web assets base path found; using default ability video CDN"), this.set("_abilityVideoBasePath", e || v))
+                    })).catch((() => {
+                        !this._backdropEl || this.isDestroyed || this.isDestroying || s.logger.warning("[JadeChampionModal] Failed to fetch web assets base path; using default ability video CDN")
+                    }))
                 },
                 _observeTencentLearnMoreUrl() {
                     this.get("isTencentRegion") && s.db.observe(E, this, (e => {
@@ -15263,27 +15372,8 @@
                         this.set("tencentTosLink", e || null)
                     }))
                 },
-                _debugAfford: s.Ember.observer("wallet.RP", "rpCost", "item.currency", (function() {
-                    this._logAffordDebug("observer")
-                })),
-                _logAffordDebug(e) {
-                    console.log("[jade-fiat-modal] afford debug (" + e + ")", {
-                        itemId: this.get("item.id"),
-                        itemName: this.get("item.name"),
-                        itemCurrency: this.get("item.currency"),
-                        itemCost: this.get("item.cost"),
-                        rpCost: this.get("rpCost"),
-                        walletRP: this.get("wallet.RP"),
-                        wallet: this.get("wallet"),
-                        prices: this.get("item.prices"),
-                        hasFiatPrice: this.get("hasFiatPrice"),
-                        isBundle: this.get("isBundle"),
-                        rpNewBalance: this.get("rpNewBalance"),
-                        cantAffordRp: this.get("cantAffordRp")
-                    })
-                },
                 didInsertElement() {
-                    this._super(...arguments), this._logAffordDebug("didInsertElement"), this._resolveBundledItems(), this._onPaymentMessage = e => {
+                    this._super(...arguments), this._resolveBundledItems(), this._onPaymentMessage = e => {
                         e.data && "closePaymentsWindow" === e.data.action && s.Ember.run((() => this._closePaymentWindow()))
                     }, window.addEventListener("message", this._onPaymentMessage)
                 },
@@ -16364,8 +16454,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "9mJ97OQ9",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_15\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\store.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_15\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\styles\\\\store.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-store-page"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-store-layout"],["flush-element"],["text","\\n"],["block",["if"],[["get",["toolbarShowSidebar"]]],null,65],["text","\\n"],["text","    "],["open-element","div",[]],["static-attr","class","jade-store-main"],["flush-element"],["text","\\n"],["block",["if"],[["get",["toolbarCurrencies","length"]]],null,47],["text","\\n"],["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-grid ",["helper",["unless"],[["get",["filteredItems","length"]],"jade-store-grid--empty"],null]," ",["helper",["unless"],[["get",["toolbarShowSidebar"]],"jade-store-grid--wide"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["showMarquee"]]],null,44],["block",["if"],[["get",["filteredItems","length"]]],null,35,7],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-page-sub-nav jade-sub-nav--parchment"],["flush-element"],["text","\\n"],["block",["each"],[["get",["categoryTabs"]]],null,4],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,3],["text","\\n"],["block",["if"],[["get",["showUpgradeModal"]]],null,2],["text","\\n"],["block",["if"],[["get",["isFiatPurchaseModalOpen"]]],null,1],["text","\\n"],["block",["if"],[["get",["isQuantityPurchaseModalOpen"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["jade-quantity-purchase-modal"],null,[["classicExclusiveBadge","item","onClose"],[["get",["classicExclusiveFlagNode"]],["get",["quantityPurchaseItem"]],["helper",["action"],[["get",[null]],"closeQuantityPurchaseModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["jade-fiat-purchase-modal"],null,[["item","itemDescription","wallet","ownedItemInstanceIds","onClose","onRpPurchase","onPurchaseSuccess"],[["get",["fiatPurchaseItem"]],["get",["fiatPurchaseDescription"]],["get",["_walletBalance"]],["get",["lolInventoryService","ownedItemInstanceIds"]],["helper",["action"],[["get",[null]],"closeFiatModal"],null],["helper",["action"],[["get",[null]],"rpFallbackPurchase"],null],["helper",["action"],[["get",[null]],"fiatPurchaseSucceeded"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-bundles-modal"],null,[["bundles","showPurchaseModal"],[["get",["passBundles"]],["get",["showUpgradeModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive","classicExclusiveBadge"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]],["get",["classicExclusiveFlagNode"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","a",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["tab","isActive"]],"active"],null]]]],["modifier",["action"],[["get",[null]],"selectCategory",["get",["tab","id"]]]],["flush-element"],["text","\\n      "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","jade-sub-nav-btn"],["flush-element"],["text","\\n        "],["append",["unknown",["tab","label"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["tab"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-shop-loading-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["uikit-spinner"]],false],["text","\\n          "],["close-element"],["text","\\n        "]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-no-results"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-no-results__text"],["flush-element"],["append",["unknown",["tra","jade_store_no_results"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isStoreLoaded"]]],null,6,5]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-store-item-description"],["flush-element"],["append",["unknown",["item","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["append",["unknown",["item","name"]],false]],"locals":[]},{"statements":[["append",["unknown",["item","formattedName"]],true]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","jade-store-item-req-text"],["flush-element"],["append",["unknown",["item","requirementText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","currencyIconPath"]]],null,12],["text","                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n                    "]],"locals":[]},{"statements":[["text","                            "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["price","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","jade-store-price-entry"],["flush-element"],["text","\\n"],["block",["if"],[["get",["price","currencyIconPath"]]],null,14],["text","                          "],["open-element","span",[]],["flush-element"],["append",["unknown",["price","cost"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":["price"]},{"statements":[["block",["each"],[["get",["item","prices"]]],null,15]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasMultiplePrices"]]],null,16,13]],"locals":[]},{"statements":[["text","                            "],["open-element","span",[]],["static-attr","class","jade-store-original-cost"],["flush-element"],["append",["unknown",["sp","originalCost"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                            "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["sp","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","jade-store-price-entry"],["flush-element"],["text","\\n"],["block",["if"],[["get",["sp","currencyIconPath"]]],null,19],["text","                          "],["open-element","span",[]],["flush-element"],["append",["unknown",["sp","cost"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["sp","isOnSale"]]],null,18],["text","                        "],["close-element"],["text","\\n"]],"locals":["sp"]},{"statements":[["block",["each"],[["get",["item","salePrices"]]],null,20]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasDiscount"]]],null,21,17]],"locals":[]},{"statements":[["text","                    "],["open-element","span",[]],["static-attr","class","jade-store-price-entry jade-store-fiat-price"],["flush-element"],["append",["unknown",["item","fiatPriceFormatted"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasFiatPrice"]]],null,23],["block",["if"],[["get",["item","cost"]]],null,22],["text","                "]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","jade_store_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","isOwned"]]],null,25,24]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","jade_store_item_max_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-limited-badge ",["helper",["if"],[["get",["item","limitedBadgeUrgent"]],"jade-store-limited-badge--urgent"],null]]]],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__icon"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__text"],["flush-element"],["append",["unknown",["item","limitedBadgeText"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-discount-tag"],["flush-element"],["append",["unknown",["item","discountLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-classic-exclusive-flag-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["append",["helper",["jade-store-holo"],null,[["holoFoilPath","holoAnimationsEnabled"],[["get",["item","holoFoilPath"]],["get",["holoAnimationsEnabled"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-store-item-placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-item-image"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["item","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-item ",["unknown",["item","tileSizeClass"]]," ",["helper",["unless"],[["get",["item","isOwned"]],"jade-store-item-clickable"],null]," ",["helper",["if"],[["get",["item","isOwned"]],"jade-store-item-owned"],null]," ",["helper",["if"],[["get",["item","isRune"]],"jade-store-item--rune"],null]," ",["helper",["if"],[["get",["item","isQuintessence"]],"jade-store-item--quint"],null]," ",["helper",["if"],[["get",["item","isPortrait"]],"jade-store-item--portrait"],null]," ",["helper",["if"],[["get",["item","showClassicExclusiveFlag"]],"classic-exclusive"],null]]]],["modifier",["action"],[["get",[null]],"openShopItemPurchase",["get",["item"]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,33,32],["block",["if"],[["get",["item","hasHoloFoil"]]],null,31],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-badges"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","showClassicExclusiveFlag"]]],null,30],["block",["if"],[["get",["item","hasDiscount"]]],null,29],["text","              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","hasLimitedBadge"]]],null,28],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-item-price ",["helper",["if"],[["get",["item","hasRequirements"]],"jade-store-has-requirements"],null]]]],["flush-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-item-price-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","isMaxQuantityOwned"]]],null,27,26],["text","              "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","hasRequirements"]]],null,11],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-label"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-name"],["flush-element"],["block",["if"],[["get",["item","isPortrait"]]],null,10,9],["close-element"],["text","\\n"],["block",["if"],[["get",["item","isRune"]]],null,8],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-border-outer"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-border-inner"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-price-line"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-hover-border"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["block",["each"],[["get",["filteredItems"]]],null,34]],"locals":[]},{"statements":[["text","                  "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-store-marquee__pip ",["helper",["if"],[["get",["dot","isActive"]],"jade-store-marquee__pip--active"],null]]]],["modifier",["action"],[["get",[null]],"marqueeGoTo",["get",["dot","index"]]]],["flush-element"],["append",["unknown",["dot","number"]],false],["close-element"],["text","\\n"]],"locals":["dot"]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-store-marquee__pager"],["flush-element"],["text","\\n"],["block",["each"],[["get",["marqueeDots"]]],null,36],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-limited-badge ",["helper",["if"],[["get",["item","limitedBadgeUrgent"]],"jade-store-limited-badge--urgent"],null]]]],["flush-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__icon"],["flush-element"],["close-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__text"],["flush-element"],["append",["unknown",["item","limitedBadgeText"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-store-discount-tag"],["flush-element"],["append",["unknown",["item","discountLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-store-classic-exclusive-flag-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","jade-store-marquee__placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-marquee__image"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["item","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-marquee__slide ",["helper",["if"],[["get",["item","showClassicExclusiveFlag"]],"classic-exclusive"],null]]]],["modifier",["action"],[["get",[null]],"openShopItemPurchase",["get",["item"]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,42,41],["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-item-badges"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","showClassicExclusiveFlag"]]],null,40],["block",["if"],[["get",["item","hasDiscount"]]],null,39],["text","                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","hasLimitedBadge"]]],null,38],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","jade-store-marquee__caption"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-marquee__title"],["flush-element"],["append",["unknown",["item","name"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-marquee"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"marqueePause"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"marqueeResume"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-marquee__track"],["dynamic-attr","style",["unknown",["marqueeTrackStyle"]],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["marqueeItems"]]],null,43],["text","            "],["close-element"],["text","\\n"],["block",["if"],[["get",["marqueeDots","length"]]],null,37],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-token-badge__icon"],["dynamic-attr","src",["concat",[["unknown",["token","iconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-store-token-badge"],["flush-element"],["text","\\n"],["block",["if"],[["get",["token","iconPath"]]],null,45],["text","              "],["open-element","span",[]],["static-attr","class","jade-store-token-badge__count"],["flush-element"],["append",["unknown",["token","balance"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["token"]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-store-token-balances"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarCurrencies"]]],null,46],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"toggleCheckboxFilter",["get",["filter","id"]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-checkbox ",["helper",["if"],[["get",["filter","isChecked"]],"jade-store-checkbox-on"],null]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["filter","label"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["filter"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-filters"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarCheckboxes"]]],null,48],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-check"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-check.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-down.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-up.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["opt","asc"]]],null,52,51]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-sort-option ",["helper",["if"],[["get",["opt","isSelected"]],"jade-store-sort-option-selected"],null]]]],["modifier",["action"],[["get",[null]],"selectDropdownOption",["get",["opt","id"]]]],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","jade-store-sort-option-label"],["flush-element"],["append",["unknown",["opt","label"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isSortDropdown"]]],null,53],["block",["if"],[["get",["opt","isSelected"]]],null,50],["text","              "],["close-element"],["text","\\n"]],"locals":["opt"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-sort-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarDropdownOptions"]]],null,54],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-sort-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-down.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-sort-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-up.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["activeSort","asc"]]],null,57,56]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-sort-wrapper"],["flush-element"],["text","\\n        "],["open-element","button",[]],["static-attr","class","jade-store-sort-control"],["modifier",["action"],[["get",[null]],"toggleSortDropdown"]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-store-sort-inner"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-sort-label"],["flush-element"],["append",["unknown",["toolbarDropdownLabel"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isSortDropdown"]]],null,58],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-store-sort-separator"],["flush-element"],["close-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","jade-store-sort-dropdown-icon"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-dropdown-caret.svg"],["static-attr","alt",""],["static-attr","width","8"],["static-attr","height","6"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["sortDropdownOpen"]]],null,55],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-search"],["flush-element"],["text","\\n        "],["open-element","input",[]],["static-attr","type","text"],["static-attr","class","jade-store-search-input"],["dynamic-attr","placeholder",["unknown",["tra","jade_store_search_placeholder"]],null],["dynamic-attr","value",["unknown",["searchQuery"]],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"updateSearch"],[["value"],["target.value"]]],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","jade-store-divider"],["flush-element"],["close-element"]],"locals":[]},{"statements":[["text","            "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"selectSubcategory",["get",["subcat","id"]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-radio ",["helper",["if"],[["get",["subcat","isActive"]],"jade-store-radio-on"],null]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["subcat","label"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["subcat"]},{"statements":[["text","            "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"selectSubcategory",null]],["flush-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-radio ",["helper",["unless"],[["get",["activeSubcategory"]],"jade-store-radio-on"],null]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["activeCategoryLabel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-store-filters"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isSubcategoryOnly"]]],null,63],["block",["each"],[["get",["subcategoriesForActiveCategory"]]],null,62],["text","        "],["close-element"],["text","\\n        "],["block",["if"],[["get",["toolbarShowSearch"]]],null,61],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-store-sidebar"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasSubcategories"]]],null,64],["text","\\n"],["block",["if"],[["get",["toolbarShowSearch"]]],null,60],["text","\\n"],["block",["if"],[["get",["toolbarHasDropdown"]]],null,59],["text","\\n"],["block",["if"],[["get",["toolbarCheckboxes","length"]]],null,49],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "IGGCDrV5",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_15\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\templates\\\\store.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\Releases_16_15\\\\LeagueClientContent_Release\\\\15692\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\styles\\\\store.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-store-page"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","jade-store-layout"],["flush-element"],["text","\\n"],["block",["if"],[["get",["toolbarShowSidebar"]]],null,68],["text","\\n"],["text","    "],["open-element","div",[]],["static-attr","class","jade-store-main"],["flush-element"],["text","\\n"],["block",["if"],[["get",["toolbarCurrencies","length"]]],null,50],["text","\\n"],["text","      "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-grid ",["helper",["unless"],[["get",["filteredItems","length"]],"jade-store-grid--empty"],null]," ",["helper",["unless"],[["get",["toolbarShowSidebar"]],"jade-store-grid--wide"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["showMarquee"]]],null,47],["block",["if"],[["get",["filteredItems","length"]]],null,38,7],["text","      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","jade-page-sub-nav jade-sub-nav--parchment"],["flush-element"],["text","\\n"],["block",["each"],[["get",["categoryTabs"]]],null,4],["close-element"],["text","\\n\\n"],["block",["if"],[["get",["purchaseModalItem"]]],null,3],["text","\\n"],["block",["if"],[["get",["showUpgradeModal"]]],null,2],["text","\\n"],["block",["if"],[["get",["isFiatPurchaseModalOpen"]]],null,1],["text","\\n"],["block",["if"],[["get",["isQuantityPurchaseModalOpen"]]],null,0]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","  "],["append",["helper",["jade-quantity-purchase-modal"],null,[["classicExclusiveBadge","item","onClose"],[["get",["classicExclusiveFlagNode"]],["get",["quantityPurchaseItem"]],["helper",["action"],[["get",[null]],"closeQuantityPurchaseModal"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["jade-fiat-purchase-modal"],null,[["item","itemDescription","wallet","ownedItemInstanceIds","onClose","onRpPurchase","onPurchaseSuccess"],[["get",["fiatPurchaseItem"]],["get",["fiatPurchaseDescription"]],["get",["_walletBalance"]],["get",["lolInventoryService","ownedItemInstanceIds"]],["helper",["action"],[["get",[null]],"closeFiatModal"],null],["helper",["action"],[["get",[null]],"rpFallbackPurchase"],null],["helper",["action"],[["get",[null]],"fiatPurchaseSucceeded"],null]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-bundles-modal"],null,[["bundles","showPurchaseModal"],[["get",["passBundles"]],["get",["showUpgradeModal"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","  "],["append",["helper",["purchase-modal"],null,[["modalItem","catalogItemErrorText","isPurchaseModalItemActive","classicExclusiveBadge"],[["get",["purchaseModalItem"]],["get",["purchaseModalErrorText"]],["get",["isPurchaseModalItemActive"]],["get",["classicExclusiveFlagNode"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","a",[]],["dynamic-attr","class",["concat",[["helper",["if"],[["get",["tab","isActive"]],"active"],null]]]],["modifier",["action"],[["get",[null]],"selectCategory",["get",["tab","id"]]]],["flush-element"],["text","\\n      "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","jade-sub-nav-btn"],["flush-element"],["text","\\n        "],["append",["unknown",["tab","label"]],false],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n"]],"locals":["tab"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-shop-loading-spinner"],["flush-element"],["text","\\n            "],["append",["unknown",["uikit-spinner"]],false],["text","\\n          "],["close-element"],["text","\\n        "]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-no-results"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-no-results__text"],["flush-element"],["append",["unknown",["tra","jade_store_no_results"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["isStoreLoaded"]]],null,6,5]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-store-item-description"],["flush-element"],["append",["unknown",["item","description"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["append",["unknown",["item","name"]],false]],"locals":[]},{"statements":[["append",["unknown",["item","formattedName"]],true]],"locals":[]},{"statements":[["text","                "],["open-element","span",[]],["static-attr","class","jade-store-item-req-text"],["flush-element"],["append",["unknown",["item","requirementText"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","currencyIconPath"]]],null,12],["text","                      "],["open-element","span",[]],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n                    "]],"locals":[]},{"statements":[["text","                        "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["item","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","currencyIconPath"]]],null,14],["text","                      "],["open-element","span",[]],["static-attr","class","jade-store-price-entry"],["flush-element"],["text","\\n                        "],["open-element","span",[]],["flush-element"],["append",["unknown",["item","cost"]],false],["close-element"],["text","\\n                        "],["open-element","span",[]],["static-attr","class","jade-store-original-cost"],["flush-element"],["append",["unknown",["item","originalCost"]],false],["close-element"],["text","\\n                      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","bundleSavings"]]],null,15,13]],"locals":[]},{"statements":[["text","                            "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["price","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","jade-store-price-entry"],["flush-element"],["text","\\n"],["block",["if"],[["get",["price","currencyIconPath"]]],null,17],["text","                          "],["open-element","span",[]],["flush-element"],["append",["unknown",["price","cost"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":["price"]},{"statements":[["block",["each"],[["get",["item","prices"]]],null,18]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasMultiplePrices"]]],null,19,16]],"locals":[]},{"statements":[["text","                            "],["open-element","span",[]],["static-attr","class","jade-store-original-cost"],["flush-element"],["append",["unknown",["sp","originalCost"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                            "],["open-element","img",[]],["static-attr","class","jade-store-currency-icon"],["dynamic-attr","src",["concat",[["unknown",["sp","currencyIconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","span",[]],["static-attr","class","jade-store-price-entry"],["flush-element"],["text","\\n"],["block",["if"],[["get",["sp","currencyIconPath"]]],null,22],["text","                          "],["open-element","span",[]],["flush-element"],["append",["unknown",["sp","cost"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["sp","isOnSale"]]],null,21],["text","                        "],["close-element"],["text","\\n"]],"locals":["sp"]},{"statements":[["block",["each"],[["get",["item","salePrices"]]],null,23]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasDiscount"]]],null,24,20]],"locals":[]},{"statements":[["text","                    "],["open-element","span",[]],["static-attr","class","jade-store-price-entry jade-store-fiat-price"],["flush-element"],["append",["unknown",["item","fiatPriceFormatted"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","hasFiatPrice"]]],null,26],["block",["if"],[["get",["item","cost"]]],null,25],["text","                "]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","jade_store_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["item","isOwned"]]],null,28,27]],"locals":[]},{"statements":[["text","                  "],["append",["unknown",["tra","jade_store_item_max_owned"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-limited-badge ",["helper",["if"],[["get",["item","limitedBadgeUrgent"]],"jade-store-limited-badge--urgent"],null]]]],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__icon"],["flush-element"],["close-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__text"],["flush-element"],["append",["unknown",["item","limitedBadgeText"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-discount-tag"],["flush-element"],["append",["unknown",["item","discountLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-classic-exclusive-flag-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["append",["helper",["jade-store-holo"],null,[["holoFoilPath","holoAnimationsEnabled"],[["get",["item","holoFoilPath"]],["get",["holoAnimationsEnabled"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["static-attr","class","jade-store-item-placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-item-image"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["item","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-item ",["unknown",["item","tileSizeClass"]]," ",["helper",["unless"],[["get",["item","isOwned"]],"jade-store-item-clickable"],null]," ",["helper",["if"],[["get",["item","isOwned"]],"jade-store-item-owned"],null]," ",["helper",["if"],[["get",["item","isRune"]],"jade-store-item--rune"],null]," ",["helper",["if"],[["get",["item","isQuintessence"]],"jade-store-item--quint"],null]," ",["helper",["if"],[["get",["item","isPortrait"]],"jade-store-item--portrait"],null]," ",["helper",["if"],[["get",["item","showClassicExclusiveFlag"]],"classic-exclusive"],null]]]],["modifier",["action"],[["get",[null]],"openShopItemPurchase",["get",["item"]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-content"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,36,35],["block",["if"],[["get",["item","hasHoloFoil"]]],null,34],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-badges"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","showClassicExclusiveFlag"]]],null,33],["block",["if"],[["get",["item","hasDiscount"]]],null,32],["text","              "],["close-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","hasLimitedBadge"]]],null,31],["text","              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-item-price ",["helper",["if"],[["get",["item","hasRequirements"]],"jade-store-has-requirements"],null]]]],["flush-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-item-price-text"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","isMaxQuantityOwned"]]],null,30,29],["text","              "],["close-element"],["text","\\n"],["block",["if"],[["get",["item","hasRequirements"]]],null,11],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-label"],["flush-element"],["text","\\n              "],["open-element","div",[]],["static-attr","class","jade-store-item-name"],["flush-element"],["block",["if"],[["get",["item","isPortrait"]]],null,10,9],["close-element"],["text","\\n"],["block",["if"],[["get",["item","isRune"]]],null,8],["text","            "],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-border-outer"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-border-inner"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-price-line"],["flush-element"],["close-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-item-hover-border"],["flush-element"],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["block",["each"],[["get",["filteredItems"]]],null,37]],"locals":[]},{"statements":[["text","                  "],["open-element","button",[]],["dynamic-attr","class",["concat",["jade-store-marquee__pip ",["helper",["if"],[["get",["dot","isActive"]],"jade-store-marquee__pip--active"],null]]]],["modifier",["action"],[["get",[null]],"marqueeGoTo",["get",["dot","index"]]]],["flush-element"],["append",["unknown",["dot","number"]],false],["close-element"],["text","\\n"]],"locals":["dot"]},{"statements":[["text","              "],["open-element","div",[]],["static-attr","class","jade-store-marquee__pager"],["flush-element"],["text","\\n"],["block",["each"],[["get",["marqueeDots"]]],null,39],["text","              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-limited-badge ",["helper",["if"],[["get",["item","limitedBadgeUrgent"]],"jade-store-limited-badge--urgent"],null]]]],["flush-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__icon"],["flush-element"],["close-element"],["text","\\n                          "],["open-element","span",[]],["static-attr","class","jade-store-limited-badge__text"],["flush-element"],["append",["unknown",["item","limitedBadgeText"]],false],["close-element"],["text","\\n                        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-store-discount-tag"],["flush-element"],["append",["unknown",["item","discountLabel"]],false],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                        "],["open-element","div",[]],["static-attr","class","jade-store-classic-exclusive-flag-spacer"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","div",[]],["static-attr","class","jade-store-marquee__placeholder"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-marquee__image"],["dynamic-attr","src",["concat",[["unknown",["item","iconUrl"]]]]],["dynamic-attr","alt",["concat",[["unknown",["item","name"]]]]],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-marquee__slide ",["helper",["if"],[["get",["item","showClassicExclusiveFlag"]],"classic-exclusive"],null]]]],["modifier",["action"],[["get",[null]],"openShopItemPurchase",["get",["item"]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","iconUrl"]]],null,45,44],["text","                  "],["open-element","div",[]],["static-attr","class","jade-store-item-badges"],["flush-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section left"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","showClassicExclusiveFlag"]]],null,43],["block",["if"],[["get",["item","hasDiscount"]]],null,42],["text","                    "],["close-element"],["text","\\n                    "],["open-element","div",[]],["static-attr","class","jade-store-item-badges-section right"],["flush-element"],["text","\\n"],["block",["if"],[["get",["item","hasLimitedBadge"]]],null,41],["text","                    "],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                  "],["open-element","div",[]],["static-attr","class","jade-store-marquee__caption"],["flush-element"],["text","\\n                    "],["open-element","span",[]],["static-attr","class","jade-store-marquee__title"],["flush-element"],["append",["unknown",["item","name"]],false],["close-element"],["text","\\n                  "],["close-element"],["text","\\n                "],["close-element"],["text","\\n"]],"locals":["item"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-marquee"],["dynamic-attr","onmouseenter",["helper",["action"],[["get",[null]],"marqueePause"],null],null],["dynamic-attr","onmouseleave",["helper",["action"],[["get",[null]],"marqueeResume"],null],null],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","jade-store-marquee__track"],["dynamic-attr","style",["unknown",["marqueeTrackStyle"]],null],["flush-element"],["text","\\n"],["block",["each"],[["get",["marqueeItems"]]],null,46],["text","            "],["close-element"],["text","\\n"],["block",["if"],[["get",["marqueeDots","length"]]],null,40],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-token-badge__icon"],["dynamic-attr","src",["concat",[["unknown",["token","iconPath"]]]]],["static-attr","alt",""],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","jade-store-token-badge"],["flush-element"],["text","\\n"],["block",["if"],[["get",["token","iconPath"]]],null,48],["text","              "],["open-element","span",[]],["static-attr","class","jade-store-token-badge__count"],["flush-element"],["append",["unknown",["token","balance"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["token"]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-store-token-balances"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarCurrencies"]]],null,49],["text","        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","          "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"toggleCheckboxFilter",["get",["filter","id"]]]],["flush-element"],["text","\\n            "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-checkbox ",["helper",["if"],[["get",["filter","isChecked"]],"jade-store-checkbox-on"],null]]]],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["filter","label"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["filter"]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-filters"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarCheckboxes"]]],null,51],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                  "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-check"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-check.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-down.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                    "],["open-element","img",[]],["static-attr","class","jade-store-sort-option-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-up.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["opt","asc"]]],null,55,54]],"locals":[]},{"statements":[["text","              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-sort-option ",["helper",["if"],[["get",["opt","isSelected"]],"jade-store-sort-option-selected"],null]]]],["modifier",["action"],[["get",[null]],"selectDropdownOption",["get",["opt","id"]]]],["flush-element"],["text","\\n                "],["open-element","span",[]],["static-attr","class","jade-store-sort-option-label"],["flush-element"],["append",["unknown",["opt","label"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isSortDropdown"]]],null,56],["block",["if"],[["get",["opt","isSelected"]]],null,53],["text","              "],["close-element"],["text","\\n"]],"locals":["opt"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","jade-store-sort-dropdown"],["flush-element"],["text","\\n"],["block",["each"],[["get",["toolbarDropdownOptions"]]],null,57],["text","          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-sort-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-down.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","                "],["open-element","img",[]],["static-attr","class","jade-store-sort-arrow"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-arrow-up.svg"],["static-attr","alt",""],["static-attr","width","16"],["static-attr","height","16"],["flush-element"],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["block",["if"],[["get",["activeSort","asc"]]],null,60,59]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-sort-wrapper"],["flush-element"],["text","\\n        "],["open-element","button",[]],["static-attr","class","jade-store-sort-control"],["modifier",["action"],[["get",[null]],"toggleSortDropdown"]],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-store-sort-inner"],["flush-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","jade-store-sort-label"],["flush-element"],["append",["unknown",["toolbarDropdownLabel"]],false],["close-element"],["text","\\n"],["block",["if"],[["get",["isSortDropdown"]]],null,61],["text","          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","jade-store-sort-separator"],["flush-element"],["close-element"],["text","\\n          "],["open-element","img",[]],["static-attr","class","jade-store-sort-dropdown-icon"],["static-attr","src","/fe/lol-jade/images/jade-uikit/sort-dropdown-caret.svg"],["static-attr","alt",""],["static-attr","width","8"],["static-attr","height","6"],["flush-element"],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["if"],[["get",["sortDropdownOpen"]]],null,58],["text","      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","      "],["open-element","div",[]],["static-attr","class","jade-store-search"],["flush-element"],["text","\\n        "],["open-element","input",[]],["static-attr","type","text"],["static-attr","class","jade-store-search-input"],["dynamic-attr","placeholder",["unknown",["tra","jade_store_search_placeholder"]],null],["dynamic-attr","value",["unknown",["searchQuery"]],null],["dynamic-attr","oninput",["helper",["action"],[["get",[null]],"updateSearch"],[["value"],["target.value"]]],null],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["open-element","div",[]],["static-attr","class","jade-store-divider"],["flush-element"],["close-element"]],"locals":[]},{"statements":[["text","            "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"selectSubcategory",["get",["subcat","id"]]]],["flush-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-radio ",["helper",["if"],[["get",["subcat","isActive"]],"jade-store-radio-on"],null]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["subcat","label"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":["subcat"]},{"statements":[["text","            "],["open-element","label",[]],["static-attr","class","jade-store-filter-option"],["modifier",["action"],[["get",[null]],"selectSubcategory",null]],["flush-element"],["text","\\n              "],["open-element","div",[]],["dynamic-attr","class",["concat",["jade-store-radio ",["helper",["unless"],[["get",["activeSubcategory"]],"jade-store-radio-on"],null]]]],["flush-element"],["close-element"],["text","\\n              "],["open-element","span",[]],["static-attr","class","jade-store-filter-label"],["flush-element"],["append",["unknown",["activeCategoryLabel"]],false],["close-element"],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","jade-store-filters"],["flush-element"],["text","\\n"],["block",["unless"],[["get",["isSubcategoryOnly"]]],null,66],["block",["each"],[["get",["subcategoriesForActiveCategory"]]],null,65],["text","        "],["close-element"],["text","\\n        "],["block",["if"],[["get",["toolbarShowSearch"]]],null,64],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","jade-store-sidebar"],["flush-element"],["text","\\n"],["block",["if"],[["get",["hasSubcategories"]]],null,67],["text","\\n"],["block",["if"],[["get",["toolbarShowSearch"]]],null,63],["text","\\n"],["block",["if"],[["get",["toolbarHasDropdown"]]],null,62],["text","\\n"],["block",["if"],[["get",["toolbarCheckboxes","length"]]],null,52],["text","    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -16613,7 +16703,8 @@
                     }
                 },
                 initEmotePanel: function() {
-                    return (0, i.useEmotesApi)((e => e.getCurrentPlayerEmotePanel().then((e => {
+                    const e = this.get("isDemacia");
+                    return (0, i.useEmotesApi)((t => t.getCurrentPlayerEmotePanel(e).then((e => {
                         this.setEmotesModalComponent(e), this.addModalCloseListener()
                     }))))
                 },

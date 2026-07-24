@@ -9297,11 +9297,13 @@ lol-uikit-scrollable.champion-select-center-container__scrollable {
     font-family: var(--font-display)
 }
 
-.jade-shop-grid__error-text {
+.jade-shop-grid__error-text,
+.jade-shop-grid__item-cost {
     font-family: var(--font-gill-sans-mt)
 }
 
-.jade-shop-grid__error-text:lang(vi-VN) {
+.jade-shop-grid__error-text:lang(vi-VN),
+.jade-shop-grid__item-cost:lang(vi-VN) {
     font-family: var(--font-body)
 }
 
@@ -9443,19 +9445,26 @@ lol-uikit-scrollable.champion-select-center-container__scrollable {
 }
 
 .jade-shop-grid__item-cost {
-    color: #9b9ea4
-}
-
-.jade-shop-grid__item-cost,
-.jade-shop-grid__item-owned {
-    font-family: Roboto, sans-serif;
+    color: #e2ba3d;
     font-size: 12px;
     font-weight: 400;
     line-height: 14px
 }
 
+.jade-shop-grid__item-cost.original-cost {
+    color: #fff;
+    margin-left: 4px;
+    opacity: .5;
+    text-decoration: line-through;
+    text-decoration-skip-ink: none
+}
+
 .jade-shop-grid__item-owned {
-    color: #c8aa6e
+    color: #c8aa6e;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px
 }
 
 .jade-shop-loading-spinner {
@@ -13589,7 +13598,7 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
 }
 
 .jade-champion-modal__skin-classic-exclusive-icon {
-    background: url(/fe/lol-jade/images/objectives-game-tabs/tab-jade-active.png) 50% no-repeat;
+    background: url(/fe/lol-jade/images/collections/classic-exclusive-skin-badge.png) 50% no-repeat;
     background-size: contain;
     height: 20px;
     margin-right: 5px;

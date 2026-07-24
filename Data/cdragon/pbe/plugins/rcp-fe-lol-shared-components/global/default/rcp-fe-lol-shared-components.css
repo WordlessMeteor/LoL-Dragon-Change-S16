@@ -3652,6 +3652,7 @@ lol-uikit-flat-input.player-name-input__game-name-input>input[type=search],
 lol-uikit-flat-input.player-name-input__single-input>input[type=search],
 lol-uikit-flat-input.player-name-input__tag-line-input>input[type=search] {
     direction: ltr;
+    padding-right: 0;
     unicode-bidi: isolate
 }
 
@@ -3694,6 +3695,13 @@ div.player-name-input__split-inputs-wrapper {
 
 .player-name-input__game-name-input {
     flex: 3
+}
+
+.player-name-input__game-name-input:lang(ja-jp),
+.player-name-input__game-name-input:lang(zh-cn),
+.player-name-input__game-name-input:lang(zh-my),
+.player-name-input__game-name-input:lang(zh-tw) {
+    flex: 2.5
 }
 
 .player-name-input__game-name-input>input[type=search],
