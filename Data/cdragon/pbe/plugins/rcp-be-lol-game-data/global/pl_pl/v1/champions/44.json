@@ -780,7 +780,7 @@
             "cost": "@Cost@ pkt. many, wszystkie ładunki",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Leczy pobliskich, sojuszniczych bohaterów, bazując na liczbie zebranych ładunków. Ataki wzmocnione efektem Zuchwałości dają ładunek Gwiezdnego Muśnięcia.",
-            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Zyskuje ładunek (maks. @Effect6Amount@) co @StackCooldown@ sek. i za każdym razem, gdy trafia atakiem wzmocnionym <spellName>Zuchwałością</spellName>.<br><br><spellActive>Użycie:</spellActive> Zużywa wszystkie ładunki, by przywrócić pobliskim sojuszniczym bohaterom <healing>@HealingPerStack@ pkt. zdrowia</healing> za każdy ładunek (<healing>@MaxStackHealing@ pkt.</healing> przy @Effect6Amount@ ładunkach).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Biernie:</spellPassive> Zyskuje ładunek (maks. @MaxCharges@) co @StackCooldown@ sek. i za każdym razem, gdy trafia atakiem wzmocnionym <spellName>Zuchwałością</spellName>.<br><br><spellActive>Użycie:</spellActive> Zużywa wszystkie ładunki, by przywrócić pobliskim sojuszniczym bohaterom <healing>@HealingPerStack@ pkt. zdrowia</healing> za każdy ładunek (<healing>@MaxStackHealing@</healing> pkt. przy @MaxCharges@ ładunkach).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Biernie zwiększa pancerz Tarica oraz sojusznika z efektem Bastionu.<br><br>Użycie zapewnia sojusznikowi tarczę oraz obdarowuje efektem Bastionu, który pozostaje aktywny, dopóki nie oddali się on od Tarica. Ponadto czary Tarica rzucane będą także z bohatera chronionego Bastionem.",
-            "dynamicDescription": "<spellPassive>Umiejętność bierna:</spellPassive> Taric zyskuje <scaleArmor>@BonusArmor@ pkt. pancerza</scaleArmor> i za pomocą tej umiejętności tworzy więź między sobą a sojusznikiem. Kiedy objęci więzią bohaterowie znajdują się niedaleko siebie, połączony z Tarikiem sojusznik zyskuje <scaleArmor>@BonusArmor@ pkt. pancerza</scaleArmor>. Ponadto umiejętności Tarica rzucane są także z pozycji pobliskiego sojusznika.<br><br><spellPassive>Użycie:</spellPassive> Taric tworzy więź z sojuszniczym bohaterem, osłaniając go <shield>tarczą równą @Effect2Amount@% maks. zdrowia</shield> na @Effect3Amount@ sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Umiejętność bierna:</spellPassive> Taric zyskuje <scaleArmor>@BonusArmor@ pkt. pancerza</scaleArmor> i za pomocą tej umiejętności tworzy więź między sobą a sojusznikiem. Kiedy objęci więzią bohaterowie znajdują się niedaleko siebie, połączony z Tarikiem sojusznik zyskuje <scaleArmor>@BonusArmor@ pkt. pancerza</scaleArmor>. Ponadto umiejętności Tarica rzucane są także z pozycji pobliskiego sojusznika.<br><br><spellPassive>Użycie: </spellPassive>Taric tworzy więź z sojuszniczym bohaterem, osłaniając go tarczą równą <shield>@ShieldHPRatio@% maks. zdrowia</shield> na @ShieldDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ pkt. (@AbilityResourceName@)",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Taric przygotowuje promień gwiezdnego światła, który po chwili zadaje wrogom obrażenia magiczne i ogłusza ich.",
-            "dynamicDescription": "Taric wytwarza promień gwiezdnego światła, który po @Effect3Amount@ sek. zadaje wrogom <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> i <status>ogłusza</status> ich na @Effect2Amount@ sek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric wytwarza promień gwiezdnego światła, który po @ChargeDuration@ sek. zadaje wrogom <magicDamage>@TotalDamage@ pkt. obrażeń magicznych</magicDamage> i <status>ogłusza</status> ich na @StunDuration@ sek.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

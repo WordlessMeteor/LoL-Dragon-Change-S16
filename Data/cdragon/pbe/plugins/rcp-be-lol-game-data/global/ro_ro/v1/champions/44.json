@@ -780,7 +780,7 @@
             "cost": "@Cost@ mană, toate cumulurile",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Vindecă aliații din apropiere în funcție de cumulurile strânse. Atacurile cu buff-ul ''Bravadă'' oferă un cumul de ''Atingerea stelelor''.",
-            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> primește un cumul (maximum @Effect6Amount@) la fiecare @StackCooldown@ secunde sau când lovește un inamic cu <spellName>''Bravadă''</spellName>.<br><br><spellActive>Activă:</spellActive> consumă toate cumulurile pentru a le reface <healing>@HealingPerStack@ viață</healing> per cumul campionilor aliați din apropiere (<healing>@MaxStackHealing@</healing> la @Effect6Amount@ cumuluri).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> primește un cumul (maximum @MaxCharges@) la fiecare @StackCooldown@ secunde sau când lovește un inamic cu <spellName>''Bravadă''</spellName>.<br><br><spellActive>Activă:</spellActive> consumă toate cumulurile pentru a le reface <healing>@HealingPerStack@ viață</healing> per cumul campionilor aliați din apropiere (<healing>@MaxStackHealing@</healing> la @MaxCharges@ cumuluri).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Crește în mod pasiv armura lui Taric și a oricărui campion aliat care beneficiază de buff-ul ''Bastion''.<br><br>Protejează în mod activ un aliat și îi oferă buff-ul ''Bastion'' cât timp acesta rămâne lângă Taric. Vrăjile lui Taric sunt lansate și de aliatul cu ''Bastion''.",
-            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>Taric primește <scaleArmor>@BonusArmor@ armură</scaleArmor> și formează o legătură între el și aliatul țintit cu această abilitate. Atât timp cât sunt unul lângă celălalt, aliatul primește <scaleArmor>@BonusArmor@ armură</scaleArmor>, iar Taric folosește toate abilitățile sale atât din poziția sa, cât și din poziția aliatului legat.<br><br><spellPassive>Activă: </spellPassive>Taric formează o legătură cu un campion aliat, oferindu-i un <shield>scut în valoare de @Effect2Amount@% din viața maximă</shield> timp de @Effect3Amount@ secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>Taric primește <scaleArmor>@BonusArmor@ armură</scaleArmor> și formează o legătură între el și aliatul țintit cu această abilitate. Atât timp cât sunt unul lângă celălalt, aliatul primește <scaleArmor>@BonusArmor@ armură</scaleArmor>, iar Taric folosește toate abilitățile sale atât din poziția sa, cât și din poziția aliatului legat.<br><br><spellPassive>Activă: </spellPassive>Taric formează o legătură cu un campion aliat, oferindu-i un <shield>scut în valoare de @ShieldHPRatio@% din viața maximă</shield> timp de @ShieldDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Taric pregătește o rază de lumină astrală care, după o scurtă durată, provoacă daune magice și amețește inamicii.",
-            "dynamicDescription": "Taric proiectează o rază de lumină care explodează după @Effect3Amount@ secundă, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor și <status>amețindu-i</status> timp de @Effect2Amount@ secunde.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric proiectează o rază de lumină care explodează după @ChargeDuration@ secundă, provocându-le <magicDamage>@TotalDamage@ daune magice</magicDamage> inamicilor și <status>amețindu-i</status> timp de @StunDuration@ secunde.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

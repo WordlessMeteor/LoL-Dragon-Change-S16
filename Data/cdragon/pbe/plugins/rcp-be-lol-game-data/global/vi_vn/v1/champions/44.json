@@ -780,7 +780,7 @@
             "cost": "@Cost@ Năng lượng, tất cả tích trữ",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Hồi máu cho các tướng đồng minh dựa trên số tích trữ. Đòn đánh cường hóa của Can Đảm cho một tích trữ Ánh Sáng Tinh Tú",
-            "dynamicDescription": "<spellPassive>Nội tại:</spellPassive> Nhận một cộng dồn (tối đa @Effect6Amount@) sau mỗi @StackCooldown@ giây và khi sử dụng chính xác Đòn đánh từ <spellName>Can Đảm</spellName>.<br><br><spellActive>Kích hoạt:</spellActive> Sử dụng toàn bộ cộng dồn để hồi lại <healing>@HealingPerStack@ Máu</healing> với mỗi cộng dồn cho tướng đồng minh ở gần (<healing>@MaxStackHealing@</healing> khi có @Effect6Amount@ cộng dồn).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Nhận một cộng dồn (tối đa @MaxCharges@) sau mỗi @StackCooldown@ giây và khi tung Đòn Đánh chính xác từ <spellName>Can Đảm</spellName>.<br><br><spellActive>Kích Hoạt:</spellActive> Sử dụng toàn bộ cộng dồn để hồi lại <healing>@HealingPerStack@ Máu</healing> với mỗi cộng dồn cho tướng đồng minh ở gần (<healing>@MaxStackHealing@</healing> khi có @MaxCharges@ cộng dồn).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Nội tại tăng Giáp của Taric và tướng đồng minh có Pháo Đài.<br><br>Kích hoạt sẽ tạo lá chắn cho đồng minh và đặt Pháo Đài lên họ chừng nào họ còn đứng gần Taric. Kỹ năng của Taric cũng có thể dùng từ đồng minh có Pháo Đài.",
-            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Taric nhận <scaleArmor>@BonusArmor@ Giáp</scaleArmor> và tạo ra một liên kết giữa bản thân và đồng minh được kết nối bằng Kỹ năng này. Khi ở gần nhau, đồng minh kết nối được tăng <scaleArmor>@BonusArmor@ Giáp</scaleArmor> và Taric có thể sử dụng tất cả các kỹ năng của mình từ vị trí của cả bản thân lẫn đồng minh kết nối.<br><br><spellPassive>Kích Hoạt: </spellPassive>Taric kết nối với một tướng đồng minh, cho họ một Lá Chắn tương đương <shield>@Effect2Amount@% Máu tối đa</shield> trong @Effect3Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại: </spellPassive>Taric nhận <scaleArmor>@BonusArmor@ Giáp</scaleArmor> và tạo ra một liên kết giữa bản thân và đồng minh được kết nối bằng Kỹ Năng này. Khi ở gần nhau, đồng minh kết nối được tăng <scaleArmor>@BonusArmor@ Giáp</scaleArmor> và Taric có thể sử dụng tất cả các Kỹ Năng của mình từ vị trí của cả bản thân lẫn đồng minh kết nối.<br><br><spellPassive>Kích Hoạt: </spellPassive>Taric kết nối với một tướng đồng minh, cho họ một Lá Chắn tương đương <shield>@ShieldHPRatio@% Máu tối đa</shield> trong @ShieldDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Taric gọi ra luồng sáng tinh tú. Sau khi chờ một thời gian, nó sẽ gây sát thương phép và làm choáng kẻ địch.",
-            "dynamicDescription": "Taric triệu gọi một luồng sáng tinh tú, phát nổ sau @Effect3Amount@ giây để gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> và <status>Làm Choáng</status> kẻ địch trong @Effect2Amount@ giây.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric triệu gọi một luồng sáng tinh tú, phát nổ sau @ChargeDuration@ giây để gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> và <status>Làm Choáng</status> kẻ địch trong @StunDuration@ giây.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

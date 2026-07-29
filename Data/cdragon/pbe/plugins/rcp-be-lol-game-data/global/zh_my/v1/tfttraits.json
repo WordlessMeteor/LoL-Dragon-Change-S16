@@ -17906,6 +17906,1766 @@
         ]
     },
     {
+        "display_name": "适应者",
+        "trait_id": "DA_18_Adaptor",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Adaptor.TFT_Set18.png",
+        "tooltip_text": "固有：适应者的技能会根据其物理攻击或魔法攻击较高者而变化。<br><br>适应者会获得魔法攻击或物理攻击（取两项中数值较高的一项）。<br><row>（@MinUnits@）@ADAPGain*100@%或</row><br><row>（@MinUnits@）@ADAPGain*100@%或</row><br><row>（@MinUnits@）@ADAPGain*100@%或</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAPGain",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPGain",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPGain",
+                        "value": 0.5
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "顶尖掠食者",
+        "trait_id": "DA_18_ApexPredator",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_ApexPredator.TFT_Set18.png",
+        "tooltip_text": "远古巨龙会占用2个队伍栏位，并提供+2峡谷怪物特性。",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "巨岩壁垒",
+        "trait_id": "DA_18_Battlemage",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Monolith.TFT_Set18.png",
+        "tooltip_text": "每有一名敌人将巨岩壁垒指定为目标，获得@Resists@物理防御和魔法防御。",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Resists",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "漆黑荆棘",
+        "trait_id": "DA_18_Blackthorn",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGod.TFT_Set18.png",
+        "tooltip_text": "战斗开始前，位于漆黑荆棘格子上的友军会被献祭，并为你的英雄提供生命值。<br><br>漆黑荆棘会根据祭品的定位、星等和费用获得额外属性。<br><row>（@MinUnits@）@Health@%i:scaleHealth%</row><br><row>（@MinUnits@）@Health@%i:scaleHealth%；加成效果增强@StatMultiplier*100@%</row><br><row>（@MinUnits@）@Health@%i:scaleHealth%；祭品不会死亡。祭品还会获得：@Tier3BonusAD*100@% %i:scaleAD%%i:scaleAP%，<br>@Tier3BonusAttackSpeed*100@%%i:scaleAS%，@Tier3BonusArmor@ %i:scaleArmor%%i:scaleMR%，@Tier3BonusHealth@ %i:scaleHealth%，@Tier3BonusOmnivamp*100@%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Health",
+                        "value": 175.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Health",
+                        "value": 300.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Health",
+                        "value": 350.0
+                    },
+                    {
+                        "name": "Tier3BonusAD",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Tier3BonusArmor",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Tier3BonusAttackSpeed",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Tier3BonusHealth",
+                        "value": 250.0
+                    },
+                    {
+                        "name": "Tier3BonusOmnivamp",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "灵花祭",
+        "trait_id": "DA_18_Blossom",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Blossom.TFT_Set18.png",
+        "tooltip_text": "战斗结束后，你的灵火会获得强化。<br><br>灵花祭英雄获得物理攻击、魔法攻击和@BonusHealth*100@%最大生命值。<br><row>（@MinUnits@）灵火获得升级，@ADAP*100@%%i:scaleAD%%i:scaleAP%</row><br><row>（@MinUnits@）每次商店都会出现灵火，@ADAP*100@%%i:scaleAD%%i:scaleAP%</row><br><row>（@MinUnits@）购买灵火后获得@GoldPerCharmPurchased@金钱，@ADAP*100@%%i:scaleAD%%i:scaleAP%</row><br><row>（@MinUnits@）每回合可购买2个灵火，@ADAP*100@%%i:scaleAD%%i:scaleAP%</row><br><row>（@MinUnits@）灵火充盈着力量，@ADAP*100@%%i:scaleAD%%i:scaleAP%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 0.12
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.12
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "GoldPerCharmPurchased",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 9,
+                "max_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 11,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "武斗家",
+        "trait_id": "DA_18_Brawler",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Brawler.TFT_Set18.png",
+        "tooltip_text": "你的队伍获得@BrawlerTeamHealth@最大生命值，武斗家会获得更多最大生命值。<br><row>（@MinUnits@）@BrawlerHealthPercent*100@% %i:scaleHealth%</row><br><row>（@MinUnits@）@BrawlerHealthPercent*100@% %i:scaleHealth%</row><br><row>（@MinUnits@）@BrawlerHealthPercent*100@% %i:scaleHealth%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerTeamHealth",
+                        "value": 120.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerHealthPercent",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerHealthPercent",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerHealthPercent",
+                        "value": 0.65
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "腐蚀",
+        "trait_id": "DA_18_Caustic",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
+        "tooltip_text": "腐蚀伤害会对敌人施加@ShredPercent@%削减和斩断效果，持续@ShredDuration@秒。",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ShredDuration",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "ShredPercent",
+                        "value": 30.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "女巫集会",
+        "trait_id": "DA_18_Coven",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Coven.TFT_Set18.png",
+        "tooltip_text": "通过击杀英雄收集精萃，输掉玩家战斗可获得更多精萃。<br><br>从@EssenceForRitualTooltip@精萃开始，你可以选择将精萃转化为奖励，或继续收集精萃。每项奖励所需的精萃数量都会不断增加。<br><row>（@MinUnits@）每次击杀获得@EssencePerDeath@精萃，每次失败获得@EssencePerLoss@精萃</row><br><row>（@MinUnits@）每次击杀获得@EssencePerDeath@精萃，每次失败获得@EssencePerLoss@精萃</row><br><row>（@MinUnits@）每次击杀获得@EssencePerDeath@精萃，每次失败获得@EssencePerLoss@精萃</row><br><row>（@MinUnits@）每次击杀获得@EssencePerDeath@精萃，每次失败获得@EssencePerLoss@精萃</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EssenceForRitualTooltip",
+                        "value": 40.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 18.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 22.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 35.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 7.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 70.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "捍卫者",
+        "trait_id": "DA_18_Defender",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Defender.TFT_Set18.png",
+        "tooltip_text": "你的队伍获得@NonDefenderDefenseGain@物理防御和魔法防御。捍卫者会获得更多防御。<br><row>（@MinUnits@）@DefenderDefenseGain@</row><br><row>（@MinUnits@） @DefenderDefenseGain@</row><br><row>（@MinUnits@） @DefenderDefenseGain@</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NonDefenderDefenseGain",
+                        "value": 12.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DefenderDefenseGain",
+                        "value": 25.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DefenderDefenseGain",
+                        "value": 55.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DefenderDefenseGain",
+                        "value": 110.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "日月双蚀",
+        "trait_id": "DA_18_Eclipse",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Eclipse.TFT_Set18.png",
+        "tooltip_text": "战斗开始@DelaySeconds@秒后，日月双蚀会击杀生命值最低的敌人，并每过@EclipseBeamPeriod@秒重复一次。",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DelaySeconds",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "EclipseBeamPeriod",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 0,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            }
+        ]
+    },
+    {
+        "display_name": "神木精灵",
+        "trait_id": "DA_18_Elderwood",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Elderwood.TFT_Set18.png",
+        "tooltip_text": "获得可放置的神木精灵植物。<br><row>（@MinUnits@）一棵石皮树和一个生命花</row><br><row>（@MinUnits@）第二棵石皮树和数棵石皮树获得@StonebarkTreeBonusHealth@生命值</row><br><row>（@MinUnits@）以及深林守护者</row><br><row>（@MinUnits@）植物最高可升至2星</row><br><row>（@MinUnits@）植物最高可升至3星，树林焕发生机</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "APPerTotalElderwoodStarLevel",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "MaxHealthRatioPerTotalElderwoodStarLevel",
+                        "value": 0.25
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "StonebarkTreeBonusHealth",
+                        "value": 100.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [],
+                "min_units": 7,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [],
+                "min_units": 9,
+                "max_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [],
+                "min_units": 11,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "处刑者",
+        "trait_id": "DA_18_Executioner",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Executioner.TFT_Set18.png",
+        "tooltip_text": "<row>（@MinUnits@）处刑者获得<TFTKeyword>精准</TFTKeyword>效果和@CritChance*100@%暴击机率。</row><br><row>（@MinUnits@）此外，敌人会流血，在@BleedDuration@秒内承受@BonusBleedPercent*100@%额外真实伤害。</row><br><row>（@MinUnits@）流血伤害提升至@BonusBleedPercent*100@%。</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CritChance",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BleedDuration",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "BonusBleedPercent",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusBleedPercent",
+                        "value": 0.5
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "妖精宫廷",
+        "trait_id": "DA_18_Fae",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Fae.TFT_Set18.png",
+        "tooltip_text": "你的队伍造成伤害、治疗和护盾时会吸引小精灵。<br><br>每只小精灵都会为妖精宫廷英雄提供物理攻击和魔法攻击；当这些英雄的生命值低于@HealThreshold*100@%时，每只小精灵都会为其提供治疗。<br><row>（@MinUnits@）@ADAP@%和@Heal@%治疗。</row><br><row>（@MinUnits@）@ADAP@%和@Heal@%治疗。吸引7只小精灵后，开始改为吸引黄金小精灵，黄金小精灵会提供金钱。</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealThreshold",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "绿林之父",
+        "trait_id": "DA_18_Greenfather",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Greenfather.TFT_Set18.png",
+        "tooltip_text": "当你的最强埃尔文施法时，获得@SeedsPerCast@颗种子，且每场战斗额外获得@CombatStartSeeds@颗。埃尔文会消耗@SeedsToGrowHex@颗种子，在你的棋盘上培育一个格子，并为站在其中的单位提供加成。<br><br>种子：0/@SeedsToGrowHex@<br><br>当前生态：",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CombatStartSeeds",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "SeedsPerCast",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "SeedsToGrowHex",
+                        "value": 5.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "猎手",
+        "trait_id": "DA_18_Hunter",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Hunter.TFT_Set18.png",
+        "tooltip_text": "猎手获得物理攻击。如果猎手在@HunterDuration@秒内没有更换目标，则获得@DamageAmp*100@%伤害增幅。<br><row>（@MinUnits@）@HunterAD*100@%%i:scaleAD%</row><br><row>（@MinUnits@）@HunterAD*100@%%i:scaleAD%</row><br><row>（@MinUnits@）@HunterAD*100@%%i:scaleAD%</row><br><row>（@MinUnits@）@HunterAD*100@%%i:scaleAD%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "HunterDuration",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "地狱火使者",
+        "trait_id": "DA_18_Inferno",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
+        "tooltip_text": "地狱火使者的伤害会对敌人施加<TFTKeyword>燃烧</TFTKeyword>和@WoundPercent@%<TFTKeyword>重创</TFTKeyword>效果，持续@Duration@秒。地狱火使者的燃烧效果可与其它燃烧效果叠加。<br><row>（@MinUnits@）@HPBurnPerSecond@%燃烧</row><br><row>（@MinUnits@）战斗结束后，你的商店中@LuckySlotCount@个没有地狱火使者的栏位会被点燃，重骰出一名高一阶的英雄</row><br><row>（@MinUnits@）点燃@LuckySlotCount@个商店栏位，@HPBurnPerSecond@%燃烧效果</row><br><row>（@MinUnits@）点燃@LuckySlotCount@个商店栏位，@HPBurnPerSecond@%燃烧效果</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Duration",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HPBurnPerSecond",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "LuckySlotCount",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HPBurnPerSecond",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "LuckySlotCount",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HPBurnPerSecond",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "LuckySlotCount",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "神谕者",
+        "trait_id": "DA_18_Invoker",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Invoker.TFT_Set18.png",
+        "tooltip_text": "你的队伍获得魔力回复，神谕者会获得更多。<br><row>（@MinUnits@）@TeamManaRegen@%i:scaleManaRegen% | @InvokerManaBonus@%i:scaleManaRegen%</row><br><row>（@MinUnits@）@TeamManaRegen@%i:scaleManaRegen% | @InvokerManaBonus@%i:scaleManaRegen%</row><br><row>（@MinUnits@）@TeamManaRegen@%i:scaleManaRegen% | @InvokerManaBonus@%i:scaleManaRegen%</row><br><row>（@MinUnits@）@TeamManaRegen@%i:scaleManaRegen% | @InvokerManaBonus@%i:scaleManaRegen%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "月光使者",
+        "trait_id": "DA_18_Lunar",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Lunar.TFT_Set18.png",
+        "tooltip_text": "月光使者英雄及其相邻友军获得攻击速度和魔法攻击。月光使者英雄额外获得@LunarMultiplier*100@%。<br><row>（@MinUnits@）@AttackSpeed*100@% %i:scaleAS%，@AbilityPower*100@% %i:scaleAP%</row><br><row>（@MinUnits@）@AttackSpeed*100@% %i:scaleAS%，@AbilityPower*100@% %i:scaleAP%</row><br><row>（@MinUnits@）@AttackSpeed*100@% %i:scaleAS%，@AbilityPower*100@% %i:scaleAP%</row><br><row>（@MinUnits@）@AttackSpeed*100@% %i:scaleAS%，@AbilityPower*100@% %i:scaleAP%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "LunarMultiplier",
+                        "value": 1.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.07
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "圣灵使",
+        "trait_id": "DA_18_LuxUniqueTrait",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Avatar.TFT_Set18.png",
+        "tooltip_text": "当你的备战区或棋盘上有1个圣灵使时，你商店中的其它圣灵使都会转化为与该圣灵使相同的特性。<br><br>圣灵使所选的特性在特性加成中会被计算两次。",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "古木",
+        "trait_id": "DA_18_Maokai_UniqueTrait",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
+        "tooltip_text": "每当有敌人在@UniqueTraitHexRange@格范围内阵亡时，获得@UniqueTraitHealthPerStack@点永久最大生命值。<br><br>当前：0",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "UniqueTraitHealthPerStack",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "UniqueTraitHexRange",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "速射",
+        "trait_id": "DA_18_Rapidfire",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Rapidfire.TFT_Set18.png",
+        "tooltip_text": "你的队伍获得@TeamAS*100@%攻击速度。疾射英雄每次攻击都会获得更多攻击速度，最多可叠加@MaxStacks@层。<br><row>（@MinUnits@）每次攻击+@ASPerAttack*100@%%i:scaleAS%</row><br><row>（@MinUnits@）每次攻击+@ASPerAttack*100@%%i:scaleAS%</row><br><row>（@MinUnits@）每次攻击+@ASPerAttack*100@%%i:scaleAS%</row><br><row>（@MinUnits@）每次攻击+@ASPerAttack*100@%%i:scaleAS%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "MaxStacks",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "TeamAS",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.03
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.09
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "宿敌",
+        "trait_id": "DA_18_Rival",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Rival.TFT_Set18.png",
+        "tooltip_text": "<row>（@MinUnits@）仅在部署1名宿敌时激活。<br><br>宿敌会收集击杀/助攻数，击败其他宿敌时可获得3次击杀/助攻。</row><br><row>（@MinUnits@）宿敌可以同时登场。当卡力斯通过技能获得魔力时，雷葛尔会获得该魔力量的@Augment_RengarManaPercent*100@%。当雷葛尔通过技能获得治疗时，卡力斯会获得该治疗量的@Augment_KhaZixHealPercent*100@%。</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Augment_KhaZixHealPercent",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Augment_RengarManaPercent",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "破坏者",
+        "trait_id": "DA_18_Slayer",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Ravager.TFT_Set18.png",
+        "tooltip_text": "劫掠者获得@Omnivamp*100@%全能吸血。此外，劫掠者会造成额外伤害，对生命值低于@EnemyHealthThreshold*100@%的单位时伤害翻倍。<br><row>（@MinUnits@）@BonusDamagePercentBase*100@%额外伤害</row><br><row>（@MinUnits@）@BonusDamagePercentBase*100@%额外伤害</row><br><row>（@MinUnits@）@BonusDamagePercentBase*100@%额外伤害</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnemyHealthThreshold",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamagePercentBase",
+                        "value": 0.12
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamagePercentBase",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamagePercentBase",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "日耀使者",
+        "trait_id": "DA_18_Solar",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Solar.TFT_Set18.png",
+        "tooltip_text": "<row>（@MinUnits@）你的英雄获得一道相当于@ShieldRatio*100@%最大生命值的护盾，并造成@BonusMagicDamage*100@%额外魔法伤害。每拥有一位独特的三星英雄，都会获得额外加成：<br><br>1：每拥有一名三星英雄，护盾和魔法伤害提升@PercentIncreasePer3Star*100@%。<br>@NumThreeStarThreshold1@：@Threshold1AttackSpeed*100@% %i:scaleAS%和@Threshold1ArmorMagicResist@%i:scaleArmor%%i:scaleMR%<br>@NumThreeStarThreshold2@：@Threshold2TrueDamageConversion*100@%的额外魔法伤害会转化为真实伤害。<br>@NumThreeStarThreshold3@：战斗每经过@Threshold3StarUpPeriod@秒，三星英雄会在战斗中晋升为四星。</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusMagicDamage",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "NumThreeStarThreshold1",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "NumThreeStarThreshold2",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "NumThreeStarThreshold3",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "PercentIncreasePer3Star",
+                        "value": 0.025
+                    },
+                    {
+                        "name": "ShieldRatio",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Threshold1ArmorMagicResist",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "Threshold1AttackSpeed",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Threshold2TrueDamageConversion",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Threshold3StarUpPeriod",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "术士",
+        "trait_id": "DA_18_Spellweaver",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Spellweaver.TFT_Set18.png",
+        "tooltip_text": "你的队伍获得@TeamwideAP*100@%魔法攻击。术士会获得更多魔法攻击，每当术士施放技能时还会获得额外魔法攻击。<br><row>（@MinUnits@）@SpellweaverAP*100@%%i:scaleAP%，每次施法+@APPerCast*100@%%i:scaleAP%</row><br><row>（@MinUnits@）@SpellweaverAP*100@%%i:scaleAP%，每次施法+@APPerCast*100@%%i:scaleAP%</row><br><row>（@MinUnits@）@SpellweaverAP*100@%%i:scaleAP%，每次施法+@APPerCast*100@%%i:scaleAP%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TeamwideAP",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "APPerCast",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "SpellweaverAP",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "APPerCast",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "SpellweaverAP",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "APPerCast",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "SpellweaverAP",
+                        "value": 0.55
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "迅灵",
+        "trait_id": "DA_18_Sprykin",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Sprykin.TFT_Set18.png",
+        "tooltip_text": "获得毛茸茸大伙伴。将一个迅灵放到毛茸茸大伙伴身上，选择它的骑手。<br><row>（@MinUnits@）骑手获得<br>@HealthIncrease*100@%%i:scaleHealth%和@AttackSpeedIncrease*100@%%i:scaleAS%</row><br><row>（@MinUnits@）@HealthIncrease*100@%%i:scaleHealth%@AttackSpeedIncrease*100@%%i:scaleAS%，且毛茸茸大伙伴技能效果的@TeamwideRatio*100@%会作用于你的迅灵英雄</row><br><row>（@MinUnits@）@HealthIncrease*100@%%i:scaleHealth%@AttackSpeedIncrease*100@%%i:scaleAS%，且毛茸茸大伙伴技能效果的@TeamwideRatio*100@%会作用于你的迅灵英雄。</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedIncrease",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "HealthIncrease",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedIncrease",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "HealthIncrease",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "TeamwideRatio",
+                        "value": 0.5
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedIncrease",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "HealthIncrease",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "TeamwideRatio",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "召唤师",
+        "trait_id": "DA_18_Summoner",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Summoner.TFT_Set18.png",
+        "tooltip_text": "召唤师会以不同方式强化他们的召唤物。<br><br>约瑞科：+@HealthMult*100@%生命值<br>阿祈尔：+@DamageMult*100@%伤害<br>喙鸟妈妈：+@DamageMult*100@%伤害<br>枷萝：+@NumExtraAttacks@植物攻击次数<br><row>（@MinUnits@）强化召唤物</row><br><row>（@MinUnits@）每项效果提升50%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageMult",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "HealthMult",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "NumExtraAttacks",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "先锋战士",
+        "trait_id": "DA_18_Vanguard",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Vanguard.TFT_Set18.png",
+        "tooltip_text": "战斗开始和生命值低于@HealthThreshold*100@%时：先锋战士会获得一道基于最大生命值的护盾，持续@ShieldDuration@秒。<br><row>（@MinUnits@）@MaxHealthShield*100@%最大生命值</row><br><row>（@MinUnits@）@MaxHealthShield*100@%最大生命值</row><br><row>（@MinUnits@）@MaxHealthShield*100@%最大生命值。拥有护盾时，获得@DurabilityIncrease*100@%续战力。</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "MaxHealthShield",
+                        "value": 0.18
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "MaxHealthShield",
+                        "value": 0.35
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DurabilityIncrease",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "MaxHealthShield",
+                        "value": 0.45
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "荆棘少女",
+        "trait_id": "DA_18_ZyraUniqueTrait",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_ZyraOrigin.TFT_Set18.png",
+        "tooltip_text": "你的队伍获得@BaseDurability*100@%续战力，如果枷萝有@PlantNumThreshold@颗或以上的植物存活，则提升至@IncreasedDurability*100@%。",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BaseDurability",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "IncreasedDurability",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PlantNumThreshold",
+                        "value": 6.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "调谐使",
+        "trait_id": "DA_AluneUniqueTrait18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Attuned.TFT_Set18.png",
+        "tooltip_text": "你的最强亚卢妮在每次施法后，都会切换至一个新的月相。当月相处于半月或以下时，你的队伍获得@Durability*100@%韧性。当月相高于半月时，你的队伍获得@DamageAmp*100@%伤害增幅。",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "Durability",
+                        "value": 0.07
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "赏金追寻者",
+        "trait_id": "DA_DravenUniqueTrait18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_BountySeeker.TFT_Set18.png",
+        "tooltip_text": "选择一项赏金。你的最强达瑞文可推进赏金进度，从而获取其奖励。完成一项赏金后，可以选择另一项。",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "翡翠化身",
+        "trait_id": "DA_Emerald18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_EmeraldAspect.TFT_Set18.png",
+        "tooltip_text": "将一名友军拖动至你最强的塔里克身上进行配对，使其获得塔里克技能提供的强力加成。",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "致命盛华",
+        "trait_id": "DA_FloraFatalis18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_FloraFatalis.TFT_Set18.png",
+        "tooltip_text": "致命盛华英雄在击杀/助攻敌人时会将其收割，获得：<br><row>（@MinUnits@）@Mana@魔力值</row><br><row>（@MinUnits@）并为生命值最低的友军回复@PercentHeal*100@%最大生命值。</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Mana",
+                        "value": 10.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PercentHeal",
+                        "value": 0.08
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "重装战士",
+        "trait_id": "DA_Juggernaut18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Juggernaut.TFT_Set18.png",
+        "tooltip_text": "你的队伍获得续战力。重装战士会获得更多续战力。<br><row>（@MinUnits@）@TeamDurability*100@%%i:scaleDR%或@JuggernautDurability*100@%%i:scaleDR%</row><br><row>（@MinUnits@）@TeamDurability*100@%%i:scaleDR%或@JuggernautDurability*100@%%i:scaleDR%</row><br><row>（@MinUnits@）@TeamDurability*100@%%i:scaleDR%或@JuggernautDurability*100@%%i:scaleDR%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "JuggernautDurability",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "TeamDurability",
+                        "value": 0.04
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "JuggernautDurability",
+                        "value": 0.28
+                    },
+                    {
+                        "name": "TeamDurability",
+                        "value": 0.06
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "JuggernautDurability",
+                        "value": 0.34
+                    },
+                    {
+                        "name": "TeamDurability",
+                        "value": 0.08
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "原初之灵",
+        "trait_id": "DA_Primal18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Primal.TFT_Set18.png",
+        "tooltip_text": "从四种原初祝福中选择一种。<br><row>（@MinUnits@）</row><br><row>（@MinUnits@）</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "峡谷怪物",
+        "trait_id": "DA_Riftbeast18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Riftbeast.TFT_Set18.png",
+        "tooltip_text": "<row>（@MinUnits@）使用首领标记，为一只峡谷怪物赋予其专属增益</row><br><row>（@MinUnits@）每@OverrunCombats@场战斗，你的下一个商店将被峡谷怪物占据。</row><br><row>（@MinUnits@）战斗开始和每过5秒，峡谷怪物获得<br>@CapstoneAD*100@%%i:scaleAD%@CapstoneAP*100@%%i:scaleAP%@CapstoneAspd*100@%%i:scaleAS%<br>+@CapstoneArmor@%i:scaleArmor%+@CapstoneMR@%i:scaleMR%+@CapstoneHealth@%i:scaleHealth%+@CapstoneManaRegen@%i:scaleManaRegen%</row><br><row>（@MinUnits@）+@TeamSize@队伍人数上限</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "OverrunCombats",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "CapstoneAD",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "CapstoneAP",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "CapstoneArmor",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "CapstoneAspd",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "CapstoneHealth",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "CapstoneMR",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "CapstoneManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "TeamSize",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
         "display_name": "太空军团",
         "trait_id": "Astro",
         "set": "TFTSet3",

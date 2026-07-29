@@ -358,6 +358,7 @@
     },
     "{08606bf4}": {
         "ObjectName": "VladimirEMissile",
+        "objectPath": "{08606bf4}",
         "mScriptName": "VladimirEMissile",
         "mSpell": {
             "flags": 4,
@@ -459,6 +460,7 @@
     },
     "{d3a3b479}": {
         "ObjectName": "VladimirESlow",
+        "objectPath": "{d3a3b479}",
         "mScriptName": "VladimirESlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_VladimirESlow",
@@ -468,6 +470,7 @@
     },
     "Characters/Vladimir/Spells/VladimirEAbility/VladimirE": {
         "ObjectName": "VladimirE",
+        "objectPath": "Characters/Vladimir/Spells/VladimirEAbility/VladimirE",
         "mScriptName": "VladimirE",
         "mSpell": {
             "mAffectsTypeFlags": 8192,
@@ -596,14 +599,92 @@
                         65.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxHealthCost",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        15.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        75.0,
+                        90.0,
+                        105.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TotalMaxHPDamage",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxChannelTime",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TimetoRampMaxDamage",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseMaxDamage",
+                    "values": [
+                        30.0,
+                        60.0,
+                        90.0,
+                        120.0,
+                        150.0,
+                        180.0,
+                        210.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "MinDamageTooltip": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 3,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 12,
@@ -620,8 +701,8 @@
                 "MaxDamageTooltip": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 10,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "{bd94e453}",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 12,
@@ -776,20 +857,17 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 3,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_MinimumDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 10,
+                                    "type": "BaseMaxDamage",
                                     "nameOverride": "Spell_ListType_MaximumDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 9,
+                                    "type": "SlowPercent",
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -1415,8 +1493,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 9,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowPercent",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1462,6 +1540,7 @@
     },
     "Characters/Vladimir/Spells/VladimirBloodGorgedAbility/VladimirBloodGorged": {
         "ObjectName": "VladimirBloodGorged",
+        "objectPath": "{11207c2a}",
         "mScriptName": "VladimirBloodGorged",
         "mSpell": {
             "mEffectAmount": [
@@ -1514,6 +1593,34 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "HPforAP",
+                    "values": [
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0,
+                        30.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatioBonusHP",
+                    "values": [
+                        1.600000023841858,
+                        1.600000023841858,
+                        1.600000023841858,
+                        1.600000023841858,
+                        1.600000023841858,
+                        1.600000023841858,
+                        1.600000023841858
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "ApproximateAPBonusAvoidingRecursion": {
                     "mMultiplier": {
@@ -1534,8 +1641,8 @@
                                     },
                                     {
                                         "mPart1": {
-                                            "mEffectIndex": 2,
-                                            "__type": "EffectValueCalculationPart"
+                                            "mDataValue": "{55e7c63a}",
+                                            "__type": "NamedDataValueCalculationPart"
                                         },
                                         "mPart2": {
                                             "mCoefficient": -1.0,
@@ -1603,8 +1710,8 @@
                                     "__type": "NumberCalculationPart"
                                 },
                                 "mPart2": {
-                                    "mEffectIndex": 2,
-                                    "__type": "EffectValueCalculationPart"
+                                    "mDataValue": "{55e7c63a}",
+                                    "__type": "NamedDataValueCalculationPart"
                                 },
                                 "__type": "ProductOfSubPartsCalculationPart"
                             },
@@ -1673,6 +1780,7 @@
     },
     "Characters/Vladimir/Spells/VladimirRHealMissile": {
         "ObjectName": "VladimirRHealMissile",
+        "objectPath": "{29dba4f1}",
         "mScriptName": "VladimirRHealMissile",
         "mSpell": {
             "flags": 4,
@@ -1767,6 +1875,7 @@
     },
     "Characters/Vladimir/Spells/VladimirHemoplagueMissile": {
         "ObjectName": "VladimirHemoplagueMissile",
+        "objectPath": "{2e1c8de0}",
         "mScriptName": "VladimirHemoplagueMissile",
         "mSpell": {
             "flags": 4194308,
@@ -1915,6 +2024,7 @@
     },
     "Characters/Vladimir/Spells/VladimirHemoplagueAbility/VladimirHemoplague": {
         "ObjectName": "VladimirHemoplague",
+        "objectPath": "Characters/Vladimir/Spells/VladimirHemoplagueAbility/VladimirHemoplague",
         "mScriptName": "VladimirHemoplague",
         "mSpell": {
             "flags": 4,
@@ -2003,12 +2113,79 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        150.0,
+                        150.0,
+                        250.0,
+                        350.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAmp",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VampPercentFirstChamp",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "VampPercentAdditionalChamp",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "Damage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.699999988079071,
@@ -2130,8 +2307,7 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -2220,6 +2396,7 @@
     },
     "Characters/Vladimir/Spells/VladimirSanguinePoolSlow": {
         "ObjectName": "VladimirSanguinePoolSlow",
+        "objectPath": "{4c3b1aee}",
         "mScriptName": "VladimirSanguinePoolSlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Slow",
@@ -2230,6 +2407,7 @@
     },
     "Characters/Vladimir/Spells/VladimirTidesofBlood": {
         "ObjectName": "VladimirTidesofBlood",
+        "objectPath": "{584f92dd}",
         "mScriptName": "VladimirTidesofBlood",
         "mSpell": {
             "mAffectsTypeFlags": 15375,
@@ -2403,6 +2581,7 @@
     },
     "Characters/Vladimir/Spells/VladimirBloodBallVFXBuff": {
         "ObjectName": "VladimirBloodBallVFXBuff",
+        "objectPath": "{989d4b33}",
         "mScriptName": "VladimirBloodBallVFXBuff",
         "mBuff": {
             "PersistentEffectConditions": [
@@ -2423,6 +2602,7 @@
     },
     "Characters/Vladimir/Spells/VladimirCritAttack": {
         "ObjectName": "VladimirCritAttack",
+        "objectPath": "Characters/Vladimir/Spells/VladimirCritAttack",
         "mScriptName": "VladimirCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
@@ -2497,6 +2677,7 @@
     },
     "Characters/Vladimir/Spells/VladimirSanguinePoolAbility/VladimirSanguinePool": {
         "ObjectName": "VladimirSanguinePool",
+        "objectPath": "Characters/Vladimir/Spells/VladimirSanguinePoolAbility/VladimirSanguinePool",
         "mScriptName": "VladimirSanguinePool",
         "mSpell": {
             "flags": 4,
@@ -2800,8 +2981,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "MoveSpeedMod",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2813,8 +2994,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 5,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "VampPercent",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2875,6 +3056,7 @@
     },
     "Characters/Vladimir/Spells/VladimirTidesofBloodHeal": {
         "ObjectName": "VladimirTidesofBloodHeal",
+        "objectPath": "{a2ccd833}",
         "mScriptName": "VladimirTidesofBloodHeal",
         "mSpell": {
             "flags": 4,
@@ -3023,6 +3205,7 @@
     },
     "Characters/Vladimir/Spells/VladimirTidesofBloodNuke": {
         "ObjectName": "VladimirTidesofBloodNuke",
+        "objectPath": "{a39cd0f8}",
         "mScriptName": "VladimirTidesofBloodNuke",
         "mSpell": {
             "flags": 4,
@@ -3170,6 +3353,7 @@
     },
     "Characters/Vladimir/Spells/VladimirTransfusionHeal": {
         "ObjectName": "VladimirTransfusionHeal",
+        "objectPath": "{af32e773}",
         "mScriptName": "VladimirTransfusionHeal",
         "mSpell": {
             "flags": 4,
@@ -3261,6 +3445,7 @@
     },
     "Characters/Vladimir/Spells/VladimirQBuild": {
         "ObjectName": "VladimirQBuild",
+        "objectPath": "{b3bf0190}",
         "mScriptName": "VladimirQBuild",
         "mBuff": {
             "mDescription": "game_buff_tooltip_VladimirQBuild",
@@ -3270,6 +3455,7 @@
     },
     "Characters/Vladimir/Spells/VladimirHemoplagueDebuff": {
         "ObjectName": "VladimirHemoplagueDebuff",
+        "objectPath": "{cda738ae}",
         "mScriptName": "VladimirHemoplagueDebuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_VladimirHemoplagueDebuff",
@@ -3295,6 +3481,7 @@
     },
     "Characters/Vladimir/Spells/VladimirQAbility/VladimirQ": {
         "ObjectName": "VladimirQ",
+        "objectPath": "Characters/Vladimir/Spells/VladimirQAbility/VladimirQ",
         "mScriptName": "VladimirQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -3412,6 +3599,84 @@
                         0.3499999940395355
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        60.0,
+                        80.0,
+                        100.0,
+                        120.0,
+                        140.0,
+                        160.0,
+                        180.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseHeal",
+                    "values": [
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Empowered___HealPer100AP_0_1_",
+                    "values": [
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033,
+                        0.03999999910593033
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamagePercentAmp",
+                    "values": [
+                        85.0,
+                        85.0,
+                        85.0,
+                        85.0,
+                        85.0,
+                        85.0,
+                        85.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FrenzyDuration",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinionHealPercent",
+                    "values": [
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -3452,8 +3717,8 @@
                 "BaseDamageTooltip": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.6000000238418579,
@@ -3465,8 +3730,8 @@
                 "BaseHealTooltip": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 2,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseHeal",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mDataValue": "HealAPRatio",
@@ -3671,14 +3936,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "BaseHeal",
                                     "nameOverride": "Spell_ListType_Healing",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -3741,6 +4004,7 @@
     },
     "Characters/Vladimir/Spells/VladimirQFrenzy": {
         "ObjectName": "VladimirQFrenzy",
+        "objectPath": "{d74b1136}",
         "mScriptName": "VladimirQFrenzy",
         "mBuff": {
             "mDescription": "game_buff_tooltip_VladimirQFrenzy",
@@ -3750,6 +4014,7 @@
     },
     "Characters/Vladimir/Spells/VladimirBasicAttack3": {
         "ObjectName": "VladimirBasicAttack3",
+        "objectPath": "Characters/Vladimir/Spells/VladimirBasicAttack3",
         "mScriptName": "VladimirBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
@@ -3824,6 +4089,7 @@
     },
     "Characters/Vladimir/Spells/VladimirBasicAttack2": {
         "ObjectName": "VladimirBasicAttack2",
+        "objectPath": "Characters/Vladimir/Spells/VladimirBasicAttack2",
         "mScriptName": "VladimirBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
@@ -3898,6 +4164,7 @@
     },
     "Characters/Vladimir/Spells/VladimirBasicAttack4": {
         "ObjectName": "VladimirBasicAttack4",
+        "objectPath": "Characters/Vladimir/Spells/VladimirBasicAttack4",
         "mScriptName": "VladimirBasicAttack4",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
@@ -3972,6 +4239,7 @@
     },
     "Characters/Vladimir/Spells/VladimirTidesofBloodCost": {
         "ObjectName": "VladimirTidesofBloodCost",
+        "objectPath": "{e17e6ee0}",
         "mScriptName": "VladimirTidesofBloodCost",
         "mBuff": {
             "mDescription": "game_buff_tooltip_VladimirTidesofBloodCost",
@@ -3981,6 +4249,7 @@
     },
     "Characters/Vladimir/Spells/VladimirBasicAttack": {
         "ObjectName": "VladimirBasicAttack",
+        "objectPath": "Characters/Vladimir/Spells/VladimirBasicAttack",
         "mScriptName": "VladimirBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
@@ -4054,6 +4323,23 @@
     },
     "{354550f7}": {
         "RecSpellRankUpInfos": [
+            {
+                "MapId": 11,
+                "Position": "bottom",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
             {
                 "MapId": 11,
                 "Position": "middle",

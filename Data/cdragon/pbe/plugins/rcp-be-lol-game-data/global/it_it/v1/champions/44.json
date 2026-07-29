@@ -780,7 +780,7 @@
             "cost": "@Cost@ mana, tutte le cariche",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Cura gli alleati vicini in base al numero di cariche accumulate. Gli attacchi potenziati da Spavalderia conferiscono una carica di Tocco delle stelle.",
-            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> guadagna una carica (massimo @Effect6Amount@) ogni @StackCooldown@ secondi e quando mette a segno un attacco base con <spellName>Spavalderia</spellName>.<br><br><spellActive>Attiva:</spellActive> consuma tutte le cariche per ripristinare <healing>@HealingPerStack@ salute</healing> per carica ai campioni alleati vicini (<healing>@MaxStackHealing@</healing> a @Effect6Amount@ cariche).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> guadagna una carica (massimo @MaxCharges@) ogni @StackCooldown@ secondi e quando mette a segno un attacco base con <spellName>Spavalderia</spellName>.<br><br><spellActive>Attiva:</spellActive> consuma tutte le cariche per ripristinare <healing>@HealingPerStack@ salute</healing> per carica ai campioni alleati vicini (<healing>@MaxStackHealing@</healing> a @MaxCharges@ cariche).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "La passiva di Bastione aumenta l'armatura di Taric e dei campioni alleati.<br><br>L'attiva protegge un alleato e crea con esso un legame che durerà fino a quando non si allontana da Taric. Le abilità di Taric vengono lanciate anche dal compagno di Bastione.",
-            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> Taric ottiene <scaleArmor>@BonusArmor@ armatura</scaleArmor> e crea un legame tra se stesso e l'alleato vincolato da questa abilità. Finché sono vicini tra loro, Taric lancia tutte le sue abilità anche dall'alleato collegato, che inoltre ottiene <scaleArmor>@BonusArmor@ armatura</scaleArmor>.<br><br><spellPassive>Attiva:</spellPassive> Taric si lega ad un campione alleato, conferendogli uno <shield>scudo per un @Effect2Amount@% della salute massima</shield> dell'alleato per @Effect3Amount@ secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> Taric ottiene <scaleArmor>@BonusArmor@ armatura</scaleArmor> e crea un legame tra se stesso e l'alleato vincolato da questa abilità. Finché sono vicini tra loro, Taric lancia tutte le sue abilità anche dall'alleato collegato, che inoltre ottiene <scaleArmor>@BonusArmor@ armatura</scaleArmor>.<br><br><spellPassive>Attiva: </spellPassive>Taric si lega a un campione alleato, conferendogli uno scudo per un <shield>@ShieldHPRatio@% della salute massima</shield> per @ShieldDuration@ secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Taric prepara un fascio di luce stellare che, dopo un breve ritardo, infligge danni magici e stordisce i nemici.",
-            "dynamicDescription": "Taric proietta un fascio di luce stellare che esplode dopo @Effect3Amount@ secondo infliggendo <magicDamage> @TotalDamage@ danni magici</magicDamage> e <status>stordendo</status> i nemici per @Effect2Amount@ secondi.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric proietta un fascio di luce stellare che esplode dopo @ChargeDuration@ secondo infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage> e <status>stordendo</status> i nemici per @StunDuration@ secondi.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

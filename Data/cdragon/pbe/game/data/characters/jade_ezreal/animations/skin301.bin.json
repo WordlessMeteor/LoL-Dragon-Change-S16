@@ -64,13 +64,6 @@
             },
             "Death": {
                 "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "Audio_Death": {
-                        "mSoundName": "Play_sfx_Ezreal_Death3D_cast",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
-                    }
-                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Jade_Ezreal/Skins/Skin301/Animations/Death.anm",
                     "__type": "AnimationResourceData"
@@ -87,13 +80,6 @@
             },
             "Laugh": {
                 "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "{0cf0606b}": {
-                        "mSoundName": "Play_sfx_Ezreal_Laugh3D_buffactivate",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
-                    }
-                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Jade_Ezreal/Skins/Skin301/Animations/laugh.anm",
                     "__type": "AnimationResourceData"
@@ -130,7 +116,7 @@
                         "mEffectKey": "Jade_Ezreal_BA_cas",
                         "mParticleEventDataPairList": [
                             {
-                                "mBoneName": "{d5d6c09a}",
+                                "mBoneName": "BUFFBONE_GLB_WEAPON_1_LOC",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
@@ -144,6 +130,17 @@
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
+                        "__type": "ParticleEventData"
+                    },
+                    "{954c7a90}": {
+                        "mEffectKey": "Jade_Ezreal_Q_bow01",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "l_buffbone_glb_hand_loc",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsKillEvent": false,
                         "__type": "ParticleEventData"
                     }
                 },
@@ -168,7 +165,7 @@
                         "mEffectKey": "Jade_Ezreal_R_bow_01",
                         "mParticleEventDataPairList": [
                             {
-                                "mBoneName": "{c0a7c3f9}",
+                                "mBoneName": "BUFFBONE_HAND_BOW",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
@@ -180,7 +177,7 @@
                         "mEffectKey": "Jade_Ezreal_R_Gauntlet_Glow",
                         "mParticleEventDataPairList": [
                             {
-                                "mBoneName": "{c0a7c3f9}",
+                                "mBoneName": "BUFFBONE_HAND_BOW",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
@@ -197,13 +194,6 @@
             },
             "Taunt": {
                 "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "Audio_Taunt": {
-                        "mSoundName": "Play_sfx_Ezreal_Taunt3D_buffactivate",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
-                    }
-                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Jade_Ezreal/Skins/Skin301/Animations/Taunt.anm",
                     "__type": "AnimationResourceData"
@@ -213,13 +203,6 @@
             "Dance": {
                 "mFlags": 8,
                 "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "{9928211f}": {
-                        "mSoundName": "Play_sfx_Ezreal_Dance3D_buffactivate",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
-                    }
-                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Jade_Ezreal/Skins/Skin301/Animations/Dance.anm",
                     "__type": "AnimationResourceData"
@@ -282,11 +265,6 @@
                         "mIsLoop": false,
                         "mIsKillEvent": false,
                         "__type": "ParticleEventData"
-                    },
-                    "Audio_Recall": {
-                        "mSoundName": "Play_sfx_Ezreal_Recall3D_buffactivate",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
                     }
                 },
                 "mAnimationResourceData": {

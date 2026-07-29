@@ -242,6 +242,7 @@
             "__type": "CharacterHealthBarDataRecord"
         },
         "mResourceResolver": "Characters/Warwick/Skins/Skin63/Resources",
+        "objectPath": "{449c47b2}",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Warwick/Skins/Skin63/Particles/Warwick_Skin63_idle_back": {
@@ -751,6 +752,7 @@
         ],
         "particleName": "Warwick_Skin63_idle_back",
         "particlePath": "Characters/Warwick/Skins/Skin63/Particles/Warwick_Skin63_idle_back",
+        "objectPath": "{04e70eef}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Warwick/Skins/Skin63/Particles/Warwick_Skin63_Recall_SpeedLine01": {
@@ -2802,6 +2804,7 @@
         "particleName": "Warwick_Skin63_Recall_SpeedLine01",
         "particlePath": "Characters/Warwick/Skins/Skin63/Particles/Warwick_Skin63_Recall_SpeedLine01",
         "flags": 198,
+        "objectPath": "{a0685295}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Warwick/Skins/Skin63/Particles/Warwick_Skin63_W_cas": {
@@ -5169,6 +5172,7 @@
         "particleName": "Warwick_Skin63_W_cas",
         "particlePath": "Characters/Warwick/Skins/Skin63/Particles/Warwick_Skin63_W_cas",
         "flags": 1236,
+        "objectPath": "{d3017a58}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Warwick/Skins/Skin63/Materials/Warwick_Skin63_Hair_Mat_inst": {
@@ -6843,9 +6847,94 @@
                 "TextureName": "Alpha_Multiplier_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Shape",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Color",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Holographic_Tiling",
+                "value": [
+                    77.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Direction",
+                "value": [
+                    0.10000000149011612,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Tiling",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Height",
+                "value": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Ribbon_U_Remap",
                 "value": [
@@ -7514,6 +7603,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_HOLOGRAPHIC_MATRIX",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
                 "on": false,

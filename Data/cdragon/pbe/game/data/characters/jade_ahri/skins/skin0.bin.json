@@ -355,6 +355,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
+        "objectPath": "{343756dc}",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Jade_Ahri/Skins/Skin0/Resources": {
@@ -416,6 +417,376 @@
         },
         "__type": "ResourceResolver"
     },
+    "Characters/Jade_Ahri/Skins/Skin0/Materials/MAT_Body_inst": {
+        "name": "Characters/Jade_Ahri/Skins/Skin0/Materials/MAT_Body_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Jade_Ahri/Skins/Base/Jade_Ahri_base_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Texture_2",
+                "texturePath": "ASSETS/Characters/Jade_Ahri/Skins/Base/Particles/Jade_Ahri_R_TextureSwap.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Scroll_Texture",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Diffuse_Lerp_Factor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Mult",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineColor",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "OutlineControl",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTex_TintColor",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexB_MaskStrength",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Color",
+                "value": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Color",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Tiles",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Tiles",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexR_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "ScrollTexG_Speed",
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "OUTLINE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "SCROLLTEX_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/2_Diffuse_Lerp",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Diffuse_Lerp_Factor",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "Jade_AhriR",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mTurnOnTimeSec": 0.25,
+                        "mTurnOffTimeSec": 2.5,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
+    "Characters/Jade_Ahri/Skins/Skin0/Materials/MAT_Tails_inst": {
+        "name": "Characters/Jade_Ahri/Skins/Skin0/Materials/MAT_Tails_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Diffuse_Texture",
+                "texturePath": "ASSETS/Characters/Jade_Ahri/Skins/Base/Jade_Ahri_Base_Tails_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask_Texture_red",
+                "texturePath": "ASSETS/Characters/Jade_Ahri/Skins/Base/Particles/Jade_Ahri_Base_R_Tails_Mask_01.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Intensity",
+                "value": [
+                    0.15000000596046448,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Bloom_Color",
+                "value": [
+                    0.18039216101169586,
+                    0.5490196347236633,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Alpha_Bias",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "BLOOM_USE_DIFFUSE_COLOR",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Diffuse_Bloom",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "dynamicMaterial": {
+            "parameters": [
+                {
+                    "name": "Bloom_Intensity",
+                    "driver": {
+                        "mBoolDriver": {
+                            "mScriptName": "Jade_AhriR",
+                            "__type": "HasBuffDynamicMaterialBoolDriver"
+                        },
+                        "mOnValue": 1.25,
+                        "mOffValue": 0.15000000596046448,
+                        "__type": "LerpMaterialDriver"
+                    },
+                    "__type": "DynamicMaterialParameterDef"
+                }
+            ],
+            "__type": "DynamicMaterialDef"
+        },
+        "__type": "StaticMaterialDef"
+    },
     "__linked": [
         "DATA/Characters/Jade_Ahri/Jade_Ahri.bin",
         "DATA/Characters/Jade_Ahri/Jade_Ahri_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin52_Skins_Skin53.bin",
@@ -430,7 +801,6 @@
         "DATA/Characters/Jade_Ahri/Jade_Ahri_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin301_Skins_Skin302_Skins_Skin52_Skins_Skin53.bin",
         "DATA/Characters/Jade_Ahri/Jade_Ahri_Multi_Skins_Skin0_Skins_Skin2_Skins_Skin301_Skins_Skin302_Skins_Skin53.bin",
         "DATA/Characters/Jade_Ahri/Jade_Ahri_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin301_Skins_Skin302_Skins_Skin52.bin",
-        "DATA/Characters/Jade_Ahri/Jade_Ahri_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin52.bin",
-        "DATA/Characters/Jade_Ahri/Jade_Ahri_Multi_Skins_Skin0_Skins_Skin301.bin"
+        "DATA/Characters/Jade_Ahri/Jade_Ahri_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin52.bin"
     ]
 }

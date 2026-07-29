@@ -361,6 +361,7 @@
     },
     "Characters/Nocturne/Spells/NocturnePAbility/NocturneP": {
         "ObjectName": "NocturneP",
+        "objectPath": "{04bf54ce}",
         "mScriptName": "NocturneP",
         "mSpell": {
             "DataValues": [
@@ -599,7 +600,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 2,
-                            "mDataValue": "{68fddee1}",
+                            "mDataValue": "TotalDamageNoCritADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -608,8 +609,8 @@
                 "TotalHealing": {
                     "mFormulaParts": [
                         {
-                            "{0589a59c}": "{52cf79bf}",
-                            "{0b65bc23}": "{acd1e79b}",
+                            "{0589a59c}": "HealLevel1Value",
+                            "{0b65bc23}": "HealLevel18Value",
                             "__type": "{ee18a47b}"
                         },
                         {
@@ -623,7 +624,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 2,
-                            "mDataValue": "{0872af20}",
+                            "mDataValue": "TotalDamageCritADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -701,6 +702,7 @@
     },
     "Characters/Nocturne/Spells/NocturnePAbility/NocturneUmbraBladesAttack": {
         "ObjectName": "NocturneUmbraBladesAttack",
+        "objectPath": "Characters/Nocturne/Spells/NocturnePAbility/NocturneUmbraBladesAttack",
         "mScriptName": "NocturneUmbraBladesAttack",
         "mSpell": {
             "mAffectsTypeFlags": 512,
@@ -781,6 +783,7 @@
     },
     "Characters/Nocturne/Spells/NocturnePAbility/NocturneUmbraBlades": {
         "ObjectName": "NocturneUmbraBlades",
+        "objectPath": "{44f8e010}",
         "mScriptName": "NocturneUmbraBlades",
         "mBuff": {
             "mDescription": "Spell_NocturneP_BuffDescription",
@@ -810,11 +813,13 @@
     },
     "{0a460f01}": {
         "ObjectName": "NocturneShroudOfDarknessBuff",
+        "objectPath": "{0a460f01}",
         "mScriptName": "NocturneShroudOfDarknessBuff",
         "__type": "SpellObject"
     },
     "Characters/Nocturne/Spells/NocturneShroudofDarknessAbility/NocturneShroudofDarkness": {
         "ObjectName": "NocturneShroudofDarkness",
+        "objectPath": "{48f62200}",
         "mScriptName": "NocturneShroudofDarkness",
         "mSpell": {
             "flags": 4,
@@ -1133,6 +1138,7 @@
     },
     "Characters/Nocturne/Spells/NocturneShroudofDarknessAbility/NocturneShroudofDarknessShield": {
         "ObjectName": "NocturneShroudofDarknessShield",
+        "objectPath": "{9c3f7899}",
         "mScriptName": "NocturneShroudofDarknessShield",
         "mBuff": {
             "mDescription": "game_buff_tooltip_NocturneShroudofDarknessShield",
@@ -1142,6 +1148,7 @@
     },
     "Characters/Nocturne/Spells/NocturneShroudofDarknessAbility/NocturneWSpellPassive": {
         "ObjectName": "NocturneWSpellPassive",
+        "objectPath": "{b988be17}",
         "mScriptName": "NocturneWSpellPassive",
         "mBuff": {
             "mDescription": "Spell_NocturneP_BuffDescription",
@@ -1170,6 +1177,7 @@
     },
     "Characters/Nocturne/Spells/NocturneDuskbringerAbility/NocturneDuskbringerTrail": {
         "ObjectName": "NocturneDuskbringerTrail",
+        "objectPath": "{20fc455e}",
         "mScriptName": "NocturneDuskbringerTrail",
         "mBuff": {
             "mDescription": "game_buff_tooltip_NocturneDuskbringerTrail",
@@ -1179,6 +1187,7 @@
     },
     "Characters/Nocturne/Spells/NocturneDuskbringerAbility/NocturneDuskbringer": {
         "ObjectName": "NocturneDuskbringer",
+        "objectPath": "Characters/Nocturne/Spells/NocturneDuskbringerAbility/NocturneDuskbringer",
         "mScriptName": "NocturneDuskbringer",
         "mSpell": {
             "mAffectsTypeFlags": 14346,
@@ -1597,6 +1606,7 @@
     },
     "Characters/Nocturne/Spells/NocturneDuskbringerAbility/NocturneQSpellPassive": {
         "ObjectName": "NocturneQSpellPassive",
+        "objectPath": "{f65a99e2}",
         "mScriptName": "NocturneQSpellPassive",
         "mBuff": {
             "mDescription": "Spell_NocturneP_BuffDescription",
@@ -1628,6 +1638,7 @@
     },
     "Characters/Nocturne/Spells/NocturneParanoiaAbility/NocturneParanoia2": {
         "ObjectName": "NocturneParanoia2",
+        "objectPath": "{4cefd0c2}",
         "mScriptName": "NocturneParanoia2",
         "mSpell": {
             "flags": 4,
@@ -1891,6 +1902,7 @@
     },
     "Characters/Nocturne/Spells/NocturneParanoiaAbility/NocturneParanoia": {
         "ObjectName": "NocturneParanoia",
+        "objectPath": "Characters/Nocturne/Spells/NocturneParanoiaAbility/NocturneParanoia",
         "mScriptName": "NocturneParanoia",
         "mSpell": {
             "flags": 4,
@@ -2238,6 +2250,7 @@
     },
     "Characters/Nocturne/Spells/NocturneParanoiaAbility/NocturneParanoiaTarget": {
         "ObjectName": "NocturneParanoiaTarget",
+        "objectPath": "{d42bb14d}",
         "mScriptName": "NocturneParanoiaTarget",
         "mBuff": {
             "mDescription": "game_buff_tooltip_NocturneParanoiaTarget",
@@ -2247,6 +2260,7 @@
     },
     "Characters/Nocturne/Spells/RekSaiNocturneParanoia": {
         "ObjectName": "RekSaiNocturneParanoia",
+        "objectPath": "{5216406b}",
         "mScriptName": "RekSaiNocturneParanoia",
         "mBuff": {
             "mDescription": "game_buff_tooltip_NocturneParanoiaTarget",
@@ -2266,6 +2280,7 @@
     },
     "Characters/Nocturne/Spells/NocturneUnspeakableHorrorAbility/NocturneUnspeakableHorror": {
         "ObjectName": "NocturneUnspeakableHorror",
+        "objectPath": "Characters/Nocturne/Spells/NocturneUnspeakableHorrorAbility/NocturneUnspeakableHorror",
         "mScriptName": "NocturneUnspeakableHorror",
         "mSpell": {
             "flags": 4,
@@ -2623,11 +2638,13 @@
     },
     "Characters/Nocturne/Spells/NocturneUnspeakableHorrorAbility/NocturneEHaste": {
         "ObjectName": "NocturneEHaste",
+        "objectPath": "{8bfda7eb}",
         "mScriptName": "NocturneEHaste",
         "__type": "SpellObject"
     },
     "Characters/Nocturne/Spells/NocturneUnspeakableHorrorAbility/NocturneESpellPassive": {
         "ObjectName": "NocturneESpellPassive",
+        "objectPath": "{994babe7}",
         "mScriptName": "NocturneESpellPassive",
         "mBuff": {
             "mDescription": "Spell_NocturneP_BuffDescription",
@@ -2646,6 +2663,7 @@
     },
     "Characters/Nocturne/Spells/NocturneBasicAttack": {
         "ObjectName": "NocturneBasicAttack",
+        "objectPath": "Characters/Nocturne/Spells/NocturneBasicAttack",
         "mScriptName": "NocturneBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -2727,6 +2745,7 @@
     },
     "Characters/Nocturne/Spells/NocturneBasicAttack2": {
         "ObjectName": "NocturneBasicAttack2",
+        "objectPath": "Characters/Nocturne/Spells/NocturneBasicAttack2",
         "mScriptName": "NocturneBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -2809,6 +2828,7 @@
     },
     "Characters/Nocturne/Spells/NocturneCritAttack": {
         "ObjectName": "NocturneCritAttack",
+        "objectPath": "Characters/Nocturne/Spells/NocturneCritAttack",
         "mScriptName": "NocturneCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,

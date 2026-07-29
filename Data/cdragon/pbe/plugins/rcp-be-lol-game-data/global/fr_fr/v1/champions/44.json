@@ -780,7 +780,7 @@
             "cost": "@Cost@ pts de mana, toutes les charges",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Rend des PV aux champions alliés proches en fonction du nombre de charges stockées. Les attaques renforcées par Plastronneur octroient une charge de Bénédiction stellaire.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Taric gagne un effet (max : @Effect6Amount@) toutes les @StackCooldown@ sec et quand il touche un ennemi avec une attaque renforcée par <spellName>Plastronneur</spellName>.<br><br><spellActive>Active :</spellActive> Taric consomme tous les effets cumulés pour rendre <healing>@HealingPerStack@ PV</healing> par effet aux champions alliés proches (<healing>@MaxStackHealing@ PV</healing> à @Effect6Amount@ effets).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Taric gagne un effet cumulé (max @MaxCharges@) toutes les @StackCooldown@ sec et en touchant avec une attaque de <spellName>Plastronneur</spellName>.<br><br><spellActive>Active :</spellActive> Taric consomme tous les effets cumulés pour rendre <healing>@HealingPerStack@ PV</healing> par effet cumulé aux champions alliés à proximité (<healing>@MaxStackHealing@</healing> à @MaxCharges@ effets cumulés).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Augmente passivement l'armure de Taric et de tout champion allié affecté par Bastion.<br><br>À l'activation, offre un bouclier à un allié et ce dernier bénéficie de l'effet Bastion aussi longtemps qu'il reste près de Taric. Les compétences de Taric se lancent également depuis l'allié affecté par Bastion.",
-            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Taric gagne <scaleArmor>+@BonusArmor@ armure</scaleArmor> et crée un lien entre lui et l'allié auquel il s'est lié avec cette compétence. Tant qu'ils sont proches l'un de l'autre, l'allié gagne <scaleArmor>+@BonusArmor@ armure</scaleArmor> et toutes les compétences de Taric partent de lui et de son allié lié.<br><br><spellPassive>Active : </spellPassive>Taric se lie à un champion allié, octroyant un <shield>bouclier équivalent à @Effect2Amount@% des PV max</shield> pendant @Effect3Amount@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive :</spellPassive> Taric gagne <scaleArmor>@BonusArmor@ armure</scaleArmor> et crée un lien entre lui et l'allié auquel il s'est lié avec cette compétence. Tant qu'ils sont proches l'un de l'autre, l'allié gagne <scaleArmor>@BonusArmor@ armure</scaleArmor> et toutes les compétences de Taric partent de lui et de son allié lié.<br><br><spellPassive>Active : </spellPassive>Taric se lie à un champion allié, conférant un <shield>bouclier de @ShieldHPRatio@% des PV max</shield> pendant @ShieldDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Taric prépare un rayon de lumière stellaire qui, après un bref délai, inflige des dégâts magiques et étourdit les ennemis.",
-            "dynamicDescription": "Taric projette un rayon de lumière stellaire qui explose au bout de @Effect3Amount@ sec pour infliger <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> et <status>étourdir</status> les ennemis pendant @Effect2Amount@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric projette un rayon de lumière stellaire qui explose au bout de @ChargeDuration@ sec pour infliger <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> et <status>étourdir</status> les ennemis pendant @StunDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

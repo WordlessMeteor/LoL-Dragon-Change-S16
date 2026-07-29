@@ -17906,6 +17906,1766 @@
         ]
     },
     {
+        "display_name": "Adattatore",
+        "trait_id": "DA_18_Adaptor",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Adaptor.TFT_Set18.png",
+        "tooltip_text": "Innato: le abilità degli Adattatori cambiano a seconda del valore più alto tra il loro attacco fisico e il loro potere magico.<br><br>Gli Adattatori ottengono potere magico o attacco fisico, a seconda di qual è più alto.<br><row>(@MinUnits@) @ADAPGain*100@% O</row><br><row>(@MinUnits@) @ADAPGain*100@% O</row><br><row>(@MinUnits@) @ADAPGain*100@% O</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAPGain",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPGain",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPGain",
+                        "value": 0.5
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Predatore supremo",
+        "trait_id": "DA_18_ApexPredator",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_ApexPredator.TFT_Set18.png",
+        "tooltip_text": "Il Drago maggiore occupa 2 slot della squadra e fornisce +2 al tratto Belva della Landa.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Monolite",
+        "trait_id": "DA_18_Battlemage",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Monolith.TFT_Set18.png",
+        "tooltip_text": "I Monoliti ottengono @Resists@ armatura e resistenza magica per ogni nemico che li prende di mira.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Resists",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Aculeo Nero",
+        "trait_id": "DA_18_Blackthorn",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGod.TFT_Set18.png",
+        "tooltip_text": "L'alleato sull'esagono Aculeo Nero viene sacrificato prima del combattimento, fornendo salute ai tuoi campioni. <br><br>I campioni Aculeo Nero ottengono statistiche aggiuntive in base al ruolo, al livello stella e al costo del sacrificio.<br><row>(@MinUnits@) @Health@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Health@ %i:scaleHealth%; il bonus è più forte di un @StatMultiplier*100@%</row><br><row>(@MinUnits@) @Health@ %i:scaleHealth%; il sacrificio non muore. Ottiene anche: @Tier3BonusAD*100@% %i:scaleAD%%i:scaleAP%, <br>@Tier3BonusAttackSpeed*100@% %i:scaleAS%, @Tier3BonusArmor@ %i:scaleArmor%%i:scaleMR%, @Tier3BonusHealth@ %i:scaleHealth%, @Tier3BonusOmnivamp*100@%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Health",
+                        "value": 175.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Health",
+                        "value": 300.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Health",
+                        "value": 350.0
+                    },
+                    {
+                        "name": "Tier3BonusAD",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Tier3BonusArmor",
+                        "value": 20.0
+                    },
+                    {
+                        "name": "Tier3BonusAttackSpeed",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "Tier3BonusHealth",
+                        "value": 250.0
+                    },
+                    {
+                        "name": "Tier3BonusOmnivamp",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Fiore",
+        "trait_id": "DA_18_Blossom",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Blossom.TFT_Set18.png",
+        "tooltip_text": "Dopo il combattimento, i tuoi Spiritelli vengono potenziati. <br><br>I campioni Fiore ottengono attacco fisico, potere magico e @BonusHealth*100@% salute massima.<br><row>(@MinUnits@) Gli Spiritelli sono potenziati, @ADAP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@MinUnits@) Gli Spiritelli sono in ogni negozio, @ADAP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@MinUnits@) Ottieni @GoldPerCharmPurchased@ oro dopo aver acquistato uno Spiritello, @ADAP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@MinUnits@) Puoi acquistare 2 Spiritelli per turno, @ADAP*100@% %i:scaleAD%%i:scaleAP%</row><br><row>(@MinUnits@) Gli Spiritelli traboccano di potere, @ADAP*100@% %i:scaleAD%%i:scaleAP%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 0.12
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.12
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "GoldPerCharmPurchased",
+                        "value": 5.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 9,
+                "max_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 11,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Combattente",
+        "trait_id": "DA_18_Brawler",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Brawler.TFT_Set18.png",
+        "tooltip_text": "La tua squadra ottiene @BrawlerTeamHealth@ salute massima. I Combattenti ne ottengono di più.<br><row>(@MinUnits@) @BrawlerHealthPercent*100@% %i:scaleHealth%</row><br><row>(@MinUnits@) @BrawlerHealthPercent*100@% %i:scaleHealth%</row><br><row>(@MinUnits@) @BrawlerHealthPercent*100@% %i:scaleHealth%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerTeamHealth",
+                        "value": 120.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerHealthPercent",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerHealthPercent",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerHealthPercent",
+                        "value": 0.65
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Caustico",
+        "trait_id": "DA_18_Caustic",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
+        "tooltip_text": "I danni Caustici deteriorano e annientano i nemici di un @ShredPercent@% per @ShredDuration@ secondi.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ShredDuration",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "ShredPercent",
+                        "value": 30.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Congrega",
+        "trait_id": "DA_18_Coven",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Coven.TFT_Set18.png",
+        "tooltip_text": "Raccogli Essenza uccidendo i campioni e ne ottieni ancora di più perdendo i combattimenti contro altri giocatori. <br><br>A partire da @EssenceForRitualTooltip@ Essenza, scegli se convertire l'Essenza in ricompense o continuare a raccogliere Essenza. Ogni ricompensa richiede quantità crescenti di Essenza.<br><row>(@MinUnits@) @EssencePerDeath@ Essenza per uccisione, @EssencePerLoss@ Essenza per sconfitta</row><br><row>(@MinUnits@) @EssencePerDeath@ per uccisione, @EssencePerLoss@ per sconfitta</row><br><row>(@MinUnits@) @EssencePerDeath@ per uccisione, @EssencePerLoss@ per sconfitta</row><br><row>(@MinUnits@) @EssencePerDeath@ per uccisione, @EssencePerLoss@ per sconfitta</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EssenceForRitualTooltip",
+                        "value": 40.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 18.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 22.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 35.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 7.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 70.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Difensore",
+        "trait_id": "DA_18_Defender",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Defender.TFT_Set18.png",
+        "tooltip_text": "La tua squadra ottiene @NonDefenderDefenseGain@ armatura e resistenza magica. I Difensori ne ottengono di più.<br><row>(@MinUnits@) @DefenderDefenseGain@</row><br><row>(@MinUnits@) @DefenderDefenseGain@</row><br><row>(@MinUnits@) @DefenderDefenseGain@</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NonDefenderDefenseGain",
+                        "value": 12.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DefenderDefenseGain",
+                        "value": 25.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DefenderDefenseGain",
+                        "value": 55.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DefenderDefenseGain",
+                        "value": 110.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Eclissi",
+        "trait_id": "DA_18_Eclipse",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Eclipse.TFT_Set18.png",
+        "tooltip_text": "Dopo @DelaySeconds@ secondi di combattimento, l'Eclissi uccide il nemico con meno salute, ripetendosi ogni @EclipseBeamPeriod@ secondi.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DelaySeconds",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "EclipseBeamPeriod",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 0,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            }
+        ]
+    },
+    {
+        "display_name": "Bosco Antico",
+        "trait_id": "DA_18_Elderwood",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Elderwood.TFT_Set18.png",
+        "tooltip_text": "Ottieni piante del Bosco Antico posizionabili.<br><row>(@MinUnits@) Un Albero corteccia di pietra e un Fiorvitalis</row><br><row>(@MinUnits@) Un secondo Albero corteccia di pietra e gli Alberi corteccia di pietra ottengono @StonebarkTreeBonusHealth@ salute</row><br><row>(@MinUnits@) e il Protettore del Bosco profondo</row><br><row>(@MinUnits@) Le piante possono arrivare fino a 2 stelle</row><br><row>(@MinUnits@) Le piante possono arrivare fino a 3 stelle e la foresta prende vita</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "APPerTotalElderwoodStarLevel",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "MaxHealthRatioPerTotalElderwoodStarLevel",
+                        "value": 0.25
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "StonebarkTreeBonusHealth",
+                        "value": 100.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [],
+                "min_units": 7,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [],
+                "min_units": 9,
+                "max_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [],
+                "min_units": 11,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Carnefice",
+        "trait_id": "DA_18_Executioner",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Executioner.TFT_Set18.png",
+        "tooltip_text": "<row>(@MinUnits@) I Carnefici ottengono <TFTKeyword>Precisione</TFTKeyword> e @CritChance*100@% probabilità di colpo critico.</row><br><row>(@MinUnits@) Inoltre, i nemici sanguinano subendo un @BonusBleedPercent*100@% di danni puri bonus nell'arco di @BleedDuration@ secondo/i.</row><br><row>(@MinUnits@) Danni da sanguinamento aumentati a un @BonusBleedPercent*100@%.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CritChance",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BleedDuration",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "BonusBleedPercent",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusBleedPercent",
+                        "value": 0.5
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Fatato",
+        "trait_id": "DA_18_Fae",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Fae.TFT_Set18.png",
+        "tooltip_text": "I danni, la guarigione e gli scudi della tua squadra attirano i folletti.<br><br>Ogni folletto fornisce ai campioni Fatati attacco fisico e potere magico e, quando scendono sotto un @HealThreshold*100@% di salute, ricevono guarigione per ogni folletto.<br><row>(@MinUnits@) @ADAP@% e @Heal@% guarigione.</row><br><row>(@MinUnits@) @ADAP@% e @Heal@% guarigione. Dopo aver attirato 7 folletti, inizierai ad attirare folletti d'oro che forniscono oro.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealThreshold",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Anziano della foresta",
+        "trait_id": "DA_18_Greenfather",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Greenfather.TFT_Set18.png",
+        "tooltip_text": "Ottieni @SeedsPerCast@ seme quando il tuo Ivern più forte lancia un'abilità, più @CombatStartSeeds@ ogni combattimento. Ivern usa @SeedsToGrowHex@ semi per far crescere un esagono sulla tua plancia che fornisce un bonus a chi lo occupa. <br><br>Semi: 0/@SeedsToGrowHex@<br><br>Bioma attuale:",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CombatStartSeeds",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "SeedsPerCast",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "SeedsToGrowHex",
+                        "value": 5.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Cacciatore",
+        "trait_id": "DA_18_Hunter",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Hunter.TFT_Set18.png",
+        "tooltip_text": "I Cacciatori ottengono attacco fisico. Se un Cacciatore non cambia bersaglio per @HunterDuration@ secondi, ottiene un @DamageAmp*100@% di amplificazione danni.<br><row>(@MinUnits@) @HunterAD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @HunterAD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @HunterAD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @HunterAD*100@% %i:scaleAD%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "HunterDuration",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Inferno",
+        "trait_id": "DA_18_Inferno",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
+        "tooltip_text": "I danni dei campioni Inferno <TFTKeyword>Ustionano</TFTKeyword> e infliggono <TFTKeyword>Ferita grave</TFTKeyword> pari a un @WoundPercent@% ai nemici per @Duration@ secondi. Gli effetti di Ustione dei campioni Inferno si sommano ad altre Ustioni.<br><row>(@MinUnits@) @HPBurnPerSecond@% Ustione</row><br><row>(@MinUnits@) Dopo il combattimento, incendia un totale di @LuckySlotCount@ slot dell'emporio senza campioni Inferno, facendo apparire un campione di un livello superiore</row><br><row>(@MinUnits@) Incendia un totale di @LuckySlotCount@ slot dell'emporio, @HPBurnPerSecond@% Ustione</row><br><row>(@MinUnits@) Incendia @LuckySlotCount@ slot dell'emporio, @HPBurnPerSecond@% Ustione</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Duration",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HPBurnPerSecond",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "LuckySlotCount",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HPBurnPerSecond",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "LuckySlotCount",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HPBurnPerSecond",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "LuckySlotCount",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Invocatore",
+        "trait_id": "DA_18_Invoker",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Invoker.TFT_Set18.png",
+        "tooltip_text": "La squadra ottiene rigenerazione mana, aumentata per gli Invocatori.<br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%</row><br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%</row><br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%</row><br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Lunare",
+        "trait_id": "DA_18_Lunar",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Lunar.TFT_Set18.png",
+        "tooltip_text": "I campioni Lunari e gli alleati adiacenti ottengono velocità d'attacco e potere magico. I campioni Lunari ne ottengono un @LunarMultiplier*100@% in più.<br><row>(@MinUnits@) @AttackSpeed*100@% %i:scaleAS%, @AbilityPower*100@% %i:scaleAP%</row><br><row>(@MinUnits@) @AttackSpeed*100@% %i:scaleAS%, @AbilityPower*100@% %i:scaleAP%</row><br><row>(@MinUnits@) @AttackSpeed*100@% %i:scaleAS%, @AbilityPower*100@% %i:scaleAP%</row><br><row>(@MinUnits@) @AttackSpeed*100@% %i:scaleAS%, @AbilityPower*100@% %i:scaleAP%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "LunarMultiplier",
+                        "value": 1.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.07
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.2
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Avatar",
+        "trait_id": "DA_18_LuxUniqueTrait",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Avatar.TFT_Set18.png",
+        "tooltip_text": "Innata: avere un Avatar sulla tua panchina o plancia trasforma tutti gli altri Avatar nel tuo negozio nel tratto di quell'Avatar.<br><br>Il tratto scelto di un Avatar conta il doppio ai fini dei bonus tratto.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Crescita antica",
+        "trait_id": "DA_18_Maokai_UniqueTrait",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
+        "tooltip_text": "Ogni volta che un nemico entro @UniqueTraitHexRange@ esagoni muore, ottieni @UniqueTraitHealthPerStack@ salute massima permanente.<br><br>Attuale: 0",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "UniqueTraitHealthPerStack",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "UniqueTraitHexRange",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Fuocorapido",
+        "trait_id": "DA_18_Rapidfire",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Rapidfire.TFT_Set18.png",
+        "tooltip_text": "La tua squadra ottiene @TeamAS*100@% velocità d'attacco. I campioni Fuocorapido ne ottengono di più a ogni attacco, fino a @MaxStacks@ cariche.<br><row>(@MinUnits@) +@ASPerAttack*100@% %i:scaleAS% per attacco</row><br><row>(@MinUnits@) +@ASPerAttack*100@% %i:scaleAS% per attacco</row><br><row>(@MinUnits@) +@ASPerAttack*100@% %i:scaleAS% per attacco</row><br><row>(@MinUnits@) +@ASPerAttack*100@% %i:scaleAS% per attacco</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "MaxStacks",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "TeamAS",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.03
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.09
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Rivale",
+        "trait_id": "DA_18_Rival",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Rival.TFT_Set18.png",
+        "tooltip_text": "<row>(@MinUnits@) Attivo solo quando schieri 1 Rivale.<br><br>I Rivali collezionano eliminazioni e guadagnano 3 se eliminano un altro Rivale.</row><br><row>(@MinUnits@) I Rivali possono essere schierati insieme. Quando Kha'Zix ottiene mana dalla sua abilità, Rengar ottiene un @Augment_RengarManaPercent*100@% di quel mana. Quando Rengar ottiene guarigione dalla sua abilità, Kha'Zix riceve un @Augment_KhaZixHealPercent*100@% di quella guarigione.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Augment_KhaZixHealPercent",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Augment_RengarManaPercent",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Devastatore",
+        "trait_id": "DA_18_Slayer",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Ravager.TFT_Set18.png",
+        "tooltip_text": "I Devastatori ottengono un @Omnivamp*100@% di rubavita globale. Inoltre, i Devastatori infliggono danni bonus, raddoppiati contro le unità con meno di un @EnemyHealthThreshold*100@% di salute.<br><row>(@MinUnits@) @BonusDamagePercentBase*100@% danni bonus</row><br><row>(@MinUnits@) @BonusDamagePercentBase*100@% danni bonus</row><br><row>(@MinUnits@) @BonusDamagePercentBase*100@% danni bonus</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnemyHealthThreshold",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamagePercentBase",
+                        "value": 0.12
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamagePercentBase",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamagePercentBase",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Solare",
+        "trait_id": "DA_18_Solar",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Solar.TFT_Set18.png",
+        "tooltip_text": "<row>(@MinUnits@) I tuoi campioni ottengono uno scudo pari a un @ShieldRatio*100@% della salute massima e infliggono un @BonusMagicDamage*100@% di danni magici bonus. Ottieni bonus aggiuntivi per ogni campione a 3 stelle unico:<br><br>1: Aumenta scudo e danni magici di un @PercentIncreasePer3Star*100@% per ogni campione a 3 stelle. <br>@NumThreeStarThreshold1@: @Threshold1AttackSpeed*100@% %i:scaleAS% e @Threshold1ArmorMagicResist@ %i:scaleArmor%%i:scaleMR%<br>@NumThreeStarThreshold2@: converte un @Threshold2TrueDamageConversion*100@% dei danni magici bonus in danni puri.<br>@NumThreeStarThreshold3@: ogni @Threshold3StarUpPeriod@ secondi di combattimento, i tuoi campioni a 3 stelle ascendono a 4 stelle.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusMagicDamage",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "NumThreeStarThreshold1",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "NumThreeStarThreshold2",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "NumThreeStarThreshold3",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "PercentIncreasePer3Star",
+                        "value": 0.025
+                    },
+                    {
+                        "name": "ShieldRatio",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Threshold1ArmorMagicResist",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "Threshold1AttackSpeed",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "Threshold2TrueDamageConversion",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Threshold3StarUpPeriod",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Tessimagie",
+        "trait_id": "DA_18_Spellweaver",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Spellweaver.TFT_Set18.png",
+        "tooltip_text": "La tua squadra ottiene un @TeamwideAP*100@% di potere magico. I Tessimagie ne ottengono di più, oltre a potere magico extra ogni volta che un Tessimagie lancia un'abilità.<br><row>(@MinUnits@) @SpellweaverAP*100@% %i:scaleAP%, +@APPerCast*100@% %i:scaleAP% per lancio</row><br><row>(@MinUnits@) @SpellweaverAP*100@% %i:scaleAP%, +@APPerCast*100@% %i:scaleAP% per lancio</row><br><row>(@MinUnits@) @SpellweaverAP*100@% %i:scaleAP%, +@APPerCast*100@% %i:scaleAP% per lancio</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TeamwideAP",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "APPerCast",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "SpellweaverAP",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "APPerCast",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "SpellweaverAP",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "APPerCast",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "SpellweaverAP",
+                        "value": 0.55
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Tipovispo",
+        "trait_id": "DA_18_Sprykin",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Sprykin.TFT_Set18.png",
+        "tooltip_text": "Ottieni il Grande amico peloso. Lascia un Tipovispo sul Grande amico per farne il suo cavaliere.<br><row>(@MinUnits@) Il cavaliere ottiene<br>@HealthIncrease*100@% %i:scaleHealth% e @AttackSpeedIncrease*100@% %i:scaleAS%</row><br><row>(@MinUnits@) @HealthIncrease*100@% %i:scaleHealth% @AttackSpeedIncrease*100@% %i:scaleAS%, e un @TeamwideRatio*100@% dell'abilità del Grande amico si applica ai tuoi campioni Tipovispo.</row><br><row>(@MinUnits@) @HealthIncrease*100@% %i:scaleHealth% @AttackSpeedIncrease*100@% %i:scaleAS%, e un @TeamwideRatio*100@% dell'abilità del Grande amico si applica ai tuoi campioni Tipovispo.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedIncrease",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "HealthIncrease",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedIncrease",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "HealthIncrease",
+                        "value": 0.25
+                    },
+                    {
+                        "name": "TeamwideRatio",
+                        "value": 0.5
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedIncrease",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "HealthIncrease",
+                        "value": 0.35
+                    },
+                    {
+                        "name": "TeamwideRatio",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Evocatore",
+        "trait_id": "DA_18_Summoner",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Summoner.TFT_Set18.png",
+        "tooltip_text": "Gli Evocatori potenziano le loro evocazioni in modi diversi.<br><br>Yorick: +@HealthMult*100@% salute<br>Azir: +@DamageMult*100@% danni<br>Mamabecco: +@DamageMult*100@% danni<br>Zyra: +@NumExtraAttacks@ attacchi delle piante<br><row>(@MinUnits@) Potenzia evocazioni</row><br><row>(@MinUnits@) Migliora ogni effetto del 50%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageMult",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "HealthMult",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "NumExtraAttacks",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Avanguardia",
+        "trait_id": "DA_18_Vanguard",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Vanguard.TFT_Set18.png",
+        "tooltip_text": "All'inizio del combattimento e dopo essere scesi sotto un @HealthThreshold*100@% di salute, gli Avanguardia ottengono uno scudo pari a una percentuale della salute massima per @ShieldDuration@ secondo/i.<br><row>(@MinUnits@) @MaxHealthShield*100@% salute massima</row><br><row>(@MinUnits@) @MaxHealthShield*100@% salute massima</row><br><row>(@MinUnits@) @MaxHealthShield*100@% salute massima. Ottieni un @DurabilityIncrease*100@% di resistenza sotto la protezione di uno scudo.</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "MaxHealthShield",
+                        "value": 0.18
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "MaxHealthShield",
+                        "value": 0.35
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DurabilityIncrease",
+                        "value": 0.08
+                    },
+                    {
+                        "name": "MaxHealthShield",
+                        "value": 0.45
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Ancella spinosa",
+        "trait_id": "DA_18_ZyraUniqueTrait",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_ZyraOrigin.TFT_Set18.png",
+        "tooltip_text": "La squadra ottiene @BaseDurability*100@% resistenza, che aumenta a @IncreasedDurability*100@% se sono vive @PlantNumThreshold@ o più piante di Zyra.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BaseDurability",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "IncreasedDurability",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PlantNumThreshold",
+                        "value": 6.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Armonioso",
+        "trait_id": "DA_AluneUniqueTrait18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Attuned.TFT_Set18.png",
+        "tooltip_text": "La tua Alune più potente passa a una nuova fase della luna dopo ogni lancio. Quando la luna è a metà o meno, la squadra ottiene un @Durability*100@% di resistenza. Mentre è sopra, la tua squadra ottiene un @DamageAmp*100@% di amplificazione danni.",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "Durability",
+                        "value": 0.07
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Cercatore di taglie",
+        "trait_id": "DA_DravenUniqueTrait18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_BountySeeker.TFT_Set18.png",
+        "tooltip_text": "Scegli una taglia. Il tuo Draven più forte può avanzare nella taglia per ottenere la sua ricompensa. Al completamento di una taglia, scegline un'altra.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Incarnazione smeraldina",
+        "trait_id": "DA_Emerald18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_EmeraldAspect.TFT_Set18.png",
+        "tooltip_text": "Trascina un alleato sul tuo Taric più forte per abbinarli, fornendo all'alleato potenti bonus dall'abilità di Taric.",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Flora Fatalis",
+        "trait_id": "DA_FloraFatalis18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_FloraFatalis.TFT_Set18.png",
+        "tooltip_text": "I campioni Flora Fatalis mietono i nemici all'eliminazione, ottenendo:<br><row>(@MinUnits@) @Mana@ mana</row><br><row>(@MinUnits@) e forniscono una guarigione pari a un @PercentHeal*100@% della salute massima all'alleato con meno salute.</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Mana",
+                        "value": 10.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PercentHeal",
+                        "value": 0.08
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Colosso",
+        "trait_id": "DA_Juggernaut18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Juggernaut.TFT_Set18.png",
+        "tooltip_text": "La tua squadra ottiene resistenza. I Colossi ne ottengono di più.<br><row>(@MinUnits@) @TeamDurability*100@% %i:scaleDR% o @JuggernautDurability*100@% %i:scaleDR%</row><br><row>(@MinUnits@) @TeamDurability*100@% %i:scaleDR% o @JuggernautDurability*100@% %i:scaleDR%</row><br><row>(@MinUnits@) @TeamDurability*100@% %i:scaleDR% o @JuggernautDurability*100@% %i:scaleDR%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "JuggernautDurability",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "TeamDurability",
+                        "value": 0.04
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "JuggernautDurability",
+                        "value": 0.28
+                    },
+                    {
+                        "name": "TeamDurability",
+                        "value": 0.06
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "JuggernautDurability",
+                        "value": 0.34
+                    },
+                    {
+                        "name": "TeamDurability",
+                        "value": 0.08
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Primordiale",
+        "trait_id": "DA_Primal18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Primal.TFT_Set18.png",
+        "tooltip_text": "Scegli una delle quattro Benedizioni Primordiali.<br><row>(@MinUnits@)</row><br><row>(@MinUnits@)</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Belva della Landa",
+        "trait_id": "DA_Riftbeast18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Riftbeast.TFT_Set18.png",
+        "tooltip_text": "<row>(@MinUnits@) Usa il Marchio alfa per fornire a una Belva della Landa il suo buff unico</row><br><row>(@MinUnits@) Ogni @OverrunCombats@ combattimenti, il tuo prossimo negozio sarà invaso dalle Belve della Landa</row><br><row>(@MinUnits@) All'inizio del combattimento e ogni 5 secondi, le Belve della Landa crescono ottenendo <br>@CapstoneAD*100@% %i:scaleAD% @CapstoneAP*100@% %i:scaleAP% @CapstoneAspd*100@% %i:scaleAS%<br>+@CapstoneArmor@ %i:scaleArmor% +@CapstoneMR@ %i:scaleMR% +@CapstoneHealth@ %i:scaleHealth% +@CapstoneManaRegen@ %i:scaleManaRegen%</row><br><row>(@MinUnits@) +@TeamSize@ dimensione massima della squadra</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "OverrunCombats",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "CapstoneAD",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "CapstoneAP",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "CapstoneArmor",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "CapstoneAspd",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "CapstoneHealth",
+                        "value": 60.0
+                    },
+                    {
+                        "name": "CapstoneMR",
+                        "value": 6.0
+                    },
+                    {
+                        "name": "CapstoneManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "TeamSize",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
         "display_name": "Astronauta",
         "trait_id": "Astro",
         "set": "TFTSet3",

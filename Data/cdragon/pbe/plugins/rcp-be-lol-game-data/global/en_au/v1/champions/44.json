@@ -780,7 +780,7 @@
             "cost": "@Cost@ Mana, all Charges",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Heals nearby allied champions based on charges stored. Bravado-empowered attacks grant a charge of Starlight's Touch.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Gain a stack (max @Effect6Amount@) every @StackCooldown@ seconds and when hitting a <spellName>Bravado</spellName> Attack.<br><br><spellActive>Active:</spellActive> Consume all stacks to restore <healing>@HealingPerStack@ Health</healing> per stack to nearby ally champions (<healing>@MaxStackHealing@</healing> at @Effect6Amount@ stacks).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Gain a stack (max @MaxCharges@) every @StackCooldown@ seconds and when hitting a <spellName>Bravado</spellName> Attack.<br><br><spellActive>Active:</spellActive> Consume all stacks to restore <healing>@HealingPerStack@ Health</healing> per stack to nearby ally champions (<healing>@MaxStackHealing@</healing> at @MaxCharges@ stacks).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Passively increase the Armor of Taric and any allied champion with Bastion.<br><br>Actively shields an ally and grants them Bastion for as long as they remain near Taric. Taric's spells also cast off the ally with Bastion.",
-            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Taric gains <scaleArmor>@BonusArmor@ Armor</scaleArmor> and forms a tether between him and the ally bound by this Ability. As long as they are near each other, the ally gains <scaleArmor>@BonusArmor@ Armor</scaleArmor> and Taric casts all his Abilities from both himself and his linked ally.<br><br><spellPassive>Active: </spellPassive>Taric binds to an ally champion, granting a <shield>@Effect2Amount@% max Health Shield</shield> for @Effect3Amount@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive: </spellPassive>Taric gains <scaleArmor>@BonusArmor@ Armor</scaleArmor> and forms a tether between him and the ally bound by this Ability. As long as they are near each other, the ally gains <scaleArmor>@BonusArmor@ Armor</scaleArmor> and Taric casts all his Abilities from both himself and his linked ally.<br><br><spellPassive>Active: </spellPassive>Taric binds to an ally champion, granting a <shield>@ShieldHPRatio@% max Health Shield</shield> for @ShieldDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taric readies a beam of starlight that, after a brief delay, deals magic damage and stuns enemies.",
-            "dynamicDescription": "Taric projects a beam of starlight, bursting after @Effect3Amount@ second to deal <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Stun</status> enemies for @Effect2Amount@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric projects a beam of starlight, bursting after @ChargeDuration@ second to deal <magicDamage>@TotalDamage@ magic damage</magicDamage> and <status>Stun</status> enemies for @StunDuration@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

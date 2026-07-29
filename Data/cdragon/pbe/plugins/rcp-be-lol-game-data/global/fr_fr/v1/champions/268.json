@@ -857,7 +857,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@AmmoRechargeTime@ sec de rechargement (@Cooldown@ sec %i:cooldown%)",
             "description": "Azir invoque un soldat de sable qui attaque les cibles proches à sa place, remplaçant son attaque de base contre les cibles situées à portée du soldat. Les attaques du soldat infligent des dégâts magiques aux ennemis sur une même ligne.",
-            "dynamicDescription": "Azir invoque un <keywordMajor>soldat de sable</keywordMajor> pendant @Effect1Amount@ sec. Quand Azir attaque un ennemi proche d'un <keywordMajor>soldat de sable</keywordMajor>, il ordonne à la place à ce soldat de donner un coup de lance vers cet ennemi, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>.<br><br>Cette compétence a @MaxAmmo@ charges.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Azir invoque un <keywordMajor>soldat de sable</keywordMajor> pendant @SoldierDuration@ sec. Quand Azir attaque un ennemi proche d'un <keywordMajor>soldat de sable</keywordMajor>, il ordonne à la place à ce soldat de donner un coup de lance vers cet ennemi, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> dans sa direction.<br><br>Cette compétence a @MaxAmmo@ charges.@SpellModifierDescriptionAppend@",
             "range": [
                 525.0,
                 525.0,
@@ -1007,7 +1007,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Azir s'entoure brièvement d'un bouclier et fonce vers un de ses soldats de sable, blessant les ennemis touchés. S'il touche un champion ennemi, il prépare instantanément un nouveau soldat de sable et la ruée s'arrête.",
-            "dynamicDescription": "Azir s'octroie un <shield>bouclier de @TotalShield@ PV</shield> pendant @Effect6Amount@ sec et se rue vers l'un de ses <keywordMajor>soldats de sable</keywordMajor>, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis qu'il traverse.<br><br>Si Azir touche un champion ennemi, il s'arrête et gagne une charge de <keywordMajor>soldat de sable</keywordMajor>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Azir s'octroie un <shield>bouclier de @TotalShield@ PV</shield> pendant @ShieldDuration@ sec et se rue vers l'un de ses <keywordMajor>soldats de sable</keywordMajor>, infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage> aux ennemis qu'il traverse.<br><br>Si Azir touche un champion ennemi, il s'arrête et gagne une charge de <keywordMajor>Soldat de sable</keywordMajor>.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -1157,7 +1157,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Azir invoque un mur de soldats qui chargent vers l'avant, repoussant et blessant les ennemis.",
-            "dynamicDescription": "Azir invoque un mur de soldats dotés de boucliers qui chargent vers l'avant, <status>repoussant</status> les ennemis et infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>. Les soldats conservent ensuite leur formation en mur pendant @Effect4Amount@ sec et empêchent les ennemis de passer.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Azir invoque un mur de soldats dotés de boucliers qui chargent vers l'avant, <status>repoussant</status> les ennemis et infligeant <magicDamage>@TotalDamage@ pts de dégâts magiques</magicDamage>. Les soldats conservent ensuite leur formation en mur pendant @WallDuration@ sec et empêchent les ennemis de passer.@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,

@@ -780,7 +780,7 @@
             "cost": "@Cost@ Mana, semua Charge",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Heal champion sekutu di sekitar berdasarkan charge yang disimpan. Serangan yang diperkuat Bravado memberikan satu charge Starlight's Touch.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Mendapatkan stack (maksimum @Effect6Amount@) setiap @StackCooldown@ detik dan saat mengenai Serangan <spellName>Bravado</spellName>.<br><br><spellActive>Aktif:</spellActive> Mengonsumsi semua stack untuk memulihkan <healing>@HealingPerStack@ Health</healing> per stack pada semua champion sekutu di sekitar (<healing>@MaxStackHealing@</healing> pada @Effect6Amount@ stack).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Mendapatkan satu stack (maksimum @MaxCharges@) setiap @StackCooldown@ detik dan saat <spellName>Bravado</spellName> Attack mengenai musuh.<br><br><spellActive>Aktif:</spellActive> Mengonsumsi semua stack untuk memulihkan <healing>@HealingPerStack@ Health</healing> per stack pada semua champion sekutu di sekitar (<healing>@MaxStackHealing@</healing> pada @MaxCharges@ stack).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Secara pasif meningkatkan Armor of Taric dan champion sekutu dengan Bastion.<br><br>Secara aktif memberi shield pada sekutu dan memberi mereka Bastion selama mereka berada di dekat Taric. Spell Taric juga cast ke sekutu dengan Bastion.",
-            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Taric mendapatkan <scaleArmor>@BonusArmor@ Armor</scaleArmor> dan membentuk tether antara dia dengan sekutu yang terikat oleh Ability ini. Selama mereka saling berdekatan, sekutu mendapatkan <scaleArmor>@BonusArmor@ Armor</scaleArmor> dan Taric melakukan cast semua Ability-nya dari dirinya sendiri dan sekutu yang terhubung.<br><br><spellPassive>Aktif: </spellPassive>Taric mengikatkan diri ke champion sekutu, memberikan <shield>@Effect2Amount@% Shield Health maksimum</shield> selama @Effect3Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif: </spellPassive>Taric mendapatkan <scaleArmor>@BonusArmor@ Armor</scaleArmor> dan membentuk tether antara dia dengan sekutu yang terikat oleh Ability ini. Selama mereka saling berdekatan, sekutu mendapatkan <scaleArmor>@BonusArmor@ Armor</scaleArmor> dan Taric cast semua Ability-nya dari dirinya sendiri dan sekutu yang terhubung.<br><br><spellPassive>Aktif: </spellPassive>Taric membentuk ikatan dengan champion sekutu, memberikan Shield sebesar <shield>@ShieldHPRatio@% dari Health maksimum</shield> selama @ShieldDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Taric menyiapkan pancaran Starlight yang, setelah jeda singkat, menghasilkan magic damage dan menerapkan stun pada musuh.",
-            "dynamicDescription": "Taric menyiapkan pancaran Starlight yang meledak setelah @Effect3Amount@ detik untuk menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan menerapkan <status>Stun</status> pada musuh selama @Effect2Amount@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric menyiapkan pancaran Starlight yang meledak setelah @ChargeDuration@ detik untuk menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> dan menerapkan <status>Stun</status> pada musuh selama @StunDuration@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

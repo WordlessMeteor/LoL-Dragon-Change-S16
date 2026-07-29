@@ -10665,6 +10665,11 @@ lol-uikit-content-block.runes-not-yet-unlocked {
     left: 47px
 }
 
+.champion-select .summoner-array.enemy-party.enemy-names-visible .summoner-timer-wrapper {
+    left: auto;
+    right: 292px
+}
+
 .champion-select .summoner-array.align-summoners-top {
     justify-content: flex-start;
     margin-top: 55px
@@ -10959,6 +10964,17 @@ lol-uikit-tooltip .swapping-tooltip-title:lang(ar-ae) {
 
 .in-finalization .summoner-object.actions-complete {
     opacity: 1
+}
+
+.summoner-object.enemy-name-copyable .name-text,
+.summoner-object.enemy-name-copyable .player-name-wrapper {
+    cursor: pointer;
+    transition: color .15s ease
+}
+
+.champion-select.enemy-names-copied .summoner-object.enemy-name-copyable .name-text,
+.champion-select.enemy-names-copied .summoner-object.enemy-name-copyable .player-name-wrapper {
+    color: #cdbe91
 }
 
 .summoner-object {

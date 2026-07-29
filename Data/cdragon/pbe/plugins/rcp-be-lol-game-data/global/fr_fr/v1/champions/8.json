@@ -1292,7 +1292,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Vladimir vole les PV de l'ennemi ciblé. Quand la jauge de ressource de Vladimir est pleine, Transfusion infligera beaucoup plus de dégâts et rendra beaucoup plus de PV pendant un court instant.",
-            "dynamicDescription": "Vladimir draine l'essence vitale de sa cible, lui infligeant <magicDamage>@BaseDamageTooltip@ pts de dégâts magiques</magicDamage> et récupérant <healing>@BaseHealTooltip@ PV</healing>. Après avoir utilisé cette compétence deux fois, Vladimir gagne <speed>+@MovementSpeedOnQ2@% de vitesse de déplacement</speed> pendant 0.5 sec et renforce la prochaine utilisation de cette compétence pendant @Effect8Amount@ sec.<br><br>La version renforcée inflige à la place <magicDamage>@EmpoweredDamageTooltip@ pts de dégâts magiques</magicDamage> et rend <healing>@EmpoweredHealTooltip@ PV supplémentaires plus @EmpoweredHealPercentTooltip@ des PV manquants</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vladimir draine l'essence vitale de sa cible, lui infligeant <magicDamage>@BaseDamageTooltip@ pts de dégâts magiques</magicDamage> et récupérant <healing>@BaseHealTooltip@ PV</healing>. Après avoir utilisé cette compétence deux fois, Vladimir gagne <speed>@MovementSpeedOnQ2@% de vitesse de déplacement</speed> pendant 0.5 sec et renforce la prochaine utilisation de cette compétence pendant @FrenzyDuration@ sec.<br><br>La version renforcée de cette compétence inflige <magicDamage>@EmpoweredDamageTooltip@ pts de dégâts magiques</magicDamage> à la place et restaure en plus <healing>@EmpoweredHealTooltip@ plus @EmpoweredHealPercentTooltip@ des PV manquants</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1589,7 +1589,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirE.png",
             "abilityVideoPath": "champion-abilities/0008/ability_0008_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0008/ability_0008_E1.jpg",
-            "cost": "Coût de canalisation : <font color='#CC3300'>@Effect2Amount@% des PV max (@ChargeHealthTooltip@)</font>",
+            "cost": "Coût de canalisation : <font color='#CC3300'>@MaxHealthCost@% des PV max (@ChargeHealthTooltip@)</font>",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Vladimir dépense ses propres PV pour charger un orbe de sang qui, une fois lâché, infligera des dégâts de zone autour de lui. Les Vagues de sang peuvent être bloquées par les unités ennemies.",
             "dynamicDescription": "<charge>Début de la charge : </charge>Vladimir charge un orbe de sang, dépensant jusqu'à <font color='#CC3300'>@ChargeHealthTooltip@ PV</font>. Quand l'orbe est pleinement chargé, Vladimir est <status>ralenti</status> de 20%.<br><br><release>Relâcher : </release>Vladimir lance des projectiles de sang sur les ennemis proches, leur infligeant entre <magicDamage>@MinDamageTooltip@</magicDamage> et <magicDamage>@MaxDamageTooltip@ pts de dégâts magiques</magicDamage> selon la durée de la charge. Si cette compétence a été chargée pendant au moins 1 sec, elle <status>ralentit</status> également les cibles de @SlowPercent@% pendant 0.5 sec.@SpellModifierDescriptionAppend@",
@@ -1742,7 +1742,7 @@
             "cost": "Pas de coût",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Vladimir contamine une zone avec une peste virulente. Les ennemis infectés subissent plus de dégâts pendant la durée de la compétence. Après quelques secondes, Peste sanguine inflige des dégâts magiques aux ennemis infectés et rend des PV à Vladimir pour chaque champion ennemi touché.",
-            "dynamicDescription": "Vladimir crée une peste virulente. Les ennemis infectés subissent @Effect2Amount@% de dégâts supplémentaires (toutes sources confondues) pendant @Effect4Amount@ sec. Lorsque l'effet expire, Vladimir inflige <magicDamage>@Damage@ pts de dégâts magiques</magicDamage> à toutes les cibles infectées. Vladimir récupère <healing>@Damage@ PV</healing> s'il touche un champion, et <healing>@SecondaryHealingTooltip@ PV</healing> de plus pour chaque champion touché au-delà du premier.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vladimir crée une peste virulente. Les ennemis infectés subissent @DamageAmp@% de dégâts bonus (toutes sources confondues) pendant @Duration@ sec. Lorsque l'effet expire, Vladimir inflige <magicDamage>@Damage@ pts de dégâts magiques</magicDamage> à toutes les cibles infectées. Vladimir récupère <healing>@Damage@ PV</healing> s'il touche un champion, et <healing>@SecondaryHealingTooltip@ PV</healing> de plus pour chaque champion touché au-delà du premier.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,

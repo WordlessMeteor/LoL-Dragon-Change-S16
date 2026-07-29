@@ -12,6 +12,7 @@
     },
     "Characters/Taric/Spells/TaricPassiveAbility/TaricPassive": {
         "ObjectName": "TaricPassive",
+        "objectPath": "{02fd61b5}",
         "mScriptName": "TaricPassive",
         "mSpell": {
             "DataValues": [
@@ -168,6 +169,7 @@
     },
     "Characters/Taric/Spells/TaricPassiveAbility/TaricPassiveAttack2": {
         "ObjectName": "TaricPassiveAttack2",
+        "objectPath": "{76d4f0cd}",
         "mScriptName": "TaricPassiveAttack2",
         "mSpell": {
             "flags": 128,
@@ -277,6 +279,7 @@
     },
     "Characters/Taric/Spells/TaricPassiveAbility/TaricPassiveAttack": {
         "ObjectName": "TaricPassiveAttack",
+        "objectPath": "Characters/Taric/Spells/TaricPassiveAbility/TaricPassiveAttack",
         "mScriptName": "TaricPassiveAttack",
         "mSpell": {
             "flags": 128,
@@ -409,6 +412,7 @@
     },
     "Characters/Taric/Spells/TaricWAbility/TaricWAllyBuff": {
         "ObjectName": "TaricWAllyBuff",
+        "objectPath": "{133a9b92}",
         "mScriptName": "TaricWAllyBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TaricWAllyBuff",
@@ -418,11 +422,13 @@
     },
     "Characters/Taric/Spells/TaricWAbility/PassiveGemIdleVFX": {
         "ObjectName": "PassiveGemIdleVFX",
+        "objectPath": "Characters/Taric/Spells/TaricWAbility/PassiveGemIdleVFX",
         "mScriptName": "PassiveGemIdleVFX",
         "__type": "SpellObject"
     },
     "Characters/Taric/Spells/TaricWAbility/TaricW": {
         "ObjectName": "TaricW",
+        "objectPath": "Characters/Taric/Spells/TaricWAbility/TaricW",
         "mScriptName": "TaricW",
         "mSpell": {
             "mAffectsTypeFlags": 1,
@@ -515,6 +521,58 @@
                         0.09000000357627869,
                         0.10000000149011612,
                         0.10999999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldHPRatio",
+                    "values": [
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0,
+                        10.0,
+                        11.0,
+                        12.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "LeashBreakWarningRange",
+                    "values": [
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "LeashBreakActualRange",
+                    "values": [
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -697,8 +755,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "ShieldHPRatio",
                                     "nameOverride": "Spell_ListType_TaricShieldRatio",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -756,8 +813,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "ShieldDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -769,8 +826,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "ShieldDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -796,11 +853,13 @@
     },
     "Characters/Taric/Spells/TaricWAbility/TaricWShoulderManager": {
         "ObjectName": "TaricWShoulderManager",
+        "objectPath": "{587856ac}",
         "mScriptName": "TaricWShoulderManager",
         "__type": "SpellObject"
     },
     "Characters/Taric/Spells/TaricWAbility/TaricWAllyBuffMissile": {
         "ObjectName": "TaricWAllyBuffMissile",
+        "objectPath": "{781e20ce}",
         "mScriptName": "TaricWAllyBuffMissile",
         "mSpell": {
             "flags": 132,
@@ -892,6 +951,7 @@
     },
     "Characters/Taric/Spells/TaricWAbility/TaricWSelfBuff": {
         "ObjectName": "TaricWSelfBuff",
+        "objectPath": "{c6758ec2}",
         "mScriptName": "TaricWSelfBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TaricWSelfBuff",
@@ -913,6 +973,7 @@
     },
     "Characters/Taric/Spells/TaricRAbility/TaricR": {
         "ObjectName": "TaricR",
+        "objectPath": "Characters/Taric/Spells/TaricRAbility/TaricR",
         "mScriptName": "TaricR",
         "mSpell": {
             "mAffectsTypeFlags": 9221,
@@ -1188,6 +1249,7 @@
     },
     "Characters/Taric/Spells/TaricRAbility/TaricRIndicator": {
         "ObjectName": "TaricRIndicator",
+        "objectPath": "{3c4c681a}",
         "mScriptName": "TaricRIndicator",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TaricRIndicator",
@@ -1197,6 +1259,7 @@
     },
     "Characters/Taric/Spells/TaricRAbility/TaricRTarget": {
         "ObjectName": "TaricRTarget",
+        "objectPath": "{8acadf9c}",
         "mScriptName": "TaricRTarget",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TaricRTarget",
@@ -1216,6 +1279,7 @@
     },
     "Characters/Taric/Spells/TaricQAbility/TaricQ": {
         "ObjectName": "TaricQ",
+        "objectPath": "Characters/Taric/Spells/TaricQAbility/TaricQ",
         "mScriptName": "TaricQ",
         "mSpell": {
             "mAffectsTypeFlags": 9221,
@@ -1370,6 +1434,32 @@
                         0.009999999776482582
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseHealMax",
+                    "values": [
+                        25.0,
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        125.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxCharges",
+                    "values": [
+                        1.0,
+                        1.0,
+                        2.0,
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1449,8 +1539,8 @@
                 },
                 "MaxStackHealing": {
                     "mMultiplier": {
-                        "mEffectIndex": 6,
-                        "__type": "EffectValueCalculationPart"
+                        "mDataValue": "MaxCharges",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "mFormulaParts": [
                         {
@@ -1628,14 +1718,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 6,
+                                    "type": "MaxCharges",
                                     "nameOverride": "Spell_ListType_TaricMaxCharges",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 5,
+                                    "type": "BaseHealMax",
                                     "nameOverride": "Spell_ListType_TaricMaxHealing",
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -1743,11 +1831,13 @@
     },
     "Characters/Taric/Spells/TaricQAbility/TaricQHandGlowManager": {
         "ObjectName": "TaricQHandGlowManager",
+        "objectPath": "{4c438abc}",
         "mScriptName": "TaricQHandGlowManager",
         "__type": "SpellObject"
     },
     "Characters/Taric/Spells/TaricBasicAttack": {
         "ObjectName": "TaricBasicAttack",
+        "objectPath": "Characters/Taric/Spells/TaricBasicAttack",
         "mScriptName": "TaricBasicAttack",
         "mSpell": {
             "flags": 128,
@@ -1851,6 +1941,7 @@
     },
     "Characters/Taric/Spells/TaricEAbility/TaricEChargeBuff": {
         "ObjectName": "TaricEChargeBuff",
+        "objectPath": "{6c836474}",
         "mScriptName": "TaricEChargeBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TaricEChargeBuff",
@@ -1860,6 +1951,7 @@
     },
     "Characters/Taric/Spells/TaricEAbility/TaricE": {
         "ObjectName": "TaricE",
+        "objectPath": "Characters/Taric/Spells/TaricEAbility/TaricE",
         "mScriptName": "TaricE",
         "mSpell": {
             "flags": 4,
@@ -1929,6 +2021,47 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        50.0,
+                        90.0,
+                        130.0,
+                        170.0,
+                        210.0,
+                        250.0,
+                        290.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChargeDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
@@ -1948,8 +2081,8 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.5,
@@ -2088,8 +2221,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2232,8 +2364,8 @@
                     "EffectTag": 4096,
                     "EffectCalculation": {
                         "mMultiplier": {
-                            "mEffectIndex": 2,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "StunDuration",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         "__type": "GameCalculation"
                     },
@@ -2244,8 +2376,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2257,8 +2389,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2272,6 +2404,7 @@
     },
     "Characters/Taric/Spells/TaricCritAttack": {
         "ObjectName": "TaricCritAttack",
+        "objectPath": "{9aea5add}",
         "mScriptName": "TaricCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 6826,
@@ -2356,6 +2489,7 @@
     },
     "Characters/Taric/Spells/TaricBasicAttack3": {
         "ObjectName": "TaricBasicAttack3",
+        "objectPath": "Characters/Taric/Spells/TaricBasicAttack3",
         "mScriptName": "TaricBasicAttack3",
         "mSpell": {
             "flags": 128,
@@ -2445,6 +2579,7 @@
     },
     "Characters/Taric/Spells/TaricBasicAttack2": {
         "ObjectName": "TaricBasicAttack2",
+        "objectPath": "Characters/Taric/Spells/TaricBasicAttack2",
         "mScriptName": "TaricBasicAttack2",
         "mSpell": {
             "flags": 128,
@@ -2716,24 +2851,24 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{36ba497b}",
-                            "{4273a02a}",
-                            "{45782211}"
+                            "Items/773132",
+                            "Items/771029",
+                            "Items/771006"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{36ba497b}",
-                            "{387151d5}"
+                            "Items/773132",
+                            "Items/771033"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{253d453e}",
-                            "{387151d5}",
-                            "{43781eeb}"
+                            "Items/773096",
+                            "Items/771033",
+                            "Items/771004"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -2741,31 +2876,31 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{34ab3bcb}",
-                            "{3bbc8ff1}",
-                            "{52200427}"
+                            "Items/773190",
+                            "Items/773105",
+                            "Items/773222"
                         ],
                         "MaxCompletedItems": 2,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{23bea8c0}",
-                            "{264a12c4}"
+                            "Items/773111",
+                            "Items/773047"
                         ],
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{1f47c928}",
-                            "{994f44fb}",
-                            "{944f3d1c}",
-                            "{24beaa53}",
-                            "{9853c096}",
-                            "{b5c64a5b}",
-                            "{aa405534}",
-                            "{3cbc9184}",
-                            "{27591ee1}"
+                            "Items/773050",
+                            "Items/773068",
+                            "Items/773065",
+                            "Items/773110",
+                            "Items/773005",
+                            "Items/773143",
+                            "Items/773083",
+                            "Items/773102",
+                            "Items/773026"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }

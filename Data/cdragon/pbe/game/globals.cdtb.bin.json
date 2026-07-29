@@ -11106,6 +11106,7 @@
         "particleName": "SeasonalMilestoneGlow_Lv10",
         "particlePath": "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv10",
         "drawingLayer": 1,
+        "objectPath": "{682bdc8a}",
         "__type": "VfxSystemDefinitionData"
     },
     "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv9": {
@@ -12338,6 +12339,7 @@
         "particleName": "SeasonalMilestoneGlow_Lv9",
         "particlePath": "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv9",
         "drawingLayer": 1,
+        "objectPath": "{a73b2326}",
         "__type": "VfxSystemDefinitionData"
     },
     "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv8": {
@@ -13570,6 +13572,7 @@
         "particleName": "SeasonalMilestoneGlow_Lv8",
         "particlePath": "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv8",
         "drawingLayer": 1,
+        "objectPath": "{a83b24b9}",
         "__type": "VfxSystemDefinitionData"
     },
     "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv7": {
@@ -14802,6 +14805,7 @@
         "particleName": "SeasonalMilestoneGlow_Lv7",
         "particlePath": "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv7",
         "drawingLayer": 1,
+        "objectPath": "{b13b32e4}",
         "__type": "VfxSystemDefinitionData"
     },
     "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv6": {
@@ -16034,6 +16038,7 @@
         "particleName": "SeasonalMilestoneGlow_Lv6",
         "particlePath": "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv6",
         "drawingLayer": 1,
+        "objectPath": "{b23b3477}",
         "__type": "VfxSystemDefinitionData"
     },
     "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv5": {
@@ -17266,6 +17271,7 @@
         "particleName": "SeasonalMilestoneGlow_Lv5",
         "particlePath": "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv5",
         "drawingLayer": 1,
+        "objectPath": "{b33b360a}",
         "__type": "VfxSystemDefinitionData"
     },
     "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv4": {
@@ -18498,6 +18504,7 @@
         "particleName": "SeasonalMilestoneGlow_Lv4",
         "particlePath": "Globals/ChampionMastery/Particles/SeasonalMilestoneGlow_Lv4",
         "drawingLayer": 1,
+        "objectPath": "{b43b379d}",
         "__type": "VfxSystemDefinitionData"
     },
     "{01476a96}": {
@@ -21341,6 +21348,10 @@
         "FowTeam": 1,
         "__type": "StealthVfx"
     },
+    "{1915335a}": {
+        "effectName": "r:Twitch_Q_Invisible",
+        "__type": "StealthVfx"
+    },
     "{3f4ecb17}": {
         "FadeAmount": 0.20000000298023224,
         "FadeTime": 0.5,
@@ -21395,6 +21406,13 @@
         "scale": 1.600000023841858,
         "PersistentThroughReconnect": true,
         "TimeoutInFow": 20.0,
+        "__type": "StealthVfx"
+    },
+    "{5d2cf108}": {
+        "effectName": "r:Twitch_Q_Cas_Invisible",
+        "FowTeam": 1,
+        "FowVisibilityRadius": 10.0,
+        "SendIfOnScreenOrDiscard": true,
         "__type": "StealthVfx"
     },
     "{6456f55d}": {
@@ -21525,6 +21543,14 @@
         "UseOwnerFacing": true,
         "TimeoutInFow": 5.0,
         "UseAttachmentForMeshOnly": true,
+        "__type": "StealthVfx"
+    },
+    "{e30c7acf}": {
+        "effectName": "r:Twitch_Q_Camouflage_Ring",
+        "UseTargetObject": true,
+        "OnlySendToOwner": true,
+        "PersistentThroughReconnect": true,
+        "TimeoutInFow": 20.0,
         "__type": "StealthVfx"
     },
     "{ed81496c}": {
@@ -23919,11 +23945,11 @@
                     "__type": "StealthCharacterFadeInstance"
                 },
                 "CamoRingEffect": {
-                    "effect": "{152c4f11}",
+                    "effect": "{e30c7acf}",
                     "__type": "StealthVfxInstance"
                 },
                 "CamoRingEffectOther": {
-                    "effect": "{12f5fc70}",
+                    "effect": "{1915335a}",
                     "__type": "StealthVfxInstance"
                 },
                 "DetectionEyeEffect": {
@@ -23939,7 +23965,7 @@
                     "__type": "StealthVfxInstance"
                 },
                 "EnterStealthEffect": {
-                    "effect": "{a1ace792}",
+                    "effect": "{5d2cf108}",
                     "__type": "StealthVfxInstance"
                 },
                 "PersistentStealthEffect": {

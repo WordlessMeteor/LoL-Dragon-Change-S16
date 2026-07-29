@@ -359,6 +359,7 @@
     },
     "Characters/Zed/Spells/ZedPassiveAbility/ZedMarker": {
         "ObjectName": "ZedMarker",
+        "objectPath": "{01bf094a}",
         "mScriptName": "ZedMarker",
         "mSpell": {
             "flags": 4,
@@ -522,6 +523,7 @@
     },
     "Characters/Zed/Spells/ZedPassiveAbility/ZedPassive": {
         "ObjectName": "ZedPassive",
+        "objectPath": "{3493b845}",
         "mScriptName": "ZedPassive",
         "mSpell": {
             "DataValues": [
@@ -767,6 +769,7 @@
     },
     "Characters/Zed/Spells/ZedPassiveAbility/ZedPassiveCD": {
         "ObjectName": "ZedPassiveCD",
+        "objectPath": "{eea47782}",
         "mScriptName": "ZedPassiveCD",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ZedPassiveCD",
@@ -790,6 +793,7 @@
     },
     "Characters/Zed/Spells/ZedWAbility/ZedW": {
         "ObjectName": "ZedW",
+        "objectPath": "Characters/Zed/Spells/ZedWAbility/ZedW",
         "mScriptName": "ZedW",
         "mSpell": {
             "flags": 4,
@@ -812,15 +816,6 @@
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -899,6 +894,58 @@
                         25000.0,
                         25000.0,
                         25000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SwapTimeLimit",
+                    "values": [
+                        5.25,
+                        5.25,
+                        5.25,
+                        5.25,
+                        5.25,
+                        5.25,
+                        5.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EnergyRestoreDoubleHit",
+                    "values": [
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShadowDuration",
+                    "values": [
+                        5.25,
+                        5.25,
+                        5.25,
+                        5.25,
+                        5.25,
+                        5.25,
+                        5.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShadowDurationTooltip",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1050,8 +1097,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 3,
+                                    "type": "EnergyRestoreDoubleHit",
                                     "nameOverride": "Spell_ZedW_EnergyReturn",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1138,6 +1184,7 @@
     },
     "Characters/Zed/Spells/ZedWAbility/ZedWMissile": {
         "ObjectName": "ZedWMissile",
+        "objectPath": "{224ddc2b}",
         "mScriptName": "ZedWMissile",
         "mSpell": {
             "mAlternateName": "EzrealMysticShotMissile",
@@ -1339,6 +1386,7 @@
     },
     "Characters/Zed/Spells/ZedWAbility/ZedWHandler": {
         "ObjectName": "ZedWHandler",
+        "objectPath": "{53951c6b}",
         "mScriptName": "ZedWHandler",
         "mSpell": {
             "flags": 4,
@@ -1493,6 +1541,7 @@
     },
     "Characters/Zed/Spells/ZedWAbility/ZedWHandlerBuffName": {
         "ObjectName": "ZedWHandlerBuffName",
+        "objectPath": "{90990a55}",
         "mScriptName": "ZedWHandlerBuffName",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ZedWHandler",
@@ -1502,6 +1551,7 @@
     },
     "Characters/Zed/Spells/ZedWAbility/ZedW2": {
         "ObjectName": "ZedW2",
+        "objectPath": "Characters/Zed/Spells/ZedWAbility/ZedW2",
         "mScriptName": "ZedW2",
         "mSpell": {
             "flags": 4,
@@ -1692,11 +1742,13 @@
     },
     "Characters/Zed/Spells/ZedRAbility/ZedRPassiveBuff": {
         "ObjectName": "ZedRPassiveBuff",
+        "objectPath": "{1653d81f}",
         "mScriptName": "ZedRPassiveBuff",
         "__type": "SpellObject"
     },
     "Characters/Zed/Spells/ZedRAbility/ZedRADBuff": {
         "ObjectName": "ZedRADBuff",
+        "objectPath": "{1d1b462d}",
         "mScriptName": "ZedRADBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ZedRADBuff",
@@ -1724,6 +1776,7 @@
     },
     "Characters/Zed/Spells/ZedRAbility/ZedR": {
         "ObjectName": "ZedR",
+        "objectPath": "Characters/Zed/Spells/ZedRAbility/ZedR",
         "mScriptName": "ZedR",
         "mSpell": {
             "flags": 4,
@@ -2033,6 +2086,7 @@
     },
     "Characters/Zed/Spells/ZedRAbility/ZedR2": {
         "ObjectName": "ZedR2",
+        "objectPath": "{7d9fef31}",
         "mScriptName": "ZedR2",
         "mSpell": {
             "flags": 4,
@@ -2220,6 +2274,7 @@
     },
     "Characters/Zed/Spells/ZedRAbility/ZedRDashEffectShadow": {
         "ObjectName": "ZedRDashEffectShadow",
+        "objectPath": "{7e0ba71c}",
         "mScriptName": "ZedRDashEffectShadow",
         "mSpell": {
             "mAlternateName": "ZedUlt",
@@ -2229,6 +2284,7 @@
     },
     "Characters/Zed/Spells/ZedRAbility/ZedUltExecute": {
         "ObjectName": "ZedUltExecute",
+        "objectPath": "{945618db}",
         "mScriptName": "ZedUltExecute",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ZedUltExecute",
@@ -2238,6 +2294,7 @@
     },
     "Characters/Zed/Spells/ZedRAbility/ZedRHandler": {
         "ObjectName": "ZedRHandler",
+        "objectPath": "{a896603f}",
         "mScriptName": "ZedRHandler",
         "mSpell": {
             "flags": 4,
@@ -2393,6 +2450,7 @@
     },
     "Characters/Zed/Spells/ZedRAbility/ZedRDeathMark": {
         "ObjectName": "ZedRDeathMark",
+        "objectPath": "{bb6b81e4}",
         "mScriptName": "ZedRDeathMark",
         "mBuff": {
             "mDescription": "game_buff_tooltip_ZedUltExecute",
@@ -2402,6 +2460,7 @@
     },
     "Characters/Zed/Spells/ZedRAbility/ZedRMissile": {
         "ObjectName": "ZedRMissile",
+        "objectPath": "{ff607a47}",
         "mScriptName": "ZedRMissile",
         "mSpell": {
             "mAlternateName": "EzrealMysticShotMissile",
@@ -2600,6 +2659,7 @@
     },
     "Characters/Zed/Spells/ZedShadowBasicAttack": {
         "ObjectName": "ZedShadowBasicAttack",
+        "objectPath": "{48a11119}",
         "mScriptName": "ZedShadowBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -2688,6 +2748,7 @@
     },
     "Characters/Zed/Spells/ZedQAbility/ZedQ": {
         "ObjectName": "ZedQ",
+        "objectPath": "Characters/Zed/Spells/ZedQAbility/ZedQ",
         "mScriptName": "ZedQ",
         "mSpell": {
             "mAffectsTypeFlags": 23759,
@@ -3051,6 +3112,7 @@
     },
     "Characters/Zed/Spells/ZedQAbility/ZedQMissile": {
         "ObjectName": "ZedQMissile",
+        "objectPath": "{bf14b98b}",
         "mScriptName": "ZedQMissile",
         "mSpell": {
             "flags": 4,
@@ -3195,6 +3257,7 @@
     },
     "Characters/Zed/Spells/ZedCritAttack": {
         "ObjectName": "ZedCritAttack",
+        "objectPath": "Characters/Zed/Spells/ZedCritAttack",
         "mScriptName": "ZedCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -3275,6 +3338,7 @@
     },
     "Characters/Zed/Spells/ZedEAbility/ZedE": {
         "ObjectName": "ZedE",
+        "objectPath": "Characters/Zed/Spells/ZedEAbility/ZedE",
         "mScriptName": "ZedE",
         "mSpell": {
             "flags": 4,
@@ -3608,6 +3672,7 @@
     },
     "Characters/Zed/Spells/ZedBasicAttack": {
         "ObjectName": "ZedBasicAttack",
+        "objectPath": "Characters/Zed/Spells/ZedBasicAttack",
         "mScriptName": "ZedBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -3688,6 +3753,7 @@
     },
     "Characters/Zed/Spells/ZedBasicAttack2": {
         "ObjectName": "ZedBasicAttack2",
+        "objectPath": "Characters/Zed/Spells/ZedBasicAttack2",
         "mScriptName": "ZedBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -4365,6 +4431,7 @@
     },
     "{4336a59a}": {
         "ObjectName": "ZedSpiritShadowQuestLoss",
+        "objectPath": "{4336a59a}",
         "mScriptName": "ZedSpiritShadowQuestLoss",
         "mSpell": {
             "mImgIconName": [
@@ -4391,6 +4458,7 @@
     },
     "{8dbccb5a}": {
         "ObjectName": "ZedSpiritShadowQuestReward",
+        "objectPath": "{8dbccb5a}",
         "mScriptName": "ZedSpiritShadowQuestReward",
         "mSpell": {
             "mImgIconName": [
@@ -4417,6 +4485,7 @@
     },
     "{ba9186d9}": {
         "ObjectName": "ZedSpiritShadowQuestWin",
+        "objectPath": "{ba9186d9}",
         "mScriptName": "ZedSpiritShadowQuestWin",
         "mBuff": {
             "__type": "BuffData"
@@ -4425,6 +4494,7 @@
     },
     "{bc93ec5f}": {
         "ObjectName": "ZedSpiritShadowQuestStart",
+        "objectPath": "{bc93ec5f}",
         "mScriptName": "ZedSpiritShadowQuestStart",
         "mSpell": {
             "mImgIconName": [

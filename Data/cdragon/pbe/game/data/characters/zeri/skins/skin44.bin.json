@@ -532,6 +532,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
+        "objectPath": "{80da9de1}",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Zeri/Skins/Skin44/Materials/Hair": {
@@ -1026,9 +1027,94 @@
                 "TextureName": "Alpha_Multiplier_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Shape",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Color",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Holographic_Tiling",
+                "value": [
+                    77.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Direction",
+                "value": [
+                    0.10000000149011612,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Tiling",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Height",
+                "value": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Ribbon_U_Remap",
                 "value": [
@@ -1685,6 +1771,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_HOLOGRAPHIC_MATRIX",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
                 "on": false,
@@ -7745,6 +7837,7 @@
         ],
         "particleName": "Zeri_Skin44_E_Vault_WallBoots002",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_E_Vault_WallBoots002",
+        "objectPath": "{1804f3b3}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_E_Dash": {
@@ -12181,6 +12274,7 @@
         ],
         "particleName": "Zeri_Skin44_E_Dash",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_E_Dash",
+        "objectPath": "{1ac01bcf}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Idle02": {
@@ -13393,6 +13487,7 @@
         ],
         "particleName": "Zeri_Skin44_Idle02",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Idle02",
+        "objectPath": "{20d45bbf}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Emote_WinddownDust": {
@@ -15452,6 +15547,7 @@
         "visibilityRadius": 9999999.0,
         "particleName": "Zeri_Skin44_Emote_WinddownDust",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Emote_WinddownDust",
+        "objectPath": "{55376384}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Emote_Joke_Body": {
@@ -19743,6 +19839,7 @@
         "visibilityRadius": 99999.0,
         "particleName": "Zeri_Skin44_Emote_Joke_Body",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Emote_Joke_Body",
+        "objectPath": "{734ecdd6}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Emote_Dance_Dust": {
@@ -21062,6 +21159,7 @@
         "visibilityRadius": 3000.0,
         "particleName": "Zeri_Skin44_Emote_Dance_Dust",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Emote_Dance_Dust",
+        "objectPath": "{7b39df1a}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Emote_Taunt_HairBeam": {
@@ -23795,6 +23893,7 @@
         "particleName": "Zeri_Skin44_Emote_Taunt_HairBeam",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Emote_Taunt_HairBeam",
         "flags": 198,
+        "objectPath": "{82c82c18}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Recall_Poro01": {
@@ -24043,6 +24142,7 @@
         "particleName": "Zeri_Skin44_Recall_Poro01",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Recall_Poro01",
         "flags": 1236,
+        "objectPath": "{8c1522de}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Idle_Snow02": {
@@ -24828,6 +24928,7 @@
         "particleName": "Zeri_Skin44_Idle_Snow02",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Idle_Snow02",
         "flags": 215,
+        "objectPath": "{a874e4fb}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Idle_snow": {
@@ -25512,6 +25613,7 @@
         ],
         "particleName": "Zeri_Skin44_Idle_snow",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Idle_snow",
+        "objectPath": "{ae753bd9}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Recall_Ground01": {
@@ -29547,6 +29649,7 @@
         "visibilityRadius": 99999.0,
         "particleName": "Zeri_Skin44_Recall_Ground01",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_Recall_Ground01",
+        "objectPath": "{c4b2c393}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_E_Buff": {
@@ -30042,6 +30145,7 @@
         "particleName": "Zeri_Skin44_E_Buff",
         "particlePath": "Characters/Zeri/Skins/Skin44/Particles/Zeri_Skin44_E_Buff",
         "flags": 1236,
+        "objectPath": "{e858d29e}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Gear/ZeriSkin40_RBuff": {
@@ -32653,6 +32757,7 @@
         "particleName": "Zeri_Skin44_RW_Wall_Tar_Vault",
         "particlePath": "Characters/Zeri/Skins/Skin44/Gear/ZeriSkin40_RBuff/Particles/Zeri_Skin44_RW_Wall_Tar_Vault",
         "flags": 198,
+        "objectPath": "{3c56c314}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Gear/ZeriSkin40_RBuff/Particles/Zeri_Skin44_RW_SecondImpact_Beam_Enemy": {
@@ -40921,6 +41026,7 @@
         "particlePath": "Characters/Zeri/Skins/Skin44/Gear/ZeriSkin40_RBuff/Particles/Zeri_Skin44_RW_SecondImpact_Beam_Enemy",
         "soundOnCreateDefault": "Play_sfx_ZeriSkin40_ZeriRW_beam_buffactivate",
         "flags": 230,
+        "objectPath": "{45d1a082}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Gear/ZeriSkin40_RBuff/Particles/Zeri_Skin44_RW_SecondImpact_Beam": {
@@ -49566,6 +49672,7 @@
         "particlePath": "Characters/Zeri/Skins/Skin44/Gear/ZeriSkin40_RBuff/Particles/Zeri_Skin44_RW_SecondImpact_Beam",
         "soundOnCreateDefault": "Play_sfx_ZeriSkin40_ZeriRW_beam_buffactivate",
         "flags": 198,
+        "objectPath": "{ab14eee5}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Gear/ZeriSkin40_RBuff/Particles/Zeri_Skin44_RE_Dash": {
@@ -56877,6 +56984,7 @@
         "particleName": "Zeri_Skin44_RE_Dash",
         "particlePath": "Characters/Zeri/Skins/Skin44/Gear/ZeriSkin40_RBuff/Particles/Zeri_Skin44_RE_Dash",
         "soundOnCreateDefault": "Play_sfx_ZeriSkin40_ZeriRE_cast_poro",
+        "objectPath": "{f124f87d}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Zeri/Skins/Skin44/Resources": {

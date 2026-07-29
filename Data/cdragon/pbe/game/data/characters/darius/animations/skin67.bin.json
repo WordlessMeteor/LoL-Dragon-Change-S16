@@ -276,7 +276,7 @@
                         ],
                         "__type": "ParticleEventData"
                     },
-                    "{0cf0606b}": {
+                    "Audio_Laugh": {
                         "mSoundName": "Play_sfx_DariusSkin67_Laugh_anim",
                         "mIsLoop": false,
                         "__type": "SoundEventData"
@@ -1753,126 +1753,6 @@
                 "mFalseConditionClipName": "{7e50fff6}",
                 "__type": "ConditionBoolClipData"
             },
-            "Spell4": {
-                "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "weapon": {
-                        "mJointNameToOverride": "weapon",
-                        "mJointNameToSnapTo": "SnapWeapon",
-                        "__type": "JointSnapEventData"
-                    },
-                    "{e3a4c5e3}": {
-                        "mEffectKey": "Darius_R_Cast_Wolf",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "Root",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "mIsKillEvent": false,
-                        "mIsDetachable": true,
-                        "__type": "ParticleEventData"
-                    },
-                    "{5be819d6}": {
-                        "mStartFrame": 9.0,
-                        "mSoundName": "Play_sfx_DariusSkin15_DariusExecute_swing",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
-                    },
-                    "{cef6a86c}": {
-                        "mStartFrame": 11.0,
-                        "mEffectKey": "Darius_R_Trail",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "Lion_Root",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "__type": "ParticleEventData"
-                    },
-                    "{83026351}": {
-                        "mStartFrame": 3.0,
-                        "mEndFrame": 13.0,
-                        "mShowSubmeshList": [
-                            "Edge",
-                            "SkillR"
-                        ],
-                        "mHideSubmeshList": [
-                            "Wheel",
-                            "Knife",
-                            "metal",
-                            "ComponentB"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "{7563a63a}": {
-                        "mStartFrame": 7.0,
-                        "mEffectKey": "{6af0c361}",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "Weapon_WheelR",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "__type": "ParticleEventData"
-                    },
-                    "{79acc0fa}": {
-                        "mEffectKey": "{9cc21d65}",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "L_WingA_Wing_Back5_vfx",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "__type": "ParticleEventData"
-                    },
-                    "{137a2188}": {
-                        "mEffectKey": "{6a56a454}",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "R_WingA_Wing_Back5_vfx",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "__type": "ParticleEventData"
-                    },
-                    "{34cc4bb9}": {
-                        "mEffectKey": "{96b521a4}",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "C_Buffbone_GLB_Layout_Loc",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "__type": "ParticleEventData"
-                    },
-                    "{69e23078}": {
-                        "mEffectKey": "{29f04ad1}",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "C_WingB_Engine",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "__type": "ParticleEventData"
-                    },
-                    "{7463a4a7}": {
-                        "mEffectKey": "{67f0bea8}",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "Weapon_WheelR",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "__type": "ParticleEventData"
-                    }
-                },
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Darius/Skins/Skin67/Animations/Spell4.anm",
-                    "__type": "AnimationResourceData"
-                },
-                "__type": "AtomicClipData"
-            },
             "Spell2_IdleIn": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -2949,6 +2829,150 @@
                 "mChangeAnimationMidPlay": true,
                 "mTrueConditionClipName": "{2f095efb}",
                 "mFalseConditionClipName": "Run_Base",
+                "__type": "ConditionBoolClipData"
+            },
+            "{23bc3a50}": {
+                "mTrackDataName": "UpperBody",
+                "mEventDataMap": {
+                    "wolf": {
+                        "mShowSubmeshList": [
+                            "Wolf_Mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "weapon": {
+                        "mJointNameToOverride": "weapon",
+                        "mJointNameToSnapTo": "SnapWeapon",
+                        "__type": "JointSnapEventData"
+                    },
+                    "{e3a4c5e3}": {
+                        "mEffectKey": "Darius_R_Cast_Wolf",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsKillEvent": false,
+                        "mIsDetachable": true,
+                        "__type": "ParticleEventData"
+                    },
+                    "{5be819d6}": {
+                        "mStartFrame": 9.0,
+                        "mSoundName": "Play_sfx_DariusSkin15_DariusExecute_swing",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
+                    "BODY": {
+                        "mStartFrame": 3.0,
+                        "mEndFrame": 18.0,
+                        "mHideSubmeshList": [
+                            "Darius_Axe_Mat",
+                            "Darius_Cape_Mat",
+                            "Darius_Skin15_Mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{cef6a86c}": {
+                        "mEffectKey": "Darius_R_Trail",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Lion_Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Darius/Skins/Skin15/Animations/Darius_Skin15_Spell4_5.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "{421a8ec5}": {
+                "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "wolf": {
+                        "mShowSubmeshList": [
+                            "Wolf_Mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "weapon": {
+                        "mJointNameToOverride": "weapon",
+                        "mJointNameToSnapTo": "SnapWeapon",
+                        "__type": "JointSnapEventData"
+                    },
+                    "{e3a4c5e3}": {
+                        "mEffectKey": "Darius_R_Cast_Wolf",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsKillEvent": false,
+                        "mIsDetachable": true,
+                        "__type": "ParticleEventData"
+                    },
+                    "{5be819d6}": {
+                        "mStartFrame": 9.0,
+                        "mSoundName": "Play_sfx_DariusSkin15_DariusExecute_swing",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
+                    "BODY": {
+                        "mStartFrame": 3.0,
+                        "mEndFrame": 18.0,
+                        "mHideSubmeshList": [
+                            "Darius_Axe_Mat",
+                            "Darius_Cape_Mat",
+                            "Darius_Skin15_Mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{cef6a86c}": {
+                        "mEffectKey": "Darius_R_Trail",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Lion_Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Darius/Skins/Skin15/Animations/Darius_Skin15_Spell4_5.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
+            "Spell4": {
+                "Updater": {
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mAnimationNames": [
+                                        "{23bc3a50}",
+                                        "{421a8ec5}"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "mDelayOn": 0.009999999776482582,
+                        "__type": "DelayedBoolMaterialDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "SyncFrameOnChangeAnim": true,
+                "mTrueConditionClipName": "{421a8ec5}",
+                "mFalseConditionClipName": "{23bc3a50}",
                 "__type": "ConditionBoolClipData"
             },
             "{2dfc27a3}": {
@@ -6374,14 +6398,6 @@
                 "mTime": 0.10000000149011612,
                 "__type": "TimeBlendData"
             },
-            "13255853229302194225": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "13255853227624957852": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
             "6247030500422183204": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
@@ -6422,137 +6438,9 @@
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },
-            "2432597616147972167": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "11831733634744074311": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "10832289109967781959": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "2291038461894213703": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "13630352413733306439": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "7794375148558499911": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "13987674970998063175": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "13156647005934993479": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "6521702302107451463": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "16902268717553303623": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "12895556605436117063": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "12521393167871131719": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "12052251746940371015": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "9102056282029178951": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "12394966557790715975": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "13111734580165361735": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "1019861475242950727": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "10323833856216940615": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "3120158486520283207": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "15677482531659595847": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "7418097655075979335": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "1588456596239171655": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "13039675255255613511": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "18000867475800342599": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "12207219303760937031": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "13255853229984858183": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "8859501508680892487": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "13590883339320311879": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "6247030502054051911": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "6463208476783296583": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "5105853778791645255": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
             "16902268716281704166": {
                 "mClipName": "Idle_In",
                 "__type": "TransitionClipBlendData"
-            },
-            "13222943558475333703": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
             },
             "12030939628319747814": {
                 "mClipName": "Idle_In",
@@ -6573,34 +6461,6 @@
             "10400565850870066918": {
                 "mClipName": "Run_Homeguard_To_Idle",
                 "__type": "TransitionClipBlendData"
-            },
-            "12030939629591347271": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "10400565852141666375": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "14289569270205923399": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "10469693183267061831": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "314137613377617991": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "15013796791780261959": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "14004966243043786823": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
             },
             "7800963176147398374": {
                 "mClipName": "Run_Homeguard_To_Idle",
@@ -6758,10 +6618,6 @@
                 "mClipName": "Dance_In",
                 "__type": "TransitionClipBlendData"
             },
-            "13255853227431913303": {
-                "mClipName": "Dance_In",
-                "__type": "TransitionClipBlendData"
-            },
             "8859501506127947607": {
                 "mClipName": "Dance_In",
                 "__type": "TransitionClipBlendData"
@@ -6785,18 +6641,6 @@
             "14004966240490841943": {
                 "mClipName": "Dance_In",
                 "__type": "TransitionClipBlendData"
-            },
-            "16852854062250868807": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "11490697228393529415": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
-            },
-            "7800963177418997831": {
-                "mTime": 0.10000000149011612,
-                "__type": "TimeBlendData"
             },
             "6521702302099789083": {
                 "mTime": 0.0,
@@ -6875,18 +6719,6 @@
                 "__type": "TimeBlendData"
             },
             "12394966555074188507": {
-                "mTime": 0.05000000074505806,
-                "__type": "TimeBlendData"
-            },
-            "13255853230548687692": {
-                "mClipName": "Spell2_IdleIn2",
-                "__type": "TransitionClipBlendData"
-            },
-            "13255853228625649795": {
-                "mTime": 0.05000000074505806,
-                "__type": "TimeBlendData"
-            },
-            "13255853227268330715": {
                 "mTime": 0.05000000074505806,
                 "__type": "TimeBlendData"
             },

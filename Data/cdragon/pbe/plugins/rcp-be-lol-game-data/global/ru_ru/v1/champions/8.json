@@ -1292,7 +1292,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Владимир высасывает жизненную силу врага. Когда ресурс Владимира заполнится, Переливание нанесет огромный урон и восстановит здоровье Владимиру.",
-            "dynamicDescription": "Владимир вытягивает жизненную силу цели, нанося ей <magicDamage>@BaseDamageTooltip@ магического урона</magicDamage> и восстанавливая себе <healing>@BaseHealTooltip@ здоровья</healing>. Использовав это умение дважды, Владимир <speed>ускоряется на @MovementSpeedOnQ2@%</speed> на 0.5 сек., а его следующее применение этого умения усиливается на @Effect8Amount@ сек.<br><br>Усиленная версия этого умения наносит <magicDamage>@EmpoweredDamageTooltip@ магического урона</magicDamage> и дополнительно лечит в размере <healing>@EmpoweredHealTooltip@ плюс @EmpoweredHealPercentTooltip@ от недостающего здоровья</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Владимир вытягивает жизненную силу цели, нанося ей <magicDamage>@BaseDamageTooltip@ ед. маг. урона</magicDamage> и восстанавливая себе <healing>@BaseHealTooltip@ здоровья</healing>. Применив это умение дважды, Владимир <speed>ускоряется на @MovementSpeedOnQ2@%</speed> на 0,5 сек., а его следующее применение этого умения усиливается на @FrenzyDuration@ сек.<br><br>Усиленная версия этого умения наносит <magicDamage>@EmpoweredDamageTooltip@ ед. маг. урона</magicDamage> и дополнительно лечит на <healing>@EmpoweredHealTooltip@ плюс @EmpoweredHealPercentTooltip@ от недост. здоровья</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1589,7 +1589,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirE.png",
             "abilityVideoPath": "champion-abilities/0008/ability_0008_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0008/ability_0008_E1.jpg",
-            "cost": "Стоимость: <font color='#CC3300'>@Effect2Amount@% от макс. запаса здоровья (@ChargeHealthTooltip@)</font>",
+            "cost": "Стоимость: <font color='#CC3300'>@MaxHealthCost@% от макс. здоровья (@ChargeHealthTooltip@)</font>",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Владимир тратит собственное здоровье, чтобы наполнить резервуар крови. После использования он нанесет урон по площади, но вражеские бойцы могут его заблокировать.",
             "dynamicDescription": "<charge>Начало подготовки:</charge> Владимир заполняет резервуар крови, расходуя до <font color='#CC3300'>@ChargeHealthTooltip@ здоровья</font>. При максимальном уровне заряда Владимир <status>замедляется</status> на 20%.<br><br><release>Применение:</release> Владимир выпускает фонтан крови, поражая окружающих врагов и нанося от <magicDamage>@MinDamageTooltip@</magicDamage> до <magicDamage>@MaxDamageTooltip@ магического урона</magicDamage> в зависимости от времени подготовки. Если подготовка длилась хотя бы 1 сек., умение также <status>замедляет</status> цели на @SlowPercent@% на 0.5 сек.@SpellModifierDescriptionAppend@",
@@ -1742,7 +1742,7 @@
             "cost": "Без стоимости",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Владимир заражает всех противников в выбранной области. В течение действия умения пораженные враги получают увеличенный урон; кроме того, по окончании действия умения им наносится дополнительный магический урон.",
-            "dynamicDescription": "Владимир заражает всех врагов в выбранной области. В течение @Effect4Amount@ сек. пораженные враги получают на @Effect2Amount@% больше урона. По окончании действия умения Владимир наносит <magicDamage>@Damage@ магического урона</magicDamage> всем пораженным врагам. Владимир восстанавливает себе <healing>@Damage@ здоровья</healing>, если поражает чемпиона, и еще <healing>@SecondaryHealingTooltip@ здоровья</healing> за каждого последующего чемпиона.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Владимир заражает всех врагов в выбранной области. В течение @Duration@ сек. пораженные враги получают на @DamageAmp@% больше урона. По окончании действия умения Владимир наносит <magicDamage>@Damage@ ед. маг. урона</magicDamage> всем пораженным врагам. Владимир восстанавливает себе <healing>@Damage@ здоровья</healing>, если поражает чемпиона, и еще <healing>@SecondaryHealingTooltip@ здоровья</healing> за каждого последующего чемпиона.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,

@@ -857,7 +857,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@AmmoRechargeTime@ 秒充能時間 (@Cooldown@ 秒 %i:cooldown%)",
             "description": "阿祈爾召喚沙礫士兵為他攻擊附近的目標。若敵方單位在士兵的攻擊範圍內，士兵會代替阿祈爾進行普攻。該普攻會對直線上的敵軍造成魔法傷害。",
-            "dynamicDescription": "阿祈爾召喚一位<keywordMajor>沙礫士兵</keywordMajor>，持續@Effect1Amount@秒。阿祈爾對<keywordMajor>沙礫士兵</keywordMajor>附近的敵人進行普攻時，會改為命令士兵向敵人刺擊，朝目標方向造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br>此技能可儲備最多@MaxAmmo@名士兵。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿祈爾召喚一位<keywordMajor>沙礫士兵</keywordMajor>，持續@SoldierDuration@秒。阿祈爾普攻<keywordMajor>沙礫士兵</keywordMajor>附近的敵軍時，改為命令士兵朝目標方向刺擊，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br>此技能可儲備最多@MaxAmmo@名士兵。@SpellModifierDescriptionAppend@",
             "range": [
                 525.0,
                 525.0,
@@ -1007,7 +1007,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "阿祈爾短暫獲得一個護盾，並衝刺到一名沙礫士兵旁。如果成功擊中一名敵方英雄，他將停止衝刺，同時立刻獲得一個沙礫士兵充能。",
-            "dynamicDescription": "阿祈爾獲得一個 <shield>@TotalShield@ 護盾</shield>，持續 @Effect6Amount@ 秒，並衝向其中一名<keywordMajor>沙礫士兵</keywordMajor>，對穿過的敵人造成 <magicDamage>@TotalDamage@ 魔法傷害</magicDamage>。<br><br>若阿祈爾命中一名敵方英雄，他會停止衝刺並立刻獲得一名<keywordMajor>沙礫士兵</keywordMajor>的充能。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿祈爾賦予自身<shield>@TotalShield@護盾</shield>，持續@ShieldDuration@秒，並衝向其中一名<keywordMajor>沙礫士兵</keywordMajor>，對穿過的敵軍造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。<br><br>若阿祈爾命中敵方英雄，他會停止衝刺並獲得一名<keywordMajor>沙礫士兵</keywordMajor>的充能。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -1157,7 +1157,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "阿祈爾召喚由砂漠禁軍所組成的障壁往前衝刺，擊退並對敵人造成傷害。",
-            "dynamicDescription": "阿祈爾召喚出一道由武裝禁軍組成的障壁，障壁會向前推進，<status>擊退</status> 敵人並造成 <magicDamage>@TotalDamage@ 魔法傷害</magicDamage>。禁軍會持續存在並阻擋敵人的去路 @Effect4Amount@ 秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "阿祈爾召喚出一道由武裝禁軍組成的障壁，障壁會向前推進，<status>擊退</status>敵軍並造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。禁軍會持續存在並阻擋敵軍的去路@WallDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,

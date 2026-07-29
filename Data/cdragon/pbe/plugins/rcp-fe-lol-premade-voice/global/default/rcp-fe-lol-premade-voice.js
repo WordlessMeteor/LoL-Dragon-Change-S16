@@ -25,6 +25,7 @@
                         ContextualNotificationManager: e => e.get("rcp-fe-lol-uikit").getContextualNotificationManager(),
                         dataBinding: e => e.get("rcp-fe-common-libs").getDataBinding("rcp-fe-lol-premade-voice"),
                         FlyoutManager: e => e.get("rcp-fe-lol-uikit").getFlyoutManager(),
+                        localeDirectionOverrides: e => e.get("rcp-fe-common-libs").localeDirectionOverrides,
                         logger: e => e.get("rcp-fe-common-libs").logging.create(l),
                         ModalManager: e => e.get("rcp-fe-lol-uikit").getModalManager(),
                         SharedPlayerBehaviorApps: e => e.get("rcp-fe-lol-shared-components").getApi_SharedPlayerBehaviorApps(),
@@ -653,7 +654,7 @@
                     this._teamVoicePluginEnabled ? (this.removeClass("hide", this._selectors.sectionDivider), this.removeClass("hide", this._selectors.teamHeader)) : (this.addClass("hide", this._selectors.sectionDivider), this.addClass("hide", this._selectors.teamHeader), this.addClass("hide", this._selectors.teamPartyRow)), this._updateTeamPartyIndicator(), this._updateTeamUnavailableStatus()
                 }
                 _updateTeamUnavailableStatus() {
-                    this._teamVoicePluginEnabled && (this._setTeamVoiceStatusText(this._getTeamVoiceStatusLabelKey()), this._teamVoiceAvailability || this._teamConnectionState === x.VOICE_CONNECTED_STATE || this._teamVoiceAvailabilityReason === V ? (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._removeTeamToggleRestrictionTooltip()) : (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), L[this._teamVoiceAvailabilityReason] ? this._attachTeamToggleRestrictionTooltip(this._teamVoiceAvailabilityReason) : this._removeTeamToggleRestrictionTooltip()))
+                    this._teamVoicePluginEnabled && (this._setTeamVoiceStatusText(this._getTeamVoiceStatusLabelKey()), this._teamVoiceRestricted ? (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._setTeamToggleMuteRestricted(!0), this._attachTeamToggleRestrictionTooltip(P)) : this._teamVoiceAvailability || this._teamConnectionState === x.VOICE_CONNECTED_STATE || this._teamVoiceAvailabilityReason === V ? (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._updateToggleState(this._selectors.teamToggle, this._teamConnectionState), this._removeTeamToggleRestrictionTooltip()) : (this.removeClass("hide", this._selectors.teamPttIndicator), this.removeClass("hide", this._selectors.teamToggle), this._setToggleRestricted(this._selectors.teamToggle, !0), L[this._teamVoiceAvailabilityReason] ? this._attachTeamToggleRestrictionTooltip(this._teamVoiceAvailabilityReason) : this._removeTeamToggleRestrictionTooltip()))
                 }
                 _getTeamVoiceStatusLabelKey() {
                     return this._teamConnectionState === x.VOICE_CONNECTED_STATE ? this._teamVoiceRestricted ? N[P] : null : this._teamVoiceAvailabilityReason === V ? N[V] : this._teamVoiceAvailability ? this._teamVoiceConnectionFailed ? "parties_comm_panel_team_voice_status_try_again" : null : N[this._teamVoiceAvailabilityReason] || M
@@ -1034,7 +1035,7 @@
                     i.TooltipManager.unassign(r);
                     const a = document.createElement("lol-uikit-tooltip"),
                         o = document.createElement("lol-parties-team-voice-tooltip");
-                    o.setAttribute("header", t), o.setAttribute("body", n), a.appendChild(o), i.TooltipManager.assign(r, a, null, {
+                    o.setAttribute("header", i.localeDirectionOverrides.wrapWithDirectionOverride(t)), o.setAttribute("body", i.localeDirectionOverrides.wrapWithDirectionOverride(n)), a.appendChild(o), i.TooltipManager.assign(r, a, null, {
                         targetAnchor: {
                             x: "center",
                             y: "top"
@@ -2119,7 +2120,7 @@
                 _showTeamVoiceEAT() {
                     this._teamVoiceEATShown = !0;
                     const e = document.createElement("lol-parties-team-voice-eat");
-                    e.setAttribute("header", r.tra.get("parties_comm_panel_team_voice_eat_title")), e.setAttribute("body", r.tra.get("parties_comm_panel_team_voice_eat_body")), e.addEventListener("dismiss", (() => this._dismissTeamVoiceEAT())), e.style.position = "fixed", e.style.zIndex = "1000", e.style.visibility = "hidden", document.body.appendChild(e), this._teamVoiceEATNotification = e;
+                    e.setAttribute("header", r.localeDirectionOverrides.wrapWithDirectionOverride(r.tra.get("parties_comm_panel_team_voice_eat_title"))), e.setAttribute("body", r.localeDirectionOverrides.wrapWithDirectionOverride(r.tra.get("parties_comm_panel_team_voice_eat_body"))), e.addEventListener("dismiss", (() => this._dismissTeamVoiceEAT())), e.style.position = "fixed", e.style.zIndex = "1000", e.style.visibility = "hidden", document.body.appendChild(e), this._teamVoiceEATNotification = e;
                     requestAnimationFrame((() => {
                         const t = this.getBoundingClientRect(),
                             n = e.getBoundingClientRect(),

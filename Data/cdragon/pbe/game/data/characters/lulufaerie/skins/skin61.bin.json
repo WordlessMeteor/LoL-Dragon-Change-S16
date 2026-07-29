@@ -1,0 +1,332 @@
+{
+    "{a72b6648}": {
+        "championSkinName": "LuluFaerieSkin61",
+        "skinParent": 56,
+        "skinAnimationProperties": {
+            "animationGraphData": "{c9690e03}",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/LuluFaerie/Skins/Skin56/LuluFaerie_Skin56.skl",
+            "simpleSkin": "ASSETS/Characters/LuluFaerie/Skins/Skin56/LuluFaerie_Skin56.skn",
+            "texture": "ASSETS/Characters/LuluFaerie/Skins/Skin61/LuluFaerie_Skin61_TX_CM.tex",
+            "skinScale": 2.0,
+            "selfIllumination": 0.699999988079071,
+            "Material": "{854eded0}",
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "mResourceResolver": "{dd701ad2}",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mDriver": {
+                        "mAnimationNames": [
+                            "Recall"
+                        ],
+                        "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                    },
+                    "__type": "NotMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Root",
+                        "effectKey": "{aaf47559}",
+                        "UseDifferentKeyForOtherTeam": true,
+                        "EffectKeyForOtherTeam": "{62841e65}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
+        "objectPath": "{a72b6648}",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "{854eded0}": {
+        "name": "Characters/LuluFaerie/Skins/Skin61/Materials/LuluFaerie_Skin61_Fresnel_inst",
+        "samplerValues": [
+            {
+                "TextureName": "Bloom_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Diffuse_Color",
+                "texturePath": "ASSETS/Characters/LuluFaerie/Skins/Skin61/LuluFaerie_Skin61_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Mask",
+                "texturePath": "ASSETS/Characters/LuluFaerie/Skins/Skin56/LuluFaerie_Skin56_FresnelMask_TX_CM.tex",
+                "addressU": 1,
+                "addressV": 1,
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "iridescentTex",
+                "texturePath": "ASSETS/Shared/Materials/Default_Gradient.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "Bloom_Intensity",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "modelHeight",
+                "value": [
+                    275.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "rimOffset",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMax",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "albedoNewMin",
+                "value": [
+                    0.10000000149011612,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Color",
+                "value": [
+                    0.18779277801513672,
+                    0.8615701794624329,
+                    0.7974517345428467,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Fresnel_Size",
+                "value": [
+                    1.534999966621399,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Shadow_Bias",
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "MaxSpec",
+                "value": [
+                    19.010000228881836,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "LQ_Lighting_Intensity",
+                "value": [
+                    33.25,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "RimLightOffset",
+                "value": [
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    -0.41999998688697815,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "SpecularColor",
+                "value": [
+                    0.886274516582489,
+                    0.9098039269447327,
+                    1.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "IridescentControl",
+                "value": [
+                    1.0,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "USE_BLOOM_MASK",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_ALBEDO_REMAP",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_RIM",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "IRIDESCENCE_ON",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "shaderMacros": {
+            "NUM_BLEND_WEIGHTS": "4"
+        },
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/SkinnedMesh/Specular_Fresnel_Masked",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "childTechniques": [
+            {
+                "name": "transition",
+                "parentName": "normal",
+                "shaderMacros": {
+                    "TRANSITION": "1"
+                },
+                "__type": "StaticMaterialChildTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{dd701ad2}": {
+        "resourceMap": {
+            "Lulu_BA_cas": "{9021c49b}",
+            "Lulu_BA_cas_01": "{efe8db00}",
+            "Lulu_BA_mis": "{1d9d9f91}",
+            "Lulu_BA_tar": "{73687095}",
+            "Lulu_emote_dance_sfx": "{591ee001}",
+            "Lulu_emote_death_sfx": "{906ef674}",
+            "Lulu_emote_joke_sfx": "{37f1c199}",
+            "Lulu_emote_laugh_sfx": "{d79bcfc6}",
+            "Lulu_emote_taunt_sfx": "{98720c3e}",
+            "Lulu_E_tar_ally": "{551a076c}",
+            "Lulu_E_Tar_Enemy": "{87bbf122}",
+            "Lulu_idle": "{b88e6105}",
+            "Lulu_Pix_BA_mis": "{32ec0448}",
+            "Lulu_Pix_BA_tar": "{db1d8b94}",
+            "Lulu_Pix_E_Teleport": "{78e99969}",
+            "Lulu_Pix_idle_green": "{a336243c}",
+            "Lulu_Pix_idle_red": "{51b90c5c}",
+            "Lulu_Pix_idle_red2": "{07a9df02}",
+            "Lulu_P_Faerie_Flash_01": "{e7cdd28f}",
+            "Lulu_Q_mis": "{98bbcdb6}",
+            "Lulu_Q_tar": "{42c9ed42}",
+            "Lulu_Q_tar_slow": "{ad7021d3}",
+            "Lulu_R_cas": "{ced0bdfd}",
+            "Lulu_R_forward_01": "{26e6aa0e}",
+            "Lulu_R_tar_audio": "{70fe2c5f}",
+            "Lulu_R_Tar_buf": "{dd674dec}",
+            "Lulu_R_tar_buf_end": "{27d181a1}",
+            "Lulu_R_Tar_Hit": "{3d894ba4}",
+            "Lulu_R_tar_knockup": "{2a362360}",
+            "Lulu_R_tar_slow": "{30c5f472}",
+            "Lulu_W_audio_ally": "{2d65c29f}",
+            "Lulu_W_audio_enemy": "{381cc1d3}",
+            "Lulu_W_buf_ally": "{194b96ac}",
+            "Lulu_W_cas_buf_hand": "{029311fa}",
+            "Lulu_W_Mis": "{7a1b8d54}",
+            "Lulu_W_tar_01": "{9226f303}",
+            "Lulu_W_Tar_Ally": "{737072ee}",
+            "Lulu_W_Tar_Enemy": "{fd311a0c}",
+            "{661daca3}": "{49f605bf}",
+            "{20ea731a}": "{e2ac718a}",
+            "{147082d5}": "{21edcc3a}",
+            "{f91347f8}": "{d46191b4}",
+            "{0d5d1418}": "{092dad2b}",
+            "{89f57317}": "{9a673b21}",
+            "{6dfd42af}": "{9d55236d}",
+            "{3f57b540}": "{f36e860e}",
+            "{827cf3ff}": "{ab84ed25}",
+            "{e354a48a}": "{e91998b1}",
+            "{2d174927}": "{8da7686c}",
+            "{9d7acb9f}": "{31d8c2f0}",
+            "{00df0685}": "{c7d7cc7a}",
+            "{413b8a5d}": "{eb900003}",
+            "{89a03f60}": "{e107bdfe}",
+            "{d76e91b7}": "{82db9df8}",
+            "{1eddda77}": "{9796d156}",
+            "{92f4727a}": "{98da0b47}",
+            "{0df74034}": "{636efc14}",
+            "{63677d24}": "{6d43bb87}",
+            "{aaf47559}": "{87dab1a2}",
+            "{62841e65}": "{f7311662}",
+            "{2c981cb2}": "{1c75850e}",
+            "{7083f332}": "{df34c4bc}",
+            "{06415c6f}": "{03302824}",
+            "{5e335440}": "{bace185e}",
+            "{683363fe}": "{249e09a4}",
+            "{57f72f6f}": "{26f4fdc2}",
+            "{5655eaf2}": "{c57fc4b9}",
+            "{90108922}": "{d96d7759}",
+            "{0849291c}": "{a039f1c2}"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/LuluFaerie/LuluFaerie.bin",
+        "DATA/Characters/LuluFaerie/Animations/Skin56.bin"
+    ]
+}

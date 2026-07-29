@@ -350,7 +350,7 @@
             "rigPoseModifierData": [
                 {
                     "mStartingJointName": "L_Ribbon1",
-                    "mEndingJointName": "{8ab6c4c3}",
+                    "mEndingJointName": "L_ribbon5",
                     "mDefaultMaskName": "{7136e1bc}",
                     "mMaxBoneAngle": 80.0,
                     "mFrequency": 1.0,
@@ -359,7 +359,7 @@
                 },
                 {
                     "mStartingJointName": "R_Ribbon1",
-                    "mEndingJointName": "{be857845}",
+                    "mEndingJointName": "R_ribbon5",
                     "mDefaultMaskName": "{7136e1bc}",
                     "mMaxBoneAngle": 80.0,
                     "mFrequency": 1.0,
@@ -455,9 +455,9 @@
                     }
                 ],
                 "SubmeshesToShow": [
-                    "{9dd6359f}",
-                    "{9ad630e6}",
-                    "{e98b1045}"
+                    "A_Gun24",
+                    "A_Gun23",
+                    "A_Gun23_Wings"
                 ],
                 "__type": "PersistentEffectConditionData"
             },
@@ -531,9 +531,9 @@
                     }
                 ],
                 "SubmeshesToShow": [
-                    "{bfb4d382}",
-                    "{f848f156}",
-                    "{c0b4d515}"
+                    "C_Gun25",
+                    "C_Gun25_Gem",
+                    "C_Gun24"
                 ],
                 "__type": "PersistentEffectConditionData"
             },
@@ -607,10 +607,10 @@
                     }
                 ],
                 "SubmeshesToShow": [
-                    "{da59d24d}",
-                    "{9dc07a8d}",
-                    "{d459c8db}",
-                    "{f68fbfa4}"
+                    "B_Gun25",
+                    "B_Gun25_Gem",
+                    "B_Gun23",
+                    "B_Gun23_Wings"
                 ],
                 "__type": "PersistentEffectConditionData"
             },
@@ -679,7 +679,7 @@
                         },
                         {
                             "Submeshes": [
-                                "{b9b4ca10}"
+                                "C_Gun23"
                             ],
                             "__type": "SubmeshVisibilityBoolDriver"
                         },
@@ -788,6 +788,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
+        "objectPath": "{b8050025}",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/MissFortune/Skins/Skin70/Materials/Gun25": {
@@ -2090,9 +2091,94 @@
                 "TextureName": "Alpha_Multiplier_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Shape",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Color",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Holographic_Tiling",
+                "value": [
+                    77.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Direction",
+                "value": [
+                    0.10000000149011612,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Tiling",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Height",
+                "value": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Ribbon_U_Remap",
                 "value": [
@@ -2737,6 +2823,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_HOLOGRAPHIC_MATRIX",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
                 "on": false,
@@ -4056,9 +4148,94 @@
                 "TextureName": "Alpha_Multiplier_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Shape",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Color",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Holographic_Tiling",
+                "value": [
+                    77.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Direction",
+                "value": [
+                    0.10000000149011612,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Tiling",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Height",
+                "value": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Ribbon_U_Remap",
                 "value": [
@@ -4703,6 +4880,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_HOLOGRAPHIC_MATRIX",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
                 "on": false,
@@ -6555,9 +6738,94 @@
                 "TextureName": "Alpha_Multiplier_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Shape",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Color",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Holographic_Tiling",
+                "value": [
+                    77.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Direction",
+                "value": [
+                    0.10000000149011612,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Tiling",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Height",
+                "value": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Ribbon_U_Remap",
                 "value": [
@@ -7202,6 +7470,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_HOLOGRAPHIC_MATRIX",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
                 "on": false,
@@ -10867,6 +11141,7 @@
         "particleName": "MissFortune_Skin70_Emote_Respawn",
         "particlePath": "Characters/MissFortune/Skins/Skin70/Particles/MissFortune_Skin70_Emote_Respawn",
         "flags": 197,
+        "objectPath": "{b37b0542}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/MissFortune/Skins/Skin70/Particles/MissFortune_Skin70_Idle_2023GunGlow": {
@@ -11776,6 +12051,7 @@
         "particleName": "MissFortune_Skin70_Idle_2023GunGlow",
         "particlePath": "Characters/MissFortune/Skins/Skin70/Particles/MissFortune_Skin70_Idle_2023GunGlow",
         "flags": 1221,
+        "objectPath": "{cfebcb9e}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/MissFortune/Skins/Skin70/Particles/MissFortune_Skin70_Idle_2023GoldGun": {
@@ -12333,6 +12609,7 @@
         "particleName": "MissFortune_Skin70_Idle_2023GoldGun",
         "particlePath": "Characters/MissFortune/Skins/Skin70/Particles/MissFortune_Skin70_Idle_2023GoldGun",
         "flags": 1221,
+        "objectPath": "{da14ad15}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/MissFortune/Skins/Skin70/Resources": {

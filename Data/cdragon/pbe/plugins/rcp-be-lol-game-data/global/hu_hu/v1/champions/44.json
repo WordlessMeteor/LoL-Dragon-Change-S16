@@ -780,7 +780,7 @@
             "cost": "@Cost@ mana, összes töltet",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Gyógyítja a közeli szövetséges hősöket, a felhasznált töltetek számától függő mértékben. A Hősködéssel felerősített támadások egy töltetet biztosítanak a Csillagfény érintéséhez.",
-            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> @StackCooldown@ másodpercenként egy jelzőt kap (legfeljebb @Effect6Amount@ jelzője lehet), illetve akkor is, ha a <spellName>Hősködéssel</spellName> ér el találatot.<br><br><spellActive>Aktív:</spellActive> az összes jelzőt felhasználva jelzőnként <healing>@HealingPerStack@ életerőt</healing> tölt vissza a közeli szövetséges hősöknek (@Effect6Amount@ jelző esetén <healing>@MaxStackHealing@</healing> gyógyítás).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> @StackCooldown@ másodpercenként egy jelzőt kap (legfeljebb @MaxCharges@ jelzője lehet), illetve akkor is, ha a <spellName>Hősködéssel</spellName> ér el találatot.<br><br><spellActive>Aktív:</spellActive> az összes jelzőt felhasználva jelzőnként <healing>@HealingPerStack@ életerőt</healing> tölt vissza a közeli szövetséges hősöknek (@MaxCharges@ jelző esetén <healing>@MaxStackHealing@</healing> gyógyítás).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Passzívan növeli Taric és az Erőd hatása alatt álló, a közelben tartózkodó, szövetséges hős páncélját.<br><br>Aktív használatkor pajzsot von egy szövetséges köré, aki az Erőd hatását is élvezheti, amíg Taric közelében marad. Taric varázslatait az Erőd hatása alatt álló hős is elsüti.",
-            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>Taricnak <scaleArmor>@BonusArmor@ páncélt</scaleArmor> biztosít, és köteléket hoz létre a képesség hatása alatt álló szövetséges hőssel. Amíg közel vannak egymáshoz, a szövetséges hősnek is <scaleArmor>@BonusArmor@ páncélt</scaleArmor> biztosít, és Taric az összes képességét a kötelékkel rendelkező szövetséges irányából is elsüti.<br><br><spellPassive>Aktív: </spellPassive>Taric köteléket hoz létre egy szövetséges hőssel, amellyel @Effect3Amount@ másodpercig a maximális életerejének <shield>@Effect2Amount@%-ával egyenlő erejű pajzsot</shield> hoz létre.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív:</spellPassive> <scaleArmor>@BonusArmor@ páncélt</scaleArmor> biztosít Taricnak, és köteléket hoz létre a képesség hatása alatt álló szövetséges hőssel. Amíg közel vannak egymáshoz, a szövetséges hősnek is <scaleArmor>@BonusArmor@ páncélt</scaleArmor> biztosít, és Taric az összes képességét a kötelékkel rendelkező szövetséges irányából is elsüti.<br><br><spellPassive>Aktív:</spellPassive> Taric köteléket hoz létre egy szövetséges hőssel, amellyel @ShieldDuration@ másodpercig <shield>a maximális életerejének @ShieldHPRatio@%-ával egyenlő erejű pajzsot</shield> biztosít.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Taric előkészít egy csillagfénysugarat, amely rövid késleltetés után varázssebzést okoz, és elkábítja az ellenfeleket.",
-            "dynamicDescription": "Taric csillagfénysugarat vetít ki, amely @Effect3Amount@ másodperc elteltével felrobban, <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okozva, és @Effect2Amount@ másodpercre <status>elkábítva</status> az eltalált ellenfeleket.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric csillagfénysugarat vetít ki, amely @ChargeDuration@ másodperc elteltével felrobban, <magicDamage>@TotalDamage@ varázssebzést</magicDamage> okozva, és @StunDuration@ másodpercre <status>elkábítva</status> az eltalált ellenfeleket.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

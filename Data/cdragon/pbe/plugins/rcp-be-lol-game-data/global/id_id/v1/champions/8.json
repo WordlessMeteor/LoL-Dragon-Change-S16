@@ -1292,7 +1292,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Vladimir mengambil darah dari musuh yang ditarget. Saat sumber daya Vladimir penuh, Transfusion akan mendapat manfaat dari peningkatan damage yang besar dan heal untuk sesaat.",
-            "dynamicDescription": "Vladimir menguras nyawa targetnya, menghasilkan <magicDamage>@BaseDamageTooltip@ magic damage</magicDamage> dan memulihkan <healing>@BaseHealTooltip@ Health</healing>. Setelah menggunakan Ability ini dua kali, Vladimir memperoleh <speed>@MovementSpeedOnQ2@% Move Speed</speed> selama 0,5 detik dan memperkuat penggunaan berikutnya Ability ini selama @Effect8Amount@ detik.<br><br>Saat diperkuat, Ability ini menghasilkan <magicDamage>@EmpoweredDamageTooltip@ magic damage</magicDamage> dan memulihkan <healing>@EmpoweredHealTooltip@ tambahan plus @EmpoweredHealPercentTooltip@ Health yang hilang</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vladimir menguras nyawa targetnya, menghasilkan <magicDamage>@BaseDamageTooltip@ magic damage</magicDamage> dan memulihkan <healing>@BaseHealTooltip@ Health</healing>. Setelah menggunakan Ability ini dua kali, Vladimir memperoleh <speed>@MovementSpeedOnQ2@% Move Speed</speed> selama 0,5 detik dan memperkuat penggunaan berikutnya Ability ini selama @FrenzyDuration@ detik.<br><br>Saat diperkuat, Ability ini menghasilkan <magicDamage>@EmpoweredDamageTooltip@ magic damage</magicDamage> dan memulihkan tambahan <healing>@EmpoweredHealTooltip@ plus @EmpoweredHealPercentTooltip@ Health yang hilang</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1589,7 +1589,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirE.png",
             "abilityVideoPath": "champion-abilities/0008/ability_0008_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0008/ability_0008_E1.jpg",
-            "cost": "Biaya channeling <font color='#CC3300'>@Effect2Amount@% dari Health maksimum (@ChargeHealthTooltip@)</font>",
+            "cost": "Biaya channeling <font color='#CC3300'>@MaxHealthCost@% dari Health maksimum (@ChargeHealthTooltip@)</font>",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Vladimir menggunakan health-nya sendiri untuk mengisi kolam darah yang jika dilepaskan akan menghasilkan damage di area sekitarnya, tetapi bisa ditahan oleh unit musuh.",
             "dynamicDescription": "<charge>Mulai Charge: </charge>Vladimir mengumpulkan reservoir darah, menggunakan hingga <font color='#CC3300'>@ChargeHealthTooltip@ Health.</font> Saat terisi penuh, Vladimir terkena <status>Slow</status> sebesar 20%.<br><br><release>Release: </release>Vladimir melepaskan tembakan peluru darah ke musuh di sekitar, menghasilkan antara <magicDamage>@MinDamageTooltip@</magicDamage> dan <magicDamage>@MaxDamageTooltip@ magic damage</magicDamage> berdasarkan waktu charge. Jika Ability ini di-charge minimal 1 detik, juga memberikan efek <status>Slow</status> ke target sebesar @SlowPercent@% selama 0,5 detik.@SpellModifierDescriptionAppend@",
@@ -1742,7 +1742,7 @@
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Vladimir menginfeksi suatu area dengan wabah mematikan. Musuh yang terinfeksi akan menerima peningkatan damage selama durasi itu. Setelah beberapa saat, Hemoplague menghasilkan magic damage ke musuh yang terinfeksi dan heal Vladimir untuk setiap champion musuh yang terkena.",
-            "dynamicDescription": "Vladimir menciptakan wabah mematikan, menyebabkan korbannya menerima @Effect2Amount@% peningkatan damage dari semua sumber selama @Effect4Amount@ detik. Setelah berakhir, Vladimir menghasilkan <magicDamage>@Damage@ magic damage</magicDamage> pada semua target yang terinfeksi. Vladimir memulihkan <healing>@Damage@ Health</healing> jika mengenai champion, dan memulihkan <healing>@SecondaryHealingTooltip@ Health</healing> tambahan untuk setiap champion berikutnya.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vladimir menciptakan wabah mematikan, menyebabkan korbannya menerima @DamageAmp@% peningkatan damage dari semua sumber selama @Duration@ detik. Setelah berakhir, Vladimir menghasilkan <magicDamage>@Damage@ magic damage</magicDamage> pada semua target yang terinfeksi. Vladimir memulihkan <healing>@Damage@ Health</healing> jika mengenai champion, dan memulihkan <healing>@SecondaryHealingTooltip@ Health</healing> tambahan untuk setiap champion berikutnya.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,

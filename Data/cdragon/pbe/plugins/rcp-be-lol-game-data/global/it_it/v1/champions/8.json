@@ -1292,7 +1292,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Vladimir ruba vita dal nemico bersaglio. Quando la riserva di Vladimir è piena, danni e cure di Trasfusione aumenteranno di molto per un breve periodo.",
-            "dynamicDescription": "Vladimir assorbe la forza vitale del bersaglio, infliggendo <magicDamage>@BaseDamageTooltip@ danni magici</magicDamage> e recuperando <healing>@BaseHealTooltip@ salute</healing>. Dopo aver usato questa abilità per due volte, Vladimir guadagna <speed>@MovementSpeedOnQ2@% velocità di movimento</speed> per 0,5 secondi e potenzia l'uso successivo di questa abilità per @Effect8Amount@ secondi.<br><br>La versione potenziata di questa abilità infligge <magicDamage>@EmpoweredDamageTooltip@ danni magici</magicDamage> e ripristina <healing>@EmpoweredHealTooltip@ (+ @EmpoweredHealPercentTooltip@) salute mancante aggiuntiva</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vladimir assorbe la forza vitale del bersaglio, infliggendo <magicDamage>@BaseDamageTooltip@ danni magici</magicDamage> e recuperando <healing>@BaseHealTooltip@ salute</healing>. Dopo aver usato questa abilità per due volte, Vladimir guadagna <speed>@MovementSpeedOnQ2@% velocità di movimento</speed> per 0,5 secondi e potenzia l'uso successivo di questa abilità per @FrenzyDuration@ secondi.<br><br>La versione potenziata di questa abilità infligge <magicDamage>@EmpoweredDamageTooltip@ danni magici</magicDamage> e ripristina <healing>@EmpoweredHealTooltip@ (+ @EmpoweredHealPercentTooltip@) salute mancante aggiuntiva</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1589,7 +1589,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirE.png",
             "abilityVideoPath": "champion-abilities/0008/ability_0008_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0008/ability_0008_E1.jpg",
-            "cost": "Costo canalizzazione <font color='#CC3300'>@Effect2Amount@% della salute massima (@ChargeHealthTooltip@)</font>",
+            "cost": "Costo canalizzazione <font color='#CC3300'>@MaxHealthCost@% della salute massima (@ChargeHealthTooltip@)</font>",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Vladimir utilizza la sua salute per caricare una riserva di sangue che, una volta rilasciata, infligge danni nell'area che lo circonda, ma che può essere anche bloccata dalle unità nemiche.",
             "dynamicDescription": "<charge>Caricamento: </charge>Vladimir accumula una riserva di sangue, sacrificando fino a <font color='#CC3300'>@ChargeHealthTooltip@ salute.</font> Al massimo della carica, Vladimir è <status>rallentato</status> del 20%.<br><br><release>Rilascio: </release>Vladimir libera una scarica di proiettili di sangue contro i nemici circostanti, infliggendo tra <magicDamage>@MinDamageTooltip@</magicDamage> e <magicDamage>@MaxDamageTooltip@ danni magici</magicDamage> in base al tempo di caricamento. Se questa abilità viene caricata per almeno 1 secondo, <status>rallenta</status> inoltre i bersagli di un @SlowPercent@% per 0,5 secondi.@SpellModifierDescriptionAppend@",
@@ -1742,7 +1742,7 @@
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Vladimir infetta un'area con una piaga virulenta. I nemici colpiti subiscono danni aumentati per la durata. Dopo alcuni secondi, Emopiaga infligge danni magici ai nemici infettati e cura Vladimir per ogni campione nemico colpito.",
-            "dynamicDescription": "Vladimir genera una piaga virulenta, che fa subire alle sue vittime il @Effect2Amount@% di danni aggiuntivi da tutte le fonti per @Effect4Amount@ secondi. Dopo la scadenza, Vladimir infligge <magicDamage>@Damage@ danni magici</magicDamage> a tutti i bersagli infetti. Vladimir recupera <healing>@Damage@ salute</healing> se colpisce un campione, e <healing>@SecondaryHealingTooltip@ salute</healing> aggiuntiva per ogni campione colpito oltre al primo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vladimir genera una piaga virulenta, che fa subire alle sue vittime @DamageAmp@% danni aggiuntivi da tutte le fonti per @Duration@ secondi. Dopo la scadenza, Vladimir infligge <magicDamage>@Damage@ danni magici</magicDamage> a tutti i bersagli infetti. Vladimir recupera <healing>@Damage@ salute</healing> se colpisce un campione e <healing>@SecondaryHealingTooltip@ salute</healing> aggiuntiva per ogni campione colpito oltre al primo.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,

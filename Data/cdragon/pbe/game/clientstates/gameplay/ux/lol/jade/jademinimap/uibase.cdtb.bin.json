@@ -1,13 +1,13 @@
 {
-    "{c852c8b2}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 39,
         "__type": "UISceneData"
     },
-    "{008cf8ec}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatPanel_HighlightFX": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatPanel_HighlightFX",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 15,
         "Position": {
             "UIRect": {
@@ -49,9 +49,9 @@
         "BaseScale": 1.0,
         "__type": "UiElementEffectGlowData"
     },
-    "{03b742ad}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/DragHandles/DragHandleRight": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/DragHandles/DragHandleRight",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -84,9 +84,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{4049b714}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/DragHandles/DragHandleTop": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/DragHandles/DragHandleTop",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -119,9 +119,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{7dddf0d8}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/DragHandles/DragHandleLeft": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/DragHandles/DragHandleLeft",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -154,9 +154,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{8b749556}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/DragHandles/DragHandleBot": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/DragHandles/DragHandleBot",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -189,31 +189,31 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{8ec2af51}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Elements": [
-            "{4f7cfa5c}",
-            "{84bbf79a}",
-            "{ff25d762}",
-            "{06199469}"
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatButton_HitRegion",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonClicked",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonDefault",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonHover"
         ],
-        "HitRegionElement": "{4f7cfa5c}",
+        "HitRegionElement": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatButton_HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
-                "{ff25d762}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonDefault"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "HoverStateElements": {
             "DisplayElementList": [
-                "{06199469}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonHover"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "ClickedStateElements": {
             "DisplayElementList": [
-                "{84bbf79a}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonClicked"
             ],
             "__type": "UiElementGroupButtonState"
         },
@@ -221,11 +221,12 @@
             "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
             "__type": "UiElementGroupButtonSoundEvents"
         },
+        "objectPath": "{8ec2af51}",
         "__type": "UiElementGroupButtonData"
     },
-    "{06199469}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonHover": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonHover",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -265,9 +266,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{4f7cfa5c}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatButton_HitRegion": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatButton_HitRegion",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -295,9 +296,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{84bbf79a}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonClicked": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonClicked",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -337,9 +338,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{ff25d762}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonDefault": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatButton/VoiceChatPanel_ButtonDefault",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -379,52 +380,52 @@
         },
         "__type": "UiElementIconData"
     },
-    "{9305dccf}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Elements": [
-            "{92dcdcca}",
-            "{f2850ea7}",
-            "{1da613db}",
-            "{81d622f8}",
-            "{087d09a3}",
-            "{aba8b23f}",
-            "{f1223e54}"
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockButton_HitRegion",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonClicked",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonDefault",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonHover",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonClicked",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonDefault",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonHover"
         ],
-        "HitRegionElement": "{92dcdcca}",
+        "HitRegionElement": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockButton_HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
-                "{1da613db}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonDefault"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "HoverStateElements": {
             "DisplayElementList": [
-                "{81d622f8}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonHover"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "ClickedStateElements": {
             "DisplayElementList": [
-                "{f2850ea7}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonClicked"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "SelectedStateElements": {
             "DisplayElementList": [
-                "{aba8b23f}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonDefault"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "SelectedHoverStateElements": {
             "DisplayElementList": [
-                "{f1223e54}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonHover"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "SelectedClickedStateElements": {
             "DisplayElementList": [
-                "{087d09a3}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonClicked"
             ],
             "__type": "UiElementGroupButtonState"
         },
@@ -433,11 +434,12 @@
             "MouseUpSelected": "play_sfx_hud_base_Generic_Button_Click",
             "__type": "UiElementGroupButtonSoundEvents"
         },
+        "objectPath": "{9305dccf}",
         "__type": "UiElementGroupButtonData"
     },
-    "{087d09a3}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonClicked": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonClicked",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -477,9 +479,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{1da613db}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonDefault": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonDefault",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -519,9 +521,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{81d622f8}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonHover": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonHover",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -561,9 +563,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{92dcdcca}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockButton_HitRegion": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockButton_HitRegion",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -590,9 +592,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{aba8b23f}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonDefault": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonDefault",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -632,9 +634,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{f1223e54}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonHover": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOn_ButtonHover",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -674,9 +676,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{f2850ea7}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonClicked": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/CameraLockButton/CameraLockOff_ButtonClicked",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -716,52 +718,52 @@
         },
         "__type": "UiElementIconData"
     },
-    "{1144af15}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Elements": [
-            "{936c7dcf}",
-            "{1f649bc3}",
-            "{a1396650}",
-            "{af27b09a}",
-            "{43635a83}",
-            "{7e6ced1f}",
-            "{3b7aaa34}"
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonClicked",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonDefault",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonHover",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePath_HitRegion",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonClicked",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonDefault",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonHover"
         ],
-        "HitRegionElement": "{af27b09a}",
+        "HitRegionElement": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePath_HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
-                "{7e6ced1f}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonDefault"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "HoverStateElements": {
             "DisplayElementList": [
-                "{3b7aaa34}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonHover"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "ClickedStateElements": {
             "DisplayElementList": [
-                "{43635a83}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonClicked"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "SelectedStateElements": {
             "DisplayElementList": [
-                "{1f649bc3}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonDefault"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "SelectedHoverStateElements": {
             "DisplayElementList": [
-                "{a1396650}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonHover"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "SelectedClickedStateElements": {
             "DisplayElementList": [
-                "{936c7dcf}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonClicked"
             ],
             "__type": "UiElementGroupButtonState"
         },
@@ -769,11 +771,12 @@
             "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
             "__type": "UiElementGroupButtonSoundEvents"
         },
+        "objectPath": "{1144af15}",
         "__type": "UiElementGroupButtonData"
     },
-    "{1f649bc3}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonDefault": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonDefault",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 4,
         "Position": {
@@ -814,9 +817,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{3b7aaa34}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonHover": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonHover",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -856,9 +859,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{43635a83}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonClicked": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonClicked",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -898,9 +901,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{7e6ced1f}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonDefault": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOff_ButtonDefault",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 4,
         "Position": {
@@ -941,9 +944,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{936c7dcf}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonClicked": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonClicked",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -983,9 +986,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{a1396650}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonHover": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePathOn_ButtonHover",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -1025,9 +1028,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{af27b09a}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePath_HitRegion": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/JunglePathButton/JunglePath_HitRegion",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -1055,9 +1058,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{1fe63a03}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapRegionButtons": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapRegionButtons",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -1086,31 +1089,31 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{28494473}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Elements": [
-            "{b2714a66}",
-            "{a0109cf6}",
-            "{32cabc55}",
-            "{b44422e6}"
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonClicked",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonDefault",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonHover",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/PingButton_HitRegion"
         ],
-        "HitRegionElement": "{b44422e6}",
+        "HitRegionElement": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/PingButton_HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
-                "{a0109cf6}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonDefault"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "HoverStateElements": {
             "DisplayElementList": [
-                "{32cabc55}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonHover"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "ClickedStateElements": {
             "DisplayElementList": [
-                "{b2714a66}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonClicked"
             ],
             "__type": "UiElementGroupButtonState"
         },
@@ -1118,11 +1121,12 @@
             "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
             "__type": "UiElementGroupButtonSoundEvents"
         },
+        "objectPath": "{28494473}",
         "__type": "UiElementGroupButtonData"
     },
-    "{32cabc55}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonHover": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonHover",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 6,
         "Position": {
             "UIRect": {
@@ -1162,9 +1166,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{a0109cf6}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonDefault": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonDefault",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 5,
         "Position": {
@@ -1205,9 +1209,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{b2714a66}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonClicked": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/Ping_ButtonClicked",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 7,
         "Position": {
             "UIRect": {
@@ -1247,9 +1251,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{b44422e6}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/PingButton_HitRegion": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/PingButton/PingButton_HitRegion",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -1276,9 +1280,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{3988d03f}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/ObjectiveBounty/OBChaosDecaying": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/ObjectiveBounty/OBChaosDecaying",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 2,
         "Position": {
@@ -1319,9 +1323,9 @@
         },
         "__type": "UiElementEffectCooldownRadialData"
     },
-    "{492dbe54}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/ObjectiveBounty/OBOrderFilling": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/ObjectiveBounty/OBOrderFilling",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 2,
         "Position": {
@@ -1363,9 +1367,9 @@
         },
         "__type": "UiElementEffectCooldownRadialData"
     },
-    "{77902f07}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/ObjectiveBounty/OBOrderDecaying": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/ObjectiveBounty/OBOrderDecaying",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 2,
         "Position": {
@@ -1406,9 +1410,9 @@
         },
         "__type": "UiElementEffectCooldownRadialData"
     },
-    "{7d00cd31}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/ObjectiveBounty/OBBorder": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/ObjectiveBounty/OBBorder",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 1,
         "Position": {
             "UIRect": {
@@ -1448,9 +1452,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{bc51d2bc}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/ObjectiveBounty/OBChaosFilling": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/ObjectiveBounty/OBChaosFilling",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 2,
         "Position": {
@@ -1492,9 +1496,9 @@
         },
         "__type": "UiElementEffectCooldownRadialData"
     },
-    "{88c18f6e}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapFrameBoarder": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapFrameBoarder",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 3,
         "Position": {
@@ -1537,32 +1541,32 @@
         },
         "__type": "UiElementIconData"
     },
-    "{9cfa7620}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Elements": [
-            "{ceaa4a10}",
-            "{eaf8f0c0}",
-            "{f62618a7}",
-            "{93d93954}"
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonClicked",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonDefault",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonHover",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenuButton_HitRegion"
         ],
         "IsEnabled": true,
-        "HitRegionElement": "{93d93954}",
+        "HitRegionElement": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenuButton_HitRegion",
         "DefaultStateElements": {
             "DisplayElementList": [
-                "{eaf8f0c0}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonDefault"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "HoverStateElements": {
             "DisplayElementList": [
-                "{f62618a7}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonHover"
             ],
             "__type": "UiElementGroupButtonState"
         },
         "ClickedStateElements": {
             "DisplayElementList": [
-                "{ceaa4a10}"
+                "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonClicked"
             ],
             "__type": "UiElementGroupButtonState"
         },
@@ -1570,11 +1574,12 @@
             "MouseUpEvent": "play_sfx_hud_base_Generic_Button_Click",
             "__type": "UiElementGroupButtonSoundEvents"
         },
+        "objectPath": "{9cfa7620}",
         "__type": "UiElementGroupButtonData"
     },
-    "{93d93954}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenuButton_HitRegion": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenuButton_HitRegion",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -1602,9 +1607,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{ceaa4a10}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonClicked": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonClicked",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -1644,9 +1649,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{eaf8f0c0}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonDefault": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonDefault",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 4,
         "Position": {
@@ -1687,9 +1692,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{f62618a7}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonHover": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/OptionsMenuButton/OptionsMenu_ButtonHover",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -1729,9 +1734,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{bd0361fa}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapRegion": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapRegion",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Position": {
             "UIRect": {
@@ -1759,9 +1764,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{db811b0f}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapContent": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapContent",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Position": {
             "UIRect": {
@@ -1789,9 +1794,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{e60cae30}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatPanel_AnchorRef": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/VoiceChatPanel_AnchorRef",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -1818,9 +1823,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{f7d89075}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapTooltip": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapTooltip",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Layer": 1,
         "Position": {
             "UIRect": {
@@ -1848,9 +1853,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{fe35dc7f}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapFrame": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap/MinimapFrame",
-        "Scene": "{c852c8b2}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/Minimap",
         "Enabled": true,
         "Layer": 3,
         "Position": {
@@ -1893,14 +1898,14 @@
         },
         "__type": "UiElementIconData"
     },
-    "{f41e291a}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions",
         "Layer": 39,
         "__type": "UISceneData"
     },
-    "{01eebc57}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions/DockRegionTop": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions/DockRegionTop",
-        "Scene": "{f41e291a}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -1927,9 +1932,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{4d199a99}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions/DockRegionBot": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions/DockRegionBot",
-        "Scene": "{f41e291a}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -1956,9 +1961,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{c4499bae}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions/DockRegionRight": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions/DockRegionRight",
-        "Scene": "{f41e291a}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -1985,9 +1990,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{ed15db15}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions/DockRegionLeft": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions/DockRegionLeft",
-        "Scene": "{f41e291a}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapDockRegions",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -2014,7 +2019,7 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{b3b9cd93}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer",
         "Layer": 40,
         "SceneTransitionIn": {
@@ -2023,24 +2028,24 @@
         },
         "__type": "UISceneData"
     },
-    "{4b0c8c7b}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup",
-        "Scene": "{b3b9cd93}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer",
         "Elements": [
-            "{5174d302}",
-            "{06c0de2a}",
-            "{9e336b0c}",
-            "{0802dc44}",
-            "{5c7415ec}",
-            "{c9fd51d1}",
-            "{9b11ece7}",
-            "{6905f83d}"
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerImminentIcon",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerSoonIcon",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerSoonText",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerImminentText",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerVoidEpicText",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerIcon",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerText",
+            "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerFrame"
         ],
         "__type": "UiElementGroupData"
     },
-    "{06c0de2a}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerSoonIcon": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerSoonIcon",
-        "Scene": "{b3b9cd93}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer",
         "Layer": 6,
         "Position": {
             "UIRect": {
@@ -2061,9 +2066,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{0802dc44}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerImminentText": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerImminentText",
-        "Scene": "{b3b9cd93}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer",
         "Layer": 5,
         "Position": {
             "UIRect": {
@@ -2083,9 +2088,9 @@
         "TextAlignmentHorizontal": 1,
         "__type": "UiElementTextData"
     },
-    "{5174d302}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerImminentIcon": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerImminentIcon",
-        "Scene": "{b3b9cd93}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer",
         "Layer": 6,
         "Position": {
             "UIRect": {
@@ -2106,9 +2111,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{5c7415ec}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerVoidEpicText": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerVoidEpicText",
-        "Scene": "{b3b9cd93}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer",
         "Layer": 5,
         "Position": {
             "UIRect": {
@@ -2128,9 +2133,9 @@
         "TextAlignmentHorizontal": 1,
         "__type": "UiElementTextData"
     },
-    "{6905f83d}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerFrame": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerFrame",
-        "Scene": "{b3b9cd93}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer",
         "Layer": 4,
         "Position": {
             "UIRect": {
@@ -2165,9 +2170,9 @@
         },
         "__type": "UiElementIconData"
     },
-    "{9b11ece7}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerText": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerText",
-        "Scene": "{b3b9cd93}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer",
         "Layer": 5,
         "Position": {
             "UIRect": {
@@ -2187,9 +2192,9 @@
         "TextAlignmentHorizontal": 1,
         "__type": "UiElementTextData"
     },
-    "{9e336b0c}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerSoonText": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerSoonText",
-        "Scene": "{b3b9cd93}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer",
         "Layer": 5,
         "Position": {
             "UIRect": {
@@ -2209,9 +2214,9 @@
         "TextAlignmentHorizontal": 1,
         "__type": "UiElementTextData"
     },
-    "{c9fd51d1}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerIcon": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer/MinimapTimerGroup/MinimapTimerIcon",
-        "Scene": "{b3b9cd93}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/MinimapTimer",
         "Layer": 6,
         "Position": {
             "UIRect": {
@@ -2240,14 +2245,14 @@
         },
         "__type": "UiElementIconData"
     },
-    "{ea962385}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/ChatAnchors": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/ChatAnchors",
         "Layer": 39,
         "__type": "UISceneData"
     },
-    "{149297c6}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/ChatAnchors/Anchor_Chat_Base": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/ChatAnchors/Anchor_Chat_Base",
-        "Scene": "{ea962385}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/ChatAnchors",
         "Position": {
             "UIRect": {
                 "Position": [
@@ -2274,9 +2279,9 @@
         },
         "__type": "UiElementRegionData"
     },
-    "{5e82115d}": {
+    "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/ChatAnchors/Anchor_Chat_SpectatorUpdate": {
         "name": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/ChatAnchors/Anchor_Chat_SpectatorUpdate",
-        "Scene": "{ea962385}",
+        "Scene": "ClientStates/Gameplay/UX/LoL/Jade/JadeMinimap/UIBase/ChatAnchors",
         "Position": {
             "UIRect": {
                 "Position": [

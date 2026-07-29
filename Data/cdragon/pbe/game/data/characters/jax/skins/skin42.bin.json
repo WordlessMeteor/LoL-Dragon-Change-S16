@@ -366,6 +366,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
+        "objectPath": "{09655456}",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Jax/Skins/Skin42/Materials/Jax_skin42_HairVFX_inst": {
@@ -470,9 +471,94 @@
                 "TextureName": "Alpha_Multiplier_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Shape",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Color",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Holographic_Tiling",
+                "value": [
+                    77.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Direction",
+                "value": [
+                    0.10000000149011612,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Tiling",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Height",
+                "value": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Ribbon_U_Remap",
                 "value": [
@@ -1117,6 +1203,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_HOLOGRAPHIC_MATRIX",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
                 "on": false,
@@ -6410,6 +6502,7 @@
         ],
         "particleName": "Jax_Skin42_Idle_Footprint",
         "particlePath": "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Idle_Footprint",
+        "objectPath": "{20af0547}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Idle_R_FootPrint": {
@@ -8687,6 +8780,7 @@
         ],
         "particleName": "Jax_Skin42_Idle_R_FootPrint",
         "particlePath": "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Idle_R_FootPrint",
+        "objectPath": "{4cfa5d0e}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Idle_WeaponVFX": {
@@ -9282,6 +9376,7 @@
         ],
         "particleName": "Jax_Skin42_Idle_WeaponVFX",
         "particlePath": "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Idle_WeaponVFX",
+        "objectPath": "{7903ce3c}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Idle_GlowFire": {
@@ -9333,11 +9428,11 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{55bbebfc}",
+                            "NeckPieceinner",
                             "BODY"
                         ],
                         "mSubmeshesToDrawAlways": [
-                            "{55bbebfc}",
+                            "NeckPieceinner",
                             "BODY"
                         ],
                         "mLockMeshToAttachment": true,
@@ -9436,10 +9531,10 @@
                 "primitive": {
                     "mMesh": {
                         "mSubmeshesToDraw": [
-                            "{55bbebfc}"
+                            "NeckPieceinner"
                         ],
                         "mSubmeshesToDrawAlways": [
-                            "{55bbebfc}"
+                            "NeckPieceinner"
                         ],
                         "mLockMeshToAttachment": true,
                         "__type": "VfxMeshDefinitionData"
@@ -9537,6 +9632,7 @@
         ],
         "particleName": "Jax_Skin42_Idle_GlowFire",
         "particlePath": "Characters/Jax/Skins/Skin42/Particles/Jax_Skin42_Idle_GlowFire",
+        "objectPath": "{cf870d91}",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jax/Skins/Skin42/Resources": {

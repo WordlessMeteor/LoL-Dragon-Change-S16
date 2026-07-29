@@ -696,7 +696,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "洛克投擲一件縛魂神器，對命中的敵軍造成傷害，並有機會封印處決目標。洛克封印敵方英雄時會獲得額外力量。",
-            "dynamicDescription": "洛克向指定位置投擲縛魂神器，對範圍內敵軍造成<magicDamage>@Damage@魔法傷害</magicDamage>並<status>緩速</status>@SlowAmount*100@%，效果於@SlowDuration@秒內逐漸衰減。神器會標記命中的敵軍@Duration@秒；受標記的敵方英雄只要生命低於@ExecutionThreshold*100@%就會遭到封印處決，同時重置其他受影響英雄身上的標記持續時間。<br><br>持續時間結束後，若有英雄被封印，神器就會掉落到地上。洛克撿起神器即可永久提升處決門檻@ExecuteThresholdPerStack*100@%，且每封印一名英雄，便返還@CooldownReduction@%目前冷卻時間。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "洛克向指定位置投擲縛魂神器，對範圍內敵軍造成<magicDamage>@Damage@魔法傷害</magicDamage>並<status>緩速</status>@SlowAmount*100@%，效果於@SlowDuration@秒內逐漸衰減。神器會標記命中的敵軍@Duration@秒；受標記的敵方英雄只要生命低於<spellName>@ExecuteTooltipCalc@</spellName>就會遭到封印處決，同時重置其他受影響英雄身上的標記持續時間。<br><br>持續時間結束後，若有英雄被封印，神器就會掉落到地上。洛克撿起神器可使處決門檻永久提升@ExecuteThresholdPerStack*100@%，且每封印一名英雄，返還@CooldownReduction@%總冷卻時間。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

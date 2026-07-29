@@ -1292,7 +1292,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Vladimir raubt dem gegnerischen Ziel Leben. Wenn Vladimir „Transfusion“ 2-mal aktiviert hat, werden Schaden und Heilung der Fähigkeit kurzzeitig massiv erhöht.",
-            "dynamicDescription": "Vladimir entzieht seinem Ziel Lebenskraft, fügt ihm dabei <magicDamage>@BaseDamageTooltip@&nbsp;magischen Schaden</magicDamage> zu und stellt <healing>@BaseHealTooltip@&nbsp;Leben</healing> wieder her. Nachdem Vladimir diese Fähigkeit zweimal eingesetzt hat, erhält er 0,5&nbsp;Sekunden lang <speed>@MovementSpeedOnQ2@&nbsp;% Lauftempo</speed> und verstärkt @Effect8Amount@&nbsp;Sekunden lang den nächsten Einsatz dieser Fähigkeit.<br><br>Die verstärkte Version dieser Fähigkeit verursacht <magicDamage>@EmpoweredDamageTooltip@&nbsp;magischen Schaden</magicDamage> und stellt zusätzlich <healing>@EmpoweredHealTooltip@ plus @EmpoweredHealPercentTooltip@ des fehlenden Lebens</healing> wieder her.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vladimir entzieht seinem Ziel Lebenskraft, fügt ihm dabei <magicDamage>@BaseDamageTooltip@ magischen Schaden</magicDamage> zu und stellt <healing>@BaseHealTooltip@ Leben</healing> wieder her. Nachdem Vladimir diese Fähigkeit zweimal eingesetzt hat, erhält er 0,5 Sekunden lang <speed>@MovementSpeedOnQ2@ % Lauftempo</speed> und verstärkt @FrenzyDuration@ Sekunden lang den nächsten Einsatz dieser Fähigkeit.<br><br>Die verstärkte Version dieser Fähigkeit verursacht <magicDamage>@EmpoweredDamageTooltip@ magischen Schaden</magicDamage> und stellt zusätzlich <healing>@EmpoweredHealTooltip@ plus @EmpoweredHealPercentTooltip@ des fehlenden Lebens</healing> wieder her.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1589,7 +1589,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirE.png",
             "abilityVideoPath": "champion-abilities/0008/ability_0008_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0008/ability_0008_E1.jpg",
-            "cost": "Kanalisierungskosten <font color='#CC3300'>@Effect2Amount@&nbsp;% des max. Lebens (@ChargeHealthTooltip@)</font>",
+            "cost": "Kanalisierungskosten <font color='#CC3300'>@MaxHealthCost@ % des max. Lebens (@ChargeHealthTooltip@)</font>",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Vladimir bezahlt mit seinem Leben dafür, ein Blutreservoir aufzuladen, das bei Entfesselung, Umgebungsschaden um ihn herum anrichtet, aber von gegnerischen Einheiten blockiert werden kann.",
             "dynamicDescription": "<charge>Vorbereitung: </charge>Vladimir opfert bis zu <font color='#CC3300'>@ChargeHealthTooltip@&nbsp;Leben</font>, um ein Blutreservoir aufzuladen. Bei voller Aufladung wird Vladimir um 20&nbsp;% <status>verlangsamt</status>.<br><br><release>Auslösung: </release>Vladimir entfesselt einen Ring aus Blutsalven, der umstehenden Gegnern abhängig von der Aufladungsdauer zwischen <magicDamage>@MinDamageTooltip@</magicDamage> und <magicDamage>@MaxDamageTooltip@&nbsp;magischen Schaden</magicDamage> zufügt. Wenn diese Fähigkeit mindestens 1&nbsp;Sekunde lang aufgeladen wurde, werden die Ziele 0,5&nbsp;Sekunden lang um @SlowPercent@&nbsp;% <status>verlangsamt</status>.@SpellModifierDescriptionAppend@",
@@ -1742,7 +1742,7 @@
             "cost": "Keine Kosten",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Vladimir infiziert ein Gebiet mit einer bösartigen Seuche. Betroffene Gegner erleiden während der Wirkungsdauer erhöhten Schaden durch Angriffe. Nach ein paar Sekunden fügt „Blutseuche“ betroffenen Gegnern magischen Schaden zu und heilt Vladimir für jeden getroffenen Champion.",
-            "dynamicDescription": "Vladimir infiziert Gegner mit einer ansteckenden Seuche, wodurch sie @Effect4Amount@&nbsp;Sekunden lang um @Effect2Amount@&nbsp;% erhöhten Schaden aus allen Quellen erleiden. Nach Ablauf der Fähigkeit fügt Vladimir allen Infizierten <magicDamage>@Damage@&nbsp;magischen Schaden</magicDamage> zu. Wird ein Champion getroffen, stellt Vladimir <healing>@Damage@&nbsp;Leben</healing> wieder her. Pro weiteren getroffenen Champion stellt Vladimir zusätzlich <healing>@SecondaryHealingTooltip@&nbsp;Leben</healing> wieder her.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vladimir infiziert Gegner mit einer ansteckenden Seuche, wodurch sie @Duration@ Sekunden lang um @DamageAmp@ % erhöhten Schaden aus allen Quellen erleiden. Nach Ablauf der Fähigkeit fügt Vladimir allen Infizierten <magicDamage>@Damage@ magischen Schaden</magicDamage> zu. Wird ein Champion getroffen, stellt Vladimir <healing>@Damage@ Leben</healing> wieder her. Pro weiteren getroffenen Champion stellt Vladimir zusätzlich <healing>@SecondaryHealingTooltip@ Leben</healing> wieder her.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,

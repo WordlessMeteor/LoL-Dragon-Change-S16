@@ -1,6 +1,7 @@
 {
     "Characters/Nidalee/Spells/Takedown": {
         "ObjectName": "Takedown",
+        "objectPath": "{0123af5e}",
         "mScriptName": "Takedown",
         "mSpell": {
             "flags": 4,
@@ -120,6 +121,32 @@
                         0.75,
                         0.75,
                         0.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusAttackRange",
+                    "values": [
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -340,6 +367,7 @@
     },
     "Characters/Nidalee/Spells/JavelinTossAbility/JavelinToss": {
         "ObjectName": "JavelinToss",
+        "objectPath": "Characters/Nidalee/Spells/JavelinTossAbility/JavelinToss",
         "mScriptName": "JavelinToss",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -489,6 +517,19 @@
                         3.25,
                         3.25,
                         3.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RangeThreshold",
+                    "values": [
+                        525.0,
+                        525.0,
+                        525.0,
+                        525.0,
+                        525.0,
+                        525.0,
+                        525.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -878,6 +919,7 @@
     },
     "Characters/Nidalee/Spells/PrimalSurgeAbility/PrimalSurge": {
         "ObjectName": "PrimalSurge",
+        "objectPath": "Characters/Nidalee/Spells/PrimalSurgeAbility/PrimalSurge",
         "mScriptName": "PrimalSurge",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -1210,6 +1252,7 @@
     },
     "Characters/Nidalee/Spells/NidaleeBasicAttack2": {
         "ObjectName": "NidaleeBasicAttack2",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeBasicAttack2",
         "mScriptName": "NidaleeBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -1327,6 +1370,7 @@
     },
     "Characters/Nidalee/Spells/AspectOfTheCougarAbility/AspectOfTheCougar": {
         "ObjectName": "AspectOfTheCougar",
+        "objectPath": "Characters/Nidalee/Spells/AspectOfTheCougarAbility/AspectOfTheCougar",
         "mScriptName": "AspectOfTheCougar",
         "mSpell": {
             "flags": 4,
@@ -1804,6 +1848,7 @@
     },
     "Characters/Nidalee/Spells/NidaleeCougarTakedownAttack": {
         "ObjectName": "NidaleeCougarTakedownAttack",
+        "objectPath": "{33bd1011}",
         "mScriptName": "NidaleeCougarTakedownAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -1840,6 +1885,7 @@
     },
     "Characters/Nidalee/Spells/Prowl": {
         "ObjectName": "Prowl",
+        "objectPath": "{4daf6543}",
         "mScriptName": "Prowl",
         "mSpell": {
             "mImgIconName": [
@@ -1855,6 +1901,7 @@
     },
     "Characters/Nidalee/Spells/PounceEnabler": {
         "ObjectName": "PounceEnabler",
+        "objectPath": "{4f94127e}",
         "mScriptName": "PounceEnabler",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -1863,6 +1910,7 @@
     },
     "Characters/Nidalee/Spells/Swipe": {
         "ObjectName": "Swipe",
+        "objectPath": "{50ed83b9}",
         "mScriptName": "Swipe",
         "mSpell": {
             "flags": 32,
@@ -2054,6 +2102,7 @@
     },
     "Characters/Nidalee/Spells/BushwhackAbility/Bushwhack": {
         "ObjectName": "Bushwhack",
+        "objectPath": "Characters/Nidalee/Spells/BushwhackAbility/Bushwhack",
         "mScriptName": "Bushwhack",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -2152,6 +2201,58 @@
                 {
                     "name": "ModesBonusMaxTraps",
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DotDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamagePerTick",
+                    "values": [
+                        0.0,
+                        10.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TrapLifetime",
+                    "values": [
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TotalFlatDamage",
+                    "values": [
+                        0.0,
+                        40.0,
+                        80.0,
+                        120.0,
+                        160.0,
+                        200.0,
+                        240.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2210,8 +2311,8 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 5,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamagePerTick",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.05000000074505806,
@@ -2372,8 +2473,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 7,
+                                    "type": "TotalFlatDamage",
                                     "nameOverride": "Spell_ListType_NidaleeTrapDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2423,8 +2523,8 @@
                             "__type": "{f3cbe7b2}"
                         },
                         "mPart2": {
-                            "mEffectIndex": 3,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "DotDuration",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         "__type": "ProductOfSubPartsCalculationPart"
                     }
@@ -2470,6 +2570,7 @@
     },
     "Characters/Nidalee/Spells/BushwhackAbility/BushwhackDamage": {
         "ObjectName": "BushwhackDamage",
+        "objectPath": "{a147aa45}",
         "mScriptName": "BushwhackDamage",
         "mBuff": {
             "mDescription": "game_buff_tooltip_BushwhackDamage",
@@ -2479,6 +2580,7 @@
     },
     "Characters/Nidalee/Spells/NidaleeTakedownAttack": {
         "ObjectName": "NidaleeTakedownAttack",
+        "objectPath": "{61b16d68}",
         "mScriptName": "NidaleeTakedownAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7423,
@@ -2590,6 +2692,7 @@
     },
     "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunted": {
         "ObjectName": "NidaleePassiveHunted",
+        "objectPath": "{6f1ba207}",
         "mScriptName": "NidaleePassiveHunted",
         "mSpell": {
             "mImgIconName": [
@@ -2605,6 +2708,7 @@
     },
     "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunting": {
         "ObjectName": "NidaleePassiveHunting",
+        "objectPath": "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunting",
         "mScriptName": "NidaleePassiveHunting",
         "mSpell": {
             "mImgIconName": [
@@ -2620,6 +2724,7 @@
     },
     "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunt": {
         "ObjectName": "NidaleePassiveHunt",
+        "objectPath": "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunt",
         "mScriptName": "NidaleePassiveHunt",
         "mSpell": {
             "mImgIconName": [
@@ -2672,6 +2777,7 @@
     },
     "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/BrushPassive": {
         "ObjectName": "BrushPassive",
+        "objectPath": "{c74eb2cb}",
         "mScriptName": "BrushPassive",
         "mBuff": {
             "mDescription": "game_buff_tooltip_BrushPassive",
@@ -2681,6 +2787,7 @@
     },
     "Characters/Nidalee/Spells/PounceBlocker": {
         "ObjectName": "PounceBlocker",
+        "objectPath": "{7abf65b7}",
         "mScriptName": "PounceBlocker",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -2689,6 +2796,7 @@
     },
     "Characters/Nidalee/Spells/Pounce": {
         "ObjectName": "Pounce",
+        "objectPath": "{968ed22f}",
         "mScriptName": "Pounce",
         "mSpell": {
             "flags": 36,
@@ -2781,6 +2889,21 @@
                 },
                 {
                     "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "EnhancedPounceRange",
+                    "values": [
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mCoefficient": 0.30000001192092896,
@@ -2963,6 +3086,7 @@
     },
     "Characters/Nidalee/Spells/NidaleeCougarBasicAttack": {
         "ObjectName": "NidaleeCougarBasicAttack",
+        "objectPath": "{9b7b0714}",
         "mScriptName": "NidaleeCougarBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -3010,6 +3134,7 @@
     },
     "Characters/Nidalee/Spells/NidaleeCougarScent": {
         "ObjectName": "NidaleeCougarScent",
+        "objectPath": "{c0fb0105}",
         "mScriptName": "NidaleeCougarScent",
         "mSpell": {
             "mImgIconName": [
@@ -3025,6 +3150,7 @@
     },
     "Characters/Nidalee/Spells/NidaleeCougarCritAttack": {
         "ObjectName": "NidaleeCougarCritAttack",
+        "objectPath": "{c16d271a}",
         "mScriptName": "NidaleeCougarCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -3073,6 +3199,7 @@
     },
     "Characters/Nidalee/Spells/SwipeBlocker": {
         "ObjectName": "SwipeBlocker",
+        "objectPath": "{d692dfb9}",
         "mScriptName": "SwipeBlocker",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -3081,6 +3208,7 @@
     },
     "Characters/Nidalee/Spells/NidaleeCritAttack": {
         "ObjectName": "NidaleeCritAttack",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeCritAttack",
         "mScriptName": "NidaleeCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -3185,6 +3313,7 @@
     },
     "Characters/Nidalee/Spells/TakedownBlocker": {
         "ObjectName": "TakedownBlocker",
+        "objectPath": "{e685e2b8}",
         "mScriptName": "TakedownBlocker",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -3193,6 +3322,7 @@
     },
     "Characters/Nidalee/Spells/NidaleeBasicAttack": {
         "ObjectName": "NidaleeBasicAttack",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeBasicAttack",
         "mScriptName": "NidaleeBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -3299,6 +3429,7 @@
     },
     "Characters/Nidalee/Spells/NidaleeCougarBasicAttack2": {
         "ObjectName": "NidaleeCougarBasicAttack2",
+        "objectPath": "{e8ac40d2}",
         "mScriptName": "NidaleeCougarBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -3347,6 +3478,7 @@
     },
     "Characters/Nidalee/Spells/PounceMS": {
         "ObjectName": "PounceMS",
+        "objectPath": "{f04b318f}",
         "mScriptName": "PounceMS",
         "mSpell": {
             "mImgIconName": [
@@ -3773,15 +3905,26 @@
     "{d84dde80}": {
         "OrderJunglePath": [
             {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
                 "Camp": 3,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 5,
+                "Camp": 4,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 4,
+                "Camp": 5,
                 "__type": "TakeCamp"
             },
             {
@@ -4078,23 +4221,23 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{2b4c593a}",
-                            "{ff9a32d3}",
-                            "{467823a4}"
+                            "Items/773070",
+                            "Items/772041",
+                            "Items/771001"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{4373a1bd}",
-                            "{c76c22c4}",
-                            "{c76c22c4}"
+                            "Items/771028",
+                            "Items/771052",
+                            "Items/771052"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{9751806c}"
+                            "Items/773010"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -4102,30 +4245,30 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{9a53c3bc}",
-                            "{bbc89264}",
-                            "{26591d4e}"
+                            "Items/773003",
+                            "Items/773151",
+                            "Items/773027"
                         ],
                         "MaxCompletedItems": 2,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{29592207}",
-                            "{b4c8875f}"
+                            "Items/773020",
+                            "Items/773158"
                         ],
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{a7c1b723}",
-                            "{a4404bc2}",
-                            "{aab72e80}",
-                            "{b9c88f3e}",
-                            "{3cbc9184}",
-                            "{3bba515a}",
-                            "{bec8971d}",
-                            "{9c53c6e2}"
+                            "Items/773165",
+                            "Items/773089",
+                            "Items/773128",
+                            "Items/773157",
+                            "Items/773102",
+                            "Items/773135",
+                            "Items/773152",
+                            "Items/773001"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }

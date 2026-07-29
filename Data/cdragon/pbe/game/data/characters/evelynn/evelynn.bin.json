@@ -13,6 +13,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnQAbility/EvelynnQ2": {
         "ObjectName": "EvelynnQ2",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnQAbility/EvelynnQ2",
         "mScriptName": "EvelynnQ2",
         "mSpell": {
             "flags": 36,
@@ -206,6 +207,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnQAbility/EvelynnQ": {
         "ObjectName": "EvelynnQ",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnQAbility/EvelynnQ",
         "mScriptName": "EvelynnQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -422,6 +424,23 @@
                         3.0,
                         3.0,
                         3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MonsterPercentRefund",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FakeCD",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -780,6 +799,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnQAbility/EvelynnQDebuff": {
         "ObjectName": "EvelynnQDebuff",
+        "objectPath": "{4d2194a1}",
         "mScriptName": "EvelynnQDebuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EvelynnQDebuff",
@@ -789,6 +809,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnQAbility/EvelynnQLineMissile": {
         "ObjectName": "EvelynnQLineMissile",
+        "objectPath": "{a2aafef7}",
         "mScriptName": "EvelynnQLineMissile",
         "mSpell": {
             "flags": 4,
@@ -955,6 +976,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnQAbility/EvelynnQDebuffCircleMissile": {
         "ObjectName": "EvelynnQDebuffCircleMissile",
+        "objectPath": "{b7d97583}",
         "mScriptName": "EvelynnQDebuffCircleMissile",
         "mSpell": {
             "flags": 4194324,
@@ -1061,6 +1083,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnWAbility/EvelynnWShred": {
         "ObjectName": "EvelynnWShred",
+        "objectPath": "{2151e37b}",
         "mScriptName": "EvelynnWShred",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EvelynnWShred",
@@ -1070,6 +1093,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnWAbility/EvelynnWMissile": {
         "ObjectName": "EvelynnWMissile",
+        "objectPath": "{51641479}",
         "mScriptName": "EvelynnWMissile",
         "mSpell": {
             "flags": 4,
@@ -1153,6 +1177,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnWAbility/EvelynnWApplyMark": {
         "ObjectName": "EvelynnWApplyMark",
+        "objectPath": "{7439763c}",
         "mScriptName": "EvelynnWApplyMark",
         "mSpell": {
             "mAffectsTypeFlags": 2050,
@@ -1251,6 +1276,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnWAbility/EvelynnW": {
         "ObjectName": "EvelynnW",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnWAbility/EvelynnW",
         "mScriptName": "EvelynnW",
         "mSpell": {
             "flags": 4,
@@ -1493,6 +1519,71 @@
                         0.75
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MonsterExtraCharm",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuringCharm",
+                    "values": [
+                        -0.44999998807907104,
+                        -0.44999998807907104,
+                        -0.44999998807907104,
+                        -0.44999998807907104,
+                        -0.44999998807907104,
+                        -0.44999998807907104,
+                        -0.44999998807907104
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActualCD",
+                    "values": [
+                        16.0,
+                        15.0,
+                        14.0,
+                        13.0,
+                        12.0,
+                        11.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "NonCharmSlowDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "{f9c2333e}": {
@@ -1637,8 +1728,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "CharmDuration",
                                     "nameOverride": "Spell_ListType_CharmDuration",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1648,16 +1738,14 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 9,
+                                    "type": "MRShred",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_MagicResistShred",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 7,
+                                    "type": "MonsterDamage",
                                     "nameOverride": "Spell_ListType_MonsterDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1696,8 +1784,8 @@
             "{6d548702}": {
                 "mFormulaParts": [
                     {
-                        "mEffectIndex": 5,
-                        "__type": "EffectValueCalculationPart"
+                        "mDataValue": "BuffDuration",
+                        "__type": "NamedDataValueCalculationPart"
                     }
                 ],
                 "__type": "GameCalculation"
@@ -1784,6 +1872,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnRAbility/EvelynnRTrail": {
         "ObjectName": "EvelynnRTrail",
+        "objectPath": "{256ae725}",
         "mScriptName": "EvelynnRTrail",
         "mSpell": {
             "flags": 4,
@@ -1889,6 +1978,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnRAbility/EvelynnRThresholdTracker": {
         "ObjectName": "EvelynnRThresholdTracker",
+        "objectPath": "{8212901a}",
         "mScriptName": "EvelynnRThresholdTracker",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EvelynnEHaste",
@@ -1898,6 +1988,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnRAbility/EvelynnR": {
         "ObjectName": "EvelynnR",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnRAbility/EvelynnR",
         "mScriptName": "EvelynnR",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2047,6 +2138,45 @@
                         1.25
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        0.0,
+                        125.0,
+                        250.0,
+                        375.0,
+                        500.0,
+                        650.0,
+                        775.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CritBonus",
+                    "values": [
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CritTreshold",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "{f9c2333e}": {
@@ -2103,8 +2233,8 @@
                 "Damage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.75,
@@ -2253,14 +2383,12 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "multiplier": 2.4000000953674316,
                                     "nameOverride": "Spell_ListType_EvelynnEmpoweredDamage",
                                     "__type": "TooltipInstanceListElement"
@@ -2424,6 +2552,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnPassiveAbility/EvelynnPassive": {
         "ObjectName": "EvelynnPassive",
+        "objectPath": "{2f54c93f}",
         "mScriptName": "EvelynnPassive",
         "mSpell": {
             "DataValues": [
@@ -2549,11 +2678,13 @@
     },
     "Characters/Evelynn/Spells/EvelynnPassiveAbility/EvelynnPassiveDelay": {
         "ObjectName": "EvelynnPassiveDelay",
+        "objectPath": "{9f80023e}",
         "mScriptName": "EvelynnPassiveDelay",
         "__type": "SpellObject"
     },
     "Characters/Evelynn/Spells/EvelynnPassiveAbility/EvelynnPassiveDemonCloak": {
         "ObjectName": "EvelynnPassiveDemonCloak",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnPassiveAbility/EvelynnPassiveDemonCloak",
         "mScriptName": "EvelynnPassiveDemonCloak",
         "mSpell": {
             "mFloatVarsDecimals": [
@@ -2613,6 +2744,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnEAbility/EvelynnE2": {
         "ObjectName": "EvelynnE2",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnEAbility/EvelynnE2",
         "mScriptName": "EvelynnE2",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2739,6 +2871,21 @@
                         1.5499999523162842
                     ],
                     "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "MoveSpeed",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mCoefficient": 0.014999999664723873,
@@ -2915,8 +3062,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 3,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "MoveSpeed",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2930,6 +3077,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnEAbility/EvelynnE2Dash": {
         "ObjectName": "EvelynnE2Dash",
+        "objectPath": "{9c7d8017}",
         "mScriptName": "EvelynnE2Dash",
         "mSpell": {
             "flags": 4,
@@ -3044,6 +3192,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnEAbility/EvelynnEHaste": {
         "ObjectName": "EvelynnEHaste",
+        "objectPath": "{9f6a360e}",
         "mScriptName": "EvelynnEHaste",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EvelynnEHaste",
@@ -3053,6 +3202,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnEAbility/EvelynnE": {
         "ObjectName": "EvelynnE",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnEAbility/EvelynnE",
         "mScriptName": "EvelynnE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -3257,6 +3407,45 @@
                         2.0,
                         2.0,
                         2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeed",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MonsterDamageCamp",
+                    "values": [
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -3558,16 +3747,19 @@
     },
     "Characters/Evelynn/Spells/EvelynnSkin24Manager": {
         "ObjectName": "EvelynnSkin24Manager",
+        "objectPath": "{82e5ba19}",
         "mScriptName": "EvelynnSkin24Manager",
         "__type": "SpellObject"
     },
     "Characters/Evelynn/Spells/EvelynnStealthRing": {
         "ObjectName": "EvelynnStealthRing",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnStealthRing",
         "mScriptName": "EvelynnStealthRing",
         "__type": "SpellObject"
     },
     "Characters/Evelynn/Spells/EvelynnBasicAttack3": {
         "ObjectName": "EvelynnBasicAttack3",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnBasicAttack3",
         "mScriptName": "EvelynnBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -3647,6 +3839,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnBasicAttack2": {
         "ObjectName": "EvelynnBasicAttack2",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnBasicAttack2",
         "mScriptName": "EvelynnBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -3726,6 +3919,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnBasicAttack": {
         "ObjectName": "EvelynnBasicAttack",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnBasicAttack",
         "mScriptName": "EvelynnBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -3804,6 +3998,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnCritAttack": {
         "ObjectName": "EvelynnCritAttack",
+        "objectPath": "Characters/Evelynn/Spells/EvelynnCritAttack",
         "mScriptName": "EvelynnCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -3883,6 +4078,7 @@
     },
     "Characters/Evelynn/Spells/EvelynnNonDemonFX": {
         "ObjectName": "EvelynnNonDemonFX",
+        "objectPath": "{df94daad}",
         "mScriptName": "EvelynnNonDemonFX",
         "mBuff": {
             "PersistentEffectConditions": [
@@ -4540,24 +4736,24 @@
                 "StartingItemBundles": [
                     {
                         "items": [
-                            "{36bc8812}",
-                            "{467823a4}"
+                            "Items/773108",
+                            "Items/771001"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{bbc653cd}",
-                            "{99a41f9d}",
-                            "{99a41f9d}"
+                            "Items/773145",
+                            "Items/772003",
+                            "Items/772003"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     },
                     {
                         "items": [
-                            "{9751806c}",
-                            "{99a41f9d}",
-                            "{99a41f9d}"
+                            "Items/773010",
+                            "Items/772003",
+                            "Items/772003"
                         ],
                         "__type": "ItemRecommendationOverrideStartingItemBundle"
                     }
@@ -4565,30 +4761,30 @@
                 "mRecItemRanges": [
                     {
                         "items": [
-                            "{aab72e80}",
-                            "{b8c64f14}",
-                            "{26591d4e}"
+                            "Items/773128",
+                            "Items/773146",
+                            "Items/773027"
                         ],
                         "MaxCompletedItems": 2,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{29592207}",
-                            "{b4c8875f}"
+                            "Items/773020",
+                            "Items/773158"
                         ],
                         "__type": "ItemRecOverrideRange"
                     },
                     {
                         "items": [
-                            "{bbc89264}",
-                            "{b9c88f3e}",
-                            "{3ebc94aa}",
-                            "{a4404bc2}",
-                            "{2abeb3c5}",
-                            "{3cbc9184}",
-                            "{3bba515a}",
-                            "{9c53c6e2}"
+                            "Items/773151",
+                            "Items/773157",
+                            "Items/773100",
+                            "Items/773089",
+                            "Items/773116",
+                            "Items/773102",
+                            "Items/773135",
+                            "Items/773001"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }

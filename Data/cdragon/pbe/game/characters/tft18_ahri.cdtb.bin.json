@@ -1,0 +1,568 @@
+{
+    "{19cf6cf1}": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{387769e5}": {
+        "ObjectName": "TFT18_AhriCritAttack",
+        "objectPath": "{387769e5}",
+        "mScriptName": "TFT18_AhriCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.382099986076355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_hand",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1750.0,
+            "mHitEffectKey": "TFT_Global_BA_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{69b53865}": {
+        "ObjectName": "TFT18_AhriBasicAttack2",
+        "objectPath": "{69b53865}",
+        "mScriptName": "TFT18_AhriBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.382099986076355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_hand",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1750.0,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{6a3ff915}": {
+        "ObjectName": "TFT18_AhriBasicAttack",
+        "objectPath": "{6a3ff915}",
+        "mScriptName": "TFT18_AhriBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "{11704a2b}": 0.382099986076355,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyAttackDamage": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mStartBoneName": "R_hand",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 1750.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1750.0,
+            "mHitEffectKey": "TFT_Global_BA_Hit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{791697d9}": {
+        "ObjectName": "TFT18_AhriSpell",
+        "objectPath": "{791697d9}",
+        "mScriptName": "TFT18_AhriSpell",
+        "mSpell": {
+            "mAffectsTypeFlags": 7183,
+            "mAffectsStatusFlags": 32,
+            "DataValues": [
+                {
+                    "name": "DataValue",
+                    "values": [
+                        0.0,
+                        1.0,
+                        2.0,
+                        10.0,
+                        160.0,
+                        200.0,
+                        240.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "OtherValue",
+                    "values": [
+                        0.0,
+                        100.0,
+                        200.0,
+                        1000.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{d678dbfb}": {
+                    "mFormulaParts": [
+                        {
+                            "mSubpart": {
+                                "mDataValue": "OtherValue",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "mStyleTag": "noScale",
+                            "mStyleTagIfScaled": "scaleAP",
+                            "__type": "SubPartScaledProportionalToStat"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "mCastTime": 0.25,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastOrQueueWhileCasting": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "castConeDistance": 100.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "selectionPriority": 1,
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "TFT18_AhriSpell",
+                    "mFormat": "{fffee0e7}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TFT18_AhriSpell_Name",
+                        "keyTooltip": "Spell_TFT18_AhriSpell_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "DataValue",
+                                    "typeIndex": 2,
+                                    "nameOverride": "TFT18_Spell_ListType_TemplateValue1",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "OtherValue",
+                                    "nameOverride": "TFT18_Spell_ListType_TemplateValue2",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{cbf79401}": {
+        "mCharacterName": "TFT18_Ahri",
+        "baseHPModifiable": {
+            "baseValue": 850.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 200.0,
+        "healthBarFullParallax": true,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arAllowMaxValueToBeOverridden": true,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 40.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 40.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 40.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseCritChance": 0.25,
+        "critDamageMultiplier": 1.399999976158142,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 890.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.800000011920929,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.800000011920929,
+            "__type": "ModifiableFloat"
+        },
+        "basicAttack": {
+            "mAttackName": "TFT18_AhriBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "TFT18_AhriBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackName": "TFT18_AhriCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "selectionRadius": 150.0,
+        "unitTagsString": "Champion",
+        "flags": 9446656,
+        "tier": 4,
+        "mLinkedTraits": [
+            {
+                "TraitData": "{e8f0f7f2}",
+                "__type": "TFTTraitContributionData"
+            },
+            {
+                "TraitData": "{36b330e5}",
+                "__type": "TFTTraitContributionData"
+            }
+        ],
+        "mMoveInterval": -0.10000000149011612,
+        "mMoveProximity": 180.0,
+        "mMoveRange": 250.0,
+        "mMoveHeight": 0.0,
+        "mInitialMana": 20.0,
+        "mShopData": "{fe7c8124}",
+        "mManaPerAttack": 0.0,
+        "__type": "TFTCharacterRecord"
+    },
+    "__linked": []
+}

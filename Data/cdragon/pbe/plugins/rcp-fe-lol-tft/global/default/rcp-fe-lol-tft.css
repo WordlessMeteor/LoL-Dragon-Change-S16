@@ -13095,7 +13095,7 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    height: 120px;
+    min-height: 120px;
     padding: 7px 7px 7px 0;
     position: relative;
     width: 100%
@@ -13107,7 +13107,7 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
     border-left: 9px solid #785a28;
     box-sizing: border-box;
     content: "";
-    height: 120px;
+    height: 100%;
     left: -40px;
     pointer-events: none;
     position: absolute;
@@ -13304,8 +13304,8 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
-    height: 100%;
     justify-content: space-between;
+    min-height: 100%;
     padding-top: 14px;
     position: relative;
     width: 345px
@@ -13377,9 +13377,16 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
 }
 
 .tft-match-summary-component .match-summary-right .match-summary-traits {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex: 1 1 auto;
+    flex-direction: column;
+    width: 100%
+}
+
+.tft-match-summary-component .match-summary-right .match-summary-traits .match-summary-traits-row {
+    align-items: center;
+    display: flex;
     flex-direction: row;
     width: 100%
 }
@@ -13389,9 +13396,10 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
     background-image: url(/fe/lol-tft/bronze.png);
     background-size: 100% 100%;
     display: flex;
+    flex-shrink: 0;
     height: 28px;
     justify-content: center;
-    margin: 0 3px 0 0;
+    margin: 0 3px 2px 0;
     width: 24px
 }
 
@@ -13450,7 +13458,7 @@ html[lang=ar-ae] .rcp-fe-lol-tft-battlepass-timeline lol-uikit-scrollable {
 }
 
 .tft-match-summary-component .match-summary-right .match-summary-traits .match-summary-trait-img-bg:not(:first-child) {
-    margin: 0 3px 0 8px
+    margin: 0 3px 2px 8px
 }
 
 .tft-match-summary-component.pair .placement_3:after,

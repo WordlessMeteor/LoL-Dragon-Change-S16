@@ -2174,6 +2174,125 @@
                 "__type": "ShaderPhysicalParameter"
             },
             {
+                "name": "Holographic_Mask_Tiling",
+                "data": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Holographic_Mask_Tiling",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Speed",
+                "data": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Holographic_Mask_Scroll_Speed",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Direction",
+                "data": [
+                    0.10000000149011612,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Holographic_Mask_Scroll_Direction",
+                        "fields": 3,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Holographic_Mask_Intensity",
+                "data": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Holographic_Mask_Intensity",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Holographic_Tiling",
+                "data": [
+                    77.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Holographic_Tiling",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Holographic_Parallax_Height",
+                "data": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Holographic_Parallax_Height",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
+                "name": "Holographic_Parallax_Tiling",
+                "data": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "logicalParameters": [
+                    {
+                        "name": "Holographic_Parallax_Tiling",
+                        "fields": 1,
+                        "__type": "ShaderLogicalParameter"
+                    }
+                ],
+                "__type": "ShaderPhysicalParameter"
+            },
+            {
                 "name": "Fading_In_Gradient",
                 "data": [
                     0.05000000074505806,
@@ -2393,6 +2512,10 @@
                 "__type": "ShaderStaticSwitch"
             },
             {
+                "name": "USE_HOLOGRAPHIC_MATRIX",
+                "__type": "ShaderStaticSwitch"
+            },
+            {
                 "name": "USE_LIGHTNESS_BREATHE",
                 "__type": "ShaderStaticSwitch"
             },
@@ -2502,6 +2625,24 @@
             },
             {
                 "name": "Screen_Space_Texture",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Holographic_Color",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Holographic_Mask",
+                "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "samplerName": "Wrap_No_Mip",
+                "__type": "ShaderTexture"
+            },
+            {
+                "name": "Holographic_Shape",
                 "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
                 "samplerName": "Wrap_No_Mip",
                 "__type": "ShaderTexture"
@@ -23624,6 +23765,7 @@
         "staticSwitches": [
             {
                 "name": "PARTICLE_COLOR_ACTIVE",
+                "{066e669c}": true,
                 "__type": "ShaderStaticSwitch"
             },
             {
@@ -23633,6 +23775,7 @@
             },
             {
                 "name": "NAVMESH_MASK_ACTIVE",
+                "{066e669c}": true,
                 "__type": "ShaderStaticSwitch"
             }
         ],
@@ -44309,6 +44452,7 @@
             {
                 "name": "Diffuse_Texture2",
                 "defaultTexturePath": "ASSETS/Shared/Materials/black.tex",
+                "samplerName": "CharacterWrap",
                 "__type": "ShaderTexture"
             },
             {
