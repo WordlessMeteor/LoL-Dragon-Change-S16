@@ -1,0 +1,2662 @@
+{
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankRAbility": {
+        "mRootSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankRAbility/Jade_GangplankR",
+        "mChildSpells": [
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankRAbility/Jade_GangplankR",
+            "{d37c3fd0}",
+            "{00a591bc}"
+        ],
+        "mName": "Jade_GangplankRAbility",
+        "AbilityTraits": 3,
+        "__type": "AbilityObject"
+    },
+    "{00a591bc}": {
+        "ObjectName": "Jade_GangplankR_Ball",
+        "mScriptName": "Jade_GangplankR_Ball",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mIsDisabledWhileDead": false,
+            "castRange": [
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0
+                ],
+                "{0a3e0478}": 20000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mSpeed": 500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "__type": "MissileSpecification"
+            },
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{d37c3fd0}": {
+        "ObjectName": "Jade_GangplankR_Slow",
+        "mScriptName": "Jade_GangplankR_Slow",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_CannonBarrage.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_GangplankR_Slow",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_GangplankR_Jade_Name",
+                    "keyTooltip": "Buff_GangplankR_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankRAbility/Jade_GangplankR": {
+        "ObjectName": "Jade_GangplankR",
+        "mScriptName": "Jade_GangplankR",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.0,
+                        1.5,
+                        0.5,
+                        0.5,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        75.0,
+                        120.0,
+                        165.0,
+                        210.0,
+                        255.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Slow",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "{f9c2333e}": {
+                "{a110bc47}": {
+                    "value": [
+                        140.0,
+                        140.0,
+                        120.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.10000000149011612,
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_CannonBarrage.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                120.0,
+                120.0,
+                115.0,
+                110.0,
+                120.0,
+                120.0,
+                120.0
+            ],
+            "Cooldown": {
+                "values": [
+                    120.0,
+                    120.0,
+                    115.0,
+                    110.0,
+                    120.0,
+                    120.0,
+                    120.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "mUseMinimapTargeting": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0,
+                20000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0,
+                    20000.0
+                ],
+                "{0a3e0478}": 20000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castFrame": 10.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Gangplank_GangplankR_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GangplankR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_GangplankR_Jade_Name",
+                        "keySummary": "Spell_GangplankR_Jade_Summary",
+                        "keyTooltip": "Spell_GangplankR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "__type": "TargeterDefinitionMinimap"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "Duration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{02062618}": {
+        "ObjectName": "Jade_GangplankBilgewaterToken",
+        "mScriptName": "Jade_GangplankBilgewaterToken",
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_GangplankBilgewaterToken",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankWAbility": {
+        "mRootSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankWAbility/Jade_GangplankW",
+        "mChildSpells": [
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankWAbility/Jade_GangplankW",
+            "{67531f9e}"
+        ],
+        "mName": "Jade_GangplankWAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankWAbility/Jade_GangplankW": {
+        "ObjectName": "Jade_GangplankW",
+        "mScriptName": "Jade_GangplankW",
+        "mSpell": {
+            "mAffectsTypeFlags": 15567,
+            "mSpellTags": [
+                "SpecialCase_StasisLocked"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        20.0,
+                        45.0,
+                        70.0,
+                        95.0,
+                        120.0,
+                        145.0,
+                        170.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0,
+                        13.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseHeal",
+                    "values": [
+                        10.0,
+                        80.0,
+                        150.0,
+                        220.0,
+                        290.0,
+                        360.0,
+                        430.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalHeal": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseHeal",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 1.0,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.8999999761581421,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_RemoveScurvy.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                24.0,
+                22.0,
+                21.0,
+                20.0,
+                19.0,
+                18.0,
+                18.0
+            ],
+            "Cooldown": {
+                "values": [
+                    24.0,
+                    22.0,
+                    21.0,
+                    20.0,
+                    19.0,
+                    18.0,
+                    18.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "cannotBeSuppressed": true,
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castFrame": 9.734999656677246,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                65.0,
+                65.0,
+                65.0,
+                65.0,
+                65.0,
+                65.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    65.0,
+                    65.0,
+                    65.0,
+                    65.0,
+                    65.0,
+                    65.0
+                ],
+                "{0a3e0478}": 65.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Gangplank_GangplankW_OnCast"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GangplankW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_GangplankW_Jade_Name",
+                        "keySummary": "Spell_GangplankW_Jade_Summary",
+                        "keyTooltip": "Spell_GangplankW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseHeal",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Healing",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 8,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalHeal",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2097152,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 64,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{67531f9e}": {
+        "ObjectName": "Jade_GangplankW_Buff",
+        "mScriptName": "Jade_GangplankW_Buff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_RemoveScurvy.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_GangplankW_Buff",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_GangplankW_Jade_Name",
+                    "keyTooltip": "Buff_GangplankW_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankBasicAttack": {
+        "ObjectName": "Jade_GangplankBasicAttack",
+        "mScriptName": "Jade_GangplankBasicAttack",
+        "mSpell": {
+            "bHaveHitEffect": true,
+            "castFrame": 8.710000038146973,
+            "mHitEffectKey": "Jade_Gangplank_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Gangplank_GangplankBasicAttack_OnCast",
+                "13": "Play_sfx_Gangplank_GangplankBasicAttack_OnHit"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{69ee55f0}": {
+        "mRootSpell": "{9139d956}",
+        "mChildSpells": [
+            "{9139d956}",
+            "{3d9b8289}",
+            "{f11da6cd}"
+        ],
+        "mName": "Jade_GangplankPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{3d9b8289}": {
+        "ObjectName": "Jade_GangplankPassive_Debuff",
+        "mScriptName": "Jade_GangplankPassive_Debuff",
+        "__type": "SpellObject"
+    },
+    "{9139d956}": {
+        "ObjectName": "Jade_GangplankPassive",
+        "mScriptName": "Jade_GangplankPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "Cooldown",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "OldMoveSpeed",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveSpeedDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DoTDuration",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TurretDamageMult",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MovementSpeedDebuff",
+                    "values": [
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mStartValue": 4.0,
+                            "mEndValue": 21.0,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MoveSpeed": {
+                    "mFormulaParts": [
+                        {
+                            "mStartValue": 0.15000000596046448,
+                            "mEndValue": 0.30000001192092896,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_GrogSoakedBlade.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GangplankPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_GangplankPassive_Jade_Name",
+                        "keySummary": "Spell_GangplankPassive_Jade_Summary",
+                        "keyTooltip": "Spell_GangplankPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_GangplankPassive",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f11da6cd}": {
+        "ObjectName": "Jade_GangplankPassive_Counter",
+        "mScriptName": "Jade_GangplankPassive_Counter",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_GrogSoakedBlade.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_GangplankPassive_Counter",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_GangplankPassive__Jade_Name",
+                    "keyTooltip": "Buff_GangplankPassive_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankEAbility": {
+        "mRootSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankEAbility/Jade_GangplankE",
+        "mChildSpells": [
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankEAbility/Jade_GangplankE",
+            "{ff7d1052}"
+        ],
+        "mName": "Jade_GangplankEAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankEAbility/Jade_GangplankE": {
+        "ObjectName": "Jade_GangplankE",
+        "mScriptName": "Jade_GangplankE",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        4.0,
+                        4.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        80.0,
+                        75.0,
+                        105.0,
+                        135.0,
+                        165.0,
+                        195.0,
+                        240.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "PassiveAD",
+                    "values": [
+                        6.0,
+                        8.0,
+                        10.0,
+                        12.0,
+                        14.0,
+                        16.0,
+                        18.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveMS",
+                    "values": [
+                        0.019999999552965164,
+                        0.029999999329447746,
+                        0.03999999910593033,
+                        0.05000000074505806,
+                        0.05999999865889549,
+                        0.07000000029802322,
+                        0.07999999821186066
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveAD",
+                    "values": [
+                        5.0,
+                        12.0,
+                        19.0,
+                        26.0,
+                        33.0,
+                        40.0,
+                        47.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveMS",
+                    "values": [
+                        0.05000000074505806,
+                        0.07999999821186066,
+                        0.10999999940395355,
+                        0.14000000059604645,
+                        0.17000000178813934,
+                        0.20000000298023224,
+                        0.23000000417232513
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AllyActiveAD",
+                    "values": [
+                        2.5,
+                        6.0,
+                        9.5,
+                        13.0,
+                        16.5,
+                        20.0,
+                        23.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AllyActiveMS",
+                    "values": [
+                        0.02500000037252903,
+                        0.03999999910593033,
+                        0.054999999701976776,
+                        0.07000000029802322,
+                        0.08500000089406967,
+                        0.10000000149011612,
+                        0.11500000208616257
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mCoefficient": 0.4000000059604645,
+            "mAnimationName": "Spell3_Jade",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_RaiseMorale.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 0.7000000476837158,
+            "cooldownTime": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "Cooldown": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileWindingUpTargetingChampion": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "mDoNotNeedToFaceTarget": true,
+            "castRange": [
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0
+                ],
+                "{0a3e0478}": 1200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                1300.0,
+                1300.0,
+                1300.0,
+                1300.0,
+                1300.0,
+                1300.0,
+                1300.0
+            ],
+            "castFrame": 16.0,
+            "mFloatVarsDecimals": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "mana": [
+                50.0,
+                55.0,
+                60.0,
+                65.0,
+                70.0,
+                70.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    55.0,
+                    60.0,
+                    65.0,
+                    70.0,
+                    70.0
+                ],
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Gangplank_GangplankPassiveAttackDoT_OnBuffCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GangplankE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_GangplankE_Jade_Name",
+                        "keySummary": "Spell_GangplankE_Jade_Summary",
+                        "keyTooltip": "Spell_GangplankE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "ActiveAD",
+                                    "typeIndex": 3,
+                                    "nameOverride": "Spell_GangplankE_Jade_LevelUpActiveAD_Name",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ActiveMS",
+                                    "typeIndex": 1,
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_GangplankE_Jade_LevelUpActiveMS_Name",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PassiveAD",
+                                    "nameOverride": "Spell_GangplankE_Jade_LevelUpPassiveAD_Name",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PassiveMS",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_GangplankE_Jade_LevelUpPassiveMS_Name",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseCost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{ec17e271}": [
+                {
+                    "EffectTag": 2,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "ActiveMS",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "ActiveMS",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{ff7d1052}": {
+        "ObjectName": "Jade_GangplankE_Buff",
+        "mScriptName": "Jade_GangplankE_Buff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_RaiseMorale.dds"
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "20": "Play_sfx_Gangplank_GangplankPassiveAttack_OnBuffCast"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_GangplankE_Buff",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_GangplankE_Jade_Name",
+                    "keyTooltip": "Buff_GangplankE_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankQAbility": {
+        "mRootSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankQAbility/Jade_GangplankQ",
+        "mChildSpells": [
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankQAbility/Jade_GangplankQ"
+        ],
+        "mName": "Jade_GangplankQAbility",
+        "__type": "AbilityObject"
+    },
+    "{4b70c950}": {
+        "ObjectName": "Jade_Gangplank_IsBank",
+        "mScriptName": "Jade_Gangplank_IsBank",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Gangplank/HUD/Icons2D/Gangplank_Coin.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_Gangplank_IsBank",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Gangplank_IsBank_Jade_Name",
+                    "keyTooltip": "Buff_Gangplank_IsBank_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankCritAttack": {
+        "ObjectName": "Jade_GangplankCritAttack",
+        "mScriptName": "Jade_GangplankCritAttack",
+        "mSpell": {
+            "mAnimationName": "Crit",
+            "bHaveHitEffect": true,
+            "castFrame": 8.710000038146973,
+            "mHitEffectKey": "Jade_Gangplank_BA_Tar_Crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Gangplank_GangplankCritAttack_OnCast",
+                "13": "Play_sfx_Gangplank_GangplankCritAttack_OnHit"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{b97caa03}": {
+        "ObjectName": "Jade_Gangplank_IsPirate",
+        "mScriptName": "Jade_Gangplank_IsPirate",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/MissFortune/HUD/Icons2D/IsPirate.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_Gangplank_IsPirate",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Gangplank_IsPirate_Jade_Name",
+                    "keyTooltip": "Buff_Gangplank_IsPirate_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Gangplank/Spells/Jade_GangplankQAbility/Jade_GangplankQ": {
+        "ObjectName": "Jade_GangplankQ",
+        "mScriptName": "Jade_GangplankQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        10.0,
+                        10.0,
+                        40.0,
+                        70.0,
+                        100.0,
+                        130.0,
+                        145.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        3.0,
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0,
+                        500.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        4.0,
+                        4.0,
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "CherryRatio",
+                    "values": [
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322,
+                        0.07000000029802322
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "GameModeInteger",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SpellDamage",
+                    "values": [
+                        -5.0,
+                        20.0,
+                        45.0,
+                        70.0,
+                        95.0,
+                        120.0,
+                        145.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "GoldGain",
+                    "values": [
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "GameModeInteger",
+                            "values": [
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0,
+                                2.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
+            "mSpellCalculations": {
+                "ShotDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "SpellDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mDataValue": "ADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 1.0,
+            "mAnimationName": "Spell1_BASE",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_Parley.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0,
+                5.0
+            ],
+            "Cooldown": {
+                "values": [
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0,
+                    5.0
+                ],
+                "{0a3e0478}": 5.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "alwaysSnapFacing": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0,
+                625.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0,
+                    625.0
+                ],
+                "{0a3e0478}": 625.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0,
+                710.0
+            ],
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 14.5,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "Jade_Gangplank_Q_Mis",
+            "mHitEffectKey": "Jade_Gangplank_Q_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                50.0,
+                55.0,
+                60.0,
+                65.0,
+                70.0,
+                75.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    55.0,
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_Gangplank_GangplankQProceed_OnMissileLaunch",
+                "13": "Play_sfx_Gangplank_GangplankQProceed_OnHit"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_GangplankQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_GangplankQ_Jade_Name",
+                        "keySummary": "Spell_GangplankQ_Jade_Summary",
+                        "keyTooltip": "Spell_GangplankQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "SpellDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "GoldGain",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_GangplankQ_LevelUp_ExtraGold_Jade",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "ShotDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 32,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Gangplank/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Gangplank",
+        "baseHPModifiable": {
+            "baseValue": 576.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 81.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.15000000596046448,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 105.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 255.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 40.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.4399999380111694,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.14000000059604645,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 57.0,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 23.799999237060547,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.299999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "{01262a25}": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 345.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6510000228881836,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6510000228881836,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.75,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackTotalTime": 1.5199999809265137,
+            "mAttackCastTime": 0.25,
+            "mAttackProbability": 1.0,
+            "mAttackName": "Jade_GangplankBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "critAttacks": [
+            {
+                "mAttackName": "Jade_GangplankCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_GangplankQAbility/Jade_GangplankQ",
+            "Jade_GangplankWAbility/Jade_GangplankW",
+            "Jade_GangplankEAbility/Jade_GangplankE",
+            "Jade_GangplankRAbility/Jade_GangplankR"
+        ],
+        "spells": [
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankQAbility/Jade_GangplankQ",
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankWAbility/Jade_GangplankW",
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankEAbility/Jade_GangplankE",
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankRAbility/Jade_GangplankR"
+        ],
+        "extraSpells": [
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "Jade_GangplankEBarrelFuseMissile",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{00a591bc}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankEAbility",
+            "{69ee55f0}",
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankQAbility",
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankRAbility",
+            "Characters/Jade_Gangplank/Spells/Jade_GangplankWAbility"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Gangplank",
+        "passiveLuaName": "Jade_GangplankPassive",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Gangplank",
+        "passiveSpell": "Jade_GangplankPassive",
+        "passive1IconName": "ASSETS/Characters/Jade_Gangplank/HUD/Icons2D/Jade_Gangplank_Passive.dds",
+        "name": "game_character_displayname_Jade_Gangplank",
+        "weaponMaterials": [
+            "PirateBasicAttack"
+        ],
+        "selectionHeight": 145.0,
+        "selectionRadius": 120.0,
+        "pathfindingCollisionRadius": 35.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1055,
+            "skillOrder": 1,
+            "__type": "ToolEducationData"
+        },
+        "characterToolData": {
+            "mapAIPresence": {
+                "8": {
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Gangplank",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "fighter",
+            "championId": 60041,
+            "roles": "BRAWLER",
+            "magicRank": 4,
+            "difficultyRank": 9,
+            "description": "game_character_description_Jade_Gangplank",
+            "defenseRank": 6,
+            "ChasingAttackRangePercent": 0.800000011920929,
+            "botEnabled": true,
+            "botEnabledMM": true,
+            "attackRank": 7,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Domination",
+        "mPerkReplacements": {
+            "mReplacements": [
+                {
+                    "mReplaceTarget": "Perks/Styles/Resolve/Aftershock",
+                    "mReplaceWith": "Perks/Styles/Resolve/GraspOfTheUndying",
+                    "__type": "PerkReplacement"
+                },
+                {
+                    "mReplaceTarget": "Perks/Styles/Inspiration/GlacialAugment",
+                    "mReplaceWith": "Perks/Styles/Inspiration/FirstStrike",
+                    "__type": "PerkReplacement"
+                }
+            ],
+            "__type": "PerkReplacementList"
+        },
+        "mCharacterPassiveSpell": "{9139d956}",
+        "{c5c48b41}": 1,
+        "Script": "{b5536f41}",
+        "__type": "CharacterRecord"
+    },
+    "{4aa0f177}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{5cc93afa}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1055",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1054",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3078",
+                            "Items/6632",
+                            "Items/6630"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3071"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6609",
+                            "Items/6333",
+                            "Items/6035"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3026",
+                            "Items/6333",
+                            "Items/3065",
+                            "Items/3110",
+                            "Items/6609",
+                            "Items/3053",
+                            "Items/6035",
+                            "Items/3156"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3177"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3057"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3067"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3078",
+                            "Items/6632",
+                            "Items/6630"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3071"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6609",
+                            "Items/6333",
+                            "Items/6035"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3026",
+                            "Items/6333",
+                            "Items/3065",
+                            "Items/3110",
+                            "Items/6609",
+                            "Items/3053",
+                            "Items/6035",
+                            "Items/3156"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 30,
+                        "mModeNameStringId": "cherry",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/223184"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/223177"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/223047",
+                            "Items/223111",
+                            "Items/223005"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223078",
+                            "Items/226632",
+                            "Items/226630"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223071"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/226609",
+                            "Items/226333",
+                            "Items/226035"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223026",
+                            "Items/226333",
+                            "Items/223065",
+                            "Items/223110",
+                            "Items/226609",
+                            "Items/223053",
+                            "Items/226035",
+                            "Items/223156"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "{d99ae229}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{5d458de4}": {
+        "mNameTraKey": "Jade_Portrait_Name_Gangplank_LoR_01",
+        "catalogEntry": {
+            "contentId": "a8823f34-884c-4cd5-ae6a-685788662b67",
+            "itemID": 7,
+            "__type": "CatalogEntry"
+        },
+        "mDescriptionTraKey": "Jade_Portrait_Description_Gangeplank_LoR_01",
+        "{55bb9b57}": 7,
+        "{ff3c9ff8}": "{e15eb251}",
+        "image": {
+            "image": "ASSETS/Characters/Jade_Gangplank/Skins/Base/Jade_GangeplankLoadScreen_LoR_01.tex",
+            "__type": "CensoredImage"
+        },
+        "__type": "{3018b0da}"
+    },
+    "{ec98e4bd}": {
+        "mNameTraKey": "Jade_Portrait_Name_Gangplank_Feeney",
+        "catalogEntry": {
+            "contentId": "36a0d0d4-f51a-4fcc-b411-72db785e44a8",
+            "itemID": 8,
+            "__type": "CatalogEntry"
+        },
+        "mDescriptionTraKey": "Jade_Portrait_Description_Gangplank_Feeney",
+        "{55bb9b57}": 8,
+        "{ff3c9ff8}": "{e79c1e24}",
+        "image": {
+            "image": "ASSETS/Characters/Jade_Gangplank/Skins/Base/Jade_GangplankLoadScreen_Feeney.tex",
+            "__type": "CensoredImage"
+        },
+        "__type": "{3018b0da}"
+    },
+    "{b5536f41}": {
+        "ScriptName": "charscriptJade_Gangplank",
+        "path": "{b5536f41}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "be7a2ab1-ee2a-4a9d-9302-751660a29c00",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 4,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "6586af72-2176-4387-aff2-e8364ae7d3d2",
+                        "Src": {
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "ParleyGold",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    null,
+                    {
+                        "{d851ffa3}": "04da1047-4606-4ef3-a3bd-125dcabdd6e9",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "InstanceVars"
+                            },
+                            "Var": "hasbanked",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{2b9c7047}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "04906f98-616e-4d7f-80dc-bdfb870379d0",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 4,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "blocks": [
+                    null,
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "82e0930f-806e-4d11-89d8-b3fea8711613",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "Level",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 2,
+                            "Value2": {
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "IsDisabled": true,
+                                    "{d851ffa3}": "99f46053-7839-4e1f-a94b-657c81db5c0e",
+                                    "Condition": null,
+                                    "Invert": true,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "IsDisabled": true,
+                                                "{d851ffa3}": "e31910fe-4dfd-4697-a940-10263b2eabcc",
+                                                "Var": {
+                                                    "Var": "Attacker",
+                                                    "__type": "{622705af}"
+                                                },
+                                                "__type": "{851b8dc5}"
+                                            },
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    null,
+                    {
+                        "{d851ffa3}": "16df19b1-a547-49b7-be67-ed393b1785ed",
+                        "Condition": {
+                            "Value1": {
+                                "Table": {
+                                    "__type": "InstanceVars"
+                                },
+                                "Var": "{38129d70}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "Characters/Jade_Gangplank/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "__linked": []
+}

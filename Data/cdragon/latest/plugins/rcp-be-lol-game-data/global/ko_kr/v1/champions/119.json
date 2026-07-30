@@ -2570,7 +2570,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "드레이븐의 이동 속도와 공격 속도가 증가합니다. 이동 속도 증가 효과는 시간이 지날수록 급격하게 감소합니다. 드레이븐이 회전 도끼를 회수하면 광기의 피 재사용 대기시간이 초기화됩니다.",
-            "dynamicDescription": "드레이븐이 유체화 상태가 되며 <speed>이동 속도가 @Effect2Amount@%</speed> 증가하고 @Effect3Amount@초에 걸쳐 원래대로 돌아옵니다. @Effect5Amount@초 동안 <attackSpeed>공격 속도가 @Effect4Amount@%</attackSpeed> 증가합니다.<br><br>드레이븐이 <keywordMajor>회전 도끼</keywordMajor>를 잡으면 이 스킬의 재사용 대기시간이 초기화됩니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "드레이븐이 유체화 상태가 되며 <speed>이동 속도가 @Temp_MSMod@%</speed> 증가했다가 @Temp_MSDuration@초에 걸쳐 원래대로 돌아옵니다. @Temp_ASDuration@초 동안 <attackSpeed>공격 속도가 @Temp_AS@%</attackSpeed> 증가합니다.<br><br>드레이븐이 <keywordMajor>회전 도끼</keywordMajor>를 잡으면 이 스킬의 재사용 대기시간이 초기화됩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -2720,7 +2720,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "드레이븐이 도끼를 던져 물리 피해를 입히며, 도끼에 맞은 적들을 옆으로 밀어냅니다. 타격을 받은 대상들은 이동 속도가 감소합니다.",
-            "dynamicDescription": "드레이븐이 수평으로 도끼를 던져 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 <status>뒤로 밀어내며</status> @Effect3Amount@초 동안 @Effect2Amount@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "드레이븐이 수평으로 도끼를 던져 <physicalDamage>@TotalDamage@의 물리 피해</physicalDamage>를 입히고 <status>뒤로 밀어내며</status> @SlowDuration@초 동안 @SlowAmount@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,

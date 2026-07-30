@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Karthus sömürü enerjisinden bir perde oluşturur. Perdenin içinden geçen rakip birimlerin Hareket Hızı ve Büyü Direnci belirli bir süreliğine azalır.",
-            "dynamicDescription": "Karthus @Effect4Amount@ saniyeliğine varlığını koruyan bir duvar oluşturur. Duvarın içinden geçen rakipler @Effect5Amount@ saniyeliğine <scaleMR>%@Effect1Amount@ Büyü Direnci</scaleMR> kaybeder ve süre boyunca azalarak kaybolacak şekilde %@Effect3Amount@ <status>yavaşlar</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus @WallDuration@ saniyeliğine varlığını koruyan bir duvar oluşturur. Duvarın içinden geçen rakipler @DebuffDuration@ saniyeliğine <scaleMR>%@MagicResistShred@ Büyü Direnci</scaleMR> kaybeder ve süre boyunca azalarak kaybolacak şekilde %@SlowPercent@ <status>yavaşlar</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "Saniye başına @Cost@ Mana",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Karthus pasif olarak kurbanlarından enerji çalarak, öldürdüğü her kurbandan Mana kazanır. Alternatif olarak, Karthus kendini avlarının ruhlarıyla kuşatarak kendi Manasını hızla tüketirken, yakındaki rakiplere de hasar verebilir.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Karthus bir birimi katlettiğinde <scaleMana>@Effect2Amount@ Mana</scaleMana> yeniler.<br><br><toggle>Aç/Kapa:</toggle> Karthus ölümcül bir hare oluşturarak yakınındaki rakiplere her saniye <magicDamage>@TotalDPS@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Karthus bir birimi katlettiğinde <scaleMana>@ManaRestoreOnKill@ Mana</scaleMana> yeniler.<br><br><toggle>Aç/Kapa:</toggle> Karthus ölümcül bir hare oluşturarak yakınındaki rakiplere her saniye <magicDamage>@TotalDPS@ Büyü Hasarı</magicDamage> verir.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -1,0 +1,2968 @@
+{
+    "Characters/Jade_Jax/Spells/Jade_JaxQAbility": {
+        "mRootSpell": "Characters/Jade_Jax/Spells/Jade_JaxQAbility/Jade_JaxQ",
+        "mChildSpells": [
+            "Characters/Jade_Jax/Spells/Jade_JaxQAbility/Jade_JaxQ"
+        ],
+        "mName": "Jade_JaxQAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxBasicAttack2": {
+        "ObjectName": "Jade_JaxBasicAttack2",
+        "mScriptName": "Jade_JaxBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_JaxBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.4085499942302704,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.5,
+            "missileSpeed": 400.0,
+            "mHitEffectKey": "Jade_Jax_BA_tar_2",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Jax_JaxBasicAttack_OnCast",
+                "13": "Play_sfx_Jax_JaxBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxRAbility": {
+        "mRootSpell": "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxR",
+        "mChildSpells": [
+            "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxR",
+            "{1809327f}",
+            "{9438137e}"
+        ],
+        "mName": "Jade_JaxRAbility",
+        "__type": "AbilityObject"
+    },
+    "{1809327f}": {
+        "ObjectName": "Jade_JaxRPassiveAttack",
+        "mScriptName": "Jade_JaxRPassiveAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7423,
+            "mAlternateName": "Jade_JaxRelentlessAssault",
+            "mAnimationName": "Spell4Attack",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Jax_CoupDeGrace.dds"
+            ],
+            "{11704a2b}": 0.3109999895095825,
+            "{f26881a0}": 2.7330000400543213,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileWindingUpTargetingChampion": true,
+            "castRange": [
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0
+                ],
+                "{0a3e0478}": 900.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.75,
+            "missileSpeed": 20.0,
+            "mHitEffectKey": "Jade_Jax_R_tar",
+            "mAfterEffectKey": "Jade_Jax_R_Hit_Both",
+            "SpellEventToAudioEventSuffix": {
+                "13": "Play_sfx_Jax_JaxRPassiveAttack_OnHit",
+                "12": "Play_sfx_Jax_JaxRPassiveAttack_OnCast"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_GrandmasterAtArms",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxR": {
+        "ObjectName": "Jade_JaxR",
+        "mScriptName": "Jade_JaxR",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_PassiveSlot"
+            ],
+            "DataValues": [
+                {
+                    "name": "PassiveBaseDamage",
+                    "values": [
+                        110.0,
+                        140.0,
+                        170.0,
+                        200.0,
+                        230.0,
+                        260.0,
+                        290.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveAPRatio",
+                    "values": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveFallOffTime",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackSpeedPerStack",
+                    "values": [
+                        0.019999999552965164,
+                        0.05999999865889549,
+                        0.10000000149011612,
+                        0.14000000059604645,
+                        0.18000000715255737,
+                        0.2199999988079071,
+                        0.25999999046325684
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "OnHitDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "PassiveBaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "PassiveAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Jax_CoupDeGrace.dds"
+            ],
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "missileSpeed": 1500.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "19": "Play_sfx_Jax_JaxR_OnBuffDeactivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JaxR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JaxR_Jade_Name",
+                        "keySummary": "Spell_JaxR_Jade_Summary",
+                        "keyTooltip": "Spell_JaxR_Jade_Tooltip",
+                        "keyCost": "Spell_Passive",
+                        "keyCooldown": ""
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "AttackSpeedPerStack",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_AttackSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PassiveBaseDamage",
+                                    "nameOverride": "Spell_ListType_PassiveDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8192,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{9438137e}": {
+        "ObjectName": "Jade_JaxRAS",
+        "mScriptName": "Jade_JaxRAS",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStacks",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FallOffRate",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "AttackSpeedPerStack": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 0.03999999910593033,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 4,
+                                    "mAdditionalBonusAtThisLevel": 0.019999999552965164,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 7,
+                                    "mAdditionalBonusAtThisLevel": 0.019999999552965164,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 10,
+                                    "mAdditionalBonusAtThisLevel": 0.019999999552965164,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 13,
+                                    "mAdditionalBonusAtThisLevel": 0.019999999552965164,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 16,
+                                    "mAdditionalBonusAtThisLevel": 0.019999999552965164,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 19,
+                                    "mAdditionalBonusAtThisLevel": 0.019999999552965164,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "MaxBonusAttackSpeed": {
+                    "mMultiplier": {
+                        "mDataValue": "MaxStacks",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "tooltipOnly": true,
+                    "mModifiedGameCalculation": "AttackSpeedPerStack",
+                    "__type": "GameCalculationModified"
+                },
+                "{de239d19}": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 0.00279999990016222,
+                            "mInitialBonusPerLevel": 0.0006000000284984708,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 14,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "mPrecision": 2,
+                    "__type": "GameCalculation"
+                },
+                "{381232c0}": {
+                    "mMultiplier": {
+                        "mBuffName": "{f7a38240}",
+                        "mCoefficient": 1.0,
+                        "__type": "BuffCounterByCoefficientCalculationPart"
+                    },
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mModifiedGameCalculation": "{de239d19}",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Jax_CoupDeGrace.dds"
+            ],
+            "useAnimatorFramerate": true,
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JaxRAS",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JaxPassive_Jade_Name",
+                        "keySummary": "Spell_JaxPassive_Jade_Summary",
+                        "keyTooltip": "Spell_JaxPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_JaxRAS",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_JaxR_Jade_Name",
+                    "keyTooltip": "Buff_Jade_JaxRAbility_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{7a7537b6}": {
+        "ObjectName": "Jade_JaxFishingPassive",
+        "mScriptName": "Jade_JaxFishingPassive",
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxEAbility": {
+        "mRootSpell": "Characters/Jade_Jax/Spells/Jade_JaxEAbility/Jade_JaxE",
+        "mChildSpells": [
+            "Characters/Jade_Jax/Spells/Jade_JaxEAbility/Jade_JaxE"
+        ],
+        "mName": "Jade_JaxEAbility",
+        "AbilityTraits": 2080,
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxEAbility/Jade_JaxE": {
+        "ObjectName": "Jade_JaxE",
+        "mScriptName": "Jade_JaxE",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_JaxCounterStrike",
+            "mSpellTags": [
+                "Trait_ImmobilizingCCSpell",
+                "Trait_SignatureSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PercentIncreasedPerDodge",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDodgesForDamageIncrease",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DodgeDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AoEDamageReduction",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageRadius",
+                    "values": [
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "ADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "MaxDamage": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "tooltipOnly": true,
+                    "mModifiedGameCalculation": "TotalDamage",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mAnimationName": "Idle1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Jax_Disarm.dds"
+            ],
+            "{f26881a0}": 1.399999976158142,
+            "cooldownTime": [
+                18.0,
+                18.0,
+                16.0,
+                14.0,
+                12.0,
+                10.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    18.0,
+                    18.0,
+                    16.0,
+                    14.0,
+                    12.0,
+                    10.0,
+                    8.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "castRadius": [
+                375.0,
+                375.0,
+                375.0,
+                375.0,
+                375.0,
+                375.0,
+                375.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 3.0399999618530273,
+            "missileSpeed": 1450.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                90.0,
+                95.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0,
+                    90.0,
+                    95.0
+                ],
+                "{0a3e0478}": 70.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Jax_JaxE_OnBuffActivate",
+                "19": "Play_sfx_Jax_JaxE_OnBuffDeactivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JaxE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JaxE_Jade_Name",
+                        "keySummary": "Spell_JaxE_Jade_Summary",
+                        "keyTooltip": "Spell_JaxE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                350.0,
+                                350.0,
+                                350.0,
+                                350.0,
+                                350.0,
+                                350.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Spell_JaxE_Jade_Name",
+            "mTooltipData": {
+                "mObjectName": "Jade_JaxE",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_JaxE_Jade_Name",
+                    "keyTooltip": "Buff_JaxE_Jade_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxWAbility": {
+        "mRootSpell": "Characters/Jade_Jax/Spells/Jade_JaxWAbility/Jade_JaxW",
+        "mChildSpells": [
+            "Characters/Jade_Jax/Spells/Jade_JaxWAbility/Jade_JaxW",
+            "{92738cf0}"
+        ],
+        "mName": "Jade_JaxWAbility",
+        "__type": "AbilityObject"
+    },
+    "{92738cf0}": {
+        "ObjectName": "Jade_JaxWAttack",
+        "mScriptName": "Jade_JaxWAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 23210,
+            "mSpellTags": [
+                "PositiveEffect_EmpowerAttack"
+            ],
+            "mAnimationName": "Spell2Attack",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Jax/HUD/Icons2D/Jade_JaxW.dds"
+            ],
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "mCantCancelWhileWindingUpTargetingChampion": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.5,
+            "missileSpeed": 0.0,
+            "bHaveHitBone": true,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Jax_JaxWAttack_OnCast"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxWAbility/Jade_JaxW": {
+        "ObjectName": "Jade_JaxW",
+        "mScriptName": "Jade_JaxW",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "PositiveEffect_EmpowerAttack",
+                "Trait_AttackReset"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        20.0,
+                        40.0,
+                        60.0,
+                        80.0,
+                        100.0,
+                        120.0,
+                        140.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADRatio",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AoERadius",
+                    "values": [
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "ADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "FinalDamage": {
+                    "mConditionalGameCalculation": "TotalDamage",
+                    "mConditionalCalculationRequirements": {
+                        "mBuffName": "{da01ce38}",
+                        "__type": "HasBuffCastRequirement"
+                    },
+                    "__type": "GameCalculationConditional"
+                }
+            },
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Jax_Empower.dds"
+            ],
+            "{11704a2b}": 0.5217499732971191,
+            "{f26881a0}": 1.533400058746338,
+            "cooldownTime": [
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                3.0,
+                3.0
+            ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    3.0,
+                    3.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "mDoesNotConsumeCooldown": true,
+            "castRange": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0
+                ],
+                "{0a3e0478}": 300.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.569999694824219,
+            "missileSpeed": 0.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                35.0,
+                35.0,
+                35.0,
+                35.0,
+                35.0,
+                35.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    35.0,
+                    35.0,
+                    35.0,
+                    35.0,
+                    35.0,
+                    35.0
+                ],
+                "{0a3e0478}": 35.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Jax_JaxW_OnBuffActivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JaxW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JaxW_Jade_Name",
+                        "keySummary": "Spell_JaxW_Jade_Summary",
+                        "keyTooltip": "Spell_JaxW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_JaxW",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_JaxW_Jade_Name",
+                    "keyTooltip": "Buff_Jade_JaxWAbility_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "mBuffAttributeFlag": 32,
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 512,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxBasicAttackTower2": {
+        "ObjectName": "Jade_JaxBasicAttackTower2",
+        "mScriptName": "Jade_JaxBasicAttackTower2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_JaxBasicAttack2",
+            "mAnimationName": "AttackTower2",
+            "{11704a2b}": 0.4085499942302704,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "alwaysSnapFacing": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.5,
+            "missileSpeed": 400.0,
+            "mHitEffectKey": "Jade_Jax_BA_tar_Turret",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Jax_JaxBasicAttackTower_OnCast",
+                "13": "Play_sfx_Jax_JaxBasicAttackTower_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{9f06c3b4}": {
+        "mRootSpell": "{f8c0b6bc}",
+        "mChildSpells": [
+            "{f8c0b6bc}"
+        ],
+        "mName": "Jade_JaxPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxBasicAttack": {
+        "ObjectName": "Jade_JaxBasicAttack",
+        "mScriptName": "Jade_JaxBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_JaxBasicAttack",
+            "{11704a2b}": 0.4085499942302704,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.5,
+            "missileSpeed": 400.0,
+            "mHitEffectKey": "Jade_Jax_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Jax_JaxBasicAttack_OnCast",
+                "13": "Play_sfx_Jax_JaxBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{bccf5cfc}": {
+        "ObjectName": "Jade_JaxSkin14Manager",
+        "mScriptName": "Jade_JaxSkin14Manager",
+        "__type": "SpellObject"
+    },
+    "{c3c2c656}": {
+        "ObjectName": "Jade_JaxFishingPassiveCounter",
+        "mScriptName": "Jade_JaxFishingPassiveCounter",
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_JaxFishingPassiveCounter",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_JaxFishingPassiveCounter_Name",
+                    "keyTooltip": "Buff_JaxFishingPassiveCounter_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxCritAttack": {
+        "ObjectName": "Jade_JaxCritAttack",
+        "mScriptName": "Jade_JaxCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.4085499942302704,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 11.640000343322754,
+            "missileSpeed": 400.0,
+            "mHitEffectKey": "Jade_Jax_BA_crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Jax_JaxCritAttack_OnCast",
+                "13": "Play_sfx_Jax_JaxCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxBasicAttackTower": {
+        "ObjectName": "Jade_JaxBasicAttackTower",
+        "mScriptName": "Jade_JaxBasicAttackTower",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_JaxBasicAttack2",
+            "mAnimationName": "AttackTower",
+            "{11704a2b}": 0.4085499942302704,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "alwaysSnapFacing": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.5,
+            "missileSpeed": 400.0,
+            "mHitEffectKey": "Jade_Jax_BA_tar_Turret",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Jax_JaxBasicAttackTower_OnCast",
+                "13": "Play_sfx_Jax_JaxBasicAttackTower_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Jax/Spells/Jade_JaxQAbility/Jade_JaxQ": {
+        "ObjectName": "Jade_JaxQ",
+        "mScriptName": "Jade_JaxQ",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 23615,
+            "mAffectsStatusFlags": 16,
+            "mExcludedUnitTags": {
+                "mObjectTagList": [
+                    "structure",
+                    "{6f573685}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mCastRequirementsTarget": [
+                {
+                    "mInvertResult": true,
+                    "mUnit": "Characters/SRU_FaeLightWardPad/CharacterRecords/Root",
+                    "__type": "IsSpecifiedUnitCastRequirement"
+                }
+            ],
+            "mAlternateName": "Jade_JaxLeapStrike",
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADRatio",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mStatFormula": 2,
+                            "mDataValue": "ADRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Jax_RelentlessAssault.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                17.0,
+                17.0,
+                14.0,
+                11.0,
+                8.0,
+                5.0,
+                5.0
+            ],
+            "Cooldown": {
+                "values": [
+                    17.0,
+                    17.0,
+                    14.0,
+                    11.0,
+                    8.0,
+                    5.0,
+                    5.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "alwaysSnapFacing": true,
+            "castRange": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 20.850000381469727,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "globalhit_yellow_tar",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                65.0,
+                65.0,
+                65.0,
+                65.0,
+                65.0,
+                65.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    65.0,
+                    65.0,
+                    65.0,
+                    65.0,
+                    65.0,
+                    65.0
+                ],
+                "{0a3e0478}": 65.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Jax_JaxQ_cast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JaxQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JaxQ_Jade_Name",
+                        "keySummary": "Spell_JaxQ_Jade_Summary",
+                        "keyTooltip": "Spell_JaxQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 512,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 256,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{e6f29cce}": {
+        "ObjectName": "Jade_JaxAttackSequencer",
+        "mScriptName": "Jade_JaxAttackSequencer",
+        "__type": "SpellObject"
+    },
+    "{f8c0b6bc}": {
+        "ObjectName": "Jade_JaxPassive",
+        "mScriptName": "Jade_JaxPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "HealthPerAD",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthPerAP",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Jax_MasterOfArms.dds",
+                "ASSETS/Characters/Jade_Jax/HUD/Icons2D/Jade_Jax_Fishing.dds",
+                "ASSETS/Characters/Jade_Jax/HUD/Icons2D/Fish_1.dds",
+                "ASSETS/Characters/Jade_Jax/HUD/Icons2D/Fish_2.dds"
+            ],
+            "useAnimatorFramerate": true,
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JaxPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JaxPassive_Jade_Name",
+                        "keySummary": "Spell_JaxPassive_Jade_Summary",
+                        "keyTooltip": "Spell_JaxPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{189f19b5}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{4a52b5c8}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1055",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1054",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3111",
+                            "Items/3047"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3078",
+                            "Items/3153"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6610",
+                            "Items/3053",
+                            "Items/6333"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3026",
+                            "Items/6333",
+                            "Items/3053",
+                            "Items/3156",
+                            "Items/3091",
+                            "Items/6609",
+                            "Items/3161"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/2051"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3177"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3184"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3078",
+                            "Items/6632",
+                            "Items/6631"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3111",
+                            "Items/3047"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3153",
+                            "Items/3074",
+                            "Items/6609"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6333",
+                            "Items/3053",
+                            "Items/3091"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3026",
+                            "Items/6035",
+                            "Items/6333",
+                            "Items/3053",
+                            "Items/3156",
+                            "Items/3153",
+                            "Items/3742",
+                            "Items/3091",
+                            "Items/6609"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 30,
+                        "mModeNameStringId": "cherry",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/223177"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/222051"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/223047"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/223047",
+                            "Items/223111",
+                            "Items/223005",
+                            "Items/223177",
+                            "Items/222051"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223078",
+                            "Items/223071",
+                            "Items/223053",
+                            "Items/220001"
+                        ],
+                        "MaxCompletedItems": 1,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223078",
+                            "Items/223071",
+                            "Items/220001",
+                            "Items/226692",
+                            "Items/223161"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/226609",
+                            "Items/226333",
+                            "Items/223156",
+                            "Items/220001",
+                            "Items/223053"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223748",
+                            "Items/223026",
+                            "Items/223742",
+                            "Items/223039",
+                            "Items/223073"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/226610",
+                            "Items/223156",
+                            "Items/226631",
+                            "Items/223181",
+                            "Items/223742",
+                            "Items/226609",
+                            "Items/4015",
+                            "Items/226333",
+                            "Items/223039",
+                            "Items/223161"
+                        ],
+                        "MaxCompletedItems": 5,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/2142",
+                            "Items/220000",
+                            "Items/220007"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 453,
+                        "mModeNameStringId": "{20426d6f}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/771054"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/773146",
+                            "Items/773110",
+                            "Items/773153",
+                            "Items/773078",
+                            "Items/773072",
+                            "Items/773091",
+                            "Items/773143",
+                            "Items/773123",
+                            "Items/773047",
+                            "Items/771053",
+                            "Items/773144",
+                            "Items/773145",
+                            "Items/773086",
+                            "Items/773057",
+                            "Items/773044",
+                            "Items/771036",
+                            "Items/771037",
+                            "Items/771038",
+                            "Items/771042",
+                            "Items/771043",
+                            "Items/771051",
+                            "Items/771018",
+                            "Items/771001"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 453,
+                        "mModeNameStringId": "{20426d6f}",
+                        "mPosition": "jungle",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/771039"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/773154",
+                            "Items/773110",
+                            "Items/773078",
+                            "Items/773146",
+                            "Items/773153",
+                            "Items/773072",
+                            "Items/773091",
+                            "Items/773143",
+                            "Items/773047",
+                            "Items/773106",
+                            "Items/771053",
+                            "Items/773144",
+                            "Items/773145",
+                            "Items/773086",
+                            "Items/773057",
+                            "Items/773044",
+                            "Items/771036",
+                            "Items/771037",
+                            "Items/771038",
+                            "Items/771042",
+                            "Items/771043",
+                            "Items/771051",
+                            "Items/771018",
+                            "Items/771001"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "{c282365e}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{d97265ff}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    2,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    2,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    1,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    1,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "jungle",
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{40183dd5}": {
+        "ScriptName": "charscriptJade_Jax",
+        "path": "{40183dd5}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{b415ce8f}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "bb4192ac-8449-4868-aab4-e202039fd1a0",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{70954771}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 3,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "1c539445-78b8-4d9d-bc45-d5dc3c2b0f61",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "Level",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "value": 1,
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "Characters/Jade_Jax/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/Jade_Jax/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Jax",
+        "baseHPModifiable": {
+            "baseValue": 506.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 83.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.600000023841858,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10999999940395355,
+            "__type": "ModifiableFloat"
+        },
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 265.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 35.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.4199999570846558,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.14000000059604645,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 59.67499923706055,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.375,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 25.5,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.200000047683716,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "{01262a25}": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 350.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6380000114440918,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6380000114440918,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 3.4000000953674316,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 400.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.09189043939113617,
+            "mAttackProbability": 1.0,
+            "mAttackName": "Jade_JaxBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.0,
+                "mAttackName": "Jade_JaxBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackProbability": 0.0,
+                "mAttackName": "Jade_JaxBasicAttackTower",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackName": "Jade_JaxBasicAttackTower2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.09189043939113617,
+                "mAttackName": "Jade_JaxCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_JaxQAbility/Jade_JaxQ",
+            "Jade_JaxWAbility/Jade_JaxW",
+            "Jade_JaxEAbility/Jade_JaxE",
+            "Jade_JaxRAbility/Jade_JaxR"
+        ],
+        "spells": [
+            "Characters/Jade_Jax/Spells/Jade_JaxQAbility/Jade_JaxQ",
+            "Characters/Jade_Jax/Spells/Jade_JaxWAbility/Jade_JaxW",
+            "Characters/Jade_Jax/Spells/Jade_JaxEAbility/Jade_JaxE",
+            "Characters/Jade_Jax/Spells/Jade_JaxRAbility/Jade_JaxR"
+        ],
+        "extraSpells": [
+            "",
+            "",
+            "Jade_JaxRPassiveAttack",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{1809327f}",
+            "{92738cf0}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "Characters/Jade_Jax/Spells/Jade_JaxQAbility",
+            "Characters/Jade_Jax/Spells/Jade_JaxWAbility",
+            "Characters/Jade_Jax/Spells/Jade_JaxEAbility",
+            "{9f06c3b4}",
+            "Characters/Jade_Jax/Spells/Jade_JaxRAbility"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Jax",
+        "passiveLuaName": "Jade_JaxPassive_Jade",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Jax",
+        "passive1IconName": "ASSETS/Characters/Jade_Jax/HUD/Icons2D/Armsmaster_MasterOfArms.dds",
+        "name": "game_character_displayname_Jade_Jax",
+        "weaponMaterials": [
+            "ArmsmasterBasicAttack"
+        ],
+        "mUseCCAnimations": true,
+        "selectionHeight": 130.0,
+        "selectionRadius": 120.0,
+        "pathfindingCollisionRadius": 35.0,
+        "{eb74898c}": 0.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1055,
+            "skillOrder": 1,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            0,
+            16,
+            0
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Jade_Jax's greatest talent lies in his ability to grow stronger with every attack. Each successive attack increases his attack speed temporarily, and every 4th blow will devastate his target.",
+                    "displayName": "Relentless Assault",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Jax's greatest talent lies in his ability to grow stronger with every attack. Each successive attack increases his attack speed temporarily, and every 4th blow will devastate his target.",
+                    "displayName": "Relentless Assault",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Jax's greatest talent lies in his ability to grow stronger with every attack. Each successive attack increases his attack speed temporarily, and every 4th blow will devastate his target.",
+                    "displayName": "Relentless Assault",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Jax's greatest talent lies in his ability to grow stronger with every attack. Each successive attack increases his attack speed temporarily, and every 4th blow will devastate his target.",
+                    "displayName": "Relentless Assault",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "+40% Mana Point regeneration.",
+                "+60% Mana Point regeneration.",
+                "+80% Mana Point regeneration."
+            ],
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Jax",
+                    "effect": [
+                        "0.2",
+                        "0.4",
+                        "0.6",
+                        "0.8"
+                    ],
+                    "level": [
+                        3,
+                        7,
+                        11,
+                        15
+                    ],
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "fighter",
+            "championId": 60024,
+            "roles": "BRAWLER",
+            "magicRank": 7,
+            "LevelSpellEffectiveness": 2.0,
+            "difficultyRank": 5,
+            "description": "game_character_description_Jade_Jax",
+            "defenseRank": 5,
+            "classification": "Deadly",
+            "ChasingAttackRangePercent": 0.5,
+            "attackRank": 7,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Precision",
+        "mCharacterPassiveSpell": "{f8c0b6bc}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{f8c0b6bc}",
+                "mComponentBuffs": [
+                    "{9438137e}"
+                ],
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{7a7537b6}",
+                "mComponentBuffs": [
+                    "{c3c2c656}"
+                ],
+                "mAllowOnClones": false,
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{bccf5cfc}",
+                "SkinFilter": {
+                    "skinIds": [
+                        14
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{e6f29cce}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{40183dd5}",
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

@@ -1,8 +1,8 @@
 {
-    "{002be2d5}": {
+    "Characters/Jade_Kennen/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{0113cb5b}": {
+    "Characters/Jade_Kennen/Spells/Jade_KennenCritAttack": {
         "ObjectName": "Jade_KennenCritAttack",
         "objectPath": "{0113cb5b}",
         "mScriptName": "Jade_KennenCritAttack",
@@ -88,8 +88,8 @@
             "mCastType": 1,
             "castFrame": 14.0,
             "missileSpeed": 1700.0,
-            "mMissileEffectKey": "{f5ad0a76}",
-            "mHitEffectKey": "{9fb99702}",
+            "mMissileEffectKey": "Jade_Kennen_BA_Crit_mis",
+            "mHitEffectKey": "Jade_Kennen_BA_Crit_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -109,10 +109,10 @@
         },
         "__type": "SpellObject"
     },
-    "{5250c2d7}": {
-        "mRootSpell": "{7feb1bba}",
+    "Characters/Jade_Kennen/Spells/Jade_KennenRAbility": {
+        "mRootSpell": "Characters/Jade_Kennen/Spells/Jade_KennenRAbility/Jade_KennenR",
         "mChildSpells": [
-            "{7feb1bba}"
+            "Characters/Jade_Kennen/Spells/Jade_KennenRAbility/Jade_KennenR"
         ],
         "mName": "Jade_KennenRAbility",
         "mType": 2,
@@ -131,7 +131,7 @@
         },
         "__type": "SpellObject"
     },
-    "{7feb1bba}": {
+    "Characters/Jade_Kennen/Spells/Jade_KennenRAbility/Jade_KennenR": {
         "ObjectName": "Jade_KennenR",
         "objectPath": "{7feb1bba}",
         "mScriptName": "Jade_KennenR",
@@ -153,26 +153,26 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        5.0,
-                        40.0,
-                        75.0,
-                        110.0,
+                        15.0,
+                        80.0,
                         145.0,
-                        180.0,
-                        215.0
+                        210.0,
+                        275.0,
+                        340.0,
+                        405.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "APRatio",
                     "values": [
-                        0.22499999403953552,
-                        0.22499999403953552,
-                        0.22499999403953552,
-                        0.22499999403953552,
-                        0.22499999403953552,
-                        0.22499999403953552,
-                        0.22499999403953552
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -394,7 +394,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "{dcc7d1f6}",
+                                "mDataValue": "Jade_KennenRDefenses",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -470,7 +470,7 @@
         },
         "__type": "SpellObject"
     },
-    "{2f1a41d3}": {
+    "Characters/Jade_Kennen/Spells/Jade_KennenBasicAttack2": {
         "ObjectName": "Jade_KennenBasicAttack2",
         "objectPath": "{2f1a41d3}",
         "mScriptName": "Jade_KennenBasicAttack2",
@@ -557,8 +557,8 @@
             "mCastType": 1,
             "castFrame": 12.0,
             "missileSpeed": 1700.0,
-            "mMissileEffectKey": "{94102145}",
-            "mHitEffectKey": "{b708c019}",
+            "mMissileEffectKey": "Jade_Kennen_BA_mis",
+            "mHitEffectKey": "Jade_Kennen_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -579,10 +579,10 @@
         },
         "__type": "SpellObject"
     },
-    "{c4446ac2}": {
-        "mRootSpell": "{33f12d9a}",
+    "Characters/Jade_Kennen/Spells/Jade_KennenWAbility": {
+        "mRootSpell": "Characters/Jade_Kennen/Spells/Jade_KennenWAbility/Jade_KennenW",
         "mChildSpells": [
-            "{33f12d9a}",
+            "Characters/Jade_Kennen/Spells/Jade_KennenWAbility/Jade_KennenW",
             "{fba331cf}",
             "{e2c9c43f}",
             "{cdeb76dc}",
@@ -591,7 +591,7 @@
         "mName": "Jade_KennenWAbility",
         "__type": "AbilityObject"
     },
-    "{33f12d9a}": {
+    "Characters/Jade_Kennen/Spells/Jade_KennenWAbility/Jade_KennenW": {
         "ObjectName": "Jade_KennenW",
         "objectPath": "{33f12d9a}",
         "mScriptName": "Jade_KennenW",
@@ -720,7 +720,7 @@
                     "mFormulaParts": [
                         {
                             "mStat": 2,
-                            "mDataValue": "{87ff17ac}",
+                            "mDataValue": "PassiveOnHitADRatio",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1076,8 +1076,8 @@
             "mCastType": 1,
             "castFrame": 16.0,
             "missileSpeed": 1700.0,
-            "mMissileEffectKey": "{fbf8e747}",
-            "mHitEffectKey": "{bc66ee7b}",
+            "mMissileEffectKey": "Jade_Kennen_W_BA_mis",
+            "mHitEffectKey": "Jade_Kennen_W_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "root",
             "SpellEventToAudioEventSuffix": {
@@ -1111,10 +1111,10 @@
         },
         "__type": "SpellObject"
     },
-    "{ece9d110}": {
-        "mRootSpell": "{3c63ab52}",
+    "Characters/Jade_Kennen/Spells/Jade_KennenEAbility": {
+        "mRootSpell": "Characters/Jade_Kennen/Spells/Jade_KennenEAbility/Jade_KennenE",
         "mChildSpells": [
-            "{3c63ab52}",
+            "Characters/Jade_Kennen/Spells/Jade_KennenEAbility/Jade_KennenE",
             "{a4adb6a2}",
             "{f1f3e8a0}",
             "{fe8f7e70}"
@@ -1122,7 +1122,7 @@
         "mName": "Jade_KennenEAbility",
         "__type": "AbilityObject"
     },
-    "{3c63ab52}": {
+    "Characters/Jade_Kennen/Spells/Jade_KennenEAbility/Jade_KennenE": {
         "ObjectName": "Jade_KennenE",
         "objectPath": "{3c63ab52}",
         "mScriptName": "Jade_KennenE",
@@ -1359,7 +1359,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.800000011920929,
+                            "mCoefficient": 0.6000000238418579,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -1367,7 +1367,7 @@
                 },
                 "{341aec2a}": {
                     "mMultiplier": {
-                        "mDataValue": "{0b0a66ec}",
+                        "mDataValue": "DamageToMinions",
                         "__type": "NamedDataValueCalculationPart"
                     },
                     "mFormulaParts": [
@@ -2129,8 +2129,8 @@
             "mCastType": 1,
             "castFrame": 14.0,
             "missileSpeed": 1700.0,
-            "mMissileEffectKey": "{94102145}",
-            "mHitEffectKey": "{b708c019}",
+            "mMissileEffectKey": "Jade_Kennen_BA_mis",
+            "mHitEffectKey": "Jade_Kennen_BA_tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2151,15 +2151,15 @@
         },
         "__type": "SpellObject"
     },
-    "{f888cbec}": {
-        "mRootSpell": "{b5665ca2}",
+    "Characters/Jade_Kennen/Spells/Jade_KennenQAbility": {
+        "mRootSpell": "Characters/Jade_Kennen/Spells/Jade_KennenQAbility/Jade_KennenQ",
         "mChildSpells": [
-            "{b5665ca2}"
+            "Characters/Jade_Kennen/Spells/Jade_KennenQAbility/Jade_KennenQ"
         ],
         "mName": "Jade_KennenQAbility",
         "__type": "AbilityObject"
     },
-    "{b5665ca2}": {
+    "Characters/Jade_Kennen/Spells/Jade_KennenQAbility/Jade_KennenQ": {
         "ObjectName": "Jade_KennenQ",
         "objectPath": "{b5665ca2}",
         "mScriptName": "Jade_KennenQ",
@@ -2266,13 +2266,13 @@
                 "__type": "{0a0eddc9}"
             },
             "castRangeDisplayOverride": [
-                950.0,
-                950.0,
-                950.0,
-                950.0,
-                950.0,
-                950.0,
-                950.0
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
             ],
             "castRadius": [
                 299.29998779296875,
@@ -2315,7 +2315,7 @@
             "mCastType": 3,
             "castFrame": 10.229999542236328,
             "missileSpeed": 1700.0,
-            "mMissileEffectKey": "{f2ae8a53}",
+            "mMissileEffectKey": "Jade_Kennen_Q_mis",
             "mLineWidth": 50.0,
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
@@ -2700,7 +2700,7 @@
         ],
         "__type": "RecSpellRankUpInfoList"
     },
-    "{7975b8ad}": {
+    "Characters/Jade_Kennen/CharacterRecords/Root": {
         "mCharacterName": "Jade_Kennen",
         "baseHPModifiable": {
             "baseValue": 482.0,
@@ -2800,10 +2800,10 @@
             "Jade_KennenRAbility/Jade_KennenR"
         ],
         "spells": [
-            "{b5665ca2}",
-            "{33f12d9a}",
-            "{3c63ab52}",
-            "{7feb1bba}"
+            "Characters/Jade_Kennen/Spells/Jade_KennenQAbility/Jade_KennenQ",
+            "Characters/Jade_Kennen/Spells/Jade_KennenWAbility/Jade_KennenW",
+            "Characters/Jade_Kennen/Spells/Jade_KennenEAbility/Jade_KennenE",
+            "Characters/Jade_Kennen/Spells/Jade_KennenRAbility/Jade_KennenR"
         ],
         "extraSpells": [
             "Jade_KennenShurikenHurl1",
@@ -2842,11 +2842,11 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{5250c2d7}",
+            "Characters/Jade_Kennen/Spells/Jade_KennenRAbility",
             "{575dbab2}",
-            "{f888cbec}",
-            "{ece9d110}",
-            "{c4446ac2}"
+            "Characters/Jade_Kennen/Spells/Jade_KennenQAbility",
+            "Characters/Jade_Kennen/Spells/Jade_KennenEAbility",
+            "Characters/Jade_Kennen/Spells/Jade_KennenWAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Kennen",
         "passiveLuaName": "Jade_KennenMarkOfStorm.lua",
@@ -3030,11 +3030,13 @@
             "{eb530788}": {
                 "blocks": [
                     {
+                        "IsDisabled": true,
                         "{d851ffa3}": "968ca423-6319-473b-92f9-9e8aa994e88a",
                         "Sequence": {
                             "blocks": [
                                 null,
                                 {
+                                    "IsDisabled": true,
                                     "{d851ffa3}": "40dd53cc-f122-4f91-8647-e0eae36818c3",
                                     "Src": {
                                         "__type": "BoolGet"
@@ -3050,6 +3052,7 @@
                                 null,
                                 null,
                                 {
+                                    "IsDisabled": true,
                                     "{d851ffa3}": "26e593a1-6050-4288-ac62-41dabfb5ef22",
                                     "Condition": {
                                         "Value1": {
@@ -3066,6 +3069,7 @@
                                     "__type": "{e524b2fc}"
                                 },
                                 {
+                                    "IsDisabled": true,
                                     "{d851ffa3}": "f23fa222-187a-4de3-953a-fed8d25e73e0",
                                     "Condition": {
                                         "Value1": {
@@ -3083,6 +3087,7 @@
                                     "__type": "{e524b2fc}"
                                 },
                                 {
+                                    "IsDisabled": true,
                                     "{d851ffa3}": "74c9caf8-5955-4390-a08a-d2b25776c789",
                                     "Condition": {
                                         "Value1": {

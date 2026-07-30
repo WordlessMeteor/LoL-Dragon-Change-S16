@@ -1384,7 +1384,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "次元を捻じ曲げる一次元的グレネードを投げ、命中した敵ユニットにダメージとスロウ効果を与える。<br>数秒後、グレネードは巻き戻されて自身の元へ戻ってくる。グレネードは戻る時もダメージ判定を持ち、触れた敵ユニットにダメージを与える。",
-            "dynamicDescription": "<magicDamage>@InitialDamage@の魔法ダメージ</magicDamage>を与える装置を投げる。装置はチャンピオンに命中するか、最大射程に到達するとフィールドを展開し、範囲内の敵に@Effect2Amount*-100@%の<status>スロウ効果</status>を付与する。フィールド展開後、装置を自身のところに呼び戻し、<magicDamage>@RecallDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<magicDamage>@InitialDamage@の魔法ダメージ</magicDamage>を与える装置を投げる。装置はチャンピオンに命中するか、最大射程に到達するとフィールドを展開し、範囲内の敵に@SlowPercent*-100@%の<status>スロウ効果</status>を付与する。フィールド展開後、装置を自身のところに呼び戻し、<magicDamage>@RecallDamage@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "残り体力の少ない敵に対する通常攻撃が追加魔法ダメージを与える。「パラレルトラップ」を発動すると時間軸を分岐させて数秒後に次元歪曲空間を出現させ、効果範囲内にいる敵にスロウ効果を与える。この次元歪曲空間へエコーが進入するとシールドを獲得し、範囲内の敵ユニットの時間を停止させてスタン効果を与える。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 体力が30%未満の敵に対して、通常攻撃が<magicDamage>減少体力の@MissingHealthPercent@にあたる魔法ダメージ</magicDamage>を与える。<br><br><spellActive>発動効果:</spellActive> 発動後、少ししてから時空の法則が捻じ曲げられた空間を作り出す。この空間は1.5秒間持続し、範囲内にいる敵に@Effect10Amount@%の<status>スロウ効果</status>を与える。自身がこの空間に入ると空間が爆発し、@Effect2Amount@秒間対象を<status>スタン</status>させて、自身は<shield>耐久値@TotalShield@のシールド</shield>を獲得する。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 体力が@BelowHealthThreshold*100@%未満の敵に対して、通常攻撃が<magicDamage>減少体力の@MissingHealthPercent@にあたる魔法ダメージ</magicDamage>を与える。<br><br><spellActive>発動効果:</spellActive> 発動後、少ししてから時空の法則が捻じ曲げられた空間を作り出す。この空間は@SlowZoneDuration@秒間持続し、範囲内にいる敵に@SlowPercent@%の<status>スロウ効果</status>を与える。自身がこの空間に入ると空間が爆発し、@StunDuration@秒間対象を<status>スタン</status>させる。また、自身は<shield>耐久値@TotalShield@のシールド</shield>を獲得する。@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

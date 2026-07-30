@@ -1370,7 +1370,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "敵に突進してノックアップする。敵チャンピオンをノックアップすると、そこで突進が止まる。﻿",
-            "dynamicDescription": "突進して敵に<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与えて、@Effect4Amount@秒間<status>ノック</status><status>アップ</status>させる。敵チャンピオンに当たると、そこで突進が止まる。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "突進して敵に<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を与えて、@KnockupDurationTOOLTIPONLY@秒間<status>ノック</status><status>アップ</status>させる。敵チャンピオンに当たると、そこで突進が止まる。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "「凍傷」のスタックが最大になった敵チャンピオンを凍らせてスタンさせる。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 近くにいる味方の近接攻撃チャンピオンの通常攻撃が、チャンピオンとジャングルモンスターにスタックを1つ付与する。<br><br><spellPassive>発動効果:</spellPassive> 4スタックを付与した敵を対象として<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、@Effect1Amount@秒間の<status>スタン効果</status>を付与する。 @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 近くにいる味方の近接攻撃チャンピオンの通常攻撃が、チャンピオンとジャングルモンスターにスタックを1つ付与する。<br><br><spellPassive>発動効果:</spellPassive> 4スタックを付与した敵を対象として<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与え、@CCDuration@秒間の<status>スタン効果</status>を付与する。 @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "ボーラを投げて、最初に当たった敵チャンピオンを凍らせてスタンさせる。さらに氷の嵐を巻き起こして、他の敵ユニットにスロウ効果を与える。",
-            "dynamicDescription": "真なる氷のボーラを投げ、最初に当たった敵チャンピオンを@Effect2Amount@秒間<status>スタン</status>させて可視化し、<magicDamage>@MinorDamageTooltip@の魔法ダメージ</magicDamage>を与える。<br><br>ボーラが射程の25%以上飛んだ場合は、<status>スタン</status>と可視化の効果時間が@Effect6Amount@秒間になる。その後、氷の嵐を発生させて、周囲の敵に@Effect3Amount@秒間、@Effect4Amount@%の<status>スロウ効果</status>を与える。効果を受けたすべての敵は<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を受ける。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "真なる氷のボーラを投げ、最初に当たった敵チャンピオンを@BaseStunDuration@秒間<status>スタン</status>させて可視化し、<magicDamage>@MinorDamageTooltip@の魔法ダメージ</magicDamage>を与える。<br><br>ボーラが射程の25%以上飛んだ場合は、<status>スタン</status>と可視化の効果時間が@EmpoweredStunDuration@秒間になる。その後、氷の嵐を発生させて、周囲の敵に@ZoneDuration@秒間、@ExplosionSlowAmount@%の<status>スロウ効果</status>を与える。効果を受けたすべての敵は<magicDamage>@TotalDamageTooltip@の魔法ダメージ</magicDamage>を受ける。@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

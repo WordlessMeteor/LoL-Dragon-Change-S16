@@ -1,0 +1,3008 @@
+{
+    "Characters/Jade_Taric/Spells/Jade_TaricRAbility": {
+        "mRootSpell": "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricR",
+        "mChildSpells": [
+            "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricR",
+            "{4ac17987}",
+            "{b5e15a69}"
+        ],
+        "mName": "Jade_TaricRAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricBasicAttack": {
+        "ObjectName": "Jade_TaricBasicAttack",
+        "mScriptName": "Jade_TaricBasicAttack",
+        "mSpell": {
+            "flags": 128,
+            "mAffectsTypeFlags": 6826,
+            "mAlternateName": "Jade_TaricBasicAttack",
+            "{11704a2b}": 0.3487499952316284,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyAttackDamage": true,
+            "mApplyMaterialOnHitSound": true,
+            "alwaysSnapFacing": true,
+            "bHaveHitEffect": true,
+            "mUseAutoattackCastTimeData": {
+                "__type": "UseAutoattackCastTimeData"
+            },
+            "mUpdateRotationWhenCasting": true,
+            "mConsideredAsAutoAttack": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 8.5,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Taric_BA_Tar_01",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Taric_TaricBasicAttack_OnCast",
+                "13": "Play_sfx_Taric_TaricBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "centerLocator": {
+                            "orientationType": 1,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricWAbility": {
+        "mRootSpell": "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricW",
+        "mChildSpells": [
+            "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricW",
+            "{fe5f10c3}",
+            "{53e8151d}"
+        ],
+        "mName": "Jade_TaricWAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricW": {
+        "ObjectName": "Jade_TaricW",
+        "mScriptName": "Jade_TaricW",
+        "mSpell": {
+            "mAffectsTypeFlags": 1,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "PositiveEffect_Boon"
+            ],
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        6.0,
+                        7.0,
+                        8.0,
+                        9.0,
+                        10.0,
+                        11.0,
+                        12.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0,
+                        1000.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0,
+                        1300.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "ArmorBonus",
+                    "values": [
+                        5.0,
+                        10.0,
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        10.0,
+                        50.0,
+                        90.0,
+                        130.0,
+                        170.0,
+                        210.0,
+                        250.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorShred",
+                    "values": [
+                        -5.0,
+                        -10.0,
+                        -15.0,
+                        -20.0,
+                        -25.0,
+                        -30.0,
+                        -35.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorBonusCoefficient",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 1,
+                            "mCoefficient": 0.20000000298023224,
+                            "__type": "StatByCoefficientCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.6000000238418579,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{6d035af7}": {
+                    "mFormulaParts": [
+                        {
+                            "mStat": 1,
+                            "mDataValue": "ArmorBonusCoefficient",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.30000001192092896,
+            "mCoefficient2": 0.10000000149011612,
+            "mAnimationName": "Spell2_Jade",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Shatter.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 0.0,
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRadius": [
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0,
+                125.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.0,
+            "missileSpeed": 1700.0,
+            "mLineWidth": 60.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                2,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "TargetingForgivenessDefinitions": [
+                {
+                    "ForgivenessRange": 175.0,
+                    "TargetForgivenessDefinitions": [
+                        {
+                            "mUnitTags": {
+                                "mObjectTagList": [
+                                    "{ea595ca6}",
+                                    "{c02a7870}"
+                                ],
+                                "__type": "ObjectTags"
+                            },
+                            "__type": "HasUnitTagsCastRequirement"
+                        }
+                    ],
+                    "__type": "TargetingForgivenessDefinitions"
+                }
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Taric_TaricPassiveAttack2_OnCast",
+                "14": "Play_sfx_Taric_TaricWAllyBuffMissile_tether_break_connection_deactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TaricW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_Shatter_Jade",
+                        "keySummary": "game_spell_description_Shatter_Jade",
+                        "keyTooltip": "game_spell_tooltip_Shatter_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ArmorBonus",
+                                    "nameOverride": "Spell_ListType_ArmorBonus",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ArmorShred",
+                                    "multiplier": -1.0,
+                                    "nameOverride": "Spell_ListType_ArmorReduction",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Shatter_Jade",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{53e8151d}": {
+        "ObjectName": "Jade_TaricWSelfBonus",
+        "mScriptName": "Jade_TaricWSelfBonus",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Shatter.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_ShatterSelfBonus_Jade",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{fe5f10c3}": {
+        "ObjectName": "Jade_TaricWAura",
+        "mScriptName": "Jade_TaricWAura",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Shatter.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_ShatterAura_Jade",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricBasicAttack3": {
+        "ObjectName": "Jade_TaricBasicAttack3",
+        "mScriptName": "Jade_TaricBasicAttack3",
+        "mSpell": {
+            "flags": 128,
+            "mAffectsTypeFlags": 6826,
+            "mAnimationName": "Attack3",
+            "{11704a2b}": 0.3487499952316284,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyAttackDamage": true,
+            "mApplyMaterialOnHitSound": true,
+            "alwaysSnapFacing": true,
+            "bHaveHitEffect": true,
+            "mUseAutoattackCastTimeData": {
+                "__type": "UseAutoattackCastTimeData"
+            },
+            "mUpdateRotationWhenCasting": true,
+            "mConsideredAsAutoAttack": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Taric_BA_Tar_03",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Taric_TaricBasicAttack_OnCast",
+                "13": "Play_sfx_Taric_TaricBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricBasicAttack2": {
+        "ObjectName": "Jade_TaricBasicAttack2",
+        "mScriptName": "Jade_TaricBasicAttack2",
+        "mSpell": {
+            "flags": 128,
+            "mAffectsTypeFlags": 6826,
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.3487499952316284,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyAttackDamage": true,
+            "mApplyMaterialOnHitSound": true,
+            "alwaysSnapFacing": true,
+            "bHaveHitEffect": true,
+            "mUseAutoattackCastTimeData": {
+                "__type": "UseAutoattackCastTimeData"
+            },
+            "mUpdateRotationWhenCasting": true,
+            "mConsideredAsAutoAttack": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Taric_BA_Tar_02",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Taric_TaricBasicAttack_OnCast",
+                "13": "Play_sfx_Taric_TaricBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricCritAttack": {
+        "ObjectName": "Jade_TaricCritAttack",
+        "mScriptName": "Jade_TaricCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 6826,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.3487499952316284,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyAttackDamage": true,
+            "alwaysSnapFacing": true,
+            "mUseAutoattackCastTimeData": {
+                "__type": "UseAutoattackCastTimeData"
+            },
+            "mUpdateRotationWhenCasting": true,
+            "mConsideredAsAutoAttack": true,
+            "castRange": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0,
+                    600.0
+                ],
+                "{0a3e0478}": 600.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 16.0,
+            "missileSpeed": 0.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Taric_TaricCritAttack_OnCast",
+                "13": "Play_sfx_Taric_TaricCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricEAbility": {
+        "mRootSpell": "Characters/Jade_Taric/Spells/Jade_TaricEAbility/Jade_TaricE",
+        "mChildSpells": [
+            "Characters/Jade_Taric/Spells/Jade_TaricEAbility/Jade_TaricE"
+        ],
+        "mName": "Jade_TaricEAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricEAbility/Jade_TaricE": {
+        "ObjectName": "Jade_TaricE",
+        "mScriptName": "Jade_TaricE",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}",
+                    "minion",
+                    "Monster"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_TaricE",
+            "mSpellTags": [
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        50.0,
+                        90.0,
+                        130.0,
+                        170.0,
+                        210.0,
+                        250.0,
+                        290.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "MinDamage",
+                    "values": [
+                        5.0,
+                        35.0,
+                        65.0,
+                        95.0,
+                        125.0,
+                        155.0,
+                        185.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDmageTT",
+                    "values": [
+                        10.0,
+                        70.0,
+                        130.0,
+                        190.0,
+                        250.0,
+                        310.0,
+                        370.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinStunLength",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxStunLength",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        19.0,
+                        19.0,
+                        17.5,
+                        16.0,
+                        14.5,
+                        13.0,
+                        13.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MinDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.4000000059604645,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{14982b14}": {
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MaxDmageTT",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.800000011920929,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.5,
+            "mCoefficient2": 0.5,
+            "mAnimationName": "Passive_Attack2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Dazzle.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                17.0,
+                14.0,
+                13.0,
+                12.0,
+                11.0,
+                10.0,
+                10.0
+            ],
+            "Cooldown": {
+                "values": [
+                    17.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    10.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mSpeed": 1050.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 5.0,
+            "missileSpeed": 1750.0,
+            "mMissileEffectKey": "Jade_Taric_W_Mis",
+            "mLineWidth": 100.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                75.0,
+                75.0,
+                75.0,
+                75.0,
+                75.0,
+                75.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    75.0,
+                    75.0,
+                    75.0,
+                    75.0,
+                    75.0,
+                    75.0
+                ],
+                "{0a3e0478}": 75.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_Taric_TaricE_missilelaunch",
+                "13": "Play_sfx_Taric_TaricE_hit",
+                "12": "Play_sfx_Taric_TaricE_cast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TaricE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_Dazzle_Jade",
+                        "keySummary": "game_spell_description_Dazzle_Jade",
+                        "keyTooltip": "game_spell_tooltip_Dazzle_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MinDamage",
+                                    "nameOverride": "Spell_ListType_MinimumDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MaxDmageTT",
+                                    "nameOverride": "Spell_ListType_MaximumDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                650.0,
+                                650.0,
+                                650.0,
+                                650.0,
+                                650.0,
+                                650.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_TaricE",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mMultiplier": {
+                    "mSpellCalculationKey": "TotalDamage",
+                    "__type": "{f3cbe7b2}"
+                },
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{4ac17987}": {
+        "ObjectName": "Jade_TaricRBuff",
+        "mScriptName": "Jade_TaricRBuff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Radiance.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Radiance_Jade",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricR": {
+        "ObjectName": "Jade_TaricR",
+        "mScriptName": "Jade_TaricR",
+        "mSpell": {
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_TaricR",
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "PositiveEffect_Boon"
+            ],
+            "DataValues": [
+                {
+                    "name": "DamageIncrease",
+                    "values": [
+                        0.0,
+                        20.0,
+                        40.0,
+                        60.0,
+                        80.0,
+                        100.0,
+                        120.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Damage",
+                    "values": [
+                        50.0,
+                        150.0,
+                        250.0,
+                        350.0,
+                        450.0,
+                        550.0,
+                        650.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AllyBonus",
+                    "values": [
+                        5.0,
+                        15.0,
+                        25.0,
+                        35.0,
+                        45.0,
+                        55.0,
+                        65.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "Damage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.699999988079071,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.5,
+            "mCoefficient2": 0.5,
+            "mAnimationName": "Spell4_Jade",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Radiance.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                60.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0
+            ],
+            "Cooldown": {
+                "values": [
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0
+                ],
+                "{0a3e0478}": 60.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "mOrientRadiusTextureFromPlayer": true,
+            "castRadius": [
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
+            ],
+            "castRadiusSecondary": [
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TaricR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_TaricHammerSmash_Jade",
+                        "keySummary": "game_spell_description_TaricHammerSmash_Jade",
+                        "keyTooltip": "game_spell_tooltip_TaricHammerSmash_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "Damage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "DamageIncrease",
+                                    "nameOverride": "Spell_ListType_AttackDamageBonus",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "DamageIncrease",
+                                    "nameOverride": "jade_stat_ability_power",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "overrideRadius": {
+                            "mPerLevelValues": [
+                                400.0,
+                                400.0,
+                                400.0,
+                                400.0,
+                                400.0,
+                                400.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    },
+                    {
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                1000.0,
+                                1000.0,
+                                1000.0,
+                                1000.0,
+                                1000.0,
+                                1000.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_TaricR",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{b5e15a69}": {
+        "ObjectName": "Jade_TaricRAura",
+        "mScriptName": "Jade_TaricRAura",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Radiance.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_RadianceAura_Jade",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricQAbility": {
+        "mRootSpell": "Characters/Jade_Taric/Spells/Jade_TaricQAbility/Jade_TaricQ",
+        "mChildSpells": [
+            "Characters/Jade_Taric/Spells/Jade_TaricQAbility/Jade_TaricQ"
+        ],
+        "mName": "Jade_TaricQAbility",
+        "__type": "AbilityObject"
+    },
+    "{97b93084}": {
+        "mRootSpell": "{84804140}",
+        "mChildSpells": [
+            "{84804140}"
+        ],
+        "mName": "Jade_TaricPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{84804140}": {
+        "ObjectName": "Jade_TaricPassive",
+        "mScriptName": "Jade_TaricPassive",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "RatioTT",
+                    "values": [
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164,
+                        0.019999999552965164
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{0f379d64}": {
+                    "mFormulaParts": [
+                        {
+                            "mCoefficient": 0.019999999552965164,
+                            "__type": "AbilityResourceByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{321779cc}": {
+                    "mMultiplier": {
+                        "mNumber": 2.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "{0f379d64}",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Gemcraft.dds"
+            ],
+            "PassiveSpellAffectedByCooldown": true,
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TaricPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_Gemcraft_Jade",
+                        "keySummary": "game_character_passiveDescription_Taric_Jade",
+                        "keyTooltip": "game_spell_tooltip_Gemcraft_Jade"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_TaricPassive",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Taric/Spells/Jade_TaricQAbility/Jade_TaricQ": {
+        "ObjectName": "Jade_TaricQ",
+        "mScriptName": "Jade_TaricQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_TaricQ",
+            "mSpellTags": [
+                "PositiveEffect_Boon"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.30000001192092896,
+                        0.44999998807907104,
+                        0.6000000238418579,
+                        0.75,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.75,
+                        0.75,
+                        1.5,
+                        2.25,
+                        3.0,
+                        3.75,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        25.0,
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        125.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        2.0,
+                        3.0,
+                        4.0,
+                        5.0,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseHeal",
+                    "values": [
+                        20.0,
+                        60.0,
+                        100.0,
+                        140.0,
+                        180.0,
+                        220.0,
+                        260.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SelfCastRatio",
+                    "values": [
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142,
+                        1.399999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "HealAmount": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseHeal",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{245d67c1}": {
+                    "mMultiplier": {
+                        "mNumber": 1.399999976158142,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "tooltipOnly": true,
+                    "mModifiedGameCalculation": "HealAmount",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mCoefficient": 0.15000000596046448,
+            "mCoefficient2": 0.75,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Taric_Imbue.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                20.0,
+                20.0,
+                19.0,
+                18.0,
+                17.0,
+                16.0,
+                15.0
+            ],
+            "Cooldown": {
+                "values": [
+                    20.0,
+                    20.0,
+                    19.0,
+                    18.0,
+                    17.0,
+                    16.0,
+                    15.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mAmmoUsed": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mAmmoRechargeTime": [
+                15.0,
+                15.0,
+                15.0,
+                15.0,
+                15.0,
+                15.0,
+                15.0
+            ],
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "mOrientRadiusTextureFromPlayer": true,
+            "castRange": [
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0,
+                    750.0
+                ],
+                "{0a3e0478}": 750.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0,
+                750.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.449999809265137,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                80.0,
+                95.0,
+                110.0,
+                125.0,
+                140.0,
+                60.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    95.0,
+                    110.0,
+                    125.0,
+                    140.0,
+                    60.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "mCanCompleteCastWithoutTarget": true,
+                "__type": "Target"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Taric_TaricQ_OnCast",
+                "13": "Play_sfx_Taric_TaricQ_heal3"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TaricQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_Imbue_Jade",
+                        "keySummary": "game_spell_description_Imbue_Jade",
+                        "keyTooltip": "game_spell_tooltip_Imbue_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseHeal",
+                                    "typeIndex": 6,
+                                    "nameOverride": "Spell_ListType_Heal",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "typeIndex": 5,
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseCost",
+                                    "nameOverride": "Spell_ListType_Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 1,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "overrideRadius": {
+                            "mPerLevelValues": [
+                                325.0,
+                                325.0,
+                                325.0,
+                                325.0,
+                                325.0,
+                                325.0
+                            ],
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Jade_TaricQ",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 4,
+            "{ec17e271}": [
+                {
+                    "EffectTag": 16,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "HealAmount",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 8,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "HealAmount",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{06a939d5}": {
+        "ScriptName": "charscriptJade_Taric",
+        "path": "{06a939d5}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "blocks": [
+                    null,
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "f69743ba-edd1-4733-be25-206e532749c4",
+                        "Formula": "0.2 * ptp.Jade_TaricArmor",
+                        "Dest": {
+                            "Var": "WActiveArmorRatio",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "{15ebaa9c}"
+                    },
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "8caa3441-22b0-4572-a2c0-6ad86296f20f",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "Level",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 2,
+                            "Value2": {
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{bd909891}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "6f5a556e-a93b-479a-9bb3-c44401bbf3fd",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{c01bbfc7}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 3,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "b1ae34e3-c3bb-462c-95c5-74b342df871d",
+                                    "Var": {
+                                        "Var": "Attacker",
+                                        "__type": "{622705af}"
+                                    },
+                                    "__type": "{851b8dc5}"
+                                },
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{30a8c166}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "52d24c10-381e-40f9-aa57-12fb74952097",
+                        "Dest": {
+                            "Var": "tmpTable__",
+                            "__type": "CustomTableSet"
+                        },
+                        "__type": "CreateCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "1f0c6e8c-a978-4f73-b845-c2bd03bd61f9",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "8a19604e-e463-4aa1-b5e6-5895ed8a31f4",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "1318ed60-4bd4-4ca5-838c-ea7882284959",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "f7e091ac-9867-40bc-b9e1-597d8522df65",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "4f72f663-9a6c-4fec-a015-5b5bbed523f7",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "822c3098-b144-4091-a74e-32604c452ff7",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "269d7f22-d504-4772-8b94-b8ba7d0b14cf",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "112f730a-f6f8-45db-803f-fb8d4b6fbb88",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "a8b6feae-73ea-4ccb-8803-0b707c1c0566",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "13a27c3a-377e-4fe3-9916-508a14b05c36",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "e1280b3e-fe28-4f42-b572-a12161850e9e",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "bf9e497f-6fa3-461b-8751-621bebfb6111",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "9907697f-2d2b-4ff2-b5d4-a3c311bbc54a",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "8b8765e2-dba3-4799-8690-7039a8443ea5",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "d6eed1d9-5edd-4f21-af82-6b2412a6e779",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "752ff3eb-af9a-45a5-bd6e-213ef806c194",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "8cc2d3c9-4c7e-49af-aa39-146c0694e222",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "d129eb90-a85e-4e8a-92b1-6658280570af",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 0.019999999552965164,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "7fadb3c4-e157-4227-a5c5-ea1ecb62bde5",
+                        "SrcTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "SrcKey": {
+                            "Var": "Level",
+                            "__type": "ScriptTableGet"
+                        },
+                        "Dest": {
+                            "Var": "tmpValue__",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "GetKeyValueInCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "8c52c8f8-30ba-4d72-9e35-ea4a38ff9fd4",
+                        "Src": {
+                            "Var": "{49c7e05d}",
+                            "__type": "ScriptTableGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "ManaRatio",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{b065fdd3}": {
+                "__type": "RootScriptSequence"
+            },
+            "{d576330f}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "62d55814-83e1-4f7e-84c3-e459ac497ed9",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{9b2f99b3}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 1,
+                            "Value2": null,
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "78f4c190-b2a7-47f7-b4fb-dfd6ca439c0f",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{9b2f99b3}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 1,
+                                        "Value2": null,
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "51a31c2f-78eb-49f9-8cda-699d59e5ef43",
+                                                "Var": {
+                                                    "Var": "Target",
+                                                    "__type": "{622705af}"
+                                                },
+                                                "__type": "{851b8dc5}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "8c8fd735-4b7f-4c96-8e52-b89c67ee7ddf",
+                                                "Src": {
+                                                    "__type": "IntGet"
+                                                },
+                                                "Dest": {
+                                                    "Var": "newCooldown",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            {
+                                                "{d851ffa3}": "a5194a0f-e219-4f6c-93d5-0c09f9c56795",
+                                                "Src": {
+                                                    "__type": "IntGet"
+                                                },
+                                                "Dest": {
+                                                    "Var": "CDR",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            {
+                                                "{d851ffa3}": "80d65ebb-95e2-49f9-9b0a-2d40f09400f6",
+                                                "Condition": null,
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "88b57905-cd60-4d0b-a26c-15e5cbd4a422",
+                                                            "Src": {
+                                                                "value": 3,
+                                                                "__type": "IntGet"
+                                                            },
+                                                            "Dest": {
+                                                                "Var": "CDR",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "SetVarInTableBlock"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "870e89e2-9c18-436d-96d8-f47906739252",
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "b53171c0-b14f-428b-b04f-823399a94880",
+                                                            "Src": {
+                                                                "value": 1,
+                                                                "__type": "IntGet"
+                                                            },
+                                                            "Dest": {
+                                                                "Var": "CDR",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "SetVarInTableBlock"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            null,
+                                            {
+                                                "{d851ffa3}": "647d23a9-865e-420b-be19-13f6b4033f90",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "Cooldown",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Operation": 2,
+                                                    "Value2": {
+                                                        "__type": "IntGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
+                                                },
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "6b158993-4677-49b0-824a-366181de57c0",
+                                                            "Formula": "ptp.cooldown - ptp.CDR",
+                                                            "Dest": {
+                                                                "Var": "newCooldown",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "{15ebaa9c}"
+                                                        },
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "{1d18e0b5}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{75de5cc8}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3865",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3070"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3190",
+                            "Items/2065",
+                            "Items/3001"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3119"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3050",
+                            "Items/3109",
+                            "Items/3110"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3110",
+                            "Items/4638",
+                            "Items/3143",
+                            "Items/4401",
+                            "Items/3075",
+                            "Items/3107"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "mCoreItems": [
+                    "Items/3876"
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/2051"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/6660"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3190",
+                            "Items/2065",
+                            "Items/3068"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111",
+                            "Items/3117"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3050",
+                            "Items/3109",
+                            "Items/3001"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3193",
+                            "Items/3143",
+                            "Items/4641",
+                            "Items/4401",
+                            "Items/3107"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "{c275cb5e}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{e526aaff}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    0,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "utility",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    0,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "utility",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    0,
+                    2
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "Characters/Jade_Taric/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/Jade_Taric/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Taric",
+        "baseHPModifiable": {
+            "baseValue": 558.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 90.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.5199999809265137,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10000000149011612,
+            "__type": "ModifiableFloat"
+        },
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 311.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 56.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.8999999761581421,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.07999999821186066,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 55.5,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.5,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 23.700000762939453,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.200000047683716,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "{01262a25}": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 340.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.0199999809265137,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 350.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.11999999731779099,
+            "mAttackDelayCastOffsetPercentAttackSpeedRatio": 0.25,
+            "mAttackProbability": 0.3330000042915344,
+            "mAttackName": "Jade_TaricBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.11999999731779099,
+                "mAttackDelayCastOffsetPercentAttackSpeedRatio": 0.25,
+                "mAttackProbability": 0.3330000042915344,
+                "mAttackName": "Jade_TaricBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackDelayCastOffsetPercent": -0.11999999731779099,
+                "mAttackDelayCastOffsetPercentAttackSpeedRatio": 0.25,
+                "mAttackProbability": 0.3330000042915344,
+                "mAttackName": "Jade_TaricBasicAttack3",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackDelayCastOffsetPercent": -0.11999999731779099,
+                "mAttackDelayCastOffsetPercentAttackSpeedRatio": 0.25,
+                "mAttackName": "Jade_TaricPassiveAttack",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackDelayCastOffsetPercent": -0.11999999731779099,
+                "mAttackDelayCastOffsetPercentAttackSpeedRatio": 0.25,
+                "mAttackName": "Jade_TaricPassiveAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.11999999731779099,
+                "mAttackDelayCastOffsetPercentAttackSpeedRatio": 0.25,
+                "mAttackName": "Jade_TaricCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_TaricQAbility/Jade_TaricQ",
+            "Jade_TaricWAbility/Jade_TaricW",
+            "Jade_TaricEAbility/Jade_TaricE",
+            "Jade_TaricRAbility/Jade_TaricR"
+        ],
+        "spells": [
+            "Characters/Jade_Taric/Spells/Jade_TaricQAbility/Jade_TaricQ",
+            "Characters/Jade_Taric/Spells/Jade_TaricWAbility/Jade_TaricW",
+            "Characters/Jade_Taric/Spells/Jade_TaricEAbility/Jade_TaricE",
+            "Characters/Jade_Taric/Spells/Jade_TaricRAbility/Jade_TaricR"
+        ],
+        "extraSpells": [
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "Characters/Jade_Taric/Spells/Jade_TaricEAbility",
+            "{97b93084}",
+            "Characters/Jade_Taric/Spells/Jade_TaricQAbility",
+            "Characters/Jade_Taric/Spells/Jade_TaricRAbility",
+            "Characters/Jade_Taric/Spells/Jade_TaricWAbility"
+        ],
+        "passiveName": "Spell_Jade_TaricPassive_Name",
+        "passiveLuaName": "",
+        "passiveToolTip": "Spell_Jade_TaricPassive_Summary",
+        "passiveSpell": "Jade_TaricPassive",
+        "passive1IconName": "ASSETS/Characters/Jade_Taric/HUD/Icons2D/Jade_Taric_Passive.dds",
+        "name": "game_character_displayname_Jade_Taric",
+        "weaponMaterials": [
+            "GemKnightBasicAttack"
+        ],
+        "selectionHeight": 165.0,
+        "selectionRadius": 135.0,
+        "pathfindingCollisionRadius": 35.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1054,
+            "skillOrder": 1,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            0,
+            16,
+            0
+        ],
+        "characterToolData": {
+            "mapAIPresence": {
+                "8": {
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "Spell_Jade_TaricPassive_Name",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "support",
+            "searchTagsSecondary": "tank",
+            "championId": 60044,
+            "roles": "SUPPORT",
+            "magicRank": 5,
+            "LevelSpellEffectiveness": 2.0,
+            "difficultyRank": 3,
+            "description": "game_character_description_Jade_Taric",
+            "defenseRank": 8,
+            "ChasingAttackRangePercent": 0.30000001192092896,
+            "botEnabled": true,
+            "botEnabledMM": true,
+            "attackRank": 4,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Resolve",
+        "mCharacterPassiveSpell": "{84804140}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{84804140}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{06a939d5}",
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

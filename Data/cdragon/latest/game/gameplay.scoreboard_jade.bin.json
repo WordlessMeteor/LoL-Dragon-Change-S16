@@ -1,0 +1,618 @@
+{
+    "ClientStates/Gameplay/UX/LoL/Jade/Scoreboard_Jade": {
+        "PathHashToSelf": "clientstates/gameplay/ux/lol/jade/scoreboard_jade",
+        "BaseLoadable": "{4e5fdb42}",
+        "{b01c9387}": "{7cac95c7}",
+        "DragonUiLoadable": "{77e29bb4}",
+        "{330f7f89}": "{e2425887}",
+        "ScoreboardScene": "{640eca21}",
+        "OverlayScene": "{cebc7c26}",
+        "DragOverlayScene": "{37508959}",
+        "TeamScoresDefinitions": {
+            "ChampionKills": {
+                "DeviceUx": 2,
+                "TeamKillsIcon": "{4ade916b}",
+                "Team1KillText": "{7abc75fc}",
+                "Team2KillText": "{0d674ed7}",
+                "__type": "UiMetricTeamKills"
+            },
+            "TowerKills": {
+                "DeviceUx": 2,
+                "Team1TowerKillsIcon": "{07f2e3c5}",
+                "Team2TowerKillsIcon": "{37c07db6}",
+                "Team1TowerKillsText": "{74fd768a}",
+                "Team2TowerKillsText": "{efbe0d0f}",
+                "__type": "UiMetricTeamTowerKills"
+            },
+            "{516fe283}": {
+                "DeviceUx": 2,
+                "{d736c5a4}": "{1b36d04b}",
+                "{ba6de6d3}": "{0e775972}",
+                "{6975adea}": "{41bb157c}",
+                "{b2d11fb5}": "{1e48c30f}",
+                "__type": "{b36c777a}"
+            },
+            "{bcbb5260}": {
+                "DeviceUx": 2,
+                "{3594d7df}": "{a6369eb9}",
+                "{d43baf7a}": "{56bc6d78}",
+                "{e7bfbb59}": "{0fb406fa}",
+                "{e47ec0fc}": "{0f17f88d}",
+                "__type": "{6734c597}"
+            },
+            "DragonTracker": {
+                "DeviceUx": 2,
+                "DragonTypeIcons": {
+                    "Infernal": {
+                        "TeamSlotSourceIcon": "{48ee54ab}",
+                        "SoulActiveSourceIcon": "{f1eda628}",
+                        "SoulKnownSourceIcon": "{eb504fb6}",
+                        "TeamRewardBuffName": "SRX_DragonBuffInfernal",
+                        "SoulRewardBuffName": "SRX_DragonSoulBuffInfernal",
+                        "SoulPreviewBuffName": "SRX_DragonSoulBuffInfernal_Preview",
+                        "__type": "MultiDragonTypeSourceUiData"
+                    },
+                    "CLOUD": {
+                        "TeamSlotSourceIcon": "{b5bdbc8b}",
+                        "SoulActiveSourceIcon": "{69e75632}",
+                        "SoulKnownSourceIcon": "{51b08da4}",
+                        "TeamRewardBuffName": "SRX_DragonBuffCloud",
+                        "SoulRewardBuffName": "SRX_DragonSoulBuffCloud",
+                        "SoulPreviewBuffName": "SRX_DragonSoulBuffCloud_Preview",
+                        "__type": "MultiDragonTypeSourceUiData"
+                    },
+                    "Ocean": {
+                        "TeamSlotSourceIcon": "{d5f4acec}",
+                        "SoulActiveSourceIcon": "{cb1a1e15}",
+                        "SoulKnownSourceIcon": "{adefb6c3}",
+                        "TeamRewardBuffName": "SRX_DragonBuffOcean",
+                        "SoulRewardBuffName": "SRX_DragonSoulBuffOcean",
+                        "SoulPreviewBuffName": "SRX_DragonSoulBuffOcean_Preview",
+                        "__type": "MultiDragonTypeSourceUiData"
+                    },
+                    "mountain": {
+                        "TeamSlotSourceIcon": "{8ca88b5f}",
+                        "SoulActiveSourceIcon": "{dd0bee38}",
+                        "SoulKnownSourceIcon": "{8da91592}",
+                        "TeamRewardBuffName": "SRX_DragonBuffMountain",
+                        "SoulRewardBuffName": "SRX_DragonSoulBuffMountain",
+                        "SoulPreviewBuffName": "SRX_DragonSoulBuffMountain_Preview",
+                        "__type": "MultiDragonTypeSourceUiData"
+                    },
+                    "Hextech": {
+                        "TeamSlotSourceIcon": "{60581d43}",
+                        "SoulActiveSourceIcon": "{1b821cee}",
+                        "SoulKnownSourceIcon": "{e781e21c}",
+                        "TeamRewardBuffName": "SRX_DragonBuffHextech",
+                        "SoulRewardBuffName": "SRX_DragonSoulBuffHextech",
+                        "SoulPreviewBuffName": "SRX_DragonSoulBuffHextech_Preview",
+                        "__type": "MultiDragonTypeSourceUiData"
+                    },
+                    "Chemtech": {
+                        "TeamSlotSourceIcon": "{a7130e05}",
+                        "SoulActiveSourceIcon": "{e25b68f6}",
+                        "SoulKnownSourceIcon": "{a68c5d6c}",
+                        "TeamRewardBuffName": "SRX_DragonBuffChemtech",
+                        "SoulRewardBuffName": "SRX_DragonSoulBuffChemtech",
+                        "SoulPreviewBuffName": "SRX_DragonSoulBuffChemtech_Preview",
+                        "__type": "MultiDragonTypeSourceUiData"
+                    },
+                    "Party": {
+                        "TeamSlotSourceIcon": "{8ac95ce6}",
+                        "SoulActiveSourceIcon": "{f266c17f}",
+                        "SoulKnownSourceIcon": "{488fb39d}",
+                        "TeamRewardBuffName": "SRX_DragonBuffParty",
+                        "SoulRewardBuffName": "SRX_DragonSoulBuffParty",
+                        "SoulPreviewBuffName": "SRX_DragonSoulBuffParty_Preview",
+                        "__type": "MultiDragonTypeSourceUiData"
+                    }
+                },
+                "SoulSlot": {
+                    "SoulIconSlot": "{4fb52100}",
+                    "SoulSourceEmptyIcon": "{a096457c}",
+                    "__type": "MultiDragonSoulSlotUiData"
+                },
+                "Team1IconSlots": [
+                    "{dedf6cc5}",
+                    "{dbdf680c}",
+                    "{dcdf699f}",
+                    "{d9df64e6}"
+                ],
+                "Team2IconSlots": [
+                    "{38621ba2}",
+                    "{37621a0f}",
+                    "{3662187c}",
+                    "{356216e9}"
+                ],
+                "TeamSlotDisabledIcon": "{ceb54240}",
+                "__type": "UiMetricMultiDragonKillsSrX"
+            },
+            "__type": "ScoreboardTeamScoresDefinitions"
+        },
+        "Team1AllyGlow": "{f5dd004f}",
+        "Team1EnemyGlow": "{1da3b1ad}",
+        "Team1SwapDragTarget": "{9cd098a3}",
+        "Team1SwapHoverIcon": "{acbce293}",
+        "Team2AllyGlow": "{9d44e6c0}",
+        "Team2EnemyGlow": "{a90356e6}",
+        "Team2SwapDragTarget": "{a106aaea}",
+        "Team2SwapHoverIcon": "{c430557c}",
+        "MainTooltipAnchor": "{3fe2b110}",
+        "PlayerSlotHeightReference": "{f46ba64b}",
+        "OrderScoreLineUiData": {
+            "Scene": "{da019013}",
+            "DragBarSlot": "{c4ec8122}",
+            "DeadSlotHighlight": "{0402a7e2}",
+            "FowSlotHighlight": "{1f679a7c}",
+            "Portrait": {
+                "PortraitIcon": "{61fa3574}",
+                "PortraitIconShape": 1,
+                "Frame": "{ba40176f}",
+                "FrameWhileDead": "{2b62ab59}",
+                "RespawnTimerText": "{91fbe8df}",
+                "SingleClickToPing": true,
+                "__type": "UiPlayerPortraitData"
+            },
+            "PortraitRegion": "{c05c65e0}",
+            "Metrics": {
+                "0": {
+                    "Text": "{30011586}",
+                    "__type": "UiMetricUnitKda"
+                },
+                "1": {
+                    "Text": "{3c59dafa}",
+                    "__type": "UiMetricUnitCreepScore"
+                },
+                "2": {
+                    "Text": "{0b943721}",
+                    "__type": "UiMetricUnitVisionScore"
+                },
+                "3": {
+                    "Icon": "{5c61d183}",
+                    "Text": "{b540d605}",
+                    "__type": "UiMetricUnitBounty"
+                }
+            },
+            "MusicButton": "{c2076c65}",
+            "SocialTooltipAnchor": "{289e55f0}",
+            "SelfSlotHighlight": "{fdac7f4e}",
+            "UnitLevel": {
+                "LevelText": "{8d761d7c}",
+                "__type": "UnitLevelUiData"
+            },
+            "UltCooldownGem": {
+                "AllyGem": "{b44755cb}",
+                "EnemyGem": "{80503d47}",
+                "GemBackground": "{a382ad42}",
+                "CooldownEffects": {
+                    "RadialEffect": "{4ff9277a}",
+                    "__type": "CooldownEffectUiData"
+                },
+                "__type": "CooldownGemUiData"
+            },
+            "Keystone": {
+                "KeystoneIcon": "{e84ca7a6}",
+                "KeystoneSubstyleIcon": "{d9764845}",
+                "__type": "ChampionPerkKeystoneUiData"
+            },
+            "SummonerName": {
+                "SummonerNameText": "{9f5905cd}",
+                "__type": "SummonerNameUiData"
+            },
+            "OpenMuteModalButton": "{3ed53b98}",
+            "OpenReportModalButton": "{a78d76bd}",
+            "{9f82652b}": "{966dd73a}",
+            "MuteAllButton": "{f8fc9396}",
+            "MuteSelfButton": "{e3cfcbf9}",
+            "MuteModalAnchor": "{23c50878}",
+            "SpellSlots": {
+                "SummonerSpell1": {
+                    "ContentElement": "{cf433c05}",
+                    "CooldownFx": "{66b64836}",
+                    "OverlayHandle": "{fc72eb43}",
+                    "__type": "SpellSlotSimpleUiDefinition"
+                },
+                "SummonerSpell2": {
+                    "ContentElement": "{0f45df5c}",
+                    "CooldownFx": "{3339a563}",
+                    "OverlayHandle": "{5dc443a4}",
+                    "__type": "SpellSlotSimpleUiDefinition"
+                },
+                "__type": "ScoreLineSpellSlots"
+            },
+            "ItemSlots": {
+                "Item0": {
+                    "Icon": "{b010f358}",
+                    "Backdrop": "{5dabb13a}",
+                    "StackText": "{b5ec91b7}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{e7253fef}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{31a339fc}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item1": {
+                    "Icon": "{b00eb4c1}",
+                    "Backdrop": "{f62c1193}",
+                    "StackText": "{c93f4eb8}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{a49f7a32}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{660f5653}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item2": {
+                    "Icon": "{f015d546}",
+                    "Backdrop": "{34d4233c}",
+                    "StackText": "{7ff330f5}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{19cf0869}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{4997146a}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item3": {
+                    "Icon": "{f01396af}",
+                    "Backdrop": "{e6257e45}",
+                    "StackText": "{7f55c416}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{32e12d64}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{8d96ef49}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item4": {
+                    "Icon": "{b00665fc}",
+                    "Backdrop": "{065e7cce}",
+                    "StackText": "{117c7803}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{feb8ea03}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{a6ec2cd8}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item5": {
+                    "Icon": "{f0048c25}",
+                    "Backdrop": "{d5d6db57}",
+                    "StackText": "{10934cd4}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{599b8356}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{3ff222ef}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item6": {
+                    "Icon": "{f00b47ea}",
+                    "Backdrop": "{86714b50}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{cc52590d}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{82bb0556}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "__type": "SimpleItemSlots"
+            },
+            "{45fb73d6}": {
+                "Group": "{4a3ba360}",
+                "Icon": "{a11f9027}",
+                "HoverRegion": "{646a7d05}",
+                "TextureData": {
+                    "{f02aa447}": "ASSETS/UX/LoL/RoleQuest_IconTop_Progress.tex",
+                    "{71089646}": "ASSETS/UX/LoL/RoleQuest_IconTop_Complete.tex",
+                    "{0b96a54f}": "ASSETS/UX/LoL/RoleQuest_IconJungle_Progress.tex",
+                    "{08df082e}": "ASSETS/UX/LoL/RoleQuest_IconJungle_Complete.tex",
+                    "{ee6f7154}": "ASSETS/UX/LoL/RoleQuest_IconMid_Progress.tex",
+                    "{934eeacd}": "ASSETS/UX/LoL/RoleQuest_IconMid_Complete.tex",
+                    "{a521a0c5}": "ASSETS/UX/LoL/RoleQuest_IconBot_Progress.tex",
+                    "{8fb9b7b0}": "ASSETS/UX/LoL/RoleQuest_IconBot_Complete.tex",
+                    "{03d0587a}": "ASSETS/UX/LoL/RoleQuest_IconSupport_Progress.tex",
+                    "{02af14c7}": "ASSETS/UX/LoL/RoleQuest_IconSupport_Complete.tex",
+                    "DefaultTextureName": "ASSETS/UX/LoL/RoleQuest_Progress.tex",
+                    "__type": "{7ac70a36}"
+                },
+                "__type": "{f03c301d}"
+            },
+            "{da5ad358}": {
+                "Icon": "{44c59e84}",
+                "Backdrop": "{9d8c27a9}",
+                "StackText": "{917074c2}",
+                "CooldownEffects": {
+                    "RadialEffect": "{1bc88878}",
+                    "__type": "CooldownEffectUiData"
+                },
+                "HitArea": "{646a7d05}",
+                "__type": "{862f8352}"
+            },
+            "__type": "ScoreLineSrUiData"
+        },
+        "ChaosScoreLineUiData": {
+            "Scene": "{5898f63e}",
+            "DragBarSlot": "{4cb10182}",
+            "DeadSlotHighlight": "{67f80342}",
+            "FowSlotHighlight": "{5d41045c}",
+            "Portrait": {
+                "PortraitIcon": "{5fa47854}",
+                "PortraitIconShape": 1,
+                "Frame": "{6b2ce40f}",
+                "FrameWhileDead": "{03db1cf9}",
+                "RespawnTimerText": "{3272557f}",
+                "SingleClickToPing": true,
+                "__type": "UiPlayerPortraitData"
+            },
+            "PortraitRegion": "{8ebc47c0}",
+            "Metrics": {
+                "0": {
+                    "Text": "{92de2e66}",
+                    "__type": "UiMetricUnitKda"
+                },
+                "1": {
+                    "Text": "{f46e015a}",
+                    "__type": "UiMetricUnitCreepScore"
+                },
+                "2": {
+                    "Text": "{df6de881}",
+                    "__type": "UiMetricUnitVisionScore"
+                },
+                "3": {
+                    "Icon": "{52994de3}",
+                    "Text": "{c4c50765}",
+                    "__type": "UiMetricUnitBounty"
+                }
+            },
+            "MusicButton": "{6001dd05}",
+            "SocialTooltipAnchor": "{9f883690}",
+            "SelfSlotHighlight": "{61a1daae}",
+            "UnitLevel": {
+                "LevelText": "{3e647d1c}",
+                "__type": "UnitLevelUiData"
+            },
+            "UltCooldownGem": {
+                "AllyGem": "{1044c16b}",
+                "EnemyGem": "{96f39067}",
+                "GemBackground": "{6dbc2ee2}",
+                "CooldownEffects": {
+                    "RadialEffect": "{cba9511a}",
+                    "__type": "CooldownEffectUiData"
+                },
+                "__type": "CooldownGemUiData"
+            },
+            "Keystone": {
+                "KeystoneIcon": "{f68f51c6}",
+                "KeystoneSubstyleIcon": "{685ba165}",
+                "__type": "ChampionPerkKeystoneUiData"
+            },
+            "SummonerName": {
+                "SummonerNameText": "{386190ed}",
+                "__type": "SummonerNameUiData"
+            },
+            "OpenMuteModalButton": "{3cb11ba0}",
+            "OpenReportModalButton": "{5c9544a5}",
+            "{9f82652b}": "{d7eaaf82}",
+            "MuteAllButton": "{e844326e}",
+            "MuteSelfButton": "{8394edb1}",
+            "MuteModalAnchor": "{fff59818}",
+            "SpellSlots": {
+                "SummonerSpell1": {
+                    "ContentElement": "{168647e5}",
+                    "CooldownFx": "{e582d216}",
+                    "OverlayHandle": "{66ff6fa3}",
+                    "__type": "SpellSlotSimpleUiDefinition"
+                },
+                "SummonerSpell2": {
+                    "ContentElement": "{d689b4bc}",
+                    "CooldownFx": "{ac4373c3}",
+                    "OverlayHandle": "{ea247184}",
+                    "__type": "SpellSlotSimpleUiDefinition"
+                },
+                "__type": "ScoreLineSpellSlots"
+            },
+            "ItemSlots": {
+                "Item0": {
+                    "Icon": "{2d8f5038}",
+                    "Backdrop": "{8668451a}",
+                    "StackText": "{7789ac17}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{97ee7dcf}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{d414835c}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item1": {
+                    "Icon": "{2d8d11a1}",
+                    "Backdrop": "{0c9d0773}",
+                    "StackText": "{42d4a718}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{87539b12}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{324547b3}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item2": {
+                    "Icon": "{ed9368a6}",
+                    "Backdrop": "{e56f4e9c}",
+                    "StackText": "{fd4799d5}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{eccb46c9}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{bd8fd74a}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item3": {
+                    "Icon": "{ed912a0f}",
+                    "Backdrop": "{ef78e6a5}",
+                    "StackText": "{15f6e1f6}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{a73e8ec4}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{d550a129}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item4": {
+                    "Icon": "{2d84c2dc}",
+                    "Backdrop": "{a12002ae}",
+                    "StackText": "{d09f2963}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{083a64e3}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{244cbd38}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item5": {
+                    "Icon": "{ed821f85}",
+                    "Backdrop": "{737faab7}",
+                    "StackText": "{8de7b5b4}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{3bb707b6}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{87abd4cf}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "Item6": {
+                    "Icon": "{ed8a6e4a}",
+                    "Backdrop": "{fe2fcab0}",
+                    "CooldownEffects": {
+                        "RadialEffect": "{c2a2106d}",
+                        "__type": "CooldownEffectUiData"
+                    },
+                    "HitArea": "{2bd3d836}",
+                    "__type": "ItemSlotSimpleUiData"
+                },
+                "__type": "SimpleItemSlots"
+            },
+            "{45fb73d6}": {
+                "Group": "{0e902b2e}",
+                "Icon": "{c54eed35}",
+                "HoverRegion": "{b24f64ab}",
+                "TextureData": {
+                    "{f02aa447}": "ASSETS/UX/LoL/RoleQuest_IconTop_Progress.tex",
+                    "{71089646}": "ASSETS/UX/LoL/RoleQuest_IconTop_Complete.tex",
+                    "{0b96a54f}": "ASSETS/UX/LoL/RoleQuest_IconJungle_Progress.tex",
+                    "{08df082e}": "ASSETS/UX/LoL/RoleQuest_IconJungle_Complete.tex",
+                    "{ee6f7154}": "ASSETS/UX/LoL/RoleQuest_IconMid_Progress.tex",
+                    "{934eeacd}": "ASSETS/UX/LoL/RoleQuest_IconMid_Complete.tex",
+                    "{a521a0c5}": "ASSETS/UX/LoL/RoleQuest_IconBot_Progress.tex",
+                    "{8fb9b7b0}": "ASSETS/UX/LoL/RoleQuest_IconBot_Complete.tex",
+                    "{03d0587a}": "ASSETS/UX/LoL/RoleQuest_IconSupport_Progress.tex",
+                    "{02af14c7}": "ASSETS/UX/LoL/RoleQuest_IconSupport_Complete.tex",
+                    "DefaultTextureName": "ASSETS/UX/LoL/RoleQuest_Progress.tex",
+                    "__type": "{7ac70a36}"
+                },
+                "__type": "{f03c301d}"
+            },
+            "{da5ad358}": {
+                "Icon": "{2594fbe2}",
+                "Backdrop": "{e6c1f5bb}",
+                "StackText": "{fbe545d0}",
+                "CooldownEffects": {
+                    "RadialEffect": "{430eeefa}",
+                    "__type": "CooldownEffectUiData"
+                },
+                "HitArea": "{b24f64ab}",
+                "__type": "{862f8352}"
+            },
+            "__type": "ScoreLineSrUiData"
+        },
+        "OrderObjectiveBountiesData": {
+            "BaronIcon": "{a6369eb9}",
+            "RiftHeraldIcon": "{87608af1}",
+            "{0cfe173b}": "{db93e324}",
+            "DragonsIcon": "{1b36d04b}",
+            "TowerIcon": "{07f2e3c5}",
+            "BaronScore": "{0fb406fa}",
+            "RiftHeraldScore": "{bb1093e2}",
+            "{aec651cc}": "{b9a1ebd1}",
+            "DragonsScore": "{41bb157c}",
+            "TowerScore": "{74fd768a}",
+            "BaronValue": "{37705e76}",
+            "RiftHeraldValue": "{39e809c4}",
+            "{7681fe9f}": "{d1d0b7c2}",
+            "DragonsValue": "{2bd4f5c2}",
+            "TowersValue": "{d24882cc}",
+            "RiftHeraldCampName": "SRU_RiftHerald",
+            "__type": "SbObjectiveBounties"
+        },
+        "ChaosObjectiveBountiesData": {
+            "BaronIcon": "{56bc6d78}",
+            "RiftHeraldIcon": "{24a51592}",
+            "{0cfe173b}": "{13f1a2c3}",
+            "DragonsIcon": "{0e775972}",
+            "TowerIcon": "{37c07db6}",
+            "BaronScore": "{0f17f88d}",
+            "RiftHeraldScore": "{cc81f9af}",
+            "{aec651cc}": "{92121324}",
+            "DragonsScore": "{1e48c30f}",
+            "TowerScore": "{efbe0d0f}",
+            "BaronValue": "{281b6302}",
+            "RiftHeraldValue": "{a5cd07ca}",
+            "{7681fe9f}": "{946c4d98}",
+            "DragonsValue": "{182421ea}",
+            "TowersValue": "{587821b6}",
+            "RiftHeraldCampName": "SRU_RiftHerald",
+            "__type": "SbObjectiveBounties"
+        },
+        "SummonerSocialCard": {
+            "SummonerNameLink": "{6e80d0ce}",
+            "TaglineLink": "{7b4a53b1}",
+            "SummonerIconLink": "{810becc4}",
+            "ChampionNameLink": "{f8cdf9c4}",
+            "BackdropLink": "{ef47d373}",
+            "{3da285d8}": "{8d2c28bd}",
+            "SceneLink": "{c83dd0be}",
+            "__type": "UiSummonerSocialCardData"
+        },
+        "OrderTeamIdentity": {
+            "NameLink": "{cc73a89e}",
+            "TagLink": "{c0d93bfb}",
+            "LogoLink": "{00dfdb62}",
+            "__type": "UiTeamIdentityData"
+        },
+        "ChaosTeamIdentity": {
+            "NameLink": "{96adb871}",
+            "TagLink": "{0d9b1a12}",
+            "LogoLink": "{0667ea3d}",
+            "__type": "UiTeamIdentityData"
+        },
+        "closeButton": "{7a9f3129}",
+        "Team1ReportModalAnchor": "{0ed7a6b6}",
+        "Team2ReportModalAnchor": "{a63c2cb7}",
+        "__type": "ScoreboardViewController"
+    },
+    "{4e5fdb42}": {
+        "FilepathHash": "clientstates/gameplay/ux/lol/jade/scoreboard_jade/uibase",
+        "__type": "UiPropertyLoadable"
+    },
+    "{77e29bb4}": {
+        "FilepathHash": "clientstates/gameplay/ux/lol/jade/scoreboard_jade/scores_dragon_srx",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/lol/jade/scoreboard_jade/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{7cac95c7}": {
+        "FilepathHash": "clientstates/gameplay/ux/lol/jade/scoreboard_jade/sb_mirrored",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/lol/jade/scoreboard_jade/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{a079531a}": {
+        "FilepathHash": "clientstates/gameplay/ux/lol/jade/scoreboard_jade/sb_feats",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/lol/jade/scoreboard_jade/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "{e2425887}": {
+        "FilepathHash": "clientstates/gameplay/ux/lol/jade/scoreboard_jade/sb_socialsr",
+        "OverrideSrcFolder": "clientstates/gameplay/ux/lol/jade/scoreboard_jade/uibase",
+        "__type": "UiPropertyOverrideLoadable"
+    },
+    "__linked": []
+}

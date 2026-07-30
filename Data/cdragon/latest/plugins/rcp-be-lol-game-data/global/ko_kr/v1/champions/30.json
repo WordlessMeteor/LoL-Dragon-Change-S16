@@ -1128,7 +1128,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "카서스가 에너지를 빨아들이는 통행 가능한 벽을 생성합니다. 이 벽을 지나는 모든 적 유닛의 이동 속도와 마법 저항력이 일정 시간 감소합니다.",
-            "dynamicDescription": "카서스가 @Effect4Amount@초 동안 유지되는 벽을 생성합니다. 벽을 지나는 적은 @Effect5Amount@초간 <scaleMR>마법 저항력이 @Effect1Amount@%</scaleMR> 감소하고 @Effect3Amount@% <status>둔화</status>됩니다. 둔화 효과는 시간이 지나면서 점차 사라집니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "카서스가 @WallDuration@초 동안 유지되는 벽을 생성합니다. 벽을 지나는 적은 @DebuffDuration@초간 <scaleMR>마법 저항력이@MagicResistShred@%</scaleMR> 감소하고 @SlowPercent@% <status>둔화</status>됩니다. 둔화 효과는 시간이 지나면서 점차 사라집니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "초당 마나 @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "카서스는 적에게서 마력을 훔쳐 적을 처치할 때마다 마나를 획득합니다. 또 카서스는 희생양의 영혼을 자신 주위에 둘러 적들에게 피해를 입힐 수도 있지만, 이럴 경우 마나가 매우 빨리 소모됩니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>카서스가 적 유닛을 처치할 때마다 <scaleMana>@Effect2Amount@의 마나</scaleMana>를 회복합니다.<br><br><toggle>활성화/비활성화: </toggle>카서스가 죽음의 영역을 생성해 근처 적들에게 초당 <magicDamage>@TotalDPS@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>카서스가 적 유닛을 처치할 때마다 <scaleMana>@ManaRestoreOnKill@의 마나</scaleMana>를 회복합니다.<br><br><toggle>활성화/비활성화: </toggle>카서스가 죽음의 영역을 생성해 근처 적들에게 초당 <magicDamage>@TotalDPS@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

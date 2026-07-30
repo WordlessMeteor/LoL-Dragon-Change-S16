@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Karthus egy áthatolható energiaelszívó függönyt hoz létre. A függönyön átlépő ellenséges egységek mozgási sebessége és varázsellenállása egy időre csökken.",
-            "dynamicDescription": "Karthus létrehoz egy falat, amely @Effect4Amount@ másodpercig tart ki. A falon áthaladó ellenfelek @Effect5Amount@ másodpercre <scaleMR>@Effect1Amount@% varázsellenállást</scaleMR> veszítenek, és @Effect3Amount@%-kal <status>lelassulnak</status>. A lassítás fokozatosan megszűnik az időtartam során.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus létrehoz egy falat, amely @WallDuration@ másodpercig tart ki. A falon áthaladó ellenfelek @DebuffDuration@ másodpercre <scaleMR>@MagicResistShred@% varázsellenállást</scaleMR> veszítenek, és @SlowPercent@%-kal <status>lelassulnak</status>. A lassítás fokozatosan megszűnik az időtartam során.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ mana másodpercenként",
             "cooldown": "@Cooldown@ mp %i:cooldown%",
             "description": "Karthus passzívan elszívja áldozatai energiáját, és minden gyilkossággal manát nyer. Dönthet úgy is, hogy körbeveszi magát az áldozatai lelkével, és így sebzést okoz a közelben tartózkodó ellenfeleknek, de ezzel gyorsan elfogyasztja a manáját.",
-            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>ha Karthus megöl egy egységet, visszanyer <scaleMana>@Effect2Amount@ manát</scaleMana>.<br><br><toggle>Kapcsoló: </toggle>Karthus halálos aurát hoz létre, amely másodpercenként <magicDamage>@TotalDPS@ varázssebzést</magicDamage> okoz a közeli ellenfeleknek.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passzív: </spellPassive>ha Karthus megöl egy egységet, <scaleMana>@ManaRestoreOnKill@ manát</scaleMana> nyer vissza.<br><br><toggle>Kapcsoló: </toggle>Karthus halálos aurát hoz létre, amely másodpercenként <magicDamage>@TotalDPS@ varázssebzést</magicDamage> okoz a közeli ellenfeleknek.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

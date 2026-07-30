@@ -656,13 +656,13 @@
                         {
                             "name": "EnergyRestore",
                             "values": [
-                                150.0,
-                                150.0,
-                                150.0,
-                                150.0,
-                                150.0,
-                                150.0,
-                                150.0
+                                200.0,
+                                200.0,
+                                200.0,
+                                200.0,
+                                200.0,
+                                200.0,
+                                200.0
                             ],
                             "__type": "SpellDataValue"
                         },
@@ -688,11 +688,11 @@
                     "value": [
                         15.0,
                         15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0,
-                        15.0
+                        13.0,
+                        12.0,
+                        11.0,
+                        10.0,
+                        12.0
                     ],
                     "__type": "SpellEffectAmount"
                 }
@@ -2329,6 +2329,36 @@
                         0.6000000238418579
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Level1MS",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSBonusPerLevelAtAndAfter",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSAdditionalBonusAtThreshold",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2357,6 +2387,32 @@
                                 0.699999988079071,
                                 0.699999988079071,
                                 0.699999988079071
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MSAdditionalBonusAtThreshold",
+                            "values": [
+                                0.15000000596046448,
+                                0.15000000596046448,
+                                0.15000000596046448,
+                                0.15000000596046448,
+                                0.15000000596046448,
+                                0.15000000596046448,
+                                0.15000000596046448
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "Level1MS",
+                            "values": [
+                                0.4000000059604645,
+                                0.4000000059604645,
+                                0.4000000059604645,
+                                0.4000000059604645,
+                                0.4000000059604645,
+                                0.4000000059604645,
+                                0.4000000059604645
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -2457,25 +2513,29 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mLevel1Value": 0.30000001192092896,
-                            "mBreakpoints": [
+                            "{91d404a5}": "Level1MS",
+                            "{bbd778a2}": "MSBonusPerLevelAtAndAfter",
+                            "{9823b29a}": [
                                 {
-                                    "mLevel": 6,
-                                    "mAdditionalBonusAtThisLevel": 0.10000000149011612,
-                                    "__type": "Breakpoint"
+                                    "level": 6,
+                                    "{ae9b464d}": "MSAdditionalBonusAtThreshold",
+                                    "{b0d8b2ac}": "MSBonusPerLevelAtAndAfter",
+                                    "__type": "{0333530c}"
                                 },
                                 {
-                                    "mLevel": 11,
-                                    "mAdditionalBonusAtThisLevel": 0.10000000149011612,
-                                    "__type": "Breakpoint"
+                                    "level": 11,
+                                    "{ae9b464d}": "MSAdditionalBonusAtThreshold",
+                                    "{b0d8b2ac}": "MSBonusPerLevelAtAndAfter",
+                                    "__type": "{0333530c}"
                                 },
                                 {
-                                    "mLevel": 16,
-                                    "mAdditionalBonusAtThisLevel": 0.10000000149011612,
-                                    "__type": "Breakpoint"
+                                    "level": 16,
+                                    "{ae9b464d}": "MSAdditionalBonusAtThreshold",
+                                    "{b0d8b2ac}": "MSBonusPerLevelAtAndAfter",
+                                    "__type": "{0333530c}"
                                 }
                             ],
-                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                            "__type": "{4ce08984}"
                         }
                     ],
                     "mDisplayAsPercent": true,

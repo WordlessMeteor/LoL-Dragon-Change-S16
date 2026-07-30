@@ -13783,13 +13783,17 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.png",
-        "tooltip_text": "Shurima'lılar her saniye %@ASPerSecond*100@ Saldırı Hızı kazanır ve @HealthRestorePerSecond@ Can yeniler. Çatışma başlangıcında ilave etkiler kazanırlar.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prizmatik: Nasus, Renekton ve Xerath'ı aç. Ardından Shurima özelliğinin 4 birimlik eşiğini etkinleştir.</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) %@BonusHealth*100@ Azami Can</row><br><row>(@MinUnits@) @ArmorMR@ Zırh ve Büyü Direnci</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Her @GodhoodCadence@ saniyede bir, bir Shurima'lı YÜKSELİŞ'E ERER.</ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>Yalnızca Nasus, Renekton ve Xerath açıldığında etkinleşebilir.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
+        "tooltip_text": "Shurima'lılar her saniye %@ASPerSecond*100@ Saldırı Hızı kazanır ve @HealthRestorePerSecond@ Can yeniler. Çatışma başlangıcında ilave etkiler kazanırlar.<ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prizmatik: Nasus, Renekton ve Xerath'ı aç. Ardından Shurima özelliğinin 4 birimlik eşiğini etkinleştir.</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER><br><br><row>(@MinUnits@) %@BonusHealth*100@ Azami Can</row><br><row>(@MinUnits@) @ArmorMR@ Zırh ve Büyü Direnci</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Her @GodhoodCadence@ saniyede bir, bir Shurima'lı YÜKSELİŞ'E ERER. </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>Yalnızca Nasus, Renekton ve Xerath açıldığında etkinleşebilir.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "ASPerSecond",
                         "value": 0.02
+                    },
+                    {
+                        "name": "GodhoodCadence",
+                        "value": 3.0
                     },
                     {
                         "name": "HealthRestorePerSecond",
@@ -15816,7 +15820,7 @@
                     },
                     {
                         "name": "TeamManaRegen",
-                        "value": 3.0
+                        "value": 2.0
                     }
                 ],
                 "min_units": 5,

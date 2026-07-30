@@ -13783,13 +13783,17 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.png",
-        "tooltip_text": "Cada segundo, los shurimanos obtienen un @ASPerSecond*100@% de velocidad de ataque y restauran @HealthRestorePerSecond@ de vida. Al comienzo del combate, obtienen efectos adicionales.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismático: Desbloquea a Nasus, Renekton y Xerath. Después, despliega Shurima (4).</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% de vida máxima.</row><br><row>(@MinUnits@) @ArmorMR@ de armadura y resistencia mágica.</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Un shurimano asciende a DEIDAD cada @GodhoodCadence@ s. </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>Solo disponible tras desbloquear a Nasus, Renekton y Xerath.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
+        "tooltip_text": "Cada segundo, los shurimanos obtienen un @ASPerSecond*100@% de velocidad de ataque y restauran @HealthRestorePerSecond@ de vida. Al comienzo del combate, obtienen efectos adicionales.<ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismático: Desbloquea a Nasus, Renekton y Xerath. Después, despliega Shurima (4).</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER><br><br><row>(@MinUnits@) @BonusHealth*100@% de vida máxima.</row><br><row>(@MinUnits@) @ArmorMR@ de armadura y resistencia mágica.</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Un shurimano asciende a DEIDAD cada @GodhoodCadence@ s. </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>Solo disponible tras desbloquear a Nasus, Renekton y Xerath.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "ASPerSecond",
                         "value": 0.02
+                    },
+                    {
+                        "name": "GodhoodCadence",
+                        "value": 3.0
                     },
                     {
                         "name": "HealthRestorePerSecond",
@@ -15816,7 +15820,7 @@
                     },
                     {
                         "name": "TeamManaRegen",
-                        "value": 3.0
+                        "value": 2.0
                     }
                 ],
                 "min_units": 5,

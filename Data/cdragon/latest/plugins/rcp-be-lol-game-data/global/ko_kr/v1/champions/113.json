@@ -1370,7 +1370,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "세주아니가 전방으로 돌진해 적들을 공중으로 띄웁니다. 적 챔피언에게 한 번 부딪히면 돌진을 멈춥니다.",
-            "dynamicDescription": "세주아니가 돌진하며 적들에게 <magicDamage>@TotalDamageTooltip@의 마법 피해</magicDamage>를 입히고 @Effect4Amount@초 동안 <status>공중으로</status> <status>띄워 올립니다</status>. 적 챔피언에게 충돌하면 돌진을 멈춥니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "세주아니가 돌진하며 적들에게 <magicDamage>@TotalDamageTooltip@의 마법 피해</magicDamage>를 입히고 @KnockupDurationTOOLTIPONLY@초 동안 <status>공중으로</status> <status>띄워 올립니다</status>. 적 챔피언에게 충돌하면 돌진을 멈춥니다.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "세주아니가 서리가 최대로 중첩된 대상을 얼리고 기절시킵니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 근처 아군 근접 챔피언이 적 챔피언 또는 정글 몬스터를 기본 공격하면 중첩이 쌓입니다.<br><br><spellPassive>사용 시:</spellPassive> 세주아니가 중첩이 4회 쌓인 대상에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @Effect1Amount@초 동안 <status>기절</status>시킵니다. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 근처 아군 근접 챔피언이 적 챔피언 또는 정글 몬스터를 기본 공격하면 중첩이 쌓입니다.<br><br><spellPassive>사용 시:</spellPassive> 세주아니가 중첩이 4회 쌓인 대상에게 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 @CCDuration@초 동안 <status>기절</status>시킵니다. @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "세주아니가 올가미를 던져 첫 번째로 맞힌 챔피언을 얼리고 기절시킵니다. 올가미는 적들을 둔화시키는 얼음 폭풍을 일으킵니다.",
-            "dynamicDescription": "세주아니가 얼음 정수 올가미를 던져 @Effect2Amount@초 동안 처음 맞힌 챔피언의 모습을 드러내고 <status>기절</status>시키며, <magicDamage>@MinorDamageTooltip@의 마법 피해</magicDamage>를 입힙니다.<br><br>올가미가 사거리의 25% 이상 날아가 적중할 경우 @Effect6Amount@초 동안 모습을 드러내고 <status>기절</status>시킵니다. 또한 @Effect3Amount@초 동안 주변 적들을 @Effect4Amount@% <status>둔화</status>시키는 얼음 폭풍을 일으킵니다. 스킬에 영향을 받은 모든 적은 <magicDamage>@TotalDamageTooltip@의 마법 피해</magicDamage>를 입습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "세주아니가 얼음 정수 올가미를 던져 @BaseStunDuration@초 동안 처음 맞힌 챔피언의 모습을 드러내고 <status>기절</status>시키며, <magicDamage>@MinorDamageTooltip@의 마법 피해</magicDamage>를 입힙니다.<br><br>올가미가 사거리의 25% 이상 날아가 적중할 경우 @EmpoweredStunDuration@초 동안 모습을 드러내고 <status>기절</status>시킵니다. 또한 @ZoneDuration@초 동안 주변 적들을 @ExplosionSlowAmount@% <status>둔화</status>시키는 얼음 폭풍을 일으킵니다. 스킬에 영향을 받은 모든 적은 <magicDamage>@TotalDamageTooltip@의 마법 피해</magicDamage>를 입습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

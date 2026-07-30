@@ -1626,7 +1626,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Leona usa su escudo para realizar su siguiente ataque básico, infligiendo daño mágico adicional y aturdiendo al objetivo.",
-            "dynamicDescription": "El siguiente ataque de Leona <status>aturde</status> durante @Effect1Amount@ seg e inflige <magicDamage>@TotalDamageTooltip@</magicDamage> de daño mágico adicional.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "El siguiente ataque de Leona inflige <magicDamage>@TotalDamageTooltip@</magicDamage> de daño mágico adicional y <status>aturde</status> durante @StunDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1776,7 +1776,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Leona eleva su escudo para obtener reducción de daño, armadura y resistencia mágica. Cuando la duración termine, si hay enemigos cercanos, les infligirá daño mágico y extenderá la duración del efecto.",
-            "dynamicDescription": "Leona levanta su escudo para reducir el daño en @FlatDamageReduction@ y obtener <scaleArmor>@BonusArmorTooltip@ de Armadura</scaleArmor> y <scaleMR>@BonusMRTooltip@ de Resistencia Mágica</scaleMR> durante @Effect3Amount@ seg. Luego, detona su escudo e inflige <magicDamage>@TotalDamageTooltip@ de daño mágico</magicDamage> a los enemigos cercanos. Si alcanza al menos a uno, conservará el efecto de <scaleArmor>Armadura</scaleArmor> y <scaleMR>Resistencia Mágica</scaleMR> adicionales por @Effect3Amount@ seg más.<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona levanta su escudo, lo que reduce el daño recibido en @FlatDamageReduction@ y le otorga <scaleArmor>@BonusArmorTooltip@ de Armadura</scaleArmor> y <scaleMR>@BonusMRTooltip@ de Resistencia Mágica</scaleMR> durante @ArmorMRDuration@ seg. Luego, el escudo detona, lo que inflige <magicDamage>@TotalDamageTooltip@ de daño mágico</magicDamage> a los enemigos cercanos. Si la explosión impacta a un objetivo, Leona conserva las bonificaciones de <scaleArmor>armadura</scaleArmor> y <scaleMR>resistencia mágica</scaleMR> durante @ArmorMRDuration@ seg más.<br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1926,7 +1926,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Leona proyecta una imagen solar de su espada, infligiendo daño mágico a todos los enemigos en línea recta. Cuando la imagen desaparece, el último campeón enemigo alcanzado por ella se quedará inmovilizado brevemente, y Leona irá rápidamente hacia él.",
-            "dynamicDescription": "Leona hace una estocada con una espada de luz, lo que inflige <magicDamage>@TotalDamageTooltip@ de daño mágico</magicDamage>. El último campeón alcanzado quedará <status>inmovilizado</status> durante @Effect2Amount@ seg y Leona se desplazará hacia él.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona realiza una estocada con su espada de luz, lo que inflige <magicDamage>@TotalDamageTooltip@ de daño mágico</magicDamage>. Luego, <status>inmoviliza</status> al último campeón impactado durante @RootDuration@ seg y se desplaza hacia él.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,

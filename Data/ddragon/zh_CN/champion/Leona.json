@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.14.1",
+    "version": "16.15.1",
     "data": {
         "Leona": {
             "id": "Leona",
@@ -10,7 +10,7 @@
             "title": "蕾欧娜",
             "image": {
                 "full": "Leona.png",
-                "sprite": "champion2.png",
+                "sprite": "champion4.png",
                 "group": "champion",
                 "x": 48,
                 "y": 48,
@@ -546,14 +546,14 @@
                     "id": "LeonaShieldOfDaybreak",
                     "name": "破晓之盾",
                     "description": "蕾欧娜用盾进行下次普通攻击，造成额外魔法伤害并晕眩目标。",
-                    "tooltip": "蕾欧娜的下次攻击会<status>晕眩</status>目标{{ e1 }}秒，并造成额外的<magicDamage>{{ totaldamagetooltip }}</magicDamage>魔法伤害。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "蕾欧娜的下次攻击会<status>晕眩</status>目标{{ stunduration }}秒，并造成额外的<magicDamage>{{ totaldamagetooltip }}</magicDamage>魔法伤害。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },
@@ -674,10 +674,10 @@
                     "rangeBurn": "100",
                     "image": {
                         "full": "LeonaShieldOfDaybreak.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell13.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 96,
+                        "x": 384,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -687,7 +687,7 @@
                     "id": "LeonaSolarBarrier",
                     "name": "日蚀",
                     "description": "蕾欧娜举起盾牌，提供伤害减免、护甲和魔法抗性。当持续时间首次结束时，如果附近有敌人，那么她会对其造成魔法伤害并延长效果的持续时间。",
-                    "tooltip": "蕾欧娜举起她的盾牌，使即将到来的伤害降低{{ flatdamagereduction }}并获得<scaleArmor>{{ bonusarmortooltip }}护甲</scaleArmor>和<scaleMR>{{ bonusmrtooltip }}魔法抗性</scaleMR>，持续{{ e3 }}秒。之后，她的盾牌会爆炸，对附近的敌人造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>。如果她命中了至少一名敌人，那么她会将<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>加成延续额外的{{ e3 }}秒。<br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "蕾欧娜举起她的盾牌，使即将到来的伤害降低{{ flatdamagereduction }}并获得<scaleArmor>{{ bonusarmortooltip }}护甲</scaleArmor>和<scaleMR>{{ bonusmrtooltip }}魔法抗性</scaleMR>，持续{{ armormrduration }}秒。之后，她的盾牌会爆炸，对附近的敌人造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>。如果她命中了至少一名敌人，那么她会将该<scaleArmor>护甲</scaleArmor>和<scaleMR>魔法抗性</scaleMR>加成延续额外的{{ armormrduration }}秒。<br />{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -696,8 +696,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e4 }} -> {{ e4NL }}",
+                            "{{ explosionbasedamage }} -> {{ explosionbasedamageNL }}",
+                            "{{ armorbasebonus }} -> {{ armorbasebonusNL }}",
                             "{{ flatdamagereduction }} -> {{ flatdamagereductionNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
@@ -819,10 +819,10 @@
                     "rangeBurn": "450",
                     "image": {
                         "full": "LeonaSolarBarrier.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell13.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 96,
+                        "x": 432,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -832,7 +832,7 @@
                     "id": "LeonaZenithBlade",
                     "name": "天顶之刃",
                     "description": "蕾欧娜投掷一束日光，对直线上的所有敌人造成魔法伤害。当效果消失时，蕾欧娜会冲向最后一个被击中的敌人并使其无法移动。",
-                    "tooltip": "蕾欧娜用光明之剑进行猛刺，造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>。最后一个被命中的敌方英雄将会被<status>禁锢</status>{{ e2 }}秒，并且蕾欧娜将会冲向该英雄。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "蕾欧娜用光明之剑进行猛刺，造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>。最后一个被命中的英雄将会被<status>禁锢</status>{{ rootduration }}秒，并且蕾欧娜将会冲向该英雄。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -840,7 +840,7 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -962,10 +962,10 @@
                     "rangeBurn": "875",
                     "image": {
                         "full": "LeonaZenithBlade.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell14.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 96,
+                        "x": 0,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -1077,10 +1077,10 @@
                     "rangeBurn": "1200",
                     "image": {
                         "full": "LeonaSolarFlare.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell14.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 96,
+                        "x": 48,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -1092,7 +1092,7 @@
                 "description": "技能会在敌人身上施加【日光】效果，持续1.5秒。在此期间，蕾欧娜友军对这些目标造成伤害时，会触发【日光】，使目标受到额外的魔法伤害。",
                 "image": {
                     "full": "LeonaSunlight.png",
-                    "sprite": "passive2.png",
+                    "sprite": "passive4.png",
                     "group": "passive",
                     "x": 48,
                     "y": 48,

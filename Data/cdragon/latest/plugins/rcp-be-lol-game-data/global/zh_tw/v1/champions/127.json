@@ -371,7 +371,7 @@
                 },
                 {
                     "id": 127014,
-                    "name": "幽冥煞星 麗珊卓(金黃)",
+                    "name": "幽冥煞星 麗珊卓(石英黃)",
                     "contentId": "cb9f6363-3171-4cdc-b60d-12b471993d76",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -1111,7 +1111,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "麗珊卓投射出冰晶，當命中敵人時立即爆裂化為碎片，造成魔法傷害和降低目標的跑速。擊中第一個目標之後，部分的碎晶會穿透過去，對範圍內的其他敵人造成相同傷害。",
-            "dynamicDescription": "麗珊卓射出一束冰晶，命中第一位敵軍時立刻爆裂為碎片，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，<status>緩速</status>他們@Effect3Amount*-100@%，持續@Effect2Amount@秒，也會對他們後方的敵軍造成傷害和緩速。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "麗珊卓射出一束冰晶，命中第一位敵軍時立刻爆裂為碎片，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>，使對方<status>緩速</status>@SlowPercentage*-100@%，持續@SlowDuration@秒，並會對目標後方的敵軍造成傷害和緩速。@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1261,7 +1261,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "凍結四周的敵人，對範圍內的敵人造成魔法傷害和定身效果。",
-            "dynamicDescription": "麗珊卓生成一個冰霜領域，<status>定身</status>附近的敵人 @Effect2Amount@ 秒並造成 <magicDamage>@TotalDamage@ 魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "麗珊卓生成一個冰霜領域，<status>定身</status>鄰近敵軍@SnareDuration@秒並造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

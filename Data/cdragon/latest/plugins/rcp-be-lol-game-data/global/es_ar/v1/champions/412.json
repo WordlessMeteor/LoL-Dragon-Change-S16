@@ -1832,7 +1832,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Los ataques de Thresh se cargan e infligen más daño mientras más espere entre ataques. Al activarse, Thresh desliza su cadena y lanza a todos los enemigos alcanzados hacia la dirección del impacto.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Los ataques de Thresh infligen daño adicional según cuánto tiempo ha pasado desde la última vez que atacó. Infligen entre <magicDamage>@PAttackDamageMin@</magicDamage> y <magicDamage>@PAttackDamageMax@ de daño mágico</magicDamage>.<br><br><spellActive>Activa:</spellActive> Thresh azota sus cadenas, con lo que <status>atrae</status> o <status>empuja</status> a los enemigos en la dirección del azote. Los enemigos alcanzados también quedan <status>ralentizados</status> un @Effect2Amount@% durante @Effect4Amount@ seg y reciben <magicDamage>@TotalDamage@ de daño mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Al asestar un ataque, Thresh inflige daño adicional según el tiempo que pasó desde la última vez que atacó. Inflige entre <magicDamage>@PAttackDamageMin@</magicDamage> y <magicDamage>@PAttackDamageMax@ de daño mágico</magicDamage>.<br><br><spellActive>Activa:</spellActive> Thresh azota con sus cadenas, lo que <status>atrae</status> o <status>empuja</status> a los enemigos en la dirección del azote. Los objetivos impactados también reciben <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y quedan <status>ralentizados</status> en un @ActiveSlowPercentage@% durante @SlowDuration@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1982,7 +1982,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Una prisión de muros que ralentiza e inflige daño al romperse.",
-            "dynamicDescription": "Thresh crea una prisión de paredes espectrales, <status>lo que ralentiza</status> a los campeones un @Effect3Amount@% durante @Effect2Amount@ seg e inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage>. Las paredes se rompen después de una colisión y, después de que una se rompe, el resto no inflige daño y <status>ralentiza</status> por la mitad de la duración.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Thresh crea una prisión de muros espectrales, lo que inflige <magicDamage>@TotalDamage@ de daño mágico</magicDamage> a los campeones enemigos y los <status>ralentiza</status> en un @SlowAmount@% durante @SlowDuration@ seg. Los muros se rompen al chocar con ellos. Después de que uno cae, el resto ya no inflige daño y <status>ralentiza</status> durante la mitad del tiempo inicial.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

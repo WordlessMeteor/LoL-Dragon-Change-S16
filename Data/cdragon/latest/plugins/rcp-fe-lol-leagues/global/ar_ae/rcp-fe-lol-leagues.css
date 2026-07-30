@@ -2257,6 +2257,334 @@ div[data-screen-name=rcp-fe-lol-profiles-modal] .rank-standing-list-container .l
     position: relative
 }
 
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label {
+    font-family: var(--font-display)
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-title-container .demacia-promotion-vignette-subtitle,
+.demacia-promotion-vignette-component .demacia-promotion-vignette-title-container .demacia-promotion-vignette-title {
+    font-family: var(--font-frizquadrata)
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-title-container .demacia-promotion-vignette-subtitle:lang(vi-VN),
+.demacia-promotion-vignette-component .demacia-promotion-vignette-title-container .demacia-promotion-vignette-title:lang(vi-VN) {
+    font-family: var(--font-display)
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label {
+    -webkit-font-feature-settings: "kern" 1;
+    font-kerning: normal;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+    text-transform: uppercase
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label,
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label:lang(el-gr),
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label:lang(ja-jp),
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label:lang(ko-kr),
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label:lang(th-th),
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label:lang(tr-tr),
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label:lang(zh-tw) {
+    text-transform: none
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label {
+    color: #f0e6d2;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: .05em;
+    line-height: 22px
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.demacia-promotion-vignette-component {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-title-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    height: 57px;
+    justify-content: center;
+    position: absolute;
+    top: 44px;
+    width: 600px
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-title-container .demacia-promotion-vignette-title {
+    color: #f0e6d2;
+    font-size: 24px;
+    font-style: Roman;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 36px;
+    text-transform: uppercase
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-title-container .demacia-promotion-vignette-subtitle {
+    color: #a09b8c;
+    font-size: 14px;
+    font-style: Roman;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 100%
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-background {
+    background-image: url(/fe/lol-jade/images/old_sr_illustration.png);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 512px;
+    left: -280px;
+    opacity: .5;
+    position: absolute;
+    top: 125px;
+    width: 1280px
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .demacia-promotion-vignette-rank-container {
+    align-items: center;
+    display: flex;
+    height: 720px;
+    justify-content: center;
+    width: 720px
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .demacia-promotion-vignette-rank-container lol-regalia-emblem-element {
+    animation-delay: 1.2s;
+    animation-duration: .05s, .25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear, ease-out;
+    height: 300px;
+    opacity: 0;
+    position: relative;
+    width: 300px
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .demacia-promotion-vignette-rank-container lol-regalia-emblem-element.animated {
+    animation-name: demaciaFadeIn, demaciaPopIn
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .demacia-promotion-vignette-rank-container .demacia-promotion-vignette-rank-video {
+    position: absolute
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    position: relative;
+    text-align: center;
+    top: -200px;
+    width: 100%
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label.animated {
+    opacity: 0
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label.animated.fadeIn {
+    animation-delay: 1.75s;
+    animation-duration: .4s;
+    animation-fill-mode: both;
+    animation-name: fadeInSlideUp;
+    animation-timing-function: ease-out
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label .leagues-promotion-vignette-profile-icon-border {
+    background: linear-gradient(180deg, #c89b3c, #785a28);
+    background-position: 50%;
+    background-size: 100% 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 1px #000;
+    height: 36px;
+    margin: 0 0 0 10px;
+    padding: 3px;
+    width: 36px
+}
+
+.demacia-promotion-vignette-component .demacia-promotion-vignette-body-container .leagues-promotion-vignette-label .leagues-promotion-vignette-profile-icon-border .leagues-promotion-vignette-profile-icon {
+    border-radius: 50%;
+    box-shadow: 0 0 1px #000;
+    height: 100%;
+    width: 100%
+}
+
+.demacia-promotion-vignette-component .demacia-promo-next-button {
+    align-items: center;
+    background: linear-gradient(0deg, #c73e00 37.5%, #efa23a);
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+    height: 48px;
+    justify-content: center;
+    line-height: normal;
+    position: absolute;
+    text-shadow: 0 0 2px #000;
+    top: 665px;
+    white-space: nowrap;
+    width: 174px
+}
+
+.demacia-promotion-vignette-component .demacia-promo-next-button:hover {
+    background: linear-gradient(0deg, #d94800 37.5%, #f5b04a)
+}
+
+.demacia-promotion-vignette-component .demacia-promo-next-button:active {
+    background: linear-gradient(0deg, #a83500 37.5%, #d48a2e)
+}
+
+@-moz-keyframes demaciaFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes demaciaFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-o-keyframes demaciaFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes demaciaFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@-moz-keyframes demaciaPopIn {
+    0% {
+        transform: scale(.75)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes demaciaPopIn {
+    0% {
+        transform: scale(.75)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@-o-keyframes demaciaPopIn {
+    0% {
+        transform: scale(.75)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes demaciaPopIn {
+    0% {
+        transform: scale(.75)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+@-moz-keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@-webkit-keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@-o-keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
 .leagues-promotion-vignette-v2-component .leagues-promotion-vignette-header,
 .leagues-promotion-vignette-v2-component .leagues-promotion-vignette-label {
     font-family: var(--font-display)

@@ -989,7 +989,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Овечка делает рывок в выбранном направлении, а затем стреляет, поражая до трех врагов.",
-            "dynamicDescription": "Киндред совершают рывок и выпускают стрелы в 3 врагов, нанося <physicalDamage>@TotalDamage@ физического урона</physicalDamage> и увеличивая свою <attackSpeed>скорость атаки на @TotalQAttackSpeed@</attackSpeed> на @Effect8Amount@ сек.<br><br>Пока Киндред находятся в области действия умения <spellName>Волчье бешенство</spellName>, перезарядка этого умения сокращается до @Effect4Amount@ сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Киндред совершают рывок и выпускают стрелы в 3 врагов, нанося <physicalDamage>@TotalDamage@ ед. физ. урона</physicalDamage> и получая <attackSpeed>@TotalQAttackSpeed@ скорости атаки</attackSpeed> на @BaseASDuration@ сек.<br><br>Пока Киндред в области действия умения <spellName>Волчье бешенство</spellName>, перезарядка этого умения сокращена до @CDNewValue@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 340.0,
                 340.0,
@@ -1439,7 +1439,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Овечка дарует всем бойцам в зоне действия умения защиту от смерти. Во время действия умения никто не может умереть. По окончании его действия всем восстанавливается здоровье.",
-            "dynamicDescription": "Киндред благословляют землю вокруг себя на @Effect2Amount@ сек., создавая область, в которой никто не может умереть (действует на всех союзных, вражеских и нейтральных бойцов). Когда уровень здоровья бойца достигает 10%, он становится невосприимчив к урону и лечению, пока не покинет область.<br><br>По окончании действия благословения все бойцы внутри области восстанавливают <healing>@Effect1Amount@ здоровья</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Киндред благословляют землю вокруг себя на @BuffDuration@ сек., создавая область, в которой никто не умирает (действует на всех союзных, вражеских и нейтр. бойцов). Когда здоровье бойца достигает 10%, он получает невосприимчивость к урону и лечению, пока не покинет область.<br><br>По окончании действия благословения все бойцы в области восстанавливают <healing>@HealFlat@ здоровья</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

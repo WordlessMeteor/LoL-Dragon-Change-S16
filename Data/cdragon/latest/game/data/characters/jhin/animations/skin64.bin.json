@@ -31,7 +31,7 @@
             "Idle_Base": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Jhin/Skins/Skin64/Animations/Jhin_Idle01.SKINS_Jhin_Skin64.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/Jhin/Skins/Skin64/Animations/Jhin_Idle01.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -95,7 +95,7 @@
             "Attack3": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Jhin/Skins/Skin64/Animations/Jhin_Attack5.SKINS_Jhin_Skin64.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/Jhin/Skins/Skin64/Animations/Jhin_Attack5.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
@@ -179,8 +179,8 @@
             "Laugh": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{0cf0606b}": {
-                        "mName": "{0cf0606b}",
+                    "Audio_Laugh": {
+                        "mName": "Audio_Laugh",
                         "mSoundName": "Play_sfx_Jhin_Laugh3D_buffactivate",
                         "__type": "SoundEventData"
                     }
@@ -209,8 +209,8 @@
             "DanceIn": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{bc45bbc5}": {
-                        "mName": "{bc45bbc5}",
+                    "Audio_Dance": {
+                        "mName": "Audio_Dance",
                         "mSoundName": "Play_sfx_Jhin_Dance3D_buffactivate",
                         "__type": "SoundEventData"
                     }
@@ -225,8 +225,8 @@
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{bc45bbc5}": {
-                        "mName": "{bc45bbc5}",
+                    "Audio_Dance": {
+                        "mName": "Audio_Dance",
                         "mSoundName": "Play_sfx_Jhin_Dance3D_loop",
                         "__type": "SoundEventData"
                     },
@@ -314,8 +314,8 @@
             "Joke": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{eed2417d}": {
-                        "mName": "{eed2417d}",
+                    "Audio_Joke": {
+                        "mName": "Audio_Joke",
                         "mStartFrame": -1.0,
                         "mSoundName": "Play_sfx_Jhin_Joke3D_buffactivate",
                         "__type": "SoundEventData"
@@ -430,8 +430,8 @@
                     "{b231e4d2}": {
                         "mEndFrame": 260.0,
                         "mHideSubmeshList": [
-                            "{c8fb31d9}",
-                            "{a445c8b3}"
+                            "RecallStair",
+                            "RecallMirror"
                         ],
                         "__type": "SubmeshVisibilityEventData"
                     },
@@ -528,7 +528,7 @@
                         "mEffectKey": "{04ce2ee7}",
                         "mParticleEventDataPairList": [
                             {
-                                "mBoneName": "{2a95f713}",
+                                "mBoneName": "Recall_Mirror_Root",
                                 "__type": "ParticleEventDataPair"
                             }
                         ],
@@ -580,7 +580,7 @@
                     }
                 },
                 "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Jhin/Skins/Skin64/Animations/Recall.SKINS_Jhin_Skin64.anm",
+                    "mAnimationFilePath": "ASSETS/Characters/Jhin/Skins/Skin64/Animations/Recall.anm",
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"

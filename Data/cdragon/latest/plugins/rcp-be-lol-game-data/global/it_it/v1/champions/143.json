@@ -1752,7 +1752,7 @@
             "cost": "1 Seme",
             "cooldown": "Nessuna ricarica",
             "description": "Zyra pianta un seme, che dura fino a 60 secondi. Se lanciate vicino a un seme, Spine letali e Radici stringenti lo fanno crescere in una pianta, che combatte per Zyra. Zyra può immagazzinare più semi contemporaneamente, e uccidere i nemici riduce il tempo di ricarica di Crescita rigogliosa.",
-            "dynamicDescription": "Zyra pianta un <keywordMajor>Seme</keywordMajor> che dura @Effect6Amount@ secondi. Questi <keywordMajor>Semi</keywordMajor> conferiscono <keywordStealth>Visione magica</keywordStealth> per @Effect3Amount@ secondi nei confronti dei campioni nemici che ci passano sopra, ma vengono distrutti.<br><br>Quest'abilità ha 2 cariche e un tempo di ricarica di @AmmoRechargeTime@ secondo/i. Uccidere un minion nemico o un mostro riduce la ricarica di un @Effect1Amount*100@%. Le eliminazioni di campioni riducono la ricarica di un @Effect2Amount*100@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra pianta un <keywordMajor>Seme</keywordMajor> che dura @SeedDuration@ secondo/i. Questi <keywordMajor>Semi</keywordMajor> conferiscono <keywordStealth>Visione magica</keywordStealth> per @VisionGranted@ secondo/i nei confronti dei campioni nemici che ci passano sopra, ma vengono distrutti.<br><br>Questa abilità ha 2 cariche con un tempo di ricarica di @AmmoRechargeTime@ secondo/i. Uccidere un minion nemico o un mostro riduce la ricarica di un @KillAmmoRefundMinion*100@%. Le eliminazioni di campioni riducono invece la ricarica di un @KillAmmoRefundChamp*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Zyra invia delle piante rampicanti attraverso il terreno per intrappolare il bersaglio, infliggendo danni e trattenendolo quando ci passa attraverso. Se lanciato vicino a un seme, Radici stringenti fa crescere una Frusta rampicante, i cui attacchi a corta gittata riducono la velocità di movimento dei nemici.",
-            "dynamicDescription": "Zyra dirama delle piante rampicanti davanti a sé, <status>trattenendo</status> i nemici per @Effect5Amount@ secondo/i e infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage>. <br><br>Se quest'abilità passa vicino a un <keywordMajor>Seme</keywordMajor>, lo tramuta in una Frusta rampicante che infligge <magicDamage>@spell.ZyraP:PlantDamage@ danni magici</magicDamage> e dura @spell.ZyraP:PlantDuration@ secondi. Le Fruste rampicanti hanno una gittata di 400 e i loro attacchi <status>rallentano</status> del @Effect2Amount@% per @Effect3Amount@ secondi. Il <status>rallentamento</status> di più Fruste rampicanti si accumula fino a @MaxSlowStacks@ volte.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra dirama delle piante rampicanti davanti a sé, <status>trattenendo</status> i nemici per @RootDuration@ secondo/i e infliggendo <magicDamage>@TotalDamage@ danni magici</magicDamage>. <br><br>Se quest'abilità passa vicino a un <keywordMajor>Seme</keywordMajor>, lo tramuta in una Frusta rampicante che infligge <magicDamage>@spell.ZyraP:PlantDamage@ danni magici</magicDamage> e dura @spell.ZyraP:PlantDuration@ secondo/i. Le Fruste rampicanti hanno una gittata di 400 e i loro attacchi <status>rallentano</status> di un @SlowAmountPlantAttack@% per @SlowDurationPlantAttack@ secondo/i. Il <status>rallentamento</status> di più Fruste rampicanti si accumula fino a @MaxSlowStacks@ volte.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Zyra evoca una selva contorta nella posizione bersaglio, infliggendo danni ai nemici mentre si espande e lanciandoli in aria quando si contrae. Le piante nella selva sono furiose.",
-            "dynamicDescription": "Zyra evoca la furia della natura, creando una selva contorta che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>. Dopo 2 secondi, le piante schioccano verso l'alto, <status>lanciando in aria</status> i nemici per @Effect1Amount@ secondo/i.<br><br>Le piante di Zyra all'interno della selva si infuriano, ottengono <healing>@Effect2Amount*100@% salute</healing> e attaccano infliggendo @PlantDamageBonus@% danni bonus.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra evoca la furia della natura, creando una selva contorta che infligge <magicDamage>@TotalDamage@ danni magici</magicDamage>. Dopo 2 secondi, i rampicanti scattano verso l'alto, <status>lanciando in aria</status> per @KnockupDuration@ secondo.<br><br>Le piante di Zyra all'interno della selva si infuriano, ripristinano la propria durata, ottengono <healing>@EnragedBonusHealthPercent*100@% salute</healing> e attaccano infliggendo @PlantDamageBonus@% danni bonus.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

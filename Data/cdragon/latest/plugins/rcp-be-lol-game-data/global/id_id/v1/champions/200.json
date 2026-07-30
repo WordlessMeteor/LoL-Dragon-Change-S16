@@ -642,10 +642,10 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                1.0,
-                1.0,
-                1.0,
-                1.0,
+                4.0,
+                3.25,
+                2.5,
+                1.75,
                 1.0,
                 1.0
             ],
@@ -797,7 +797,7 @@
                 10.0,
                 9.0,
                 8.0,
-                8.0
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -942,12 +942,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                20.0,
-                19.0,
+                24.0,
+                21.0,
                 18.0,
-                17.0,
-                16.0,
-                16.0
+                15.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -1073,8 +1073,8 @@
             "abilityVideoImagePath": "champion-abilities/0200/ability_0200_R1.jpg",
             "cost": "Tanpa Biaya",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
-            "description": "Bel'Veth menyerap sisa-sisa Void Coral, berubah ke True Form, dan meningkatkan Health maksimum, Attack Range, Attack Speed, serta Move Speed di luar kombat. Mengonsumsi sisa-sisa Void Coral dari monster epik Void akan memberinya durasi Ultima lebih lama, begitu juga dengan kekuatan untuk memanggil Void Remora.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Setiap serangan kedua melawan target yang sama menghasilkan <trueDamage>@FinalOnHitDamage@ true damage</trueDamage> tambahan, bisa di-stack tanpa batas. Melakukan takedown champion dan monster epik akan menyisakan sebuah Void Coral.<br><br><spellActive>Aktif:</spellActive> Mengonsumsi Void Coral memberikan stack <keywordMajor>@PassiveStacksOnDevour@ Lavender</keywordMajor> dan mengaktifkan True Form Bel'Veth selama @SteroidDuration@ detik. Void Coral dari monster epik Void meningkatkan durasi itu hingga @VoidDuration@ detik dan menyebabkan minion yang mati di sekitar menjadi Void Remora. Saat casting, Bel'Veth menerapkan <status>Slow</status> pada musuh di sekitar sebelum meledak, menghasilkan <trueDamage>@TotalExplosionDamage@ + @MissingHealthDamage*100@% true damage dari Health yang hilang</trueDamage>.<br><br>Dalam True Form, Bel'Veth mendapatkan <healing>@MaxHealthOnDevour@ Health maksimum</healing>, <speed>@OOCMS@ Move Speed</speed> di luar kombat, @BonusAARange@ Attack Range, <attackSpeed>@TotalASMod*100@% Total Attack Speed</attackSpeed>, dan <spellName>Void Surge</spellName> yang bisa menembus dinding.<br><br><br>@SpellModifierDescriptionAppend@",
+            "description": "Bel'Veth menyerap sisa-sisa Void Coral, berubah ke True Form, dan meningkatkan Health maksimum, Attack Range, serta Attack Speed. Mengonsumsi sisa-sisa Void Coral dari monster epik Void akan memberinya kekuatan untuk memanggil Void Remora.",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Serangan menghasilkan <trueDamage>@FinalOnHitDamage@ true damage</trueDamage> tambahan, dapat di-stack tanpa batas. Melakukan takedown pada champion dan monster epik akan menyisakan sebuah Void Coral.<br><br><spellActive>Aktif:</spellActive> Bel'Veth mengonsumsi Void Coral, mendapatkan <keywordMajor>@PassiveStacksOnDevour@ stack Lavender</keywordMajor> dan mengaktifkan True Form miliknya. Void Coral dari monster epik Void menyebabkan minion yang mati di sekitar menjadi Void Remora. Saat melakukan cast, Bel'Veth menerapkan <status>Slow</status> pada musuh di sekitarnya sebelum meledak, menghasilkan <trueDamage>@TotalExplosionDamage@ + @MissingHealthDamage*100@% true damage dari Health yang hilang</trueDamage>.<br><br>Dalam True Form, Bel'Veth mendapatkan <healing>@MaxHealthOnDevour@ Health maksimum</healing>, @BonusAARange@ Attack Range, <attackSpeed>@TotalASMod*100@% Total Attack Speed</attackSpeed>, dan <spellName>Void Surge</spellName> bisa menembus dinding.<br><br><rules>True Form bertahan selama @SteroidDuration@ detik, meningkat jadi @SteroidDurationUpgrade@ detik saat punya <keywordMajor>@StackThresholdForUpgrade@ stack Lavender</keywordMajor>. Pada <keywordMajor>@StackThresholdForPermanent@ stack Lavender</keywordMajor>, True Form bertahan sampai kamu mati.</rules><br><br><br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

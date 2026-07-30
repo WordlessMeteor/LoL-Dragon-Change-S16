@@ -989,7 +989,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Kindred salta y dispara hasta tres flechas a los objetivos cercanos.",
-            "dynamicDescription": "Kindred salta y dispara una flecha a un máx. de 3 enemigos, lo que les inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> y obtiene un <attackSpeed>@TotalQAttackSpeed@ de Velocidad de Ataque</attackSpeed> durante @Effect8Amount@ seg.<br><br>Al estar dentro de <spellName>Frenesí de Lobo</spellName>, el enfriamiento de esta habilidad se reduce a @Effect4Amount@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kindred salta y dispara una flecha a un máximo de 3 enemigos, lo que les inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> a los objetivos y le otorga <attackSpeed>@TotalQAttackSpeed@ de Velocidad de Ataque</attackSpeed> a Kindred durante @BaseASDuration@ seg.<br><br>Mientras <spellName>Frenesí de Lobo</spellName> esté activa, el enfriamiento de esta habilidad se reduce a @CDNewValue@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 340.0,
                 340.0,
@@ -1439,7 +1439,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "La Oveja otorga a todos los seres vivos dentro de una zona un alivio que los salva de la muerte. Hasta que finaliza el efecto, nada puede morir. Al final, las unidades son curadas.",
-            "dynamicDescription": "Kindred bendice el piso durante @Effect2Amount@ seg, lo que hace que cualquier unidad, ya sea aliada, enemiga o neutral, sea inmortal al estar en esa área. Al llegar al 10% de Vida, las unidades no podrán recibir daño o curarse al estar dentro del área.<br><br>Cuando termina la bendición, todas las unidades en su interior reciben <healing>@Effect1Amount@ de Vida</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Kindred bendice el suelo durante @BuffDuration@ seg, lo que impide que cualquier unidad aliada, enemiga o neutral muera dentro del área. Cuando las unidades quedan con un 10% de Vida dentro del terreno bendecido, no pueden recibir daño ni curaciones hasta que salgan del área.<br><br>Al terminar la bendición, todas las unidades en el interior del área recuperan <healing>@HealFlat@ de Vida</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

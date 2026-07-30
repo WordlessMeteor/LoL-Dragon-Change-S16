@@ -1,106 +1,89 @@
 {
-    "Characters/SRU_ChaosMinionSiege/Spells/SRU_ChaosMinionSiegeBasicAttack": {
-        "ObjectName": "SRU_ChaosMinionSiegeBasicAttack",
-        "mScriptName": "SRU_ChaosMinionSiegeBasicAttack",
-        "mSpell": {
-            "mAffectsTypeFlags": 5327,
-            "mAlternateName": "Red_Minion_MechCannonBasicAttack",
-            "cooldownTime": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
-            ],
-            "Cooldown": {
-                "values": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "{0a3e0478}": 0.0,
-                "__type": "{0a0eddc9}"
-            },
-            "bHaveHitEffect": true,
-            "mConsideredAsAutoAttack": true,
-            "castRange": [
-                200.0,
-                200.0,
-                200.0,
-                200.0,
-                200.0,
-                200.0,
-                200.0
-            ],
-            "{0e1136d1}": {
-                "values": [
-                    200.0,
-                    200.0,
-                    200.0,
-                    200.0,
-                    200.0,
-                    200.0,
-                    200.0
-                ],
-                "{0a3e0478}": 200.0,
-                "__type": "{0a0eddc9}"
-            },
-            "castRadius": [
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0
-            ],
-            "castConeDistance": 100.0,
-            "mMissileSpec": {
-                "movementComponent": {
-                    "mTargetHeightAugment": 100.0,
-                    "mOffsetInitialTargetHeight": 100.0,
-                    "mStartBoneName": "cannon",
-                    "mSpeed": 1200.0,
-                    "__type": "FixedSpeedMovement"
-                },
-                "verticalFacing": {
-                    "__type": "VeritcalFacingMatchVelocity"
-                },
-                "behaviors": [
-                    {
-                        "__type": "CastOnMovementComplete"
-                    },
-                    {
-                        "__type": "DestroyOnMovementComplete"
-                    }
-                ],
-                "__type": "MissileSpecification"
-            },
-            "mCastType": 1,
-            "castFrame": 9.0,
-            "missileSpeed": 1200.0,
-            "mMissileEffectName": "DATA/Particles/SRU_Chaos_CanM_BA1.troy",
-            "mHitEffectName": "DATA/Particles/SRU_Chaos_CanM_Tar.troy",
-            "bHaveHitBone": true,
-            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
-            "mClientData": {
-                "mTargeterDefinitions": [
-                    {
-                        "useCasterBoundingBox": false,
-                        "__type": "TargeterDefinitionRange"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
-            "__type": "SpellDataResource"
+    "{0a14382f}": {
+        "mCharacterName": "SRU_ChaosMinionSiege",
+        "mFallbackCharacterName": "SRU_ChaosMinionRanged",
+        "baseHPModifiable": {
+            "baseValue": 725.0,
+            "__type": "ModifiableFloat"
         },
-        "__type": "SpellObject"
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 55.0,
+        "primaryAbilityResource": {
+            "{726ee5cd}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arIsShown": false,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "secondaryAbilityResource": {
+            "arIsShown": false,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 40.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 325.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 280.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 1.0,
+            "__type": "ModifiableFloat"
+        },
+        "basicAttack": {
+            "mAttackTotalTime": 1.0,
+            "mAttackCastTime": 0.30000001192092896,
+            "__type": "AttackSlotData"
+        },
+        "towerTargetingPriorityBoost": 5.0,
+        "expGivenOnDeath": 96.0,
+        "goldGivenOnDeath": 39.0,
+        "experienceRadius": 1600.0,
+        "perceptionBubbleRadius": 1200.0,
+        "significance": 0.5,
+        "name": "game_character_displayname_Red_Minion_MechCannon",
+        "selectionHeight": 95.0,
+        "selectionRadius": 140.0,
+        "pathfindingCollisionRadius": 55.74369812011719,
+        "overrideGameplayCollisionRadius": 65.0,
+        "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Siege",
+        "characterToolData": {
+            "mapAIPresence": {
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "description": "game_character_description_Red_Minion_MechCannon",
+            "baseAttackSpeedBonus": 30.0,
+            "attackSpeed": 2.0,
+            "__type": "CharacterToolData"
+        },
+        "Script": "{85b53614}",
+        "__type": "CharacterRecord"
     },
     "Characters/SRU_ChaosMinionSiege/CharacterRecords/Root": {
         "mCharacterName": "SRU_ChaosMinionSiege",
@@ -541,6 +524,109 @@
         ],
         "__type": "CharacterRecord"
     },
+    "Characters/SRU_ChaosMinionSiege/Spells/SRU_ChaosMinionSiegeBasicAttack": {
+        "ObjectName": "SRU_ChaosMinionSiegeBasicAttack",
+        "mScriptName": "SRU_ChaosMinionSiegeBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Red_Minion_MechCannonBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "mConsideredAsAutoAttack": true,
+            "castRange": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0,
+                    200.0
+                ],
+                "{0a3e0478}": 200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "cannon",
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 9.0,
+            "missileSpeed": 1200.0,
+            "mMissileEffectKey": "{5e10b01f}",
+            "mHitEffectKey": "{865ee72f}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
     "Characters/SRU_ChaosMinionSiege/Skins/Meta": {
         "relativeColorSwapTable": [
             1,
@@ -630,6 +716,208 @@
             }
         ],
         "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{85b53614}": {
+        "ScriptName": "CharScriptSRU_ChaosMinionSiege_Jade",
+        "path": "{85b53614}",
+        "sequences": {
+            "{e22f9f8c}": {
+                "blocks": [
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "c5d6960b-e7f7-4cac-9ce1-ab53da300dce",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "f77bd672-9766-484b-af1a-c6b78196db46",
+                                    "Var": {
+                                        "Var": "Attacker",
+                                        "__type": "{622705af}"
+                                    },
+                                    "__type": "{851b8dc5}"
+                                },
+                                {
+                                    "{d851ffa3}": "510a501f-2372-4d93-83e7-8df18ecbed2c",
+                                    "Condition": null,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "20c55bbf-c62a-4939-9835-018259666f26",
+                                                "Formula": "0.5 * ptp.DamageAmount",
+                                                "Dest": {
+                                                    "Var": "DamageAmount",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "eddbe7cf-6418-4d6f-82d7-11586698167b",
+                                                "Var": {
+                                                    "Var": "Target",
+                                                    "__type": "{622705af}"
+                                                },
+                                                "__type": "{851b8dc5}"
+                                            },
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{6a7835b9}": {
+                "blocks": [
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "17b6787e-0bd2-49f6-bb82-f8e30ba5fc07",
+                        "ToSay": {
+                            "value": "Jade Chaos Siege",
+                            "__type": "StringGet"
+                        },
+                        "__type": "DebugPrintToChatBlock"
+                    },
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "29251a24-955d-424a-92fc-fa53b7f691f7",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "103ba028-fbec-455f-b855-fd4c67cb20b9",
+                                    "__type": "ScriptCommentBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "6b587b6d-04fb-45e5-ac21-c85da2ffaa46",
+                                    "Src": {
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "InhibsDestroyed",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "359e1e92-ba91-4c88-bad6-2214dc23cb78",
+                                    "Src": {
+                                        "value": 200,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "InstanceVars"
+                                        },
+                                        "Var": "HpInhibitor",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "21b6a1ca-6c08-4bce-82d6-361e4e38991b",
+                                    "Src": {
+                                        "value": 25,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "InstanceVars"
+                                        },
+                                        "Var": "DamageInhibitor",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null,
+                                {
+                                    "{d851ffa3}": "7f4e93c6-4738-4797-8357-5af1c848b80f",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{358b1671}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "1cbb6e6e-5b13-4b53-b7be-bd32019e7284",
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "8f2b4139-f517-427b-9e01-5e10797d4f31",
+                                                "Formula": "iv.DamageInhibitor * ptp.InhibsDestroyed",
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "InstanceVars"
+                                                    },
+                                                    "Var": "DamageInhibitor",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "04387019-9dcf-4a92-8719-ebe655f6d820",
+                                                "Formula": "iv.HpInhibitor * ptp.InhibsDestroyed",
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "InstanceVars"
+                                                    },
+                                                    "Var": "HpInhibitor",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            },
+                                            null,
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{d576330f}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "47d52a1b-0186-4dbf-9421-3b64091e8f64",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "c7b90236-6ecd-4914-b275-46a41f4bcebe",
+                                    "Formula": "ptp.DamageAmount * 2",
+                                    "Dest": {
+                                        "Var": "DamageAmount",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
     },
     "__linked": []
 }

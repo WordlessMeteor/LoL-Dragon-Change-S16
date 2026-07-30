@@ -65,7 +65,6 @@
                             "Items/3190",
                             "Items/2065"
                         ],
-                        "MaxCompletedItems": 0,
                         "__type": "ItemRecOverrideRange"
                     },
                     {
@@ -96,10 +95,6 @@
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
-                ],
-                "mCoreItems": [
-                    "Items/3869",
-                    "Items/3876"
                 ],
                 "__type": "ItemRecommendationOverride"
             },
@@ -158,6 +153,74 @@
                             "Items/4641",
                             "Items/4401",
                             "Items/3107"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "{ad33a648}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/773132",
+                            "Items/771029",
+                            "Items/771006"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/773132",
+                            "Items/771033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/773096",
+                            "Items/771033",
+                            "Items/771004"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/773190",
+                            "Items/773105",
+                            "Items/773222"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773111",
+                            "Items/773047"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773050",
+                            "Items/773068",
+                            "Items/773065",
+                            "Items/773110",
+                            "Items/773005",
+                            "Items/773143",
+                            "Items/773083",
+                            "Items/773102",
+                            "Items/773026"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }
@@ -552,13 +615,41 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        10.0,
+                        10.0,
+                        35.0,
+                        60.0,
+                        85.0,
+                        110.0,
+                        135.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamageTooltip": {
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 2,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.30000001192092896,
@@ -693,8 +784,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -734,8 +824,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -747,8 +837,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -760,8 +850,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -903,13 +993,41 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        10.0,
+                        50.0,
+                        90.0,
+                        130.0,
+                        170.0,
+                        210.0,
+                        250.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RootDuration",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamageTooltip": {
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.4000000059604645,
@@ -1052,8 +1170,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1119,8 +1236,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "RootDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2235,6 +2352,58 @@
                         0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ExplosionBaseDamage",
+                    "values": [
+                        25.0,
+                        55.0,
+                        85.0,
+                        115.0,
+                        145.0,
+                        175.0,
+                        205.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MRBaseBonus",
+                    "values": [
+                        12.5,
+                        20.0,
+                        27.5,
+                        35.0,
+                        42.5,
+                        50.0,
+                        57.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorBaseBonus",
+                    "values": [
+                        12.5,
+                        20.0,
+                        27.5,
+                        35.0,
+                        42.5,
+                        50.0,
+                        57.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmorMRDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2242,8 +2411,8 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 4,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "ArmorBaseBonus",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 1,
@@ -2258,8 +2427,8 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 4,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "ArmorBaseBonus",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 6,
@@ -2274,8 +2443,8 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "ExplosionBaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mDataValue": "APRatio",
@@ -2415,13 +2584,13 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "ExplosionBaseDamage",
                                     "typeIndex": 1,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "ArmorBaseBonus",
                                     "typeIndex": 4,
                                     "nameOverride": "Spell_ListType_ArmorandMagicResist",
                                     "__type": "TooltipInstanceListElement"

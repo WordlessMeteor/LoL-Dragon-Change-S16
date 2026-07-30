@@ -1752,7 +1752,7 @@
             "cost": "1 Hạt Giống",
             "cooldown": "Không Hồi chiêu",
             "description": "Zyra đặt một hạt giống tồn tại 60 giây. Dùng Bó Gai Chết Chóc và Rễ Cây Trói Buộc gần hạt giống sẽ biến chúng thành cây chiến đấu cho Zyra. Zyra có thể tích trữ nhiều hạt giống một lúc, và hạ gục kẻ địch giảm thời gian sạc lại của Sum Sê.",
-            "dynamicDescription": "Zyra đặt ra một <keywordMajor>Hạt Giống</keywordMajor> tồn tại trong @Effect6Amount@ giây. Những <keywordMajor>Hạt Giống</keywordMajor> này cho <keywordStealth>Tầm Nhìn Chuẩn</keywordStealth> của tướng địch dẫm phải chúng trong @Effect3Amount@ giây, nhưng sẽ bị phá hủy.<br><br>Kỹ năng này có 2 tích trữ, thời gian hồi tích trữ là @AmmoRechargeTime@ giây. Tiêu diệt lính địch hoặc quái sẽ giảm thời gian hồi tích trữ đi @Effect1Amount*100@%. Tham gia hạ gục tướng sẽ giảm thời gian hồi tích trữ đi @Effect2Amount*100@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra đặt ra một <keywordMajor>Hạt Giống</keywordMajor> tồn tại trong @SeedDuration@ giây. Những <keywordMajor>Hạt Giống</keywordMajor> này cho <keywordStealth>Tầm Nhìn Chuẩn</keywordStealth> của tướng địch dẫm phải chúng trong @VisionGranted@ giây, nhưng sẽ bị phá hủy.<br><br>Kỹ năng này có 2 tích trữ, thời gian hồi tích trữ là @AmmoRechargeTime@ giây. Tiêu diệt lính địch hoặc quái sẽ giảm thời gian hồi tích trữ đi @KillAmmoRefundMinion*100@%. Tham gia hạ gục tướng sẽ giảm thời gian hồi tích trữ đi @KillAmmoRefundChamp*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Zyra phóng dây leo qua mặt đất để bắt giữ mục tiêu, gây sát thương phép và trói chân kẻ địch khi chúng đi qua. Nếu dùng chiêu gần hạt giống, Rễ Cây Trói Buộc biến thành Cây Quất Roi, có đòn đánh tầm xa làm chậm Tốc độ Di chuyển của địch.",
-            "dynamicDescription": "Zyra phóng dây leo về phía trước, <status>Trói Chân</status> kẻ địch trong @Effect5Amount@ giây và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>. <br><br>Nếu Kỹ Năng này chạm vào một <keywordMajor>Hạt Giống</keywordMajor>, <keywordMajor>Hạt Giống</keywordMajor> sẽ nảy mầm thành Cây Quất Roi, gây <magicDamage>@spell.ZyraP:PlantDamage@ sát thương phép</magicDamage> và tồn tại trong @spell.ZyraP:PlantDuration@ giây. Cây Quất Roi có tầm đánh 400 và các đòn đánh của chúng <status>Làm Chậm</status> mục tiêu đi @Effect2Amount@% trong @Effect3Amount@ giây. Hiệu ứng <status>Làm Chậm</status> từ nhiều Cây Quất Roi có thể cộng dồn @MaxSlowStacks@ lần.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra phóng dây leo về phía trước, <status>Trói Chân</status> kẻ địch trong @RootDuration@ giây và gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>. <br><br>Nếu Kỹ Năng này chạm vào một <keywordMajor>Hạt Giống</keywordMajor>, <keywordMajor>Hạt Giống</keywordMajor> sẽ nảy mầm thành Cây Quất Roi, gây <magicDamage>@spell.ZyraP:PlantDamage@ sát thương phép</magicDamage> và tồn tại trong @spell.ZyraP:PlantDuration@ giây. Cây Quất Roi có tầm đánh 400 và các đòn đánh của chúng <status>Làm Chậm</status> mục tiêu đi @SlowAmountPlantAttack@% trong @SlowDurationPlantAttack@ giây. Hiệu ứng <status>Làm Chậm</status> từ nhiều Cây Quất Roi có thể cộng dồn @MaxSlowStacks@ lần.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Zyra gọi ra một bụi cây kì dị tại vị trí đã chọn, gây sát thương lên những kẻ địch lúc nó bành trướng ra rồi hất tung những nạn nhân trúng chiêu đi. Cây bên trong vùng tác dụng trở nên cuồng nộ.",
-            "dynamicDescription": "Zyra triệu hồi cơn thịnh nộ của tự nhiên, tạo ra một bụi gai kỳ dị gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>. Sau 2 giây, chúng sẽ <status>Hất Tung</status> mục tiêu trong @Effect1Amount@ giây.<br><br>Những cây con của Zyra ở trong vùng tác động sẽ trở nên hung dữ hơn, tái tạo lại thời gian tồn tại, nhận <healing>@Effect2Amount*100@% Máu</healing> và Đòn đánh gây thêm @PlantDamageBonus@% sát thương. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra triệu hồi cơn cuồng nộ thiên nhiên, gọi lên một lùm cây kỳ dị gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage>. Sau 2 giây, dây leo sẽ trồi lên và <status>Hất Tung</status> trong @KnockupDuration@ giây.<br><br>Các cây của Zyra bên trong khu vực lùm cây sẽ hóa cuồng, đặt lại thời gian tác dụng, nhận <healing>@EnragedBonusHealthPercent*100@% Máu</healing> và Tấn Công với @PlantDamageBonus@% sát thương cộng thêm.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

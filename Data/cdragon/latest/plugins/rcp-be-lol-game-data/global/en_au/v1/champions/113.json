@@ -1370,7 +1370,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sejuani charges forward, knocking enemies into the air. The charge stops after hitting an enemy champion.",
-            "dynamicDescription": "Sejuani charges, dealing <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> to enemies and <status>Knocking</status> them <status>Up</status> for @Effect4Amount@ seconds. The charge ends after hitting an enemy champion.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani charges, dealing <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> to enemies and <status>Knocking</status> them <status>Up</status> for @KnockupDurationTOOLTIPONLY@ seconds. The charge ends after hitting an enemy champion.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sejuani freezes and stuns an enemy champion that has maximum Frost stacks.",
-            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Nearby melee allied champions' Attacks apply a stack to champions and jungle monsters.<br><br><spellPassive>Active:</spellPassive> Sejuani deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to target enemy with 4 stacks and <status>Stuns</status> them for @Effect1Amount@ second. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passive:</spellPassive> Nearby melee allied champions' Attacks apply a stack to champions and jungle monsters.<br><br><spellPassive>Active:</spellPassive> Sejuani deals <magicDamage>@TotalDamage@ magic damage</magicDamage> to target enemy with 4 stacks and <status>Stuns</status> them for @CCDuration@ second. @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sejuani throws her bola that freezes and stuns the first champion hit and creates an ice storm that slows other enemies.",
-            "dynamicDescription": "Sejuani throws her True Ice bola, <status>Stunning</status> and revealing the first enemy champion hit for @Effect2Amount@ second and dealing <magicDamage>@MinorDamageTooltip@ magic damage</magicDamage>.<br><br>If the bola travels at least 25% of its range, it <status>Stuns</status> and reveals for @Effect6Amount@ seconds instead. It then also creates an ice storm that <status>Slows</status> surrounding enemies by @Effect4Amount@% for @Effect3Amount@ seconds. All affected enemies take <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani throws her True Ice bola, <status>Stunning</status> and revealing the first enemy champion hit for @BaseStunDuration@ second and dealing <magicDamage>@MinorDamageTooltip@ magic damage</magicDamage>.<br><br>If the bola travels at least 25% of its range, it <status>Stuns</status> and reveals for @EmpoweredStunDuration@ seconds instead. It then also creates an ice storm that <status>Slows</status> surrounding enemies by @ExplosionSlowAmount@% for @ZoneDuration@ seconds. All affected enemies take <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

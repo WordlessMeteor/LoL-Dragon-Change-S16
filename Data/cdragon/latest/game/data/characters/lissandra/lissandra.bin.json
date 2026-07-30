@@ -96,12 +96,66 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        70.0,
+                        105.0,
+                        140.0,
+                        175.0,
+                        210.0,
+                        245.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SnareDuration",
+                    "values": [
+                        1.25,
+                        1.25,
+                        1.350000023841858,
+                        1.4500000476837158,
+                        1.5499999523162842,
+                        1.649999976158142,
+                        1.649999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TargetsToHit",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FreeCastCD",
+                    "values": [
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.699999988079071,
@@ -232,14 +286,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "SnareDuration",
                                     "nameOverride": "Spell_ListType_RootDuration",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2416,12 +2468,27 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        70.0,
+                        105.0,
+                        140.0,
+                        175.0,
+                        210.0,
+                        245.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.6000000238418579,
@@ -2546,8 +2613,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2931,6 +2997,32 @@
                         -0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercentage",
+                    "values": [
+                        -0.1599999964237213,
+                        -0.20000000298023224,
+                        -0.23999999463558197,
+                        -0.2800000011920929,
+                        -0.3199999928474426,
+                        -0.36000001430511475,
+                        -0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -3084,8 +3176,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 3,
+                                    "type": "SlowPercentage",
                                     "multiplier": -100.0,
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,

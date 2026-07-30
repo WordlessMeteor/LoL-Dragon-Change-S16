@@ -1,0 +1,143 @@
+{
+    "Characters/S3_AncientGolem/Spells/AncientGolem_BasicAttack": {
+        "ObjectName": "AncientGolem_BasicAttack",
+        "mScriptName": "AncientGolem_BasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 23.219999313354492,
+            "mHitEffectKey": "{6e40e18f}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/S3_AncientGolem/Spells/AncientGolem_BasicAttack2": {
+        "ObjectName": "AncientGolem_BasicAttack2",
+        "mScriptName": "AncientGolem_BasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 23.219999313354492,
+            "mHitEffectKey": "{6e40e18f}",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Chest_Loc",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/S3_AncientGolem/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/S3_AncientGolem/CharacterRecords/Root": {
+        "mCharacterName": "S3_AncientGolem",
+        "baseHPModifiable": {
+            "baseValue": 1400.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "primaryAbilityResource": {
+            "arType": 8,
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 60.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 20.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMoveSpeedModifiable": {
+            "baseValue": 220.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 150.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6100000143051147,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 300.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": 0.10999999940395355,
+            "mAttackProbability": 0.5,
+            "mAttackName": "AncientGolem_BasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": 0.10000000149011612,
+                "mAttackProbability": 0.5,
+                "mAttackName": "AncientGolem_BasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "expGivenOnDeath": 260.0,
+        "goldGivenOnDeath": 55.0,
+        "experienceRadius": -1.0,
+        "significance": 0.6000000238418579,
+        "enemyTooltip": "game_character_enemyTooltip_S3_AncientGolem",
+        "name": "game_character_displayname_S3_AncientGolem",
+        "weaponMaterials": [
+            "S3_AncientGolemBasicAttack"
+        ],
+        "selectionHeight": 120.0,
+        "selectionRadius": 155.0,
+        "pathfindingCollisionRadius": 24.57469940185547,
+        "overrideGameplayCollisionRadius": 80.0,
+        "unitTagsString": "Monster | Monster_Large | Monster_Blue | Monster_Camp | Monster_Buff",
+        "characterToolData": {
+            "mapAIPresence": {
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "description": "game_character_description_S3_AncientGolem",
+            "attackSpeed": 0.6100000143051147,
+            "__type": "CharacterToolData"
+        },
+        "flags": 278934792,
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

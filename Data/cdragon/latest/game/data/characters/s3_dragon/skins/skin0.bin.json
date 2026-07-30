@@ -1,0 +1,70 @@
+{
+    "Characters/S3_Dragon/Skins/Skin0": {
+        "championSkinName": "S3_Dragon",
+        "metaDataTags": "monstertype:dragon",
+        "skinAudioProperties": {
+            "bankUnits": [
+                {
+                    "name": "NPC_Map10_S3_Dragon_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/NPC_Map10_Wraith_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/NPC_Map10_Wraith_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/S3_Dragon/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/S3_Dragon/S3_Dragon.skl",
+            "simpleSkin": "ASSETS/Characters/S3_Dragon/S3_Dragon.skn",
+            "texture": "ASSETS/Characters/S3_Dragon/S3_Dragon.tex",
+            "skinScale": 2.0,
+            "selfIllumination": 1.0,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "{9a817954}": [
+                {
+                    "category": "{e1043940}",
+                    "Submeshes": "lambert3",
+                    "__type": "{993f8595}"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "{670f1fb4}",
+                "boneName": "Head",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconCircle": "ASSETS/Characters/S3_Dragon/Info/S3_Dragon_Circle.tex",
+        "iconSquare": "ASSETS/Characters/S3_Dragon/Info/S3_Dragon_Square.tex",
+        "mResourceResolver": "Characters/S3_Dragon/Skins/Skin0/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/S3_Dragon/Skins/Skin0/Resources": {
+        "resourceMap": {
+            "{670f1fb4}": "Maps/Shipping/Map453/Particles/Jade_Dragon_Smoke",
+            "{11caba79}": "Maps/Shipping/Map453/Particles/Jade_GlobalFireball_mis",
+            "{f4da6c7d}": "Items/Shared/Particles/Jade_GlobalHit_Physical",
+            "{5888f0a0}": "Maps/Shipping/Map453/Particles/Jade_Cape_Neg_buf",
+            "{541e25c3}": "Maps/Shipping/Map453/Particles/Jade_TurretDragonAttack_cas2"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/S3_Dragon/S3_Dragon.bin",
+        "DATA/Characters/S3_Dragon/Animations/Skin0.bin"
+    ]
+}

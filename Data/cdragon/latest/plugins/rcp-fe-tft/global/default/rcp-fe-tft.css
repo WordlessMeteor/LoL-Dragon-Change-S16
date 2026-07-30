@@ -198,31 +198,49 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
 }
 
 .tft-pardon-our-dust-button-wrapper {
-    margin-top: 55px;
+    align-self: flex-end;
+    height: 83px;
+    margin-top: 0;
+    position: relative
+}
+
+.tft-pardon-our-dust {
+    display: inline-block;
     position: relative
 }
 
 .tft-pardon-our-dust .tft-pardon-our-dust-label {
+    align-items: center;
+    bottom: 0;
     cursor: pointer;
-    font-size: 34px;
-    height: 92px;
-    line-height: 92px;
+    display: flex;
+    font-size: 20px;
+    justify-content: center;
+    left: 0;
     position: absolute;
+    right: 0;
     text-align: center;
-    width: 264px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, .75);
+    top: 0;
+    white-space: nowrap;
     z-index: 10
 }
 
 .tft-pardon-our-dust img {
     cursor: pointer;
-    height: 92px;
-    left: 0;
-    position: absolute;
-    top: 0
+    height: 73px
 }
 
+.tft-pardon-our-dust .tft-pardon-our-dust-img-main {
+    display: block
+}
+
+.tft-pardon-our-dust .tft-pardon-our-dust-img-clicked,
 .tft-pardon-our-dust .tft-pardon-our-dust-img-hover {
-    opacity: 0
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0
 }
 
 :hover~.tft-pardon-our-dust-img-hover {
@@ -234,8 +252,17 @@ lol-uikit-content-block.tft-persistent-tooltip-compact[type=tooltip-small] a:vis
     opacity: 0
 }
 
+:active~.tft-pardon-our-dust-img-clicked {
+    opacity: 1
+}
+
+:active~.tft-pardon-our-dust-img-hover,
+:active~.tft-pardon-our-dust-img-main {
+    opacity: 0
+}
+
 .tft-pardon-our-dust-pip {
-    left: 261px;
+    left: 198px;
     position: absolute;
     top: -6px
 }

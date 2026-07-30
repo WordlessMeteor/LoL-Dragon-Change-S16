@@ -1752,7 +1752,7 @@
             "cost": "1 بذرة",
             "cooldown": "دون فترة تبريد",
             "description": "تغرس زايرا بذرة تدوم حتى 60 ثانية. يؤدي إلقاء قدرتي الأشواك المميتة والجذور القابضة بجوار البذور إلى تحويلها إلى نباتات تقاتل لصالح زايرا. وتستطيع زايرا تخزين عدة بذور في ذات الوقت، ويقلص قتل الأعداء فترة إعادة شحن النمو المستفحل.",
-            "dynamicDescription": "تغرس زايرا <keywordMajor>بذرة</keywordMajor> تدوم @Effect6Amount@ث. تمنح هذه <keywordMajor>البذور</keywordMajor> <keywordStealth>رؤية حقيقية</keywordStealth> لأبطال العدو الذين يدوسون عليها لمدة @Effect3Amount@ث، مع بقاء إمكانية تدميرها.<br><br>تمتلك هذه القدرة شحنتين مع فترة إعادة شحن قدرها @AmmoRechargeTime@ث. يؤدي قتل تابع معادٍ أو وحش إلى تقليص فترة إعادة الشحن بنسبة @Effect1Amount*100@%. تؤدي الإطاحة ببطل إلى تقليص فترة إعادة الشحن بنسبة @Effect2Amount*100@% عوضًا عن ذلك.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تغرس زايرا <keywordMajor>بذرة</keywordMajor> تدوم لمدة @SeedDuration@ث. تمنح هذه <keywordMajor>البذور</keywordMajor> <keywordStealth>رؤية حقيقية</keywordStealth> لأبطال العدو الذين يدوسون عليها لمدة @VisionGranted@ث، لكن يبقى تدميرها ممكنًا.<br><br>تملك هذه القدرة شحنتين مع فترة إعادة شحن تبلغ @AmmoRechargeTime@ث. يؤدي قتل تابع معادٍ أو وحش إلى تقليص فترة إعادة الشحن بنسبة @KillAmmoRefundMinion*100@%. تؤدي الإطاحة ببطل إلى تقليص فترة إعادة الشحن بنسبة @KillAmmoRefundChamp*100@% عوضًا عن ذلك.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ترسل زايرا جذور الكرمة عبر الأرض للإيقاع بهدفها، فتلحق الضرر وتثبت الأعداء في طريقها. إذا تم إلقاؤها قرب بذرة، تنبت الجذور القابضة سوط كرمة الذي تقلص هجماته القصيرة المدى سرعة حركة العدو.",
-            "dynamicDescription": "ترسل زايرا الكروم إلى الأمام <status>وتثبت</status> الأعداء لمدة @Effect5Amount@ث وتلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>. <br><br>إذا مرت هذه القدرة قرب <keywordMajor>بذرة</keywordMajor>، فإن <keywordMajor>البذرة</keywordMajor> ستنمو لتصبح سوط كرمة يلحق <magicDamage>@spell.ZyraP:PlantDamage@ ضرر سحر</magicDamage> ويستمر لمدة @spell.ZyraP:PlantDuration@ث. يمتلك سوط الكرمة مدى 400، <status>وتبطئ هجماته</status> بنسبة @Effect2Amount@% لمدة @Effect3Amount@ث. يمكن تكدس <status>الإبطاء</status> من سوط الكرمة المتعددة حتى @MaxSlowStacks@ من المرات.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ترسل زايرا الكروم إلى الأمام، فتؤدي إلى <status>تثبيت</status> الأعداء لمدة @RootDuration@ث، كما تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>. <br><br>إذا مرت هذه القدرة قرب <keywordMajor>بذرة</keywordMajor>، فإن <keywordMajor>البذرة</keywordMajor> تنمو لتصبح سوط كرمة يلحق <magicDamage>@spell.ZyraP:PlantDamage@ ضرر سحر</magicDamage> ويستمر لمدة @spell.ZyraP:PlantDuration@ث. يمتلك سوط الكرمة مدى 400، وتطبق هجماته تأثير <status>الإبطاء</status> بنسبة @SlowAmountPlantAttack@% لمدة @SlowDurationPlantAttack@ث. يمكن تكدس <status>الإبطاء</status> من عدة سياط كرمة، حتى @MaxSlowStacks@ من المرات.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تستدعي زايرا أجمة ملتوية في الموقع المنشود، فتلحق الضرر بالأعداء مع توسعها، وتطيح بهم في الهواء مع انكماشها. ويثور غضب النباتات ضمن الأجمة.",
-            "dynamicDescription": "تستدعي زايرا غضب الطبيعة، وأجمة ملتفة تُلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>. وبعد ثانيتين، تبرز الكرمة إلى الأعلى، <status>فتطيح</status> بالأعداء لمدة @Effect1Amount@ث.<br><br>يثور غضب نباتات زايرا ضمن الأجمة، مما يعيد ضبط مدتها، وتكسب <healing>@Effect2Amount*100@% صحة</healing>، وتهاجم لإلحاق @PlantDamageBonus@% ضرر إضافي.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تستدعي زايرا غضب الطبيعة، فتؤدي إلى نمو أجمة ملتفة تلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>. تنطلق الكروم إلى الأعلى بعد ثانيتين، فتؤدي إلى <status>الإطاحة في الهواء</status> لمدة @KnockupDuration@ث.<br><br>يثور غضب نباتات زايرا ضمن الأجمة، مما يعيد ضبط مدتها، فتكسب <healing>@EnragedBonusHealthPercent*100@% صحة</healing> وتهاجم لإلحاق @PlantDamageBonus@% ضرر إضافي.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

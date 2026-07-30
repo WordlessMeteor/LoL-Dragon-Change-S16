@@ -2745,6 +2745,32 @@
                         33.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DoorDuration",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseTravelSpeed",
+                    "values": [
+                        900.0,
+                        900.0,
+                        900.0,
+                        900.0,
+                        900.0,
+                        900.0,
+                        900.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2770,12 +2796,12 @@
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
-                        20.0,
-                        20.0,
+                        18.0,
                         18.0,
                         16.0,
                         14.0,
                         12.0,
+                        10.0,
                         12.0
                     ],
                     "__type": "SpellEffectAmount"
@@ -2990,8 +3016,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "FriendlyMovementBonusPercentage",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -3003,8 +3029,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "FriendlyMovementBonusPercentage",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -3757,8 +3783,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -3770,8 +3796,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 4,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -3783,8 +3809,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -3796,8 +3822,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -4207,13 +4233,13 @@
                         {
                             "name": "ChargeupTime",
                             "values": [
-                                5.0,
-                                5.0,
-                                5.0,
-                                5.0,
-                                5.0,
-                                5.0,
-                                5.0
+                                2.5,
+                                2.5,
+                                2.5,
+                                2.5,
+                                2.5,
+                                2.5,
+                                2.5
                             ],
                             "__type": "SpellDataValue"
                         },
@@ -4246,13 +4272,26 @@
                         {
                             "name": "Ammo_Cooldown",
                             "values": [
-                                10.0,
-                                10.0,
-                                10.0,
-                                10.0,
-                                10.0,
-                                10.0,
-                                10.0
+                                8.0,
+                                8.0,
+                                8.0,
+                                8.0,
+                                8.0,
+                                8.0,
+                                8.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MoveSpeed_Ratio",
+                            "values": [
+                                0.0007999999797903001,
+                                0.0007999999797903001,
+                                0.0007999999797903001,
+                                0.0007999999797903001,
+                                0.0007999999797903001,
+                                0.0007999999797903001,
+                                0.0007999999797903001
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -4718,8 +4757,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 6,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "MinimumHeal",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -4731,8 +4770,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 6,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "MinimumHeal",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"

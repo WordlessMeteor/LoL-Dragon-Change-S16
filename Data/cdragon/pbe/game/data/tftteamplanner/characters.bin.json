@@ -47202,10 +47202,10 @@
                     "name": "DamageMin",
                     "values": [
                         180.0,
-                        205.0,
-                        305.0,
-                        460.0,
-                        800.0,
+                        30.0,
+                        45.0,
+                        70.0,
+                        120.0,
                         500.0,
                         500.0
                     ],
@@ -47215,12 +47215,25 @@
                     "name": "DamageMax",
                     "values": [
                         330.0,
-                        450.0,
-                        675.0,
-                        1015.0,
-                        1725.0,
+                        680.0,
+                        1020.0,
+                        1550.0,
+                        2650.0,
                         1000.0,
                         1000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxHealthDamage",
+                    "values": [
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448,
+                        0.15000000596046448
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -48518,6 +48531,10 @@
         "healthBarFullParallax": true,
         "primaryAbilityResource": {
             "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 55.0,
+                "__type": "ModifiableFloat"
+            },
             "{c4ab3550}": {
                 "baseValue": 0.0,
                 "__type": "ModifiableFloat"
@@ -48526,7 +48543,7 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 65.0,
+            "baseValue": 20.0,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
@@ -48548,7 +48565,7 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.550000011920929,
+            "baseValue": 0.6499999761581421,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
@@ -48574,7 +48591,7 @@
             ""
         ],
         "spells": [
-            "Characters/TFT17_IvernMinion/Spells/TFT17_IvernMinionSpell",
+            "{e01a20d1}",
             "{00000000}",
             "{00000000}",
             "{00000000}"
@@ -48597,92 +48614,92 @@
                 "__type": "TFTTraitContributionData"
             }
         ],
-        "CharacterRole": "{2ccf900f}",
+        "CharacterRole": "{44de5928}",
         "mMoveInterval": -0.25,
         "mMoveProximity": 180.0,
         "mMoveRange": 250.0,
         "mMoveHeight": 0.0,
-        "mInitialMana": 50.0,
         "mShopData": "{31f1402e}",
         "MobileHealthBarHeightOverride": 135.0,
         "mManaPerAttack": 5.0,
         "__type": "TFTCharacterRecord"
     },
-    "Characters/TFT17_IvernMinion/Spells/TFT17_IvernMinionSpell": {
-        "ObjectName": "TFT17_IvernMinionSpell",
-        "objectPath": "{e558341d}",
-        "mScriptName": "TFT17_IvernMinionSpell",
+    "{e01a20d1}": {
+        "ObjectName": "TFT17_IvernMinionSpellHero",
+        "objectPath": "{e01a20d1}",
+        "mScriptName": "TFT17_IvernMinionSpellHero",
         "mSpell": {
+            "flags": 4,
             "mAffectsTypeFlags": 11333,
             "mAffectsStatusFlags": 32,
             "DataValues": [
                 {
-                    "name": "HealingPercentHealth",
+                    "name": "LeapHexRange",
                     "values": [
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "HealingAP",
-                    "values": [
-                        80.0,
-                        380.0,
-                        430.0,
-                        600.0,
-                        770.0,
-                        80.0,
-                        80.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "HealDuration",
-                    "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "Damage",
                     "values": [
-                        200.0,
-                        160.0,
-                        240.0,
-                        360.0,
-                        600.0,
-                        450.0,
-                        450.0
+                        300.0,
+                        180.0,
+                        270.0,
+                        425.0,
+                        725.0,
+                        900.0,
+                        900.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FalloffPerHex",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "StunDuration",
                     "values": [
+                        1.0,
+                        1.0,
+                        1.0,
                         1.5,
                         1.5,
-                        1.75,
                         2.0,
-                        2.25,
-                        1.5,
-                        1.5
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "PercentEffects",
+                    "name": "BonusDamage",
+                    "values": [
+                        45.0,
+                        30.0,
+                        45.0,
+                        70.0,
+                        95.0,
+                        13545.0,
+                        135.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusDamagePerMeep",
                     "values": [
                         0.5,
                         0.5,
@@ -48695,114 +48712,149 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "HealingAndShieldingPerAstro",
+                    "name": "BonusAS",
                     "values": [
-                        0.11999999731779099,
-                        0.11999999731779099,
-                        0.11999999731779099,
-                        0.11999999731779099,
-                        0.11999999731779099,
-                        0.11999999731779099,
-                        0.11999999731779099
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "MeepsPerAstro",
+                    "name": "BonusBAD",
                     "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
+                        -45.0,
+                        -45.0,
+                        -45.0,
+                        -45.0,
+                        -45.0,
+                        -45.0,
+                        -45.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "NewManaCost",
+                    "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StartingManaModification",
+                    "values": [
+                        -50.0,
+                        -50.0,
+                        -50.0,
+                        -50.0,
+                        -50.0,
+                        -50.0,
+                        -50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EnemiesKnockedUp",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
-                "ModifiedDamage": {
+                "DamageTotal": {
                     "mSimpleTooltipCalculationDisplay": 5,
                     "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mSubparts": [
-                                {
-                                    "mSubpart": {
-                                        "mDataValue": "Damage",
-                                        "__type": "NamedDataValueCalculationPart"
-                                    },
-                                    "mRatio": 0.009999999776482582,
-                                    "__type": "SubPartScaledProportionalToStat"
-                                }
-                            ],
-                            "__type": "SumOfSubPartsCalculationPart"
+                            "mSubpart": {
+                                "mDataValue": "Damage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
                     "__type": "GameCalculation"
                 },
-                "ModifiedHeal": {
+                "TotalBonusDamage": {
                     "mSimpleTooltipCalculationDisplay": 5,
-                    "mFormulaParts": [
-                        {
-                            "mSubparts": [
-                                {
-                                    "mSubpart": {
-                                        "mDataValue": "HealingPercentHealth",
-                                        "__type": "NamedDataValueCalculationPart"
-                                    },
-                                    "mRatio": 1.0,
-                                    "mStat": 12,
-                                    "__type": "SubPartScaledProportionalToStat"
-                                },
-                                {
-                                    "mSubpart": {
-                                        "mDataValue": "HealingAP",
-                                        "__type": "NamedDataValueCalculationPart"
-                                    },
-                                    "mRatio": 0.009999999776482582,
-                                    "__type": "SubPartScaledProportionalToStat"
-                                }
-                            ],
-                            "__type": "SumOfSubPartsCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "ModifiedHealingAndShielding": {
-                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
                             "mPart1": {
-                                "mBuffName": "{743a49ea}",
-                                "mDataValue": "MeepsPerAstro",
-                                "__type": "BuffCounterByNamedDataValueCalculationPart"
+                                "mSubpart": {
+                                    "mDataValue": "BonusDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                "mRatio": 0.009999999776482582,
+                                "__type": "SubPartScaledProportionalToStat"
                             },
                             "mPart2": {
-                                "mDataValue": "HealingAndShieldingPerAstro",
-                                "__type": "NamedDataValueCalculationPart"
+                                "mSubparts": [
+                                    {
+                                        "mNumber": 1.0,
+                                        "__type": "NumberCalculationPart"
+                                    },
+                                    {
+                                        "mBuffName": "{743a49ea}",
+                                        "mDataValue": "BonusDamagePerMeep",
+                                        "__type": "BuffCounterByNamedDataValueCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
                             },
                             "__type": "ProductOfSubPartsCalculationPart"
                         }
                     ],
-                    "mDisplayAsPercent": true,
                     "__type": "GameCalculation"
                 },
-                "ModifiedNumMeeps": {
+                "ModifiedBonusDamage": {
                     "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
                     "mFormulaParts": [
                         {
-                            "mBuffName": "{743a49ea}",
-                            "mCoefficient": 1.0,
-                            "__type": "BuffCounterByCoefficientCalculationPart"
+                            "mSubpart": {
+                                "mDataValue": "BonusDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mRatio": 0.009999999776482582,
+                            "__type": "SubPartScaledProportionalToStat"
                         }
                     ],
                     "__type": "GameCalculation"
+                },
+                "ModifiedDamagePerMeep": {
+                    "mSimpleTooltipCalculationDisplay": 5,
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "mFormulaParts": [
+                        {
+                            "mBuffName": "{743a49ea}",
+                            "mDataValue": "BonusDamagePerMeep",
+                            "__type": "BuffCounterByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
                 }
             },
-            "mAnimationName": "Spell1",
-            "mCastTime": 0.6660000085830688,
+            "mAnimationName": "",
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
             "cooldownTime": [
@@ -48874,36 +48926,30 @@
             "mSpellCooldownOrSealedQueueThreshold": 0.5,
             "mClientData": {
                 "mTooltipData": {
-                    "mObjectName": "TFT17_IvernMinionSpell",
+                    "mObjectName": "TFT17_IvernMinionSpellHero",
                     "mFormat": "{fffee0e7}",
                     "mLocKeys": {
-                        "keyName": "Spell_TFT17_IvernMinionSpell_Name",
-                        "keyTooltip": "Spell_TFT17_IvernMinionSpell_Tooltip"
+                        "keyName": "Spell_TFT17_IvernMinionSpellHero_Name",
+                        "keyTooltip": "Spell_TFT17_IvernMinionSpellHero_Tooltip"
                     },
                     "mLists": {
                         "LevelUp": {
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "HealingAP",
-                                    "nameOverride": "Spell_TFT17_IvernMinionSpell_Healing",
+                                    "type": "BonusDamage",
+                                    "nameOverride": "Spell_TFT17_IvernMinionSpellHero_BonusDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "Damage",
                                     "typeIndex": 2,
-                                    "nameOverride": "Spell_TFT17_IvernMinionSpell_Damage",
+                                    "nameOverride": "TFT_AP_Damage_Total",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "StunDuration",
                                     "nameOverride": "TFT_Stun_ScaleLevel",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "HealingAndShieldingPerAstro",
-                                    "nameOverride": "Spell_TFT17_IvernMinionSpell_AstroBonus",
-                                    "Style": 2,
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],

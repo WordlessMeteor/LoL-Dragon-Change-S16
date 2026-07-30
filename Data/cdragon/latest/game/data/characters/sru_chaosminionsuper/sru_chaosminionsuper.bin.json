@@ -393,6 +393,96 @@
         ],
         "__type": "CharacterRecord"
     },
+    "{db00da5f}": {
+        "mCharacterName": "SRU_ChaosMinionSuper",
+        "mFallbackCharacterName": "SRU_OrderMinionSuper",
+        "baseHPModifiable": {
+            "baseValue": 1480.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 77.0,
+        "primaryAbilityResource": {
+            "{726ee5cd}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 120.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 100.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 325.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 170.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.8500000238418579,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.8500000238418579,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackTotalTime": 1.440000057220459,
+            "mAttackCastTime": 0.5,
+            "__type": "AttackSlotData"
+        },
+        "towerTargetingPriorityBoost": 6.0,
+        "expGivenOnDeath": 96.0,
+        "goldGivenOnDeath": 39.0,
+        "experienceRadius": 1600.0,
+        "significance": 0.5,
+        "friendlyTooltip": "game_character_friendlyTooltip_Red_Minion_MechMelee",
+        "enemyTooltip": "game_character_enemyTooltip_Red_Minion_MechMelee",
+        "name": "game_character_displayname_Red_Minion_MechMelee",
+        "minimapIconOverride": "SuperMinion",
+        "selectionHeight": 110.0,
+        "selectionRadius": 145.0,
+        "pathfindingCollisionRadius": 55.52080154418945,
+        "overrideGameplayCollisionRadius": 65.0,
+        "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Super",
+        "characterToolData": {
+            "mapAIPresence": {
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "description": "game_character_description_Red_Minion_MechMelee",
+            "__type": "CharacterToolData"
+        },
+        "flags": 9446664,
+        "mClientSideItemInventory": [
+            "Items/1512"
+        ],
+        "Script": "{b776ced0}",
+        "__type": "CharacterRecord"
+    },
     "Characters/SRU_ChaosMinionSuper/Spells/SRU_ChaosMinionSuperBasicAttack2": {
         "ObjectName": "SRU_ChaosMinionSuperBasicAttack2",
         "mScriptName": "SRU_ChaosMinionSuperBasicAttack2",
@@ -630,6 +720,85 @@
             }
         ],
         "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{b776ced0}": {
+        "ScriptName": "CharScriptSRU_ChaosMinionSuper_Jade",
+        "path": "{b776ced0}",
+        "sequences": {
+            "{e22f9f8c}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "74891bbf-b9cf-4042-bb68-e989715e8ffe",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "d2bffdd0-1b1f-47b2-a5a0-e3930172afea",
+                                    "Var": {
+                                        "Var": "Attacker",
+                                        "__type": "{622705af}"
+                                    },
+                                    "__type": "{851b8dc5}"
+                                },
+                                {
+                                    "{d851ffa3}": "516aeb74-fee9-4bad-9a21-1e0e62fce0e2",
+                                    "Condition": null,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "befcd6ac-7e16-4b2e-a530-8f6624eb77f9",
+                                                "Formula": "0.5 * ptp.DamageAmount",
+                                                "Dest": {
+                                                    "Var": "DamageAmount",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "5410b40d-dd7d-4078-bf0d-13cad383cad9",
+                                                "Var": {
+                                                    "Var": "Target",
+                                                    "__type": "{622705af}"
+                                                },
+                                                "__type": "{851b8dc5}"
+                                            },
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{54757ad9}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
     },
     "__linked": []
 }

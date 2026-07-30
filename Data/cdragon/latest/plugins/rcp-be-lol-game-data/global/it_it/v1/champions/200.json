@@ -642,10 +642,10 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                1.0,
-                1.0,
-                1.0,
-                1.0,
+                4.0,
+                3.25,
+                2.5,
+                1.75,
                 1.0,
                 1.0
             ],
@@ -797,7 +797,7 @@
                 10.0,
                 9.0,
                 8.0,
-                8.0
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -942,12 +942,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                20.0,
-                19.0,
+                24.0,
+                21.0,
                 18.0,
-                17.0,
-                16.0,
-                16.0
+                15.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -1073,8 +1073,8 @@
             "abilityVideoImagePath": "champion-abilities/0200/ability_0200_R1.jpg",
             "cost": "Nessun costo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
-            "description": "Bel'Veth consuma i resti di corallo del Vuoto e assume la sua Vera forma, aumentando la salute massima, la gittata d'attacco, la velocità d'attacco e la velocità di movimento fuori dai combattimenti. Consumare i resti di corallo del Vuoto di un mostro epico del Vuoto prolunga la durata della sua suprema e le conferisce il potere di evocare remore del Vuoto.",
-            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> ogni secondo attacco contro lo stesso bersaglio infligge <trueDamage>@FinalOnHitDamage@ danni puri</trueDamage> aggiuntivi, cumulabili all'infinito. Le eliminazioni contro campioni e mostri epici lasciano cadere un pezzo di Corallo del Vuoto.<br><br><spellActive>Attiva:</spellActive> consumare Corallo del Vuoto conferisce <keywordMajor>@PassiveStacksOnDevour@ carica Indaco</keywordMajor> e attiva la Vera forma di Bel'Veth per @SteroidDuration@ secondi. Il corallo del Vuoto da mostri epici del Vuoto aumenta la durata a @VoidDuration@ secondi e i minion che muoiono nelle sue vicinanze rinascono come remore del Vuoto. Quando lancia, Bel'Veth <status>rallenta</status> i nemici nelle vicinanze prima di esplodere, infliggendo <trueDamage>@TotalExplosionDamage@ + @MissingHealthDamage*100@% danni puri sulla salute mancante</trueDamage>.<br><br>Nella sua Vera forma, Bel'Veth ottiene <healing>@MaxHealthOnDevour@ salute massima</healing>, <speed>@OOCMS@ velocità di movimento</speed> fuori dal combattimento, @BonusAARange@ gittata d'attacco, <attackSpeed>@TotalASMod*100@% velocità d'attacco totale</attackSpeed> e <spellName>Impulso del Vuoto</spellName> può attraversare i muri.<br><br><br>@SpellModifierDescriptionAppend@",
+            "description": "Bel'Veth consuma i resti di corallo del Vuoto e assume la sua Vera forma, aumentando la salute massima, la gittata d'attacco e la velocità d'attacco. Consumare i resti di corallo del Vuoto di un mostro epico del Vuoto le conferisce il potere di evocare remore del Vuoto.",
+            "dynamicDescription": "<spellPassive>Passiva:</spellPassive> gli attacchi infliggono <trueDamage>@FinalOnHitDamage@ danni puri</trueDamage> aggiuntivi, cumulabili all'infinito. Le eliminazioni contro campioni e mostri epici lasciano cadere un pezzo di corallo del Vuoto.<br><br><spellActive>Attiva:</spellActive> Bel'Veth consuma un corallo del Vuoto, ottenendo <keywordMajor>@PassiveStacksOnDevour@ carica Indaco</keywordMajor> e attivando la sua Vera forma. Consumando corallo del Vuoto da mostri epici del Vuoto, Bel'Veth fa rinascere i minion che muoiono nelle sue vicinanze come remore del Vuoto. Quando lancia, Bel'Veth <status>rallenta</status> i nemici nelle vicinanze prima di esplodere, infliggendo <trueDamage>@TotalExplosionDamage@ + @MissingHealthDamage*100@% danni puri in base alla salute mancante</trueDamage>.<br><br>Nella sua Vera forma, Bel'Veth ottiene <healing>@MaxHealthOnDevour@ salute massima</healing>, @BonusAARange@ gittata d'attacco, <attackSpeed>@TotalASMod*100@% velocità d'attacco totale</attackSpeed> e <spellName>Impulso del Vuoto</spellName> può attraversare i muri.<br><br><rules>La Vera forma dura @SteroidDuration@ secondi, aumentati a @SteroidDurationUpgrade@ secondi a <keywordMajor>@StackThresholdForUpgrade@ cariche Indaco</keywordMajor>. A <keywordMajor>@StackThresholdForPermanent@ cariche Indaco</keywordMajor>, la Vera forma dura fino alla morte.</rules><br><br><br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

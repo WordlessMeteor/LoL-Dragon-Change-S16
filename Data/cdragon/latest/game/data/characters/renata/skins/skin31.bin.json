@@ -8073,7 +8073,7 @@
                     "__type": "ValueFloat"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/AurelionSol_Base_R_Cata_SharpEdges_GradientMask.TFT_Set17.tex",
+                    "textureMult": "ASSETS/Shared/Particles/AurelionSol_Base_R_Cata_SharpEdges_GradientMask.tex",
                     "UvRotationMult": {
                         "constantValue": -90.0,
                         "__type": "ValueFloat"
@@ -8812,7 +8812,7 @@
                     "__type": "ValueFloat"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/AurelionSol_Base_R_Cata_SharpEdges_GradientMask.TFT_Set17.tex",
+                    "textureMult": "ASSETS/Shared/Particles/AurelionSol_Base_R_Cata_SharpEdges_GradientMask.tex",
                     "UvRotationMult": {
                         "constantValue": -90.0,
                         "__type": "ValueFloat"
@@ -32716,7 +32716,7 @@
                     "__type": "ValueFloat"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/6655_Items_Noise_02.TFT_Set17.tex",
+                    "textureMult": "ASSETS/Shared/Particles/6655_Items_Noise_02.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             2.0,
@@ -39764,7 +39764,7 @@
                     "__type": "ValueFloat"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/6655_Items_Noise_02.TFT_Set17.tex",
+                    "textureMult": "ASSETS/Shared/Particles/6655_Items_Noise_02.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             2.0,
@@ -41474,7 +41474,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Air_Trail.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Air_Trail.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.20000000298023224,
@@ -41700,7 +41700,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Air_Trail.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Air_Trail.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.20000000298023224,
@@ -58474,7 +58474,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Air_Trail.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Air_Trail.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.20000000298023224,
@@ -58701,7 +58701,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Air_Trail.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/AurelionSol_Base_Air_Trail.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.20000000298023224,
@@ -58991,7 +58991,7 @@
                     "__type": "ValueFloat"
                 },
                 "textureMult": {
-                    "textureMult": "ASSETS/Shared/Particles/6655_Items_Noise_02.TFT_Set17.tex",
+                    "textureMult": "ASSETS/Shared/Particles/6655_Items_Noise_02.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             2.0,
@@ -115746,6 +115746,16 @@
         "name": "Characters/Renata/Skins/Skin31/Materials/Renata_Skin31_Glass_Cannister_Mat_inst",
         "paramValues": [
             {
+                "name": "Light_Offset",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "modelHeight",
                 "value": [
                     275.0,
@@ -115891,6 +115901,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_SPECULAR_OFFSET",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

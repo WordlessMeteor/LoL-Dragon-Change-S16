@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.14.1",
+    "version": "16.15.1",
     "data": {
         "Lissandra": {
             "id": "Lissandra",
@@ -10,7 +10,7 @@
             "title": "丽桑卓",
             "image": {
                 "full": "Lissandra.png",
-                "sprite": "champion2.png",
+                "sprite": "champion4.png",
                 "group": "champion",
                 "x": 144,
                 "y": 48,
@@ -422,7 +422,7 @@
                     "id": "LissandraQ",
                     "name": "寒冰碎片",
                     "description": "掷出一杆冰矛，冰矛会在命中敌人时碎裂，造成魔法伤害和减速效果。碎裂会穿过目标，对被冰矛命中的其他敌人造成等量伤害。",
-                    "tooltip": "丽桑卓扔出一杆冰矛，冰矛会在命中第一个敌人后碎裂，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>、持续{{ e2 }}秒的{{ e3 }}%<status>减速</status>，并且还会对该敌人身后的敌人们造成伤害和减速。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "丽桑卓扔出一杆冰矛，冰矛会在命中第一个敌人后碎裂，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>、持续{{ slowduration }}秒的{{ slowpercentage*-100 }}%<status>减速</status>，并且还会对该敌人身后的敌人们造成伤害和减速。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -432,7 +432,7 @@
                         ],
                         "effect": [
                             "{{ damage }} -> {{ damageNL }}",
-                            "{{ effect3amount*-100.000000 }}% -> {{ effect3amountnl*-100.000000 }}%",
+                            "{{ slowpercentage*-100.000000 }}% -> {{ slowpercentagenl*-100.000000 }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -472,11 +472,11 @@
                             1.5
                         ],
                         [
-                            20,
-                            24,
-                            28,
-                            32,
-                            36
+                            -0.2,
+                            -0.24,
+                            -0.28,
+                            -0.32,
+                            -0.36
                         ],
                         [
                             0,
@@ -532,7 +532,7 @@
                         null,
                         "0",
                         "1.5",
-                        "20/24/28/32/36",
+                        "-0.2/-0.24/-0.28/-0.32/-0.36",
                         "0",
                         "0",
                         "0",
@@ -554,10 +554,10 @@
                     "rangeBurn": "725",
                     "image": {
                         "full": "LissandraQ.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell14.png",
                         "group": "spell",
-                        "x": 0,
-                        "y": 144,
+                        "x": 288,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -567,7 +567,7 @@
                     "id": "LissandraW",
                     "name": "冰霜之环",
                     "description": "将周围的敌人冻在原地，造成魔法伤害和束缚效果。",
-                    "tooltip": "丽桑卓生成一个冰封领域，<status>禁锢</status>附近的敌人们{{ e2 }}秒并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "丽桑卓生成一个冰封领域，<status>禁锢</status>附近的敌人们{{ snareduration }}秒并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -575,8 +575,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ snareduration }} -> {{ snaredurationNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -697,10 +697,10 @@
                     "rangeBurn": "450",
                     "image": {
                         "full": "LissandraW.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell14.png",
                         "group": "spell",
-                        "x": 48,
-                        "y": 144,
+                        "x": 336,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -718,7 +718,7 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -840,10 +840,10 @@
                     "rangeBurn": "1050",
                     "image": {
                         "full": "LissandraE.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell14.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 144,
+                        "x": 384,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -959,10 +959,10 @@
                     "rangeBurn": "550",
                     "image": {
                         "full": "LissandraR.png",
-                        "sprite": "spell7.png",
+                        "sprite": "spell14.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 144,
+                        "x": 432,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -974,7 +974,7 @@
                 "description": "当一名敌方英雄在丽桑卓附近阵亡时，该英雄会变成一个冰封奴仆。冰封奴仆会寻找活着的敌人，使身边敌人的移动速度减少。在一段延迟后，冰封奴仆会从极度冰寒中粉碎，对附近目标造成魔法伤害。",
                 "image": {
                     "full": "Lissandra_Passive.png",
-                    "sprite": "passive2.png",
+                    "sprite": "passive4.png",
                     "group": "passive",
                     "x": 144,
                     "y": 48,

@@ -6509,7 +6509,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -6984,7 +6984,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -7246,7 +7246,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -10975,7 +10975,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -11870,7 +11870,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -12199,7 +12199,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.TFT_Set17.tex",
+                "texture": "ASSETS/Shared/Particles/Senna_Base_RingMult.tex",
                 "birthUvScrollRate": {
                     "constantValue": [
                         0.0,
@@ -34911,6 +34911,16 @@
         "name": "Characters/Malzahar/Skins/Skin19/Materials/Honey_inst",
         "paramValues": [
             {
+                "name": "Light_Offset",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "modelHeight",
                 "value": [
                     275.0,
@@ -35062,6 +35072,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_SPECULAR_OFFSET",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

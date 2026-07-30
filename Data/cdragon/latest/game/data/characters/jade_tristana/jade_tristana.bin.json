@@ -1,0 +1,2339 @@
+{
+    "Characters/Jade_Tristana/Spells/Jade_TristanaCritAttack": {
+        "ObjectName": "Jade_TristanaCritAttack",
+        "mScriptName": "Jade_TristanaCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_TristanaCritAttack",
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "castRange": [
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375
+                ],
+                "{0a3e0478}": 554.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 2250.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 6.462500095367432,
+            "missileSpeed": 2250.0,
+            "mMissileEffectKey": "Jade_Tristana_BA_mis2",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tristana_TristanaCritAttack_OnCast",
+                "13": "Play_sfx_Tristana_TristanaCritAttack_OnHit",
+                "16": "Play_sfx_Tristana_TristanaCritAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility": {
+        "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE",
+        "mChildSpells": [
+            "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE",
+            "{990d44ac}"
+        ],
+        "mName": "Jade_TristanaEAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Tristana/Spells/Jade_TristanaBasicAttack2": {
+        "ObjectName": "Jade_TristanaBasicAttack2",
+        "mScriptName": "Jade_TristanaBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_TristanaBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "castRange": [
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375
+                ],
+                "{0a3e0478}": 554.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 2250.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 6.462500095367432,
+            "missileSpeed": 2250.0,
+            "mMissileEffectKey": "Jade_Tristana_BA_mis",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tristana_TristanaBasicAttack_OnCast",
+                "13": "Play_sfx_Tristana_TristanaBasicAttack_OnHit",
+                "16": "Play_sfx_Tristana_TristanaBasicAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility": {
+        "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW",
+        "mChildSpells": [
+            "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW",
+            "{fbb089bb}"
+        ],
+        "mName": "Jade_TristanaWAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility": {
+        "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility/Jade_TristanaQ",
+        "mChildSpells": [
+            "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility/Jade_TristanaQ"
+        ],
+        "mName": "Jade_TristanaQAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility/Jade_TristanaQ": {
+        "ObjectName": "Jade_TristanaQ",
+        "mScriptName": "Jade_TristanaQ",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "PositiveEffect_EmpowerAttack"
+            ],
+            "DataValues": [
+                {
+                    "name": "AttackSpeedMod",
+                    "values": [
+                        0.15000000596046448,
+                        0.30000001192092896,
+                        0.44999998807907104,
+                        0.6000000238418579,
+                        0.75,
+                        0.8999999761581421,
+                        1.0499999523162842
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mAnimationName": "Idle1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_HeadShot.dds"
+            ],
+            "{f26881a0}": 1.399999976158142,
+            "cooldownTime": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "Cooldown": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 3.0399999618530273,
+            "missileSpeed": 1450.0,
+            "mana": [
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0,
+                    50.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tristana_TristanaQ_OnCast",
+                "18": "Play_sfx_Tristana_TristanaQ_OnBuffActivate",
+                "19": "Play_sfx_Tristana_TristanaQ_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TristanaQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TristanaQ_Jade_Name",
+                        "keySummary": "Spell_TristanaQ_Jade_Summary",
+                        "keyTooltip": "Spell_TristanaQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "AttackSpeedMod",
+                                    "typeIndex": 1,
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_AttackSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_TristanaQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 512,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE": {
+        "ObjectName": "Jade_TristanaE",
+        "mScriptName": "Jade_TristanaE",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "PassiveBaseDamage",
+                    "values": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveDot",
+                    "values": [
+                        14.0,
+                        22.0,
+                        30.0,
+                        38.0,
+                        46.0,
+                        54.0,
+                        62.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ActiveDotTotal",
+                    "values": [
+                        70.0,
+                        110.0,
+                        150.0,
+                        190.0,
+                        230.0,
+                        270.0,
+                        310.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "GrievousDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "GrievousAmount",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "PassiveDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "PassiveBaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.25,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{fd502790}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "ActiveDot",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.20000000298023224,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{bac8cb48}": {
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "ActiveDotTotal",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 1.0,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Crit",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_ExplosiveShot.dds"
+            ],
+            "cooldownTime": [
+                16.0,
+                16.0,
+                16.0,
+                16.0,
+                16.0,
+                16.0,
+                16.0
+            ],
+            "Cooldown": {
+                "values": [
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0,
+                    16.0
+                ],
+                "{0a3e0478}": 16.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRangeUseBoundingBoxes": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "mUseAutoattackCastTimeData": {
+                "__type": "UseAutoattackCastTimeData"
+            },
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Root",
+                    "mSpeed": 1400.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 6.0,
+            "missileSpeed": 1400.0,
+            "mMissileEffectKey": "Jade_Tristana_E_mis",
+            "mHitEffectKey": "Jade_Tristana_E_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_Buffbone_Glb_Center_Loc",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                50.0,
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    60.0,
+                    70.0,
+                    80.0,
+                    90.0,
+                    100.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tristana_TristanaE_OnCast",
+                "13": "Play_sfx_Tristana_TristanaEChargeSound_buffdeactivate",
+                "16": "Play_sfx_Tristana_TristanaE_OnMissileLaunch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TristanaE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TristanaE_Jade_Name",
+                        "keySummary": "Spell_TristanaE_Jade_Summary",
+                        "keyTooltip": "Spell_TristanaE_Jade_Tooltip",
+                        "keyTooltipExtendedBelowLine": "Jade_GreviousWounds_Buff"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "PassiveBaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_TristanaPassiveExplosionDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ActiveDotTotal",
+                                    "typeIndex": 4,
+                                    "nameOverride": "Spell_ListType_DamageOverTime",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "{fd502790}",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{990d44ac}": {
+        "ObjectName": "Jade_TristanaE_Debuff",
+        "mScriptName": "Jade_TristanaE_Debuff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_DetonatingShot.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_TristanaE_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility": {
+        "mRootSpell": "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility/Jade_TristanaR",
+        "mChildSpells": [
+            "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility/Jade_TristanaR"
+        ],
+        "mName": "Jade_TristanaRAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility/Jade_TristanaR": {
+        "ObjectName": "Jade_TristanaR",
+        "mScriptName": "Jade_TristanaR",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        200.0,
+                        300.0,
+                        400.0,
+                        500.0,
+                        600.0,
+                        700.0,
+                        800.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockbackDistance",
+                    "values": [
+                        400.0,
+                        600.0,
+                        800.0,
+                        1000.0,
+                        1200.0,
+                        1400.0,
+                        1600.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "DamageCalc": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 1.5,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_BusterShot.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                60.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0,
+                60.0
+            ],
+            "Cooldown": {
+                "values": [
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0,
+                    60.0
+                ],
+                "{0a3e0478}": 60.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRangeUseBoundingBoxes": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castRadiusSecondary": [
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0,
+                200.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Root",
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.260000228881836,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "Jade_Tristana_R_mis",
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tristana_TristanaR_OnCast",
+                "13": "Play_sfx_Tristana_TristanaR_OnHit",
+                "16": "Play_sfx_Tristana_TristanaR_OnMissileLaunch"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TristanaR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TristanaR_Jade_Name",
+                        "keySummary": "Spell_TristanaR_Jade_Summary",
+                        "keyTooltip": "Spell_TristanaR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "KnockbackDistance",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_TristanaKnockbackDistance",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "overrideRadius": {
+                            "mPerLevelValues": [
+                                200.0,
+                                200.0,
+                                200.0,
+                                200.0,
+                                200.0,
+                                200.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_TristanaR_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "DamageCalc",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 4194304,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "KnockbackDistance",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW": {
+        "ObjectName": "Jade_TristanaW",
+        "mScriptName": "Jade_TristanaW",
+        "mSpell": {
+            "mAffectsTypeFlags": 7183,
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock",
+                "Trait_PlayerSelectedDashDirection"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        70.0,
+                        115.0,
+                        160.0,
+                        205.0,
+                        250.0,
+                        295.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "LandingDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell2_In",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_RendingShot.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                24.0,
+                22.0,
+                20.0,
+                18.0,
+                16.0,
+                14.0,
+                14.0
+            ],
+            "Cooldown": {
+                "values": [
+                    24.0,
+                    22.0,
+                    20.0,
+                    18.0,
+                    16.0,
+                    14.0,
+                    14.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
+            ],
+            "castRadius": [
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0,
+                270.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 4.534999847412109,
+            "missileSpeed": 20.0,
+            "mana": [
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0
+                ],
+                "{0a3e0478}": 80.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tristana_TristanaW_OnCast",
+                "18": "Play_sfx_Tristana_TristanaW_loop"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TristanaW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TristanaW_Jade_Name",
+                        "keySummary": "Spell_TristanaW_Jade_Summary",
+                        "keyTooltip": "Spell_TristanaW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "LandingDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 3,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 128,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{fbb089bb}": {
+        "ObjectName": "Jade_TristanaW_Slow",
+        "mScriptName": "Jade_TristanaW_Slow",
+        "mBuff": {
+            "mDescription": "Buff_TristanaW_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{b69d7b6f}": {
+        "ObjectName": "Jade_TristanaSkin80Manager",
+        "mScriptName": "Jade_TristanaSkin80Manager",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "GoldToNextForm",
+                    "values": [
+                        2000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0,
+                        6000.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SecondsOutOfCombatTillTransform",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SecondsOutOfCombatTillEmote",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{bbd819cc}": {
+        "mRootSpell": "{fd6d02a1}",
+        "mChildSpells": [
+            "{fd6d02a1}"
+        ],
+        "mName": "Jade_TristanaPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Tristana/Spells/Jade_TristanaBasicAttack": {
+        "ObjectName": "Jade_TristanaBasicAttack",
+        "mScriptName": "Jade_TristanaBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "Jade_TristanaBasicAttack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "castRange": [
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375,
+                554.0999755859375
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375,
+                    554.0999755859375
+                ],
+                "{0a3e0478}": 554.0999755859375,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Buffbone_Glb_Weapon_1",
+                    "mSpeed": 2250.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 6.462500095367432,
+            "missileSpeed": 2250.0,
+            "mMissileEffectKey": "Jade_Tristana_BA_mis",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Tristana_TristanaBasicAttack_OnCast",
+                "13": "Play_sfx_Tristana_TristanaBasicAttack_OnHit",
+                "16": "Play_sfx_Tristana_TristanaBasicAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{fd6d02a1}": {
+        "ObjectName": "Jade_TristanaPassive",
+        "mScriptName": "Jade_TristanaPassive",
+        "mSpell": {
+            "mSpellCalculations": {
+                "BonusPassiveRange": {
+                    "mFormulaParts": [
+                        {
+                            "mEndValue": 153.0,
+                            "__type": "ByCharLevelInterpolationCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Tristana_DrawAbead.dds"
+            ],
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeUseBoundingBoxes": true,
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_TristanaPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_TristanaPassive_Jade_Name",
+                        "keySummary": "Spell_TristanaPassive_Jade_Summary",
+                        "keyTooltip": "Spell_TristanaPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Draw_a_Bead",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Tristana/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{835de583}": {
+        "ScriptName": "charscriptJade_Tristana",
+        "path": "{835de583}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "023160ac-d2a3-45b8-9974-e63b745042b1",
+                        "Src": {
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "BonusRange",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "90049c13-309f-4e25-82d1-d379b826ffac",
+                        "Src": {
+                            "__type": "IntGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "EBonusRange",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{bd909891}": {
+                "blocks": [
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "30d3ce30-f21e-4740-815e-4b6ce2f3faa4",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{822e38a2}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": "Jade_TristanaW",
+                                "__type": "StringGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "65100ba7-20b1-44a1-984f-7d93802c6c58",
+                                    "Src": {
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "UnpathablePointCount",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null,
+                                null,
+                                null,
+                                {
+                                    "{d851ffa3}": "1795a51e-722f-4924-b537-86667ea98056",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "Distance",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 2,
+                                        "Value2": {
+                                            "value": 900,
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "64f5c5e0-44c8-420e-a79e-252eade822f4",
+                                                "Src": {
+                                                    "value": 900,
+                                                    "__type": "IntGet"
+                                                },
+                                                "Dest": {
+                                                    "Var": "Distance",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            {
+                                                "{d851ffa3}": "c5e52617-8227-4c3a-b75b-4fd29b4fe553",
+                                                "Formula": "ptp.Distance - 50",
+                                                "Dest": {
+                                                    "Var": "Distance",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "b3b6a347-79b3-4ba3-96f7-2b425e8b166f",
+                                    "Formula": "ptp.Distance - 50",
+                                    "Dest": {
+                                        "Var": "Distance",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                {
+                                    "{d851ffa3}": "d6162891-2382-4942-b418-3dc64b7f36a0",
+                                    "Formula": "ptp.Distance / 2",
+                                    "Dest": {
+                                        "Var": "DistanceToCenter",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                },
+                                null,
+                                null,
+                                null,
+                                {
+                                    "{d851ffa3}": "a8317a5f-b0ca-4020-abd0-04f5bb1c6f40",
+                                    "Src": {
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "NearbyChamp",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "bf8cca31-cf6a-42ab-aa46-af9bd760c831",
+                                    "Src": {
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "NearbyTargetChamp",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "a57b6f38-2cfd-46bb-b6ab-857874c610ef",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{95c4bf69}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 5,
+                                        "Value2": {
+                                            "value": 0.25,
+                                            "__type": "FloatGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            null,
+                                            null,
+                                            {
+                                                "IsDisabled": true,
+                                                "{d851ffa3}": "b95d33bd-98eb-4bec-984d-5c2cb0f801bb",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "{a387b91d}",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Value2": {
+                                                        "value": 1,
+                                                        "__type": "IntGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
+                                                },
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "cc8d9bd3-e1e1-4c4c-acf0-76a1e78d785a",
+                                                            "Condition": {
+                                                                "Value1": {
+                                                                    "Var": "{617cbf6e}",
+                                                                    "__type": "ScriptTableGet"
+                                                                },
+                                                                "Value2": {
+                                                                    "__type": "IntGet"
+                                                                },
+                                                                "__type": "ComparisonScriptCondition"
+                                                            },
+                                                            "Sequence": {
+                                                                "blocks": [
+                                                                    {
+                                                                        "{d851ffa3}": "e156cd7f-06c4-4ecb-abef-4f334323c944",
+                                                                        "Var": {
+                                                                            "Var": "Attacker",
+                                                                            "__type": "{622705af}"
+                                                                        },
+                                                                        "__type": "{851b8dc5}"
+                                                                    },
+                                                                    null
+                                                                ],
+                                                                "__type": "ScriptSequence"
+                                                            },
+                                                            "__type": "{e524b2fc}"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                null,
+                                {
+                                    "{d851ffa3}": "25e57f45-6bf5-4c35-84f2-4b93fcb4116b",
+                                    "Src": {
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "CharacterVars"
+                                        },
+                                        "Var": "Long",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null,
+                                null,
+                                {
+                                    "{d851ffa3}": "cb341f34-d231-4104-afa0-023defc7aadd",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "Distance",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 3,
+                                        "Value2": {
+                                            "value": 700,
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            null,
+                                            {
+                                                "{d851ffa3}": "e96e6a09-322b-453e-9667-23b9867ca509",
+                                                "Src": {
+                                                    "value": 1,
+                                                    "__type": "IntGet"
+                                                },
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "CharacterVars"
+                                                    },
+                                                    "Var": "Long",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "87a29f1c-e2f1-47b7-a4a8-a44832a186dd",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "Distance",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 3,
+                                        "Value2": {
+                                            "value": 400,
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "type": 3,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "a6be137c-b246-4d91-8aa1-79bbb0134fbb",
+                                                "Src": {
+                                                    "value": 2,
+                                                    "__type": "IntGet"
+                                                },
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "CharacterVars"
+                                                    },
+                                                    "Var": "Long",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "ba61306e-ec9e-4543-bf80-190520c88425",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "Distance",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 3,
+                                        "Value2": {
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "type": 3,
+                                    "Sequence": {
+                                        "blocks": [
+                                            null,
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "95d93c0d-2b10-4108-833f-66a2ae97732f",
+                        "Condition": null,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "6b4d385d-d5c4-4dd8-bb8b-2f1bb243f826",
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "79caa99a-5ee9-4f71-990d-4c8e0e349d0b",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "Level",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 3,
+                                        "Value2": {
+                                            "value": 1,
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{6b1c1b08}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "88cd8855-682c-49f0-8f5e-a62d1ea60303",
+                        "Formula": "iv.EBaseRange + cv.EBonusRange",
+                        "Dest": {
+                            "Var": "EBonusRangeTemp",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "{15ebaa9c}"
+                    },
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{edb2eab3}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "9c4ac57b-6265-44cf-82bd-37f17b2ac1a4",
+                        "Formula": "9 + cv.EBonusRange",
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "EBonusRange",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "{15ebaa9c}"
+                    },
+                    {
+                        "{d851ffa3}": "e611e254-5075-45a0-8778-5ddbbe7e4fe7",
+                        "Formula": "cv.EBonusRange",
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "BonusRange",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "{15ebaa9c}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "{92239350}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    0,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "bottom",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    0,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "bottom",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    0,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    1,
+                    0,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{9505e2d4}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "Characters/Jade_Tristana/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Tristana",
+        "baseHPModifiable": {
+            "baseValue": 497.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 82.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.149999976158142,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.12999999523162842,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 80.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 225.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 32.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.3799999952316284,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.09000000357627869,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 49.5,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 22.0,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 325.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 550.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.656000018119812,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.656000018119812,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 4.0,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 800.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.15199999511241913,
+            "mAttackProbability": 0.8500000238418579,
+            "mAttackName": "Jade_TristanaBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.15000000596046448,
+                "mAttackName": "Jade_TristanaBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.15199336409568787,
+                "mAttackName": "Jade_TristanaCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_TristanaQAbility/Jade_TristanaQ",
+            "Jade_TristanaWAbility/Jade_TristanaW",
+            "Jade_TristanaEAbility/Jade_TristanaE",
+            "Jade_TristanaRAbility/Jade_TristanaR"
+        ],
+        "spells": [
+            "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility/Jade_TristanaQ",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility/Jade_TristanaW",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility/Jade_TristanaE",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility/Jade_TristanaR"
+        ],
+        "{c1984296}": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{bbd819cc}",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaQAbility",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaWAbility",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaEAbility",
+            "Characters/Jade_Tristana/Spells/Jade_TristanaRAbility"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Tristana",
+        "passiveLuaName": "",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Tristana",
+        "passiveSpell": "Jade_TristanaPassive",
+        "passive1IconName": "ASSETS/Characters/Jade_Tristana/HUD/Icons2D/Jade_Tristana_Passive.dds",
+        "name": "game_character_displayname_Jade_Tristana",
+        "mUseCCAnimations": true,
+        "selectionHeight": 110.0,
+        "selectionRadius": 100.0,
+        "pathfindingCollisionRadius": 30.0,
+        "overrideGameplayCollisionRadius": 55.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1055,
+            "skillOrder": 2,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            14,
+            0,
+            7
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Jade_Tristana loads a massive cannonball into her weapon and fires it at an enemy unit. This deals damage and knocks the target back.",
+                    "displayName": "Buster Shot",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Tristana loads a massive cannonball into her weapon and fires it at an enemy unit. This deals damage and knocks the target back.",
+                    "displayName": "Buster Shot",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Tristana loads a massive cannonball into her weapon and fires it at an enemy unit. This deals damage and knocks the target back.",
+                    "displayName": "Buster Shot",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Tristana loads a massive cannonball into her weapon and fires it at an enemy unit. This deals damage and knocks the target back.",
+                    "displayName": "Buster Shot",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Tristana",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "marksman",
+            "searchTagsSecondary": "assassin",
+            "championId": 60018,
+            "roles": "ATTACKER",
+            "magicRank": 5,
+            "difficultyRank": 4,
+            "description": "game_character_description_Jade_Tristana",
+            "defenseRank": 3,
+            "classification": "Deadly",
+            "ChasingAttackRangePercent": 0.800000011920929,
+            "botEnabled": true,
+            "botEnabledMM": true,
+            "attackRank": 9,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "purchaseIdentities": [
+            "Ranged"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Precision",
+        "mCharacterPassiveSpell": "{fd6d02a1}",
+        "{c5c48b41}": 1,
+        "Script": "{835de583}",
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

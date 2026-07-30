@@ -1832,7 +1832,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Треш накапливает силу для удара между автоатаками - чем больше времени между ними проходит, тем больше урона он наносит. При активации умения Треш делает взмах цепью, отбрасывая врагов по направлению удара.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> автоатаки Треша наносят дополнительный урон, который зависит от того, сколько времени прошло с прошлой автоатаки. Они наносят <magicDamage>от @PAttackDamageMin@ до @PAttackDamageMax@ магического урона</magicDamage>.<br><br><spellActive>Активно:</spellActive> Треш взмахивает цепью, <status>подтягивая</status> или <status>отбрасывая</status> врагов в направлении взмаха. Пораженные враги также <status>замедляются</status> на @Effect2Amount@% на @Effect4Amount@ сек. и получают <magicDamage>@TotalDamage@ магического урона</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> автоатаки Треша наносят доп. урон, зависящий от времени с предыдущей автоатаки (<magicDamage>@PAttackDamageMin@</magicDamage>–<magicDamage>@PAttackDamageMax@ ед. маг. урона</magicDamage>).<br><br><spellActive>Активно:</spellActive> Треш взмахивает цепью, <status>подтягивая</status> или <status>отбрасывая</status> врагов в направлении взмаха. Пораженные враги также <status>замедляются</status> на @ActiveSlowPercentage@% на @SlowDuration@ сек. и получают <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1982,7 +1982,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Треш создает призрачные стены вокруг себя, которые наносят урон и замедляют врагов, пытающихся пройти сквозь них.",
-            "dynamicDescription": "Треш создает тюрьму с призрачными стенами, которые <status>замедляют</status> чемпионов на @Effect3Amount@% на @Effect2Amount@ сек. и наносят <magicDamage>@TotalDamage@ магического урона</magicDamage>. Стены уничтожаются, когда их касается враг. После уничтожения первой стены остальные перестают наносить урон, а продолжительность их <status>замедления</status> уменьшается вдвое.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Треш создает тюрьму с призрачными стенами, <status>замедляющую</status> чемпионов на @SlowAmount@% на @SlowDuration@ сек. и наносящую <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>. Стены уничтожаются, когда их касается враг. После уничтожения первой стены остальные перестают наносить урон, а длительность их <status>замедления</status> падает вдвое.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

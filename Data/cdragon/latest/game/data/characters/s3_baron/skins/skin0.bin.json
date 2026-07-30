@@ -1,0 +1,94 @@
+{
+    "Characters/S3_Baron/Skins/Skin0": {
+        "championSkinName": "S3_Baron",
+        "metaDataTags": "monstertype:baron",
+        "skinAudioProperties": {
+            "bankUnits": [
+                {
+                    "name": "NPC_Map10_S3_Baron_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/NPC_Map10_Wraith_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Shared/NPC_Map10_Wraith_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/S3_Baron/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/S3_Baron/S3_Baron.skl",
+            "simpleSkin": "ASSETS/Characters/S3_Baron/S3_Baron.skn",
+            "texture": "ASSETS/Characters/S3_Baron/S3_Baron.tex",
+            "skinScale": 1.5,
+            "selfIllumination": 1.0,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "{9a817954}": [
+                {
+                    "category": "{e1043940}",
+                    "Submeshes": "blinn2",
+                    "__type": "{993f8595}"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "idleParticlesEffects": [
+            {
+                "effectKey": "{4a45a419}",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconCircle": "ASSETS/Characters/S3_Baron/Info/S3_Baron_Circle.tex",
+        "iconSquare": "ASSETS/Characters/S3_Baron/Info/S3_Baron_Square.tex",
+        "mResourceResolver": "Characters/S3_Baron/Skins/Skin0/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "mDrivers": [
+                        {
+                            "__type": "IsAttackingBoolDriver"
+                        },
+                        {
+                            "SpellSlot": 62,
+                            "__type": "IsCastingBoolDriver"
+                        }
+                    ],
+                    "__type": "OneTrueMaterialDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "Jaw",
+                        "effectKey": "{b8528418}",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/S3_Baron/Skins/Skin0/Resources": {
+        "resourceMap": {
+            "{4a45a419}": "Maps/Shipping/Map453/Particles/Jade_WormFog",
+            "{e9e648e8}": "Maps/Shipping/Map453/Particles/Jade_WormBasicAttack_mis",
+            "{94923934}": "Maps/Shipping/Map453/Particles/Jade_CausticWake_tar",
+            "{ec9e937f}": "Maps/Shipping/Map453/Particles/Jade_Slimecall_tar",
+            "{49a8a8fc}": "Maps/Shipping/Map453/Particles/Jade_PropelBubbles",
+            "{b8528418}": "Maps/Shipping/Map453/Particles/Jade_WormFoam"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/S3_Baron/S3_Baron.bin",
+        "DATA/Characters/S3_Baron/Animations/Skin0.bin"
+    ]
+}

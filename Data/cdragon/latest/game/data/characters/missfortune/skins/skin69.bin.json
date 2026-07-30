@@ -12,11 +12,11 @@
             "__type": "SkinUpgradeData"
         },
         "loadscreen": {
-            "image": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortuneLoadScreen_69.SKINS_MissFortune_Skin69.tex",
+            "image": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortuneLoadScreen_69.tex",
             "__type": "CensoredImage"
         },
         "loadscreenVintage": {
-            "image": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortuneLoadScreen_69_LE.SKINS_MissFortune_Skin69.tex",
+            "image": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortuneLoadScreen_69_LE.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -171,6 +171,7 @@
                         "Play_vo_MissFortuneSkin69_Ping2DOnMyWay",
                         "Play_vo_MissFortuneSkin69_Ping2DTarget",
                         "Play_vo_MissFortuneSkin69_Recall3DGeneral",
+                        "Play_vo_MissFortuneSkin69_Receive3DHealShield",
                         "Play_vo_MissFortuneSkin69_Respawn2DGeneral",
                         "Play_vo_MissFortuneSkin69_Spell2DRankUpGeneral",
                         "Play_vo_MissFortuneSkin69_Spell2DRRankOne",
@@ -181,8 +182,6 @@
                         "Play_vo_MissFortuneSkin69_Spell3DRCast",
                         "Play_vo_MissFortuneSkin69_Spell3DRCastReady",
                         "Play_vo_MissFortuneSkin69_Spell3DWCast",
-                        "Play_vo_MissFortuneSkin69_SpellBuffReceive2DGeneral",
-                        "Play_vo_MissFortuneSkin69_SpellCastQBounceKill3D",
                         "Play_vo_MissFortuneSkin69_Taunt3DGeneral",
                         "Play_vo_MissFortuneSkin69_TauntResponse3DGeneral"
                     ],
@@ -197,9 +196,9 @@
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69.SKINS_MissFortune_Skin69.skl",
-            "simpleSkin": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69.SKINS_MissFortune_Skin69.skn",
-            "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_TX_CM.SKINS_MissFortune_Skin69.tex",
+            "skeleton": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69.skl",
+            "simpleSkin": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69.skn",
+            "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_TX_CM.tex",
             "skinScale": 1.2000000476837158,
             "selfIllumination": 0.699999988079071,
             "overrideBoundingBox": [
@@ -302,7 +301,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_TX_CM.SKINS_MissFortune_Skin69.tex",
+                    "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_TX_CM.tex",
                     "submesh": "Hair",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -327,7 +326,7 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
                 {
-                    "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Throne_TX_CM.SKINS_MissFortune_Skin69.tex",
+                    "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Throne_TX_CM.tex",
                     "submesh": "Throne",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -340,7 +339,7 @@
             "rigPoseModifierData": [
                 {
                     "mStartingJointName": "L_Ribbon1",
-                    "mEndingJointName": "{8ab6c4c3}",
+                    "mEndingJointName": "L_ribbon5",
                     "mDefaultMaskName": "{7136e1bc}",
                     "mMaxBoneAngle": 80.0,
                     "mFrequency": 1.0,
@@ -349,7 +348,7 @@
                 },
                 {
                     "mStartingJointName": "R_Ribbon1",
-                    "mEndingJointName": "{be857845}",
+                    "mEndingJointName": "R_ribbon5",
                     "mDefaultMaskName": "{7136e1bc}",
                     "mMaxBoneAngle": 80.0,
                     "mFrequency": 1.0,
@@ -363,7 +362,7 @@
         "mContextualActionData": "Characters/MissFortune/CAC/MissFortune_Skin69",
         "iconCircle": "ASSETS/Characters/MissFortune/HUD/MissFortune_Circle_0.tex",
         "iconSquare": "ASSETS/Characters/MissFortune/HUD/MissFortune_Square_0.tex",
-        "iconAvatar": "ASSETS/Characters/MissFortune/HUD/MissFortune_Circle_69.SKINS_MissFortune_Skin69.tex",
+        "iconAvatar": "ASSETS/Characters/MissFortune/HUD/MissFortune_Circle_69.tex",
         "healthBarData": {
             "unitHealthBarStyle": 12,
             "__type": "CharacterHealthBarDataRecord"
@@ -445,9 +444,9 @@
                     }
                 ],
                 "SubmeshesToShow": [
-                    "{9dd6359f}",
-                    "{9ad630e6}",
-                    "{e98b1045}"
+                    "A_Gun24",
+                    "A_Gun23",
+                    "A_Gun23_Wings"
                 ],
                 "__type": "PersistentEffectConditionData"
             },
@@ -521,9 +520,9 @@
                     }
                 ],
                 "SubmeshesToShow": [
-                    "{bfb4d382}",
-                    "{f848f156}",
-                    "{c0b4d515}"
+                    "C_Gun25",
+                    "C_Gun25_Gem",
+                    "C_Gun24"
                 ],
                 "__type": "PersistentEffectConditionData"
             },
@@ -597,10 +596,10 @@
                     }
                 ],
                 "SubmeshesToShow": [
-                    "{da59d24d}",
-                    "{9dc07a8d}",
-                    "{d459c8db}",
-                    "{f68fbfa4}"
+                    "B_Gun25",
+                    "B_Gun25_Gem",
+                    "B_Gun23",
+                    "B_Gun23_Wings"
                 ],
                 "__type": "PersistentEffectConditionData"
             },
@@ -669,7 +668,7 @@
                         },
                         {
                             "Submeshes": [
-                                "{b9b4ca10}"
+                                "C_Gun23"
                             ],
                             "__type": "SubmeshVisibilityBoolDriver"
                         },
@@ -858,7 +857,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Z_bigglow.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Z_bigglow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -911,7 +910,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Sphere_R_01.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Sphere_R_01.tex",
                 "texAddressModeBase": 2,
                 "birthUvRotateRate": {
                     "constantValue": -50.0,
@@ -1035,7 +1034,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_02.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_02.tex",
                 "texAddressModeBase": 2,
                 "uvRotation": {
                     "constantValue": 150.0,
@@ -1175,7 +1174,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_04.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_04.tex",
                 "texAddressModeBase": 2,
                 "uvScale": {
                     "constantValue": [
@@ -1215,7 +1214,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Z_Sphere_01.SKINS_MissFortune_Skin69.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Z_Sphere_01.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -1258,7 +1257,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_R_Flat_01.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_R_Flat_01.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1328,7 +1327,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/MissFortune_Skin21_ball32_02.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/MissFortune_Skin21_ball32_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -1430,7 +1429,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Cassiopeia_Skin38_Cirlcle_01.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Cassiopeia_Skin38_Cirlcle_01.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -1863,14 +1862,14 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Varus_Skin69_egoSparkle_01.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Varus_Skin69_egoSparkle_01.tex",
                 "numFrames": 9,
                 "texDiv": [
                     3.0,
                     3.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/MissFortune_Skin50_E_Unit_Tar_green_Mask06.SKINS_MissFortune_Skin69.tex",
+                    "textureMult": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/MissFortune_Skin50_E_Unit_Tar_green_Mask06.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             0.0,
@@ -2268,14 +2267,14 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Varus_Skin69_egoSparkle_01.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Varus_Skin69_egoSparkle_01.tex",
                 "numFrames": 9,
                 "texDiv": [
                     3.0,
                     3.0
                 ],
                 "textureMult": {
-                    "textureMult": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/MissFortune_Skin50_E_Unit_Tar_green_Mask06.SKINS_MissFortune_Skin69.tex",
+                    "textureMult": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/MissFortune_Skin50_E_Unit_Tar_green_Mask06.tex",
                     "birthUvScrollRateMult": {
                         "constantValue": [
                             0.0,
@@ -2717,7 +2716,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Leona_Skin50_Taunt_Flecks.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Leona_Skin50_Taunt_Flecks.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -3146,7 +3145,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Aatrox_Skin30_SparkleB.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Aatrox_Skin30_SparkleB.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -3420,7 +3419,7 @@
                     "erosionFeatherIn": 0.0,
                     "erosionFeatherOut": 1.0,
                     "erosionSliceWidth": 0.800000011920929,
-                    "erosionMapName": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Thresh_Skin17_R_SmokeErode.SKINS_MissFortune_Skin69.tex",
+                    "erosionMapName": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Thresh_Skin17_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -3563,7 +3562,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/MissFortune_Skin69_Dot.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/MissFortune_Skin69_Dot.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -4124,7 +4123,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Varus_Skin69_LightBeam.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Varus_Skin69_LightBeam.tex",
                 "uvScale": {
                     "constantValue": [
                         1.0,
@@ -4235,7 +4234,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Cassiopeia_Skin38_Cirlcle_01.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Cassiopeia_Skin38_Cirlcle_01.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -4488,7 +4487,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Zoe_Skin20_Particles_1_954_01.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Zoe_Skin20_Particles_1_954_01.tex",
                 "uvScale": {
                     "constantValue": [
                         1.0,
@@ -4824,7 +4823,7 @@
                 "isUniformScale": 1,
                 "isRandomStartFrame": 1,
                 "doesCastShadow": 1,
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -4951,7 +4950,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Z_bigglow.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Z_bigglow.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -5003,7 +5002,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_01.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_01.tex",
                 "texAddressModeBase": 2,
                 "birthUvRotateRate": {
                     "constantValue": -50.0,
@@ -5060,7 +5059,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_02.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_02.tex",
                 "texAddressModeBase": 2,
                 "birthUvRotateRate": {
                     "constantValue": -50.0,
@@ -5118,7 +5117,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Sphere_R_01.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Sphere_R_01.tex",
                 "texAddressModeBase": 2,
                 "birthUvRotateRate": {
                     "constantValue": -50.0,
@@ -5241,7 +5240,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_02.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_02.tex",
                 "texAddressModeBase": 2,
                 "uvRotation": {
                     "constantValue": 150.0,
@@ -5413,7 +5412,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_02.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_02.tex",
                 "texAddressModeBase": 2,
                 "uvRotation": {
                     "constantValue": 150.0,
@@ -5553,7 +5552,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_04.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_P_Ball_04.tex",
                 "texAddressModeBase": 2,
                 "uvScale": {
                     "constantValue": [
@@ -5593,7 +5592,7 @@
                 },
                 "primitive": {
                     "mMesh": {
-                        "mSimpleMeshName": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Z_Sphere_01.SKINS_MissFortune_Skin69.scb",
+                        "mSimpleMeshName": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_Z_Sphere_01.scb",
                         "__type": "VfxMeshDefinitionData"
                     },
                     "__type": "VfxPrimitiveMesh"
@@ -5636,7 +5635,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_R_Flat_01.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/Orianna_Skin38_R_Flat_01.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -5734,7 +5733,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/MissFortune_Skin21_ball32_02.SKINS_MissFortune_Skin69.tex",
+                "texture": "ASSETS/Characters/MissFortune/Skins/Skin69/Particles/MissFortune_Skin21_ball32_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -5870,7 +5869,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Stairs_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Stairs_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -5878,19 +5877,19 @@
             },
             {
                 "TextureName": "SS_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/XinZhao_Skin53_Stars_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/XinZhao_Skin53_Stars_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask1",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Stairs_Mask1_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Stairs_Mask1_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask2",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Stairs_Mask2_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Stairs_Mask2_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -6064,12 +6063,12 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gold_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gold_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gold_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gold_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -6084,7 +6083,7 @@
             },
             {
                 "TextureName": "FBM_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -6092,7 +6091,7 @@
             },
             {
                 "TextureName": "Distortion_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -6130,7 +6129,7 @@
             },
             {
                 "TextureName": "Bloom_Mask",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gold_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gold_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -6152,9 +6151,64 @@
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alpha_Multiplier_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Ribbon_U_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_V_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_Amplitude",
+                "value": [
+                    17.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_MoveSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_SegmentCount",
+                "value": [
+                    5.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -6750,6 +6804,18 @@
         ],
         "switches": [
             {
+                "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
+                "on": false,
+                "Group": "Alpha",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
+                "on": false,
+                "Group": "Vertex_Animation",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -6912,17 +6978,17 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Ribbom_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Ribbom_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "MaskTexture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Ribbon_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Ribbon_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "SecondaryDiffuseTexture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_RibbomGold04_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_RibbomGold04_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -6942,7 +7008,7 @@
             },
             {
                 "TextureName": "BloomOutlineVDMask",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Ribbom_VD_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Ribbom_VD_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -7377,7 +7443,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -7524,17 +7590,17 @@
             },
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_Material_Gold_Matcap_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_Material_Gold_Matcap_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Color_Mask_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gold_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gold_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -7542,7 +7608,7 @@
             },
             {
                 "TextureName": "iridescentTex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gradient_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gradient_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -7550,13 +7616,13 @@
             },
             {
                 "TextureName": "AdditiveScrollTex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_AdditiveScroll_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_AdditiveScroll_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "AdditiveScroll_Mask",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_AdditiveScroll_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_AdditiveScroll_Mask_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -8044,17 +8110,17 @@
             },
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_Material_Gold_Matcap_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_Material_Gold_Matcap_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Color_Mask_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_Color_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_Color_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -8062,7 +8128,7 @@
             },
             {
                 "TextureName": "iridescentTex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_Material_Iridescence_MAT_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_Material_Iridescence_MAT_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -8070,13 +8136,13 @@
             },
             {
                 "TextureName": "AdditiveScrollTex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_AdditiveScroll_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_AdditiveScroll_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "AdditiveScroll_Mask",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_AdditiveScroll_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_AdditiveScroll_Mask_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -8084,7 +8150,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture2",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Vi_Skin49_Material_Diffuse_Black.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Vi_Skin49_Material_Diffuse_Black.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -8513,7 +8579,7 @@
             },
             {
                 "TextureName": "Diffuse_Color",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -8521,7 +8587,7 @@
             },
             {
                 "TextureName": "Mask",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_Mask_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -8732,7 +8798,7 @@
             },
             {
                 "TextureName": "Main_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Ult_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Ult_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
@@ -9253,7 +9319,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -9261,19 +9327,19 @@
             },
             {
                 "TextureName": "SS_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/XinZhao_Skin53_Stars_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/XinZhao_Skin53_Stars_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask1",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gem_Mask1_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gem_Mask1_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask2",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gem_Mask2_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun25_Gem_Mask2_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -9453,12 +9519,12 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_Gold_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_Gold_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_Gold_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_Gold_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -9473,7 +9539,7 @@
             },
             {
                 "TextureName": "FBM_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -9481,7 +9547,7 @@
             },
             {
                 "TextureName": "Distortion_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -9519,7 +9585,7 @@
             },
             {
                 "TextureName": "Bloom_Mask",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_Gold_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun23_Gold_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -9541,9 +9607,64 @@
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alpha_Multiplier_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Ribbon_U_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_V_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_Amplitude",
+                "value": [
+                    17.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_MoveSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_SegmentCount",
+                "value": [
+                    5.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -10138,6 +10259,18 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
+                "on": false,
+                "Group": "Alpha",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
+                "on": false,
+                "Group": "Vertex_Animation",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -10301,12 +10434,12 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_Gold_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_Gold_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_Gold_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_Gold_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -10321,7 +10454,7 @@
             },
             {
                 "TextureName": "FBM_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -10329,7 +10462,7 @@
             },
             {
                 "TextureName": "Distortion_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Zoe_Skin43_Generated_Noise.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -10367,7 +10500,7 @@
             },
             {
                 "TextureName": "Bloom_Mask",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_Gold_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gun24_Gold_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -10389,9 +10522,64 @@
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alpha_Multiplier_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Ribbon_U_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_V_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_Amplitude",
+                "value": [
+                    17.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_MoveSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_SegmentCount",
+                "value": [
+                    5.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -10986,6 +11174,18 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
+                "on": false,
+                "Group": "Alpha",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
+                "on": false,
+                "Group": "Vertex_Animation",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
@@ -11159,17 +11359,17 @@
             },
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_Material_Gold_Matcap_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_Material_Gold_Matcap_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Color_Mask_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gold_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gold_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -11177,7 +11377,7 @@
             },
             {
                 "TextureName": "iridescentTex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gradient_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gradient_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -11185,13 +11385,13 @@
             },
             {
                 "TextureName": "AdditiveScrollTex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_AdditiveScroll_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_AdditiveScroll_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "AdditiveScroll_Mask",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_AdditiveScroll_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_AdditiveScroll_Mask_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -11199,7 +11399,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture2",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Ult_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Ult_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -11741,17 +11941,17 @@
             },
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_Material_Gold_Matcap_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/Yone_Skin74_Material_Gold_Matcap_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Color_Mask_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gold_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gold_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -11759,7 +11959,7 @@
             },
             {
                 "TextureName": "iridescentTex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gradient_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_Gradient_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -11767,13 +11967,13 @@
             },
             {
                 "TextureName": "AdditiveScrollTex",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_AdditiveScroll_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_AdditiveScroll_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "AdditiveScroll_Mask",
-                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_AdditiveScroll_Mask_TX_CM.SKINS_MissFortune_Skin69.tex",
+                "texturePath": "ASSETS/Characters/MissFortune/Skins/Skin69/MissFortune_Skin69_AdditiveScroll_Mask_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,

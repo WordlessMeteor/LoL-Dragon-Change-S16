@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.14.1",
+    "version": "16.15.1",
     "data": {
         "Draven": {
             "id": "Draven",
@@ -729,8 +729,8 @@
                         "full": "DravenSpinning.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 0,
+                        "x": 96,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -740,7 +740,7 @@
                     "id": "DravenFury",
                     "name": "血性冲刺",
                     "description": "德莱文获得移动速度和攻击速度加成。移动速度加成在持续时间过后会急剧下降。在接到一把旋转飞斧后，血性冲刺会立刻冷却完毕。",
-                    "tooltip": "德莱文进入幽灵状态，获得在{{ e3 }}秒里持续衰减的<speed>{{ e2 }}%移动速度</speed>和持续{{ e5 }}秒的<attackSpeed>{{ e4 }}%攻击速度</attackSpeed>。<br /><br />当德莱文接住一把<keywordMajor>旋转飞斧</keywordMajor>时，这个技能的冷却时间就会刷新。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "德莱文进入幽灵状态，获得在{{ temp_msduration }}秒里持续衰减的<speed>{{ temp_msmod }}%移动速度</speed>和持续{{ temp_asduration }}秒的<attackSpeed>{{ temp_as }}%攻击速度</attackSpeed>。<br /><br />当德莱文接住一把<keywordMajor>旋转飞斧</keywordMajor>时，这个技能的冷却时间就会刷新。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "移动速度",
@@ -872,8 +872,8 @@
                         "full": "DravenFury.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 0,
+                        "x": 144,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -883,7 +883,7 @@
                     "id": "DravenDoubleShot",
                     "name": "开道利斧",
                     "description": "德莱文扔出他的斧头，对命中的目标造成物理伤害，并将他们击退至一边。被命中的目标会受到减速效果。",
-                    "tooltip": "德莱文抛掷一柄开山斧，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，<status>击退</status>，以及持续{{ e3 }}秒的{{ e2 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "德莱文抛掷一柄开山斧，造成<physicalDamage>{{ totaldamage }}物理伤害</physicalDamage>，<status>击退</status>，以及持续{{ slowduration }}秒的{{ slowamount }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -891,8 +891,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ slowamount }}% -> {{ slowamountNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -1015,8 +1015,8 @@
                         "full": "DravenDoubleShot.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 0,
+                        "x": 192,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -1132,8 +1132,8 @@
                         "full": "DravenRCast.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 0,
+                        "x": 240,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },

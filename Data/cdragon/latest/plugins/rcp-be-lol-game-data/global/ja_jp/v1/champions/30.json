@@ -1128,7 +1128,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "エネルギーを搾取する霊的な壁を出現させ、そこを通り抜けた敵の移動速度と魔法防御を一定時間低下させる。",
-            "dynamicDescription": "@Effect4Amount@秒間持続する壁を出現させる。この壁を通過した敵は@Effect5Amount@秒間、<scaleMR>魔法防御が@Effect1Amount@%</scaleMR>低下し、@Effect3Amount@%の<status>スロウ効果</status>を受ける。この効果は効果時間をかけて減衰していく。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@WallDuration@秒間持続する壁を出現させる。この壁を通過した敵は@DebuffDuration@秒間、<scaleMR>魔法防御が@MagicResistShred@%</scaleMR>低下し、@SlowPercent@%の<status>スロウ効果</status>を受ける。この効果は徐々に減衰していく。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "毎秒@Cost@マナ",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "自動効果として、カーサスが倒した敵から生気を奪いマナを回復する。<br>発動すると自身の周囲に倒した獲物の魂を召喚し、範囲内の敵にダメージを与えるがマナを著しく消耗する。",
-            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 敵を倒すと<scaleMana>マナが@Effect2Amount@</scaleMana>回復する。<br><br><toggle>発動中:</toggle> 壊死のオーラを展開し、周囲の敵に毎秒<magicDamage>@TotalDPS@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>自動効果:</spellPassive> 敵を倒すと<scaleMana>マナが@ManaRestoreOnKill@</scaleMana>回復する。<br><br><toggle>発動中:</toggle> 壊死のオーラを展開し、周囲の敵に毎秒<magicDamage>@TotalDPS@の魔法ダメージ</magicDamage>を与える。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

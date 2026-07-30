@@ -1727,6 +1727,19 @@
                         0.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1944,8 +1957,8 @@
                     "EffectTag": 16777216,
                     "EffectCalculation": {
                         "mMultiplier": {
-                            "mEffectIndex": 2,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "StunDuration",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         "__type": "GameCalculation"
                     },
@@ -2727,6 +2740,84 @@
                         650.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PassiveUpdateAreaLength",
+                    "values": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockupDuration",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinSlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxSlowDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DistToSlowRatio",
+                    "values": [
+                        0.0020000000949949026,
+                        0.0020000000949949026,
+                        0.0020000000949949026,
+                        0.0020000000949949026,
+                        0.0020000000949949026,
+                        0.0020000000949949026,
+                        0.0020000000949949026
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -2977,8 +3068,8 @@
                     "EffectTag": 16777216,
                     "EffectCalculation": {
                         "mMultiplier": {
-                            "mEffectIndex": 4,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "SlowAmount",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         "__type": "GameCalculation"
                     },

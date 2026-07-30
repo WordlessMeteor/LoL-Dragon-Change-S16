@@ -1702,8 +1702,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -1896,13 +1895,13 @@
                 {
                     "name": "SpeedSteal",
                     "values": [
-                        10.0,
-                        15.0,
+                        20.0,
                         20.0,
                         25.0,
                         30.0,
                         35.0,
-                        40.0
+                        40.0,
+                        45.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2113,8 +2112,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "SpeedSteal",
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -2686,6 +2684,23 @@
             },
             {
                 "MapId": 11,
+                "Position": "middle",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
                 "Position": "Top",
                 "IsDefaultRecommendation": true,
                 "mDefaultPriority": [
@@ -2738,6 +2753,76 @@
             }
         ],
         "__type": "RecSpellRankUpInfoList"
+    },
+    "{657bcb1c}": {
+        "mOverrides": [
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "{ad33a648}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/771011",
+                            "Items/771001"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/773132",
+                            "Items/771006",
+                            "Items/771001"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/773044"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/773068",
+                            "Items/773083",
+                            "Items/773078"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773111",
+                            "Items/773047"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773110",
+                            "Items/773065",
+                            "Items/773064",
+                            "Items/773075",
+                            "Items/773143",
+                            "Items/773005",
+                            "Items/773102",
+                            "Items/773026"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
     },
     "{659427fa}": {
         "OrderJunglePath": [

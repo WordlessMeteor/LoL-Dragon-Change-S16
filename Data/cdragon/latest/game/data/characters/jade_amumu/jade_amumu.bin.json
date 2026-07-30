@@ -1,0 +1,2527 @@
+{
+    "Characters/Jade_Amumu/Spells/Jade_AmumuAuraofDespairAbility": {
+        "mRootSpell": "Characters/Jade_Amumu/Spells/Jade_AmumuAuraofDespairAbility/Jade_AmumuAuraofDespair",
+        "mChildSpells": [
+            "Characters/Jade_Amumu/Spells/Jade_AmumuAuraofDespairAbility/Jade_AmumuAuraofDespair",
+            "{37d034f2}"
+        ],
+        "mName": "Jade_AmumuAuraofDespairAbility",
+        "__type": "AbilityObject"
+    },
+    "{37d034f2}": {
+        "ObjectName": "Jade_AmumuAuraOfDespairCleanup",
+        "mScriptName": "Jade_AmumuAuraOfDespairCleanup",
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Amumu/Spells/Jade_AmumuAuraofDespairAbility/Jade_AmumuAuraofDespair": {
+        "ObjectName": "Jade_AmumuAuraofDespair",
+        "mScriptName": "Jade_AmumuAuraofDespair",
+        "mSpell": {
+            "flags": 20,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_Amumu_AuraofDespair",
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_DoT",
+                "Trait_Low_Damage",
+                "Trait_AoE"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        4.0,
+                        8.0,
+                        12.0,
+                        16.0,
+                        20.0,
+                        24.0,
+                        28.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthDamage",
+                    "values": [
+                        1.2000000476837158,
+                        1.5,
+                        1.7999999523162842,
+                        2.0999999046325684,
+                        2.4000000953674316,
+                        2.700000047683716,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582,
+                        0.009999999776482582
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{c8e45bc3}": {
+                    "mMultiplier": {
+                        "mNumber": 1.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalHealthDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "HealthDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mPrecision": 2,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.004999999888241291,
+            "mAnimationName": "Crit",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_AuraOfDespair.dds"
+            ],
+            "{11704a2b}": 0.3068000078201294,
+            "{f26881a0}": 2.9333999156951904,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "Cooldown": {
+                "values": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "{0a3e0478}": 1.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "bIsToggleSpell": true,
+            "mLockedSpellOriginationCastID": true,
+            "castRange": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0
+                ],
+                "{0a3e0478}": 300.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 5.0,
+            "missileSpeed": 0.0,
+            "mana": [
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0,
+                8.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0,
+                    8.0
+                ],
+                "{0a3e0478}": 8.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Amumu_AuraofDespair_OnBuffActivate",
+                "19": "Play_sfx_Amumu_AuraofDespair_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AmumuAuraofDespair",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_AuraofDespair_Name",
+                        "keySummary": "AmumuAuraOfDespair_Jade_Summary",
+                        "keyTooltip": "Spell_AmumuAuraOfDespair_Jade_Tooltip",
+                        "keyCost": "Spell_Cost_PerSecond"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "HealthDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_AmumuR_ListType_Jade_PercentHealthDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_AuraofDespair",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalHealthDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Amumu/Spells/Jade_AmumuCurseoftheSadMummyAbility": {
+        "mRootSpell": "Characters/Jade_Amumu/Spells/Jade_AmumuCurseoftheSadMummyAbility/Jade_AmumuCurseoftheSadMummy",
+        "mChildSpells": [
+            "Characters/Jade_Amumu/Spells/Jade_AmumuCurseoftheSadMummyAbility/Jade_AmumuCurseoftheSadMummy",
+            "{49510e83}"
+        ],
+        "mName": "Jade_AmumuCurseoftheSadMummyAbility",
+        "mType": 2,
+        "__type": "AbilityObject"
+    },
+    "{49510e83}": {
+        "ObjectName": "Jade_AmumuCurseoftheSadMummyCastEffects",
+        "mScriptName": "Jade_AmumuCurseoftheSadMummyCastEffects",
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Amumu/Spells/Jade_AmumuCurseoftheSadMummyAbility/Jade_AmumuCurseoftheSadMummy": {
+        "ObjectName": "Jade_AmumuCurseoftheSadMummy",
+        "mScriptName": "Jade_AmumuCurseoftheSadMummy",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_Amumu_CurseoftheSadMummy",
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "RDamage",
+                    "values": [
+                        50.0,
+                        150.0,
+                        250.0,
+                        350.0,
+                        450.0,
+                        550.0,
+                        650.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RCoefficient",
+                    "values": [
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929,
+                        0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "RCalculatedDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "RDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "RCoefficient",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_BandAidThingy.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 0.25,
+            "cooldownTime": [
+                150.0,
+                150.0,
+                130.0,
+                110.0,
+                110.0,
+                110.0,
+                110.0
+            ],
+            "Cooldown": {
+                "values": [
+                    150.0,
+                    150.0,
+                    130.0,
+                    110.0,
+                    110.0,
+                    110.0,
+                    110.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 17.850000381469727,
+            "missileSpeed": 20.0,
+            "mana": [
+                100.0,
+                150.0,
+                200.0,
+                80.0,
+                80.0,
+                0.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    150.0,
+                    200.0,
+                    80.0,
+                    80.0,
+                    0.0
+                ],
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Amumu_CurseoftheSadMummy_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AmumuCurseoftheSadMummy",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_CurseoftheSadMummy_Name",
+                        "keySummary": "Spell_CurseoftheSadMummy_Summary",
+                        "keyTooltip": "Spell_AmumuCurseoftheSadMummy_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "RDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_AmumuR_ListType_Jade_DamageDealt",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "nameOverride": "Spell_ListType_ManaCost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_CurseoftheSadMummy",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "RCalculatedDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "DebuffDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "DebuffDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "DebuffDuration",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Amumu/Spells/Jade_AmumuBasicAttack": {
+        "ObjectName": "Jade_AmumuBasicAttack",
+        "mScriptName": "Jade_AmumuBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 6095,
+            "{11704a2b}": 0.3541499972343445,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "mHitEffectKey": "Jade_Amumu_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Amumu_AmumuBasicAttack_OnCast",
+                "13": "Play_sfx_Amumu_AmumuBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{5dd6d7fb}": {
+        "mRootSpell": "{a1f6917e}",
+        "mChildSpells": [
+            "{a1f6917e}",
+            "{5cd8f5af}"
+        ],
+        "mName": "Jade_AmumuPAbility",
+        "mType": 3,
+        "__type": "AbilityObject"
+    },
+    "{5cd8f5af}": {
+        "ObjectName": "Jade_AmumuCursedTouch",
+        "mScriptName": "Jade_AmumuCursedTouch",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_CorpseExplosion.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Jade_AmumuP_Jade_Name",
+            "mTooltipData": {
+                "mObjectName": "Jade_AmumuCursedTouch",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "AmumuP_Jade_Name",
+                    "keyTooltip": "AmumuCursedTouchDebuff_Jade"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{a1f6917e}": {
+        "ObjectName": "Jade_AmumuP",
+        "mScriptName": "Jade_AmumuP",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "DebuffDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{46da6601}": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 15.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 7,
+                                    "mAdditionalBonusAtThisLevel": 5.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 13,
+                                    "mAdditionalBonusAtThisLevel": 5.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_CorpseExplosion.dds"
+            ],
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AmumuP",
+                    "mFormat": "{476ec0b8}",
+                    "EnableExtendedTooltip": false,
+                    "mLocKeys": {
+                        "keyName": "AmumuP_Jade_Name",
+                        "keyTooltip": "AmumuP_Jade_Tooltip",
+                        "keySummary": "AmumuP_Jade_Summary"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Amumu/Spells/Jade_AmumuTantrumAbility": {
+        "mRootSpell": "Characters/Jade_Amumu/Spells/Jade_AmumuTantrumAbility/Jade_AmumuTantrum",
+        "mChildSpells": [
+            "Characters/Jade_Amumu/Spells/Jade_AmumuTantrumAbility/Jade_AmumuTantrum"
+        ],
+        "mName": "Jade_AmumuTantrumAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Amumu/Spells/Jade_AmumuTantrumAbility/Jade_AmumuTantrum": {
+        "ObjectName": "Jade_AmumuTantrum",
+        "mScriptName": "Jade_AmumuTantrum",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_Amumu_Tantrum",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        0.0,
+                        2.0,
+                        4.0,
+                        6.0,
+                        8.0,
+                        10.0,
+                        15.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        65.0,
+                        65.0,
+                        95.0,
+                        125.0,
+                        155.0,
+                        185.0,
+                        185.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75,
+                        0.75
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746,
+                        0.029999999329447746
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "PassiveDamageReduction",
+                    "values": [
+                        0.0,
+                        2.0,
+                        4.0,
+                        6.0,
+                        8.0,
+                        10.0,
+                        12.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CooldownReduction",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "DamageReduction": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mEffectIndex": 1,
+                            "__type": "EffectValueCalculationPart"
+                        },
+                        {
+                            "mStat": 1,
+                            "mStatFormula": 2,
+                            "mCoefficient": 0.029999999329447746,
+                            "__type": "StatByCoefficientCalculationPart"
+                        },
+                        {
+                            "mStat": 6,
+                            "mStatFormula": 2,
+                            "mCoefficient": 0.029999999329447746,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TantrumDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.5,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.5,
+            "mAnimationName": "Crit",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_Tantrum.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                10.0,
+                10.0,
+                9.0,
+                8.0,
+                7.0,
+                6.0,
+                6.0
+            ],
+            "Cooldown": {
+                "values": [
+                    10.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    6.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
+                ],
+                "{0a3e0478}": 350.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 13.319999694824219,
+            "missileSpeed": 0.0,
+            "mana": [
+                35.0,
+                35.0,
+                35.0,
+                35.0,
+                35.0,
+                35.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    35.0,
+                    35.0,
+                    35.0,
+                    35.0,
+                    35.0,
+                    35.0
+                ],
+                "{0a3e0478}": 35.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Amumu_Tantrum_OnCast"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AmumuTantrum",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_Tantrum_Name",
+                        "keySummary": "Spell_Tantrum_Summary",
+                        "keyTooltip": "Spell_AmumuTantrum_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "Effect%dAmount",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_DamageReduced",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Effect%dAmount",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Tantrum",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TantrumDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Amumu/Spells/Jade_AmumuBasicAttack2": {
+        "ObjectName": "Jade_AmumuBasicAttack2",
+        "mScriptName": "Jade_AmumuBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 6095,
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.3541499972343445,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "mHitEffectKey": "Jade_Amumu_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Amumu_AmumuBasicAttack2_OnCast",
+                "13": "Play_sfx_Amumu_AmumuBasicAttack2_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Amumu/Spells/Jade_AmumuBandageTossAbility": {
+        "mRootSpell": "Characters/Jade_Amumu/Spells/Jade_AmumuBandageTossAbility/Jade_AmumuBandageToss",
+        "mChildSpells": [
+            "Characters/Jade_Amumu/Spells/Jade_AmumuBandageTossAbility/Jade_AmumuBandageToss",
+            "{aab85399}"
+        ],
+        "mName": "Jade_AmumuBandageTossAbility",
+        "__type": "AbilityObject"
+    },
+    "{aab85399}": {
+        "ObjectName": "Jade_AmumuSadMummyBandageToss",
+        "mScriptName": "Jade_AmumuSadMummyBandageToss",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_Amumu_BandageToss",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        20.0,
+                        80.0,
+                        140.0,
+                        200.0,
+                        260.0,
+                        320.0,
+                        380.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.0,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_BandageFlinger.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "mProjectTargetToCastRange": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 80.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnHit"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 13.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "Jade_Amumu_Q_mis",
+            "mLineWidth": 80.0,
+            "mHitEffectKey": "Jade_Amumu_Q_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": true,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Amumu/Spells/Jade_AmumuBandageTossAbility/Jade_AmumuBandageToss": {
+        "ObjectName": "Jade_AmumuBandageToss",
+        "mScriptName": "Jade_AmumuBandageToss",
+        "mSpell": {
+            "mAffectsTypeFlags": 14346,
+            "mSpellTags": [
+                "PositiveEffect_MoveBlock",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        45.0,
+                        70.0,
+                        95.0,
+                        120.0,
+                        145.0,
+                        170.0,
+                        195.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0,
+                        1800.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        80.0,
+                        130.0,
+                        180.0,
+                        230.0,
+                        280.0,
+                        330.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071,
+                        0.699999988079071
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashSpeed",
+                    "values": [
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0,
+                        1350.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.699999988079071,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.699999988079071,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_BandageFlinger.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                16.0,
+                16.0,
+                14.0,
+                12.0,
+                10.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    16.0,
+                    16.0,
+                    14.0,
+                    12.0,
+                    10.0,
+                    8.0,
+                    8.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mAmmoRechargeTime": [
+                16.0,
+                16.0,
+                15.0,
+                14.0,
+                13.0,
+                12.0,
+                12.0
+            ],
+            "mCooldownNotAffectedByCDR": true,
+            "mCantCancelWhileWindingUp": true,
+            "cantCastWhileRooted": true,
+            "castRange": [
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0,
+                    1100.0
+                ],
+                "{0a3e0478}": 1100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0,
+                1100.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 13.0,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "Jade_Amumu_Q_beam",
+            "mLineWidth": 80.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mana": [
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0,
+                50.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    90.0,
+                    100.0,
+                    110.0,
+                    120.0,
+                    130.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "LocationClamped"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Amumu_BandageToss_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_AmumuBandageToss",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_BandageToss_Name",
+                        "keySummary": "Spell_BandageToss_Summary",
+                        "keyTooltip": "AmumuBandageToss_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "nameOverride": "Spell_ListType_Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "nameOverride": "Spell_ListType_ManaCost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4096,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 256,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 3,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 32768,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mNumber": 80.0,
+                                "__type": "NumberCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Amumu/Spells/Jade_AmumuCritAttack": {
+        "ObjectName": "Jade_AmumuCritAttack",
+        "mScriptName": "Jade_AmumuCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 6095,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.3541499972343445,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 11.0,
+            "mHitEffectKey": "Jade_Amumu_BA_tar_crit",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Amumu_AmumuCritAttack_OnCast",
+                "13": "Play_sfx_Amumu_AmumuCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{596bcab3}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    0,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    1,
+                    2,
+                    0,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "utility",
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    0,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "jungle",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    1,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    1,
+                    2,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{9d20feaa}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{ee2311b1}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{5d415585}": {
+        "ScriptName": "charscriptJade_Amumu",
+        "path": "{5d415585}",
+        "sequences": {
+            "{78e4e28e}": {
+                "__type": "RootScriptSequence"
+            },
+            "{6a7835b9}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "__type": "RootScriptSequence"
+            },
+            "{30a8c166}": {
+                "__type": "RootScriptSequence"
+            },
+            "{b415ce8f}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "6aa8f76e-c71c-425b-91ef-ba5a57b54152",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "Level",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Operation": 3,
+                            "Value2": {
+                                "value": 1,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "Characters/Jade_Amumu/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{edc90609}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "mPosition": "jungle",
+                        "__type": "ItemRecommendationOverrideContext"
+                    },
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "mPosition": "Top",
+                        "__type": "ItemRecommendationOverrideContext"
+                    },
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "mPosition": "middle",
+                        "__type": "ItemRecommendationOverrideContext"
+                    },
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "mPosition": "bottom",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1054",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1056",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/4637",
+                            "Items/3068",
+                            "Items/6665"
+                        ],
+                        "MaxCompletedItems": 1,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111",
+                            "Items/3020"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6665",
+                            "Items/3084",
+                            "Items/6667"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3119",
+                            "Items/3068",
+                            "Items/4637",
+                            "Items/8020",
+                            "Items/3110"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3083",
+                            "Items/3065",
+                            "Items/3075",
+                            "Items/3143",
+                            "Items/3193"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/2051"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/6660"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3105"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3068",
+                            "Items/6662",
+                            "Items/6664"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3143",
+                            "Items/3001",
+                            "Items/3075",
+                            "Items/4401"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3193",
+                            "Items/4401",
+                            "Items/3143",
+                            "Items/3001"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3083",
+                            "Items/3065",
+                            "Items/3075",
+                            "Items/3143",
+                            "Items/3001",
+                            "Items/3050"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "mPosition": "utility",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3865",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6665",
+                            "Items/3190",
+                            "Items/3075"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111",
+                            "Items/3020"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3119",
+                            "Items/3068",
+                            "Items/4637",
+                            "Items/8020",
+                            "Items/3110"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3083",
+                            "Items/3065",
+                            "Items/3075",
+                            "Items/3143",
+                            "Items/3193",
+                            "Items/4641"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "mCoreItems": [
+                    "Items/3876",
+                    "Items/3869"
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 453,
+                        "mModeNameStringId": "{20426d6f}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/771052",
+                            "Items/772003",
+                            "Items/773340"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/771028",
+                            "Items/773340"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/773116",
+                            "Items/773068",
+                            "Items/773001"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773111",
+                            "Items/773117"
+                        ],
+                        "{f71960ab}": "{71caf510}",
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773206",
+                            "Items/773116",
+                            "Items/773207"
+                        ],
+                        "MaxCompletedItems": 1,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773110",
+                            "Items/773222",
+                            "Items/773151"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773001",
+                            "Items/773105",
+                            "Items/773102"
+                        ],
+                        "MaxCompletedItems": 5,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773152",
+                            "Items/773157",
+                            "Items/773001",
+                            "Items/773105",
+                            "Items/773102",
+                            "Items/773023"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "Characters/Jade_Amumu/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Amumu",
+        "baseHPModifiable": {
+            "baseValue": 556.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 84.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.659999966621399,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.17000000178813934,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 68.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 260.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 40.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.399999976158142,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.10000000149011612,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 50.79999923706055,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.799999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 25.299999237060547,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.299999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "{01262a25}": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 335.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6380000114440918,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6380000114440918,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.180000066757202,
+            "__type": "ModifiableFloat"
+        },
+        "mAdaptiveForceToAbilityPowerWeight": 1.0,
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.06615646183490753,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_AmumuBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_AmumuBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.06615646183490753,
+                "mAttackName": "Jade_AmumuCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_AmumuBandageTossAbility/Jade_AmumuBandageToss",
+            "Jade_AmumuAuraofDespairAbility/Jade_AmumuAuraofDespair",
+            "Jade_AmumuTantrumAbility/Jade_AmumuTantrum",
+            "Jade_AmumuCurseoftheSadMummyAbility/Jade_AmumuCurseoftheSadMummy"
+        ],
+        "spells": [
+            "Characters/Jade_Amumu/Spells/Jade_AmumuBandageTossAbility/Jade_AmumuBandageToss",
+            "Characters/Jade_Amumu/Spells/Jade_AmumuAuraofDespairAbility/Jade_AmumuAuraofDespair",
+            "Characters/Jade_Amumu/Spells/Jade_AmumuTantrumAbility/Jade_AmumuTantrum",
+            "Characters/Jade_Amumu/Spells/Jade_AmumuCurseoftheSadMummyAbility/Jade_AmumuCurseoftheSadMummy"
+        ],
+        "extraSpells": [
+            "Jade_Amumu_SadMummyBandageToss",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{aab85399}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{5dd6d7fb}",
+            "Characters/Jade_Amumu/Spells/Jade_AmumuBandageTossAbility",
+            "Characters/Jade_Amumu/Spells/Jade_AmumuAuraofDespairAbility",
+            "Characters/Jade_Amumu/Spells/Jade_AmumuTantrumAbility",
+            "Characters/Jade_Amumu/Spells/Jade_AmumuCurseoftheSadMummyAbility"
+        ],
+        "passiveName": "",
+        "passiveLuaName": "Jade_AmumuP_Jade",
+        "passiveToolTip": "",
+        "passiveSpell": "Jade_AmumuP_Jade",
+        "passive1IconName": "ASSETS/Characters/Jade_Amumu/HUD/Icons2D/Jade_Amumu_Passive.dds",
+        "name": "game_character_displayname_Jade_Amumu",
+        "weaponMaterials": [
+            "SadMummyBasicAttack"
+        ],
+        "selectionHeight": 130.0,
+        "selectionRadius": 100.0,
+        "pathfindingCollisionRadius": 30.0,
+        "overrideGameplayCollisionRadius": 55.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1054,
+            "skillOrder": 2,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            16,
+            0,
+            0,
+            10
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Jade_Amumu summons up bandages to surround all nearby enemies, constricting their movement and causing them to take damage each second.",
+                    "displayName": "Curse of the Sad Mummy",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Amumu summons up bandages to surround all nearby enemies, constricting their movement and causing them to take damage each second.",
+                    "displayName": "Curse of the Sad Mummy",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Amumu summons up bandages to surround all nearby enemies, constricting their movement and causing them to take damage each second.",
+                    "displayName": "Curse of the Sad Mummy",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Jade_Amumu summons up bandages to surround all nearby enemies, constricting their movement and causing them to take damage each second.",
+                    "displayName": "Curse of the Sad Mummy",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "+40% Mana Point regeneration.",
+                "+60% Mana Point regeneration.",
+                "+80% Mana Point regeneration."
+            ],
+            "searchTags": "tank",
+            "searchTagsSecondary": "support",
+            "championId": 60032,
+            "roles": "TANK",
+            "magicRank": 8,
+            "LevelSpellEffectiveness": 4.0,
+            "difficultyRank": 3,
+            "description": "game_character_description_Jade_Amumu",
+            "defenseRank": 6,
+            "classification": "Strong",
+            "ChasingAttackRangePercent": 0.5,
+            "botEnabled": true,
+            "botEnabledMM": true,
+            "attackRank": 2,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Resolve",
+        "mCharacterPassiveSpell": "{a1f6917e}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{a1f6917e}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{5d415585}",
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

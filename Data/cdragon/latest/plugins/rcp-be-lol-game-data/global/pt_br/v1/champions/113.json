@@ -1370,7 +1370,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sejuani avança em investida, lançando os inimigos pelos ares. A investida cessa após acertar um Campeão inimigo.",
-            "dynamicDescription": "Sejuani realiza uma investida, causando <magicDamage>@TotalDamageTooltip@ de Dano Mágico</magicDamage> aos inimigos e <status>Arremessando-os ao ar</status> por @Effect4Amount@s. A investida se encerra ao atingir um Campeão inimigo.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani realiza uma investida, causando <magicDamage>@TotalDamageTooltip@ de Dano Mágico</magicDamage> aos inimigos e <status>Arremessando-os ao ar</status> por @KnockupDurationTOOLTIPONLY@s. A investida se encerra após atingir um Campeão inimigo.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sejuani congela e atordoa um Campeão inimigo que tiver o máximo de acúmulos de Congelar.",
-            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> os Ataques de Campeões corpo a corpo aliados que estiverem por perto aplicam um acúmulo em Campeões e monstros da selva.<br><br><spellPassive>Ativo:</spellPassive> Sejuani causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> ao inimigo-alvo com 4 acúmulos e o <status>Atordoa</status> por @Effect1Amount@s. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> os Ataques de Campeões corpo a corpo aliados que estiverem por perto aplicam um acúmulo a Campeões e monstros da selva.<br><br><spellPassive>Ativo:</spellPassive> Sejuani causa <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> ao inimigo-alvo com 4 acúmulos e o <status>Atordoa</status> por @CCDuration@s. @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Sejuani arremessa sua boleadeira, congelando e atordoando o primeiro Campeão que acertar, criando uma tempestade de gelo que causa lentidão aos demais inimigos.",
-            "dynamicDescription": "Sejuani arremessa sua boleadeira de Gelo Verdadeiro, <status>Atordoando</status> e revelando o primeiro Campeão inimigo que atingir por @Effect2Amount@s e causando <magicDamage>@MinorDamageTooltip@ de Dano Mágico</magicDamage>.<br><br>Se a boleadeira percorrer ao menos 25% de seu alcance máximo, ela <status>Atordoa</status> e revela por @Effect6Amount@s. Ela também cria uma tempestade de gelo que causa @Effect4Amount@% de <status>Lentidão</status> aos inimigos próximos por @Effect3Amount@s. Todos os inimigos atingidos sofrem <magicDamage>@TotalDamageTooltip@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani arremessa sua boleadeira de Gelo Verdadeiro, <status>Atordoando</status> e revelando o primeiro Campeão inimigo que atingir por @BaseStunDuration@s e causando <magicDamage>@MinorDamageTooltip@ de Dano Mágico</magicDamage>.<br><br>Se a boleadeira percorrer pelo menos 25% do alcance, ela <status>Atordoa</status> e revela por @EmpoweredStunDuration@s. Ela também cria uma tempestade de gelo que causa @ExplosionSlowAmount@% de <status>Lentidão</status> aos inimigos próximos por @ZoneDuration@s. Todos os inimigos atingidos sofrem <magicDamage>@TotalDamageTooltip@ de Dano Mágico</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

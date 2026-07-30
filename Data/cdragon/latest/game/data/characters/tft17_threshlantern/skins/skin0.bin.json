@@ -13,9 +13,9 @@
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/TFT17_ThreshLantern/Skins/Base/TFT17_ThreshLantern_Skin06.TFT_Set17.skl",
-            "simpleSkin": "ASSETS/Characters/TFT17_ThreshLantern/Skins/Base/TFT17_ThreshLantern_Skin06.TFT_Set17.skn",
-            "texture": "ASSETS/Characters/TFT17_ThreshLantern/Skins/Base/TFT17_ThreshLantern_Skin06_TX_CM.TFT_Set17.tex",
+            "skeleton": "ASSETS/Characters/TFT17_ThreshLantern/Skins/Base/TFT17_ThreshLantern_Skin06.skl",
+            "simpleSkin": "ASSETS/Characters/TFT17_ThreshLantern/Skins/Base/TFT17_ThreshLantern_Skin06.skn",
+            "texture": "ASSETS/Characters/TFT17_ThreshLantern/Skins/Base/TFT17_ThreshLantern_Skin06_TX_CM.tex",
             "selfIllumination": 0.699999988079071,
             "Material": "Characters/TFT17_ThreshLantern/Skins/Skin0/Materials/TierUpgrade",
             "materialOverride": [
@@ -30,7 +30,7 @@
             },
             "__type": "SkinMeshDataProperties"
         },
-        "iconSquare": "ASSETS/Characters/TFT17_ThreshLantern/HUD/TFT17_ThreshLantern_Square.TFT_Set17.tex",
+        "iconSquare": "ASSETS/Characters/TFT17_ThreshLantern/HUD/TFT17_ThreshLantern_Square.tex",
         "healthBarData": {
             "hpPerTick": 300.0,
             "unitHealthBarStyle": 15,
@@ -49,7 +49,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/TFT17_ThreshLantern/Skins/Base/TFT17_ThreshLantern_Skin06_TX_CM.TFT_Set17.tex",
+                "texturePath": "ASSETS/Characters/TFT17_ThreshLantern/Skins/Base/TFT17_ThreshLantern_Skin06_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
@@ -663,6 +663,16 @@
         "name": "Characters/TFT17_ThreshLantern/Skins/Skin0/Materials/Glass_inst",
         "paramValues": [
             {
+                "name": "Light_Offset",
+                "value": [
+                    0.5,
+                    0.5,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
                 "name": "modelHeight",
                 "value": [
                     275.0,
@@ -814,6 +824,11 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_SPECULAR_OFFSET",
+                "on": false,
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

@@ -642,10 +642,10 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                1.0,
-                1.0,
-                1.0,
-                1.0,
+                4.0,
+                3.25,
+                2.5,
+                1.75,
                 1.0,
                 1.0
             ],
@@ -797,7 +797,7 @@
                 10.0,
                 9.0,
                 8.0,
-                8.0
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -942,12 +942,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                20.0,
-                19.0,
+                24.0,
+                21.0,
                 18.0,
-                17.0,
-                16.0,
-                16.0
+                15.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -1073,8 +1073,8 @@
             "abilityVideoImagePath": "champion-abilities/0200/ability_0200_R1.jpg",
             "cost": "Sem custo",
             "cooldown": "@Cooldown@s %i:cooldown%",
-            "description": "Bel'Veth consome os restos de Coral do Vazio e revela sua Forma Verdadeira, aumentando a própria Vida máxima, Alcance de Ataque, Velocidade de Ataque e Velocidade de Movimento fora de combate. Consumir Coral do Vazio dos restos de um monstro épico concederá a ela uma ultimate de maior duração, assim como a capacidade de invocar rêmoras do Vazio.",
-            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> cada segundo Ataque contra o mesmo alvo causa <trueDamage>@FinalOnHitDamage@ de Dano Verdadeiro</trueDamage> adicional, acumulando infinitamente. Campeões e monstros épicos abatidos deixam um Coral do Vazio.<br><br><spellActive>Ativo:</spellActive> consumir um Coral do Vazio concede acúmulo(s) de <keywordMajor>@PassiveStacksOnDevour@ Lavanda</keywordMajor> e ativa a Forma Verdadeira de Bel'Veth por @SteroidDuration@s. Coral do Vazio de monstros épicos do Vazio aumenta a duração a @VoidDuration@s e transforma tropas próximas que morrem em rêmoras do Vazio. Durante a conjuração, Bel'Veth causa <status>Lentidão</status> a inimigos próximos antes de explodir, e <trueDamage>@TotalExplosionDamage@ + @MissingHealthDamage*100@% da Vida perdida como Dano Verdadeiro</trueDamage>.<br><br>Na Forma Verdadeira, Bel'Veth recebe <healing>@MaxHealthOnDevour@ de Vida máxima</healing>, <speed>@OOCMS@ de Velocidade de Movimento</speed> fora de combate, @BonusAARange@ de Alcance de Ataque, <attackSpeed>@TotalASMod*100@% de Velocidade de Ataque total</attackSpeed> e <spellName>Impulso do Vazio</spellName> pode atravessar paredes.<br><br><br>@SpellModifierDescriptionAppend@",
+            "description": "Bel'Veth consome os restos de Coral do Vazio e revela sua Forma Verdadeira, recebendo Vida máxima, Alcance de Ataque e Velocidade de Ataque. Consumir Coral do Vazio dos restos de um monstro épico concederá a ela a capacidade de invocar Rêmoras do Vazio.",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> Ataques causam <trueDamage>@FinalOnHitDamage@ de Dano Verdadeiro</trueDamage> adicional, acumulando infinitamente. Eliminações de Campeões e monstros épicos deixam um Coral do Vazio.<br><br><spellActive>Ativo:</spellActive> Bel'Veth consome um Coral do Vazio, recebendo <keywordMajor>@PassiveStacksOnDevour@ acúmulo de Lavanda</keywordMajor> e ativando a Forma Verdadeira da Campeã. Coral do Vazio de monstros épicos do Vazio transforma tropas próximas que morrem em Rêmoras do Vazio. Durante a conjuração, Bel'Veth aplica <status>Lentidão</status> nos inimigos próximos antes de explodir, causando <trueDamage>@TotalExplosionDamage@ + @MissingHealthDamage*100@% da Vida perdida como Dano Verdadeiro</trueDamage>.<br><br>Na Forma Verdadeira, Bel'Veth recebe <healing>@MaxHealthOnDevour@ de Vida máxima</healing>, @BonusAARange@ de Alcance de Ataque e <attackSpeed>@TotalASMod*100@% de Velocidade de Ataque total</attackSpeed>, e <spellName>Impulso do Vazio</spellName> pode atravessar paredes.<br><br><rules>A Forma Verdadeira dura @SteroidDuration@s, aumentando para @SteroidDurationUpgrade@s com <keywordMajor>@StackThresholdForUpgrade@ acúmulos de Lavanda</keywordMajor>. Com <keywordMajor>@StackThresholdForPermanent@ acúmulos de Lavanda</keywordMajor>, a Forma Verdadeira dura até a morte.</rules><br><br><br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

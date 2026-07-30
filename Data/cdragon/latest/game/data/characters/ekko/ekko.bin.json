@@ -79,6 +79,32 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MonsterMod",
+                    "values": [
+                        2.700000047683716,
+                        2.700000047683716,
+                        2.700000047683716,
+                        2.700000047683716,
+                        2.700000047683716,
+                        2.700000047683716,
+                        2.700000047683716
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "LockoutTime",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -103,7 +129,6 @@
             },
             "mSpellCalculations": {
                 "BonusMS": {
-                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
                             "mLevel1Value": 0.5,
@@ -135,7 +160,6 @@
                         "mDataValue": "ModesMultiplier",
                         "__type": "NamedDataValueCalculationPart"
                     },
-                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
                             "mLevel1Value": 30.0,
@@ -932,6 +956,97 @@
                         150.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AoERadius",
+                    "values": [
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0,
+                        375.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StunDuration",
+                    "values": [
+                        2.25,
+                        2.25,
+                        2.25,
+                        2.25,
+                        2.25,
+                        2.25,
+                        2.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldBase",
+                    "values": [
+                        80.0,
+                        100.0,
+                        120.0,
+                        140.0,
+                        160.0,
+                        180.0,
+                        200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowZoneDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DelayBeforeDetonation",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DelayBeforeEnemyCanSee",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -974,7 +1089,6 @@
                         "mNumber": 0.009999999776482582,
                         "__type": "NumberCalculationPart"
                     },
-                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseOnHitDamage",
@@ -989,11 +1103,10 @@
                     "__type": "GameCalculation"
                 },
                 "TotalShield": {
-                    "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 4,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "ShieldBase",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 1.5,
@@ -1134,8 +1247,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 4,
+                                    "type": "ShieldBase",
                                     "nameOverride": "Spell_ListType_ShieldAmount",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1182,8 +1294,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 7,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "SlowZoneDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1195,8 +1307,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1208,8 +1320,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1221,8 +1333,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "StunDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1996,6 +2108,49 @@
                         165.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        -0.25,
+                        -0.4000000059604645,
+                        -0.44999998807907104,
+                        -0.5,
+                        -0.550000011920929,
+                        -0.6000000238418579,
+                        -0.6700000166893005
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAPRatio",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowZoneRadius",
+                    "values": [
+                        165.0,
+                        165.0,
+                        165.0,
+                        165.0,
+                        165.0,
+                        165.0,
+                        165.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ExpandDuration",
+                    "values": [
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75,
+                        1.75
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2208,8 +2363,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "SlowPercent",
                                     "multiplier": -100.0,
                                     "nameOverride": "Spell_ListType_Slow",
                                     "Style": 1,
@@ -2301,8 +2455,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 7,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "ExpandDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -2721,13 +2875,67 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        25.0,
+                        50.0,
+                        75.0,
+                        100.0,
+                        125.0,
+                        150.0,
+                        175.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashDistance",
+                    "values": [
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0,
+                        350.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackRangeIncrease",
+                    "values": [
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0,
+                        300.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mSpellCalculations": {
                 "TotalDamage": {
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.4000000059604645,
@@ -2859,8 +3067,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },

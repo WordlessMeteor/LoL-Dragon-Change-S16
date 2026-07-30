@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Ekko aruncă o grenadă temporală care, atunci când lovește un campion inamic, explodează într-un câmp de energie ce distorsionează timpul, încetinind și provocând daune tuturor unităților aflate în interior. După un scurt timp, grenada se întoarce la Ekko, provocând daune pe traiectorie.",
-            "dynamicDescription": "Ekko aruncă un dispozitiv care provoacă <magicDamage>@InitialDamage@ daune magice</magicDamage>. Când lovește un campion sau ajunge la capătul razei, se extinde într-un câmp care <status>încetinește</status> inamicii din interior cu @Effect2Amount*-100@%. După ce se extinde, Ekko îl cheamă înapoi, provocând <magicDamage>@RecallDamage@ daune magice</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko aruncă un dispozitiv care provoacă <magicDamage>@InitialDamage@ daune magice</magicDamage>. Când lovește un campion sau ajunge la capătul razei, se extinde într-un câmp care <status>încetinește</status> inamicii din interior cu @SlowPercent*-100@%. După ce se extinde, Ekko îl cheamă înapoi, provocând <magicDamage>@RecallDamage@ daune magice</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Atacurile de bază ale lui Ekko le provoacă daune magice bonus inamicilor cu viață scăzută. Poate folosi ''Paradox temporal'' pentru a distorsiona timpul, creând după câteva secunde o anomalie care încetinește inamicii prinși în interiorul ei. Dacă Ekko intră în zona afectată de anomalie, primește un scut și amețește inamicii, prinzându-i într-un câmp de stază temporală.",
-            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> atacurile lui Ekko împotriva inamicilor care au sub 30% viață provoacă <magicDamage>daune magice în valoare de @MissingHealthPercent@ din viața lipsă</magicDamage>.<br><br><spellActive>Activă:</spellActive> Ekko lansează o cronosferă care rezistă 1,5 secunde după o pregătire, <status>încetinind</status> inamicii din interior cu @Effect10Amount@%. Dacă Ekko intră în sferă, o detonează, <status>amețind</status> inamicii timp de @Effect2Amount@ secunde și primind un <shield>scut în valoare de @TotalShield@</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă:</spellPassive> atacurile lui Ekko împotriva inamicilor cu mai puțin de @BelowHealthThreshold*100@% viață provoacă <magicDamage>daune magice egale cu @MissingHealthPercent@ din viața lipsă</magicDamage>.<br><br><spellActive>Activă:</spellActive> Ekko lansează o cronosferă care rezistă @SlowZoneDuration@ secunde după o pregătire, <status>încetinind</status> inamicii din interior cu @SlowPercent@%. Dacă Ekko intră în sferă, o detonează, <status>amețind</status> inamicii timp de @StunDuration@ secunde și primind un <shield>scut în valoare de @TotalShield@</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

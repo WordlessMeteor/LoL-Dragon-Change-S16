@@ -1,0 +1,2571 @@
+{
+    "Characters/Jade_DrMundo/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{beb59620}": {
+        "mRootSpell": "{01b253f8}",
+        "mChildSpells": [
+            "{01b253f8}"
+        ],
+        "mName": "Jade_DrMundoPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{01b253f8}": {
+        "ObjectName": "Jade_DrMundoPassive",
+        "mScriptName": "Jade_DrMundoPassive",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mSpellCalculations": {
+                "{0ee04500}": {
+                    "mFormulaParts": [
+                        {
+                            "mStat": 12,
+                            "mCoefficient": 0.003000000026077032,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_AdrenalineRush.dds"
+            ],
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mIsDisabledWhileDead": false,
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_DrMundoPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_DrMundoPassive_Jade_Name",
+                        "keySummary": "Spell_DrMundoPassive_Jade_Summary",
+                        "keyTooltip": "Spell_DrMundoPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_DrMundoPassive_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility": {
+        "mRootSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility/Jade_DrMundoE",
+        "mChildSpells": [
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility/Jade_DrMundoE"
+        ],
+        "mName": "Jade_DrMundoEAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility/Jade_DrMundoE": {
+        "ObjectName": "Jade_DrMundoE",
+        "mScriptName": "Jade_DrMundoE",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mSpellTags": [
+                "Trait_AttackReset",
+                "PositiveEffect_EmpowerAttack"
+            ],
+            "DataValues": [
+                {
+                    "name": "HealthCost",
+                    "values": [
+                        15.0,
+                        25.0,
+                        35.0,
+                        45.0,
+                        55.0,
+                        65.0,
+                        75.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageMod",
+                    "values": [
+                        0.25,
+                        0.4000000059604645,
+                        0.550000011920929,
+                        0.699999988079071,
+                        0.8500000238418579,
+                        1.0,
+                        1.149999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseIncrease",
+                    "values": [
+                        25.0,
+                        40.0,
+                        55.0,
+                        70.0,
+                        85.0,
+                        100.0,
+                        115.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_Masochism.dds"
+            ],
+            "mCastTime": 1.0,
+            "{11704a2b}": 1.0,
+            "{f26881a0}": 2.9333999156951904,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0
+            ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0
+                ],
+                "{0a3e0478}": 7.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mCanMoveWhileChanneling": true,
+            "useAnimatorFramerate": true,
+            "mLockedSpellOriginationCastID": true,
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castConeDistance": 100.0,
+            "castFrame": 1.225000023841858,
+            "missileSpeed": 20.0,
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_DrMundo_DrMundoE_OnCast",
+                "18": "Play_sfx_DrMundo_DrMundoE_OnBuffActivate",
+                "19": "Play_sfx_DrMundo_DrMundoE_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_DrMundoE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_DrMundoE_Jade_Name",
+                        "keySummary": "Spell_DrMundoE_Jade_Summary",
+                        "keyTooltip": "Spell_DrMundoE_Jade_Tooltip",
+                        "keyCost": "Spell_DrMundo_Jade_Cost"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseIncrease",
+                                    "nameOverride": "Spell_ListType_DrMundoE_BonusAttackDamage_Jade_Tooltip",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "DamageMod",
+                                    "nameOverride": "Spell_ListType_BonusADRatio",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "HealthCost",
+                                    "nameOverride": "Spell_ListType_HealthCost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_DrMundoE_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 0,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility": {
+        "mRootSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ",
+        "mChildSpells": [
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ",
+            "{3486c2c3}"
+        ],
+        "mName": "Jade_DrMundoQAbility",
+        "__type": "AbilityObject"
+    },
+    "{3486c2c3}": {
+        "ObjectName": "Jade_DrMundoQ_Missile",
+        "mScriptName": "Jade_DrMundoQ_Missile",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CurrentHealthDamage",
+                    "values": [
+                        0.17499999701976776,
+                        0.20000000298023224,
+                        0.22499999403953552,
+                        0.25,
+                        0.2750000059604645,
+                        0.30000001192092896,
+                        0.32499998807907104
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinimumDamage",
+                    "values": [
+                        30.0,
+                        80.0,
+                        130.0,
+                        180.0,
+                        230.0,
+                        280.0,
+                        330.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaximumMonsterDamage",
+                    "values": [
+                        225.0,
+                        300.0,
+                        375.0,
+                        450.0,
+                        525.0,
+                        600.0,
+                        675.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthCost",
+                    "values": [
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthRefundOnHitChampionMonsterPercent",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthRefundOnHitMinionPercent",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "HealthRestoreOnHitChampionMonster": {
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "HealthRefundOnHitChampionMonsterPercent",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mDataValue": "HealthCost",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "HealthRestoreOnHitMinion": {
+                    "mExpandedTooltipCalculationDisplay": 5,
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "mPart1": {
+                                "mDataValue": "HealthRefundOnHitMinionPercent",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "mPart2": {
+                                "mDataValue": "HealthCost",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_InfectedCleaver.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0
+            ],
+            "Cooldown": {
+                "values": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                ],
+                "{0a3e0478}": 4.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "mTurnSpeedScalar": 2.0,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0
+                ],
+                "{0a3e0478}": 1050.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0
+            ],
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mTracksTarget": false,
+                    "mStartBoneName": "L_Buffbone_GLB_Loc",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 2000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 10.920000076293945,
+            "missileSpeed": 2000.0,
+            "mMissileEffectKey": "Jade_DrMundo_Q_mis_01",
+            "mLineWidth": 60.0,
+            "mHitEffectOrientType": 2,
+            "mFloatVarsDecimals": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_DrMundo_DrMundoQ_OnMissileLaunch",
+                "13": "Play_sfx_DrMundo_DrMundoQ_OnHit"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_DrMundoQ_Missile",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_DrMundoQ_Name",
+                        "keyTooltip": "Spell_DrMundoQ_Tooltip",
+                        "keyCost": "Spell_DrMundoQ_Cost",
+                        "keyTooltipExtendedBelowLine": "Spell_DrMundoQ_TooltipExtendedBelowLine",
+                        "keySummary": "Spell_DrMundoQ_Summary"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "CurrentHealthDamage",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_DrMundoQ_ListType_CurrentHealthDamage",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MinimumDamage",
+                                    "nameOverride": "Spell_ListType_MinimumDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "MaximumMonsterDamage",
+                                    "nameOverride": "Spell_ListType_MaxDamageToMonsters",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "HealthCost",
+                                    "nameOverride": "Spell_ListType_HealthCost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_DrMundoQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSubparts": [
+                            {
+                                "mDataValue": "MinimumDamage",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            {
+                                "mPart1": {
+                                    "mDataValue": "CurrentHealthDamage",
+                                    "__type": "NamedDataValueCalculationPart"
+                                },
+                                "mPart2": {
+                                    "{a8cb9c14}": true,
+                                    "mStat": 13,
+                                    "mCoefficient": 1.0,
+                                    "__type": "StatByCoefficientCalculationPart"
+                                },
+                                "__type": "ProductOfSubPartsCalculationPart"
+                            }
+                        ],
+                        "__type": "{8a96ea3c}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "SlowAmount",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 8,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "HealthRefundOnHitChampionMonsterPercent",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 32768,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mNumber": 60.0,
+                                "__type": "NumberCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ": {
+        "ObjectName": "Jade_DrMundoQ",
+        "mScriptName": "Jade_DrMundoQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "DataValues": [
+                {
+                    "name": "HealthCost",
+                    "values": [
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0,
+                        80.0,
+                        90.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinDamage",
+                    "values": [
+                        30.0,
+                        80.0,
+                        130.0,
+                        180.0,
+                        230.0,
+                        280.0,
+                        330.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MoveMod",
+                    "values": [
+                        -0.4000000059604645,
+                        -0.4000000059604645,
+                        -0.4000000059604645,
+                        -0.4000000059604645,
+                        -0.4000000059604645,
+                        -0.4000000059604645,
+                        -0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageMod",
+                    "values": [
+                        0.11999999731779099,
+                        0.15000000596046448,
+                        0.18000000715255737,
+                        0.20999999344348907,
+                        0.23000000417232513,
+                        0.25,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDamage",
+                    "values": [
+                        200.0,
+                        300.0,
+                        400.0,
+                        500.0,
+                        600.0,
+                        700.0,
+                        800.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthReturn",
+                    "values": [
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "{a8cb9c14}": true,
+                            "mStat": 13,
+                            "mDataValue": "DamageMod",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_InfectedCleaver.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0,
+                4.0
+            ],
+            "Cooldown": {
+                "values": [
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0,
+                    4.0
+                ],
+                "{0a3e0478}": 4.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "mTurnSpeedScalar": 2.0,
+            "mIgnoreRangeCheck": true,
+            "castRange": [
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0,
+                1050.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0,
+                    1050.0
+                ],
+                "{0a3e0478}": 1050.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0,
+                975.0
+            ],
+            "castRadius": [
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875,
+                299.29998779296875
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.920000076293945,
+            "missileSpeed": 1500.0,
+            "mLineWidth": 60.0,
+            "mHitEffectOrientType": 0,
+            "mFloatVarsDecimals": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_DrMundo_DrMundoQ_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_DrMundoQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_DrMundoQ_Jade_Name",
+                        "keySummary": "Spell_DrMundoQ_Jade_Summary",
+                        "keyTooltip": "Spell_DrMundoQ_Jade_Tooltip",
+                        "keyCost": "Spell_DrMundo_Jade_Cost"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "MinDamage",
+                                    "nameOverride": "Spell_ListType_MinimumDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "DamageMod",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_DrMundoQ_DamagePercentage_Jade_Tooltip",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "HealthCost",
+                                    "nameOverride": "Spell_ListType_HealthCost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 8,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 32768,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mNumber": 60.0,
+                                "__type": "NumberCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack3": {
+        "ObjectName": "Jade_DrMundoBasicAttack3",
+        "mScriptName": "Jade_DrMundoBasicAttack3",
+        "mSpell": {
+            "mAffectsTypeFlags": 21711,
+            "mAlternateName": "Jade_DrMundoBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.829999923706055,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_DrMundo_BA_tar_02",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_DrMundo_DrMundoBasicAttack2_OnCast",
+                "13": "Play_sfx_DrMundo_DrMundoBasicAttack2_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack2": {
+        "ObjectName": "Jade_DrMundoBasicAttack2",
+        "mScriptName": "Jade_DrMundoBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 21711,
+            "mAlternateName": "Jade_DrMundoBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.829999923706055,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_DrMundo_BA_tar_02",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_DrMundo_DrMundoBasicAttack2_OnCast",
+                "13": "Play_sfx_DrMundo_DrMundoBasicAttack2_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility": {
+        "mRootSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility/Jade_DrMundoR",
+        "mChildSpells": [
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility/Jade_DrMundoR"
+        ],
+        "mName": "Jade_DrMundoRAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility/Jade_DrMundoR": {
+        "ObjectName": "Jade_DrMundoR",
+        "mScriptName": "Jade_DrMundoR",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 15567,
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "name": "SpeedMod",
+                    "values": [
+                        0.05000000074505806,
+                        0.15000000596046448,
+                        0.25,
+                        0.3499999940395355,
+                        0.44999998807907104,
+                        0.550000011920929,
+                        0.6499999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "FactorTT",
+                    "values": [
+                        0.30000001192092896,
+                        0.4000000059604645,
+                        0.5,
+                        0.6000000238418579,
+                        0.699999988079071,
+                        0.800000011920929,
+                        0.8999999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthCost",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Factor",
+                    "values": [
+                        0.0,
+                        0.0333000011742115,
+                        0.041669998317956924,
+                        0.05000000074505806,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{0ee04500}": {
+                    "mFormulaParts": [
+                        {
+                            "mStat": 12,
+                            "mDataValue": "FactorTT",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_Sadism.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                75.0,
+                75.0,
+                75.0,
+                75.0,
+                75.0,
+                75.0,
+                75.0
+            ],
+            "Cooldown": {
+                "values": [
+                    75.0,
+                    75.0,
+                    75.0,
+                    75.0,
+                    75.0,
+                    75.0,
+                    75.0
+                ],
+                "{0a3e0478}": 75.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 15.0,
+            "missileSpeed": 828.5,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_DrMundo_DrMundoR_OnCast",
+                "18": "Play_sfx_DrMundo_DrMundoR_OnBuffActivate",
+                "19": "Play_sfx_DrMundo_DrMundoR_OnBuffDeactivate"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.5,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_DrMundoR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_DrMundoR_Jade_Name",
+                        "keySummary": "Spell_DrMundoR_Jade_Summary",
+                        "keyTooltip": "Spell_DrMundoR_Jade_Tooltip",
+                        "keyCost": "Spell_DrMundo_Jade_PercentageCost"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "FactorTT",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_Heal",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SpeedMod",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MovementSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_DrMundoR_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 2,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 8,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 32,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 64,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{5871a0f7}": {
+        "ObjectName": "Jade_DrMundoShoseShop",
+        "mScriptName": "Jade_DrMundoShoseShop",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mSpellCalculations": {
+                "{0ee04500}": {
+                    "mFormulaParts": [
+                        {
+                            "mStat": 12,
+                            "mCoefficient": 0.003000000026077032,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "ImgIconPath": "ASSETS/Items/Icons2D/Jade/DrMundo_Shose_Shop.tex",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mIsDisabledWhileDead": false,
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_DrMundoShoseShop",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Jade_DrMundoShoseShop_Name",
+                    "keyTooltip": "Buff_Jade_DrMundoShoseShop_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoCritAttack": {
+        "ObjectName": "Jade_DrMundoCritAttack",
+        "mScriptName": "Jade_DrMundoCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 21711,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.965000152587891,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "Jade_DrMundo_BA_tar_crit_01",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_DrMundo_DrMundoCritAttack_OnCast",
+                "13": "Play_sfx_DrMundo_DrMundoCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility": {
+        "mRootSpell": "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility/Jade_DrMundoW",
+        "mChildSpells": [
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility/Jade_DrMundoW"
+        ],
+        "mName": "Jade_DrMundoWAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility/Jade_DrMundoW": {
+        "ObjectName": "Jade_DrMundoW",
+        "mScriptName": "Jade_DrMundoW",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_DamageAbility",
+                "Trait_RecastOrReplaceSpell",
+                "Trait_DoT",
+                "Trait_AttackBuff_Duration",
+                "Trait_Low_Damage",
+                "Trait_AoE",
+                "Trait_Toggle"
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        20.0,
+                        35.0,
+                        50.0,
+                        65.0,
+                        80.0,
+                        95.0,
+                        110.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealthCost",
+                    "values": [
+                        5.0,
+                        10.0,
+                        15.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DurationMod",
+                    "values": [
+                        0.05000000074505806,
+                        0.10000000149011612,
+                        0.15000000596046448,
+                        0.20000000298023224,
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.20000000298023224,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/DrMundo_BurningAgony.dds"
+            ],
+            "{11704a2b}": 0.0,
+            "{f26881a0}": 0.0,
+            "cooldownTime": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "Cooldown": {
+                "values": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "{0a3e0478}": 1.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUpTargetingChampion": true,
+            "mCanMoveWhileChanneling": true,
+            "bIsToggleSpell": true,
+            "mDoNotNeedToFaceTarget": true,
+            "mIgnoreRangeCheck": true,
+            "mDoesNotConsumeMana": true,
+            "castRange": [
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0,
+                325.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0,
+                    325.0
+                ],
+                "{0a3e0478}": 325.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mFloatVarsDecimals": [
+                0,
+                -1,
+                -1,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "19": "Play_sfx_DrMundo_DrMundoW_buffdeactivate",
+                "18": "Play_sfx_DrMundo_DrMundoW_OnBuffActivate"
+            },
+            "mSpellCooldownOrSealedQueueThreshold": 0.2750000059604645,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_DrMundoW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_DrMundoW_Jade_Name",
+                        "keySummary": "Spell_DrMundoW_Jade_Summary",
+                        "keyTooltip": "Spell_DrMundoW_Jade_Tooltip",
+                        "keyCost": "Spell_DrMundo_Jade_Cost"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "DurationMod",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_DrMundoW_CCReduction_Jade_Tooltip",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "HealthCost",
+                                    "nameOverride": "Spell_ListType_HealthCost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_DrMundoW_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 33554432,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack": {
+        "ObjectName": "Jade_DrMundoBasicAttack",
+        "mScriptName": "Jade_DrMundoBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 21711,
+            "mAlternateName": "Jade_DrMundoBasicAttack",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.694999694824219,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "Jade_DrMundo_BA_tar_01",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_DrMundo_DrMundoBasicAttack_OnCast",
+                "13": "Play_sfx_DrMundo_DrMundoBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{c8b13159}": {
+        "ObjectName": "Jade_DrMundoSkin09_WeaponRotationManager",
+        "mScriptName": "Jade_DrMundoSkin09_WeaponRotationManager",
+        "__type": "SpellObject"
+    },
+    "{18992bf3}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "jungle",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    1,
+                    2,
+                    1,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{450aaeea}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "{4feb79f1}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{a756de61}": {
+        "ScriptName": "charscriptJade_DrMundo",
+        "path": "{a756de61}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "Characters/Jade_DrMundo/CharacterRecords/Root": {
+        "mCharacterName": "Jade_DrMundo",
+        "baseHPModifiable": {
+            "baseValue": 522.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 89.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.4499999284744263,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.15000000596046448,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 120.0,
+        "primaryAbilityResource": {
+            "{726ee5cd}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 59.22999954223633,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 24.5,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.5,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "{01262a25}": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 345.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.799999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.13968749344348907,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_DrMundoBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.33000001311302185,
+                "mAttackName": "Jade_DrMundoBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackProbability": 0.3400000035762787,
+                "mAttackName": "Jade_DrMundoBasicAttack3",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.13968749344348907,
+                "mAttackName": "Jade_DrMundoCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_DrMundoQAbility/Jade_DrMundoQ",
+            "Jade_DrMundoWAbility/Jade_DrMundoW",
+            "Jade_DrMundoEAbility/Jade_DrMundoE",
+            "Jade_DrMundoRAbility/Jade_DrMundoR"
+        ],
+        "spells": [
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility/Jade_DrMundoW",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility/Jade_DrMundoE",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility/Jade_DrMundoR"
+        ],
+        "extraSpells": [
+            "",
+            "Jade_DrMundoEAttack",
+            "",
+            "Jade_DrMundoPObjectMissile",
+            "Jade_DrMundoWRecast",
+            "Jade_DrMundoBasicAttackTower",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "Jade_DrMundoP",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "{beb59620}",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility",
+            "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility"
+        ],
+        "passiveName": "game_character_passiveName_Jade_DrMundo",
+        "passiveLuaName": "Jade_DrMundoP",
+        "passiveToolTip": "game_character_passiveDescription_Jade_DrMundo",
+        "passiveSpell": "Jade_DrMundoP",
+        "passive1IconName": "ASSETS/Characters/Jade_DrMundo/HUD/Icons2D/Jade_DrMundo_P.dds",
+        "name": "game_character_displayname_Jade_DrMundo",
+        "weaponMaterials": [
+            "Jade_DrMundoBasicAttack"
+        ],
+        "mUseCCAnimations": true,
+        "selectionHeight": 175.0,
+        "selectionRadius": 135.0,
+        "pathfindingCollisionRadius": 50.0,
+        "overrideGameplayCollisionRadius": 80.0,
+        "{eb74898c}": 0.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1054,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            14,
+            0,
+            0,
+            0
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
+                    "displayName": "Infernal Guardian",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
+                    "displayName": "Infernal Guardian",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
+                    "displayName": "Infernal Guardian",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.",
+                    "displayName": "Infernal Guardian",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "+40% Mana Point regeneration.",
+                "+60% Mana Point regeneration.",
+                "+80% Mana Point regeneration."
+            ],
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_DrMundo",
+                    "effect": [
+                        "0.2",
+                        "0.4",
+                        "0.6"
+                    ],
+                    "level": [
+                        1,
+                        9,
+                        17
+                    ],
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "tank",
+            "searchTagsSecondary": "fighter",
+            "championId": 60036,
+            "roles": "TANK",
+            "magicRank": 6,
+            "LevelSpellEffectiveness": 2.0,
+            "difficultyRank": 5,
+            "description": "game_character_description_Jade_DrMundo",
+            "defenseRank": 7,
+            "classification": "Strong",
+            "ChasingAttackRangePercent": 0.5,
+            "attackRank": 5,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Resolve",
+        "mCharacterPassiveSpell": "{01b253f8}",
+        "{c5c48b41}": 1,
+        "Script": "{a756de61}",
+        "__type": "CharacterRecord"
+    },
+    "{c99a4349}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1054",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3084",
+                            "Items/3068",
+                            "Items/6667"
+                        ],
+                        "MaxCompletedItems": 1,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111",
+                            "Items/3009"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3084",
+                            "Items/6667",
+                            "Items/6665"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3065",
+                            "Items/3075",
+                            "Items/3083",
+                            "Items/3143",
+                            "Items/4401"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3193",
+                            "Items/3143",
+                            "Items/4401",
+                            "Items/3075",
+                            "Items/8001"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 30,
+                        "mModeNameStringId": "cherry",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/222051"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/223184"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/223047",
+                            "Items/223111",
+                            "Items/223005"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223084",
+                            "Items/223068",
+                            "Items/226667"
+                        ],
+                        "MaxCompletedItems": 1,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223084",
+                            "Items/226667",
+                            "Items/226665"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223065",
+                            "Items/223075",
+                            "Items/223143",
+                            "Items/224401"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223193",
+                            "Items/223143",
+                            "Items/224401",
+                            "Items/223075",
+                            "Items/228001"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "__linked": []
+}

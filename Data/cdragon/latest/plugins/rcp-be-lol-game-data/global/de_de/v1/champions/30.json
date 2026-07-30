@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Karthus erzeugt eine passierbare Wand aus negativer Energie. Jede gegnerische Einheit, welche die Wand durchschreitet, verliert für eine bestimmte Zeit Lauftempo und Magieresistenz.",
-            "dynamicDescription": "Karthus erzeugt eine Mauer, die @Effect4Amount@&nbsp;Sekunden lang bestehen bleibt. Gegner, die sie passieren, verlieren @Effect5Amount@&nbsp;Sekunden lang <scaleMR>@Effect1Amount@&nbsp;% Magieresistenz</scaleMR> und werden um @Effect3Amount@&nbsp;% <status>verlangsamt</status>. Die Verlangsamung fällt über die Dauer hinweg ab.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus erzeugt eine Mauer, die @WallDuration@ Sekunden lang bestehen bleibt. Gegner, die sie passieren, verlieren @DebuffDuration@ Sekunden lang <scaleMR>@MagicResistShred@ % Magieresistenz</scaleMR> und werden um @SlowPercent@ % <status>verlangsamt</status>. Die Verlangsamung fällt über die Dauer hinweg ab.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@&nbsp;Mana pro Sekunde",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Karthus stiehlt passiv Energie von seinen Opfern, wodurch er mit jedem Todesstoß Mana gewinnt. Alternativ kann Karthus sich selbst mit den Seelen seiner Beute umgeben und so Schaden an nahen Gegnern verursachen. Doch dadurch verbraucht er sein Mana sehr schnell.",
-            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Wenn Karthus eine Einheit tötet, stellt er <scaleMana>@Effect2Amount@&nbsp;Mana</scaleMana> wieder her.<br><br><toggle>Aktivierbar:</toggle> Karthus erschafft eine nekrotische Aura, die Gegnern in der Nähe <magicDamage>@TotalDPS@&nbsp;magischen Schaden</magicDamage> pro Sekunde zufügt.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv: </spellPassive>Wenn Karthus eine Einheit tötet, stellt er <scaleMana>@ManaRestoreOnKill@ Mana</scaleMana> wieder her.<br><br><toggle>Aktivierbar: </toggle>Karthus erschafft eine nekrotische Aura, die Gegnern in der Nähe <magicDamage>@TotalDPS@ magischen Schaden</magicDamage> pro Sekunde zufügt.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -617,7 +617,7 @@
     "spells": [
         {
             "spellKey": "q",
-            "name": "اندفاع الفويد",
+            "name": "ثوران الفويد",
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Belveth/HUD/Icons2D/BV_Q_1.png",
             "abilityVideoPath": "champion-abilities/0200/ability_0200_Q1.webm",
             "abilityVideoImagePath": "champion-abilities/0200/ability_0200_Q1.jpg",
@@ -642,10 +642,10 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                1.0,
-                1.0,
-                1.0,
-                1.0,
+                4.0,
+                3.25,
+                2.5,
+                1.75,
                 1.0,
                 1.0
             ],
@@ -774,7 +774,7 @@
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تضرب بيلفيث بذيلها الأرض، فتلحق الضرر بأعدائها، وتطيح بهم إلى الأعلى وتبطئهم.",
-            "dynamicDescription": "تضرب بيلفيث بذيلها الأرض، فتلحق <magicDamage>@Damage@ ضرر سحر</magicDamage> و <status>تطيح في الهواء</status> الأعداءَ لمدة @Duration@ث و <status>تبطئهم</status> بنسبة @SlowPercent*100@% لمدة @SlowDuration@ث. إذا أصيب بطل، فهذا يجدد فترة التبريد <spellName>اندفاع الفويد</spellName> في ذلك الاتجاه.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تخبط بيلفيث بذيلها، فتلحق <magicDamage>@Damage@ ضرر سحر</magicDamage> كما <status>تطيح في الهواء</status> بالأعداء لمدة @Duration@ث وكذلك <status>تبطئهم</status> بنسبة @SlowPercent*100@% لمدة @SlowDuration@ث. إذا أصيب بطل، يتكفل ذلك بتجديد فترة تبريد قدرة <spellName>ثوران الفويد</spellName> في ذلك الاتجاه.@SpellModifierDescriptionAppend@",
             "range": [
                 715.0,
                 715.0,
@@ -797,7 +797,7 @@
                 10.0,
                 9.0,
                 8.0,
-                8.0
+                10.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -942,12 +942,12 @@
                 0.0
             ],
             "cooldownCoefficients": [
-                20.0,
-                19.0,
+                24.0,
+                21.0,
                 18.0,
-                17.0,
-                16.0,
-                16.0
+                15.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 0.0,
@@ -1073,8 +1073,8 @@
             "abilityVideoImagePath": "champion-abilities/0200/ability_0200_R1.jpg",
             "cost": "بلا تكاليف",
             "cooldown": "@Cooldown@ %i:cooldown%",
-            "description": "تستهلك بيلفيث بقايا شعاب الفويد المرجانية، وتتحول إلى هيئتها الحقيقية وتزيد من صحتها القصوى ونطاق الهجوم وسرعة الهجوم وسرعة الحركة خارج القتال. إن استهلاك بقايا شعاب الفويد المرجانية لوحوش الفويد الخارقة سيمنحها فترة قدرة خارقة أطول، بالإضافة إلى القدرة على استدعاء أسماك الفويد.",
-            "dynamicDescription": "<spellPassive>التأثير الكامن:</spellPassive> يُلحق كل هجوم ثانٍ على ذات الهدف <trueDamage>@FinalOnHitDamage@ ضررًا حقيقيًا</trueDamage> إضافيًا، حيث يمكن أن يتكدس دون حد أقصى. وتترك الإطاحات بالوحوش الخارقة والأبطال خلفها قطعة من شعاب الفويد المرجانية.<br><br><spellActive>التأثير النشط:</spellActive> يمنح استهلاك شعاب الفويد المرجانية تكدس <keywordMajor>@PassiveStacksOnDevour@ خزامى البحر</keywordMajor> وينشط شكل بيلفيث الحقيقي لمدة @SteroidDuration@ث. تزيد شعاب الفويد المرجانية القادمة من وحوش الفويد الخارقة المدة إلى @VoidDuration@ث ويتسبب في موت الأتباع في الجوار ليصبحوا سمك الفويد. عند الإلقاء، <status>تبطئ</status> بيلفيث الأعداء في الجوار قبل أن تفجّرهم، فتلحق بهم <trueDamage>@TotalExplosionDamage@ + @MissingHealthDamage*100@% من الضرر الحقيقي للصحة الناقصة</trueDamage>.<br><br>تكسب بيلفيث بشكلها الحقيقي <healing>@MaxHealthOnDevour@ الصحة القصوى</healing> و <speed>@OOCMS@ سرعة الحركة</speed> خارج القتال، و @BonusAARange@ مدى هجوم، <attackSpeed>@TotalASMod*100@% إجمالي سرعة الهجوم</attackSpeed> ويمكن لـ <spellName>اندفاع الفويد</spellName> أن يمر عبر الجدران.<br><br><br>@SpellModifierDescriptionAppend@",
+            "description": "تستهلك بيلفيث بقايا شعاب الفويد المرجانية، فتتحول إلى هيئتها الحقيقية وتزداد صحتها القصوى ومدى هجومها وسرعة هجومها. يمنحها استهلاك بقايا شعاب الفويد المرجانية الخاصة بوحش فويد خارق القدرة على استدعاء أسماك الفويد.",
+            "dynamicDescription": "<spellPassive>تأثير كامن:</spellPassive> تلحق الهجمات <trueDamage>@FinalOnHitDamage@ ضرر حقيقي</trueDamage> إضافي، ويتكدس هذا التأثير إلى ما لا نهاية. تترك الإطاحة بالأبطال والوحوش الخارقة خلفها قطعة من شعاب الفويد المرجانية.<br><br><spellActive>تأثير نشط:</spellActive> تستهلك بيلفيث قطعة من شعاب الفويد المرجانية، فتكسب تكدسات بقدر <keywordMajor>@PassiveStacksOnDevour@ من الخزامى</keywordMajor> وتفعّل هيئتها الحقيقية. تتسبب شعاب الفويد المرجانية الناتجة عن وحوش الفويد الخارقة في تحول الأتباع الذين يموتون في الجوار إلى أسماك الفويد. عند الإلقاء، <status>تبطئ</status> بيلفيث الأعداء في الجوار قبل أن تفجّرهم، فتلحق بهم <trueDamage>@TotalExplosionDamage@ + @MissingHealthDamage*100@% من الصحة الناقصة على شكل ضرر حقيقي</trueDamage>.<br><br>في هيئتها الحقيقية، تكسب بيلفيث <healing>@MaxHealthOnDevour@ صحة قصوى</healing> و @BonusAARange@ مدى هجوم و <attackSpeed>@TotalASMod*100@% سرعة هجوم إجمالية</attackSpeed> ويمكن لتعويذة <spellName>ثوران الفويد</spellName> المرور عبر الجدران.<br><br><rules>تستمر الهيئة الحقيقية لمدة @SteroidDuration@ث، وتزداد إلى @SteroidDurationUpgrade@ث عند امتلاك تكدسات بقدر <keywordMajor>@StackThresholdForUpgrade@ من الخزامى</keywordMajor>. وعند امتلاك تكدسات بقدر <keywordMajor>@StackThresholdForPermanent@ من الخزامى</keywordMajor>، تستمر الهيئة الحقيقية حتى الموت.</rules><br><br><br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

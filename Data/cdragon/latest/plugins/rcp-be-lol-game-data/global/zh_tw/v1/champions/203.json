@@ -586,7 +586,7 @@
                 },
                 {
                     "id": 203027,
-                    "name": "貓狗大戰 鏡爪(金黃)",
+                    "name": "貓狗大戰 鏡爪(石英黃)",
                     "contentId": "cf4a6cc8-62ae-4fa6-a79c-d8622c95f05b",
                     "relatedPrimeContentId": "",
                     "skinClassification": "kRecolor",
@@ -989,7 +989,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "鏡爪翻滾並對附近目標發射最多三支箭矢。",
-            "dynamicDescription": "鏡爪進行翻滾，對最多 3 名敵人發射一根箭矢，造成 <physicalDamage>@TotalDamage@ 物理傷害</physicalDamage>並提供持續 @Effect8Amount@ 秒的 <attackSpeed>@TotalQAttackSpeed@ 攻擊速度</attackSpeed>。<br><br>在 <spellName>魔狼狂熱</spellName> 之內時，這個技能的冷卻時間會縮短至 @Effect4Amount@ 秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "鏡爪進行翻滾，對最多3名敵軍射出箭矢，造成<physicalDamage>@TotalDamage@物理傷害</physicalDamage>，並提升<attackSpeed>@TotalQAttackSpeed@攻速</attackSpeed>，持續@BaseASDuration@秒。<br><br>在<spellName>魔狼狂熱</spellName>範圍內時，此技能的冷卻時間縮短至@CDNewValue@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 340.0,
                 340.0,
@@ -1439,7 +1439,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "神羊庇護周圍的生命。效果結束前，任何物體都無法死亡。效果結束時，所有單位會受到治療。",
-            "dynamicDescription": "鏡爪避護地面@Effect2Amount@秒，使其中的友軍、敵方或中立單位不會死亡。生命降至10%時，仍留在該區域內的單位就不會受到傷害或治療效果了。<br><br>當庇護結束時，範圍內的所有單位將會受到<healing>@Effect1Amount@的治療</healing>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "鏡爪庇護區域@BuffDuration@秒，使其中的友軍、敵軍或中立單位不會死亡。生命降至10%時仍留在該區域內的單位，不會受到傷害或治療。<br><br>庇護結束時，區域內的所有單位將會回復<healing>@HealFlat@生命</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,

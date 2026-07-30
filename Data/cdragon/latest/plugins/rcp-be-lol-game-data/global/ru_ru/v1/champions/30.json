@@ -1128,7 +1128,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Картус создает энергетический барьер, который замедляет проходящих сквозь него врагов и уменьшает их сопротивление магии на некоторое время.",
-            "dynamicDescription": "Картус создает стену на @Effect4Amount@ сек. Враги, проходящие сквозь стену, теряют <scaleMR>@Effect1Amount@% сопротивления магии</scaleMR> на @Effect5Amount@ сек. и <status>замедляются</status> на @Effect3Amount@% (эффект ослабевает в течение времени действия).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Картус создает стену на @WallDuration@ сек. Враги, проходящие сквозь нее, теряют <scaleMR>@MagicResistShred@% сопр. магии</scaleMR> на @DebuffDuration@ сек. и <status>замедляются</status> на @SlowPercent@% (эффект ослабевает в течение времени действия).@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ маны в секунду",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Картус пассивно высасывает жизненную энергию из убитых им врагов, восстанавливая себе ману при каждом убийстве. Или же вместо этого он может окружить себя душами своих жертв, которые наносят урон ближайшим врагам, но быстро расходуют его ману.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> когда Картус убивает бойца, он восстанавливает себе <scaleMana>@Effect2Amount@ маны</scaleMana>.<br><br><toggle>Включено:</toggle> Картус создает вокруг себя ауру смерти, нанося <magicDamage>@TotalDPS@ магического урона</magicDamage> в секунду врагам поблизости.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> убивая бойца, Картус восстанавливает <scaleMana>@ManaRestoreOnKill@ ед. маны</scaleMana>.<br><br><toggle>Включено:</toggle> Картус создает вокруг себя ауру смерти, нанося <magicDamage>@TotalDPS@ ед. маг. урона</magicDamage> в секунду врагам поблизости.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

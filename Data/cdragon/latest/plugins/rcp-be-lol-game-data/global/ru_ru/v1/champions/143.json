@@ -1752,7 +1752,7 @@
             "cost": "1 семя",
             "cooldown": "Без перезарядки",
             "description": "Зайра сажает семя, действующее в течение 60 секунд. Если Зайра задевает его при использовании Цепких корней или Смертоносных колючек, из него развивается растение, которое сражается за нее. У Зайры может быть несколько семян в запасе, а при убийстве врага время получения новых семян Безудержного роста сокращается.",
-            "dynamicDescription": "Зайра сажает <keywordMajor>семя</keywordMajor>, которое существует @Effect6Amount@ сек. Эти <keywordMajor>семена</keywordMajor> на @Effect3Amount@ сек. дают <keywordStealth>истинное видение</keywordStealth> вражеских чемпионов, которые на них наступают, но сами при этом уничтожаются.<br><br>У этого умения может быть до 2 зарядов (новый заряд дается раз в @AmmoRechargeTime@ сек.). При убийстве миньона или монстра время до появления нового заряда сокращается на @Effect1Amount*100@%. Участия в убийствах чемпионов сокращают время до появления нового заряда на @Effect2Amount*100@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Зайра сажает <keywordMajor>семя</keywordMajor>, существующее @SeedDuration@ сек. Эти <keywordMajor>семена</keywordMajor> на @VisionGranted@ сек. дают <keywordStealth>истинное видение</keywordStealth> вражеских чемпионов, наступающих на них, но сами при этом уничтожаются.<br><br>У этого умения может быть до 2 зар. (новый заряд дается раз в @AmmoRechargeTime@ сек.). При убийстве миньона или монстра время до появления нового заряда снижается на @KillAmmoRefundMinion*100@%. Участия в убийствах чемпионов сокращают время до появления нового заряда на @KillAmmoRefundChamp*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Зайра пускает лозы сквозь землю в указанном направлении, нанося урон всем задетым врагам и обездвиживая их. Если лозы задевают семя, из него вырастает плеточник, атакующий находящихся рядом врагов, при этом замедляя их.",
-            "dynamicDescription": "Зайра выпускает вперед лозы, которые <status>обездвиживают</status> врагов на @Effect5Amount@ сек. и наносят <magicDamage>@TotalDamage@ магического урона</magicDamage>. <br><br>Если лозы задевают <keywordMajor>семя</keywordMajor>, из него вырастает плеточник, который наносит <magicDamage>@spell.ZyraP:PlantDamage@ магического урона</magicDamage> и существует @spell.ZyraP:PlantDuration@ сек. Дальность атаки плеточников равна 400, и их автоатаки <status>замедляют</status> на @Effect2Amount@% на @Effect3Amount@ сек. <status>Замедление</status> от нескольких плеточников суммируется до @MaxSlowStacks@ раз.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Зайра выпускает вперед лозы, <status>обездвиживающие</status> врагов на @RootDuration@ сек. и наносящие <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>. <br><br>Если лозы задевают <keywordMajor>семя</keywordMajor>, из <keywordMajor>семени</keywordMajor> вырастает плеточник, наносящий <magicDamage>@spell.ZyraP:PlantDamage@ ед. маг. урона</magicDamage> и существующий @spell.ZyraP:PlantDuration@ сек. Дальность атаки плеточников равна 400, их автоатаки <status>замедляют</status> на @SlowAmountPlantAttack@% на @SlowDurationPlantAttack@ сек. <status>Замедление</status> от нескольких плеточников суммируется до @MaxSlowStacks@ р.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Зайра вызывает быстрый рост побегов в указанной области. Побеги по мере распространения наносят урон врагам, а затем подбрасывают их в воздух. Задетые побегами растения становятся разъяренными.",
-            "dynamicDescription": "Зайра призывает ярость природы, вызывая быстрый рост побегов, которые наносят <magicDamage>@TotalDamage@ магического урона</magicDamage>. Через 2 сек. побеги <status>подбрасывают</status> находящихся на них врагов на @Effect1Amount@ сек.<br><br>Задетые побегами растения Зайры становятся разъяренными: продолжительность их существования сбрасывается, а <healing>здоровье</healing> увеличивается на <healing>@Effect2Amount*100@%</healing>. Кроме того, они начинают наносить @PlantDamageBonus@% дополнительного урона.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Зайра призывает ярость природы, вызывая быстрый рост побегов, наносящих <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage>. Через 2 сек. побеги <status>подбрасывают</status> находящихся на них врагов на @KnockupDuration@ сек.<br><br>Задетые побегами растения Зайры становятся разъяренными: длительность их существования сбрасывается, а <healing>здоровье растет на @EnragedBonusHealthPercent*100@%</healing>. Также они начинают наносить @PlantDamageBonus@% дополнительного урона.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

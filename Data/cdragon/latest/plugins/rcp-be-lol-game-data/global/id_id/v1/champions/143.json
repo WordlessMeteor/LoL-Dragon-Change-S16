@@ -1752,7 +1752,7 @@
             "cost": "1 Benih",
             "cooldown": "Tidak Ada Cooldown",
             "description": "Zyra menanam sebuah benih yang bertahan selama 60 detik. Deadly Spines dan Grasping Roots yang di-cast di dekat benih akan mengubah benih yang bertarung demi Zyra. Zyra dapat menyimpan beberapa benih sekaligus. Membunuh musuh akan mengurangi waktu recharge Rampant Growth.",
-            "dynamicDescription": "Zyra menanam sebuah <keywordMajor>Benih</keywordMajor> yang bertahan selama @Effect6Amount@ detik. <keywordMajor>Benih</keywordMajor> memberikan <keywordStealth>True Sight</keywordStealth> dari champion musuh yang menginjaknya selama @Effect3Amount@ detik, tetapi benih tetap akan hancur.<br><br>Ability ini memiliki 2 charge dengan waktu recharge selama @AmmoRechargeTime@ detik. Membunuh minion musuh atau monster akan mengurangi waktu recharge sebanyak @Effect1Amount*100@%. Takedown champion mengurangi waktu recharge sebanyak @Effect2Amount*100@%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra menanam sebuah <keywordMajor>Benih</keywordMajor> yang bertahan selama @SeedDuration@ detik. <keywordMajor>Benih</keywordMajor> memberikan <keywordStealth>True Sight</keywordStealth> dari champion musuh yang menginjaknya selama @VisionGranted@ detik, tetapi benih tetap akan hancur.<br><br>Ability ini memiliki 2 charge dengan waktu recharge @AmmoRechargeTime@ detik. Membunuh minion musuh atau monster akan mengurangi waktu recharge sebanyak @KillAmmoRefundMinion*100@%. Takedown champion jadi mengurangi waktu recharge sebanyak @KillAmmoRefundChamp*100@%.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Zyra mengirimkan tanaman merambat di tanah untuk menjerat target, menghasilkan damage dan menerapkan root ke musuh yang dilewatinya. Jika cast di dekat benih, Grasping Roots akan menumbuhkan satu Vine Lasher, yang mengurangi Move Speed musuh dengan serangan jarak pendek.",
-            "dynamicDescription": "Zyra mengirim tanaman rambat ke depan, menerapkan <status>Root</status> selama @Effect5Amount@ detik dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. <br><br>Jika Ability ini lewat di dekat <keywordMajor>Benih</keywordMajor>, <keywordMajor>Benih</keywordMajor> akan tumbuh menjadi Vine Lasher yang menghasilkan <magicDamage>@spell.ZyraP:PlantDamage@ magic damage</magicDamage> dan bertahan @spell.ZyraP:PlantDuration@ detik. Vine Lasher memiliki range sejauh 400, dan Serangannya menerapkan <status>Slow</status> sebesar @Effect2Amount@% selama @Effect3Amount@ detik. <status>Slow</status> dari beberapa Vine Lasher dapat menambah stack hingga @MaxSlowStacks@ kali.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra mengirim tanaman rambat ke depan, menerapkan <status>Root</status> selama @RootDuration@ detik dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. <br><br>Jika Ability ini lewat di dekat <keywordMajor>Benih</keywordMajor>, <keywordMajor>Benih</keywordMajor> akan tumbuh menjadi Vine Lasher yang menghasilkan <magicDamage>@spell.ZyraP:PlantDamage@ magic damage</magicDamage> dan bertahan @spell.ZyraP:PlantDuration@ detik. Vine Lasher memiliki range sejauh 400, dan Serangannya menerapkan <status>Slow</status> sebesar @SlowAmountPlantAttack@% selama @SlowDurationPlantAttack@ detik. <status>Slow</status> dari beberapa Vine Lasher dapat stack hingga @MaxSlowStacks@ kali.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Zyra memanggil semak belukar yang berkembang di lokasi target, menghasilkan Damage pada musuh dan melempar mereka semua ke udara. Tanaman di semak belukar menjadi makin liar.",
-            "dynamicDescription": "Zyra memanggil the fury of nature, menumbuhkan semak belukar yang menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. Setelah 2 detik, tanaman rambat melecut ke atas, menerapkan <status>Knock Up</status> pada musuh selama @Effect1Amount@ detik.<br><br>Tanaman Zyra di semak belukar menjadi makin liar, mereset durasinya, mendapatkan <healing>@Effect2Amount*100@% Health</healing>, dan Menyerang dengan @PlantDamageBonus@% damage bonus.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra memanggil the fury of nature, menumbuhkan semak belukar yang menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. Setelah 2 detik, tanaman rambat melecut ke atas, menerapkan <status>Knock Up</status> selama @KnockupDuration@ detik.<br><br>Tanaman Zyra di semak belukar jadi makin liar, mereset durasinya, mendapatkan <healing>@EnragedBonusHealthPercent*100@% Health</healing>, dan Menyerang dengan @PlantDamageBonus@% damage bonus.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

@@ -1,0 +1,165 @@
+{
+    "Characters/Jade_Lulu/Skins/Skin2": {
+        "skinClassification": 1,
+        "championSkinName": "Jade_LuluClassic",
+        "metaDataTags": "faction:bandlecity,race:yordle,gender:female,element:dark,skinline:trickortreat",
+        "loadscreen": {
+            "image": "ASSETS/Characters/Jade_Lulu/Skins/Skin02/Jade_LuluLoadScreen_2.tex",
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Lulu",
+                "LuluClassic"
+            ],
+            "bankUnits": [
+                {
+                    "name": "Lulu_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Lulu/Skins/Base/Lulu_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Lulu/Skins/Base/Lulu_Base_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                },
+                {
+                    "name": "Lulu_Base_VO",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Lulu/Skins/Base/Lulu_Base_VO_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Lulu/Skins/Base/Lulu_Base_VO_events.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Lulu/Skins/Base/Lulu_Base_VO_audio.wpk"
+                    ],
+                    "events": [
+                        "Play_vo_Lulu_Attack2DGeneral",
+                        "Play_vo_Lulu_Death3D",
+                        "Play_vo_Lulu_Joke3DGeneral",
+                        "Play_vo_Lulu_Laugh3DGeneral",
+                        "Play_vo_Lulu_LuluR_cast3D",
+                        "Play_vo_Lulu_LuluW_cast3DAlly",
+                        "Play_vo_Lulu_LuluW_cast3DEnemy",
+                        "Play_vo_Lulu_Move2DStandard",
+                        "Play_vo_Lulu_Spell3DRCast",
+                        "Play_vo_Lulu_Spell3DWCastAlly",
+                        "Play_vo_Lulu_Spell3DWCastEnemy",
+                        "Play_vo_Lulu_Taunt3DGeneral"
+                    ],
+                    "voiceOver": true,
+                    "__type": "BankUnit"
+                },
+                {
+                    "name": "Lulu_Skin02_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Lulu/Skins/Skin02/Lulu_Skin02_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Lulu/Skins/Skin02/Lulu_Skin02_SFX_events.bnk"
+                    ],
+                    "events": [
+                        "Play_sfx_LuluClassic_LuluWTwo_OnBuffActivate",
+                        "Play_sfx_LuluClassic_LuluWTwo_OnBuffDeactivate",
+                        "Play_sfx_LuluClassic_LuluWTwo_OnCast",
+                        "Play_sfx_LuluClassic_LuluWTwo_OnHit",
+                        "Play_sfx_LuluClassic_LuluWTwo_OnMissileLaunch",
+                        "Stop_sfx_LuluClassic_LuluWTwo_OnBuffActivate"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Jade_Lulu/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Jade_Lulu/Skins/Skin02/Jade_Lulu_classic.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Lulu/Skins/Skin02/Jade_Lulu_classic.skn",
+            "texture": "ASSETS/Characters/Jade_Lulu/Skins/Skin02/Jade_Lulu_classic_TX_CM.tex",
+            "skinScale": 1.100000023841858,
+            "selfIllumination": 1.0,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "{9a817954}": [
+                {
+                    "category": "{e1043940}",
+                    "Submeshes": "MAT_Waena_Classic",
+                    "__type": "{993f8595}"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Flesh",
+        "defaultAnimations": [
+            "Eyes"
+        ],
+        "idleParticlesEffects": [
+            {
+                "effectKey": "Jade_Lulu_idle",
+                "boneName": "BUFFBONE_CSTM_WEAPON_1",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "mContextualActionData": "Characters/Jade_Lulu/CAC/Jade_Lulu_Base",
+        "iconCircle": "ASSETS/Characters/Jade_Lulu/HUD/Jade_Lulu_Circle_0.tex",
+        "iconSquare": "ASSETS/Characters/Jade_Lulu/HUD/Jade_Lulu_Square_0.tex",
+        "iconAvatar": "ASSETS/Characters/Jade_Lulu/HUD/Jade_Lulu_Circle_2.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/Jade_Lulu/Skins/Skin2/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Jade_Lulu/Skins/Skin2/Resources": {
+        "resourceMap": {
+            "Jade_Lulu_BA_cas": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_BA_cas",
+            "Jade_Lulu_BA_cas_01": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_BA_cas_01",
+            "Jade_Lulu_BA_mis": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_BA_mis",
+            "Jade_Lulu_BA_tar": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_BA_tar",
+            "Jade_Lulu_emote_dance_sfx": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_emote_dance_sfx",
+            "Jade_Lulu_emote_death_sfx": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_emote_death_sfx",
+            "Jade_Lulu_emote_joke_sfx": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_emote_joke_sfx",
+            "Jade_Lulu_emote_laugh_sfx": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_emote_laugh_sfx",
+            "Jade_Lulu_emote_taunt_sfx": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_emote_taunt_sfx",
+            "Jade_Lulu_E_tar_ally": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_E_tar_ally",
+            "{fbb223d9}": "{00000000}",
+            "Jade_Lulu_E_tar_enemy": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_E_tar_enemy",
+            "Jade_Lulu_idle": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_idle",
+            "Jade_Lulu_Pix_BA_mis": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_Pix_BA_mis",
+            "Jade_Lulu_Pix_BA_tar": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_Pix_BA_tar",
+            "Jade_Lulu_Pix_E_teleport": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_Pix_E_teleport",
+            "Jade_Lulu_Pix_idle_green": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_Pix_idle_green",
+            "Jade_Lulu_Pix_idle_red": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_Pix_idle_red",
+            "Jade_Lulu_Pix_idle_red2": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_Pix_idle_red2",
+            "Jade_Lulu_P_Faerie_Flash_01": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_P_Faerie_Flash_01",
+            "Jade_Lulu_Q_mis": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_Q_mis",
+            "Jade_Lulu_Q_tar": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_Q_tar",
+            "Jade_Lulu_Q_tar_slow": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_Q_tar_slow",
+            "Jade_Lulu_R_cas": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_R_cas",
+            "Jade_Lulu_R_forward_01": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_R_forward_01",
+            "Jade_Lulu_R_tar_audio": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_R_tar_audio",
+            "Jade_Lulu_R_tar_buf": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_R_tar_buf",
+            "Jade_Lulu_R_tar_buf_end": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_R_tar_buf_end",
+            "Jade_Lulu_R_tar_hit": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_R_tar_hit",
+            "Jade_Lulu_R_tar_knockup": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_R_tar_knockup",
+            "Jade_Lulu_R_tar_slow": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_R_tar_slow",
+            "Jade_Lulu_W_audio_ally": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_W_audio_ally",
+            "Jade_Lulu_W_audio_enemy": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_W_audio_enemy",
+            "Jade_Lulu_W_buf_ally": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_W_buf_ally",
+            "Jade_Lulu_W_cas_buf_hand": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_W_cas_buf_hand",
+            "Jade_Lulu_W_Mis": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_W_mis",
+            "Jade_Lulu_W_tar_01": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_W_tar_01",
+            "Jade_Lulu_W_tar_ally": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_W_tar_ally",
+            "Jade_Lulu_W_tar_enemy": "Characters/Jade_Lulu/Skins/Skin0/Particles/Jade_Lulu_Base_W_tar_enemy"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/Jade_Lulu/Jade_Lulu.bin",
+        "DATA/Characters/Jade_Lulu/Animations/Skin0.bin",
+        "DATA/Characters/Jade_Lulu/Jade_Lulu_Multi_Skins_Root_Skins_Skin0_Skins_Skin14_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin37_Skins_Skin38_Skins_Skin39_Skins_Skin40_Skins_Skin41_Skins_Skin42_Skins_Skin43_Skins_Skin44_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin50_Skins_Skin51_Skins_Skin52_Skins_Skin53_Skins_Skin54_Skins_Skin55.bin",
+        "DATA/Characters/Jade_Lulu/Jade_Lulu_Multi_Skins_Skin0_Skins_Skin14_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin2_Skins_Skin20.bin",
+        "DATA/Characters/Jade_Lulu/Jade_Lulu_Multi_Skins_Skin0_Skins_Skin2.bin"
+    ]
+}

@@ -92,6 +92,96 @@
         ],
         "__type": "CharacterRecord"
     },
+    "{16ccb8f7}": {
+        "mCharacterName": "SRU_OrderMinionSiege",
+        "mFallbackCharacterName": "SRU_OrderMinionRanged",
+        "baseHPModifiable": {
+            "baseValue": 725.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 55.0,
+        "primaryAbilityResource": {
+            "{726ee5cd}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "arIsShown": false,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "secondaryAbilityResource": {
+            "arIsShown": false,
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 40.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 325.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 280.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 1.0,
+            "__type": "ModifiableFloat"
+        },
+        "basicAttack": {
+            "mAttackTotalTime": 1.0,
+            "mAttackCastTime": 0.30000001192092896,
+            "__type": "AttackSlotData"
+        },
+        "towerTargetingPriorityBoost": 5.0,
+        "expGivenOnDeath": 96.0,
+        "goldGivenOnDeath": 39.0,
+        "experienceRadius": 1600.0,
+        "perceptionBubbleRadius": 1200.0,
+        "significance": 0.5,
+        "name": "game_character_displayname_Blue_Minion_MechCannon",
+        "selectionHeight": 95.0,
+        "selectionRadius": 140.0,
+        "pathfindingCollisionRadius": 55.74369812011719,
+        "overrideGameplayCollisionRadius": 65.0,
+        "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Siege",
+        "characterToolData": {
+            "sound": {
+                "death": "Order_Minion_Rider_Death_1.wav",
+                "__type": "ToolSoundData"
+            },
+            "mapAIPresence": {
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "description": "game_character_description_Blue_Minion_MechCannon",
+            "baseAttackSpeedBonus": 30.0,
+            "attackSpeed": 2.0,
+            "__type": "CharacterToolData"
+        },
+        "Script": "{acad3f3c}",
+        "__type": "CharacterRecord"
+    },
     "{17c7eecb}": {
         "mCharacterName": "SRU_OrderMinionSiege",
         "mFallbackCharacterName": "SRU_OrderMinionRanged",
@@ -548,8 +638,8 @@
             "mCastType": 1,
             "castFrame": 9.0,
             "missileSpeed": 1200.0,
-            "mMissileEffectName": "DATA/Particles/SRU_Order_CanM_BA1.troy",
-            "mHitEffectName": "DATA/Particles/SRU_Order_CanM_Tar.troy",
+            "mMissileEffectKey": "{3645fbaf}",
+            "mHitEffectKey": "{4590d79f}",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "mClientData": {
@@ -654,6 +744,208 @@
             }
         ],
         "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{acad3f3c}": {
+        "ScriptName": "CharScriptSRU_OrderMinionSiege_Jade",
+        "path": "{acad3f3c}",
+        "sequences": {
+            "{e22f9f8c}": {
+                "blocks": [
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "b770facb-561a-457f-a906-4753cc4c9eae",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "a0f780d6-70b9-4070-8403-d94e4e6af139",
+                                    "Var": {
+                                        "Var": "Attacker",
+                                        "__type": "{622705af}"
+                                    },
+                                    "__type": "{851b8dc5}"
+                                },
+                                {
+                                    "{d851ffa3}": "8b3e3a41-a5b1-448f-8030-33752d02acc7",
+                                    "Condition": null,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "47f78b44-2810-467f-9bef-14c77e7ac50b",
+                                                "Formula": "0.5 * ptp.DamageAmount",
+                                                "Dest": {
+                                                    "Var": "DamageAmount",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "25a61218-5702-45f7-9f41-188e0db313ff",
+                                                "Var": {
+                                                    "Var": "Target",
+                                                    "__type": "{622705af}"
+                                                },
+                                                "__type": "{851b8dc5}"
+                                            },
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{6a7835b9}": {
+                "blocks": [
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "926eb9bd-b0c1-4b9c-b351-3a4e8a8ebfb7",
+                        "ToSay": {
+                            "value": "Jade Order Siege",
+                            "__type": "StringGet"
+                        },
+                        "__type": "DebugPrintToChatBlock"
+                    },
+                    {
+                        "IsDisabled": true,
+                        "{d851ffa3}": "15c58689-c11b-4356-bb32-f57ecc855cf8",
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "ff44aa24-5156-48f4-a33f-934af628761b",
+                                    "__type": "ScriptCommentBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "41616ea2-91f9-4376-95dd-b8bd517e5e2c",
+                                    "Src": {
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "InhibsDestroyed",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "7bf72c54-febc-4334-8783-09eb09977dcc",
+                                    "Src": {
+                                        "value": 200,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "InstanceVars"
+                                        },
+                                        "Var": "HpInhibitor",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "ffbb4b74-9461-44f4-86a3-82900fdebe44",
+                                    "Src": {
+                                        "value": 25,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Table": {
+                                            "__type": "InstanceVars"
+                                        },
+                                        "Var": "DamageInhibitor",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null,
+                                {
+                                    "{d851ffa3}": "890ff66f-d90a-4f9b-b892-cebb715feb37",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{358b1671}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "2824b99c-5a4b-4302-83cf-fd1e1e737416",
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "35ef9ec9-8ebb-49ff-bfa0-dcca0adf241a",
+                                                "Formula": "iv.DamageInhibitor * ptp.InhibsDestroyed",
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "InstanceVars"
+                                                    },
+                                                    "Var": "DamageInhibitor",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "607cf98a-5ea7-426c-832e-a0ae0b3c7f77",
+                                                "Formula": "iv.HpInhibitor * ptp.InhibsDestroyed",
+                                                "Dest": {
+                                                    "Table": {
+                                                        "__type": "InstanceVars"
+                                                    },
+                                                    "Var": "HpInhibitor",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            },
+                                            null,
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "ScriptCommentBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{d576330f}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "2e61d6bd-5cd1-44ae-9245-7e1d013d4216",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "5271add2-7ef3-4c91-b678-fbc76351e505",
+                                    "Formula": "ptp.DamageAmount * 2",
+                                    "Dest": {
+                                        "Var": "DamageAmount",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "{15ebaa9c}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
     },
     "__linked": []
 }

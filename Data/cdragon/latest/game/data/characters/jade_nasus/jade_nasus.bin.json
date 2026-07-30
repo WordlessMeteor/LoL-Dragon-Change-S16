@@ -1,0 +1,2873 @@
+{
+    "{1d9065fa}": {
+        "ObjectName": "Jade_NasusSkin5SFX",
+        "mScriptName": "Jade_NasusSkin5SFX",
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusBasicAttack2": {
+        "ObjectName": "Jade_NasusBasicAttack2",
+        "mScriptName": "Jade_NasusBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAlternateName": "Jade_NasusBasicAttack2",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906
+                ],
+                "{0a3e0478}": 49.400001525878906,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "Jade_Nasus_AA_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Nasus_NasusBasicAttack_OnCast",
+                "13": "Play_sfx_Nasus_NasusBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusWAbility": {
+        "mRootSpell": "Characters/Jade_Nasus/Spells/Jade_NasusWAbility/Jade_NasusW",
+        "mChildSpells": [
+            "Characters/Jade_Nasus/Spells/Jade_NasusWAbility/Jade_NasusW"
+        ],
+        "mName": "Jade_NasusWAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusWAbility/Jade_NasusW": {
+        "ObjectName": "Jade_NasusW",
+        "mScriptName": "Jade_NasusW",
+        "mSpell": {
+            "mAffectsTypeFlags": 4106,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "DataValues": [
+                {
+                    "name": "SlowBase",
+                    "values": [
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPerTick",
+                    "values": [
+                        0.0,
+                        3.0,
+                        6.0,
+                        9.0,
+                        12.0,
+                        15.0,
+                        18.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxSlowTooltipOnly",
+                    "values": [
+                        35.0,
+                        47.0,
+                        59.0,
+                        71.0,
+                        83.0,
+                        95.0,
+                        107.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackSpeedSlowMult",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BBSpeedMod",
+                    "values": [
+                        -0.3499999940395355,
+                        -0.3499999940395355,
+                        -0.3499999940395355,
+                        -0.3499999940395355,
+                        -0.3499999940395355,
+                        -0.3499999940395355,
+                        -0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BBASpeedMod",
+                    "values": [
+                        -0.17499999701976776,
+                        -0.17499999701976776,
+                        -0.17499999701976776,
+                        -0.17499999701976776,
+                        -0.17499999701976776,
+                        -0.17499999701976776,
+                        -0.17499999701976776
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BBBonusSpeedMod",
+                    "values": [
+                        0.0,
+                        -0.029999999329447746,
+                        -0.05999999865889549,
+                        -0.09000000357627869,
+                        -0.11999999731779099,
+                        -0.15000000596046448,
+                        -0.18000000715255737
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BBBonusASpeedMod",
+                    "values": [
+                        -0.0,
+                        -0.014999999664723873,
+                        -0.029999999329447746,
+                        -0.04500000178813934,
+                        -0.05999999865889549,
+                        -0.07500000298023224,
+                        -0.09000000357627869
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{e98773b5}": {
+                    "mMultiplier": {
+                        "mDataValue": "AttackSpeedSlowMult",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "SlowBase",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{99eb5a88}": {
+                    "mMultiplier": {
+                        "mDataValue": "AttackSpeedSlowMult",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MaxSlowTooltipOnly",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 1.0,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Nasus_Wither.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                16.0,
+                15.0,
+                14.0,
+                13.0,
+                12.0,
+                11.0,
+                11.0
+            ],
+            "Cooldown": {
+                "values": [
+                    16.0,
+                    15.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    11.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "bIsToggleSpell": true,
+            "castRange": [
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0,
+                700.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0,
+                    700.0
+                ],
+                "{0a3e0478}": 700.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 14.819999694824219,
+            "missileSpeed": 0.0,
+            "mana": [
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0
+                ],
+                "{0a3e0478}": 80.0,
+                "__type": "{630af303}"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Nasus_NasusW_OnCast",
+                "19": "Play_sfx_Nasus_NasusW_OnBuffDeactivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_NasusW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_NasusW_Jade_Name",
+                        "keySummary": "Spell_NasusW_Jade_Summary",
+                        "keyTooltip": "Spell_NasusW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "MaxSlowTooltipOnly",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_MaxSlow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_NasusW_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mDataValue": "MaxSlowTooltipOnly",
+                        "__type": "NamedDataValueCalculationPart"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 8,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusQAbility": {
+        "mRootSpell": "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQ",
+        "mChildSpells": [
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQ",
+            "{d1c0cb81}",
+            "{a884c2d6}",
+            "{6201ac59}"
+        ],
+        "mName": "Jade_NasusQAbility",
+        "__type": "AbilityObject"
+    },
+    "{4bfa3f64}": {
+        "ObjectName": "Jade_NasusSiblingRivalryVictory",
+        "mScriptName": "Jade_NasusSiblingRivalryVictory",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Nasus/HUD/Icons2D/Jade_Nasus_R.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_NasusSiblingRivalryVictory",
+                "mFormat": "{2ca8f134}",
+                "mLocKeys": {
+                    "keyName": "Quests_NasusVsRenekton_NasusVictoryName",
+                    "keyTooltip": "Quests_NasusVsRenekton_NasusVictoryTooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{50dc1371}": {
+        "ObjectName": "Jade_NasusSiblingRivalryReady",
+        "mScriptName": "Jade_NasusSiblingRivalryReady",
+        "__type": "SpellObject"
+    },
+    "{7f98aae4}": {
+        "mRootSpell": "{be31b2f7}",
+        "mChildSpells": [
+            "{be31b2f7}"
+        ],
+        "mName": "Jade_NasusPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{5cf1a812}": {
+        "ObjectName": "Jade_Nasus_Susan0175_Egg",
+        "mScriptName": "Jade_Nasus_Susan0175_Egg",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Nasus_Wither.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_Nasus_Susan0175_Egg",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Jade_Susan0175_Egg",
+                    "keyTooltip": "Buff_Jade_Susan0175_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{be31b2f7}": {
+        "ObjectName": "Jade_NasusPassive",
+        "mScriptName": "Jade_NasusPassive",
+        "mSpell": {
+            "mSpellCalculations": {
+                "LifeSteal": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 0.14000000059604645,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mAdditionalBonusAtThisLevel": 0.029999999329447746,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": 0.029999999329447746,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Nasus_SoulEater.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_NasusPassive",
+                    "mFormat": "{476ec0b8}",
+                    "EnableExtendedTooltip": false,
+                    "mLocKeys": {
+                        "keyName": "Spell_NasusPassive_Jade_Name",
+                        "keySummary": "Spell_NasusPassive_Jade_Summary",
+                        "keyTooltip": "Spell_NasusPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Spell_NasusPassive_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{6201ac59}": {
+        "ObjectName": "Jade_NasusSiphoningStrikeAttack",
+        "mScriptName": "Jade_NasusSiphoningStrikeAttack",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Nasus_SiphoningStrike.dds"
+            ],
+            "{11704a2b}": 0.5217499732971191,
+            "{f26881a0}": 1.533400058746338,
+            "cooldownTime": [
+                9.0,
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                4.0
+            ],
+            "Cooldown": {
+                "values": [
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    4.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0
+                ],
+                "{0a3e0478}": 300.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 6.0,
+            "missileSpeed": 0.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Nasus_NasusQAttack_OnCast",
+                "13": "Play_sfx_Nasus_NasusQAttack_OnHit"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "{d1c0cb81}",
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_Jade_NasusQ_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQ": {
+        "ObjectName": "Jade_NasusQ",
+        "mScriptName": "Jade_NasusQ",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}",
+                    "Minion_Lane",
+                    "{c87e0da5}",
+                    "{86e87e64}",
+                    "{000c65f6}",
+                    "{73d0031e}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "PositiveEffect_EmpowerAttack",
+                "Trait_AttackReset"
+            ],
+            "DataValues": [
+                {
+                    "name": "BonusRange",
+                    "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusDamage",
+                    "values": [
+                        10.0,
+                        30.0,
+                        50.0,
+                        70.0,
+                        90.0,
+                        110.0,
+                        130.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BasicStacks",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BigStacks",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BonusDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStat": 2,
+                            "mCoefficient": 1.0,
+                            "__type": "StatByCoefficientCalculationPart"
+                        },
+                        {
+                            "mBuffName": "{5665a78c}",
+                            "mIconKey": "%i:JadeNasusStackIcon%",
+                            "mCoefficient": 1.0,
+                            "__type": "BuffCounterByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{2ff1a8cd}": {
+                    "mFormulaParts": [
+                        {
+                            "mStat": 9,
+                            "mCoefficient": 1.0,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Nasus_SiphoningStrike.dds"
+            ],
+            "{11704a2b}": 0.5217499732971191,
+            "{f26881a0}": 1.533400058746338,
+            "cooldownTime": [
+                8.0,
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                4.0
+            ],
+            "Cooldown": {
+                "values": [
+                    8.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    4.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRangeUseBoundingBoxes": true,
+            "castRange": [
+                255.0,
+                255.0,
+                255.0,
+                255.0,
+                255.0,
+                255.0,
+                255.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    255.0,
+                    255.0,
+                    255.0,
+                    255.0,
+                    255.0,
+                    255.0,
+                    255.0
+                ],
+                "{0a3e0478}": 255.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 17.15999984741211,
+            "missileSpeed": 0.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0,
+                20.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Nasus_NasusQ_OnCast",
+                "18": "Play_sfx_Nasus_NasusQ_OnBuffActivate",
+                "19": "Play_sfx_Nasus_NasusQ_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_NasusQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_NasusQ_Jade_Name",
+                        "keySummary": "Spell_NasusQ_Jade_Summary",
+                        "keyTooltip": "Spell_NasusQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BonusDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_NasusQ_Jade_Tooltip",
+            "mBuffAttributeFlag": 32,
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 32,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 512,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{a884c2d6}": {
+        "ObjectName": "Jade_NasusQStacks",
+        "mScriptName": "Jade_NasusQStacks",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Nasus_SiphoningStrike.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_NasusQ_Passive_Jade_Tooltip",
+            "mBuffAttributeFlag": 8,
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{d1c0cb81}": {
+        "ObjectName": "Jade_NasusSiphoningStrike",
+        "mScriptName": "Jade_NasusSiphoningStrike",
+        "mSpell": {
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mEffectAmount": [
+                {
+                    "value": [
+                        10.0,
+                        30.0,
+                        50.0,
+                        70.0,
+                        90.0,
+                        110.0,
+                        130.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.0,
+            "mAnimationName": "Spell4",
+            "{11704a2b}": 0.5217499732971191,
+            "{f26881a0}": 1.533400058746338,
+            "cooldownTime": [
+                9.0,
+                8.0,
+                7.0,
+                6.0,
+                5.0,
+                4.0,
+                4.0
+            ],
+            "Cooldown": {
+                "values": [
+                    9.0,
+                    8.0,
+                    7.0,
+                    6.0,
+                    5.0,
+                    4.0,
+                    4.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0,
+                300.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0,
+                    300.0
+                ],
+                "{0a3e0478}": 300.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 17.15999984741211,
+            "missileSpeed": 0.0,
+            "bHaveHitBone": true,
+            "mana": [
+                20.0,
+                25.0,
+                30.0,
+                35.0,
+                40.0,
+                45.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    20.0,
+                    25.0,
+                    30.0,
+                    35.0,
+                    40.0,
+                    45.0
+                ],
+                "{0a3e0478}": 20.0,
+                "__type": "{630af303}"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_SiphoningStrike",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusEAbility": {
+        "mRootSpell": "Characters/Jade_Nasus/Spells/Jade_NasusEAbility/Jade_NasusE",
+        "mChildSpells": [
+            "Characters/Jade_Nasus/Spells/Jade_NasusEAbility/Jade_NasusE"
+        ],
+        "mName": "Jade_NasusEAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusRAbility": {
+        "mRootSpell": "Characters/Jade_Nasus/Spells/Jade_NasusRAbility/Jade_NasusR",
+        "mChildSpells": [
+            "Characters/Jade_Nasus/Spells/Jade_NasusRAbility/Jade_NasusR"
+        ],
+        "mName": "Jade_NasusRAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusRAbility/Jade_NasusR": {
+        "ObjectName": "Jade_NasusR",
+        "mScriptName": "Jade_NasusR",
+        "mSpell": {
+            "mAffectsTypeFlags": 9221,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mSpellTags": [
+                "Trait_Ultimate"
+            ],
+            "DataValues": [
+                {
+                    "name": "BonusHealth",
+                    "values": [
+                        150.0,
+                        300.0,
+                        450.0,
+                        600.0,
+                        750.0,
+                        900.0,
+                        1050.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AttackRangeIncrease",
+                    "values": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AOEDamagePercent",
+                    "values": [
+                        0.019999999552965164,
+                        0.029999999329447746,
+                        0.03999999910593033,
+                        0.05000000074505806,
+                        0.05999999865889549,
+                        0.07000000029802322,
+                        0.07999999821186066
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TickRate",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "InitialResistGain",
+                    "values": [
+                        25.0,
+                        40.0,
+                        55.0,
+                        70.0,
+                        85.0,
+                        100.0,
+                        115.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDamageCap",
+                    "values": [
+                        240.0,
+                        240.0,
+                        240.0,
+                        240.0,
+                        240.0,
+                        240.0,
+                        240.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "QCDR",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SizeIncreasePercent",
+                    "values": [
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104,
+                        0.5,
+                        0.550000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseAoERadius",
+                    "values": [
+                        376.0,
+                        376.0,
+                        376.0,
+                        376.0,
+                        376.0,
+                        376.0,
+                        376.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinAoERadius",
+                    "values": [
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "DamageCalc": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "AoeDamagePercent",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 9.999999747378752e-05,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Nasus_AvatarOfDeath.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                120.0,
+                120.0,
+                120.0,
+                120.0,
+                120.0,
+                120.0,
+                120.0
+            ],
+            "Cooldown": {
+                "values": [
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0,
+                    120.0
+                ],
+                "{0a3e0478}": 120.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 12.425000190734863,
+            "missileSpeed": 779.9000244140625,
+            "bHaveHitBone": true,
+            "mana": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                0.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    0.0
+                ],
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Self"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Nasus_NasusR_OnCast",
+                "18": "Play_sfx_Nasus_NasusR_OnBuffActivate",
+                "19": "Play_sfx_Nasus_NasusR_OnBuffDeactivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_NasusR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_NasusR_Jade_Name",
+                        "keySummary": "Spell_NasusR_Jade_Summary",
+                        "keyTooltip": "Spell_NasusR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BonusHealth",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_BonusHealth",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "AOEDamagePercent",
+                                    "typeIndex": 3,
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_MaxHealthPercent",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_NasusR_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "DamageCalc",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 8,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "BonusHealth",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 524288,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mDataValue": "InitialResistGain",
+                                "__type": "NamedDataValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 2048,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4096,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusCritAttack": {
+        "ObjectName": "Jade_NasusCritAttack",
+        "mScriptName": "Jade_NasusCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906
+                ],
+                "{0a3e0478}": 49.400001525878906,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 0.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Nasus_Crit_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Nasus_NasusCritAttack_OnCast",
+                "13": "Play_sfx_Nasus_NasusCritAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusBasicAttack": {
+        "ObjectName": "Jade_NasusBasicAttack",
+        "mScriptName": "Jade_NasusBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 8143,
+            "mAlternateName": "Jade_NasusBasicAttack",
+            "{11704a2b}": 0.34389999508857727,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mApplyMaterialOnHitSound": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906,
+                49.400001525878906
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906,
+                    49.400001525878906
+                ],
+                "{0a3e0478}": 49.400001525878906,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 0.0,
+            "mHitEffectKey": "Jade_Nasus_AA_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Nasus_NasusBasicAttack_OnCast",
+                "13": "Play_sfx_Nasus_NasusBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{aec68d2c}": {
+        "ObjectName": "Jade_NasusSiblingRivalryWin",
+        "mScriptName": "Jade_NasusSiblingRivalryWin",
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Nasus/Spells/Jade_NasusEAbility/Jade_NasusE": {
+        "ObjectName": "Jade_NasusE",
+        "mScriptName": "Jade_NasusE",
+        "mSpell": {
+            "mAffectsTypeFlags": 15567,
+            "DataValues": [
+                {
+                    "name": "TickDamage",
+                    "values": [
+                        3.0,
+                        11.0,
+                        19.0,
+                        27.0,
+                        35.0,
+                        43.0,
+                        51.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TotalArmorShred",
+                    "values": [
+                        20.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "InitialDamages",
+                    "values": [
+                        15.0,
+                        55.0,
+                        95.0,
+                        135.0,
+                        175.0,
+                        215.0,
+                        255.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDotDamage": {
+                    "mMultiplier": {
+                        "mDataValue": "Duration",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "TickDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStatFormula": 2,
+                            "mCoefficient": 0.11999999731779099,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "InitialDamage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "InitialDamages",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.6000000238418579,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{8ceed52a}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "TickDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStatFormula": 2,
+                            "mCoefficient": 0.11999999731779099,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mCoefficient": 0.11999999731779099,
+            "mCoefficient2": 0.6000000238418579,
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Nasus_SpiritFire.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
+                ],
+                "{0a3e0478}": 12.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                380.0,
+                380.0,
+                380.0,
+                380.0,
+                380.0,
+                380.0,
+                380.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.734999656677246,
+            "missileSpeed": 20.0,
+            "bHaveHitBone": true,
+            "mana": [
+                70.0,
+                85.0,
+                100.0,
+                115.0,
+                130.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    70.0,
+                    85.0,
+                    100.0,
+                    115.0,
+                    130.0,
+                    100.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Area"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_NasusE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_NasusE_Jade_Name",
+                        "keySummary": "Spell_NasusE_Jade_Summary",
+                        "keyTooltip": "Spell_NasusE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "InitialDamages",
+                                    "typeIndex": 4,
+                                    "nameOverride": "Spell_ListType_InitialDamage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "TickDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_DamagePerSecond",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "TotalArmorShred",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_ArmorReduction",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Buff_NasusE_Jade_Tooltip",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "InitialDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 64,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f69e2d7c}": {
+        "ObjectName": "Jade_NasusSiblingRivalryActive",
+        "mScriptName": "Jade_NasusSiblingRivalryActive",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Nasus/HUD/Icons2D/Jade_Nasus_R.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_NasusSiblingRivalryActive",
+                "mFormat": "{2ca8f134}",
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f7d344f9}": {
+        "ObjectName": "Jade_NasusSiblingRivalryDefeat",
+        "mScriptName": "Jade_NasusSiblingRivalryDefeat",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Nasus/HUD/Icons2D/Jade_Nasus_Passive.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_NasusSiblingRivalryDefeat",
+                "mFormat": "{2ca8f134}",
+                "mLocKeys": {
+                    "keyName": "Quests_NasusVsRenekton_NasusDefeatName",
+                    "keyTooltip": "Quests_NasusVsRenekton_NasusDefeatTooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f8e57b33}": {
+        "ObjectName": "Jade_NasusRunCycleManager",
+        "mScriptName": "Jade_NasusRunCycleManager",
+        "__type": "SpellObject"
+    },
+    "{243bf3f8}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{4ea0dc1c}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "jungle",
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    0,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "Top",
+                "IsDefaultRecommendation": true,
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{c908a3d5}": {
+        "OrderJunglePath": [
+            {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 3,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "ChaosJunglePath": [
+            {
+                "Camp": 7,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 6,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 8,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 10,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 11,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TerminatePath"
+            }
+        ],
+        "__type": "JunglePathRecommendation"
+    },
+    "Characters/Jade_Nasus/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{a4a3ed77}": {
+        "ScriptName": "charscriptJade_Nasus",
+        "path": "{a4a3ed77}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "f8078440-cf14-4526-b4b8-07f649b93b9c",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 5,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "85b69019-6b2d-406a-a3ed-3577a48f31ab",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "SwapModel",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{2b9c7047}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "3f147745-ff20-4bb5-8904-87f986ce19ab",
+                        "Condition": {
+                            "Value1": {
+                                "Table": {
+                                    "__type": "CharacterVars"
+                                },
+                                "Var": "{1bd2a5fb}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": true,
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "Characters/Jade_Nasus/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Nasus",
+        "baseHPModifiable": {
+            "baseValue": 500.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 90.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.6800000667572021,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.18000000715255737,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 110.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 245.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 45.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.4200000762939453,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.10000000149011612,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 56.79999923706055,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 3.5,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 22.5,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.5,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 31.25,
+            "__type": "ModifiableFloat"
+        },
+        "{01262a25}": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 350.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6380000114440918,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6380000114440918,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 3.4800000190734863,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 350.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.09860365092754364,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_NasusBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_NasusBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.09860365092754364,
+                "mAttackName": "Jade_NasusCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_NasusQAbility/Jade_NasusQ",
+            "Jade_NasusWAbility/Jade_NasusW",
+            "Jade_NasusEAbility/Jade_NasusE",
+            "Jade_NasusRAbility/Jade_NasusR"
+        ],
+        "spells": [
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility/Jade_NasusQ",
+            "Characters/Jade_Nasus/Spells/Jade_NasusWAbility/Jade_NasusW",
+            "Characters/Jade_Nasus/Spells/Jade_NasusEAbility/Jade_NasusE",
+            "Characters/Jade_Nasus/Spells/Jade_NasusRAbility/Jade_NasusR"
+        ],
+        "extraSpells": [
+            "Jade_NasusQAttack",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{6201ac59}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "Characters/Jade_Nasus/Spells/Jade_NasusEAbility",
+            "{7f98aae4}",
+            "Characters/Jade_Nasus/Spells/Jade_NasusQAbility",
+            "Characters/Jade_Nasus/Spells/Jade_NasusRAbility",
+            "Characters/Jade_Nasus/Spells/Jade_NasusWAbility"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Nasus",
+        "passiveLuaName": "Jade_NasusPassive_Jade",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Nasus",
+        "passive1IconName": "ASSETS/Characters/Jade_Nasus/HUD/Icons2D/Jade_Nasus_Passive.dds",
+        "name": "game_character_displayname_Jade_Nasus",
+        "weaponMaterials": [
+            "Jade_NasusBasicAttack"
+        ],
+        "selectionHeight": 170.0,
+        "selectionRadius": 135.0,
+        "pathfindingCollisionRadius": 50.0,
+        "overrideGameplayCollisionRadius": 80.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1055,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            0,
+            14,
+            0,
+            0
+        ],
+        "characterToolData": {
+            "sound": {
+                "attack": [
+                    "Singe_K-Attack1.wav",
+                    "Singe_K-Attack2.wav",
+                    "Singe_K-Attack3.wav",
+                    "Singe_K-Attack4.wav"
+                ],
+                "click": [
+                    "Singe_K-Click1.wav",
+                    "Singe_K-Click2.wav",
+                    "Singe_K-Click3.wav",
+                    "Singe_K-Click4.wav"
+                ],
+                "move": [
+                    "Singe_K-Move1.wav",
+                    "Singe_K-Move2.wav",
+                    "Singe_K-Move3.wav",
+                    "Singe_K-Move4.wav"
+                ],
+                "death": "Singe_K-Death1.wav",
+                "ready": "Singe_K-Ready1.wav",
+                "__type": "ToolSoundData"
+            },
+            "spellData": [
+                {
+                    "desc": "Singed drinks his patented Insanity Potion to gain a rediculous amount of stats for a short period of time.",
+                    "displayName": "Insanity Potion",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Singed drinks his patented Insanity Potion to gain a rediculous amount of stats for a short period of time.",
+                    "displayName": "Insanity Potion",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Singed drinks his patented Insanity Potion to gain a rediculous amount of stats for a short period of time.",
+                    "displayName": "Insanity Potion",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Singed drinks his patented Insanity Potion to gain a rediculous amount of stats for a short period of time.",
+                    "displayName": "Insanity Potion",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "{b66d0e47}": true,
+                    "{6175bb7b}": true,
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "Magic damage done to Singed is reduced by 10%."
+            ],
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Nasus",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "fighter",
+            "searchTagsSecondary": "tank",
+            "championId": 60075,
+            "roles": "BRAWLER",
+            "magicRank": 6,
+            "LevelSpellEffectiveness": 2.0,
+            "difficultyRank": 6,
+            "description": "game_character_description_Jade_Nasus",
+            "defenseRank": 5,
+            "classification": "Deadly",
+            "ChasingAttackRangePercent": 0.5,
+            "botEnabled": true,
+            "botEnabledMM": true,
+            "botDefaultSpell1": "SummonerHeal",
+            "botDefaultSpell2": "SummonerTeleport",
+            "attackRank": 7,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "flags": 8398088,
+        "purchaseIdentities": [
+            "Melee"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Resolve",
+        "mPerkReplacements": {
+            "mReplacements": [
+                {
+                    "mReplaceTarget": "Perks/Styles/Resolve/Aftershock",
+                    "mReplaceWith": "Perks/Styles/Resolve/GraspOfTheUndying",
+                    "__type": "PerkReplacement"
+                },
+                {
+                    "mReplaceTarget": "Perks/Styles/Inspiration/GlacialAugment",
+                    "mReplaceWith": "Perks/Styles/Inspiration/FirstStrike",
+                    "__type": "PerkReplacement"
+                }
+            ],
+            "__type": "PerkReplacementList"
+        },
+        "mCharacterPassiveSpell": "{be31b2f7}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{be31b2f7}",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "Shared/Spells/GlobalRunCycleManager",
+                "SkinFilter": {
+                    "skinIds": [
+                        5
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{f8e57b33}",
+                "SkinFilter": {
+                    "FilterType": 1,
+                    "skinIds": [
+                        5
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "Shared/Spells/GlobalRecallFacingSouth",
+                "SkinFilter": {
+                    "skinIds": [
+                        11
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{1d9065fa}",
+                "SkinFilter": {
+                    "skinIds": [
+                        5
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{a4a3ed77}",
+        "__type": "CharacterRecord"
+    },
+    "{bbf3c020}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1054",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3070",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6632",
+                            "Items/6662",
+                            "Items/3078"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3143",
+                            "Items/3119",
+                            "Items/3075",
+                            "Items/4401"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3193",
+                            "Items/4401",
+                            "Items/3143",
+                            "Items/3181"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3083",
+                            "Items/3065",
+                            "Items/3075",
+                            "Items/3143",
+                            "Items/3001",
+                            "Items/3050"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/2051"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/6660"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3105"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/3068",
+                            "Items/6662",
+                            "Items/6664"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3047",
+                            "Items/3111"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3143",
+                            "Items/3001",
+                            "Items/3075",
+                            "Items/4401"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3193",
+                            "Items/4401",
+                            "Items/3143",
+                            "Items/3001"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3083",
+                            "Items/3065",
+                            "Items/3075",
+                            "Items/3143",
+                            "Items/3001",
+                            "Items/3050"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "__linked": []
+}

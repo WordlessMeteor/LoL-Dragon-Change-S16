@@ -1424,7 +1424,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "瑟庄妮向前冲锋，将敌人击飞至空中。冲锋会在命中一名敌方英雄后停止。",
-            "dynamicDescription": "瑟庄妮冲锋，对敌人造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>并<status>击飞</status>敌人@Effect4Amount@秒。冲锋会在命中一名敌方英雄后停止。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "瑟庄妮冲锋，对敌人造成<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>并<status>击飞</status>敌人@KnockupDurationTOOLTIPONLY@秒。该冲锋会在命中一名敌方英雄后停止。@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1724,7 +1724,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "瑟庄妮冻结并晕眩一名叠满了霜冻层数的敌方英雄。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>附近近战友方英雄的攻击会对英雄和野怪施加一层效果。<br><br><spellPassive>主动：</spellPassive>瑟庄妮对带有4层此效果的目标敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>并使其<status>晕眩</status>@Effect1Amount@秒。 @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>附近近战友方英雄的攻击会对英雄和野怪施加一层效果。<br><br><spellPassive>主动：</spellPassive>瑟庄妮对带有4层此效果的目标敌人造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>并使其<status>晕眩</status>@CCDuration@秒。 @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1874,7 +1874,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "瑟庄妮投出她的套索来冻结并击晕命中的第一名敌方英雄，并创造一次冰风暴来减速其它敌人。",
-            "dynamicDescription": "瑟庄妮扔出她的极冰套索，<status>晕眩</status>并显形命中的第一个敌方英雄@Effect2Amount@秒并造成<magicDamage>@MinorDamageTooltip@魔法伤害</magicDamage>。<br><br>如果套索飞行了至少25%的最大距离，那么它会<status>晕眩</status>并显形@Effect6Amount@秒。它还会生成一团冰风暴来使目标附近的敌人<status>减速</status>@Effect4Amount@%，持续@Effect3Amount@秒。所有受影响的敌人都会受到<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "瑟庄妮扔出她的极冰套索，<status>晕眩</status>并显形命中的第一个敌方英雄@BaseStunDuration@秒并造成<magicDamage>@MinorDamageTooltip@魔法伤害</magicDamage>。<br><br>如果套索飞行了至少25%的最大距离，那么它会转而造成持续@EmpoweredStunDuration@秒<status>晕眩</status>和显形。它还会生成一团冰风暴来使目标附近的敌人<status>减速</status>@ExplosionSlowAmount@%，持续@ZoneDuration@秒。所有受影响的敌人都会受到<magicDamage>@TotalDamageTooltip@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

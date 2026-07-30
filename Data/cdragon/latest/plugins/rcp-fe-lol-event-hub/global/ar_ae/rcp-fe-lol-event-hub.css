@@ -65,6 +65,7 @@
 .eh-purchase-bundles-modal-summary-description-text,
 .eh-purchase-bundles-modal-summary-item-drop-rates,
 .eh-purchase-bundles-modal-summary-item-inventory-type,
+.eh-purchase-bundles-modal-summary-item-map-availability,
 .eh-purchase-bundles-modal-summary-item-name,
 .eh-purchase-bundles-modal-summary-tos,
 .eh-purchase-bundles-modal-summary-tos a,
@@ -133,6 +134,7 @@
 .eh-purchase-bundles-modal-summary-initial-price-text,
 .eh-purchase-bundles-modal-summary-item-drop-rates,
 .eh-purchase-bundles-modal-summary-item-inventory-type,
+.eh-purchase-bundles-modal-summary-item-map-availability,
 .eh-purchase-bundles-modal-summary-item-name,
 .eh-purchase-bundles-modal-summary-items-header,
 .eh-purchase-bundles-modal-summary-subtitle,
@@ -676,6 +678,7 @@
 .eh-purchase-bundles-modal-summary-balance,
 .eh-purchase-bundles-modal-summary-description-text,
 .eh-purchase-bundles-modal-summary-item-drop-rates,
+.eh-purchase-bundles-modal-summary-item-map-availability,
 .eh-purchase-levels-modal-error,
 .event-shop-card-multi-purchase-future-balance,
 .event-shop-card-multi-purchase-item-details,
@@ -702,6 +705,7 @@
 .eh-purchase-bundles-modal-summary-balance:lang(ja-jp),
 .eh-purchase-bundles-modal-summary-description-text:lang(ja-jp),
 .eh-purchase-bundles-modal-summary-item-drop-rates:lang(ja-jp),
+.eh-purchase-bundles-modal-summary-item-map-availability:lang(ja-jp),
 .eh-purchase-levels-modal-error:lang(ja-jp),
 .event-shop-card-multi-purchase-future-balance:lang(ja-jp),
 .event-shop-card-multi-purchase-item-details:lang(ja-jp),
@@ -723,6 +727,7 @@
 .eh-purchase-bundles-modal-summary-balance:lang(ar-ae),
 .eh-purchase-bundles-modal-summary-description-text:lang(ar-ae),
 .eh-purchase-bundles-modal-summary-item-drop-rates:lang(ar-ae),
+.eh-purchase-bundles-modal-summary-item-map-availability:lang(ar-ae),
 .eh-purchase-levels-modal-error:lang(ar-ae),
 .event-shop-card-multi-purchase-future-balance:lang(ar-ae),
 .event-shop-card-multi-purchase-item-details:lang(ar-ae),
@@ -925,6 +930,86 @@
 .eh-claim-button:active .eh-claim-button-animation-hover,
 .eh-claim-button:active .eh-claim-button-animation-idle {
     display: none
+}
+
+.rcp-fe-lol-event-hub-sub-nav lol-uikit-navigation-bar lol-uikit-navigation-item {
+    direction: rtl
+}
+
+.rcp-fe-lol-event-hub-sub-nav .event-hub-sub-nav-container {
+    inset-inline-start: 32px;
+    position: absolute;
+    top: 88px;
+    z-index: 10
+}
+
+.rcp-fe-lol-event-hub-sub-nav .event-hub-sub-nav-count-badge {
+    display: inline-block;
+    margin-inline-start: 4px
+}
+
+.rcp-fe-lol-event-hub-sub-nav .event-hub-sub-nav-count-badge .hextech-ui-badge {
+    align-items: baseline
+}
+
+.rcp-fe-lol-event-hub-sub-nav .event-hub-sub-nav-pip {
+    animation: event-hub-sub-nav-pip-pulse 2s ease-in-out infinite;
+    background-color: #c89b3c;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 1px rgba(200, 155, 60, .6);
+    display: inline-block;
+    height: 8px;
+    margin-inline-start: 4px;
+    vertical-align: middle;
+    width: 8px
+}
+
+@-moz-keyframes event-hub-sub-nav-pip-pulse {
+
+    0%,
+    to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .4
+    }
+}
+
+@-webkit-keyframes event-hub-sub-nav-pip-pulse {
+
+    0%,
+    to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .4
+    }
+}
+
+@-o-keyframes event-hub-sub-nav-pip-pulse {
+
+    0%,
+    to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .4
+    }
+}
+
+@keyframes event-hub-sub-nav-pip-pulse {
+
+    0%,
+    to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .4
+    }
 }
 
 .event-shop-card-multi-purchase-modal {
@@ -3268,6 +3353,10 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
     margin: 0
 }
 
+.eh-purchase-bundles-modal-summary-item-map-availability {
+    color: #5b5a56
+}
+
 .eh-purchase-bundles-modal-summary-item-description {
     align-items: center;
     display: flex;
@@ -4622,4 +4711,11 @@ lol-uikit-content-block[type=dialog-large].event-shop-card-multi-purchase-conten
 
 .rcp-fe-lol-event-hub-application:has(.event-hub-season-pass-root-extended) {
     padding-top: 0
+}
+
+.rcp-fe-lol-event-hub-application:has(.event-hub-sub-nav-container) .eh-page-header-activity-center-milestones-logo,
+.rcp-fe-lol-event-hub-application:has(.event-hub-sub-nav-container) .eh-page-header-seasonal-logo,
+.rcp-fe-lol-event-hub-application:has(.event-hub-sub-nav-container) .eh-page-header-top-bar {
+    position: relative;
+    top: 34px
 }

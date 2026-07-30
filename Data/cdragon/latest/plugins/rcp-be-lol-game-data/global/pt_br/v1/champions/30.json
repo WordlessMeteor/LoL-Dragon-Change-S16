@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Karthus cria uma barreira transponível de energia parasita. Qualquer unidade inimiga que atravessá-la tem sua Velocidade de Movimento e Resistência Mágica reduzidas por um período de tempo.",
-            "dynamicDescription": "Karthus cria uma barreira que dura @Effect4Amount@s. Inimigos que a atravessarem perdem <scaleMR>@Effect1Amount@% de Resistência Mágica</scaleMR> por @Effect5Amount@s e sofrem @Effect3Amount@% de <status>Lentidão</status> que decai ao longo da duração.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus cria uma barreira que dura @WallDuration@s. Inimigos que a atravessam perdem <scaleMR>@MagicResistShred@% de Resistência Mágica</scaleMR> por @DebuffDuration@s e sofrem @SlowPercent@% de <status>Lentidão</status> que decai ao longo da duração.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ de Mana por segundo",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Karthus passivamente rouba energia de suas vítimas, recebendo Mana a cada abate. Ele também pode se cercar das almas de suas presas, causando dano a inimigos próximos, mas drenando rapidamente a própria Mana.",
-            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>quando Karthus abate uma unidade, ele restaura <scaleMana>@Effect2Amount@ de Mana</scaleMana>.<br><br><toggle>Alternar: </toggle>Karthus cria uma aura necrótica, causando <magicDamage>@TotalDPS@ de Dano Mágico</magicDamage> por segundo aos inimigos próximos.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>quando Karthus abate uma unidade, ele restaura <scaleMana>@ManaRestoreOnKill@ de Mana</scaleMana>.<br><br><toggle>Alternar: </toggle>Karthus cria uma aura necrótica, causando <magicDamage>@TotalDPS@ de Dano Mágico</magicDamage> por segundo a inimigos próximos.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

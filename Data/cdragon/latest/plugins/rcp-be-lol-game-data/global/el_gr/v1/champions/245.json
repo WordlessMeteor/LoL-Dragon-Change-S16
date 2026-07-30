@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Έκκο πετάει μια χρονική χειροβομβίδα που ανοίγει και δημιουργεί ένα πεδίο αλλοίωσης του χρόνου όταν χτυπά έναν αντίπαλο Ήρωα, επιβραδύνοντας και προκαλώντας ζημιά σε όσους βρίσκονται εντός του πεδίου επιρροής. Μετά από μικρή καθυστέρηση, η χειροβομβίδα επιστρέφει στον Έκκο, προκαλώντας ζημιά στους στόχους που θα βρεθούν στον δρόμο της.",
-            "dynamicDescription": "Ο Έκκο πετάει μια συσκευή που προκαλεί <magicDamage>@InitialDamage@ Μαγική Ζημιά</magicDamage>. Όταν πετύχει έναν Ήρωα ή αφού φτάσει στο τέλος της εμβέλειάς της, επεκτείνεται σε ένα πεδίο που <status>Επιβραδύνει</status> τους εχθρούς εντός του κατά @Effect2Amount*-100@%. Αφού επεκταθεί, ο Έκκο την ανακαλεί, προκαλώντας <magicDamage>@RecallDamage@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Έκκο πετάει μια συσκευή που προκαλεί <magicDamage>@InitialDamage@ Μαγική Ζημιά</magicDamage>. Όταν πετύχει έναν Ήρωα ή αφού φτάσει στο τέλος της εμβέλειάς της, ανοίγει και δημιουργεί ένα πεδίο που <status>Επιβραδύνει</status> τους εχθρούς εντός του κατά @SlowPercent*-100@%. Αφού ανοίξει, ο Έκκο την ανακαλεί, προκαλώντας <magicDamage>@RecallDamage@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Οι βασικές επιθέσεις του Έκκο προκαλούν μπόνους ζημιά σε εχθρούς που έχουν λίγη Ζωή. Μπορεί να χρησιμοποιήσει την Παράλληλη Σύγκλιση για να διακόψει τη ροή του χρόνου, δημιουργώντας μια διαταραχή μετά από λίγα δευτερόλεπτα, η οποία επιβραδύνει τους εχθρούς που βρίσκονται στο πεδίο επιρροής της. Αν ο Έκκο μπει στη διαταραχή, αποκτά ασπίδα και ακινητοποιεί τους εχθρούς, παγιδεύοντάς τους στον χρόνο.",
-            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Οι επιθέσεις του Έκκο ενάντια σε αντιπάλους με κάτω από 30% Ζωής προκαλούν <magicDamage>@MissingHealthPercent@ Μαγική Ζημιά ίση με τη Ζωή που λείπει</magicDamage>.<br><br><spellActive>Ενεργή:</spellActive> Ο Έκκο εκτοξεύει μια χρονόσφαιρα που διαρκεί 1,5 δευτ. μετά από μια καθυστέρηση που <status>Επιβραδύνει</status> τους αντιπάλους στο εσωτερικό της κατά @Effect10Amount@%. Αν ο Έκκο μπει στη σφαίρα, την ανατινάζει, <status>Ακινητοποιώντας</status> για @Effect2Amount@ δευτ. και αποκτώντας <shield>@TotalShield@ Ασπίδα</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Οι επιθέσεις του Έκκο ενάντια σε εχθρούς με Ζωή κάτω από @BelowHealthThreshold*100@% προκαλούν <magicDamage>Μαγική Ζημιά ίση με το @MissingHealthPercent@ της Ζωής που τους λείπει</magicDamage>.<br><br><spellActive>Ενεργή:</spellActive> Ο Έκκο εκτοξεύει μια χρονόσφαιρα που διαρκεί @SlowZoneDuration@ δευτ. μετά από καθυστέρηση, η οποία <status>Επιβραδύνει</status> τους εχθρούς που βρίσκονται μέσα σε αυτήν κατά @SlowPercent@%. Αν ο Έκκο μπει στη σφαίρα, την ανατινάζει, <status>Ακινητοποιώντας</status> για @StunDuration@ δευτ. και αποκτώντας <shield>@TotalShield@ Ασπίδα</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

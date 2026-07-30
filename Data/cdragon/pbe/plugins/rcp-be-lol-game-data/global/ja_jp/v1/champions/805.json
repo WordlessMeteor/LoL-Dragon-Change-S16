@@ -696,7 +696,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "拘束のアーティファクトを投げ、命中した敵にダメージを与え、場合によってはとどめを刺す。敵チャンピオンを封印すると、さらなる力を獲得する。",
-            "dynamicDescription": "指定地点に束縛のアーティファクトを投げ、範囲内の敵に<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与え、@SlowAmount*100@%の<status>スロウ効果</status>を付与する。この効果は@SlowDuration@秒かけて減衰する。このアーティファクトは、命中した敵に@Duration@秒間マークを付与する。マークされた敵チャンピオンの体力が@ExecutionThreshold*100@%未満になると封印し、影響を受けている他のチャンピオンに付与されたマークの効果時間をリセットする。<br><br>効果時間終了時、1体以上のチャンピオンを封印していた場合、アーティファクトが地面に落下する。アーティファクトを拾うと、封印したチャンピオン1体につき、とどめを刺せる体力量が恒久的に@ExecuteThresholdPerStack*100@%増加し、現在のクールダウンの@CooldownReduction@%が解消される。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "指定地点に束縛のアーティファクトを投げ、範囲内の敵に<magicDamage>@Damage@の魔法ダメージ</magicDamage>を与え、@SlowAmount*100@%の<status>スロウ効果</status>を付与する。この効果は@SlowDuration@秒かけて減衰する。このアーティファクトは、命中した敵に@Duration@秒間マークを付与する。マークされた敵チャンピオンの体力が<spellName>@ExecuteTooltipCalc@</spellName>未満になると封印し、影響を受けている他のチャンピオンに付与されたマークの効果時間をリセットする。<br><br>効果時間終了時、1体以上のチャンピオンを封印していた場合、アーティファクトが地面に落下する。アーティファクトを拾うと、封印したチャンピオン1体につき、とどめを刺せる体力量が恒久的に@ExecuteThresholdPerStack*100@%増加し、合計クールダウンの@CooldownReduction@%が解消される。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

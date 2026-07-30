@@ -1,0 +1,495 @@
+{
+    "Characters/Jade_Turret/Skins/Root": {
+        "championSkinName": "SRUAPJade_TurretOrder1",
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Jade_Turret/Animations/Skin0",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Jade_Turret/Skins/Skin00/BlueLaneTower.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Turret/Skins/Skin00/BlueLaneTower.skn",
+            "ReducedBoneSkinning": true,
+            "texture": "ASSETS/Characters/Jade_Turret/Skins/Skin00/BlueLaneTower_diff.tex",
+            "emissiveTexture": "ASSETS/Characters/Jade_Turret/Skins/Skin00/BlueLaneTower_Diffuse_Cmask.tex",
+            "selfIllumination": 1.0,
+            "brushAlphaOverride": 1.0,
+            "initialSubmeshToHide": "Stage1,Stage2,Stage3",
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Stone",
+        "idleParticlesEffects": [
+            {
+                "effectName": "doesnotexist.troy",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "iconCircle": "ASSETS/Characters/Jade_Turret/HUD/Jade_Turret_Blue_Circle.tex",
+        "iconSquare": "ASSETS/Characters/Jade_Turret/HUD/Jade_Turret_Blue_Square.tex",
+        "emoteBuffbone": "",
+        "godrayFXbone": "",
+        "healthBarData": {
+            "unitHealthBarStyle": 8,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mResourceResolver": "Characters/Jade_Turret/Skins/Root/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Tar_Champ_01": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 600.0,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            600.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.30000001192092896,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.30000001192092896
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.300000190734863,
+                "lifetime": 0.10000000149011612,
+                "emitterName": "sparks",
+                "importance": 3,
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        300.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.5,
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                300.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthDrag": {
+                    "constantValue": [
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            1.0,
+                            20.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.0,
+                                        100.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    0.0,
+                                    1.0,
+                                    20.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            1.0,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.30000001192092896,
+                            0.4000000059604645,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                0.800000011920929,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.20000000298023224,
+                                0.800000011920929,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                0.0,
+                                0.20000000298023224,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "isDirectionOriented": 1,
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        20.0,
+                        20.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.30000001192092896,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                0.20000000298023224,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Turret/Skins/base/Particles/sliver.tex",
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.10000000149011612,
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            0.10000000149011612
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 1.0,
+                "isSingleParticle": 1,
+                "emitterName": "flash",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            0.0,
+                            40.0,
+                            0.0
+                        ],
+                        "__type": "ValueVector3"
+                    },
+                    "__type": "VfxShapeLegacy"
+                },
+                "FlexShapeDefinition": {
+                    "scaleBirthScaleByBoundObjectSize": 0.004999999888241291,
+                    "scaleEmitOffsetByBoundObjectSize": 0.004999999888241291,
+                    "__type": "VfxFlexShapeDefinitionData"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Turret/Skins/base/Particles/color-rainbowbell.tex",
+                "meshRenderFlags": 0,
+                "colorLookUpTypeY": 3,
+                "colorLookUpScales": [
+                    0.5,
+                    0.05999999865889549
+                ],
+                "colorLookUpOffsets": [
+                    0.5,
+                    0.4000000059604645
+                ],
+                "isUniformScale": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                0.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                0.699999988079071
+                            ],
+                            [
+                                2.0,
+                                2.0,
+                                2.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Turret/Skins/base/Particles/pow.tex",
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "SRU_Order_Jade_Turret_BA_Tar_Champ_01",
+        "particlePath": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Tar_Champ_01",
+        "soundOnCreateDefault": "Play_sfx_Env_map11_OrderJade_TurretMinionBasicAttack_hit",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "Characters/Jade_Turret/Skins/Root/Resources": {
+        "resourceMap": {
+            "{654e2fc2}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA",
+            "{6dc31aba}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Champ_01",
+            "{72d8279e}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Tar",
+            "{15702a66}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Tar_Champ_01",
+            "{aa681f67}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_LaserSight_beam",
+            "{3d8af184}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Cas_Champ_01",
+            "{9209d383}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Cas_Champ_02",
+            "{9109d1f0}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Cas_Champ_03",
+            "{9809dcf5}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Cas_Champ_04",
+            "{64216259}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Tar_Champ_02",
+            "{632160c6}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Tar_Champ_03",
+            "{6621657f}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Tar_Champ_04",
+            "{253e28bd}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Champ_02",
+            "{243e272a}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Champ_03",
+            "{1f3e1f4b}": "Characters/Jade_Turret/Skins/Skin0/Particles/SRU_Order_Jade_Turret_BA_Champ_04",
+            "{6aa4f8f3}": "Characters/Jade_Turret/Skins/Skin0/Particles/Jade_Turret_Skin40_BA__Explosion_AoE"
+        },
+        "__type": "ResourceResolver"
+    },
+    "__linked": [
+        "DATA/Characters/Jade_Turret/Jade_Turret.bin",
+        "DATA/Characters/Jade_Turret/Animations/Skin0.bin",
+        "DATA/Characters/Jade_Turret/Jade_Turret_Multi_Skins_Root_Skins_Skin0_Skins_Skin2_Skins_Skin4.bin"
+    ]
+}

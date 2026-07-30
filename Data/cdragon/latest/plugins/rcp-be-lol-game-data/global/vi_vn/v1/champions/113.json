@@ -1370,7 +1370,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Sejuani lao tới, hất tung kẻ địch lên không. Pha lao dừng lại sau khi trúng một tướng địch.",
-            "dynamicDescription": "Sejuani lao tới, gây <magicDamage>@TotalDamageTooltip@ sát thương phép</magicDamage> lên kẻ địch và <status>Hất</status> <status>Tung</status> chúng trong @Effect4Amount@ giây. Kỹ năng sẽ dừng lại khi trúng một tướng địch.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani lao tới, gây <magicDamage>@TotalDamageTooltip@ sát thương phép</magicDamage> lên kẻ địch và <status>Hất Tung</status> chúng <status>Lên Không</status> trong @KnockupDurationTOOLTIPONLY@ giây. Đòn lao tới sẽ kết thúc sau khi trúng một tướng địch.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Sejuani đóng băng và làm choáng một tướng địch có tối đa cộng dồn Băng.",
-            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Đòn đánh của tướng đồng minh cận chiến gần đó đặt cộng dồn lên tướng địch và quái rừng.<br><br><spellPassive>Kích Hoạt:</spellPassive> Sejuani gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên mục tiêu có 4 cộng dồn và <status>Làm Choáng</status> chúng trong @Effect1Amount@ giây. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Nội Tại:</spellPassive> Đòn đánh của tướng đồng minh cận chiến gần đó đặt cộng dồn lên tướng địch và quái rừng.<br><br><spellPassive>Kích Hoạt:</spellPassive> Sejuani gây <magicDamage>@TotalDamage@ sát thương phép</magicDamage> lên mục tiêu có 4 cộng dồn và <status>Làm Choáng</status> chúng trong @CCDuration@ giây. @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ giây %i:cooldown%",
             "description": "Sejuani ném bola đóng băng tướng địch đầu tiên trúng phải và tạo ra một cơn bão băng giá làm chậm các kẻ địch khác.",
-            "dynamicDescription": "Sejuani ném bola bằng Chân Băng, <status>Làm Choáng</status> và lộ diện tướng địch đầu tiên trúng phải trong @Effect2Amount@ giây và gây <magicDamage>@MinorDamageTooltip@ sát thương phép</magicDamage>.<br><br>Nếu bola di chuyển được ít nhất 25% quãng đường, hiệu ứng <status>Làm Choáng</status> và lộ diện này sẽ kéo dài @Effect6Amount@ giây. Sau đó nó cũng tạo ra một cơn bão <status>Làm Chậm</status> kẻ địch xung quanh đi @Effect4Amount@% trong @Effect3Amount@ giây. Tất cả những kẻ địch ảnh hưởng sẽ chịu <magicDamage>@TotalDamageTooltip@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani ném bola bằng Chân Băng, <status>Làm Choáng</status> và khiến tướng địch đầu tiên trúng phải lộ diện trong @BaseStunDuration@ giây, đồng thời gây <magicDamage>@MinorDamageTooltip@ sát thương phép</magicDamage>.<br><br>Nếu bola di chuyển được ít nhất 25% quãng đường, hiệu ứng <status>Làm Choáng</status> và lộ diện này sẽ kéo dài @EmpoweredStunDuration@ giây. Sau đó, nó cũng tạo ra một cơn bão băng làm <status>Làm Chậm</status> kẻ địch xung quanh đi @ExplosionSlowAmount@% trong @ZoneDuration@ giây. Tất cả các kẻ địch chịu ảnh hưởng nhận <magicDamage>@TotalDamageTooltip@ sát thương phép</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

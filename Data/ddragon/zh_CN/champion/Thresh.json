@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.14.1",
+    "version": "16.15.1",
     "data": {
         "Thresh": {
             "id": "Thresh",
@@ -10,7 +10,7 @@
             "title": "锤石",
             "image": {
                 "full": "Thresh.png",
-                "sprite": "champion4.png",
+                "sprite": "champion6.png",
                 "group": "champion",
                 "x": 384,
                 "y": 48,
@@ -656,10 +656,10 @@
                     "rangeBurn": "1075",
                     "image": {
                         "full": "ThreshQ.png",
-                        "sprite": "spell14.png",
+                        "sprite": "spell20.png",
                         "group": "spell",
-                        "x": 0,
-                        "y": 48,
+                        "x": 288,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -799,10 +799,10 @@
                     "rangeBurn": "950",
                     "image": {
                         "full": "ThreshW.png",
-                        "sprite": "spell14.png",
+                        "sprite": "spell20.png",
                         "group": "spell",
-                        "x": 48,
-                        "y": 48,
+                        "x": 336,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -812,7 +812,7 @@
                     "id": "ThreshE",
                     "name": "厄运钟摆",
                     "description": "锤石会提升攻击伤害，攻击的间歇期越久伤害值越高。在激活此技能时，锤石会挥舞他的锁链，将命中的所有敌人带向锁链挥舞的方向。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>锤石的攻击造成额外伤害，伤害值基于与他最后一次攻击相隔的时间。造成<magicDamage>{{ pattackdamagemin }}</magicDamage>到<magicDamage>{{ pattackdamagemax }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>锤石挥舞他的锁链，沿挥舞的方向<status>拉拽</status>或<status>推挤</status>敌人。还会对命中的敌人们造成持续{{ e4 }}秒的{{ e2 }}%<status>减速</status>和<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>锤石的攻击造成额外伤害，伤害值基于与他最后一次攻击相隔的时间。造成<magicDamage>{{ pattackdamagemin }}</magicDamage>到<magicDamage>{{ pattackdamagemax }}魔法伤害</magicDamage>。<br /><br /><spellActive>主动：</spellActive>锤石挥舞他的锁链，沿挥舞的方向<status>拉拽</status>或<status>推挤</status>敌人。还会对命中的敌人们造成持续{{ slowduration }}秒的{{ activeslowpercentage }}%<status>减速</status>和<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "被动伤害",
@@ -823,8 +823,8 @@
                         ],
                         "effect": [
                             "{{ passiveadratio }}% -> {{ passiveadratioNL }}%",
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ activebasedamage }} -> {{ activebasedamageNL }}",
+                            "{{ activeslowpercentage }}% -> {{ activeslowpercentageNL }}%",
                             "{{ cost }} -> {{ costNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
@@ -946,10 +946,10 @@
                     "rangeBurn": "500",
                     "image": {
                         "full": "ThreshE.png",
-                        "sprite": "spell14.png",
+                        "sprite": "spell20.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 48,
+                        "x": 384,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -959,14 +959,14 @@
                     "id": "ThreshRPenta",
                     "name": "幽冥监牢",
                     "description": "构建一座监牢，其墙壁在被敌方单位打破时对该敌方单位造成伤害和减速效果。",
-                    "tooltip": "锤石生成一个由灵魂墙体组成的监牢，对英雄造成持续{{ e2 }}秒的{{ e3 }}%<status>减速</status>和<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。墙体一经碰撞就会被打破，并且一旦被打破一面墙体，剩余的就不会造成伤害且<status>减速</status>时长减半。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "锤石生成一个由灵魂墙体组成的监牢，对英雄造成持续{{ slowduration }}秒的{{ slowamount }}%<status>减速</status>和<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。墙体一经碰撞就会被打破，并且一旦被打破一面墙体，剩余的就不会造成伤害且<status>减速</status>时长减半。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ damage }} -> {{ damageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -1061,10 +1061,10 @@
                     "rangeBurn": "450",
                     "image": {
                         "full": "ThreshRPenta.png",
-                        "sprite": "spell14.png",
+                        "sprite": "spell20.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 48,
+                        "x": 432,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -1076,7 +1076,7 @@
                 "description": "锤石可以收割那些死在他身边的敌人们的灵魂，从而为他提供护甲和法术强度。",
                 "image": {
                     "full": "Thresh_Passive.png",
-                    "sprite": "passive4.png",
+                    "sprite": "passive6.png",
                     "group": "passive",
                     "x": 384,
                     "y": 48,

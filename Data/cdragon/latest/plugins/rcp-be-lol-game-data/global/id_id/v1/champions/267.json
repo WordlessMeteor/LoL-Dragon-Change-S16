@@ -1552,7 +1552,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Mengirimkan gelembung ke area target, menghasilkan damage dan membuat semua musuh menerima stun saat terkena.",
-            "dynamicDescription": "Nami menembakkan gelembung, memberikan efek <status>Stun</status> selama @Effect2Amount@ detik dan menghasilkan <magicDamage>@TotalDamageTT@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nami menembakkan gelembung, menerapkan <status>Stun</status> selama @StunDuration@ detik dan menghasilkan <magicDamage>@TotalDamageTT@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,
@@ -2002,7 +2002,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Memanggil Tidal Wave raksasa yang menerapkan Knock Up, memberikan efek slow, dan menghasilkan damage ke musuh. Serangan sekutu mendapatkan dua kali lipat efek Surging Tides.",
-            "dynamicDescription": "Nami memanggil tidal wave, melakukan <status>Knock Up</status> selama 0,5 detik, menerapkan efek <status>Slow</status> sebesar @Effect4Amount@%, dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. Durasi <status>Slow</status> meningkat berdasarkan jarak tempuh gelombang, hingga @Effect5Amount@ detik.<br><br>Sekutu yang terkena gelombang mendapatkan dua kali lipat efek <spellName>Surging Tides</spellName>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Nami memanggil Tidal Wave, melakukan <status>Knock Up</status> selama 0,5 detik, menerapkan <status>Slow</status> sebesar @SlowAmount@%, dan menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage>. Durasi <status>Slow</status> meningkat berdasarkan jarak tempuh gelombang, hingga @MaxSlowDuration@ detik.<br><br>Sekutu yang terkena gelombang mendapatkan dua kali lipat efek <spellName>Surging Tides</spellName>.@SpellModifierDescriptionAppend@",
             "range": [
                 2550.0,
                 2550.0,

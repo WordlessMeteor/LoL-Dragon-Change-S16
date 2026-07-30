@@ -297,26 +297,26 @@
                 {
                     "name": "PerSideCDAttackSpeedMultiplier",
                     "values": [
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BaseDashSpeed",
                     "values": [
-                        750.0,
-                        800.0,
                         850.0,
-                        900.0,
-                        950.0,
-                        1000.0,
-                        1050.0
+                        850.0,
+                        850.0,
+                        850.0,
+                        850.0,
+                        850.0,
+                        850.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -440,6 +440,45 @@
                 {
                     "name": "ADRatio",
                     "values": [
+                        1.0499999523162842,
+                        1.0499999523162842,
+                        1.0499999523162842,
+                        1.0499999523162842,
+                        1.0499999523162842,
+                        1.0499999523162842,
+                        1.0499999523162842
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Damage",
+                    "values": [
+                        10.0,
+                        12.0,
+                        14.0,
+                        16.0,
+                        18.0,
+                        20.0,
+                        22.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MonsterMod",
+                    "values": [
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinonMod",
+                    "values": [
                         1.0,
                         1.0,
                         1.0,
@@ -447,45 +486,6 @@
                         1.0,
                         1.0,
                         1.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "Damage",
-                    "values": [
-                        -5.0,
-                        0.0,
-                        5.0,
-                        10.0,
-                        15.0,
-                        20.0,
-                        25.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MonsterMod",
-                    "values": [
-                        45.0,
-                        55.0,
-                        65.0,
-                        75.0,
-                        85.0,
-                        95.0,
-                        105.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MinonMod",
-                    "values": [
-                        0.5,
-                        0.6000000238418579,
-                        0.699999988079071,
-                        0.800000011920929,
-                        0.8999999761581421,
-                        1.0,
-                        1.100000023841858
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -556,21 +556,21 @@
                 "ASSETS/Characters/Belveth/HUD/Icons2D/BV_Q_15.dds"
             ],
             "cooldownTime": [
-                1.0,
-                1.0,
-                1.0,
-                1.0,
-                1.0,
+                4.0,
+                4.0,
+                3.25,
+                2.5,
+                1.75,
                 1.0,
                 1.0
             ],
             "Cooldown": {
                 "values": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
+                    4.0,
+                    4.0,
+                    3.25,
+                    2.5,
+                    1.75,
                     1.0,
                     1.0
                 ],
@@ -653,15 +653,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "MonsterMod",
-                                    "nameOverride": "Spell_ListType_MonsterDamage",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "MinonMod",
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_ListType_MinionDamage",
-                                    "Style": 1,
+                                    "type": "Cooldown",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -918,13 +910,13 @@
                 {
                     "name": "OnHitDamage",
                     "values": [
+                        0.0,
                         2.0,
+                        4.0,
                         6.0,
+                        8.0,
                         10.0,
-                        14.0,
-                        18.0,
-                        22.0,
-                        26.0
+                        12.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -957,13 +949,13 @@
                 {
                     "name": "MissingHealthDamage",
                     "values": [
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25,
-                        0.25
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -996,13 +988,52 @@
                 {
                     "name": "SteroidDuration",
                     "values": [
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0,
-                        60.0
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0,
+                        45.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SteroidDurationUpgrade",
+                    "values": [
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0,
+                        90.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StackThresholdForUpgrade",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "StackThresholdForPermanent",
+                    "values": [
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1035,13 +1066,13 @@
                 {
                     "name": "BonusAARange",
                     "values": [
+                        -25.0,
+                        25.0,
                         75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0,
-                        75.0
+                        125.0,
+                        175.0,
+                        225.0,
+                        275.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1060,53 +1091,44 @@
                 },
                 {
                     "name": "OOCMS",
-                    "values": [
-                        -25.0,
-                        10.0,
-                        45.0,
-                        80.0,
-                        115.0,
-                        150.0,
-                        185.0
-                    ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BaseMaxHealth",
                     "values": [
-                        50.0,
+                        -50.0,
                         100.0,
-                        150.0,
-                        200.0,
                         250.0,
-                        300.0,
-                        350.0
+                        400.0,
+                        550.0,
+                        700.0,
+                        850.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "TotalASMod",
                     "values": [
+                        -0.05000000074505806,
                         0.05000000074505806,
-                        0.10000000149011612,
                         0.15000000596046448,
-                        0.20000000298023224,
                         0.25,
-                        0.30000001192092896,
-                        0.3499999940395355
+                        0.3499999940395355,
+                        0.44999998807907104,
+                        0.550000011920929
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "MaxEpicMonsterStacks",
                     "values": [
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1159,6 +1181,19 @@
                         100.0,
                         100.0,
                         100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SizeIncreasePercent",
+                    "values": [
+                        -0.05000000074505806,
+                        0.05000000074505806,
+                        0.15000000596046448,
+                        0.25,
+                        0.3499999940395355,
+                        0.44999998807907104,
+                        0.550000011920929
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1229,7 +1264,7 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 0.11999999731779099,
+                            "mCoefficient": 0.029999999329447746,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -1244,11 +1279,11 @@
                         {
                             "mStat": 2,
                             "mStatFormula": 2,
-                            "mCoefficient": 1.2000000476837158,
+                            "mCoefficient": 1.5,
                             "__type": "StatByCoefficientCalculationPart"
                         },
                         {
-                            "mCoefficient": 0.8999999761581421,
+                            "mCoefficient": 1.5,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -1261,7 +1296,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 1.0,
+                            "mCoefficient": 1.5,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -1269,15 +1304,8 @@
                 },
                 "MaxMonsterOnHitTooltip": {
                     "mMultiplier": {
-                        "mPart1": {
-                            "mDataValue": "MaxEpicMonsterStacks",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        "mPart2": {
-                            "mNumber": 0.5,
-                            "__type": "NumberCalculationPart"
-                        },
-                        "__type": "ProductOfSubPartsCalculationPart"
+                        "mDataValue": "MaxEpicMonsterStacks",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "tooltipOnly": true,
                     "mModifiedGameCalculation": "FinalOnHitDamage",
@@ -1397,15 +1425,15 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "OOCMS",
-                                    "nameOverride": "Spell_ListType_MovementSpeed",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
                                     "type": "TotalASMod",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_AttackSpeed",
                                     "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusAARange",
+                                    "nameOverride": "Spell_ListType_Range",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -1687,13 +1715,13 @@
                 {
                     "name": "SheenDuration",
                     "values": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1726,26 +1754,26 @@
                 {
                     "name": "AttackADRatio",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "OnHitRatio",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1767,9 +1795,21 @@
                 "AttackSpeedPerStack": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 0.2800000011920929,
-                            "mEndValue": 1.100000023841858,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "mLevel1Value": 0.10000000149011612,
+                            "mInitialBonusPerLevel": 0.05000000074505806,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 6,
+                                    "mBonusPerLevelAtAndAfter": 0.10000000149011612,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mBonusPerLevelAtAndAfter": 0.15000000596046448,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
                         }
                     ],
                     "mPrecision": 2,
@@ -1779,7 +1819,7 @@
                     "mFormulaParts": [
                         {
                             "mStartValue": 0.20000000298023224,
-                            "mEndValue": 0.4000000059604645,
+                            "mEndValue": 0.20000000298023224,
                             "mScaleByStatProgressionMultiplier": true,
                             "__type": "ByCharLevelInterpolationCalculationPart"
                         }
@@ -2031,6 +2071,22 @@
                 "__type": "SpellDataResourceClient"
             },
             "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ab31f415}": {
+        "ObjectName": "BelvethPassiveSheen",
+        "mScriptName": "BelvethPassiveSheen",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Belveth/HUD/Icons2D/Belveth_Passive.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Spell_BelvethPassiveSheen",
+            "mBuffAttributeFlag": 8,
+            "__type": "BuffData"
         },
         "__type": "SpellObject"
     },
@@ -2665,52 +2721,52 @@
                 {
                     "name": "Duration",
                     "values": [
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75,
-                        0.75
+                        0.5,
+                        0.6000000238418579,
+                        0.699999988079071,
+                        0.800000011920929,
+                        0.8999999761581421,
+                        1.0,
+                        1.100000023841858
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BaseDamage",
                     "values": [
-                        30.0,
-                        70.0,
-                        110.0,
-                        150.0,
-                        190.0,
-                        230.0,
-                        270.0
+                        20.0,
+                        80.0,
+                        140.0,
+                        200.0,
+                        260.0,
+                        320.0,
+                        380.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "SlowPercent",
                     "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "SlowDuration",
                     "values": [
-                        1.0,
-                        1.25,
-                        1.5,
-                        1.75,
                         2.0,
-                        2.25,
-                        2.5
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -2724,13 +2780,7 @@
                         },
                         {
                             "mStatFormula": 2,
-                            "mCoefficient": 1.25,
-                            "__type": "StatByCoefficientCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mCoefficient": 1.0,
+                            "mCoefficient": 1.5,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -2750,7 +2800,7 @@
                 10.0,
                 9.0,
                 8.0,
-                8.0
+                10.0
             ],
             "Cooldown": {
                 "values": [
@@ -2760,7 +2810,7 @@
                     10.0,
                     9.0,
                     8.0,
-                    8.0
+                    10.0
                 ],
                 "__type": "{0a0eddc9}"
             },
@@ -2845,8 +2895,8 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "SlowDuration",
-                                    "nameOverride": "Spell_ListType_SlowDuration",
+                                    "type": "Duration",
+                                    "nameOverride": "Spell_ListType_KnockupDuration",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -3001,26 +3051,26 @@
                 {
                     "name": "DamagePerHit",
                     "values": [
-                        5.0,
-                        6.0,
-                        7.0,
                         8.0,
-                        9.0,
                         10.0,
-                        11.0
+                        12.0,
+                        14.0,
+                        16.0,
+                        18.0,
+                        20.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "OnHitRatio",
                     "values": [
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066,
-                        0.07999999821186066
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099,
+                        0.11999999731779099
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3040,52 +3090,52 @@
                 {
                     "name": "MonsterMod",
                     "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "MissingHealthMult",
                     "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "DRPercent",
                     "values": [
+                        0.10000000149011612,
+                        0.20000000298023224,
                         0.30000001192092896,
-                        0.3499999940395355,
                         0.4000000059604645,
-                        0.44999998807907104,
                         0.5,
-                        0.550000011920929,
-                        0.6000000238418579
+                        0.6000000238418579,
+                        0.699999988079071
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BonusLifeSteal",
                     "values": [
+                        0.15000000596046448,
                         0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224
+                        0.25,
+                        0.30000001192092896,
+                        0.3499999940395355,
+                        0.4000000059604645,
+                        0.44999998807907104
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -3105,7 +3155,7 @@
                             "mPart2": {
                                 "mStat": 4,
                                 "mStatFormula": 2,
-                                "mCoefficient": 0.5,
+                                "mCoefficient": 0.4000000059604645,
                                 "__type": "StatByCoefficientCalculationPart"
                             },
                             "__type": "ProductOfSubPartsCalculationPart"
@@ -3121,7 +3171,7 @@
                         },
                         {
                             "mStat": 2,
-                            "mCoefficient": 0.07999999821186066,
+                            "mCoefficient": 0.11999999731779099,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -3132,11 +3182,6 @@
                         {
                             "mDataValue": "BonusLifesteal",
                             "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStat": 18,
-                            "mCoefficient": 1.0,
-                            "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
                     "mDisplayAsPercent": true,
@@ -3144,7 +3189,7 @@
                 },
                 "MaxDamagePerStrikeTooltip": {
                     "mMultiplier": {
-                        "mNumber": 4.0,
+                        "mNumber": 2.0,
                         "__type": "NumberCalculationPart"
                     },
                     "tooltipOnly": true,
@@ -3158,23 +3203,23 @@
             ],
             "{f26881a0}": 0.0,
             "cooldownTime": [
-                20.0,
-                20.0,
-                19.0,
+                24.0,
+                24.0,
+                21.0,
                 18.0,
-                17.0,
-                16.0,
-                16.0
+                15.0,
+                12.0,
+                12.0
             ],
             "Cooldown": {
                 "values": [
-                    20.0,
-                    20.0,
-                    19.0,
+                    24.0,
+                    24.0,
+                    21.0,
                     18.0,
-                    17.0,
-                    16.0,
-                    16.0
+                    15.0,
+                    12.0,
+                    12.0
                 ],
                 "__type": "{0a0eddc9}"
             },
@@ -3229,6 +3274,13 @@
                                     "type": "DRPercent",
                                     "multiplier": 100.0,
                                     "nameOverride": "Spell_ListType_DamageReduction",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusLifeSteal",
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_LifeSteal",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -4219,11 +4271,11 @@
     "Characters/Belveth/CharacterRecords/Root": {
         "mCharacterName": "Belveth",
         "baseHPModifiable": {
-            "baseValue": 610.0,
+            "baseValue": 580.0,
             "__type": "ModifiableFloat"
         },
         "hpPerLevelModifiable": {
-            "baseValue": 105.0,
+            "baseValue": 110.0,
             "__type": "ModifiableFloat"
         },
         "baseStaticHPRegenModifiable": {
@@ -4238,22 +4290,19 @@
         "primaryAbilityResource": {
             "arType": 14,
             "{726ee5cd}": {
-                "baseValue": 60.0,
+                "baseValue": 45.0,
                 "__type": "ModifiableFloat"
             },
             "{c4ab3550}": {
                 "baseValue": 0.0,
                 "__type": "ModifiableFloat"
             },
-            "arIncrements": 60.0,
-            "arMaxSegments": 3,
             "arHasRegenText": false,
             "arAllowMaxValueToBeOverridden": true,
             "{4eb6a404}": 2,
             "__type": "AbilityResourceSlotInfo"
         },
         "secondaryAbilityResource": {
-            "arType": 12,
             "{726ee5cd}": {
                 "baseValue": 6.0,
                 "__type": "ModifiableFloat"
@@ -4266,6 +4315,7 @@
             "arMaxSegments": 6,
             "arHasRegenText": false,
             "arDisplayAsPips": true,
+            "arIsShown": false,
             "VisibilityFlags": 1,
             "arOverrideSmallPipName": "SamiraStyleSmall",
             "arOverrideSpacerName": "PipSpacer",
@@ -4274,7 +4324,7 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 60.0,
+            "baseValue": 55.0,
             "__type": "ModifiableFloat"
         },
         "damagePerLevelModifiable": {
@@ -4282,11 +4332,11 @@
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {
-            "baseValue": 32.0,
+            "baseValue": 28.0,
             "__type": "ModifiableFloat"
         },
         "armorPerLevelModifiable": {
-            "baseValue": 4.699999809265137,
+            "baseValue": 5.0,
             "__type": "ModifiableFloat"
         },
         "baseMR": {
@@ -4307,18 +4357,17 @@
             "__type": "ModifiableFloat"
         },
         "attackSpeedModifiable": {
-            "baseValue": 0.8500000238418579,
+            "baseValue": 0.6700000166893005,
             "__type": "ModifiableFloat"
         },
         "attackSpeedRatioModifiable": {
-            "baseValue": 0.8500000238418579,
+            "baseValue": 0.6700000166893005,
             "__type": "ModifiableFloat"
         },
         "acquisitionRange": 600.0,
         "basicAttack": {
-            "mAttackTotalTime": 1.0099999904632568,
-            "mAttackCastTime": 0.25,
-            "mAttackDelayCastOffsetPercentAttackSpeedRatio": 1.0,
+            "mAttackTotalTime": 1.4930000305175781,
+            "mAttackCastTime": 0.2199999988079071,
             "mAttackProbability": 1.0,
             "mAttackName": "BelvethBasicAttack",
             "__type": "AttackSlotData"

@@ -1,0 +1,866 @@
+{
+    "Characters/Jade_Leona/Skins/Skin4": {
+        "skinClassification": 1,
+        "championSkinName": "Jade_LeonaSkin04",
+        "metaDataTags": "faction:mttargon,gender:female,race:human,element:water,skinline:poolparty",
+        "loadscreen": {
+            "image": "ASSETS/Characters/Jade_Leona/Skins/Skin04/Jade_LeonaLoadscreen_4.tex",
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Leona",
+                "LeonaSkin04"
+            ],
+            "bankUnits": [
+                {
+                    "name": "Leona_Base_VO",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Leona/Skins/Base/Leona_Base_VO_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Leona/Skins/Base/Leona_Base_VO_events.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Leona/Skins/Base/Leona_Base_VO_audio.wpk"
+                    ],
+                    "events": [
+                        "Play_vo_Leona_Attack2DGeneral",
+                        "Play_vo_Leona_Death3D",
+                        "Play_vo_Leona_Joke3DGeneral",
+                        "Play_vo_Leona_Laugh3DGeneral",
+                        "Play_vo_Leona_LeonaBasicAttack2_cast3D",
+                        "Play_vo_Leona_LeonaBasicAttack3_cast3D",
+                        "Play_vo_Leona_LeonaBasicAttack_cast3D",
+                        "Play_vo_Leona_LeonaCritAttack_cast3D",
+                        "Play_vo_Leona_LeonaShieldOfDaybreakAttack_cast3D",
+                        "Play_vo_Leona_LeonaSolarFlare_cast3D",
+                        "Play_vo_Leona_LeonaZenithBlade_cast3D",
+                        "Play_vo_Leona_Move2DStandard",
+                        "Play_vo_Leona_Spell3DBasic",
+                        "Play_vo_Leona_Spell3DECast",
+                        "Play_vo_Leona_Spell3DRCast",
+                        "Play_vo_Leona_Taunt3DGeneral"
+                    ],
+                    "voiceOver": true,
+                    "__type": "BankUnit"
+                },
+                {
+                    "name": "Leona_Skin04_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Leona/Skins/Skin04/Leona_Skin04_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Leona/Skins/Skin04/Leona_Skin04_SFX_events.bnk"
+                    ],
+                    "events": [
+                        "Play_sfx_LeonaSkin04_Dance3D_buffactivate",
+                        "Play_sfx_LeonaSkin04_Death3D_cast",
+                        "Play_sfx_LeonaSkin04_Joke3D_buffactivate",
+                        "Play_sfx_LeonaSkin04_Laugh3D_buffactivate",
+                        "Play_sfx_LeonaSkin04_LeonaBasicAttack2_OnCast",
+                        "Play_sfx_LeonaSkin04_LeonaBasicAttack2_OnHit",
+                        "Play_sfx_LeonaSkin04_LeonaBasicAttack3_OnCast",
+                        "Play_sfx_LeonaSkin04_LeonaBasicAttack3_OnHit",
+                        "Play_sfx_LeonaSkin04_LeonaBasicAttack4_OnCast",
+                        "Play_sfx_LeonaSkin04_LeonaBasicAttack4_OnHit",
+                        "Play_sfx_LeonaSkin04_LeonaBasicAttack_OnCast",
+                        "Play_sfx_LeonaSkin04_LeonaBasicAttack_OnHit",
+                        "Play_sfx_LeonaSkin04_LeonaCritAttack_OnCast",
+                        "Play_sfx_LeonaSkin04_LeonaCritAttack_OnHit",
+                        "Play_sfx_LeonaSkin04_Recall_leadin",
+                        "Play_sfx_LeonaSkin04_Taunt3D_buffactivate"
+                    ],
+                    "__type": "BankUnit"
+                },
+                {
+                    "name": "Leona_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Leona/Skins/Base/Leona_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Leona/Skins/Base/Leona_Base_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Jade_Leona/Animations/Skin4",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Jade_Leona/Skins/Skin04/Jade_Leona_skin04.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Leona/Skins/Skin04/Jade_Leona_skin04.skn",
+            "texture": "ASSETS/Characters/Jade_Leona/Skins/Skin04/Jade_Leona_skin04_TX_CM.tex",
+            "skinScale": 1.3700000047683716,
+            "selfIllumination": 1.0,
+            "overrideBoundingBox": [
+                95.0,
+                190.0,
+                95.0
+            ],
+            "initialSubmeshToHide": "Leona_chair_mat Leona_glasses",
+            "materialOverride": [
+                {
+                    "texture": "ASSETS/Characters/Jade_Leona/Skins/Skin04/Jade_Leona_skin04_chair_TX_CM.tex",
+                    "submesh": "Leona_Chair_Mat",
+                    "__type": "SkinMeshDataProperties_MaterialOverride"
+                }
+            ],
+            "{9a817954}": [
+                {
+                    "category": "{e1043940}",
+                    "materialOverride": "Characters/Jade_Leona/Skins/Skin0/Materials/Jade_Leona_CharacterOutline_inst",
+                    "Submeshes": "mesh_leona",
+                    "__type": "{993f8595}"
+                },
+                {
+                    "category": "{e1043940}",
+                    "materialOverride": "Characters/Jade_Leona/Skins/Skin0/Materials/Jade_Leona_CharacterOutline_inst",
+                    "Submeshes": "leona_glasses",
+                    "__type": "{993f8595}"
+                },
+                {
+                    "category": "{e1043940}",
+                    "materialOverride": "Characters/Jade_Leona/Skins/Skin0/Materials/Jade_Leona_CharacterOutline_inst",
+                    "Submeshes": "leona_chair_mat",
+                    "__type": "{993f8595}"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "defaultAnimations": [
+            "Idle1Props"
+        ],
+        "mContextualActionData": "Characters/Jade_Leona/CAC/Jade_Leona_Base",
+        "iconCircle": "ASSETS/Characters/Jade_Leona/HUD/Jade_Leona_Circle.tex",
+        "iconSquare": "ASSETS/Characters/Jade_Leona/HUD/Jade_Leona_Square.tex",
+        "iconAvatar": "ASSETS/Characters/Jade_Leona/HUD/Jade_Leona_Circle_4.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mEmblems": [
+            {
+                "mEmblemData": "Emblems/1",
+                "__type": "SkinEmblem"
+            }
+        ],
+        "mResourceResolver": "Characters/Jade_Leona/Skins/Skin4/Resources",
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Jade_Leona/Skins/Skin4/Resources": {
+        "resourceMap": {
+            "DoomBots_Jade_Leona_W_cas_minions": "Characters/Jade_Leona/Skins/Skin0/Particles/DoomBots_Jade_Leona_Base_W_cas_minions",
+            "Jade_Leona_BA_hit": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_BA_hit",
+            "Jade_Leona_Death": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_Death",
+            "Jade_Leona_Death_pfx_01": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_Death_pfx_01",
+            "Jade_Leona_Death_sfx_01": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_Death_sfx_01",
+            "Jade_Leona_Death_Sound": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Death_Sound",
+            "Jade_Leona_Emote_Dance_sfx_01": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_Emote_Dance_sfx_01",
+            "Jade_Leona_Emote_Joke_sfx_01": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_Emote_Joke_sfx_01",
+            "Jade_Leona_Emote_Laugh_sfx_01": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_Emote_Laugh_sfx_01",
+            "Jade_Leona_Emote_Taunt_sfx_01": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_Emote_Taunt_sfx_01",
+            "Jade_Leona_E_cas_arrive": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_E_cas_arrive",
+            "Jade_Leona_E_mis_dash": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_E_mis_dash",
+            "Jade_Leona_E_mis_weapon": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_E_mis_weapon",
+            "Jade_Leona_E_tar": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_E_tar",
+            "Jade_Leona_E_ZB_sfx_01": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_E_ZB_sfx_01",
+            "Jade_Leona_P_tar_buf": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_P_tar_buf",
+            "Jade_Leona_P_tar_buf_champ": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_P_tar_buf_champ",
+            "Jade_Leona_P_tar_hit": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_P_tar_hit",
+            "Jade_Leona_Q_cas": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_Q_cas",
+            "Jade_Leona_Q_tar": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_Q_tar",
+            "Jade_Leona_R_buf": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_R_buf",
+            "Jade_Leona_R_cas": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_R_cas",
+            "Jade_Leona_R_hit_aoe_green": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_R_hit_aoe_green",
+            "Jade_Leona_R_hit_aoe_red": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_R_hit_aoe_red",
+            "Jade_Leona_R_hit_impact": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_R_hit_impact",
+            "Jade_Leona_R_tar": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_R_tar",
+            "Jade_Leona_W_buf_1": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_W_buf_1",
+            "Jade_Leona_W_buf_2": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_W_buf_2",
+            "Jade_Leona_W_cas_fail": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_W_cas_fail",
+            "Jade_Leona_W_cas_hit": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_W_cas_hit",
+            "Jade_Leona_W_DoomBot_Exp_Ind_ally_01": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_W_DoomBot_Exp_Ind_ally_01",
+            "Jade_Leona_W_tar": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_W_tar",
+            "Jade_Leona_Skin04_Death_Sound_BV2": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Skin04_Death_Sound",
+            "Jade_Leona_Moon_R_Cas": "Characters/Jade_Leona/Skins/Skin0/Particles/Jade_Leona_Base_Moon_R_Cas",
+            "{ef0da96c}": "{00000000}",
+            "Jade_Leona_Idle_Sword": "{00000000}",
+            "Jade_Leona_Idle_Shield": "{00000000}",
+            "Jade_Leona_Recall_strt_sfx_01": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_Recall_strt_sfx_01"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_R_buf": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "emitterName": "Cas_WeaponGlow",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "primitive": {
+                    "mMesh": {
+                        "mLockMeshToAttachment": true,
+                        "__type": "VfxMeshDefinitionData"
+                    },
+                    "__type": "VfxPrimitiveAttachedMesh"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "constantValue": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        0.800000011920929
+                    ],
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.800000011920929
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        1.0099999904632568,
+                        1.0099999904632568,
+                        1.0099999904632568
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Skin04/Particles/Jade_Leona_Skin04_SwordMask.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_buf_Mult.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.5,
+                            0.30000001192092896
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "emitterName": "BeamswordGlow",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -90.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "colorLookUpTypeY": 3,
+                "colorLookUpScales": [
+                    1.0,
+                    0.5
+                ],
+                "colorLookUpOffsets": [
+                    0.0,
+                    0.5
+                ],
+                "particleIsLocalOrientation": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        180.0,
+                        0.0,
+                        90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        95.0,
+                        45.0,
+                        50.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_Buf_SwordGlow.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_buf_Mult.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            -0.10000000149011612,
+                            1.0
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "birthUVOffsetMult": {
+                        "constantValue": [
+                            1.0,
+                            1.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    1.0,
+                                    1.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector2fVariableData"
+                        },
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 2.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 11.0,
+                "emitterName": "BeamswordGlow2",
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -90.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "blendMode": 4,
+                "Color": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.5,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedColorVariableData"
+                    },
+                    "__type": "ValueColor"
+                },
+                "colorLookUpTypeY": 3,
+                "colorLookUpScales": [
+                    1.0,
+                    0.5
+                ],
+                "colorLookUpOffsets": [
+                    0.0,
+                    0.5
+                ],
+                "particleIsLocalOrientation": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        180.0,
+                        90.0,
+                        90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        90.0,
+                        45.0,
+                        50.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_Buf_SwordGlow.tex",
+                "textureMult": {
+                    "textureMult": "ASSETS/Characters/Jade_Leona/Skins/Base/Particles/Jade_Leona_Base_R_buf_Mult.tex",
+                    "birthUvScrollRateMult": {
+                        "constantValue": [
+                            0.20000000298023224,
+                            0.800000011920929
+                        ],
+                        "__type": "ValueVector2"
+                    },
+                    "__type": "VfxTextureMultDefinitionData"
+                },
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.6000000238418579,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.600000381469727,
+                "lifetime": 0.5,
+                "isSingleParticle": 1,
+                "emitterName": "Activate",
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        2.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.2999999523162842
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                2.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        20.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "particleColorTexture": "",
+                "blendMode": 4,
+                "colorLookUpTypeY": 3,
+                "colorLookUpScales": [
+                    1.0,
+                    0.5
+                ],
+                "colorLookUpOffsets": [
+                    0.0,
+                    0.5
+                ],
+                "miscRenderFlags": 1,
+                "particleIsLocalOrientation": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        180.0,
+                        0.0,
+                        90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        200.0,
+                        150.0,
+                        50.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.399999976158142
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    0.5009999871253967,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    -1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                200.0,
+                                150.0,
+                                50.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.3499999940395355,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.5,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "numFrames": 4,
+                "__type": "VfxEmitterDefinitionData"
+            },
+            {
+                "rate": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "constantValue": 0.6000000238418579,
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.600000381469727,
+                "lifetime": 0.5,
+                "isSingleParticle": 1,
+                "emitterName": "Rainbow",
+                "birthVelocity": {
+                    "constantValue": [
+                        0.0,
+                        2.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.2999999523162842
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                2.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "bindWeight": {
+                    "constantValue": 1.0,
+                    "__type": "ValueFloat"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        20.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "particleColorTexture": "",
+                "blendMode": 4,
+                "colorLookUpTypeY": 3,
+                "colorLookUpScales": [
+                    1.0,
+                    0.5
+                ],
+                "colorLookUpOffsets": [
+                    0.0,
+                    0.5
+                ],
+                "particleIsLocalOrientation": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        180.0,
+                        0.0,
+                        90.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "birthScale0": {
+                    "constantValue": [
+                        150.0,
+                        150.0,
+                        50.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    1.399999976158142
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.5,
+                                    0.5009999871253967,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    -1.0,
+                                    -1.0,
+                                    1.0,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                150.0,
+                                150.0,
+                                50.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "times": [
+                            0.0,
+                            0.3499999940395355,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                0.699999988079071,
+                                0.699999988079071,
+                                1.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "numFrames": 4,
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Leona_Skin04_R_buf",
+        "particlePath": "Characters/Jade_Leona/Skins/Skin4/Particles/Jade_Leona_Skin04_R_buf",
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": [
+        "DATA/Characters/Jade_Leona/Jade_Leona.bin",
+        "DATA/Characters/Jade_Leona/Animations/Skin4.bin",
+        "DATA/Characters/Jade_Leona/Jade_Leona_Multi_Skins_Skin0_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Leona/Jade_Leona_Multi_Skins_Skin0_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin34_Skins_Skin4_Skins_Skin44_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin6_Skins_Skin7_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Leona/Jade_Leona_Multi_Skins_Skin0_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin34_Skins_Skin4_Skins_Skin44_Skins_Skin45_Skins_Skin46_Skins_Skin47_Skins_Skin48_Skins_Skin49_Skins_Skin5_Skins_Skin6_Skins_Skin7_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Leona/Jade_Leona_Multi_Skins_Skin4_Skins_Skin5_Skins_Skin6_Skins_Skin7.bin",
+        "DATA/Characters/Jade_Leona/Jade_Leona_Multi_Skins_Root_Skins_Skin0_Skins_Skin12_Skins_Skin13_Skins_Skin14_Skins_Skin15_Skins_Skin16_Skins_Skin17_Skins_Skin18_Skins_Skin19_Skins_Skin20_Skins_Skin4_Skins_Skin5_Skins_Skin50_Skins_Skin51_Skins_Skin6_Skins_Skin7_Skins_Skin9.bin"
+    ]
+}

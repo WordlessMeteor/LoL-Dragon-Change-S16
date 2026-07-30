@@ -13783,13 +13783,17 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.png",
-        "tooltip_text": "كل ثانية، يكسب أبطال شوريما @ASPerSecond*100@% سرعة هجوم ويستعيدون @HealthRestorePerSecond@ صحة. عند بداية القتال، يكسبون تأثيرات إضافية.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>موشورية: افتح ناسوس ورينيكتون وزيراث، ثم أدخل 4 وحدات شوريما</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% صحة قصوى</row><br><row>(@MinUnits@) @ArmorMR@ دروع ومقاومة سحر</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>يرتقي بطلٌ من شوريما فيصبح خارقًا كل @GodhoodCadence@ث </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>تتوفر حصرًا بعد فتح كلٍ من ناسوس ورينيكتون وزيراث.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
+        "tooltip_text": "كل ثانية، يكسب أبطال شوريما @ASPerSecond*100@% سرعة هجوم ويستعيدون @HealthRestorePerSecond@ صحة. عند بداية القتال، يكسبون تأثيرات إضافية.<ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>موشورية: افتح ناسوس ورينيكتون وزيراث، ثم أدخل 4 وحدات شوريما</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER><br><br><row>(@MinUnits@) @BonusHealth*100@% صحة قصوى</row><br><row>(@MinUnits@) @ArmorMR@ دروع ومقاومة سحر</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>يرتقي بطلٌ من شوريما فيصبح خارقًا كل @GodhoodCadence@ث </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>تتوفر حصرًا بعد فتح كلٍ من ناسوس ورينيكتون وزيراث.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "ASPerSecond",
                         "value": 0.02
+                    },
+                    {
+                        "name": "GodhoodCadence",
+                        "value": 3.0
                     },
                     {
                         "name": "HealthRestorePerSecond",
@@ -15816,7 +15820,7 @@
                     },
                     {
                         "name": "TeamManaRegen",
-                        "value": 3.0
+                        "value": 2.0
                     }
                 ],
                 "min_units": 5,

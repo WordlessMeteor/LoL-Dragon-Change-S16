@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.14.1",
+    "version": "16.15.1",
     "data": {
         "Warwick": {
             "id": "Warwick",
@@ -10,7 +10,7 @@
             "title": "沃里克",
             "image": {
                 "full": "Warwick.png",
-                "sprite": "champion5.png",
+                "sprite": "champion7.png",
                 "group": "champion",
                 "x": 288,
                 "y": 0,
@@ -479,7 +479,7 @@
                     "id": "WarwickQ",
                     "name": "野兽之口",
                     "description": "沃里克向前猛扑并撕咬他的目标，造成基于目标最大生命值的伤害，并造成基于实际伤害值的治疗效果。",
-                    "tooltip": "<tap>秒放：</tap>沃里克向前猛扑并撕咬，造成<magicDamage>{{ basebitedamage }}外加{{ targetpercenthpdamage }}%最大生命值的魔法伤害</magicDamage>和<healing>{{ e3 }}%实际伤害值的治疗效果</healing>。<br /><br /><hold>蓄力：</hold>沃里克猛扑并用它的狼嘴紧咬目标，并跃到目标身后。在紧咬目标时，沃里克会跟随目标的所有移动。在释放他的蓄力后，他会造成等额伤害和治疗效果。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<tap>秒放：</tap>沃里克向前猛扑并撕咬，造成<magicDamage>{{ basebitedamage }}外加{{ targetpercenthpdamage }}%最大生命值的魔法伤害</magicDamage>和<healing>{{ lifestealpercent }}%实际伤害值的治疗效果</healing>。<br /><br /><hold>蓄力：</hold>沃里克猛扑并用它的狼嘴紧咬目标，并跃到目标身后。在紧咬目标时，沃里克会跟随目标的所有移动。在释放他的蓄力后，他会造成等额伤害和治疗效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "治疗效果",
@@ -488,7 +488,7 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e3 }}% -> {{ e3NL }}%",
+                            "{{ lifestealpercent }}% -> {{ lifestealpercentNL }}%",
                             "{{ targetpercenthpdamage }}% -> {{ targetpercenthpdamageNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
@@ -522,53 +522,53 @@
                             0
                         ],
                         [
-                            100,
-                            150,
-                            200,
-                            250,
-                            300
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            25,
-                            37.5,
-                            50,
-                            62.5,
-                            75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            150,
-                            165,
-                            180,
-                            195,
-                            210
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            450,
-                            450,
-                            450,
-                            450,
-                            450
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            200,
-                            200,
-                            200,
-                            200,
-                            200
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            300,
-                            300,
-                            300,
-                            300,
-                            300
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            425,
-                            425,
-                            425,
-                            425,
-                            425
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -588,13 +588,13 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "100/150/200/250/300",
-                        "25/37.5/50/62.5/75",
-                        "150/165/180/195/210",
-                        "450",
-                        "200",
-                        "300",
-                        "425",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0"
                     ],
@@ -611,10 +611,10 @@
                     "rangeBurn": "365",
                     "image": {
                         "full": "WarwickQ.png",
-                        "sprite": "spell16.png",
+                        "sprite": "spell22.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 0,
+                        "x": 384,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -658,46 +658,46 @@
                     "effect": [
                         null,
                         [
-                            35,
-                            42.5,
-                            50,
-                            57.5,
-                            65
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            70,
-                            80,
-                            90,
-                            100,
-                            110
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            10,
-                            15,
-                            20,
-                            25,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            80,
-                            90,
-                            100,
-                            110,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            30,
-                            30,
-                            30,
-                            30,
-                            30
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            8,
-                            8,
-                            8,
-                            8,
-                            8
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -730,12 +730,12 @@
                     ],
                     "effectBurn": [
                         null,
-                        "35/42.5/50/57.5/65",
-                        "70/80/90/100/110",
-                        "10/15/20/25/30",
-                        "80/90/100/110/120",
-                        "30",
-                        "8",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -754,10 +754,10 @@
                     "rangeBurn": "4000",
                     "image": {
                         "full": "WarwickW.png",
-                        "sprite": "spell16.png",
+                        "sprite": "spell22.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 0,
+                        "x": 432,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -767,14 +767,14 @@
                     "id": "WarwickE",
                     "name": "远祖嗥叫",
                     "description": "沃里克获得持续2.5秒的伤害减免效果。在效果结束时，或者重新激活技能时，沃里克会嗥叫，使附近的敌人因恐惧而逃跑1秒。",
-                    "tooltip": "沃里克获得持续2.5秒的{{ e1 }}%伤害减免。在它结束后，沃里克会发出嗥叫，<status>恐惧</status>附近的敌人{{ e3 }}秒。沃里克可以<recast>再次施放</recast>来提前结束这个技能。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "沃里克获得{{ dramount }}%伤害减免，持续{{ drduration }}秒。在它结束后，沃里克会发出嗥叫，<status>恐惧</status>附近的敌人{{ fearduration }}秒。沃里克可以<recast>再次施放</recast>来提前结束这个技能。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害减免",
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }}% -> {{ e1NL }}%",
+                            "{{ dramount }}% -> {{ dramountNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -799,46 +799,46 @@
                     "effect": [
                         null,
                         [
-                            35,
-                            40,
-                            45,
-                            50,
-                            55
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2.75,
-                            2.75,
-                            2.75,
-                            2.75,
-                            2.75
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            1,
-                            1,
-                            1,
-                            1,
-                            1
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            800,
-                            800,
-                            800,
-                            800,
-                            800
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            400,
-                            400,
-                            400,
-                            400,
-                            400
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -871,12 +871,12 @@
                     ],
                     "effectBurn": [
                         null,
-                        "35/40/45/50/55",
-                        "2.75",
-                        "1",
-                        "1",
-                        "800",
-                        "400",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -895,10 +895,10 @@
                     "rangeBurn": "375",
                     "image": {
                         "full": "WarwickE.png",
-                        "sprite": "spell16.png",
+                        "sprite": "spell22.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 0,
+                        "x": 0,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -1010,10 +1010,10 @@
                     "rangeBurn": "25000",
                     "image": {
                         "full": "WarwickR.png",
-                        "sprite": "spell16.png",
+                        "sprite": "spell22.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 0,
+                        "x": 48,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -1025,7 +1025,7 @@
                 "description": "沃里克的普攻造成额外魔法伤害。如果沃里克的生命值低于50%，那么他会获得等额的治疗效果。如果他的生命值低于25%，则治疗效果提升至三倍。",
                 "image": {
                     "full": "WarwickP.png",
-                    "sprite": "passive5.png",
+                    "sprite": "passive7.png",
                     "group": "passive",
                     "x": 288,
                     "y": 0,

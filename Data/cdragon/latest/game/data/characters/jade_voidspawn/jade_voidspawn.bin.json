@@ -1,0 +1,289 @@
+{
+    "Characters/Jade_VoidSpawn/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/Jade_VoidSpawn/CharacterRecords/Root": {
+        "mCharacterName": "Jade_VoidSpawn",
+        "baseHPModifiable": {
+            "baseValue": 50.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 45.0,
+        "primaryAbilityResource": {
+            "{726ee5cd}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 60.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 40.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 0.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 480.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 125.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.6940000057220459,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.6940000057220459,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 5.0,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 800.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": 0.0,
+            "mAttackProbability": 1.0,
+            "__type": "AttackSlotData"
+        },
+        "towerTargetingPriorityBoost": 6.0,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 0.0,
+        "significance": 0.30000001192092896,
+        "untargetableSpawnTime": 1.2000000476837158,
+        "spellNames": [
+            "Jade_VoidSpawnTowerBreak",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "spells": [
+            "Characters/Jade_VoidSpawn/Spells/Jade_VoidSpawnTowerBreak",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "name": "game_character_displayname_TemplateFighter",
+        "selectionHeight": 60.0,
+        "selectionRadius": 70.0,
+        "pathfindingCollisionRadius": 20.0,
+        "unitTagsString": "Minion | Minion_Summon | Special_MonsterIgnores | Special_EpicMonsterIgnores | Special_Void",
+        "characterToolData": {
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "PostAttackMoveDelay": 0.30000001192092896,
+            "ChasingAttackRangePercent": 0.5,
+            "__type": "CharacterToolData"
+        },
+        "minionScoreValue": 0.0,
+        "flags": 8398088,
+        "__type": "CharacterRecord"
+    },
+    "{8d0cbce9}": {
+        "ObjectName": "Jade_VoidSpawnBasicAttack",
+        "mScriptName": "Jade_VoidSpawnBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "VoidgateVoidlingBasicAttack",
+            "mAnimationName": "attack1",
+            "{11704a2b}": 0.3461499810218811,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 22.0,
+            "mHitEffectName": "DATA/Shared/Particles/globalhit_bloodslash.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_VoidSpawn/Spells/Jade_VoidSpawnTowerBreak": {
+        "ObjectName": "Jade_VoidSpawnTowerBreak",
+        "mScriptName": "Jade_VoidSpawnTowerBreak",
+        "mSpell": {
+            "mAffectsTypeFlags": 14346,
+            "mAlternateName": "Landslide",
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                ""
+            ],
+            "mCastTime": 0.2418999969959259,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0
+            ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0
+                ],
+                "{0a3e0478}": 7.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "bIsToggleSpell": true,
+            "castRadius": [
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0,
+                400.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 0.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                50.0,
+                55.0,
+                60.0,
+                65.0,
+                70.0,
+                75.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    50.0,
+                    55.0,
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0
+                ],
+                "{0a3e0478}": 50.0,
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{e60d4cc1}": {
+        "ObjectName": "Jade_VoidSpawnBasicAttack2",
+        "mScriptName": "Jade_VoidSpawnBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 5327,
+            "mAlternateName": "VoidgateVoidlingBasicAttack2",
+            "mAnimationName": "attack2",
+            "{11704a2b}": 0.3461499810218811,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castConeDistance": 100.0,
+            "castFrame": 22.0,
+            "mHitEffectName": "DATA/Shared/Particles/globalhit_bloodslash.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "__linked": []
+}

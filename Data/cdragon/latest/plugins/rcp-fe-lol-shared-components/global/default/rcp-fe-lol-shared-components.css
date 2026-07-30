@@ -3652,6 +3652,7 @@ lol-uikit-flat-input.player-name-input__game-name-input>input[type=search],
 lol-uikit-flat-input.player-name-input__single-input>input[type=search],
 lol-uikit-flat-input.player-name-input__tag-line-input>input[type=search] {
     direction: ltr;
+    padding-right: 0;
     unicode-bidi: isolate
 }
 
@@ -3694,6 +3695,13 @@ div.player-name-input__split-inputs-wrapper {
 
 .player-name-input__game-name-input {
     flex: 3
+}
+
+.player-name-input__game-name-input:lang(ja-jp),
+.player-name-input__game-name-input:lang(zh-cn),
+.player-name-input__game-name-input:lang(zh-my),
+.player-name-input__game-name-input:lang(zh-tw) {
+    flex: 2.5
 }
 
 .player-name-input__game-name-input>input[type=search],
@@ -4796,6 +4804,7 @@ div.player-name-input__split-inputs-wrapper {
 
 .communications-agreement-modal-component {
     align-items: stretch;
+    direction: ltr;
     display: flex;
     flex-direction: column;
     width: 556px
@@ -16460,12 +16469,8 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     flex-direction: column;
     gap: 4px;
     padding: 16px;
+    text-align: left;
     white-space: nowrap
-}
-
-.honor-panel-restriction-tooltip-content:lang(ar-ae) {
-    direction: rtl;
-    text-align: right
 }
 
 .honor-panel-restriction-tooltip-content .honor-panel-restriction-tooltip-title {
@@ -17758,8 +17763,24 @@ lol-uikit-tooltip[add-part-selector=eternals-item-tooltip]::part(lol-uikit-toolt
     max-width: 200px
 }
 
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-video-header {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-video-header .shoppefront-purchase-modal-header-video {
+    border-radius: 2px;
+    max-height: 280px;
+    max-width: 100%
+}
+
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content {
     margin: 0 18px 25px
+}
+
+.shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .shoppefront-purchase-modal-classic-exclusive-disclaimer {
+    margin-bottom: 6px
 }
 
 .shoppefront-purchase-modal-wrapper .shoppefront-purchase-modal-content .digital-goods-disclaimer {

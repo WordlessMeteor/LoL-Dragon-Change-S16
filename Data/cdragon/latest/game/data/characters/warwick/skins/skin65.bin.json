@@ -9,11 +9,11 @@
             "__type": "{e7ee4f28}"
         },
         "loadscreen": {
-            "image": "ASSETS/Characters/Warwick/Skins/Skin58/WarwickLoadScreen_58.SKINS_Warwick_Skin58.tex",
+            "image": "ASSETS/Characters/Warwick/Skins/Skin58/WarwickLoadScreen_58.tex",
             "__type": "CensoredImage"
         },
         "loadscreenVintage": {
-            "image": "ASSETS/Characters/Warwick/Skins/Skin58/WarwickLoadScreen_58_LE.SKINS_Warwick_Skin58.tex",
+            "image": "ASSETS/Characters/Warwick/Skins/Skin58/WarwickLoadScreen_58_LE.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -160,9 +160,9 @@
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58.SKINS_Warwick_Skin58.skl",
-            "simpleSkin": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58.SKINS_Warwick_Skin58.skn",
-            "texture": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.Chroma_Warwick_WarHounds.tex",
+            "skeleton": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58.skl",
+            "simpleSkin": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58.skn",
+            "texture": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.tex",
             "skinScale": 0.75,
             "selfIllumination": 0.5,
             "reflectionFresnelColor": [
@@ -174,7 +174,7 @@
             "initialSubmeshToHide": "Recall VFXTail1",
             "materialOverride": [
                 {
-                    "texture": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_Recall_TX_CM.Chroma_Warwick_WarHounds.tex",
+                    "texture": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_Recall_TX_CM.tex",
                     "submesh": "Recall",
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 },
@@ -235,7 +235,7 @@
         "mContextualActionData": "Characters/Warwick/CAC/Warwick_Base",
         "iconCircle": "ASSETS/Characters/Warwick/HUD/Warwick_Circle_0.tex",
         "iconSquare": "ASSETS/Characters/Warwick/HUD/Warwick_Square_0.tex",
-        "iconAvatar": "ASSETS/Characters/Warwick/HUD/Warwick_Circle_58.SKINS_Warwick_Skin58.tex",
+        "iconAvatar": "ASSETS/Characters/Warwick/HUD/Warwick_Circle_58.tex",
         "healthBarData": {
             "attachToBone": "Buffbone_Cstm_Healthbar",
             "unitHealthBarStyle": 12,
@@ -249,7 +249,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_Fur_TX_CM.Chroma_Warwick_WarHounds.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_Fur_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -257,7 +257,7 @@
             },
             {
                 "TextureName": "Panning_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Vex_Skin10_Air_swoosh.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Vex_Skin10_Air_swoosh.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -410,7 +410,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.Chroma_Warwick_WarHounds.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "__type": "StaticMaterialShaderSamplerDef"
@@ -480,7 +480,7 @@
             },
             {
                 "TextureName": "Bloom_Mask",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_Bloom_Mask_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_Bloom_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -490,7 +490,7 @@
             },
             {
                 "TextureName": "Fresnel_Mask",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_Bloom_Mask_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_Bloom_Mask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -502,9 +502,64 @@
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alpha_Multiplier_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Ribbon_U_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_V_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_Amplitude",
+                "value": [
+                    17.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_MoveSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_SegmentCount",
+                "value": [
+                    5.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -1124,6 +1179,18 @@
         ],
         "switches": [
             {
+                "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
+                "on": false,
+                "Group": "Alpha",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
+                "on": false,
+                "Group": "Vertex_Animation",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -1286,7 +1353,7 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_Fur_TX_CM.Chroma_Warwick_WarHounds.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_Fur_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -1294,7 +1361,7 @@
             },
             {
                 "TextureName": "Panning_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Zac_Skin14_Q_Air_swoosh.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Zac_Skin14_Q_Air_swoosh.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             }
@@ -1449,17 +1516,17 @@
             },
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_Material_Gold_Matcap_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_Material_Gold_Matcap_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Color_Mask_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_MetalMask_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_MetalMask_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.Chroma_Warwick_WarHounds.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -1467,7 +1534,7 @@
             },
             {
                 "TextureName": "iridescentTex",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_Material_Iridescence_MAT_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_Material_Iridescence_MAT_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -1475,13 +1542,13 @@
             },
             {
                 "TextureName": "AdditiveScrollTex",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_AdditiveScroll_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_AdditiveScroll_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "AdditiveScroll_Mask",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_MetalMask_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_MetalMask_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -1911,7 +1978,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_Overlay_Mask_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_Overlay_Mask_TX_CM.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "addressW": 1,
@@ -1919,7 +1986,7 @@
             },
             {
                 "TextureName": "Main_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_Fur_TX_CM.Chroma_Warwick_WarHounds.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_Fur_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
@@ -2465,7 +2532,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_OverlayTail_Mask_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_OverlayTail_Mask_TX_CM.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "addressW": 1,
@@ -2473,7 +2540,7 @@
             },
             {
                 "TextureName": "Main_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_Fur_TX_CM.Chroma_Warwick_WarHounds.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_Fur_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
@@ -3019,17 +3086,17 @@
             },
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_Material_Gold_Matcap_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_Material_Gold_Matcap_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Color_Mask_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.Chroma_Warwick_WarHounds.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.Chroma_Warwick_WarHounds.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -3037,7 +3104,7 @@
             },
             {
                 "TextureName": "iridescentTex",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_Material_Iridescence_MAT_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_Material_Iridescence_MAT_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -3045,13 +3112,13 @@
             },
             {
                 "TextureName": "AdditiveScrollTex",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_AdditiveScroll_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Senna_Skin72_AdditiveScroll_TX_CM.tex",
                 "addressW": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "AdditiveScroll_Mask",
-                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_MetalMask_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texturePath": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_MetalMask_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -3638,7 +3705,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_Rengar_Skin58_W_Ring_RGB.SKINS_Warwick_Skin58.tex",
+                "particleColorTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_Rengar_Skin58_W_Ring_RGB.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -3667,7 +3734,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/ball32_02.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/ball32_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -3937,7 +4004,7 @@
                     },
                     "erosionFeatherIn": 0.0,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_idle_plasma.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_idle_plasma.tex",
                     "erosionMapAddressMode": 0,
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
@@ -4079,7 +4146,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_Vayne_Skin06_R_white.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_Vayne_Skin06_R_white.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -4394,7 +4461,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin35_W_SmokeErode_02.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin35_W_SmokeErode_02.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -4486,7 +4553,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_Q_Smoke01.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_Q_Smoke01.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -4795,7 +4862,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin35_W_SmokeErode_02.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin35_W_SmokeErode_02.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -4887,7 +4954,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_Q_Smoke01.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_Q_Smoke01.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -5196,7 +5263,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin35_W_SmokeErode_02.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin35_W_SmokeErode_02.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -5288,7 +5355,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_Q_Smoke01.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_Q_Smoke01.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -5537,7 +5604,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Sett_Skin67_Horizontal_Erode_A.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Sett_Skin67_Horizontal_Erode_A.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "{cb13aff1}": -70.0,
@@ -5627,7 +5694,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Sett_Skin67_Spark_Vertical_2.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Sett_Skin67_Spark_Vertical_2.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -5871,7 +5938,7 @@
                         },
                         "__type": "ValueFloat"
                     },
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Sett_Skin67_Horizontal_Erode_A.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Sett_Skin67_Horizontal_Erode_A.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "{cb13aff1}": -70.0,
@@ -5961,7 +6028,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Sett_Skin67_Spark_Vertical_2.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Sett_Skin67_Spark_Vertical_2.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -6046,7 +6113,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.Chroma_Warwick_WarHounds.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -6072,12 +6139,12 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "particleColorTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin35_Cas_Distort.SKINS_Warwick_Skin58.tex",
+                "particleColorTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin35_Cas_Distort.tex",
                 "blendMode": 1,
                 "pass": -6,
                 "distortionDefinition": {
                     "distortion": 0.009999999776482582,
-                    "normalMapTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin35_distortion_soundwaves_01.SKINS_Warwick_Skin58.tex",
+                    "normalMapTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin35_distortion_soundwaves_01.tex",
                     "__type": "VfxDistortionDefinitionData"
                 },
                 "miscRenderFlags": 1,
@@ -6134,7 +6201,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_Vayne_Skin06_R_white.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_Vayne_Skin06_R_white.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],
@@ -6342,7 +6409,7 @@
                     },
                     "erosionFeatherOut": 0.4000000059604645,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_steamjets.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_steamjets.tex",
                     "erosionMapAddressMode": 0,
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
@@ -6432,7 +6499,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_steamjets.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_steamjets.tex",
                 "frameRate": 8.0,
                 "numFrames": 4,
                 "startFrame": 1,
@@ -6497,7 +6564,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "particleColorTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_Rengar_Skin58_W_Ring_RGB.SKINS_Warwick_Skin58.tex",
+                "particleColorTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_Rengar_Skin58_W_Ring_RGB.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -6526,7 +6593,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/ball32_02.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/ball32_02.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -6762,7 +6829,7 @@
                     "erosionFeatherIn": 0.0,
                     "erosionFeatherOut": 0.30000001192092896,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_plasma_sharp.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_plasma_sharp.tex",
                     "erosionMapAddressMode": 0,
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
@@ -6901,7 +6968,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_Vayne_Skin06_R_white.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_Vayne_Skin06_R_white.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -6943,15 +7010,15 @@
                 "lifetime": 1.0,
                 "emitterName": "Override",
                 "importance": 3,
-                "particleColorTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_Vayne_Skin06_R_white.SKINS_Warwick_Skin58.tex",
+                "particleColorTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_Vayne_Skin06_R_white.tex",
                 "meshRenderFlags": 0,
                 "isUniformScale": 1,
                 "materialOverrideDefinitions": [
                     {
                         "priority": 2,
                         "subMeshName": "Metal",
-                        "baseTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_Body01.SKINS_Warwick_Skin58.tex",
-                        "transitionTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_Vayne_Skin06_R_white.SKINS_Warwick_Skin58.tex",
+                        "baseTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_Body01.tex",
+                        "transitionTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_R_Vayne_Skin06_R_white.tex",
                         "transitionSample": 0.078125,
                         "__type": "VfxMaterialOverrideDefinitionData"
                     }
@@ -7043,7 +7110,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.Chroma_Warwick_WarHounds.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin65/Warwick_Skin65_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             },
             {
@@ -7242,7 +7309,7 @@
                     },
                     "erosionFeatherOut": 0.4000000059604645,
                     "erosionSliceWidth": 1.0,
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_steamjets.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_steamjets.tex",
                     "erosionMapAddressMode": 0,
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
@@ -7332,7 +7399,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_steamjets.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Warwick_Skin58_W_steamjets.tex",
                 "frameRate": 8.0,
                 "numFrames": 4,
                 "startFrame": 1,
@@ -7527,7 +7594,7 @@
                     },
                     "erosionFeatherOut": 0.20000000298023224,
                     "erosionSliceWidth": 1.7000000476837158,
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_R_SmokeErode.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -7649,7 +7716,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Aatrox_Skin33_Recall_Dust.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Aatrox_Skin33_Recall_Dust.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -7853,7 +7920,7 @@
                     },
                     "erosionFeatherOut": 0.20000000298023224,
                     "erosionSliceWidth": 1.7000000476837158,
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_R_SmokeErode.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_R_SmokeErode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -7975,7 +8042,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Smolder_Base_4x4Smoke.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Smolder_Base_4x4Smoke.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -8012,7 +8079,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "falloffTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/DefaultFalloff.SKINS_Warwick_Skin58.tex",
+                "falloffTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/DefaultFalloff.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -8089,7 +8156,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionSliceWidth": 0.5,
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Senna_Ground_A_Errode.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Senna_Ground_A_Errode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -8186,7 +8253,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_Recall_Flares_02.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_Recall_Flares_02.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -8223,7 +8290,7 @@
                 "primitive": {
                     "__type": "VfxPrimitiveArbitraryQuad"
                 },
-                "falloffTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/DefaultFalloff.SKINS_Warwick_Skin58.tex",
+                "falloffTexture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/DefaultFalloff.tex",
                 "blendMode": 4,
                 "birthColor": {
                     "constantValue": [
@@ -8300,7 +8367,7 @@
                         "__type": "ValueFloat"
                     },
                     "erosionSliceWidth": 0.5,
-                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Senna_Ground_A_Errode.SKINS_Warwick_Skin58.tex",
+                    "erosionMapName": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Senna_Ground_A_Errode.tex",
                     "erosionMapChannelMixer": {
                         "constantValue": [
                             1.0,
@@ -8397,7 +8464,7 @@
                     },
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_Recall_Flares_02.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Particles/Darius_Skin67_Recall_Flares_02.tex",
                 "numFrames": 4,
                 "texDiv": [
                     2.0,
@@ -8501,7 +8568,7 @@
                     ],
                     "__type": "ValueVector3"
                 },
-                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_TX_CM.SKINS_Warwick_Skin58.tex",
+                "texture": "ASSETS/Characters/Warwick/Skins/Skin58/Warwick_Skin58_TX_CM.tex",
                 "__type": "VfxEmitterDefinitionData"
             }
         ],

@@ -13783,13 +13783,17 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.png",
-        "tooltip_text": "Ogni secondo, le unità di Shurima ottengono @ASPerSecond*100@% velocità d'attacco e ripristinano @HealthRestorePerSecond@ salute. All'inizio del combattimento, ottengono effetti aggiuntivi.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismatico: sblocca Nasus, Renekton e Xerath, poi schiera 4 Shurima</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@% della salute massima</row><br><row>(@MinUnits@) @ArmorMR@ armatura e resistenza magica</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Un'unità di Shurima ascende a DIVINITÀ ogni @GodhoodCadence@ secondo/i </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>Disponibile solo dopo che sono stati sbloccati Nasus, Renekton e Xerath.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
+        "tooltip_text": "Ogni secondo, le unità di Shurima ottengono @ASPerSecond*100@% velocità d'attacco e ripristinano @HealthRestorePerSecond@ salute. All'inizio del combattimento, ottengono effetti aggiuntivi.<ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Prismatico: sblocca Nasus, Renekton e Xerath, poi schiera 4 Shurima</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER><br><br><row>(@MinUnits@) @BonusHealth*100@% della salute massima</row><br><row>(@MinUnits@) @ArmorMR@ armatura e resistenza magica</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>Un'unità di Shurima ascende a DIVINITÀ ogni @GodhoodCadence@ secondo/i </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>Disponibile solo dopo che sono stati sbloccati Nasus, Renekton e Xerath.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "ASPerSecond",
                         "value": 0.02
+                    },
+                    {
+                        "name": "GodhoodCadence",
+                        "value": 3.0
                     },
                     {
                         "name": "HealthRestorePerSecond",
@@ -15816,7 +15820,7 @@
                     },
                     {
                         "name": "TeamManaRegen",
-                        "value": 3.0
+                        "value": 2.0
                     }
                 ],
                 "min_units": 5,

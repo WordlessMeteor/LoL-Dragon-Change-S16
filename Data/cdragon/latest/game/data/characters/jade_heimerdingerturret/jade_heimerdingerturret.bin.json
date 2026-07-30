@@ -1,0 +1,573 @@
+{
+    "Characters/Jade_HeimerdingerTurret/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretBlue_Attack": {
+        "ObjectName": "Jade_HeimerdingerTurretBlue_Attack",
+        "mScriptName": "Jade_HeimerdingerTurretBlue_Attack",
+        "mSpell": {
+            "flags": 128,
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "Jade_HeimerdingerTurretBlue_Attack",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 30.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1599.39990234375,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 12.774999618530273,
+            "missileSpeed": 1599.39990234375,
+            "mMissileEffectKey": "Jade_Heimerdinger_Q_Turret_Charged_Mis",
+            "mHitEffectKey": "Jade_Heimerdinger_Q_Turret_Charged_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_HeimerTYellow_HeimerdingerTurretEnergyBlast_OnCast",
+                "16": "Play_sfx_HeimerTYellow_HeimerdingerTurretEnergyBlast_OnMissileLaunch",
+                "13": "Play_sfx_HeimerTYellow_HeimerdingerTurretEnergyBlast_OnHit"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{73eeaa52}": {
+        "ObjectName": "Jade_HeimerdingerTurretYellow_QSpawnDestroyAudio",
+        "mScriptName": "Jade_HeimerdingerTurretYellow_QSpawnDestroyAudio",
+        "mSpell": {
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_HeimerTYellow_HeimerdingerEngineAudio_OnBuffActivate",
+                "19": "Play_sfx_HeimerTYellow_HeimerdingerQSpawnDestroyAudio_OnBuffDeactivate"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretGreen_Attack": {
+        "ObjectName": "Jade_HeimerdingerTurretGreen_Attack",
+        "mScriptName": "Jade_HeimerdingerTurretGreen_Attack",
+        "mSpell": {
+            "flags": 128,
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 30.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1599.39990234375,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 12.774999618530273,
+            "missileSpeed": 1599.39990234375,
+            "mMissileEffectKey": "Jade_Heimerdinger_Q_Turret_Mis",
+            "mHitEffectKey": "Jade_Heimerdinger_Q_Turret_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_HeimerTYellow_HeimerTYellowBasicAttack_OnCast",
+                "16": "Play_sfx_HeimerTYellow_HeimerTYellowBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_HeimerTYellow_HeimerTYellowBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretRed_Attack": {
+        "ObjectName": "Jade_HeimerdingerTurretRed_Attack",
+        "mScriptName": "Jade_HeimerdingerTurretRed_Attack",
+        "mSpell": {
+            "flags": 128,
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 30.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1599.39990234375,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 12.774999618530273,
+            "missileSpeed": 1599.39990234375,
+            "mMissileEffectKey": "Jade_Heimerdinger_Q_Turret_Mis",
+            "mHitEffectKey": "Jade_Heimerdinger_Q_Turret_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_HeimerTYellow_HeimerTYellowBasicAttack_OnCast",
+                "16": "Play_sfx_HeimerTYellow_HeimerTYellowBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_HeimerTYellow_HeimerTYellowBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretYellow_Attack": {
+        "ObjectName": "Jade_HeimerdingerTurretYellow_Attack",
+        "mScriptName": "Jade_HeimerdingerTurretYellow_Attack",
+        "mSpell": {
+            "flags": 128,
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0,
+                1000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0,
+                    1000.0
+                ],
+                "{0a3e0478}": 1000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 30.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "",
+                    "mTargetBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1599.39990234375,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 12.774999618530273,
+            "missileSpeed": 1599.39990234375,
+            "mMissileEffectKey": "Jade_Heimerdinger_Q_Turret_Mis",
+            "mHitEffectKey": "Jade_Heimerdinger_Q_Turret_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_HeimerTYellow_HeimerTYellowBasicAttack_OnCast",
+                "16": "Play_sfx_HeimerTYellow_HeimerTYellowBasicAttack_OnMissileLaunch",
+                "13": "Play_sfx_HeimerTYellow_HeimerTYellowBasicAttack_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{f42d8f8c}": {
+        "ObjectName": "Jade_HeimerdingerTurretYellow_EngineAudio",
+        "mScriptName": "Jade_HeimerdingerTurretYellow_EngineAudio",
+        "mSpell": {
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_HeimerTYellow_HeimerdingerEngineAudio_OnBuffActivate",
+                "19": "Play_sfx_HeimerTYellow_HeimerTurretShutdown_OnBuffDeactivate"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_HeimerdingerTurret/CharacterRecords/Root": {
+        "mCharacterName": "Jade_HeimerdingerTurret",
+        "baseHPModifiable": {
+            "baseValue": 260.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 110.0,
+        "healthBarFullParallax": true,
+        "baseDamageModifiable": {
+            "baseValue": 0.0010000000474974513,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 80.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 1.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 525.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 1.25,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 450.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.011979999952018261,
+            "mAttackProbability": 1.0,
+            "mAttackName": "Jade_HeimerdingerTurretYellow_Attack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.012000000104308128,
+                "mAttackName": "Jade_HeimerdingerTurretBlue_Attack",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackDelayCastOffsetPercent": -0.012000000104308128,
+                "mAttackName": "Jade_HeimerdingerTurretGreen_Attack",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackDelayCastOffsetPercent": -0.012000000104308128,
+                "mAttackName": "Jade_HeimerdingerTurretRed_Attack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "towerTargetingPriorityBoost": 10.0,
+        "expGivenOnDeath": 0.0,
+        "goldGivenOnDeath": 12.0,
+        "perceptionBubbleRadius": 650.0,
+        "significance": 0.30000001192092896,
+        "spellNames": [
+            "Jade_HeimerdingerTurret_HeimerdingerTurretEnergyBlast",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "spells": [
+            "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretYellow_Attack",
+            "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretGreen_Attack",
+            "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretBlue_Attack",
+            "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretRed_Attack"
+        ],
+        "{c1984296}": [
+            "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretBlue_Attack",
+            "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretGreen_Attack",
+            "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretRed_Attack",
+            "Characters/Jade_HeimerdingerTurret/Spells/Jade_HeimerdingerTurretYellow_Attack",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}",
+            "{00000000}"
+        ],
+        "name": "game_character_displayname_HeimerdingerQ",
+        "selectionHeight": 60.0,
+        "selectionRadius": 60.0,
+        "pathfindingCollisionRadius": 1.0,
+        "overrideGameplayCollisionRadius": 35.0,
+        "unitTagsString": "Minion | Minion_Summon",
+        "characterToolData": {
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "description": "game_character_description_HeimerdingerQ",
+            "__type": "CharacterToolData"
+        },
+        "minionScoreValue": 0.0,
+        "flags": 8987904,
+        "__type": "CharacterRecord"
+    },
+    "__linked": []
+}

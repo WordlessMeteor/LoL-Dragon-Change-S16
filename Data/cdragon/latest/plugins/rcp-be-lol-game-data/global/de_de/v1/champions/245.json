@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Ekko wirft eine Zeitgranate, die sich zu einem Zeitverzerrungsfeld ausweitet, wenn sie auf einen gegnerischen Champion trifft, verlangsamt und jeden, der im Feld gefangen ist, Schaden zufügt. Nach einer Verzögerung kehrt die Granate zu Ekko zurück, wobei sie auf dem Rückweg erneut Schaden verursacht.",
-            "dynamicDescription": "Ekko wirft ein Gerät, das <magicDamage>@InitialDamage@&nbsp;magischen Schaden</magicDamage> verursacht. Wenn es einen Champion trifft oder das Ende seiner Reichweite erreicht, explodiert es in ein Feld, das Gegner in seinem Inneren um @Effect2Amount*-100@&nbsp;% <status>verlangsamt</status>. Nachdem es sich ausgebreitet hat, ruft Ekko es zurück und verursacht <magicDamage>@RecallDamage@&nbsp;magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko wirft ein Gerät, das <magicDamage>@InitialDamage@ magischen Schaden</magicDamage> verursacht. Wenn es einen Champion trifft oder das Ende seiner Reichweite erreicht, explodiert es in ein Feld, das Gegner in seinem Inneren um @SlowPercent*-100@ % <status>verlangsamt</status>. Nachdem es sich ausgebreitet hat, ruft Ekko es zurück und verursacht <magicDamage>@RecallDamage@ magischen Schaden</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Ekkos normale Angriffe fügen Gegnern mit wenig Leben zusätzlichen magischen Schaden zu. Ekko kann „Parallelkonvergenz“ aktivieren, um die Zeitlinie aufzubrechen und nach ein paar Sekunden eine Anomalie zu erschaffen, die Gegner, die in ihr gefangen sind, verlangsamt. Betritt Ekko die Anomalie, erhält er einen Schild und betäubt Gegner, indem er sie in der Zeit feststecken lässt.",
-            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Ekkos Angriffe gegen Gegner mit weniger als 30&nbsp;% Leben verursachen <magicDamage>magischen Schaden</magicDamage> in Höhe von @MissingHealthPercent@&nbsp;des fehlenden Lebens.<br><br><spellActive>Aktiv:</spellActive> Ekko feuert nach einer Verzögerung eine Chronosphäre ab, die 1,5 Sekunden anhält und Gegner in ihrem Inneren um @Effect10Amount@&nbsp;% <status>verlangsamt</status>. Wenn Ekko die Sphäre betritt, explodiert sie, <status>betäubt</status> Gegner @Effect2Amount@&nbsp;Sekunden lang und gewährt ihm einen <shield>Schild</shield> in Höhe von @TotalShield@.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiv:</spellPassive> Ekkos Angriffe gegen Gegner mit weniger als @BelowHealthThreshold*100@ % Leben verursachen <magicDamage>magischen Schaden in Höhe von @MissingHealthPercent@ des fehlenden Lebens</magicDamage>.<br><br><spellActive>Aktiv:</spellActive> Ekko feuert nach einer Verzögerung eine Chronosphäre ab, die @SlowZoneDuration@ Sekunden lang anhält und Gegner in ihrem Inneren um @SlowPercent@ % <status>verlangsamt</status>. Wenn Ekko die Sphäre betritt, explodiert sie, <status>betäubt</status> Gegner @StunDuration@ Sekunden lang und gewährt ihm einen <shield>Schild in Höhe von @TotalShield@</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

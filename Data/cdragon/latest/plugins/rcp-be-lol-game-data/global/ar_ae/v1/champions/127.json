@@ -1111,7 +1111,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "ترمي رمحًا جليديًا يتفتت عند إصابة عدو، مما يلحق ضرر سحر به ويبطئ سرعة حركته. تخترق الشظايا جسد الهدف فتلحق ذات الضرر بالأعداء المصابين الآخرين.",
-            "dynamicDescription": "ترمي ليساندرا رمحًا من الجليد يتحطم في أول عدو يصاب به، فيلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> و <status>يبطئه</status> بنسبة @Effect3Amount*-100@% لمدة @Effect2Amount@ث، ويلحق الضرر ويبطئ الأعداء الموجودين خلفه.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "ترمي ليساندرا رمحًا من الجليد يتحطم عند إصابة أول عدو، فيلحق به <magicDamage>@TotalDamage@ ضرر سحر</magicDamage> كما <status>يبطئه</status> بنسبة @SlowPercentage*-100@% لمدة @SlowDuration@ث، ويلحق كذلك الضرر بالأعداء الموجودين خلفه ويبطئهم.@SpellModifierDescriptionAppend@",
             "range": [
                 725.0,
                 725.0,
@@ -1261,7 +1261,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "تجمد الأعداء القريبين في الجليد، وتلحق ضرر سحر بهم وتثبتهم في أماكنهم.",
-            "dynamicDescription": "تنشئ ليساندرا حقلًا جليديًا <status>يثبّت</status> الأعداء في الجوار لمدة @Effect2Amount@ث ويلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "تنشئ ليساندرا حقلًا جليديًا يتولى <status>تثبيت</status> الأعداء في الجوار لمدة @SnareDuration@ث، ويلحق <magicDamage>@TotalDamage@ ضرر سحر</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

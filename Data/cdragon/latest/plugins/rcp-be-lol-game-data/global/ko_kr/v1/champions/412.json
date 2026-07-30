@@ -1832,7 +1832,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "쓰레쉬가 공격하기 위한 힘을 모아, 다음 공격까지 대기시간이 길수록 더 큰 피해를 가합니다. 활성화하면 쇠사슬을 휘둘러 맞은 적들을 휘두른 방향으로 밀어냅니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 기본 공격 시 마지막 공격 이후 공격을 하지 않고 있는 시간에 비례하여 추가 마법 피해를 입힙니다. <magicDamage>@PAttackDamageMin@</magicDamage>~<magicDamage>@PAttackDamageMax@</magicDamage>의 마법 피해를 입힙니다.<br><br><spellActive>사용 시:</spellActive> 사슬을 휘둘러 휘두른 방향으로 적을 <status>당기거나</status> <status>끌어옵니다</status>. 적중한 적은 @Effect4Amount@초 동안 @Effect2Amount@% <status>둔화</status>되고 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 기본 공격 시 마지막 공격 이후 공격을 하지 않고 있는 시간에 비례하여 추가 마법 피해를 입힙니다. <magicDamage>@PAttackDamageMin@</magicDamage>~<magicDamage>@PAttackDamageMax@의 마법 피해</magicDamage>를 입힙니다.<br><br><spellActive>사용 시:</spellActive> 사슬을 휘둘러 휘두른 방향으로 적을 <status>당기거나</status> <status>밀어냅니다</status>. 적중한 적은 @SlowDuration@초 동안 @ActiveSlowPercentage@% <status>둔화</status>되고 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 500.0,
                 500.0,
@@ -1982,7 +1982,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "벽으로 된 감옥이 부서지면 둔화를 일으키며 피해를 입힙니다.",
-            "dynamicDescription": "쓰레쉬가 영혼 감옥을 생성합니다. 장벽을 통과하는 적 챔피언은 @Effect2Amount@초 동안 @Effect3Amount@% <status>둔화</status>되고 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입습니다. 충돌하면 벽은 허물어집니다. 벽 하나가 무너지면 나머지 벽은 피해를 입히지 않고 <status>둔화</status> 지속시간이 절반만 적용됩니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "쓰레쉬가 영혼 감옥을 생성합니다. 장벽을 통과하는 적 챔피언은 @SlowDuration@초 동안 @SlowAmount@% <status>둔화</status>되고 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입습니다. 충돌하면 벽은 허물어집니다. 벽 하나가 무너지면 나머지 벽은 피해를 입히지 않고 <status>둔화</status> 지속시간이 절반만 적용됩니다.@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.14.1",
+    "version": "16.15.1",
     "data": {
         "Nami": {
             "id": "Nami",
@@ -10,7 +10,7 @@
             "title": "娜美",
             "image": {
                 "full": "Nami.png",
-                "sprite": "champion2.png",
+                "sprite": "champion4.png",
                 "group": "champion",
                 "x": 432,
                 "y": 96,
@@ -530,7 +530,7 @@
                     "id": "NamiQ",
                     "name": "碧波之牢",
                     "description": "朝着目标区域放出一个泡泡，对命中的所有敌人造成伤害和晕眩效果。",
-                    "tooltip": "娜美掷出一个泡泡，<status>晕眩</status>敌人{{ e2 }}秒并造成<magicDamage>{{ totaldamagett }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "娜美掷出一个泡泡，<status>晕眩</status>敌人{{ stunduration }}秒并造成<magicDamage>{{ totaldamagett }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -658,10 +658,10 @@
                     "rangeBurn": "875",
                     "image": {
                         "full": "NamiQ.png",
-                        "sprite": "spell9.png",
+                        "sprite": "spell15.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 48,
+                        "x": 0,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -801,10 +801,10 @@
                     "rangeBurn": "725",
                     "image": {
                         "full": "NamiW.png",
-                        "sprite": "spell9.png",
+                        "sprite": "spell15.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 48,
+                        "x": 48,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -944,10 +944,10 @@
                     "rangeBurn": "800",
                     "image": {
                         "full": "NamiE.png",
-                        "sprite": "spell9.png",
+                        "sprite": "spell15.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 48,
+                        "x": 96,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -957,7 +957,7 @@
                     "id": "NamiR",
                     "name": "怒涛之啸",
                     "description": "召唤一阵巨大的怒涛，击飞、减速并伤害沿途的所有敌人。被怒涛命中的友方英雄会获得【踏浪之行】的双倍加速效果。",
-                    "tooltip": "娜美召唤一阵怒涛，造成0.5秒<status>击飞</status>，{{ e4 }}%<status>减速</status>并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<status>减速</status>的持续时间会基于怒涛的行进距离而提升，至多持续{{ e5 }}秒。<br /><br />被怒涛命中的友方英雄会获得<spellName>踏浪之行</spellName>的双倍效果。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "娜美召唤一阵怒涛，造成0.5秒<status>击飞</status>，{{ slowamount }}%<status>减速</status>并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<status>减速</status>的持续时间会基于怒涛的行进距离而提升，至多持续{{ maxslowduration }}秒。<br /><br />被怒涛命中的友方英雄会获得<spellName>踏浪之行</spellName>的双倍效果。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -1059,10 +1059,10 @@
                     "rangeBurn": "2550",
                     "image": {
                         "full": "NamiR.png",
-                        "sprite": "spell9.png",
+                        "sprite": "spell15.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 48,
+                        "x": 144,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -1074,7 +1074,7 @@
                 "description": "每当娜美的技能命中友方英雄时，他们都会暂时获得移动速度加成。",
                 "image": {
                     "full": "NamiPassive.png",
-                    "sprite": "passive2.png",
+                    "sprite": "passive4.png",
                     "group": "passive",
                     "x": 432,
                     "y": 96,

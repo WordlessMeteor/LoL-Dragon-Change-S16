@@ -1,8 +1,8 @@
 {
-    "{ede0fc24}": {
-        "mRootSpell": "{0da1e415}",
+    "Characters/Jade_Akali/Spells/Jade_AkaliWAbility": {
+        "mRootSpell": "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliW",
         "mChildSpells": [
-            "{0da1e415}",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliW",
             "{52d4a4b6}",
             "{475db9f2}",
             "{3fc0435c}",
@@ -31,7 +31,7 @@
         },
         "__type": "SpellObject"
     },
-    "{0da1e415}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliW": {
         "ObjectName": "Jade_AkaliW",
         "objectPath": "{0da1e415}",
         "mScriptName": "Jade_AkaliW",
@@ -743,7 +743,7 @@
             "mCastType": 3,
             "castFrame": 7.53000020980835,
             "missileSpeed": 1.0,
-            "mMissileEffectKey": "{58d51e18}",
+            "mMissileEffectKey": "Jade_Akali_W_Smoke_Ring_Node",
             "mLineWidth": 60.0,
             "bHaveHitBone": true,
             "mHitBoneName": "root",
@@ -852,7 +852,7 @@
             "mCastType": 3,
             "castFrame": 7.53000020980835,
             "missileSpeed": 1.0,
-            "mMissileEffectKey": "{58d51e18}",
+            "mMissileEffectKey": "Jade_Akali_W_Smoke_Ring_Node",
             "mLineWidth": 60.0,
             "bHaveHitBone": true,
             "mHitBoneName": "root",
@@ -1370,7 +1370,7 @@
         },
         "__type": "SpellObject"
     },
-    "{0200b1e5}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliBasicAttack2": {
         "ObjectName": "Jade_AkaliBasicAttack2",
         "objectPath": "{0200b1e5}",
         "mScriptName": "Jade_AkaliBasicAttack2",
@@ -1545,10 +1545,10 @@
         },
         "__type": "SpellObject"
     },
-    "{18d01d51}": {
-        "mRootSpell": "{ecccc4d3}",
+    "Characters/Jade_Akali/Spells/Jade_AkaliRAbility": {
+        "mRootSpell": "Characters/Jade_Akali/Spells/Jade_AkaliRAbility/Jade_AkaliR",
         "mChildSpells": [
-            "{ecccc4d3}"
+            "Characters/Jade_Akali/Spells/Jade_AkaliRAbility/Jade_AkaliR"
         ],
         "mName": "Jade_AkaliRAbility",
         "__type": "AbilityObject"
@@ -1559,7 +1559,7 @@
         "mScriptName": "Jade_AkaliRWithQLingering",
         "__type": "SpellObject"
     },
-    "{ecccc4d3}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliRAbility/Jade_AkaliR": {
         "ObjectName": "Jade_AkaliR",
         "objectPath": "{ecccc4d3}",
         "mScriptName": "Jade_AkaliR",
@@ -1708,8 +1708,8 @@
             ],
             "mAmmoRechargeTime": [
                 30.0,
-                30.0,
-                22.5,
+                25.0,
+                20.0,
                 15.0,
                 30.0,
                 30.0,
@@ -1834,7 +1834,7 @@
         },
         "__type": "SpellObject"
     },
-    "{36388995}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliBasicAttack": {
         "ObjectName": "Jade_AkaliBasicAttack",
         "objectPath": "{36388995}",
         "mScriptName": "Jade_AkaliBasicAttack",
@@ -1927,10 +1927,10 @@
         },
         "__type": "SpellObject"
     },
-    "{a071e2ba}": {
-        "mRootSpell": "{8fa5ec11}",
+    "Characters/Jade_Akali/Spells/Jade_AkaliQAbility": {
+        "mRootSpell": "Characters/Jade_Akali/Spells/Jade_AkaliQAbility/Jade_AkaliQ",
         "mChildSpells": [
-            "{8fa5ec11}"
+            "Characters/Jade_Akali/Spells/Jade_AkaliQAbility/Jade_AkaliQ"
         ],
         "mName": "Jade_AkaliQAbility",
         "__type": "AbilityObject"
@@ -1947,7 +1947,7 @@
         "mScriptName": "Jade_AkaliQTargetInternal",
         "__type": "SpellObject"
     },
-    "{8fa5ec11}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliQAbility/Jade_AkaliQ": {
         "ObjectName": "Jade_AkaliQ",
         "objectPath": "{8fa5ec11}",
         "mScriptName": "Jade_AkaliQ",
@@ -1957,13 +1957,13 @@
                 {
                     "name": "InitialDamageBase",
                     "values": [
-                        15.0,
-                        35.0,
-                        55.0,
-                        75.0,
+                        20.0,
+                        45.0,
+                        70.0,
                         95.0,
-                        115.0,
-                        135.0
+                        120.0,
+                        145.0,
+                        170.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2035,13 +2035,13 @@
                 {
                     "name": "APRatioProc",
                     "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -2132,11 +2132,11 @@
                 "InitialDamage": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{cdd07acf}",
+                            "mDataValue": "InitialDamageBase",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{3070cbdd}",
+                            "mDataValue": "APRatioInitial",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -2149,7 +2149,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{f3b8264f}",
+                            "mDataValue": "APRatioProc",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -2616,7 +2616,7 @@
         },
         "__type": "SpellObject"
     },
-    "{4c58e765}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliCritAttack": {
         "ObjectName": "Jade_AkaliCritAttack",
         "objectPath": "{4c58e765}",
         "mScriptName": "Jade_AkaliCritAttack",
@@ -2683,7 +2683,7 @@
             "castConeDistance": 100.0,
             "castFrame": 10.0,
             "missileSpeed": 467.0,
-            "mHitEffectKey": "{78289a69}",
+            "mHitEffectKey": "Jade_Akali_Crit_Tar",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
             "SpellEventToAudioEventSuffix": {
@@ -2702,15 +2702,15 @@
         },
         "__type": "SpellObject"
     },
-    "{ccb4e4b6}": {
-        "mRootSpell": "{59f27ef9}",
+    "Characters/Jade_Akali/Spells/Jade_AkaliEAbility": {
+        "mRootSpell": "Characters/Jade_Akali/Spells/Jade_AkaliEAbility/Jade_AkaliE",
         "mChildSpells": [
-            "{59f27ef9}"
+            "Characters/Jade_Akali/Spells/Jade_AkaliEAbility/Jade_AkaliE"
         ],
         "mName": "Jade_AkaliEAbility",
         "__type": "AbilityObject"
     },
-    "{59f27ef9}": {
+    "Characters/Jade_Akali/Spells/Jade_AkaliEAbility/Jade_AkaliE": {
         "ObjectName": "Jade_AkaliE",
         "objectPath": "{59f27ef9}",
         "mScriptName": "Jade_AkaliE",
@@ -2976,100 +2976,52 @@
         },
         "__type": "SpellObject"
     },
-    "{6833bc76}": {
-        "ObjectName": "Jade_AkaliBasicAttackPassiveMelee",
-        "objectPath": "{6833bc76}",
-        "mScriptName": "Jade_AkaliBasicAttackPassiveMelee",
+    "{5c751401}": {
+        "ObjectName": "Jade_AkaliPassiveForce",
+        "objectPath": "{5c751401}",
+        "mScriptName": "Jade_AkaliPassiveForce",
         "mSpell": {
-            "mAffectsTypeFlags": 4234,
-            "mAlternateName": "Jade_AkaliBasicAttack",
-            "mAnimationName": "Passive_Melee_Attack",
-            "{11704a2b}": 0.3240000009536743,
-            "cooldownTime": [
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0,
-                0.0
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/AkaliTwinDisciplines.dds"
             ],
-            "Cooldown": {
-                "values": [
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "{0a3e0478}": 0.0,
-                "__type": "{0a0eddc9}"
-            },
-            "mPreCastLockoutDeltaTime": 0.5,
-            "mPostCastLockoutDeltaTime": 0.10000000149011612,
-            "canCastWhileDisabled": true,
-            "mUseAutoattackCastTimeData": {
-                "__type": "UseAutoattackCastTimeData"
-            },
-            "castRange": [
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0
-            ],
-            "{0e1136d1}": {
-                "values": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
-                ],
-                "{0a3e0478}": 100.0,
-                "__type": "{0a0eddc9}"
-            },
-            "castRadius": [
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0,
-                100.0
-            ],
-            "castConeDistance": 100.0,
-            "castFrame": 9.600000381469727,
-            "missileSpeed": 467.0,
-            "mHitEffectOrientType": 0,
-            "bHaveHitBone": true,
-            "SpellEventToAudioEventSuffix": {
-                "12": "Play_sfx_Akali_AkaliBasicAttackPassiveMelee_OnCast",
-                "13": "Play_sfx_Akali_AkaliBasicAttackPassiveMelee_OnHit"
-            },
-            "mClientData": {
-                "mTargeterDefinitions": [
-                    {
-                        "useCasterBoundingBox": false,
-                        "__type": "TargeterDefinitionRange"
-                    }
-                ],
-                "__type": "SpellDataResourceClient"
-            },
             "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_AkaliPassiveForce",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Jade_AkaliPassiveForce_Name",
+                    "keyTooltip": "Buff_Jade_AkaliPassiveForce_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
         },
         "__type": "SpellObject"
     },
-    "{7bb20de0}": {
-        "ObjectName": "Jade_AkaliSkin61Manager",
-        "objectPath": "{7bb20de0}",
-        "mScriptName": "Jade_AkaliSkin61Manager",
+    "{ab9fd185}": {
+        "ObjectName": "Jade_AkaliPassiveMight",
+        "objectPath": "{ab9fd185}",
+        "mScriptName": "Jade_AkaliPassiveMight",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/AkaliTwinDisciplines.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_AkaliPassiveMight",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Jade_AkaliPassiveMight_Name",
+                    "keyTooltip": "Buff_Jade_AkaliPassiveMight_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
         "__type": "SpellObject"
     },
     "{f3e3777b}": {
@@ -3167,52 +3119,78 @@
                 {
                     "name": "BaseDamageOnHit",
                     "values": [
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "DamageOnHitPerAP",
                     "values": [
-                        0.1599999964237213,
-                        0.1599999964237213,
-                        0.1599999964237213,
-                        0.1599999964237213,
-                        0.1599999964237213,
-                        0.1599999964237213,
-                        0.1599999964237213
+                        0.16660000383853912,
+                        0.16660000383853912,
+                        0.16660000383853912,
+                        0.16660000383853912,
+                        0.16660000383853912,
+                        0.16660000383853912,
+                        0.16660000383853912
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "BaseSpellVampPercent",
                     "values": [
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0,
-                        6.0
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0,
+                        8.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "SpellVampPerAD",
                     "values": [
-                        0.1599999964237213,
-                        0.1599999964237213,
-                        0.1599999964237213,
-                        0.1599999964237213,
-                        0.1599999964237213,
-                        0.1599999964237213,
-                        0.1599999964237213
+                        0.16660000383853912,
+                        0.16660000383853912,
+                        0.16660000383853912,
+                        0.16660000383853912,
+                        0.16660000383853912,
+                        0.16660000383853912,
+                        0.16660000383853912
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MightThreshold",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ForceThreshold",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -3222,12 +3200,35 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{e8c61679}",
+                            "mDataValue": "BaseDamageOnHit",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{ac9c039c}",
-                            "__type": "StatByNamedDataValueCalculationPart"
+                            "mPart1": {
+                                "mSubparts": [
+                                    {
+                                        "mPart1": {
+                                            "mDataValue": "{84bf2957}",
+                                            "__type": "NamedDataValueCalculationPart"
+                                        },
+                                        "mPart2": {
+                                            "mNumber": -1.0,
+                                            "__type": "NumberCalculationPart"
+                                        },
+                                        "__type": "ProductOfSubPartsCalculationPart"
+                                    },
+                                    {
+                                        "mCoefficient": 1.0,
+                                        "__type": "StatByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "mPart2": {
+                                "mDataValue": "DamageOnHitPerAP",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -3236,14 +3237,143 @@
                     "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{1b28206b}",
+                            "mDataValue": "BaseSpellVampPercent",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mDataValue": "{84759df5}",
-                            "__type": "StatByNamedDataValueCalculationPart"
+                            "mPart1": {
+                                "mSubparts": [
+                                    {
+                                        "mPart1": {
+                                            "mDataValue": "{c22af2ab}",
+                                            "__type": "NamedDataValueCalculationPart"
+                                        },
+                                        "mPart2": {
+                                            "mNumber": -1.0,
+                                            "__type": "NumberCalculationPart"
+                                        },
+                                        "__type": "ProductOfSubPartsCalculationPart"
+                                    },
+                                    {
+                                        "mStat": 2,
+                                        "mStatFormula": 2,
+                                        "OutputType": 2,
+                                        "mCoefficient": 1.0,
+                                        "__type": "StatByCoefficientCalculationPart"
+                                    }
+                                ],
+                                "__type": "SumOfSubPartsCalculationPart"
+                            },
+                            "mPart2": {
+                                "mDataValue": "SpellVampPerAD",
+                                "__type": "NamedDataValueCalculationPart"
+                            },
+                            "__type": "ProductOfSubPartsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{ba34d9a6}": {
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mPart1": {
+                                        "mSubparts": [
+                                            {
+                                                "mNumber": -20.0,
+                                                "__type": "NumberCalculationPart"
+                                            },
+                                            {
+                                                "mCoefficient": 1.0,
+                                                "__type": "StatByCoefficientCalculationPart"
+                                            }
+                                        ],
+                                        "__type": "SumOfSubPartsCalculationPart"
+                                    },
+                                    "mPart2": {
+                                        "mDataValue": "DamageOnHitPerAP",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "__type": "ProductOfSubPartsCalculationPart"
+                                },
+                                {
+                                    "__type": "NumberCalculationPart"
+                                }
+                            ],
+                            "__type": "{8a96ea3c}"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{c225398a}": {
+                    "mFormulaParts": [
+                        {
+                            "mSubparts": [
+                                {
+                                    "mPart1": {
+                                        "mSubparts": [
+                                            {
+                                                "mPart1": {
+                                                    "mDataValue": "{c22af2ab}",
+                                                    "__type": "NamedDataValueCalculationPart"
+                                                },
+                                                "mPart2": {
+                                                    "mNumber": -1.0,
+                                                    "__type": "NumberCalculationPart"
+                                                },
+                                                "__type": "ProductOfSubPartsCalculationPart"
+                                            },
+                                            {
+                                                "mStat": 2,
+                                                "mStatFormula": 2,
+                                                "OutputType": 2,
+                                                "mCoefficient": 1.0,
+                                                "__type": "StatByCoefficientCalculationPart"
+                                            }
+                                        ],
+                                        "__type": "SumOfSubPartsCalculationPart"
+                                    },
+                                    "mPart2": {
+                                        "mDataValue": "SpellVampPerAD",
+                                        "__type": "NamedDataValueCalculationPart"
+                                    },
+                                    "__type": "ProductOfSubPartsCalculationPart"
+                                },
+                                {
+                                    "__type": "NumberCalculationPart"
+                                }
+                            ],
+                            "__type": "{8a96ea3c}"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{3b7e3a04}": {
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamageOnHit",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mSpellCalculationKey": "{ba34d9a6}",
+                            "__type": "{f3cbe7b2}"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "{d4fbac39}": {
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseSpellVampPercent",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mSpellCalculationKey": "{c225398a}",
+                            "__type": "{f3cbe7b2}"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -3294,6 +3424,102 @@
             },
             "__type": "SpellDataResource"
         },
+        "__type": "SpellObject"
+    },
+    "{6833bc76}": {
+        "ObjectName": "Jade_AkaliBasicAttackPassiveMelee",
+        "objectPath": "{6833bc76}",
+        "mScriptName": "Jade_AkaliBasicAttackPassiveMelee",
+        "mSpell": {
+            "mAffectsTypeFlags": 4234,
+            "mAlternateName": "Jade_AkaliBasicAttack",
+            "mAnimationName": "Passive_Melee_Attack",
+            "{11704a2b}": 0.3240000009536743,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mPreCastLockoutDeltaTime": 0.5,
+            "mPostCastLockoutDeltaTime": 0.10000000149011612,
+            "canCastWhileDisabled": true,
+            "mUseAutoattackCastTimeData": {
+                "__type": "UseAutoattackCastTimeData"
+            },
+            "castRange": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "{0a3e0478}": 100.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 9.600000381469727,
+            "missileSpeed": 467.0,
+            "mHitEffectOrientType": 0,
+            "bHaveHitBone": true,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Akali_AkaliBasicAttackPassiveMelee_OnCast",
+                "13": "Play_sfx_Akali_AkaliBasicAttackPassiveMelee_OnHit"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{7bb20de0}": {
+        "ObjectName": "Jade_AkaliSkin61Manager",
+        "objectPath": "{7bb20de0}",
+        "mScriptName": "Jade_AkaliSkin61Manager",
         "__type": "SpellObject"
     },
     "{0fa0bc7e}": {
@@ -3557,10 +3783,10 @@
         ],
         "__type": "ItemRecommendationOverrideSet"
     },
-    "{1788c872}": {
+    "Characters/Jade_Akali/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{797eb914}": {
+    "Characters/Jade_Akali/CharacterRecords/Root": {
         "mCharacterName": "Jade_Akali",
         "baseHPModifiable": {
             "baseValue": 530.0,
@@ -3669,10 +3895,10 @@
             "Jade_AkaliRAbility/Jade_AkaliR"
         ],
         "spells": [
-            "{8fa5ec11}",
-            "{0da1e415}",
-            "{59f27ef9}",
-            "{ecccc4d3}"
+            "Characters/Jade_Akali/Spells/Jade_AkaliQAbility/Jade_AkaliQ",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility/Jade_AkaliW",
+            "Characters/Jade_Akali/Spells/Jade_AkaliEAbility/Jade_AkaliE",
+            "Characters/Jade_Akali/Spells/Jade_AkaliRAbility/Jade_AkaliR"
         ],
         "extraSpells": [
             "BaseSpell",
@@ -3711,10 +3937,10 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{a071e2ba}",
-            "{ede0fc24}",
-            "{ede0fc24}",
-            "{18d01d51}",
+            "Characters/Jade_Akali/Spells/Jade_AkaliQAbility",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility",
+            "Characters/Jade_Akali/Spells/Jade_AkaliWAbility",
+            "Characters/Jade_Akali/Spells/Jade_AkaliRAbility",
             "{3ec99a83}"
         ],
         "passiveName": "game_character_passiveName_Jade_Akali",

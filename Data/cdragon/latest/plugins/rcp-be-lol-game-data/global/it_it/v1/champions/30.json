@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Karthus crea uno schermo di energia salassante. Qualsiasi unità nemica attraversi lo schermo ha la velocità di movimento e la resistenza magica ridotte per un certo periodo di tempo.",
-            "dynamicDescription": "Karthus crea un muro che dura per @Effect4Amount@ secondi. I nemici che lo attraversano perdono <scaleMR>@Effect1Amount@% di resistenza magica</scaleMR> per @Effect5Amount@ secondi e sono <status>rallentati</status> del @Effect3Amount@%, che decade nell'arco della durata.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus crea un muro che dura per @WallDuration@ secondo/i. I nemici che lo attraversano perdono un <scaleMR>@MagicResistShred@% di resistenza magica</scaleMR> per @DebuffDuration@ secondo/i e vengono <status>rallentati</status> di un @SlowPercent@%, effetto che decade nell'arco della durata.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ mana al secondo",
             "cooldown": "@Cooldown@ secondi di %i:cooldown%",
             "description": "Karthus ruba passivamente energia alle sue vittime, ottenendo mana per ogni uccisione. In alternativa, Karthus può circondarsi delle anime delle sue prede, infliggendo danni ai nemici nelle vicinanze, ma consumando il suo mana molto rapidamente.",
-            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>Quando Karthus uccide un'unità, recupera <scaleMana>@Effect2Amount@ mana</scaleMana>.<br><br><toggle>Attiva:</toggle> Karthus crea un'aura necrotica, che infligge <magicDamage>@TotalDPS@ danni magici</magicDamage> al secondo ai nemici vicini.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passiva: </spellPassive>quando Karthus ottiene uccisioni su un'unità, rigenera <scaleMana>@ManaRestoreOnKill@ mana</scaleMana>.<br><br><toggle>Attiva/disattiva: </toggle>Karthus crea un'aura necrotica, che infligge <magicDamage>@TotalDPS@ danni magici</magicDamage> al secondo ai nemici vicini.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

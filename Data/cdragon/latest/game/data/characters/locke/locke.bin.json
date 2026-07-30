@@ -240,6 +240,116 @@
                     "Items/2510"
                 ],
                 "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 30,
+                        "mModeNameStringId": "cherry",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/2050"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/223112"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/223020"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/223158",
+                            "Items/223020",
+                            "Items/223005",
+                            "Items/2050",
+                            "Items/223112",
+                            "Items/222051"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/224645",
+                            "Items/223146",
+                            "Items/223100",
+                            "Items/220004"
+                        ],
+                        "MaxCompletedItems": 1,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223152",
+                            "Items/223089",
+                            "Items/220004",
+                            "Items/223100"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223165",
+                            "Items/223135",
+                            "Items/224646",
+                            "Items/220004",
+                            "Items/223089"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223165",
+                            "Items/223146",
+                            "Items/223089",
+                            "Items/224645",
+                            "Items/224646",
+                            "Items/224633"
+                        ],
+                        "MaxCompletedItems": 4,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/223135",
+                            "Items/223089",
+                            "Items/223102",
+                            "Items/223157",
+                            "Items/223165",
+                            "Items/224645",
+                            "Items/4015",
+                            "Items/224629"
+                        ],
+                        "MaxCompletedItems": 5,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/2142",
+                            "Items/220000",
+                            "Items/220007"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
             }
         ],
         "__type": "ItemRecommendationOverrideSet"
@@ -329,6 +439,12 @@
     "{1f220483}": {
         "ObjectName": "LockeEAttackReady",
         "mScriptName": "LockeEAttackReady",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E2.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
         "mBuff": {
             "mTooltipData": {
                 "mObjectName": "LockeEAttackReady",
@@ -536,8 +652,8 @@
             },
             "mAnimationName": "Spell4_landing",
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E.Locke.dds",
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E2.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E.dds",
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E2.dds"
             ],
             "mCastTime": 0.17499999701976776,
             "{11704a2b}": 0.0,
@@ -722,7 +838,7 @@
             "mAffectsTypeFlags": 6154,
             "mAnimationName": "Crit2",
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E2.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E2.dds"
             ],
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
@@ -844,7 +960,7 @@
             "mAffectsStatusFlags": 48,
             "mAnimationName": "Attack2",
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E2.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_E2.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.0,
@@ -939,6 +1055,12 @@
     "{2e984c15}": {
         "ObjectName": "LockeRExecuteTracker",
         "mScriptName": "LockeRExecuteTracker",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_R.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
         "mBuff": {
             "mTooltipData": {
                 "mObjectName": "LockeRExecuteTracker",
@@ -1027,6 +1149,12 @@
     "{9b4c6fd1}": {
         "ObjectName": "LockeRSlow",
         "mScriptName": "LockeRSlow",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_R.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
         "mBuff": {
             "mTooltipData": {
                 "mObjectName": "LockeRSlow",
@@ -1046,7 +1174,7 @@
         "mScriptName": "LockeRStack",
         "mSpell": {
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_R_Buff.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_R_Buff.dds"
             ],
             "cooldownTime": [
                 0.0,
@@ -1123,7 +1251,7 @@
             "mAffectsTypeFlags": 6154,
             "mAnimationName": "Spell1",
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_R.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_R.dds"
             ],
             "mCastTime": 0.125,
             "{11704a2b}": 0.125,
@@ -1455,6 +1583,26 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "CooldownReduction",
+                            "values": [
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0,
+                                50.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
@@ -1521,7 +1669,7 @@
             },
             "mAnimationName": "Spell4",
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_R.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_R.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -1745,13 +1893,13 @@
                 {
                     "name": "BaseMoveSpeed",
                     "values": [
-                        0.3499999940395355,
                         0.4000000059604645,
-                        0.44999998807907104,
-                        0.5,
-                        0.550000011920929,
-                        0.6000000238418579,
-                        0.6499999761581421
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1784,13 +1932,13 @@
                 {
                     "name": "BaseDamageRestoreAmount",
                     "values": [
-                        10.0,
+                        20.0,
                         40.0,
-                        70.0,
+                        60.0,
+                        80.0,
                         100.0,
-                        130.0,
-                        160.0,
-                        190.0
+                        120.0,
+                        140.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1845,8 +1993,93 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealCapAPRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealCapLevel1Value",
+                    "values": [
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0,
+                        150.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealCapLevel18Value",
+                    "values": [
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0,
+                        450.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "BaseDamageRestoreAmount",
+                            "values": [
+                                20.0,
+                                80.0,
+                                140.0,
+                                200.0,
+                                260.0,
+                                320.0,
+                                380.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "HealCapLevel1Value",
+                            "values": [
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0,
+                                225.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "HealCapLevel18Value",
+                            "values": [
+                                675.0,
+                                675.0,
+                                675.0,
+                                675.0,
+                                675.0,
+                                675.0,
+                                675.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "MoveSpeed": {
                     "mFormulaParts": [
@@ -1869,7 +2102,7 @@
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mCoefficient": 1.2000000476837158,
+                            "mCoefficient": 1.0,
                             "__type": "StatByCoefficientCalculationPart"
                         }
                     ],
@@ -1898,13 +2131,13 @@
                 "MaxHealingThreshold": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 150.0,
-                            "mEndValue": 450.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "{0589a59c}": "HealCapLevel1Value",
+                            "{0b65bc23}": "HealCapLevel18Value",
+                            "__type": "{ee18a47b}"
                         },
                         {
-                            "mCoefficient": 0.6000000238418579,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "HealCapAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -1941,7 +2174,7 @@
             },
             "mAnimationName": "Spell2",
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_W.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_W.dds"
             ],
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
@@ -2080,13 +2313,6 @@
                                 {
                                     "type": "BaseDamageRestoreAmount",
                                     "nameOverride": "Spell_ListType_DamageRestored",
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "BaseMoveSpeed",
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_ListType_MovementSpeed",
-                                    "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
@@ -2271,7 +2497,7 @@
             },
             "mAnimationName": "Spell3_Dance",
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_W2.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_W2.dds"
             ],
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
@@ -2412,6 +2638,12 @@
     "{42ee5c34}": {
         "ObjectName": "LockeQNailsReady",
         "mScriptName": "LockeQNailsReady",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Q.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
         "mBuff": {
             "mTooltipData": {
                 "mObjectName": "LockeQNailsReady",
@@ -2445,13 +2677,13 @@
                 {
                     "name": "BaseMissileDamage",
                     "values": [
-                        42.0,
-                        50.0,
-                        58.0,
-                        66.0,
-                        74.0,
-                        82.0,
-                        90.0
+                        32.0,
+                        40.0,
+                        48.0,
+                        56.0,
+                        64.0,
+                        72.0,
+                        80.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2719,7 +2951,7 @@
             },
             "mAnimationName": "Spell1_Left",
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Q.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Q.dds"
             ],
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
@@ -2911,6 +3143,12 @@
     "{8051c8fd}": {
         "ObjectName": "LockeQSlow",
         "mScriptName": "LockeQSlow",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Q.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
         "mBuff": {
             "mTooltipData": {
                 "mObjectName": "LockeQSlow",
@@ -2932,7 +3170,7 @@
             "mAffectsTypeFlags": 6154,
             "mAnimationName": "Spell1_Left",
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Q.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Q.dds"
             ],
             "mCastTime": 0.25,
             "{11704a2b}": 0.25,
@@ -3127,13 +3365,126 @@
         "ObjectName": "LockePassive",
         "mScriptName": "LockePassive",
         "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MinOnHitStartValue",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinOnHitEndValue",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxOnHitStartValue",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxOnHitEndValue",
+                    "values": [
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0,
+                        80.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "MinOnHitStartValue",
+                            "values": [
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5,
+                                7.5
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MinOnHitEndValue",
+                            "values": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MaxOnHitStartValue",
+                            "values": [
+                                15.0,
+                                15.0,
+                                15.0,
+                                15.0,
+                                15.0,
+                                15.0,
+                                15.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MaxOnHitEndValue",
+                            "values": [
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "MinOnHitDamage": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 5.0,
-                            "mEndValue": 40.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "{0589a59c}": "MinOnHitStartValue",
+                            "{0b65bc23}": "MinOnHitEndValue",
+                            "__type": "{ee18a47b}"
                         },
                         {
                             "mCoefficient": 0.10000000149011612,
@@ -3145,9 +3496,9 @@
                 "MaxOnHitDamage": {
                     "mFormulaParts": [
                         {
-                            "mStartValue": 10.0,
-                            "mEndValue": 80.0,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "{0589a59c}": "MaxOnHitStartValue",
+                            "{0b65bc23}": "MaxOnHitEndValue",
+                            "__type": "{ee18a47b}"
                         },
                         {
                             "mCoefficient": 0.20000000298023224,
@@ -3182,7 +3533,7 @@
             ],
             "mAnimationName": "",
             "mImgIconName": [
-                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Passive.Locke.dds"
+                "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Passive.dds"
             ],
             "{11704a2b}": 0.0,
             "{f26881a0}": 0.0,
@@ -3969,7 +4320,7 @@
     "Characters/Locke/CharacterRecords/Root": {
         "mCharacterName": "Locke",
         "baseHPModifiable": {
-            "baseValue": 655.0,
+            "baseValue": 620.0,
             "__type": "ModifiableFloat"
         },
         "hpPerLevelModifiable": {
@@ -4151,7 +4502,7 @@
         "passiveLuaName": "LockePassive",
         "passiveToolTip": "",
         "passiveSpell": "LockePassive",
-        "passive1IconName": "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Passive.Locke.dds",
+        "passive1IconName": "ASSETS/Characters/Locke/HUD/Icons2D/Locke_Passive.dds",
         "name": "game_character_displayname_Locke",
         "weaponMaterials": [
             "LockeBasicAttack"

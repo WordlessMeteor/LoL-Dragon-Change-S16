@@ -1198,14 +1198,14 @@
                 property: "abilityPreviewsDisabled",
                 scope: "local",
                 defaultValue: !1
-            }, f = {
+            }, _ = {
                 model: "generalSettings",
                 namespace: "lol-general",
                 schemaVersion: 1,
                 property: "displayLegacyPatchNumbers",
                 scope: "account",
                 defaultValue: !1
-            }, _ = {
+            }, f = {
                 model: "generalSettings",
                 namespace: "lol-general",
                 schemaVersion: 1,
@@ -1289,12 +1289,12 @@
                 honeyfruit: o.Ember.inject.service("honeyfruit"),
                 isVngPublisherSettingsVisible: o.Ember.computed.alias("honeyfruit.vngPublisherSettings.visible"),
                 init() {
-                    this._super(...arguments), "TENCENT" === window.RIOT.CONSTANTS.regionLocale.region?.toUpperCase() && (_.defaultValue = !1, f.defaultValue = !0), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(f), this.bindSetting(_), this.bindSetting(g), this.bindSetting(h), o.WindowManager.getValidWindowSizes().then((e => {
+                    this._super(...arguments), "TENCENT" === window.RIOT.CONSTANTS.regionLocale.region?.toUpperCase() && (f.defaultValue = !1, _.defaultValue = !0), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(_), this.bindSetting(f), this.bindSetting(g), this.bindSetting(h), o.WindowManager.getValidWindowSizes().then((e => {
                         this.set("validWindowSizes", e)
                     }))
                 },
                 resetToDefault: function() {
-                    this.set("isProfilePrivate", r.setting === c.PRIVATE), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(h.property, h.defaultValue)
+                    this.set("isProfilePrivate", r.setting === c.PRIVATE), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(h.property, h.defaultValue)
                 },
                 actions: {
                     reload: function() {
@@ -1439,12 +1439,12 @@
             }), Object.defineProperty(t, "TIME", {
                 enumerable: !0,
                 get: function() {
-                    return f.default
+                    return _.default
                 }
             }), Object.defineProperty(t, "VANGUARD_STATES", {
                 enumerable: !0,
                 get: function() {
-                    return _.default
+                    return f.default
                 }
             }), Object.defineProperty(t, "getGameKeyFromGameMode", {
                 enumerable: !0,
@@ -1463,8 +1463,8 @@
                 d = g(n(60)),
                 m = g(n(61)),
                 p = g(n(62)),
-                f = g(n(63)),
-                _ = g(n(64));
+                _ = g(n(63)),
+                f = g(n(64));
 
             function g(e) {
                 return e && e.__esModule ? e : {
@@ -1560,7 +1560,7 @@
                     default: e
                 }
             }
-            var f = {
+            var _ = {
                 COMPONENT_TYPES: a.default,
                 CURRENCY_TYPES: o.default,
                 INVENTORY_TYPES: i.default,
@@ -1572,7 +1572,7 @@
                 SCROLL_LIST_DISPLAY_TYPES: d.default,
                 TEMPLATE_TYPES: m.default
             };
-            t.default = f
+            t.default = _
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -1752,12 +1752,12 @@
                 d = "RANKED_TFT_PAIRS",
                 m = [n, a, i, s],
                 p = [...m, o],
-                f = [r],
-                _ = [l, c],
+                _ = [r],
+                f = [l, c],
                 g = [u, d],
-                h = [..._, ...g],
-                E = [...p, ..._],
-                v = [...g, ...f];
+                h = [...f, ...g],
+                E = [...p, ...f],
+                v = [...g, ..._];
             var S = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: n,
                 RANKED_FLEX_SR_QUEUE_TYPE: a,
@@ -1771,7 +1771,7 @@
                 RANKED_TFT_PAIRS_QUEUE_TYPE: d,
                 RANKED_LOL_QUEUE_TYPES: p,
                 RANKED_SR_QUEUE_TYPES: m,
-                RANKED_TFT_QUEUE_TYPES: _,
+                RANKED_TFT_QUEUE_TYPES: f,
                 RATED_TFT_QUEUE_TYPES: g,
                 RANKED_AND_RATED_TFT_QUEUE_TYPES: h,
                 ALL_RANKED_QUEUE_TYPES: E,
@@ -2100,7 +2100,7 @@
                 DEFAULT_PROGRAMMATIC_ACTION_NAME_ATTRIBUTE: () => u.DEFAULT_PROGRAMMATIC_ACTION_NAME_ATTRIBUTE,
                 FORM_PRIVATE_TAG_NAMES: () => g.FORM_PRIVATE_TAG_NAMES,
                 LifeCycle: () => i.LifeCycle,
-                MAX_ATTRIBUTE_VALUE_CHAR_LENGTH: () => _.MAX_ATTRIBUTE_VALUE_CHAR_LENGTH,
+                MAX_ATTRIBUTE_VALUE_CHAR_LENGTH: () => f.MAX_ATTRIBUTE_VALUE_CHAR_LENGTH,
                 NodePrivacyLevel: () => g.NodePrivacyLevel,
                 PRIVACY_ATTR_NAME: () => g.PRIVACY_ATTR_NAME,
                 PRIVACY_ATTR_VALUE_ALLOW: () => g.PRIVACY_ATTR_VALUE_ALLOW,
@@ -2123,20 +2123,20 @@
                 getPrivacySelector: () => g.getPrivacySelector,
                 getScrollX: () => c.getScrollX,
                 getScrollY: () => c.getScrollY,
-                getSessionReplayUrl: () => f.getSessionReplayUrl,
+                getSessionReplayUrl: () => _.getSessionReplayUrl,
                 getTextContent: () => g.getTextContent,
                 getViewportDimension: () => l.getViewportDimension,
                 hasChildNodes: () => m.hasChildNodes,
                 initViewportObservable: () => l.initViewportObservable,
                 isCommentNode: () => m.isCommentNode,
                 isElementNode: () => m.isElementNode,
-                isLongDataUrl: () => _.isLongDataUrl,
+                isLongDataUrl: () => f.isLongDataUrl,
                 isNodeShadowHost: () => m.isNodeShadowHost,
                 isNodeShadowRoot: () => m.isNodeShadowRoot,
                 isTextNode: () => m.isTextNode,
                 makeRumPublicApi: () => a.makeRumPublicApi,
                 reducePrivacyLevel: () => g.reducePrivacyLevel,
-                sanitizeDataUrl: () => _.sanitizeDataUrl,
+                sanitizeDataUrl: () => f.sanitizeDataUrl,
                 shouldIgnoreElement: () => g.shouldIgnoreElement,
                 shouldMaskNode: () => g.shouldMaskNode,
                 startRum: () => o.startRum,
@@ -2153,8 +2153,8 @@
                 d = n(160),
                 m = n(164),
                 p = n(161),
-                f = n(218),
-                _ = n(149),
+                _ = n(218),
+                f = n(149),
                 g = n(163)
         }, (e, t, n) => {
             "use strict";
@@ -2172,8 +2172,8 @@
                 d = n(74),
                 m = n(123),
                 p = n(125),
-                f = n(72),
-                _ = n(135),
+                _ = n(72),
+                f = n(135),
                 g = n(82),
                 h = n(126),
                 E = n(70),
@@ -2264,7 +2264,7 @@
                                 L.addAction({
                                     name: (0, p.sanitize)(e),
                                     context: (0, p.sanitize)(t),
-                                    startClocks: (0, f.clocksNow)(),
+                                    startClocks: (0, _.clocksNow)(),
                                     type: "custom",
                                     handlingStack: n
                                 }), (0, c.addTelemetryUsage)({
@@ -2279,7 +2279,7 @@
                                     error: e,
                                     handlingStack: n,
                                     context: (0, p.sanitize)(t),
-                                    startClocks: (0, f.clocksNow)()
+                                    startClocks: (0, _.clocksNow)()
                                 }), (0, c.addTelemetryUsage)({
                                     feature: "add-error"
                                 })
@@ -2289,7 +2289,7 @@
                             L.addTiming((0, p.sanitize)(e), t)
                         })),
                         setUser: (0, l.monitor)((function(e) {
-                            (0, _.checkUser)(e) && N.setContext((0, _.sanitizeUser)(e)), (0, c.addTelemetryUsage)({
+                            (0, f.checkUser)(e) && N.setContext((0, f.sanitizeUser)(e)), (0, c.addTelemetryUsage)({
                                 feature: "set-user"
                             })
                         })),
@@ -2297,7 +2297,7 @@
                             return N.getContext()
                         })),
                         setUserProperty: (0, l.monitor)((function(e, t) {
-                            var n, a = (0, _.sanitizeUser)((n = {}, n[e] = t, n))[e];
+                            var n, a = (0, f.sanitizeUser)((n = {}, n[e] = t, n))[e];
                             N.setContextProperty(e, a), (0, c.addTelemetryUsage)({
                                 feature: "set-user"
                             })
@@ -2337,7 +2337,7 @@
                             }), L.addDurationVital({
                                 name: (0, p.sanitize)(e),
                                 type: "duration",
-                                startClocks: (0, f.timeStampToClocks)(t.startTime),
+                                startClocks: (0, _.timeStampToClocks)(t.startTime),
                                 duration: t.duration,
                                 context: (0, p.sanitize)(t && t.context),
                                 description: (0, p.sanitize)(t && t.description)
@@ -2479,7 +2479,7 @@
                 clocksNow: () => E,
                 clocksOrigin: () => v,
                 currentDrift: () => p,
-                dateNow: () => _,
+                dateNow: () => f,
                 elapsed: () => S,
                 getRelativeTime: () => T,
                 getTimeStamp: () => b,
@@ -2488,7 +2488,7 @@
                 relativeToClocks: () => u,
                 timeStampNow: () => g,
                 timeStampToClocks: () => d,
-                toServerDuration: () => f
+                toServerDuration: () => _
             });
             var a, o = n(73),
                 i = 1e3,
@@ -2512,24 +2512,24 @@
             }
 
             function m(e) {
-                var t = _() - performance.now();
+                var t = f() - performance.now();
                 return t > A() ? Math.round(y(t, e)) : b(e)
             }
 
             function p() {
-                return Math.round(_() - y(A(), performance.now()))
+                return Math.round(f() - y(A(), performance.now()))
             }
 
-            function f(e) {
+            function _(e) {
                 return (0, o.isNumber)(e) ? (0, o.round)(1e6 * e, 0) : e
             }
 
-            function _() {
+            function f() {
                 return (new Date).getTime()
             }
 
             function g() {
-                return _()
+                return f()
             }
 
             function h() {
@@ -2717,8 +2717,8 @@
                 d = n(129),
                 m = n(72),
                 p = n(82),
-                f = n(78),
-                _ = n(71),
+                _ = n(78),
+                f = n(71),
                 g = n(113);
 
             function h(e, t, n, h, E) {
@@ -2749,9 +2749,9 @@
                                 sessionSampleRate: 100,
                                 defaultPrivacyLevel: null !== (t = e.defaultPrivacyLevel) && void 0 !== t ? t : null === (n = (0, o.getEventBridge)()) || void 0 === n ? void 0 : n.getPrivacyLevel()
                             })
-                        }(e)), y = e, (0, i.addTelemetryConfiguration)((0, f.serializeRumConfiguration)(e)), T)(0, s.displayAlreadyInitializedError)("DD_RUM", e);
+                        }(e)), y = e, (0, i.addTelemetryConfiguration)((0, _.serializeRumConfiguration)(e)), T)(0, s.displayAlreadyInitializedError)("DD_RUM", e);
                     else {
-                        var a = (0, f.validateAndBuildRumConfiguration)(e);
+                        var a = (0, _.validateAndBuildRumConfiguration)(e);
                         a && (t || a.sessionStoreStrategyType ? a.compressIntakeRequests && !t && N && !(S = N(a, "Datadog RUM", l.noop)) || (T = a, (0, c.initFetchObservable)().subscribe(l.noop), n.tryToInit(a.trackingConsent), C()) : r.display.warn("No storage available for session. We will not send any data."))
                     }
                 }
@@ -2765,7 +2765,7 @@
                         e ? ((0, u.initFeatureFlags)(e.enableExperimentalFeatures), y = e, b && (0, d.willSyntheticsInjectRum)() || ((0, g.callPluginsMethod)(e.betaPlugins, "onInit", {
                             initConfiguration: e,
                             publicApi: t
-                        }), e.remoteConfigurationId && (0, u.isExperimentalFeatureEnabled)(u.ExperimentalFeature.REMOTE_CONFIGURATION) ? (0, f.fetchAndApplyRemoteConfiguration)(e, L) : L(e))) : r.display.error("Missing configuration")
+                        }), e.remoteConfigurationId && (0, u.isExperimentalFeatureEnabled)(u.ExperimentalFeature.REMOTE_CONFIGURATION) ? (0, _.fetchAndApplyRemoteConfiguration)(e, L) : L(e))) : r.display.error("Missing configuration")
                     },
                     get initConfiguration() {
                         return y
@@ -2818,10 +2818,10 @@
                         }))
                     },
                     startDurationVital: function(e, t) {
-                        return (0, _.startDurationVital)(h, e, t)
+                        return (0, f.startDurationVital)(h, e, t)
                     },
                     stopDurationVital: function(e, t) {
-                        (0, _.stopDurationVital)(k, h, e, t)
+                        (0, f.stopDurationVital)(k, h, e, t)
                     },
                     addDurationVital: k
                 }
@@ -2943,8 +2943,8 @@
             "use strict";
             n.r(t), n.d(t, {
                 clearTracingIfNeeded: () => u,
-                createTraceIdentifier: () => _,
-                getCrypto: () => f,
+                createTraceIdentifier: () => f,
+                getCrypto: () => _,
                 isTracingOption: () => c,
                 isTracingSupported: () => p,
                 startTracer: () => d
@@ -2999,11 +2999,11 @@
 
             function m(e, t, n, a) {
                 if (p() && n.findTrackedSession()) {
-                    var i, c, u, d, m, f = (0, s.find)(e.allowedTracingUrls, (function(e) {
+                    var i, c, u, d, m, _ = (0, s.find)(e.allowedTracingUrls, (function(e) {
                         return (0, o.matchList)([e.match], t.url, !0)
                     }));
-                    if (f)
-                        if (t.traceSampled = !(0, r.isNumber)(e.traceSampleRate) || (0, r.performDraw)(e.traceSampleRate), t.traceSampled || e.traceContextInjection === l.TraceContextInjection.ALL) t.traceId = _(), t.spanId = _(), a((i = t.traceId, c = t.spanId, u = t.traceSampled, d = f.propagatorTypes, m = {}, d.forEach((function(e) {
+                    if (_)
+                        if (t.traceSampled = !(0, r.isNumber)(e.traceSampleRate) || (0, r.performDraw)(e.traceSampleRate), t.traceSampled || e.traceContextInjection === l.TraceContextInjection.ALL) t.traceId = f(), t.spanId = f(), a((i = t.traceId, c = t.spanId, u = t.traceSampled, d = _.propagatorTypes, m = {}, d.forEach((function(e) {
                             switch (e) {
                                 case "datadog":
                                     (0, s.assign)(m, {
@@ -3035,14 +3035,14 @@
             }
 
             function p() {
-                return void 0 !== f()
-            }
-
-            function f() {
-                return window.crypto || window.msCrypto
+                return void 0 !== _()
             }
 
             function _() {
+                return window.crypto || window.msCrypto
+            }
+
+            function f() {
                 var e = new Uint8Array(8);
 
                 function t(t) {
@@ -3059,7 +3059,7 @@
                     } while (n || a);
                     return o
                 }
-                return f().getRandomValues(e), e[0] = 127 & e[0], {
+                return _().getRandomValues(e), e[0] = 127 & e[0], {
                     toDecimalString: function() {
                         return n(10)
                     },
@@ -3239,7 +3239,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 DefaultPrivacyLevel: () => p,
-                TraceContextInjection: () => f,
+                TraceContextInjection: () => _,
                 isSampleRate: () => g,
                 serializeConfiguration: () => E,
                 validateAndBuildConfiguration: () => h
@@ -3259,12 +3259,12 @@
                     MASK: "mask",
                     MASK_USER_INPUT: "mask-user-input"
                 },
-                f = {
+                _ = {
                     ALL: "all",
                     SAMPLED: "sampled"
                 };
 
-            function _(e, t) {
+            function f(e, t) {
                 return null == e || "string" == typeof e || (o.display.error("".concat(t, " must be defined as a string")), !1)
             }
 
@@ -3273,9 +3273,9 @@
             }
 
             function h(e) {
-                var t, n, s, p, f;
+                var t, n, s, p, _;
                 if (e && e.clientToken) {
-                    if ((!(h = e.site) || "string" != typeof h || /(datadog|ddog|datad0g|dd0g)/.test(h) || (o.display.error("Site should be a valid Datadog site. ".concat(o.MORE_DETAILS, " ").concat(o.DOCS_ORIGIN, "/getting_started/site/.")), 0)) && g(e.sessionSampleRate, "Session") && g(e.telemetrySampleRate, "Telemetry") && g(e.telemetryConfigurationSampleRate, "Telemetry Configuration") && g(e.telemetryUsageSampleRate, "Telemetry Usage") && _(e.version, "Version") && _(e.env, "Env") && _(e.service, "Service")) {
+                    if ((!(h = e.site) || "string" != typeof h || /(datadog|ddog|datad0g|dd0g)/.test(h) || (o.display.error("Site should be a valid Datadog site. ".concat(o.MORE_DETAILS, " ").concat(o.DOCS_ORIGIN, "/getting_started/site/.")), 0)) && g(e.sessionSampleRate, "Session") && g(e.telemetrySampleRate, "Telemetry") && g(e.telemetryConfigurationSampleRate, "Telemetry Configuration") && g(e.telemetryUsageSampleRate, "Telemetry Usage") && f(e.version, "Version") && f(e.env, "Env") && f(e.service, "Service")) {
                         var h;
                         if (void 0 === e.trackingConsent || (0, l.objectHasValue)(d.TrackingConsent, e.trackingConsent)) return (0, c.assign)({
                             beforeSend: e.beforeSend && (0, a.catchUserErrors)(e.beforeSend, "beforeSend threw an error:"),
@@ -3287,7 +3287,7 @@
                             service: e.service || void 0,
                             silentMultipleInit: !!e.silentMultipleInit,
                             allowUntrustedEvents: !!e.allowUntrustedEvents,
-                            trackingConsent: null !== (f = e.trackingConsent) && void 0 !== f ? f : d.TrackingConsent.GRANTED,
+                            trackingConsent: null !== (_ = e.trackingConsent) && void 0 !== _ ? _ : d.TrackingConsent.GRANTED,
                             storeContextsAcrossPages: !!e.storeContextsAcrossPages,
                             batchBytesLimit: 16 * r.ONE_KIBI_BYTE,
                             eventRateLimiterThreshold: 3e3,
@@ -3409,8 +3409,8 @@
             "use strict";
             n.r(t), n.d(t, {
                 STORAGE_POLL_DELAY: () => p,
-                selectSessionStoreStrategyType: () => f,
-                startSessionStore: () => _
+                selectSessionStoreStrategyType: () => _,
+                startSessionStore: () => f
             });
             var a = n(98),
                 o = n(87),
@@ -3424,13 +3424,13 @@
                 m = n(103),
                 p = i.ONE_SECOND;
 
-            function f(e) {
+            function _(e) {
                 var t = (0, c.selectCookieStrategy)(e);
                 return !t && e.allowFallbackToLocalStorage && (t = (0, d.selectLocalStorageStrategy)()), t
             }
 
-            function _(e, t, n) {
-                var f, _ = new o.Observable,
+            function f(e, t, n) {
+                var _, f = new o.Observable,
                     g = new o.Observable,
                     h = new o.Observable,
                     E = "Cookie" === e.type ? (0, c.initCookieStrategy)(e.cookieOptions) : (0, d.initLocalStorageStrategy)(),
@@ -3460,8 +3460,8 @@
                             },
                             after: function(e) {
                                 (0, u.isSessionStarted)(e) && !I() && function(e) {
-                                    f = e, _.notify()
-                                }(e), f = e
+                                    _ = e, f.notify()
+                                }(e), _ = e
                             }
                         }, E)
                     }), p),
@@ -3470,11 +3470,11 @@
 
                 function N(e) {
                     return (0, u.isSessionInExpiredState)(e) && (e = (0, u.getExpiredSessionState)()), I() && (! function(e) {
-                        return f.id !== e.id || f[t] !== e[t]
+                        return _.id !== e.id || _[t] !== e[t]
                     }(e) ? (h.notify({
-                        previousState: f,
+                        previousState: _,
                         newState: e
-                    }), f = e) : (f = (0, u.getExpiredSessionState)(), g.notify())), e
+                    }), _ = e) : (_ = (0, u.getExpiredSessionState)(), g.notify())), e
                 }
 
                 function A() {
@@ -3483,13 +3483,13 @@
                             if ((0, u.isSessionInNotStartedState)(e)) return (0, u.getExpiredSessionState)()
                         },
                         after: function(e) {
-                            f = e
+                            _ = e
                         }
                     }, E)
                 }
 
                 function I() {
-                    return void 0 !== f[t]
+                    return void 0 !== _[t]
                 }
                 return {
                     expandOrRenewSession: T,
@@ -3501,9 +3501,9 @@
                         }, E)
                     },
                     getSession: function() {
-                        return f
+                        return _
                     },
-                    renewObservable: _,
+                    renewObservable: f,
                     expireObservable: g,
                     sessionStateUpdateObservable: h,
                     restartSession: A,
@@ -3576,7 +3576,7 @@
                 areCookiesAuthorized: () => p,
                 deleteCookie: () => m,
                 getCookie: () => c,
-                getCurrentSite: () => f,
+                getCurrentSite: () => _,
                 getInitCookie: () => u,
                 resetInitCookies: () => d,
                 setCookie: () => l
@@ -3625,7 +3625,7 @@
                 }
             }
 
-            function f() {
+            function _() {
                 if (void 0 === o) {
                     for (var e = "dd_site_test_".concat((0, r.generateUUID)()), t = window.location.hostname.split("."), n = t.pop(); t.length && !c(e);) n = "".concat(t.pop(), ".").concat(n), l(e, "test", s.ONE_SECOND, {
                         domain: n
@@ -3706,13 +3706,13 @@
             "use strict";
             n.r(t), n.d(t, {
                 EXPIRED: () => c,
-                expandSessionState: () => f,
+                expandSessionState: () => _,
                 getExpiredSessionState: () => u,
                 isSessionInExpiredState: () => p,
                 isSessionInNotStartedState: () => d,
                 isSessionStarted: () => m,
                 toSessionState: () => g,
-                toSessionString: () => _
+                toSessionString: () => f
             });
             var a = n(84),
                 o = n(82),
@@ -3741,11 +3741,11 @@
                 var t
             }
 
-            function f(e) {
+            function _(e) {
                 e.expire = String((0, i.dateNow)() + s.SESSION_EXPIRATION_DELAY)
             }
 
-            function _(e) {
+            function f(e) {
                 return (0, o.objectEntries)(e).map((function(e) {
                     var t = e[0],
                         n = e[1];
@@ -3983,8 +3983,8 @@
                 void 0 === n && (n = 0);
                 var l = t.isLockEnabled,
                     d = t.persistSession,
-                    f = t.expireSession,
-                    _ = function(e) {
+                    _ = t.expireSession,
+                    f = function(e) {
                         return d((0, s.assign)({}, e, {
                             lock: h
                         }))
@@ -4003,12 +4003,12 @@
                         var h, E = g();
                         if (l) {
                             if (E.lock) return void m(e, t, n);
-                            if (h = (0, i.generateUUID)(), _(E.session), (E = g()).lock !== h) return void m(e, t, n)
+                            if (h = (0, i.generateUUID)(), f(E.session), (E = g()).lock !== h) return void m(e, t, n)
                         }
                         var v = e.process(E.session);
                         if (l && (E = g()).lock !== h) m(e, t, n);
                         else {
-                            if (v && ((0, r.isSessionInExpiredState)(v) ? f() : ((0, r.expandSessionState)(v), l ? _(v) : d(v))), l && (!v || !(0, r.isSessionInExpiredState)(v))) {
+                            if (v && ((0, r.isSessionInExpiredState)(v) ? _() : ((0, r.expandSessionState)(v), l ? f(v) : d(v))), l && (!v || !(0, r.isSessionInExpiredState)(v))) {
                                 if ((E = g()).lock !== h) return void m(e, t, n);
                                 d(E.session), v = E.session
                             }
@@ -4356,7 +4356,7 @@
                     c = r.capture,
                     u = r.passive,
                     d = (0, a.monitor)((function(t) {
-                        (t.isTrusted || t.__ddIsTrusted || e.allowUntrustedEvents) && (l && f(), i(t))
+                        (t.isTrusted || t.__ddIsTrusted || e.allowUntrustedEvents) && (l && _(), i(t))
                     })),
                     m = u ? {
                         capture: c,
@@ -4364,7 +4364,7 @@
                     } : c,
                     p = (0, o.getZoneJsOriginalValue)(t, "addEventListener");
 
-                function f() {
+                function _() {
                     var e = (0, o.getZoneJsOriginalValue)(t, "removeEventListener");
                     n.forEach((function(n) {
                         return e.call(t, n, d, m)
@@ -4373,7 +4373,7 @@
                 return n.forEach((function(e) {
                     return p.call(t, e, d, m)
                 })), {
-                    stop: f
+                    stop: _
                 }
             }
         }, (e, t, n) => {
@@ -4508,8 +4508,8 @@
                 d = n(119),
                 m = n(82),
                 p = n(73),
-                f = n(110),
-                _ = n(74),
+                _ = n(110),
+                f = n(74),
                 g = n(122),
                 h = n(120),
                 E = n(114),
@@ -4533,10 +4533,10 @@
                         is_worker: "WorkerGlobalScope" in self
                     };
                 return b = function(n) {
-                    var r = (0, f.jsonStringify)(n);
+                    var r = (0, _.jsonStringify)(n);
                     if (g[n.type] && i.size < t.maxTelemetryEventsPerPage && !i.has(r)) {
                         var l = function(e, t, n) {
-                            return (0, _.combine)({
+                            return (0, f.combine)({
                                 type: "telemetry",
                                 date: (0, c.timeStampNow)(),
                                 service: e,
@@ -4545,7 +4545,7 @@
                                 _dd: {
                                     format_version: 2
                                 },
-                                telemetry: (0, _.combine)(t, {
+                                telemetry: (0, f.combine)(t, {
                                     runtime_env: n,
                                     connectivity: (0, h.getConnectivity)(),
                                     sdk_setup: "npm"
@@ -4631,7 +4631,7 @@
                     error: {
                         stack: o.NO_ERROR_STACK_PRESENT_MESSAGE
                     },
-                    message: "".concat("Uncaught", " ").concat((0, f.jsonStringify)(e))
+                    message: "".concat("Uncaught", " ").concat((0, _.jsonStringify)(e))
                 }
             }
 
@@ -4722,14 +4722,14 @@
             "use strict";
             n.r(t), n.d(t, {
                 computeStackTrace: () => i,
-                computeStackTraceFromOnErrorMessage: () => _
+                computeStackTraceFromOnErrorMessage: () => f
             });
             var a = n(82),
                 o = "?";
 
             function i(e) {
                 var t = [],
-                    n = f(e, "stack"),
+                    n = _(e, "stack"),
                     i = String(e);
                 return n && (0, a.startsWith)(n, i) && (n = n.slice(i.length)), n && n.split("\n").forEach((function(e) {
                     var n = function(e) {
@@ -4782,8 +4782,8 @@
                     }(e);
                     n && (!n.func && n.line && (n.func = o), t.push(n))
                 })), {
-                    message: f(e, "message"),
-                    name: f(e, "name"),
+                    message: _(e, "message"),
+                    name: _(e, "name"),
                     stack: t
                 }
             }
@@ -4796,14 +4796,14 @@
             var m = /^\s*(.*?)(?:\((.*?)\))?(?:^|@)((?:file|https?|blob|chrome|webpack|resource|capacitor|\[native).*?|[^@]*bundle)(?::(\d+))?(?::(\d+))?\s*$/i,
                 p = /(\S+) line (\d+)(?: > eval line \d+)* > eval/i;
 
-            function f(e, t) {
+            function _(e, t) {
                 if ("object" == typeof e && e && t in e) {
                     var n = e[t];
                     return "string" == typeof n ? n : void 0
                 }
             }
 
-            function _(e, t, n, a) {
+            function f(e, t, n, a) {
                 var o = [{
                         url: t,
                         column: a,
@@ -4885,16 +4885,16 @@
                     u = e.nonErrorPrefix,
                     m = e.source,
                     p = e.handling,
-                    f = n instanceof Error,
-                    _ = function(e, t, n, i) {
+                    _ = n instanceof Error,
+                    f = function(e, t, n, i) {
                         return (null == e ? void 0 : e.message) && (null == e ? void 0 : e.name) ? e.message : t ? "Empty message" : "".concat(n, " ").concat((0, o.jsonStringify)((0, a.sanitize)(i)))
-                    }(t, f, u, n),
+                    }(t, _, u, n),
                     g = function(e, t) {
                         if (void 0 === t) return !1;
                         if (e) return !0;
                         return t.stack.length > 0 && (t.stack.length > 1 || void 0 !== t.stack[0].url)
-                    }(f, t) ? (0, s.toStackTraceString)(t) : r,
-                    h = f ? d(n, m) : void 0;
+                    }(_, t) ? (0, s.toStackTraceString)(t) : r,
+                    h = _ ? d(n, m) : void 0;
                 return {
                     startClocks: l,
                     source: m,
@@ -4902,7 +4902,7 @@
                     handlingStack: i,
                     originalError: n,
                     type: t ? t.name : void 0,
-                    message: _,
+                    message: f,
                     stack: g,
                     causes: h,
                     fingerprint: c(n)
@@ -4951,27 +4951,27 @@
                     c = new WeakMap,
                     m = u(e, r, void 0, o, c),
                     p = JSON.stringify(m),
-                    f = p ? p.length : 0;
-                if (!(f > t)) {
-                    for (; o.length > 0 && f < t;) {
-                        var _ = o.shift(),
+                    _ = p ? p.length : 0;
+                if (!(_ > t)) {
+                    for (; o.length > 0 && _ < t;) {
+                        var f = o.shift(),
                             g = 0;
-                        if (Array.isArray(_.source))
-                            for (var h = 0; h < _.source.length; h++) {
-                                if (f += void 0 !== (E = u(_.source[h], _.path, h, o, c)) ? JSON.stringify(E).length : 4, f += g, g = 1, f > t) {
+                        if (Array.isArray(f.source))
+                            for (var h = 0; h < f.source.length; h++) {
+                                if (_ += void 0 !== (E = u(f.source[h], f.path, h, o, c)) ? JSON.stringify(E).length : 4, _ += g, g = 1, _ > t) {
                                     d(t, "truncated", e);
                                     break
                                 }
-                                _.target[h] = E
+                                f.target[h] = E
                             } else
-                                for (var h in _.source)
-                                    if (Object.prototype.hasOwnProperty.call(_.source, h)) {
+                                for (var h in f.source)
+                                    if (Object.prototype.hasOwnProperty.call(f.source, h)) {
                                         var E;
-                                        if (void 0 !== (E = u(_.source[h], _.path, h, o, c)) && (f += JSON.stringify(E).length + g + h.length + l, g = 1), f > t) {
+                                        if (void 0 !== (E = u(f.source[h], f.path, h, o, c)) && (_ += JSON.stringify(E).length + g + h.length + l, g = 1), _ > t) {
                                             d(t, "truncated", e);
                                             break
                                         }
-                                        _.target[h] = E
+                                        f.target[h] = E
                                     }
                     }
                     return n(), a(), m
@@ -5055,17 +5055,17 @@
                                 void 0 === d && s instanceof Request && (d = s.method);
                                 var m = void 0 !== d ? String(d).toUpperCase() : "GET",
                                     p = s instanceof Request ? s.url : (0, c.normalizeUrl)(String(s)),
-                                    f = (0, l.clocksNow)(),
-                                    _ = {
+                                    _ = (0, l.clocksNow)(),
+                                    f = {
                                         state: "start",
                                         init: u,
                                         input: s,
                                         method: m,
-                                        startClocks: f,
+                                        startClocks: _,
                                         url: p,
                                         handlingStack: o
                                     };
-                                t.notify(_), n[0] = _.input, n[1] = _.init, a((function(e) {
+                                t.notify(f), n[0] = f.input, n[1] = f.init, a((function(e) {
                                     return function(e, t, n) {
                                         var a = n;
 
@@ -5087,7 +5087,7 @@
                                                 error: e
                                             })
                                         })))
-                                    }(t, e, _)
+                                    }(t, e, f)
                                 }))
                             }(t, e)
                         }), {
@@ -5451,8 +5451,8 @@
                 d = n(144),
                 m = n(146),
                 p = n(148),
-                f = n(153),
-                _ = n(169),
+                _ = n(153),
+                f = n(169),
                 g = n(175),
                 h = n(176),
                 E = n(182),
@@ -5469,7 +5469,7 @@
                 k = n(215),
                 x = n(217);
 
-            function O(e, t, n, c, m, f, T, C) {
+            function O(e, t, n, c, m, _, T, C) {
                 var k = [],
                     O = new d.LifeCycle;
                 O.subscribe(12, (function(e) {
@@ -5520,7 +5520,7 @@
                 var K = (0, s.canUseEventBridge)() ? (0, v.startRumSessionManagerStub)() : (0, v.startRumSessionManager)(e, O, T);
                 if ((0, s.canUseEventBridge)())(0, y.startRumEventBridge)(O);
                 else {
-                    var V = (0, S.startRumBatch)(e, O, R.observable, w, P, K.expireObservable, f);
+                    var V = (0, S.startRumBatch)(e, O, R.observable, w, P, K.expireObservable, _);
                     k.push((function() {
                         return V.stop()
                     })), (0, A.startCustomerDataTelemetry)(e, R, O, n, V.flushObservable)
@@ -5550,7 +5550,7 @@
                         k.push(ae)
                     }
                 } else(0, g.startLongTaskCollection)(O, e);
-                var oe = (0, _.startErrorCollection)(O, e, F, D).addError;
+                var oe = (0, f.startErrorCollection)(O, e, F, D).addError;
                 (0, p.startRequestCollection)(O, e, K);
                 var ie = (0, L.startVitalCollection)(O, F, C),
                     se = (0, u.startInternalContext)(e.applicationId, K, Y, z, j);
@@ -5584,8 +5584,8 @@
             function M(e, t, n, a, o, i, s, r, l) {
                 var u = (0, m.startViewHistory)(e),
                     d = (0, T.startUrlContexts)(e, i, n),
-                    p = (0, f.startActionCollection)(e, s, t, o),
-                    _ = p.addAction,
+                    p = (0, _.startActionCollection)(e, s, t, o),
+                    f = p.addAction,
                     g = p.actionContexts,
                     h = (0, C.startDisplayContext)(t),
                     E = (0, k.startCiVisibilityContext)(t);
@@ -5593,7 +5593,7 @@
                     viewHistory: u,
                     pageStateHistory: o,
                     urlContexts: d,
-                    addAction: _,
+                    addAction: f,
                     actionContexts: g,
                     stop: function() {
                         E.stop(), h.stop(), d.stop(), u.stop(), o.stop()
@@ -5655,8 +5655,8 @@
                 d = n(74),
                 m = n(84),
                 p = n(83),
-                f = n(139),
-                _ = n(140),
+                _ = n(139),
+                f = n(140),
                 g = {
                     "view.name": "string",
                     "view.url": "string",
@@ -5685,10 +5685,10 @@
                     "action.target.name": "string"
                 }, h, g, E), I.long_task = (0, o.assign)({}, h, g), I.vital = (0, o.assign)({}, h, g), a = I;
                 var L = ((C = {}).error = (0, s.createEventRateLimiter)("error", e.eventRateLimiterThreshold, A), C.action = (0, s.createEventRateLimiter)("action", e.eventRateLimiterThreshold, A), C.vital = (0, s.createEventRateLimiter)("vital", e.eventRateLimiterThreshold, A), C),
-                    k = (0, f.getSyntheticsContext)();
+                    k = (0, _.getSyntheticsContext)();
                 t.subscribe(11, (function(o) {
                     var i, s = o.startTime,
-                        f = o.rawRumEvent,
+                        _ = o.rawRumEvent,
                         g = o.domainContext,
                         h = o.savedCommonContext,
                         E = o.customerContext,
@@ -5725,7 +5725,7 @@
                                     url: I.url,
                                     referrer: I.referrer
                                 },
-                                action: (i = f, -1 !== ["error", "resource", "long_task"].indexOf(i.type) && O ? {
+                                action: (i = _, -1 !== ["error", "resource", "long_task"].indexOf(i.type) && O ? {
                                     id: O
                                 } : void 0),
                                 synthetics: k,
@@ -5733,12 +5733,12 @@
                                 display: T.get(),
                                 connectivity: (0, u.getConnectivity)()
                             },
-                            R = (0, d.combine)(M, f);
+                            R = (0, d.combine)(M, _);
                         R.context = (0, d.combine)(x.context, A.context, E), "has_replay" in R.session || (R.session.has_replay = x.hasReplay), "view" === R.type && (R.session.sampled_for_replay = 1 === C.sessionReplay), (0, m.isEmptyObject)(x.user) || (R.usr = x.user),
                             function(e, t, n, o) {
                                 var i;
                                 if (t) {
-                                    var s = (0, _.limitModification)(e, a[e.type], (function(e) {
+                                    var s = (0, f.limitModification)(e, a[e.type], (function(e) {
                                         return t(e, n)
                                     }));
                                     if (!1 === s && "view" !== e.type) return !1;
@@ -6057,7 +6057,7 @@
                     var a = t;
                     if ((0, l.isAllowedRequestUrl)(a.url)) switch (a.state) {
                         case "start":
-                            n.traceXhr(a, a.xhr), a.requestIndex = f(), e.notify(6, {
+                            n.traceXhr(a, a.xhr), a.requestIndex = _(), e.notify(6, {
                                 requestIndex: a.requestIndex,
                                 url: a.url
                             });
@@ -6092,7 +6092,7 @@
                     var a = n;
                     if ((0, l.isAllowedRequestUrl)(a.url)) switch (a.state) {
                         case "start":
-                            t.traceFetch(a), a.requestIndex = f(), e.notify(6, {
+                            t.traceFetch(a), a.requestIndex = _(), e.notify(6, {
                                 requestIndex: a.requestIndex,
                                 url: a.url
                             });
@@ -6135,7 +6135,7 @@
                 }
             }
 
-            function f() {
+            function _() {
                 var e = u;
                 return u += 1, e
             }
@@ -6144,12 +6144,12 @@
             n.r(t), n.d(t, {
                 FAKE_INITIAL_DOCUMENT: () => l,
                 MAX_ATTRIBUTE_VALUE_CHAR_LENGTH: () => T,
-                computeResourceEntryDetails: () => f,
+                computeResourceEntryDetails: () => _,
                 computeResourceEntryDuration: () => p,
                 computeResourceEntryProtocol: () => E,
                 computeResourceEntrySize: () => v,
                 computeResourceEntryType: () => u,
-                hasValidResourceEntryDuration: () => _,
+                hasValidResourceEntryDuration: () => f,
                 hasValidResourceEntryTimings: () => g,
                 isAllowedRequestUrl: () => S,
                 isLongDataUrl: () => b,
@@ -6221,7 +6221,7 @@
                 return 0 === t && n < a ? (0, s.toServerDuration)((0, s.elapsed)(n, a)) : (0, s.toServerDuration)(t)
             }
 
-            function f(e) {
+            function _(e) {
                 if (g(e)) {
                     var t = e.startTime,
                         n = e.fetchStart,
@@ -6242,7 +6242,7 @@
                 }
             }
 
-            function _(e) {
+            function f(e) {
                 return e.duration >= 0
             }
 
@@ -6324,16 +6324,16 @@
                                     d.state = "start", d.startClocks = (0, s.clocksNow)(), d.isAborted = !1, d.xhr = a, d.handlingStack = i;
                                     var m = !1,
                                         p = (0, o.instrumentMethod)(a, "onreadystatechange", (function() {
-                                            a.readyState === XMLHttpRequest.DONE && f()
+                                            a.readyState === XMLHttpRequest.DONE && _()
                                         })).stop,
-                                        f = function() {
-                                            if (_(), p(), !m) {
+                                        _ = function() {
+                                            if (f(), p(), !m) {
                                                 m = !0;
                                                 var e = r;
                                                 e.state = "complete", e.duration = (0, s.elapsed)(d.startClocks.timeStamp, (0, s.timeStampNow)()), e.status = a.status, n.notify((0, l.shallowClone)(e))
                                             }
                                         },
-                                        _ = (0, c.addEventListener)(t, a, "loadend", f).stop;
+                                        f = (0, c.addEventListener)(t, a, "loadend", _).stop;
                                     n.notify(d)
                                 }(n, e, t)
                             }), {
@@ -6530,8 +6530,8 @@
                 d = n(163),
                 m = n(165),
                 p = n(162),
-                f = n(166),
-                _ = n(167),
+                _ = n(166),
+                f = n(167),
                 g = n(168),
                 h = 5 * a.ONE_MINUTE;
 
@@ -6543,7 +6543,7 @@
                 e.subscribe(9, (function() {
                     s.reset()
                 })), e.subscribe(4, E);
-                var l = (0, f.listenActionEvents)(n, {
+                var l = (0, _.listenActionEvents)(n, {
                     onPointerDown: function(a) {
                         return function(e, t, n, a) {
                             var o = e.enablePrivacyForActionName ? (0, d.getNodePrivacyLevel)(a.target, e.defaultPrivacyLevel) : d.NodePrivacyLevel.ALLOW;
@@ -6585,10 +6585,10 @@
                             i(m);
                             var p = null === (d = null == s ? void 0 : s.target) || void 0 === d ? void 0 : d.selector;
                             p && (0, g.updateInteractionSelector)(r.timeStamp, p);
-                            var f = (0, c.waitPageActivityEnd)(t, n, e, (function(e) {
+                            var _ = (0, c.waitPageActivityEnd)(t, n, e, (function(e) {
                                     e.hadActivity && e.end < m.startClocks.timeStamp ? m.discard() : e.hadActivity ? m.stop(e.end) : u() ? m.stop(m.startClocks.timeStamp) : m.stop()
                                 }), g.CLICK_ACTION_MAX_DURATION).stop,
-                                _ = t.subscribe(4, (function(e) {
+                                f = t.subscribe(4, (function(e) {
                                     var t = e.endClocks;
                                     m.stop(t.timeStamp)
                                 })),
@@ -6596,9 +6596,9 @@
                                     m.stop()
                                 }));
                             m.stopObservable.subscribe((function() {
-                                _.unsubscribe(), f(), h.unsubscribe()
+                                f.unsubscribe(), _(), h.unsubscribe()
                             }))
-                        }(n, e, t, s, r, _, l, o, i, u)
+                        }(n, e, t, s, r, f, l, o, i, u)
                     }
                 }).stop;
                 return {
@@ -6612,7 +6612,7 @@
                     }
                 };
 
-                function _(e) {
+                function f(e) {
                     if (!a || !a.tryAppend(e)) {
                         var t = e.clone();
                         a = (0, m.createClickChain)(e, (function(e) {
@@ -6630,25 +6630,25 @@
                 var u, d = (0, s.generateUUID)(),
                     m = (0, a.clocksNow)(),
                     p = t.add(d, m.relative),
-                    f = (0, l.trackEventCounts)({
+                    _ = (0, l.trackEventCounts)({
                         lifeCycle: e,
                         isChildEvent: function(e) {
                             return void 0 !== e.action && (Array.isArray(e.action.id) ? (0, r.includes)(e.action.id, d) : e.action.id === d)
                         }
                     }),
-                    _ = 0,
+                    f = 0,
                     g = [],
                     h = new i.Observable;
 
                 function E(e) {
-                    0 === _ && (_ = 1, (u = e) ? p.close((0, a.getRelativeTime)(u)) : p.remove(), f.stop(), h.notify())
+                    0 === f && (f = 1, (u = e) ? p.close((0, a.getRelativeTime)(u)) : p.remove(), _.stop(), h.notify())
                 }
                 return {
                     event: c,
                     stop: E,
                     stopObservable: h,
                     get hasError() {
-                        return f.eventCounts.errorCount > 0
+                        return _.eventCounts.errorCount > 0
                     },
                     get hasPageActivity() {
                         return void 0 !== u
@@ -6659,14 +6659,14 @@
                     },
                     startClocks: m,
                     isStopped: function() {
-                        return 1 === _ || 2 === _
+                        return 1 === f || 2 === f
                     },
                     clone: function() {
                         return v(e, t, n, o, c)
                     },
                     validate: function(t) {
-                        if (E(), 1 === _) {
-                            var n = f.eventCounts,
+                        if (E(), 1 === f) {
+                            var n = _.eventCounts,
                                 i = n.resourceCount,
                                 s = n.errorCount,
                                 l = n.longTaskCount,
@@ -6684,17 +6684,17 @@
                                     events: null != t ? t : [c],
                                     event: c
                                 }, o);
-                            e.notify(0, p), _ = 2
+                            e.notify(0, p), f = 2
                         }
                     },
                     discard: function() {
-                        E(), _ = 2
+                        E(), f = 2
                     }
                 }
             }
 
             function S(e, t) {
-                (0, _.computeFrustration)(e, t).isRage ? (e.forEach((function(e) {
+                (0, f.computeFrustration)(e, t).isRage ? (e.forEach((function(e) {
                     return e.discard()
                 })), t.stop((0, a.timeStampNow)()), t.validate(e.map((function(e) {
                     return e.event
@@ -6749,7 +6749,7 @@
             n.r(t), n.d(t, {
                 PAGE_ACTIVITY_END_DELAY: () => d,
                 PAGE_ACTIVITY_VALIDATION_DELAY: () => u,
-                createPageActivityObservable: () => f,
+                createPageActivityObservable: () => _,
                 doWaitPageActivityEnd: () => p,
                 waitPageActivityEnd: () => m
             });
@@ -6764,18 +6764,18 @@
                 d = 100;
 
             function m(e, t, n, a, o) {
-                return p(f(e, t, n), a, o)
+                return p(_(e, t, n), a, o)
             }
 
             function p(e, t, n) {
                 var s, r = !1,
                     l = (0, a.setTimeout)((0, o.monitor)((function() {
-                        return f({
+                        return _({
                             hadActivity: !1
                         })
                     })), u),
                     c = void 0 !== n ? (0, a.setTimeout)((0, o.monitor)((function() {
-                        return f({
+                        return _({
                             hadActivity: !0,
                             end: (0, i.timeStampNow)()
                         })
@@ -6785,7 +6785,7 @@
                         (0, a.clearTimeout)(l), (0, a.clearTimeout)(s);
                         var n = (0, i.timeStampNow)();
                         t || (s = (0, a.setTimeout)((0, o.monitor)((function() {
-                            return f({
+                            return _({
                                 hadActivity: !0,
                                 end: n
                             })
@@ -6795,7 +6795,7 @@
                         r = !0, (0, a.clearTimeout)(l), (0, a.clearTimeout)(s), (0, a.clearTimeout)(c), m.unsubscribe()
                     };
 
-                function f(e) {
+                function _(e) {
                     r || (p(), t(e))
                 }
                 return {
@@ -6803,7 +6803,7 @@
                 }
             }
 
-            function f(e, t, n) {
+            function _(e, t, n) {
                 return new s.Observable((function(a) {
                     var o, i = [],
                         s = 0;
@@ -6811,12 +6811,12 @@
                         type: c.RumPerformanceEntryType.RESOURCE
                     }).subscribe((function(e) {
                         e.some((function(e) {
-                            return !_(n, e.name)
+                            return !f(n, e.name)
                         })) && d()
                     })), e.subscribe(6, (function(e) {
-                        _(n, e.url) || (void 0 === o && (o = e.requestIndex), s += 1, d())
+                        f(n, e.url) || (void 0 === o && (o = e.requestIndex), s += 1, d())
                     })), e.subscribe(7, (function(e) {
-                        _(n, e.url) || void 0 === o || e.requestIndex < o || (s -= 1, d())
+                        f(n, e.url) || void 0 === o || e.requestIndex < o || (s -= 1, d())
                     })));
                     var r, u = (r = d, (0, l.instrumentMethod)(window, "open", r)).stop;
                     return function() {
@@ -6833,7 +6833,7 @@
                 }))
             }
 
-            function _(e, t) {
+            function f(e, t) {
                 return (0, r.matchList)(e.excludedActivityUrls, t)
             }
         }, (e, t, n) => {
@@ -6854,7 +6854,7 @@
             function m(e, t) {
                 return new i.Observable((function(n) {
                     if (window.PerformanceObserver) {
-                        var i, m, f = function(e) {
+                        var i, m, _ = function(e) {
                                 var t = function(e) {
                                     return e.filter((function(e) {
                                         return ! function(e) {
@@ -6864,11 +6864,11 @@
                                 }(e);
                                 t.length > 0 && n.notify(t)
                             },
-                            _ = !0,
+                            f = !0,
                             g = new PerformanceObserver((0, s.monitor)((function(e) {
-                                _ ? i = (0, r.setTimeout)((function() {
-                                    return f(e.getEntries())
-                                })) : f(e.getEntries())
+                                f ? i = (0, r.setTimeout)((function() {
+                                    return _(e.getEntries())
+                                })) : _(e.getEntries())
                             })));
                         try {
                             g.observe(t)
@@ -6876,7 +6876,7 @@
                             var h = [a.RESOURCE, a.NAVIGATION, a.LONG_TASK, a.PAINT];
                             if ((0, l.includes)(h, t.type)) {
                                 t.buffered && (i = (0, r.setTimeout)((function() {
-                                    return f(performance.getEntriesByType(t.type))
+                                    return _(performance.getEntriesByType(t.type))
                                 })));
                                 try {
                                     g.observe({
@@ -6887,13 +6887,13 @@
                                 }
                             }
                         }
-                        return _ = !1,
+                        return f = !1,
                             function(e) {
                                 !o && void 0 !== window.performance && "getEntries" in performance && "addEventListener" in performance && (o = (0, c.addEventListener)(e, performance, "resourcetimingbufferfull", (function() {
                                     performance.clearResourceTimings()
                                 })))
                             }(e), p(a.FIRST_INPUT) || t.type !== a.FIRST_INPUT || (m = (0, d.retrieveFirstInputTiming)(e, (function(e) {
-                                f([e])
+                                _([e])
                             })).stop),
                             function() {
                                 g.disconnect(), m && m(), (0, r.clearTimeout)(i)
@@ -6962,7 +6962,7 @@
             n.r(t), n.d(t, {
                 STABLE_ATTRIBUTES: () => i,
                 getSelectorFromElement: () => l,
-                isSelectorUniqueAmongSiblings: () => f,
+                isSelectorUniqueAmongSiblings: () => _,
                 supportScopeSelector: () => g
             });
             var a, o = n(161),
@@ -6988,7 +6988,7 @@
                     for (var n, a = e; a && "HTML" !== a.nodeName;) {
                         var i = m(a, s, p, t, n);
                         if (i) return i;
-                        n = m(a, r, f, t, n) || _(d(a), n), a = (0, o.getParentElement)(a)
+                        n = m(a, r, _, t, n) || f(d(a), n), a = (0, o.getParentElement)(a)
                     }
                     return n
                 }
@@ -7018,21 +7018,21 @@
             function m(e, t, n, a, o) {
                 for (var i = 0, s = t; i < s.length; i++) {
                     var r = (0, s[i])(e, a);
-                    if (r && n(e, r, o)) return _(r, o)
+                    if (r && n(e, r, o)) return f(r, o)
                 }
             }
 
             function p(e, t, n) {
-                return 1 === e.ownerDocument.querySelectorAll(_(t, n)).length
+                return 1 === e.ownerDocument.querySelectorAll(f(t, n)).length
             }
 
-            function f(e, t, n) {
+            function _(e, t, n) {
                 var a;
                 if (void 0 === n) a = function(e) {
                     return (0, o.elementMatches)(e, t)
                 };
                 else {
-                    var i = g() ? _("".concat(t, ":scope"), n) : _(t, n);
+                    var i = g() ? f("".concat(t, ":scope"), n) : f(t, n);
                     a = function(e) {
                         return null !== e.querySelector(i)
                     }
@@ -7044,7 +7044,7 @@
                 return !0
             }
 
-            function _(e, t) {
+            function f(e, t) {
                 return t ? "".concat(e, ">").concat(t) : e
             }
 
@@ -7124,7 +7124,7 @@
                 var a = t.enablePrivacyForActionName,
                     o = t.actionNameAttribute,
                     i = d(e, l) || o && d(e, o);
-                return n === r.NodePrivacyLevel.MASK ? i || c : i || h(e, o, f, a) || h(e, o, _, a) || ""
+                return n === r.NodePrivacyLevel.MASK ? i || c : i || h(e, o, _, a) || h(e, o, f, a) || ""
             }
 
             function d(e, t) {
@@ -7143,7 +7143,7 @@
                     }
                 if (n) return v(E(n.getAttribute(t).trim()))
             }
-            var m, p, f = [function(e, t, n) {
+            var m, p, _ = [function(e, t, n) {
                     if (function() {
                             void 0 === m && (m = "labels" in HTMLInputElement.prototype);
                             return m
@@ -7187,7 +7187,7 @@
                 }, function(e, t) {
                     if ("options" in e && e.options.length > 0) return S(e.options[0], t)
                 }],
-                _ = [function(e, t, n) {
+                f = [function(e, t, n) {
                     return S(e, t, n)
                 }],
                 g = 10;
@@ -7235,9 +7235,9 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                CENSORED_IMG_MARK: () => f,
+                CENSORED_IMG_MARK: () => _,
                 CENSORED_STRING_MARK: () => p,
-                FORM_PRIVATE_TAG_NAMES: () => _,
+                FORM_PRIVATE_TAG_NAMES: () => f,
                 NodePrivacyLevel: () => s,
                 PRIVACY_ATTR_NAME: () => r,
                 PRIVACY_ATTR_VALUE_ALLOW: () => l,
@@ -7271,8 +7271,8 @@
                 d = "hidden",
                 m = "dd-privacy-",
                 p = "***",
-                f = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
-                _ = {
+                _ = "data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+                f = {
                     INPUT: !0,
                     OUTPUT: !0,
                     TEXTAREA: !0,
@@ -7345,7 +7345,7 @@
                     case "submit":
                         return !1
                 }
-                return !!_[t.tagName]
+                return !!f[t.tagName]
             }
             var y = function(e) {
                 return e.replace(/\S/g, "x")
@@ -7598,7 +7598,7 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                doStartErrorCollection: () => f,
+                doStartErrorCollection: () => _,
                 startErrorCollection: () => p
             });
             var a = n(87),
@@ -7618,10 +7618,10 @@
                     return e.notify(13, {
                         error: t
                     })
-                })), f(e, n, i)
+                })), _(e, n, i)
             }
 
-            function f(e, t, n) {
+            function _(e, t, n) {
                 return e.subscribe(13, (function(a) {
                     var o = a.error,
                         s = a.customerContext,
@@ -7707,7 +7707,7 @@
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
-                initConsoleObservable: () => _,
+                initConsoleObservable: () => f,
                 resetConsoleObservable: () => g
             });
             var a = n(124),
@@ -7721,17 +7721,17 @@
                 d = n(122),
                 m = n(123),
                 p = n(72),
-                f = {};
+                _ = {};
 
-            function _(e) {
+            function f(e) {
                 var t = e.map((function(e) {
-                    return f[e] || (f[e] = function(e) {
+                    return _[e] || (_[e] = function(e) {
                         return new o.Observable((function(t) {
                             var n = i.globalConsole[e];
                             return i.globalConsole[e] = function() {
-                                    for (var o = [], f = 0; f < arguments.length; f++) o[f] = arguments[f];
+                                    for (var o = [], _ = 0; _ < arguments.length; _++) o[_] = arguments[_];
                                     n.apply(console, o);
-                                    var _ = (0, m.createHandlingStack)();
+                                    var f = (0, m.createHandlingStack)();
                                     (0, s.callMonitored)((function() {
                                         t.notify(function(e, t, n) {
                                             var o, s = e.map((function(e) {
@@ -7742,13 +7742,13 @@
                                                 }(e)
                                             })).join(" ");
                                             if (t === i.ConsoleApiName.error) {
-                                                var f = (0, l.find)(e, (function(e) {
+                                                var _ = (0, l.find)(e, (function(e) {
                                                     return e instanceof Error
                                                 }));
                                                 o = {
-                                                    stack: f ? (0, m.toStackTraceString)((0, d.computeStackTrace)(f)) : void 0,
-                                                    fingerprint: (0, a.tryToGetFingerprint)(f),
-                                                    causes: f ? (0, a.flattenErrorCauses)(f, "console") : void 0,
+                                                    stack: _ ? (0, m.toStackTraceString)((0, d.computeStackTrace)(_)) : void 0,
+                                                    fingerprint: (0, a.tryToGetFingerprint)(_),
+                                                    causes: _ ? (0, a.flattenErrorCauses)(_, "console") : void 0,
                                                     startClocks: (0, p.clocksNow)(),
                                                     message: s,
                                                     source: u.ErrorSource.CONSOLE,
@@ -7762,20 +7762,20 @@
                                                 error: o,
                                                 handlingStack: n
                                             }
-                                        }(o, e, _))
+                                        }(o, e, f))
                                     }))
                                 },
                                 function() {
                                     i.globalConsole[e] = n
                                 }
                         }))
-                    }(e)), f[e]
+                    }(e)), _[e]
                 }));
                 return o.mergeObservables.apply(void 0, t)
             }
 
             function g() {
-                f = {}
+                _ = {}
             }
         }, (e, t, n) => {
             "use strict";
@@ -7828,7 +7828,7 @@
                                     csp: {
                                         disposition: e.disposition
                                     },
-                                    stack: f(e.effectiveDirective, e.originalPolicy ? "".concat(t, ' of the policy "').concat((0, l.safeTruncate)(e.originalPolicy, 100, "..."), '"') : "no policy", e.sourceFile, e.lineNumber, e.columnNumber)
+                                    stack: _(e.effectiveDirective, e.originalPolicy ? "".concat(t, ' of the policy "').concat((0, l.safeTruncate)(e.originalPolicy, 100, "..."), '"') : "no policy", e.sourceFile, e.lineNumber, e.columnNumber)
                                 })
                             }(e))
                         })).stop
@@ -7849,7 +7849,7 @@
                                                 type: n.id,
                                                 message: "".concat(t, ": ").concat(n.message),
                                                 originalError: e,
-                                                stack: f(n.id, n.message, n.sourceFile, n.lineNumber, n.columnNumber)
+                                                stack: _(n.id, n.message, n.sourceFile, n.lineNumber, n.columnNumber)
                                             })
                                         }(e))
                                     }))
@@ -7875,7 +7875,7 @@
                 }, e)
             }
 
-            function f(e, t, n, o, i) {
+            function _(e, t, n, o, i) {
                 return n ? (0, a.toStackTraceString)({
                     name: e,
                     message: t,
@@ -8020,11 +8020,11 @@
                             }(e, t);
                         if (!t.trackResources && !l) return;
                         var c = "xhr" === e.type ? "xhr" : "fetch",
-                            m = s ? _(s) : void 0,
+                            m = s ? f(s) : void 0,
                             p = function(e, t, n) {
                                 return e.wasInPageStateDuringPeriod("frozen", t.relative, n) ? void 0 : (0, a.toServerDuration)(n)
                             }(n, r, e.duration),
-                            f = (0, o.combine)({
+                            _ = (0, o.combine)({
                                 date: r.timeStamp,
                                 resource: {
                                     id: (0, i.generateUUID)(),
@@ -8042,7 +8042,7 @@
                             }, l, m);
                         return {
                             startTime: r.relative,
-                            rawRumEvent: f,
+                            rawRumEvent: _,
                             domainContext: {
                                 performanceEntry: s,
                                 xhr: e.xhr,
@@ -8064,13 +8064,13 @@
                     for (var a = 0, o = n; a < o.length; a++) {
                         var i = o[a];
                         if (!(0, d.isResourceEntryRequestType)(i)) {
-                            var s = f(i, t);
+                            var s = _(i, t);
                             s && e.notify(11, s)
                         }
                     }
                 }));
                 return s(t, (function(n) {
-                    var a = f(n, t);
+                    var a = _(n, t);
                     a && e.notify(11, a)
                 })), {
                     stop: function() {
@@ -8079,7 +8079,7 @@
                 }
             }
 
-            function f(e, t) {
+            function _(e, t) {
                 var n = (0, a.relativeToClocks)(e.startTime),
                     s = function(e, t) {
                         var n = e.traceId;
@@ -8094,7 +8094,7 @@
                     }(e, t);
                 if (t.trackResources || s) {
                     var r, l = (0, d.computeResourceEntryType)(e),
-                        u = _(e),
+                        u = f(e),
                         m = (0, o.combine)({
                             date: n.timeStamp,
                             resource: {
@@ -8119,7 +8119,7 @@
                 }
             }
 
-            function _(e) {
+            function f(e) {
                 var t = e.renderBlockingStatus;
                 return {
                     resource: (0, s.assign)({
@@ -8324,7 +8324,7 @@
             function r(e, t, n, r, l, c, u, d, m) {
                 return e.subscribe(3, (function(n) {
                     return e.notify(11, function(e, t, n, s, r) {
-                        var l, c, u, d, m, p, f, _, g, h, E, v, S, y, T, b, N = s.getReplayStats(e.id),
+                        var l, c, u, d, m, p, _, f, g, h, E, v, S, y, T, b, N = s.getReplayStats(e.id),
                             A = n.findFeatureFlagEvaluations(e.startClocks.relative),
                             I = r.findAll(e.startClocks.relative, e.duration),
                             C = {
@@ -8351,12 +8351,12 @@
                                     first_byte: (0, a.toServerDuration)(null === (d = e.initialViewMetrics.navigationTimings) || void 0 === d ? void 0 : d.firstByte),
                                     dom_complete: (0, a.toServerDuration)(null === (m = e.initialViewMetrics.navigationTimings) || void 0 === m ? void 0 : m.domComplete),
                                     dom_content_loaded: (0, a.toServerDuration)(null === (p = e.initialViewMetrics.navigationTimings) || void 0 === p ? void 0 : p.domContentLoaded),
-                                    dom_interactive: (0, a.toServerDuration)(null === (f = e.initialViewMetrics.navigationTimings) || void 0 === f ? void 0 : f.domInteractive),
+                                    dom_interactive: (0, a.toServerDuration)(null === (_ = e.initialViewMetrics.navigationTimings) || void 0 === _ ? void 0 : _.domInteractive),
                                     error: {
                                         count: e.eventCounts.errorCount
                                     },
                                     first_contentful_paint: (0, a.toServerDuration)(e.initialViewMetrics.firstContentfulPaint),
-                                    first_input_delay: (0, a.toServerDuration)(null === (_ = e.initialViewMetrics.firstInput) || void 0 === _ ? void 0 : _.delay),
+                                    first_input_delay: (0, a.toServerDuration)(null === (f = e.initialViewMetrics.firstInput) || void 0 === f ? void 0 : f.delay),
                                     first_input_time: (0, a.toServerDuration)(null === (g = e.initialViewMetrics.firstInput) || void 0 === g ? void 0 : g.time),
                                     first_input_target_selector: null === (h = e.initialViewMetrics.firstInput) || void 0 === h ? void 0 : h.targetSelector,
                                     interaction_to_next_paint: (0, a.toServerDuration)(null === (E = e.commonViewMetrics.interactionToNextPaint) || void 0 === E ? void 0 : E.value),
@@ -8410,7 +8410,7 @@
             n.r(t), n.d(t, {
                 KEEP_TRACKING_AFTER_VIEW_DELAY: () => h,
                 SESSION_KEEP_ALIVE_INTERVAL: () => g,
-                THROTTLE_VIEW_UPDATE_PERIOD: () => _,
+                THROTTLE_VIEW_UPDATE_PERIOD: () => f,
                 trackViews: () => E
             });
             var a = n(72),
@@ -8424,8 +8424,8 @@
                 d = n(83),
                 m = n(184),
                 p = n(185),
-                f = n(191),
-                _ = 3e3,
+                _ = n(191),
+                f = 3e3,
                 g = 5 * a.ONE_MINUTE,
                 h = 5 * a.ONE_MINUTE;
 
@@ -8453,12 +8453,12 @@
                             context: A
                         };
                         e.notify(1, R), e.notify(2, R);
-                        var w = (0, c.throttle)(X, _, {
+                        var w = (0, c.throttle)(X, f, {
                                 leading: !1
                             }),
                             D = w.throttled,
                             P = w.cancel,
-                            G = (0, f.trackCommonViewMetrics)(e, t, n, D, E, v),
+                            G = (0, _.trackCommonViewMetrics)(e, t, n, D, E, v),
                             K = G.setLoadEvent,
                             V = G.setViewEnd,
                             U = G.stop,
@@ -8818,10 +8818,10 @@
                     })),
                     m = d.stop,
                     p = d.setLoadEvent,
-                    f = (0, s.trackScrollMetrics)(n, c, (function(e) {
+                    _ = (0, s.trackScrollMetrics)(n, c, (function(e) {
                         u.scroll = e
                     })).stop,
-                    _ = (0, a.trackCumulativeLayoutShift)(n, c.relative, (function(e) {
+                    f = (0, a.trackCumulativeLayoutShift)(n, c.relative, (function(e) {
                         u.cumulativeLayoutShift = e, r()
                     })).stop,
                     g = (0, o.trackInteractionToNextPaint)(n, c.relative, l),
@@ -8829,7 +8829,7 @@
                     E = g.getInteractionToNextPaint;
                 return {
                     stop: function() {
-                        m(), _(), f()
+                        m(), f(), _()
                     },
                     stopINPTracking: h,
                     setLoadEvent: p,
@@ -8843,7 +8843,7 @@
             "use strict";
             n.r(t), n.d(t, {
                 MAX_WINDOW_DURATION: () => m,
-                isLayoutShiftSupported: () => f,
+                isLayoutShiftSupported: () => _,
                 trackCumulativeLayoutShift: () => u
             });
             var a = n(102),
@@ -8855,17 +8855,17 @@
                 c = n(160);
 
             function u(e, t, n) {
-                if (!f()) return {
+                if (!_()) return {
                     stop: a.noop
                 };
                 var s, r, u = 0;
                 n({
                     value: 0
                 });
-                var _, g, h, E, v = (h = 0, E = 0, {
+                var f, g, h, E, v = (h = 0, E = 0, {
                         update: function(e) {
                             var t;
-                            return void 0 === _ || e.startTime - g >= p || e.startTime - _ >= m ? (_ = g = e.startTime, E = h = e.value, t = !0) : (h += e.value, g = e.startTime, (t = e.value > E) && (E = e.value)), {
+                            return void 0 === f || e.startTime - g >= p || e.startTime - f >= m ? (f = g = e.startTime, E = h = e.value, t = !0) : (h += e.value, g = e.startTime, (t = e.value > E) && (E = e.value)), {
                                 cumulatedValue: h,
                                 isMaxValue: t
                             }
@@ -8878,14 +8878,14 @@
                         for (var l = 0, m = a; l < m.length; l++) {
                             var p = m[l];
                             if (!(p.hadRecentInput || p.startTime < t)) {
-                                var f = v.update(p),
-                                    _ = f.cumulatedValue;
-                                if (f.isMaxValue) {
+                                var _ = v.update(p),
+                                    f = _.cumulatedValue;
+                                if (_.isMaxValue) {
                                     var g = d(p.sources);
                                     s = g ? new WeakRef(g) : void 0, r = (0, o.elapsed)(t, p.startTime)
                                 }
-                                if (_ > u) {
-                                    u = _;
+                                if (f > u) {
+                                    u = f;
                                     g = null == s ? void 0 : s.deref();
                                     n({
                                         value: (0, i.round)(u, 4),
@@ -8912,14 +8912,14 @@
             var m = 5 * o.ONE_SECOND,
                 p = o.ONE_SECOND;
 
-            function f() {
+            function _() {
                 return (0, l.supportPerformanceTimingEvent)(l.RumPerformanceEntryType.LAYOUT_SHIFT) && "WeakRef" in window
             }
         }, (e, t, n) => {
             "use strict";
             n.r(t), n.d(t, {
                 MAX_INP_VALUE: () => d,
-                isInteractionToNextPaintSupported: () => f,
+                isInteractionToNextPaintSupported: () => _,
                 trackInteractionToNextPaint: () => m,
                 trackViewInteractionCount: () => p
             });
@@ -8934,14 +8934,14 @@
                 d = 1 * a.ONE_MINUTE;
 
             function m(e, t, n) {
-                if (!f()) return {
+                if (!_()) return {
                     getInteractionToNextPaint: function() {},
                     setViewEnd: o.noop,
                     stop: o.noop
                 };
-                var c, m, _ = p(n),
-                    g = _.getViewInteractionCount,
-                    h = _.stopViewInteractionCount,
+                var c, m, f = p(n),
+                    g = f.getViewInteractionCount,
+                    h = f.stopViewInteractionCount,
                     E = 1 / 0,
                     v = function(e) {
                         var t = [];
@@ -9025,7 +9025,7 @@
                 }
             }
 
-            function f() {
+            function _() {
                 return (0, i.supportPerformanceTimingEvent)(i.RumPerformanceEntryType.EVENT) && window.PerformanceEventTiming && "interactionId" in PerformanceEventTiming.prototype
             }
         }, (e, t, n) => {
@@ -9075,12 +9075,12 @@
                         e < m.timeStamp && l(e)
                     }
                 }
-                var f = (0, o.waitPageActivityEnd)(e, t, n, (function(e) {
+                var _ = (0, o.waitPageActivityEnd)(e, t, n, (function(e) {
                     u && (u = !1, e.hadActivity && d.push((0, a.elapsed)(r.timeStamp, e.end)), p())
                 })).stop;
                 return {
                     stop: function() {
-                        f(), m.stop()
+                        _(), m.stop()
                     },
                     setLoadEvent: function(e) {
                         c && (c = !1, d.push(e), p())
@@ -9338,7 +9338,7 @@
             n.r(t), n.d(t, {
                 VISIBILITY_CHECK_DELAY: () => u,
                 startSessionManager: () => p,
-                stopSessionManager: () => f
+                stopSessionManager: () => _
             });
             var a = n(87),
                 o = n(147),
@@ -9353,10 +9353,10 @@
 
             function p(e, t, n, l) {
                 var p = new a.Observable,
-                    f = new a.Observable,
-                    _ = (0, c.startSessionStore)(e.sessionStoreStrategyType, t, n);
+                    _ = new a.Observable,
+                    f = (0, c.startSessionStore)(e.sessionStoreStrategyType, t, n);
                 m.push((function() {
-                    return _.stop()
+                    return f.stop()
                 }));
                 var g = (0, o.createValueHistory)({
                     expireDelay: d
@@ -9364,19 +9364,19 @@
 
                 function h() {
                     return {
-                        id: _.getSession().id,
-                        trackingType: _.getSession()[t],
-                        isReplayForced: !!_.getSession().forcedReplay
+                        id: f.getSession().id,
+                        trackingType: f.getSession()[t],
+                        isReplayForced: !!f.getSession().forcedReplay
                     }
                 }
                 return m.push((function() {
                         return g.stop()
-                    })), _.renewObservable.subscribe((function() {
+                    })), f.renewObservable.subscribe((function() {
                         g.add(h(), (0, i.relativeNow)()), p.notify()
-                    })), _.expireObservable.subscribe((function() {
-                        f.notify(), g.closeActive((0, i.relativeNow)())
-                    })), _.expandOrRenewSession(), g.add(h(), (0, i.clocksOrigin)().relative), l.observable.subscribe((function() {
-                        l.isGranted() ? _.expandOrRenewSession() : _.expire()
+                    })), f.expireObservable.subscribe((function() {
+                        _.notify(), g.closeActive((0, i.relativeNow)())
+                    })), f.expandOrRenewSession(), g.add(h(), (0, i.clocksOrigin)().relative), l.observable.subscribe((function() {
+                        l.isGranted() ? f.expandOrRenewSession() : f.expire()
                     })),
                     function(e, t) {
                         var n = (0, s.addEventListeners)(e, window, ["click", "touchstart", "keydown", "scroll"], t, {
@@ -9385,7 +9385,7 @@
                         }).stop;
                         m.push(n)
                     }(e, (function() {
-                        l.isGranted() && _.expandOrRenewSession()
+                        l.isGranted() && f.expandOrRenewSession()
                     })),
                     function(e, t) {
                         var n = function() {
@@ -9398,7 +9398,7 @@
                             (0, r.clearInterval)(o)
                         }))
                     }(e, (function() {
-                        return _.expandSession()
+                        return f.expandSession()
                     })),
                     function(e, t) {
                         var n = (0, s.addEventListener)(e, window, "resume", t, {
@@ -9406,20 +9406,20 @@
                         }).stop;
                         m.push(n)
                     }(e, (function() {
-                        return _.restartSession()
+                        return f.restartSession()
                     })), {
                         findSession: function(e, t) {
                             return g.find(e, t)
                         },
                         renewObservable: p,
-                        expireObservable: f,
-                        sessionStateUpdateObservable: _.sessionStateUpdateObservable,
-                        expire: _.expire,
-                        updateSessionState: _.updateSessionState
+                        expireObservable: _,
+                        sessionStateUpdateObservable: f.sessionStateUpdateObservable,
+                        expire: f.expire,
+                        updateSessionState: f.updateSessionState
                     }
             }
 
-            function f() {
+            function _() {
                 m.forEach((function(e) {
                     return e()
                 })), m = []
@@ -9670,30 +9670,30 @@
                 m = o.ONE_SECOND;
 
             function p(e, t, n, a, o) {
-                0 === t.transportStatus && 0 === t.queuedPayloads.size() && t.bandwidthMonitor.canHandle(e) ? _(e, t, n, {
+                0 === t.transportStatus && 0 === t.queuedPayloads.size() && t.bandwidthMonitor.canHandle(e) ? f(e, t, n, {
                     onSuccess: function() {
                         return g(0, t, n, a, o)
                     },
                     onFailure: function() {
-                        t.queuedPayloads.enqueue(e), f(t, n, a, o)
+                        t.queuedPayloads.enqueue(e), _(t, n, a, o)
                     }
                 }) : t.queuedPayloads.enqueue(e)
             }
 
-            function f(e, t, n, o) {
+            function _(e, t, n, o) {
                 2 === e.transportStatus && (0, a.setTimeout)((function() {
-                    _(e.queuedPayloads.first(), e, t, {
+                    f(e.queuedPayloads.first(), e, t, {
                         onSuccess: function() {
                             e.queuedPayloads.dequeue(), e.currentBackoffTime = m, g(1, e, t, n, o)
                         },
                         onFailure: function() {
-                            e.currentBackoffTime = Math.min(d, 2 * e.currentBackoffTime), f(e, t, n, o)
+                            e.currentBackoffTime = Math.min(d, 2 * e.currentBackoffTime), _(e, t, n, o)
                         }
                     })
                 }), e.currentBackoffTime)
             }
 
-            function _(e, t, n, a) {
+            function f(e, t, n, a) {
                 var o = a.onSuccess,
                     i = a.onFailure;
                 t.bandwidthMonitor.add(e), n(e, (function(n) {
@@ -9775,10 +9775,10 @@
                     r = e.pageExitObservable,
                     l = e.sessionExpireObservable,
                     c = r.subscribe((function(e) {
-                        return f(e.reason)
+                        return _(e.reason)
                     })),
                     u = l.subscribe((function() {
-                        return f("session_expire")
+                        return _("session_expire")
                     })),
                     d = new a.Observable((function() {
                         return function() {
@@ -9788,11 +9788,11 @@
                     m = 0,
                     p = 0;
 
-                function f(e) {
+                function _(e) {
                     if (0 !== p) {
                         var t = p,
                             n = m;
-                        p = 0, m = 0, _(), d.notify({
+                        p = 0, m = 0, f(), d.notify({
                             reason: e,
                             messagesCount: t,
                             bytesCount: n
@@ -9800,7 +9800,7 @@
                     }
                 }
 
-                function _() {
+                function f() {
                     (0, o.clearTimeout)(t), t = void 0
                 }
                 return {
@@ -9809,15 +9809,15 @@
                         return p
                     },
                     notifyBeforeAddMessage: function(e) {
-                        m + e >= i && f("bytes_limit"), p += 1, m += e, void 0 === t && (t = (0, o.setTimeout)((function() {
-                            f("duration_limit")
+                        m + e >= i && _("bytes_limit"), p += 1, m += e, void 0 === t && (t = (0, o.setTimeout)((function() {
+                            _("duration_limit")
                         }), s))
                     },
                     notifyAfterAddMessage: function(e) {
-                        void 0 === e && (e = 0), m += e, p >= n ? f("messages_limit") : m >= i && f("bytes_limit")
+                        void 0 === e && (e = 0), m += e, p >= n ? _("messages_limit") : m >= i && _("bytes_limit")
                     },
                     notifyAfterRemoveMessage: function(e) {
-                        m -= e, 0 === (p -= 1) && _()
+                        m -= e, 0 === (p -= 1) && f()
                     }
                 }
             }
@@ -9986,11 +9986,11 @@
 
             function m(e, t, n, s, u) {
                 t.enabled && (0, r.performDraw)(e.customerDataTelemetrySampleRate) && (g(), h(), n.subscribe(12, (function(e) {
-                    i = !0, f(o.globalContextBytes, s.getOrCreateTracker(2).getBytesCount()), f(o.userContextBytes, s.getOrCreateTracker(1).getBytesCount()), f(o.featureFlagBytes, (0, l.includes)(["view", "error"], e.type) ? s.getOrCreateTracker(0).getBytesCount() : 0)
+                    i = !0, _(o.globalContextBytes, s.getOrCreateTracker(2).getBytesCount()), _(o.userContextBytes, s.getOrCreateTracker(1).getBytesCount()), _(o.featureFlagBytes, (0, l.includes)(["view", "error"], e.type) ? s.getOrCreateTracker(0).getBytesCount() : 0)
                 })), u.subscribe((function(e) {
                     var t = e.bytesCount,
                         n = e.messagesCount;
-                    i && (a.batchCount += 1, f(a.batchBytesCount, t), f(a.batchMessagesCount, n), _(a.globalContextBytes, o.globalContextBytes), _(a.userContextBytes, o.userContextBytes), _(a.featureFlagBytes, o.featureFlagBytes), h())
+                    i && (a.batchCount += 1, _(a.batchBytesCount, t), _(a.batchMessagesCount, n), f(a.globalContextBytes, o.globalContextBytes), f(a.userContextBytes, o.userContextBytes), f(a.featureFlagBytes, o.featureFlagBytes), h())
                 })), (0, c.setInterval)(p, d))
             }
 
@@ -9998,11 +9998,11 @@
                 0 !== a.batchCount && ((0, u.addTelemetryDebug)("Customer data measures", a), g())
             }
 
-            function f(e, t) {
+            function _(e, t) {
                 e.sum += t, e.min = Math.min(e.min, t), e.max = Math.max(e.max, t)
             }
 
-            function _(e, t) {
+            function f(e, t) {
                 e.sum += t.sum, e.min = Math.min(e.min, t.min), e.max = Math.max(e.max, t.max)
             }
 
@@ -10334,7 +10334,7 @@
 
             function c(e, t, n, c, u, d) {
                 var m, p = [],
-                    f = d || (0, o.createHttpRequest)(t.sessionReplayEndpointBuilder, r.SEGMENT_BYTES_LIMIT, (function(t) {
+                    _ = d || (0, o.createHttpRequest)(t.sessionReplayEndpointBuilder, r.SEGMENT_BYTES_LIMIT, (function(t) {
                         e.notify(13, {
                             error: t
                         }), (0, a.addTelemetryDebug)("Error reported to customer", {
@@ -10343,8 +10343,8 @@
                     }));
                 if ((0, i.canUseEventBridge)()) m = (0, l.startRecordBridge)(c).addRecord;
                 else {
-                    var _ = (0, r.startSegmentCollection)(e, t, n, c, f, u);
-                    m = _.addRecord, p.push(_.stop)
+                    var f = (0, r.startSegmentCollection)(e, t, n, c, _, u);
+                    m = f.addRecord, p.push(f.stop)
                 }
                 var g = (0, s.record)({
                     emit: m,
@@ -10398,27 +10398,27 @@
                     },
                     m = (0, s.createElementsScrollPositions)(),
                     p = (0, r.initShadowRootsController)(n, d, m),
-                    f = (0, l.startFullSnapshots)(m, p, u, n, _, (function(e) {
+                    _ = (0, l.startFullSnapshots)(m, p, u, n, f, (function(e) {
                         return e.forEach((function(e) {
                             return d(e)
                         }))
                     })).stop;
 
-                function _() {
+                function f() {
                     p.flush(), h.flush()
                 }
                 var g = (0, c.initRecordIds)(),
                     h = (0, i.trackMutation)(d, n, p, document),
                     E = [h, (0, i.trackMove)(n, d), (0, i.trackMouseInteraction)(n, d, g), (0, i.trackScroll)(n, d, m, document), (0, i.trackViewportResize)(n, d), (0, i.trackInput)(n, d), (0, i.trackMediaInteraction)(n, d), (0, i.trackStyleSheet)(d), (0, i.trackFocus)(n, d), (0, i.trackVisualViewportResize)(n, d), (0, i.trackFrustration)(u, d, g), (0, i.trackViewEnd)(u, (function(e) {
-                        _(), d(e)
+                        f(), d(e)
                     }))];
                 return {
                     stop: function() {
                         p.stop(), E.forEach((function(e) {
                             return e.stop()
-                        })), f()
+                        })), _()
                     },
-                    flushMutations: _,
+                    flushMutations: f,
                     shadowRootsController: p
                 }
             }
@@ -10593,10 +10593,10 @@
                 getSerializedNodeId: () => l,
                 getValidTagName: () => h,
                 hasSerializedNode: () => s,
-                makeUrlAbsolute: () => _,
+                makeUrlAbsolute: () => f,
                 nodeAndAncestorsHaveSerializedNode: () => r,
                 setSerializedNodeId: () => c,
-                switchToAbsoluteUrl: () => f
+                switchToAbsoluteUrl: () => _
             });
             var a = n(109),
                 o = n(68),
@@ -10637,16 +10637,16 @@
                 m = /^[A-Za-z]+:|^\/\//,
                 p = /^data:.*,/i;
 
-            function f(e, t) {
+            function _(e, t) {
                 return e.replace(d, (function(e, n, a, o, i, s) {
                     var r = a || i || s;
                     if (!t || !r || m.test(r) || p.test(r)) return e;
                     var l = n || o || "";
-                    return "url(".concat(l).concat(_(r, t)).concat(l, ")")
+                    return "url(".concat(l).concat(f(r, t)).concat(l, ")")
                 }))
             }
 
-            function _(e, t) {
+            function f(e, t) {
                 try {
                     return (0, a.buildUrl)(e, t).href
                 } catch (t) {
@@ -10723,14 +10723,14 @@
                                 var d;
                                 if (u === a.NodePrivacyLevel.HIDDEN) {
                                     var p = e.getBoundingClientRect(),
-                                        f = p.width,
-                                        _ = p.height;
+                                        _ = p.width,
+                                        f = p.height;
                                     return {
                                         type: i.NodeType.Element,
                                         tagName: r,
                                         attributes: (n = {
-                                            rr_width: "".concat(f, "px"),
-                                            rr_height: "".concat(_, "px")
+                                            rr_width: "".concat(_, "px"),
+                                            rr_height: "".concat(f, "px")
                                         }, n[a.PRIVACY_ATTR_NAME] = a.PRIVACY_ATTR_VALUE_HIDDEN, n),
                                         childNodes: [],
                                         isSVG: c
@@ -10899,12 +10899,12 @@
                     null !== p && (r[m] = p)
                 }
                 if (e.value && ("textarea" === c || "select" === c || "option" === c || "input" === c)) {
-                    var f = (0, i.getElementInputValue)(e, t);
-                    void 0 !== f && (r.value = f)
+                    var _ = (0, i.getElementInputValue)(e, t);
+                    void 0 !== _ && (r.value = _)
                 }
                 if ("option" === c && t === a.NodePrivacyLevel.ALLOW) {
-                    var _ = e;
-                    _.selected && (r.selected = _.selected)
+                    var f = e;
+                    f.selected && (r.selected = f.selected)
                 }
                 if ("link" === c) {
                     var g, h = Array.from(u.styleSheets).find((function(t) {
@@ -11073,20 +11073,20 @@
                 return (0, i.addEventListeners)(e, document, Object.keys(m), (function(a) {
                     var i = (0, c.getEventTarget)(a);
                     if ((0, s.getNodePrivacyLevel)(i, e.defaultPrivacyLevel) !== s.NodePrivacyLevel.HIDDEN && (0, u.hasSerializedNode)(i)) {
-                        var p, f = (0, u.getSerializedNodeId)(i),
-                            _ = m[a.type];
-                        if (_ !== r.MouseInteractionType.Blur && _ !== r.MouseInteractionType.Focus) {
+                        var p, _ = (0, u.getSerializedNodeId)(i),
+                            f = m[a.type];
+                        if (f !== r.MouseInteractionType.Blur && f !== r.MouseInteractionType.Focus) {
                             var g = (0, d.tryToComputeCoordinates)(a);
                             if (!g) return;
                             p = {
-                                id: f,
-                                type: _,
+                                id: _,
+                                type: f,
                                 x: g.x,
                                 y: g.y
                             }
                         } else p = {
-                            id: f,
-                            type: _
+                            id: _,
+                            type: f
                         };
                         var h = (0, o.assign)({
                             id: n.getIdForEvent(a)
@@ -11133,14 +11133,14 @@
                         }
                     }), u),
                     p = m.throttled,
-                    f = m.cancel,
-                    _ = (0, o.addEventListener)(e, d, "scroll", p, {
+                    _ = m.cancel,
+                    f = (0, o.addEventListener)(e, d, "scroll", p, {
                         capture: !0,
                         passive: !0
                     }).stop;
                 return {
                     stop: function() {
-                        _(), f()
+                        f(), _()
                     }
                 }
             }
@@ -11397,16 +11397,16 @@
             function m(e, t, n) {
                 void 0 === n && (n = document);
                 var m, p = e.defaultPrivacyLevel,
-                    f = new WeakMap,
-                    _ = n !== document,
-                    g = (0, a.addEventListeners)(e, n, _ ? ["change"] : ["input", "change"], (function(e) {
+                    _ = new WeakMap,
+                    f = n !== document,
+                    g = (0, a.addEventListeners)(e, n, f ? ["change"] : ["input", "change"], (function(e) {
                         var t = (0, c.getEventTarget)(e);
                         (t instanceof HTMLInputElement || t instanceof HTMLTextAreaElement || t instanceof HTMLSelectElement) && E(t)
                     }), {
                         capture: !0,
                         passive: !0
                     }).stop;
-                if (_) m = i.noop;
+                if (f) m = i.noop;
                 else {
                     var h = [(0, o.instrumentSetter)(HTMLInputElement.prototype, "value", E), (0, o.instrumentSetter)(HTMLInputElement.prototype, "checked", E), (0, o.instrumentSetter)(HTMLSelectElement.prototype, "value", E), (0, o.instrumentSetter)(HTMLTextAreaElement.prototype, "value", E), (0, o.instrumentSetter)(HTMLSelectElement.prototype, "selectedIndex", E)];
                     m = function() {
@@ -11449,8 +11449,8 @@
 
                 function v(e, n) {
                     if ((0, u.hasSerializedNode)(e)) {
-                        var a = f.get(e);
-                        a && a.text === n.text && a.isChecked === n.isChecked || (f.set(e, n), t((0, d.assembleIncrementalSnapshot)(l.IncrementalSource.Input, (0, s.assign)({
+                        var a = _.get(e);
+                        a && a.text === n.text && a.isChecked === n.isChecked || (_.set(e, n), t((0, d.assembleIncrementalSnapshot)(l.IncrementalSource.Input, (0, s.assign)({
                             id: (0, u.getSerializedNodeId)(e)
                         }, n))))
                     }
@@ -11476,7 +11476,7 @@
                     stop: a.noop,
                     flush: a.noop
                 };
-                var f = (0, l.createMutationBatch)((function(a) {
+                var _ = (0, l.createMutationBatch)((function(a) {
                         ! function(e, t, n, a) {
                             var o = new Map;
                             e.filter((function(e) {
@@ -11501,8 +11501,8 @@
                                     }
                                     var m = Array.from(o);
                                     d(m);
-                                    for (var p = new Set, f = [], _ = 0, g = m; _ < g.length; _++) {
-                                        var h = g[_];
+                                    for (var p = new Set, _ = [], f = 0, g = m; f < g.length; f++) {
+                                        var h = g[f];
                                         if (!T(h)) {
                                             var E = (0, i.getNodePrivacyLevel)(h.parentNode, t.defaultPrivacyLevel, a);
                                             if (E !== i.NodePrivacyLevel.HIDDEN && E !== i.NodePrivacyLevel.IGNORE) {
@@ -11517,7 +11517,7 @@
                                                 });
                                                 if (v) {
                                                     var S = (0, i.getParentNode)(h);
-                                                    f.push({
+                                                    _.push({
                                                         nextId: b(h),
                                                         parentId: (0, r.getSerializedNodeId)(S),
                                                         node: v
@@ -11533,7 +11533,7 @@
                                             id: (0, r.getSerializedNodeId)(t)
                                         })
                                     })), {
-                                        adds: f,
+                                        adds: _,
                                         removes: y,
                                         hasBeenSerialized: T
                                     };
@@ -11553,8 +11553,8 @@
                                     return "childList" === e.type
                                 })), n, a, o),
                                 p = u.adds,
-                                f = u.removes,
-                                _ = u.hasBeenSerialized,
+                                _ = u.removes,
+                                f = u.hasBeenSerialized,
                                 g = function(e, t, n) {
                                     for (var a, o = [], s = new Set, l = e.filter((function(e) {
                                             return !s.has(e.target) && (s.add(e.target), !0)
@@ -11570,7 +11570,7 @@
                                     }
                                     return o
                                 }(l.filter((function(e) {
-                                    return "characterData" === e.type && !_(e.target)
+                                    return "characterData" === e.type && !f(e.target)
                                 })), n, o),
                                 h = function(e, t, n) {
                                     for (var a = [], o = new Map, s = e.filter((function(e) {
@@ -11581,34 +11581,34 @@
                                         if (d.target.getAttribute(d.attributeName) !== d.oldValue) {
                                             var m = (0, i.getNodePrivacyLevel)(d.target, t.defaultPrivacyLevel, n),
                                                 p = (0, r.serializeAttribute)(d.target, m, d.attributeName, t),
-                                                f = void 0;
+                                                _ = void 0;
                                             if ("value" === d.attributeName) {
-                                                var _ = (0, r.getElementInputValue)(d.target, m);
-                                                if (void 0 === _) continue;
-                                                f = _
-                                            } else f = "string" == typeof p ? p : null;
+                                                var f = (0, r.getElementInputValue)(d.target, m);
+                                                if (void 0 === f) continue;
+                                                _ = f
+                                            } else _ = "string" == typeof p ? p : null;
                                             var g = l.get(d.target);
                                             g || (g = {
                                                 id: (0, r.getSerializedNodeId)(d.target),
                                                 attributes: {}
-                                            }, a.push(g), l.set(d.target, g)), g.attributes[d.attributeName] = f
+                                            }, a.push(g), l.set(d.target, g)), g.attributes[d.attributeName] = _
                                         }
                                     }
                                     return a
                                 }(l.filter((function(e) {
-                                    return "attributes" === e.type && !_(e.target)
+                                    return "attributes" === e.type && !f(e.target)
                                 })), n, o);
-                            if (!(g.length || h.length || f.length || p.length)) return;
+                            if (!(g.length || h.length || _.length || p.length)) return;
                             t((0, c.assembleIncrementalSnapshot)(s.IncrementalSource.Mutation, {
                                 adds: p,
-                                removes: f,
+                                removes: _,
                                 texts: g,
                                 attributes: h
                             }))
-                        }(a.concat(_.takeRecords()), e, t, n)
+                        }(a.concat(f.takeRecords()), e, t, n)
                     })),
-                    _ = new p((0, o.monitor)(f.addMutations));
-                return _.observe(u, {
+                    f = new p((0, o.monitor)(_.addMutations));
+                return f.observe(u, {
                     attributeOldValue: !0,
                     attributes: !0,
                     characterData: !0,
@@ -11617,10 +11617,10 @@
                     subtree: !0
                 }), {
                     stop: function() {
-                        _.disconnect(), f.stop()
+                        f.disconnect(), _.stop()
                     },
                     flush: function() {
-                        f.flush()
+                        _.flush()
                     }
                 }
             }
@@ -12052,8 +12052,8 @@
                     getSessionReplayLink: function() {
                         return p()
                     },
-                    onRumStart: function(a, o, r, u, f) {
-                        var _;
+                    onRumStart: function(a, o, r, u, _) {
+                        var f;
                         o.startSessionReplayRecordingManually && (n = {
                             status: 0
                         }), a.subscribe(8, (function() {
@@ -12070,9 +12070,9 @@
                                 status: 2
                             }, (0, s.runOnReadyState)(o, "interactive", (function() {
                                 if (2 === n.status) {
-                                    var i = (_ || (f || (f = (0, c.startDeflateWorker)(o, "Datadog Session Replay", (function() {
+                                    var i = (f || (_ || (_ = (0, c.startDeflateWorker)(o, "Datadog Session Replay", (function() {
                                         m()
-                                    }), t)), f && (_ = (0, c.createDeflateEncoder)(o, f, 1))), _);
+                                    }), t)), _ && (f = (0, c.createDeflateEncoder)(o, _, 1))), f);
                                     if (i) {
                                         var s = e(a, o, r, u, i).stop;
                                         n = {
@@ -12179,7 +12179,7 @@
                     return l = 0, c = [], t
                 }
 
-                function f() {
+                function _() {
                     u > 0 && (t.postMessage({
                         action: "reset",
                         streamId: n
@@ -12203,14 +12203,14 @@
                         }), u += 1
                     },
                     finish: function(e) {
-                        f(), d.length ? (d.forEach((function(e) {
+                        _(), d.length ? (d.forEach((function(e) {
                             delete e.writeCallback
                         })), d[d.length - 1].finishCallback = function() {
                             return e(p())
                         }) : e(p())
                     },
                     finishSync: function() {
-                        f();
+                        _();
                         var e = d.map((function(e) {
                             return delete e.writeCallback, delete e.finishCallback, e.data
                         })).join("");
@@ -12230,8 +12230,8 @@
             "use strict";
             n.r(t), n.d(t, {
                 INITIALIZATION_TIME_OUT_DELAY: () => c,
-                doStartDeflateWorker: () => _,
-                getDeflateWorkerStatus: () => f,
+                doStartDeflateWorker: () => f,
+                getDeflateWorkerStatus: () => _,
                 resetDeflateWorkerState: () => p,
                 startDeflateWorker: () => m
             });
@@ -12251,7 +12251,7 @@
             };
 
             function m(e, t, n, a) {
-                switch (void 0 === a && (a = u), 0 === d.status && _(e, t, a), d.status) {
+                switch (void 0 === a && (a = u), 0 === d.status && f(e, t, a), d.status) {
                     case 1:
                         return d.initializationFailureCallbacks.push(n), d.worker;
                     case 3:
@@ -12265,11 +12265,11 @@
                 }
             }
 
-            function f() {
+            function _() {
                 return d.status
             }
 
-            function _(e, t, n) {
+            function f(e, t, n) {
                 void 0 === n && (n = u);
                 try {
                     var a = n(e),
@@ -12394,7 +12394,7 @@
                     scope: "local",
                     defaultValue: !0
                 },
-                f = {
+                _ = {
                     model: "soundSettings",
                     namespace: "lol-audio",
                     schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
@@ -12402,7 +12402,7 @@
                     scope: "local",
                     defaultValue: !0
                 },
-                _ = {
+                f = {
                     model: "soundSettings",
                     namespace: "lol-audio",
                     schemaVersion: s.LOL_SOUND_SCHEMA_VERSION,
@@ -12462,20 +12462,20 @@
                         value: e
                     })
                 })),
-                musicVolumeLabel: o.Ember.computed(_.property, (function() {
-                    const e = Number.isInteger(this.get(_.property)) ? this.get(_.property) : _.defaultValue;
+                musicVolumeLabel: o.Ember.computed(f.property, (function() {
+                    const e = Number.isInteger(this.get(f.property)) ? this.get(f.property) : f.defaultValue;
                     return this.get("tra").formatString("lol_settings_sound_music_volume_label", {
                         value: e
                     })
                 })),
                 persistenceService: o.Ember.inject.service("persistence"),
                 init() {
-                    this._super(...arguments), this.bindSetting(r), this.bindSetting(l), this.bindSetting(c), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(f), this.bindSetting(_), this.bindSetting(g), this.bindSetting(h), this.bindSetting(E), this.bindSetting(v);
+                    this._super(...arguments), this.bindSetting(r), this.bindSetting(l), this.bindSetting(c), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(_), this.bindSetting(f), this.bindSetting(g), this.bindSetting(h), this.bindSetting(E), this.bindSetting(v);
                     const e = this.get("currentSchemaVersion");
                     Number.isInteger(e) && e < s.LOL_SOUND_SCHEMA_VERSION && this.resetToDefault()
                 },
                 resetToDefault: function() {
-                    this.changeSetting(r.property, r.defaultValue), this.changeSetting(l.property, l.defaultValue), this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(v.property, v.defaultValue)
+                    this.changeSetting(r.property, r.defaultValue), this.changeSetting(l.property, l.defaultValue), this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(g.property, g.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(v.property, v.defaultValue)
                 },
                 onSaveSetting: function(e, t) {
                     if (e === c.property) {
@@ -12545,7 +12545,7 @@
                     scope: "local",
                     defaultValue: 50
                 },
-                f = {
+                _ = {
                     model: "localVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -12553,17 +12553,25 @@
                     scope: "local",
                     defaultValue: !1
                 },
-                _ = "voiceActivity",
-                g = "pushToTalk",
-                h = {
+                f = {
+                    model: "localVoiceSettings",
+                    namespace: "lol-premade-voice",
+                    schemaVersion: 1,
+                    property: "noiseSuppressionEnabled",
+                    scope: "local",
+                    defaultValue: !0
+                },
+                g = "voiceActivity",
+                h = "pushToTalk",
+                E = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "inputMode",
                     scope: "account",
-                    defaultValue: _
+                    defaultValue: g
                 },
-                E = {
+                v = {
                     model: "localVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
@@ -12571,27 +12579,30 @@
                     scope: "local",
                     defaultValue: 65
                 },
-                v = {
+                S = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "pushToTalkKey",
                     scope: "account"
                 },
-                S = {
+                y = {
                     model: "accountVoiceSettings",
                     namespace: "lol-premade-voice",
                     schemaVersion: 1,
                     property: "pushToTalkTeamKey",
                     scope: "account"
                 };
-            var y = o.Ember.Controller.extend(i.default, {
+            var T = o.Ember.Controller.extend(i.default, {
                 localVoiceSettings: o.Ember.computed.alias("model.localVoiceSettings"),
                 accountVoiceSettings: o.Ember.computed.alias("model.accountVoiceSettings"),
                 persistenceService: o.Ember.inject.service("persistence"),
                 voiceService: o.Ember.inject.service("voice"),
                 teamVoicePluginEnabled: o.Ember.computed.alias("voiceService.teamVoicePluginEnabled"),
                 isVoiceChatRestricted: o.Ember.computed.alias("voiceService.isVoiceChatRestricted"),
+                noiseSuppressionAvailable: o.Ember.computed("voiceService.noiseSuppressionAlgorithm", "voiceService.teamVoicePluginEnabled", (function() {
+                    return this.get("voiceService.teamVoicePluginEnabled") && "string" == typeof this.get("voiceService.noiseSuppressionAlgorithm")
+                })),
                 voiceComplianceAgreementAuthorized: !1,
                 teamVoiceEnabledConfig: !1,
                 shouldShowAgreementSection: o.Ember.computed("voiceComplianceAgreementAuthorized", "teamVoiceEnabledConfig", (function() {
@@ -12621,31 +12632,31 @@
                         inputVolume: e
                     })
                 })),
-                inputModes: o.Ember.computed(h.property, (function() {
+                inputModes: o.Ember.computed(E.property, (function() {
                     return [{
-                        name: _,
+                        name: g,
                         label: this.get("tra.voice_settings_input_activity"),
                         selected: this.get("isInputModeVoice")
                     }, {
-                        name: g,
+                        name: h,
                         label: this.get("tra.voice_settings_push_to_talk"),
                         selected: this.get("isInputModePushToTalk")
                     }]
                 })),
-                isInputModeVoice: o.Ember.computed(h.property, (function() {
-                    return this.get(h.property) === _
+                isInputModeVoice: o.Ember.computed(E.property, (function() {
+                    return this.get(E.property) === g
                 })),
-                isInputModePushToTalk: o.Ember.computed(h.property, (function() {
-                    return this.get(h.property) === g
+                isInputModePushToTalk: o.Ember.computed(E.property, (function() {
+                    return this.get(E.property) === h
                 })),
-                inputModeVoiceSensitivityLabel: o.Ember.computed(E.property, (function() {
-                    const e = Number.isInteger(this.get(E.property)) ? this.get(E.property) : E.defaultValue;
+                inputModeVoiceSensitivityLabel: o.Ember.computed(v.property, (function() {
+                    const e = Number.isInteger(this.get(v.property)) ? this.get(v.property) : v.defaultValue;
                     return this.get("tra.formatString")("voice_settings_input_sensitivity", {
                         sensitivity: e
                     })
                 })),
                 init() {
-                    this._super(...arguments), this.bindSetting(c), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(f), this.bindSetting(h), this.bindSetting(E), this.bindSetting(v), this.bindSetting(S), l.observe(s, this, (e => {
+                    this._super(...arguments), this.bindSetting(c), this.bindSetting(u), this.bindSetting(d), this.bindSetting(m), this.bindSetting(p), this.bindSetting(_), this.bindSetting(f), this.bindSetting(E), this.bindSetting(v), this.bindSetting(S), this.bindSetting(y), l.observe(s, this, (e => {
                         const t = o.lodash.get(e, ["data", "voiceComplianceAgreementAuthorized"], !1);
                         this.set("voiceComplianceAgreementAuthorized", Boolean(t))
                     })), l.observe(r, this, (e => {
@@ -12656,10 +12667,10 @@
                     this._super(...arguments), l.unobserve(s, this), l.unobserve(r, this)
                 },
                 resetToDefault: function() {
-                    this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(h.property, h.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(v.property, v.defaultValue), this.changeSetting(S.property, S.defaultValue)
+                    this.changeSetting(c.property, c.defaultValue), this.changeSetting(u.property, u.defaultValue), this.changeSetting(d.property, d.defaultValue), this.changeSetting(m.property, m.defaultValue), this.changeSetting(p.property, p.defaultValue), this.changeSetting(_.property, _.defaultValue), this.changeSetting(f.property, f.defaultValue), this.changeSetting(E.property, E.defaultValue), this.changeSetting(v.property, v.defaultValue), this.changeSetting(S.property, S.defaultValue), this.changeSetting(y.property, y.defaultValue)
                 },
                 _showPTTPermissionsModal() {
-                    this.changeSetting(h.property, _);
+                    this.changeSetting(E.property, g);
                     const e = this.get("tra.voice_settings_push_to_talk_modal_header"),
                         t = this.get("tra.voice_settings_push_to_talk_modal_body"),
                         n = {
@@ -12674,13 +12685,13 @@
                 },
                 actions: {
                     selectPushToTalkKey: function(e) {
-                        this.changeSetting(v.property, e)
-                    },
-                    selectPushToTalkTeamKey: function(e) {
                         this.changeSetting(S.property, e)
                     },
+                    selectPushToTalkTeamKey: function(e) {
+                        this.changeSetting(y.property, e)
+                    },
                     selectInputMode: function(e) {
-                        this.changeSetting(h.property, e), e === g && this.get("voiceService").isPushToTalkAvailable(!0).then((e => {
+                        this.changeSetting(E.property, e), e === h && this.get("voiceService").isPushToTalkAvailable(!0).then((e => {
                             e || this._showPTTPermissionsModal()
                         })).catch((() => {
                             this._showPTTPermissionsModal()
@@ -12692,12 +12703,18 @@
                     onSliderChange: function(e, t) {
                         this.changeSetting(e, t)
                     },
+                    expandVoiceSkinsDropdown: function(e) {
+                        const t = e.currentTarget;
+                        requestAnimationFrame((() => {
+                            t.shadowRoot.querySelector(".ui-dropdown-options-container lol-uikit-scrollable").style.maxHeight = "none"
+                        }))
+                    },
                     viewAgreement: function() {
                         o.SharedPlayerBehaviorApps.showCommunicationsAgreementModal()
                     }
                 }
             });
-            t.default = y
+            t.default = T
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -15698,31 +15715,35 @@
             var a = n(1);
             const o = "/lol-premade-voice",
                 i = o + "/v1/capturedevices",
-                s = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.enabled",
-                r = "/lol-parental-controls/v1/status",
-                l = a.dataBinding.bindTo(a.socket);
-            var c = a.Ember.Service.extend({
+                s = o + "/v1/settings",
+                r = "/lol-client-config/v3/client-config/lol.client_settings.team_voice.enabled",
+                l = "/lol-parental-controls/v1/status",
+                c = a.dataBinding.bindTo(a.socket);
+            var u = a.Ember.Service.extend({
                 captureDevices: void 0,
+                noiseSuppressionAlgorithm: void 0,
                 teamVoicePluginEnabled: !1,
                 isVoiceChatRestricted: !1,
                 init() {
-                    this._super(...arguments), l.observe(i, this, (function(e) {
+                    this._super(...arguments), c.observe(i, this, (function(e) {
                         this.set("captureDevices", e)
-                    })), l.observe(s, this, (function(e) {
+                    })), c.observe(s, this, (function(e) {
+                        this.set("noiseSuppressionAlgorithm", e.noiseSuppressionAlgorithm)
+                    })), c.observe(r, this, (function(e) {
                         this.set("teamVoicePluginEnabled", e || !1)
-                    })), l.observe(r, this, (e => {
+                    })), c.observe(l, this, (e => {
                         this.set("isVoiceChatRestricted", e && e.enabled && e.isVoiceChatRestricted)
                     }))
                 },
                 isPushToTalkAvailable(e) {
                     const t = e ? 1 : 0;
-                    return l.post(o + "/v1/push-to-talk/check-available", t)
+                    return c.post(o + "/v1/push-to-talk/check-available", t)
                 },
                 willDestroy() {
-                    this._super(...arguments), l.unobserve(i, this), l.unobserve(s, this), l.unobserve(r, this)
+                    this._super(...arguments), c.unobserve(i, this), c.unobserve(s, this), c.unobserve(r, this), c.unobserve(l, this)
                 }
             });
-            t.default = c
+            t.default = u
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
@@ -15768,8 +15789,8 @@
         }, (e, t, n) => {
             const a = n(1).Ember;
             e.exports = a.HTMLBars.template({
-                id: "o8xefyUo",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\voice.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\voice.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isVoiceChatRestricted"]]],null,12],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-settings-voice-content ",["helper",["if"],[["get",["isVoiceChatRestricted"]],"lol-settings-voice-content-disabled"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-party-join"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_join_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoin"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","autoJoin",["helper",["mut"],[["get",["autoJoin"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoin"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n          "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_party_auto_join"]]],null],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,11],["block",["if"],[["get",["shouldShowAgreementSection"]]],null,10],["text","      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","muteOnConnect"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","muteOnConnect",["helper",["mut"],[["get",["muteOnConnect"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","muteOnConnect"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_party_connect_mute"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_input_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row input-mode-row"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-section"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_input_device_label"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["captureDevices"]]],null,9],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","lol-parties-mic-test-button",[]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-volume-label"],["flush-element"],["text","\\n          "],["append",["unknown",["inputVolumeLabel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-input-volume-slider"],["flush-element"],["text","\\n          "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["inputVolume",["get",["inputVolume"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_input_mode_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-radio-input",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["inputModes"]]],null,8],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["isInputModeVoice"]]],null,7,2],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n          "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkKey"],null],"voice_settings_ptt_label","party"]]],false],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,0],["text","        "],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["isInputModePushToTalk"]]],null,1]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n          "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","voice-sensitivity-slider-wrapper"],["flush-element"],["text","\\n              "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["vadSensitivity",["get",["vadSensitivity"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["inputModeVoiceSensitivityLabel"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","voice_settings_input_sensitivity_label"]],false],["text","\\n              "],["open-element","span",[]],["static-attr","class","lol-settings-voice-auto-badge"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","voice_settings_input_auto_badge"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","vadAuto"],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","vadAuto",["helper",["mut"],[["get",["vadAuto"]]],null]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","vadAuto"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_input_auto_vad"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity-label"],["flush-element"],["text","\\n"],["block",["if"],[["get",["vadAuto"]]],null,6,5],["text","          "],["close-element"],["text","\\n"],["block",["unless"],[["get",["vadAuto"]]],null,4],["text","        "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,3]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","class","lol-settings-voice-input-mode-option"],["dynamic-attr","selected",["unknown",["inputMode","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectInputMode",["get",["inputMode","name"]]],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["inputMode","label"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["inputMode"]},{"statements":[["text","              "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["deviceInfo","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectCaptureDevice",["get",["deviceInfo","handle"]]],null],null],["flush-element"],["text","\\n                "],["append",["unknown",["deviceInfo","name"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["deviceInfo"]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-agreement"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-agreement-description"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_agreement_description"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","lol-settings-voice-agreement-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"viewAgreement"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_agreement_view_button"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoinTeamVoice"],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","autoJoinTeamVoice",["helper",["mut"],[["get",["autoJoinTeamVoice"]]],null],["get",["isTeamVoiceDisabled"]]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoinTeamVoice"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n                "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_team_voice_enabled"]]],null],false],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-restricted"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_parental_controls_restricted"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "lZTlBmsZ",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\templates\\\\voice.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-settings\\\\src\\\\app\\\\styles\\\\voice.styl\\" js-path=\\"null\\" "],["text","\\n"],["open-element","lol-uikit-scrollable",[]],["static-attr","overflow-masks","enabled"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isVoiceChatRestricted"]]],null,14],["text","  "],["open-element","div",[]],["dynamic-attr","class",["concat",["lol-settings-voice-content ",["helper",["if"],[["get",["isVoiceChatRestricted"]],"lol-settings-voice-content-disabled"],null]]]],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-party-join"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_party_join_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoin"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","autoJoin",["helper",["mut"],[["get",["autoJoin"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoin"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n          "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_party_auto_join"]]],null],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,13],["block",["if"],[["get",["shouldShowAgreementSection"]]],null,12],["text","      "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","muteOnConnect"],["flush-element"],["text","\\n        "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","muteOnConnect",["helper",["mut"],[["get",["muteOnConnect"]]],null]]]],false],["text","\\n        "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","muteOnConnect"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n          "],["append",["unknown",["tra","voice_settings_party_connect_mute"]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_input_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row input-mode-row"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-section"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-device-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_input_device_label"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["captureDevices"]]],null,11],["text","          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","lol-parties-mic-test-button",[]],["flush-element"],["close-element"],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-row"],["flush-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-volume-label"],["flush-element"],["text","\\n          "],["append",["unknown",["inputVolumeLabel"]],false],["text","\\n        "],["close-element"],["text","\\n        "],["open-element","div",[]],["static-attr","class","lol-settings-input-volume-slider"],["flush-element"],["text","\\n          "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["inputVolume",["get",["inputVolume"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n        "],["close-element"],["text","\\n      "],["close-element"],["text","\\n"],["block",["if"],[["get",["noiseSuppressionAvailable"]]],null,10],["text","      "],["open-element","hr",[]],["flush-element"],["close-element"],["text","\\n    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-input-mode"],["flush-element"],["text","\\n      "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title"],["flush-element"],["text","\\n        "],["append",["unknown",["tra","voice_settings_input_mode_title"]],false],["text","\\n      "],["close-element"],["text","\\n      "],["open-element","lol-uikit-radio-input",[]],["flush-element"],["text","\\n"],["block",["each"],[["get",["inputModes"]]],null,8],["text","      "],["close-element"],["text","\\n"],["block",["if"],[["get",["isInputModeVoice"]]],null,7,2],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","            "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n          "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkKey"],null],"voice_settings_ptt_label","party"]]],false],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,0],["text","        "],["close-element"],["text","\\n      "]],"locals":[]},{"statements":[["block",["if"],[["get",["isInputModePushToTalk"]]],null,1]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-push-to-talk"],["flush-element"],["text","\\n          "],["append",["helper",["push-to-talk-key"],null,[["key","onChange","label","voiceType"],[["get",["pushToTalkTeamKey"]],["helper",["action"],[["get",[null]],"selectPushToTalkTeamKey"],null],"voice_settings_ptt_team_label","team"]]],false],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","            "],["open-element","div",[]],["static-attr","class","voice-sensitivity-slider-wrapper"],["flush-element"],["text","\\n              "],["append",["helper",["settings-slider"],null,[["property","value","percentage","showTooltip","clickset","handleOnChange"],["vadSensitivity",["get",["vadSensitivity"]],true,true,true,["helper",["action"],[["get",[null]],"onSliderChange"],null]]]],false],["text","\\n            "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["inputModeVoiceSensitivityLabel"]],false],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["append",["unknown",["tra","voice_settings_input_sensitivity_label"]],false],["text","\\n              "],["open-element","span",[]],["static-attr","class","lol-settings-voice-auto-badge"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","voice_settings_input_auto_badge"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity"],["flush-element"],["text","\\n          "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","vadAuto"],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","vadAuto",["helper",["mut"],[["get",["vadAuto"]]],null]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","vadAuto"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_input_auto_vad"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-sensitivity-label"],["flush-element"],["text","\\n"],["block",["if"],[["get",["vadAuto"]]],null,6,5],["text","          "],["close-element"],["text","\\n"],["block",["unless"],[["get",["vadAuto"]]],null,4],["text","        "],["close-element"],["text","\\n"],["block",["if"],[["get",["teamVoicePluginEnabled"]]],null,3]],"locals":[]},{"statements":[["text","          "],["open-element","lol-uikit-radio-input-option",[]],["static-attr","class","lol-settings-voice-input-mode-option"],["dynamic-attr","selected",["unknown",["inputMode","selected"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"selectInputMode",["get",["inputMode","name"]]],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["inputMode","label"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":["inputMode"]},{"statements":[["text","          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-noise-suppression-tooltip"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_noise_suppression_tooltip"]],false],["text","\\n          "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row lol-settings-voice-noise-suppression"],["static-attr","for","noiseSuppressionEnabled"],["flush-element"],["text","\\n          "],["append",["helper",["input"],null,[["slot","type","name","checked"],["input","checkbox","noiseSuppressionEnabled",["helper",["mut"],[["get",["noiseSuppressionEnabled"]]],null]]]],false],["text","\\n          "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","noiseSuppressionEnabled"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_noise_suppression_enabled"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"],["block",["unless"],[["get",["noiseSuppressionEnabled"]]],null,9],["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-header"],["flush-element"],["text","\\n            "],["open-element","div",[]],["static-attr","class","lol-settings-voice-section-title lol-settings-voice-skins-title"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_voice_skins_title"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","lol-settings-voice-skins-beta"],["flush-element"],["append",["unknown",["tra","voice_settings_voice_skins_beta"]],false],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","lol-settings-voice-skins-brand-logo"],["static-attr","aria-hidden","true"],["flush-element"],["close-element"],["text","\\n            "],["open-element","span",[]],["static-attr","class","lol-settings-voice-skins-brand"],["flush-element"],["append",["unknown",["tra","voice_settings_voice_skins_brand"]],false],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-description"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_voice_skins_description"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_voice_skins_heard_by"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-voice-skins-dropdown"],["static-attr","direction","downward"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected","true"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_voice_skins_heard_by_no_one"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_voice_skins_heard_by_team"]],false],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["flush-element"],["text","\\n              "],["append",["unknown",["tra","voice_settings_voice_skins_heard_by_party_and_team"]],false],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-label lol-settings-voice-skins-selected-label"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_voice_skins_selected"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-skins-selected-row"],["flush-element"],["text","\\n            "],["open-element","lol-uikit-framed-dropdown",[]],["static-attr","class","lol-settings-voice-skins-selected-dropdown"],["static-attr","direction","downward"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"expandVoiceSkinsDropdown"],null],null],["flush-element"],["text","\\n              "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["static-attr","selected","true"],["flush-element"],["text","\\n                "],["append",["unknown",["tra","voice_settings_voice_skins_unsupported"]],false],["text","\\n              "],["close-element"],["text","\\n            "],["close-element"],["text","\\n            "],["open-element","button",[]],["static-attr","type","button"],["static-attr","class","lol-settings-voice-skins-preview"],["dynamic-attr","aria-label",["unknown",["tra","voice_settings_voice_skins_preview"]],null],["static-attr","disabled",""],["flush-element"],["text","\\n              "],["open-element","span",[]],["static-attr","aria-hidden","true"],["flush-element"],["close-element"],["text","\\n            "],["close-element"],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","              "],["open-element","lol-uikit-dropdown-option",[]],["static-attr","slot","lol-uikit-dropdown-option"],["dynamic-attr","selected",["unknown",["deviceInfo","selected"]],null],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"selectCaptureDevice",["get",["deviceInfo","handle"]]],null],null],["flush-element"],["text","\\n                "],["append",["unknown",["deviceInfo","name"]],false],["text","\\n              "],["close-element"],["text","\\n"]],"locals":["deviceInfo"]},{"statements":[["text","        "],["open-element","div",[]],["static-attr","class","lol-settings-voice-agreement"],["flush-element"],["text","\\n          "],["open-element","div",[]],["static-attr","class","lol-settings-voice-agreement-description"],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_agreement_description"]],false],["text","\\n          "],["close-element"],["text","\\n          "],["open-element","button",[]],["static-attr","class","lol-settings-voice-agreement-button"],["dynamic-attr","onClick",["helper",["action"],[["get",[null]],"viewAgreement"],null],null],["flush-element"],["text","\\n            "],["append",["unknown",["tra","voice_settings_agreement_view_button"]],false],["text","\\n          "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","lol-uikit-flat-checkbox",[]],["static-attr","class","lol-settings-voice-row"],["static-attr","for","autoJoinTeamVoice"],["flush-element"],["text","\\n            "],["append",["helper",["input"],null,[["slot","type","name","checked","disabled"],["input","checkbox","autoJoinTeamVoice",["helper",["mut"],[["get",["autoJoinTeamVoice"]]],null],["get",["isTeamVoiceDisabled"]]]]],false],["text","\\n            "],["open-element","label",[]],["static-attr","slot","label"],["static-attr","for","autoJoinTeamVoice"],["static-attr","class","lol-settings-checkbox-label"],["flush-element"],["text","\\n                "],["append",["helper",["sanitize"],[["get",["tra","voice_settings_team_voice_enabled"]]],null],false],["text","\\n            "],["close-element"],["text","\\n        "],["close-element"],["text","\\n"]],"locals":[]},{"statements":[["text","    "],["open-element","div",[]],["static-attr","class","lol-settings-voice-restricted"],["flush-element"],["text","\\n      "],["append",["unknown",["tra","voice_settings_parental_controls_restricted"]],false],["text","\\n    "],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

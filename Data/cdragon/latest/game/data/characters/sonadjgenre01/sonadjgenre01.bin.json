@@ -2,6 +2,111 @@
     "Characters/SonaDJGenre01/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
+    "{361bc73d}": {
+        "ObjectName": "SonaDJGenre01BasicAttack",
+        "mScriptName": "SonaDJGenre01BasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 512,
+            "mAlternateName": "SonaBasicAttack",
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/1041_Long_Staff.dds"
+            ],
+            "{11704a2b}": 0.4236000180244446,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mSpeed": 1500.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 11.0,
+            "missileSpeed": 1500.0,
+            "mMissileEffectKey": "Sona_BA_Mis",
+            "mHitEffectKey": "Sona_BA_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
     "Characters/SonaDJGenre01/CharacterRecords/Root": {
         "mCharacterName": "SonaDJGenre01",
         "mFallbackCharacterName": "Sona",
@@ -259,7 +364,7 @@
                 "__type": "CharacterPassiveData"
             },
             {
-                "mParentPassiveBuff": "Characters/Sona/Spells/SonaDJManager",
+                "mParentPassiveBuff": "{5091a579}",
                 "SkinFilter": {
                     "skinIds": [
                         6

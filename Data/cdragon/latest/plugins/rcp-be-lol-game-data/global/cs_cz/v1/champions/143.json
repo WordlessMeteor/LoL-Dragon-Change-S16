@@ -1752,7 +1752,7 @@
             "cost": "1 semínko",
             "cooldown": "Bez přebíjecí doby",
             "description": "Zyra zasadí semínko, které vydrží až 60 sekund. Když poblíž semínek sešle Smrtící ostny či Svíravé kořeny, vyrostou z nich rostliny, které Zyře pomáhají v boji. Zyra může mít najednou uloženo několik semínek a zabíjením nepřátel si zkracuje dobu nabíjení Divokého růstu.",
-            "dynamicDescription": "Zyra zasadí <keywordMajor>semínko</keywordMajor>, které vydrží až @Effect6Amount@&nbsp;sek. Tato <keywordMajor>semínka</keywordMajor> poskytují na @Effect3Amount@&nbsp;sek. <keywordStealth>pravé vidění</keywordStealth> na šampiony, kteří na ně šlápnou, zároveň však dojde k jejich zničení.<br><br>Tato schopnost má 2 nabití s rychlostí dobíjení @AmmoRechargeTime@&nbsp;sek. Zabitím nepřátelského poskoka nebo příšery se doba dobíjení zkrátí o @Effect1Amount*100@&nbsp;%. Likvidace šampiona zkrátí dobu dobíjení o @Effect2Amount*100@&nbsp;%.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra zasadí <keywordMajor>semínko</keywordMajor>, které vydrží až @SeedDuration@ sek. Tato <keywordMajor>semínka</keywordMajor> poskytují na @VisionGranted@ sek. <keywordStealth>pravé vidění</keywordStealth> na šampiony, kteří na ně šlápnou, zároveň tím však dojde k jejich zničení.<br><br>Tato schopnost má 2 nabití s rychlostí dobíjení @AmmoRechargeTime@ sek. Zabitím nepřátelského poskoka nebo příšery se doba dobíjení zkrátí o @KillAmmoRefundMinion*100@ %. Likvidace šampiona zkrátí dobu dobíjení o @KillAmmoRefundChamp*100@ %.@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Zyra vyšle skrz zem úponky, které znehybní její cíl, způsobí mu poškození a znemožní pohyb všem nepřátelům, kterých se dotknou. Při seslání poblíž semínka ze Svíravých kořenů vyrostou Šlehavé úponky, jejichž kontaktní útoky snižují nepřátelům rychlost pohybu.",
-            "dynamicDescription": "Zyra vyšle kupředu úponky, které na @Effect5Amount@&nbsp;sek. <status>znehybní</status> zasažený cíl a způsobí mu <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. <br><br>Pokud tato schopnost projde blízkostí <keywordMajor>semínka</keywordMajor>, vyrostou ze <keywordMajor>semínka</keywordMajor> Šlehavé úponky, které způsobují <magicDamage>@spell.ZyraP:PlantDamage@ bodů magického poškození</magicDamage> a po uplynutí @spell.ZyraP:PlantDuration@&nbsp;sek. zmizí. Šlehavé úponky mají dosah 400 jednotek a jejich útoky <status>zpomalují</status> zasažené cíle na @Effect3Amount@&nbsp;sek. o @Effect2Amount@&nbsp;%. <status>Zpomalení</status> z vícerých Šlehavých úponků se může až @MaxSlowStacks@x nasčítat.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra vyšle kupředu úponky, které na @RootDuration@ sek. <status>znehybní</status> zasažený cíl a způsobí mu <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. <br><br>Pokud tato schopnost projde blízkostí <keywordMajor>semínka</keywordMajor>, vyrostou ze <keywordMajor>semínka</keywordMajor> Šlehavé úponky, které způsobují <magicDamage>@spell.ZyraP:PlantDamage@ bodů magického poškození</magicDamage> a po uplynutí @spell.ZyraP:PlantDuration@ sek. zmizí. Šlehavé úponky mají dosah 400 jednotek a jejich útoky <status>zpomalují</status> zasažené cíle na @SlowDurationPlantAttack@ sek. o @SlowAmountPlantAttack@ %. <status>Zpomalení</status> z vícerých Šlehavých úponků se může nasčítat až @MaxSlowStacks@x.@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Zyra vyvolá na zaměřené lokaci spletité houští, které při rozrůstání způsobí nepřátelům poškození a během smršťování je vyhodí do vzduchu. Rostliny v houštině se rozzuří.",
-            "dynamicDescription": "Zyra vyvolá hněv přírody, díky čemuž vyroste spletité houští, které způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Po 2&nbsp;sekundách šlehnou výhonky směrem vzhůru, čímž vyhodí nepřátele na @Effect1Amount@&nbsp;sek. <status>do vzduchu</status>.<br><br>Zyřiny rostliny v houštině se rozzuří, resetuje se jim životnost, získají <healing>@Effect2Amount*100@&nbsp;% zdraví</healing> a zaútočí se silou @PlantDamageBonus@&nbsp;% bonusového poškození.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Zyra vyvolá hněv přírody, díky čemuž vyroste spletité houští, které způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage>. Po 2 sekundách šlehnou výhonky směrem vzhůru, čímž vyhodí nepřátele na @KnockupDuration@ sek. <status>do vzduchu</status>.<br><br>Zyřiny rostliny v houštině se rozzuří, resetuje se jim životnost, získají <healing>@EnragedBonusHealthPercent*100@ % zdraví</healing> a jejich útoky způsobují @PlantDamageBonus@% bonusové poškození.@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Karthus crea una pantalla traspasable que roba energía. Cualquier enemigo que la atraviese verá reducidas durante un período de tiempo su velocidad de movimiento y su resistencia mágica.",
-            "dynamicDescription": "Karthus crea un muro que dura @Effect4Amount@ s. Los enemigos que pasan a través del mismo pierden un <scaleMR>@Effect1Amount@% de resistencia mágica</scaleMR> durante @Effect5Amount@ s y quedan <status>ralentizados</status> un @Effect3Amount@%, que disminuye a lo largo de la duración.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus crea un muro que dura @WallDuration@ s. Los enemigos que pasan a través del mismo pierden un <scaleMR>@MagicResistShred@% de resistencia mágica</scaleMR> durante @DebuffDuration@ s y quedan <status>ralentizados</status> un @SlowPercent@%, que disminuye a lo largo de la duración.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ de maná por s",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Karthus roba energía de forma pasiva a sus víctimas, cuyas muertes le proporcionan maná. También puede optar por rodearse con las almas de sus presas, lo que inflige daño a los enemigos cercanos a costa de un alto coste de maná.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Cuando Karthus mata a una unidad, recupera <scaleMana>@Effect2Amount@ de maná</scaleMana>.<br><br><toggle>Activación:</toggle> Karthus crea un aura necrótica que inflige <magicDamage>@TotalDPS@ de daño mágico</magicDamage> por segundo a los enemigos cercanos.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>Cuando Karthus mata a una unidad recupera <scaleMana>@ManaRestoreOnKill@ de maná</scaleMana>.<br><br><toggle>Activación:</toggle> Karthus crea un aura necrótica que inflige <magicDamage>@TotalDPS@ de daño mágico</magicDamage> por segundo a los enemigos cercanos.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

@@ -2248,10 +2248,10 @@
                     "descriptions": [
                         {
                             "region": "riot",
-                            "description": "Ce chroma a été offert aux joueurs qui ont gagné au moins 15 parties classées et atteint le rang Challenger dans n'importe quelle file classée de la Faille de l'invocateur lors de la saison 3 de 2025."
+                            "description": "Ce chroma a été offert aux joueurs qui ont gagné au moins 15 parties classées et atteint le rang Grand Maître dans n'importe quelle file classée de la Faille de l'invocateur lors de la saison 3 de 2025."
                         }
                     ],
-                    "description": "Ce chroma a été offert aux joueurs qui ont gagné au moins 15 parties classées et atteint le rang Challenger dans n'importe quelle file classée de la Faille de l'invocateur lors de la saison 3 de 2025.",
+                    "description": "Ce chroma a été offert aux joueurs qui ont gagné au moins 15 parties classées et atteint le rang Grand Maître dans n'importe quelle file classée de la Faille de l'invocateur lors de la saison 3 de 2025.",
                     "rarities": [
                         {
                             "region": "riot",
@@ -2570,7 +2570,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Draven gagne des bonus en vitesse de déplacement et en vitesse d'attaque. Le bonus en vitesse de déplacement diminue rapidement sur la durée. Attraper une Hache tournoyante met fin au délai de récupération de Pulsion sanguinaire.",
-            "dynamicDescription": "Draven devient fantomatique et gagne <speed>+@Effect2Amount@% de vitesse de déplacement</speed> (ce bonus diminue en @Effect3Amount@ sec) et <attackSpeed>+@Effect4Amount@% de vitesse d'attaque</attackSpeed> pendant @Effect5Amount@ sec.<br><br>Quand Draven rattrape une <keywordMajor>Hache tournoyante</keywordMajor>, le délai de récupération de la compétence est annulé.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Draven devient fantomatique et gagne <speed>@Temp_MSMod@% de vitesse de déplacement</speed> (ce bonus diminue en @Temp_MSDuration@ sec) et <attackSpeed>@Temp_AS@% de vitesse d'attaque</attackSpeed> pendant @Temp_ASDuration@ sec.<br><br>Quand Draven rattrape une <keywordMajor>Hache tournoyante</keywordMajor>, le délai de récupération de la compétence est annulé.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -2720,7 +2720,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sec %i:cooldown%",
             "description": "Draven lance ses haches, infligeant des dégâts physiques aux cibles touchées et les repoussant sur le côté. Les cibles touchées sont ralenties.",
-            "dynamicDescription": "Draven lance horizontalement une hache qui inflige <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage>, <status>repousse</status> et <status>ralentit</status> de @Effect2Amount@% pendant @Effect3Amount@ sec.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Draven lance horizontalement une hache qui inflige <physicalDamage>@TotalDamage@ pts de dégâts physiques</physicalDamage>, <status>repousse</status> et <status>ralentit</status> de @SlowAmount@% pendant @SlowDuration@ sec.@SpellModifierDescriptionAppend@",
             "range": [
                 1050.0,
                 1050.0,

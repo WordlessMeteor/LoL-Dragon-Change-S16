@@ -1799,6 +1799,32 @@
                         0.18000000715255737
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BoxDuration",
+                    "values": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ArmTime",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1918,8 +1944,8 @@
                 "TrapDuration": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 4,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BoxDuration",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.10000000149011612,
@@ -3936,6 +3962,64 @@
                             "Items/4637",
                             "Items/3157",
                             "Items/3102"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "{ad33a648}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/773134",
+                            "Items/772003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/773093",
+                            "Items/771036"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/773142",
+                            "Items/773071",
+                            "Items/773123"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773006",
+                            "Items/773117",
+                            "Items/773158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773153",
+                            "Items/773035",
+                            "Items/773022",
+                            "Items/773156",
+                            "Items/773026",
+                            "Items/773031",
+                            "Items/773072"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }

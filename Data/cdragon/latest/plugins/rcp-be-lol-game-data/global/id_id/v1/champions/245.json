@@ -1384,7 +1384,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Ekko melempar granat temporal yang meluas menjadi bidang distorsi waktu saat mengenai champion musuh, menerapkan slow dan memberi damage pada siapa pun yang terperangkap di dalamnya. Granat akan rewind ke Ekko setelah beberapa saat, menghasilkan damage saat kembali.",
-            "dynamicDescription": "Ekko melemparkan perangkat, menghasilkan <magicDamage>@InitialDamage@ magic damage</magicDamage>. Saat mengenai champion atau mencapai akhir range serangan, perangkat akan meluas menjadi area yang menerapkan <status>Slow</status> pada musuh di dalamnya sebesar @Effect2Amount*-100@%. Sesudah meluas, Ekko me-recall perangkat, menghasilkan <magicDamage>@RecallDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ekko melempar perangkat, menghasilkan <magicDamage>@InitialDamage@ magic damage</magicDamage>. Saat mengenai champion atau mencapai akhir range serangan, perangkat akan meluas menjadi area yang menerapkan <status>Slow</status> pada musuh di dalamnya sebesar @SlowPercent*-100@%. Sesudah meluas, Ekko me-recall perangkat, menghasilkan <magicDamage>@RecallDamage@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Basic attack Ekko menghasilkan magic damage bonus pada musuh dengan health rendah. Dia bisa cast Parallel Convergence untuk membelah timeline, menciptakan anomali setelah beberapa detik, menerapkan slow pada musuh yang terjebak di dalamnya. Jika Ekko memasuki anomali tersebut, dia mendapatkan shield dan menerapkan stun pada musuh dengan menghentikan mereka tepat waktu.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Serangan Ekko terhadap musuh dengan Health di bawah 30% menghasilkan <magicDamage>@MissingHealthPercent@ magic damage dari Health yang hilang</magicDamage>.<br><br><spellActive>Aktif:</spellActive> Setelah beberapa saat, Ekko meluncurkan kubah waktu selama 1,5 detik yang menerapkan <status>Slow</status> ke musuh di dalamnya sebesar @Effect10Amount@%. Jika Ekko memasuki kubah dan meledakkannya, menerapkan <status>Stun</status> selama @Effect2Amount@ detik dan mendapatkan <shield>@TotalShield@ Shield</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Serangan Ekko terhadap musuh dengan Health di bawah @BelowHealthThreshold*100@% menghasilkan <magicDamage>magic damage sebesar @MissingHealthPercent@ Health yang hilang</magicDamage>.<br><br><spellActive>Aktif:</spellActive> Setelah beberapa saat, Ekko meluncurkan kubah waktu selama @SlowZoneDuration@ detik yang menerapkan <status>Slow</status> ke musuh di dalamnya sebesar @SlowPercent@%. Jika Ekko memasuki kubah dan meledakkannya, menerapkan <status>Stun</status> selama @StunDuration@ detik dan mendapatkan <shield>@TotalShield@ Shield</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,

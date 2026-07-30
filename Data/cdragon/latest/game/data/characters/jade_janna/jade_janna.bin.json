@@ -1,0 +1,3389 @@
+{
+    "Characters/Jade_Janna/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaReapTheWhirlwindAbility": {
+        "mRootSpell": "Characters/Jade_Janna/Spells/Jade_JannaReapTheWhirlwindAbility/Jade_JannaReapTheWhirlwind",
+        "mChildSpells": [
+            "Characters/Jade_Janna/Spells/Jade_JannaReapTheWhirlwindAbility/Jade_JannaReapTheWhirlwind"
+        ],
+        "mName": "Jade_JannaReapTheWhirlwindAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaReapTheWhirlwindAbility/Jade_JannaReapTheWhirlwind": {
+        "ObjectName": "Jade_JannaReapTheWhirlwind",
+        "mScriptName": "Jade_JannaReapTheWhirlwind",
+        "mSpell": {
+            "mAffectsTypeFlags": 7183,
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "PositiveEffect_Boon",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "mEffectAmount": [
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.0,
+                        300.0,
+                        450.0,
+                        600.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "HealBasePerSecond",
+                    "values": [
+                        30.0,
+                        70.0,
+                        110.0,
+                        150.0,
+                        190.0,
+                        230.0,
+                        270.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "HealPerSecond": {
+                    "mExpandedTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "HealBasePerSecond",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mSubpart": {
+                                "mNumber": 0.3499999940395355,
+                                "__type": "NumberCalculationPart"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalHeal": {
+                    "mMultiplier": {
+                        "mNumber": 4.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "tooltipOnly": true,
+                    "mModifiedGameCalculation": "HealPerSecond",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mCoefficient": 0.5,
+            "mCoefficient2": 1.5,
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Janna_ReapTheWhirlwind.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                150.0,
+                150.0,
+                135.0,
+                120.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "Cooldown": {
+                "values": [
+                    150.0,
+                    150.0,
+                    135.0,
+                    120.0,
+                    100.0,
+                    100.0,
+                    100.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                725.0,
+                725.0,
+                725.0,
+                725.0,
+                725.0,
+                725.0,
+                725.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    725.0,
+                    725.0,
+                    725.0,
+                    725.0,
+                    725.0,
+                    725.0,
+                    725.0
+                ],
+                "{0a3e0478}": 725.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0,
+                600.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 5.170000076293945,
+            "missileSpeed": 828.5,
+            "mana": [
+                100.0,
+                150.0,
+                200.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    100.0,
+                    150.0,
+                    200.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "SelfAoe"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Janna_ReapTheWhirlwind_OnBuffActivate",
+                "0": "Play_sfx_Janna_ReapTheWhirlwind_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JannaReapTheWhirlwind",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JannaR_Jade_Name",
+                        "keySummary": "Spell_JannaR_Jade_Summary",
+                        "keyTooltip": "Spell_JannaR_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "HealBasePerSecond",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_HealPerSecond",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_JannaReapTheWhirlwind",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_JannaR_Jade_Name",
+                    "keyTooltip": "Buff_JannaR_Jade_Buff"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "{ec17e271}": [
+                {
+                    "EffectTag": 32,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalHeal",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 64,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalHeal",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4194304,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 6,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{2d758813}": {
+        "mRootSpell": "{c4962ae3}",
+        "mChildSpells": [
+            "{c4962ae3}",
+            "{71edd439}"
+        ],
+        "mName": "Jade_JannaTailwindSelfAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaSowTheWindAbility": {
+        "mRootSpell": "Characters/Jade_Janna/Spells/Jade_JannaSowTheWindAbility/Jade_JannaSowTheWind",
+        "mChildSpells": [
+            "Characters/Jade_Janna/Spells/Jade_JannaSowTheWindAbility/Jade_JannaSowTheWind"
+        ],
+        "mName": "Jade_JannaSowTheWindAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaSowTheWindAbility/Jade_JannaSowTheWind": {
+        "ObjectName": "Jade_JannaSowTheWind",
+        "mScriptName": "Jade_JannaSowTheWind",
+        "mSpell": {
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_Janna_SowTheWind",
+            "DataValues": [
+                {
+                    "name": "MSPercent",
+                    "values": [
+                        0.009999999776482582,
+                        0.03999999910593033,
+                        0.07000000029802322,
+                        0.10000000149011612,
+                        0.12999999523162842,
+                        0.1599999964237213,
+                        0.1899999976158142
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        5.0,
+                        60.0,
+                        115.0,
+                        170.0,
+                        225.0,
+                        280.0,
+                        335.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0,
+                        2.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        -18.0,
+                        -24.0,
+                        -30.0,
+                        -36.0,
+                        -42.0,
+                        -48.0,
+                        -54.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSAPRatio",
+                    "values": [
+                        0.00019999999494757503,
+                        0.00019999999494757503,
+                        0.00019999999494757503,
+                        0.00019999999494757503,
+                        0.00019999999494757503,
+                        0.00019999999494757503,
+                        0.00019999999494757503
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAPRatio",
+                    "values": [
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalMS": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MSPercent",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "MSAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "mPrecision": 1,
+                    "__type": "GameCalculation"
+                },
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalSlow": {
+                    "mMultiplier": {
+                        "mNumber": 0.009999999776482582,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "SlowPercent",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "SlowAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "{132e5eed}": {
+                    "mMultiplier": {
+                        "mNumber": -1.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "tooltipOnly": true,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "SlowPercent",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Janna_Zephyr.dds"
+            ],
+            "mCastTime": 0.24500000476837158,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                12.0,
+                12.0,
+                11.0,
+                10.0,
+                9.0,
+                8.0,
+                8.0
+            ],
+            "Cooldown": {
+                "values": [
+                    12.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    9.0,
+                    8.0,
+                    8.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mProjectTargetToCastRange": true,
+            "castRangeUseBoundingBoxes": true,
+            "useAnimatorFramerate": true,
+            "bIsToggleSpell": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0,
+                -1.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "head",
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "Jade_Janna_W_mis",
+            "mLineWidth": 60.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                40.0,
+                50.0,
+                60.0,
+                70.0,
+                80.0,
+                80.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    40.0,
+                    50.0,
+                    60.0,
+                    70.0,
+                    80.0,
+                    80.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "16": "Play_sfx_Janna_SowTheWind_OnMissileLaunch",
+                "13": "Play_sfx_Janna_SowTheWind_OnHit",
+                "12": "Play_sfx_Janna_SowTheWind_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JannaSowTheWind",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JannaW_Jade_Name",
+                        "keySummary": "Spell_JannaW_Jade_Summary",
+                        "keyTooltip": "Spell_JannaW_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "MSPercent",
+                                    "typeIndex": 1,
+                                    "multiplier": 100.0,
+                                    "nameOverride": "Spell_ListType_PassiveMovementSpeed",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SlowPercent",
+                                    "typeIndex": 3,
+                                    "multiplier": -1.0,
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_JannaSowTheWind",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_JannaW_Jade_Name",
+                    "keyTooltip": "Buff_JannaW_Jade_Buff"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "PersistentEffectConditions": [
+                {
+                    "PersistentVfxs": [
+                        {
+                            "effectKey": "Jade_Janna_W_Buf",
+                            "__type": "PersistentVfxData"
+                        }
+                    ],
+                    "__type": "PersistentEffectConditionData"
+                }
+            ],
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalSlow",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaCritAttack": {
+        "ObjectName": "Jade_JannaCritAttack",
+        "mScriptName": "Jade_JannaCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAnimationName": "Crit",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF",
+                    "mStartBoneSkinOverrides": {
+                        "5": "Buffbone_Glb_Weapon_1"
+                    },
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "Jade_Janna_BA_Mis",
+            "mHitEffectKey": "Jade_Janna_BA_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Janna_JannaCritAttack_OnCast",
+                "13": "Play_sfx_Janna_JannaCritAttack_OnHit",
+                "16": "Play_sfx_Janna_JannaCritAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaBasicAttack2": {
+        "ObjectName": "Jade_JannaBasicAttack2",
+        "mScriptName": "Jade_JannaBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "Jade_JannaBasicAttack2",
+            "mAnimationName": "Attack2",
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF",
+                    "mStartBoneSkinOverrides": {
+                        "5": "Buffbone_Glb_Weapon_1"
+                    },
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "Jade_Janna_BA_Mis",
+            "mHitEffectKey": "Jade_Janna_BA_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Janna_JannaBasicAttack2_OnCast",
+                "13": "Play_sfx_Janna_JannaBasicAttack2_OnHit",
+                "16": "Play_sfx_Janna_JannaBasicAttack2_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{59ee31d7}": {
+        "ObjectName": "Jade_JannaDumbledoge",
+        "mScriptName": "Jade_JannaDumbledoge",
+        "mSpell": {
+            "ImgIconPath": "ASSETS/UX/Jade/S3Icons/SameSized/23.tex",
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JannaDumbledoge",
+                    "mFormat": "{476ec0b8}",
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_JannaDumbledoge",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Buff_Jade_JannaDumbledoge_Name",
+                    "keyTooltip": "Buff_Jade_JannaDumbledoge_Tooltip"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaEyeOfTheStormAbility": {
+        "mRootSpell": "Characters/Jade_Janna/Spells/Jade_JannaEyeOfTheStormAbility/Jade_JannaEyeOfTheStorm",
+        "mChildSpells": [
+            "Characters/Jade_Janna/Spells/Jade_JannaEyeOfTheStormAbility/Jade_JannaEyeOfTheStorm"
+        ],
+        "mName": "Jade_JannaEyeOfTheStormAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility": {
+        "mRootSpell": "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGale",
+        "mChildSpells": [
+            "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGale",
+            "{8136e1fd}"
+        ],
+        "mName": "Jade_JannaHowlingGaleAbility",
+        "__type": "AbilityObject"
+    },
+    "{71edd439}": {
+        "ObjectName": "Jade_JannaTailwind",
+        "mScriptName": "Jade_JannaTailwind",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Janna_Tailwind.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_JannaTailwind",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_JannaPassive_Jade_Name",
+                    "keyTooltip": "Buff_JannaPassive_Jade_Buff"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c4962ae3}": {
+        "ObjectName": "Jade_JannaTailwindSelf",
+        "mScriptName": "Jade_JannaTailwindSelf",
+        "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MSPercentAlly",
+                    "values": [
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSPercentSelf",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSBonusMagicDamage",
+                    "values": [
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896,
+                        0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "MSToOnHitConversionRate": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MSBonusMagicDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        }
+                    ],
+                    "mDisplayAsPercent": true,
+                    "__type": "GameCalculation"
+                },
+                "BonusDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mStat": 7,
+                            "mStatFormula": 2,
+                            "mDataValue": "MSBonusMagicDamage",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Janna_Tailwind.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JannaTailwindSelf",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JannaPassive_Jade_Name",
+                        "keySummary": "Spell_JannaPassive_Jade_Summary",
+                        "keyTooltip": "Spell_JannaPassive_Jade_Tooltip"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "Spell_TailwindSelf_Tooltip",
+            "mTooltipData": {
+                "mObjectName": "Jade_JannaTailwindSelf",
+                "mFormat": "{b34f999a}",
+                "__type": "TooltipInstanceBuff"
+            },
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{8136e1fd}": {
+        "ObjectName": "Jade_JannaHowlingGaleSpell",
+        "mScriptName": "Jade_JannaHowlingGaleSpell",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        30.0,
+                        66.0,
+                        132.0,
+                        231.0,
+                        308.0,
+                        440.0,
+                        540.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.75,
+                        3.0,
+                        3.25,
+                        3.5,
+                        3.75,
+                        4.0,
+                        4.25
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.2000000476837158,
+            "mAnimationName": "Spell1",
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mIsDisabledWhileDead": false,
+            "mProjectTargetToCastRange": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 120.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "R_hand",
+                    "mSpeed": 900.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 1.0,
+            "missileSpeed": 900.0,
+            "mMissileEffectKey": "Jade_Janna_Q_Mis",
+            "mLineWidth": 120.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "head",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": true,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0,
+                                120.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Move",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGale": {
+        "ObjectName": "Jade_JannaHowlingGale",
+        "mScriptName": "Jade_JannaHowlingGale",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 15567,
+            "mPlatformSpellInfo": {
+                "mPlatformEnabled": true,
+                "__type": "PlatformSpellInfo"
+            },
+            "mAlternateName": "Jade_Janna_HowlingGale",
+            "mSpellTags": [
+                "Trait_ChannelSpell",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "MissileTravelTime",
+                    "values": [
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25,
+                        1.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinionMod",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseRange",
+                    "values": [
+                        1100.0,
+                        1100.0,
+                        1100.0,
+                        1100.0,
+                        1100.0,
+                        1100.0,
+                        1100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        35.0,
+                        60.0,
+                        85.0,
+                        110.0,
+                        135.0,
+                        160.0,
+                        185.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MinimumRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChargeDamage",
+                    "values": [
+                        5.0,
+                        25.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        35.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusRatio",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChargeDistancePercent",
+                    "values": [
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseKnockup",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ChargeKnockup",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxDuration",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "BonusDamage",
+                            "values": [
+                                15.0,
+                                20.0,
+                                25.0,
+                                30.0,
+                                35.0,
+                                40.0,
+                                45.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "BonusRatio",
+                            "values": [
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224,
+                                0.20000000298023224
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
+            "{f9c2333e}": {
+                "ARAM": {
+                    "value": [
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                "{bffdf499}": {
+                    "value": [
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0,
+                        16.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
+            "mSpellCalculations": {
+                "MinimumDamage": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mSubpart": {
+                                "mNumber": 0.75,
+                                "__type": "NumberCalculationPart"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Janna_HowlingGale.dds"
+            ],
+            "cooldownTime": [
+                14.0,
+                14.0,
+                13.0,
+                12.0,
+                11.0,
+                10.0,
+                10.0
+            ],
+            "Cooldown": {
+                "values": [
+                    14.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    11.0,
+                    10.0,
+                    10.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "bIsToggleSpell": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                1075.0,
+                1075.0,
+                1075.0,
+                1075.0,
+                1075.0,
+                1075.0,
+                1075.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 10.0,
+            "missileSpeed": 0.0,
+            "mLineWidth": 120.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                90.0,
+                105.0,
+                130.0,
+                145.0,
+                160.0,
+                160.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    90.0,
+                    105.0,
+                    120.0,
+                    135.0,
+                    150.0,
+                    150.0
+                ],
+                "__type": "{630af303}"
+            },
+            "mTargetingTypeData": {
+                "__type": "Direction"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JannaHowlingGale",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JannaQ_Jade_Name",
+                        "keySummary": "Spell_JannaQ_Jade_Summary",
+                        "keyTooltip": "Spell_JannaQ_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "ChargeDamage",
+                                    "nameOverride": "Spell_ListType_JannaQ_ChargeDamage_Jade",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                1100.0,
+                                1100.0,
+                                1100.0,
+                                1100.0,
+                                1100.0,
+                                1100.0
+                            ],
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "alwaysDraw": true,
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                1100.0,
+                                1100.0,
+                                1100.0,
+                                1100.0,
+                                1100.0,
+                                1100.0
+                            ],
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    },
+                    {
+                        "hideWithLineIndicator": true,
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                1735.0,
+                                1735.0,
+                                1735.0,
+                                1735.0,
+                                1735.0,
+                                1735.0
+                            ],
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "startLocator": {
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "endLocator": {
+                            "distanceOffset": 1735.0,
+                            "orientationType": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "fallbackDirection": 3,
+                        "alwaysDraw": true,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0,
+                                100.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                1735.0,
+                                1735.0,
+                                1735.0,
+                                1735.0,
+                                1735.0,
+                                1735.0
+                            ],
+                            "mValueType": 1,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_JannaHowlingGale",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_JannaQ_Jade_Name",
+                    "keyTooltip": "Buff_JannaQ_Jade_Buff"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "MinimumDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 16777216,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 4,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "{38382c53}": [
+                {
+                    "{e38f54f7}": 1,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 4,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 64,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 1024,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 8192,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                },
+                {
+                    "{e38f54f7}": 128,
+                    "{0717e686}": false,
+                    "__type": "{150d1b92}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaEyeOfTheStormAbility/Jade_JannaEyeOfTheStorm": {
+        "ObjectName": "Jade_JannaEyeOfTheStorm",
+        "mScriptName": "Jade_JannaEyeOfTheStorm",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 65,
+            "mSpellTags": [
+                "PositiveEffect_Boon"
+            ],
+            "DataValues": [
+                {
+                    "name": "ECDRefundforCC",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EmpowerDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "EmpowerPercent",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DecayGracePeriod",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseShield",
+                    "values": [
+                        40.0,
+                        80.0,
+                        120.0,
+                        160.0,
+                        200.0,
+                        240.0,
+                        280.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldAPRatio",
+                    "values": [
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusAD",
+                    "values": [
+                        5.0,
+                        14.0,
+                        23.0,
+                        32.0,
+                        41.0,
+                        50.0,
+                        59.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ADAPRatio",
+                    "values": [
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612,
+                        0.10000000149011612
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalShield": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseShield",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "ShieldAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalAD": {
+                    "mSimpleTooltipCalculationDisplay": 6,
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BonusAD",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "ADAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/Janna_EyeOfTheStorm.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "mCantCancelWhileWindingUp": true,
+            "castRange": [
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0,
+                800.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0,
+                    800.0
+                ],
+                "{0a3e0478}": 800.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 3.4800000190734863,
+            "missileSpeed": 20.0,
+            "mFloatVarsDecimals": [
+                0,
+                0,
+                0,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2,
+                2
+            ],
+            "mana": [
+                70.0,
+                80.0,
+                90.0,
+                100.0,
+                110.0,
+                110.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    70.0,
+                    80.0,
+                    90.0,
+                    100.0,
+                    110.0,
+                    110.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "TargetingForgivenessDefinitions": [
+                {
+                    "ForgivenessRange": 175.0,
+                    "TargetForgivenessDefinitions": [
+                        {
+                            "mUnitTags": {
+                                "mObjectTagList": [
+                                    "{ea595ca6}",
+                                    "{c02a7870}"
+                                ],
+                                "__type": "ObjectTags"
+                            },
+                            "__type": "HasUnitTagsCastRequirement"
+                        },
+                        {
+                            "__type": "SameTeamCastRequirement"
+                        }
+                    ],
+                    "__type": "TargetingForgivenessDefinitions"
+                }
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_Janna_EyeOfTheStorm_OnBuffActivate"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_JannaEyeOfTheStorm",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "Spell_JannaE_Jade_Name",
+                        "keySummary": "Spell_JannaE_Jade_Summary",
+                        "keyTooltip": "Spell_JannaE_Jade_Tooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseShield",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_ShieldHealth",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BonusAD",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_AttackDamageBonus",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_JannaEyeOfTheStorm",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_JannaE_Jade_Name",
+                    "keyTooltip": "Buff_JannaE_Jade_Buff"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{ec17e271}": [
+                {
+                    "EffectTag": 262144,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalShield",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 524288,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalShield",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{e1c2871b}": {
+        "ObjectName": "ForecastJade_JannaVO",
+        "mScriptName": "ForecastJade_JannaVO",
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Janna/Spells/Jade_JannaBasicAttack": {
+        "ObjectName": "Jade_JannaBasicAttack",
+        "mScriptName": "Jade_JannaBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 7375,
+            "mAlternateName": "Jade_JannaBasicAttack",
+            "mCastTime": 0.32260000705718994,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0,
+                550.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0,
+                    550.0
+                ],
+                "{0a3e0478}": 550.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_FROST_STAFF",
+                    "mStartBoneSkinOverrides": {
+                        "5": "Buffbone_Glb_Weapon_1"
+                    },
+                    "mSpeed": 1200.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 10.0,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "Jade_Janna_BA_Mis",
+            "mHitEffectKey": "Jade_Janna_BA_Tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Janna_JannaBasicAttack_OnCast",
+                "13": "Play_sfx_Janna_JannaBasicAttack_OnHit",
+                "16": "Play_sfx_Janna_JannaBasicAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{3c2501e6}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "{4a3bea72}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "utility",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    1,
+                    2,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    1,
+                    0,
+                    2,
+                    1
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "utility",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    1,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    1,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "Mid",
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{5298cc13}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3865",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6620",
+                            "Items/6617",
+                            "Items/2065"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3009",
+                            "Items/3158",
+                            "Items/3117"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6616",
+                            "Items/3222",
+                            "Items/3504"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3107",
+                            "Items/4641",
+                            "Items/6616",
+                            "Items/3222",
+                            "Items/3504",
+                            "Items/3157",
+                            "Items/6621"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "mCoreItems": [
+                    "Items/3870",
+                    "Items/3876"
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3112"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/4642"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3067"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6620",
+                            "Items/6617",
+                            "Items/2065"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3009",
+                            "Items/3158",
+                            "Items/3117"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6616",
+                            "Items/3222",
+                            "Items/3504"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3107",
+                            "Items/4641",
+                            "Items/6616",
+                            "Items/3222",
+                            "Items/3504",
+                            "Items/3157"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "mPosition": "middle",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1056",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1082",
+                            "Items/2003",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6653",
+                            "Items/6656",
+                            "Items/6655"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6616",
+                            "Items/3157",
+                            "Items/4629"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3165",
+                            "Items/6616",
+                            "Items/3102",
+                            "Items/3089",
+                            "Items/3135",
+                            "Items/4629"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "Characters/Jade_Janna/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Janna",
+        "baseHPModifiable": {
+            "baseValue": 434.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 78.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.0099999904632568,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.10999999940395355,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 120.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 366.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 64.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.5,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.11999999731779099,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 51.95000076293945,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 2.950000047683716,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 16.799999237060547,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.799999952316284,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 335.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 475.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.609999895095825,
+            "__type": "ModifiableFloat"
+        },
+        "mAdaptiveForceToAbilityPowerWeight": 1.0,
+        "acquisitionRange": 550.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.10000000149011612,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_JannaBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.10000000149011612,
+                "mAttackProbability": 0.5,
+                "mAttackName": "Jade_JannaBasicAttack2",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.10000000149011612,
+                "mAttackName": "Jade_JannaCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGale",
+            "Jade_JannaSowTheWindAbility/Jade_JannaSowTheWind",
+            "Jade_JannaEyeOfTheStormAbility/Jade_JannaEyeOfTheStorm",
+            "Jade_JannaReapTheWhirlwindAbility/Jade_JannaReapTheWhirlwind"
+        ],
+        "spells": [
+            "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGale",
+            "Characters/Jade_Janna/Spells/Jade_JannaSowTheWindAbility/Jade_JannaSowTheWind",
+            "Characters/Jade_Janna/Spells/Jade_JannaEyeOfTheStormAbility/Jade_JannaEyeOfTheStorm",
+            "Characters/Jade_Janna/Spells/Jade_JannaReapTheWhirlwindAbility/Jade_JannaReapTheWhirlwind"
+        ],
+        "extraSpells": [
+            "Jade_Janna_HowlingGaleSpell",
+            "Jade_JannaCritAttack",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{8136e1fd}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "Characters/Jade_Janna/Spells/Jade_JannaEyeOfTheStormAbility",
+            "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility",
+            "Characters/Jade_Janna/Spells/Jade_JannaReapTheWhirlwindAbility",
+            "Characters/Jade_Janna/Spells/Jade_JannaSowTheWindAbility",
+            "{2d758813}"
+        ],
+        "passiveName": "game_character_passiveName_Jade_Janna",
+        "passiveLuaName": "Jade_JannaTailwindSelf_Jade",
+        "passiveToolTip": "game_character_passiveDescription_Jade_Janna",
+        "passiveRange": 1250.0,
+        "passive1IconName": "ASSETS/Characters/Jade_Janna/HUD/Icons2D/Jade_JannaP.dds",
+        "name": "game_character_displayname_Jade_Janna",
+        "selectionHeight": 200.0,
+        "selectionRadius": 125.0,
+        "pathfindingCollisionRadius": 35.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1056,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            8,
+            14,
+            0,
+            7
+        ],
+        "characterToolData": {
+            "spellData": [
+                {
+                    "desc": "Needs text",
+                    "displayName": "Monsoon",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Needs text",
+                    "displayName": "Monsoon",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Needs text",
+                    "displayName": "Monsoon",
+                    "__type": "ToolSpellDesc"
+                },
+                {
+                    "desc": "Needs text",
+                    "displayName": "Monsoon",
+                    "__type": "ToolSpellDesc"
+                }
+            ],
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passLev1Desc": [
+                "5 Astral Spirts"
+            ],
+            "passiveData": [
+                {
+                    "name": "game_character_passiveName_Jade_Janna",
+                    "effect": [
+                        "-1",
+                        "-1",
+                        "-1",
+                        "-1"
+                    ],
+                    "level": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "__type": "ToolPassiveData"
+                },
+                {
+                    "effect": [
+                        "-1",
+                        "-1",
+                        "-1",
+                        "-1"
+                    ],
+                    "level": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "support",
+            "searchTagsSecondary": "mage",
+            "championId": 60040,
+            "roles": "SUPPORT",
+            "magicRank": 7,
+            "Lore2": "poor sod",
+            "LevelSpellEffectiveness": 3.0,
+            "difficultyRank": 7,
+            "description": "game_character_description_Jade_Janna",
+            "defenseRank": 5,
+            "attackSpeed": 10.0,
+            "attackRank": 3,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "purchaseIdentities": [
+            "Ranged"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Sorcery",
+        "mCharacterPassiveSpell": "{c4962ae3}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{c4962ae3}",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{e1c2871b}",
+                "SkinFilter": {
+                    "skinIds": [
+                        5
+                    ],
+                    "__type": "SkinFilterData"
+                },
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{7f47ddbf}",
+        "__type": "CharacterRecord"
+    },
+    "{7f47ddbf}": {
+        "ScriptName": "charscriptJade_Janna",
+        "path": "{7f47ddbf}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null,
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "b6f77a27-c96e-4c25-9e73-fafae7bdeace",
+                        "Condition": {
+                            "Value1": {
+                                "Table": {
+                                    "__type": "CharacterVars"
+                                },
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 5,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "2154fd10-a06c-4736-b5ad-c077889b2fad",
+                        "Condition": null,
+                        "Invert": true,
+                        "Sequence": {
+                            "blocks": [
+                                null,
+                                {
+                                    "{d851ffa3}": "dc64df0f-311b-45d7-aab7-40889f502d8d",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "Level",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 2,
+                                        "Value2": {
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "2ac9b9ca-4e88-4166-b8d2-5bd0cf381831",
+                                                "Condition": null,
+                                                "Invert": true,
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        null,
+                                                        {
+                                                            "{d851ffa3}": "a6884056-bf65-446a-bb4e-3c9845e67508",
+                                                            "Condition": {
+                                                                "Value1": {
+                                                                    "Var": "Cooldown",
+                                                                    "__type": "ScriptTableGet"
+                                                                },
+                                                                "Operation": 5,
+                                                                "Value2": {
+                                                                    "__type": "IntGet"
+                                                                },
+                                                                "__type": "ComparisonScriptCondition"
+                                                            },
+                                                            "Sequence": {
+                                                                "blocks": [
+                                                                    null
+                                                                ],
+                                                                "__type": "ScriptSequence"
+                                                            },
+                                                            "__type": "{e524b2fc}"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    null,
+                    null,
+                    {
+                        "{d851ffa3}": "b90307f5-bc33-4856-8a95-39babb52e003",
+                        "Condition": {
+                            "Value1": {
+                                "Table": {
+                                    "__type": "CharacterVars"
+                                },
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 5,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "82f5bdec-7816-4594-8283-9fbc8792cb9c",
+                                    "Src": {
+                                        "value": 25000,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "BrandDistance",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                {
+                                    "{d851ffa3}": "ec353964-58cc-4343-b89f-094e463cfc24",
+                                    "Src": {
+                                        "value": 25000,
+                                        "__type": "IntGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "AnnieDistance",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null,
+                                {
+                                    "{d851ffa3}": "9458a189-8aa5-4957-b25f-8d40ff7b697c",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{07d6871d}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 4,
+                                        "Value2": {
+                                            "Var": "{8a9c0099}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "b88f9b4d-02f6-44be-8f6f-594d9081c858",
+                                                "Condition": null,
+                                                "Invert": true,
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "b5ce3505-be39-46cf-a664-3be401575f3b",
+                                                            "Var": {
+                                                                "Var": "Attacker",
+                                                                "__type": "{622705af}"
+                                                            },
+                                                            "__type": "{851b8dc5}"
+                                                        },
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "8c2e3474-3172-4dfe-a2fa-aa703d21c23f",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{8a9c0099}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Operation": 4,
+                                        "Value2": {
+                                            "Var": "{07d6871d}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "f090b158-e621-4295-91c4-f0155ecb3efe",
+                                                "Condition": null,
+                                                "Invert": true,
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "c6e93945-ea76-4eab-b984-653cc0d7be59",
+                                                            "Var": {
+                                                                "Var": "Attacker",
+                                                                "__type": "{622705af}"
+                                                            },
+                                                            "__type": "{851b8dc5}"
+                                                        },
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                },
+                                {
+                                    "{d851ffa3}": "0e3dbb9f-3fca-4618-a854-8a864368533f",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{07d6871d}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "value": 25000,
+                                            "__type": "IntGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            null,
+                                            {
+                                                "{d851ffa3}": "55596ca1-d6eb-436c-a2d3-01e14a77713f",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "{8a9c0099}",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Value2": {
+                                                        "value": 25000,
+                                                        "__type": "IntGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
+                                                },
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        null,
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{78e4e28e}": {
+                "blocks": [
+                    null,
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "__linked": []
+}

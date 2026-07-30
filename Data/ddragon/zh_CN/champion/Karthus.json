@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.14.1",
+    "version": "16.15.1",
     "data": {
         "Karthus": {
             "id": "Karthus",
@@ -10,7 +10,7 @@
             "title": "卡尔萨斯",
             "image": {
                 "full": "Karthus.png",
-                "sprite": "champion1.png",
+                "sprite": "champion3.png",
                 "group": "champion",
                 "x": 384,
                 "y": 96,
@@ -491,10 +491,10 @@
                     "rangeBurn": "875",
                     "image": {
                         "full": "KarthusLayWasteA1.png",
-                        "sprite": "spell6.png",
+                        "sprite": "spell12.png",
                         "group": "spell",
-                        "x": 0,
-                        "y": 48,
+                        "x": 288,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -504,15 +504,15 @@
                     "id": "KarthusWallOfPain",
                     "name": "痛苦之墙",
                     "description": "卡尔萨斯创造一道可通过的魔能之墙。所有穿过墙体的敌方单位都会被暂时降低移动速度和魔法抗性。",
-                    "tooltip": "卡尔萨斯生成一个持续{{ e4 }}秒的墙体。穿过它的敌人们会受到<scaleMR>{{ e1 }}%魔法抗性</scaleMR>削减，持续{{ e5 }}秒，以及在此期间持续衰减的{{ e3 }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "卡尔萨斯生成一个持续{{ wallduration }}秒的墙体。穿过它的敌人们会受到持续{{ debuffduration }}秒的<scaleMR>{{ magicresistshred }}%魔法抗性</scaleMR>削减，以及在此期间持续衰减的{{ slowpercent }}%<status>减速</status>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "墙体宽度",
                             "移动减速"
                         ],
                         "effect": [
-                            "{{ e2 }} -> {{ e2NL }}",
-                            "{{ e3 }}% -> {{ e3NL }}%"
+                            "{{ tt_wallwidth }} -> {{ tt_wallwidthNL }}",
+                            "{{ slowpercent }}% -> {{ slowpercentNL }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -632,10 +632,10 @@
                     "rangeBurn": "1000",
                     "image": {
                         "full": "KarthusWallOfPain.png",
-                        "sprite": "spell6.png",
+                        "sprite": "spell12.png",
                         "group": "spell",
-                        "x": 48,
-                        "y": 48,
+                        "x": 336,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -645,7 +645,7 @@
                     "id": "KarthusDefile",
                     "name": "亵渎",
                     "description": "卡尔萨斯被动地从他的猎物那里窃取法力，每杀死一个敌人就会获得法力。卡尔萨斯也可以转化这种力量，用猎物的灵魂环绕自身，对附近的敌人造成伤害，但会急速消耗他自己的法力。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>当卡尔萨斯击杀了一个单位时，他会回复<scaleMana>{{ e2 }}法力</scaleMana>。<br /><br /><toggle>激活：</toggle>卡尔萨斯生成一个死灵光环，每秒对附近的敌人们造成<magicDamage>{{ totaldps }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>卡尔萨斯击杀一个单位时，回复<scaleMana>{{ manarestoreonkill }}法力值</scaleMana>。<br /><br /><toggle>激活：</toggle>卡尔萨斯生成一个死灵光环，每秒对附近敌人造成<magicDamage>{{ totaldps }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "每秒伤害",
@@ -653,8 +653,8 @@
                             "@AbilityResourceName@消耗"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ damagepersecond }} -> {{ damagepersecondNL }}",
+                            "{{ manarestoreonkill }} -> {{ manarestoreonkillNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
                     },
@@ -775,10 +775,10 @@
                     "rangeBurn": "550",
                     "image": {
                         "full": "KarthusDefile.png",
-                        "sprite": "spell6.png",
+                        "sprite": "spell12.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 48,
+                        "x": 384,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -890,10 +890,10 @@
                     "rangeBurn": "10000",
                     "image": {
                         "full": "KarthusFallenOne.png",
-                        "sprite": "spell6.png",
+                        "sprite": "spell12.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 48,
+                        "x": 432,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -905,7 +905,7 @@
                 "description": "在死亡时，卡尔萨斯会化为一个灵体，能够继续施放技能。",
                 "image": {
                     "full": "Karthus_Passive.png",
-                    "sprite": "passive1.png",
+                    "sprite": "passive3.png",
                     "group": "passive",
                     "x": 384,
                     "y": 96,

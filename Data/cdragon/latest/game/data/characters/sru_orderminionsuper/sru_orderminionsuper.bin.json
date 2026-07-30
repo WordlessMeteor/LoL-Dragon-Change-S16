@@ -95,6 +95,95 @@
         ],
         "__type": "CharacterRecord"
     },
+    "{0814a077}": {
+        "mCharacterName": "SRU_OrderMinionSuper",
+        "baseHPModifiable": {
+            "baseValue": 1480.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 0.0,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 74.0,
+        "primaryAbilityResource": {
+            "{726ee5cd}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 0.0,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 120.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 100.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 325.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 170.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.8500000238418579,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.8500000238418579,
+            "__type": "ModifiableFloat"
+        },
+        "acquisitionRange": 600.0,
+        "basicAttack": {
+            "mAttackTotalTime": 1.440000057220459,
+            "mAttackCastTime": 0.5,
+            "__type": "AttackSlotData"
+        },
+        "towerTargetingPriorityBoost": 6.0,
+        "expGivenOnDeath": 96.0,
+        "goldGivenOnDeath": 39.0,
+        "experienceRadius": 1600.0,
+        "significance": 0.5,
+        "friendlyTooltip": "game_character_friendlyTooltip_Blue_Minion_MechMelee",
+        "enemyTooltip": "game_character_enemyTooltip_Blue_Minion_MechMelee",
+        "name": "game_character_displayname_Blue_Minion_MechMelee",
+        "minimapIconOverride": "SuperMinion",
+        "selectionHeight": 110.0,
+        "selectionRadius": 145.0,
+        "pathfindingCollisionRadius": 55.52080154418945,
+        "overrideGameplayCollisionRadius": 65.0,
+        "unitTagsString": "Minion | Minion_Lane | Minion_Lane_Super",
+        "characterToolData": {
+            "mapAIPresence": {
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "description": "game_character_description_Blue_Minion_MechMelee",
+            "__type": "CharacterToolData"
+        },
+        "flags": 9446664,
+        "mClientSideItemInventory": [
+            "Items/1512"
+        ],
+        "Script": "{109c4a78}",
+        "__type": "CharacterRecord"
+    },
     "Characters/SRU_OrderMinionSuper/CharacterRecords/Root": {
         "mCharacterName": "SRU_OrderMinionSuper",
         "baseHPModifiable": {
@@ -388,6 +477,85 @@
             "Items/1512"
         ],
         "__type": "CharacterRecord"
+    },
+    "{109c4a78}": {
+        "ScriptName": "CharScriptSRU_OrderMinionSuper_Jade",
+        "path": "{109c4a78}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{e22f9f8c}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "d852090e-97aa-43f9-90b0-123c5320cda2",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "f788266f-ec50-4e15-84a2-4adf6d25df42",
+                                    "Var": {
+                                        "Var": "Attacker",
+                                        "__type": "{622705af}"
+                                    },
+                                    "__type": "{851b8dc5}"
+                                },
+                                {
+                                    "{d851ffa3}": "d38cd255-3bcf-4ce1-8cc8-e62e4640214d",
+                                    "Condition": null,
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "2765dc5d-3690-415b-af6d-232d206dcbda",
+                                                "Formula": "0.5 * ptp.DamageAmount",
+                                                "Dest": {
+                                                    "Var": "DamageAmount",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "{15ebaa9c}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "0fa83bf7-19a6-4346-9ee1-a5a093b4df01",
+                                                "Var": {
+                                                    "Var": "Target",
+                                                    "__type": "{622705af}"
+                                                },
+                                                "__type": "{851b8dc5}"
+                                            },
+                                            null
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{eb530788}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{54757ad9}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
     },
     "Characters/SRU_OrderMinionSuper/Spells/SRU_OrderMinionSuperBasicAttack2": {
         "ObjectName": "SRU_OrderMinionSuperBasicAttack2",

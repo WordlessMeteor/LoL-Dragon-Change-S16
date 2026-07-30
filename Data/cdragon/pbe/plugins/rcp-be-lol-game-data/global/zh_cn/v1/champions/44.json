@@ -798,7 +798,7 @@
             "cost": "@Cost@法力值，所有充能数",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "基于已储存的充能来治疗附近的友方英雄。【正气凌人】的强化普攻会为这个技能提供一层充能。",
-            "dynamicDescription": "Spell_TaricQ_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>每@StackCooldown@秒和打出一次<spellName>正气凌人</spellName>攻击时获得一层效果(最多@MaxCharges@)。<br><br><spellActive>主动：</spellActive>消耗所有层数来为附近的友方英雄们回复<healing>@HealingPerStack@x层数的生命值</healing>(在@MaxCharges@层时回复<healing>@MaxStackHealing@生命值</healing>)。@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -948,7 +948,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "被动提升塔里克和带有【坚毅壁垒】效果的友方英雄的护甲。<br><br>主动施放会为一名友方英雄提供护盾和【坚毅壁垒】效果，只要该英雄呆在塔里克身边，【坚毅壁垒】效果会一直持续。塔里克的技能也会从带有【坚毅壁垒】效果的友方英雄身上施放。",
-            "dynamicDescription": "Spell_TaricW_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>塔里克获得<scaleArmor>@BonusArmor@护甲</scaleArmor>并在他和被此技能绑定过的友方英雄之间形成一条灵链。只要他们在彼此附近，该友方英雄就会获得<scaleArmor>@BonusArmor@护甲</scaleArmor>并且塔里克的各个技能也会从他自己和该友方英雄处施放。<br><br><spellPassive>主动：</spellPassive>塔里克与一名友方英雄进行绑定，提供持续@ShieldDuration@秒的<shield>@ShieldHPRatio@%最大生命值的护盾值</shield>。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1098,7 +1098,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "塔里克准备施放一束星光，在短暂的延迟后，会对敌人造成魔法伤害和晕眩效果。",
-            "dynamicDescription": "Spell_TaricE_Tooltip@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔里克投射一束星光，在@ChargeDuration@后爆裂，以造成<magicDamage>@TotalDamage@魔法伤害</magicDamage>并使敌人们<status>晕眩n</status>@StunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

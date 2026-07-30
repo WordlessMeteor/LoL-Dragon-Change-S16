@@ -267,7 +267,7 @@
                     "id": 18
                 }
             ],
-            "description": "นักรบเกราะหนัก Leona ได้รู้ความจริงเบื้องหลังแสงสว่างของ PROJECT และบัดนี้ได้เคียงคู่กับ Ashe และกบฎ G/NETIC เธอครอบครองโล่ที่สะสมประจุ Ion ซึ่งสามารถปัดป้องการโจมตีและสร้างความมึนงงให้เป้าหมายได้ด้วยพลังงานจากโล่"
+            "description": "นักรบเกราะหนัก Leona ได้รู้ความจริงเบื้องหลังแสงสว่างของ PROJECT และบัดนี้ได้เคียงคู่กับ Ashe และกบฏ G/NETIC เธอครอบครองโล่ที่สะสมประจุ Ion ซึ่งสามารถปัดป้องการโจมตีและสร้างความมึนงงให้เป้าหมายได้ด้วยพลังงานจากโล่"
         },
         {
             "id": 89009,
@@ -1626,7 +1626,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ในการโจมตีครั้งต่อไป Leona จะใช้โล่ของเธอโจมตี สร้างโบนัสความเสียหายเวท และสตันเป้าหมาย",
-            "dynamicDescription": "การโจมตีปกติครั้งถัดไปของ Leona จะ<status>สตัน</status>เป้าหมายเป็นเวลา  @Effect1Amount@ วินาที และสร้างความเสียหายเวทเพิ่มเติม <magicDamage>@TotalDamageTooltip@ หน่วย</magicDamage>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "การโจมตีปกติครั้งถัดไปของ Leona จะ<status>สตัน</status>เป้าหมายเป็นเวลา @StunDuration@ วินาที และสร้างความเสียหายเวทเพิ่มเติม <magicDamage>@TotalDamageTooltip@</magicDamage> หน่วย@SpellModifierDescriptionAppend@",
             "range": [
                 100.0,
                 100.0,
@@ -1776,7 +1776,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Leona ตั้งโล่ของเธอขึ้นมาเพื่อรับการป้องกันความเสียหาย เกราะ และต้านทานเวท เมื่อสิ้นสุดระยะเวลาสกิลครั้งแรก หากมีศัตรูอยู่ใกล้เคียง เธอจะสร้างความเสียหายเวทกับพวกเขาและยืดระยะเวลาของเอฟเฟกต์นี้",
-            "dynamicDescription": "Leona ยกโล่ขึ้นมา ลดความเสียหายที่จะได้รับลง @FlatDamageReduction@ หน่วย และเพิ่ม<scaleArmor>เกราะ @BonusArmorTooltip@ หน่วย</scaleArmor> และ<scaleMR>ต้านทานเวท @BonusMRTooltip@ หน่วย</scaleMR> เป็นเวลา @Effect3Amount@ วินาที หลังจากนั้น โล่ของเธอจะระเบิดออก สร้าง<magicDamage>ความเสียหายเวท @TotalDamageTooltip@ หน่วย</magicDamage>ให้กับศัตรูใกล้เคียง หากสกิลนี้โดนอย่างน้อยหนึ่งเป้าหมาย โบนัส<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR>จะอยู่นานขึ้น @Effect3Amount@ วินาที<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona ยกโล่ขึ้นมา ลดความเสียหายที่จะได้รับลง @FlatDamageReduction@ หน่วย เพิ่ม<scaleArmor>เกราะ @BonusArmorTooltip@ หน่วย</scaleArmor> และ<scaleMR>ต้านทานเวท @BonusMRTooltip@ หน่วย</scaleMR> เป็นเวลา @ArmorMRDuration@ วินาที หลังจากนั้น โล่ของเธอจะระเบิดออกสร้าง<magicDamage>ความเสียหายเวท @TotalDamageTooltip@ หน่วย</magicDamage>ให้กับศัตรูใกล้เคียง หากสกิลนี้โดนอย่างน้อยหนึ่งเป้าหมาย โบนัส<scaleArmor>เกราะ</scaleArmor>และ<scaleMR>ต้านทานเวท</scaleMR>จะอยู่นานขึ้น @ArmorMRDuration@ วินาที<br>@SpellModifierDescriptionAppend@",
             "range": [
                 450.0,
                 450.0,
@@ -1926,7 +1926,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Leona ส่งดาบสุริยะออกจากดาบของเธอ สร้างความเสียหายเวทแก่ศัตรูทุกตัวที่อยู่บนเส้นทาง เมื่อลำแสงดาบหายไป เธอจะพุ่งเข้าหาแชมเปี้ยนศัตรูตัวสุดท้ายที่โดน และทำให้ศัตรูหยุดนิ่งไปชั่วครู่หนึ่ง",
-            "dynamicDescription": "Leona แทงด้วยดาบแห่งแสง สร้างความเสียหายเวท <magicDamage>@TotalDamageTooltip@ หน่วย</magicDamage> แชมเปี้ยนตัวสุดท้ายที่โดน จะถูก<status>ตรึง</status>ไว้เป็นเวลา @Effect2Amount@ วินาทีและ Leona จะพุ่งไปหาพวกเขา@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Leona แทงดาบแห่งแสงไปข้างหน้า สร้าง<magicDamage>ความเสียหายเวท @TotalDamageTooltip@ หน่วย</magicDamage> แชมเปี้ยนตัวสุดท้ายที่โดนจะถูก<status>ตรึง</status>ไว้ เป็นเวลา @RootDuration@ วินาทีและ Leona จะพุ่งไปหาพวกเขา@SpellModifierDescriptionAppend@",
             "range": [
                 875.0,
                 875.0,

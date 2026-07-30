@@ -13783,13 +13783,17 @@
         "trait_id": "TFT16_Shurima",
         "set": "TFTSet16",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_16_Shurima.png",
-        "tooltip_text": "Shurimané získávají každou sekundu @ASPerSecond*100@&nbsp;% k rychlosti útoků a obnovují si @HealthRestorePerSecond@ zdraví. Na začátku boje obdrží dodatečné efekty.<ShowIfCustom.Set=TFTSetEventCT><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Spektrální: Odemkni si Nasuse, Renektona a Xeratha a pak vyšli do boje 4 shurimské jednotky</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventCT><br><br><row>(@MinUnits@) @BonusHealth*100@&nbsp;% k maximálnímu zdraví</row><br><row>(@MinUnits@) @ArmorMR@ k brnění a odolnosti vůči magii</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>V pravidelném intervalu @GodhoodCadence@&nbsp;sek. dosáhne jeden Shuriman BOŽSTVÍ </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>K dispozici pouze po odemčení Nasuse, Renektona a Xeratha.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
+        "tooltip_text": "Shurimané získávají každou sekundu @ASPerSecond*100@ % k rychlosti útoků a obnovují si @HealthRestorePerSecond@ zdraví. Na začátku boje obdrží dodatečné efekty.<ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic><rules><br><br>Spektrální: Odemkni si Nasuse, Renektona a Xeratha a pak vyšli do boje 4 shurimské jednotky</rules></ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER><br><br><row>(@MinUnits@) @BonusHealth*100@ % k maximálnímu zdraví</row><br><row>(@MinUnits@) @ArmorMR@ k brnění a odolnosti vůči magii</row><br><row>(@MinUnits@) <ShowIf.TFT16_Shurima_PrismaticActive>V pravidelném intervalu @GodhoodCadence@ sek. dosáhne jeden Shuriman BOŽSTVÍ </ShowIf.TFT16_Shurima_PrismaticActive><ShowIfCustom.Set=TFTSetEventER><ShowIf.TFT16_Shurima_NoPrismatic>K dispozici pouze po odemčení Nasuse, Renektona a Xeratha.</ShowIf.TFT16_Shurima_NoPrismatic></ShowIfCustom.Set=TFTSetEventER></row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "ASPerSecond",
                         "value": 0.02
+                    },
+                    {
+                        "name": "GodhoodCadence",
+                        "value": 3.0
                     },
                     {
                         "name": "HealthRestorePerSecond",
@@ -15816,7 +15820,7 @@
                     },
                     {
                         "name": "TeamManaRegen",
-                        "value": 3.0
+                        "value": 2.0
                     }
                 ],
                 "min_units": 5,

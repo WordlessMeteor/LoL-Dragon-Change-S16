@@ -1,0 +1,4258 @@
+{
+    "Characters/Jade_Lulu/Spells/Jade_LuluWAbility": {
+        "mRootSpell": "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluW",
+        "mChildSpells": [
+            "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluW",
+            "{af1a2650}",
+            "{f1e12655}"
+        ],
+        "mName": "Jade_LuluWAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluW": {
+        "ObjectName": "Jade_LuluW",
+        "mScriptName": "Jade_LuluW",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 5135,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_LuluW",
+            "mSpellTags": [
+                "PositiveEffect_Boon",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "APBoost",
+                    "values": [
+                        10.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0,
+                        70.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSBoost",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PolymorphDuration",
+                    "values": [
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25,
+                        2.5,
+                        2.75
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "{62954ee2}": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "MSBoost",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mStatFormula": 2,
+                            "mCoefficient": 0.0010000000474974513,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Whimsy.dds"
+            ],
+            "{11704a2b}": 0.17500001192092896,
+            "{f26881a0}": 0.7000000476837158,
+            "cooldownTime": [
+                18.0,
+                18.0,
+                16.5,
+                15.0,
+                13.5,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    18.0,
+                    18.0,
+                    16.5,
+                    15.0,
+                    13.5,
+                    12.0,
+                    12.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "mMinimapIconDisplayFlag": 0,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 2000.0,
+            "mana": [
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                85.0,
+                85.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    65.0,
+                    70.0,
+                    75.0,
+                    80.0,
+                    85.0,
+                    85.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Lulu_LuluW_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_LuluW",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_LuluW_Jade",
+                        "keySummary": "game_spell_description_LuluW_Jade",
+                        "keyTooltip": "game_spell_tooltip_LuluW_Jade",
+                        "keyTooltipExtendedBelowLine": "spell_LuluW_Jade_ExtTooltip"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "APBoost",
+                                    "nameOverride": "Spell_ListType_LuluW_Jade_BonusAP",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "PolymorphDuration",
+                                    "typeIndex": 3,
+                                    "nameOverride": "Spell_ListType_LuluWPolymorphDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 4,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 2048,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 3,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16384,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 3,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{af1a2650}": {
+        "ObjectName": "Jade_LuluWBuff",
+        "mScriptName": "Jade_LuluWBuff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Whimsy.dds"
+            ],
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Lulu_LuluWBuff_OnCast",
+                "18": "Play_sfx_Lulu_LuluWBuff_OnBuffActivate",
+                "19": "Play_sfx_Lulu_LuluWBuff_OnBuffDeactivate"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_LuluWBuff_Jade",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{c2447e8b}": {
+        "ObjectName": "Jade_LuluWDebuff",
+        "mScriptName": "Jade_LuluWDebuff",
+        "mSpell": {
+            "mAffectsTypeFlags": 5135,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_LuluW",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25,
+                        2.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        12.0,
+                        15.0,
+                        18.0,
+                        21.0,
+                        24.0,
+                        27.0,
+                        30.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.75,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/Characters/Fiddlesticks/HUD/Icons2D/fiddlestick_puppywind.dds"
+            ],
+            "mCastTime": 0.2418999969959259,
+            "{11704a2b}": 0.17500001192092896,
+            "{f26881a0}": 0.7000000476837158,
+            "cooldownTime": [
+                17.0,
+                16.0,
+                15.0,
+                14.0,
+                13.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    17.0,
+                    16.0,
+                    15.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    12.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mSpeed": 2250.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 2250.0,
+            "mMissileEffectKey": "Jade_Lulu_W_Mis",
+            "mHitEffectKey": "Jade_Lulu_W_tar_01",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Lulu_LuluWTwo_OnCast",
+                "13": "Play_sfx_Lulu_LuluWTwo_OnHit",
+                "16": "Play_sfx_Lulu_LuluWTwo_OnMissileLaunch",
+                "18": "Play_sfx_Lulu_LuluWTwo_OnBuffActivate",
+                "19": "Play_sfx_Lulu_LuluWTwo_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "{15d85111}",
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_LuluWDebuff_Jade",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{f1e12655}": {
+        "ObjectName": "Jade_LuluWTwo",
+        "mScriptName": "Jade_LuluWTwo",
+        "mSpell": {
+            "mAffectsTypeFlags": 5135,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_LuluW",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        45.0,
+                        50.0,
+                        55.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        1.0,
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25,
+                        2.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0,
+                        40.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        12.0,
+                        15.0,
+                        18.0,
+                        21.0,
+                        24.0,
+                        27.0,
+                        30.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 0.75,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/Characters/Fiddlesticks/HUD/Icons2D/fiddlestick_puppywind.dds"
+            ],
+            "mCastTime": 0.2418999969959259,
+            "{11704a2b}": 0.17500001192092896,
+            "{f26881a0}": 0.7000000476837158,
+            "cooldownTime": [
+                17.0,
+                16.0,
+                15.0,
+                14.0,
+                13.0,
+                12.0,
+                12.0
+            ],
+            "Cooldown": {
+                "values": [
+                    17.0,
+                    16.0,
+                    15.0,
+                    14.0,
+                    13.0,
+                    12.0,
+                    12.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "bHaveHitEffect": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mSpeed": 2250.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 2250.0,
+            "mMissileEffectKey": "Jade_Lulu_W_Mis",
+            "mHitEffectKey": "Jade_Lulu_W_tar_01",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Lulu_LuluWTwo_OnCast",
+                "13": "Play_sfx_Lulu_LuluWTwo_OnHit",
+                "16": "Play_sfx_Lulu_LuluWTwo_OnMissileLaunch",
+                "18": "Play_sfx_Lulu_LuluWTwo_OnBuffActivate",
+                "19": "Play_sfx_Lulu_LuluWTwo_OnBuffDeactivate"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "{15d85111}",
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Lulu/Spells/Jade_LuluEAbility": {
+        "mRootSpell": "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluE",
+        "mChildSpells": [
+            "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluE",
+            "{3db8b26b}",
+            "{25ef7fdf}"
+        ],
+        "mName": "Jade_LuluEAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluE": {
+        "ObjectName": "Jade_LuluE",
+        "mScriptName": "Jade_LuluE",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 7183,
+            "mAlternateName": "Jade_LuluE",
+            "mSpellTags": [
+                "PositiveEffect_Boon"
+            ],
+            "mEffectAmount": [
+                {
+                    "value": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0,
+                        50.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5,
+                        2.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        30.0,
+                        80.0,
+                        130.0,
+                        180.0,
+                        230.0,
+                        280.0,
+                        280.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DamageAPRatio",
+                    "values": [
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579,
+                        0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseShield",
+                    "values": [
+                        30.0,
+                        60.0,
+                        105.0,
+                        150.0,
+                        195.0,
+                        240.0,
+                        240.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldAPRatio",
+                    "values": [
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645,
+                        0.4000000059604645
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "DamageAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalShield": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseShield",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "ShieldAPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell3",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_CommandPix.dds"
+            ],
+            "{11704a2b}": 0.17500001192092896,
+            "{f26881a0}": 0.7000000476837158,
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "bIsToggleSpell": true,
+            "castRange": [
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0,
+                650.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0,
+                    650.0
+                ],
+                "{0a3e0478}": 650.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438,
+                171.89999389648438
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 0.0,
+            "mana": [
+                60.0,
+                70.0,
+                80.0,
+                90.0,
+                100.0,
+                100.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    60.0,
+                    70.0,
+                    80.0,
+                    90.0,
+                    100.0,
+                    100.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_LuluE",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_LuluE_Jade",
+                        "keySummary": "game_spell_description_LuluE_Jade",
+                        "keyTooltip": "game_spell_tooltip_LuluE_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseShield",
+                                    "typeIndex": 2,
+                                    "nameOverride": "Spell_ListType_ShieldAmount",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 4,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 262144,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalShield",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 524288,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalShield",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{25ef7fdf}": {
+        "ObjectName": "Jade_LuluFaerieBurn",
+        "mScriptName": "Jade_LuluFaerieBurn",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_CommandPix.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_LuluEBurn_Jade",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{3db8b26b}": {
+        "ObjectName": "Jade_LuluFaerieShield",
+        "mScriptName": "Jade_LuluFaerieShield",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_CommandPix.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_LuluEShield_Jade",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{7ac12ce4}": {
+        "mRootSpell": "{232600f1}",
+        "mChildSpells": [
+            "{232600f1}",
+            "{7aad00cf}",
+            "{e5b124f3}"
+        ],
+        "mName": "Jade_LuluPassiveAbility",
+        "__type": "AbilityObject"
+    },
+    "{232600f1}": {
+        "ObjectName": "Jade_LuluPassive",
+        "mScriptName": "Jade_LuluPassive",
+        "mSpell": {
+            "mSpellCalculations": {
+                "{7816c04b}": {
+                    "mFormulaParts": [
+                        {
+                            "mLevel1Value": 3.0,
+                            "mBreakpoints": [
+                                {
+                                    "mLevel": 3,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 5,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 7,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 9,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 11,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 13,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 15,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                },
+                                {
+                                    "mLevel": 17,
+                                    "mAdditionalBonusAtThisLevel": 4.0,
+                                    "__type": "Breakpoint"
+                                }
+                            ],
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                },
+                "TotalDamageCalc": {
+                    "mMultiplier": {
+                        "mNumber": 3.0,
+                        "__type": "NumberCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "{7816c04b}",
+                    "__type": "GameCalculationModified"
+                }
+            },
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.dds"
+            ],
+            "castRange": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_LuluPassive",
+                    "mFormat": "{476ec0b8}",
+                    "mLocKeys": {
+                        "keyName": "game_character_passiveName_Lulu_Jade",
+                        "keySummary": "game_character_passiveDescription_Lulu_Jade",
+                        "keyTooltip": "game_character_passiveTooltip_Lulu_Jade"
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_LuluPassive_Jade",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{7aad00cf}": {
+        "ObjectName": "Jade_LuluPassiveMissile",
+        "mScriptName": "Jade_LuluPassiveMissile",
+        "mSpell": {
+            "flags": 4194308,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_LuluPassiveMissile",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        30.0,
+                        90.0,
+                        150.0,
+                        245.0,
+                        315.0,
+                        440.0,
+                        565.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.25,
+                        2.5,
+                        2.75,
+                        3.0,
+                        3.25,
+                        3.5,
+                        3.75
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.2000000476837158,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.dds"
+            ],
+            "mCastTime": 0.25099998712539673,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0,
+                1200.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0,
+                    1200.0
+                ],
+                "{0a3e0478}": 1200.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 30.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+                    "mProjectTargetToCastRange": true,
+                    "mAcceleration": 5200.0,
+                    "mMinSpeed": 900.0,
+                    "mMaxSpeed": 2600.0,
+                    "mInitialSpeed": 900.0,
+                    "__type": "AcceleratingMovement"
+                },
+                "visibilityComponent": {
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 3.0,
+            "missileSpeed": 900.0,
+            "mMissileEffectKey": "Jade_Lulu_Pix_BA_mis",
+            "mLineWidth": 30.0,
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Lulu_Pix_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 2,
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{e5b124f3}": {
+        "ObjectName": "Jade_LuluPassiveMissileController",
+        "mScriptName": "Jade_LuluPassiveMissileController",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 7375,
+            "mEffectAmount": [
+                {
+                    "value": [
+                        30.0,
+                        90.0,
+                        150.0,
+                        245.0,
+                        315.0,
+                        440.0,
+                        565.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "value": [
+                        2.25,
+                        2.5,
+                        2.75,
+                        3.0,
+                        3.25,
+                        3.5,
+                        3.75
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.2000000476837158,
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/Characters/Morgana/HUD/Icons2D/FallenAngel_DarkBinding.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0,
+                350.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0,
+                    350.0
+                ],
+                "{0a3e0478}": 350.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0,
+                1175.0
+            ],
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "luaOnMissileUpdateDistanceInterval": 100.01000213623047,
+            "mMissileSpec": {
+                "mMissileWidth": 1.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "C_BUFFBONE_GLB_CENTER_LOC",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1000.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "visibilityComponent": {
+                    "__type": "EnterFOWVisibility"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 3.0,
+            "missileSpeed": 1000.0,
+            "mMissileEffectKey": "Jade_Lulu_P_Faerie_Flash_01",
+            "mLineWidth": 1.0,
+            "mHitEffectOrientType": 2,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_Lulu_LuluPassiveMissileController_OnMissileCast"
+            },
+            "mClientData": {
+                "mUseTooltipFromAnotherSpell": "{232600f1}",
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Lulu/Spells/Jade_LuluCritAttack": {
+        "ObjectName": "Jade_LuluCritAttack",
+        "mScriptName": "Jade_LuluCritAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "LuxBasicAttack",
+            "mAnimationName": "Crit",
+            "{11704a2b}": 0.4281499981880188,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mSpeed": 1600.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 1600.0,
+            "mMissileEffectKey": "Jade_Lulu_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectName": "doesnotexist.troy",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Lulu_LuluCritAttack_OnCast",
+                "13": "Play_sfx_Lulu_LuluCritAttack_OnHit",
+                "16": "Play_sfx_Lulu_LuluCritAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Lulu/Spells/Jade_LuluBasicAttack2": {
+        "ObjectName": "Jade_LuluBasicAttack2",
+        "mScriptName": "Jade_LuluBasicAttack2",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "LuxBasicAttack",
+            "mAnimationName": "Attack2",
+            "{11704a2b}": 0.4281499981880188,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "r_hand",
+                    "mSpeed": 1450.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 1450.0,
+            "mMissileEffectKey": "Jade_Lulu_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Lulu_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Lulu_LuluBasicAttack2_OnCast",
+                "13": "Play_sfx_Lulu_LuluBasicAttack2_OnHit",
+                "16": "Play_sfx_Lulu_LuluBasicAttack2_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{59aa2133}": {
+        "ObjectName": "Jade_LuluRunCycleManager",
+        "mScriptName": "Jade_LuluRunCycleManager",
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Lulu/Spells/Jade_LuluQAbility": {
+        "mRootSpell": "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQ",
+        "mChildSpells": [
+            "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQ",
+            "{87b7c583}",
+            "{6dfab280}",
+            "{ba1eee5b}"
+        ],
+        "mName": "Jade_LuluQAbility",
+        "__type": "AbilityObject"
+    },
+    "{6dfab280}": {
+        "ObjectName": "Jade_LuluQSlow",
+        "mScriptName": "Jade_LuluQSlow",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Glitterbolt.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_LuluQSlow_Jade",
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQ": {
+        "ObjectName": "Jade_LuluQ",
+        "mScriptName": "Jade_LuluQ",
+        "mSpell": {
+            "mAffectsTypeFlags": 12298,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_LuluQ",
+            "DataValues": [
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        35.0,
+                        80.0,
+                        125.0,
+                        170.0,
+                        215.0,
+                        260.0,
+                        305.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatio",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        -0.800000011920929,
+                        -0.800000011920929,
+                        -0.800000011920929,
+                        -0.800000011920929,
+                        -0.800000011920929,
+                        -0.800000011920929,
+                        -0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowDuration",
+                    "values": [
+                        0.75,
+                        1.0,
+                        1.25,
+                        1.5,
+                        1.75,
+                        2.0,
+                        2.25
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalDamage": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mDataValue": "APRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell1",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_Glitterbolt.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0,
+                7.0
+            ],
+            "Cooldown": {
+                "values": [
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0,
+                    7.0
+                ],
+                "{0a3e0478}": 7.0,
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0,
+                25000.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0,
+                    25000.0
+                ],
+                "{0a3e0478}": 25000.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRangeDisplayOverride": [
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0,
+                925.0
+            ],
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 1400.0,
+            "mLineWidth": 80.0,
+            "mFloatVarsDecimals": [
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1,
+                -1
+            ],
+            "mana": [
+                60.0,
+                65.0,
+                70.0,
+                75.0,
+                80.0,
+                80.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0,
+                    80.0,
+                    80.0
+                ],
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Lulu_LuluQ_OnCast"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_LuluQ",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_LuluQ_Jade",
+                        "keySummary": "game_spell_description_LuluQ_Jade",
+                        "keyTooltip": "game_spell_tooltip_LuluQ_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 5,
+                            "Elements": [
+                                {
+                                    "type": "BaseDamage",
+                                    "typeIndex": 1,
+                                    "nameOverride": "Spell_ListType_Damage",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SlowDuration",
+                                    "nameOverride": "Spell_ListType_SlowDuration",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "startLocator": {
+                            "basePosition": 1,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                925.0,
+                                925.0,
+                                925.0,
+                                925.0,
+                                925.0,
+                                925.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureBaseOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Base.tex",
+                        "textureTargetOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Tip.tex",
+                        "__type": "TargeterDefinitionLine"
+                    },
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0,
+                                80.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureBaseOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Base.tex",
+                        "textureTargetOverrideName": "ASSETS/Spells/Textures/Lulu_Q_Skillshot_Tip.tex",
+                        "__type": "TargeterDefinitionLine"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 1,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "hideWithLineIndicator": true,
+                        "overrideBaseRange": {
+                            "mPerLevelValues": [
+                                925.0,
+                                925.0,
+                                925.0,
+                                925.0,
+                                925.0,
+                                925.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{6d548702}": {
+                "mFormulaParts": [
+                    {
+                        "mSpellCalculationKey": "TotalDamage",
+                        "__type": "{f3cbe7b2}"
+                    }
+                ],
+                "__type": "GameCalculation"
+            },
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 2,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{87b7c583}": {
+        "ObjectName": "Jade_LuluQMissileTwo",
+        "mScriptName": "Jade_LuluQMissileTwo",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_LuluQ",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        75.0,
+                        250.0,
+                        425.0,
+                        600.0,
+                        0.0,
+                        0.0,
+                        175.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.0,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Bowmaster_EnchantedArrow.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "Root",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1450.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 16.15999984741211,
+            "missileSpeed": 1450.0,
+            "mMissileEffectKey": "Jade_Lulu_Q_mis",
+            "mLineWidth": 60.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_Lulu_LuluQMissileTwo_OnMissileCast",
+                "16": "Play_sfx_Lulu_LuluQMissileTwo_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{ba1eee5b}": {
+        "ObjectName": "Jade_LuluQMissile",
+        "mScriptName": "Jade_LuluQMissile",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 6154,
+            "mAlternateName": "Jade_LuluQ",
+            "mEffectAmount": [
+                {
+                    "value": [
+                        75.0,
+                        250.0,
+                        425.0,
+                        600.0,
+                        0.0,
+                        0.0,
+                        175.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                },
+                {
+                    "__type": "SpellEffectAmount"
+                }
+            ],
+            "mCoefficient": 1.0,
+            "mAnimationName": "Spell2",
+            "mImgIconName": [
+                "ASSETS/Spells/Icons2D/Bowmaster_EnchantedArrow.dds"
+            ],
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "canCastWhileDisabled": true,
+            "mCantCancelWhileWindingUp": true,
+            "mSpellRevealsChampion": false,
+            "castRange": [
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0,
+                950.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0,
+                    950.0
+                ],
+                "{0a3e0478}": 950.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "mMissileWidth": 60.0,
+                "movementComponent": {
+                    "mUseHeightOffsetAtEnd": true,
+                    "mTracksTarget": false,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "L_hand",
+                    "mProjectTargetToCastRange": true,
+                    "mSpeed": 1450.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "heightSolver": {
+                    "__type": "BlendedLinearHeightSolver"
+                },
+                "verticalFacing": {
+                    "__type": "VerticalFacingFaceTarget"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnHit"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 3,
+            "castFrame": 16.15999984741211,
+            "missileSpeed": 1450.0,
+            "mMissileEffectKey": "Jade_Lulu_Q_mis",
+            "mLineWidth": 60.0,
+            "bHaveHitBone": true,
+            "mHitBoneName": "root",
+            "selectionPriority": 1,
+            "mTargetingTypeData": {
+                "__type": "Location"
+            },
+            "SpellEventToAudioEventSuffix": {
+                "15": "Play_sfx_Lulu_LuluQMissile_OnMissileCast",
+                "16": "Play_sfx_Lulu_LuluQMissile_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "hideWithLineIndicator": true,
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "endLocator": {
+                            "basePosition": 3,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "lineStopsAtEndPosition": false,
+                        "lineWidth": {
+                            "mPerLevelValues": [
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0,
+                                60.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "__type": "TargeterDefinitionLine"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Lulu/Spells/Jade_LuluRAbility": {
+        "mRootSpell": "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluR",
+        "mChildSpells": [
+            "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluR",
+            "{dc8e4d28}"
+        ],
+        "mName": "Jade_LuluRAbility",
+        "__type": "AbilityObject"
+    },
+    "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluR": {
+        "ObjectName": "Jade_LuluR",
+        "mScriptName": "Jade_LuluR",
+        "mSpell": {
+            "flags": 4,
+            "mAffectsTypeFlags": 1029,
+            "mRequiredUnitTags": {
+                "mObjectTagList": [
+                    "{ea595ca6}"
+                ],
+                "__type": "ObjectTags"
+            },
+            "mAlternateName": "Jade_LuluR",
+            "mSpellTags": [
+                "Trait_Ultimate",
+                "PositiveEffect_Boon",
+                "Trait_ImmobilizingCCSpell"
+            ],
+            "DataValues": [
+                {
+                    "name": "BonusHealth",
+                    "values": [
+                        125.0,
+                        300.0,
+                        450.0,
+                        600.0,
+                        725.0,
+                        875.0,
+                        1025.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowPercent",
+                    "values": [
+                        15.0,
+                        30.0,
+                        45.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        105.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0,
+                        7.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "AoERadius",
+                    "values": [
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0,
+                        400.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockbackDuration",
+                    "values": [
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockbackDistance",
+                    "values": [
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0,
+                        275.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MSMod",
+                    "values": [
+                        -0.15000000596046448,
+                        -0.30000001192092896,
+                        -0.44999998807907104,
+                        -0.6000000238418579,
+                        -0.75,
+                        -0.8999999761581421,
+                        -1.0499999523162842
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "mSpellCalculations": {
+                "TotalBonusHealth": {
+                    "mFormulaParts": [
+                        {
+                            "mDataValue": "BonusHealth",
+                            "__type": "NamedDataValueCalculationPart"
+                        },
+                        {
+                            "mCoefficient": 0.5,
+                            "__type": "StatByCoefficientCalculationPart"
+                        }
+                    ],
+                    "__type": "GameCalculation"
+                }
+            },
+            "mAnimationName": "Spell4",
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_GiantGrowth.dds"
+            ],
+            "mCastTime": 0.25,
+            "{11704a2b}": 0.25,
+            "{f26881a0}": 1.0,
+            "cooldownTime": [
+                110.0,
+                110.0,
+                95.0,
+                80.0,
+                80.0,
+                80.0,
+                80.0
+            ],
+            "Cooldown": {
+                "values": [
+                    110.0,
+                    110.0,
+                    95.0,
+                    80.0,
+                    80.0,
+                    80.0,
+                    80.0
+                ],
+                "__type": "{0a0eddc9}"
+            },
+            "mCantCancelWhileWindingUp": true,
+            "useAnimatorFramerate": true,
+            "castRange": [
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0,
+                900.0
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0,
+                    900.0
+                ],
+                "{0a3e0478}": 900.0,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0,
+                210.0
+            ],
+            "castRadiusSecondary": [
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0,
+                385.0
+            ],
+            "castConeDistance": 100.0,
+            "castFrame": 7.5,
+            "missileSpeed": 0.0,
+            "mana": [
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0,
+                150.0
+            ],
+            "{210f9ec0}": {
+                "values": [
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0,
+                    150.0
+                ],
+                "{0a3e0478}": 150.0,
+                "__type": "{630af303}"
+            },
+            "selectionPriority": 2,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Lulu_LuluR_OnCast",
+                "19": "Play_sfx_Lulu_LuluR_OnBuffDeactivate",
+                "18": "Play_sfx_Lulu_LuluR_OnBuffActivate"
+            },
+            "mCastingBreaksStealth": true,
+            "mClientData": {
+                "mTooltipData": {
+                    "mObjectName": "Jade_LuluR",
+                    "mFormat": "{d7c27163}",
+                    "mLocKeys": {
+                        "keyName": "game_spell_displayname_LuluR_Jade",
+                        "keySummary": "game_spell_description_LuluR_Jade",
+                        "keyTooltip": "game_spell_tooltip_LuluR_Jade"
+                    },
+                    "mLists": {
+                        "LevelUp": {
+                            "levelCount": 3,
+                            "Elements": [
+                                {
+                                    "type": "BonusHealth",
+                                    "nameOverride": "Spell_ListType_BonusHealth",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "SlowPercent",
+                                    "nameOverride": "Spell_ListType_Slow",
+                                    "Style": 1,
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cooldown",
+                                    "__type": "TooltipInstanceListElement"
+                                }
+                            ],
+                            "__type": "TooltipInstanceList"
+                        }
+                    },
+                    "__type": "TooltipInstanceSpell"
+                },
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    },
+                    {
+                        "centerLocator": {
+                            "basePosition": 2,
+                            "__type": "DrawablePositionLocator"
+                        },
+                        "overrideRadius": {
+                            "mPerLevelValues": [
+                                385.0,
+                                385.0,
+                                385.0,
+                                385.0,
+                                385.0,
+                                385.0
+                            ],
+                            "mValueType": 2,
+                            "__type": "FloatPerSpellLevel"
+                        },
+                        "textureRadiusOverrideName": "ASSETS/Spells/Textures/AOE_brand.tex",
+                        "__type": "TargeterDefinitionAoe"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_LuluR_Jade",
+            "__type": "BuffData"
+        },
+        "BotData": {
+            "DamageTag": 1,
+            "{ec17e271}": [
+                {
+                    "EffectTag": 1,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 1,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 8,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalBonusHealth",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 4,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalBonusHealth",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16777216,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mEffectIndex": 4,
+                                "__type": "EffectValueCalculationPart"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                },
+                {
+                    "EffectTag": 16,
+                    "EffectCalculation": {
+                        "mFormulaParts": [
+                            {
+                                "mSpellCalculationKey": "TotalBonusHealth",
+                                "__type": "{f3cbe7b2}"
+                            }
+                        ],
+                        "__type": "GameCalculation"
+                    },
+                    "__type": "{b09016f6}"
+                }
+            ],
+            "__type": "BotsSpellData"
+        },
+        "__type": "SpellObject"
+    },
+    "{bc756b9a}": {
+        "ObjectName": "Jade_LuluRBoom",
+        "mScriptName": "Jade_LuluRBoom",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_GiantGrowth.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mTooltipData": {
+                "mObjectName": "Jade_LuluRBoom",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "game_buff_name_knockedup",
+                    "keyTooltip": "game_buff_tooltip_knockedup"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
+            "mShowDuration": false,
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "{dc8e4d28}": {
+        "ObjectName": "Jade_LuluRSlow",
+        "mScriptName": "Jade_LuluRSlow",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_GiantGrowth.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "mBuff": {
+            "mDescription": "game_buff_tooltip_Slow",
+            "mShowDuration": false,
+            "__type": "BuffData"
+        },
+        "__type": "SpellObject"
+    },
+    "Characters/Jade_Lulu/Spells/Jade_LuluBasicAttack": {
+        "ObjectName": "Jade_LuluBasicAttack",
+        "mScriptName": "Jade_LuluBasicAttack",
+        "mSpell": {
+            "mAffectsTypeFlags": 24527,
+            "mAlternateName": "LuxBasicAttack",
+            "{11704a2b}": 0.4281499981880188,
+            "cooldownTime": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ],
+            "Cooldown": {
+                "values": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "{0a3e0478}": 0.0,
+                "__type": "{0a0eddc9}"
+            },
+            "bHaveHitEffect": true,
+            "castRange": [
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312,
+                622.7000122070312
+            ],
+            "{0e1136d1}": {
+                "values": [
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312,
+                    622.7000122070312
+                ],
+                "{0a3e0478}": 622.7000122070312,
+                "__type": "{0a0eddc9}"
+            },
+            "castRadius": [
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0,
+                100.0
+            ],
+            "castConeDistance": 100.0,
+            "mMissileSpec": {
+                "movementComponent": {
+                    "mTargetHeightAugment": 100.0,
+                    "mOffsetInitialTargetHeight": 100.0,
+                    "mStartBoneName": "BUFFBONE_CSTM_WEAPON_1",
+                    "mSpeed": 1450.0,
+                    "__type": "FixedSpeedMovement"
+                },
+                "verticalFacing": {
+                    "__type": "VeritcalFacingMatchVelocity"
+                },
+                "behaviors": [
+                    {
+                        "__type": "CastOnMovementComplete"
+                    },
+                    {
+                        "__type": "DestroyOnMovementComplete"
+                    }
+                ],
+                "__type": "MissileSpecification"
+            },
+            "mCastType": 1,
+            "castFrame": 7.5,
+            "missileSpeed": 1450.0,
+            "mMissileEffectKey": "Jade_Lulu_BA_mis",
+            "mHitEffectOrientType": 2,
+            "mHitEffectKey": "Jade_Lulu_BA_tar",
+            "bHaveHitBone": true,
+            "mHitBoneName": "C_BuffBone_Glb_Center_Loc",
+            "selectionPriority": 1,
+            "SpellEventToAudioEventSuffix": {
+                "12": "Play_sfx_Lulu_LuluBasicAttack_OnCast",
+                "13": "Play_sfx_Lulu_LuluBasicAttack_OnHit",
+                "16": "Play_sfx_Lulu_LuluBasicAttack_OnMissileLaunch"
+            },
+            "mClientData": {
+                "mTargeterDefinitions": [
+                    {
+                        "useCasterBoundingBox": false,
+                        "__type": "TargeterDefinitionRange"
+                    }
+                ],
+                "__type": "SpellDataResourceClient"
+            },
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
+    "{279dabfc}": {
+        "RecSpellRankUpInfos": [
+            {
+                "MapId": 12,
+                "Position": "{ada7afdb}",
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    1,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 11,
+                "Position": "utility",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    1,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    2,
+                    0,
+                    1,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "utility",
+                "IsDefaultRecommendation": true,
+                "mDefaultPriority": [
+                    3,
+                    2,
+                    1,
+                    0
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    2,
+                    1,
+                    2
+                ],
+                "__type": "RecSpellRankUpInfo"
+            },
+            {
+                "MapId": 453,
+                "Position": "Mid",
+                "mDefaultPriority": [
+                    3,
+                    0,
+                    2,
+                    1
+                ],
+                "mEarlyLevelOverrides": [
+                    0,
+                    1,
+                    2,
+                    0
+                ],
+                "__type": "RecSpellRankUpInfo"
+            }
+        ],
+        "__type": "RecSpellRankUpInfoList"
+    },
+    "{68cf0035}": {
+        "mOverrides": [
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3865",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6620",
+                            "Items/6617",
+                            "Items/2065"
+                        ],
+                        "MaxCompletedItems": 0,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3009",
+                            "Items/3158",
+                            "Items/3117"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6616",
+                            "Items/3222",
+                            "Items/3504"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3107",
+                            "Items/4641",
+                            "Items/6616",
+                            "Items/3222",
+                            "Items/3504",
+                            "Items/3157",
+                            "Items/6621"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "mCoreItems": [
+                    "Items/3870"
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "ARAM",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/3112"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/4642"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/3067"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6620",
+                            "Items/6617",
+                            "Items/2065"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3009",
+                            "Items/3158",
+                            "Items/3117"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6616",
+                            "Items/3222",
+                            "Items/3504"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3107",
+                            "Items/4641",
+                            "Items/6616",
+                            "Items/3222",
+                            "Items/3504",
+                            "Items/3157"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 11,
+                        "mModeNameStringId": "CLASSIC",
+                        "mPosition": "middle",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/1056",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/2033"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/1082",
+                            "Items/2003",
+                            "Items/2003",
+                            "Items/2003"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/6653",
+                            "Items/6656",
+                            "Items/6655"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3020",
+                            "Items/3158"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/6616",
+                            "Items/3157",
+                            "Items/4629"
+                        ],
+                        "MaxCompletedItems": 3,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/3157",
+                            "Items/3165",
+                            "Items/6616",
+                            "Items/3102",
+                            "Items/3089",
+                            "Items/3135",
+                            "Items/4629"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            }
+        ],
+        "__type": "ItemRecommendationOverrideSet"
+    },
+    "{e5446258}": {
+        "__type": "ChampionRuneRecommendationsContext"
+    },
+    "Characters/Jade_Lulu/CharacterRecords/Root": {
+        "mCharacterName": "Jade_Lulu",
+        "baseHPModifiable": {
+            "baseValue": 497.0,
+            "__type": "ModifiableFloat"
+        },
+        "hpPerLevelModifiable": {
+            "baseValue": 82.0,
+            "__type": "ModifiableFloat"
+        },
+        "baseStaticHPRegenModifiable": {
+            "baseValue": 1.1200000047683716,
+            "__type": "ModifiableFloat"
+        },
+        "hpRegenPerLevelModifiable": {
+            "baseValue": 0.11999999731779099,
+            "__type": "ModifiableFloat"
+        },
+        "healthBarHeight": 85.0,
+        "primaryAbilityResource": {
+            "arType": 0,
+            "{726ee5cd}": {
+                "baseValue": 255.0,
+                "__type": "ModifiableFloat"
+            },
+            "{6216bf7b}": {
+                "baseValue": 55.0,
+                "__type": "ModifiableFloat"
+            },
+            "{c4ab3550}": {
+                "baseValue": 1.100000023841858,
+                "__type": "ModifiableFloat"
+            },
+            "{3a509002}": {
+                "baseValue": 0.10000000149011612,
+                "__type": "ModifiableFloat"
+            },
+            "__type": "AbilityResourceSlotInfo"
+        },
+        "baseDamageModifiable": {
+            "baseValue": 46.599998474121094,
+            "__type": "ModifiableFloat"
+        },
+        "damagePerLevelModifiable": {
+            "baseValue": 2.5999999046325684,
+            "__type": "ModifiableFloat"
+        },
+        "baseArmorModifiable": {
+            "baseValue": 16.700000762939453,
+            "__type": "ModifiableFloat"
+        },
+        "armorPerLevelModifiable": {
+            "baseValue": 3.700000047683716,
+            "__type": "ModifiableFloat"
+        },
+        "baseMR": {
+            "baseValue": 30.0,
+            "__type": "ModifiableFloat"
+        },
+        "critDamageMultiplier": 2.0,
+        "baseMoveSpeedModifiable": {
+            "baseValue": 325.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackRangeModifiable": {
+            "baseValue": 550.0,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedRatioModifiable": {
+            "baseValue": 0.625,
+            "__type": "ModifiableFloat"
+        },
+        "attackSpeedPerLevelModifiable": {
+            "baseValue": 2.25,
+            "__type": "ModifiableFloat"
+        },
+        "mAdaptiveForceToAbilityPowerWeight": 1.0,
+        "acquisitionRange": 625.0,
+        "basicAttack": {
+            "mAttackDelayCastOffsetPercent": -0.11249999701976776,
+            "mAttackProbability": 0.5,
+            "mAttackName": "Jade_LuluBasicAttack",
+            "__type": "AttackSlotData"
+        },
+        "extraAttacks": [
+            {
+                "mAttackName": "Jade_LuluBasicAttack2",
+                "__type": "AttackSlotData"
+            },
+            {
+                "mAttackProbability": 0.5,
+                "__type": "AttackSlotData"
+            }
+        ],
+        "critAttacks": [
+            {
+                "mAttackDelayCastOffsetPercent": -0.11249999701976776,
+                "mAttackName": "Jade_LuluCritAttack",
+                "__type": "AttackSlotData"
+            }
+        ],
+        "spellNames": [
+            "Jade_LuluQAbility/Jade_LuluQ",
+            "Jade_LuluWAbility/Jade_LuluW",
+            "Jade_LuluEAbility/Jade_LuluE",
+            "Jade_LuluRAbility/Jade_LuluR"
+        ],
+        "spells": [
+            "Characters/Jade_Lulu/Spells/Jade_LuluQAbility/Jade_LuluQ",
+            "Characters/Jade_Lulu/Spells/Jade_LuluWAbility/Jade_LuluW",
+            "Characters/Jade_Lulu/Spells/Jade_LuluEAbility/Jade_LuluE",
+            "Characters/Jade_Lulu/Spells/Jade_LuluRAbility/Jade_LuluR"
+        ],
+        "extraSpells": [
+            "Jade_LuluPassiveMissile",
+            "Jade_LuluQMissile",
+            "Jade_LuluQMissileTwo",
+            "Jade_LuluPassiveMissileController",
+            "BaseSpell",
+            "Jade_LuluWTwo",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell",
+            "BaseSpell"
+        ],
+        "{c1984296}": [
+            "{7aad00cf}",
+            "{ba1eee5b}",
+            "{87b7c583}",
+            "{e5b124f3}",
+            "Shared/Spells/BaseSpell",
+            "{f1e12655}",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell",
+            "Shared/Spells/BaseSpell"
+        ],
+        "mAbilities": [
+            "Characters/Jade_Lulu/Spells/Jade_LuluEAbility",
+            "{7ac12ce4}",
+            "Characters/Jade_Lulu/Spells/Jade_LuluQAbility",
+            "Characters/Jade_Lulu/Spells/Jade_LuluRAbility",
+            "Characters/Jade_Lulu/Spells/Jade_LuluWAbility"
+        ],
+        "passiveName": "Spell_Jade_LuluPassive_Name",
+        "passiveLuaName": "",
+        "passiveToolTip": "Spell_Jade_LuluPassive_Summary",
+        "passiveSpell": "Jade_LuluPassive",
+        "passive1IconName": "ASSETS/Characters/Jade_Lulu/HUD/Icons2D/Jade_Lulu_PixFaerieCompanion.dds",
+        "name": "game_character_displayname_Jade_Lulu",
+        "selectionHeight": 85.0,
+        "selectionRadius": 100.0,
+        "pathfindingCollisionRadius": 30.0,
+        "overrideGameplayCollisionRadius": 55.0,
+        "unitTagsString": "Champion",
+        "mEducationToolData": {
+            "firstItem": 1056,
+            "__type": "ToolEducationData"
+        },
+        "mAbilitySlotCC": [
+            14,
+            11,
+            0,
+            8
+        ],
+        "characterToolData": {
+            "mapAIPresence": {
+                "8": {
+                    "__type": "ToolAiPresence"
+                },
+                "0": {
+                    "__type": "ToolAiPresence"
+                },
+                "1": {
+                    "__type": "ToolAiPresence"
+                },
+                "2": {
+                    "__type": "ToolAiPresence"
+                },
+                "3": {
+                    "__type": "ToolAiPresence"
+                },
+                "4": {
+                    "__type": "ToolAiPresence"
+                },
+                "5": {
+                    "__type": "ToolAiPresence"
+                },
+                "6": {
+                    "__type": "ToolAiPresence"
+                },
+                "7": {
+                    "__type": "ToolAiPresence"
+                }
+            },
+            "passiveData": [
+                {
+                    "name": "Spell_Jade_LuluPassive_Name",
+                    "__type": "ToolPassiveData"
+                }
+            ],
+            "searchTags": "support",
+            "searchTagsSecondary": "mage",
+            "championId": 60117,
+            "roles": "SUPPORT",
+            "magicRank": 7,
+            "difficultyRank": 5,
+            "description": "game_character_description_Jade_Lulu",
+            "defenseRank": 5,
+            "classification": "Arcane",
+            "attackRank": 4,
+            "__type": "CharacterToolData"
+        },
+        "platformEnabled": true,
+        "purchaseIdentities": [
+            "Ranged"
+        ],
+        "mPreferredPerkStyle": "Perks/Styles/Sorcery",
+        "mCharacterPassiveSpell": "{232600f1}",
+        "mCharacterPassiveBuffs": [
+            {
+                "mParentPassiveBuff": "{232600f1}",
+                "__type": "CharacterPassiveData"
+            },
+            {
+                "mParentPassiveBuff": "{59aa2133}",
+                "__type": "CharacterPassiveData"
+            }
+        ],
+        "{c5c48b41}": 1,
+        "Script": "{94c2b406}",
+        "__type": "CharacterRecord"
+    },
+    "Characters/Jade_Lulu/Skins/Meta": {
+        "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{94c2b406}": {
+        "ScriptName": "charscriptJade_Luluu",
+        "path": "{94c2b406}",
+        "sequences": {
+            "{6a7835b9}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "7f479089-23f2-4cb8-a8e0-d8b2a5226d27",
+                        "Src": {
+                            "__type": "BoolGet"
+                        },
+                        "Dest": {
+                            "Var": "IsDead",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "60356ad8-9266-4360-82e5-c34285d864ed",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "1c331c07-d39e-40c3-a275-42312b6d1a08",
+                                    "Src": {
+                                        "value": true,
+                                        "__type": "BoolGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "IsDead",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "d654e169-5c8a-47a2-8282-248c32a62656",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "59af68b8-3db9-4499-b4bf-d1053eda74db",
+                                    "Src": {
+                                        "value": true,
+                                        "__type": "BoolGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "IsDead",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "2e65671e-97da-40ba-918e-768721bca23d",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{c3bf3577}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "__type": "BoolGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "bcc9616a-5c57-4086-a0f5-8cee62381890",
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{b3ccfba0}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "32c07bee-9537-4ca6-9e57-661ecda88cbf",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "586a203d-ac69-4a8c-a1b1-d7f9d319cf93",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "7bde2d0e-8c5c-4c03-bf23-3356f7a71eff",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "d19f22d0-11cb-4383-8810-01f004e2c75f",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{edb2eab3}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "01fcb899-483e-4b0b-8edc-65102c22a475",
+                        "Dest": {
+                            "Var": "tmpTable__",
+                            "__type": "CustomTableSet"
+                        },
+                        "__type": "CreateCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "68e30d5b-5212-4be6-ae6b-f3fc96506974",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 20.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "d4001798-8d8c-4341-860a-f9f582230999",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 30.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "a3c4f500-6b24-4c53-a170-2e38a15087a1",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 40.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "b315e9ea-7505-4445-bb13-f55582fb0ba7",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 50.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "ca8500f5-2127-4a43-95b4-6afa5954287f",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 60.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "5972b8e1-f821-467a-905c-001575533b91",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 70.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "9604521f-d523-4cc9-a308-f8492e5e939f",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 80.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "a85c6e03-d3d9-4450-b734-968fac282971",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 90.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "3e4f6def-8f34-46f4-a155-c57d1d61b5c3",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 100.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "7acfb5b2-0cdc-42a4-b70e-4a5ed349e0e8",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 110.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "f1c01d3b-90ab-4b8c-826a-27688c4213cf",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 120.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "f75b4810-07c0-48ea-8636-e6706c52b41d",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 130.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "c9cdcf57-3488-48a4-a4b8-a8b714878ca1",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 140.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "51bb2e8a-4926-4868-8a4e-3f9bb4a1c776",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 150.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "ea52cc5e-8d3c-48ab-a429-88e8de08f1a5",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 160.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "c90032ed-df44-4a3b-9efa-86d7ee53c1e3",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 170.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "a024358c-673a-451d-9a4b-6358f456f60a",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 180.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "8646cec4-4a37-4daf-a1c4-68ef10e5daab",
+                        "DestTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "value": {
+                            "value": 190.0,
+                            "__type": "FloatGet"
+                        },
+                        "__type": "InsertIntoCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "6f91cf11-4364-40a7-8117-2826cf1a45bd",
+                        "SrcTable": {
+                            "Var": "{32c9d448}",
+                            "__type": "CustomTableGet"
+                        },
+                        "SrcKey": {
+                            "Var": "Level",
+                            "__type": "ScriptTableGet"
+                        },
+                        "Dest": {
+                            "Var": "tmpValue__",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "GetKeyValueInCustomTableBlock"
+                    },
+                    {
+                        "{d851ffa3}": "f9771146-69aa-4fcd-aabe-f006468bcd55",
+                        "Src": {
+                            "Var": "{49c7e05d}",
+                            "__type": "ScriptTableGet"
+                        },
+                        "Dest": {
+                            "Table": {
+                                "__type": "CharacterVars"
+                            },
+                            "Var": "Jade_LuluPassiveDamage",
+                            "__type": "ScriptTableSet"
+                        },
+                        "__type": "SetVarInTableBlock"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{2b9c7047}": {
+                "blocks": [
+                    null
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "CustomSequences": {
+            "{c9066acc}": {
+                "blocks": [
+                    null,
+                    {
+                        "{d851ffa3}": "82a7d49a-d03a-4fdc-98a5-c135e29af875",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 4,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "a2d89592-ae76-44e4-b46e-c002d64ecffe",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 6,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "22c84bc6-472b-4439-ae28-f0178c8c2229",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 14,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "ecede923-cd29-4dbc-ab8b-0738035c1530",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 26,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "435062a8-8b5b-494d-8988-ef0da893f6b3",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 27,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "c54cc3b2-9bcb-4f5e-b8c6-05df7d7e37b3",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 37,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "2eb84c0b-8369-494d-af0c-14cdf320f8a3",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 55,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "__type": "{e524b2fc}"
+                    },
+                    {
+                        "{d851ffa3}": "53233c59-5678-439b-ae96-25000b93e218",
+                        "Condition": {
+                            "Value1": {
+                                "Var": "{7b34fa25}",
+                                "__type": "ScriptTableGet"
+                            },
+                            "Value2": {
+                                "value": 56,
+                                "__type": "IntGet"
+                            },
+                            "__type": "ComparisonScriptCondition"
+                        },
+                        "type": 2,
+                        "Sequence": {
+                            "blocks": [
+                                {
+                                    "{d851ffa3}": "f4ffce89-d656-42d0-864f-0fb21328e42e",
+                                    "Src": {
+                                        "value": true,
+                                        "__type": "BoolGet"
+                                    },
+                                    "Dest": {
+                                        "Var": "PixOnLulu",
+                                        "__type": "ScriptTableSet"
+                                    },
+                                    "__type": "SetVarInTableBlock"
+                                },
+                                null,
+                                {
+                                    "{d851ffa3}": "d6570ab1-6ab0-4382-9cae-7aa51fb0b329",
+                                    "Condition": {
+                                        "Value1": {
+                                            "Var": "{86d008df}",
+                                            "__type": "ScriptTableGet"
+                                        },
+                                        "Value2": {
+                                            "value": true,
+                                            "__type": "BoolGet"
+                                        },
+                                        "__type": "ComparisonScriptCondition"
+                                    },
+                                    "Sequence": {
+                                        "blocks": [
+                                            {
+                                                "{d851ffa3}": "68ca9865-6bf2-4b77-99c0-3be3616e21f1",
+                                                "Condition": null,
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            }
+                                        ],
+                                        "__type": "ScriptSequence"
+                                    },
+                                    "__type": "{e524b2fc}"
+                                }
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            },
+            "{2ea9fcb5}": {
+                "blocks": [
+                    {
+                        "{d851ffa3}": "0e2750ea-2717-4843-9a7a-ed223efe44d3",
+                        "Condition": null,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
+                ],
+                "__type": "RootScriptSequence"
+            }
+        },
+        "__type": "CharScript"
+    },
+    "__linked": []
+}

@@ -1370,7 +1370,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Sejuani menerjang ke depan, melontarkan musuh ke udara. Terjangannya berhenti setelah menghantam champion musuh.",
-            "dynamicDescription": "Sejuani menerjang, menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> pada musuh dan menerapkan efek <status>Knock</status> <status>Up</status> pada mereka selama @Effect4Amount@ detik. Terjangannya berhenti setelah menghantam champion musuh.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani menerjang, menghasilkan <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage> pada musuh dan menerapkan <status>Knock</status> <status>Up</status> pada mereka selama @KnockupDurationTOOLTIPONLY@ detik. Terjangannya berhenti setelah menghantam champion musuh.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Sejuani menerapkan efek freeze dan stun pada champion musuh yang memiliki stack Frost maksimum.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Serangan dari champion sekutu di sekitar memberikan satu stack pada champion dan monster jungle.<br><br><spellPassive>Aktif:</spellPassive> Sejuani menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> pada target musuh dengan 4 stack dan menerapkan <status>Stun</status> pada mereka selama @Effect1Amount@ detik. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Serangan dari champion melee sekutu di sekitar memberikan satu stack pada champion dan monster jungle.<br><br><spellPassive>Aktif:</spellPassive> Sejuani menghasilkan <magicDamage>@TotalDamage@ magic damage</magicDamage> pada target musuh dengan 4 stack dan menerapkan <status>Stun</status> pada mereka selama @CCDuration@ detik. @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Sejuani melemparkan bolas yang membekukan dan menerapkan efek stun pada champion pertama yang terkena, serta menciptakan badai es yang menerapkan efek slow pada musuh lain.",
-            "dynamicDescription": "Sejuani melemparkan bolas True Ice, menerapkan efek <status>Stun</status> dan mengungkap champion musuh pertama yang terkena selama @Effect2Amount@ detik dan menghasilkan <magicDamage>@MinorDamageTooltip@ magic damage</magicDamage>.<br><br>Jika bolas itu mencapai setidaknya 25% dari jaraknya, bolas itu menerapkan efek <status>Stun</status> dan mengungkap posisi musuh selama @Effect6Amount@ detik sebagai gantinya. Bolas ini juga menciptakan badai es yang menerapkan efek <status>Slow</status> pada musuh di sekitar sebesar @Effect4Amount@% selama @Effect3Amount@ detik. Semua musuh yang terkena menerima <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Sejuani melemparkan bola True Ice, menerapkan <status>Stun</status> dan mengungkap champion musuh pertama yang terkena selama @BaseStunDuration@ detik serta menghasilkan <magicDamage>@MinorDamageTooltip@ magic damage</magicDamage>.<br><br>Jika mencapai setidaknya 25% dari range-nya, bola itu jadi menerapkan <status>Stun</status> dan mengungkap musuh selama @EmpoweredStunDuration@ detik. Bola ini juga menciptakan badai es yang menerapkan <status>Slow</status> pada musuh di sekitar sebesar @ExplosionSlowAmount@% selama @ZoneDuration@ detik. Semua musuh yang terkena menerima <magicDamage>@TotalDamageTooltip@ magic damage</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

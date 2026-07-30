@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡尔瑟斯以自身能量创造一道可通过的墙面，任何试图通过那面墙的敌方单位将会在短时间内降低魔防与移动速度。",
-            "dynamicDescription": "卡尔瑟斯创造一个存在 @Effect4Amount@ 秒的痛苦之墙。想要通过此面墙的敌人将会降低<scaleMR>@Effect1Amount@% 魔法防御</scaleMR>，持续 @Effect5Amount@ 秒，以及在此期间递减的 @Effect3Amount@% <status>缓速</status>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "卡尔瑟斯制造一道持续@WallDuration@秒的墙体。穿过墙体的敌人会失去<scaleMR>@MagicResistShred@%魔法防御</scaleMR>，持续@DebuffDuration@秒，并被<status>减速</status>@SlowPercent@%，减速效果会在此期间逐渐衰减。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "每秒消耗 @Cost@ 魔力",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "卡尔瑟斯的被动将会偷取受害者的能量，每获得一个击杀将会获得魔力。卡尔瑟斯还可以让他所囚禁的生灵围绕在他身旁，使身边敌方单位每秒都受到伤害，但会迅速消耗自己的魔力。",
-            "dynamicDescription": "<spellPassive>被动：</spellPassive>当卡尔瑟斯击杀了一个单位时，他会回复 <scaleMana>@Effect2Amount@ 魔力</scaleMana>。<br><br><toggle>启动：</toggle>卡尔瑟斯生成一个死灵光环，每秒对附近的敌人们造成 <magicDamage>@TotalDPS@ 魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被动：</spellPassive>当卡尔瑟斯击杀一个单位时，回复<scaleMana>@ManaRestoreOnKill@魔力值</scaleMana>。<br><br><toggle>激活：</toggle>卡尔瑟斯生成一道死灵光环，每秒对附近敌人造成<magicDamage>@TotalDPS@魔法伤害</magicDamage>。@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

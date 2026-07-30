@@ -5149,8 +5149,9 @@
                     return !1
                 })),
                 checked: !1,
-                checkboxId: i.Ember.computed("puuid", (function() {
-                    return `invite-dialog-checkbox-${this.get("puuid")}`
+                linkedFriend: null,
+                checkboxId: i.Ember.computed((function() {
+                    return `invite-dialog-checkbox-${i.Ember.guidFor(this)}`
                 })),
                 isDiscordInviteFlow: i.Ember.computed("availability", "discordInfo", "discordOnlineStatus", (function() {
                     const e = this.get("availability"),
@@ -22800,22 +22801,27 @@
                         }), []);
                     return n.sort(p), n
                 })),
-                recentGroup: i.Ember.computed("recentlyPlayedSummoners", (function() {
+                recentGroup: i.Ember.computed("recentlyPlayedSummoners", "friends.[]", (function() {
                     const e = this.get("recentlyPlayedSummoners");
                     if (0 === e.length) return null;
+                    const t = this.get("friends") || [];
                     return {
-                        friends: e.map((e => s.default.create({
-                            summonerId: e.summonerId,
-                            puuid: e.puuid,
-                            name: e.summonerName,
-                            gameName: e.gameName,
-                            gameTag: e.tagLine,
-                            checked: !1,
-                            isHonorRecognized: e.isHonorRecognized || !1,
-                            isRecentlyPlayed: e.isRecentlyPlayed || !1,
-                            championId: e.championId,
-                            isInRecentGroup: !0
-                        }))),
+                        friends: e.map((e => {
+                            const n = s.default.create({
+                                    summonerId: e.summonerId,
+                                    puuid: e.puuid,
+                                    name: e.summonerName,
+                                    gameName: e.gameName,
+                                    gameTag: e.tagLine,
+                                    checked: !1,
+                                    isHonorRecognized: e.isHonorRecognized || !1,
+                                    isRecentlyPlayed: e.isRecentlyPlayed || !1,
+                                    championId: e.championId,
+                                    isInRecentGroup: !0
+                                }),
+                                o = t.find((t => e.puuid && i.Ember.get(t, "puuid") === e.puuid || e.summonerId && i.Ember.get(t, "summonerId") === e.summonerId));
+                            return o && (n.set("linkedFriend", o), i.Ember.defineProperty(n, "checked", i.Ember.computed.alias("linkedFriend.checked"))), n
+                        })),
                         name: m.LOBBY_INVITE_RECENTLY_PLAYED_GROUP_NAME
                     }
                 })),
@@ -23042,7 +23048,7 @@
                             t = this.aggregateSelectedPlayers();
                         let n, o = t;
                         if (this.get("isDiscordEnabled") && this.get("isDiscordLinked") && e?.length && (n = t.filterBy("isDiscordInviteFlow", !0), o = t.filterBy("isDiscordInviteFlow", !1)), o?.length) {
-                            const e = o.map((e => e.summonerId));
+                            const e = i.lodash.uniq(o.map((e => e.summonerId)));
                             this.get("lobbiesService").invitePlayers(e).catch((e => {
                                 i.logger.trace("Unable to invite summoners", e)
                             }))

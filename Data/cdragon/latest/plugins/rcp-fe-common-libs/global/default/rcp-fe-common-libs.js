@@ -15641,6 +15641,7 @@
                 CHERRY: "CHERRY",
                 CLASSIC: "CLASSIC",
                 CUSTOM: "CUSTOM",
+                JADE: "JADE",
                 KIWI: "KIWI",
                 KIWI_JADE: "KIWI_JADE",
                 PRACTICETOOL: "PRACTICETOOL",
@@ -15854,39 +15855,41 @@
                 n = "RANKED_FLEX_SR",
                 i = "RANKED_FLEX_TT",
                 o = "RANKED_PREMADE_5x5",
-                s = "CHERRY",
-                a = "RANKED_TFT",
-                l = "RANKED_TFT_DOUBLE_UP",
-                u = "RANKED_TFT_TURBO",
-                c = "RANKED_TFT_PAIRS";
-            let h = [r, n, o];
-            const f = [...h, i],
-                p = [s],
-                d = [a, l],
-                m = [u, c],
-                g = [...d, ...m],
-                _ = [...f, ...d],
-                v = [...m, ...p];
-            var y = {
+                s = "JADE_RANKED_SOLO_5x5",
+                a = "CHERRY",
+                l = "RANKED_TFT",
+                u = "RANKED_TFT_DOUBLE_UP",
+                c = "RANKED_TFT_TURBO",
+                h = "RANKED_TFT_PAIRS",
+                f = [r, n, o, s],
+                p = [...f, i],
+                d = [a],
+                m = [l, u],
+                g = [c, h],
+                _ = [...m, ...g],
+                v = [...p, ...m],
+                y = [...g, ...d];
+            var b = {
                 RANKED_SOLO_5x5_QUEUE_TYPE: r,
                 RANKED_FLEX_SR_QUEUE_TYPE: n,
                 RANKED_PREMADE_5X5_QUEUE_TYPE: o,
+                JADE_RANKED_SOLO_5x5: s,
                 RANKED_FLEX_TT_QUEUE_TYPE: i,
-                RANKED_CHERRY_QUEUE_TYPE: s,
-                RANKED_TFT_QUEUE_TYPE: a,
-                RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: l,
-                RANKED_TFT_TURBO_QUEUE_TYPE: u,
-                RANKED_TFT_PAIRS_QUEUE_TYPE: c,
-                RANKED_LOL_QUEUE_TYPES: f,
-                RANKED_SR_QUEUE_TYPES: h,
-                RANKED_TFT_QUEUE_TYPES: d,
-                RATED_TFT_QUEUE_TYPES: m,
-                RANKED_AND_RATED_TFT_QUEUE_TYPES: g,
-                ALL_RANKED_QUEUE_TYPES: _,
-                ALL_RATED_QUEUE_TYPES: v,
-                ALL_RANKED_AND_RATED_QUEUE_TYPES: [..._, ...v]
+                RANKED_CHERRY_QUEUE_TYPE: a,
+                RANKED_TFT_QUEUE_TYPE: l,
+                RANKED_TFT_DOUBLE_UP_QUEUE_TYPE: u,
+                RANKED_TFT_TURBO_QUEUE_TYPE: c,
+                RANKED_TFT_PAIRS_QUEUE_TYPE: h,
+                RANKED_LOL_QUEUE_TYPES: p,
+                RANKED_SR_QUEUE_TYPES: f,
+                RANKED_TFT_QUEUE_TYPES: m,
+                RATED_TFT_QUEUE_TYPES: g,
+                RANKED_AND_RATED_TFT_QUEUE_TYPES: _,
+                ALL_RANKED_QUEUE_TYPES: v,
+                ALL_RATED_QUEUE_TYPES: y,
+                ALL_RANKED_AND_RATED_QUEUE_TYPES: [...v, ...y]
             };
-            e.default = y
+            e.default = b
         }, (t, e) => {
             "use strict";
             Object.defineProperty(e, "__esModule", {
@@ -15894,8 +15897,8 @@
             }), e.default = void 0;
             const r = "UNRANKED",
                 n = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
-                i = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"];
-            const o = n[n.length - 1],
+                i = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
+                o = n[n.length - 1],
                 s = [o, "MASTER", "GRANDMASTER", "CHALLENGER"],
                 a = ["IV", "III", "II", "I"],
                 l = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
@@ -15915,7 +15918,7 @@
                 APEX_TIERS: ["MASTER", "GRANDMASTER", "CHALLENGER"],
                 REGULAR_TIERS: n,
                 TIERS: i,
-                ALL_TIERS: [r, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
+                ALL_TIERS: [r, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER", "SALT", "WOOD", "LEGEND"],
                 TIERS_WITH_NO_DIVISIONS: [r, "MASTER", "GRANDMASTER", "CHALLENGER"],
                 HIGHEST_TIER: o,
                 LOWEST_TIER: n[0],

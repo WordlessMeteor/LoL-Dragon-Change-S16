@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.14.1",
+    "version": "16.15.1",
     "data": {
         "Zyra": {
             "id": "Zyra",
@@ -10,7 +10,7 @@
             "title": "婕拉",
             "image": {
                 "full": "Zyra.png",
-                "sprite": "champion5.png",
+                "sprite": "champion7.png",
                 "group": "champion",
                 "x": 96,
                 "y": 96,
@@ -584,7 +584,7 @@
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e1 }} -> {{ e1NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -704,10 +704,10 @@
                     "rangeBurn": "800",
                     "image": {
                         "full": "ZyraQ.png",
-                        "sprite": "spell17.png",
+                        "sprite": "spell24.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 96,
+                        "x": 96,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -717,7 +717,7 @@
                     "id": "ZyraW",
                     "name": "狂野生长",
                     "description": "婕拉播下一颗种子，最多持续60秒。在种子附近施放【Q致命棘刺】或【E缠绕之根】会让种子长成植物，与婕拉并肩作战。婕拉可以同时存有多个种子，并且击杀敌人会减少【W狂野生长】的充能时间。",
-                    "tooltip": "婕拉种下一颗持续{{ e6 }}秒的<keywordMajor>种子</keywordMajor>。这些<keywordMajor>种子</keywordMajor>在被敌方英雄踩到后会提供该英雄的<keywordStealth>真实视野</keywordStealth>，持续{{ e3 }}秒，但仍然会被摧毁。<br /><br />这个技能有2层充能，充能时间为{{ ammorechargetime }}秒。击杀一个敌方小兵或野怪会使充能时间缩短{{ e1 }}%。参与击杀英雄会转而使充能时间缩短{{ e2 }}%。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "婕拉种下一颗持续{{ seedduration }}秒的<keywordMajor>种子</keywordMajor>。这些<keywordMajor>种子</keywordMajor>在被敌方英雄踩到后会提供该英雄的<keywordStealth>真实视野</keywordStealth>，持续{{ visiongranted }}秒，但仍然会被摧毁。<br /><br />这个技能有2层充能，充能时间为{{ ammorechargetime }}秒。击杀一个敌方小兵或野怪会使充能时间缩短{{ killammorefundminion*100 }}%。参与击杀英雄会使充能时间缩短{{ killammorefundchamp*100 }}%。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "种子充能速率"
@@ -747,18 +747,18 @@
                     "effect": [
                         null,
                         [
-                            35,
-                            35,
-                            35,
-                            35,
-                            35
+                            0.35,
+                            0.35,
+                            0.35,
+                            0.35,
+                            0.35
                         ],
                         [
-                            100,
-                            100,
-                            100,
-                            100,
-                            100
+                            1,
+                            1,
+                            1,
+                            1,
+                            1
                         ],
                         [
                             2,
@@ -819,8 +819,8 @@
                     ],
                     "effectBurn": [
                         null,
-                        "35",
-                        "100",
+                        "0.35",
+                        "1",
                         "2",
                         "0",
                         "0",
@@ -843,10 +843,10 @@
                     "rangeBurn": "850",
                     "image": {
                         "full": "ZyraW.png",
-                        "sprite": "spell17.png",
+                        "sprite": "spell24.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 96,
+                        "x": 144,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -856,7 +856,7 @@
                     "id": "ZyraE",
                     "name": "缠绕之根",
                     "description": "婕拉朝前方放出贯穿地面的藤蔓来诱捕她的目标，藤蔓经过的敌人会受到伤害和束缚效果。如果在一颗种子附近施放，那么【E缠绕之根】就会让种子长成一株藤蔓鞭击者，可进行短程攻击并降低敌人的移动速度。",
-                    "tooltip": "婕拉向前方放出藤蔓，<status>禁锢</status>{{ e5 }}秒并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />如果这个技能在一颗<keywordMajor>种子</keywordMajor>附近经过，那么这颗<keywordMajor>种子</keywordMajor>就会长成藤蔓鞭击者，造成<magicDamage>{{ spell.zyrap:plantdamage }}魔法伤害</magicDamage>并持续{{ spell.zyrap:plantduration }}秒。藤蔓鞭击者拥有400攻击距离，并且它们的攻击会施加持续{{ e3 }}秒的{{ e2 }}%<status>减速</status>。来自多个藤蔓鞭击者的<status>减速</status>可以至多叠加{{ maxslowstacks }}次。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "婕拉向前方放出藤蔓，<status>禁锢</status>{{ rootduration }}秒并造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。<br /><br />如果这个技能在一颗<keywordMajor>种子</keywordMajor>附近经过，那么这颗<keywordMajor>种子</keywordMajor>就会长成藤蔓鞭击者，造成<magicDamage>{{ spell.zyrap:plantdamage }}魔法伤害</magicDamage>并持续{{ spell.zyrap:plantduration }}秒。藤蔓鞭击者拥有400攻击距离，并且它们的攻击会施加持续{{ slowdurationplantattack }}秒的{{ slowamountplantattack }}%<status>减速</status>。来自多个藤蔓鞭击者的<status>减速</status>可以至多叠加{{ maxslowstacks }}次。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "@AbilityResourceName@消耗",
@@ -986,10 +986,10 @@
                     "rangeBurn": "1100",
                     "image": {
                         "full": "ZyraE.png",
-                        "sprite": "spell17.png",
+                        "sprite": "spell24.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 96,
+                        "x": 192,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -999,7 +999,7 @@
                     "id": "ZyraR",
                     "name": "绞杀之藤",
                     "description": "婕拉在目标区域召唤一个扭曲的密林，在蔓延时对区域内的所有敌人造成伤害，并在收缩时击飞区域内的所有敌人。密林内的植物会被进入激怒状态。",
-                    "tooltip": "婕拉召唤自然之怒，长出一个扭曲的密林，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。在2秒后，藤蔓会向上方抽击，使敌人<status>击飞</status>{{ e1 }}秒。<br /><br />婕拉在密林中的植物们会被激怒，重置持续时间，获得<healing>{{ e2 }}%生命值</healing>并且攻击会造成{{ plantdamagebonus }}%额外伤害。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "婕拉召唤自然之怒，长出一个扭曲的密林，造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>。在2秒后，藤蔓会向上方抽击，使敌人<status>击飞</status>{{ knockupduration }}秒。<br /><br />婕拉在密林中的植物们会被激怒，重置持续时间，获得<healing>{{ enragedbonushealthpercent*100 }}%生命值</healing>并且攻击会造成{{ plantdamagebonus }}%额外伤害。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "冷却时间",
@@ -1007,7 +1007,7 @@
                         ],
                         "effect": [
                             "{{ cooldown }} -> {{ cooldownNL }}",
-                            "{{ e3 }} -> {{ e3NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 3,
@@ -1032,9 +1032,9 @@
                             1
                         ],
                         [
-                            50,
-                            50,
-                            50
+                            0.5,
+                            0.5,
+                            0.5
                         ],
                         [
                             200,
@@ -1080,7 +1080,7 @@
                     "effectBurn": [
                         null,
                         "1",
-                        "50",
+                        "0.5",
                         "200/300/400",
                         "0",
                         "0",
@@ -1101,10 +1101,10 @@
                     "rangeBurn": "700",
                     "image": {
                         "full": "ZyraR.png",
-                        "sprite": "spell17.png",
+                        "sprite": "spell24.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 96,
+                        "x": 240,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -1116,7 +1116,7 @@
                 "description": "种子会周期性地在婕拉身边生成，生成速度随等级提升。婕拉可通过在种子附近施放致命棘刺或缠绕之根来让种子长成为婕拉而战的植物。",
                 "image": {
                     "full": "ZyraP.png",
-                    "sprite": "passive5.png",
+                    "sprite": "passive7.png",
                     "group": "passive",
                     "x": 96,
                     "y": 96,

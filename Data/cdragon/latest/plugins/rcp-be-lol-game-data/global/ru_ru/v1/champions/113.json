@@ -1370,7 +1370,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Седжуани совершает рывок вперед, подбрасывая врагов в воздух. Рывок прекращается при столкновении с вражеским чемпионом.",
-            "dynamicDescription": "Седжуани совершает рывок, нанося <magicDamage>@TotalDamageTooltip@ магического урона</magicDamage> врагам на пути и <status>подбрасывая</status> их на @Effect4Amount@ сек. Рывок прекращается при столкновении с вражеским чемпионом.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Седжуани совершает рывок, нанося <magicDamage>@TotalDamageTooltip@ ед. маг. урона</magicDamage> врагам на пути и <status><status>подбрасывая</status></status> их на @KnockupDurationTOOLTIPONLY@ сек. Рывок прекращается при столкновении с вражеским чемпионом.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Седжуани замораживает и оглушает вражеского чемпиона с максимальным количеством зарядов Мороза.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> автоатаки окружающих союзных чемпионов ближнего боя накладывают заряды на чемпионов и лесных монстров.<br><br><spellPassive>Активно:</spellPassive> Седжуани наносит <magicDamage>@TotalDamage@ магического урона</magicDamage> выбранному врагу с 4 зарядами и <status>оглушает</status> его на @Effect1Amount@ сек. @SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> автоатаки окружающих союзных чемпионов ближнего боя накладывают заряды на чемпионов и лесных монстров.<br><br><spellPassive>Активно:</spellPassive> Седжуани наносит <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> выбранному врагу с 4 зар. и <status>оглушает</status> его на @CCDuration@ сек. @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Седжуани бросает болас, который замораживает и оглушает первого врага на пути, а также создает ледяную бурю, которая замедляет остальных врагов.",
-            "dynamicDescription": "Седжуани кидает болас из Истинного льда, <status>оглушая</status> и раскрывая первого вражеского чемпиона на пути на @Effect2Amount@ сек., а также нанося ему <magicDamage>@MinorDamageTooltip@ магического урона</magicDamage>.<br><br>Если болас пролетел хотя бы 25% от максимальной дальности, продолжительность <status>оглушения</status> и раскрытия увеличивается до @Effect6Amount@ сек. Также он создает ледяную бурю, которая <status>замедляет</status> окружающих врагов на @Effect4Amount@% на @Effect3Amount@ сек. Все пораженные враги получают <magicDamage>@TotalDamageTooltip@ магического урона</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Седжуани кидает болас из Истинного льда, <status>оглушая</status> и раскрывая первого вражеского чемпиона на пути на @BaseStunDuration@ сек., а также нанося ему <magicDamage>@MinorDamageTooltip@ ед. маг. урона</magicDamage>.<br><br>Если болас пролетел хотя бы 25% от макс. дальности, длительность <status>оглушения</status> и раскрытия растут до @EmpoweredStunDuration@ сек. Также он создает ледяную бурю, <status>замедляющую</status> окружающих врагов на @ExplosionSlowAmount@% на @ZoneDuration@ сек. Все пораженные враги получают <magicDamage>@TotalDamageTooltip@ ед. маг. урона</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

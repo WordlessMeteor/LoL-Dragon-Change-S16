@@ -1,0 +1,446 @@
+{
+    "Characters/Jade_Singed/Skins/Skin5": {
+        "skinClassification": 1,
+        "championSkinName": "ExperimentChemicalman",
+        "metaDataTags": "faction:zaun,gender:male,race:human,skinline:legacy",
+        "loadscreen": {
+            "image": "ASSETS/Characters/Jade_Singed/Skins/Skin05/Jade_SingedLoadScreen_5.tex",
+            "__type": "CensoredImage"
+        },
+        "skinAudioProperties": {
+            "tagEventList": [
+                "Singed"
+            ],
+            "bankUnits": [
+                {
+                    "name": "Singed_Base_SFX",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Singed/Skins/Base/Singed_Base_SFX_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/SFX/Characters/Singed/Skins/Base/Singed_Base_SFX_events.bnk"
+                    ],
+                    "__type": "BankUnit"
+                },
+                {
+                    "name": "Singed_Base_VO",
+                    "bankPath": [
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Singed/Skins/Base/Singed_Base_VO_audio.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Singed/Skins/Base/Singed_Base_VO_events.bnk",
+                        "ASSETS/Sounds/Wwise2016/VO/en_US/Characters/Singed/Skins/Base/Singed_Base_VO_audio.wpk"
+                    ],
+                    "events": [
+                        "Play_vo_Singed_Attack2DGeneral",
+                        "Play_vo_Singed_Death3D",
+                        "Play_vo_Singed_Fling_cast3D",
+                        "Play_vo_Singed_Joke3DGeneral",
+                        "Play_vo_Singed_Laugh3DGeneral",
+                        "Play_vo_Singed_Move2DStandard",
+                        "Play_vo_Singed_SingedBasicAttack2_cast3D",
+                        "Play_vo_Singed_SingedBasicAttack_cast3D",
+                        "Play_vo_Singed_SingedCritAttack_cast3D",
+                        "Play_vo_Singed_Spell3DBasic",
+                        "Play_vo_Singed_Spell3DECast",
+                        "Play_vo_Singed_Taunt3DGeneral"
+                    ],
+                    "voiceOver": true,
+                    "__type": "BankUnit"
+                }
+            ],
+            "__type": "SkinAudioProperties"
+        },
+        "skinAnimationProperties": {
+            "animationGraphData": "Characters/Jade_Singed/Animations/Skin5",
+            "__type": "SkinAnimationProperties"
+        },
+        "skinMeshProperties": {
+            "skeleton": "ASSETS/Characters/Jade_Singed/Skins/Skin05/Jade_Singed_experiment.skl",
+            "simpleSkin": "ASSETS/Characters/Jade_Singed/Skins/Skin05/Jade_Singed_experiment.skn",
+            "texture": "ASSETS/Characters/Jade_Singed/Skins/Skin05/Jade_Singed_experiment_TX_CM.tex",
+            "skinScale": 1.5,
+            "selfIllumination": 1.0,
+            "reflectionFresnelColor": [
+                0,
+                0,
+                0,
+                255
+            ],
+            "{9a817954}": [
+                {
+                    "category": "{e1043940}",
+                    "Submeshes": "singed_experiment_MD_singed_experiment_MD_Bane_Singed",
+                    "__type": "{993f8595}"
+                }
+            ],
+            "__type": "SkinMeshDataProperties"
+        },
+        "armorMaterial": "Metal",
+        "defaultAnimations": [
+            "backpack_idle"
+        ],
+        "idleParticlesEffects": [
+            {
+                "effectKey": "Jade_Singed_Idle_01",
+                "boneName": "bag_c",
+                "__type": "SkinCharacterDataProperties_CharacterIdleEffect"
+            }
+        ],
+        "mContextualActionData": "Characters/Jade_Singed/CAC/Jade_Singed_Base",
+        "iconCircle": "ASSETS/Characters/Jade_Singed/HUD/Jade_Singed_Circle_0.tex",
+        "iconSquare": "ASSETS/Characters/Jade_Singed/HUD/Jade_Singed_Square_0.tex",
+        "iconAvatar": "ASSETS/Characters/Jade_Singed/HUD/Jade_Singed_Circle_5.tex",
+        "healthBarData": {
+            "unitHealthBarStyle": 12,
+            "__type": "CharacterHealthBarDataRecord"
+        },
+        "mEmblems": [
+            {
+                "mEmblemData": "Emblems/29",
+                "__type": "SkinEmblem"
+            }
+        ],
+        "mResourceResolver": "Characters/Jade_Singed/Skins/Skin5/Resources",
+        "PersistentEffectConditions": [
+            {
+                "OwnerCondition": {
+                    "Spell": "{e108604f}",
+                    "__type": "HasBuffDynamicMaterialBoolDriver"
+                },
+                "PersistentVfxs": [
+                    {
+                        "boneName": "bag_a",
+                        "effectKey": "Jade_Singed_R_mesh",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "C_BUFFBONE_GLB_HEAD_LOC",
+                        "effectKey": "Jade_Singed_R_buf",
+                        "__type": "PersistentVfxData"
+                    },
+                    {
+                        "boneName": "Root",
+                        "effectKey": "Jade_Singed_R_trail",
+                        "__type": "PersistentVfxData"
+                    }
+                ],
+                "__type": "PersistentEffectConditionData"
+            }
+        ],
+        "__type": "SkinCharacterDataProperties"
+    },
+    "Characters/Jade_Singed/Skins/Skin5/Resources": {
+        "resourceMap": {
+            "Jade_Singed_BA_crit_tar": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_BA_crit_tar",
+            "Jade_Singed_BA_tar": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_BA_tar",
+            "Jade_Singed_E_tar_Fling_01": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_E_tar_Fling_01",
+            "Jade_Singed_E_tar_fling_land": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_E_tar_fling_land",
+            "Jade_Singed_Idle_01": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_Idle_01",
+            "Jade_Singed_P_Sound": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_P_Sound",
+            "Jade_Singed_P_timer": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_P_timer",
+            "Jade_Singed_Q_Cast": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_Q_Cast",
+            "Jade_Singed_Q_Cast_enemy": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_Q_Cast_enemy",
+            "Jade_Singed_Q_Trail": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_Q_Trail",
+            "Jade_Singed_Q_Trail_enemy": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_Q_Trail_enemy",
+            "Jade_Singed_R_buf": "Characters/Jade_Singed/Skins/Skin5/Particles/Jade_Singed_Skin05_R_buf",
+            "Jade_Singed_R_mesh": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_R_mesh",
+            "Jade_Singed_R_steam": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_R_steam",
+            "Jade_Singed_R_trail": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_R_trail",
+            "Jade_Singed_W_cas_01": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_W_cas_01",
+            "Jade_Singed_W_green_pool": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_W_green_pool",
+            "Jade_Singed_W_red_pool": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_W_red_pool",
+            "Jade_Singed_W_Root": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_W_Root",
+            "Jade_Singed_W_Root_01": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_W_Root_01",
+            "Jade_Singed_W_RunePrison_tar_01": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_W_RunePrison_tar_01",
+            "{605f4e2c}": "Characters/Jade_Singed/Skins/Skin0/Particles/JADE/Jade_Singed_Base_JADE_W_Cas",
+            "Jade_Singed_W_Bubble_Child": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_W_Bubble_Child",
+            "Jade_Singed_Acidtrail_buf_red": "Characters/Jade_Singed/Skins/Skin0/Particles/Jade_Singed_Base_Acidtrail_buf_red"
+        },
+        "__type": "ResourceResolver"
+    },
+    "Characters/Jade_Singed/Skins/Skin5/Particles/Jade_Singed_Skin05_R_buf": {
+        "complexEmitterDefinitionData": [
+            {
+                "rate": {
+                    "constantValue": 30.0,
+                    "__type": "ValueFloat"
+                },
+                "particleLifetime": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    0.8999999761581421,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.30000001192092896,
+                                    0.5,
+                                    1.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            3.0
+                        ],
+                        "__type": "VfxAnimatedFloatVariableData"
+                    },
+                    "__type": "ValueFloat"
+                },
+                "particleLinger": 10.0,
+                "lifetime": 25.0,
+                "emitterName": "groundfroth",
+                "SpawnShape": {
+                    "emitOffset": {
+                        "constantValue": [
+                            1.0,
+                            1.0,
+                            1.0
+                        ],
+                        "dynamics": {
+                            "probabilityTables": [
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        -50.0,
+                                        50.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "__type": "VfxProbabilityTableData"
+                                },
+                                {
+                                    "keyTimes": [
+                                        0.0,
+                                        1.0
+                                    ],
+                                    "keyValues": [
+                                        -50.0,
+                                        50.0
+                                    ],
+                                    "__type": "VfxProbabilityTableData"
+                                }
+                            ],
+                            "times": [
+                                0.0
+                            ],
+                            "values": [
+                                [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ]
+                            ],
+                            "__type": "VfxAnimatedVector3fVariableData"
+                        },
+                        "__type": "ValueVector3"
+                    },
+                    "emitRotationAngles": [
+                        {
+                            "constantValue": 1.0,
+                            "dynamics": {
+                                "probabilityTables": [
+                                    {
+                                        "keyTimes": [
+                                            0.0,
+                                            1.0
+                                        ],
+                                        "keyValues": [
+                                            0.0,
+                                            360.0
+                                        ],
+                                        "__type": "VfxProbabilityTableData"
+                                    }
+                                ],
+                                "times": [
+                                    0.0
+                                ],
+                                "values": [
+                                    1.0
+                                ],
+                                "__type": "VfxAnimatedFloatVariableData"
+                            },
+                            "__type": "ValueFloat"
+                        }
+                    ],
+                    "emitRotationAxes": [
+                        [
+                            0.0,
+                            1.0000001192092896,
+                            0.0
+                        ]
+                    ],
+                    "__type": "VfxShapeLegacy"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        -192.0,
+                        0.0
+                    ],
+                    "__type": "ValueVector3"
+                },
+                "primitive": {
+                    "__type": "VfxPrimitiveArbitraryQuad"
+                },
+                "particleColorTexture": "ASSETS/Characters/Jade_Singed/Skins/Base/Particles/color-groundfroth.tex",
+                "blendMode": 1,
+                "meshRenderFlags": 0,
+                "colorLookUpTypeY": 3,
+                "colorLookUpScales": [
+                    1.0,
+                    0.5
+                ],
+                "isUniformScale": 1,
+                "isRandomStartFrame": 1,
+                "birthRotation0": {
+                    "constantValue": [
+                        -90.0,
+                        1.0,
+                        0.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    0.0,
+                                    360.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                -90.0,
+                                1.0,
+                                0.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "isLocalOrientation": 0,
+                "birthScale0": {
+                    "constantValue": [
+                        20.0,
+                        20.0,
+                        20.0
+                    ],
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "keyTimes": [
+                                    0.0,
+                                    1.0
+                                ],
+                                "keyValues": [
+                                    1.0,
+                                    2.0
+                                ],
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0
+                        ],
+                        "values": [
+                            [
+                                20.0,
+                                20.0,
+                                20.0
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "scale0": {
+                    "dynamics": {
+                        "probabilityTables": [
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            },
+                            {
+                                "__type": "VfxProbabilityTableData"
+                            }
+                        ],
+                        "times": [
+                            0.0,
+                            0.25,
+                            1.0
+                        ],
+                        "values": [
+                            [
+                                0.0,
+                                0.0,
+                                0.0
+                            ],
+                            [
+                                1.0,
+                                1.0,
+                                1.0
+                            ],
+                            [
+                                1.100000023841858,
+                                1.100000023841858,
+                                1.100000023841858
+                            ]
+                        ],
+                        "__type": "VfxAnimatedVector3fVariableData"
+                    },
+                    "__type": "ValueVector3"
+                },
+                "texture": "ASSETS/Characters/Jade_Singed/Skins/Base/Particles/Jade_Singed_ult_Spatter.tex",
+                "numFrames": 4,
+                "texDiv": [
+                    2.0,
+                    2.0
+                ],
+                "__type": "VfxEmitterDefinitionData"
+            }
+        ],
+        "particleName": "Jade_Singed_Skin05_R_buf",
+        "particlePath": "Characters/Jade_Singed/Skins/Skin5/Particles/Jade_Singed_Skin05_R_buf",
+        "flags": 197,
+        "__type": "VfxSystemDefinitionData"
+    },
+    "__linked": [
+        "DATA/Characters/Jade_Singed/Jade_Singed.bin",
+        "DATA/Characters/Jade_Singed/Animations/Skin5.bin",
+        "DATA/Characters/Jade_Singed/Jade_Singed_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin5_Skins_Skin6_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Singed/Jade_Singed_Multi_Skins_Root_Skins_Skin0_Skins_Skin1_Skins_Skin19_Skins_Skin2_Skins_Skin20_Skins_Skin21_Skins_Skin22_Skins_Skin23_Skins_Skin24_Skins_Skin25_Skins_Skin26_Skins_Skin27_Skins_Skin5_Skins_Skin6_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Singed/Jade_Singed_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin5_Skins_Skin6_Skins_Skin9.bin",
+        "DATA/Characters/Jade_Singed/Jade_Singed_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin5_Skins_Skin6.bin",
+        "DATA/Characters/Jade_Singed/Jade_Singed_Multi_Skins_Skin0_Skins_Skin1_Skins_Skin2_Skins_Skin5.bin",
+        "DATA/Characters/Jade_Singed/Jade_Singed_Multi_Skins_Skin0_Skins_Skin2_Skins_Skin5.bin"
+    ]
+}

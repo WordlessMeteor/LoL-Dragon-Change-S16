@@ -557,8 +557,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1705,6 +1704,71 @@
                         0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseShield",
+                    "values": [
+                        60.0,
+                        60.0,
+                        75.0,
+                        90.0,
+                        105.0,
+                        120.0,
+                        120.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamage",
+                    "values": [
+                        15.0,
+                        40.0,
+                        65.0,
+                        90.0,
+                        115.0,
+                        140.0,
+                        165.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxHPDamageRatio",
+                    "values": [
+                        14.0,
+                        14.0,
+                        14.0,
+                        14.0,
+                        14.0,
+                        14.0,
+                        14.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DetonateRecastCooldown",
+                    "values": [
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0,
+                        6.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1915,8 +1979,8 @@
                 "TotalShield": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseShield",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mDataValue": "ShieldAPRatio",
@@ -1933,8 +1997,8 @@
                 "TotalDamage": {
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 2,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamage",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mDataValue": "DamageAPRatio",
@@ -2075,14 +2139,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "BaseShield",
                                     "nameOverride": "Spell_ListType_ShieldAmount",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "BaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -5200,6 +5262,19 @@
                         1.25
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SlowAmount",
+                    "values": [
+                        -0.800000011920929,
+                        -0.800000011920929,
+                        -0.800000011920929,
+                        -0.800000011920929,
+                        -0.800000011920929,
+                        -0.800000011920929,
+                        -0.800000011920929
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -5544,12 +5619,6 @@
                 {
                     "EffectTag": 1,
                     "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
-                            }
-                        ],
                         "__type": "GameCalculation"
                     },
                     "__type": "{b09016f6}"
@@ -6396,15 +6465,10 @@
     "{582cc26b}": {
         "OrderJunglePath": [
             {
-                "Camp": 4,
+                "Camp": 1,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 5,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 3,
                 "__type": "TakeCamp"
             },
             {
@@ -6412,10 +6476,15 @@
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 1,
+                "Camp": 3,
                 "__type": "TakeCamp"
             },
             {
+                "Camp": 4,
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 5,
                 "__type": "TakeCamp"
             },
             {
@@ -6660,6 +6729,71 @@
                             "Items/3001",
                             "Items/3110",
                             "Items/3742"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    }
+                ],
+                "__type": "ItemRecommendationOverride"
+            },
+            {
+                "mForceOverride": true,
+                "mOverrideContexts": [
+                    {
+                        "mMapID": 12,
+                        "mModeNameStringId": "{ad33a648}",
+                        "__type": "ItemRecommendationOverrideContext"
+                    }
+                ],
+                "StartingItemBundles": [
+                    {
+                        "items": [
+                            "Items/771011",
+                            "Items/771001"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/773132",
+                            "Items/771006",
+                            "Items/771001"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    },
+                    {
+                        "items": [
+                            "Items/773044"
+                        ],
+                        "__type": "ItemRecommendationOverrideStartingItemBundle"
+                    }
+                ],
+                "mRecItemRanges": [
+                    {
+                        "items": [
+                            "Items/773068",
+                            "Items/773083",
+                            "Items/773078"
+                        ],
+                        "MaxCompletedItems": 2,
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773111",
+                            "Items/773047"
+                        ],
+                        "__type": "ItemRecOverrideRange"
+                    },
+                    {
+                        "items": [
+                            "Items/773110",
+                            "Items/773065",
+                            "Items/773064",
+                            "Items/773075",
+                            "Items/773143",
+                            "Items/773005",
+                            "Items/773102",
+                            "Items/773026"
                         ],
                         "__type": "ItemRecOverrideRange"
                     }

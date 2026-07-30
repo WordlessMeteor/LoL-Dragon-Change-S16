@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.14.1",
+    "version": "16.15.1",
     "data": {
         "Sejuani": {
             "id": "Sejuani",
@@ -10,7 +10,7 @@
             "title": "瑟庄妮",
             "image": {
                 "full": "Sejuani.png",
-                "sprite": "champion3.png",
+                "sprite": "champion5.png",
                 "group": "champion",
                 "x": 288,
                 "y": 96,
@@ -453,7 +453,7 @@
                     "id": "SejuaniQ",
                     "name": "极寒突袭",
                     "description": "瑟庄妮向前冲锋，将敌人击飞至空中。冲锋会在命中一名敌方英雄后停止。",
-                    "tooltip": "瑟庄妮冲锋，对敌人造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>并<status>击飞</status>敌人{{ e4 }}秒。冲锋会在命中一名敌方英雄后停止。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "瑟庄妮冲锋，对敌人造成<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>并<status>击飞</status>敌人{{ knockupdurationtooltiponly }}秒。该冲锋会在命中一名敌方英雄后停止。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -583,10 +583,10 @@
                     "rangeBurn": "650",
                     "image": {
                         "full": "SejuaniQ.png",
-                        "sprite": "spell12.png",
+                        "sprite": "spell18.png",
                         "group": "spell",
-                        "x": 96,
-                        "y": 0,
+                        "x": 384,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -726,10 +726,10 @@
                     "rangeBurn": "600",
                     "image": {
                         "full": "SejuaniW.png",
-                        "sprite": "spell12.png",
+                        "sprite": "spell18.png",
                         "group": "spell",
-                        "x": 144,
-                        "y": 0,
+                        "x": 432,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -739,7 +739,7 @@
                     "id": "SejuaniE",
                     "name": "永冻领域",
                     "description": "瑟庄妮冻结并晕眩一名叠满了霜冻层数的敌方英雄。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>附近近战友方英雄的攻击会对英雄和野怪施加一层效果。<br /><br /><spellPassive>主动：</spellPassive>瑟庄妮对带有4层此效果的目标敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>并使其<status>晕眩</status>{{ e1 }}秒。 {{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>附近近战友方英雄的攻击会对英雄和野怪施加一层效果。<br /><br /><spellPassive>主动：</spellPassive>瑟庄妮对带有4层此效果的目标敌人造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>并使其<status>晕眩</status>{{ ccduration }}秒。 {{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害"
@@ -865,10 +865,10 @@
                     "rangeBurn": "560",
                     "image": {
                         "full": "SejuaniE.png",
-                        "sprite": "spell12.png",
+                        "sprite": "spell18.png",
                         "group": "spell",
-                        "x": 192,
-                        "y": 0,
+                        "x": 0,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -878,7 +878,7 @@
                     "id": "SejuaniR",
                     "name": "极冰寒狱",
                     "description": "瑟庄妮投出她的套索来冻结并击晕命中的第一名敌方英雄，并创造一次冰风暴来减速其它敌人。",
-                    "tooltip": "瑟庄妮扔出她的极冰套索，<status>晕眩</status>并显形命中的第一个敌方英雄{{ e2 }}秒并造成<magicDamage>{{ minordamagetooltip }}魔法伤害</magicDamage>。<br /><br />如果套索飞行了至少25%的最大距离，那么它会<status>晕眩</status>并显形{{ e6 }}秒。它还会生成一团冰风暴来使目标附近的敌人<status>减速</status>{{ e4 }}%，持续{{ e3 }}秒。所有受影响的敌人都会受到<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "瑟庄妮扔出她的极冰套索，<status>晕眩</status>并显形命中的第一个敌方英雄{{ basestunduration }}秒并造成<magicDamage>{{ minordamagetooltip }}魔法伤害</magicDamage>。<br /><br />如果套索飞行了至少25%的最大距离，那么它会转而造成持续{{ empoweredstunduration }}秒<status>晕眩</status>和显形。它还会生成一团冰风暴来使目标附近的敌人<status>减速</status>{{ explosionslowamount }}%，持续{{ zoneduration }}秒。所有受影响的敌人都会受到<magicDamage>{{ totaldamagetooltip }}魔法伤害</magicDamage>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "最小伤害",
@@ -886,8 +886,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e7 }} -> {{ e7NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ empoweredbasedamage }} -> {{ empoweredbasedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -982,10 +982,10 @@
                     "rangeBurn": "1300",
                     "image": {
                         "full": "SejuaniR.png",
-                        "sprite": "spell12.png",
+                        "sprite": "spell18.png",
                         "group": "spell",
-                        "x": 240,
-                        "y": 0,
+                        "x": 48,
+                        "y": 96,
                         "w": 48,
                         "h": 48
                     },
@@ -997,7 +997,7 @@
                 "description": "在脱离战斗后，瑟庄妮会获得冰霜护甲，冰川护甲可提供护甲、魔法抗性和免疫减速。当瑟庄妮受到伤害后，冰霜护甲会存留一小段时间。瑟庄妮可以伤害一名被晕眩的敌人来击碎它，从而造成巨量魔法伤害。",
                 "image": {
                     "full": "Sejuani_passive.png",
-                    "sprite": "passive3.png",
+                    "sprite": "passive5.png",
                     "group": "passive",
                     "x": 288,
                     "y": 96,

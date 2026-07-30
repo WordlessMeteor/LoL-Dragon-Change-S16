@@ -1,5 +1,6 @@
 .sanctum-root-addon-component .sanctum-active-banner-container-wrapper .sanctum-active-banner-borders .banner-drop-rates,
 .sanctum-root-addon-component .sanctum-active-banner-title,
+.sanctum-root-addon-component .sanctum-jade-warning,
 .sanctum-root-addon-component .sanctum-no-active-banners-container p {
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
@@ -47,6 +48,23 @@
     letter-spacing: 0
 }
 
+.sanctum-root-addon-component .sanctum-jade-warning {
+    color: #a09b8c;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 16px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+.sanctum-root-addon-component .sanctum-jade-warning:lang(ja-jp) {
+    font-size: 13px
+}
+
+.sanctum-root-addon-component .sanctum-jade-warning:lang(ar-ae) {
+    letter-spacing: 0
+}
+
 .sanctum-root-addon-component .sanctum-active-banner-title,
 .sanctum-root-addon-component .sanctum-purchase-roll-button,
 .sanctum-root-addon-component .sanctum-skin-status .sanctum-status-text {
@@ -54,6 +72,7 @@
 }
 
 .sanctum-root-addon-component .sanctum-active-banner-container-wrapper .sanctum-active-banner-borders .banner-drop-rates,
+.sanctum-root-addon-component .sanctum-jade-warning,
 .sanctum-root-addon-component .sanctum-no-active-banners-container p {
     font-family: var(--font-body)
 }
@@ -422,6 +441,14 @@
 
 .sanctum-root-addon-component .sanctum-preview-drops-container {
     display: flex
+}
+
+.sanctum-root-addon-component .sanctum-jade-warning {
+    bottom: 20px;
+    color: #5b5a56;
+    position: absolute;
+    right: 20px;
+    z-index: 2
 }
 
 .sanctum-root-addon-component .sanctum-circle-button {

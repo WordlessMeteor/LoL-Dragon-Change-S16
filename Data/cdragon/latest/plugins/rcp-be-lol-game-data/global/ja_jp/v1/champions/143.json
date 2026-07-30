@@ -1752,7 +1752,7 @@
             "cost": "種1個",
             "cooldown": "クールダウン無し",
             "description": "最大60秒間持続する種を生やす。種の近くで「死華の棘」または「捕縛の根」を使用すると種は植物に成長し、味方として戦う。同時に複数の種を蓄えておくことが可能で、敵ユニットを倒すと「狂い咲き」のチャージ時間が短縮される。",
-            "dynamicDescription": "@Effect6Amount@秒間持続する<keywordMajor>種</keywordMajor>を植える。敵チャンピオンが<keywordMajor>種</keywordMajor>を踏むと、@Effect3Amount@秒間対象の<keywordStealth>真の視界</keywordStealth>を得るが、種は破壊される。<br><br>このスキルは2つまでチャージでき、@AmmoRechargeTime@秒で1つリチャージされる。敵のミニオンまたはモンスターをキルすると、リチャージ時間が@Effect1Amount*100@%短縮される。チャンピオンからキルまたはアシストを奪うと、代わりにリチャージ時間が@Effect2Amount*100@%短縮される。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "@SeedDuration@秒間持続する<keywordMajor>種</keywordMajor>を植える。敵チャンピオンが<keywordMajor>種</keywordMajor>を踏むと、@VisionGranted@秒間対象の<keywordStealth>真の視界</keywordStealth>を得るが、<keywordMajor>種</keywordMajor>は破壊される。<br><br>このスキルは2つまでチャージでき、@AmmoRechargeTime@秒で1つリチャージされる。敵のミニオンまたはモンスターをキルすると、リチャージ時間が@KillAmmoRefundMinion*100@%短縮される。チャンピオンからキルまたはアシストを奪うと、代わりにリチャージ時間が@KillAmmoRefundChamp*100@%短縮される。@SpellModifierDescriptionAppend@",
             "range": [
                 850.0,
                 850.0,
@@ -1902,7 +1902,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "地中から伸びる巨大なツタが対象を絡めとり、ダメージを与え移動不能にする。「捕縛の根」を種の近くで使用すると「棘鞭草」に成長させ、近距離の敵を攻撃しダメージを与え、移動速度を低下させる。",
-            "dynamicDescription": "前方にツルを送り出し、@Effect5Amount@秒間<status>スネア効果</status>を与えて、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>このスキルが近くの<keywordMajor>種</keywordMajor>に触れると、<keywordMajor>種</keywordMajor>が成長して「棘鞭草」になり、<magicDamage>@spell.ZyraP:PlantDamage@の魔法ダメージ</magicDamage>を与える。「棘鞭草」は@spell.ZyraP:PlantDuration@秒間持続し、射程が400で、通常攻撃が@Effect3Amount@秒間@Effect2Amount@%の<status>スロウ効果</status>を与える。複数の「棘鞭草」が与えた<status>スロウ効果</status>は最大@MaxSlowStacks@回までスタックする。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "前方にツルを送り出し、@RootDuration@秒間<status>スネア効果</status>を与えて、<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。<br><br>このスキルが近くの<keywordMajor>種</keywordMajor>に触れると、<keywordMajor>種</keywordMajor>が成長して「棘鞭草」になり、<magicDamage>@spell.ZyraP:PlantDamage@の魔法ダメージ</magicDamage>を与える。「棘鞭草」は@spell.ZyraP:PlantDuration@秒間持続し、射程が400で、通常攻撃が@SlowDurationPlantAttack@秒間@SlowAmountPlantAttack@%の<status>スロウ効果</status>を与える。複数の「棘鞭草」が与えた<status>スロウ効果</status>は最大@MaxSlowStacks@回までスタックする。@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -2052,7 +2052,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定地点から茨を放射状に成長させて範囲内の敵にダメージを与え、茨が地中に戻る際に触れた敵をノックアップさせる。茨の範囲内の植物は怒り狂う。",
-            "dynamicDescription": "大自然の怒りを呼び覚まし、茨を成長させて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。2秒後にツルが跳ね上がり、@Effect1Amount@秒間<status>ノックアップ</status>させる。<br><br>茨に接触した植物は怒り狂い、効果時間がリセットされて、<healing>@Effect2Amount*100@%の体力</healing>を獲得し、通常攻撃で@PlantDamageBonus@%の追加ダメージを与える。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "大自然の怒りを呼び覚まし、茨を成長させて<magicDamage>@TotalDamage@の魔法ダメージ</magicDamage>を与える。2秒後にツルが跳ね上がり、@KnockupDuration@秒間<status>ノックアップ</status>させる。<br><br>茨に接触した植物は怒り狂い、効果時間がリセットされて、<healing>@EnragedBonusHealthPercent*100@%の体力</healing>を獲得し、通常攻撃で@PlantDamageBonus@%の追加ダメージを与える。@SpellModifierDescriptionAppend@",
             "range": [
                 700.0,
                 700.0,

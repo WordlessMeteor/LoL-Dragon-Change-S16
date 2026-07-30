@@ -18264,7 +18264,9 @@
                     })
                 })),
                 useMessagesMutedClass: r.Ember.computed.and("friend.isP2PConversationMuted", "notDragCapture"),
-                isOffline: r.Ember.computed.equal("friend.availability", "offline"),
+                isMobile: r.Ember.computed.equal("friend.availability", i.AVAILABILITY.MOBILE),
+                isOffline: r.Ember.computed.equal("friend.availability", i.AVAILABILITY.OFFLINE),
+                isFunctionallyOffline: r.Ember.computed.or("isMobile", "isOffline"),
                 conversation: r.Ember.computed("friend.id", "conversationsService.conversations.[]", (function() {
                     const e = this.get("friend.id"),
                         t = this.get("conversationsService.conversations");
@@ -18307,25 +18309,25 @@
                         r = n?.has(e.puuid);
                     return !r && t
                 })),
-                isInvitableViaDiscord: r.Ember.computed("isDiscordEnabled", "isDiscordFriendOffline", "isFriendLinkedToDiscord", "isFriendDiscordOnly", "isOffline", (function() {
+                isInvitableViaDiscord: r.Ember.computed("isDiscordEnabled", "isDiscordFriendOffline", "isFriendLinkedToDiscord", "isFriendDiscordOnly", "isFunctionallyOffline", (function() {
                     const e = this.get("isDiscordEnabled"),
                         t = this.get("isDiscordFriendOffline"),
                         n = this.get("isFriendLinkedToDiscord"),
                         r = this.get("isFriendDiscordOnly"),
-                        o = this.get("isOffline");
+                        o = this.get("isFunctionallyOffline");
                     return !!e && (!!n && (!t && !(!r && !o)))
                 })),
-                isInvitableViaLeague: r.Ember.computed("isFriendDiscordOnly", "isFriendRemote", "isOffline", (function() {
+                isInvitableViaLeague: r.Ember.computed("isFriendDiscordOnly", "isFriendRemote", "isFunctionallyOffline", (function() {
                     const e = this.get("isFriendDiscordOnly"),
                         t = this.get("isFriendRemote"),
-                        n = this.get("isOffline");
+                        n = this.get("isFunctionallyOffline");
                     return !e && (!n && !t)
                 })),
-                isInvitableViaRiot: r.Ember.computed("discordIntegrationService.isOOGIJEnabled", "isFriendDiscordOnly", "isFriendRemote", "isOffline", (function() {
+                isInvitableViaRiot: r.Ember.computed("discordIntegrationService.isOOGIJEnabled", "isFriendDiscordOnly", "isFriendRemote", "isFunctionallyOffline", (function() {
                     const e = this.get("discordIntegrationService.isOOGIJEnabled"),
                         t = this.get("isFriendDiscordOnly"),
                         n = this.get("isFriendRemote"),
-                        r = this.get("isOffline");
+                        r = this.get("isFunctionallyOffline");
                     return !!e && (!t && (!!n && !r))
                 })),
                 unreadMessageCount: r.Ember.computed("conversation", (function() {

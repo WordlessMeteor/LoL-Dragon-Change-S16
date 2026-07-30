@@ -1128,7 +1128,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Karthus creează un zid de energie prin care se poate trece. Viteza de mișcare și rezistența la magie ale unităților inamice care trec prin zid sunt reduse pentru o perioadă redusă de timp.",
-            "dynamicDescription": "Karthus creează un zid care rezistă timp de @Effect4Amount@ secunde. Inamicii care trec prin el pierd <scaleMR>@Effect1Amount@% rezistență la magie</scaleMR> timp de @Effect5Amount@ secunde și sunt <status>încetiniți</status> cu @Effect3Amount@%, valoare ce scade de-a lungul duratei.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Karthus creează un zid care rezistă timp de @WallDuration@ secunde. Inamicii care trec prin el pierd <scaleMR>@MagicResistShred@% rezistență la magie</scaleMR> timp de @DebuffDuration@ secunde și sunt <status>încetiniți</status> cu @SlowPercent@%, valoare ce scade de-a lungul duratei.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -1278,7 +1278,7 @@
             "cost": "@Cost@ mană pe secundă",
             "cooldown": "%i:cooldown%: @Cooldown@ sec",
             "description": "Karthus fură în mod pasiv energie de la victimele lui, câștigând mană la fiecare ucidere. De asemenea, Karthus se poate înconjura de sufletele prăzii sale, provocând daune inamicilor din apropiere, însă această acțiune îi consumă rapid mana.",
-            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>când Karthus ucide o unitate, își reface <scaleMana>@Effect2Amount@ mană</scaleMana>.<br><br><toggle>La activare: </toggle>Karthus creează o aură necrotică, provocându-le <magicDamage>@TotalDPS@ daune magice</magicDamage> pe secundă inamicilor din apropiere.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivă: </spellPassive>când Karthus ucide o unitate, își reface <scaleMana>@ManaRestoreOnKill@ mană</scaleMana>.<br><br><toggle>La activare: </toggle>Karthus creează o aură necrotică, provocându-le <magicDamage>@TotalDPS@ daune magice</magicDamage> pe secundă inamicilor din apropiere.@SpellModifierDescriptionAppend@",
             "range": [
                 550.0,
                 550.0,

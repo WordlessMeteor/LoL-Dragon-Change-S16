@@ -4,7 +4,7 @@
         "skinParent": 42,
         "metaDataTags": "faction:noxus,gender:male,race:human",
         "loadscreen": {
-            "image": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonFormLoadScreen_42.SKINS_Swain_Skin42.tex",
+            "image": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonFormLoadScreen_42.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -18,9 +18,9 @@
             "__type": "SkinAnimationProperties"
         },
         "skinMeshProperties": {
-            "skeleton": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42.SKINS_Swain_Skin42.skl",
-            "simpleSkin": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42.SKINS_Swain_Skin42.skn",
-            "texture": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_TX_CM.Chroma_Swain_FriedChicken.tex",
+            "skeleton": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42.skl",
+            "simpleSkin": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42.skn",
+            "texture": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_TX_CM.tex",
             "selfIllumination": 0.699999988079071,
             "overrideBoundingBox": [
                 150.0,
@@ -75,21 +75,21 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_TX_CM.Chroma_Swain_FriedChicken.tex",
+                "texturePath": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_TX_CM.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_Flowmap_Mask.SKINS_Swain_Skin42.tex",
+                "texturePath": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_Flowmap_Mask.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Pattern_01",
-                "texturePath": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_TX_CM.Chroma_Swain_FriedChicken.tex",
+                "texturePath": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -130,7 +130,7 @@
             },
             {
                 "TextureName": "FlowMap_Texture",
-                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42_Flowmap.SKINS_Swain_Skin42.tex",
+                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42_Flowmap.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -150,7 +150,7 @@
             },
             {
                 "TextureName": "Fresnel_Color_Texture",
-                "texturePath": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_Arm_Fresnel_Color.Chroma_Swain_FriedChicken.tex",
+                "texturePath": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_Arm_Fresnel_Color.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -167,9 +167,64 @@
                 "TextureName": "DeformMask",
                 "texturePath": "ASSETS/Shared/Materials/black.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alpha_Multiplier_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Ribbon_U_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_V_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_Amplitude",
+                "value": [
+                    17.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_MoveSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_SegmentCount",
+                "value": [
+                    5.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -765,6 +820,18 @@
         ],
         "switches": [
             {
+                "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
+                "on": false,
+                "Group": "Alpha",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
+                "on": false,
+                "Group": "Vertex_Animation",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"
             },
@@ -926,12 +993,12 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_TX_CM.Chroma_Swain_FriedChicken.tex",
+                "texturePath": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Materials",
-                "texturePath": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_Gold_Mask.SKINS_Swain_Skin42.tex",
+                "texturePath": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_Gold_Mask.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1264,7 +1331,7 @@
             },
             {
                 "TextureName": "MatCap_Tex",
-                "texturePath": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_Oil_Matcap.SKINS_Swain_Skin42.tex",
+                "texturePath": "ASSETS/Characters/Swain/Skins/Skin42/Swain_Skin42_Oil_Matcap.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -1272,7 +1339,7 @@
             },
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin49/SwainDemonForm_Skin49_Wings_TX_CM.Chroma_Swain_FriedChicken.tex",
+                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin49/SwainDemonForm_Skin49_Wings_TX_CM.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "addressW": 1,
@@ -1280,7 +1347,7 @@
             },
             {
                 "TextureName": "OutlineMask_Texture",
-                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42_Wings_Mask.SKINS_Swain_Skin42.tex",
+                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42_Wings_Mask.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1577,21 +1644,21 @@
         "samplerValues": [
             {
                 "TextureName": "Diffuse_Texture",
-                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin49/SwainDemonForm_Skin49_Wings_TX_CM.Chroma_Swain_FriedChicken.tex",
+                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin49/SwainDemonForm_Skin49_Wings_TX_CM.tex",
                 "addressU": 2,
                 "addressV": 2,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Mask_Texture",
-                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42_Head_VAT_Mask.SKINS_Swain_Skin42.tex",
+                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42_Head_VAT_Mask.tex",
                 "addressU": 1,
                 "addressV": 1,
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "Pattern_01",
-                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin49/SwainDemonForm_Skin49_Wings_TX_CM.Chroma_Swain_FriedChicken.tex",
+                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin49/SwainDemonForm_Skin49_Wings_TX_CM.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1652,7 +1719,7 @@
             },
             {
                 "TextureName": "Fresnel_Color_Texture",
-                "texturePath": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_Arm_Fresnel_Color.Chroma_Swain_FriedChicken.tex",
+                "texturePath": "ASSETS/Characters/Swain/Skins/Skin49/Swain_Skin49_Arm_Fresnel_Color.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
@@ -1662,16 +1729,71 @@
             },
             {
                 "TextureName": "DeformNoise",
-                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42_Head_VAT.SKINS_Swain_Skin42.tex",
+                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42_Head_VAT.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             },
             {
                 "TextureName": "DeformMask",
-                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42_Head_VAT_Mask.SKINS_Swain_Skin42.tex",
+                "texturePath": "ASSETS/Characters/SwainDemonForm/Skins/Skin42/SwainDemonForm_Skin42_Head_VAT_Mask.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Alpha_Multiplier_Texture",
+                "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Ribbon_U_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_V_Remap",
+                "value": [
+                    0.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_Amplitude",
+                "value": [
+                    17.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_MoveSpeed",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Ribbon_SegmentCount",
+                "value": [
+                    5.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "modelHeight",
                 "value": [
@@ -2260,6 +2382,18 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
+                "on": false,
+                "Group": "Alpha",
+                "__type": "StaticMaterialSwitchDef"
+            },
+            {
+                "name": "USE_VERTEX_ANIMATION_TO_SIMULATE_RIBBON",
+                "on": false,
+                "Group": "Vertex_Animation",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALBEDO_REMAP",
                 "__type": "StaticMaterialSwitchDef"

@@ -1370,7 +1370,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Σεζουάνι ορμά προς τα εμπρός, πετώντας τους εχθρούς στον αέρα. Η έφοδος σταματά όταν χτυπήσει έναν αντίπαλο Ήρωα.",
-            "dynamicDescription": "Η Σεζουάνι εφορμά, προκαλώντας <magicDamage>@TotalDamageTooltip@ Μαγική Ζημιά</magicDamage> στους εχθρούς και <status>Πετώντας</status> τους <status>στον Αέρα</status> για @Effect4Amount@ δευτ. Η έφοδος σταματά όταν χτυπήσει έναν αντίπαλο Ήρωα.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Σεζουάνι εφορμά, προκαλώντας <magicDamage>@TotalDamageTooltip@ Μαγική Ζημιά</magicDamage> στους εχθρούς και <status>Εκτοξεύοντάς</status> τους <status>στον Αέρα</status> για @KnockupDurationTOOLTIPONLY@ δευτ. Η έφοδος σταματά όταν χτυπήσει έναν αντίπαλο Ήρωα.@SpellModifierDescriptionAppend@",
             "range": [
                 650.0,
                 650.0,
@@ -1670,7 +1670,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Σεζουάνι παγώνει και ακινητοποιεί έναν αντίπαλο ήρωα που έχει τον μέγιστο αριθμό στοιβών Πάγου.",
-            "dynamicDescription": "<spellPassive>Παθητική:</spellPassive> Οι επιθέσεις των κοντινών συμμάχων Ηρώων που μάχονται από κοντά εφαρμόζουν μια στοίβα σε Ήρωες και τέρατα της Ζούγκλας.<br><br><spellPassive>Ενεργή:</spellPassive> Η Σεζουάνι προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στον εχθρικό στόχο με 4 στοίβες και <status>Ακινητοποίηση</status> για @Effect1Amount@ δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Παθητική</spellPassive>: Οι επιθέσεις των κοντινών συμμάχων Ηρώων που μάχονται από κοντά εφαρμόζουν μια στοίβα σε Ήρωες και τέρατα της Ζούγκλας.<br><br><spellPassive>Ενεργή:</spellPassive> Η Σεζουάνι προκαλεί <magicDamage>@TotalDamage@ Μαγική Ζημιά</magicDamage> στον εχθρικό στόχο με 4 στοίβες και <status>Ακινητοποίηση</status> για @CCDuration@ δευτερόλεπτο. @SpellModifierDescriptionAppend@",
             "range": [
                 560.0,
                 560.0,
@@ -1820,7 +1820,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Η Σεζουάνι πετάει το μπόλα της που παγώνει και ακινητοποιεί τον πρώτο ήρωα που χτυπά και δημιουργεί μια παγοθύελλα που επιβραδύνει τους υπόλοιπους εχθρούς.",
-            "dynamicDescription": "Η Σεζουάνι πετάει το μπόλα από Πραγματικό Πάγο, <status>Ακινητοποιώντας</status> και αποκαλύπτοντας τον πρώτο αντίπαλο Ήρωα που δέχεται χτύπημα για @Effect2Amount@ δευτ. και προκαλώντας <magicDamage>@MinorDamageTooltip@ Μαγική Ζημιά</magicDamage>.<br><br>Αν το μπόλα ταξιδέψει για τουλάχιστον 25% της εμβέλειάς του, <status>Ακινητοποιεί</status> και αποκαλύπτει για @Effect6Amount@ δευτ. Κατόπιν, δημιουργεί μια παγοθύελλα που <status>Επιβραδύνει</status> τους γύρω εχθρούς κατά @Effect4Amount@% για @Effect3Amount@ δευτ. Όλοι οι εχθροί που επηρεάζονται δέχονται <magicDamage>@TotalDamageTooltip@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Η Σεζουάνι πετάει το μπόλα από Πραγματικό Πάγο, <status>Ακινητοποιώντας</status> και αποκαλύπτοντας τον πρώτο αντίπαλο Ήρωα που δέχεται χτύπημα για @BaseStunDuration@ δευτ. και προκαλώντας <magicDamage>@MinorDamageTooltip@ Μαγική Ζημιά</magicDamage>.<br><br>Αν το μπόλα διανύσει τουλάχιστον το 25% της εμβέλειάς του, <status>Ακινητοποιεί</status> και αποκαλύπτει για @EmpoweredStunDuration@ δευτ. Στη συνέχεια, δημιουργεί μια παγοθύελλα που <status>Επιβραδύνει</status> τους γύρω εχθρούς κατά @ExplosionSlowAmount@% για @ZoneDuration@ δευτ. Όλοι οι εχθροί που επηρεάζονται δέχονται <magicDamage>@TotalDamageTooltip@ Μαγική Ζημιά</magicDamage>.@SpellModifierDescriptionAppend@",
             "range": [
                 1300.0,
                 1300.0,

@@ -1384,7 +1384,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "에코가 적 챔피언에게 맞으면 펼쳐져서 시간 왜곡 지대를 만들고, 지대 안에 있는 적 모두를 둔화시키며 피해를 입히는 시간 톱니바퀴를 던집니다. 잠시 후 톱니바퀴는 되감겨 에코에게 돌아오며, 경로 상에 있는 적에게 피해를 입힙니다.",
-            "dynamicDescription": "에코가 장치를 던져 <magicDamage>@InitialDamage@의 마법 피해</magicDamage>를 입힙니다. 장치는 챔피언에게 맞거나 사거리 끝에 도달하면 역장을 펼쳐 안에 있는 적을 @Effect2Amount*-100@% <status>둔화</status>시킵니다. 이후 에코가 장치를 불러들이며 <magicDamage>@RecallDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "에코가 장치를 던져 <magicDamage>@InitialDamage@의 마법 피해</magicDamage>를 입힙니다. 장치는 챔피언에게 맞거나 사거리 끝에 도달하면 역장을 펼쳐 안에 있는 적을 @SlowPercent*-100@% <status>둔화</status>시킵니다. 이후 에코가 장치를 불러들이며 <magicDamage>@RecallDamage@의 마법 피해</magicDamage>를 입힙니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1075.0,
                 1075.0,
@@ -1534,7 +1534,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "에코의 기본 공격이 체력이 낮은 적에게 추가 마법 피해를 입힙니다. 에코가 평행 시간 교차를 사용하면 시간의 균열을 열어 몇 초 후에 퍼져나가는 불안정한 특이점을 만들어내며, 이 안에 갇힌 적들을 둔화시킵니다. 에코가 특이점 안에 들어가면 자신은 보호막을 얻으며, 적들의 시간을 멈추며 기절시킵니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 에코의 기본 공격은 체력이 30% 미만인 적에게 <magicDamage>잃은 체력의 @MissingHealthPercent@에 해당하는 마법 피해</magicDamage>를 입힙니다.<br><br><spellActive>사용 시:</spellActive> 에코가 잠시 후 1.5초 동안 유지되는 시간의 구체를 발사하여 안에 있는 적을 @Effect10Amount@% <status>둔화</status>시킵니다. 에코가 구체 안에 들어가면 구체를 폭발시켜 @Effect2Amount@초 동안 <status>기절</status>시키고 <shield>@TotalShield@의 피해를 흡수하는 보호막</shield>을 얻습니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> 에코의 기본 공격은 체력이 @BelowHealthThreshold*100@% 미만인 적에게 <magicDamage>잃은 체력의 @MissingHealthPercent@에 해당하는 마법 피해</magicDamage>를 입힙니다.<br><br><spellActive>사용 시:</spellActive> 에코가 잠시 후 @SlowZoneDuration@초 동안 유지되는 시간의 구체를 발사하여 안에 있는 적을 @SlowPercent@% <status>둔화</status>시킵니다. 에코가 구체 안에 들어가면 구체를 폭발시켜 @StunDuration@초 동안 <status>기절</status>시키고 <shield>@TotalShield@의 피해를 흡수하는 보호막</shield>을 얻습니다.@SpellModifierDescriptionAppend@",
             "range": [
                 1600.0,
                 1600.0,
