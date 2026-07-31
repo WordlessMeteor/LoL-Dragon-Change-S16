@@ -185,7 +185,7 @@
             t.INVALID_SKIN_ID = 0;
             t.STANDARD_MAX_TEAM_SIZE = 5;
             t.JADE_CHAMPION_SWAP_ONLY_QUEUE_IDS = [];
-            t.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS = [4300, 3262];
+            t.JADE_PICK_ORDER_SWAP_ONLY_QUEUE_IDS = [4300, 4310, 3262];
             const I = {
                 CHAMPION: "/lol-champ-select/v1/session/champion-swaps",
                 PICK_ORDER: "/lol-champ-select/v1/session/pick-order-swaps",
@@ -14368,10 +14368,11 @@
                             const e = this.get("_tencentLearnMoreUrl");
                             return void(e ? window.open(e, "_blank") : s.logger.warning("[JadeChampionModal] No Tencent learn more URL set in client config"))
                         }
-                        const e = this.get("championData.id");
-                        if (!e) return;
-                        const t = document.documentElement.lang || "en_US";
-                        window.open("https://www.leagueoflegends.com/" + t + "/classic/champions/" + e + "/", "_blank")
+                        const e = this.get("championData.alias");
+                        if (!e) return void s.logger.warning("[JadeChampionModal] Champion asset missing alias; cannot build learn more URL");
+                        const t = e.replace(/^Jade_/i, "").toLowerCase(),
+                            n = "https://www.leagueoflegends.com/" + (document.documentElement.lang || "en-US").toLowerCase() + "/classic/champions/" + t + "/";
+                        window.open(n, "_blank")
                     },
                     prevSkin() {
                         const e = this.get("skins");
