@@ -17992,11 +17992,11 @@
         ]
     },
     {
-        "display_name": "上古魔神",
+        "display_name": "黑荆棘",
         "trait_id": "DA_18_Blackthorn",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGod.TFT_Set18.png",
-        "tooltip_text": "战斗开始时：位于【魔神格】内的友军被献祭，为你的弈子们提供生命值。<br><br>【上古魔神】弈子们基于【祭品】的定位、星级和费用，获得额外属性。<br><row>(@MinUnits@) @Health@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Health@ %i:scaleHealth%；额外加成再提升@StatMultiplier*100@% </row><br><row>(@MinUnits@) @Health@ %i:scaleHealth%；献祭不再造成阵亡。【祭品】还会获得：@Tier3BonusAD*100@% %i:scaleAD%%i:scaleAP%，<br>@Tier3BonusAttackSpeed*100@% %i:scaleAS%，@Tier3BonusArmor@ %i:scaleArmor%%i:scaleMR%，@Tier3BonusHealth@ %i:scaleHealth%，@Tier3BonusOmnivamp*100@%</row>",
+        "tooltip_text": "战斗开始时：位于【黑荆棘格】内的友军被献祭，为你的弈子们提供生命值。<br><br>【黑荆棘】弈子们基于【祭品】的定位、星级和费用，获得额外属性。<br><row>(@MinUnits@) @Health@ %i:scaleHealth%</row><br><row>(@MinUnits@) @Health@ %i:scaleHealth%；额外加成再提升@StatMultiplier*100@% </row><br><row>(@MinUnits@) @Health@ %i:scaleHealth%；献祭不再造成阵亡。【祭品】还会获得：@Tier3BonusAD*100@% %i:scaleAD%%i:scaleAP%，<br>@Tier3BonusAttackSpeed*100@% %i:scaleAS%，@Tier3BonusArmor@ %i:scaleArmor%%i:scaleMR%，@Tier3BonusHealth@ %i:scaleHealth%，@Tier3BonusOmnivamp*100@%</row>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -18035,7 +18035,7 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.3
+                        "value": 0.2
                     },
                     {
                         "name": "Tier3BonusArmor",
@@ -18043,7 +18043,7 @@
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.3
+                        "value": 0.2
                     },
                     {
                         "name": "Tier3BonusHealth",
@@ -18250,7 +18250,7 @@
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 18.0
+                        "value": 20.0
                     }
                 ],
                 "min_units": 3,
@@ -18266,7 +18266,7 @@
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 22.0
+                        "value": 25.0
                     }
                 ],
                 "min_units": 4,
@@ -18562,7 +18562,7 @@
                 "constants": [
                     {
                         "name": "CombatStartSeeds",
-                        "value": 3.0
+                        "value": 4.0
                     },
                     {
                         "name": "SeedsPerCast",
@@ -19013,9 +19013,45 @@
             {
                 "constants": [],
                 "min_units": 1,
-                "max_units": 1,
+                "max_units": 0,
                 "style_idx": 5,
                 "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "RengarADPerStack",
+                        "value": 0.002
+                    },
+                    {
+                        "name": "RengarADStackReq",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "RengarGold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "RengarGold_2",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "RengarGold_3",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "RengarStackReq",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "RengarThresholdAD",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
             },
             {
                 "constants": [
@@ -19140,7 +19176,7 @@
                     },
                     {
                         "name": "Threshold3StarUpPeriod",
-                        "value": 1.0
+                        "value": 4.0
                     }
                 ],
                 "min_units": 3,
@@ -19243,11 +19279,11 @@
                 "constants": [
                     {
                         "name": "AttackSpeedIncrease",
-                        "value": 0.25
+                        "value": 0.3
                     },
                     {
                         "name": "HealthIncrease",
-                        "value": 0.25
+                        "value": 0.3
                     },
                     {
                         "name": "TeamwideRatio",
@@ -19263,11 +19299,11 @@
                 "constants": [
                     {
                         "name": "AttackSpeedIncrease",
-                        "value": 0.35
+                        "value": 0.45
                     },
                     {
                         "name": "HealthIncrease",
-                        "value": 0.35
+                        "value": 0.45
                     },
                     {
                         "name": "TeamwideRatio",
@@ -19620,27 +19656,27 @@
                 "constants": [
                     {
                         "name": "CapstoneAD",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "CapstoneAP",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "CapstoneArmor",
-                        "value": 6.0
+                        "value": 3.0
                     },
                     {
                         "name": "CapstoneAspd",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "CapstoneHealth",
-                        "value": 60.0
+                        "value": 50.0
                     },
                     {
                         "name": "CapstoneMR",
-                        "value": 6.0
+                        "value": 3.0
                     },
                     {
                         "name": "CapstoneManaRegen",

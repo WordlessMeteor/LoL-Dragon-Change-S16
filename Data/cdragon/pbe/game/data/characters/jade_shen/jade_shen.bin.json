@@ -1,15 +1,15 @@
 {
-    "{17e9e1bc}": {
-        "mRootSpell": "{7344ba9d}",
+    "Characters/Jade_Shen/Spells/Jade_ShenWAbility": {
+        "mRootSpell": "Characters/Jade_Shen/Spells/Jade_ShenWAbility/Jade_ShenW",
         "mChildSpells": [
-            "{7344ba9d}"
+            "Characters/Jade_Shen/Spells/Jade_ShenWAbility/Jade_ShenW"
         ],
         "mName": "Jade_ShenWAbility",
         "__type": "AbilityObject"
     },
-    "{1d20319d}": {
+    "Characters/Jade_Shen/Spells/Jade_ShenBasicAttack2": {
         "ObjectName": "Jade_ShenBasicAttack2",
-        "objectPath": "{1d20319d}",
+        "objectPath": "Characters/Jade_Shen/Spells/Jade_ShenBasicAttack2",
         "mScriptName": "Jade_ShenBasicAttack2",
         "mSpell": {
             "mAnimationName": "Attack2",
@@ -37,7 +37,7 @@
             },
             "bHaveHitEffect": true,
             "castFrame": 8.0,
-            "mHitEffectKey": "{f773e097}",
+            "mHitEffectKey": "Jade_Shen_BA_tar_blood_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -48,10 +48,10 @@
         },
         "__type": "SpellObject"
     },
-    "{dcd73d12}": {
-        "mRootSpell": "{fc402629}",
+    "Characters/Jade_Shen/Spells/Jade_ShenQAbility": {
+        "mRootSpell": "Characters/Jade_Shen/Spells/Jade_ShenQAbility/Jade_ShenQ",
         "mChildSpells": [
-            "{fc402629}",
+            "Characters/Jade_Shen/Spells/Jade_ShenQAbility/Jade_ShenQ",
             "{2677f1c4}"
         ],
         "mName": "Jade_ShenQAbility",
@@ -73,9 +73,9 @@
         },
         "__type": "SpellObject"
     },
-    "{fc402629}": {
+    "Characters/Jade_Shen/Spells/Jade_ShenQAbility/Jade_ShenQ": {
         "ObjectName": "Jade_ShenQ",
-        "objectPath": "{fc402629}",
+        "objectPath": "Characters/Jade_Shen/Spells/Jade_ShenQAbility/Jade_ShenQ",
         "mScriptName": "Jade_ShenQ",
         "mSpell": {
             "mAffectsTypeFlags": 18442,
@@ -109,13 +109,13 @@
                 {
                     "name": "BaseHealAmount_Jade",
                     "values": [
-                        0.6666600108146667,
-                        1.9999933242797852,
-                        3.333326578140259,
-                        4.666659832000732,
-                        5.999993324279785,
-                        7.33332633972168,
-                        8.666659355163574
+                        2.0,
+                        6.0,
+                        10.0,
+                        14.0,
+                        18.0,
+                        22.0,
+                        26.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -177,11 +177,11 @@
                     "{72c5c2a8}": 1,
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{dee1cee8}",
+                            "mDataValue": "BaseDamage_Jade",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mDataValue": "{9029e74a}",
+                            "mDataValue": "APRatio_Jade",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -190,12 +190,12 @@
                 "{01153b5e}": {
                     "mFormulaParts": [
                         {
-                            "mDataValue": "{0a6ae2a1}",
+                            "mDataValue": "BaseHealAmount_Jade",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mStat": 12,
-                            "mDataValue": "{e23188c6}",
+                            "mDataValue": "HealthPercentBonus_Jade",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -296,7 +296,7 @@
             },
             "mCastType": 1,
             "castFrame": 12.600000381469727,
-            "mMissileEffectKey": "{fec96968}",
+            "mMissileEffectKey": "Jade_Shen_Q_mis",
             "mLineWidth": 60.0,
             "mFloatVarsDecimals": [
                 0,
@@ -407,7 +407,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "{dbbae28a}",
+                                "mDataValue": "HealDuration_Jade",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -420,7 +420,7 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mDataValue": "{dbbae28a}",
+                                "mDataValue": "HealDuration_Jade",
                                 "__type": "NamedDataValueCalculationPart"
                             }
                         ],
@@ -449,10 +449,10 @@
         },
         "__type": "SpellObject"
     },
-    "{63c660ce}": {
-        "mRootSpell": "{e868f611}",
+    "Characters/Jade_Shen/Spells/Jade_ShenEAbility": {
+        "mRootSpell": "Characters/Jade_Shen/Spells/Jade_ShenEAbility/Jade_ShenE",
         "mChildSpells": [
-            "{e868f611}",
+            "Characters/Jade_Shen/Spells/Jade_ShenEAbility/Jade_ShenE",
             "{b33f2adf}",
             "{46bb735b}"
         ],
@@ -481,9 +481,9 @@
         },
         "__type": "SpellObject"
     },
-    "{e868f611}": {
+    "Characters/Jade_Shen/Spells/Jade_ShenEAbility/Jade_ShenE": {
         "ObjectName": "Jade_ShenE",
-        "objectPath": "{e868f611}",
+        "objectPath": "Characters/Jade_Shen/Spells/Jade_ShenEAbility/Jade_ShenE",
         "mScriptName": "Jade_ShenE",
         "mSpell": {
             "flags": 4,
@@ -878,10 +878,10 @@
         },
         "__type": "SpellObject"
     },
-    "{faa94069}": {
-        "mRootSpell": "{cfd6b84d}",
+    "Characters/Jade_Shen/Spells/Jade_ShenRAbility": {
+        "mRootSpell": "Characters/Jade_Shen/Spells/Jade_ShenRAbility/Jade_ShenR",
         "mChildSpells": [
-            "{cfd6b84d}",
+            "Characters/Jade_Shen/Spells/Jade_ShenRAbility/Jade_ShenR",
             "{52a8f007}",
             "{e87ed0fb}"
         ],
@@ -907,9 +907,9 @@
         },
         "__type": "SpellObject"
     },
-    "{cfd6b84d}": {
+    "Characters/Jade_Shen/Spells/Jade_ShenRAbility/Jade_ShenR": {
         "ObjectName": "Jade_ShenR",
-        "objectPath": "{cfd6b84d}",
+        "objectPath": "Characters/Jade_Shen/Spells/Jade_ShenRAbility/Jade_ShenR",
         "mScriptName": "Jade_ShenR",
         "mSpell": {
             "mAffectsTypeFlags": 16385,
@@ -1443,7 +1443,7 @@
                         {
                             "mStat": 12,
                             "mStatFormula": 2,
-                            "mDataValue": "{20159473}",
+                            "mDataValue": "HealthPercentDamageMod",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1459,7 +1459,7 @@
                         {
                             "mStat": 12,
                             "mStatFormula": 2,
-                            "mDataValue": "{20159473}",
+                            "mDataValue": "HealthPercentDamageMod",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1544,9 +1544,9 @@
         },
         "__type": "SpellObject"
     },
-    "{7344ba9d}": {
+    "Characters/Jade_Shen/Spells/Jade_ShenWAbility/Jade_ShenW": {
         "ObjectName": "Jade_ShenW",
-        "objectPath": "{7344ba9d}",
+        "objectPath": "Characters/Jade_Shen/Spells/Jade_ShenWAbility/Jade_ShenW",
         "mScriptName": "Jade_ShenW",
         "mSpell": {
             "flags": 4,
@@ -1603,7 +1603,7 @@
                         },
                         {
                             "OutputType": 2,
-                            "mDataValue": "{25303313}",
+                            "mDataValue": "APShieldMod",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1778,9 +1778,9 @@
         },
         "__type": "SpellObject"
     },
-    "{ec57be3d}": {
+    "Characters/Jade_Shen/Spells/Jade_ShenBasicAttack": {
         "ObjectName": "Jade_ShenBasicAttack",
-        "objectPath": "{ec57be3d}",
+        "objectPath": "Characters/Jade_Shen/Spells/Jade_ShenBasicAttack",
         "mScriptName": "Jade_ShenBasicAttack",
         "mSpell": {
             "cooldownTime": [
@@ -1807,7 +1807,7 @@
             },
             "bHaveHitEffect": true,
             "castFrame": 8.0,
-            "mHitEffectKey": "{f773e097}",
+            "mHitEffectKey": "Jade_Shen_BA_tar_blood_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -1818,9 +1818,9 @@
         },
         "__type": "SpellObject"
     },
-    "{f265ed7d}": {
+    "Characters/Jade_Shen/Spells/Jade_ShenCritAttack": {
         "ObjectName": "Jade_ShenCritAttack",
-        "objectPath": "{f265ed7d}",
+        "objectPath": "Characters/Jade_Shen/Spells/Jade_ShenCritAttack",
         "mScriptName": "Jade_ShenCritAttack",
         "mSpell": {
             "mAnimationName": "Crit",
@@ -1848,7 +1848,7 @@
             },
             "bHaveHitEffect": true,
             "castFrame": 8.0,
-            "mHitEffectKey": "{fa79593e}",
+            "mHitEffectKey": "Jade_Shen_BA_blood_crit_01",
             "bHaveHitBone": true,
             "mHitBoneName": "C_BUFFBONE_GLB_CHEST_LOC",
             "SpellEventToAudioEventSuffix": {
@@ -2113,10 +2113,10 @@
         },
         "__type": "CharScript"
     },
-    "{a43e8520}": {
+    "Characters/Jade_Shen/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
     },
-    "{d5e6e546}": {
+    "Characters/Jade_Shen/CharacterRecords/Root": {
         "mCharacterName": "Jade_Shen",
         "baseHPModifiable": {
             "baseValue": 513.0,
@@ -2219,10 +2219,10 @@
             "Jade_ShenRAbility/Jade_ShenR"
         ],
         "spells": [
-            "{fc402629}",
-            "{7344ba9d}",
-            "{e868f611}",
-            "{cfd6b84d}"
+            "Characters/Jade_Shen/Spells/Jade_ShenQAbility/Jade_ShenQ",
+            "Characters/Jade_Shen/Spells/Jade_ShenWAbility/Jade_ShenW",
+            "Characters/Jade_Shen/Spells/Jade_ShenEAbility/Jade_ShenE",
+            "Characters/Jade_Shen/Spells/Jade_ShenRAbility/Jade_ShenR"
         ],
         "{c1984296}": [
             "{56ab502a}",
@@ -2243,11 +2243,11 @@
             "Shared/Spells/BaseSpell"
         ],
         "mAbilities": [
-            "{63c660ce}",
+            "Characters/Jade_Shen/Spells/Jade_ShenEAbility",
             "{a0121044}",
-            "{dcd73d12}",
-            "{faa94069}",
-            "{17e9e1bc}"
+            "Characters/Jade_Shen/Spells/Jade_ShenQAbility",
+            "Characters/Jade_Shen/Spells/Jade_ShenRAbility",
+            "Characters/Jade_Shen/Spells/Jade_ShenWAbility"
         ],
         "passiveName": "game_character_passiveName_Jade_Shen",
         "passiveLuaName": "Jade_ShenPassive_Jade",

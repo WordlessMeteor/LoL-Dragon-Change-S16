@@ -10117,15 +10117,15 @@
                     return n(212)
                 }
                 constructor() {
-                    super(), this._wrapperElement = this.shadowRoot.querySelector("div.lol-uikit-slider-wrapper"), this._baseElement = this.shadowRoot.querySelector("div.lol-uikit-slider-base"), this._buttonElement = this.shadowRoot.querySelector("div.lol-uikit-slider-button"), this._fillElement = this.shadowRoot.querySelector("div.lol-uikit-slider-fill"), this._mouseMoveHandler = this._mouseMoveHandler.bind(this), this._mouseUpHandler = this._mouseUpHandler.bind(this), this._isDragging = !1, this._suppressTooltipHideDuringDrag = e => {
+                    super(), this._wrapperElement = this.shadowRoot.querySelector("div.lol-uikit-slider-wrapper"), this._baseElement = this.shadowRoot.querySelector("div.lol-uikit-slider-base"), this._buttonElement = this.shadowRoot.querySelector("div.lol-uikit-slider-button"), this._fillElement = this.shadowRoot.querySelector("div.lol-uikit-slider-fill"), this._mouseMoveHandler = this._mouseMoveHandler.bind(this), this._mouseUpHandler = this._mouseUpHandler.bind(this), this._resizeObserver = new ResizeObserver(this._resizeHandler.bind(this)), this._isDragging = !1, this._suppressTooltipHideDuringDrag = e => {
                         this._isDragging && this._trackTooltipPosition && e.stopImmediatePropagation()
                     }, this._buttonElement.addEventListener("mouseleave", this._suppressTooltipHideDuringDrag)
                 }
                 connectedCallback() {
-                    super.connectedCallback(), this._initProperties(), this._cleanAttributeObservers(), this._addAttributeObservers(), this._bindEventListeners(), this._moveSliderTo(this._getSliderButtonOffset(this.value))
+                    super.connectedCallback(), this._initProperties(), this._cleanAttributeObservers(), this._addAttributeObservers(), this._bindEventListeners(), this._resizeObserver.observe(this._baseElement), this._moveSliderTo(this._getSliderButtonOffset(this.value))
                 }
                 disconnectedCallback() {
-                    super.disconnectedCallback(), this._cleanAttributeObservers(), this._unbindEventListeners()
+                    super.disconnectedCallback(), this._cleanAttributeObservers(), this._unbindEventListeners(), this._resizeObserver.disconnect()
                 }
                 setTooltipContentDelegate(e) {
                     if (null === e) this._tooltipContentDelegate = null;
@@ -10139,6 +10139,9 @@
                 }
                 _initStepAttributes() {
                     this._halfBtnBlock = g.getComputedStyleAttribute(this._buttonElement, this._options.buttonBlockAttribute) / 2, this._sliderValueRange = this._max - this._min, this._stepCount = this._sliderValueRange / this._step, this._maxOffset = this._getMaxOffset(), this._stepOffset = this._maxOffset / this._stepCount
+                }
+                _resizeHandler() {
+                    this._initStepAttributes(), this._moveSliderTo(this._getSliderButtonOffset(this.value))
                 }
                 _initTooltipAttributes() {
                     this._showTooltip = this._getBooleanAttribute("showTooltip", true), this._trackTooltipPosition = this._getBooleanAttribute("trackTooltipPosition", false), this._showTooltip && !this.disabled && this._assignTooltip(), this._tooltipUnit = this.getAttribute("unit")

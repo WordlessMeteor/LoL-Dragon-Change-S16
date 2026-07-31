@@ -220,7 +220,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{bf34cf4c}": {
+            "Spell4_Out_NotMoving": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/TFT4_Yone/Skins/Base/Animations/TFT4_Yone_spell_out_notMoving.anm",
@@ -246,7 +246,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{656f208c}": {
+            "Spell4_ToWalk": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/TFT4_Yone/Skins/Base/Animations/TFT4_Yone_spell_toWalk.anm",
@@ -260,14 +260,14 @@
                 },
                 "mChangeAnimationMidPlay": true,
                 "mTrueConditionClipName": "Spell4_Out_Moving",
-                "mFalseConditionClipName": "{bf34cf4c}",
+                "mFalseConditionClipName": "Spell4_Out_NotMoving",
                 "__type": "ConditionBoolClipData"
             },
             "{663298ef}": {
                 "Updater": {
                     "__type": "IsMovingParametricUpdater"
                 },
-                "mTrueConditionClipName": "{656f208c}",
+                "mTrueConditionClipName": "Spell4_ToWalk",
                 "mFalseConditionClipName": "Spell4_ToIdle",
                 "__type": "ConditionBoolClipData"
             },
@@ -413,6 +413,7 @@
                 "__type": "TrackData"
             }
         },
+        "objectPath": "{4b67ecde}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

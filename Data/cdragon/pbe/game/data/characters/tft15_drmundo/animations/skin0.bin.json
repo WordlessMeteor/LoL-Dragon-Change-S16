@@ -114,7 +114,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{f1979687}": {
+            "CritOut": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/TFT15_DrMundo/Skins/Base/Animations/DrMundo_Crit_toIdle.anm",
@@ -131,7 +131,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{dc5fa677}": {
+            "Attack2Out": {
                 "mTrackDataName": "Default",
                 "mTickDuration": 0.01666666753590107,
                 "mAnimationResourceData": {
@@ -150,7 +150,7 @@
             "Attack2": {
                 "mClipNameList": [
                     "{feaa04b6}",
-                    "{dc5fa677}"
+                    "Attack2Out"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -184,7 +184,7 @@
                 "startFrame": 73.0,
                 "__type": "AtomicClipData"
             },
-            "{18c86404}": {
+            "Luchador_Jump_In": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "WeaponSnap": {
@@ -244,15 +244,15 @@
                 "EndFrame": 250.0,
                 "__type": "AtomicClipData"
             },
-            "{7fe556da}": {
+            "Luchador_Jump": {
                 "mClipNameList": [
-                    "{18c86404}",
+                    "Luchador_Jump_In",
                     "{fbd87d51}",
                     "{9674ae6c}"
                 ],
                 "__type": "SequencerClipData"
             },
-            "{da2234d5}": {
+            "SpellAttack_In": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Swipe": {
@@ -280,7 +280,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{efd82b3e}": {
+            "SpellAttack_Out": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/TFT15_DrMundo/Skins/Base/Animations/TFT15_DrMundo_SpellAttack_Out.anm",
@@ -290,8 +290,8 @@
             },
             "SpellAttack": {
                 "mClipNameList": [
-                    "{da2234d5}",
-                    "{efd82b3e}"
+                    "SpellAttack_In",
+                    "SpellAttack_Out"
                 ],
                 "mEventDataMap": {
                     "{49e03d92}": {
@@ -1835,6 +1835,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{0cb042ec}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

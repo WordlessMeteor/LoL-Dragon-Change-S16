@@ -100,7 +100,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{dbc2c725}": {
+            "Attack1_IntoIdle": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack1_IntoIdle.anm",
@@ -108,7 +108,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{d650550a}": {
+            "Attack2_IntoIdle": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/TFT15_Udyr/Skins/Base/Animations/TFT15_Udyr_Attack2_IntoIdle.anm",
@@ -127,7 +127,7 @@
             "Attack2": {
                 "mClipNameList": [
                     "Attack2_Start",
-                    "{d650550a}"
+                    "Attack2_IntoIdle"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -140,12 +140,12 @@
             },
             "{bd60ee38}": {
                 "mClipNameList": [
-                    "{990e84bf}",
-                    "{b23e7c6e}"
+                    "Attack1_Phoenix_Start",
+                    "Attack1_Phoenix_ToIdle"
                 ],
                 "__type": "SequencerClipData"
             },
-            "{990e84bf}": {
+            "Attack1_Phoenix_Start": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -161,7 +161,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{b23e7c6e}": {
+            "Attack1_Phoenix_ToIdle": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -205,12 +205,12 @@
             },
             "{fb3b2acd}": {
                 "mClipNameList": [
-                    "{7852b276}",
-                    "{6a911b21}"
+                    "Attack2_Phoenix_Start",
+                    "Attack2_Phoenix_ToIdle"
                 ],
                 "__type": "SequencerClipData"
             },
-            "{7852b276}": {
+            "Attack2_Phoenix_Start": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -226,7 +226,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{6a911b21}": {
+            "Attack2_Phoenix_ToIdle": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -268,7 +268,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{9208c037}": {
+            "Idle_Phoenix": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -284,7 +284,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{453a9302}": {
+            "Run_Phoenix": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -327,7 +327,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{60193d7c}": {
+            "Spell_Transform_ToIdle": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -343,7 +343,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{9bbd1de5}": {
+            "Spell_Transform_Start": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{dc5e9f4a}": {
@@ -361,19 +361,19 @@
             },
             "{3a0ecf8a}": {
                 "mClipNameList": [
-                    "{9bbd1de5}",
-                    "{60193d7c}"
+                    "Spell_Transform_Start",
+                    "Spell_Transform_ToIdle"
                 ],
                 "__type": "SequencerClipData"
             },
             "Attack1": {
                 "mClipNameList": [
                     "Attack1_Start",
-                    "{dbc2c725}"
+                    "Attack1_IntoIdle"
                 ],
                 "__type": "SequencerClipData"
             },
-            "{817454ff}": {
+            "Spell_Base_ToIdle": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "Phoenix": {
@@ -392,7 +392,7 @@
             "Spell": {
                 "mClipNameList": [
                     "Spell_BASE",
-                    "{817454ff}"
+                    "Spell_Base_ToIdle"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -3542,6 +3542,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{75a3f3b9}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

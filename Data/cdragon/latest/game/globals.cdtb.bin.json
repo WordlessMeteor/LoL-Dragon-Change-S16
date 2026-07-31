@@ -21341,6 +21341,10 @@
         "FowTeam": 1,
         "__type": "StealthVfx"
     },
+    "{1915335a}": {
+        "effectName": "r:Twitch_Q_Invisible",
+        "__type": "StealthVfx"
+    },
     "{3f4ecb17}": {
         "FadeAmount": 0.20000000298023224,
         "FadeTime": 0.5,
@@ -21395,6 +21399,13 @@
         "scale": 1.600000023841858,
         "PersistentThroughReconnect": true,
         "TimeoutInFow": 20.0,
+        "__type": "StealthVfx"
+    },
+    "{5d2cf108}": {
+        "effectName": "r:Twitch_Q_Cas_Invisible",
+        "FowTeam": 1,
+        "FowVisibilityRadius": 10.0,
+        "SendIfOnScreenOrDiscard": true,
         "__type": "StealthVfx"
     },
     "{6456f55d}": {
@@ -21525,6 +21536,14 @@
         "UseOwnerFacing": true,
         "TimeoutInFow": 5.0,
         "UseAttachmentForMeshOnly": true,
+        "__type": "StealthVfx"
+    },
+    "{e30c7acf}": {
+        "effectName": "r:Twitch_Q_Camouflage_Ring",
+        "UseTargetObject": true,
+        "OnlySendToOwner": true,
+        "PersistentThroughReconnect": true,
+        "TimeoutInFow": 20.0,
         "__type": "StealthVfx"
     },
     "{ed81496c}": {
@@ -23919,11 +23938,11 @@
                     "__type": "StealthCharacterFadeInstance"
                 },
                 "CamoRingEffect": {
-                    "effect": "{152c4f11}",
+                    "effect": "{e30c7acf}",
                     "__type": "StealthVfxInstance"
                 },
                 "CamoRingEffectOther": {
-                    "effect": "{12f5fc70}",
+                    "effect": "{1915335a}",
                     "__type": "StealthVfxInstance"
                 },
                 "DetectionEyeEffect": {
@@ -23939,7 +23958,7 @@
                     "__type": "StealthVfxInstance"
                 },
                 "EnterStealthEffect": {
-                    "effect": "{a1ace792}",
+                    "effect": "{5d2cf108}",
                     "__type": "StealthVfxInstance"
                 },
                 "PersistentStealthEffect": {

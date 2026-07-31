@@ -733,8 +733,6 @@
         {
             "id": 60098301,
             "contentId": "fa896172-b86e-4c4f-8a64-bf56cf76ed28",
-            "relatedPrimeContentId": "37d96a46-50ca-437b-9c64-bfe9c36e0566",
-            "relatedPrimeItemId": 98000,
             "isBase": false,
             "name": "",
             "skinClassification": "kChampion",
@@ -751,34 +749,25 @@
             "collectionSplashVideoPath": null,
             "collectionCardHoverVideoPath": null,
             "featuresText": null,
-            "chromaPath": null,
-            "emblems": null,
-            "regionRarityId": 0,
-            "rarityGemPath": null,
-            "skinLines": null,
-            "description": null
-        },
-        {
-            "id": 60098302,
-            "contentId": "fa896172-b86e-4c4f-8a64-bf56cf76ed28",
-            "relatedPrimeContentId": "37d96a46-50ca-437b-9c64-bfe9c36e0566",
-            "relatedPrimeItemId": 98000,
-            "isBase": false,
-            "name": "",
-            "skinClassification": "kRecolor",
-            "splashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Shen/Skins/Base/Images/Jade_Shen_splash_centered_0.project_jade.jpg",
-            "uncenteredSplashPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Shen/Skins/Base/Images/Jade_Shen_splash_uncentered_0.project_jade.jpg",
-            "tilePath": "/lol-game-data/assets/ASSETS/Characters/Jade_Shen/Skins/Base/Images/Jade_Shen_splash_tile_0.project_jade.jpg",
-            "loadScreenPath": "/lol-game-data/assets/ASSETS/Characters/Jade_Shen/Skins/Base/Jade_ShenLoadScreen.project_jade.jpg",
-            "skinType": "",
-            "rarity": "kNoRarity",
-            "isLegacy": false,
-            "splashVideoPath": null,
-            "previewVideoUrl": null,
-            "collectionSplashVideoPath": null,
-            "collectionCardHoverVideoPath": null,
-            "featuresText": null,
-            "chromaPath": null,
+            "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60098/60098301.png",
+            "chromas": [
+                {
+                    "id": 60098302,
+                    "name": "",
+                    "contentId": "5e580d2c-be5c-4ead-b053-036677500052",
+                    "relatedPrimeContentId": "",
+                    "skinClassification": "kRecolor",
+                    "chromaPath": "/lol-game-data/assets/v1/champion-chroma-images/60098/60098302.png",
+                    "tilePath": "/lol-game-data/assets/v1/champion-chroma-images/60098/60098302.png",
+                    "colors": [
+                        "#FFEE59",
+                        "#FFEE59"
+                    ],
+                    "descriptions": [],
+                    "description": "",
+                    "rarities": []
+                }
+            ],
             "emblems": null,
             "regionRarityId": 0,
             "rarityGemPath": null,
@@ -791,7 +780,7 @@
         "abilityIconPath": "/lol-game-data/assets/ASSETS/UX/Jade/S3Icons/SameSized/Shen_KiStrike.project_jade.png",
         "abilityVideoPath": "",
         "abilityVideoImagePath": "",
-        "description": "การโจมตีครั้งถัดไปของ Shen ในทุก ๆ 9 วินาทีจะสร้างโบนัสความเสียหาย โดยทุก ๆ ครั้งที่ Shen โจมตี คูลดาวน์ของ Ki Strike จะลดลง"
+        "description": "การโจมตีครั้งถัดไปของ Shen ในทุก ๆ 9 วินาทีจะสร้างโบนัสความ‍เสีย‍หาย โดยทุก ๆ ครั้งที่ Shen โจมตี คูลดาวน์ของ Ki Strike จะลดลง"
     },
     "spells": [
         {
@@ -802,7 +791,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "สร้างความเสียหายแก่เป้าหมายและฮีลพลังชีวิตตัวเอง โดยเพื่อนร่วมทีมที่โจมตีเป้าหมายนี้จะได้รับฮีลด้วย",
+            "description": "สร้างความเสียหายแก่เป้าหมายและฮีลพลังชีวิตตัวเอง โดยเพื่อนร่วม‍ทีมที่โจมตีเป้าหมายนี้จะได้รับฮีลด้วย",
             "dynamicDescription": "Shen ขว้างดาบพลังจิต สร้าง<magicDamage>ความเสียหายเวท @TotalMagicDamage_Jade@ หน่วย</magicDamage>แก่ยูนิตเป้าหมาย และทำเครื่องหมายไว้เป็นเวลา @MarkDuration_Jade@ วินาที สกิลและการโจมตีของเพื่อนร่วมทีมที่โจมตีเป้าหมายนี้จะฮีลพวกเขา <healing>@TotalHealOverTimeAmount_Jade@</healing> หน่วยเป็นเวลา @HealDuration_Jade@ วินาที การสังหารศัตรูด้วยสกิลนี้จะฟื้นฟู<healing>พลังชีวิต @TotalHeal_Jade@ หน่วย</healing>ทันทีแทน@SpellModifierDescriptionAppend@",
             "range": [
                 475.0,
@@ -1252,7 +1241,7 @@
             "abilityVideoImagePath": "",
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
-            "description": "Shen มอบโล่ป้องกันแก่แชมเปี้ยนร่วมทีมเป้าหมาย แล้วหลังจากนั้นครู่หนึ่งเขาจะเทเลพอร์ตไปหาเป้าหมาย",
+            "description": "Shen มอบโล่ป้องกันแก่แชมเปี้ยนร่วมทีมเป้าหมาย แล้วหลังจากนั้นครู่‍หนึ่งเขาจะเทเลพอร์ตไปหาเป้าหมาย",
             "dynamicDescription": "Shen มอบ<shield>โล่ป้องกัน @TotalShield@ หน่วย</shield>แก่แชมเปี้ยนร่วมทีมเป็นเวลา @ShieldDuration@ วินาที หลังจากร่ายเป็นเวลา @ChannelDuration@ วินาที Shen จะเทเลพอร์ตไปยังตำแหน่งของเพื่อนร่วมทีม@SpellModifierDescriptionAppend@",
             "range": [
                 25000.0,

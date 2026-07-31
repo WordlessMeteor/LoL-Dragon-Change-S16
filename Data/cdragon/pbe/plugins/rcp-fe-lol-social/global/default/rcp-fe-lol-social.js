@@ -23472,7 +23472,7 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.XP_BOOST_ICON_PATH = t.XP_BOOSTED_GAMES_REWARD_TYPE = t.UNKNOWN_TRANSGRESSION_TYPE = t.REMEDY_ICON_MAP = t.RANK_MANIPULATION_HITCHHIKER = t.RANK_MANIPULATION_BOOSTEE = t.NEGATIVE_IN_GAME_BEHAVIOR_TRANSGRESSION_TYPE = t.LP_CONSOLATION_REWARD_TYPE = t.LP_CONSOLATION_REMEDY_ICON_PATH = t.LEAGUE_DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = t.KNOWN_TRANSGRESSION_TYPES = t.INAPPROPRIATE_TEXT_TRANSGRESSION_TYPE = t.GAMEPLAY_VIOLATION_TRANSGRESSION_TYPE = t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = t.DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = t.AWAY_FROM_KEYBOARD_TRANSGRESSION_TYPE = t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = t.ARAM_REROLL_REFUND_REWARD_TYPE = t.ARAM_REROLL_ICON_PATH = void 0;
+            }), t.XP_BOOST_ICON_PATH = t.XP_BOOSTED_GAMES_REWARD_TYPE = t.UNKNOWN_TRANSGRESSION_TYPE = t.REMEDY_ICON_MAP = t.RANK_MANIPULATION_HITCHHIKER = t.RANK_MANIPULATION_BOOSTEE = t.NEGATIVE_IN_GAME_BEHAVIOR_TRANSGRESSION_TYPE = t.LP_CONSOLATION_REWARD_TYPE = t.LP_CONSOLATION_REMEDY_ICON_PATH = t.LEAGUE_DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = t.KNOWN_TRANSGRESSION_TYPES = t.INAPPROPRIATE_TEXT_TRANSGRESSION_TYPE = t.GAMEPLAY_VIOLATION_TRANSGRESSION_TYPE = t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = t.DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = t.COMMS_ABUSE_VOICE_TRANSGRESSION_TYPE = t.AWAY_FROM_KEYBOARD_TRANSGRESSION_TYPE = t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = t.ARAM_REROLL_REFUND_REWARD_TYPE = t.ARAM_REROLL_ICON_PATH = void 0;
             const r = "GAMEPLAY_VIOLATION";
             t.GAMEPLAY_VIOLATION_TRANSGRESSION_TYPE = r;
             const o = "AWAY_FROM_KEYBOARD";
@@ -23485,33 +23485,35 @@
             t.RANK_MANIPULATION_BOOSTEE = s;
             const l = "INAPPROPRIATE_TEXT";
             t.INAPPROPRIATE_TEXT_TRANSGRESSION_TYPE = l;
-            const c = "DIRECT_MESSAGE_ABUSE";
-            t.DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = c;
-            const d = "DISRUPTIVE_PINGING";
-            t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = d;
+            const c = "COMMS_ABUSE_VOICE";
+            t.COMMS_ABUSE_VOICE_TRANSGRESSION_TYPE = c;
+            const d = "DIRECT_MESSAGE_ABUSE";
+            t.DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = d;
+            const p = "DISRUPTIVE_PINGING";
+            t.DISRUPTIVE_PINGING_TRANSGRESSION_TYPE = p;
             t.UNKNOWN_TRANSGRESSION_TYPE = "UNKNOWN";
-            const p = "LEAGUE_DM_ABUSE";
-            t.LEAGUE_DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = p;
-            const u = new Set([r, o, i, a, s, l, c, p, d]);
-            t.KNOWN_TRANSGRESSION_TYPES = u;
-            const m = "XP_BOOSTED_GAMES";
-            t.XP_BOOSTED_GAMES_REWARD_TYPE = m;
-            const g = "AUTOFILL_PROTECTED_GAMES";
-            t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = g;
-            const h = "ARAM_REROLL_REFUND";
-            t.ARAM_REROLL_REFUND_REWARD_TYPE = h;
-            const f = "LP_CONSOLATION";
-            t.LP_CONSOLATION_REWARD_TYPE = f;
-            const _ = n(563);
-            t.ARAM_REROLL_ICON_PATH = _;
-            const A = n(564);
-            t.XP_BOOST_ICON_PATH = A;
-            const b = n(565);
-            t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = b;
-            const y = n(566);
-            t.LP_CONSOLATION_REMEDY_ICON_PATH = y;
-            const x = {};
-            t.REMEDY_ICON_MAP = x, x[m] = A, x[g] = b, x[h] = _, x[f] = y
+            const u = "LEAGUE_DM_ABUSE";
+            t.LEAGUE_DIRECT_MESSAGE_ABUSE_TRANSGRESSION_TYPE = u;
+            const m = new Set([r, o, i, a, s, l, c, d, u, p]);
+            t.KNOWN_TRANSGRESSION_TYPES = m;
+            const g = "XP_BOOSTED_GAMES";
+            t.XP_BOOSTED_GAMES_REWARD_TYPE = g;
+            const h = "AUTOFILL_PROTECTED_GAMES";
+            t.AUTOFILL_PROTECTED_GAMES_REWARD_TYPE = h;
+            const f = "ARAM_REROLL_REFUND";
+            t.ARAM_REROLL_REFUND_REWARD_TYPE = f;
+            const _ = "LP_CONSOLATION";
+            t.LP_CONSOLATION_REWARD_TYPE = _;
+            const A = n(563);
+            t.ARAM_REROLL_ICON_PATH = A;
+            const b = n(564);
+            t.XP_BOOST_ICON_PATH = b;
+            const y = n(565);
+            t.AUTOFILL_PROTECTION_REMEDY_ICON_PATH = y;
+            const x = n(566);
+            t.LP_CONSOLATION_REMEDY_ICON_PATH = x;
+            const v = {};
+            t.REMEDY_ICON_MAP = v, v[g] = b, v[h] = y, v[f] = A, v[_] = x
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "aram_blessing.svg"

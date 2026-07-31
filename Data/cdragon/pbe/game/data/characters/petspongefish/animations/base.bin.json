@@ -844,7 +844,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{ff7ec843}": {
+            "Reaction_WinStreakStart": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{00de23b5}": {
@@ -860,7 +860,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{2977b336}": {
+            "Reaction_WinStreakEnd": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{00de23b5}": {
@@ -876,7 +876,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{ef33df2e}": {
+            "Reaction_Top4": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{00de23b5}": {
@@ -892,7 +892,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{c3fa865c}": {
+            "Reaction_3Star": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{00de23b5}": {
@@ -908,7 +908,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{c75da49e}": {
+            "Laugh_01_In": {
                 "mTrackDataName": "Base",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/PetSpongeFish/Themes/Base/Animations/PetSpongeFish_Base_Laugh_01_In.anm",
@@ -916,7 +916,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{a06d583e}": {
+            "Laugh_01_Ioop": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mAnimationResourceData": {
@@ -925,7 +925,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{7dd31cd1}": {
+            "Laugh_02": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{1c6c2ed3}": {
@@ -953,8 +953,8 @@
             },
             "{7ad31818}": {
                 "mClipNameList": [
-                    "{c75da49e}",
-                    "{a06d583e}"
+                    "Laugh_01_In",
+                    "Laugh_01_Ioop"
                 ],
                 "mEventDataMap": {
                     "VFX_Laugh_01": {
@@ -980,8 +980,8 @@
                 "Updater": {
                     "driver": {
                         "mAnimationNames": [
-                            "{c75da49e}",
-                            "{a06d583e}"
+                            "Laugh_01_In",
+                            "Laugh_01_Ioop"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
@@ -991,7 +991,7 @@
                 "mFalseConditionClipName": "{25214329}",
                 "__type": "ConditionBoolClipData"
             },
-            "{21849ac0}": {
+            "Laugh_03_In": {
                 "mTrackDataName": "Base",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/PetSpongeFish/Themes/Base/Animations/PetSpongeFish_Base_Laugh_03_In.anm",
@@ -999,7 +999,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{0b4ffc4c}": {
+            "Laugh_03_Ioop": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mAnimationResourceData": {
@@ -1010,8 +1010,8 @@
             },
             "{7cd31b3e}": {
                 "mClipNameList": [
-                    "{21849ac0}",
-                    "{0b4ffc4c}"
+                    "Laugh_03_In",
+                    "Laugh_03_Ioop"
                 ],
                 "mEventDataMap": {
                     "VFX_Laugh_03": {
@@ -1037,14 +1037,14 @@
                 "Updater": {
                     "driver": {
                         "mAnimationNames": [
-                            "{21849ac0}",
-                            "{0b4ffc4c}"
+                            "Laugh_03_In",
+                            "Laugh_03_Ioop"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{7dd31cd1}",
+                "mTrueConditionClipName": "Laugh_02",
                 "mFalseConditionClipName": "{7ad31818}",
                 "__type": "ConditionBoolClipData"
             },
@@ -1054,7 +1054,7 @@
                 ],
                 "__type": "SequencerClipData"
             },
-            "{caf2c292}": {
+            "Taunt_Fast": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{720fc94f}": {
@@ -1086,13 +1086,13 @@
                     "driver": {
                         "mAnimationNames": [
                             "{c8c50d17}",
-                            "{caf2c292}"
+                            "Taunt_Fast"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{caf2c292}",
+                "mTrueConditionClipName": "Taunt_Fast",
                 "mFalseConditionClipName": "{c8c50d17}",
                 "__type": "ConditionBoolClipData"
             },
@@ -2442,6 +2442,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{04bd00b5}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

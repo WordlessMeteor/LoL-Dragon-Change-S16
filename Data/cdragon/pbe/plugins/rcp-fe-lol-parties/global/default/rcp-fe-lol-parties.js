@@ -4427,7 +4427,7 @@
                         this.set("cherryLobbyData", e[0][0]);
                         const t = e[0];
                         this.set("progressTrack", t[0].ProgressTrack), this.set("championsCompletedTrack", t[0].ChampionsCompletedTrack), (0, i.dataBinding)("/lol-reward-track").get(`/register/${t[0].ProgressTrack.Id}`);
-                        const n = e[1].reduce(((e, t) => (t.id >= 66600 && t.id <= 66699 || t.id > 0 && (e[t.id] = t), e)), {});
+                        const n = e[1].reduce(((e, t) => (t.id >= 66600 && t.id <= 66699 || t.id >= 6e4 && t.id <= 60999 || t.id > 0 && (e[t.id] = t), e)), {});
                         this.set("championSummaryMap", n);
                         const a = e[2];
                         let r;

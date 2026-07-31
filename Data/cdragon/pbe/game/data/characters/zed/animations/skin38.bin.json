@@ -100,7 +100,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{ba9fda17}": {
+            "RAW_Idle1": {
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
@@ -109,7 +109,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{bb9fdbaa}": {
+            "RAW_Idle2": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
                     "{3a6f2adb}": {
@@ -189,7 +189,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{7970f94b}": {
+            "RAW_Run": {
                 "mFlags": 2,
                 "mTrackDataName": "Run",
                 "mTickDuration": 0.032258063554763794,
@@ -315,11 +315,11 @@
                 "mFlags": 2,
                 "mClipNameList": [
                     "{8ea9425a}",
-                    "{ba9fda17}"
+                    "RAW_Idle1"
                 ],
                 "__type": "SequencerClipData"
             },
-            "{5513f195}": {
+            "RAW_Run_Leadin": {
                 "mFlags": 8,
                 "mTrackDataName": "Run",
                 "mAnimationResourceData": {
@@ -392,7 +392,7 @@
             "Idle2": {
                 "mSelectorPairDataList": [
                     {
-                        "mClipName": "{bb9fdbaa}",
+                        "mClipName": "RAW_Idle2",
                         "mProbability": 45.0,
                         "__type": "SelectorPairData"
                     },
@@ -468,7 +468,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{9b58589d}": {
+            "RAW_Dance": {
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -483,7 +483,7 @@
                         ],
                         "__type": "SubmeshVisibilityEventData"
                     },
-                    "{bc45bbc5}": {
+                    "Audio_Dance": {
                         "mSoundName": "Play_sfx_Zed_Dance3D_buffactivate",
                         "mIsLoop": false,
                         "__type": "SoundEventData"
@@ -499,7 +499,7 @@
                 "mFlags": 2,
                 "mClipNameList": [
                     "{98ffa803}",
-                    "{9b58589d}"
+                    "RAW_Dance"
                 ],
                 "mEventDataMap": {
                     "HideWeapon": {
@@ -910,8 +910,8 @@
             "Run_Normal": {
                 "mFlags": 2,
                 "mClipNameList": [
-                    "{5513f195}",
-                    "{7970f94b}"
+                    "RAW_Run_Leadin",
+                    "RAW_Run"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -5510,6 +5510,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{3501faac}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

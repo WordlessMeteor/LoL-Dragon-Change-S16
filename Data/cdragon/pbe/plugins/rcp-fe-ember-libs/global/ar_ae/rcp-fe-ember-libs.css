@@ -148,7 +148,8 @@
 .loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input,
 .lol-patcher-error-modal ul,
 .loot-table-content,
-.loot-table-header-subtext {
+.loot-table-header-subtext,
+.loot-table-no-duplicates-container {
     font-family: var(--font-body)
 }
 
@@ -170,6 +171,7 @@
 .loot-table-content .list-title h5,
 .loot-table-content .loot-table-header,
 .loot-table-header-subtext,
+.loot-table-no-duplicates-container,
 .loot-table-variable-odds-tooltip__title,
 .uikit-vignette .header {
     -webkit-font-feature-settings: "kern" 1;
@@ -355,7 +357,8 @@
 
 .loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header,
 .loot-table-content,
-.loot-table-header-subtext {
+.loot-table-header-subtext,
+.loot-table-no-duplicates-container {
     color: #a09b8c;
     font-size: 14px;
     font-weight: 400;
@@ -366,7 +369,8 @@
 
 .loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header:lang(ar-ae),
 .loot-table-content:lang(ar-ae),
-.loot-table-header-subtext:lang(ar-ae) {
+.loot-table-header-subtext:lang(ar-ae),
+.loot-table-no-duplicates-container:lang(ar-ae) {
     letter-spacing: 0
 }
 
@@ -1388,7 +1392,8 @@
 .loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-container .cosmetic-option-scroller .cosmetic-option-item-list .cosmetic-option-group .cosmetic-option-group-header,
 .loadouts-modal-active-item lol-parties-cosmetics-panel .cosmetic-selection-options-container lol-uikit-flat-input input,
 .loot-table-content,
-.loot-table-header-subtext {
+.loot-table-header-subtext,
+.loot-table-no-duplicates-container {
     font-family: var(--font-body)
 }
 
@@ -1403,8 +1408,31 @@
     top: 275px
 }
 
+.loot-table-no-duplicates-container {
+    align-items: center;
+    background: #a09b8c;
+    border-radius: 4px;
+    color: #010a13;
+    display: flex;
+    gap: 4px;
+    padding-left: 4px;
+    padding-right: 4px;
+    width: fit-content
+}
+
+.loot-table-no-duplicates-container .loot-table-no-duplicates-icon {
+    background-image: url(/fe/lol-jade/images/battlepass/battle-pass-cross-out.svg);
+    background-size: cover;
+    height: 16px;
+    width: 16px
+}
+
 .loot-table-header-subtext {
     margin-top: 10px
+}
+
+.loot-table-header-subtext.italic {
+    font-style: italic
 }
 
 .loot-table-content {

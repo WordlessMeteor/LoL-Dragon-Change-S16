@@ -7,7 +7,7 @@
                 ],
                 "__type": "ParallelClipData"
             },
-            "{e5848c9f}": {
+            "Cast_Animation_01": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Table": {
@@ -172,12 +172,12 @@
             },
             "Cast_Cycle": {
                 "mClipNameList": [
-                    "{c3e9b6a9}",
+                    "Cast_Cycle_Base",
                     "{8ea09c03}"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{c3e9b6a9}": {
+            "Cast_Cycle_Base": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
@@ -324,12 +324,12 @@
             },
             "{5e5fc064}": {
                 "mClipNameList": [
-                    "{5d8a8c0c}",
+                    "Cast_Run_Base",
                     "{1ea9f0d0}"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{5d8a8c0c}": {
+            "Cast_Run_Base": {
                 "mTrackDataName": "Base",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/TFT16_CT_Pengaren/Skins/Base/Animations/TFT16_CT_Pengaren_Cast_Run_Base.anm",
@@ -339,7 +339,7 @@
             },
             "Celebrate": {
                 "mClipNameList": [
-                    "{71176af2}",
+                    "Celebrate_Base",
                     "Joke_Loop"
                 ],
                 "mEventDataMap": {
@@ -484,7 +484,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "{71176af2}": {
+            "Celebrate_Base": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -544,12 +544,12 @@
             },
             "Damage_Hurt": {
                 "mClipNameList": [
-                    "{150e3e90}",
+                    "Damage_Hurt_Base",
                     "{1ea9f0d0}"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{150e3e90}": {
+            "Damage_Hurt_Base": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -1547,7 +1547,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{e9d54398}": {
+            "Pedestal_In_No_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mAnimationResourceData": {
@@ -1597,10 +1597,10 @@
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
                 "mTrueConditionClipName": "Pedestal_Out_Vfx",
-                "mFalseConditionClipName": "{a11e46b5}",
+                "mFalseConditionClipName": "Pedestal_Out_No_Vfx",
                 "__type": "ConditionBoolClipData"
             },
-            "{a11e46b5}": {
+            "Pedestal_Out_No_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mAnimationResourceData": {
@@ -1631,7 +1631,7 @@
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{e9d54398}",
+                "mTrueConditionClipName": "Pedestal_In_No_Vfx",
                 "mFalseConditionClipName": "Pedestal_In_Vfx",
                 "__type": "ConditionBoolClipData"
             },
@@ -1845,8 +1845,8 @@
                         "mAnimationNames": [
                             "Taunt_loop",
                             "Taunt_In",
-                            "{d2b36ff6}",
-                            "{d17d88f2}"
+                            "Taunt_Strike_Quick",
+                            "Taunt_Strike_Slow"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
@@ -1901,15 +1901,15 @@
                 "Updater": {
                     "driver": {
                         "mAnimationNames": [
-                            "{d2b36ff6}",
-                            "{d17d88f2}"
+                            "Taunt_Strike_Quick",
+                            "Taunt_Strike_Slow"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{d2b36ff6}",
-                "mFalseConditionClipName": "{d17d88f2}",
+                "mTrueConditionClipName": "Taunt_Strike_Quick",
+                "mFalseConditionClipName": "Taunt_Strike_Slow",
                 "__type": "ConditionBoolClipData"
             },
             "Taunt_loop": {
@@ -2071,7 +2071,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "{d2b36ff6}": {
+            "Taunt_Strike_Quick": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -2156,7 +2156,7 @@
                 "startFrame": 7.0,
                 "__type": "AtomicClipData"
             },
-            "{d17d88f2}": {
+            "Taunt_Strike_Slow": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -2239,7 +2239,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{c3fa865c}": {
+            "Reaction_3Star": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -2255,7 +2255,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{ef33df2e}": {
+            "Reaction_Top4": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -2271,7 +2271,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{2977b336}": {
+            "Reaction_WinStreakEnd": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -2287,7 +2287,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{ff7ec843}": {
+            "Reaction_WinStreakStart": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -3315,6 +3315,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{e92389ca}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

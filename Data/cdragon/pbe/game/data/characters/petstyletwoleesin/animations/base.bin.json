@@ -819,7 +819,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{ff7ec843}": {
+            "Reaction_WinStreakStart": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{00de23b5}": {
@@ -841,7 +841,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{2977b336}": {
+            "Reaction_WinStreakEnd": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{00de23b5}": {
@@ -863,7 +863,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{ef33df2e}": {
+            "Reaction_Top4": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{00de23b5}": {
@@ -885,7 +885,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{c3fa865c}": {
+            "Reaction_3Star": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{00de23b5}": {
@@ -1147,7 +1147,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "{a32e92bd}": {
+            "Laugh_Loop_01": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
@@ -1189,7 +1189,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{a02e8e04}": {
+            "Laugh_Loop_02": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
@@ -1255,7 +1255,7 @@
             "{25c0be07}": {
                 "mClipNameList": [
                     "Laugh_In",
-                    "{a32e92bd}"
+                    "Laugh_Loop_01"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -1270,13 +1270,13 @@
                     "driver": {
                         "mAnimationNames": [
                             "Laugh_In",
-                            "{a32e92bd}"
+                            "Laugh_Loop_01"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{a02e8e04}",
+                "mTrueConditionClipName": "Laugh_Loop_02",
                 "mFalseConditionClipName": "{f77c134e}",
                 "__type": "ConditionBoolClipData"
             },
@@ -1284,13 +1284,13 @@
                 "Updater": {
                     "driver": {
                         "mAnimationNames": [
-                            "{a02e8e04}"
+                            "Laugh_Loop_02"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{a32e92bd}",
+                "mTrueConditionClipName": "Laugh_Loop_01",
                 "mFalseConditionClipName": "{25c0be07}",
                 "__type": "ConditionBoolClipData"
             },
@@ -2615,6 +2615,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{38f6880c}",
         "__type": "AnimationGraphData"
     },
     "__linked": []
