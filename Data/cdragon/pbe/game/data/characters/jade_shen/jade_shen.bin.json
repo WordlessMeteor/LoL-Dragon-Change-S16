@@ -122,13 +122,13 @@
                 {
                     "name": "HealthPercentBonus_Jade",
                     "values": [
-                        0.004999999888241291,
-                        0.004999999888241291,
-                        0.004999999888241291,
-                        0.004999999888241291,
-                        0.004999999888241291,
-                        0.004999999888241291,
-                        0.004999999888241291
+                        0.014999999664723873,
+                        0.014999999664723873,
+                        0.014999999664723873,
+                        0.014999999664723873,
+                        0.014999999664723873,
+                        0.014999999664723873,
+                        0.014999999664723873
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -170,6 +170,19 @@
                         3.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "InstantHealMod",
+                    "values": [
+                        0.3333300054073334,
+                        0.3333300054073334,
+                        0.3333300054073334,
+                        0.3333300054073334,
+                        0.3333300054073334,
+                        0.3333300054073334,
+                        0.3333300054073334
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -188,6 +201,14 @@
                     "__type": "GameCalculation"
                 },
                 "{01153b5e}": {
+                    "mMultiplier": {
+                        "mDataValue": "{74ad29a8}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
+                    "mModifiedGameCalculation": "{3a1fcf2b}",
+                    "__type": "GameCalculationModified"
+                },
+                "{3a1fcf2b}": {
                     "mFormulaParts": [
                         {
                             "mDataValue": "BaseHealAmount_Jade",
@@ -200,15 +221,6 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "{3a1fcf2b}": {
-                    "mMultiplier": {
-                        "mNumber": 3.0,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "tooltipOnly": true,
-                    "mModifiedGameCalculation": "{01153b5e}",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "Spell1_Attack1",
@@ -645,14 +657,6 @@
                         }
                     ],
                     "__type": "GameCalculation"
-                },
-                "{4605c453}": {
-                    "mMultiplier": {
-                        "mNumber": 0.5,
-                        "__type": "NumberCalculationPart"
-                    },
-                    "mModifiedGameCalculation": "{05bf97a8}",
-                    "__type": "GameCalculationModified"
                 }
             },
             "mImgIconName": [
@@ -671,14 +675,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    20.0,
+                    18.0,
                     16.0,
                     14.0,
                     12.0,
                     10.0,
                     8.0,
-                    10.0
+                    6.0
                 ],
+                "{0a3e0478}": 18.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -2115,6 +2120,22 @@
     },
     "Characters/Jade_Shen/Skins/Meta": {
         "__type": "SkinCharacterMetaDataProperties"
+    },
+    "{c29f5a5c}": {
+        "mNameTraKey": "Jade_Portrait_Name_Shen_LoR_01",
+        "catalogEntry": {
+            "contentId": "3e623e26-de11-4251-878d-a017ab5b8044",
+            "itemID": 34,
+            "__type": "CatalogEntry"
+        },
+        "mDescriptionTraKey": "Jade_Portrait_Description_Shen_LoR_01",
+        "{55bb9b57}": 33,
+        "{ff3c9ff8}": "{e15eb251}",
+        "image": {
+            "image": "ASSETS/Characters/Jade_Shen/Skins/Base/Jade_ShenLoadScreen_LoR_01.tex",
+            "__type": "CensoredImage"
+        },
+        "__type": "{3018b0da}"
     },
     "Characters/Jade_Shen/CharacterRecords/Root": {
         "mCharacterName": "Jade_Shen",

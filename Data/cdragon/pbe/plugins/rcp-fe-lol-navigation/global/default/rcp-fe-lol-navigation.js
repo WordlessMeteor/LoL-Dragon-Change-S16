@@ -25513,7 +25513,8 @@
                 r = {
                     classic_launch: 1
                 },
-                l = {
+                l = ["classicFreeRewardedSkinsCount", "ipLaunchBonusPerWin"],
+                c = {
                     showTooltip: function(e, t = i.lolUikit) {
                         t.getTooltipManager().show(e)
                     },
@@ -25521,8 +25522,8 @@
                         t.getTooltipManager().hide(e)
                     },
                     _displayTooltipTemporary(e) {
-                        l.showTooltip(e), setTimeout((function() {
-                            l.hideTooltip(e)
+                        c.showTooltip(e), setTimeout((function() {
+                            c.hideTooltip(e)
                         }), 4e3)
                     },
                     addTooltip: function(e, t) {
@@ -25598,12 +25599,15 @@
                     _getProgramSortPriority: function(e) {
                         return r[e.toLowerCase()] ?? 0
                     },
+                    _hasXboxLoyaltySource: function(e) {
+                        return Object.keys(e?.loyaltySources || {}).some((e => "xbox" === e.toLowerCase()))
+                    },
                     _applyClassicRewardsOverride: function(e) {
                         const t = this.classicRewardsOverride;
                         if (!t || "object" != typeof t || !Object.keys(t).length) return e;
                         const n = Object.assign({}, e, t),
                             i = Object.assign({}, e?.loyaltySources, t?.loyaltySources);
-                        return Object.keys(i).length && (n.loyaltySources = i), n
+                        return Object.keys(i).length && (n.loyaltySources = i), this._hasXboxLoyaltySource(e) && l.forEach((e => delete n[e])), n
                     },
                     _buildRewardsBody: function(e, t) {
                         let n;
@@ -25649,8 +25653,8 @@
                         return s[a] = t, "<br>" + i.tra.formatString(n, s)
                     }
                 };
-            var c = l;
-            t.default = c
+            var d = c;
+            t.default = d
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {

@@ -242,11 +242,11 @@
             };
             t.JADE_HOME_TAB_IDS = R;
             t.JADE_NAV_ROUTES_CONFIG_PATH = "/lol-client-config/v3/client-config/lol.client_settings.jade.navRoutes";
-            const j = Object.fromEntries(Object.entries(D).map((([e, t]) => [t, {
+            const L = Object.fromEntries(Object.entries(D).map((([e, t]) => [t, {
                 key: e,
                 enabled: !0
             }])));
-            t.DEFAULT_JADE_NAV_ROUTES_CONFIG = j
+            t.DEFAULT_JADE_NAV_ROUTES_CONFIG = L
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2056,7 +2056,7 @@
                 setupController(e, t) {
                     this._super(e, t);
                     const n = this.get("loadoutsService");
-                    n && n.refreshMasteryLoadoutFromRemote(), s.Ember.run.scheduleOnce("afterRender", e, "_initPages")
+                    n && n.refreshMasteryLoadoutFromRemote(), e.set("currentPage", null), s.Ember.run.scheduleOnce("afterRender", e, "_initPages")
                 },
                 actions: {
                     willTransition(e) {
@@ -4607,7 +4607,7 @@
                     n && this._performSelectPage(n)
                 },
                 _performSelectPage(e) {
-                    o.MASTERY_SFX.buttonPress.play(), this.get("pages").forEach((e => s.Ember.set(e, "current", !1))), s.Ember.set(e, "current", !0), this.set("currentPage", e), this.get("loadoutsService").setActiveMasteryPage(e.id)
+                    o.MASTERY_SFX.buttonPress.play(), this.get("pages").forEach((e => s.Ember.set(e, "current", !1))), s.Ember.set(e, "current", !0), this.set("currentPage", e), this.get("loadoutsService").setAndPersistActiveMasteryPage(e.id)
                 },
                 revertPage() {
                     const e = this.get("currentPage");
@@ -4877,10 +4877,10 @@
                 getPointsInTreeForMasteryPage(e, t) {
                     let n = 0;
                     const s = this.get("treeByMasteryId");
-                    return Object.keys(t || {}).forEach((a => {
+                    return s ? (Object.keys(t || {}).forEach((a => {
                         const o = s.get(a);
                         e === o && (n += t[a])
-                    })), n
+                    })), n) : 0
                 },
                 getMasteriesGameDataPromise() {
                     return this.get("masteriesGameDataPromise") ? this.get("masteriesGameDataPromise") : s.db.get("/lol-game-data/assets/v1/jade-mastery-display.json")
@@ -5575,18 +5575,18 @@
                     tra: A
                 } = n, M = (0, o.getItemCost)(e), O = a.get(e.id), D = O ? O.toUpperCase() : null, R = D ? d[D] : null;
                 if (null == M && !D) return null;
-                const j = (0, o.getPricesWithIcons)(e, h),
-                    L = j.length > 0 ? j : r.get(O) || [],
-                    N = L.find((e => e.currency !== p)),
-                    B = N?.currency ?? L[0]?.currency ?? (0, o.getItemCurrency)(e),
+                const L = (0, o.getPricesWithIcons)(e, h),
+                    j = L.length > 0 ? L : r.get(O) || [],
+                    N = j.find((e => e.currency !== p)),
+                    B = N?.currency ?? j[0]?.currency ?? (0, o.getItemCurrency)(e),
                     F = h[B],
-                    U = N?.cost ?? M ?? L[0]?.cost ?? null,
+                    U = N?.cost ?? M ?? j[0]?.cost ?? null,
                     H = [...s.get(e.id) || []],
                     V = H.includes(u.PORTRAITS?.ID),
                     q = e.overrideTileSize || (V ? "tall-tile" : null),
-                    Y = e.purchaseUnits?.[0]?.fulfillment,
-                    G = Y?.itemId || Y?.itemInstanceId || null,
-                    W = V && T && G && T.get(G) || "",
+                    G = e.purchaseUnits?.[0]?.fulfillment,
+                    Y = G?.itemId || G?.itemInstanceId || null,
+                    W = V && T && Y && T.get(Y) || "",
                     K = !!W,
                     J = (0, l.getRequirementText)(e, I),
                     $ = E.has(e.inventoryTypeId),
@@ -5619,7 +5619,7 @@
                         hasDiscount: ae,
                         discountPercent: oe,
                         discountLabel: le
-                    } = (0, o.getDiscountInfo)(L),
+                    } = (0, o.getDiscountInfo)(j),
                     ie = (0, i.getDisplayType)(e, A),
                     re = !!R,
                     ce = R ? (0, o.formatFiatPrice)(R.realAmountCents, R.realCurrencyCode) : null,
@@ -5635,16 +5635,16 @@
                     description: e.itemDescription,
                     index: t,
                     cost: he,
-                    originalCost: null != ue ? ue : N?.originalCost ?? L[0]?.originalCost ?? U,
+                    originalCost: null != ue ? ue : N?.originalCost ?? j[0]?.originalCost ?? U,
                     bundleSavings: pe,
                     currency: B,
                     currencyIconPath: F ? F.iconPath : null,
-                    prices: L.length > 1 ? L : null,
-                    hasMultiplePrices: L.length > 1,
+                    prices: j.length > 1 ? j : null,
+                    hasMultiplePrices: j.length > 1,
                     hasDiscount: ae && !me,
                     discountPercent: oe,
                     discountLabel: le,
-                    salePrices: ae && !me ? L : null,
+                    salePrices: ae && !me ? j : null,
                     iconUrl: g(e.id) || e.tilePath || e.splashPath || null,
                     tileSize: q,
                     tileSizeClass: q ? "jade-tile-" + q : "",
@@ -5668,8 +5668,8 @@
                     runeType: e.inventoryTypeId || null,
                     showClassicExclusiveFlag: S(e, C),
                     needsSkinPrereq: !(!e.isChroma || !(e.prerequisites || []).some((e => "NOT_SATISFIED" === e.status))),
-                    hasBlueEssencePrice: L.some((e => e.currency === p)),
-                    costBE: (L.find((e => e.currency === p)) || {}).cost || 0,
+                    hasBlueEssencePrice: j.some((e => e.currency === p)),
+                    costBE: (j.find((e => e.currency === p)) || {}).cost || 0,
                     hasFiatPrice: re,
                     fiatPriceFormatted: ce,
                     fiatPricePointId: R ? R.id : null,
@@ -6399,7 +6399,7 @@
                                 amount: M,
                                 name: u.get("battlepass_inventory_type_voting_power")
                             })), D = A ? u.get("battlepass_inventory_type_voting_power") : w ? u.get("battlepass_inventory_type_currency") : (0, c.getDisplayType)(e, u);
-                            const j = (0, c.getLocalTypeImage)(e);
+                            const L = (0, c.getLocalTypeImage)(e);
                             return {
                                 id: e.id,
                                 catalogItem: e,
@@ -6423,8 +6423,8 @@
                                 tileVideoPath: d && !x && _[I || ""] ? "/fe/lol-jade/videos/battlepass/" + _[I || ""] : null,
                                 purchaseLimitReached: y,
                                 canAfford: k,
-                                iconUrl: j || e.tilePath || null,
-                                previewUrl: j || e.splashPath || e.tilePath || null,
+                                iconUrl: L || e.tilePath || null,
+                                previewUrl: L || e.splashPath || e.tilePath || null,
                                 hasFullScreenSplash: (0, c.hasFullScreenSplash)(e)
                             }
                         })),
@@ -7753,7 +7753,7 @@
                 YELLOW: o.INVENTORY_TYPES.RUNE_SEAL,
                 BLUE: o.INVENTORY_TYPES.RUNE_GLYPH,
                 QUINT: o.INVENTORY_TYPES.RUNE_QUINTESSENCE
-            }, p = o.INVENTORY_TYPES.RUNE_PAGE, h = o.INVENTORY_TYPES.MASTERY, g = o.INVENTORY_TYPES.MASTERY_PAGE, _ = r({
+            }, p = o.INVENTORY_TYPES.RUNE_PAGE, h = o.INVENTORY_TYPES.MASTERY, g = o.INVENTORY_TYPES.MASTERY_PAGE, _ = "ACTIVE_MASTERY_PAGE", f = r({
                 Ember: i,
                 websocket: c().getSocket(),
                 logPrefix: "service:loadouts",
@@ -7768,7 +7768,7 @@
                     }
                 }
             });
-            var f = i.Service.extend(_, {
+            var v = i.Service.extend(f, {
                 summonersJourneyService: i.inject.service("summoners-journey"),
                 accountLoadout: i.computed.readOnly("collectionLoadout.firstObject"),
                 accountLevel: i.computed.reads("summonersJourneyService.currentLevel"),
@@ -7785,6 +7785,7 @@
                 _runeSaveTimer: null,
                 localMasteryLoadout: null,
                 currentMasteryPageNumber: 1,
+                _activeMasteryPageSaveTimer: null,
                 accountLoadoutDidChange: i.observer("accountLoadout", (function() {
                     const e = this.get("accountLoadout");
                     if (e && !this.get("localRuneLoadout")) {
@@ -8099,7 +8100,7 @@
                     if (!n) return;
                     for (let t = 1; t <= 30; t++) {
                         const s = `MASTERY_PAGE_${e}_MASTERY_${t}`;
-                        n.get(s) && n.set(s, {
+                        n.set(s, {
                             itemId: -1,
                             contentId: "",
                             inventoryType: h,
@@ -8224,6 +8225,21 @@
                         data: {}
                     }), this.set("currentMasteryPageNumber", e))
                 },
+                setAndPersistActiveMasteryPage(e) {
+                    this.setActiveMasteryPage(e);
+                    const t = this.get("accountLoadout.loadout");
+                    t && i.set(t, _, {
+                        itemId: e,
+                        contentId: "",
+                        inventoryType: g
+                    }), this._activeMasteryPageSaveTimer && i.run.cancel(this._activeMasteryPageSaveTimer), this._activeMasteryPageSaveTimer = i.run.later(this, (function() {
+                        this._activeMasteryPageSaveTimer = null;
+                        const e = this.get("accountLoadout.id");
+                        e && this.setActiveDemaciaPage(e, this.get("currentMasteryPageNumber"), g, _).catch((e => {
+                            m.error("Failed to persist active mastery page:", e)
+                        }))
+                    }), 500)
+                },
                 getActiveMasteryPage() {
                     this.get("remoteMasteryLoadout");
                     const e = this.get("localMasteryLoadout");
@@ -8250,19 +8266,23 @@
                 },
                 setActiveDemaciaPage(e, t, n, a) {
                     const o = {
-                        id: e,
-                        loadout: {
-                            [a]: {
-                                contentId: "",
-                                inventoryType: n,
-                                itemId: t
+                            contentId: "",
+                            inventoryType: n,
+                            itemId: t
+                        },
+                        l = {
+                            id: e,
+                            loadout: {
+                                [a]: o
                             }
-                        }
-                    };
-                    return s.db.patch(`/lol-loadouts/v4/loadouts/${e}`, o)
+                        };
+                    return s.db.patch(`/lol-loadouts/v4/loadouts/${e}`, l).then((e => {
+                        const n = this.get("accountLoadout.loadout");
+                        return n && i.set(n, a, o), a === _ ? this.setActiveMasteryPage(t) : "ACTIVE_RUNE_PAGE" === a && this.setActivePage(t), e
+                    }))
                 }
             });
-            t.default = f
+            t.default = v
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -9885,8 +9905,10 @@
             n(164);
             const r = o.INVENTORY_TYPES.RUNE_PAGE,
                 c = o.INVENTORY_TYPES.MASTERY_PAGE,
-                m = o.INVENTORY_TYPES.MASTERY;
-            var d = s.Ember.Component.extend({
+                m = o.INVENTORY_TYPES.MASTERY,
+                d = "/lol-loadouts/v4/loadouts/scope/account",
+                u = e => e ? Object.keys(e).filter((e => e.startsWith("MASTERY_PAGE_"))).length : 0;
+            var p = s.Ember.Component.extend({
                 layout: n(165),
                 classNames: ["jade-loadouts-edit-component"],
                 loadoutsService: s.Ember.inject.service("loadouts"),
@@ -9913,12 +9935,14 @@
                         this.set("masteryData", e)
                     })), this._gameflowObserver = e => {
                         const t = e?.phase;
-                        if ("ChampSelect" !== t && this.get("showMasteryEditModal")) {
+                        if ("ChampSelect" === t && "ChampSelect" !== this._lastGameflowPhase && this._refreshRemoteLoadoutSnapshot(), this._lastGameflowPhase = t, "ChampSelect" !== t && this.get("showMasteryEditModal")) {
                             const e = this.get("tooltipComponent");
                             e && e.send("hide"), this.set("showMasteryEditModal", !1), this.set("showConfirmationModal", !1), this.set("editingMasteryPage", null), this.set("_originalMasteries", null)
                         }
                     }, s.db.observe("/lol-gameflow/v1/session", this, this._gameflowObserver);
-                    this.get("runePagesService").getRuneGameDataPromise().then((e => this.set("runes", e)))
+                    this.get("runePagesService").getRuneGameDataPromise().then((e => this.set("runes", e))), this._refreshRemoteLoadoutSnapshot(), this._accountLoadoutObserver = e => {
+                        this._applyRemoteLoadouts(e)
+                    }, s.db.observe(d, this, this._accountLoadoutObserver)
                 },
                 _injectModalStyles: s.Ember.observer("showMasteryEditModal", (function() {
                     this.get("showMasteryEditModal") && s.Ember.run.scheduleOnce("afterRender", this, (function() {
@@ -9934,7 +9958,7 @@
                     }))
                 })),
                 willDestroyElement() {
-                    this._super(...arguments), this._gameflowObserver && s.db.unobserve("/lol-gameflow/v1/session", this, this._gameflowObserver)
+                    this._super(...arguments), this._gameflowObserver && s.db.unobserve("/lol-gameflow/v1/session", this, this._gameflowObserver), this._accountLoadoutObserver && s.db.unobserve(d, this, this._accountLoadoutObserver)
                 },
                 jadeRunePages: s.Ember.computed("accountLoadout.loadout", "accountLoadout.loadout.ACTIVE_RUNE_PAGE.itemId", "accountLoadout.loadout.RUNE_PAGE_1_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_2_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_3_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_4_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_5_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_6_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_7_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_8_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_9_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_10_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_11_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_12_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_13_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_14_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_15_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_16_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_17_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_18_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_19_NAME.data.name", "accountLoadout.loadout.RUNE_PAGE_20_NAME.data.name", (function() {
                     const e = this.get("accountLoadout");
@@ -10121,6 +10145,23 @@
                     }
                     return n
                 },
+                _remoteLoadoutSnapshot: null,
+                _refreshRemoteLoadoutSnapshot() {
+                    return s.db.get(d).then((e => this._applyRemoteLoadouts(e))).catch((() => {}))
+                },
+                _applyRemoteLoadouts(e) {
+                    if (this.get("isDestroyed") || this.get("isDestroying")) return;
+                    const t = e || [],
+                        n = this.get("accountLoadout.id"),
+                        s = (t.find((e => e && e.id === n)) || t[0] || {}).loadout || null;
+                    this.set("_remoteLoadoutSnapshot", s)
+                },
+                _getMasteryPageMasteries(e) {
+                    const t = this.get("_remoteLoadoutSnapshot");
+                    if (u(t) > 0) return this._readMasteryPageFromLoadout(t, e);
+                    const n = this.get("accountLoadout.loadout");
+                    return u(n) > 0 ? this._readMasteryPageFromLoadout(n, e) : this.get("loadoutsService").getMasteryPage(e) || {}
+                },
                 actions: {
                     selectJadeRunePage(e) {
                         this.send("hideTooltip");
@@ -10142,20 +10183,14 @@
                             t = (this.get("jadeMasteryPages") || []).find((t => t.id === e))?.name ?? s.tra.formatString("jade_mastery_default_page_name", {
                                 pageNum: e
                             }),
-                            n = this.get("loadoutsService");
-                        n.refreshMasteryLoadoutFromRemote();
-                        let a = n.getMasteryPage(e) || {};
-                        if (0 === Object.keys(a).length) {
-                            const t = this._readMasteryPageFromLoadout(this.get("accountLoadout.loadout"), e);
-                            Object.keys(t).length > 0 && (a = t)
-                        }
+                            n = this._getMasteryPageMasteries(e);
                         this.set("_originalMasteries", {
-                            ...a
+                            ...n
                         }), this.set("editingMasteryPage", {
                             id: e,
                             name: t,
                             masteries: {
-                                ...a
+                                ...n
                             }
                         }), this.set("showMasteryEditModal", !0)
                     },
@@ -10238,7 +10273,11 @@
                                 s.Ember.set(e, t, l[t])
                             })), this.get("loadoutsService").setMasteryPage(n, o), this.set("_originalMasteries", {
                                 ...o
-                            })
+                            });
+                            const t = this.get("_remoteLoadoutSnapshot");
+                            return t && Object.keys(l).forEach((e => {
+                                t[e] = l[e]
+                            })), this._refreshRemoteLoadoutSnapshot()
                         }))
                     },
                     resetAllPoints() {
@@ -10247,24 +10286,22 @@
                     showMasteryPageSummaryTooltip(e, t) {
                         const n = this.get("tooltipComponent");
                         if (!n || !e) return;
-                        const s = this.get("loadoutsService");
-                        s.refreshMasteryLoadoutFromRemote();
-                        const a = s.getMasteryPage(e.id) || {},
-                            o = this.get("masteryPagesService"),
-                            i = e.name || o.getDefaultPageName(e?.id),
-                            r = o.getPointsInTreeForMasteryPage(l.MASTERY_TREE_NAMES.offense, a),
-                            c = o.getPointsInTreeForMasteryPage(l.MASTERY_TREE_NAMES.defense, a),
-                            m = o.getPointsInTreeForMasteryPage(l.MASTERY_TREE_NAMES.utility, a);
+                        const s = this._getMasteryPageMasteries(e.id),
+                            a = this.get("masteryPagesService"),
+                            o = e.name || a.getDefaultPageName(e?.id),
+                            i = a.getPointsInTreeForMasteryPage(l.MASTERY_TREE_NAMES.offense, s),
+                            r = a.getPointsInTreeForMasteryPage(l.MASTERY_TREE_NAMES.defense, s),
+                            c = a.getPointsInTreeForMasteryPage(l.MASTERY_TREE_NAMES.utility, s);
                         n.send("show", {
                             contentComponent: "mastery-page-summary",
                             contentData: {
-                                pageName: i,
+                                pageName: o,
                                 offenseIcon: this.get("offenseIcon"),
-                                offensePoints: r,
+                                offensePoints: i,
                                 defenseIcon: this.get("defenseIcon"),
-                                defensePoints: c,
+                                defensePoints: r,
                                 utilityIcon: this.get("utilityIcon"),
-                                utilityPoints: m,
+                                utilityPoints: c,
                                 centerTitle: !0
                             },
                             x: t.clientX,
@@ -10320,7 +10357,7 @@
                     }
                 }
             });
-            t.default = d
+            t.default = p
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -14081,9 +14118,15 @@
                     const e = this.get("championData.roles")?.[0];
                     return e ? `/fe/lol-champion-details/role-icon-${e.toLowerCase()}.png` : ""
                 })),
-                isChampionOwned: s.Ember.computed("championData", (function() {
-                    return !!this.get("championData")?._championOwned
+                isChampionOwned: s.Ember.computed("championData", "champion", "lolInventoryService.ownedInventoryContent", (function() {
+                    return !!this.get("championData")?._championOwned || this._isChampionOwnedInInventory()
                 })),
+                _isChampionOwnedInInventory() {
+                    const e = this.get("champion");
+                    if (!e) return !1;
+                    const t = (this.get("lolInventoryService.ownedInventoryContent") || {})[h.CHAMPION];
+                    return !!t && [e.id, e.relatedPrimeItemId].filter((e => null != e)).some((e => t.has(e) || e >= 6e4 && t.has(e - 6e4)))
+                },
                 isTencentRegion: s.Ember.computed((function() {
                     return "TENCENT" === window.RIOT?.CONSTANTS?.regionLocale?.region
                 })),
@@ -14236,10 +14279,19 @@
                     }))
                 },
                 _onClassicSkinPurchased() {
+                    if (!this._backdropEl) return;
                     const e = this._openPurchaseSkin;
-                    this._backdropEl && e && (s.Ember.set(e, "ownership", Object.assign({}, e.ownership, {
-                        owned: !0
-                    })), this.notifyPropertyChange("championData"), this.notifyPropertyChange("selectedSkin"))
+                    if (e && s.Ember.set(e, "ownership", Object.assign({}, e.ownership, {
+                            owned: !0
+                        })), this._purchaseIncludedChampion()) {
+                        const e = this.get("championData");
+                        e && s.Ember.set(e, "_championOwned", !0)
+                    }
+                    this.notifyPropertyChange("championData"), this.notifyPropertyChange("selectedSkin"), this._refreshOwnership()
+                },
+                _purchaseIncludedChampion() {
+                    const e = this._openPurchaseCatalogItem;
+                    return !(e?.inventoryTypeId !== h.CHAMPION && !this._openPurchaseSkin?.isBase) || !!(e?.prerequisites || []).some((e => e?.catalogEntry?.inventoryTypeId === h.CHAMPION))
                 },
                 _openClassicExclusiveSkinPurchase(e, t) {
                     this._openPurchaseSkin = e, this._openPurchaseCatalogItem = t, this._ensureCurrencyIconData().then((() => {
@@ -14420,7 +14472,7 @@
                                 }
                                 if (t) {
                                     const t = this._findClassicSkinCatalogItem(e);
-                                    if (t) return this._openPurchaseSkin = e, this._openPurchaseModal(t), void this._refreshOwnership()
+                                    if (t) return this._openPurchaseSkin = e, this._openPurchaseCatalogItem = t, this._openPurchaseModal(t), void this._refreshOwnership()
                                 }
                                 const n = t ? a.PAW.MODAL_TYPES.CHROMA_MODAL : a.PAW.MODAL_TYPES.SKIN_VIEWER_MODAL;
                                 s.pawApi.createPAWModal({
@@ -14605,8 +14657,9 @@
                         t && t.skins && e.skins && (this._mergeOwnershipData(t, e), this.notifyPropertyChange("championData"), this._refreshOpenPurchaseModal())
                     })))
                 },
+                _preserveOwned: (e, t) => e?.owned && !t?.owned ? e : t,
                 _mergeOwnershipData(e, t) {
-                    s.Ember.set(e, "_championOwned", t.ownership?.owned);
+                    !t.ownership?.owned && e._championOwned || s.Ember.set(e, "_championOwned", t.ownership?.owned);
                     const n = this.get("ownershipMap") || {},
                         a = {};
                     t.skins.forEach((e => {
@@ -14615,9 +14668,9 @@
                         }))
                     })), this.set("ownershipMap", n), e.skins.forEach((e => {
                         const t = e.relatedPrimeItemId || e.id;
-                        n[t] && s.Ember.set(e, "ownership", n[t]), void 0 !== a[t] && s.Ember.set(e, "isBase", a[t]), (e.chromas || []).forEach((e => {
+                        n[t] && s.Ember.set(e, "ownership", this._preserveOwned(e.ownership, n[t])), void 0 !== a[t] && s.Ember.set(e, "isBase", a[t]), (e.chromas || []).forEach((e => {
                             const t = e.relatedPrimeItemId || e.id;
-                            s.Ember.set(e, "ownership", n[t])
+                            s.Ember.set(e, "ownership", this._preserveOwned(e.ownership, n[t]))
                         }))
                     }))
                 },
