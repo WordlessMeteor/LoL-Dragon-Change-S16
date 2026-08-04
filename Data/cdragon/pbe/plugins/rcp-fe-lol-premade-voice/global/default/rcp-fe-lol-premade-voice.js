@@ -1298,7 +1298,7 @@
                     default: e
                 }
             }
-            const l = "couldShowTeamVoiceFtux";
+            const l = "hasShownTeamVoiceFtux";
             var s = new class {
                 constructor() {
                     this._ftuxShown = !1, this._checkInProgress = !1
@@ -1307,9 +1307,9 @@
                     if (this._ftuxShown || this._checkInProgress) return !1;
                     this._checkInProgress = !0;
                     try {
-                        if (!await i.default.teamVoicePluginEnabled()) return !1;
                         const e = await a.default.navigationPreferences();
-                        return !(!e || !e.data || !0 !== e.data[l]) && (this._showFtux(), !0)
+                        if (!await i.default.teamVoicePluginEnabled()) return !1;
+                        return !0 !== e?.data?.[l] && (this._showFtux(), !0)
                     } catch (e) {
                         return r.logger.error(`team-voice-ftux-service -- error checking FTUX state: ${e}`), !1
                     } finally {
@@ -1334,7 +1334,7 @@
                 }
                 _persistSeen() {
                     a.default.patchNavigationPreferences({
-                        [l]: !1
+                        [l]: !0
                     }).catch((e => {
                         r.logger.error(`team-voice-ftux-service -- error saving FTUX preference: ${e}`)
                     }))

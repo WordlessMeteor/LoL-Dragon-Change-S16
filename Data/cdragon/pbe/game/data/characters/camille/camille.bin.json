@@ -34,23 +34,10 @@
     },
     "Characters/Camille/Spells/CamillePassiveAbility/CamillePassive": {
         "ObjectName": "CamillePassive",
-        "objectPath": "{57931293}",
+        "objectPath": "Characters/Camille/Spells/CamillePassiveAbility/CamillePassive",
         "mScriptName": "CamillePassive",
         "mSpell": {
             "DataValues": [
-                {
-                    "name": "MaxHPCoefficient",
-                    "values": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224
-                    ],
-                    "__type": "SpellDataValue"
-                },
                 {
                     "name": "ShieldDuration",
                     "values": [
@@ -69,21 +56,16 @@
                 "PassiveCooldown": {
                     "mFormulaParts": [
                         {
-                            "mLevel1Value": 18.0,
+                            "mLevel1Value": 14.0,
                             "mBreakpoints": [
                                 {
                                     "mLevel": 7,
-                                    "mAdditionalBonusAtThisLevel": -4.0,
+                                    "mAdditionalBonusAtThisLevel": -3.0,
                                     "__type": "Breakpoint"
                                 },
                                 {
                                     "mLevel": 13,
-                                    "mAdditionalBonusAtThisLevel": -4.0,
-                                    "__type": "Breakpoint"
-                                },
-                                {
-                                    "mLevel": 19,
-                                    "mAdditionalBonusAtThisLevel": -4.0,
+                                    "mAdditionalBonusAtThisLevel": -3.0,
                                     "__type": "Breakpoint"
                                 }
                             ],
@@ -97,8 +79,28 @@
                     "mFormulaParts": [
                         {
                             "mStat": 12,
-                            "mDataValue": "MaxHPCoefficient",
-                            "__type": "StatByNamedDataValueCalculationPart"
+                            "mSubpart": {
+                                "mLevel1Value": 0.10000000149011612,
+                                "mBreakpoints": [
+                                    {
+                                        "mLevel": 7,
+                                        "mAdditionalBonusAtThisLevel": 0.05000000074505806,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 13,
+                                        "mAdditionalBonusAtThisLevel": 0.05000000074505806,
+                                        "__type": "Breakpoint"
+                                    },
+                                    {
+                                        "mLevel": 19,
+                                        "mAdditionalBonusAtThisLevel": 0.05000000074505806,
+                                        "__type": "Breakpoint"
+                                    }
+                                ],
+                                "__type": "ByCharLevelBreakpointsCalculationPart"
+                            },
+                            "__type": "StatBySubPartCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -189,7 +191,7 @@
     },
     "Characters/Camille/Spells/CamillePassiveAbility/CamillePassiveCooldown": {
         "ObjectName": "CamillePassiveCooldown",
-        "objectPath": "{9bb2bf66}",
+        "objectPath": "Characters/Camille/Spells/CamillePassiveAbility/CamillePassiveCooldown",
         "mScriptName": "CamillePassiveCooldown",
         "__type": "SpellObject"
     },
@@ -223,7 +225,7 @@
     },
     "Characters/Camille/Spells/CamilleEAbility/CamilleERightMissile": {
         "ObjectName": "CamilleERightMissile",
-        "objectPath": "{12461f6d}",
+        "objectPath": "Characters/Camille/Spells/CamilleEAbility/CamilleERightMissile",
         "mScriptName": "CamilleERightMissile",
         "mSpell": {
             "flags": 4,
@@ -429,7 +431,7 @@
     },
     "Characters/Camille/Spells/CamilleEAbility/CamilleEStun": {
         "ObjectName": "CamilleEStun",
-        "objectPath": "{64f1d733}",
+        "objectPath": "Characters/Camille/Spells/CamilleEAbility/CamilleEStun",
         "mScriptName": "CamilleEStun",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CamilleEKnockback2",
@@ -439,7 +441,7 @@
     },
     "Characters/Camille/Spells/CamilleEAbility/CamilleEAttackSpeed": {
         "ObjectName": "CamilleEAttackSpeed",
-        "objectPath": "{74f42592}",
+        "objectPath": "Characters/Camille/Spells/CamilleEAbility/CamilleEAttackSpeed",
         "mScriptName": "CamilleEAttackSpeed",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CamilleEAttackSpeed",
@@ -449,7 +451,7 @@
     },
     "Characters/Camille/Spells/CamilleEAbility/CamilleEDash2": {
         "ObjectName": "CamilleEDash2",
-        "objectPath": "{a519fd03}",
+        "objectPath": "Characters/Camille/Spells/CamilleEAbility/CamilleEDash2",
         "mScriptName": "CamilleEDash2",
         "mSpell": {
             "flags": 4,
@@ -840,7 +842,7 @@
     },
     "Characters/Camille/Spells/CamilleEAbility/CamilleEOnWall": {
         "ObjectName": "CamilleEOnWall",
-        "objectPath": "{ad143122}",
+        "objectPath": "Characters/Camille/Spells/CamilleEAbility/CamilleEOnWall",
         "mScriptName": "CamilleEOnWall",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CamilleEOnWall",
@@ -1309,7 +1311,7 @@
     },
     "Characters/Camille/Spells/CamilleEAbility/CamilleELeftMissile": {
         "ObjectName": "CamilleELeftMissile",
-        "objectPath": "{b165eda2}",
+        "objectPath": "Characters/Camille/Spells/CamilleEAbility/CamilleELeftMissile",
         "mScriptName": "CamilleELeftMissile",
         "mSpell": {
             "flags": 4,
@@ -1525,7 +1527,7 @@
     },
     "Characters/Camille/Spells/CamilleEAbility/CamilleEMissile": {
         "ObjectName": "CamilleEMissile",
-        "objectPath": "{fa1dccd1}",
+        "objectPath": "Characters/Camille/Spells/CamilleEAbility/CamilleEMissile",
         "mScriptName": "CamilleEMissile",
         "mSpell": {
             "flags": 4,
@@ -2204,7 +2206,7 @@
     },
     "Characters/Camille/Spells/CamilleQAbility/CamilleQPrimingComplete": {
         "ObjectName": "CamilleQPrimingComplete",
-        "objectPath": "{322fb242}",
+        "objectPath": "Characters/Camille/Spells/CamilleQAbility/CamilleQPrimingComplete",
         "mScriptName": "CamilleQPrimingComplete",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CamilleQPrimingComplete",
@@ -2214,7 +2216,7 @@
     },
     "Characters/Camille/Spells/CamilleQAbility/CamilleQSpeed": {
         "ObjectName": "CamilleQSpeed",
-        "objectPath": "{4c52a00a}",
+        "objectPath": "Characters/Camille/Spells/CamilleQAbility/CamilleQSpeed",
         "mScriptName": "CamilleQSpeed",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CamilleQSpeed",
@@ -2224,7 +2226,7 @@
     },
     "Characters/Camille/Spells/CamilleQAbility/CamilleQ2": {
         "ObjectName": "CamilleQ2",
-        "objectPath": "{60700907}",
+        "objectPath": "Characters/Camille/Spells/CamilleQAbility/CamilleQ2",
         "mScriptName": "CamilleQ2",
         "mSpell": {
             "flags": 4,
@@ -2468,7 +2470,7 @@
     },
     "Characters/Camille/Spells/CamilleQAbility/CamilleQPrimingStart": {
         "ObjectName": "CamilleQPrimingStart",
-        "objectPath": "{72aacc9f}",
+        "objectPath": "Characters/Camille/Spells/CamilleQAbility/CamilleQPrimingStart",
         "mScriptName": "CamilleQPrimingStart",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CamilleQPrimingStart",
@@ -2575,7 +2577,7 @@
     },
     "Characters/Camille/Spells/CamilleQAbility/CamilleQAttack": {
         "ObjectName": "CamilleQAttack",
-        "objectPath": "{caab9b87}",
+        "objectPath": "Characters/Camille/Spells/CamilleQAbility/CamilleQAttack",
         "mScriptName": "CamilleQAttack",
         "mSpell": {
             "flags": 4,
@@ -2687,13 +2689,13 @@
     },
     "Characters/Camille/Spells/CamilleAttackAnimationCycle": {
         "ObjectName": "CamilleAttackAnimationCycle",
-        "objectPath": "{4171c77d}",
+        "objectPath": "Characters/Camille/Spells/CamilleAttackAnimationCycle",
         "mScriptName": "CamilleAttackAnimationCycle",
         "__type": "SpellObject"
     },
     "Characters/Camille/Spells/CamilleRAbility/CamilleRRange": {
         "ObjectName": "CamilleRRange",
-        "objectPath": "{471ed848}",
+        "objectPath": "Characters/Camille/Spells/CamilleRAbility/CamilleRRange",
         "mScriptName": "CamilleRRange",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CamilleRRange",
@@ -2703,7 +2705,7 @@
     },
     "Characters/Camille/Spells/CamilleRAbility/CamilleRTether": {
         "ObjectName": "CamilleRTether",
-        "objectPath": "{6b9c174b}",
+        "objectPath": "Characters/Camille/Spells/CamilleRAbility/CamilleRTether",
         "mScriptName": "CamilleRTether",
         "mSpell": {
             "flags": 4,
@@ -3175,7 +3177,7 @@
     },
     "Characters/Camille/Spells/CamilleWAbility/CamilleW": {
         "ObjectName": "CamilleW",
-        "objectPath": "{4b07d6a3}",
+        "objectPath": "Characters/Camille/Spells/CamilleWAbility/CamilleW",
         "mScriptName": "CamilleW",
         "mSpell": {
             "flags": 4,
@@ -3257,13 +3259,13 @@
                 {
                     "name": "OuterConeMaxHPDamage",
                     "values": [
-                        0.054999999701976776,
-                        0.05999999865889549,
                         0.06499999761581421,
                         0.07000000029802322,
                         0.07500000298023224,
                         0.07999999821186066,
-                        0.08500000089406967
+                        0.08500000089406967,
+                        0.09000000357627869,
+                        0.0949999988079071
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -3426,13 +3428,13 @@
             ],
             "Cooldown": {
                 "values": [
-                    15.0,
-                    15.0,
-                    14.0,
-                    13.0,
+                    12.5,
                     12.0,
+                    11.5,
                     11.0,
-                    11.0
+                    10.5,
+                    10.0,
+                    9.5
                 ],
                 "__type": "{0a0eddc9}"
             },
@@ -3669,7 +3671,7 @@
     },
     "Characters/Camille/Spells/CamilleWAbility/CamilleWConeSlashSlow": {
         "ObjectName": "CamilleWConeSlashSlow",
-        "objectPath": "{54b52010}",
+        "objectPath": "Characters/Camille/Spells/CamilleWAbility/CamilleWConeSlashSlow",
         "mScriptName": "CamilleWConeSlashSlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CamilleWConeSlashSlow",
@@ -3679,13 +3681,13 @@
     },
     "Characters/Camille/Spells/CamilleVOManager": {
         "ObjectName": "CamilleVOManager",
-        "objectPath": "{804b5865}",
+        "objectPath": "Characters/Camille/Spells/CamilleVOManager",
         "mScriptName": "CamilleVOManager",
         "__type": "SpellObject"
     },
     "Characters/Camille/Spells/CamilleEnemyScouter": {
         "ObjectName": "CamilleEnemyScouter",
-        "objectPath": "{87067f3c}",
+        "objectPath": "Characters/Camille/Spells/CamilleEnemyScouter",
         "mScriptName": "CamilleEnemyScouter",
         "__type": "SpellObject"
     },
@@ -4683,7 +4685,7 @@
         "primaryAbilityResource": {
             "arType": 0,
             "{726ee5cd}": {
-                "baseValue": 339.0,
+                "baseValue": 375.0,
                 "__type": "ModifiableFloat"
             },
             "{6216bf7b}": {
