@@ -130,7 +130,7 @@
     },
     "Characters/Leblanc/Spells/LeblancEAbility/LeblancERoot": {
         "ObjectName": "LeblancERoot",
-        "objectPath": "{231f28d9}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancEAbility/LeblancERoot",
         "mScriptName": "LeblancERoot",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -332,6 +332,20 @@
                         }
                     ],
                     "__type": "SpellDataValueVector"
+                }
+            },
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        12.0,
+                        12.0,
+                        11.25,
+                        10.5,
+                        9.75,
+                        9.0,
+                        7.0
+                    ],
+                    "__type": "SpellEffectAmount"
                 }
             },
             "mSpellCalculations": {
@@ -603,7 +617,7 @@
     },
     "Characters/Leblanc/Spells/LeblancEAbility/LeblancEMissile": {
         "ObjectName": "LeblancEMissile",
-        "objectPath": "{b8987d6f}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancEAbility/LeblancEMissile",
         "mScriptName": "LeblancEMissile",
         "mSpell": {
             "flags": 4,
@@ -838,7 +852,7 @@
     },
     "Characters/Leblanc/Spells/LeblancEAbility/LeblancEBeam": {
         "ObjectName": "LeblancEBeam",
-        "objectPath": "{dd8b07d6}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancEAbility/LeblancEBeam",
         "mScriptName": "LeblancEBeam",
         "mBuff": {
             "mDescription": "game_buff_tooltip_LeblancEBeam",
@@ -848,7 +862,7 @@
     },
     "Characters/Leblanc/Spells/LeblancREAbility/LeblancRERoot": {
         "ObjectName": "LeblancRERoot",
-        "objectPath": "{2504c70f}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancREAbility/LeblancRERoot",
         "mScriptName": "LeblancRERoot",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -861,7 +875,7 @@
     },
     "Characters/Leblanc/Spells/LeblancREAbility/LeblancREMissile": {
         "ObjectName": "LeblancREMissile",
-        "objectPath": "{94b0f075}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancREAbility/LeblancREMissile",
         "mScriptName": "LeblancREMissile",
         "mSpell": {
             "flags": 4,
@@ -1283,7 +1297,7 @@
     },
     "Characters/Leblanc/Spells/LeblancREAbility/LeblancREBeam": {
         "ObjectName": "LeblancREBeam",
-        "objectPath": "{bd593ecc}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancREAbility/LeblancREBeam",
         "mScriptName": "LeblancREBeam",
         "mBuff": {
             "mDescription": "game_buff_tooltip_LeblancREBeam",
@@ -1414,26 +1428,26 @@
                         {
                             "name": "BaseDamage",
                             "values": [
-                                60.0,
-                                85.0,
-                                110.0,
-                                135.0,
-                                160.0,
-                                185.0,
-                                210.0
+                                80.0,
+                                105.0,
+                                130.0,
+                                155.0,
+                                180.0,
+                                205.0,
+                                230.0
                             ],
                             "__type": "SpellDataValue"
                         },
                         {
                             "name": "CooldownRefund",
                             "values": [
-                                0.6000000238418579,
-                                0.6000000238418579,
-                                0.6000000238418579,
-                                0.6000000238418579,
-                                0.6000000238418579,
-                                0.6000000238418579,
-                                0.6000000238418579
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0,
+                                1.0
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -1473,12 +1487,6 @@
                         {
                             "mLevel1Value": 10.0,
                             "mInitialBonusPerLevel": 8.0,
-                            "mBreakpoints": [
-                                {
-                                    "mLevel": 19,
-                                    "__type": "Breakpoint"
-                                }
-                            ],
                             "__type": "ByCharLevelBreakpointsCalculationPart"
                         }
                     ],
@@ -1701,7 +1709,7 @@
     },
     "Characters/Leblanc/Spells/LeblancQAbility/LeblancQMark": {
         "ObjectName": "LeblancQMark",
-        "objectPath": "{ec4a96a4}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancQAbility/LeblancQMark",
         "mScriptName": "LeblancQMark",
         "mSpell": {
             "mAlternateName": "LeblancQMark",
@@ -1945,7 +1953,7 @@
     },
     "Characters/Leblanc/Spells/LeblancRWAbility/LeblancRWReturn": {
         "ObjectName": "LeblancRWReturn",
-        "objectPath": "{8060d5c5}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancRWAbility/LeblancRWReturn",
         "mScriptName": "LeblancRWReturn",
         "mSpell": {
             "flags": 36,
@@ -2090,13 +2098,26 @@
     },
     "Characters/Leblanc/Spells/LeblancPAbility/LeblancP": {
         "ObjectName": "LeblancP",
-        "objectPath": "{30905009}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancPAbility/LeblancP",
         "mScriptName": "LeblancP",
         "mSpell": {
             "mAlternateName": "LeblancP",
             "DataValues": [
                 {
                     "name": "TooltipCooldown",
+                    "values": [
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Cooldown",
                     "values": [
                         60.0,
                         60.0,
@@ -2115,13 +2136,26 @@
                         {
                             "name": "TooltipCooldown",
                             "values": [
-                                10.0,
-                                10.0,
-                                10.0,
-                                10.0,
-                                10.0,
-                                10.0,
-                                10.0
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "Cooldown",
+                            "values": [
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0,
+                                5.0
                             ],
                             "__type": "SpellDataValue"
                         }
@@ -2132,13 +2166,13 @@
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0,
+                        5.0
                     ],
                     "__type": "SpellEffectAmount"
                 }
@@ -2253,7 +2287,7 @@
     },
     "Characters/Leblanc/Spells/LeblancWAbility/LeblancWReturn": {
         "ObjectName": "LeblancWReturn",
-        "objectPath": "{3f47cc2b}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancWAbility/LeblancWReturn",
         "mScriptName": "LeblancWReturn",
         "mSpell": {
             "flags": 36,
@@ -2419,7 +2453,7 @@
     },
     "Characters/Leblanc/Spells/LeblancWAbility/LeblancWMove": {
         "ObjectName": "LeblancWMove",
-        "objectPath": "{66a5f750}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancWAbility/LeblancWMove",
         "mScriptName": "LeblancWMove",
         "mSpell": {
             "flags": 4,
@@ -3077,7 +3111,7 @@
     },
     "Characters/Leblanc/Spells/LeblancRToggle": {
         "ObjectName": "LeblancRToggle",
-        "objectPath": "{4213f4f5}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancRToggle",
         "mScriptName": "LeblancRToggle",
         "mSpell": {
             "flags": 36,
@@ -3338,7 +3372,7 @@
     },
     "Characters/Leblanc/Spells/LeblancWReturnSFX": {
         "ObjectName": "LeblancWReturnSFX",
-        "objectPath": "{463da9ff}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancWReturnSFX",
         "mScriptName": "LeblancWReturnSFX",
         "mSpell": {
             "flags": 36,
@@ -3674,7 +3708,7 @@
     },
     "Characters/Leblanc/Spells/LeblancRQAbility/LeblancRQMark": {
         "ObjectName": "LeblancRQMark",
-        "objectPath": "{d309772e}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancRQAbility/LeblancRQMark",
         "mScriptName": "LeblancRQMark",
         "mSpell": {
             "mAlternateName": "LeblancRQMark",
@@ -3808,7 +3842,7 @@
     },
     "Characters/Leblanc/Spells/LeblancRWMove": {
         "ObjectName": "LeblancRWMove",
-        "objectPath": "{6661a3d3}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancRWMove",
         "mScriptName": "LeblancRWMove",
         "mSpell": {
             "flags": 4,
@@ -4132,7 +4166,7 @@
     },
     "Characters/Leblanc/Spells/LeblancRStealth": {
         "ObjectName": "LeblancRStealth",
-        "objectPath": "{a9730b0c}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancRStealth",
         "mScriptName": "LeblancRStealth",
         "mSpell": {
             "mAlternateName": "LeblancRStealth",
@@ -4149,7 +4183,7 @@
     },
     "Characters/Leblanc/Spells/LeblancPCooldown": {
         "ObjectName": "LeblancPCooldown",
-        "objectPath": "{b0942eda}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancPCooldown",
         "mScriptName": "LeblancPCooldown",
         "mBuff": {
             "mDescription": "buff_desc_LeblancPCooldown",
@@ -4159,7 +4193,7 @@
     },
     "Characters/Leblanc/Spells/LeblancQChain": {
         "ObjectName": "LeblancQChain",
-        "objectPath": "{b8b4a5a5}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancQChain",
         "mScriptName": "LeblancQChain",
         "mSpell": {
             "flags": 8,
@@ -4388,7 +4422,7 @@
     },
     "Characters/Leblanc/Spells/LeblancPMarkProc": {
         "ObjectName": "LeblancPMarkProc",
-        "objectPath": "{ba4df896}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancPMarkProc",
         "mScriptName": "LeblancPMarkProc",
         "mSpell": {
             "mAlternateName": "LeblancChaosOrb",
@@ -4402,7 +4436,7 @@
     },
     "Characters/Leblanc/Spells/LeblancPMark": {
         "ObjectName": "LeblancPMark",
-        "objectPath": "{bd47989a}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancPMark",
         "mScriptName": "LeblancPMark",
         "mSpell": {
             "mAlternateName": "LeblancPMark",
@@ -4815,7 +4849,7 @@
     },
     "Characters/Leblanc/Spells/LeblancRRQ": {
         "ObjectName": "LeblancRRQ",
-        "objectPath": "{d54fcdfc}",
+        "objectPath": "Characters/Leblanc/Spells/LeblancRRQ",
         "mScriptName": "LeblancRRQ",
         "mSpell": {
             "flags": 8,

@@ -20,7 +20,7 @@
     },
     "Characters/RekSai/Spells/RekSaiWBurrowedAbility/RekSaiWBurrowed": {
         "ObjectName": "RekSaiWBurrowed",
-        "objectPath": "{1531f5b5}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiWBurrowedAbility/RekSaiWBurrowed",
         "mScriptName": "RekSaiWBurrowed",
         "mSpell": {
             "flags": 4,
@@ -265,7 +265,7 @@
     },
     "Characters/RekSai/Spells/RekSaiEAbility/RekSaiEReady": {
         "ObjectName": "RekSaiEReady",
-        "objectPath": "{179e1548}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiEAbility/RekSaiEReady",
         "mScriptName": "RekSaiEReady",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiEReady",
@@ -275,7 +275,7 @@
     },
     "Characters/RekSai/Spells/RekSaiEAbility/RekSaiECooldown": {
         "ObjectName": "RekSaiECooldown",
-        "objectPath": "{94c62b0c}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiEAbility/RekSaiECooldown",
         "mScriptName": "RekSaiECooldown",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiECooldown",
@@ -456,6 +456,39 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "TunnelReuseCooldown",
+                            "values": [
+                                5.0,
+                                4.0,
+                                3.0,
+                                2.0,
+                                1.0,
+                                0.0,
+                                -1.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "DashCooldown",
+                            "values": [
+                                10.0,
+                                9.0,
+                                8.0,
+                                7.0,
+                                6.0,
+                                5.0,
+                                4.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "BaseDamageCalculation": {
                     "mFormulaParts": [
@@ -671,7 +704,7 @@
     },
     "Characters/RekSai/Spells/RekSaiEAbility/RekSaiESpellPassive": {
         "ObjectName": "RekSaiESpellPassive",
-        "objectPath": "{ba9243ee}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiEAbility/RekSaiESpellPassive",
         "mScriptName": "RekSaiESpellPassive",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -856,7 +889,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowedSlow": {
         "ObjectName": "RekSaiQBurrowedSlow",
-        "objectPath": "{1ba06604}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowedSlow",
         "mScriptName": "RekSaiQBurrowedSlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiQBurrowedSlow",
@@ -866,7 +899,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowedMis": {
         "ObjectName": "RekSaiQBurrowedMis",
-        "objectPath": "{91f37d54}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowedMis",
         "mScriptName": "RekSaiQBurrowedMis",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1065,7 +1098,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowed": {
         "ObjectName": "RekSaiQBurrowed",
-        "objectPath": "{a45bfe19}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowed",
         "mScriptName": "RekSaiQBurrowed",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1077,6 +1110,20 @@
                 "Trait_Low_Damage",
                 "Trait_AoE"
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        7.5,
+                        7.5,
+                        7.5,
+                        7.5,
+                        7.5,
+                        7.5,
+                        7.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mAnimationName": "Spell1_Burrowed",
             "mImgIconName": [
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_Q2.dds"
@@ -1193,7 +1240,7 @@
     },
     "Characters/RekSai/Spells/RekSaiPassiveAbility/RekSaiPRegen": {
         "ObjectName": "RekSaiPRegen",
-        "objectPath": "{1bf59e39}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiPassiveAbility/RekSaiPRegen",
         "mScriptName": "RekSaiPRegen",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiPRegen",
@@ -1203,7 +1250,7 @@
     },
     "Characters/RekSai/Spells/RekSaiPassiveAbility/RekSaiPassive": {
         "ObjectName": "RekSaiPassive",
-        "objectPath": "{92dcc335}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiPassiveAbility/RekSaiPassive",
         "mScriptName": "RekSaiPassive",
         "mSpell": {
             "mEffectAmount": [
@@ -1321,17 +1368,76 @@
                         5.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealPercentStartValue",
+                    "values": [
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealPercentEndValue",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "HealPercentStartValue",
+                            "values": [
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "HealPercentEndValue",
+                            "values": [
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "HealAmount": {
                     "mFormulaParts": [
                         {
                             "mStat": 12,
                             "mSubpart": {
-                                "mStartValue": 0.09000000357627869,
-                                "mEndValue": 0.20000000298023224,
-                                "__type": "ByCharLevelInterpolationCalculationPart"
+                                "{0589a59c}": "{af63b70d}",
+                                "{0b65bc23}": "{13b388d2}",
+                                "__type": "{ee18a47b}"
                             },
                             "__type": "StatBySubPartCalculationPart"
                         }
@@ -1471,7 +1577,7 @@
     },
     "Characters/RekSai/Spells/RekSaiBasicAttack6": {
         "ObjectName": "RekSaiBasicAttack6",
-        "objectPath": "{217e40c9}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiBasicAttack6",
         "mScriptName": "RekSaiBasicAttack6",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -1558,7 +1664,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQSpellPassive": {
         "ObjectName": "RekSaiQSpellPassive",
-        "objectPath": "{3228a74e}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQSpellPassive",
         "mScriptName": "RekSaiQSpellPassive",
         "mSpell": {
             "flags": 4,
@@ -1894,7 +2000,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack2": {
         "ObjectName": "RekSaiQAttack2",
-        "objectPath": "{66fb55b1}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack2",
         "mScriptName": "RekSaiQAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 24575,
@@ -2464,7 +2570,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack": {
         "ObjectName": "RekSaiQAttack",
-        "objectPath": "{f9cbe619}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack",
         "mScriptName": "RekSaiQAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24575,
@@ -2545,7 +2651,7 @@
     },
     "Characters/RekSai/Spells/RekSaiInCombat": {
         "ObjectName": "RekSaiInCombat",
-        "objectPath": "{33fbfd62}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiInCombat",
         "mScriptName": "RekSaiInCombat",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -3121,7 +3227,7 @@
     },
     "Characters/RekSai/Spells/RekSaiRAbility/RekSaiR": {
         "ObjectName": "RekSaiR",
-        "objectPath": "{f91b0077}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiRAbility/RekSaiR",
         "mScriptName": "RekSaiR",
         "mSpell": {
             "mAffectsTypeFlags": 4106,
@@ -3485,7 +3591,7 @@
     },
     "Characters/RekSai/Spells/RekSaiWAbility/RekSaiW": {
         "ObjectName": "RekSaiW",
-        "objectPath": "{6577bdad}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiWAbility/RekSaiW",
         "mScriptName": "RekSaiW",
         "mSpell": {
             "flags": 4,
@@ -3836,12 +3942,12 @@
                             "name": "BurrowedMoveSpeed",
                             "values": [
                                 10.0,
-                                15.0,
                                 20.0,
-                                25.0,
                                 30.0,
-                                35.0,
-                                40.0
+                                40.0,
+                                50.0,
+                                60.0,
+                                70.0
                             ],
                             "__type": "SpellDataValue"
                         },
@@ -4034,7 +4140,7 @@
     },
     "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWAttack": {
         "ObjectName": "RekSaiWAttack",
-        "objectPath": "{6b227d15}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWAttack",
         "mScriptName": "RekSaiWAttack",
         "mSpell": {
             "mAffectsTypeFlags": 6826,
@@ -4080,7 +4186,7 @@
     },
     "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWSpellPassive": {
         "ObjectName": "RekSaiWSpellPassive",
-        "objectPath": "{79df06f2}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWSpellPassive",
         "mScriptName": "RekSaiWSpellPassive",
         "mSpell": {
             "flags": 4,
@@ -4333,7 +4439,7 @@
     },
     "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWUnburrowLockout": {
         "ObjectName": "RekSaiWUnburrowLockout",
-        "objectPath": "{995eb096}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWUnburrowLockout",
         "mScriptName": "RekSaiWUnburrowLockout",
         "mSpell": {
             "mAffectsTypeFlags": 9221,
@@ -4440,7 +4546,7 @@
     },
     "Characters/RekSai/Spells/RekSaiKnockupImmune": {
         "ObjectName": "RekSaiKnockupImmune",
-        "objectPath": "{7aafb2b3}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiKnockupImmune",
         "mScriptName": "RekSaiKnockupImmune",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiKnockupImmune",
@@ -4458,7 +4564,7 @@
     },
     "Characters/RekSai/Spells/RekSaiJetSkiManager": {
         "ObjectName": "RekSaiJetSkiManager",
-        "objectPath": "{c2cc2558}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiJetSkiManager",
         "mScriptName": "RekSaiJetSkiManager",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -4482,13 +4588,13 @@
     },
     "Characters/RekSai/Spells/RekSaiRunCycleManager": {
         "ObjectName": "RekSaiRunCycleManager",
-        "objectPath": "{dced8a0b}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiRunCycleManager",
         "mScriptName": "RekSaiRunCycleManager",
         "__type": "SpellObject"
     },
     "Characters/RekSai/Spells/RekSaiEBurrowedAbility/RekSaiEBurrowed": {
         "ObjectName": "RekSaiEBurrowed",
-        "objectPath": "{e228f849}",
+        "objectPath": "Characters/RekSai/Spells/RekSaiEBurrowedAbility/RekSaiEBurrowed",
         "mScriptName": "RekSaiEBurrowed",
         "mSpell": {
             "flags": 4,
@@ -4497,6 +4603,20 @@
                 "PositiveEffect_MoveBlock",
                 "Trait_PlayerSelectedDashDirection"
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        9.0,
+                        9.0,
+                        8.0,
+                        7.0,
+                        6.0,
+                        5.0,
+                        4.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mAnimationName": "Idle1",
             "mImgIconName": [
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_E2.dds"
