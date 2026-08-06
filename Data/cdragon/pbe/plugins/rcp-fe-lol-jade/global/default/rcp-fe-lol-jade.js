@@ -867,22 +867,22 @@
                         CollectionPortraitsRoute: n(78).default,
                         ApplicationController: n(80).default,
                         HomeController: n(81).default,
-                        RunesController: n(87).default,
-                        MasteriesController: n(97).default,
-                        StoreController: n(100).default,
-                        BattlepassController: n(106).default,
-                        CollectionController: n(109).default,
-                        CollectionChampionsController: n(110).default,
-                        CollectionSpellsController: n(111).default,
-                        CollectionItemsController: n(113).default,
-                        CollectionPortraitsController: n(114).default,
-                        LoadoutsService: n(115).default,
-                        PatcherService: n(116).default,
-                        JadeHomePcsService: n(117).default,
-                        PageNameValidationService: n(92).default,
-                        MasteryPagesService: n(99).default,
-                        RunePagesService: n(118).default,
-                        SummonersJourneyService: n(120).default,
+                        RunesController: n(88).default,
+                        MasteriesController: n(98).default,
+                        StoreController: n(101).default,
+                        BattlepassController: n(107).default,
+                        CollectionController: n(110).default,
+                        CollectionChampionsController: n(111).default,
+                        CollectionSpellsController: n(112).default,
+                        CollectionItemsController: n(114).default,
+                        CollectionPortraitsController: n(115).default,
+                        LoadoutsService: n(116).default,
+                        PatcherService: n(117).default,
+                        JadeHomePcsService: n(118).default,
+                        PageNameValidationService: n(93).default,
+                        MasteryPagesService: n(100).default,
+                        RunePagesService: n(119).default,
+                        SummonersJourneyService: n(121).default,
                         ShoppefrontService: a.default.ShoppefrontComponents.ShoppefrontService,
                         ShoppefrontCatalogItemEnricherService: a.default.ShoppefrontComponents.ShoppefrontCatalogItemEnricherService,
                         ShoppefrontLootService: a.default.ShoppefrontComponents.ShoppefrontLootService,
@@ -893,141 +893,141 @@
                         PurchaseModalPrerequisitesComponent: a.default.ShoppefrontComponents.PurchaseModalPrerequisitesComponent,
                         DialogModalComponent: a.default.ShoppefrontComponents.DialogModalComponent,
                         ConfirmToastService: a.default.ShoppefrontComponents.ConfirmToastService,
-                        EventHubService: n(121).default,
-                        RegionInfoService: n(124).default,
-                        JadeSubNavComponent: n(125).default,
-                        CollectionSubNavComponent: n(128).default,
-                        RunePlateComponent: n(130).default,
-                        RuneInventoryComponent: n(133).default,
-                        MasteriesHeaderComponent: n(136).default,
-                        MasteryTreeComponent: n(139).default,
-                        MasteryNodeComponent: n(142).default,
-                        MasteryPrereqBarComponent: n(145).default,
-                        TooltipComponent: n(148).default,
-                        DemaciaSpellTooltipContentComponent: n(151).default,
-                        MasteryTooltipContentComponent: n(154).default,
-                        MasteryPageSummaryComponent: n(157).default,
-                        RunePageSummaryComponent: n(160).default,
+                        EventHubService: n(122).default,
+                        RegionInfoService: n(125).default,
+                        JadeSubNavComponent: n(126).default,
+                        CollectionSubNavComponent: n(129).default,
+                        RunePlateComponent: n(131).default,
+                        RuneInventoryComponent: n(134).default,
+                        MasteriesHeaderComponent: n(137).default,
+                        MasteryTreeComponent: n(140).default,
+                        MasteryNodeComponent: n(143).default,
+                        MasteryPrereqBarComponent: n(146).default,
+                        TooltipComponent: n(149).default,
+                        DemaciaSpellTooltipContentComponent: n(152).default,
+                        MasteryTooltipContentComponent: n(155).default,
+                        MasteryPageSummaryComponent: n(158).default,
+                        RunePageSummaryComponent: n(161).default,
                         JadeSelectComponent: n(44).default,
-                        JadeLoadoutsEditComponent: n(163).default,
-                        ChampionSelectCenterContainerComponent: n(166).default,
-                        ChampionsPaneComponent: n(169).default,
-                        SkinsPaneComponent: n(176).default,
-                        JadeTimerStatusComponent: n(179).default,
-                        JadeHomeShopGridComponent: n(182).default,
-                        JadeHomeErrorComponent: n(185).default,
-                        JadeSkinChromaModalComponent: n(188),
-                        JadeSkinChromaButtonComponent: n(191),
-                        SpellVideoWrapperComponent: n(194).default,
-                        DemaciaSummonerSpellSelectComponent: n(197).default,
-                        DemaciaFlyoutSelectorTriggerButtonComponent: n(201).default,
-                        DemaciaSpellPopupComponent: n(204).default,
-                        DemaciaFlyoutSelectorPopupButtonComponent: n(207).default,
-                        JadeWardSkinRendererComponent: n(210).default,
-                        JadeWardSkinPopupButtonComponent: n(213).default,
-                        JadeWardSkinSelectComponent: n(216).default,
-                        JadeWardSkinPopupComponent: n(219).default,
+                        JadeLoadoutsEditComponent: n(164).default,
+                        ChampionSelectCenterContainerComponent: n(167).default,
+                        ChampionsPaneComponent: n(170).default,
+                        SkinsPaneComponent: n(177).default,
+                        JadeTimerStatusComponent: n(180).default,
+                        JadeHomeShopGridComponent: n(183).default,
+                        JadeHomeErrorComponent: n(186).default,
+                        JadeSkinChromaModalComponent: n(189),
+                        JadeSkinChromaButtonComponent: n(192),
+                        SpellVideoWrapperComponent: n(195).default,
+                        DemaciaSummonerSpellSelectComponent: n(198).default,
+                        DemaciaFlyoutSelectorTriggerButtonComponent: n(202).default,
+                        DemaciaSpellPopupComponent: n(205).default,
+                        DemaciaFlyoutSelectorPopupButtonComponent: n(208).default,
+                        JadeWardSkinRendererComponent: n(211).default,
+                        JadeWardSkinPopupButtonComponent: n(214).default,
+                        JadeWardSkinSelectComponent: n(217).default,
+                        JadeWardSkinPopupComponent: n(220).default,
                         JadeEmoteInventoryComponent: n(46).default,
                         JadeEmoteWheelComponent: n(51).default,
                         JadeEmoteWheelSlotComponent: n(53).default,
                         JadeNavigationComponent: n(55).default,
-                        ItemBuildTreeComponent: n(222).default,
-                        ItemTooltipComponent: n(225).default,
-                        JadeSwapButtonComponent: n(227),
-                        JadeSwapDialogComponent: n(230).default,
-                        JadeBanShowcaseComponent: n(234).default,
-                        JadeProgressionWidgetComponent: n(237).default,
-                        BattlepassChaseModalComponent: n(240).default,
-                        JadeDropRatesModalComponent: n(243).default,
-                        ViewAbilitiesPaneComponent: n(245).default,
-                        JadeChampionCardComponent: n(248).default,
-                        JadeChampionModalComponent: n(251).default,
-                        JadeCollectionsChromaFlyoutContentComponent: n(254).default,
-                        JadeHomeVotingCardComponent: n(257).default,
-                        VotingSystemComponent: n(260).default,
-                        JadeFtuxParchmentModalComponent: n(263),
-                        PortraitCardComponent: n(266).default,
-                        JadeStoreHoloComponent: n(269).default,
-                        JadeFiatPurchaseModalComponent: n(272).default,
-                        JadeQuantityPurchaseModalComponent: n(275).default,
-                        JadeCelebrationVideoComponent: n(272).JadeCelebrationVideo,
-                        JadeDefaultTemplateComponent: n(278).default,
-                        JadePaginationComponent: n(282).default,
-                        JadeCtaComponent: n(285).default,
-                        PurchaseBundlesModalComponent: n(288).default,
-                        EventShopFallbackComponent: n(289).default,
+                        ItemBuildTreeComponent: n(223).default,
+                        ItemTooltipComponent: n(226).default,
+                        JadeSwapButtonComponent: n(228),
+                        JadeSwapDialogComponent: n(231).default,
+                        JadeBanShowcaseComponent: n(235).default,
+                        JadeProgressionWidgetComponent: n(238).default,
+                        BattlepassChaseModalComponent: n(241).default,
+                        JadeDropRatesModalComponent: n(244).default,
+                        ViewAbilitiesPaneComponent: n(246).default,
+                        JadeChampionCardComponent: n(249).default,
+                        JadeChampionModalComponent: n(252).default,
+                        JadeCollectionsChromaFlyoutContentComponent: n(255).default,
+                        JadeHomeVotingCardComponent: n(258).default,
+                        VotingSystemComponent: n(261).default,
+                        JadeFtuxParchmentModalComponent: n(264),
+                        PortraitCardComponent: n(267).default,
+                        JadeStoreHoloComponent: n(270).default,
+                        JadeFiatPurchaseModalComponent: n(273).default,
+                        JadeQuantityPurchaseModalComponent: n(276).default,
+                        JadeCelebrationVideoComponent: n(273).JadeCelebrationVideo,
+                        JadeDefaultTemplateComponent: n(279).default,
+                        JadePaginationComponent: n(283).default,
+                        JadeCtaComponent: n(286).default,
+                        PurchaseBundlesModalComponent: n(289).default,
+                        EventShopFallbackComponent: n(290).default,
                         DigitalGoodsDisclaimerComponent: a.default.SharedEmberComponents.DigitalGoodsDisclaimerComponent,
                         CallToActionPipComponent: a.default.SharedEmberComponents.CallToActionPipComponent,
                         ResetTimerComponent: a.default.SharedEmberComponents.ResetTimerComponent,
-                        InventoryTypeNameHelper: n(290).default,
-                        SafeImagePathHelper: n(291).default,
+                        InventoryTypeNameHelper: n(291).default,
+                        SafeImagePathHelper: n(292).default,
                         TEMPLATES: {
-                            application: n(292),
-                            home: n(293),
-                            runes: n(294),
-                            masteries: n(295),
-                            battlepass: n(296),
-                            store: n(297),
-                            collection: n(298),
-                            "collection/champions": n(299),
-                            "collection/spells": n(300),
-                            "collection/items": n(301),
-                            "collection/portraits": n(302),
-                            "components/jade-sub-nav": n(127),
-                            "components/collection-sub-nav": n(129),
-                            "components/rune-plate": n(132),
-                            "components/rune-inventory": n(135),
-                            "components/masteries-header": n(138),
-                            "components/mastery-tree": n(141),
-                            "components/mastery-node": n(144),
+                            application: n(293),
+                            home: n(294),
+                            runes: n(295),
+                            masteries: n(296),
+                            battlepass: n(297),
+                            store: n(298),
+                            collection: n(299),
+                            "collection/champions": n(300),
+                            "collection/spells": n(301),
+                            "collection/items": n(302),
+                            "collection/portraits": n(303),
+                            "components/jade-sub-nav": n(128),
+                            "components/collection-sub-nav": n(130),
+                            "components/rune-plate": n(133),
+                            "components/rune-inventory": n(136),
+                            "components/masteries-header": n(139),
+                            "components/mastery-tree": n(142),
+                            "components/mastery-node": n(145),
                             "components/jade-select": n(38),
-                            "components/jade-loadouts-edit": n(165),
-                            "components/rune-page-summary": n(162),
-                            "components/champion-select-center-container": n(168),
-                            "components/champions-pane": n(175),
-                            "components/skins-pane": n(178),
-                            "components/jade-timer-status": n(181),
-                            "components/spell-video-wrapper": n(196),
-                            "components/jade-skin-chroma-modal": n(190),
-                            "components/jade-skin-chroma-button": n(193),
-                            "components/jade-ward-skin-renderer": n(212),
-                            "components/jade-ward-skin-popup-button": n(215),
-                            "components/jade-ward-skin-select": n(218),
-                            "components/jade-ward-skin-popup": n(221),
-                            "components/demacia-summoner-spell-select": n(200),
-                            "components/demacia-flyout-selector-trigger-button": n(203),
-                            "components/demacia-summoner-spell-popup": n(206),
-                            "components/demacia-flyout-selector-popup-button": n(209),
-                            "components/jade-swap-button": n(229),
-                            "components/jade-swap-dialog": n(233),
-                            "components/jade-ban-showcase": n(236),
-                            "components/jade-progression-widget": n(239),
-                            "components/battlepass-chase-modal": n(242),
-                            "components/jade-drop-rates-modal": n(244),
-                            "components/view-abilities-pane": n(247),
-                            "components/jade-champion-card": n(250),
-                            "components/jade-champion-modal": n(253),
-                            "components/jade-home-voting-card": n(259),
-                            "components/voting-system": n(262),
-                            "components/jade-ftux-parchment-modal": n(265),
-                            "components/portrait-card": n(268),
-                            "components/jade-store-holo": n(271),
-                            "components/jade-default-template": n(281),
-                            "components/jade-pagination": n(284),
-                            "components/jade-cta": n(287),
-                            "components/jade-quantity-purchase-modal": n(277),
+                            "components/jade-loadouts-edit": n(166),
+                            "components/rune-page-summary": n(163),
+                            "components/champion-select-center-container": n(169),
+                            "components/champions-pane": n(176),
+                            "components/skins-pane": n(179),
+                            "components/jade-timer-status": n(182),
+                            "components/spell-video-wrapper": n(197),
+                            "components/jade-skin-chroma-modal": n(191),
+                            "components/jade-skin-chroma-button": n(194),
+                            "components/jade-ward-skin-renderer": n(213),
+                            "components/jade-ward-skin-popup-button": n(216),
+                            "components/jade-ward-skin-select": n(219),
+                            "components/jade-ward-skin-popup": n(222),
+                            "components/demacia-summoner-spell-select": n(201),
+                            "components/demacia-flyout-selector-trigger-button": n(204),
+                            "components/demacia-summoner-spell-popup": n(207),
+                            "components/demacia-flyout-selector-popup-button": n(210),
+                            "components/jade-swap-button": n(230),
+                            "components/jade-swap-dialog": n(234),
+                            "components/jade-ban-showcase": n(237),
+                            "components/jade-progression-widget": n(240),
+                            "components/battlepass-chase-modal": n(243),
+                            "components/jade-drop-rates-modal": n(245),
+                            "components/view-abilities-pane": n(248),
+                            "components/jade-champion-card": n(251),
+                            "components/jade-champion-modal": n(254),
+                            "components/jade-home-voting-card": n(260),
+                            "components/voting-system": n(263),
+                            "components/jade-ftux-parchment-modal": n(266),
+                            "components/portrait-card": n(269),
+                            "components/jade-store-holo": n(272),
+                            "components/jade-default-template": n(282),
+                            "components/jade-pagination": n(285),
+                            "components/jade-cta": n(288),
+                            "components/jade-quantity-purchase-modal": n(278),
                             "components/jade-emote-inventory": n(39),
                             "components/jade-emote-wheel": n(40),
                             "components/jade-emote-wheel-slot": n(41),
                             "components/jade-navigation-component": n(42),
-                            "components/item-build-tree": n(224),
-                            "components/item-tooltip": n(226),
-                            "components/purchase-modal": n(303),
-                            "components/purchase-modal-payment-options": n(304),
-                            "components/purchase-modal-prerequisites": n(305),
-                            "components/dialog-modal": n(306),
-                            "components/purchase-bundles-modal": n(307),
-                            "components/event-shop-fallback": n(308)
+                            "components/item-build-tree": n(225),
+                            "components/item-tooltip": n(227),
+                            "components/purchase-modal": n(304),
+                            "components/purchase-modal-payment-options": n(305),
+                            "components/purchase-modal-prerequisites": n(306),
+                            "components/dialog-modal": n(307),
+                            "components/purchase-bundles-modal": n(308),
+                            "components/event-shop-fallback": n(309)
                         }
                     };
                     a.default.SharedEmberComponents.EmberCollectionApi.registerToFactoryDefinition(o), e.setFactoryDefinition(l, o, {
@@ -1035,13 +1035,13 @@
                     }), e.setFactoryDefinition("rcp-fe-lol-jade-battlepass-reward-celebration", {
                         tra: s,
                         ComponentFactory: a.default.ComponentFactory,
-                        RewardCelebrationComponent: n(309).default,
+                        RewardCelebrationComponent: n(310).default,
                         DigitalGoodsDisclaimerComponent: a.default.SharedEmberComponents.DigitalGoodsDisclaimerComponent
                     }), e.setFactoryDefinition({
                         name: "JadeRpTopupModalComponent",
                         tra: s,
                         ComponentFactory: t,
-                        JadeRpTopupModalComponent: n(312)
+                        JadeRpTopupModalComponent: n(313)
                     })
                 }
                 createJadeHomeComponent() {
@@ -1059,33 +1059,33 @@
                 static registerToFactoryDefinition(e) {
                     const t = Object.assign({}, e.TEMPLATES || {}, {
                         "components/jade-select": n(38),
-                        "components/demacia-emotes-edit": n(315),
-                        "components/demacia-loadouts-edit": n(165),
-                        "components/champion-select-center-container": n(168),
-                        "components/champions-pane": n(175),
-                        "components/skins-pane": n(178),
-                        "components/jade-timer-status": n(181),
-                        "components/jade-ward-skin-renderer": n(212),
-                        "components/jade-ward-skin-popup-button": n(215),
-                        "components/jade-ward-skin-select": n(218),
-                        "components/jade-ward-skin-popup": n(221),
-                        "components/demacia-summoner-spell-select": n(200),
-                        "components/demacia-flyout-selector-trigger-button": n(203),
-                        "components/demacia-summoner-spell-popup": n(206),
-                        "components/demacia-flyout-selector-popup-button": n(209),
-                        "components/demacia-summoner-array": n(316),
-                        "components/demacia-summoner-object": n(317),
-                        "components/demacia-skin-chroma-modal": n(190),
-                        "components/demacia-skin-chroma-button": n(193),
-                        "components/demacia-swap-button": n(229),
-                        "components/demacia-swap-dialog": n(233),
-                        "components/demacia-ban-showcase": n(236),
-                        "components/demacia-progression-widget": n(239),
-                        "components/view-abilities-pane": n(247),
-                        "components/purchase-modal": n(303),
-                        "components/purchase-modal-payment-options": n(304),
-                        "components/purchase-modal-prerequisites": n(305),
-                        "components/dialog-modal": n(306)
+                        "components/demacia-emotes-edit": n(316),
+                        "components/demacia-loadouts-edit": n(166),
+                        "components/champion-select-center-container": n(169),
+                        "components/champions-pane": n(176),
+                        "components/skins-pane": n(179),
+                        "components/jade-timer-status": n(182),
+                        "components/jade-ward-skin-renderer": n(213),
+                        "components/jade-ward-skin-popup-button": n(216),
+                        "components/jade-ward-skin-select": n(219),
+                        "components/jade-ward-skin-popup": n(222),
+                        "components/demacia-summoner-spell-select": n(201),
+                        "components/demacia-flyout-selector-trigger-button": n(204),
+                        "components/demacia-summoner-spell-popup": n(207),
+                        "components/demacia-flyout-selector-popup-button": n(210),
+                        "components/demacia-summoner-array": n(317),
+                        "components/demacia-summoner-object": n(318),
+                        "components/demacia-skin-chroma-modal": n(191),
+                        "components/demacia-skin-chroma-button": n(194),
+                        "components/demacia-swap-button": n(230),
+                        "components/demacia-swap-dialog": n(234),
+                        "components/demacia-ban-showcase": n(237),
+                        "components/demacia-progression-widget": n(240),
+                        "components/view-abilities-pane": n(248),
+                        "components/purchase-modal": n(304),
+                        "components/purchase-modal-payment-options": n(305),
+                        "components/purchase-modal-prerequisites": n(306),
+                        "components/dialog-modal": n(307)
                     });
                     return Object.assign(e, {
                         ShoppefrontService: a.default.ShoppefrontComponents.ShoppefrontService,
@@ -1093,54 +1093,54 @@
                         ShoppefrontLootService: a.default.ShoppefrontComponents.ShoppefrontLootService,
                         ShoppefrontLolInventoryService: a.default.ShoppefrontComponents.ShoppefrontLolInventoryService,
                         GameDataMapperService: a.default.ShoppefrontComponents.GameDataMapperService,
-                        ConfirmToastService: n(318).default,
-                        EventHubService: n(121).default,
-                        RegionInfoService: n(124).default,
+                        ConfirmToastService: n(319).default,
+                        EventHubService: n(122).default,
+                        RegionInfoService: n(125).default,
                         PurchaseModalComponent: a.default.ShoppefrontComponents.PurchaseModalComponent,
                         PurchaseModalPaymentOptionsComponent: a.default.ShoppefrontComponents.PurchaseModalPaymentOptionsComponent,
                         PurchaseModalPrerequisitesComponent: a.default.ShoppefrontComponents.PurchaseModalPrerequisitesComponent,
                         DialogModalComponent: a.default.ShoppefrontComponents.DialogModalComponent,
                         DigitalGoodsDisclaimerComponent: a.default.SharedEmberComponents.DigitalGoodsDisclaimerComponent,
                         JadeSelectComponent: n(44).default,
-                        DemaciaEmotesEditComponent: n(319),
-                        DemaciaLoadoutsEditComponent: n(163).default,
-                        MasteryTreeComponent: n(139).default,
-                        MasteryNodeComponent: n(142).default,
-                        MasteryPrereqBarComponent: n(145).default,
-                        MasteryTooltipContentComponent: n(154).default,
-                        MasteryPageSummaryComponent: n(157).default,
-                        RunePageSummaryComponent: n(160).default,
-                        TooltipComponent: n(148).default,
-                        DemaciaSpellTooltipContentComponent: n(151).default,
-                        ChampionSelectCenterContainerComponent: n(166).default,
-                        ChampionsPaneComponent: n(169).default,
-                        SkinsPaneComponent: n(176).default,
-                        DemaciaTimerStatusComponent: n(179).default,
-                        DemaciaSummonerArrayComponent: n(324).default,
-                        DemaciaSummonerObjectComponent: n(327).default,
-                        ViewAbilitiesPaneComponent: n(245).default,
-                        DemaciaSummonerSpellPopupComponent: n(204).default,
-                        DemaciaSummonerSpellSelectComponent: n(197).default,
-                        DemaciaFlyoutSelectorTriggerButtonComponent: n(201).default,
-                        DemaciaFlyoutSelectorPopupButtonComponent: n(207).default,
-                        DemaciaWardSkinRendererComponent: n(210).default,
-                        DemaciaWardSkinPopupButtonComponent: n(213).default,
-                        DemaciaWardSkinSelectComponent: n(216).default,
-                        DemaciaWardSkinPopupComponent: n(219).default,
-                        DemaciaSkinChromaModalComponent: n(188),
-                        DemaciaSkinChromaButtonComponent: n(191),
-                        DemaciaSwapButtonComponent: n(227),
-                        DemaciaSwapDialogComponent: n(230).default,
-                        DemaciaBanShowcaseComponent: n(234).default,
-                        DemaciaProgressionWidgetComponent: n(237).default,
-                        LoadoutsService: n(115).default,
-                        MasteryPagesService: n(99).default,
-                        RunePagesService: n(118).default,
-                        SummonersJourneyService: n(120).default,
-                        AndHelper: n(329).default,
-                        EqHelper: n(330).default,
-                        NotHelper: n(331).default,
-                        AddHelper: n(332).default,
+                        DemaciaEmotesEditComponent: n(320),
+                        DemaciaLoadoutsEditComponent: n(164).default,
+                        MasteryTreeComponent: n(140).default,
+                        MasteryNodeComponent: n(143).default,
+                        MasteryPrereqBarComponent: n(146).default,
+                        MasteryTooltipContentComponent: n(155).default,
+                        MasteryPageSummaryComponent: n(158).default,
+                        RunePageSummaryComponent: n(161).default,
+                        TooltipComponent: n(149).default,
+                        DemaciaSpellTooltipContentComponent: n(152).default,
+                        ChampionSelectCenterContainerComponent: n(167).default,
+                        ChampionsPaneComponent: n(170).default,
+                        SkinsPaneComponent: n(177).default,
+                        DemaciaTimerStatusComponent: n(180).default,
+                        DemaciaSummonerArrayComponent: n(325).default,
+                        DemaciaSummonerObjectComponent: n(328).default,
+                        ViewAbilitiesPaneComponent: n(246).default,
+                        DemaciaSummonerSpellPopupComponent: n(205).default,
+                        DemaciaSummonerSpellSelectComponent: n(198).default,
+                        DemaciaFlyoutSelectorTriggerButtonComponent: n(202).default,
+                        DemaciaFlyoutSelectorPopupButtonComponent: n(208).default,
+                        DemaciaWardSkinRendererComponent: n(211).default,
+                        DemaciaWardSkinPopupButtonComponent: n(214).default,
+                        DemaciaWardSkinSelectComponent: n(217).default,
+                        DemaciaWardSkinPopupComponent: n(220).default,
+                        DemaciaSkinChromaModalComponent: n(189),
+                        DemaciaSkinChromaButtonComponent: n(192),
+                        DemaciaSwapButtonComponent: n(228),
+                        DemaciaSwapDialogComponent: n(231).default,
+                        DemaciaBanShowcaseComponent: n(235).default,
+                        DemaciaProgressionWidgetComponent: n(238).default,
+                        LoadoutsService: n(116).default,
+                        MasteryPagesService: n(100).default,
+                        RunePagesService: n(119).default,
+                        SummonersJourneyService: n(121).default,
+                        AndHelper: n(330).default,
+                        EqHelper: n(331).default,
+                        NotHelper: n(332).default,
+                        AddHelper: n(333).default,
                         TEMPLATES: t
                     })
                 }
@@ -2572,14 +2572,15 @@
                 a = n(2),
                 o = n(82),
                 l = n(85),
-                i = n(86);
-            const r = "/lol-settings/v2/account/LCUPreferences/jade-ftux",
-                c = "jade-home",
-                m = "/lol-jade-dev/v1/force-error",
-                d = "/lol-jade-dev/v1/force-voting-error",
-                u = "/lol-jade-dev/v1/force-shop-error",
-                p = ["/fe/lol-jade/images/jade-home/jade-home-top-nav-bg-dark.svg", "/fe/lol-jade/images/jade-home/home-nav-dark-default.png", "/fe/lol-jade/images/jade-home/home-nav-dark-hover.png", "/fe/lol-jade/images/jade-home/home-nav-dark-disabled.png", "/fe/lol-jade/images/jade-home/home-nav-dark-selected.png", "/fe/lol-jade/images/jade-home/home-play-btn-default.png", "/fe/lol-jade/images/jade-home/home-play-btn-hover.png", "/fe/lol-jade/images/jade-home/home-play-btn-disabled.png"];
-            var h = s.Ember.Controller.extend(o.PurchaseModalMixin, {
+                i = n(86),
+                r = n(87);
+            const c = "/lol-settings/v2/account/LCUPreferences/jade-ftux",
+                m = "jade-home",
+                d = "/lol-jade-dev/v1/force-error",
+                u = "/lol-jade-dev/v1/force-voting-error",
+                p = "/lol-jade-dev/v1/force-shop-error",
+                h = ["/fe/lol-jade/images/jade-home/jade-home-top-nav-bg-dark.svg", "/fe/lol-jade/images/jade-home/home-nav-dark-default.png", "/fe/lol-jade/images/jade-home/home-nav-dark-hover.png", "/fe/lol-jade/images/jade-home/home-nav-dark-disabled.png", "/fe/lol-jade/images/jade-home/home-nav-dark-selected.png", "/fe/lol-jade/images/jade-home/home-play-btn-default.png", "/fe/lol-jade/images/jade-home/home-play-btn-hover.png", "/fe/lol-jade/images/jade-home/home-play-btn-disabled.png"];
+            var g = s.Ember.Controller.extend(o.PurchaseModalMixin, {
                 jadeHomePcs: s.Ember.inject.service("jade-home-pcs"),
                 patcher: s.Ember.inject.service("patcher"),
                 state: a.JADE_HOME_STATES.INACTIVE,
@@ -2643,13 +2644,13 @@
                     (e && this.get("isTencentReady") || !e && this.get("isFoundationReady")) && this._loadPageContent(), this._checkHomeFtux(), this._setupDevForceError()
                 },
                 _checkHomeFtux() {
-                    return s.db.get(r).then((e => {
+                    return s.db.get(c).then((e => {
                         if (this.isDestroying || this.isDestroyed) return;
                         !!e?.data?.hasSeenHomeFtux || this.set("_homeFtuxEligible", !0)
                     })).catch((() => {}))
                 },
                 _dismissHomeFtux() {
-                    return this.set("_homeFtuxEligible", !1), s.db.patch(r, {
+                    return this.set("_homeFtuxEligible", !1), s.db.patch(c, {
                         schemaVersion: 1,
                         data: {
                             hasSeenHomeFtux: !0
@@ -2674,8 +2675,8 @@
                     this.set("state", a.JADE_HOME_STATES.LOADING_ACTIVITY);
                     try {
                         const e = this.get("jadeHomePcs"),
-                            t = this.get("isTencentRegion") ? await e.getTencentJadeHome() : await e.getPCSPageContent(c);
-                        if (!t) throw new Error(`No content returned for ${c}`);
+                            t = this.get("isTencentRegion") ? await e.getTencentJadeHome() : await e.getPCSPageContent(m);
+                        if (!t) throw new Error(`No content returned for ${m}`);
                         const {
                             mastheadBlades: n,
                             voting: o,
@@ -2683,27 +2684,29 @@
                         } = (0, a.formatBlades)(t.blades);
                         if (!n || 0 === n.length) return void this.set("state", a.JADE_HOME_STATES.ERROR);
                         const r = n.filter((e => "image" === e?.header?.media?.type)).map((e => e?.header?.media?.url));
-                        await s.Ember.RSVP.all([(0, i.preloadImages)(r), (0, i.preloadImages)(p)]), this.set("pages", n), this.set("votingData", o), this.set("votingError", !!l), o && (this._loadVotingStatus(), this._loadVotingPower()), this.set("state", a.JADE_HOME_STATES.READY)
+                        await s.Ember.RSVP.all([(0, i.preloadImages)(r), (0, i.preloadImages)(h)]), this.set("pages", n), this.set("votingData", o), this.set("votingError", !!l), o && (this._loadVotingStatus(), this._loadVotingPower()), this.set("state", a.JADE_HOME_STATES.READY)
                     } catch (e) {
-                        s.logger.error(`Failed to load page content for ${c}`, e), this.set("state", a.JADE_HOME_STATES.ERROR)
+                        s.logger.error(`Failed to load page content for ${m}`, e), this.set("state", a.JADE_HOME_STATES.ERROR)
                     }
                 },
                 _loadVotingPower() {
-                    this._progressionBinding = (0, s.dataBinding)("/lol-progression", s.socket), this._progressionBinding.observe("/v1/groups/9ec524bf-3628-4f5a-9139-5db0eb650a3b/instanceData", this, (e => {
-                        this.set("votingPower", e?.counters?.[0]?.counterValue || 0)
+                    this._progressionBinding = (0, s.dataBinding)("/lol-progression", s.socket), (0, r.whenProgressionReady)(this, (() => {
+                        this._progressionBinding.observe("/v1/groups/9ec524bf-3628-4f5a-9139-5db0eb650a3b/instanceData", this, (e => {
+                            this.set("votingPower", e?.counters?.[0]?.counterValue || 0)
+                        }))
                     }))
                 },
                 _setupDevForceError() {
-                    s.db.observe(m, this, (e => {
+                    s.db.observe(d, this, (e => {
                         this.isDestroying || this.isDestroyed || (e ? this.set("state", a.JADE_HOME_STATES.ERROR) : this.get("isError") && (this.get("pages.length") ? this.set("state", a.JADE_HOME_STATES.READY) : this._loadPageContent()))
-                    })), s.db.observe(d, this, (e => {
-                        this.isDestroying || this.isDestroyed || this.set("votingError", !!e)
                     })), s.db.observe(u, this, (e => {
+                        this.isDestroying || this.isDestroyed || this.set("votingError", !!e)
+                    })), s.db.observe(p, this, (e => {
                         this.isDestroying || this.isDestroyed || this.set("forceShopError", !!e)
                     }))
                 },
                 willDestroy() {
-                    this._super(...arguments), s.db.unobserve(m, this), s.db.unobserve(d, this), s.db.unobserve(u, this)
+                    this._super(...arguments), (0, r.unobserveProgressionReady)(this), s.db.unobserve(d, this), s.db.unobserve(u, this), s.db.unobserve(p, this)
                 },
                 actions: {
                     openVotingSystem() {
@@ -2731,7 +2734,7 @@
                     }
                 }
             });
-            t.default = h
+            t.default = g
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -3117,16 +3120,35 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
+            }), t.unobserveProgressionReady = function(e) {
+                l().unobserve(o, e)
+            }, t.whenProgressionReady = function(e, t) {
+                const n = l();
+                n.observe(o, e, (s => {
+                    !s || e.isDestroying || e.isDestroyed || (n.unobserve(o, e), t())
+                }))
+            };
+            var s = n(1);
+            const a = "/lol-progression",
+                o = "/v1/ready";
+
+            function l() {
+                return (0, s.dataBinding)(a, (0, s.getProvider)().getSocket())
+            }
+        }, (e, t, n) => {
+            "use strict";
+            Object.defineProperty(t, "__esModule", {
+                value: !0
             }), t.default = void 0;
             var s = u(n(1)),
-                a = u(n(88)),
-                o = u(n(90)),
-                l = n(91),
-                i = n(92),
-                r = n(93),
-                c = n(94),
+                a = u(n(89)),
+                o = u(n(91)),
+                l = n(92),
+                i = n(93),
+                r = n(94),
+                c = n(95),
                 m = n(2),
-                d = n(95);
+                d = n(96);
 
             function u(e) {
                 return e && e.__esModule ? e : {
@@ -3137,7 +3159,7 @@
                 Ember: p,
                 logger: h,
                 db: g
-            } = s.default, _ = n(96), f = {
+            } = s.default, _ = n(97), f = {
                 [c.RUNE_TYPES.RED]: m.INVENTORY_TYPES.RUNE_MARK,
                 [c.RUNE_TYPES.YELLOW]: m.INVENTORY_TYPES.RUNE_SEAL,
                 [c.RUNE_TYPES.BLUE]: m.INVENTORY_TYPES.RUNE_GLYPH,
@@ -3495,7 +3517,7 @@
                 value: !0
             }), t.default = void 0;
             var s = o(n(1)),
-                a = o(n(89));
+                a = o(n(90));
 
             function o(e) {
                 return e && e.__esModule ? e : {
@@ -3594,7 +3616,7 @@
                 value: !0
             }), t.default = void 0;
             var s = a(n(1));
-            a(n(89));
+            a(n(90));
 
             function a(e) {
                 return e && e.__esModule ? e : {
@@ -4310,9 +4332,9 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(2),
-                o = n(98),
-                l = n(99),
-                i = n(92);
+                o = n(99),
+                l = n(100),
+                i = n(93);
             const r = "/lol-settings/v2/account/LCUPreferences/jade-ftux";
             var c = s.Ember.Controller.extend({
                 loadoutsService: s.Ember.inject.service("loadouts"),
@@ -4907,17 +4929,17 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                o = n(101),
+                o = n(102),
                 l = n(83),
                 i = n(61),
                 r = n(82),
-                c = n(102),
-                m = n(104),
-                d = (s = n(105)) && s.__esModule ? s : {
+                c = n(103),
+                m = n(105),
+                d = (s = n(106)) && s.__esModule ? s : {
                     default: s
                 },
                 u = n(2),
-                p = n(95),
+                p = n(96),
                 h = n(69);
             const g = "JADE_SHOP",
                 _ = {
@@ -5699,12 +5721,12 @@
             var s, a = (s = n(1)) && s.__esModule ? s : {
                     default: s
                 },
-                o = n(101),
+                o = n(102),
                 l = n(83),
-                i = n(103),
-                r = n(104),
-                c = n(95),
-                m = n(94);
+                i = n(104),
+                r = n(105),
+                c = n(96),
+                m = n(95);
             const {
                 INVENTORY_TYPE_IDS: d,
                 CATEGORIES: u
@@ -5774,6 +5796,8 @@
             }, t.isOwnedByInventory = function(e, t) {
                 const n = e.purchaseUnits?.[0]?.fulfillment?.itemId;
                 return !!n && !!t?.has?.(n)
+            }, t.isPortraitItem = function(e) {
+                return _.has(e?.inventoryTypeId)
             }, t.isPurchaseLimitReached = function(e, t) {
                 const n = e.purchaseLimits;
                 if (!n || 0 === n.length) return !1;
@@ -5811,7 +5835,8 @@
             t.EVENT_PASS_INVENTORY_TYPE_ID = p;
             const h = o.CHAMPION;
             t.CHAMPION_INVENTORY_TYPE_ID = h;
-            const g = new Set([o.CHAMPION_SKIN])
+            const g = new Set([o.CHAMPION_SKIN]),
+                _ = new Set([o.PORTRAIT, "0255df48-58ac-4cf5-a9d9-63e50c5124dd"])
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -5911,14 +5936,14 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(101),
+                a = n(102),
                 o = n(82),
-                l = n(107),
+                l = n(108),
                 i = n(61),
-                r = n(108),
-                c = n(103),
+                r = n(109),
+                c = n(104),
                 m = n(84),
-                d = n(102);
+                d = n(103);
             const u = "chase:",
                 p = "sku:",
                 h = "/lol-game-data-inventory/v1/items/contentIds",
@@ -6432,7 +6457,8 @@
                                 canAfford: k,
                                 iconUrl: j || e.tilePath || null,
                                 previewUrl: j || e.splashPath || e.tilePath || null,
-                                hasFullScreenSplash: (0, c.hasFullScreenSplash)(e)
+                                hasFullScreenSplash: (0, c.hasFullScreenSplash)(e),
+                                isPortrait: (0, c.isPortraitItem)(e)
                             }
                         })),
                         v = new Set;
@@ -6476,6 +6502,7 @@
                         hasUnmetPrerequisites: e.hasUnmetPrerequisites,
                         previewUrl: e.previewUrl,
                         hasFullScreenSplash: e.hasFullScreenSplash,
+                        isPortrait: e.isPortrait || !1,
                         catalogItem: e.catalogItem || null,
                         isChaseTagged: e.isChaseTagged || !1,
                         chaseCategoryId: e.chaseCategoryId || null
@@ -6563,7 +6590,8 @@
                     const o = e => ({
                         name: e.traTitle || "",
                         iconUrl: e.tilePath || null,
-                        previewUrl: e.splashPath || e.tilePath || null
+                        previewUrl: e.splashPath || e.tilePath || null,
+                        isPortrait: (0, c.isPortraitItem)(e)
                     });
                     for (const l of s) {
                         const s = e.find((e => e.categoryId === l));
@@ -6707,6 +6735,7 @@
                                 data: s.Ember.Object.create({
                                     name: e.name || "",
                                     iconUrl: e.previewUrl || e.iconUrl || "",
+                                    isPortrait: !!e.isPortrait,
                                     vignetteId: t,
                                     isKREnv: this.get("isKREnv")
                                 })
@@ -7060,8 +7089,8 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(112),
-                o = n(98),
+                a = n(113),
+                o = n(99),
                 l = s.Ember.Controller.extend({
                     selectedSpell: null,
                     lastFinishedVideo: null,
@@ -7738,7 +7767,7 @@
                         } s.default = e, n && n.set(e, s);
                     return s
                 }(n(1)),
-                a = n(93),
+                a = n(94),
                 o = n(2);
 
             function l(e) {
@@ -8408,17 +8437,17 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(94),
-                o = n(93),
-                l = r(n(119)),
-                i = r(n(89));
+                a = n(95),
+                o = n(94),
+                l = r(n(120)),
+                i = r(n(90));
 
             function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            const c = n(96);
+            const c = n(97);
             var m = s.Ember.Service.extend({
                 loadoutsService: s.Ember.inject.service("loadouts"),
                 init() {
@@ -8525,7 +8554,7 @@
             var s, a = (s = n(1)) && s.__esModule ? s : {
                     default: s
                 },
-                o = n(94);
+                o = n(95);
             const {
                 Ember: l
             } = a.default;
@@ -8561,22 +8590,25 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(1);
-            const a = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
-                o = `/lol-progression/v1/groups/${a}/configuration`,
-                l = `/lol-progression/v1/groups/${a}/instanceData`,
-                i = 30,
-                r = {
+            var s = n(1),
+                a = n(87);
+            const o = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
+                l = `/lol-progression/v1/groups/${o}/configuration`,
+                i = `/lol-progression/v1/groups/${o}/instanceData`,
+                r = 30,
+                c = {
                     MASTERY: 3,
                     VOTING: 5,
                     SUMMONERS_JOURNEY: 10
                 };
-            var c = s.Ember.Service.extend({
+            var m = s.Ember.Service.extend({
                 init() {
-                    this._super(...arguments), s.db.observe(o, this, this.handleProgressionTrackConfig), s.db.observe(l, this, this.handleProgressionInstanceData)
+                    this._super(...arguments), (0, a.whenProgressionReady)(this, (() => {
+                        s.db.observe(l, this, this.handleProgressionTrackConfig), s.db.observe(i, this, this.handleProgressionInstanceData)
+                    }))
                 },
                 willDestroy() {
-                    this._super(...arguments), s.db.unobserve(o, this), s.db.unobserve(l, this)
+                    this._super(...arguments), (0, a.unobserveProgressionReady)(this), s.db.unobserve(l, this), s.db.unobserve(i, this)
                 },
                 handleProgressionTrackConfig(e) {
                     this.set("classicLevelProgressionConfig", e)
@@ -8584,7 +8616,7 @@
                 handleProgressionInstanceData(e) {
                     this.set("classicLevelInstanceData", e)
                 },
-                getUnlockLevels: () => r,
+                getUnlockLevels: () => c,
                 xpTotal: s.Ember.computed("classicLevelInstanceData.counters.0.counterValue", (function() {
                     return this.get("classicLevelInstanceData.counters.0.counterValue") || 0
                 })),
@@ -8593,18 +8625,18 @@
                 })),
                 _buildThresholds(e) {
                     if (!e) return [];
-                    const t = (e.milestones || []).map((e => e && e.triggers && e.triggers[0] && e.triggers[0].triggerValue)).filter((e => "number" == typeof e)).sort(((e, t) => e - t)).slice(0, i),
+                    const t = (e.milestones || []).map((e => e && e.triggers && e.triggers[0] && e.triggers[0].triggerValue)).filter((e => "number" == typeof e)).sort(((e, t) => e - t)).slice(0, r),
                         n = e.repeat && e.repeat.repeatTriggers && e.repeat.repeatTriggers[0] && e.repeat.repeatTriggers[0].increaseBy || 0;
                     if (n > 0 && t.length > 0) {
                         let e = t[t.length - 1];
-                        for (; t.length < i;) e += n, t.push(e)
+                        for (; t.length < r;) e += n, t.push(e)
                     }
                     return t
                 },
                 levelForXpTotal(e, t) {
                     let n = 0;
                     for (let s = 0; s < e.length && t >= e[s]; s++) n = s + 1;
-                    return Math.min(n, i)
+                    return Math.min(n, r)
                 },
                 levelForXp(e) {
                     const t = this.get("milestoneThresholds") || [];
@@ -8622,31 +8654,31 @@
                     return e.length ? Math.max(1, this.levelForXpTotal(e, t)) : 1
                 })),
                 nextLevel: s.Ember.computed("currentLevel", (function() {
-                    return Math.min(i, this.get("currentLevel") + 1)
+                    return Math.min(r, this.get("currentLevel") + 1)
                 })),
                 isMaxLevel: s.Ember.computed("currentLevel", (function() {
-                    return this.get("currentLevel") >= i
+                    return this.get("currentLevel") >= r
                 })),
                 xpForNextLevel: s.Ember.computed("xpTotal", "milestoneThresholds", (function() {
                     const e = this.get("milestoneThresholds") || [],
                         t = this.get("xpTotal") || 0;
                     if (!e.length) return 100;
                     const n = this.levelForXpTotal(e, t);
-                    if (n >= i || n >= e.length) return 0;
+                    if (n >= r || n >= e.length) return 0;
                     const s = n > 0 ? e[n - 1] : 0;
                     return e[n] - s
                 })),
-                eligibleForMasteries: s.Ember.computed.gte("currentLevel", r.MASTERY),
-                eligibleForSummonersJourney: s.Ember.computed.gte("currentLevel", r.SUMMONERS_JOURNEY)
+                eligibleForMasteries: s.Ember.computed.gte("currentLevel", c.MASTERY),
+                eligibleForSummonersJourney: s.Ember.computed.gte("currentLevel", c.SUMMONERS_JOURNEY)
             });
-            t.default = c
+            t.default = m
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(122),
-                a = n(123),
+            var s = n(123),
+                a = n(124),
                 o = n(1);
             const l = e => {
                 const t = e?.eventInfo?.startDate,
@@ -9054,7 +9086,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.getRouteByEventHubType = t.getOfferPurchaseConstraints = t.getCategoryOffersId = t.default = void 0;
-            var s = n(122);
+            var s = n(123);
             const a = e => `event_shop_offers_category_${e.toLowerCase()}`;
             t.getCategoryOffersId = a;
             const o = e => {
@@ -9088,7 +9120,7 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var s = n(122),
+            var s = n(123),
                 a = n(1),
                 o = a.Ember.Service.extend({
                     init() {
@@ -9113,12 +9145,12 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(98);
-            n(126);
+                a = n(99);
+            n(127);
             var o = n(2),
                 l = s.Ember.Component.extend({
                     classNames: ["jade-sub-nav"],
-                    layout: n(127),
+                    layout: n(128),
                     classNameBindings: ["isParchment:jade-sub-nav--parchment"],
                     jadeNavRoutes: o.JADE_NAV_ROUTES,
                     navRoutesConfig: null,
@@ -9154,10 +9186,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(98),
+                a = n(99),
                 o = s.Ember.Component.extend({
                     classNames: ["jade-page-sub-nav", "jade-sub-nav--parchment"],
-                    layout: n(129),
+                    layout: n(130),
                     actions: {
                         playButtonSound() {
                             a.MASTERY_SFX.buttonPress.play()
@@ -9180,16 +9212,16 @@
             var s, a = (s = n(1)) && s.__esModule ? s : {
                     default: s
                 },
-                o = n(93),
-                l = n(91);
-            n(131);
+                o = n(94),
+                l = n(92);
+            n(132);
             const {
                 Ember: i
             } = a.default;
             var r = i.Component.extend({
                 classNames: ["rune-plate-component"],
                 classNameBindings: ["pageChanging:page-changing"],
-                layout: n(132),
+                layout: n(133),
                 loadoutsService: i.inject.service("loadouts"),
                 runeSlots: null,
                 runePicker: null,
@@ -9269,23 +9301,23 @@
                 value: !0
             }), t.default = void 0;
             var s = r(n(1)),
-                a = r(n(89)),
-                o = n(94),
-                l = n(93),
-                i = n(91);
+                a = r(n(90)),
+                o = n(95),
+                l = n(94),
+                i = n(92);
 
             function r(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(134);
+            n(135);
             const {
                 Ember: c
             } = s.default;
             var m = c.Component.extend({
                 classNames: ["rune-inventory-component"],
-                layout: n(135),
+                layout: n(136),
                 loadoutsService: c.inject.service("loadouts"),
                 runes: null,
                 runePicker: null,
@@ -9407,10 +9439,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(137);
+            n(138);
             var a = s.Ember.Component.extend({
                 classNames: ["masteries-header"],
-                layout: n(138),
+                layout: n(139),
                 pointsUsed: 0,
                 pages: null,
                 actions: {
@@ -9440,11 +9472,11 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(2);
-            n(140);
+            n(141);
             var o = s.Ember.Component.extend({
                 classNames: ["mastery-tree-component"],
                 classNameBindings: ["treeType"],
-                layout: n(141),
+                layout: n(142),
                 tree: null,
                 treeType: null,
                 currentPage: null,
@@ -9515,11 +9547,11 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(143);
+            n(144);
             var a = s.Ember.Component.extend({
                 classNames: ["mastery-node-component"],
                 classNameBindings: ["isAvailable:available", "isFullyAllocated:fully-allocated", "isLocked:locked", "isUsingOffImage:off-image"],
-                layout: n(144),
+                layout: n(145),
                 mastery: null,
                 masteries: null,
                 isUnlocked: !1,
@@ -9632,7 +9664,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(146);
+            n(147);
             var a = n(2);
             const o = "disabled",
                 l = "available",
@@ -9640,7 +9672,7 @@
             var r = s.Ember.Component.extend({
                 classNames: ["mastery-prereq-bar"],
                 classNameBindings: ["isLongBar:long-bar"],
-                layout: n(147),
+                layout: n(148),
                 targetMastery: null,
                 masteries: null,
                 allMasteries: null,
@@ -9696,13 +9728,13 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(149);
+            n(150);
             const a = 15;
             var o = s.Ember.Component.extend({
                 classNames: ["tooltip-component"],
                 classNameBindings: ["isVisible:show"],
                 attributeBindings: ["style"],
-                layout: n(150),
+                layout: n(151),
                 isVisible: !1,
                 _isPositioned: !1,
                 _positionSide: null,
@@ -9793,10 +9825,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(152);
+            n(153);
             var a = s.Ember.Component.extend({
                 classNames: ["demacia-spell-tooltip-content"],
-                layout: n(153)
+                layout: n(154)
             });
             t.default = a
         }, (e, t, n) => {
@@ -9815,11 +9847,11 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(155);
+            n(156);
             var a = s.Ember.Component.extend({
                 classNames: ["mastery-tooltip-content"],
                 classNameBindings: ["treeType", "state", "isCompact:compact", "isMaxRank:max-rank"],
-                layout: n(156),
+                layout: n(157),
                 name: s.Ember.computed.reads("data.name"),
                 rank: s.Ember.computed.reads("data.rank"),
                 description: s.Ember.computed.reads("data.description"),
@@ -9847,10 +9879,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(158);
+            n(159);
             var a = s.Ember.Component.extend({
                 classNames: ["mastery-page-summary"],
-                layout: n(159),
+                layout: n(160),
                 pageName: s.Ember.computed.reads("data.pageName"),
                 offenseIcon: s.Ember.computed.reads("data.offenseIcon"),
                 offensePoints: s.Ember.computed.reads("data.offensePoints"),
@@ -9879,9 +9911,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(161);
+            n(162);
             var a = s.Ember.Component.extend({
-                layout: n(162),
+                layout: n(163),
                 classNames: ["rune-page-summary"],
                 data: null,
                 pageName: s.Ember.computed.reads("data.pageName"),
@@ -9905,18 +9937,18 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(98),
+                a = n(99),
                 o = n(2),
-                l = n(99),
-                i = n(93);
-            n(164);
+                l = n(100),
+                i = n(94);
+            n(165);
             const r = o.INVENTORY_TYPES.RUNE_PAGE,
                 c = o.INVENTORY_TYPES.MASTERY_PAGE,
                 m = o.INVENTORY_TYPES.MASTERY,
                 d = "/lol-loadouts/v4/loadouts/scope/account",
                 u = e => e ? Object.keys(e).filter((e => e.startsWith("MASTERY_PAGE_"))).length : 0;
             var p = s.Ember.Component.extend({
-                layout: n(165),
+                layout: n(166),
                 classNames: ["jade-loadouts-edit-component"],
                 loadoutsService: s.Ember.inject.service("loadouts"),
                 summonersJourneyService: s.Ember.inject.service("summoners-journey"),
@@ -10382,10 +10414,10 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(2);
-            n(167);
+            n(168);
             const o = "/lol-settings/v2/account/LCUPreferences/jade-ftux";
             var l = s.Ember.Component.extend({
-                layout: n(168),
+                layout: n(169),
                 classNames: ["champion-select-center-container"],
                 classNameBindings: ["showSkinTabGlowing:champion-select-center-container--picking-skins", "shouldHideCenter:champion-select-center-container--ban-showcase", "isSpectating"],
                 shouldHideCenter: s.Ember.computed("summoner.isBanningNow", "isBanShowcase", (function() {
@@ -10511,22 +10543,22 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = c(n(170)),
-                o = n(171),
+                a = c(n(171)),
+                o = n(172),
                 l = n(2),
-                i = n(173),
-                r = c(n(105));
+                i = n(174),
+                r = c(n(106));
 
             function c(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
-            n(174);
+            n(175);
             var m = s.Ember.Component.extend({
                 classNames: ["champions-pane"],
                 classNameBindings: ["isSpectating"],
-                layout: n(175),
+                layout: n(176),
                 gridWidth: 500,
                 gridHeight: 400,
                 summoner: null,
@@ -10771,7 +10803,7 @@
             }), t.ViewChampionClass = void 0;
             var s = n(1),
                 a = n(2);
-            const o = n(172),
+            const o = n(173),
                 l = s.Ember.Object.extend({
                     id: s.Ember.computed.alias("champion.id"),
                     isFreeToPlay: s.Ember.computed("champion.id", "grid.freeToPlayByJadeId", (function() {
@@ -10914,9 +10946,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(177);
+            n(178);
             var a, o = n(2),
-                l = (a = n(105)) && a.__esModule ? a : {
+                l = (a = n(106)) && a.__esModule ? a : {
                     default: a
                 },
                 i = n(82);
@@ -10925,7 +10957,7 @@
                 m = "right",
                 d = 1e3;
             var u = s.Ember.Component.extend(i.PurchaseModalMixin, {
-                layout: n(178),
+                layout: n(179),
                 classNames: ["skins-pane"],
                 skinPurchaseService: s.Ember.inject.service("skin-purchase"),
                 carouselSkins: [],
@@ -11305,15 +11337,15 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(180);
+            n(181);
             var a, o = n(2),
-                l = (a = n(105)) && a.__esModule ? a : {
+                l = (a = n(106)) && a.__esModule ? a : {
                     default: a
                 };
             const i = "sfx-notifications";
             var r = s.Ember.Component.extend({
                 classNames: ["jade-timer-status"],
-                layout: n(181),
+                layout: n(182),
                 champSelectScreen: null,
                 summoner: null,
                 formattedTime: null,
@@ -11478,10 +11510,10 @@
                         } s.default = e, n && n.set(e, s);
                     return s
                 }(n(1)),
-                a = n(101),
+                a = n(102),
                 o = n(83),
-                l = n(103),
-                i = n(102);
+                l = n(104),
+                i = n(103);
 
             function r(e) {
                 if ("function" != typeof WeakMap) return null;
@@ -11491,13 +11523,13 @@
                     return e ? n : t
                 })(e)
             }
-            n(183);
+            n(184);
             const {
                 INVENTORY_TYPE_IDS: c
             } = s.default.ShoppefrontComponents;
             var m = s.Ember.Component.extend({
                 classNames: ["jade-home-shop-grid"],
-                layout: n(184),
+                layout: n(185),
                 shoppefrontService: s.Ember.inject.service("shoppefront"),
                 lolInventoryService: s.Ember.inject.service("shoppefront-lol-inventory"),
                 gameDataMapperService: s.Ember.inject.service("game-data-mapper"),
@@ -11614,10 +11646,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(186);
+            n(187);
             var a = s.Ember.Component.extend({
                 classNames: ["jade-home-error"],
-                layout: n(187)
+                layout: n(188)
             });
             t.default = a
         }, (e, t, n) => {
@@ -11633,11 +11665,11 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
-            n(189);
+            n(190);
             const a = s.Ember.Component.extend({
                 classNames: ["jade-champ-select-chroma-modal"],
                 classNameBindings: ["baseSkin.chromaPreviewPath:chroma-view"],
-                layout: n(190),
+                layout: n(191),
                 didReceiveAttrs: function() {
                     this._super(...arguments);
                     const e = this.get("baseSkin"),
@@ -11683,7 +11715,7 @@
             })
         }, (e, t, n) => {
             "use strict";
-            var s, a = (s = n(105)) && s.__esModule ? s : {
+            var s, a = (s = n(106)) && s.__esModule ? s : {
                 default: s
             };
             const o = n(1),
@@ -11693,9 +11725,9 @@
                 {
                     EmberHelpers: i
                 } = o;
-            n(192), e.exports = l.Component.extend({
+            n(193), e.exports = l.Component.extend({
                 tagName: "div",
-                layout: n(193),
+                layout: n(194),
                 skinPurchaseService: l.inject.service("skin-purchase"),
                 meetsChampionRequirement: l.computed.alias("skin.isChampionUnlocked"),
                 purchaseItemId: l.computed("skin.id", "storeSkinIdMap", (function() {
@@ -11751,7 +11783,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(195);
+            n(196);
             const a = {
                     masterSoundEnabled: !0,
                     sfxEnabled: !0,
@@ -11763,7 +11795,7 @@
                     spellVolume: "volume"
                 };
             var l = s.Ember.Component.extend({
-                layout: n(196),
+                layout: n(197),
                 classNames: ["spell-video-wrapper"],
                 muted: !1,
                 spellVolume: 1,
@@ -11864,8 +11896,8 @@
                     return s
                 }(n(1)),
                 a = n(2),
-                o = i(n(105)),
-                l = i(n(198));
+                o = i(n(106)),
+                l = i(n(199));
 
             function i(e) {
                 return e && e.__esModule ? e : {
@@ -11881,7 +11913,7 @@
                     return e ? n : t
                 })(e)
             }
-            n(199);
+            n(200);
             const {
                 DataBinding: c
             } = s.default, {
@@ -11890,7 +11922,7 @@
                 RunMixin: u
             } = s.EmberAddons.EmberLifeline, p = s.UiKitPlugin.getContextualNotificationManager();
             var h = s.Ember.Component.extend(u, {
-                layout: n(200),
+                layout: n(201),
                 classNames: ["demacia-summoner-spell-container"],
                 disabled: !1,
                 requestInProgress: !1,
@@ -12223,16 +12255,16 @@
             }), t.default = void 0;
             var s, a = n(1),
                 o = n(2),
-                l = (s = n(105)) && s.__esModule ? s : {
+                l = (s = n(106)) && s.__esModule ? s : {
                     default: s
                 };
             const {
                 RunMixin: i,
                 DomMixin: r
             } = a.EmberAddons.EmberLifeline;
-            n(202);
+            n(203);
             var c = a.Ember.Component.extend(i, r, {
-                layout: n(203),
+                layout: n(204),
                 classNames: ["demacia-flyout-selector-trigger-button"],
                 classNameBindings: ["disabled:disabled:enabled", "animateButton", "isSpellLocked:locked", "isSpellLocked:swap-jungle-button"],
                 disabled: !1,
@@ -12292,13 +12324,13 @@
             "use strict";
             Object.defineProperty(t, "__esModule", {
                 value: !0
-            }), t.default = void 0, n(205);
+            }), t.default = void 0, n(206);
             const s = n(1),
                 {
                     Ember: a
                 } = s;
             var o = a.Component.extend({
-                layout: n(206),
+                layout: n(207),
                 classNames: ["demacia-spell-select-flyout"],
                 spells: null,
                 hoveredSpell: null,
@@ -12340,10 +12372,10 @@
             }), t.default = void 0;
             var s, a = n(1),
                 o = n(2),
-                l = (s = n(105)) && s.__esModule ? s : {
+                l = (s = n(106)) && s.__esModule ? s : {
                     default: s
                 };
-            n(208);
+            n(209);
             const {
                 RunMixin: i
             } = a.EmberAddons.EmberLifeline;
@@ -12352,7 +12384,7 @@
                 classNames: ["demacia-flyout-selector-button-container"],
                 classNameBindings: ["item.locked:disabled", "isSelectedItem:selected-item", "isSpell1FlyoutOpened:spell1", "isSpell2FlyoutOpened:spell2", "isHovered:is-hovered"],
                 attributeBindings: ["data-id"],
-                layout: n(209),
+                layout: n(210),
                 isItemVisible: !1,
                 isHovered: !1,
                 "data-id": a.Ember.computed.alias("item.id"),
@@ -12400,13 +12432,13 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(211);
+            n(212);
             const {
                 RunMixin: a,
                 DomMixin: o
             } = s.EmberAddons.EmberLifeline;
             var l = s.Ember.Component.extend(a, o, {
-                layout: n(212),
+                layout: n(213),
                 classNames: ["jade-ward-skin-renderer-component"],
                 classNameBindings: ["disabled:disabled:enabled", "animateButton", "isFlyoutOpen:flyout-open"],
                 disabled: !1,
@@ -12451,8 +12483,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "RGwt+346",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-ward-skin-renderer\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-ward-skin-renderer\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-ward-skin-renderer\\\\index.js\\" "],["text","\\n"],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["selectedItem","wardImagePath"]]]]],["static-attr","class","selection-button-image"],["dynamic-attr","style",["unknown",["imageStyle"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleFlyout"],null],null],["dynamic-attr","onmouseover",["helper",["action"],[["get",[null]],"onHover"],null],null],["flush-element"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","animated-border-overlay"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","animated-gradient-overlay"],["flush-element"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
+                id: "rzfXYdCX",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-ward-skin-renderer\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-ward-skin-renderer\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\jade-ward-skin-renderer\\\\index.js\\" "],["text","\\n"],["open-element","img",[]],["dynamic-attr","src",["concat",[["unknown",["selectedItem","wardImagePath"]]]]],["static-attr","class","selection-button-image"],["dynamic-attr","style",["unknown",["imageStyle"]],null],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"toggleFlyout"],null],null],["flush-element"],["close-element"],["text","\\n\\n"],["open-element","div",[]],["static-attr","class","animated-border-overlay"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","animated-gradient-overlay"],["flush-element"],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -12461,13 +12493,13 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(214);
+            n(215);
             const {
                 RunMixin: a
             } = s.EmberAddons.EmberLifeline;
             let o;
             var l = s.Ember.Component.extend(a, {
-                layout: n(215),
+                layout: n(216),
                 classNames: ["jade-ward-skin-popup-button-component"],
                 classNameBindings: ["item.locked:disabled", "isSelectedItem:selected-item"],
                 attributeBindings: ["data-id"],
@@ -12517,16 +12549,16 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                o = (s = n(105)) && s.__esModule ? s : {
+                o = (s = n(106)) && s.__esModule ? s : {
                     default: s
                 },
                 l = n(2);
-            n(217);
+            n(218);
             const i = a.UiKitPlugin.getFlyoutManager(),
                 r = "/fe/lol-champ-select/sounds",
                 c = "sfx-ui";
             var m = a.Ember.Component.extend({
-                layout: n(218),
+                layout: n(219),
                 classNames: ["jade-ward-skin-select-component"],
                 accountLoadout: {},
                 wardSkins: [],
@@ -12616,13 +12648,13 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                o = (s = n(105)) && s.__esModule ? s : {
+                o = (s = n(106)) && s.__esModule ? s : {
                     default: s
                 },
                 l = n(2);
-            n(220);
+            n(221);
             var i = a.Ember.Component.extend({
-                layout: n(221),
+                layout: n(222),
                 classNames: ["jade-ward-skin-popup-component"],
                 selectedWardSkin: {},
                 hoveredWardSkin: null,
@@ -12660,9 +12692,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(223);
+            n(224);
             var a = s.Ember.Component.extend({
-                layout: n(224),
+                layout: n(225),
                 classNames: ["item-build-tree-component"],
                 node: null,
                 itemsById: null,
@@ -12695,7 +12727,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1).Ember.Component.extend({
-                layout: n(226),
+                layout: n(227),
                 tagName: "",
                 item: null
             });
@@ -12710,8 +12742,8 @@
         }, (e, t, n) => {
             "use strict";
             var s = n(1),
-                a = i(n(198)),
-                o = i(n(105)),
+                a = i(n(199)),
+                o = i(n(106)),
                 l = n(2);
 
             function i(e) {
@@ -12719,8 +12751,8 @@
                     default: e
                 }
             }
-            n(228), e.exports = s.Ember.Component.extend({
-                layout: n(229),
+            n(229), e.exports = s.Ember.Component.extend({
+                layout: n(230),
                 classNames: ["jade-swap-button-component"],
                 classNameBindings: ["hidden"],
                 requestInProgress: !1,
@@ -12839,9 +12871,9 @@
                         } s.default = e, n && n.set(e, s);
                     return s
                 }(n(1)),
-                a = i(n(198)),
-                o = i(n(105)),
-                l = n(231);
+                a = i(n(199)),
+                o = i(n(106)),
+                l = n(232);
 
             function i(e) {
                 return e && e.__esModule ? e : {
@@ -12860,9 +12892,9 @@
             const {
                 RunMixin: c
             } = s.EmberAddons.EmberLifeline;
-            n(232);
+            n(233);
             var m = s.Ember.Component.extend(c, {
-                layout: n(233),
+                layout: n(234),
                 classNames: ["jade-swap-dialog-component"],
                 subteamDataList: [],
                 isFiveSecondsBeforeGameStart: !1,
@@ -13152,9 +13184,9 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(2);
-            n(235);
+            n(236);
             var o = s.Ember.Component.extend({
-                layout: n(236),
+                layout: n(237),
                 classNames: ["jade-ban-showcase"],
                 classNameBindings: ["isVisible::jade-ban-showcase--hidden"],
                 myTeamBans: null,
@@ -13214,18 +13246,19 @@
                 value: !0
             }), t.default = void 0;
             var s, a = n(1),
-                o = (s = n(105)) && s.__esModule ? s : {
+                o = (s = n(106)) && s.__esModule ? s : {
                     default: s
-                };
-            n(238);
-            const l = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
-                i = "0724e93d-6b74-449f-abef-8785262c3890",
-                r = "[jade-progression-widget]",
-                c = 30,
-                m = 100 / 7,
-                d = "calc(27px - " + m + "%)",
-                u = (0, a.getProvider)().getSocket(),
-                p = {
+                },
+                l = n(87);
+            n(239);
+            const i = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
+                r = "0724e93d-6b74-449f-abef-8785262c3890",
+                c = "[jade-progression-widget]",
+                m = 30,
+                d = 100 / 7,
+                u = "calc(27px - " + d + "%)",
+                p = (0, a.getProvider)().getSocket(),
+                h = {
                     ACHIEVEMENT_TITLE: "jade_inventory_type_achievement_title",
                     BOOST: "jade_inventory_type_boost",
                     CHAMPION_PERMANENT: "jade_inventory_type_champion",
@@ -13242,8 +13275,8 @@
                     SUMMONER_ICON: "jade_inventory_type_icon",
                     WARD_SKIN: "jade_inventory_type_ward_skin"
                 };
-            var h = a.Ember.Component.extend({
-                layout: n(239),
+            var g = a.Ember.Component.extend({
+                layout: n(240),
                 classNames: ["jade-progression-widget"],
                 classNameBindings: ["isLevelZero:is-level-zero", "isMaxLevel:is-max-level", "compact:is-compact"],
                 summonersJourneyService: a.Ember.inject.service("summoners-journey"),
@@ -13269,41 +13302,43 @@
                     }, this.element.addEventListener("click", this._onWidgetClick)
                 },
                 willDestroyElement() {
-                    this._super(...arguments), this._onWidgetClick && this.element.removeEventListener("click", this._onWidgetClick), this._cleanupModalBackdrop(), (0, a.dataBinding)("/lol-progression", u).unobserve(`/v1/groups/${l}/instanceData`, this)
+                    this._super(...arguments), this._onWidgetClick && this.element.removeEventListener("click", this._onWidgetClick), this._cleanupModalBackdrop(), (0, l.unobserveProgressionReady)(this), (0, a.dataBinding)("/lol-progression", p).unobserve(`/v1/groups/${i}/instanceData`, this)
                 },
                 _initProgressionData() {
-                    this._loadProgressionFetches(), (0, a.dataBinding)("/lol-progression", u).observe(`/v1/groups/${l}/instanceData`, this, (e => {
-                        !e || this.isDestroying || this.isDestroyed || (this.set("_instanceData", e), this._checkDataLoaded())
+                    (0, l.whenProgressionReady)(this, (() => {
+                        (0, a.dataBinding)("/lol-progression", p).observe(`/v1/groups/${i}/instanceData`, this, (e => {
+                            !e || this.isDestroying || this.isDestroyed || (this.set("_instanceData", e), this._checkDataLoaded())
+                        })), this._loadProgressionFetches()
                     }))
                 },
                 _loadProgressionFetches() {
-                    (0, a.dataBinding)("/lol-progression", u).get(`/v1/groups/${l}/configuration`).then((e => {
+                    (0, a.dataBinding)("/lol-progression", p).get(`/v1/groups/${i}/configuration`).then((e => {
                         this.isDestroying || this.isDestroyed || (e ? (this.set("_configuration", e), this._checkDataLoaded(), this._fetchRewardGroups(e)) : this._handleLoadError("configuration response empty"))
                     })).catch((e => {
-                        this._handleLoadError("configuration fetch FAILED for TRACK_ID: " + l, e)
+                        this._handleLoadError("configuration fetch FAILED for TRACK_ID: " + i, e)
                     })), this._fetchRewardTrackItems()
                 },
                 _handleLoadError(e, t) {
-                    a.logger.error(r, "load error:", e, t || ""), this.isDestroying || this.isDestroyed || this.set("loadError", !0)
+                    a.logger.error(c, "load error:", e, t || ""), this.isDestroying || this.isDestroyed || this.set("loadError", !0)
                 },
                 _fetchRewardGroups(e) {
                     const t = [].concat(e.milestones || [], e.repeat && e.repeat.milestones || []),
                         n = [...new Set(t.map((e => e.properties && e.properties.REWARD_GROUP_ID)).filter(Boolean))];
-                    if (!n.length) return a.logger.warning(r, "no REWARD_GROUP_IDs found in config milestones; reward group is empty"), this.set("_rewardGroupMap", {}), void this._checkDataLoaded();
+                    if (!n.length) return a.logger.warning(c, "no REWARD_GROUP_IDs found in config milestones; reward group is empty"), this.set("_rewardGroupMap", {}), void this._checkDataLoaded();
                     (0, a.dataBinding)("/lol-rewards").get("/v1/groups").then((e => {
                         if (this.isDestroying || this.isDestroyed) return;
                         if (!e) return void this._handleLoadError("/lol-rewards/v1/groups response empty");
                         const t = {};
                         n.forEach((n => {
                             const s = e.find((e => e.id === n));
-                            s ? t[n] = s : a.logger.warning(r, "REWARD_GROUP_ID not found in /lol-rewards/v1/groups:", n)
+                            s ? t[n] = s : a.logger.warning(c, "REWARD_GROUP_ID not found in /lol-rewards/v1/groups:", n)
                         })), this.set("_rewardGroupMap", t), this._checkDataLoaded()
                     })).catch((e => {
                         this._handleLoadError("/lol-rewards/v1/groups fetch FAILED", e)
                     }))
                 },
                 _fetchRewardTrackItems() {
-                    (0, a.dataBinding)("/lol-event-hub/v1").get(`/events/${i}/reward-track/items`).then((e => {
+                    (0, a.dataBinding)("/lol-event-hub/v1").get(`/events/${r}/reward-track/items`).then((e => {
                         if (this.isDestroying || this.isDestroyed) return;
                         if (!e || !Array.isArray(e) || 0 === e.length) return void this._handleLoadError("reward-track items missing/empty/not-array. items: " + JSON.stringify(e));
                         const t = {};
@@ -13312,7 +13347,7 @@
                             isNaN(n) || (t[n] = e)
                         })), this.set("_rewardTrackItemMap", t), this._checkDataLoaded()
                     })).catch((e => {
-                        this._handleLoadError("reward-track/items fetch FAILED for EVENT_ID: " + i, e)
+                        this._handleLoadError("reward-track/items fetch FAILED for EVENT_ID: " + r, e)
                     }))
                 },
                 _milestoneForLevel(e) {
@@ -13337,7 +13372,7 @@
                     return this.get("currentLevel") + 1
                 })),
                 isMaxLevel: a.Ember.computed("currentLevel", (function() {
-                    return this.get("currentLevel") >= c
+                    return this.get("currentLevel") >= m
                 })),
                 currentLevelXP: a.Ember.computed.alias("summonersJourneyService.currentLevelXp"),
                 totalLevelXP: a.Ember.computed.alias("summonersJourneyService.xpForNextLevel"),
@@ -13346,7 +13381,7 @@
                         t = this.get("summonersJourneyService.xpTotal") || 0;
                     let n = 0;
                     for (let s = 0; s < e.length && t >= e[s]; s++) n = s + 1;
-                    return Math.min(c, n)
+                    return Math.min(m, n)
                 })),
                 isLevelZero: a.Ember.computed("currentLevel", (function() {
                     return 0 === this.get("currentLevel")
@@ -13396,7 +13431,7 @@
                     if (!t) return "";
                     const n = t.rewardInventoryTypes;
                     if (!n || !n.length) return "";
-                    const s = p[n[0]];
+                    const s = h[n[0]];
                     return s ? a.tra.get(s) : n[0]
                 },
                 _descriptionFromTrackItem(e) {
@@ -13412,7 +13447,7 @@
                         n = [];
                     for (let s = 0; s < 8; s++) {
                         const a = e + s;
-                        if (a > c) break;
+                        if (a > m) break;
                         const o = a > 0 ? this._rewardGroupForLevel(a) : null;
                         n.push({
                             level: a,
@@ -13436,7 +13471,7 @@
                         t = 8 * this.get("modalCurrentPage"),
                         n = this.get("_modalPageLevelCount"),
                         s = this.get("hasModalPrevPage"),
-                        a = t + n - 1 >= c,
+                        a = t + n - 1 >= m,
                         o = a ? n - 1 : n,
                         l = o + (s ? 1 : 0);
                     if (l <= 0) return 0;
@@ -13465,7 +13500,7 @@
                 })),
                 _modalPageLevelCount: a.Ember.computed("modalCurrentPage", (function() {
                     const e = 8 * this.get("modalCurrentPage");
-                    return Math.min(8, c - e + 1)
+                    return Math.min(8, m - e + 1)
                 })),
                 _trackFormulaParts: a.Ember.computed("_modalPageLevelCount", "modalLevelsScale", (function() {
                     const e = this.get("_modalPageLevelCount"),
@@ -13486,10 +13521,10 @@
                         pct: e,
                         px: t
                     } = this.get("_trackFormulaParts");
-                    return this.get("hasModalPrevPage") ? e + m + "% - " + (t + 6) + "px" : e + "% - " + t + "px"
+                    return this.get("hasModalPrevPage") ? e + d + "% - " + (t + 6) + "px" : e + "% - " + t + "px"
                 })),
                 modalTrackLeftStyle: a.Ember.computed("hasModalPrevPage", (function() {
-                    return this.get("hasModalPrevPage") ? d : "21px"
+                    return this.get("hasModalPrevPage") ? u : "21px"
                 })),
                 modalLevelsScale: a.Ember.computed("_modalPageLevelCount", (function() {
                     const e = this.get("_modalPageLevelCount");
@@ -13497,7 +13532,7 @@
                 })),
                 _initModalBackdrop() {
                     const e = this.element.querySelector(".jade-progression-modal__backdrop");
-                    if (!e) return void a.logger.warning(r, "modal backdrop not found in DOM");
+                    if (!e) return void a.logger.warning(c, "modal backdrop not found in DOM");
                     this._modalOriginalParent = e.parentNode, this._modalOriginalNextSibling = e.nextSibling;
                     (document.getElementById("lol-uikit-layer-manager-wrapper") || document.getElementById("lol-uikit-layer-manager") || document.body).appendChild(e), this._onBackdropClick = t => {
                         t.target === e && this._closeModal()
@@ -13527,7 +13562,7 @@
                     }
                 }
             });
-            t.default = h
+            t.default = g
         }, (e, t, n) => {
             "use strict";
             n.r(t)
@@ -13544,16 +13579,16 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(241);
-            var a = n(101),
+            n(242);
+            var a = n(102),
                 o = n(61),
-                l = n(108),
-                i = n(103),
+                l = n(109),
+                i = n(104),
                 r = n(84),
-                c = n(107),
+                c = n(108),
                 m = s.Ember.Component.extend(c.KrPurchaseConfirmMixin, {
                     classNames: ["battlepass-chase-modal"],
-                    layout: n(242),
+                    layout: n(243),
                     shoppefrontService: s.Ember.inject.service("shoppefront"),
                     lolInventoryService: s.Ember.inject.service("shoppefront-lol-inventory"),
                     gameDataMapperService: s.Ember.inject.service("game-data-mapper"),
@@ -13757,7 +13792,7 @@
             }
             var i = s.Ember.Component.extend({
                 classNames: ["loot-odds-root-component"],
-                layout: n(244),
+                layout: n(245),
                 tra: s.Ember.inject.service(),
                 oddsData: null,
                 title: null,
@@ -13847,11 +13882,11 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(246);
+            n(247);
             var a = s.Ember.Component.extend({
                 classNames: ["view-abilities-pane"],
                 classNameBindings: ["hidden:view-abilities-pane--hidden"],
-                layout: n(247),
+                layout: n(248),
                 selectedChampionAssets: null,
                 hidden: !0,
                 abilityName: "",
@@ -13950,10 +13985,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(98);
-            n(249);
+                a = n(99);
+            n(250);
             var o = s.Ember.Component.extend({
-                layout: n(250),
+                layout: n(251),
                 classNames: ["jade-champion-card"],
                 champion: null,
                 isRewardsProgramEnabled: !1,
@@ -14012,12 +14047,12 @@
                     return s
                 }(n(1)),
                 a = n(3),
-                o = m(n(105)),
-                l = n(98),
+                o = m(n(106)),
+                l = n(99),
                 i = n(82),
                 r = n(83),
-                c = n(101);
-            n(252);
+                c = n(102);
+            n(253);
             m(n(14));
 
             function m(e) {
@@ -14047,7 +14082,7 @@
                 y = "abilities",
                 E = "/lol-client-config/v3/client-config/lol.client_settings.jade.tencentChampionLearnMoreUrl";
             var x = s.Ember.Component.extend(i.PurchaseModalMixin, {
-                layout: n(253),
+                layout: n(254),
                 classNames: ["jade-champion-modal-component"],
                 isOpen: !1,
                 champion: null,
@@ -14272,7 +14307,7 @@
                         n = this.get("shoppefrontService.categories") || [];
                     for (const e of n)
                         for (const n of e.items || [])
-                            if (n && t.includes(n.itemId)) return n;
+                            if (n && n.inventoryTypeId === h.CHAMPION_SKIN && t.includes(n.itemId)) return n;
                     return null
                 },
                 _onInventoryChanged() {
@@ -14706,9 +14741,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(255);
+            n(256);
             var a = s.Ember.Component.extend({
-                layout: n(256),
+                layout: n(257),
                 classNames: ["jade-collections-chroma-flyout-content"],
                 actions: {
                     onChromaClick(e) {
@@ -14733,9 +14768,9 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(258);
+            n(259);
             var a = s.Ember.Component.extend({
-                layout: n(259),
+                layout: n(260),
                 classNames: ["jade-home-voting-card-component"],
                 summonersJourneyService: s.Ember.inject.service("summoners-journey"),
                 votingInactiveStatusLoc: s.Ember.computed("votingData.isVotingConcluded", "votingData.isVotingResultsPhase", (function() {
@@ -14784,8 +14819,8 @@
                 value: !0
             }), t.default = void 0;
             var s = r(n(1)),
-                a = r(n(198)),
-                o = n(98),
+                a = r(n(199)),
+                o = n(99),
                 l = n(2),
                 i = n(61);
 
@@ -14798,7 +14833,7 @@
                 Ember: c,
                 TelemetryService: m
             } = s.default;
-            n(261);
+            n(262);
             const d = "jade-voting-system",
                 u = "voting_modal_opened",
                 p = "voting_modal_time_spent",
@@ -14811,7 +14846,7 @@
                 y = "learnMore",
                 E = "results";
             var x = c.Component.extend({
-                layout: n(262),
+                layout: n(263),
                 classNames: ["voting-system"],
                 showModal: !1,
                 votingData: null,
@@ -15109,8 +15144,8 @@
             const {
                 Ember: l
             } = a.default;
-            n(264), e.exports = l.Component.extend({
-                layout: n(265),
+            n(265), e.exports = l.Component.extend({
+                layout: n(266),
                 classNames: ["jade-ftux-parchment-modal"],
                 showModal: !1,
                 buttonText: null,
@@ -15146,12 +15181,12 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(61);
-            n(267);
+            n(268);
             const o = s.UiKitPlugin.getTooltipManager();
             var l = s.Ember.Component.extend({
                 classNames: ["portrait-card"],
                 classNameBindings: ["portrait.isFavorite:portrait-card--favorite", "isLocked:portrait-card--locked", "portrait.isOwned:portrait-card--owned"],
-                layout: n(268),
+                layout: n(269),
                 portrait: null,
                 holoAnimationsEnabled: !0,
                 _tooltipAttached: !1,
@@ -15265,10 +15300,10 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(270);
+            n(271);
             var a = s.Ember.Component.extend({
                 classNames: ["jade-store-holo"],
-                layout: n(271),
+                layout: n(272),
                 holoFoilPath: null,
                 holoAnimationsEnabled: !0,
                 _holoVideo: null,
@@ -15334,10 +15369,10 @@
                 value: !0
             }), t.default = t.JadeCelebrationVideo = void 0;
             var s = n(1),
-                a = n(108),
+                a = n(109),
                 o = n(83),
-                l = n(103);
-            n(273);
+                l = n(104);
+            n(274);
             const i = "/lol-client-config/v3/client-config/",
                 r = i + "lol.client_settings.paw.enableRPTopUp",
                 c = i + "lol.client_settings.jade.tencentTosLink",
@@ -15354,7 +15389,7 @@
                 });
             t.JadeCelebrationVideo = d;
             var u = s.Ember.Component.extend({
-                layout: n(274),
+                layout: n(275),
                 classNames: ["jade-fiat-purchase-modal-component"],
                 tra: s.Ember.inject.service(),
                 lolInventoryService: s.Ember.inject.service("shoppefront-lol-inventory"),
@@ -15731,9 +15766,9 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(83);
-            n(276);
+            n(277);
             var o = s.Ember.Component.extend({
-                layout: n(277),
+                layout: n(278),
                 classNames: ["jade-quantity-purchase-modal-component"],
                 tra: s.Ember.inject.service(),
                 lolInventoryService: s.Ember.inject.service("shoppefront-lol-inventory"),
@@ -15900,11 +15935,11 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(279);
-            var a = n(280);
+            n(280);
+            var a = n(281);
             var o = s.Ember.Component.extend({
                 classNames: ["jade-default-template"],
-                layout: n(281),
+                layout: n(282),
                 eventOrigin: a.TELEMETRY_EVENT_ORIGIN_LOCATIONS.JADE_HOME,
                 mastheadAlignment: s.Ember.computed.alias("data.mastheadAlignment"),
                 imageUrl: s.Ember.computed.alias("data.header.media.url"),
@@ -15978,13 +16013,13 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(283);
+            n(284);
             const a = 8e3,
                 o = ["jade-text-group-hovered"],
                 l = ["jade-text-group-unhovered"];
             var i = s.Ember.Component.extend({
                 classNames: ["jade-pagination"],
-                layout: n(284),
+                layout: n(285),
                 totalItems: 0,
                 activeIndex: 0,
                 onPageChange: null,
@@ -16108,12 +16143,12 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(286);
-            var a = n(280),
+            n(287);
+            var a = n(281),
                 o = n(2),
                 l = s.Ember.Component.extend({
                     classNames: ["jade-cta"],
-                    layout: n(287),
+                    layout: n(288),
                     ctaData: null,
                     disabled: !1,
                     eventOrigin: null,
@@ -16151,7 +16186,7 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(122);
+                a = n(123);
             const o = {
                     1: {
                         CSS_CLASS: "eh-purchase-bundles-modal-option-single",
@@ -16658,12 +16693,13 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1);
-            n(310);
+            n(311);
             var a = s.Ember.Component.extend({
                 classNames: ["battlepass-reward-celebration-component"],
-                layout: n(311),
+                layout: n(312),
                 name: null,
                 iconUrl: null,
+                isPortrait: !1,
                 actions: {
                     onNextButtonClicked() {
                         const e = this.get("vignetteId");
@@ -16680,8 +16716,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "tgQaHwV+",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","battlepass-reward-celebration-background"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","rewards-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reward"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reward-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["iconUrl"]]],null,1],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","digital-goods-disclaimer-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isKREnv"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","battlepass-reward-next-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onNextButtonClicked"],null],null],["flush-element"],["append",["unknown",["tra","battlepass_celebrate_button"]],false],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["digital-goods-disclaimer"],null,[["class","textOverride","linkOverride","learnMoreTextOverride"],["battlepass-disclaimer",["get",["tra","battlepass_kr_celebration_digital_goods_disclaimer"]],["get",["tra","battlepass_kr_refund_criteria_disclosures_link"]],["get",["tra","battlepass_kr_celebration_digital_goods_disclaimer_learn_more_override"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["dynamic-attr","alt",["unknown",["name"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "T2fsNA7f",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","battlepass-reward-celebration-background"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","rewards-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reward"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["reward-icon ",["helper",["if"],[["get",["isPortrait"]],"portrait"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["iconUrl"]]],null,1],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","digital-goods-disclaimer-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isKREnv"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","battlepass-reward-next-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onNextButtonClicked"],null],null],["flush-element"],["append",["unknown",["tra","battlepass_celebrate_button"]],false],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["digital-goods-disclaimer"],null,[["class","textOverride","linkOverride","learnMoreTextOverride"],["battlepass-disclaimer",["get",["tra","battlepass_kr_celebration_digital_goods_disclaimer"]],["get",["tra","battlepass_kr_refund_criteria_disclosures_link"]],["get",["tra","battlepass_kr_celebration_digital_goods_disclaimer_learn_more_override"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["dynamic-attr","alt",["unknown",["name"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {
@@ -16692,8 +16728,8 @@
                 computed: o
             } = s.Ember, l = a.extend({
                 classNames: ["jade-rp-topup-modal"],
-                layout: n(313),
-                style: n(314),
+                layout: n(314),
+                style: n(315),
                 dialogMessage: o("price", "itemName", (function() {
                     return this.get("tra").formatString("jade_fiat_modal_rp_topup_message", {
                         remainingPrice: this.get("price"),
@@ -16777,18 +16813,18 @@
         }, (e, t, n) => {
             "use strict";
             var s, a = n(1),
-                o = (s = n(105)) && s.__esModule ? s : {
+                o = (s = n(106)) && s.__esModule ? s : {
                     default: s
                 },
-                l = n(320),
-                i = n(322),
+                l = n(321),
+                i = n(323),
                 r = n(2);
-            n(323);
+            n(324);
             const {
                 DomMixin: c
             } = a.EmberAddons.EmberLifeline, m = a.UiKitPlugin.getLayerManager(), d = a.ViewportPlugin.fullScreen().getScreenRoot("rcp-fe-lol-champ-select");
             e.exports = a.Ember.Component.extend(c, {
-                layout: n(315),
+                layout: n(316),
                 classNames: ["emotes-edit-button-container"],
                 classNameBindings: ["disabled", "showingEmotes"],
                 showingEmotes: !1,
@@ -16884,7 +16920,7 @@
                 })
             };
             var s = n(1);
-            n(321);
+            n(322);
             s.ComponentFactory.setFactory("FullScreenModal", (function(e) {
                 const t = document.createElement("div");
                 t.className = e.elementClassName;
@@ -16937,15 +16973,15 @@
                 value: !0
             }), t.default = void 0;
             var s = n(1),
-                a = n(325),
+                a = n(326),
                 o = n(2),
-                l = n(231);
-            n(326);
+                l = n(232);
+            n(327);
             const {
                 RunMixin: i
             } = s.EmberAddons.EmberLifeline, r = s.UiKitPlugin.getTemplateHelper();
             var c = s.Ember.Component.extend(i, {
-                layout: n(316),
+                layout: n(317),
                 classNames: ["jade-summoner-array"],
                 classNameBindings: ["isLeft:your-party:enemy-party", "shouldAlignTop:align-summoners-top"],
                 champSelectScreen: null,
@@ -17131,10 +17167,10 @@
             }), t.default = void 0;
             var s = n(1),
                 a = n(2),
-                o = n(231);
-            n(328);
+                o = n(232);
+            n(329);
             var l = s.Ember.Component.extend({
-                layout: n(317),
+                layout: n(318),
                 classNames: ["jade-summoner-object"],
                 classNameBindings: ["isLeft:left:right", "isPickingNow:is-picking-now", "summoner.isSelf", "isBanningNow:is-banning-now", "showIntroAnimation:intro-animation", "summoner.pickSnipedClass", "summoner.shouldShowSelectedSkin:skin-showcase-active", "slotIdClass", "isPickingNext:is-picking-next"],
                 summonerName: null,
@@ -17311,7 +17347,7 @@
                 return e ? n : t
             })(e)
         }
-        n(333);
+        n(334);
         const l = document.currentScript.ownerDocument;
         const i = window.getPluginAnnounceEventName("rcp-fe-lol-jade");
         l.addEventListener(i, (function(e) {

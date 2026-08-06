@@ -11,7 +11,7 @@
     },
     "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVBasicAttack3": {
         "ObjectName": "Jade_JarvanIVBasicAttack3",
-        "objectPath": "{29302fa8}",
+        "objectPath": "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVBasicAttack3",
         "mScriptName": "Jade_JarvanIVBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -106,7 +106,7 @@
     },
     "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVBasicAttack2": {
         "ObjectName": "Jade_JarvanIVBasicAttack2",
-        "objectPath": "{2a30313b}",
+        "objectPath": "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVBasicAttack2",
         "mScriptName": "Jade_JarvanIVBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -461,7 +461,7 @@
     },
     "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVDemacianStandardAbility/Jade_JarvanIVDemacianStandard": {
         "ObjectName": "Jade_JarvanIVDemacianStandard",
-        "objectPath": "{6ad14b88}",
+        "objectPath": "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVDemacianStandardAbility/Jade_JarvanIVDemacianStandard",
         "mScriptName": "Jade_JarvanIVDemacianStandard",
         "mSpell": {
             "flags": 4,
@@ -472,39 +472,12 @@
             ],
             "mEffectAmount": [
                 {
-                    "value": [
-                        7.0,
-                        10.0,
-                        13.0,
-                        16.0,
-                        19.0,
-                        22.0,
-                        25.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        80.0,
-                        60.0,
-                        105.0,
-                        150.0,
-                        195.0,
-                        240.0,
-                        280.0
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
-                    "value": [
-                        0.17499999701976776,
-                        0.20000000298023224,
-                        0.22499999403953552,
-                        0.25,
-                        0.2750000059604645,
-                        0.30000001192092896,
-                        0.32499998807907104
-                    ],
                     "__type": "SpellEffectAmount"
                 },
                 {
@@ -540,54 +513,15 @@
             ],
             "DataValues": [
                 {
-                    "name": "EDashSpeed",
+                    "name": "BaseDamage",
                     "values": [
-                        1400.0,
-                        1400.0,
-                        1400.0,
-                        1400.0,
-                        1400.0,
-                        1400.0,
-                        1400.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "EBehindJarvanCheck",
-                    "values": [
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "EKnockUpAoE",
-                    "values": [
-                        0.0,
-                        180.0,
-                        180.0,
-                        180.0,
-                        180.0,
-                        180.0,
-                        180.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PermanentAttackSpeed",
-                    "values": [
-                        0.17499999701976776,
-                        0.20000000298023224,
-                        0.22499999403953552,
-                        0.25,
-                        0.2750000059604645,
-                        0.30000001192092896,
-                        0.32499998807907104
+                        15.0,
+                        60.0,
+                        105.0,
+                        150.0,
+                        195.0,
+                        240.0,
+                        285.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -629,41 +563,8 @@
                         25.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "BaseDamage",
-                    "values": [
-                        15.0,
-                        60.0,
-                        105.0,
-                        150.0,
-                        195.0,
-                        240.0,
-                        285.0
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "APRatio",
-                            "values": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
@@ -679,7 +580,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/JarvanIV_DemacianStandard.dds"
@@ -784,11 +684,11 @@
             "{210f9ec0}": {
                 "values": [
                     55.0,
-                    55.0,
-                    55.0,
-                    55.0,
-                    55.0,
-                    55.0
+                    60.0,
+                    65.0,
+                    70.0,
+                    75.0,
+                    80.0
                 ],
                 "{0a3e0478}": 55.0,
                 "__type": "{630af303}"
@@ -824,21 +724,17 @@
                                     "type": "PassiveAttackSpeed",
                                     "typeIndex": 3,
                                     "multiplier": 100.0,
-                                    "nameOverride": "Spell_ListType_PassiveAttackSpeed",
-                                    "Style": 1,
-                                    "__type": "TooltipInstanceListElement"
-                                },
-                                {
-                                    "type": "PassiveAttackSpeed",
-                                    "typeIndex": 3,
-                                    "multiplier": 100.0,
-                                    "nameOverride": "Spell_ListType_ActiveAttackSpeed",
+                                    "nameOverride": "Spell_ListType_AttackSpeed",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
                                     "type": "PassiveArmor",
-                                    "nameOverride": "Spell_JarvanIVE_ListType_PassiveArmor_Jade",
+                                    "nameOverride": "Spell_ListType_Armor",
+                                    "__type": "TooltipInstanceListElement"
+                                },
+                                {
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -902,97 +798,11 @@
     },
     "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVGoldenAegisAbility/Jade_JarvanIVGoldenAegis": {
         "ObjectName": "Jade_JarvanIVGoldenAegis",
-        "objectPath": "{6c599cd4}",
+        "objectPath": "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVGoldenAegisAbility/Jade_JarvanIVGoldenAegis",
         "mScriptName": "Jade_JarvanIVGoldenAegis",
         "mSpell": {
             "flags": 4,
             "mAffectsTypeFlags": 6154,
-            "mEffectAmount": [
-                {
-                    "value": [
-                        60.0,
-                        60.0,
-                        80.0,
-                        100.0,
-                        120.0,
-                        140.0,
-                        160.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        10.0,
-                        15.0,
-                        20.0,
-                        25.0,
-                        30.0,
-                        35.0,
-                        40.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.0,
-                        10.0,
-                        20.0,
-                        30.0,
-                        40.0,
-                        50.0,
-                        60.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0,
-                        4.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0,
-                        2.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.013000000268220901,
-                        0.013000000268220901,
-                        0.013000000268220901,
-                        0.013000000268220901,
-                        0.013000000268220901,
-                        0.013000000268220901,
-                        0.013000000268220901
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "ShieldAmount",
@@ -1023,13 +833,13 @@
                 {
                     "name": "ShieldBonus",
                     "values": [
-                        10.0,
+                        15.0,
                         20.0,
+                        25.0,
                         30.0,
+                        35.0,
                         40.0,
-                        50.0,
-                        60.0,
-                        70.0
+                        45.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1060,34 +870,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "mSpellCalculations": {
-                "BaseShield": {
-                    "mFormulaParts": [
-                        {
-                            "mEffectIndex": 1,
-                            "__type": "EffectValueCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mCoefficient": 0.699999988079071,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                },
-                "BonusShield": {
-                    "mFormulaParts": [
-                        {
-                            "mStat": 12,
-                            "mCoefficient": 0.013000000268220901,
-                            "__type": "StatByCoefficientCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
-                }
-            },
-            "mCoefficient": 0.800000011920929,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/JarvanIV_GoldenAegis.dds"
@@ -1365,7 +1147,7 @@
     },
     "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVCataclysmAbility/Jade_JarvanIVCataclysm": {
         "ObjectName": "Jade_JarvanIVCataclysm",
-        "objectPath": "{e9e6d9b4}",
+        "objectPath": "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVCataclysmAbility/Jade_JarvanIVCataclysm",
         "mScriptName": "Jade_JarvanIVCataclysm",
         "mSpell": {
             "flags": 4,
@@ -1628,71 +1410,12 @@
     },
     "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVDragonStrikeAbility/Jade_JarvanIVDragonStrike": {
         "ObjectName": "Jade_JarvanIVDragonStrike",
-        "objectPath": "{75528e00}",
+        "objectPath": "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVDragonStrikeAbility/Jade_JarvanIVDragonStrike",
         "mScriptName": "Jade_JarvanIVDragonStrike",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
-            ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        70.0,
-                        80.0,
-                        120.0,
-                        160.0,
-                        200.0,
-                        240.0,
-                        250.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        6.0,
-                        10.0,
-                        14.0,
-                        18.0,
-                        22.0,
-                        26.0,
-                        30.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
             ],
             "DataValues": [
                 {
@@ -1735,26 +1458,6 @@
                     "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "SWIFTPLAY": {
-                    "SpellDataValues": [
-                        {
-                            "name": "BaseDamage",
-                            "values": [
-                                30.0,
-                                70.0,
-                                110.0,
-                                150.0,
-                                190.0,
-                                230.0,
-                                270.0
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mFormulaParts": [
@@ -1772,7 +1475,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 1.4500000476837158,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/JarvanIV_DragonStrike.dds"
@@ -1908,7 +1610,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
+                                    "type": "ArmorShredPercent",
                                     "typeIndex": 2,
                                     "nameOverride": "Spell_ListType_ArmorReduction",
                                     "Style": 1,
@@ -2012,7 +1714,7 @@
     },
     "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVBasicAttack": {
         "ObjectName": "Jade_JarvanIVBasicAttack",
-        "objectPath": "{8f357a8b}",
+        "objectPath": "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVBasicAttack",
         "mScriptName": "Jade_JarvanIVBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -2171,7 +1873,7 @@
     },
     "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVCritAttack": {
         "ObjectName": "Jade_JarvanIVCritAttack",
-        "objectPath": "{fb01d003}",
+        "objectPath": "Characters/Jade_JarvanIV/Spells/Jade_JarvanIVCritAttack",
         "mScriptName": "Jade_JarvanIVCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -2599,7 +2301,7 @@
             "__type": "ModifiableFloat"
         },
         "armorPerLevelModifiable": {
-            "baseValue": 3.5999999046325684,
+            "baseValue": 3.0,
             "__type": "ModifiableFloat"
         },
         "baseMR": {

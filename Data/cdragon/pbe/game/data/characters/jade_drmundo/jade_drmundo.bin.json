@@ -108,7 +108,7 @@
     },
     "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility/Jade_DrMundoE": {
         "ObjectName": "Jade_DrMundoE",
-        "objectPath": "{185718f0}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoEAbility/Jade_DrMundoE",
         "mScriptName": "Jade_DrMundoE",
         "mSpell": {
             "flags": 4,
@@ -721,7 +721,7 @@
     },
     "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ": {
         "ObjectName": "Jade_DrMundoQ",
-        "objectPath": "{db9f8258}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoQAbility/Jade_DrMundoQ",
         "mScriptName": "Jade_DrMundoQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1028,7 +1028,7 @@
     },
     "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack3": {
         "ObjectName": "Jade_DrMundoBasicAttack3",
-        "objectPath": "{40adbb96}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack3",
         "mScriptName": "Jade_DrMundoBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 21711,
@@ -1106,7 +1106,7 @@
     },
     "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack2": {
         "ObjectName": "Jade_DrMundoBasicAttack2",
-        "objectPath": "{41adbd29}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack2",
         "mScriptName": "Jade_DrMundoBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 21711,
@@ -1192,7 +1192,7 @@
     },
     "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility/Jade_DrMundoR": {
         "ObjectName": "Jade_DrMundoR",
-        "objectPath": "{4c3b7cea}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoRAbility/Jade_DrMundoR",
         "mScriptName": "Jade_DrMundoR",
         "mSpell": {
             "flags": 4,
@@ -1201,32 +1201,6 @@
                 "Trait_Ultimate"
             ],
             "DataValues": [
-                {
-                    "name": "SpeedMod",
-                    "values": [
-                        0.05000000074505806,
-                        0.15000000596046448,
-                        0.25,
-                        0.3499999940395355,
-                        0.44999998807907104,
-                        0.550000011920929,
-                        0.6499999761581421
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "FactorTT",
-                    "values": [
-                        0.30000001192092896,
-                        0.4000000059604645,
-                        0.5,
-                        0.6000000238418579,
-                        0.699999988079071,
-                        0.800000011920929,
-                        0.8999999761581421
-                    ],
-                    "__type": "SpellDataValue"
-                },
                 {
                     "name": "HealthCost",
                     "values": [
@@ -1241,25 +1215,55 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "Factor",
+                    "name": "SpeedMod",
                     "values": [
-                        0.0,
-                        0.0333000011742115,
-                        0.041669998317956924,
                         0.05000000074505806,
-                        0.0,
-                        0.0,
-                        0.0
+                        0.15000000596046448,
+                        0.25,
+                        0.3499999940395355,
+                        0.44999998807907104,
+                        0.550000011920929,
+                        0.6499999761581421
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxHealthRegenPercent",
+                    "values": [
+                        25.0,
+                        40.0,
+                        55.0,
+                        70.0,
+                        85.0,
+                        100.0,
+                        115.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0,
+                        12.0
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "{0ee04500}": {
+                    "mMultiplier": {
+                        "mNumber": 0.009999999776482582,
+                        "__type": "NumberCalculationPart"
+                    },
                     "mFormulaParts": [
                         {
                             "mStat": 12,
-                            "mDataValue": "FactorTT",
+                            "mDataValue": "{e25f1fb9}",
                             "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
@@ -1373,8 +1377,7 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "FactorTT",
-                                    "multiplier": 100.0,
+                                    "type": "MaxHealthRegenPercent",
                                     "nameOverride": "Spell_ListType_Heal",
                                     "Style": 1,
                                     "__type": "TooltipInstanceListElement"
@@ -1562,7 +1565,7 @@
     },
     "Characters/Jade_DrMundo/Spells/Jade_DrMundoCritAttack": {
         "ObjectName": "Jade_DrMundoCritAttack",
-        "objectPath": "{82a0cd51}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoCritAttack",
         "mScriptName": "Jade_DrMundoCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 21711,
@@ -1644,7 +1647,7 @@
     },
     "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility/Jade_DrMundoW": {
         "ObjectName": "Jade_DrMundoW",
-        "objectPath": "{a019d560}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoWAbility/Jade_DrMundoW",
         "mScriptName": "Jade_DrMundoW",
         "mSpell": {
             "flags": 4,
@@ -1668,13 +1671,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        20.0,
-                        35.0,
-                        50.0,
-                        65.0,
-                        80.0,
-                        95.0,
-                        110.0
+                        25.0,
+                        40.0,
+                        55.0,
+                        70.0,
+                        85.0,
+                        100.0,
+                        115.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1694,13 +1697,13 @@
                 {
                     "name": "DurationMod",
                     "values": [
-                        0.05000000074505806,
                         0.10000000149011612,
                         0.15000000596046448,
                         0.20000000298023224,
                         0.25,
                         0.30000001192092896,
-                        0.3499999940395355
+                        0.3499999940395355,
+                        0.4000000059604645
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1906,7 +1909,7 @@
     },
     "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack": {
         "ObjectName": "Jade_DrMundoBasicAttack",
-        "objectPath": "{ac6c6be1}",
+        "objectPath": "Characters/Jade_DrMundo/Spells/Jade_DrMundoBasicAttack",
         "mScriptName": "Jade_DrMundoBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 21711,

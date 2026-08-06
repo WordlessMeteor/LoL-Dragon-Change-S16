@@ -148,7 +148,7 @@
     },
     "Characters/Jade_Katarina/Spells/Jade_KatarinaQAbility/Jade_KatarinaQ": {
         "ObjectName": "Jade_KatarinaQ",
-        "objectPath": "{db9f80aa}",
+        "objectPath": "Characters/Jade_Katarina/Spells/Jade_KatarinaQAbility/Jade_KatarinaQ",
         "mScriptName": "Jade_KatarinaQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -549,7 +549,7 @@
     },
     "Characters/Jade_Katarina/Spells/Jade_KatarinaRAbility/Jade_KatarinaR": {
         "ObjectName": "Jade_KatarinaR",
-        "objectPath": "{3923a8e2}",
+        "objectPath": "Characters/Jade_Katarina/Spells/Jade_KatarinaRAbility/Jade_KatarinaR",
         "mScriptName": "Jade_KatarinaR",
         "mSpell": {
             "mAffectsTypeFlags": 2,
@@ -642,45 +642,6 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "TTDamage",
-                    "values": [
-                        270.0,
-                        480.0,
-                        690.0,
-                        900.0,
-                        1110.0,
-                        1320.0,
-                        1530.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "TTAPRatio",
-                    "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "TTADRatio",
-                    "values": [
-                        4.5,
-                        4.5,
-                        4.5,
-                        4.5,
-                        4.5,
-                        4.5,
-                        4.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
                     "name": "GrievousWoundsDuration",
                     "values": [
                         3.0,
@@ -718,6 +679,19 @@
                         2.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaximumHits",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -742,25 +716,13 @@
                     "__type": "GameCalculation"
                 },
                 "{3dd8ef4a}": {
+                    "mMultiplier": {
+                        "mDataValue": "{ab09f7df}",
+                        "__type": "NamedDataValueCalculationPart"
+                    },
                     "tooltipOnly": true,
-                    "mFormulaParts": [
-                        {
-                            "mDataValue": "TTDamage",
-                            "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mDataValue": "TTADRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStatFormula": 2,
-                            "mDataValue": "TTAPRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
-                        }
-                    ],
-                    "__type": "GameCalculation"
+                    "mModifiedGameCalculation": "DamageCalc",
+                    "__type": "GameCalculationModified"
                 }
             },
             "mAnimationName": "",
@@ -869,8 +831,9 @@
                             "levelCount": 3,
                             "Elements": [
                                 {
-                                    "type": "TTDamage",
+                                    "type": "DamageInstance",
                                     "typeIndex": 1,
+                                    "multiplier": 10.0,
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -1362,7 +1325,7 @@
     },
     "Characters/Jade_Katarina/Spells/Jade_KatarinaWAbility/Jade_KatarinaW": {
         "ObjectName": "Jade_KatarinaW",
-        "objectPath": "{57fb3816}",
+        "objectPath": "Characters/Jade_Katarina/Spells/Jade_KatarinaWAbility/Jade_KatarinaW",
         "mScriptName": "Jade_KatarinaW",
         "mSpell": {
             "flags": 4,
@@ -1793,7 +1756,7 @@
     },
     "Characters/Jade_Katarina/Spells/Jade_KatarinaBasicAttack": {
         "ObjectName": "Jade_KatarinaBasicAttack",
-        "objectPath": "{62882087}",
+        "objectPath": "Characters/Jade_Katarina/Spells/Jade_KatarinaBasicAttack",
         "mScriptName": "Jade_KatarinaBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -1885,7 +1848,7 @@
     },
     "Characters/Jade_Katarina/Spells/Jade_KatarinaCritAttack": {
         "ObjectName": "Jade_KatarinaCritAttack",
-        "objectPath": "{8a7c243f}",
+        "objectPath": "Characters/Jade_Katarina/Spells/Jade_KatarinaCritAttack",
         "mScriptName": "Jade_KatarinaCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -1970,7 +1933,7 @@
     },
     "Characters/Jade_Katarina/Spells/Jade_KatarinaEAbility/Jade_KatarinaE": {
         "ObjectName": "Jade_KatarinaE",
-        "objectPath": "{921b11aa}",
+        "objectPath": "Characters/Jade_Katarina/Spells/Jade_KatarinaEAbility/Jade_KatarinaE",
         "mScriptName": "Jade_KatarinaE",
         "mSpell": {
             "flags": 4,
@@ -2365,7 +2328,7 @@
     },
     "Characters/Jade_Katarina/Spells/Jade_KatarinaBasicAttack2": {
         "ObjectName": "Jade_KatarinaBasicAttack2",
-        "objectPath": "{d14b7cef}",
+        "objectPath": "Characters/Jade_Katarina/Spells/Jade_KatarinaBasicAttack2",
         "mScriptName": "Jade_KatarinaBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 4234,

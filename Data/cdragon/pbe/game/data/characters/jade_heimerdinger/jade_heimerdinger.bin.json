@@ -696,7 +696,7 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerEAbility/Jade_HeimerdingerE": {
         "ObjectName": "Jade_HeimerdingerE",
-        "objectPath": "{5ab3b220}",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerEAbility/Jade_HeimerdingerE",
         "mScriptName": "Jade_HeimerdingerE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -747,8 +747,6 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.6000000238418579,
-            "mCoefficient2": 0.75,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_CH1ConcussionGrenade.dds",
@@ -768,14 +766,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    13.0,
+                    15.0,
+                    14.0,
                     13.0,
                     12.0,
                     11.0,
                     10.0,
-                    9.0,
                     9.0
                 ],
+                "{0a3e0478}": 15.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1672,7 +1671,7 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerRAbility/Jade_HeimerdingerR": {
         "ObjectName": "Jade_HeimerdingerR",
-        "objectPath": "{b70cfc84}",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerRAbility/Jade_HeimerdingerR",
         "mScriptName": "Jade_HeimerdingerR",
         "mSpell": {
             "flags": 4,
@@ -2354,7 +2353,7 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerBasicAttack": {
         "ObjectName": "Jade_HeimerdingerBasicAttack",
-        "objectPath": "{1a3438b3}",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerBasicAttack",
         "mScriptName": "Jade_HeimerdingerBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
@@ -2832,51 +2831,10 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerQAbility/Jade_HeimerdingerQ": {
         "ObjectName": "Jade_HeimerdingerQ",
-        "objectPath": "{c00f8518}",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerQAbility/Jade_HeimerdingerQ",
         "mScriptName": "Jade_HeimerdingerQ",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "Level4BonusHP",
@@ -2894,13 +2852,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        22.0,
-                        30.0,
-                        38.0,
-                        46.0,
-                        54.0,
-                        62.0,
-                        70.0
+                        20.0,
+                        28.0,
+                        36.0,
+                        44.0,
+                        52.0,
+                        60.0,
+                        68.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2935,44 +2893,9 @@
                 "Health": {
                     "mFormulaParts": [
                         {
-                            "mNumber": 260.0,
-                            "__type": "NumberCalculationPart"
-                        },
-                        {
-                            "values": [
-                                0.0,
-                                15.0,
-                                30.0,
-                                45.0,
-                                60.0,
-                                75.0,
-                                90.0,
-                                105.0,
-                                120.0,
-                                135.0,
-                                150.0,
-                                165.0,
-                                180.0,
-                                195.0,
-                                210.0,
-                                225.0,
-                                240.0,
-                                255.0,
-                                270.0,
-                                285.0,
-                                300.0,
-                                315.0,
-                                330.0,
-                                345.0,
-                                360.0,
-                                375.0,
-                                390.0,
-                                405.0,
-                                420.0,
-                                435.0,
-                                450.0
-                            ],
-                            "__type": "ByCharLevelFormulaCalculationPart"
+                            "mLevel1Value": 275.0,
+                            "mInitialBonusPerLevel": 15.0,
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
                         },
                         {
                             "mDataValue": "Level4BonusHP",
@@ -3824,116 +3747,21 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerWAbility/Jade_HeimerdingerW": {
         "ObjectName": "Jade_HeimerdingerW",
-        "objectPath": "{54c74dac}",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerWAbility/Jade_HeimerdingerW",
         "mScriptName": "Jade_HeimerdingerW",
         "mSpell": {
             "flags": 4,
-            "mEffectAmount": [
-                {
-                    "value": [
-                        30.0,
-                        60.0,
-                        90.0,
-                        120.0,
-                        150.0,
-                        180.0,
-                        210.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        6.0,
-                        12.0,
-                        18.0,
-                        24.0,
-                        30.0,
-                        36.0,
-                        42.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        54.0,
-                        108.0,
-                        162.0,
-                        216.0,
-                        270.0,
-                        324.0,
-                        378.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
                     "values": [
-                        35.0,
-                        85.0,
-                        135.0,
-                        185.0,
-                        235.0,
-                        285.0,
-                        335.0
+                        20.0,
+                        70.0,
+                        120.0,
+                        170.0,
+                        220.0,
+                        270.0,
+                        320.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -4073,12 +3901,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Cost",
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_BaseDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "BaseDamage",
-                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -4505,7 +4333,7 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerBasicAttack2": {
         "ObjectName": "Jade_HeimerdingerBasicAttack2",
-        "objectPath": "{c134f313}",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerBasicAttack2",
         "mScriptName": "Jade_HeimerdingerBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
@@ -4710,7 +4538,7 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerCritAttack": {
         "ObjectName": "Jade_HeimerdingerCritAttack",
-        "objectPath": "{effc171b}",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerCritAttack",
         "mScriptName": "Jade_HeimerdingerCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,

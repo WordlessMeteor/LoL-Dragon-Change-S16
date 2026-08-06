@@ -12,7 +12,7 @@
     },
     "Characters/Jade_Janna/Spells/Jade_JannaReapTheWhirlwindAbility/Jade_JannaReapTheWhirlwind": {
         "ObjectName": "Jade_JannaReapTheWhirlwind",
-        "objectPath": "{21c1c7a7}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaReapTheWhirlwindAbility/Jade_JannaReapTheWhirlwind",
         "mScriptName": "Jade_JannaReapTheWhirlwind",
         "mSpell": {
             "mAffectsTypeFlags": 7183,
@@ -20,110 +20,6 @@
                 "Trait_Ultimate",
                 "PositiveEffect_Boon",
                 "Trait_ImmobilizingCCSpell"
-            ],
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.0,
-                        300.0,
-                        450.0,
-                        600.0,
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        0.0,
-                        0.0,
-                        0.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        700.0,
-                        700.0,
-                        700.0,
-                        700.0,
-                        700.0,
-                        700.0,
-                        700.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        875.0,
-                        875.0,
-                        875.0,
-                        875.0,
-                        875.0,
-                        875.0,
-                        875.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        875.0,
-                        875.0,
-                        875.0,
-                        875.0,
-                        875.0,
-                        875.0,
-                        875.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1200.0,
-                        1200.0,
-                        1200.0,
-                        1200.0,
-                        1200.0,
-                        1200.0,
-                        1200.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
             ],
             "DataValues": [
                 {
@@ -138,22 +34,32 @@
                         270.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "APRatioPerSecond",
+                    "values": [
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355,
+                        0.3499999940395355
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
                 "HealPerSecond": {
-                    "mExpandedTooltipCalculationDisplay": 6,
+                    "mExpandedTooltipCalculationDisplay": 7,
                     "mFormulaParts": [
                         {
                             "mDataValue": "HealBasePerSecond",
                             "__type": "NamedDataValueCalculationPart"
                         },
                         {
-                            "mSubpart": {
-                                "mNumber": 0.3499999940395355,
-                                "__type": "NumberCalculationPart"
-                            },
-                            "__type": "StatBySubPartCalculationPart"
+                            "mDataValue": "APRatioPerSecond",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -168,8 +74,6 @@
                     "__type": "GameCalculationModified"
                 }
             },
-            "mCoefficient": 0.5,
-            "mCoefficient2": 1.5,
             "mAnimationName": "Spell4",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Janna_ReapTheWhirlwind.dds"
@@ -187,14 +91,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    150.0,
+                    165.0,
                     150.0,
                     135.0,
                     120.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    105.0,
+                    90.0,
+                    75.0
                 ],
+                "{0a3e0478}": 165.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -243,13 +148,14 @@
             ],
             "{210f9ec0}": {
                 "values": [
-                    100.0,
-                    150.0,
                     200.0,
-                    0.0,
-                    0.0,
-                    0.0
+                    275.0,
+                    350.0,
+                    425.0,
+                    500.0,
+                    575.0
                 ],
+                "{0a3e0478}": 200.0,
                 "__type": "{630af303}"
             },
             "mTargetingTypeData": {
@@ -379,7 +285,7 @@
     },
     "Characters/Jade_Janna/Spells/Jade_JannaSowTheWindAbility/Jade_JannaSowTheWind": {
         "ObjectName": "Jade_JannaSowTheWind",
-        "objectPath": "{40907b2f}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaSowTheWindAbility/Jade_JannaSowTheWind",
         "mScriptName": "Jade_JannaSowTheWind",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -797,7 +703,7 @@
     },
     "Characters/Jade_Janna/Spells/Jade_JannaCritAttack": {
         "ObjectName": "Jade_JannaCritAttack",
-        "objectPath": "{47c6a04d}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaCritAttack",
         "mScriptName": "Jade_JannaCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -907,7 +813,7 @@
     },
     "Characters/Jade_Janna/Spells/Jade_JannaBasicAttack2": {
         "ObjectName": "Jade_JannaBasicAttack2",
-        "objectPath": "{4dc5ce6d}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaBasicAttack2",
         "mScriptName": "Jade_JannaBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -1487,7 +1393,7 @@
     },
     "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGale": {
         "ObjectName": "Jade_JannaHowlingGale",
-        "objectPath": "{bbacf079}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaHowlingGaleAbility/Jade_JannaHowlingGale",
         "mScriptName": "Jade_JannaHowlingGale",
         "mSpell": {
             "flags": 4,
@@ -2055,7 +1961,7 @@
     },
     "Characters/Jade_Janna/Spells/Jade_JannaEyeOfTheStormAbility/Jade_JannaEyeOfTheStorm": {
         "ObjectName": "Jade_JannaEyeOfTheStorm",
-        "objectPath": "{d270e2a3}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaEyeOfTheStormAbility/Jade_JannaEyeOfTheStorm",
         "mScriptName": "Jade_JannaEyeOfTheStorm",
         "mSpell": {
             "flags": 4,
@@ -2403,7 +2309,7 @@
     },
     "Characters/Jade_Janna/Spells/Jade_JannaBasicAttack": {
         "ObjectName": "Jade_JannaBasicAttack",
-        "objectPath": "{fd04efcd}",
+        "objectPath": "Characters/Jade_Janna/Spells/Jade_JannaBasicAttack",
         "mScriptName": "Jade_JannaBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -2837,11 +2743,11 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 51.95000076293945,
+            "baseValue": 49.0,
             "__type": "ModifiableFloat"
         },
         "damagePerLevelModifiable": {
-            "baseValue": 2.950000047683716,
+            "baseValue": 3.0,
             "__type": "ModifiableFloat"
         },
         "baseArmorModifiable": {

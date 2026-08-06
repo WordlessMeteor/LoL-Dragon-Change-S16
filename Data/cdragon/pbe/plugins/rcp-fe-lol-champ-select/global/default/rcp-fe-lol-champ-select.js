@@ -16529,6 +16529,8 @@
             }, t.isOwnedByInventory = function(e, t) {
                 const n = e.purchaseUnits?.[0]?.fulfillment?.itemId;
                 return !!n && !!t?.has?.(n)
+            }, t.isPortraitItem = function(e) {
+                return f.has(e?.inventoryTypeId)
             }, t.isPurchaseLimitReached = function(e, t) {
                 const n = e.purchaseLimits;
                 if (!n || 0 === n.length) return !1;
@@ -16566,7 +16568,8 @@
             t.EVENT_PASS_INVENTORY_TYPE_ID = p;
             const h = i.CHAMPION;
             t.CHAMPION_INVENTORY_TYPE_ID = h;
-            const g = new Set([i.CHAMPION_SKIN])
+            const g = new Set([i.CHAMPION_SKIN]),
+                f = new Set([i.PORTRAIT, "0255df48-58ac-4cf5-a9d9-63e50c5124dd"])
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -17187,7 +17190,8 @@
                                 canAfford: P,
                                 iconUrl: O || e.tilePath || null,
                                 previewUrl: O || e.splashPath || e.tilePath || null,
-                                hasFullScreenSplash: (0, c.hasFullScreenSplash)(e)
+                                hasFullScreenSplash: (0, c.hasFullScreenSplash)(e),
+                                isPortrait: (0, c.isPortraitItem)(e)
                             }
                         })),
                         b = new Set;
@@ -17231,6 +17235,7 @@
                         hasUnmetPrerequisites: e.hasUnmetPrerequisites,
                         previewUrl: e.previewUrl,
                         hasFullScreenSplash: e.hasFullScreenSplash,
+                        isPortrait: e.isPortrait || !1,
                         catalogItem: e.catalogItem || null,
                         isChaseTagged: e.isChaseTagged || !1,
                         chaseCategoryId: e.chaseCategoryId || null
@@ -17318,7 +17323,8 @@
                     const i = e => ({
                         name: e.traTitle || "",
                         iconUrl: e.tilePath || null,
-                        previewUrl: e.splashPath || e.tilePath || null
+                        previewUrl: e.splashPath || e.tilePath || null,
+                        isPortrait: (0, c.isPortraitItem)(e)
                     });
                     for (const o of s) {
                         const s = e.find((e => e.categoryId === o));
@@ -17462,6 +17468,7 @@
                                 data: s.Ember.Object.create({
                                     name: e.name || "",
                                     iconUrl: e.previewUrl || e.iconUrl || "",
+                                    isPortrait: !!e.isPortrait,
                                     vignetteId: t,
                                     isKREnv: this.get("isKREnv")
                                 })
@@ -24987,7 +24994,7 @@
                         n = this.get("shoppefrontService.categories") || [];
                     for (const e of n)
                         for (const n of e.items || [])
-                            if (n && t.includes(n.itemId)) return n;
+                            if (n && n.inventoryTypeId === h.CHAMPION_SKIN && t.includes(n.itemId)) return n;
                     return null
                 },
                 _onInventoryChanged() {
@@ -27379,6 +27386,7 @@
                 layout: n(535),
                 name: null,
                 iconUrl: null,
+                isPortrait: !1,
                 actions: {
                     onNextButtonClicked() {
                         const e = this.get("vignetteId");
@@ -27395,8 +27403,8 @@
         }, (e, t, n) => {
             const s = n(1).Ember;
             e.exports = s.HTMLBars.template({
-                id: "tgQaHwV+",
-                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","battlepass-reward-celebration-background"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","rewards-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reward"],["flush-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","reward-icon"],["flush-element"],["text","\\n"],["block",["if"],[["get",["iconUrl"]]],null,1],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","digital-goods-disclaimer-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isKREnv"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","battlepass-reward-next-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onNextButtonClicked"],null],null],["flush-element"],["append",["unknown",["tra","battlepass_celebrate_button"]],false],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["digital-goods-disclaimer"],null,[["class","textOverride","linkOverride","learnMoreTextOverride"],["battlepass-disclaimer",["get",["tra","battlepass_kr_celebration_digital_goods_disclaimer"]],["get",["tra","battlepass_kr_refund_criteria_disclosures_link"]],["get",["tra","battlepass_kr_celebration_digital_goods_disclaimer_learn_more_override"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["dynamic-attr","alt",["unknown",["name"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
+                id: "T2fsNA7f",
+                block: '{"statements":[["comment","#ember-component template-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\layout.hbs\\" style-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\style.styl\\" js-path=\\"T:\\\\cid\\\\p4\\\\v4\\\\__MAIN__\\\\LeagueClientContent_Beta\\\\15693\\\\DevRoot\\\\Client\\\\fe\\\\rcp-fe-lol-jade\\\\src\\\\app\\\\components\\\\battlepass-reward-celebration\\\\index.js\\" "],["text","\\n"],["open-element","div",[]],["static-attr","class","battlepass-reward-celebration-background"],["flush-element"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","rewards-container"],["flush-element"],["text","\\n  "],["open-element","div",[]],["static-attr","class","reward"],["flush-element"],["text","\\n    "],["open-element","div",[]],["dynamic-attr","class",["concat",["reward-icon ",["helper",["if"],[["get",["isPortrait"]],"portrait"],null]]]],["flush-element"],["text","\\n"],["block",["if"],[["get",["iconUrl"]]],null,1],["text","    "],["close-element"],["text","\\n    "],["open-element","div",[]],["static-attr","class","digital-goods-disclaimer-container"],["flush-element"],["text","\\n"],["block",["if"],[["get",["isKREnv"]]],null,0],["text","    "],["close-element"],["text","\\n  "],["close-element"],["text","\\n"],["close-element"],["text","\\n"],["open-element","div",[]],["static-attr","class","battlepass-reward-next-button"],["dynamic-attr","onclick",["helper",["action"],[["get",[null]],"onNextButtonClicked"],null],null],["flush-element"],["append",["unknown",["tra","battlepass_celebrate_button"]],false],["close-element"],["text","\\n"]],"locals":[],"named":[],"yields":[],"blocks":[{"statements":[["text","        "],["append",["helper",["digital-goods-disclaimer"],null,[["class","textOverride","linkOverride","learnMoreTextOverride"],["battlepass-disclaimer",["get",["tra","battlepass_kr_celebration_digital_goods_disclaimer"]],["get",["tra","battlepass_kr_refund_criteria_disclosures_link"]],["get",["tra","battlepass_kr_celebration_digital_goods_disclaimer_learn_more_override"]]]]],false],["text","\\n"]],"locals":[]},{"statements":[["text","        "],["open-element","img",[]],["dynamic-attr","src",["unknown",["iconUrl"]],null],["dynamic-attr","alt",["unknown",["name"]],null],["flush-element"],["close-element"],["text","\\n"]],"locals":[]}],"hasPartials":false}',
                 meta: {}
             })
         }, (e, t, n) => {

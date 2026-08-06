@@ -3601,7 +3601,7 @@
         ],
         "particleName": "Jade_Evelynn_Base_JADE_R_AoE",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_AoE",
-        "objectPath": "{122a2ccd}",
+        "objectPath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_AoE",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_Shield_FakeProj": {
@@ -3998,7 +3998,7 @@
         ],
         "particleName": "Jade_Evelynn_Base_JADE_R_Shield_FakeProj",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_Shield_FakeProj",
-        "objectPath": "{7ca22d4a}",
+        "objectPath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_Shield_FakeProj",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_Shield": {
@@ -5329,7 +5329,7 @@
         ],
         "particleName": "Jade_Evelynn_Base_JADE_R_Shield",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_Shield",
-        "objectPath": "{e4681937}",
+        "objectPath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_Shield",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_Spike": {
@@ -5651,7 +5651,7 @@
         ],
         "particleName": "Jade_Evelynn_Base_JADE_R_Spike",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_Spike",
-        "objectPath": "{eb3ca454}",
+        "objectPath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/JADE/Jade_Evelynn_Base_JADE_R_Spike",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_Q_HateSpike_Mis": {
@@ -5876,8 +5876,10 @@
                     "__type": "ValueColor"
                 },
                 "pass": 6,
+                "miscRenderFlags": 1,
                 "isUniformScale": 1,
                 "isRandomStartFrame": 1,
+                "isGroundLayer": 1,
                 "birthRotationalVelocity0": {
                     "constantValue": [
                         1.0,
@@ -6055,6 +6057,8 @@
                     "__type": "ValueColor"
                 },
                 "pass": 1,
+                "miscRenderFlags": 1,
+                "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -6167,6 +6171,7 @@
                 },
                 "pass": 1,
                 "miscRenderFlags": 1,
+                "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
                         0.0,
@@ -6346,6 +6351,8 @@
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
                 "disableBackfaceCull": true,
+                "miscRenderFlags": 1,
+                "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
                         180.0,
@@ -6577,6 +6584,14 @@
                         -30.0
                     ],
                     "__type": "{ee39916f}"
+                },
+                "EmitterPosition": {
+                    "constantValue": [
+                        0.0,
+                        0.0,
+                        50.0
+                    ],
+                    "__type": "ValueVector3"
                 },
                 "primitive": {
                     "mMesh": {
@@ -6883,6 +6898,8 @@
                     "erosionMapName": "ASSETS/Characters/Jade_Evelynn/Skins/Base/Particles/Evelyn_Base_Q_Ripple.tex",
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "miscRenderFlags": 1,
+                "isGroundLayer": 1,
                 "scale0": {
                     "constantValue": [
                         100.0,
@@ -7124,7 +7141,9 @@
                     },
                     "__type": "VfxAlphaErosionDefinitionData"
                 },
+                "miscRenderFlags": 1,
                 "isRandomStartFrame": 1,
+                "isGroundLayer": 1,
                 "birthScale0": {
                     "constantValue": [
                         60.0,
@@ -7446,9 +7465,11 @@
                     -1.0,
                     -13.0
                 ],
+                "miscRenderFlags": 1,
                 "isDirectionOriented": 1,
                 "isUniformScale": 1,
                 "isRandomStartFrame": 1,
+                "isGroundLayer": 1,
                 "birthRotation0": {
                     "constantValue": [
                         1.0,
@@ -8049,6 +8070,7 @@
                 "pass": 21,
                 "meshRenderFlags": 0,
                 "miscRenderFlags": 1,
+                "isGroundLayer": 1,
                 "birthScale0": {
                     "constantValue": [
                         10000.0,
@@ -8086,7 +8108,7 @@
         "particleName": "Jade_Evelynn_Base_Q_HateSpike_Mis",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_Q_HateSpike_Mis",
         "soundPersistentDefault": "Play_sfx_Evelynn_EvelynnQ2_missilelaunch",
-        "objectPath": "{69f7ed19}",
+        "objectPath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_Q_HateSpike_Mis",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_P_Pulse": {
@@ -9177,7 +9199,7 @@
         "particleName": "Jade_Evelynn_Base_P_Pulse",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_P_Pulse",
         "flags": 196,
-        "objectPath": "{92ecfe8d}",
+        "objectPath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_P_Pulse",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_R_Tar": {
@@ -10435,7 +10457,7 @@
         "particleName": "Jade_Evelynn_Base_R_Tar",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_R_Tar",
         "flags": 198,
-        "objectPath": "{9a980cb9}",
+        "objectPath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_R_Tar",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_E_Tar": {
@@ -11734,7 +11756,7 @@
         "particleName": "Jade_Evelynn_Base_E_Tar",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_E_Tar",
         "flags": 132,
-        "objectPath": "{ac743f88}",
+        "objectPath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_E_Tar",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_E_Swipe": {
@@ -11851,7 +11873,7 @@
         "particleName": "Jade_Evelynn_Base_E_Swipe",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_E_Swipe",
         "flags": 196,
-        "objectPath": "{bc0bfe8d}",
+        "objectPath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_E_Swipe",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_E_Empowered_Tar": {
@@ -13532,7 +13554,7 @@
         ],
         "particleName": "Jade_Evelynn_Base_E_Empowered_Tar",
         "particlePath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_E_Empowered_Tar",
-        "objectPath": "{c399ebcd}",
+        "objectPath": "Characters/Jade_Evelynn/Skins/Skin0/Particles/Jade_Evelynn_Base_E_Empowered_Tar",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Evelynn/Skins/Skin0/Resources": {

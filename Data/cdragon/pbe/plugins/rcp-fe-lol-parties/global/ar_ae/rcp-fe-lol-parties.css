@@ -16418,7 +16418,9 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 .jade-progression-modal__selected-reward-info,
 .jade-progression-modal__subtitle,
 .jade-progression-modal__title,
-.jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content {
+.jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content,
+.jade-progression-widget__badge,
+.jade-progression-widget__badge-tooltip {
     font-family: var(--font-frizquadrata)
 }
 
@@ -16498,7 +16500,29 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 .jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content:lang(vi-VN),
 .jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content:lang(zh-cn),
 .jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content:lang(zh-my),
-.jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content:lang(zh-tw) {
+.jade-progression-widget .pass-progression-widget-level .pass-progression-widget-level-content:lang(zh-tw),
+.jade-progression-widget__badge-tooltip:lang(el-gr),
+.jade-progression-widget__badge-tooltip:lang(ja-jp),
+.jade-progression-widget__badge-tooltip:lang(ko-kr),
+.jade-progression-widget__badge-tooltip:lang(ro-ro),
+.jade-progression-widget__badge-tooltip:lang(ru-ru),
+.jade-progression-widget__badge-tooltip:lang(th-th),
+.jade-progression-widget__badge-tooltip:lang(tr-tr),
+.jade-progression-widget__badge-tooltip:lang(vi-VN),
+.jade-progression-widget__badge-tooltip:lang(zh-cn),
+.jade-progression-widget__badge-tooltip:lang(zh-my),
+.jade-progression-widget__badge-tooltip:lang(zh-tw),
+.jade-progression-widget__badge:lang(el-gr),
+.jade-progression-widget__badge:lang(ja-jp),
+.jade-progression-widget__badge:lang(ko-kr),
+.jade-progression-widget__badge:lang(ro-ro),
+.jade-progression-widget__badge:lang(ru-ru),
+.jade-progression-widget__badge:lang(th-th),
+.jade-progression-widget__badge:lang(tr-tr),
+.jade-progression-widget__badge:lang(vi-VN),
+.jade-progression-widget__badge:lang(zh-cn),
+.jade-progression-widget__badge:lang(zh-my),
+.jade-progression-widget__badge:lang(zh-tw) {
     font-family: var(--font-display)
 }
 
@@ -16665,6 +16689,117 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 
 .jade-progression-widget.is-max-level .max-level-description {
     color: #cac3b4
+}
+
+.jade-progression-widget.is-compact {
+    display: block;
+    height: auto;
+    padding: 0;
+    position: relative
+}
+
+.jade-progression-widget.is-compact:hover .jade-progression-widget__badge-tooltip-anchor {
+    opacity: 1;
+    visibility: visible
+}
+
+.jade-progression-widget__badge {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.jade-progression-widget__badge-circle {
+    background: #0a0a14;
+    flex-shrink: 0;
+    height: 52px;
+    padding: 5px;
+    position: relative;
+    width: 52px
+}
+
+.jade-progression-widget__badge-circle,
+.jade-progression-widget__badge-ring {
+    align-items: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center
+}
+
+.jade-progression-widget__badge-ring {
+    height: 100%;
+    padding: 3px;
+    width: 100%
+}
+
+.jade-progression-widget__badge-ring-inner {
+    background: #0a0a14;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%
+}
+
+.jade-progression-widget__badge-level {
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    text-align: center
+}
+
+.jade-progression-widget__badge-xp,
+.jade-progression-widget__badge-xp-label {
+    color: #fff;
+    font-size: 14px;
+    white-space: nowrap
+}
+
+.jade-progression-widget__badge-tooltip-anchor {
+    inset-inline: 0;
+    bottom: calc(100% + 13px);
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .1s ease;
+    visibility: hidden
+}
+
+.jade-progression-widget__badge-tooltip {
+    background: #0b1015;
+    border: 1px solid #d09a00;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 14px;
+    line-height: normal;
+    padding: 16px;
+    position: relative;
+    white-space: nowrap
+}
+
+.jade-progression-widget__badge-tooltip:after,
+.jade-progression-widget__badge-tooltip:before {
+    content: "";
+    height: 0;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transform: translateX(-50%);
+    width: 0
+}
+
+.jade-progression-widget__badge-tooltip:before {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 13px solid #d09a00
+}
+
+.jade-progression-widget__badge-tooltip:after {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 12px solid #0b1015;
+    margin-top: -1px
 }
 
 .jade-progression-widget .pass-progression-widget-rewards-content {
