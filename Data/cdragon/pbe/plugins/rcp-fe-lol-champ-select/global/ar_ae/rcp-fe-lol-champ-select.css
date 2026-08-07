@@ -34119,7 +34119,9 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    position: relative
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap
 }
 
 .jade-summoner-object__player-name,
@@ -34137,6 +34139,8 @@ lol-uikit-scrollable.ward-skins::-webkit-scrollbar-thumb {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-transform: uppercase
 }
 

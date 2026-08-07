@@ -12677,15 +12677,16 @@
                             const e = this.layer.querySelector(".vignette-celebration"),
                                 t = this.animationsEnabled ? .4 : 0;
                             this._fadeOut(e, t).then((() => {
-                                this.currentIndex < this.celebrationQueue.length - 1 && this._startCelebrationCeremony(), this._finalizeCelebrationCeremony()
+                                this._finalizeCelebrationCeremony(), this.celebrationQueue.length && this._startCelebrationCeremony()
                             }))
                         }))
                     }))
                 }
                 _finalizeCelebrationCeremony() {
-                    r.Lodash.forEach(this.celebrationQueue, (e => {
-                        e.onVignetteClose && e.onVignetteClose()
-                    })), this.celebrationQueue = [], this.currentIndex = -1, this.currentCelebration = null, this.isEndingCeremony = !1, this._hideLayer()
+                    const e = this.celebrationQueue.slice(this.currentIndex + 1);
+                    r.Lodash.forEach(this.celebrationQueue, (t => {
+                        -1 === e.indexOf(t) && t.onVignetteClose && t.onVignetteClose()
+                    })), this.celebrationQueue = e, this.currentIndex = -1, this.currentCelebration = null, this.isEndingCeremony = !1, this._hideLayer()
                 }
                 _openBanners() {
                     const e = this.layer.querySelector(".celebration-banners");

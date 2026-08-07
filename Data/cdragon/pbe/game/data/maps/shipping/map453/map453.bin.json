@@ -3098,7 +3098,7 @@
             "Skin": "Characters/SRU_OrderMinionRanged/Skins/Skin28",
             "__type": "SkinCharacterGeComponentDef"
         },
-        "{2092043f}": {
+        "AttackableUnit": {
             "{f1d3a034}": true,
             "__type": "AttackableUnitGeComponentDef"
         },
@@ -3111,7 +3111,7 @@
             "Skin": "Characters/SRU_ChaosMinionRanged/Skins/Skin28",
             "__type": "SkinCharacterGeComponentDef"
         },
-        "{2092043f}": {
+        "AttackableUnit": {
             "{f1d3a034}": true,
             "__type": "AttackableUnitGeComponentDef"
         },
@@ -3128,7 +3128,7 @@
             "Skin": "Characters/SRU_OrderMinionSuper/Skins/Skin28",
             "__type": "SkinCharacterGeComponentDef"
         },
-        "{2092043f}": {
+        "AttackableUnit": {
             "{f1d3a034}": true,
             "__type": "AttackableUnitGeComponentDef"
         },
@@ -3141,7 +3141,7 @@
             "Skin": "Characters/SRU_ChaosMinionSiege/Skins/Skin28",
             "__type": "SkinCharacterGeComponentDef"
         },
-        "{2092043f}": {
+        "AttackableUnit": {
             "{f1d3a034}": true,
             "__type": "AttackableUnitGeComponentDef"
         },
@@ -3288,7 +3288,7 @@
             "Skin": "Characters/SRU_OrderMinionMelee/Skins/Skin28",
             "__type": "SkinCharacterGeComponentDef"
         },
-        "{2092043f}": {
+        "AttackableUnit": {
             "{f1d3a034}": true,
             "__type": "AttackableUnitGeComponentDef"
         },
@@ -3431,7 +3431,7 @@
             "Skin": "Characters/SRU_OrderMinionSiege/Skins/Skin28",
             "__type": "SkinCharacterGeComponentDef"
         },
-        "{2092043f}": {
+        "AttackableUnit": {
             "{f1d3a034}": true,
             "__type": "AttackableUnitGeComponentDef"
         },
@@ -3444,7 +3444,7 @@
             "Skin": "Characters/SRU_ChaosMinionSuper/Skins/Skin28",
             "__type": "SkinCharacterGeComponentDef"
         },
-        "{2092043f}": {
+        "AttackableUnit": {
             "{f1d3a034}": true,
             "__type": "AttackableUnitGeComponentDef"
         },
@@ -3461,7 +3461,7 @@
             "Skin": "Characters/SRU_ChaosMinionMelee/Skins/Skin28",
             "__type": "SkinCharacterGeComponentDef"
         },
-        "{2092043f}": {
+        "AttackableUnit": {
             "{f1d3a034}": true,
             "__type": "AttackableUnitGeComponentDef"
         },
@@ -90784,7 +90784,7 @@
             "{5cb02b41}": {
                 "mConstants": {
                     "ai_AmbientGoldAmount": {
-                        "mValue": 8.0,
+                        "mValue": 10.5,
                         "__type": "GameModeConstantFloat"
                     },
                     "ai_AmbientGoldInterval": {
@@ -91073,7 +91073,7 @@
                         "mValue": 1.0,
                         "__type": "GameModeConstantFloat"
                     },
-                    "{8b687681}": {
+                    "sv_SpellVampModifiedRatio": {
                         "mValue": 0.3330000042915344,
                         "__type": "GameModeConstantFloat"
                     },
@@ -91115,7 +91115,7 @@
                         ],
                         "__type": "GameModeConstantStringVector"
                     },
-                    "{512aebc2}": {
+                    "sv_SpellVampModifiedDamageTags": {
                         "mValue": [
                             "AOE",
                             "Pet",
@@ -91123,7 +91123,7 @@
                         ],
                         "__type": "GameModeConstantStringVector"
                     },
-                    "{0ea5bdcd}": {
+                    "sv_SpellVampModifiedUnitTags": {
                         "mValue": [
                             "Minion",
                             "Monster"
@@ -91279,7 +91279,7 @@
                     "mvm_ReceiveKillEvents": {
                         "__type": "GameModeConstantBool"
                     },
-                    "{75b63dff}": {
+                    "mvm_MinionDisableTurretAdvantage": {
                         "mValue": true,
                         "__type": "GameModeConstantBool"
                     }
@@ -91344,7 +91344,7 @@
                         "__type": "GameModeConstantBool"
                     },
                     "mission_AmbientGoldStartTime": {
-                        "mValue": 65.0,
+                        "mValue": 90.0,
                         "__type": "GameModeConstantFloat"
                     },
                     "DisableFogOfWar": {
@@ -91402,11 +91402,11 @@
                     "EnableSpellPickChoice": {
                         "__type": "GameModeConstantBool"
                     },
-                    "{276d8083}": {
+                    "ForceShowBasicPlayerStats": {
                         "mValue": true,
                         "__type": "GameModeConstantBool"
                     },
-                    "{0bcbfd51}": {
+                    "DisableRelativeTeamsForMinimapIcons": {
                         "__type": "GameModeConstantBool"
                     }
                 },
@@ -91481,14 +91481,14 @@
     },
     "{bfb37979}": {
         "mTimeDeadPerLevel": [
+            10.0,
             12.0,
             14.0,
-            16.0,
-            19.0,
-            22.0,
-            25.0,
-            28.0,
-            30.0,
+            17.0,
+            20.0,
+            23.0,
+            26.0,
+            29.0,
             32.0,
             34.0,
             36.0,
@@ -111930,7 +111930,7 @@
             "__type": "CatalogEntry"
         },
         "image": "ASSETS/Loot/Classic_Pass.tex",
-        "__type": "{1e3c6622}"
+        "__type": "eventpass"
     },
     "{4139117a}": {
         "ID": "0865de69-2f28-4b36-b280-a102a289730e",
