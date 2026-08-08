@@ -13876,20 +13876,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.unobserveProgressionReady = function(e) {
-                o().unobserve(i, e)
+                s.db.unobserve(a, e)
             }, t.whenProgressionReady = function(e, t) {
-                const n = o();
-                n.observe(i, e, (s => {
-                    !s || e.isDestroying || e.isDestroyed || (n.unobserve(i, e), t())
+                s.db.observe(a, e, (n => {
+                    !n || e.isDestroying || e.isDestroyed || (s.db.unobserve(a, e), t())
                 }))
             };
             var s = n(1);
-            const a = "/lol-progression",
-                i = "/v1/ready";
-
-            function o() {
-                return (0, s.dataBinding)(a, (0, s.getProvider)().getSocket())
-            }
+            const a = "/lol-progression/v1/ready"
         }, (e, t, n) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -20937,9 +20931,13 @@
                             }
                         }
                     }
+                    const l = s.tra.formatString("jade_mastery_tooltip_rank", {
+                        currentRank: t,
+                        maxRank: e.maxRank
+                    });
                     return {
                         name: e.name || "",
-                        rank: `Rank: ${t}/${e.maxRank}`,
+                        rank: l,
                         description: e.description || "",
                         treeType: n,
                         state: a,
@@ -24004,7 +24002,7 @@
                 o = n(312);
             n(463);
             const l = "c3e84157-4b03-4887-b342-0fb8c9f78ac3",
-                r = "0724e93d-6b74-449f-abef-8785262c3890",
+                r = "/events/0724e93d-6b74-449f-abef-8785262c3890/reward-track/items",
                 c = "[jade-progression-widget]",
                 m = 30,
                 d = 100 / 7,
@@ -24054,10 +24052,10 @@
                     }, this.element.addEventListener("click", this._onWidgetClick)
                 },
                 willDestroyElement() {
-                    this._super(...arguments), this._onWidgetClick && this.element.removeEventListener("click", this._onWidgetClick), this._cleanupModalBackdrop(), (0, o.unobserveProgressionReady)(this), (0, a.dataBinding)("/lol-progression", p).unobserve(`/v1/groups/${l}/instanceData`, this)
+                    this._super(...arguments), this._onWidgetClick && this.element.removeEventListener("click", this._onWidgetClick), this._cleanupModalBackdrop(), (0, o.unobserveProgressionReady)(this), (0, a.dataBinding)("/lol-progression", p).unobserve(`/v1/groups/${l}/instanceData`, this), (0, a.dataBinding)("/lol-event-hub/v1", p).unobserve(r, this)
                 },
                 _initProgressionData() {
-                    (0, o.whenProgressionReady)(this, (() => {
+                    this._observeRewardTrackItems(), (0, o.whenProgressionReady)(this, (() => {
                         (0, a.dataBinding)("/lol-progression", p).observe(`/v1/groups/${l}/instanceData`, this, (e => {
                             !e || this.isDestroying || this.isDestroyed || (this.set("_instanceData", e), this._checkDataLoaded())
                         })), this._loadProgressionFetches()
@@ -24068,7 +24066,7 @@
                         this.isDestroying || this.isDestroyed || (e ? (this.set("_configuration", e), this._checkDataLoaded(), this._fetchRewardGroups(e)) : this._handleLoadError("configuration response empty"))
                     })).catch((e => {
                         this._handleLoadError("configuration fetch FAILED for TRACK_ID: " + l, e)
-                    })), this._fetchRewardTrackItems()
+                    }))
                 },
                 _handleLoadError(e, t) {
                     a.logger.error(c, "load error:", e, t || ""), this.isDestroying || this.isDestroyed || this.set("loadError", !0)
@@ -24089,17 +24087,15 @@
                         this._handleLoadError("/lol-rewards/v1/groups fetch FAILED", e)
                     }))
                 },
-                _fetchRewardTrackItems() {
-                    (0, a.dataBinding)("/lol-event-hub/v1").get(`/events/${r}/reward-track/items`).then((e => {
+                _observeRewardTrackItems() {
+                    (0, a.dataBinding)("/lol-event-hub/v1", p).observe(r, this, (e => {
                         if (this.isDestroying || this.isDestroyed) return;
-                        if (!e || !Array.isArray(e) || 0 === e.length) return void this._handleLoadError("reward-track items missing/empty/not-array. items: " + JSON.stringify(e));
+                        if (!Array.isArray(e) || !e.length) return;
                         const t = {};
                         e.forEach((e => {
                             const n = parseInt(e.threshold, 10);
                             isNaN(n) || (t[n] = e)
                         })), this.set("_rewardTrackItemMap", t), this._checkDataLoaded()
-                    })).catch((e => {
-                        this._handleLoadError("reward-track/items fetch FAILED for EVENT_ID: " + r, e)
                     }))
                 },
                 _milestoneForLevel(e) {
@@ -24301,7 +24297,7 @@
                         this._closeModal()
                     },
                     retryProgressionData() {
-                        this.set("loadError", !1), this.set("_configuration", null), this.set("_rewardGroupMap", null), this.set("_rewardTrackItemMap", null), this._loadProgressionFetches()
+                        this.set("loadError", !1), this.set("_configuration", null), this.set("_rewardGroupMap", null), this._loadProgressionFetches()
                     },
                     selectModalReward(e) {
                         this.set("modalSelectedRewardLevel", e), i.default.playSound("sfx-ui", "/fe/lol-champion-details/audio/sfx-champselect-button-arrowfwd-click.ogg")

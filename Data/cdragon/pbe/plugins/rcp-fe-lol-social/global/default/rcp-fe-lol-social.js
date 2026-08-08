@@ -23097,20 +23097,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.unobserveProgressionReady = function(e) {
-                a().unobserve(i, e)
+                r.db.unobserve(o, e)
             }, t.whenProgressionReady = function(e, t) {
-                const n = a();
-                n.observe(i, e, (r => {
-                    !r || e.isDestroying || e.isDestroyed || (n.unobserve(i, e), t())
+                r.db.observe(o, e, (n => {
+                    !n || e.isDestroying || e.isDestroyed || (r.db.unobserve(o, e), t())
                 }))
             };
             var r = n(1);
-            const o = "/lol-progression",
-                i = "/v1/ready";
-
-            function a() {
-                return (0, r.dataBinding)(o, (0, r.getProvider)().getSocket())
-            }
+            const o = "/lol-progression/v1/ready"
         }, (e, t, n) => {
             const r = n(1).Ember;
             e.exports = r.HTMLBars.template({

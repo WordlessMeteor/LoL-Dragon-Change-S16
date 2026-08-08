@@ -13786,20 +13786,14 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.unobserveProgressionReady = function(e) {
-                r().unobserve(i, e)
+                s.db.unobserve(a, e)
             }, t.whenProgressionReady = function(e, t) {
-                const n = r();
-                n.observe(i, e, (s => {
-                    !s || e.isDestroying || e.isDestroyed || (n.unobserve(i, e), t())
+                s.db.observe(a, e, (n => {
+                    !n || e.isDestroying || e.isDestroyed || (s.db.unobserve(a, e), t())
                 }))
             };
             var s = n(1);
-            const a = "/lol-progression",
-                i = "/v1/ready";
-
-            function r() {
-                return (0, s.dataBinding)(a, (0, s.getProvider)().getSocket())
-            }
+            const a = "/lol-progression/v1/ready"
         }, (e, t, n) => {
             "use strict";
             var s = n(1);
