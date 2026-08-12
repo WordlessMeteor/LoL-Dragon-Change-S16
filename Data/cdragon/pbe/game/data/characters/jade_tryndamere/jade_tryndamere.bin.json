@@ -10,10 +10,10 @@
         "{55bb9b57}": 25,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Tryndamere/Skins/Base/Jade_TryndamereLoadScreen_Feeney.tex",
+            "image": "assets/characters/jade_tryndamere/skins/base/jade_tryndamereloadscreen_feeney.tex",
             "__type": "CensoredImage"
         },
-        "__type": "{3018b0da}"
+        "__type": "Portrait"
     },
     "{32ac05f4}": {
         "mNameTraKey": "Jade_Portrait_Name_Tryndamere_LoR_01",
@@ -26,10 +26,10 @@
         "{55bb9b57}": 24,
         "{ff3c9ff8}": "{e15eb251}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Tryndamere/Skins/Base/Jade_TryndamereLoadScreen_LoR_01.tex",
+            "image": "assets/characters/jade_tryndamere/skins/base/jade_tryndamereloadscreen_lor_01.tex",
             "__type": "CensoredImage"
         },
-        "__type": "{3018b0da}"
+        "__type": "Portrait"
     },
     "{0fa25305}": {
         "__type": "ChampionRuneRecommendationsContext"
@@ -98,7 +98,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -343,7 +343,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -532,7 +532,7 @@
                 660.0,
                 660.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     660.0,
                     660.0,
@@ -610,7 +610,7 @@
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_TryndamereBasicAttack",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -643,7 +643,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1043,7 +1043,7 @@
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_TryndamereBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1076,7 +1076,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1446,8 +1446,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/48thSlave_Pacify.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -1614,7 +1614,7 @@
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_TryndamereCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1647,7 +1647,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1750,7 +1750,7 @@
             "baseValue": 31.25,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.25,
             "__type": "ModifiableFloat"
         },
@@ -1826,7 +1826,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "{17e52b5e}",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",

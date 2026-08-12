@@ -174,10 +174,10 @@
         "{55bb9b57}": 19,
         "{ff3c9ff8}": "{e79c1e24}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Chogath/skins/base/Jade_ChogathLoadScreen_Feeney.tex",
+            "image": "assets/characters/jade_chogath/skins/base/jade_chogathloadscreen_feeney.tex",
             "__type": "CensoredImage"
         },
-        "__type": "{3018b0da}"
+        "__type": "Portrait"
     },
     "{d644599f}": {
         "mNameTraKey": "Jade_Portrait_Name_Chogath_Legacy_02",
@@ -190,10 +190,10 @@
         "{55bb9b57}": 5,
         "{ff3c9ff8}": "{79c259f7}",
         "image": {
-            "image": "ASSETS/Characters/Jade_Chogath/skins/base/Jade_ChoGathLoadScreen_Portrait_Legacy_02.tex",
+            "image": "assets/characters/jade_chogath/skins/base/jade_chogathloadscreen_portrait_legacy_02.tex",
             "__type": "CensoredImage"
         },
-        "__type": "{3018b0da}"
+        "__type": "Portrait"
     },
     "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility": {
         "mRootSpell": "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility/Jade_ChogathW",
@@ -252,7 +252,7 @@
     },
     "Characters/Jade_Chogath/Spells/Jade_ChogathRAbility/Jade_ChogathR": {
         "ObjectName": "Jade_ChogathR",
-        "objectPath": "{ed64bf6b}",
+        "objectPath": "Characters/Jade_Chogath/Spells/Jade_ChogathRAbility/Jade_ChogathR",
         "mScriptName": "Jade_ChogathR",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -454,7 +454,7 @@
                 175.0,
                 175.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     175.0,
                     175.0,
@@ -499,7 +499,7 @@
                 60.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -578,12 +578,12 @@
     },
     "Characters/Jade_Chogath/Spells/Jade_ChogathCritAttack": {
         "ObjectName": "Jade_ChogathCritAttack",
-        "objectPath": "{319c3ce5}",
+        "objectPath": "Characters/Jade_Chogath/Spells/Jade_ChogathCritAttack",
         "mScriptName": "Jade_ChogathCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 14.125,
@@ -634,7 +634,7 @@
     },
     "Characters/Jade_Chogath/Spells/Jade_ChogathQAbility/Jade_ChogathQ": {
         "ObjectName": "Jade_ChogathQ",
-        "objectPath": "{6ddfb9f9}",
+        "objectPath": "Characters/Jade_Chogath/Spells/Jade_ChogathQAbility/Jade_ChogathQ",
         "mScriptName": "Jade_ChogathQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -856,7 +856,7 @@
                 950.0,
                 950.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     950.0,
                     950.0,
@@ -891,7 +891,7 @@
                 90.0,
                 90.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     90.0,
                     90.0,
@@ -1042,8 +1042,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
-            "{11704a2b}": 0.3888999819755554,
-            "{f26881a0}": 1.333400011062622,
+            "spellCastTime": 0.3888999819755554,
+            "spellTotalTime": 1.333400011062622,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -1076,7 +1076,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -1175,7 +1175,7 @@
     },
     "Characters/Jade_Chogath/Spells/Jade_ChogathEAbility/Jade_ChogathE": {
         "ObjectName": "Jade_ChogathE",
-        "objectPath": "{457d8d71}",
+        "objectPath": "Characters/Jade_Chogath/Spells/Jade_ChogathEAbility/Jade_ChogathE",
         "mScriptName": "Jade_ChogathE",
         "mSpell": {
             "flags": 4,
@@ -1240,8 +1240,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
-            "{11704a2b}": 0.3812499940395355,
-            "{f26881a0}": 1.5399999618530273,
+            "spellCastTime": 0.3812499940395355,
+            "spellTotalTime": 1.5399999618530273,
             "cooldownTime": [
                 0.5,
                 0.5,
@@ -1286,7 +1286,7 @@
                 40.0,
                 40.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     40.0,
                     40.0,
@@ -1428,8 +1428,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
-            "{11704a2b}": 0.3888999819755554,
-            "{f26881a0}": 1.333400011062622,
+            "spellCastTime": 0.3888999819755554,
+            "spellTotalTime": 1.333400011062622,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -1462,7 +1462,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -1570,8 +1570,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
-            "{11704a2b}": 0.3888999819755554,
-            "{f26881a0}": 1.333400011062622,
+            "spellCastTime": 0.3888999819755554,
+            "spellTotalTime": 1.333400011062622,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -1604,7 +1604,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -1712,8 +1712,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
-            "{11704a2b}": 0.3888999819755554,
-            "{f26881a0}": 1.333400011062622,
+            "spellCastTime": 0.3888999819755554,
+            "spellTotalTime": 1.333400011062622,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -1746,7 +1746,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -1854,8 +1854,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
-            "{11704a2b}": 0.3888999819755554,
-            "{f26881a0}": 1.333400011062622,
+            "spellCastTime": 0.3888999819755554,
+            "spellTotalTime": 1.333400011062622,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -1888,7 +1888,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -1996,8 +1996,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/ChoGath_ChitinousExoplates.dds"
             ],
-            "{11704a2b}": 0.3888999819755554,
-            "{f26881a0}": 1.333400011062622,
+            "spellCastTime": 0.3888999819755554,
+            "spellTotalTime": 1.333400011062622,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -2030,7 +2030,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -2128,12 +2128,12 @@
     },
     "Characters/Jade_Chogath/Spells/Jade_ChogathBasicAttack": {
         "ObjectName": "Jade_ChogathBasicAttack",
-        "objectPath": "{9f382215}",
+        "objectPath": "Characters/Jade_Chogath/Spells/Jade_ChogathBasicAttack",
         "mScriptName": "Jade_ChogathBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_ChogathBasicAttack",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 14.0,
@@ -2166,8 +2166,8 @@
             "flags": 4,
             "mAffectsTypeFlags": 8192,
             "mAnimationName": "none",
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2200,7 +2200,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2261,13 +2261,13 @@
     },
     "Characters/Jade_Chogath/Spells/Jade_ChogathBasicAttack2": {
         "ObjectName": "Jade_ChogathBasicAttack2",
-        "objectPath": "{cc5dc365}",
+        "objectPath": "Characters/Jade_Chogath/Spells/Jade_ChogathBasicAttack2",
         "mScriptName": "Jade_ChogathBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_ChogathBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 14.25,
@@ -2408,7 +2408,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -2444,7 +2444,7 @@
     },
     "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility/Jade_ChogathW": {
         "ObjectName": "Jade_ChogathW",
-        "objectPath": "{e910f7c5}",
+        "objectPath": "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility/Jade_ChogathW",
         "mScriptName": "Jade_ChogathW",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2596,7 +2596,7 @@
                 300.0,
                 300.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     300.0,
                     300.0,
@@ -2633,7 +2633,7 @@
                 110.0,
                 110.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     80.0,
@@ -2801,7 +2801,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mEarlyLevelOverrides": [
                     0,
                     1,
@@ -2936,7 +2936,7 @@
             "baseValue": 31.25,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.25,
             "__type": "ModifiableFloat"
         },
@@ -3014,7 +3014,7 @@
             "Jade_Chogath_Carnivore",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "{4381c24f}",
             "{c2452ac7}",
             "{c1452934}",
@@ -3229,7 +3229,7 @@
                         "mRuleName": "Q",
                         "mConditions": [
                             {
-                                "mSpell": "{6ddfb9f9}",
+                                "mSpell": "Characters/Jade_Chogath/Spells/Jade_ChogathQAbility/Jade_ChogathQ",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -3252,7 +3252,7 @@
                         "mRuleName": "W",
                         "mConditions": [
                             {
-                                "mSpell": "{e910f7c5}",
+                                "mSpell": "Characters/Jade_Chogath/Spells/Jade_ChogathWAbility/Jade_ChogathW",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -3275,7 +3275,7 @@
                         "mRuleName": "R",
                         "mConditions": [
                             {
-                                "mSpell": "{ed64bf6b}",
+                                "mSpell": "Characters/Jade_Chogath/Spells/Jade_ChogathRAbility/Jade_ChogathR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],

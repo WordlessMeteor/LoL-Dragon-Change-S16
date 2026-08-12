@@ -425,6 +425,64 @@
         ],
         "__type": "StaticMaterialDef"
     },
+    "{270d6921}": {
+        "name": "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Base_Turret_BA_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/turret_stoneBase_hq.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.004999999888241291,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5199969410896301,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
     "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Props_Torch_AA_MAT": {
         "name": "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Props_Torch_AA_MAT",
         "type": 0,
@@ -2008,43 +2066,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Shop_Trol_Prop_AA_Mat": {
-        "name": "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Shop_Trol_Prop_AA_Mat",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/shop_trol_prop.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/Jade/Base/Materials/Default/Jade_GroundLane_AA_MAT": {
         "name": "Maps/KitPieces/Jade/Base/Materials/Default/Jade_GroundLane_AA_MAT",
         "type": 0,
@@ -2289,6 +2310,64 @@
                 "passes": [
                     {
                         "shader": "Shaders/StaticMesh/DefaultEnv_Flat",
+                        "__type": "StaticMaterialPassDef"
+                    }
+                ],
+                "__type": "StaticMaterialTechniqueDef"
+            }
+        ],
+        "__type": "StaticMaterialDef"
+    },
+    "{c579dce2}": {
+        "name": "Maps/KitPieces/Jade/Base/Materials/Default/Jade_Base_Turret_AA_MAT",
+        "type": 0,
+        "samplerValues": [
+            {
+                "TextureName": "DiffuseTexture",
+                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/turret_stoneBase.tex",
+                "addressW": 1,
+                "__type": "StaticMaterialShaderSamplerDef"
+            }
+        ],
+        "paramValues": [
+            {
+                "name": "AlphaTestValue",
+                "value": [
+                    0.004999999888241291,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "TintColor",
+                "value": [
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5300068855285645,
+                    1.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            }
+        ],
+        "switches": [
+            {
+                "name": "MULTIPLY_ALPHA",
+                "__type": "StaticMaterialSwitchDef"
+            }
+        ],
+        "techniques": [
+            {
+                "name": "normal",
+                "passes": [
+                    {
+                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
+                        "blendEnable": true,
+                        "srcColorBlendFactor": 6,
+                        "srcAlphaBlendFactor": 6,
+                        "dstColorBlendFactor": 7,
+                        "dstAlphaBlendFactor": 7,
                         "__type": "StaticMaterialPassDef"
                     }
                 ],
@@ -3325,7 +3404,7 @@
                 "name": "TintColor",
                 "value": [
                     0.5000076293945312,
-                    0.5100023150444031,
+                    0.5000076293945312,
                     0.5100023150444031,
                     1.0
                 ],
@@ -3532,9 +3611,9 @@
             {
                 "name": "TintColor",
                 "value": [
-                    0.5,
-                    0.5,
-                    0.5,
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5199969410896301,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -3796,65 +3875,6 @@
         ],
         "__type": "StaticMaterialDef"
     },
-    "Maps/KitPieces/TestMaps/Base/Materials/Default/turret_stoneBase_hq_": {
-        "name": "Maps/KitPieces/TestMaps/Base/Materials/Default/turret_stoneBase_hq_",
-        "type": 0,
-        "samplerValues": [
-            {
-                "TextureName": "DiffuseTexture",
-                "texturePath": "ASSETS/Maps/KitPieces/Jade/Base/Textures/turret_stoneBase.tex",
-                "addressW": 1,
-                "__type": "StaticMaterialShaderSamplerDef"
-            }
-        ],
-        "paramValues": [
-            {
-                "name": "AlphaTestValue",
-                "value": [
-                    0.004999999888241291,
-                    0.0,
-                    0.0,
-                    0.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            },
-            {
-                "name": "TintColor",
-                "value": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    1.0
-                ],
-                "__type": "StaticMaterialShaderParamDef"
-            }
-        ],
-        "switches": [
-            {
-                "name": "MULTIPLY_ALPHA",
-                "on": false,
-                "__type": "StaticMaterialSwitchDef"
-            }
-        ],
-        "techniques": [
-            {
-                "name": "normal",
-                "passes": [
-                    {
-                        "shader": "Shaders/StaticMesh/DefaultEnv_Flat_AlphaTest",
-                        "blendEnable": true,
-                        "srcColorBlendFactor": 6,
-                        "srcAlphaBlendFactor": 6,
-                        "dstColorBlendFactor": 7,
-                        "dstAlphaBlendFactor": 7,
-                        "__type": "StaticMaterialPassDef"
-                    }
-                ],
-                "__type": "StaticMaterialTechniqueDef"
-            }
-        ],
-        "__type": "StaticMaterialDef"
-    },
     "Maps/KitPieces/TestMaps/Base/Materials/Default/flowerb_decalVersion3_no_shadow": {
         "name": "Maps/KitPieces/TestMaps/Base/Materials/Default/flowerb_decalVersion3_no_shadow",
         "type": 0,
@@ -3998,9 +4018,9 @@
             {
                 "name": "TintColor",
                 "value": [
-                    0.5199969410896301,
-                    0.5400015115737915,
-                    0.5400015115737915,
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5000076293945312,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -4272,9 +4292,9 @@
             {
                 "name": "TintColor",
                 "value": [
-                    0.5199969410896301,
-                    0.5400015115737915,
-                    0.5400015115737915,
+                    0.5000076293945312,
+                    0.5000076293945312,
+                    0.5000076293945312,
                     1.0
                 ],
                 "__type": "StaticMaterialShaderParamDef"
@@ -33732,8 +33752,8 @@
                         0.0
                     ],
                     [
-                        14849.8681640625,
-                        119.9776611328125,
+                        14845.7255859375,
+                        199.2158203125,
                         9317.8017578125,
                         1.0
                     ]
@@ -33980,8 +34000,8 @@
                         0.0
                     ],
                     [
-                        13064.875,
-                        91.77391052246094,
+                        13063.1083984375,
+                        123.2484359741211,
                         8016.29736328125,
                         1.0
                     ]
@@ -41987,6 +42007,68 @@
                 "name": "SRU_WaterBugs9",
                 "system": "Maps/Shipping/Map453/Particles/Jade_WaterBugs_env",
                 "__type": "MapParticle"
+            },
+            "{afd4da3d}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        7034.00732421875,
+                        219.29745483398438,
+                        2264.46240234375,
+                        1.0
+                    ]
+                ],
+                "name": "Sru_torch_fire114",
+                "system": "Maps/Shipping/Map453/Particles/Jade_FireTorch_small",
+                "__type": "MapParticle"
+            },
+            "{48398e5c}": {
+                "transform": [
+                    [
+                        1.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        1.0,
+                        0.0,
+                        0.0
+                    ],
+                    [
+                        0.0,
+                        0.0,
+                        1.0,
+                        0.0
+                    ],
+                    [
+                        6947.29248046875,
+                        242.43093872070312,
+                        5741.11328125,
+                        1.0
+                    ]
+                ],
+                "name": "Sru_torch_fire119",
+                "system": "Maps/Shipping/Map453/Particles/Jade_FireTorch_small",
+                "__type": "MapParticle"
             }
         },
         "__type": "MapPlaceableContainer"
@@ -42864,7 +42946,7 @@
                     "Skin": "Characters/Jade_Turret/Skins/Skin5",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 5,
@@ -43030,7 +43112,7 @@
                     "Skin": "Characters/Jade_Turret/Skins/Skin3",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "__type": "{82cab1b3}"
@@ -43270,7 +43352,7 @@
                     "Skin": "Characters/Jade_Turret/Skins/Skin1",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 2,
@@ -43508,7 +43590,7 @@
                     "Skin": "Characters/Jade_Turret/Skins/Skin1",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "__type": "{82cab1b3}"
@@ -43746,7 +43828,7 @@
                     "Skin": "Characters/Jade_Turret/Skins/Skin5",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 5,
@@ -43980,7 +44062,7 @@
                     "Skin": "Characters/Jade_Turret/Skins/Skin0",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "__type": "{82cab1b3}"
@@ -44210,7 +44292,7 @@
                     "Skin": "Characters/Jade_Turret/Skins/Skin0",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 2,
@@ -44441,7 +44523,7 @@
                     "Skin": "Characters/Jade_Turret/Skins/Skin2",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 1,
@@ -44672,7 +44754,7 @@
                     "Skin": "Characters/Jade_Turret/Skins/Skin0",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 5,
@@ -44903,7 +44985,7 @@
                     "Skin": "Characters/Jade_Turret/Skins/Skin0",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 4,
@@ -46481,7 +46563,33 @@
             "{69534524}": null,
             "{0878adc1}": null,
             "{bf15eb43}": null,
-            "{5239c3fc}": null
+            "{5239c3fc}": null,
+            "{e8ef772f}": null,
+            "{697fadd8}": null,
+            "{941c3f12}": null,
+            "{e2349d0a}": null,
+            "{49116b8d}": null,
+            "{cdeb8860}": null,
+            "{a7b5e2b0}": null,
+            "{3afc2ea6}": null,
+            "{395a621c}": null,
+            "{85411c9e}": null,
+            "{e87c332b}": null,
+            "{74264e72}": null,
+            "{ded9a6ca}": null,
+            "{b6cb1719}": null,
+            "{3882b003}": null,
+            "{49c83c37}": null,
+            "{58b9b8c4}": null,
+            "{c48e7f34}": null,
+            "{0631d20f}": null,
+            "{a21533bd}": null,
+            "{55b77e68}": null,
+            "{5f90e974}": null,
+            "{3c96800d}": null,
+            "{9a059c6b}": null,
+            "{032e896c}": null,
+            "{069919b8}": null
         },
         "__type": "MapPlaceableContainer"
     },
@@ -46563,7 +46671,7 @@
                     "Skin": "Characters/Jade_Inhibitor/Skins/Skin0",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 1,
@@ -46611,7 +46719,7 @@
                     "Skin": "Characters/Jade_Nexus/Skins/Skin1",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 4,
@@ -46698,7 +46806,7 @@
                     "Skin": "Characters/Jade_Inhibitor/Skins/Skin0",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 1,
@@ -46742,7 +46850,7 @@
                     "Skin": "Characters/Jade_Nexus/Skins/Skin0",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 4,
@@ -47793,7 +47901,7 @@
                     "Skin": "Characters/SRUAP_MageCrystal/Skins/Skin0",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 0,
@@ -47844,7 +47952,7 @@
                     "Skin": "Characters/SRUAP_MageCrystal/Skins/Skin0",
                     "__type": "SkinCharacterGeComponentDef"
                 },
-                "{2092043f}": {
+                "AttackableUnit": {
                     "LaneDefinition": {
                         "lane": 1,
                         "Position": 0,
@@ -48634,7 +48742,8 @@
             "{3eab19cc}": null,
             "{c98d1326}": null,
             "{4a7241ac}": null,
-            "{87368690}": null
+            "{87368690}": null,
+            "{f8392a48}": null
         },
         "__type": "MapPlaceableContainer"
     },

@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "A Maró egységek sebzése @ShredDuration@ másodpercig @ShredPercent@%-os Szaggatást és Roncsolást alkalmaz az ellenfelekre.",
+        "tooltip_text": "A Maró egységek sebzése @ShredDuration@ másodpercig @ShredPercent@%-os Szaggatást és Roncsolást alkalmaz az ellenfelekre.<br><br><rules>Szaggatás: csökkenti a varázsellenállást</rules><br><rules>Roncsolás: csökkenti a páncélt</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "A Tűzcsóva sebzése @Duration@ másodpercre <TFTKeyword>Égés</TFTKeyword> és @WoundPercent@%-os <TFTKeyword>Seb</TFTKeyword> hatást alkalmaz az ellenfelekre. A Tűzcsóva Égés-hatásai összeadódnak a többi Égés-hatással.<br><row>(@MinUnits@) @HPBurnPerSecond@%-os Égés</row><br><row>(@MinUnits@) A harc után lángba borul @LuckySlotCount@ olyan bolti helyed, amelyen nem Tűzcsóva egység van, és eggyel magasabb osztályú hőst sorsol ki</row><br><row>(@MinUnits@) @LuckySlotCount@ bolti helyed lángba borul, @HPBurnPerSecond@%-os Égés</row><br><row>(@MinUnits@) @LuckySlotCount@ bolti helyed lángba borul, @HPBurnPerSecond@%-os Égés</row>",
+        "tooltip_text": "A Tűzcsóvák sebzése @Duration@ másodpercre <TFTKeyword>Égés</TFTKeyword> és <TFTKeyword>Seb</TFTKeyword> hatást alkalmaz az ellenfelekre. A Tűzcsóva Égés-hatásai összeadódnak a többi Égés-hatással.<br><row>(@MinUnits@) @HPBurnPerSecond@%-os Égés, @WoundPercent@%-os Seb</row><br><row>(@MinUnits@) A harc után lángba borul @LuckySlotCount@ olyan bolti helyed, amelyen nem Tűzcsóva egység van, és eggyel magasabb osztályú hőst sorsol ki</row><br><row>(@MinUnits@) @LuckySlotCount@ bolti helyed lángba borul, @HPBurnPerSecond@%-os Égés</row><br><row>(@MinUnits@) @LuckySlotCount@ bolti helyed lángba borul, @HPBurnPerSecond@%-os Égés</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "Ha meghal egy @UniqueTraitHexRange@ mező távolságon belül tartózkodó ellenfél, @UniqueTraitHealthPerStack@ végleges maximális életerőt kapsz.<br><br>Jelenlegi érték: 0",
+        "tooltip_text": "Ha meghal egy @UniqueTraitHexRange@ mező távolságon belül tartózkodó ellenfél, a legerősebb Őserdő hősöd @UniqueTraitHealthPerStack@ végleges maximális életerőt kap.<br><br>Jelenlegi érték: 0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,
@@ -19501,7 +19501,7 @@
         "trait_id": "DA_Emerald18",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_EmeraldAspect.TFT_Set18.png",
-        "tooltip_text": "Húzz egy szövetségest a legerősebb Taricra, hogy összekapcsold őket. A szövetséges így erős bónuszokat kap Taric képességéből.",
+        "tooltip_text": "Húzz egy szövetségest a legerősebb Taricodra, hogy összekapcsold őket. A szövetséges így erős bónuszokat kap Taric képességéből.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

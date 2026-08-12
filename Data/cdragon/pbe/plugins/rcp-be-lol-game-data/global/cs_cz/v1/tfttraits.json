@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "Poškození od Žíravých způsobuje na @ShredDuration@ sek. @ShredPercent@% ochromení obrany a rozpolcení zbroje.",
+        "tooltip_text": "Poškození od Žíravých způsobuje na @ShredDuration@ sek. @ShredPercent@% ochromení obrany a rozpolcení zbroje.<br><br><rules>Ochromení obrany: Snižuje odolnost vůči magii.</rules><br><rules>Rozpolcení zbroje: Snižuje hodnotu brnění.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "Poškození od Ohnivých způsobuje nepřátelům <TFTKeyword>popálení</TFTKeyword> a @WoundPercent@% <TFTKeyword>zranění</TFTKeyword> trvající @Duration@&nbsp;sek. Popálení od Ohnivých lze kombinovat s ostatními typy popálení.<br><row>(@MinUnits@) @HPBurnPerSecond@% popálení</row><br><row>(@MinUnits@) Po boji se @LuckySlotCount@ pole ve tvém obchodě bez Ohnivého šampiona vznítí, šampion v hořícím poli bude o jednu úroveň vyšší</row><br><row>(@MinUnits@) Vzplanou @LuckySlotCount@ pole v obchodě, @HPBurnPerSecond@% popálení</row><br><row>(@MinUnits@) Vzplanou @LuckySlotCount@pole v obchodě, @HPBurnPerSecond@% popálení</row>",
+        "tooltip_text": "Poškození od Ohnivých způsobuje nepřátelům <TFTKeyword>popálení</TFTKeyword> a <TFTKeyword>zranění</TFTKeyword> trvající @Duration@ sek. Popálení od Ohnivých lze kombinovat s ostatními typy popálení.<br><row>(@MinUnits@) @HPBurnPerSecond@% popálení, @WoundPercent@% zranění</row><br><row>(@MinUnits@) Po boji se @LuckySlotCount@ pole ve tvém obchodě bez Ohnivého šampiona vznítí, šampion v hořícím poli bude o jednu úroveň vyšší</row><br><row>(@MinUnits@) Vzplanou @LuckySlotCount@ pole v obchodě, @HPBurnPerSecond@% popálení</row><br><row>(@MinUnits@) Vzplanou @LuckySlotCount@ pole v obchodě, @HPBurnPerSecond@% popálení</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "Kdykoliv zemře nepřítel v okruhu @UniqueTraitHexRange@ polí, získá šampion @UniqueTraitHealthPerStack@ bodů trvalého maximálního zdraví.<br><br>Aktuálně: 0",
+        "tooltip_text": "Kdykoliv zemře nepřítel v okruhu @UniqueTraitHexRange@ polí, tvůj nejsilnější šampion Starého hvozdu získá trvale +@UniqueTraitHealthPerStack@ k maximálnímu zdraví.<br><br>Aktuálně: 0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,

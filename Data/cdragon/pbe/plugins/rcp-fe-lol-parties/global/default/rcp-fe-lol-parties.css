@@ -5109,6 +5109,14 @@ hr {
     width: 15px
 }
 
+.parties-game-type-card-category-div .queue-id {
+    display: flex
+}
+
+.parties-game-type-card-category-div .queue-id-info {
+    margin-left: 5px
+}
+
 .parties-game-type-card-category-div .solo-rewards-icon {
     background: url(/fe/lol-parties/solo-rewards-icon.png) no-repeat;
     background-size: contain;
@@ -5185,7 +5193,8 @@ hr {
     color: #f0e6d2
 }
 
-.parties-game-type-card-category-btn.disabled {
+.parties-game-type-card-category-btn.disabled,
+.parties-game-type-card-category-btn.disabled .game-mode-description-text {
     color: #5c5b57;
     cursor: default
 }
@@ -9084,6 +9093,12 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] .parties-voic
     margin-right: 15px
 }
 
+.v2-header-component .lobby-header-content .tft-compensation-badge {
+    height: 32px;
+    margin-right: 20px;
+    width: 32px
+}
+
 .v2-header-component .show-tutorial-button {
     cursor: pointer;
     display: inline-block;
@@ -11353,6 +11368,30 @@ lol-uikit-content-block.parties-footer-tooltip[type=tooltip-large] .parties-voic
 
 .pass-progression-widget-wrapper {
     width: 100%
+}
+
+.v2-parties-invite-panel-kiwi-progression {
+    color: #c8aa6e;
+    font-family: var(--font-display);
+    font-weight: 700;
+    text-transform: uppercase
+}
+
+.v2-parties-invite-panel-kiwi-progression .v2-parties-invite-panel-kiwi-progression-milestone-rank {
+    font-size: 16px
+}
+
+.v2-parties-invite-panel-kiwi-progression .v2-parties-invite-panel-kiwi-progression-xp {
+    font-size: 14px
+}
+
+.v2-parties-invite-panel-kiwi-progression .v2-parties-invite-panel-kiwi-progression-button {
+    background-color: #c8aa6e;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 5px;
+    text-align: center
 }
 
 .v2-parties-invite-panel-tft-progression .progression-complete .progression-complete-title,
@@ -15590,12 +15629,31 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     left: 1em
 }
 
-.tft-loadout-menu-button>span {
+.tft-loadout-menu-button>span,
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link,
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] h6,
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] p {
     font-family: var(--font-body);
     -webkit-font-feature-settings: "kern" 1;
     font-kerning: normal;
     -webkit-user-select: none;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] p {
+    color: #a09b8c;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: .025em;
+    line-height: 20px;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] p:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+.tft-loadout-menu-button>span {
     font-weight: 400;
     letter-spacing: .1em;
     line-height: 16px;
@@ -15608,6 +15666,98 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
 
 .tft-loadout-menu-button>span:lang(ar-ae) {
     letter-spacing: 0
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link {
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: .05em;
+    outline: 0;
+    -webkit-font-smoothing: subpixel-antialiased
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link:lang(ja-jp) {
+    font-size: 13px
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link:lang(ar-ae) {
+    letter-spacing: 0
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link {
+    color: #0596aa;
+    text-decoration: none
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link.hover,
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link:hover {
+    color: #cdfafa
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link:after {
+    background-color: #0596aa;
+    content: "";
+    display: inline-block;
+    height: 9px;
+    margin: 0 0 0 5px;
+    -webkit-mask: url(/fe/lol-parties/external-link-mask.png) no-repeat;
+    -webkit-mask-size: contain;
+    vertical-align: middle;
+    width: 9px
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link:lang(ar-ae):after {
+    margin: 0 5px 0 0;
+    transform: scaleX(-1)
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link:hover:after {
+    background-color: #cdfafa
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] {
+    text-align: left;
+    white-space: normal;
+    width: 320px
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] .tft-cosmetic-status-section {
+    margin-bottom: 16px
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] .tft-cosmetic-status-heading {
+    align-items: center;
+    border-bottom: 1px solid #a09b8c;
+    display: flex;
+    margin-bottom: 8px;
+    padding-bottom: 8px
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] .tft-cosmetic-status-icon {
+    flex: 0 0 auto;
+    height: 28px;
+    margin-right: 10px;
+    width: 28px
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] h6 {
+    color: #f0e6d2;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 0
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] p {
+    margin: 0
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] p strong {
+    font-weight: 700
+}
+
+lol-uikit-content-block.tft-cosmetic-status-tooltip[type=tooltip-system] a.tft-cosmetic-status-link {
+    display: inline-block
 }
 
 .tft-loadout-menu-button {
@@ -15946,7 +16096,19 @@ lol-uikit-tooltip .quick-play-selection-rules-tooltip-list {
     font-weight: 700;
     height: 100%;
     letter-spacing: .04em;
+    position: relative;
     width: 100%
+}
+
+.tft-loadout-menu-option .loadouts-icon .cosmetic-wip-badge {
+    height: 48px;
+    object-fit: contain;
+    pointer-events: none;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 48px;
+    z-index: 1
 }
 
 .tft-loadout-menu-option .loadouts-icon.none-icon {

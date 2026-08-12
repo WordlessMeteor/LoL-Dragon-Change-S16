@@ -66,6 +66,7 @@
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-brand,
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-description,
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-label,
+.lol-settings-voice-input-mode .lol-settings-voice-input-mode-description,
 .lol-settings-voice-input-mode .lol-settings-voice-input-mode-option,
 .lol-settings-voice-keybind-dialog-unbind-button,
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label,
@@ -142,6 +143,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-brand,
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-description,
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-label,
+.lol-settings-voice-input-mode .lol-settings-voice-input-mode-description,
 .lol-settings-voice-input-mode .lol-settings-voice-input-mode-option,
 .lol-settings-voice-keybind-dialog-unbind-button,
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label,
@@ -416,6 +418,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-brand,
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-description,
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-label,
+.lol-settings-voice-input-mode .lol-settings-voice-input-mode-description,
 .lol-settings-voice-input-mode .lol-settings-voice-input-mode-option,
 .lol-settings-voice-keybind-dialog-unbind-button,
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label,
@@ -469,6 +472,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-brand:lang(ja-jp),
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-description:lang(ja-jp),
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-label:lang(ja-jp),
+.lol-settings-voice-input-mode .lol-settings-voice-input-mode-description:lang(ja-jp),
 .lol-settings-voice-input-mode .lol-settings-voice-input-mode-option:lang(ja-jp),
 .lol-settings-voice-keybind-dialog-unbind-button:lang(ja-jp),
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label:lang(ja-jp),
@@ -517,6 +521,7 @@ lol-settings-code-of-conduct-link a:visited {
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-brand:lang(ar-ae),
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-description:lang(ar-ae),
 .lol-settings-voice-input .lol-settings-voice-skins .lol-settings-voice-skins-label:lang(ar-ae),
+.lol-settings-voice-input-mode .lol-settings-voice-input-mode-description:lang(ar-ae),
 .lol-settings-voice-input-mode .lol-settings-voice-input-mode-option:lang(ar-ae),
 .lol-settings-voice-keybind-dialog-unbind-button:lang(ar-ae),
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label:lang(ar-ae),
@@ -1011,6 +1016,17 @@ lol-uikit-navigation-bar[type=tabbed] lol-uikit-navigation-item.lol-settings-nav
 
 .lol-settings-voice-ptt .lol-settings-voice-ptt-label {
     margin-bottom: 10px
+}
+
+.lol-settings-voice-ptt.lol-settings-voice-ptt-disabled {
+    cursor: default;
+    opacity: .5;
+    pointer-events: none
+}
+
+.lol-settings-voice-ptt.lol-settings-voice-ptt-disabled .lol-settings-voice-ptt-icon:active,
+.lol-settings-voice-ptt.lol-settings-voice-ptt-disabled .lol-settings-voice-ptt-icon:hover {
+    background-position: -180px 0
 }
 
 .lol-settings-voice-ptt-key {
@@ -1516,6 +1532,15 @@ lol-uikit-scrollable>.lol-settings-general-section-title:nth-of-type(n+2) {
     display: none
 }
 
+.lol-settings-voice-input-mode .lol-settings-voice-input-mode-description {
+    margin-bottom: 10px
+}
+
+.lol-settings-voice-input-mode .lol-settings-voice-input-mode-controls {
+    display: flex;
+    gap: 16px
+}
+
 lol-uikit-content-block.voice-settings-push-to-talk-alert b {
     color: #f0e6d2
 }
@@ -1523,30 +1548,31 @@ lol-uikit-content-block.voice-settings-push-to-talk-alert b {
 .lol-settings-voice-sensitivity {
     display: flex;
     flex-direction: column;
-    height: 75px;
-    left: auto;
-    position: absolute;
-    right: 100px;
-    top: 34px;
-    width: 200px
+    margin-top: 16px;
+    width: 100%
 }
 
 .lol-settings-voice-sensitivity .lol-settings-voice-row {
-    margin-bottom: 20px
+    margin-bottom: 16px
 }
 
 .lol-settings-voice-sensitivity .lol-settings-voice-sensitivity-label {
     direction: ltr
 }
 
-.lol-settings-voice-sensitivity .lol-settings-voice-sensitivity-slider {
-    height: 30px;
-    width: 210px
+.lol-settings-voice-sensitivity .voice-sensitivity-slider-wrapper,
+.lol-settings-voice-sensitivity .voice-sensitivity-slider-wrapper lol-uikit-slider {
+    width: 100%
+}
+
+.lol-settings-voice-sensitivity .voice-sensitivity-slider-wrapper lol-uikit-slider {
+    height: 30px
 }
 
 .lol-settings-voice-push-to-talk {
     display: flex;
     flex-direction: row;
+    gap: 16px;
     margin-top: 10px;
     right: 171px;
     top: 290px

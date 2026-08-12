@@ -4,7 +4,7 @@
         "championSkinName": "Jade_GangplankSkin07",
         "metaDataTags": "faction:bilgewater,gender:male,race:human,skinline:bilgewater",
         "loadscreen": {
-            "image": "ASSETS/Characters/Jade_Gangplank/Skins/Skin07/Jade_GangplankLoadScreen_7.tex",
+            "image": "assets/characters/jade_gangplank/skins/skin07/jade_gangplankloadscreen_7.tex",
             "__type": "CensoredImage"
         },
         "skinAudioProperties": {
@@ -154,16 +154,16 @@
                     "__type": "SkinMeshDataProperties_MaterialOverride"
                 }
             ],
-            "{9a817954}": [
+            "OutlineCategorySubmeshes": [
                 {
                     "category": "{e1043940}",
                     "Submeshes": "Gangplank_PrePlank_MAT",
-                    "__type": "{993f8595}"
+                    "__type": "CharacterOutlineSubmeshes"
                 },
                 {
                     "category": "{e1043940}",
                     "Submeshes": "Crate_Mat",
-                    "__type": "{993f8595}"
+                    "__type": "CharacterOutlineSubmeshes"
                 }
             ],
             "__type": "SkinMeshDataProperties"
@@ -189,7 +189,7 @@
         "particleName": "Jade_Gangplank_Skin07_R_Laugh_Sound",
         "particlePath": "Characters/Jade_Gangplank/Skins/Skin7/Particles/Jade_Gangplank_Skin07_R_Laugh_Sound",
         "voiceOverOnCreateDefault": "Play_vo_GangplankSkin07_GangplankR_laugh",
-        "objectPath": "{6824f367}",
+        "objectPath": "Characters/Jade_Gangplank/Skins/Skin7/Particles/Jade_Gangplank_Skin07_R_Laugh_Sound",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Jade_Gangplank/Skins/Skin7/Resources": {
@@ -701,7 +701,7 @@
                         "mRuleName": "Basic",
                         "mConditions": [
                             {
-                                "mSpell": "{31071c31}",
+                                "mSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -728,7 +728,7 @@
                         "mRuleName": "Crit",
                         "mConditions": [
                             {
-                                "mSpell": "{31071c31}",
+                                "mSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankBasicAttack",
                                 "__type": "ContextualConditionSpellName"
                             },
                             {
@@ -755,7 +755,7 @@
                         "mRuleName": "Q",
                         "mConditions": [
                             {
-                                "mSpell": "{bd562692}",
+                                "mSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankQAbility/Jade_GangplankQ",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -779,7 +779,7 @@
                         "mRuleName": "W",
                         "mConditions": [
                             {
-                                "mSpell": "{1147729e}",
+                                "mSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankWAbility/Jade_GangplankW",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -802,7 +802,7 @@
                         "mRuleName": "E",
                         "mConditions": [
                             {
-                                "mSpell": "{444d976a}",
+                                "mSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankEAbility/Jade_GangplankE",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -825,7 +825,7 @@
                         "mRuleName": "R",
                         "mConditions": [
                             {
-                                "mSpell": "{d8fa5a30}",
+                                "mSpell": "Characters/Jade_Gangplank/Spells/Jade_GangplankRAbility/Jade_GangplankR",
                                 "__type": "ContextualConditionSpellName"
                             }
                         ],
@@ -918,7 +918,7 @@
                         "mRuleName": "Stuned",
                         "mConditions": [
                             {
-                                "SpellBuff": "{8f96dafb}",
+                                "SpellBuff": "Shared/Spells/Stun",
                                 "__type": "ContextualConditionSpellBuffName"
                             }
                         ],
@@ -944,7 +944,7 @@
                         "mRuleName": "Stuned",
                         "mConditions": [
                             {
-                                "SpellBuff": "{8f96dafb}",
+                                "SpellBuff": "Shared/Spells/Stun",
                                 "__type": "ContextualConditionSpellBuffName"
                             }
                         ],

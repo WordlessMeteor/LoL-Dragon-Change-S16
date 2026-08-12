@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "Caustic ฉีกกระชากและสะบั้นศัตรู @ShredPercent@% เป็นเวลา @ShredDuration@ วินาทีเมื่อสร้างความเสียหาย",
+        "tooltip_text": "Caustic ฉีกกระชากและสะบั้นศัตรู @ShredPercent@% เป็นเวลา @ShredDuration@ วินาทีเมื่อสร้างความเสียหาย<br><br><rules>ฉีกกระชาก: ลดต้านทานเวท</rules><br><rules>สะบั้น: ลดเกราะ</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "Inferno <TFTKeyword>เผา</TFTKeyword>ศัตรูและสร้าง<TFTKeyword>บาดแผล</TFTKeyword> @WoundPercent@% เป็นเวลา @Duration@ วินาทีเมื่อสร้างความเสียหาย เอฟเฟกต์เผาของ Inferno สามารถสแตคกับเอฟเฟกต์เผาอื่น ๆ ได้<br><row>(@MinUnits@) เผา @HPBurnPerSecond@%</row><br><row>(@MinUnits@) ช่องร้านค้า @LuckySlotCount@ ช่องที่ไม่ใช่แชมเปี้ยน Inferno ลุกโชติช่วงเมื่อจบการต่อสู้ สุ่มปรากฏแชมเปี้ยนที่มีระดับสูงขึ้นหนึ่งระดับ</row><br><row>(@MinUnits@) ช่องร้านค้าลุกโชติช่วง @LuckySlotCount@ ช่อง, เผา @HPBurnPerSecond@%</row><br><row>(@MinUnits@) ช่องร้านค้าลุกโชติช่วง @LuckySlotCount@ ช่อง, เผา @HPBurnPerSecond@%</row>",
+        "tooltip_text": "Inferno <TFTKeyword>เผา</TFTKeyword>และสร้าง<TFTKeyword>บาดแผล</TFTKeyword>ใส่ศัตรูเป็นเวลา @Duration@ วินาทีเมื่อสร้างความเสียหาย เอฟเฟกต์เผาของ Inferno สามารถสแตคกับเอฟเฟกต์เผาอื่น ๆ ได้<br><row>(@MinUnits@) เผา @HPBurnPerSecond@%, บาดแผล @WoundPercent@%</row><br><row>(@MinUnits@) ช่องร้านค้า @LuckySlotCount@ ช่องที่ไม่ใช่แชมเปี้ยน Inferno ลุกโชติช่วงเมื่อจบการต่อสู้ สุ่มปรากฏแชมเปี้ยนที่มีระดับสูงขึ้นหนึ่งระดับ</row><br><row>(@MinUnits@) ช่องร้านค้าลุกโชติช่วง @LuckySlotCount@ ช่อง, เผา @HPBurnPerSecond@%</row><br><row>(@MinUnits@) ช่องร้านค้าลุกโชติช่วง @LuckySlotCount@ ช่อง, เผา @HPBurnPerSecond@%</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "ได้รับพลังชีวิตสูงสุดถาวร @UniqueTraitHealthPerStack@ หน่วย ทุก ๆ ครั้งที่ศัตรูถูกสังหารในระยะ @UniqueTraitHexRange@ ช่อง<br><br>ปัจจุบัน: 0 หน่วย",
+        "tooltip_text": "แชมเปี้ยน Old Growth ที่แข็งแกร่งที่สุดของคุณได้รับพลังชีวิตสูงสุดถาวร @UniqueTraitHealthPerStack@ หน่วย ทุก ๆ ครั้งที่ศัตรูถูกสังหารในระยะ @UniqueTraitHexRange@ ช่อง<br><br>ปัจจุบัน: 0 หน่วย",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,
@@ -19501,7 +19501,7 @@
         "trait_id": "DA_Emerald18",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_EmeraldAspect.TFT_Set18.png",
-        "tooltip_text": "ลากพันธมิตรไปวางทับ Taric ที่แข็งแกร่งที่สุดเพื่อจับคู่ และสกิลของ Taric จะมอบโบนัสทรงพลังให้กับคู่หู",
+        "tooltip_text": "ลากพันธมิตรไปวางทับ Taric ที่แข็งแกร่งที่สุดเพื่อจับคู่พวกเขา และสกิลของ Taric จะมอบโบนัสทรงพลังให้กับคู่หู",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

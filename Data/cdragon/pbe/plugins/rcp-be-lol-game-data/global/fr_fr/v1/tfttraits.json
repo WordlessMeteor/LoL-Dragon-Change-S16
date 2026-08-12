@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "Les dégâts des Caustiques appliquent @ShredPercent@% de scission et scission magique aux ennemis pendant @ShredDuration@ sec.",
+        "tooltip_text": "Les dégâts des Caustiques appliquent @ShredPercent@% de scission et scission magique aux ennemis pendant @ShredDuration@ sec.<br><br><rules>Scission magique : réduit la résistance magique</rules><br><rules>Scission : réduit l'armure</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "Les dégâts des Infernaux <TFTKeyword>brûlent</TFTKeyword> et infligent @WoundPercent@% d'<TFTKeyword>hémorragie</TFTKeyword> aux ennemis pendant @Duration@ sec. Les brûlures des Infernaux se cumulent avec toute autre brûlure.<br><row>(@MinUnits@) @HPBurnPerSecond@% de brûlure</row><br><row>(@MinUnits@) Après le combat, @LuckySlotCount@ emplacement(s) de la boutique qui ne comportent pas de champion Infernal s'embrasent, faisant apparaître un champion d'un palier supérieur.</row><br><row>(@MinUnits@) Vous embrasez @LuckySlotCount@ emplacements de la boutique, @HPBurnPerSecond@% de brûlure</row><br><row>(@MinUnits@) Vous embrasez @LuckySlotCount@ emplacements de la boutique, @HPBurnPerSecond@% de brûlure.</row>",
+        "tooltip_text": "Les dégâts des unités Infernales infligent <TFTKeyword>brûlure</TFTKeyword> et <TFTKeyword>hémorragie</TFTKeyword> pendant @Duration@ sec. Les brûlures des Infernaux se cumulent avec toute autre brûlure.<br><row>(@MinUnits@) @HPBurnPerSecond@% de brûlure, @WoundPercent@% d'hémorragie</row><br><row>(@MinUnits@). Après le combat, @LuckySlotCount@ emplacement(s) de la boutique qui ne comporte(nt) pas de champion Infernal s'embrase(nt), faisant apparaître un champion d'un palier supérieur.</row><br><row>(@MinUnits@) Vous embrasez @LuckySlotCount@ emplacements de la boutique, @HPBurnPerSecond@% de brûlure.</row><br><row>(@MinUnits@) Vous embrasez @LuckySlotCount@ emplacements de la boutique, @HPBurnPerSecond@% de brûlure.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "Chaque fois qu'un ennemi meurt dans un rayon de @UniqueTraitHexRange@ hexagones, Maokai gagne @UniqueTraitHealthPerStack@ PV max permanents.<br><br>Actuel : 0",
+        "tooltip_text": "Chaque fois qu'un ennemi meurt dans un rayon de @UniqueTraitHexRange@ hexagones, votre champion Forêt ancienne le plus puissant gagne @UniqueTraitHealthPerStack@ PV max permanents.<br><br>Actuel : 0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19007,7 +19007,7 @@
         "trait_id": "DA_18_Rival",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Rival.TFT_Set18.png",
-        "tooltip_text": "<row>(@MinUnits@) Actif uniquement lorsque vous avez 1 rival sur le plateau.<br><br>Les rivaux accumulent des éliminations et en gagnent 3 supplémentaires s'ils éliminent un autre rival.</row><br><row>(@MinUnits@) Les rivaux accumulent des éliminations et en gagnent 3 supplémentaires s'ils éliminent un autre rival.<br><br>Kha'Zix évolue en effectuant des éliminations, ce qui lui ajoute de façon permanente, au choix : Exécuteur, Ultrarapide, Saccageur ou Tisseur de sorts.<br><br>Rengar octroie @RengarGold@/@RengarGold_2@/@RengarGold_3@ PO toutes les @RengarStackReq@ éliminations. Après @RengarADStackReq@ éliminations, votre équipe gagne @RengarThresholdAD*100@% de dégâts d'attaque, plus @RengarADPerStack*100@% des %i:scaleAD% par élimination supplémentaire.<br><br>Éliminations de Kha'Zix : 0 / 0<br>Éliminations de Rengar : 0<br>PO gagnées : 0</row><br><row>(@MinUnits@) Les rivaux peuvent être déployés ensemble. Lorsque Kha'Zix gagne du mana grâce à sa compétence, Rengar gagne @Augment_RengarManaPercent*100@% de ce mana. Lorsque Rengar reçoit des soins grâce à sa compétence, Kha'Zix obtient @Augment_KhaZixHealPercent*100@% de ces soins.</row>",
+        "tooltip_text": "<row>(@MinUnits@) Actif uniquement lorsque vous avez 1 rival sur le plateau. Les rivaux accumulent des éliminations et en gagnent 3 supplémentaires s'ils éliminent un autre rival.</row><br><row>(@MinUnits@) Les rivaux accumulent des éliminations et en gagnent 3 supplémentaires s'ils éliminent un autre rival.<br><br>Kha'Zix évolue en effectuant des éliminations, ce qui lui ajoute de façon permanente, au choix : Exécuteur, Ultrarapide, Saccageur ou Tisseur de sorts.<br><br>Rengar octroie @RengarGold@/@RengarGold_2@/@RengarGold_3@ PO toutes les @RengarStackReq@ éliminations. Après @RengarADStackReq@ éliminations, votre équipe gagne @RengarThresholdAD*100@% de dégâts d'attaque, plus @RengarADPerStack*100@% des %i:scaleAD% par élimination supplémentaire.<br><br>Éliminations de Kha'Zix : 0 / 0<br>Éliminations de Rengar : 0<br>PO gagnées : 0</row><br><row>(@MinUnits@) Les rivaux peuvent être déployés ensemble. Lorsque Kha'Zix gagne du mana grâce à sa compétence, Rengar gagne @Augment_RengarManaPercent*100@% de ce mana. Lorsque Rengar reçoit des soins grâce à sa compétence, Kha'Zix obtient @Augment_KhaZixHealPercent*100@% de ces soins.</row>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,

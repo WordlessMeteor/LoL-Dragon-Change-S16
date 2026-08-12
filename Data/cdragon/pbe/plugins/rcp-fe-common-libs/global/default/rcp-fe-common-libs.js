@@ -15898,36 +15898,39 @@
             const r = "UNRANKED",
                 n = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND"],
                 i = ["IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER"],
-                o = n[n.length - 1],
-                s = [o, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                a = ["IV", "III", "II", "I"],
-                l = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
+                o = "LEGEND",
+                s = n[n.length - 1],
+                a = [s, "MASTER", "GRANDMASTER", "CHALLENGER"],
+                l = ["IV", "III", "II", "I"],
+                u = ["GRAY", "GREEN", "BLUE", "PURPLE", "ORANGE"];
 
-            function u(t) {
+            function c(t) {
                 const e = {};
                 for (let r = 0; r < t.length; r++) {
                     e[t[r]] = r
                 }
                 return e
             }
-            var c = {
+            var h = {
                 TIER_NAME_UNRANKED: r,
                 TIER_NAME_NONE: "NONE",
                 TIER_NAME_PROVISIONAL: "PROVISIONAL",
+                TIER_NAME_LEGEND: o,
                 DIVISION_NAME_NONE: "NA",
+                JADE_APEX_TIERS: [o],
                 APEX_TIERS: ["MASTER", "GRANDMASTER", "CHALLENGER"],
                 REGULAR_TIERS: n,
                 TIERS: i,
                 ALL_TIERS: [r, "IRON", "BRONZE", "SILVER", "GOLD", "PLATINUM", "EMERALD", "DIAMOND", "MASTER", "GRANDMASTER", "CHALLENGER", "SALT", "WOOD", "LEGEND"],
                 TIERS_WITH_NO_DIVISIONS: [r, "MASTER", "GRANDMASTER", "CHALLENGER"],
-                HIGHEST_TIER: o,
+                HIGHEST_TIER: s,
                 LOWEST_TIER: n[0],
-                DIVISIONS: a,
-                HIGHEST_DIVISION: a[a.length - 1],
-                LOWEST_DIVISION: a[0],
+                DIVISIONS: l,
+                HIGHEST_DIVISION: l[l.length - 1],
+                LOWEST_DIVISION: l[0],
                 LP_PER_DIVISION: 100,
-                TIER_NAME_TO_ORDINAL: u(i),
-                DIVISION_TO_ORDINAL: u(a),
+                TIER_NAME_TO_ORDINAL: c(i),
+                DIVISION_TO_ORDINAL: c(l),
                 DIVISION_TO_NUMERAL: Object.freeze({
                     NA: 0,
                     I: 1,
@@ -15935,9 +15938,9 @@
                     III: 3,
                     IV: 4
                 }),
-                TFT_RATED_TIERS: l,
+                TFT_RATED_TIERS: u,
                 RATED_TIER_NAME_NONE: "NONE",
-                LOWEST_TFT_RATED_TIER: l[0],
+                LOWEST_TFT_RATED_TIER: u[0],
                 REWARD_TYPES: {
                     ETERNALS_CAPSULE: "ETERNALS_CAPSULE",
                     CHAMPION_TOKEN: "CHAMPION_TOKEN",
@@ -15955,9 +15958,9 @@
                     HEXTECH_KEY_FRAGMENT: "HEXTECH_KEY_FRAGMENT"
                 },
                 DEFAULT_ORANGE_ESSENCE_QUANTITY: 500,
-                TIERS_WITH_DECAY: s
+                TIERS_WITH_DECAY: a
             };
-            e.default = c
+            e.default = h
         }, (t, e) => {
             "use strict";
             Object.defineProperty(e, "__esModule", {

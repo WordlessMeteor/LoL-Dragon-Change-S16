@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "腐蝕傷害會對敵軍造成@ShredPercent@%削抗和破甲，持續@ShredDuration@秒。",
+        "tooltip_text": "腐蝕傷害會對敵軍造成@ShredPercent@%削抗和破甲，持續@ShredDuration@秒。<br><br><rules>(削抗：降低魔法防禦</rules><br><rules>破甲：降低物理防禦)</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "地獄火使者傷害會<TFTKeyword>燃燒</TFTKeyword>並造成@WoundPercent@%<TFTKeyword>重創</TFTKeyword>，持續@Duration@秒。地獄火使者燃燒可與其他燃燒效果累加。<br><row>(@MinUnits@) @HPBurnPerSecond@%燃燒</row><br><row>(@MinUnits@)戰鬥結束後，點燃@LuckySlotCount@格沒有地獄火使者英雄的商店欄位，刷新出高一階的英雄</row><br><row>(@MinUnits@)點燃@LuckySlotCount@格商店欄位，@HPBurnPerSecond@%燃燒</row><br><row>(@MinUnits@)點燃@LuckySlotCount@格商店欄位，@HPBurnPerSecond@%燃燒</row>",
+        "tooltip_text": "地獄火使者造成的傷害會<TFTKeyword>燃燒</TFTKeyword>並<TFTKeyword>重創</TFTKeyword>敵軍@Duration@秒。地獄火使者燃燒可與其他燃燒效果累加。<br><row>(@MinUnits@) @HPBurnPerSecond@%燃燒，@WoundPercent@%重創</row><br><row>(@MinUnits@)戰鬥結束後，點燃@LuckySlotCount@格沒有地獄火使者英雄的商店欄位，刷新出高一階的英雄</row><br><row>(@MinUnits@)點燃@LuckySlotCount@格商店欄位，@HPBurnPerSecond@%燃燒</row><br><row>(@MinUnits@)點燃@LuckySlotCount@格商店欄位，@HPBurnPerSecond@%燃燒</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "每當有敵軍在@UniqueTraitHexRange@格內死亡，獲得@UniqueTraitHealthPerStack@永久最大生命。<br><br>目前：0",
+        "tooltip_text": "每當有敵軍在@UniqueTraitHexRange@格內死亡，我方最強大的原始林英雄獲得@UniqueTraitHealthPerStack@永久最大生命。<br><br>目前：0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,

@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "Caustic damage @ShredPercent@% Shreds and Sunders enemies for @ShredDuration@ seconds.",
+        "tooltip_text": "Caustic damage @ShredPercent@% Shreds and Sunders enemies for @ShredDuration@ seconds.<br><br><rules>Shred: Reduce Magic Resist</rules><br><rules>Sunder: Reduce Armor</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "Inferno damage <TFTKeyword>Burns</TFTKeyword> and @WoundPercent@% <TFTKeyword>Wounds</TFTKeyword> enemies for @Duration@ seconds. Inferno Burns stack with other Burns.<br><row>(@MinUnits@) @HPBurnPerSecond@% Burn</row><br><row>(@MinUnits@) After combat, @LuckySlotCount@ of your shop slots without an Inferno champion ignites, rolling a champion one tier higher</row><br><row>(@MinUnits@) Ignite @LuckySlotCount@ shop slots, @HPBurnPerSecond@% Burn</row><br><row>(@MinUnits@) Ignite @LuckySlotCount@ shop slots, @HPBurnPerSecond@% Burn</row>",
+        "tooltip_text": "Inferno damage <TFTKeyword>Burns</TFTKeyword> and <TFTKeyword>Wounds</TFTKeyword> enemies for @Duration@ seconds. Inferno Burns stack with other Burns.<br><row>(@MinUnits@) @HPBurnPerSecond@% Burn, @WoundPercent@% Wound</row><br><row>(@MinUnits@) After combat, @LuckySlotCount@ of your shop slots without an Inferno champion ignites, rolling a champion one tier higher</row><br><row>(@MinUnits@) Ignite @LuckySlotCount@ shop slots, @HPBurnPerSecond@% Burn</row><br><row>(@MinUnits@) Ignite @LuckySlotCount@ shop slots, @HPBurnPerSecond@% Burn</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "Whenever an enemy within @UniqueTraitHexRange@ hexes dies, gain @UniqueTraitHealthPerStack@ permanent max Health.<br><br>Current: 0",
+        "tooltip_text": "Whenever an enemy within @UniqueTraitHexRange@ hexes dies, your strongest Old Growth champion gains @UniqueTraitHealthPerStack@ permanent max Health.<br><br>Current: 0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,

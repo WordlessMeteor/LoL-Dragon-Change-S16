@@ -1,31 +1,31 @@
 {
     "Shaders/SharedData": {
         "constantBuffers": [
-            "{2fa9e31a}",
-            "{6a2c6fcc}",
-            "{a61a3acb}",
-            "{a60b3041}",
-            "{3f37d6ee}",
-            "{d8907437}",
-            "{cb07a94b}",
-            "{b2db15bc}",
-            "{6ab0703d}",
-            "{6500c3ef}",
-            "{75055a4d}",
-            "{79d723e1}",
-            "{5c978103}",
-            "{cfa1808e}",
-            "{6f972b25}",
-            "{b35f4f89}",
-            "{80b187e0}",
-            "{ccb1550b}",
-            "{5bd59755}",
-            "{b9b5c7df}",
-            "{5d21b392}",
-            "{8eddc9c2}",
-            "{d234e251}",
-            "{d243ecdb}",
-            "{7d8d2137}"
+            "Shaders/SharedData/ConstantBuffers/PerFrameVertex",
+            "Shaders/SharedData/ConstantBuffers/PerFramePixel",
+            "Shaders/SharedData/ConstantBuffers/CharacterPerDrawVS",
+            "Shaders/SharedData/ConstantBuffers/CharacterPerDrawPS",
+            "Shaders/SharedData/ConstantBuffers/CharacterPerRenderPassPS",
+            "Shaders/SharedData/ConstantBuffers/Bones",
+            "Shaders/SharedData/ConstantBuffers/FontRendering",
+            "Shaders/SharedData/ConstantBuffers/PostEffects",
+            "Shaders/SharedData/ConstantBuffers/DebugPixel",
+            "Shaders/SharedData/ConstantBuffers/UIPerPassVS",
+            "Shaders/SharedData/ConstantBuffers/UIPerPassPS",
+            "Shaders/SharedData/ConstantBuffers/CloudsFeaturePS",
+            "Shaders/SharedData/ConstantBuffers/EnvironmentTransitionPixelCB",
+            "Shaders/SharedData/ConstantBuffers/GrassDisortVS",
+            "Shaders/SharedData/ConstantBuffers/EnvironmentTransitionVertexCB",
+            "Shaders/SharedData/ConstantBuffers/TransitionPositions",
+            "Shaders/SharedData/ConstantBuffers/ParticleDecalVS",
+            "Shaders/SharedData/ConstantBuffers/GameplayConstantsPixel",
+            "Shaders/SharedData/ConstantBuffers/MantisSharedMapParameters",
+            "Shaders/SharedData/ConstantBuffers/IBL_CUBEMAP_SCALES",
+            "Shaders/SharedData/ConstantBuffers/UIToolsDebugScale",
+            "Shaders/SharedData/ConstantBuffers/ClusterData",
+            "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticleVS",
+            "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticlePS",
+            "Shaders/SharedData/ConstantBuffers/GameplayTexture"
         ],
         "textures": [
             {
@@ -42,17 +42,17 @@
             },
             {
                 "name": "SAMPLER_BACK_BUFFER_COPY",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "BLOOM_TEXTURE",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "SAMPLER_GAMMA_LOOK_UP",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -76,12 +76,12 @@
             },
             {
                 "name": "FOW_MAP",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "CLOUDS_TEXTURE",
-                "SAMPLER": "{b40cd67c}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Wrap_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -114,7 +114,7 @@
             {
                 "name": "LIGHT_GRID_TEXTURE",
                 "type": 5,
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -123,7 +123,7 @@
             },
             {
                 "name": "GRASS_TINT_MAP",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -132,7 +132,7 @@
             },
             {
                 "name": "GRASS_TINT_MAP_ALTERNATE",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -178,7 +178,7 @@
             },
             {
                 "name": "SSAO_TEXTURE",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "DefaultValue": [
                     1.0,
                     1.0,
@@ -200,31 +200,31 @@
             },
             {
                 "name": "PIXEL_COLOR_REMAP_RAMP",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "DYNAMIC_ENV_LIGHT_FACTOR",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "DYNAMIC_ENV_LIGHT_IDS",
                 "{67542274}": 1,
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "PROJECTED_TEXTURE_INPUT",
                 "frequency": 1,
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "TERRAIN_BLEND_VS",
                 "type": 5,
                 "BindLocation": 0,
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -232,7 +232,7 @@
                 "type": 1,
                 "{67542274}": 1,
                 "{ec5a120e}": 1,
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -256,13 +256,18 @@
                 "__type": "X3DSharedTextureDef"
             },
             {
+                "name": "SAND_DISTURBANCE_TEXTURE_PS",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
+                "__type": "X3DSharedTextureDef"
+            },
+            {
                 "name": "CLOUD_CARDS",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
                 "name": "LIGHT_REGION_TEXTURE_UPDATE",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -271,7 +276,7 @@
             },
             {
                 "name": "ADDITIONAL_MRT_TEXTURE",
-                "SAMPLER": "{a6bded4f}",
+                "SAMPLER": "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
                 "__type": "X3DSharedTextureDef"
             },
             {
@@ -281,14 +286,14 @@
             }
         ],
         "samplers": [
-            "{a6bded4f}",
-            "{b40cd67c}",
-            "{51bfd9ae}",
-            "{a7d7f4a0}",
-            "{0df3cfcb}",
-            "{4826710d}",
-            "{3359c942}",
-            "{14725299}"
+            "Shaders/SharedData/SharedSamplers/Clamp_No_Mip",
+            "Shaders/SharedData/SharedSamplers/Wrap_No_Mip",
+            "Shaders/SharedData/SharedSamplers/Mirror",
+            "Shaders/SharedData/SharedSamplers/CharacterWrap",
+            "Shaders/SharedData/SharedSamplers/CharacterClamp",
+            "Shaders/SharedData/SharedSamplers/EnvironmentClamp",
+            "Shaders/SharedData/SharedSamplers/EnvironmentWrap",
+            "Shaders/SharedData/SharedSamplers/Clamp_Linear_Mip"
         ],
         "dataBuffers": [
             {
@@ -380,16 +385,16 @@
         "objectPath": "{fefebb19}",
         "__type": "SkinnedPbrShadingModel"
     },
-    "{0df3cfcb}": {
+    "Shaders/SharedData/SharedSamplers/CharacterClamp": {
         "name": "CharacterClamp",
         "maxAnisotropy": 4,
         "__type": "X3DSharedSamplerDef"
     },
-    "{14725299}": {
+    "Shaders/SharedData/SharedSamplers/Clamp_Linear_Mip": {
         "name": "Clamp_Linear_Mip",
         "__type": "X3DSharedSamplerDef"
     },
-    "{3359c942}": {
+    "Shaders/SharedData/SharedSamplers/EnvironmentWrap": {
         "name": "EnvironmentWrap",
         "addressModeU": 0,
         "addressModeV": 0,
@@ -397,12 +402,12 @@
         "maxAnisotropy": 4,
         "__type": "X3DSharedSamplerDef"
     },
-    "{4826710d}": {
+    "Shaders/SharedData/SharedSamplers/EnvironmentClamp": {
         "name": "EnvironmentClamp",
         "maxAnisotropy": 4,
         "__type": "X3DSharedSamplerDef"
     },
-    "{51bfd9ae}": {
+    "Shaders/SharedData/SharedSamplers/Mirror": {
         "name": "Mirror",
         "addressModeU": 2,
         "addressModeV": 2,
@@ -410,13 +415,13 @@
         "mipLodBias": -1,
         "__type": "X3DSharedSamplerDef"
     },
-    "{a6bded4f}": {
+    "Shaders/SharedData/SharedSamplers/Clamp_No_Mip": {
         "name": "Clamp_No_Mip",
         "register": 15,
         "mipFilter": 0,
         "__type": "X3DSharedSamplerDef"
     },
-    "{a7d7f4a0}": {
+    "Shaders/SharedData/SharedSamplers/CharacterWrap": {
         "name": "CharacterWrap",
         "addressModeU": 0,
         "addressModeV": 0,
@@ -424,7 +429,7 @@
         "maxAnisotropy": 4,
         "__type": "X3DSharedSamplerDef"
     },
-    "{b40cd67c}": {
+    "Shaders/SharedData/SharedSamplers/Wrap_No_Mip": {
         "name": "Wrap_No_Mip",
         "addressModeU": 0,
         "addressModeV": 0,
@@ -432,7 +437,7 @@
         "mipFilter": 0,
         "__type": "X3DSharedSamplerDef"
     },
-    "{2fa9e31a}": {
+    "Shaders/SharedData/ConstantBuffers/PerFrameVertex": {
         "name": "PerFrameVertexCB",
         "constants": [
             {
@@ -537,7 +542,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{3f37d6ee}": {
+    "Shaders/SharedData/ConstantBuffers/CharacterPerRenderPassPS": {
         "name": "CharacterPerRenderPassPS",
         "type": 1,
         "frequency": 1,
@@ -550,7 +555,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{5bd59755}": {
+    "Shaders/SharedData/ConstantBuffers/MantisSharedMapParameters": {
         "name": "MantisSharedMapParameters",
         "type": 1,
         "constants": [
@@ -582,7 +587,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{5c978103}": {
+    "Shaders/SharedData/ConstantBuffers/EnvironmentTransitionPixelCB": {
         "name": "EnvironmentTransitionPixelCB",
         "type": 1,
         "constants": [
@@ -594,7 +599,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{5d21b392}": {
+    "Shaders/SharedData/ConstantBuffers/UIToolsDebugScale": {
         "name": "UIToolsDebugScale",
         "type": 1,
         "constants": [
@@ -605,7 +610,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{6500c3ef}": {
+    "Shaders/SharedData/ConstantBuffers/UIPerPassVS": {
         "name": "UIPerPassVS",
         "frequency": 1,
         "constants": [
@@ -622,7 +627,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{6a2c6fcc}": {
+    "Shaders/SharedData/ConstantBuffers/PerFramePixel": {
         "name": "PerFramePixelCB",
         "type": 1,
         "constants": [
@@ -800,7 +805,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{6ab0703d}": {
+    "Shaders/SharedData/ConstantBuffers/DebugPixel": {
         "name": "DebugPixelCB",
         "type": 1,
         "constants": [
@@ -823,7 +828,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{6f972b25}": {
+    "Shaders/SharedData/ConstantBuffers/EnvironmentTransitionVertexCB": {
         "name": "EnvironmentTransitionVertexCB",
         "constants": [
             {
@@ -834,7 +839,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{75055a4d}": {
+    "Shaders/SharedData/ConstantBuffers/UIPerPassPS": {
         "name": "UIPerPassPS",
         "type": 1,
         "frequency": 1,
@@ -847,7 +852,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{79d723e1}": {
+    "Shaders/SharedData/ConstantBuffers/CloudsFeaturePS": {
         "name": "CloudsFeaturePS",
         "type": 1,
         "constants": [
@@ -865,7 +870,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{7d8d2137}": {
+    "Shaders/SharedData/ConstantBuffers/GameplayTexture": {
         "name": "GameplayTexture",
         "type": 1,
         "constants": [
@@ -878,7 +883,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{80b187e0}": {
+    "Shaders/SharedData/ConstantBuffers/ParticleDecalVS": {
         "name": "ParticleDecalVS",
         "frequency": 2,
         "constants": [
@@ -900,7 +905,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{8eddc9c2}": {
+    "Shaders/SharedData/ConstantBuffers/ClusterData": {
         "name": "ClusterData",
         "type": 1,
         "constants": [
@@ -917,7 +922,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{a60b3041}": {
+    "Shaders/SharedData/ConstantBuffers/CharacterPerDrawPS": {
         "name": "CharacterPerDrawPS",
         "type": 1,
         "frequency": 2,
@@ -980,7 +985,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{a61a3acb}": {
+    "Shaders/SharedData/ConstantBuffers/CharacterPerDrawVS": {
         "name": "CharacterPerDrawVertexCB",
         "frequency": 2,
         "constants": [
@@ -1028,7 +1033,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{b2db15bc}": {
+    "Shaders/SharedData/ConstantBuffers/PostEffects": {
         "name": "PostEffectPixelCB",
         "type": 1,
         "frequency": 1,
@@ -1063,7 +1068,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{b35f4f89}": {
+    "Shaders/SharedData/ConstantBuffers/TransitionPositions": {
         "name": "TransitionPositions",
         "type": 1,
         "constants": [
@@ -1076,7 +1081,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{b9b5c7df}": {
+    "Shaders/SharedData/ConstantBuffers/IBL_CUBEMAP_SCALES": {
         "name": "IBL_CUBEMAP_SCALES_BUFFER",
         "type": 1,
         "constants": [
@@ -1090,7 +1095,7 @@
         "{a1d375b5}": 2,
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{cb07a94b}": {
+    "Shaders/SharedData/ConstantBuffers/FontRendering": {
         "name": "FontVertexCB",
         "frequency": 1,
         "constants": [
@@ -1102,7 +1107,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{ccb1550b}": {
+    "Shaders/SharedData/ConstantBuffers/GameplayConstantsPixel": {
         "name": "GameplayConstantsPixel",
         "type": 1,
         "constants": [
@@ -1129,7 +1134,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{cfa1808e}": {
+    "Shaders/SharedData/ConstantBuffers/GrassDisortVS": {
         "name": "GrassDisortVS",
         "constants": [
             {
@@ -1147,7 +1152,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{d234e251}": {
+    "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticleVS": {
         "name": "VFXDynamicPerParticleInstanceCBVS",
         "frequency": 2,
         "constants": [
@@ -1178,7 +1183,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{d243ecdb}": {
+    "Shaders/SharedData/ConstantBuffers/VFXDynamicPerParticlePS": {
         "name": "VFXDynamicPerParticleInstanceCBPS",
         "type": 1,
         "frequency": 2,
@@ -1191,7 +1196,7 @@
         ],
         "__type": "X3DSharedConstantBufferDef"
     },
-    "{d8907437}": {
+    "Shaders/SharedData/ConstantBuffers/Bones": {
         "name": "BonesCB",
         "frequency": 2,
         "constants": [

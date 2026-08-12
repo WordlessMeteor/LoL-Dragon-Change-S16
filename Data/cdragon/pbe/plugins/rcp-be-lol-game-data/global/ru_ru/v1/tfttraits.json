@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "Урон кислотных истощает врагов и раскалывает их броню (@ShredPercent@%) на @ShredDuration@ сек.",
+        "tooltip_text": "Урон кислотных истощает врагов и раскалывает их броню (@ShredPercent@%) на @ShredDuration@ сек.<br><br><rules>Истощение: снижает сопр. магии</rules><br><rules>Раскол: снижает броню</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18506,7 +18506,7 @@
         "trait_id": "DA_18_Fae",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Fae.TFT_Set18.png",
-        "tooltip_text": "Нанося урон, леча и давая щиты, ваши бойцы привлекают феечек.<br><br>За каждую феечку чемпионы фей получают силу атаки и силу умений, а также восстанавливают здоровье, если оно падает ниже @HealThreshold*100@%.<br><row>(@MinUnits@) @ADAP@% и восстановление @Heal@% здоровья.</row><br><row>(@MinUnits@) @ADAP@% и восстановление @Heal@% здоровья. После 7 феечек бойцы начинают привлекать золотых феечек, дающих золото.</row>",
+        "tooltip_text": "Нанося урон, леча и давая щиты, ваши бойцы привлекают пикси.<br><br>За каждую пикси чемпионы фей получают силу атаки и силу умений, а также восстанавливают здоровье, если оно падает ниже @HealThreshold*100@%.<br><row>(@MinUnits@) @ADAP@% и восстановление @Heal@% здоровья.</row><br><row>(@MinUnits@) @ADAP@% и восстановление @Heal@% здоровья. После 7 пикси бойцы начинают привлекать золотых пикси, дающих золото.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "Урон бойцов Инферно <TFTKeyword>поджигает</TFTKeyword> и <TFTKeyword>ранит</TFTKeyword> (@WoundPercent@%) врагов на @Duration@ сек. Поджог от Инферно суммируется с другими эффектами поджога.<br><row>(@MinUnits@) Поджог на @HPBurnPerSecond@%</row><br><row>(@MinUnits@) После боя ячейки магазина (@LuckySlotCount@) без чемпионов Инферно загораются – в них появляются чемпионы рангом выше</row><br><row>(@MinUnits@) Загорающиеся ячейки: @LuckySlotCount@, поджог на @HPBurnPerSecond@%</row><br><row>(@MinUnits@) Загорающиеся ячейки: @LuckySlotCount@, поджог на @HPBurnPerSecond@%</row>",
+        "tooltip_text": "Урон бойцов Инферно <TFTKeyword>поджигает</TFTKeyword> и <TFTKeyword>ранит</TFTKeyword> врагов на @Duration@ сек. Поджог от Инферно суммируется с другими эффектами поджога.<br><row>(@MinUnits@) Поджог на @HPBurnPerSecond@%, раны (@WoundPercent@%)</row><br><row>(@MinUnits@) После боя ячейки магазина (@LuckySlotCount@) без чемпионов Инферно загораются – в них появляются чемпионы рангом выше</row><br><row>(@MinUnits@) Загорающиеся ячейки: @LuckySlotCount@, поджог на @HPBurnPerSecond@%</row><br><row>(@MinUnits@) Загорающиеся ячейки: @LuckySlotCount@, поджог на @HPBurnPerSecond@%</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "При каждой гибели врага в пределах @UniqueTraitHexRange@ яч. макс. здоровье навсегда растет на @UniqueTraitHealthPerStack@.<br><br>Текущий бонус: 0",
+        "tooltip_text": "При каждой гибели врага в пределах @UniqueTraitHexRange@ яч. макс. здоровье вашего сильнейшего чемпиона Старых лесов навсегда растет на @UniqueTraitHealthPerStack@.<br><br>Текущий бонус: 0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,

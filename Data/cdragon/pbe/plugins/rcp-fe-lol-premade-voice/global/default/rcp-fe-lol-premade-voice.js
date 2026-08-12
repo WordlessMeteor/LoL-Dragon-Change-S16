@@ -38,7 +38,7 @@
                         Settings: e => e.get("rcp-fe-lol-settings")
                     }), await i.default.tra.ready();
                     n(14)();
-                    return new(n(122))
+                    return new(n(124))
                 }))
             }), {
                 once: !0
@@ -315,12 +315,12 @@
             "use strict";
             var r = h(n(15)),
                 i = h(n(84)),
-                a = h(n(96)),
-                o = h(n(105)),
-                l = h(n(110)),
-                s = h(n(113)),
-                c = h(n(116)),
-                p = h(n(119)),
+                a = h(n(98)),
+                o = h(n(107)),
+                l = h(n(112)),
+                s = h(n(115)),
+                c = h(n(118)),
+                p = h(n(121)),
                 d = n(1);
 
             function h(e) {
@@ -944,7 +944,7 @@
                     }))
                 }
                 _settingsClicked() {
-                    this._isGameClientRunning || (0, C.default)()
+                    this._isGameClientRunning || (this._playSound("/fe/lol-navigation/sfx-soc-ui-click-generic.ogg"), (0, C.default)())
                 }
                 _setVoiceHaloPuuid(e) {
                     const t = e || "",
@@ -1880,46 +1880,48 @@
             Object.defineProperty(t, "__esModule", {
                 value: !0
             }), t.default = void 0;
-            var r = E(n(1)),
-                i = E(n(16)),
-                a = y(n(85)),
-                o = y(n(86)),
-                l = y(n(87)),
-                s = y(n(88)),
-                c = y(n(89)),
-                p = y(n(90)),
-                d = y(n(91)),
-                h = y(n(92)),
-                m = y(n(23)),
-                u = y(n(25)),
-                g = y(n(27)),
-                A = y(n(29)),
-                _ = y(n(31)),
-                v = y(n(28)),
-                b = n(93),
-                f = n(36);
+            var r = k(n(1)),
+                i = k(n(16)),
+                a = E(n(85)),
+                o = E(n(86)),
+                l = E(n(87)),
+                s = E(n(88)),
+                c = E(n(89)),
+                p = E(n(90)),
+                d = E(n(91)),
+                h = E(n(92)),
+                m = E(n(93)),
+                u = E(n(94)),
+                g = E(n(23)),
+                A = E(n(25)),
+                _ = E(n(27)),
+                v = E(n(29)),
+                b = E(n(31)),
+                f = E(n(28)),
+                y = n(95),
+                x = n(36);
 
-            function y(e) {
+            function E(e) {
                 return e && e.__esModule ? e : {
                     default: e
                 }
             }
 
-            function x(e) {
+            function C(e) {
                 if ("function" != typeof WeakMap) return null;
                 var t = new WeakMap,
                     n = new WeakMap;
-                return (x = function(e) {
+                return (C = function(e) {
                     return e ? n : t
                 })(e)
             }
 
-            function E(e, t) {
+            function k(e, t) {
                 if (!t && e && e.__esModule) return e;
                 if (null === e || "object" != typeof e && "function" != typeof e) return {
                     default: e
                 };
-                var n = x(t);
+                var n = C(t);
                 if (n && n.has(e)) return n.get(e);
                 var r = {},
                     i = Object.defineProperty && Object.getOwnPropertyDescriptor;
@@ -1929,13 +1931,13 @@
                         o && (o.get || o.set) ? Object.defineProperty(r, a, o) : r[a] = e[a]
                     } return r.default = e, n && n.set(e, r), r
             }
-            const C = "couldShowTeamVoiceEat";
-            class k extends i.default {
+            const B = "couldShowTeamVoiceEat";
+            class $ extends i.default {
                 templateMarkup() {
-                    return n(94)
+                    return n(96)
                 }
                 stylesheetMarkup() {
-                    return n(95)
+                    return n(97)
                 }
                 constructor() {
                     super(), this._listeners = {
@@ -1946,7 +1948,7 @@
                         keyUp: this._handleKeyUp.bind(this)
                     }, this._voiceDisabled = null, this._buttonDisabled = !1, this._disabledAfterLogin = !1, this._isInCustomGame = !1, this._tooltip = null, this._firstExperienceContextualNotification = null, this._teamVoiceEATNotification = null, this._teamVoiceEATSeen = null, this._teamVoiceEATShown = !1, this._premadeVoiceAvailability = null, this._teamVoiceAvailability = null, this._isInGame = !1, this._parentNode = null, this._pttKey = null, this._pttTeamKey = null, this._pttActive = !1, this._connectionState = null, this._teamConnectionState = null, this._teamVoicePluginEnabled = !1, this._teamVoiceRestricted = !1, this._previousParticipantCount = 0, this._previousTeamSessionActive = !1, this._lockOutMemberJoinSound = !1, this._memberJoinTimeout = null;
                     const e = r.Audio.getChannel(i.SOUND_CHANNEL);
-                    this._teamPttClickSound = e.createSound(a.default), this._teamPttReleaseSound = e.createSound(o.default), this._partyPttClickSound = e.createSound(l.default), this._partyPttReleaseSound = e.createSound(s.default), this._joinSound = e.createSound(c.default), this._leaveSound = e.createSound(p.default), this._teamToggleOnSound = e.createSound(d.default), this._teamToggleOffSound = e.createSound(h.default), this._elements = {
+                    this._teamPttClickSound = e.createSound(a.default), this._teamPttReleaseSound = e.createSound(o.default), this._partyPttClickSound = e.createSound(l.default), this._partyPttReleaseSound = e.createSound(s.default), this._joinSound = e.createSound(c.default), this._leaveSound = e.createSound(p.default), this._partyChannelConnectSound = e.createSound(d.default), this._partyChannelDisconnectSound = e.createSound(h.default), this._teamChannelConnectSound = e.createSound(m.default), this._teamChannelDisconnectSound = e.createSound(u.default), this._elements = {
                         voiceButton: ".lol-premade-voice-button"
                     }, this._initDataBinding()
                 }
@@ -2021,7 +2023,7 @@
                     this._isInLobby = !!t, this._isInCustomGame = t && e.gameConfig.isCustom, this._isInPremade = n && !e.gameConfig.isCustom, this._checkIfFirstExperience(), this._checkIfTooltipNeeded(), this._checkIfTeamVoiceEATNeeded()
                 }
                 _initDataBinding() {
-                    this.lobbyDataListener = this.lobbyUpdated.bind(this), _.default.observe("lobby", this.lobbyDataListener), _.default.lobby().then(this.lobbyDataListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), m.default.observe("availability", this.availabilityDataListener), m.default.availability().then(this.availabilityDataListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), u.default.observe("availability", this.teamVoiceAvailabilityListener), u.default.availability().then(this.teamVoiceAvailabilityListener), this._voiceFirstExperienceListener = this._voiceFirstExperienceUpdated.bind(this), m.default.observe("firstExperience", this._voiceFirstExperienceListener), m.default.firstExperience().then(this._voiceFirstExperienceListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), A.default.observe("session", this.gameflowSessionListener), A.default.session().then(this.gameflowSessionListener), this.settingsDataListener = this.settingsUpdated.bind(this), m.default.observe("settings", this.settingsDataListener), m.default.settings().then(this.settingsDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), m.default.observe("participants", this.participantsDataListener), m.default.participants().then(this.participantsDataListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), u.default.observe("session", this.teamVoiceSessionListener), u.default.session().then(this.teamVoiceSessionListener), this.teamVoicePluginEnabledListener = this.teamVoiceEnabledUpdated.bind(this), g.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), g.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener)
+                    this.lobbyDataListener = this.lobbyUpdated.bind(this), b.default.observe("lobby", this.lobbyDataListener), b.default.lobby().then(this.lobbyDataListener), this.availabilityDataListener = this.availabilityUpdated.bind(this), g.default.observe("availability", this.availabilityDataListener), g.default.availability().then(this.availabilityDataListener), this.teamVoiceAvailabilityListener = this.teamVoiceAvailabilityUpdated.bind(this), A.default.observe("availability", this.teamVoiceAvailabilityListener), A.default.availability().then(this.teamVoiceAvailabilityListener), this._voiceFirstExperienceListener = this._voiceFirstExperienceUpdated.bind(this), g.default.observe("firstExperience", this._voiceFirstExperienceListener), g.default.firstExperience().then(this._voiceFirstExperienceListener), this.gameflowSessionListener = this.gameflowSessionUpdated.bind(this), v.default.observe("session", this.gameflowSessionListener), v.default.session().then(this.gameflowSessionListener), this.settingsDataListener = this.settingsUpdated.bind(this), g.default.observe("settings", this.settingsDataListener), g.default.settings().then(this.settingsDataListener), this.participantsDataListener = this.participantsUpdated.bind(this), g.default.observe("participants", this.participantsDataListener), g.default.participants().then(this.participantsDataListener), this.teamVoiceSessionListener = this.teamVoiceSessionUpdated.bind(this), A.default.observe("session", this.teamVoiceSessionListener), A.default.session().then(this.teamVoiceSessionListener), this.teamVoicePluginEnabledListener = this.teamVoiceEnabledUpdated.bind(this), _.default.observe("teamVoicePluginEnabled", this.teamVoicePluginEnabledListener), _.default.teamVoicePluginEnabled().then(this.teamVoicePluginEnabledListener)
                 }
                 gameflowSessionUpdated(e) {
                     if (!e || !e.phase) return;
@@ -2042,20 +2044,20 @@
                     this.parentNode && (this.parentNode.style && (this._voiceDisabled ? (this.addClass("voice-disabled", this._elements.voiceButton), this.parentNode.style.display = "none") : (this.removeClass("voice-disabled", this._elements.voiceButton), this.parentNode.style.display = "inherit")), this._parentNode = this.parentNode)
                 }
                 _checkIfTooltipNeeded() {
-                    this._buttonDisabled && (this._disabledAfterLogin ? this._tooltipType !== b.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED && this._attachDisabledTooltip(b.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED) : this._isInCustomGame ? this._tooltipType !== b.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME && this._attachDisabledTooltip(b.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME) : this._tooltipType !== b.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY && this._attachDisabledTooltip(b.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY))
+                    this._buttonDisabled && (this._disabledAfterLogin ? this._tooltipType !== y.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED && this._attachDisabledTooltip(y.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED) : this._isInCustomGame ? this._tooltipType !== y.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME && this._attachDisabledTooltip(y.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME) : this._tooltipType !== y.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY && this._attachDisabledTooltip(y.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY))
                 }
                 _attachDisabledTooltip(e) {
                     this._tooltipType && this._detachDisabledTooltip(), this._tooltipType = e;
                     const t = document.createElement("lol-uikit-tooltip");
                     let n;
                     switch (e) {
-                        case b.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME:
+                        case y.VOICE_BUTTON_TOOLTIP_TYPES.CUSTOM_GAME:
                             n = r.tra.get("parties_comm_button_error_in_custom_game");
                             break;
-                        case b.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY:
+                        case y.VOICE_BUTTON_TOOLTIP_TYPES.NO_PARTY:
                             n = r.tra.get("parties_comm_button_error_not_in_party");
                             break;
-                        case b.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED:
+                        case y.VOICE_BUTTON_TOOLTIP_TYPES.DISABLED:
                             n = r.tra.get("parties_comm_button_error_disabled")
                     }
                     const i = this._tooltipContentBlock(n);
@@ -2077,7 +2079,7 @@
                     this._showFirstExperience = e ? e.showFirstExperienceInLCU : null, this._checkIfFirstExperience()
                 }
                 _checkIfFirstExperience() {
-                    this._isSocial && this._showFirstExperience && this._isInPremade && !this._showedFirstExperience && this.parentNode && (this._showPanel(!1), this._attachFirstExperienceTooltip(), m.default.firstExperienceCompleted(), this._showedFirstExperience = !0)
+                    this._isSocial && this._showFirstExperience && this._isInPremade && !this._showedFirstExperience && this.parentNode && (this._showPanel(!1), this._attachFirstExperienceTooltip(), g.default.firstExperienceCompleted(), this._showedFirstExperience = !0)
                 }
                 _attachFirstExperienceTooltip() {
                     const e = this._tooltipContentBlock(r.tra.get("parties_comm_panel_tooltip_first_experience"));
@@ -2110,8 +2112,8 @@
                     this._teamVoicePluginEnabled = e, this._checkIfTeamVoiceEATNeeded()
                 }
                 _checkIfTeamVoiceEATNeeded() {
-                    !this._teamVoiceEATShown && this._teamVoicePluginEnabled && this._isInLobby && this.parentNode && null === this._teamVoiceEATSeen && (this._teamVoiceEATSeen = !1, v.default.navigationPreferences().then((e => {
-                        const t = !e || !e.data || !1 !== e.data[C];
+                    !this._teamVoiceEATShown && this._teamVoicePluginEnabled && this._isInLobby && this.parentNode && null === this._teamVoiceEATSeen && (this._teamVoiceEATSeen = !1, f.default.navigationPreferences().then((e => {
+                        const t = !e || !e.data || !1 !== e.data[B];
                         this._teamVoiceEATSeen = !t, t && this._showTeamVoiceEAT()
                     })).catch((e => {
                         r.logger.error(`voice-button -- error reading team voice EAT preference: ${e}`)
@@ -2131,31 +2133,31 @@
                     })), this._teamVoiceEATSeen = !0
                 }
                 _dismissTeamVoiceEAT() {
-                    this._teamVoiceEATNotification && (this._teamVoiceEATNotification.parentNode && this._teamVoiceEATNotification.parentNode.removeChild(this._teamVoiceEATNotification), this._teamVoiceEATNotification = null), v.default.patchNavigationPreferences({
-                        [C]: !1
+                    this._teamVoiceEATNotification && (this._teamVoiceEATNotification.parentNode && this._teamVoiceEATNotification.parentNode.removeChild(this._teamVoiceEATNotification), this._teamVoiceEATNotification = null), f.default.patchNavigationPreferences({
+                        [B]: !1
                     })
                 }
                 participantsUpdated(e) {
-                    const t = e && e.length > 0 ? f.VOICE_CONNECTED_STATE : f.VOICE_DISCONNECTED_STATE,
+                    const t = e && e.length > 0 ? x.VOICE_CONNECTED_STATE : x.VOICE_DISCONNECTED_STATE,
                         n = e ? e.length : 0;
-                    this._connectionState === f.VOICE_DISCONNECTED_STATE && t === f.VOICE_CONNECTED_STATE ? (this._playJoinSound(), this._lockOutMemberJoinSound = !0, clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
+                    this._connectionState === x.VOICE_DISCONNECTED_STATE && t === x.VOICE_CONNECTED_STATE ? (this._partyChannelConnectSound.play(), this._lockOutMemberJoinSound = !0, clearTimeout(this._memberJoinTimeout), this._memberJoinTimeout = setTimeout((() => {
                         this._lockOutMemberJoinSound = !1
-                    }), 500)) : this._connectionState === f.VOICE_CONNECTED_STATE && t === f.VOICE_DISCONNECTED_STATE || this._connectionState === f.VOICE_CONNECTED_STATE && n < this._previousParticipantCount ? this._playLeaveSound() : this._connectionState === f.VOICE_CONNECTED_STATE && n > this._previousParticipantCount && !this._lockOutMemberJoinSound && this._playDelayedJoinSound();
+                    }), 500)) : this._connectionState === x.VOICE_CONNECTED_STATE && t === x.VOICE_DISCONNECTED_STATE ? this._partyChannelDisconnectSound.play() : this._connectionState === x.VOICE_CONNECTED_STATE && n < this._previousParticipantCount ? this._playLeaveSound() : this._connectionState === x.VOICE_CONNECTED_STATE && n > this._previousParticipantCount && !this._lockOutMemberJoinSound && this._playDelayedJoinSound();
                     const r = this._connectionState !== t;
                     this._connectionState = t, this._previousParticipantCount = n, r && this._updateCombinedAvailability(!0)
                 }
                 teamVoiceSessionUpdated(e) {
                     const t = e && e.participants && e.participants.length > 0,
-                        n = t ? f.VOICE_CONNECTED_STATE : f.VOICE_DISCONNECTED_STATE;
-                    this._teamVoiceRestricted = !(!e || !e.isRestricted), this._teamVoicePluginEnabled && (!this._previousTeamSessionActive && t ? this._playTeamToggleOnSound() : this._previousTeamSessionActive && !t && this._playTeamToggleOffSound());
+                        n = t ? x.VOICE_CONNECTED_STATE : x.VOICE_DISCONNECTED_STATE;
+                    this._teamVoiceRestricted = !(!e || !e.isRestricted), this._teamVoicePluginEnabled && (!this._previousTeamSessionActive && t ? this._playTeamChannelConnectSound() : this._previousTeamSessionActive && !t && this._playTeamChannelDisconnectSound());
                     const r = this._teamConnectionState !== n;
                     this._teamConnectionState = n, this._previousTeamSessionActive = t, r && this._updateCombinedAvailability(!0)
                 }
                 _handleKeyDown(e) {
-                    this._teamVoicePluginEnabled && (!this._pttTeamKey || this._teamConnectionState !== f.VOICE_CONNECTED_STATE || this._teamVoiceRestricted || e.key !== this._pttTeamKey || e.repeat || (this._teamPttReleaseSound.stop(), this._teamPttClickSound.play()), this._pttKey && this._connectionState === f.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && !e.repeat && (this._partyPttReleaseSound.stop(), this._partyPttClickSound.play()))
+                    this._teamVoicePluginEnabled && (!this._pttTeamKey || this._teamConnectionState !== x.VOICE_CONNECTED_STATE || this._teamVoiceRestricted || e.key !== this._pttTeamKey || e.repeat || (this._teamPttReleaseSound.stop(), this._teamPttClickSound.play()), this._pttKey && this._connectionState === x.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && !e.repeat && (this._partyPttReleaseSound.stop(), this._partyPttClickSound.play()))
                 }
                 _handleKeyUp(e) {
-                    this._teamVoicePluginEnabled && (this._pttTeamKey && this._teamConnectionState === f.VOICE_CONNECTED_STATE && !this._teamVoiceRestricted && e.key === this._pttTeamKey && (this._teamPttClickSound.stop(), this._teamPttReleaseSound.play()), this._pttKey && this._connectionState === f.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && (this._partyPttClickSound.stop(), this._partyPttReleaseSound.play()))
+                    this._teamVoicePluginEnabled && (this._pttTeamKey && this._teamConnectionState === x.VOICE_CONNECTED_STATE && !this._teamVoiceRestricted && e.key === this._pttTeamKey && (this._teamPttClickSound.stop(), this._teamPttReleaseSound.play()), this._pttKey && this._connectionState === x.VOICE_CONNECTED_STATE && this._pttActive && e.key === this._pttKey && (this._partyPttClickSound.stop(), this._partyPttReleaseSound.play()))
                 }
                 _playJoinSound() {
                     this._joinSound.play()
@@ -2168,16 +2170,16 @@
                         this._playJoinSound(), this._lockOutMemberJoinSound = !1
                     }), 1500)
                 }
-                _playTeamToggleOnSound() {
-                    this._teamToggleOnSound.play()
+                _playTeamChannelConnectSound() {
+                    this._teamChannelConnectSound.play()
                 }
-                _playTeamToggleOffSound() {
-                    this._teamToggleOffSound.play()
+                _playTeamChannelDisconnectSound() {
+                    this._teamChannelDisconnectSound.play()
                 }
             }
-            k.tagName = "lol-parties-comm-button";
-            var B = k;
-            t.default = B
+            $.tagName = "lol-parties-comm-button";
+            var w = $;
+            t.default = w
         }, (e, t, n) => {
             "use strict";
             e.exports = n.p + "sfx-vc-team-ptt-click.ogg"
@@ -2198,10 +2200,16 @@
             e.exports = n.p + "sfx-voicechat-notif-leave.ogg"
         }, (e, t, n) => {
             "use strict";
-            e.exports = n.p + "sfx-vc-team-toggle-on-click.ogg"
+            e.exports = n.p + "sfx-vc-party-channel-connect.ogg"
         }, (e, t, n) => {
             "use strict";
-            e.exports = n.p + "sfx-vc-team-toggle-off-click.ogg"
+            e.exports = n.p + "sfx-vc-party-channel-disconnect.ogg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "sfx-vc-team-channel-connect.ogg"
+        }, (e, t, n) => {
+            "use strict";
+            e.exports = n.p + "sfx-vc-team-channel-disconnect.ogg"
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2274,10 +2282,10 @@
             }
             class A extends r.default {
                 templateMarkup() {
-                    return n(97)
+                    return n(99)
                 }
                 stylesheetMarkup() {
-                    return n(98)
+                    return n(100)
                 }
                 constructor() {
                     super(), this._lastSliderUpdate = 0, this._teamVoicePluginEnabled = !1, this._isDraggingSlider = !1, this._nameOverride = null;
@@ -2387,12 +2395,12 @@
             var r = n(43),
                 i = n(44),
                 a = n(45),
-                o = n(99),
-                l = n(100),
-                s = n(101),
-                c = n(102),
-                p = n(103),
-                d = n(104),
+                o = n(101),
+                l = n(102),
+                s = n(103),
+                c = n(104),
+                p = n(105),
+                d = n(106),
                 h = i(r),
                 m = a(o),
                 u = a(l),
@@ -2434,8 +2442,8 @@
             var r = s(n(16)),
                 i = s(n(23)),
                 a = s(n(25)),
-                o = n(106),
-                l = n(107);
+                o = n(108),
+                l = n(109);
 
             function s(e) {
                 return e && e.__esModule ? e : {
@@ -2444,10 +2452,10 @@
             }
             class c extends r.default {
                 templateMarkup() {
-                    return n(108)
+                    return n(110)
                 }
                 stylesheetMarkup() {
-                    return n(109)
+                    return n(111)
                 }
                 constructor() {
                     super(), this._selectors = {
@@ -2526,7 +2534,7 @@
                     l = n * r.MIN_BLUR_MULTIPLIER;
                 return (o - l) * a + ("small" === e ? 1 : 2)
             };
-            var r = n(107)
+            var r = n(109)
         }, (e, t) => {
             "use strict";
             Object.defineProperty(t, "__esModule", {
@@ -2565,7 +2573,7 @@
             var r = n(1),
                 i = s(n(16)),
                 a = s(n(23)),
-                o = n(106),
+                o = n(108),
                 l = s(n(40));
 
             function s(e) {
@@ -2575,10 +2583,10 @@
             }
             class c extends i.default {
                 templateMarkup() {
-                    return n(111)
+                    return n(113)
                 }
                 stylesheetMarkup() {
-                    return n(112)
+                    return n(114)
                 }
                 constructor() {
                     super(), this._listeners = {
@@ -2665,10 +2673,10 @@
             };
             class a extends i.default {
                 templateMarkup() {
-                    return n(114)
+                    return n(116)
                 }
                 stylesheetMarkup() {
-                    return n(115)
+                    return n(117)
                 }
                 constructor() {
                     super(), this._selectors = {
@@ -2738,10 +2746,10 @@
             };
             class a extends i.default {
                 templateMarkup() {
-                    return n(117)
+                    return n(119)
                 }
                 stylesheetMarkup() {
-                    return n(118)
+                    return n(120)
                 }
                 constructor() {
                     super(), this._selectors = {
@@ -2789,10 +2797,10 @@
             };
             class a extends i.default {
                 templateMarkup() {
-                    return n(120)
+                    return n(122)
                 }
                 stylesheetMarkup() {
-                    return n(121)
+                    return n(123)
                 }
                 constructor() {
                     super(), this._selectors = {

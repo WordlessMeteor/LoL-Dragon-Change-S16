@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "Yıpratıcı hasarı, rakipleri @ShredDuration@ saniyeliğine %@ShredPercent@ aşındırır ve örseler.",
+        "tooltip_text": "Yıpratıcı hasarı, rakipleri @ShredDuration@ saniyeliğine %@ShredPercent@ aşındırır ve örseler.<br><br><rules>Örseleme: Örselenen birimlerin büyü direnci azalır.</rules><br><rules>Aşındırma: Aşındırılan birimlerin zırhı azalır.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "Alev hasarı rakipleri @Duration@ saniyeliğine <TFTKeyword>yakar</TFTKeyword> ve %@WoundPercent@ <TFTKeyword>yaralar</TFTKeyword>. Alev özelliğinden gelen yakma etkisi diğer yakma etkileriyle birikir.<br><row>(@MinUnits@) %@HPBurnPerSecond@ Yakma etkisi kazanırsın.</row><br><row>(@MinUnits@) Çatışmadan sonra dükkânındaki Alev şampiyonu içermeyen @LuckySlotCount@ yuva yanar ve bir aşama daha yüksek bir şampiyon gelir.</row><br><row>(@MinUnits@) Dükkânındaki @LuckySlotCount@ yuva yanar, %@HPBurnPerSecond@ Yakma etkisi kazanırsın.</row><br><row>(@MinUnits@) Dükkânındaki @LuckySlotCount@ yuva yanar, %@HPBurnPerSecond@ Yakma etkisi kazanırsın.</row>",
+        "tooltip_text": "Alev birimlerinin hasarı rakipleri @Duration@ saniyeliğine <TFTKeyword>yakar</TFTKeyword> ve <TFTKeyword>yaralar</TFTKeyword>. Alev özelliğinden gelen yakma etkisi diğer yakma etkileriyle birikir.<br><row>(@MinUnits@) %@HPBurnPerSecond@ Yakma, %@WoundPercent@ Yara etkisi kazanırsın.</row><br><row>(@MinUnits@) Çatışmadan sonra dükkânındaki Alev şampiyonu içermeyen @LuckySlotCount@ yuva yanar ve bir aşama daha yüksek bir şampiyon gelir.</row><br><row>(@MinUnits@) Dükkânındaki @LuckySlotCount@ yuva yanar, %@HPBurnPerSecond@ Yakma etkisi kazanırsın.</row><br><row>(@MinUnits@) Dükkânındaki @LuckySlotCount@ yuva yanar, %@HPBurnPerSecond@ Yakma etkisi kazanırsın.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "@UniqueTraitHexRange@ hücre yakınında bir rakip katledildiğinde kalıcı olarak @UniqueTraitHealthPerStack@ Azami Can kazanır.<br><br>Mevcut: 0",
+        "tooltip_text": "@UniqueTraitHexRange@ hücre içindeki bir rakip katledildiğinde en güçlü Kadim Büyüme şampiyonun kalıcı olarak @UniqueTraitHealthPerStack@ Azami Can kazanır.<br><br>Mevcut: 0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,

@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "El daño de las unidades Cáusticas inflige un @ShredPercent@% de Rasgadura y Desgarre a los enemigos durante @ShredDuration@ seg.",
+        "tooltip_text": "El daño de las unidades Cáusticas aplica un @ShredPercent@% de Rasgadura y Desgarre a los enemigos durante @ShredDuration@ seg.<br><br><rules>Rasgadura: Reduce la resistencia mágica.</rules><br><rules>Desgarre: Reduce la armadura.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "El daño de los Inferno <TFTKeyword>quema</TFTKeyword> y aplica un @WoundPercent@% de <TFTKeyword>Heridas</TFTKeyword> a los enemigos durante @Duration@ seg. Las quemaduras de Inferno se acumulan con otras quemaduras.<br><row>(@MinUnits@) @HPBurnPerSecond@% de quemadura</row><br><row>(@MinUnits@) Después del combate, @LuckySlotCount@ de los espacios de la tienda que no tengan un campeón Inferno se incendian, lo que hace aparecer un campeón de un nivel superior</row><br><row>(@MinUnits@) Incendia @LuckySlotCount@ espacios de la tienda, @HPBurnPerSecond@% de quemadura.</row><br><row>(@MinUnits@) Incendia @LuckySlotCount@ espacios de la tienda, @HPBurnPerSecond@% de quemadura.</row>",
+        "tooltip_text": "El daño de las unidades Inferno aplica <TFTKeyword>Quemadura</TFTKeyword> y <TFTKeyword>Herida</TFTKeyword> a los enemigos durante @Duration@ seg. Las quemaduras de Inferno se acumulan con otras quemaduras.<br><row>(@MinUnits@) Los campeones Inferno aplican un @HPBurnPerSecond@% de Quemadura y un @WoundPercent@% de Herida</row><br><row>(@MinUnits@) Después de cada combate, @LuckySlotCount@ de los espacios de la tienda que no tengan un campeón Inferno se incendian, lo que hace aparecer un campeón de un nivel superior</row><br><row>(@MinUnits@) Se incendian @LuckySlotCount@ espacios de la tienda y los campeones Inferno aplican un @HPBurnPerSecond@% de Quemadura</row><br><row>(@MinUnits@) Se incendian @LuckySlotCount@ espacios de la tienda y los campeones Inferno aplican un @HPBurnPerSecond@% de Quemadura</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "Cada vez que un enemigo en un radio de @UniqueTraitHexRange@ hexágonos muere, tu equipo obtiene @UniqueTraitHealthPerStack@ de Vida Máxima permanente.<br><br>Actual: 0",
+        "tooltip_text": "Cada vez que un enemigo en un radio de @UniqueTraitHexRange@ hexágonos muere, tu campeón Bosqueviejo más fuerte obtiene @UniqueTraitHealthPerStack@ de Vida Máxima permanente.<br><br>Actual: 0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,
@@ -19501,7 +19501,7 @@
         "trait_id": "DA_Emerald18",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_EmeraldAspect.TFT_Set18.png",
-        "tooltip_text": "Arrastra a un aliado hasta tu Taric más fuerte para vincularlos. Esto le otorgará al aliado poderosas bonificaciones de la habilidad de Taric.",
+        "tooltip_text": "Arrastra a un campeón hasta tu Taric más fuerte para vincularlos. La habilidad de Taric le otorgará poderosas bonificaciones a esa unidad.",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {

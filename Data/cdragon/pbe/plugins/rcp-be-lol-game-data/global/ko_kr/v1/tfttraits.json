@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "부식 유닛이 피해를 입히면 적에게 @ShredDuration@초 동안 파쇄 및 파열을 @ShredPercent@% 적용합니다.",
+        "tooltip_text": "부식 유닛이 피해를 입히면 적에게 @ShredDuration@초 동안 파쇄 및 파열을 @ShredPercent@% 적용합니다.<br><br><rules>파쇄: 마법 저항력 감소</rules><br><rules>파열: 방어력 감소</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "지옥불이 피해를 입히면 적에게 @Duration@초 동안 <TFTKeyword>화상</TFTKeyword> 및 @WoundPercent@% <TFTKeyword>상처</TFTKeyword>를 적용합니다. 지옥불 화상은 다른 화상과 중첩됩니다.<br><row>(@MinUnits@) @HPBurnPerSecond@% 화상</row><br><row>(@MinUnits@) 전투 후, 지옥불 챔피언이 없는 상점 슬롯 @LuckySlotCount@개가 점화되어 한 단계 더 높은 챔피언 등장</row><br><row>(@MinUnits@) 상점 슬롯 @LuckySlotCount@개 점화, @HPBurnPerSecond@% 화상</row><br><row>(@MinUnits@) 상점 슬롯 @LuckySlotCount@개 점화, @HPBurnPerSecond@% 화상</row>",
+        "tooltip_text": "지옥불이 피해를 입히면 적에게 @Duration@초 동안 <TFTKeyword>화상</TFTKeyword> 및 <TFTKeyword>상처</TFTKeyword>를 적용합니다. 지옥불 화상 효과는 다른 화상 효과와 중첩됩니다.<br><row>(@MinUnits@) @HPBurnPerSecond@% 화상, @WoundPercent@% 상처</row><br><row>(@MinUnits@) 전투 후, 지옥불 챔피언이 없는 상점 슬롯 @LuckySlotCount@개가 점화되어 한 단계 더 높은 챔피언 등장</row><br><row>(@MinUnits@) 상점 슬롯 @LuckySlotCount@개 점화, @HPBurnPerSecond@% 화상</row><br><row>(@MinUnits@) 상점 슬롯 @LuckySlotCount@개 점화, @HPBurnPerSecond@% 화상</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "@UniqueTraitHexRange@칸 내 적이 사망할 때마다 영구히 @UniqueTraitHealthPerStack@의 최대 체력을 얻습니다.<br><br>현재: 0",
+        "tooltip_text": "@UniqueTraitHexRange@칸 내 적이 사망할 때마다 가장 강한 아군 고목 챔피언이 영구히 @UniqueTraitHealthPerStack@의 최대 체력을 얻습니다.<br><br>현재: 0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,

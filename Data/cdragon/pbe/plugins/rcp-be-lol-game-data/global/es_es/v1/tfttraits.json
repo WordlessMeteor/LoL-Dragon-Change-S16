@@ -18035,19 +18035,19 @@
                     },
                     {
                         "name": "Tier3BonusAD",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusArmor",
-                        "value": 15.0
+                        "value": 10.0
                     },
                     {
                         "name": "Tier3BonusAttackSpeed",
-                        "value": 0.18
+                        "value": 0.15
                     },
                     {
                         "name": "Tier3BonusHealth",
-                        "value": 200.0
+                        "value": 150.0
                     },
                     {
                         "name": "Tier3BonusOmnivamp",
@@ -18065,7 +18065,7 @@
         "trait_id": "DA_18_Blossom",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Blossom.TFT_Set18.png",
-        "tooltip_text": "Tras el combate, tus fuegos fatuos se potencian.<br><br>Los campeones de Brote obtienen daño de ataque, poder de habilidad y un @BonusHealth*100@% de vida máxima.<br><row>(@MinUnits@) Los fuegos fatuos se mejoran, @ADAP*100@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Hay fuegos fatuos en todas las tiendas, @ADAP*100@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Obtienes @GoldPerCharmPurchased@ de oro tras comprar un fuego fatuo, @ADAP*100@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Puedes comprar 2 fuegos fatuos por ronda, @ADAP*100@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Los fuegos fatuos rebosan de poder, @ADAP*100@% %i:scaleAD%%i:scaleAP%</row>.",
+        "tooltip_text": "Tras el combate, tus fuegos fatuos se potencian.<br><br>Los campeones de Brote obtienen daño de ataque, poder de habilidad y un @BonusHealth*100@% de vida máxima.<br><row>(@MinUnits@) Los fuegos fatuos se mejoran, @ADAP*100@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Hay fuegos fatuos en todas las tiendas, @ADAP*100@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Obtienes @GoldPerCharmPurchased@ de oro tras comprar un fuego fatuo, @ADAP*100@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Puedes comprar 2 fuegos fatuos por ronda, @ADAP*100@% %i:scaleAD%%i:scaleAP%.</row><br><row>(@MinUnits@) Los fuegos fatuos rebosan de poder, @ADAP*100@% %i:scaleAD%%i:scaleAP%.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18201,7 +18201,7 @@
         "trait_id": "DA_18_Caustic",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
-        "tooltip_text": "El daño de las unidades cáusticas desgarra y resquebraja un @ShredPercent@% a los enemigos durante @ShredDuration@ s.",
+        "tooltip_text": "El daño de las unidades cáusticas desgarra y resquebraja un @ShredPercent@% a los enemigos durante @ShredDuration@ s.<br><br><rules>Desgarre: Reduce la resistencia mágica.</rules><br><rules>Resquebrajamiento: Reduce la armadura.</rules>",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -18278,11 +18278,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 2.0
+                        "value": 3.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 35.0
+                        "value": 30.0
                     }
                 ],
                 "min_units": 5,
@@ -18294,11 +18294,11 @@
                 "constants": [
                     {
                         "name": "EssencePerDeath",
-                        "value": 7.0
+                        "value": 10.0
                     },
                     {
                         "name": "EssencePerLoss",
-                        "value": 100.0
+                        "value": 80.0
                     }
                 ],
                 "min_units": 7,
@@ -18659,17 +18659,13 @@
         "trait_id": "DA_18_Inferno",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
-        "tooltip_text": "El daño de los infernales <TFTKeyword>quema</TFTKeyword> y aplica un @WoundPercent@% de <TFTKeyword>heridas graves</TFTKeyword> a los enemigos durante @Duration@ s. La quemadura de Infernal se acumula con otras quemaduras.<br><row>(@MinUnits@) @HPBurnPerSecond@% de quemadura.</row><br><row>(@MinUnits@) Tras el combate, @LuckySlotCount@ de los huecos de la tienda sin campeones infernales se queman y ofrecen un campeón de un nivel superior.</row><br><row>(@MinUnits@) Quema @LuckySlotCount@ huecos de la tienda, @HPBurnPerSecond@% de quemadura.</row><br><row>(@MinUnits@) Quema @LuckySlotCount@ huecos de la tienda, @HPBurnPerSecond@% de quemadura.</row>",
+        "tooltip_text": "El daño de los infernales <TFTKeyword>quema</TFTKeyword> y <TFTKeyword>hiere</TFTKeyword> a los enemigos durante @Duration@ s. La quemadura de Infernal se acumula con otras quemaduras.<br><row>(@MinUnits@) @HPBurnPerSecond@% de quemadura, @WoundPercent@% de heridas.</row><br><row>(@MinUnits@) Tras el combate, @LuckySlotCount@ de los huecos de la tienda sin campeones infernales se queman y ofrecen un campeón de un nivel superior.</row><br><row>(@MinUnits@) Quema @LuckySlotCount@ huecos de la tienda, @HPBurnPerSecond@% de quemadura.</row><br><row>(@MinUnits@) Quema @LuckySlotCount@ huecos de la tienda, @HPBurnPerSecond@% de quemadura.</row>",
         "innate_trait_sets": [
             {
                 "constants": [
                     {
                         "name": "Duration",
                         "value": 4.0
-                    },
-                    {
-                        "name": "WoundPercent",
-                        "value": 33.0
                     }
                 ]
             }
@@ -18680,6 +18676,10 @@
                     {
                         "name": "HPBurnPerSecond",
                         "value": 1.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
                     }
                 ],
                 "min_units": 2,
@@ -18737,7 +18737,7 @@
         "trait_id": "DA_18_Invoker",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Invoker.TFT_Set18.png",
-        "tooltip_text": "Tu equipo obtiene regeneración de maná, que aumenta para los conjuradores.<br><row>(@MinUnits@) @TeamManaRegen@ de %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%.</row><br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%.</row>.<br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%.</row>.<br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%.</row>",
+        "tooltip_text": "Tu equipo obtiene regeneración de maná, que aumenta para los conjuradores.<br><row>(@MinUnits@) @TeamManaRegen@ de %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%.</row><br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%.</row><br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%.</row><br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% | @InvokerManaBonus@ %i:scaleManaRegen%.</row>",
         "innate_trait_sets": [],
         "conditional_trait_sets": [
             {
@@ -18908,7 +18908,7 @@
         "trait_id": "DA_18_Maokai_UniqueTrait",
         "set": "TFTSet18",
         "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
-        "tooltip_text": "Cada vez que un enemigo muere en un radio de @UniqueTraitHexRange@ hexágonos, obtienes @UniqueTraitHealthPerStack@ de vida máxima permanente.<br><br>Actual: 0",
+        "tooltip_text": "Cada vez que un enemigo muere en un radio de @UniqueTraitHexRange@ hexágonos, tu campeón Frondantigua más fuerte obtiene @UniqueTraitHealthPerStack@ de vida máxima permanente.<br><br>Actual: 0",
         "innate_trait_sets": [
             {
                 "constants": [
@@ -19393,7 +19393,7 @@
                 "constants": [
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.35
+                        "value": 0.32
                     }
                 ],
                 "min_units": 4,
@@ -19405,11 +19405,11 @@
                 "constants": [
                     {
                         "name": "DurabilityIncrease",
-                        "value": 0.06
+                        "value": 0.05
                     },
                     {
                         "name": "MaxHealthShield",
-                        "value": 0.45
+                        "value": 0.42
                     }
                 ],
                 "min_units": 6,
