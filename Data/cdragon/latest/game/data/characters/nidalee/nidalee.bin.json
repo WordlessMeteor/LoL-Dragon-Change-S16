@@ -1,6 +1,7 @@
 {
     "Characters/Nidalee/Spells/Takedown": {
         "ObjectName": "Takedown",
+        "objectPath": "Characters/Nidalee/Spells/Takedown",
         "mScriptName": "Takedown",
         "mSpell": {
             "flags": 4,
@@ -122,6 +123,32 @@
                         0.75
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BuffDuration",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BonusAttackRange",
+                    "values": [
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0,
+                        75.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -149,8 +176,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_Q2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 6.0,
                 6.0,
@@ -186,7 +213,7 @@
                 500.0,
                 500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     500.0,
                     500.0,
@@ -340,6 +367,7 @@
     },
     "Characters/Nidalee/Spells/JavelinTossAbility/JavelinToss": {
         "ObjectName": "JavelinToss",
+        "objectPath": "Characters/Nidalee/Spells/JavelinTossAbility/JavelinToss",
         "mScriptName": "JavelinToss",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -491,6 +519,19 @@
                         3.25
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RangeThreshold",
+                    "values": [
+                        525.0,
+                        525.0,
+                        525.0,
+                        525.0,
+                        525.0,
+                        525.0,
+                        525.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -623,8 +664,8 @@
                 "ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_Q1.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 6.0,
                 6.0,
@@ -660,7 +701,7 @@
                 1500.0,
                 1500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1500.0,
                     1500.0,
@@ -752,7 +793,7 @@
                 70.0,
                 75.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     55.0,
@@ -878,6 +919,7 @@
     },
     "Characters/Nidalee/Spells/PrimalSurgeAbility/PrimalSurge": {
         "ObjectName": "PrimalSurge",
+        "objectPath": "Characters/Nidalee/Spells/PrimalSurgeAbility/PrimalSurge",
         "mScriptName": "PrimalSurge",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -1027,8 +1069,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_E1.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 12.0,
                 12.0,
@@ -1062,7 +1104,7 @@
                 900.0,
                 900.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     900.0,
                     900.0,
@@ -1113,7 +1155,7 @@
                 70.0,
                 75.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     55.0,
@@ -1210,12 +1252,13 @@
     },
     "Characters/Nidalee/Spells/NidaleeBasicAttack2": {
         "ObjectName": "NidaleeBasicAttack2",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeBasicAttack2",
         "mScriptName": "NidaleeBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "NidaleeBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.382099986076355,
+            "spellCastTime": 0.382099986076355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1250,7 +1293,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -1327,6 +1370,7 @@
     },
     "Characters/Nidalee/Spells/AspectOfTheCougarAbility/AspectOfTheCougar": {
         "ObjectName": "AspectOfTheCougar",
+        "objectPath": "Characters/Nidalee/Spells/AspectOfTheCougarAbility/AspectOfTheCougar",
         "mScriptName": "AspectOfTheCougar",
         "mSpell": {
             "flags": 4,
@@ -1665,7 +1709,7 @@
                 "ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_R1.dds",
                 "ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_R2.dds"
             ],
-            "{11704a2b}": 0.5286999940872192,
+            "spellCastTime": 0.5286999940872192,
             "cooldownTime": [
                 3.0,
                 3.0,
@@ -1699,7 +1743,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -1804,12 +1848,13 @@
     },
     "Characters/Nidalee/Spells/NidaleeCougarTakedownAttack": {
         "ObjectName": "NidaleeCougarTakedownAttack",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeCougarTakedownAttack",
         "mScriptName": "NidaleeCougarTakedownAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mCoefficient2": 1.0,
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mCantCancelWhileWindingUp": true,
             "mCantCancelWhileChanneling": true,
             "castConeDistance": 100.0,
@@ -1840,6 +1885,7 @@
     },
     "Characters/Nidalee/Spells/Prowl": {
         "ObjectName": "Prowl",
+        "objectPath": "Characters/Nidalee/Spells/Prowl",
         "mScriptName": "Prowl",
         "mSpell": {
             "mImgIconName": [
@@ -1855,6 +1901,7 @@
     },
     "Characters/Nidalee/Spells/PounceEnabler": {
         "ObjectName": "PounceEnabler",
+        "objectPath": "Characters/Nidalee/Spells/PounceEnabler",
         "mScriptName": "PounceEnabler",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -1863,6 +1910,7 @@
     },
     "Characters/Nidalee/Spells/Swipe": {
         "ObjectName": "Swipe",
+        "objectPath": "Characters/Nidalee/Spells/Swipe",
         "mScriptName": "Swipe",
         "mSpell": {
             "flags": 32,
@@ -1924,8 +1972,8 @@
                 "ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_E2.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 6.0,
                 6.0,
@@ -1960,7 +2008,7 @@
                 350.0,
                 350.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     350.0,
                     350.0,
@@ -2054,6 +2102,7 @@
     },
     "Characters/Nidalee/Spells/BushwhackAbility/Bushwhack": {
         "ObjectName": "Bushwhack",
+        "objectPath": "Characters/Nidalee/Spells/BushwhackAbility/Bushwhack",
         "mScriptName": "Bushwhack",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -2152,6 +2201,58 @@
                 {
                     "name": "ModesBonusMaxTraps",
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DotDuration",
+                    "values": [
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "BaseDamagePerTick",
+                    "values": [
+                        0.0,
+                        10.0,
+                        20.0,
+                        30.0,
+                        40.0,
+                        50.0,
+                        60.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TrapLifetime",
+                    "values": [
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0,
+                        120.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TotalFlatDamage",
+                    "values": [
+                        0.0,
+                        40.0,
+                        80.0,
+                        120.0,
+                        160.0,
+                        200.0,
+                        240.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2210,8 +2311,8 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mEffectIndex": 5,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "BaseDamagePerTick",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         {
                             "mCoefficient": 0.05000000074505806,
@@ -2227,8 +2328,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_W1.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 14.0,
                 13.0,
@@ -2289,7 +2390,7 @@
                 900.0,
                 900.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     900.0,
                     900.0,
@@ -2340,7 +2441,7 @@
                 50.0,
                 55.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     30.0,
                     35.0,
@@ -2372,8 +2473,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 7,
+                                    "type": "TotalFlatDamage",
                                     "nameOverride": "Spell_ListType_NidaleeTrapDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -2423,8 +2523,8 @@
                             "__type": "{f3cbe7b2}"
                         },
                         "mPart2": {
-                            "mEffectIndex": 3,
-                            "__type": "EffectValueCalculationPart"
+                            "mDataValue": "DotDuration",
+                            "__type": "NamedDataValueCalculationPart"
                         },
                         "__type": "ProductOfSubPartsCalculationPart"
                     }
@@ -2470,6 +2570,7 @@
     },
     "Characters/Nidalee/Spells/BushwhackAbility/BushwhackDamage": {
         "ObjectName": "BushwhackDamage",
+        "objectPath": "Characters/Nidalee/Spells/BushwhackAbility/BushwhackDamage",
         "mScriptName": "BushwhackDamage",
         "mBuff": {
             "mDescription": "game_buff_tooltip_BushwhackDamage",
@@ -2479,13 +2580,14 @@
     },
     "Characters/Nidalee/Spells/NidaleeTakedownAttack": {
         "ObjectName": "NidaleeTakedownAttack",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeTakedownAttack",
         "mScriptName": "NidaleeTakedownAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7423,
             "mAlternateName": "Takedown",
             "mCoefficient2": 1.0,
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.375,
+            "spellCastTime": 0.375,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2521,7 +2623,7 @@
                 125.0,
                 125.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     125.0,
                     125.0,
@@ -2590,6 +2692,7 @@
     },
     "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunted": {
         "ObjectName": "NidaleePassiveHunted",
+        "objectPath": "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunted",
         "mScriptName": "NidaleePassiveHunted",
         "mSpell": {
             "mImgIconName": [
@@ -2605,6 +2708,7 @@
     },
     "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunting": {
         "ObjectName": "NidaleePassiveHunting",
+        "objectPath": "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunting",
         "mScriptName": "NidaleePassiveHunting",
         "mSpell": {
             "mImgIconName": [
@@ -2620,6 +2724,7 @@
     },
     "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunt": {
         "ObjectName": "NidaleePassiveHunt",
+        "objectPath": "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/NidaleePassiveHunt",
         "mScriptName": "NidaleePassiveHunt",
         "mSpell": {
             "mImgIconName": [
@@ -2635,7 +2740,7 @@
                 1400.0,
                 1400.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1400.0,
                     1400.0,
@@ -2672,6 +2777,7 @@
     },
     "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/BrushPassive": {
         "ObjectName": "BrushPassive",
+        "objectPath": "Characters/Nidalee/Spells/NidaleePassiveHuntAbility/BrushPassive",
         "mScriptName": "BrushPassive",
         "mBuff": {
             "mDescription": "game_buff_tooltip_BrushPassive",
@@ -2681,6 +2787,7 @@
     },
     "Characters/Nidalee/Spells/PounceBlocker": {
         "ObjectName": "PounceBlocker",
+        "objectPath": "Characters/Nidalee/Spells/PounceBlocker",
         "mScriptName": "PounceBlocker",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -2689,6 +2796,7 @@
     },
     "Characters/Nidalee/Spells/Pounce": {
         "ObjectName": "Pounce",
+        "objectPath": "Characters/Nidalee/Spells/Pounce",
         "mScriptName": "Pounce",
         "mSpell": {
             "flags": 36,
@@ -2783,14 +2891,29 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "EnhancedPounceRange",
+                    "values": [
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0,
+                        750.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "mCoefficient": 0.30000001192092896,
             "mCoefficient2": 0.20000000298023224,
             "mAnimationName": "Spell2",
             "mImgIconName": [
                 "ASSETS/Characters/Nidalee/HUD/Icons2D/Nidalee_W2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 6.0,
                 6.0,
@@ -2825,7 +2948,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2963,10 +3086,11 @@
     },
     "Characters/Nidalee/Spells/NidaleeCougarBasicAttack": {
         "ObjectName": "NidaleeCougarBasicAttack",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeCougarBasicAttack",
         "mScriptName": "NidaleeCougarBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "useAnimatorFramerate": true,
             "bHaveHitEffect": true,
             "castRange": [
@@ -2978,7 +3102,7 @@
                 125.0,
                 125.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     125.0,
                     125.0,
@@ -3010,6 +3134,7 @@
     },
     "Characters/Nidalee/Spells/NidaleeCougarScent": {
         "ObjectName": "NidaleeCougarScent",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeCougarScent",
         "mScriptName": "NidaleeCougarScent",
         "mSpell": {
             "mImgIconName": [
@@ -3025,11 +3150,12 @@
     },
     "Characters/Nidalee/Spells/NidaleeCougarCritAttack": {
         "ObjectName": "NidaleeCougarCritAttack",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeCougarCritAttack",
         "mScriptName": "NidaleeCougarCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "useAnimatorFramerate": true,
             "bHaveHitEffect": true,
             "castRange": [
@@ -3041,7 +3167,7 @@
                 125.0,
                 125.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     125.0,
                     125.0,
@@ -3073,6 +3199,7 @@
     },
     "Characters/Nidalee/Spells/SwipeBlocker": {
         "ObjectName": "SwipeBlocker",
+        "objectPath": "Characters/Nidalee/Spells/SwipeBlocker",
         "mScriptName": "SwipeBlocker",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -3081,11 +3208,12 @@
     },
     "Characters/Nidalee/Spells/NidaleeCritAttack": {
         "ObjectName": "NidaleeCritAttack",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeCritAttack",
         "mScriptName": "NidaleeCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.382099986076355,
+            "spellCastTime": 0.382099986076355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3120,7 +3248,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -3185,6 +3313,7 @@
     },
     "Characters/Nidalee/Spells/TakedownBlocker": {
         "ObjectName": "TakedownBlocker",
+        "objectPath": "Characters/Nidalee/Spells/TakedownBlocker",
         "mScriptName": "TakedownBlocker",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -3193,11 +3322,12 @@
     },
     "Characters/Nidalee/Spells/NidaleeBasicAttack": {
         "ObjectName": "NidaleeBasicAttack",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeBasicAttack",
         "mScriptName": "NidaleeBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "NidaleeBasicAttack",
-            "{11704a2b}": 0.382099986076355,
+            "spellCastTime": 0.382099986076355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3232,7 +3362,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -3299,11 +3429,12 @@
     },
     "Characters/Nidalee/Spells/NidaleeCougarBasicAttack2": {
         "ObjectName": "NidaleeCougarBasicAttack2",
+        "objectPath": "Characters/Nidalee/Spells/NidaleeCougarBasicAttack2",
         "mScriptName": "NidaleeCougarBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "useAnimatorFramerate": true,
             "bHaveHitEffect": true,
             "castRange": [
@@ -3315,7 +3446,7 @@
                 125.0,
                 125.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     125.0,
                     125.0,
@@ -3347,6 +3478,7 @@
     },
     "Characters/Nidalee/Spells/PounceMS": {
         "ObjectName": "PounceMS",
+        "objectPath": "Characters/Nidalee/Spells/PounceMS",
         "mScriptName": "PounceMS",
         "mSpell": {
             "mImgIconName": [
@@ -3748,7 +3880,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "{5b968ffb}": true,
                 "mDefaultPriority": [
                     3,
@@ -3773,15 +3905,26 @@
     "{d84dde80}": {
         "OrderJunglePath": [
             {
+                "Camp": 1,
+                "__type": "TakeCamp"
+            },
+            {
+                "__type": "TakeCamp"
+            },
+            {
+                "Camp": 2,
+                "__type": "TakeCamp"
+            },
+            {
                 "Camp": 3,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 5,
+                "Camp": 4,
                 "__type": "TakeCamp"
             },
             {
-                "Camp": 4,
+                "Camp": 5,
                 "__type": "TakeCamp"
             },
             {
@@ -4209,7 +4352,7 @@
             "baseValue": 30.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.4500000476837158,
             "__type": "ModifiableFloat"
         },
@@ -4299,7 +4442,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/Nidalee/Spells/NidaleeCougarTakedownAttack",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",

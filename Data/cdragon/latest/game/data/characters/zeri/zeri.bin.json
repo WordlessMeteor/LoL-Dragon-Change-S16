@@ -119,7 +119,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -161,6 +161,7 @@
     },
     "Characters/Zeri/Spells/ZeriPassiveAbility/ZeriPShieldMissile": {
         "ObjectName": "ZeriPShieldMissile",
+        "objectPath": "Characters/Zeri/Spells/ZeriPassiveAbility/ZeriPShieldMissile",
         "mScriptName": "ZeriPShieldMissile",
         "mSpell": {
             "flags": 4,
@@ -206,7 +207,7 @@
                 80000.0,
                 80000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     80000.0,
                     80000.0,
@@ -255,6 +256,7 @@
     },
     "Characters/Zeri/Spells/ZeriPassiveAbility/ZeriPassiveShield": {
         "ObjectName": "ZeriPassiveShield",
+        "objectPath": "Characters/Zeri/Spells/ZeriPassiveAbility/ZeriPassiveShield",
         "mScriptName": "ZeriPassiveShield",
         "mSpell": {
             "mImgIconName": [
@@ -278,6 +280,7 @@
     },
     "{5f323b15}": {
         "ObjectName": "ZeriPassiveHaste",
+        "objectPath": "{5f323b15}",
         "mScriptName": "ZeriPassiveHaste",
         "mSpell": {
             "mImgIconName": [
@@ -301,6 +304,7 @@
     },
     "Characters/Zeri/Spells/ZeriPassiveAbility/ZeriPassive": {
         "ObjectName": "ZeriPassive",
+        "objectPath": "Characters/Zeri/Spells/ZeriPassiveAbility/ZeriPassive",
         "mScriptName": "ZeriPassive",
         "mSpell": {
             "mSpellTags": [
@@ -409,7 +413,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -464,6 +468,7 @@
     },
     "{1232dcbb}": {
         "ObjectName": "ZeriSkin40Manager",
+        "objectPath": "{1232dcbb}",
         "mScriptName": "ZeriSkin40Manager",
         "__type": "SpellObject"
     },
@@ -490,10 +495,11 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQBasicAttack": {
         "ObjectName": "ZeriQBasicAttack",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQBasicAttack",
         "mScriptName": "ZeriQBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -527,7 +533,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -570,6 +576,7 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQMis": {
         "ObjectName": "ZeriQMis",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQMis",
         "mScriptName": "ZeriQMis",
         "mSpell": {
             "mAffectsTypeFlags": 6826,
@@ -651,8 +658,8 @@
             "mCoefficient": 1.100000023841858,
             "mCoefficient2": 0.15000000596046448,
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -701,7 +708,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -814,6 +821,7 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisEmpoweredPierce": {
         "ObjectName": "ZeriQMisEmpoweredPierce",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisEmpoweredPierce",
         "mScriptName": "ZeriQMisEmpoweredPierce",
         "mSpell": {
             "mAffectsTypeFlags": 6826,
@@ -895,8 +903,8 @@
             "mCoefficient": 1.100000023841858,
             "mCoefficient2": 0.15000000596046448,
             "mAnimationName": "Passive",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -954,7 +962,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -1066,6 +1074,7 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQ": {
         "ObjectName": "ZeriQ",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQ",
         "mScriptName": "ZeriQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1364,8 +1373,8 @@
                 "ASSETS/Characters/Zeri/HUD/Icons2D/ZeriQPassive.dds",
                 "ASSETS/Characters/Zeri/HUD/Icons2D/ZeriQPassiveCharged.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1404,7 +1413,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1519,13 +1528,14 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisEmpoweredPierceParent": {
         "ObjectName": "ZeriQMisEmpoweredPierceParent",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisEmpoweredPierceParent",
         "mScriptName": "ZeriQMisEmpoweredPierceParent",
         "mSpell": {
             "flags": 32,
             "mAffectsTypeFlags": 16384,
             "mAnimationName": "None",
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1561,7 +1571,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -1632,13 +1642,14 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisEmpoweredParent": {
         "ObjectName": "ZeriQMisEmpoweredParent",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisEmpoweredParent",
         "mScriptName": "ZeriQMisEmpoweredParent",
         "mSpell": {
             "flags": 32,
             "mAffectsTypeFlags": 16384,
             "mAnimationName": "None",
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1674,7 +1685,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -1745,6 +1756,7 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisPierce": {
         "ObjectName": "ZeriQMisPierce",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisPierce",
         "mScriptName": "ZeriQMisPierce",
         "mSpell": {
             "mAffectsTypeFlags": 6826,
@@ -1826,8 +1838,8 @@
             "mCoefficient": 1.100000023841858,
             "mCoefficient2": 0.15000000596046448,
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1876,7 +1888,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -1989,6 +2001,7 @@
     },
     "{c1a959c9}": {
         "ObjectName": "ZeriQBasicAttackSlow",
+        "objectPath": "{c1a959c9}",
         "mScriptName": "ZeriQBasicAttackSlow",
         "mBuff": {
             "mTooltipData": {
@@ -2006,13 +2019,14 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisParent": {
         "ObjectName": "ZeriQMisParent",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisParent",
         "mScriptName": "ZeriQMisParent",
         "mSpell": {
             "flags": 32,
             "mAffectsTypeFlags": 16384,
             "mAnimationName": "None",
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2048,7 +2062,7 @@
                 825.0,
                 825.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     825.0,
                     825.0,
@@ -2119,6 +2133,7 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisEmpowered": {
         "ObjectName": "ZeriQMisEmpowered",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisEmpowered",
         "mScriptName": "ZeriQMisEmpowered",
         "mSpell": {
             "mAffectsTypeFlags": 6826,
@@ -2200,8 +2215,8 @@
             "mCoefficient": 1.100000023841858,
             "mCoefficient2": 0.15000000596046448,
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2250,7 +2265,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -2362,13 +2377,14 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisPierceParent": {
         "ObjectName": "ZeriQMisPierceParent",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQMisPierceParent",
         "mScriptName": "ZeriQMisPierceParent",
         "mSpell": {
             "flags": 32,
             "mAffectsTypeFlags": 16384,
             "mAnimationName": "None",
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2404,7 +2420,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -2473,6 +2489,7 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQPassiveReady": {
         "ObjectName": "ZeriQPassiveReady",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQPassiveReady",
         "mScriptName": "ZeriQPassiveReady",
         "mSpell": {
             "mImgIconName": [
@@ -2496,16 +2513,18 @@
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQPassive": {
         "ObjectName": "ZeriQPassive",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQPassive",
         "mScriptName": "ZeriQPassive",
         "__type": "SpellObject"
     },
     "Characters/Zeri/Spells/ZeriQAbility/ZeriQBasicAttackEmpowered": {
         "ObjectName": "ZeriQBasicAttackEmpowered",
+        "objectPath": "Characters/Zeri/Spells/ZeriQAbility/ZeriQBasicAttackEmpowered",
         "mScriptName": "ZeriQBasicAttackEmpowered",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2539,7 +2558,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -2582,11 +2601,13 @@
     },
     "Characters/Zeri/Spells/ZeriBackpackVFXManager": {
         "ObjectName": "ZeriBackpackVFXManager",
+        "objectPath": "Characters/Zeri/Spells/ZeriBackpackVFXManager",
         "mScriptName": "ZeriBackpackVFXManager",
         "__type": "SpellObject"
     },
     "Characters/Zeri/Spells/ZeriWAbility/ZeriW": {
         "ObjectName": "ZeriW",
+        "objectPath": "Characters/Zeri/Spells/ZeriWAbility/ZeriW",
         "mScriptName": "ZeriW",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2835,8 +2856,8 @@
                 "ASSETS/Characters/Zeri/HUD/Icons2D/ZeriW.dds"
             ],
             "mCastTime": 0.550000011920929,
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 12.0,
                 12.0,
@@ -2870,7 +2891,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -2946,7 +2967,7 @@
                 90.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     60.0,
@@ -3103,10 +3124,11 @@
     },
     "Characters/Zeri/Spells/ZeriBasicAttack": {
         "ObjectName": "ZeriBasicAttack",
+        "objectPath": "Characters/Zeri/Spells/ZeriBasicAttack",
         "mScriptName": "ZeriBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3139,7 +3161,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -3194,6 +3216,7 @@
     },
     "Characters/Zeri/Spells/ZeriRAbility/ZeriRStacks": {
         "ObjectName": "ZeriRStacks",
+        "objectPath": "Characters/Zeri/Spells/ZeriRAbility/ZeriRStacks",
         "mScriptName": "ZeriRStacks",
         "mSpell": {
             "mImgIconName": [
@@ -3217,6 +3240,7 @@
     },
     "Characters/Zeri/Spells/ZeriRAbility/ZeriR": {
         "ObjectName": "ZeriR",
+        "objectPath": "Characters/Zeri/Spells/ZeriRAbility/ZeriR",
         "mScriptName": "ZeriR",
         "mSpell": {
             "flags": 32,
@@ -3491,8 +3515,8 @@
                 "ASSETS/Characters/Zeri/HUD/Icons2D/ZeriR.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.25,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.25,
             "cooldownTime": [
                 80.0,
                 80.0,
@@ -3528,7 +3552,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3572,7 +3596,7 @@
                 100.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -3659,6 +3683,7 @@
     },
     "Characters/Zeri/Spells/ZeriEAbility/ZeriESpecialRounds": {
         "ObjectName": "ZeriESpecialRounds",
+        "objectPath": "Characters/Zeri/Spells/ZeriEAbility/ZeriESpecialRounds",
         "mScriptName": "ZeriESpecialRounds",
         "mSpell": {
             "mImgIconName": [
@@ -3682,6 +3707,7 @@
     },
     "Characters/Zeri/Spells/ZeriEAbility/ZeriE": {
         "ObjectName": "ZeriE",
+        "objectPath": "Characters/Zeri/Spells/ZeriEAbility/ZeriE",
         "mScriptName": "ZeriE",
         "mSpell": {
             "flags": 4,
@@ -4061,7 +4087,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -4111,7 +4137,7 @@
                 70.0,
                 70.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     90.0,
                     85.0,
@@ -4245,6 +4271,7 @@
     },
     "Characters/Zeri/Spells/ZeriXEkko": {
         "ObjectName": "ZeriXEkko",
+        "objectPath": "Characters/Zeri/Spells/ZeriXEkko",
         "mScriptName": "ZeriXEkko",
         "mSpell": {
             "mImgIconName": [
@@ -4770,11 +4797,11 @@
             "__type": "ModifiableFloat"
         },
         "baseMR": {
-            "baseValue": 30.0,
+            "baseValue": 33.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
-            "baseValue": 1.2999999523162842,
+        "mrPerLevel": {
+            "baseValue": 1.100000023841858,
             "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,
@@ -4865,7 +4892,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",

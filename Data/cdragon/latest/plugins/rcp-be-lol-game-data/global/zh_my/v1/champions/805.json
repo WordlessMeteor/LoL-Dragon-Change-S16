@@ -696,7 +696,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "洛克投掷一个束缚法器，对命中的敌人造成伤害，并有几率将其处决。洛克在封印敌方英雄时会获得额外力量。",
-            "dynamicDescription": "洛克朝目标位置投掷一个束缚法器，对位于其中的敌人造成<magicDamage>@Damage@魔法伤害</magicDamage>和<status>减速</status>@SlowAmount*100@%的效果，在@SlowDuration@秒内持续衰减。法器会标记命中的敌人，持续@Duration@秒，封印已被标记且生命值低于@ExecutionThreshold*100@%的敌方英雄，并重置其它受影响英雄身上的标记持续时间。<br><br>持续时间结束后，如果至少封印了一名英雄，法器会落到地面。洛克可以拾取该法器，每封印一名英雄，都会使其处决阈值永久提升@ExecuteThresholdPerStack*100@%，并返还当前冷却时间的@CooldownReduction@%。<br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "洛克朝目标位置投掷一个束缚法器，对位于其中的敌人造成<magicDamage>@Damage@魔法伤害</magicDamage>和<status>减速</status>@SlowAmount*100@%的效果，在@SlowDuration@秒内持续衰减。法器会标记命中的敌人，持续@Duration@秒，封印已被标记且生命值低于<spellName>@ExecuteTooltipCalc@</spellName>的敌方英雄，并重置其它受影响英雄身上的标记持续时间。<br><br>持续时间结束后，如果至少封印了一名英雄，法器会落到地面。洛克可以拾取该法器，每封印一名英雄，都会使其处决阈值永久提升@ExecuteThresholdPerStack*100@%，并返还总冷却时间的@CooldownReduction@%。<br>@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

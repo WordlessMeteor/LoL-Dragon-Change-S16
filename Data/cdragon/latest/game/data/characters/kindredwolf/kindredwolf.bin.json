@@ -1,11 +1,12 @@
 {
     "Characters/KindredWolf/Spells/KindredWolfBasicAttack": {
         "ObjectName": "KindredWolfBasicAttack",
+        "objectPath": "Characters/KindredWolf/Spells/KindredWolfBasicAttack",
         "mScriptName": "KindredWolfBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "w_attacks",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -38,7 +39,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -84,6 +85,7 @@
     },
     "Characters/KindredWolf/Spells/LuluDummySpell": {
         "ObjectName": "LuluDummySpell",
+        "objectPath": "Characters/KindredWolf/Spells/LuluDummySpell",
         "mScriptName": "LuluDummySpell",
         "mSpell": {
             "flags": 2,
@@ -166,8 +168,8 @@
                 }
             ],
             "mCoefficient": 0.75,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 7.0,
                 7.0,
@@ -201,7 +203,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -262,7 +264,7 @@
                 70.0,
                 75.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     55.0,
@@ -464,7 +466,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Shared/Spells/BaseSpell",
             "Characters/KindredWolf/Spells/LuluDummySpell",
             "Shared/Spells/BaseSpell",

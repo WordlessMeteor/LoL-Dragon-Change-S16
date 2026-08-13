@@ -1292,7 +1292,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "弗拉迪米尔从他的目标身上抽取生命。当满足条件时，鲜血转换伤害会大幅增加，并在短时间内获得治疗效果。",
-            "dynamicDescription": "弗拉迪米尔汲取目标的生命力，造成 <magicDamage>@BaseDamageTooltip@ 魔法伤害</magicDamage>，并回复 <healing>@BaseHealTooltip@ 生命</healing>。施放此技能两次之后，弗拉迪米尔会获得 <speed>@MovementSpeedOnQ2@% 移动速度</speed>，持续 0.5 秒，并强化此技能的下一次使用，强化可保留 @Effect8Amount@ 秒。<br><br>此技能的强化版会改为造成 <magicDamage>@EmpoweredDamageTooltip@ 魔法伤害</magicDamage>，并额外回复 <healing>@EmpoweredHealTooltip@ 加上 @EmpoweredHealPercentTooltip@ 失去生命</healing>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "弗拉迪米尔汲取目标的生命力，造成<magicDamage>@BaseDamageTooltip@魔法伤害</magicDamage>并为自己回复<healing>@BaseHealTooltip@生命值</healing>。使用此技能两次后，弗拉迪米尔获得<speed>@MovementSpeedOnQ2@%移动速度</speed>，持续0.5秒，并强化此技能在@FrenzyDuration@秒内的下一次使用。<br><br>此技能的强化版改为造成<magicDamage>@EmpoweredDamageTooltip@魔法伤害</magicDamage>，并额外回复<healing>@EmpoweredHealTooltip@外加@EmpoweredHealPercentTooltip@已损失生命值</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1589,7 +1589,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirE.png",
             "abilityVideoPath": "champion-abilities/0008/ability_0008_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0008/ability_0008_E1.jpg",
-            "cost": "引导过程消耗<font color='#CC3300'>@Effect2Amount@%最大生命值（@ChargeHealthTooltip@）</font>",
+            "cost": "引导过程会消耗<font color='#CC3300'>@MaxHealthCost@%最大生命值（@ChargeHealthTooltip@）</font>",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "弗拉迪米尔消耗自身生命来储存一股血液，当施放时对周围单位造成伤害，但不能穿透目标。",
             "dynamicDescription": "<charge>开始蓄力：</charge>弗拉迪米尔储存一股血液，最多消耗<font color='#CC3300'>@ChargeHealthTooltip@生命值</font>。蓄力完成后，弗拉迪米尔会被<status>减速</status>20%。<br><br><release>释放：</release>弗拉迪米尔对附近敌人射出血柱飞弹，根据蓄力时间造成<magicDamage>@MinDamageTooltip@</magicDamage>至<magicDamage>@MaxDamageTooltip@魔法伤害</magicDamage>。如果此技能蓄力了至少1秒，还会使目标<status>减速</status>@SlowPercent@%，持续0.5秒。@SpellModifierDescriptionAppend@",
@@ -1742,7 +1742,7 @@
             "cost": "无消耗",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "弗拉迪米尔向目标区域注入剧毒瘟疫。持续时间内增加被感染的敌人所受到的伤害。血之瘟疫在数秒后会对被感染的敌人造成额外魔法伤害并治疗弗拉迪米尔。",
-            "dynamicDescription": "弗拉迪米尔生成一个剧毒瘟疫，使他的目标所受的来自所有来源的伤害提高 @Effect2Amount@%，持续 @Effect4Amount@ 秒。在其消散后，弗拉迪米尔对所有被感染的目标造成 <magicDamage>@Damage@ 魔法伤害</magicDamage>。如果弗拉迪米尔命中了一名敌方英雄，那么就会治愈自身 <healing>@SecondaryHealingTooltip@ 生命</healing>，此后每命中一名敌方英雄会治愈自身额外 <healing>@SecondaryHealingTooltip@ 生命</healing>。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "弗拉迪米尔释放致命瘟疫，使受感染的目标从所有来源受到的伤害提升@DamageAmp@%，持续@Duration@秒。持续时间结束后，弗拉迪米尔会对所有受感染的目标造成<magicDamage>@Damage@魔法伤害</magicDamage>。如果弗拉迪米尔命中了一名敌方英雄，则会回复<healing>@Damage@生命值</healing>，此后每命中一名敌方英雄都会额外回复<healing>@SecondaryHealingTooltip@生命值</healing>。@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,

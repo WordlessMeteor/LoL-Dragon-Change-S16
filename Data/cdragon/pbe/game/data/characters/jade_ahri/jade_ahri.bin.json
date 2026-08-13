@@ -1842,7 +1842,15 @@
             "__type": "SpellDataResource"
         },
         "mBuff": {
-            "mDescription": "Buff_AhriPassive_Jade_Tooltip",
+            "mTooltipData": {
+                "mObjectName": "Jade_AhriPassive_Counter",
+                "mFormat": "{b34f999a}",
+                "mLocKeys": {
+                    "keyName": "Spell_AhriPassive_Jade_Name",
+                    "keyTooltip": "Spell_AhriPassive_Jade_Summary"
+                },
+                "__type": "TooltipInstanceBuff"
+            },
             "__type": "BuffData"
         },
         "__type": "SpellObject"
@@ -3012,6 +3020,19 @@
                         0.30000001192092896,
                         0.30000001192092896,
                         0.30000001192092896
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "RecastDuration",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
                     ],
                     "__type": "SpellDataValue"
                 }

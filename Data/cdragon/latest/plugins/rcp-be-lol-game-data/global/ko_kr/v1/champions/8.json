@@ -1292,7 +1292,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "블라디미르가 대상 적으로부터 체력을 흡수합니다. 수혈을 충분히 한 뒤에는 수혈의 피해량과 치유량이 잠깐 동안 크게 늘어납니다.",
-            "dynamicDescription": "블라디미르가 대상의 체력을 흡수하며 <magicDamage>@BaseDamageTooltip@의 마법 피해</magicDamage>를 입히고 <healing>@BaseHealTooltip@의 체력</healing>을 회복합니다. 스킬을 두 번 사용한 뒤에는 0.5초 동안 <speed>이동 속도가 @MovementSpeedOnQ2@%</speed> 증가하며 @Effect8Amount@초 안에 이 스킬을 다시 사용하면 스킬이 강화됩니다.<br><br>강화된 스킬을 사용하면 <magicDamage>@EmpoweredDamageTooltip@의 마법 피해</magicDamage>를 입히며 <healing>@EmpoweredHealTooltip@+잃은 체력의 @EmpoweredHealPercentTooltip@</healing>만큼 추가로 회복합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "블라디미르가 대상의 체력을 흡수하며 <magicDamage>@BaseDamageTooltip@의 마법 피해</magicDamage>를 입히고 <healing>@BaseHealTooltip@의 체력</healing>을 회복합니다. 스킬을 두 번 사용한 뒤에는 0.5초 동안 <speed>이동 속도가 @MovementSpeedOnQ2@%</speed> 증가하며 @FrenzyDuration@초 안에 이 스킬을 다시 사용하면 스킬이 강화됩니다.<br><br>강화된 스킬을 사용하면 <magicDamage>@EmpoweredDamageTooltip@의 마법 피해</magicDamage>를 입히며 <healing>@EmpoweredHealTooltip@+잃은 체력의 @EmpoweredHealPercentTooltip@</healing>만큼 추가로 회복합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1589,7 +1589,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirE.png",
             "abilityVideoPath": "champion-abilities/0008/ability_0008_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0008/ability_0008_E1.jpg",
-            "cost": "정신 집중으로 <font color='#CC3300'>최대 체력의 @Effect2Amount@% (@ChargeHealthTooltip@)</font> 소모",
+            "cost": "정신 집중으로 <font color='#CC3300'>최대 체력의 @MaxHealthCost@% (@ChargeHealthTooltip@)</font> 소모",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "블라디미르가 자신의 체력을 희생해 피의 웅덩이를 채웁니다. 웅덩이가 파도를 방출하면 주변 지역에 피해를 입히지만 적 유닛이 파도를 가로막을 수 있습니다.",
             "dynamicDescription": "<charge>충전 시작: </charge>블라디미르가 <font color='#CC3300'>체력을 @ChargeHealthTooltip@</font>까지 희생해 피의 웅덩이를 채웁니다. 웅덩이가 가득 차면 블라디미르의 이동 속도가 20% <status>둔화</status>됩니다.<br><br><release>발사: </release>주변의 적에게 투사체를 급류처럼 방출해 충전 시간에 비례하여 <magicDamage>@MinDamageTooltip@</magicDamage>~<magicDamage>@MaxDamageTooltip@의 마법 피해</magicDamage>를 입힙니다. 스킬을 1초 이상 충전했을 경우 대상을 0.5초 동안 @SlowPercent@% <status>둔화</status>시킵니다.@SpellModifierDescriptionAppend@",
@@ -1742,7 +1742,7 @@
             "cost": "소모값 없음",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "블라디미르가 혈사병으로 목표 지역을 오염시킵니다. 질병에 감염된 적은 일정 시간 동안 더 큰 피해를 입습니다. 감염된 적은 몇 초 뒤 마법 피해를 입으며 피해를 입은 적 챔피언 수에 비례해 블라디미르의 체력이 회복됩니다.",
-            "dynamicDescription": "블라디미르가 혈사병을 일으켜 @Effect4Amount@초 동안 감염된 적이 받는 모든 피해를 @Effect2Amount@% 증가시킵니다. 감염된 적은 이 효과가 끝나면 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입습니다. 블라디미르는 적 챔피언을 맞히면 <healing>@Damage@의 체력</healing>을 회복하고, 이후 추가로 적 챔피언을 맞힐 때마다 <healing>@SecondaryHealingTooltip@의 체력</healing>을 더 회복합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "블라디미르가 혈사병을 일으켜 @Duration@초 동안 감염된 적이 받는 모든 피해를 @DamageAmp@% 증가시킵니다. 감염된 적은 이 효과가 끝나면 <magicDamage>@Damage@의 마법 피해</magicDamage>를 입습니다. 블라디미르는 적 챔피언을 맞히면 <healing>@Damage@의 체력</healing>을 회복하고, 이후 추가로 적 챔피언을 맞힐 때마다 <healing>@SecondaryHealingTooltip@의 체력</healing>을 더 회복합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,

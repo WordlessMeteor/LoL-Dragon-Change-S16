@@ -38,7 +38,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     2,
@@ -104,16 +104,21 @@
     },
     "{0148c54d}": {
         "ObjectName": "Jade_TwitchPassive_Marker",
+        "objectPath": "{0148c54d}",
         "mScriptName": "Jade_TwitchPassive_Marker",
         "__type": "SpellObject"
     },
     "{6ff55f66}": {
         "ObjectName": "Jade_TwitchPassive_Internal",
+        "objectPath": "{6ff55f66}",
         "mScriptName": "Jade_TwitchPassive_Internal",
         "mSpell": {
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_DeadlyVenom_temp.dds"
             ],
+            "SpellEventToAudioEventSuffix": {
+                "18": "Play_sfx_TwitchSkin301_TwitchPassive_Internal_OnBuffActivate"
+            },
             "__type": "SpellDataResource"
         },
         "mBuff": {
@@ -124,6 +129,7 @@
     },
     "{9831422a}": {
         "ObjectName": "Jade_TwitchPassive",
+        "objectPath": "{9831422a}",
         "mScriptName": "Jade_TwitchPassive",
         "mSpell": {
             "DataValues": [
@@ -220,7 +226,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -271,6 +277,7 @@
     },
     "{d1650076}": {
         "ObjectName": "Jade_Twitch_Rexpeita",
+        "objectPath": "{d1650076}",
         "mScriptName": "Jade_Twitch_Rexpeita",
         "mSpell": {
             "ImgIconPath": "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_Ambush.dds",
@@ -302,6 +309,7 @@
     },
     "Characters/Jade_Twitch/Spells/Jade_TwitchRAbility/Jade_TwitchR": {
         "ObjectName": "Jade_TwitchR",
+        "objectPath": "Characters/Jade_Twitch/Spells/Jade_TwitchRAbility/Jade_TwitchR",
         "mScriptName": "Jade_TwitchR",
         "mSpell": {
             "flags": 4,
@@ -440,7 +448,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -490,7 +498,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     125.0,
@@ -583,6 +591,7 @@
     },
     "{b7dcca83}": {
         "ObjectName": "Jade_TwitchR_Attack",
+        "objectPath": "{b7dcca83}",
         "mScriptName": "Jade_TwitchR_Attack",
         "mSpell": {
             "mAffectsTypeFlags": 23210,
@@ -591,8 +600,8 @@
                 "Trait_MultiTargetAttack"
             ],
             "mAnimationName": "Spell4",
-            "{11704a2b}": 0.3888999819755554,
-            "{f26881a0}": 1.333400011062622,
+            "spellCastTime": 0.3888999819755554,
+            "spellTotalTime": 1.333400011062622,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -626,7 +635,7 @@
                 5000.0,
                 5000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     5000.0,
                     5000.0,
@@ -658,7 +667,7 @@
                     "mTargetHeightAugment": 20.0,
                     "mStartBoneName": "weapon",
                     "mProjectTargetToCastRange": true,
-                    "mSpeed": 5000.0,
+                    "mSpeed": 4000.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "heightSolver": {
@@ -707,6 +716,7 @@
     },
     "{da2e76f2}": {
         "ObjectName": "Jade_TwitchR_Ult",
+        "objectPath": "{da2e76f2}",
         "mScriptName": "Jade_TwitchR_Ult",
         "mBuff": {
             "mDescription": "Buff_TwitchR_Jade_Tooltip",
@@ -733,6 +743,7 @@
     },
     "Characters/Jade_Twitch/Spells/Jade_TwitchEAbility/Jade_TwitchE": {
         "ObjectName": "Jade_TwitchE",
+        "objectPath": "Characters/Jade_Twitch/Spells/Jade_TwitchEAbility/Jade_TwitchE",
         "mScriptName": "Jade_TwitchE",
         "mSpell": {
             "mAffectsTypeFlags": 6152,
@@ -830,8 +841,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_Expunge_Old.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 13.0,
                 12.0,
@@ -866,7 +877,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -917,16 +928,16 @@
                 90.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
-                    50.0,
-                    60.0,
                     70.0,
+                    75.0,
                     80.0,
+                    85.0,
                     90.0,
-                    100.0
+                    95.0
                 ],
-                "{0a3e0478}": 50.0,
+                "{0a3e0478}": 70.0,
                 "__type": "{630af303}"
             },
             "selectionPriority": 1,
@@ -1001,6 +1012,7 @@
     },
     "Characters/Jade_Twitch/Spells/Jade_TwitchQAbility/Jade_TwitchQ": {
         "ObjectName": "Jade_TwitchQ",
+        "objectPath": "Characters/Jade_Twitch/Spells/Jade_TwitchQAbility/Jade_TwitchQ",
         "mScriptName": "Jade_TwitchQ",
         "mSpell": {
             "flags": 4,
@@ -1096,7 +1108,7 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_AlterEgo.dds",
                 "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_AlterEgo.dds"
             ],
-            "{f26881a0}": 0.18299999833106995,
+            "spellTotalTime": 0.18299999833106995,
             "cooldownTime": [
                 11.0,
                 11.0,
@@ -1129,7 +1141,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -1162,7 +1174,7 @@
                 60.0,
                 60.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     60.0,
                     60.0,
@@ -1258,6 +1270,7 @@
     },
     "{b781a4fa}": {
         "ObjectName": "Jade_TwitchQ_Buff",
+        "objectPath": "{b781a4fa}",
         "mScriptName": "Jade_TwitchQ_Buff",
         "mSpell": {
             "mImgIconName": [
@@ -1281,6 +1294,7 @@
     },
     "Characters/Jade_Twitch/Spells/Jade_TwitchWAbility/Jade_TwitchW": {
         "ObjectName": "Jade_TwitchW",
+        "objectPath": "Characters/Jade_Twitch/Spells/Jade_TwitchWAbility/Jade_TwitchW",
         "mScriptName": "Jade_TwitchW",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -1353,8 +1367,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Twitch_VenomCask.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 14.0,
                 13.0,
@@ -1389,7 +1403,7 @@
                 950.0,
                 950.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     950.0,
                     950.0,
@@ -1441,7 +1455,7 @@
                 70.0,
                 70.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     50.0,
@@ -1555,14 +1569,15 @@
     },
     "{db34071e}": {
         "ObjectName": "Jade_TwitchWMissile",
+        "objectPath": "{db34071e}",
         "mScriptName": "Jade_TwitchWMissile",
         "mSpell": {
             "flags": 4194304,
             "mAffectsTypeFlags": 23567,
             "mAlternateName": "TwitchVenomCask",
             "mAnimationName": "Spell3",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1595,7 +1610,7 @@
                 1500.0,
                 1500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1500.0,
                     1500.0,
@@ -1624,7 +1639,7 @@
                     "mTargetHeightAugment": 60.0,
                     "mOffsetInitialTargetHeight": 60.0,
                     "mStartBoneName": "Root",
-                    "mSpeed": 1400.0,
+                    "mSpeed": 1300.0,
                     "__type": "FixedSpeedMovement"
                 },
                 "heightSolver": {
@@ -1647,7 +1662,7 @@
             },
             "mCastType": 1,
             "castFrame": 7.974999904632568,
-            "missileSpeed": 1400.0,
+            "missileSpeed": 1300.0,
             "mMissileEffectKey": "Jade_Twitch_W_Mis",
             "mLineWidth": 120.0,
             "SpellEventToAudioEventSuffix": {
@@ -1669,6 +1684,7 @@
     },
     "Characters/Jade_Twitch/Spells/Jade_TwitchBasicAttack": {
         "ObjectName": "Jade_TwitchBasicAttack",
+        "objectPath": "Characters/Jade_Twitch/Spells/Jade_TwitchBasicAttack",
         "mScriptName": "Jade_TwitchBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -1707,7 +1723,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -1779,6 +1795,7 @@
     },
     "Characters/Jade_Twitch/Spells/Jade_TwitchBasicAttack3": {
         "ObjectName": "Jade_TwitchBasicAttack3",
+        "objectPath": "Characters/Jade_Twitch/Spells/Jade_TwitchBasicAttack3",
         "mScriptName": "Jade_TwitchBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -1818,7 +1835,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -1890,6 +1907,7 @@
     },
     "Characters/Jade_Twitch/Spells/Jade_TwitchBasicAttack2": {
         "ObjectName": "Jade_TwitchBasicAttack2",
+        "objectPath": "Characters/Jade_Twitch/Spells/Jade_TwitchBasicAttack2",
         "mScriptName": "Jade_TwitchBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -1929,7 +1947,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -2001,6 +2019,7 @@
     },
     "Characters/Jade_Twitch/Spells/Jade_TwitchCritAttack": {
         "ObjectName": "Jade_TwitchCritAttack",
+        "objectPath": "Characters/Jade_Twitch/Spells/Jade_TwitchCritAttack",
         "mScriptName": "Jade_TwitchCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -2040,7 +2059,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -3649,7 +3668,7 @@
             "__type": "AbilityResourceSlotInfo"
         },
         "baseDamageModifiable": {
-            "baseValue": 52.0,
+            "baseValue": 50.0,
             "__type": "ModifiableFloat"
         },
         "damagePerLevelModifiable": {
@@ -3742,7 +3761,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "{00000000}",
             "{db34071e}",
             "Shared/Spells/BaseSpell",

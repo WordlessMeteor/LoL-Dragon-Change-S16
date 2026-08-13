@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.15.1",
+    "version": "16.16.1",
     "data": {
         "Jade_MissFortune": {
             "id": "Jade_MissFortune",
@@ -12,7 +12,7 @@
                 "full": "Jade_MissFortune.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 144,
+                "x": 240,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -95,6 +95,19 @@
                     "name": "Battle Bunny Miss Fortune (Nightwire)",
                     "chromas": false,
                     "parentSkin": 31
+                },
+                {
+                    "id": "60021301",
+                    "num": 301,
+                    "name": "Classic Miss Fortune ",
+                    "chromas": false
+                },
+                {
+                    "id": "60021302",
+                    "num": 302,
+                    "name": "Classic Miss Fortune (Waterloo)",
+                    "chromas": false,
+                    "parentSkin": 301
                 }
             ],
             "lore": "- Strut (P) moved from W<br>- Impure Shots (W) passive deals magic damage on each hit with active increasing attack speed and applying grievous wounds",
@@ -180,11 +193,18 @@
                             0
                         ],
                         [
-                            20,
-                            45,
-                            70,
-                            95,
-                            120
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
+                        ],
+                        [
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -201,39 +221,32 @@
                             0
                         ],
                         [
-                            20,
-                            20,
-                            20,
-                            20,
-                            20
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            5,
-                            5,
-                            5,
-                            5,
-                            5
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            10,
-                            10,
-                            10,
-                            10,
-                            10
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            20,
-                            20,
-                            20,
-                            20,
-                            20
-                        ],
-                        [
-                            45,
-                            45,
-                            45,
-                            45,
-                            45
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -246,14 +259,14 @@
                     "effectBurn": [
                         null,
                         "0",
-                        "20/45/70/95/120",
                         "0",
                         "0",
-                        "20",
-                        "5",
-                        "10",
-                        "20",
-                        "45",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0"
                     ],
                     "vars": [],
@@ -271,8 +284,8 @@
                         "full": "Jade_MissFortuneRicochetShot.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 96,
+                        "x": 288,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -291,7 +304,7 @@
                         ],
                         "effect": [
                             "{{ damageonhitperstack }} -> {{ damageonhitperstackNL }}",
-                            "{{ maximumdamageonhitperstack }} -> {{ maximumdamageonhitperstackNL }}",
+                            "{{ damageonhitperstack*4.000000 }} -> {{ damageonhitperstacknl*4.000000 }}",
                             "{{ asmod }}% -> {{ asmodNL }}%"
                         ]
                     },
@@ -414,8 +427,8 @@
                         "full": "Jade_MissFortuneViciousStrikes.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 96,
+                        "x": 336,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -555,7 +568,7 @@
                         "full": "Jade_MissFortuneScattershot.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 384,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -670,7 +683,7 @@
                         "full": "Jade_MissFortuneBulletTime.png",
                         "sprite": "spell3.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 432,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -685,7 +698,7 @@
                     "full": "Jade_MissFortune_W.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 144,
+                    "x": 240,
                     "y": 0,
                     "w": 48,
                     "h": 48

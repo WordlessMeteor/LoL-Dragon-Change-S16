@@ -1,6 +1,7 @@
 {
     "Characters/Kennen/Spells/KennenDoubleStrikeIndicator": {
         "ObjectName": "KennenDoubleStrikeIndicator",
+        "objectPath": "Characters/Kennen/Spells/KennenDoubleStrikeIndicator",
         "mScriptName": "KennenDoubleStrikeIndicator",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KennenDoubleStrikeIndicator",
@@ -10,6 +11,7 @@
     },
     "Characters/Kennen/Spells/KennenDoubleStrikeProc": {
         "ObjectName": "KennenDoubleStrikeProc",
+        "objectPath": "Characters/Kennen/Spells/KennenDoubleStrikeProc",
         "mScriptName": "KennenDoubleStrikeProc",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -56,8 +58,8 @@
             ],
             "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -91,7 +93,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -174,6 +176,7 @@
     },
     "Characters/Kennen/Spells/KennenPassiveAbility/KennenMoSDiminish": {
         "ObjectName": "KennenMoSDiminish",
+        "objectPath": "Characters/Kennen/Spells/KennenPassiveAbility/KennenMoSDiminish",
         "mScriptName": "KennenMoSDiminish",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -186,6 +189,7 @@
     },
     "Characters/Kennen/Spells/KennenPassiveAbility/KennenPassive": {
         "ObjectName": "KennenPassive",
+        "objectPath": "Characters/Kennen/Spells/KennenPassiveAbility/KennenPassive",
         "mScriptName": "KennenPassive",
         "mSpell": {
             "mSpellTags": [
@@ -270,7 +274,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -303,6 +307,7 @@
     },
     "Characters/Kennen/Spells/KennenPassiveAbility/KennenMarkOfStorm": {
         "ObjectName": "KennenMarkOfStorm",
+        "objectPath": "Characters/Kennen/Spells/KennenPassiveAbility/KennenMarkOfStorm",
         "mScriptName": "KennenMarkOfStorm",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KennenMarkOfStorm",
@@ -312,6 +317,7 @@
     },
     "Characters/Kennen/Spells/KennenDoubleStrikeLive": {
         "ObjectName": "KennenDoubleStrikeLive",
+        "objectPath": "Characters/Kennen/Spells/KennenDoubleStrikeLive",
         "mScriptName": "KennenDoubleStrikeLive",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KennenDoubleStrikeLive",
@@ -351,6 +357,7 @@
     },
     "Characters/Kennen/Spells/KennenShurikenStormAbility/KennenShurikenStorm": {
         "ObjectName": "KennenShurikenStorm",
+        "objectPath": "Characters/Kennen/Spells/KennenShurikenStormAbility/KennenShurikenStorm",
         "mScriptName": "KennenShurikenStorm",
         "mSpell": {
             "mAffectsTypeFlags": 9221,
@@ -370,26 +377,26 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        5.0,
+                        0.0,
                         40.0,
-                        75.0,
-                        110.0,
-                        145.0,
-                        180.0,
-                        215.0
+                        80.0,
+                        120.0,
+                        160.0,
+                        200.0,
+                        240.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "APRatio",
                     "values": [
-                        0.22499999403953552,
-                        0.22499999403953552,
-                        0.22499999403953552,
-                        0.22499999403953552,
-                        0.22499999403953552,
-                        0.22499999403953552,
-                        0.22499999403953552
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -423,12 +430,12 @@
                     "name": "KennenRDefenses",
                     "values": [
                         0.0,
-                        20.0,
-                        40.0,
-                        60.0,
-                        80.0,
+                        25.0,
+                        50.0,
+                        75.0,
                         100.0,
-                        120.0
+                        125.0,
+                        150.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -512,8 +519,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Kennen/HUD/Icons2D/Kennen_R.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
             "cooldownTime": [
                 120.0,
                 120.0,
@@ -548,7 +555,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -715,6 +722,7 @@
     },
     "Characters/Kennen/Spells/KennenLightningRushAbility/KennenLightningRushBuff": {
         "ObjectName": "KennenLightningRushBuff",
+        "objectPath": "Characters/Kennen/Spells/KennenLightningRushAbility/KennenLightningRushBuff",
         "mScriptName": "KennenLightningRushBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KennenLightningRushBuff",
@@ -724,6 +732,7 @@
     },
     "Characters/Kennen/Spells/KennenLightningRushAbility/KennenLightningRushDamage": {
         "ObjectName": "KennenLightningRushDamage",
+        "objectPath": "Characters/Kennen/Spells/KennenLightningRushAbility/KennenLightningRushDamage",
         "mScriptName": "KennenLightningRushDamage",
         "mSpell": {
             "flags": 16,
@@ -777,7 +786,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -810,7 +819,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     50.0,
@@ -831,6 +840,7 @@
     },
     "Characters/Kennen/Spells/KennenLightningRushAbility/KennenLightningRush": {
         "ObjectName": "KennenLightningRush",
+        "objectPath": "Characters/Kennen/Spells/KennenLightningRushAbility/KennenLightningRush",
         "mScriptName": "KennenLightningRush",
         "mSpell": {
             "flags": 20,
@@ -1126,7 +1136,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1168,7 +1178,7 @@
                 80.0,
                 80.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     80.0,
                     80.0,
@@ -1269,6 +1279,7 @@
     },
     "Characters/Kennen/Spells/KennenLightningRushAbility/KennenLRCancel": {
         "ObjectName": "KennenLRCancel",
+        "objectPath": "Characters/Kennen/Spells/KennenLightningRushAbility/KennenLRCancel",
         "mScriptName": "KennenLRCancel",
         "mSpell": {
             "flags": 20,
@@ -1373,7 +1384,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1419,6 +1430,7 @@
     },
     "Characters/Kennen/Spells/KennenBasicAttack2": {
         "ObjectName": "KennenBasicAttack2",
+        "objectPath": "Characters/Kennen/Spells/KennenBasicAttack2",
         "mScriptName": "KennenBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -1456,7 +1468,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1522,6 +1534,7 @@
     },
     "Characters/Kennen/Spells/KennenShurikenHurlMissile1Ability/KennenShurikenHurlMissile1": {
         "ObjectName": "KennenShurikenHurlMissile1",
+        "objectPath": "Characters/Kennen/Spells/KennenShurikenHurlMissile1Ability/KennenShurikenHurlMissile1",
         "mScriptName": "KennenShurikenHurlMissile1",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1566,8 +1579,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Kennen/HUD/Icons2D/Kennen_Q.dds"
             ],
-            "{11704a2b}": 0.17500001192092896,
-            "{f26881a0}": 0.6000000238418579,
+            "spellCastTime": 0.17500001192092896,
+            "spellTotalTime": 0.6000000238418579,
             "cooldownTime": [
                 9.0,
                 7.0,
@@ -1599,7 +1612,7 @@
                 1050.0,
                 1050.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1050.0,
                     1050.0,
@@ -1673,7 +1686,7 @@
                 40.0,
                 35.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     60.0,
                     55.0,
@@ -1785,6 +1798,7 @@
     },
     "Characters/Kennen/Spells/KennenShurikenHurlMissile1Ability/KennenShurikenHurl1": {
         "ObjectName": "KennenShurikenHurl1",
+        "objectPath": "Characters/Kennen/Spells/KennenShurikenHurlMissile1Ability/KennenShurikenHurl1",
         "mScriptName": "KennenShurikenHurl1",
         "mSpell": {
             "flags": 4,
@@ -1862,8 +1876,8 @@
             "mImgIconName": [
                 "Kennen_ThunderingShuriken.dds"
             ],
-            "{11704a2b}": 0.17500001192092896,
-            "{f26881a0}": 0.6000000238418579,
+            "spellCastTime": 0.17500001192092896,
+            "spellTotalTime": 0.6000000238418579,
             "cooldownTime": [
                 8.0,
                 7.0,
@@ -1896,7 +1910,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1942,7 +1956,7 @@
                 45.0,
                 40.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     65.0,
                     60.0,
@@ -1993,6 +2007,7 @@
     },
     "Characters/Kennen/Spells/KennenCritAttack": {
         "ObjectName": "KennenCritAttack",
+        "objectPath": "Characters/Kennen/Spells/KennenCritAttack",
         "mScriptName": "KennenCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -2029,7 +2044,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -2094,6 +2109,7 @@
     },
     "Characters/Kennen/Spells/KennenBasicAttack": {
         "ObjectName": "KennenBasicAttack",
+        "objectPath": "Characters/Kennen/Spells/KennenBasicAttack",
         "mScriptName": "KennenBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 4234,
@@ -2130,7 +2146,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -2196,13 +2212,14 @@
     },
     "Characters/Kennen/Spells/KennenMegaProc": {
         "ObjectName": "KennenMegaProc",
+        "objectPath": "Characters/Kennen/Spells/KennenMegaProc",
         "mScriptName": "KennenMegaProc",
         "mSpell": {
             "mAffectsTypeFlags": 4266,
             "mAlternateName": "KennenMegaProc",
             "mAnimationName": "Spell2",
-            "{11704a2b}": 0.3109999895095825,
-            "{f26881a0}": 2.7333998680114746,
+            "spellCastTime": 0.3109999895095825,
+            "spellTotalTime": 2.7333998680114746,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2237,7 +2254,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -2312,6 +2329,7 @@
     },
     "Characters/Kennen/Spells/KennenBringTheLightAbility/KennenBringTheLight": {
         "ObjectName": "KennenBringTheLight",
+        "objectPath": "Characters/Kennen/Spells/KennenBringTheLightAbility/KennenBringTheLight",
         "mScriptName": "KennenBringTheLight",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2540,8 +2558,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Kennen/HUD/Icons2D/Kennen_W.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 13.0,
                 13.0,
@@ -2574,7 +2592,7 @@
                 725.0,
                 725.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     725.0,
                     725.0,
@@ -2625,7 +2643,7 @@
                 40.0,
                 40.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     40.0,
                     40.0,
@@ -3139,7 +3157,7 @@
             "baseValue": 30.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.2999999523162842,
             "__type": "ModifiableFloat"
         },
@@ -3215,7 +3233,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/Kennen/Spells/KennenShurikenHurlMissile1Ability/KennenShurikenHurl1",
             "Characters/Kennen/Spells/KennenMegaProc",
             "{00000000}",
@@ -3545,7 +3563,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mEarlyLevelOverrides": [
                     0,
                     1,

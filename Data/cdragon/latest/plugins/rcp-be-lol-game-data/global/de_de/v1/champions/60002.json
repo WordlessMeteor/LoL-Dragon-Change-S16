@@ -565,7 +565,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Olaf schmettert eine Axt in den Boden eines Zielbereichs, die getroffenen Einheiten Schaden zufügt und ihr Lauftempo verlangsamt. Wenn Olaf die Axt aufhebt, wird die Abklingzeit der Fähigkeit verringert.",
-            "dynamicDescription": "Olaf wirft eine Axt zu einem Zielort, die Einheiten, die sie durchdringt, <physicalDamage>@TotalDamage@ normalen Schaden</physicalDamage> zufügt und sie um @SlowAmount*100@ % <status>verlangsamt</status>. Der Effekt lässt über @DebuffDuration@ Sekunden nach. <br><br>Wenn Olaf die Axt aufhebt, wird die Abklingzeit der Fähigkeit um @CooldownRefund@ Sekunden verringert.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf wirft eine Axt zu einem Zielort, die Einheiten, die sie durchdringt, <physicalDamage>@TotalDamage@ normalen Schaden</physicalDamage> zufügt und sie über @DebuffDuration@ Sekunden hinweg um @SlowAmount*100@ % <status>verlangsamt</status>.<br><br>Wenn Olaf die Axt aufhebt, wird die Abklingzeit der Fähigkeit um @CooldownRefund@ Sekunden verringert.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -733,12 +733,12 @@
                 60.0
             ],
             "cooldownCoefficients": [
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 1.0,
@@ -1015,7 +1015,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Olaf kann vorübergehend nicht kampfunfähig gemacht werden und seine Rüstung, seine Magieresistenz und sein Tödlichkeitsfaktor sind erhöht.",
-            "dynamicDescription": "Olaf entfernt alle <status>bewegungsunfähig machenden</status> und <status>kampfunfähig machenden</status> Effekte von sich und wird @Duration@ Sekunden lang immun gegen sie. Während dieser Zeit erhält Olaf <scaleArmor>@Resists@ Rüstung</scaleArmor>, <scaleMR>@Resists@ Magieresistenz</scaleMR> und @ArmorPen@ Tödlichkeitsfaktor.<br><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellActive>Aktiv:</spellActive> Olaf entfernt alle <status>bewegungsunfähig machenden</status> und <status>kampfunfähig machenden</status> Effekte von sich und wird @Duration@ Sekunden lang immun gegen sie. Während dieser Zeit erhält Olaf <scaleArmor>@Resists@ Rüstung</scaleArmor> und <scaleMR>@Resists@ Magieresistenz</scaleMR>.<br><br><spellPassive>Passiv:</spellPassive> Olaf erhält zusätzlich @ArmorPen@ Tödlichkeitsfaktor.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

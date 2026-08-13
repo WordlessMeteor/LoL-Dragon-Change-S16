@@ -780,7 +780,7 @@
             "cost": "@Cost@ 魔力、所有充能",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "根據累加層數治療鄰近友方英雄。經過智勇雙全加強的普攻會獲得星光之觸的層數。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive> 每 @StackCooldown@ 秒及每命中一次被 <spellName>智勇雙全</spellName> 強化的普攻獲得一層效果（最多 @Effect6Amount@ 層）。<br><br><spellActive>主動：</spellActive> 消耗所有層數以回復周遭的友軍英雄每層 <healing>@HealingPerStack@ 生命</healing> （在 @Effect6Amount@ 層時達到最大治療量 <healing>@MaxStackHealing@</healing>）。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>每@StackCooldown@秒及每命中一次<spellName>智勇雙全</spellName>強化的普攻，獲得一層效果(最多@MaxCharges@層)。<br><br><spellActive>主動：</spellActive>消耗所有層數，每有一層，為鄰近友方英雄回復<healing>@HealingPerStack@生命</healing>(達@MaxCharges@層時，達最大治療量<healing>@MaxStackHealing@</healing>)。@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "被動增加塔里克和使用雙星壁壘連結友方的物理防禦。<br><br>主動能對友方施放護盾，並在他們在塔里克周圍時給予雙星壁壘效果。塔里克施放技能同時也會在雙星壁壘連結的目標身上生效。",
-            "dynamicDescription": "<spellPassive>被動：</spellPassive>塔里克獲得 <scaleArmor>@BonusArmor@ 物理防禦</scaleArmor>並在他和被此技能綁定過的友方英雄之間形成一條靈鍊。只要他們在彼此附近，該友方英雄就會獲得 <scaleArmor>@BonusArmor@ 物理防禦</scaleArmor>並且塔里克的各個技能也會在連結的友軍英雄身上發動。<br><br><spellPassive>主動：</spellPassive>塔里克祝福一名友軍英雄，給予目標及自身 <shield>@Effect2Amount@% 友軍最大生命的護盾</shield>，持續 @Effect3Amount@ 秒@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>被動：</spellPassive>塔里克獲得<scaleArmor>@BonusArmor@物防</scaleArmor>，他與此技能綁定的友方英雄之間會形成一條靈鍊。只要他們在彼此附近，該友軍會獲得<scaleArmor>@BonusArmor@物防</scaleArmor>，且塔里克施放各項技能時，該名連結的友軍也會發動相同技能。<br><br><spellPassive>主動：</spellPassive>塔里克綁定一名友方英雄，賦予<shield>@ShieldHPRatio@%最大生命的護盾</shield>，持續@ShieldDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "塔里克放射出一道星光，在短暫的延遲後，造成魔法傷害並擊暈敵方。",
-            "dynamicDescription": "塔里克放射出一道星光，在 @Effect3Amount@ 秒後爆裂，造成 <magicDamage>@TotalDamage@ 魔法傷害</magicDamage> 並 <status>暈眩</status> 敵人持續 @Effect2Amount@ 秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "塔里克射出一道星光，在@ChargeDuration@秒後爆裂，造成<magicDamage>@TotalDamage@魔法傷害</magicDamage>並<status>暈眩</status>敵軍，持續@StunDuration@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

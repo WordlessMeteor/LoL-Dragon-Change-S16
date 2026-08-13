@@ -565,7 +565,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Olaf melempar kapak ke tanah pada lokasi target, menghasilkan damage kepada unit yang dilaluinya dan mengurangi movement speed mereka. Jika Olaf mengambil kapaknya, cooldown ability ini berkurang.",
-            "dynamicDescription": "Olaf melempar kapak ke lokasi target, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> ke unit yang dilaluinya dan menerapkan <status>Slow</status> sebesar @SlowAmount*100@% yang berkurang secara bertahap selama @DebuffDuration@ detik. <br><br>Jika Olaf mengambil kapaknya, cooldown ability ini berkurang sebesar @CooldownRefund@ detik.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf melempar kapak ke lokasi target, menghasilkan <physicalDamage>@TotalDamage@ physical damage</physicalDamage> ke unit yang dilaluinya dan menerapkan <status>Slow</status> sebesar @SlowAmount*100@% selama @DebuffDuration@ detik. <br><br>Jika Olaf mengambil kapaknya, cooldown ability ini berkurang sebesar @CooldownRefund@ detik.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -733,12 +733,12 @@
                 60.0
             ],
             "cooldownCoefficients": [
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 1.0,
@@ -1015,7 +1015,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "%i:cooldown% @Cooldown@ dtk",
             "description": "Olaf untuk sementara menjadi kebal terhadap efek disable dan mendapatkan Armor, Magic Resist, serta Lethality bonus.",
-            "dynamicDescription": "Olaf membersihkan semua efek <status>Immobilize</status> dan <status>Disable</status> pada dirinya, lalu menjadi kebal terhadap efek tersebut selama @Duration@ detik. Selama waktu tersebut, Olaf mendapatkan <scaleArmor>@Resists@ Armor</scaleArmor>, <scaleMR>@Resists@ Magic Resist</scaleMR>, dan @ArmorPen@ Lethality.<br><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellActive>Aktif:</spellActive> Olaf membersihkan semua efek <status>Immobilize</status> dan <status>Disable</status> pada dirinya, lalu menjadi kebal terhadap efek tersebut selama @Duration@ detik berikutnya. Selama waktu tersebut, Olaf mendapatkan <scaleArmor>@Resists@ Armor</scaleArmor> dan <scaleMR>@Resists@ Magic Resist</scaleMR>.<br><br><spellPassive>Pasif:</spellPassive> Olaf mendapatkan tambahan @ArmorPen@ Lethality.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

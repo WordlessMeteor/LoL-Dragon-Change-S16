@@ -583,7 +583,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "奥拉夫将一柄战斧投至目标区域，对它途经的单位们造成伤害，并降低其移动速度。如果奥拉夫捡起该战斧，则该技能冷却时间会缩短。",
-            "dynamicDescription": "奥拉夫将一柄战斧投至目标区域，对它途经的单位们造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>以及在@DebuffDuration@秒内持续衰减的@SlowAmount*100@%<status>减速</status>。<br><br>如果奥拉夫捡起该战斧，则该技能冷却时间缩短@CooldownRefund@秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "奥拉夫将战斧投至目标区域，对战斧穿过的敌人造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>和最多持续@DebuffDuration@秒的@SlowAmount*100@%<status>减速</status>。如果奥拉夫将斧头捡起，那么该技能的冷却将缩短@CooldownRefund@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -751,12 +751,12 @@
                 60.0
             ],
             "cooldownCoefficients": [
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 1.0,
@@ -1033,7 +1033,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "奥拉夫暂时免疫控制技能，且获得额外护甲、魔法抗性和穿甲。",
-            "dynamicDescription": "奥拉夫净化自身所有的<status>定身</status>和<status>限制</status>效果，并在接下来的@Duration@秒内免疫此类效果。在此期间，奥拉夫获得<scaleArmor>@Resists@护甲</scaleArmor>、<scaleMR>@Resists@魔法抗性</scaleMR>和@ArmorPen@穿甲。<br><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellActive>主动：</spellActive>奥拉夫净化他身上的所有<status>定身</status>和<status>限制</status>效果并在接下来的@Duration@秒里对这些效果免疫。在此期间，奥拉夫获得<scaleArmor>@Resists@护甲</scaleArmor>和<scaleMR>@Resists@魔法抗性</scaleMR>。<br><br><spellPassive>被动：</spellPassive>奥拉夫获得额外的@ArmorPen@穿甲。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

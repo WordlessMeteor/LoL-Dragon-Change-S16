@@ -12,6 +12,7 @@
     },
     "Characters/Gnar/Spells/GnarWAbility/GnarW": {
         "ObjectName": "GnarW",
+        "objectPath": "Characters/Gnar/Spells/GnarWAbility/GnarW",
         "mScriptName": "GnarW",
         "mSpell": {
             "flags": 4,
@@ -182,6 +183,19 @@
                                 70.0
                             ],
                             "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MiniPercentHPDamage",
+                            "values": [
+                                0.07999999821186066,
+                                0.10000000149011612,
+                                0.11999999731779099,
+                                0.14000000059604645,
+                                0.1599999964237213,
+                                0.18000000715255737,
+                                0.20000000298023224
+                            ],
+                            "__type": "SpellDataValue"
                         }
                     ],
                     "__type": "SpellDataValueVector"
@@ -220,8 +234,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Gnar/HUD/Icons2D/Gnar_W.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 7.0,
                 7.0,
@@ -262,7 +276,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -393,6 +407,7 @@
     },
     "Characters/Gnar/Spells/GnarWAbility/GnarWHit": {
         "ObjectName": "GnarWHit",
+        "objectPath": "Characters/Gnar/Spells/GnarWAbility/GnarWHit",
         "mScriptName": "GnarWHit",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarWHit",
@@ -402,6 +417,7 @@
     },
     "Characters/Gnar/Spells/GnarWAbility/GnarWProc": {
         "ObjectName": "GnarWProc",
+        "objectPath": "Characters/Gnar/Spells/GnarWAbility/GnarWProc",
         "mScriptName": "GnarWProc",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarWProc",
@@ -411,6 +427,7 @@
     },
     "Characters/Gnar/Spells/GnarWAbility/GnarWBuff": {
         "ObjectName": "GnarWBuff",
+        "objectPath": "Characters/Gnar/Spells/GnarWAbility/GnarWBuff",
         "mScriptName": "GnarWBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarWBuff",
@@ -432,6 +449,7 @@
     },
     "Characters/Gnar/Spells/GnarRAbility/GnarR": {
         "ObjectName": "GnarR",
+        "objectPath": "Characters/Gnar/Spells/GnarRAbility/GnarR",
         "mScriptName": "GnarR",
         "mSpell": {
             "mAffectsTypeFlags": 13327,
@@ -541,6 +559,20 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        0.0,
+                        70.0,
+                        50.0,
+                        30.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "Damage": {
                     "mFormulaParts": [
@@ -586,8 +618,8 @@
                 "ASSETS/Characters/Gnar/HUD/Icons2D/Gnar_R_Grey.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 90.0,
@@ -621,7 +653,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -869,6 +901,7 @@
     },
     "Characters/Gnar/Spells/GnarRAbility/GnarRKnockback": {
         "ObjectName": "GnarRKnockback",
+        "objectPath": "Characters/Gnar/Spells/GnarRAbility/GnarRKnockback",
         "mScriptName": "GnarRKnockback",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarRKnockback",
@@ -878,6 +911,7 @@
     },
     "Characters/Gnar/Spells/GnarRAbility/GnarRKnockbackCC": {
         "ObjectName": "GnarRKnockbackCC",
+        "objectPath": "Characters/Gnar/Spells/GnarRAbility/GnarRKnockbackCC",
         "mScriptName": "GnarRKnockbackCC",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarRKnockback",
@@ -898,6 +932,7 @@
     },
     "Characters/Gnar/Spells/GnarQAbility/GnarQ": {
         "ObjectName": "GnarQ",
+        "objectPath": "Characters/Gnar/Spells/GnarQAbility/GnarQ",
         "mScriptName": "GnarQ",
         "mSpell": {
             "flags": 4,
@@ -1189,8 +1224,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Gnar/HUD/Icons2D/Gnar_Q.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 17.5,
                 16.0,
@@ -1222,7 +1257,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -1443,6 +1478,7 @@
     },
     "Characters/Gnar/Spells/GnarQAbility/GnarQMissile": {
         "ObjectName": "GnarQMissile",
+        "objectPath": "Characters/Gnar/Spells/GnarQAbility/GnarQMissile",
         "mScriptName": "GnarQMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1503,8 +1539,8 @@
                 "FallenAngel_DarkBinding.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1539,7 +1575,7 @@
                 1125.0,
                 1125.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1125.0,
                     1125.0,
@@ -1650,6 +1686,7 @@
     },
     "Characters/Gnar/Spells/GnarQAbility/GnarQSlow": {
         "ObjectName": "GnarQSlow",
+        "objectPath": "Characters/Gnar/Spells/GnarQAbility/GnarQSlow",
         "mScriptName": "GnarQSlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarQSlow",
@@ -1659,6 +1696,7 @@
     },
     "Characters/Gnar/Spells/GnarQAbility/GnarQMissileReturn": {
         "ObjectName": "GnarQMissileReturn",
+        "objectPath": "Characters/Gnar/Spells/GnarQAbility/GnarQMissileReturn",
         "mScriptName": "GnarQMissileReturn",
         "mSpell": {
             "flags": 4,
@@ -1719,8 +1757,8 @@
             "mImgIconName": [
                 "Ahri_OrbofDeception.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 11.0,
                 11.0,
@@ -1755,7 +1793,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1853,6 +1891,7 @@
     },
     "Characters/Gnar/Spells/GnarFuryGeneration": {
         "ObjectName": "GnarFuryGeneration",
+        "objectPath": "Characters/Gnar/Spells/GnarFuryGeneration",
         "mScriptName": "GnarFuryGeneration",
         "mBuff": {
             "mShowDuration": false,
@@ -1874,8 +1913,61 @@
     },
     "Characters/Gnar/Spells/GnarPassiveAbility/GnarPassive": {
         "ObjectName": "GnarPassive",
+        "objectPath": "Characters/Gnar/Spells/GnarPassiveAbility/GnarPassive",
         "mScriptName": "GnarPassive",
         "mSpell": {
+            "DataValues": [
+                {
+                    "name": "MegaHealthStartingValue",
+                    "values": [
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0,
+                        100.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MegaHealthEndingValue",
+                    "values": [
+                        831.0,
+                        831.0,
+                        831.0,
+                        831.0,
+                        831.0,
+                        831.0,
+                        831.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "TiredDuration",
+                    "values": [
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0,
+                        15.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "TiredDuration",
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "TotalAttackRange": {
                     "tooltipOnly": true,
@@ -1922,10 +2014,9 @@
                     "tooltipOnly": true,
                     "mFormulaParts": [
                         {
-                            "mStartValue": 100.0,
-                            "mEndValue": 831.0,
-                            "mScaleByStatProgressionMultiplier": true,
-                            "__type": "ByCharLevelInterpolationCalculationPart"
+                            "{0589a59c}": "MegaHealthStartingValue",
+                            "{0b65bc23}": "MegaHealthEndingValue",
+                            "__type": "{ee18a47b}"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -1979,7 +2070,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -2034,6 +2125,7 @@
     },
     "Characters/Gnar/Spells/GnarPassiveAbility/GnarTransformSoon": {
         "ObjectName": "GnarTransformSoon",
+        "objectPath": "Characters/Gnar/Spells/GnarPassiveAbility/GnarTransformSoon",
         "mScriptName": "GnarTransformSoon",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarTransformSoon",
@@ -2043,6 +2135,7 @@
     },
     "Characters/Gnar/Spells/GnarPassiveAbility/GnarTransformTired": {
         "ObjectName": "GnarTransformTired",
+        "objectPath": "Characters/Gnar/Spells/GnarPassiveAbility/GnarTransformTired",
         "mScriptName": "GnarTransformTired",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarTransformTired",
@@ -2052,6 +2145,7 @@
     },
     "Characters/Gnar/Spells/GnarPassiveAbility/GnarTransform": {
         "ObjectName": "GnarTransform",
+        "objectPath": "Characters/Gnar/Spells/GnarPassiveAbility/GnarTransform",
         "mScriptName": "GnarTransform",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarTransform",
@@ -2070,6 +2164,7 @@
     },
     "Characters/Gnar/Spells/GnarBigWAbility/GnarBigW": {
         "ObjectName": "GnarBigW",
+        "objectPath": "Characters/Gnar/Spells/GnarBigWAbility/GnarBigW",
         "mScriptName": "GnarBigW",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2086,8 +2181,8 @@
                 "ASSETS/Characters/Gnar/HUD/Icons2D/GnarBig_W.dds"
             ],
             "mCastTime": 0.6000000238418579,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 7.0,
                 7.0,
@@ -2122,7 +2217,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -2286,6 +2381,7 @@
     },
     "Characters/Gnar/Spells/GnarRunCycleManager": {
         "ObjectName": "GnarRunCycleManager",
+        "objectPath": "Characters/Gnar/Spells/GnarRunCycleManager",
         "mScriptName": "GnarRunCycleManager",
         "mBuff": {
             "mShowDuration": false,
@@ -2312,11 +2408,12 @@
     },
     "Characters/Gnar/Spells/GnarBasicAttack2": {
         "ObjectName": "GnarBasicAttack2",
+        "objectPath": "Characters/Gnar/Spells/GnarBasicAttack2",
         "mScriptName": "GnarBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.0,
+            "spellCastTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2349,7 +2446,7 @@
                 387.5,
                 387.5
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     387.5,
                     387.5,
@@ -2416,10 +2513,11 @@
     },
     "Characters/Gnar/Spells/GnarBasicAttack": {
         "ObjectName": "GnarBasicAttack",
+        "objectPath": "Characters/Gnar/Spells/GnarBasicAttack",
         "mScriptName": "GnarBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
-            "{11704a2b}": 0.0,
+            "spellCastTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2452,7 +2550,7 @@
                 387.5,
                 387.5
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     387.5,
                     387.5,
@@ -2528,6 +2626,7 @@
     },
     "Characters/Gnar/Spells/GnarBigQAbility/GnarBigQMissile": {
         "ObjectName": "GnarBigQMissile",
+        "objectPath": "Characters/Gnar/Spells/GnarBigQAbility/GnarBigQMissile",
         "mScriptName": "GnarBigQMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2537,8 +2636,8 @@
                 "ASSETS/Characters/Gnar/HUD/Icons2D/GnarBig_Q.dds"
             ],
             "mCastTime": 0.5,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2574,7 +2673,7 @@
                 1150.0,
                 1150.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1150.0,
                     1150.0,
@@ -2681,6 +2780,7 @@
     },
     "Characters/Gnar/Spells/GnarBigQAbility/GnarBigQ": {
         "ObjectName": "GnarBigQ",
+        "objectPath": "Characters/Gnar/Spells/GnarBigQAbility/GnarBigQ",
         "mScriptName": "GnarBigQ",
         "mSpell": {
             "flags": 4,
@@ -2810,8 +2910,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Gnar/HUD/Icons2D/GnarBig_Q.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 17.5,
                 16.0,
@@ -2843,7 +2943,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -3004,6 +3104,7 @@
     },
     "Characters/Gnar/Spells/GnarParticleTest": {
         "ObjectName": "GnarParticleTest",
+        "objectPath": "Characters/Gnar/Spells/GnarParticleTest",
         "mScriptName": "GnarParticleTest",
         "mSpell": {
             "flags": 4,
@@ -3060,7 +3161,7 @@
             "mImgIconName": [
                 "Tristana_headshot.dds"
             ],
-            "{f26881a0}": 1.399999976158142,
+            "spellTotalTime": 1.399999976158142,
             "cooldownTime": [
                 20.0,
                 20.0,
@@ -3093,7 +3194,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -3128,6 +3229,7 @@
     },
     "Characters/Gnar/Spells/GnarStun": {
         "ObjectName": "GnarStun",
+        "objectPath": "Characters/Gnar/Spells/GnarStun",
         "mScriptName": "GnarStun",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Stun",
@@ -3137,6 +3239,7 @@
     },
     "Characters/Gnar/Spells/GnarBigEAbility/GnarBigE": {
         "ObjectName": "GnarBigE",
+        "objectPath": "Characters/Gnar/Spells/GnarBigEAbility/GnarBigE",
         "mScriptName": "GnarBigE",
         "mSpell": {
             "flags": 4,
@@ -3155,8 +3258,8 @@
                 "ASSETS/Characters/Gnar/HUD/Icons2D/GnarBig_E.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 24.5,
                 22.0,
@@ -3189,7 +3292,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3376,11 +3479,12 @@
     },
     "Characters/Gnar/Spells/GnarCritAttack2": {
         "ObjectName": "GnarCritAttack2",
+        "objectPath": "Characters/Gnar/Spells/GnarCritAttack2",
         "mScriptName": "GnarCritAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAnimationName": "Crit2",
-            "{11704a2b}": 0.0,
+            "spellCastTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3413,7 +3517,7 @@
                 387.5,
                 387.5
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     387.5,
                     387.5,
@@ -3481,6 +3585,7 @@
     },
     "Characters/Gnar/Spells/GnarEAbility/GnarE": {
         "ObjectName": "GnarE",
+        "objectPath": "Characters/Gnar/Spells/GnarEAbility/GnarE",
         "mScriptName": "GnarE",
         "mSpell": {
             "flags": 4,
@@ -3649,8 +3754,80 @@
                         0.6000000238418579
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MiniTotalDamageHPRatio",
+                    "values": [
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MegaTotalDamageHPRatio",
+                    "values": [
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549,
+                        0.05999999865889549
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "MiniTotalDamageHPRatio",
+                            "values": [
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MegaTotalDamageHPRatio",
+                            "values": [
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066,
+                                0.07999999821186066
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "MinibAS",
+                            "values": [
+                                0.44999998807907104,
+                                0.5,
+                                0.550000011920929,
+                                0.6000000238418579,
+                                0.6499999761581421,
+                                0.699999988079071,
+                                0.75
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "{f9c2333e}": {
                 "cherry": {
                     "value": [
@@ -3674,8 +3851,8 @@
                         },
                         {
                             "mStat": 12,
-                            "mCoefficient": 0.05999999865889549,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "MiniTotalDamageHPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -3688,8 +3865,8 @@
                         },
                         {
                             "mStat": 12,
-                            "mCoefficient": 0.05999999865889549,
-                            "__type": "StatByCoefficientCalculationPart"
+                            "mDataValue": "MegaTotalDamageHPRatio",
+                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -3702,8 +3879,8 @@
                 "ASSETS/Characters/Gnar/HUD/Icons2D/Gnar_E.dds",
                 "ASSETS/Characters/Gnar/HUD/Icons2D/Gnar_E_cancel.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 24.5,
                 22.0,
@@ -3736,7 +3913,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3918,6 +4095,7 @@
     },
     "Characters/Gnar/Spells/GnarEAbility/GnarEAttackSpeed": {
         "ObjectName": "GnarEAttackSpeed",
+        "objectPath": "Characters/Gnar/Spells/GnarEAbility/GnarEAttackSpeed",
         "mScriptName": "GnarEAttackSpeed",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarEAttackSpeed",
@@ -3927,6 +4105,7 @@
     },
     "Characters/Gnar/Spells/GnarRedVfx": {
         "ObjectName": "GnarRedVfx",
+        "objectPath": "Characters/Gnar/Spells/GnarRedVfx",
         "mScriptName": "GnarRedVfx",
         "mBuff": {
             "mShowDuration": false,
@@ -3936,11 +4115,12 @@
     },
     "Characters/Gnar/Spells/GnarBigAttackTower": {
         "ObjectName": "GnarBigAttackTower",
+        "objectPath": "Characters/Gnar/Spells/GnarBigAttackTower",
         "mScriptName": "GnarBigAttackTower",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack_Turret",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3973,7 +4153,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -4018,11 +4198,12 @@
     },
     "Characters/Gnar/Spells/GnarCritAttack": {
         "ObjectName": "GnarCritAttack",
+        "objectPath": "Characters/Gnar/Spells/GnarCritAttack",
         "mScriptName": "GnarCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAnimationName": "Crit1",
-            "{11704a2b}": 0.0,
+            "spellCastTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -4055,7 +4236,7 @@
                 387.5,
                 387.5
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     387.5,
                     387.5,
@@ -4123,6 +4304,7 @@
     },
     "Characters/Gnar/Spells/GnarFuryHigh": {
         "ObjectName": "GnarFuryHigh",
+        "objectPath": "Characters/Gnar/Spells/GnarFuryHigh",
         "mScriptName": "GnarFuryHigh",
         "mBuff": {
             "mDescription": "game_buff_tooltip_GnarFuryHigh",
@@ -4397,7 +4579,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mEarlyLevelOverrides": [
                     0,
                     1,
@@ -4809,7 +4991,7 @@
             "baseValue": 30.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.2999999523162842,
             "__type": "ModifiableFloat"
         },
@@ -4887,7 +5069,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/Gnar/Spells/GnarBigAttackTower",
             "Characters/Gnar/Spells/GnarQAbility/GnarQMissileReturn",
             "Characters/Gnar/Spells/GnarQAbility/GnarQMissile",

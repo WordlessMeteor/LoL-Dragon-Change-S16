@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.15.1",
+    "version": "16.16.1",
     "data": {
         "Jade_Nasus": {
             "id": "Jade_Nasus",
@@ -12,7 +12,7 @@
                 "full": "Jade_Nasus.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 240,
+                "x": 336,
                 "y": 0,
                 "w": 48,
                 "h": 48
@@ -329,10 +329,10 @@
                     "rangeBurn": "255",
                     "image": {
                         "full": "Jade_NasusQ.png",
-                        "sprite": "spell3.png",
+                        "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 288,
-                        "y": 144,
+                        "x": 192,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -363,13 +363,13 @@
                     ],
                     "cooldownBurn": "15/14/13/12/11",
                     "cost": [
-                        80,
-                        80,
-                        80,
-                        80,
-                        80
+                        100,
+                        100,
+                        100,
+                        100,
+                        100
                     ],
-                    "costBurn": "80",
+                    "costBurn": "100",
                     "datavalues": {},
                     "effect": [
                         null,
@@ -470,10 +470,10 @@
                     "rangeBurn": "700",
                     "image": {
                         "full": "Jade_NasusW.png",
-                        "sprite": "spell3.png",
+                        "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 336,
-                        "y": 144,
+                        "x": 240,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -615,10 +615,10 @@
                     "rangeBurn": "650",
                     "image": {
                         "full": "Jade_NasusE.png",
-                        "sprite": "spell3.png",
+                        "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 144,
+                        "x": 288,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -628,7 +628,7 @@
                     "id": "Jade_NasusR",
                     "name": "死神降临",
                     "description": "内瑟斯释放出强力的沙尘暴，席卷附近的敌人。风暴肆虐时，他会获得更高的生命值、攻击距离、施法距离，并汲取附近敌人的最大生命值，转化为持续时间内的额外伤害。",
-                    "tooltip": "内瑟斯在沙尘暴中获得强化，持续15秒，从而使他的<scaleHealth>最大生命值提升{{ bonushealth }}</scaleHealth>，攻击距离提升{{ attackrangeincrease }}，技能施放距离提升100。<br /><br />风暴肆虐时，他会对敌人造成<magicDamage>{{ damagecalc }}最大生命值的魔法伤害</magicDamage>(每秒最多{{ maxdamagecap }}伤害)，并将其中5%转化为额外<physicalDamage>攻击力</physicalDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "沙漠风暴赐予内瑟斯力量，使他在15秒的持续时间内提升<scaleHealth>{{ bonushealth }}最大生命值</scaleHealth>、{{ attackrangeincrease }}攻击距离、以及100施法距离。<br /><br />在风暴肆虐时，他每秒对周围目标造成目标<magicDamage>{{ damagecalc }}最大生命值的魔法伤害</magicDamage>(每秒的伤害上限为{{ maxdamagecap }})，并将5%该伤害转化为<physicalDamage>攻击力</physicalDamage>。</mainText>{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "额外生命值",
@@ -730,10 +730,10 @@
                     "rangeBurn": "400",
                     "image": {
                         "full": "Jade_NasusR.png",
-                        "sprite": "spell3.png",
+                        "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 144,
+                        "x": 336,
+                        "y": 0,
                         "w": 48,
                         "h": 48
                     },
@@ -747,7 +747,7 @@
                     "full": "Jade_Nasus_Passive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 240,
+                    "x": 336,
                     "y": 0,
                     "w": 48,
                     "h": 48

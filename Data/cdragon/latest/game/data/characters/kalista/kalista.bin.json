@@ -1,6 +1,7 @@
 {
     "Characters/Kalista/Spells/KalistaPassiveAllyBuff": {
         "ObjectName": "KalistaPassiveAllyBuff",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveAllyBuff",
         "mScriptName": "KalistaPassiveAllyBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaPassiveAllyBuff",
@@ -10,6 +11,7 @@
     },
     "Characters/Kalista/Spells/KalistaCoopStrikeSelf": {
         "ObjectName": "KalistaCoopStrikeSelf",
+        "objectPath": "Characters/Kalista/Spells/KalistaCoopStrikeSelf",
         "mScriptName": "KalistaCoopStrikeSelf",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaCoopStrikeSelfMark",
@@ -35,6 +37,7 @@
     },
     "Characters/Kalista/Spells/KalistaRxAbility/KalistaRAllyStunMarker": {
         "ObjectName": "KalistaRAllyStunMarker",
+        "objectPath": "Characters/Kalista/Spells/KalistaRxAbility/KalistaRAllyStunMarker",
         "mScriptName": "KalistaRAllyStunMarker",
         "mSpell": {
             "flags": 4,
@@ -135,7 +138,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -171,7 +174,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -200,6 +203,7 @@
     },
     "Characters/Kalista/Spells/KalistaRxAbility/KalistaRMis": {
         "ObjectName": "KalistaRMis",
+        "objectPath": "Characters/Kalista/Spells/KalistaRxAbility/KalistaRMis",
         "mScriptName": "KalistaRMis",
         "mSpell": {
             "flags": 4,
@@ -250,8 +254,8 @@
             "mImgIconName": [
                 "ASSETS/Spells/Icons2D/Bowmaster_EnchantedArrow.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -287,7 +291,7 @@
                 1450.0,
                 1450.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1450.0,
                     1450.0,
@@ -384,6 +388,7 @@
     },
     "Characters/Kalista/Spells/KalistaRxAbility/KalistaRAllyStun": {
         "ObjectName": "KalistaRAllyStun",
+        "objectPath": "Characters/Kalista/Spells/KalistaRxAbility/KalistaRAllyStun",
         "mScriptName": "KalistaRAllyStun",
         "mSpell": {
             "flags": 4,
@@ -484,7 +489,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -520,7 +525,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -549,6 +554,7 @@
     },
     "Characters/Kalista/Spells/KalistaRxAbility/KalistaRx": {
         "ObjectName": "KalistaRx",
+        "objectPath": "Characters/Kalista/Spells/KalistaRxAbility/KalistaRx",
         "mScriptName": "KalistaRx",
         "mSpell": {
             "flags": 4,
@@ -613,6 +619,21 @@
                     "__type": "SpellEffectAmount"
                 }
             ],
+            "DataValues": [
+                {
+                    "name": "KnockupDuration",
+                    "values": [
+                        0.0,
+                        1.0,
+                        1.5,
+                        2.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                }
+            ],
             "{f9c2333e}": {
                 "{a110bc47}": {
                     "value": [
@@ -631,8 +652,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Kalista/HUD/Icons2D/Kalista_R.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 160.0,
                 160.0,
@@ -666,7 +687,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -716,7 +737,7 @@
                 100.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -750,8 +771,7 @@
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 2,
+                                    "type": "KnockupDuration",
                                     "nameOverride": "Spell_ListType_KnockupDuration",
                                     "__type": "TooltipInstanceListElement"
                                 }
@@ -834,8 +854,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 2,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "KnockupDuration",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -891,6 +911,7 @@
     },
     "Characters/Kalista/Spells/KalistaRxAbility/KalistaRAlly": {
         "ObjectName": "KalistaRAlly",
+        "objectPath": "Characters/Kalista/Spells/KalistaRxAbility/KalistaRAlly",
         "mScriptName": "KalistaRAlly",
         "mSpell": {
             "flags": 4,
@@ -991,7 +1012,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1055,6 +1076,7 @@
     },
     "Characters/Kalista/Spells/KalistaRxAbility/KalistaRAllyDash": {
         "ObjectName": "KalistaRAllyDash",
+        "objectPath": "Characters/Kalista/Spells/KalistaRxAbility/KalistaRAllyDash",
         "mScriptName": "KalistaRAllyDash",
         "mSpell": {
             "flags": 4,
@@ -1141,8 +1163,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1179,7 +1201,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1278,6 +1300,7 @@
     },
     "Characters/Kalista/Spells/KalistaRxAbility/KalistaRAllyStunBuffer": {
         "ObjectName": "KalistaRAllyStunBuffer",
+        "objectPath": "Characters/Kalista/Spells/KalistaRxAbility/KalistaRAllyStunBuffer",
         "mScriptName": "KalistaRAllyStunBuffer",
         "mSpell": {
             "flags": 4,
@@ -1378,7 +1401,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -1414,7 +1437,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -1464,6 +1487,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaAltarOut": {
         "ObjectName": "KalistaAltarOut",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaAltarOut",
         "mScriptName": "KalistaAltarOut",
         "mSpell": {
             "flags": 4194304,
@@ -1524,8 +1548,8 @@
             "mImgIconName": [
                 "ASSETS/Spells/Icons2D/Cryophoenix_FrigidOrb.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1559,7 +1583,7 @@
                 1100.0,
                 1100.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1100.0,
                     1100.0,
@@ -1630,6 +1654,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveChannel": {
         "ObjectName": "KalistaPassiveChannel",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveChannel",
         "mScriptName": "KalistaPassiveChannel",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -1692,8 +1717,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "mChannelDuration": [
                 4.0,
                 4.0,
@@ -1736,7 +1761,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -1776,6 +1801,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPChannel": {
         "ObjectName": "KalistaPChannel",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPChannel",
         "mScriptName": "KalistaPChannel",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -1844,8 +1870,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "mChannelDuration": [
                 2.0,
                 2.0,
@@ -1889,7 +1915,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -1929,6 +1955,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveCoopStrike": {
         "ObjectName": "KalistaPassiveCoopStrike",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveCoopStrike",
         "mScriptName": "KalistaPassiveCoopStrike",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaPassiveCoopStrike",
@@ -1938,6 +1965,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPAltarBuff": {
         "ObjectName": "KalistaPAltarBuff",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPAltarBuff",
         "mScriptName": "KalistaPAltarBuff",
         "mSpell": {
             "flags": 4194304,
@@ -1999,8 +2027,8 @@
             "mImgIconName": [
                 "ASSETS/Spells/Icons2D/Cryophoenix_FrigidOrb.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2034,7 +2062,7 @@
                 1100.0,
                 1100.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1100.0,
                     1100.0,
@@ -2105,6 +2133,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPAltarChannel": {
         "ObjectName": "KalistaPAltarChannel",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPAltarChannel",
         "mScriptName": "KalistaPAltarChannel",
         "mSpell": {
             "flags": 128,
@@ -2181,8 +2210,8 @@
             "mImgIconName": [
                 "ASSETS/Spells/Icons2D/Yeti_Shatter.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "mChannelDuration": [
                 2.0,
                 2.0,
@@ -2225,7 +2254,7 @@
                 250.0,
                 250.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     250.0,
                     250.0,
@@ -2275,6 +2304,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPInvocation": {
         "ObjectName": "KalistaPInvocation",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPInvocation",
         "mScriptName": "KalistaPInvocation",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2335,8 +2365,8 @@
                 ""
             ],
             "mCastTime": 3.5,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2370,7 +2400,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -2471,6 +2501,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveBuff": {
         "ObjectName": "KalistaPassiveBuff",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveBuff",
         "mScriptName": "KalistaPassiveBuff",
         "mSpell": {
             "DataValues": [
@@ -2659,7 +2690,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -2696,6 +2727,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPBondingRootAlly": {
         "ObjectName": "KalistaPBondingRootAlly",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPBondingRootAlly",
         "mScriptName": "KalistaPBondingRootAlly",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RumbleDangerZone",
@@ -2705,6 +2737,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveDashSpell": {
         "ObjectName": "KalistaPassiveDashSpell",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveDashSpell",
         "mScriptName": "KalistaPassiveDashSpell",
         "mSpell": {
             "flags": 4,
@@ -2791,8 +2824,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2828,7 +2861,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2926,6 +2959,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveOn": {
         "ObjectName": "KalistaPassiveOn",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveOn",
         "mScriptName": "KalistaPassiveOn",
         "mBuff": {
             "mDescription": "game_buff_tooltip_MonkeyKingPassive",
@@ -2935,6 +2969,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveDashTargeter": {
         "ObjectName": "KalistaPassiveDashTargeter",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveDashTargeter",
         "mScriptName": "KalistaPassiveDashTargeter",
         "mSpell": {
             "flags": 4,
@@ -3056,7 +3091,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3156,6 +3191,7 @@
     },
     "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveDashSpellActual": {
         "ObjectName": "KalistaPassiveDashSpellActual",
+        "objectPath": "Characters/Kalista/Spells/KalistaPassiveBuffAbility/KalistaPassiveDashSpellActual",
         "mScriptName": "KalistaPassiveDashSpellActual",
         "mSpell": {
             "flags": 4,
@@ -3242,8 +3278,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3279,7 +3315,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3353,6 +3389,7 @@
     },
     "Characters/Kalista/Spells/KalistaWSeen": {
         "ObjectName": "KalistaWSeen",
+        "objectPath": "Characters/Kalista/Spells/KalistaWSeen",
         "mScriptName": "KalistaWSeen",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CaitlynYordleTrapSight",
@@ -3362,6 +3399,7 @@
     },
     "Characters/Kalista/Spells/KalistaWSpawnTempMis": {
         "ObjectName": "KalistaWSpawnTempMis",
+        "objectPath": "Characters/Kalista/Spells/KalistaWSpawnTempMis",
         "mScriptName": "KalistaWSpawnTempMis",
         "mSpell": {
             "flags": 4,
@@ -3423,8 +3461,8 @@
                 ""
             ],
             "mCastTime": 0.25099998712539673,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3458,7 +3496,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -3574,6 +3612,7 @@
     },
     "Characters/Kalista/Spells/KalistaWAbility/KalistaWAllyPassive": {
         "ObjectName": "KalistaWAllyPassive",
+        "objectPath": "Characters/Kalista/Spells/KalistaWAbility/KalistaWAllyPassive",
         "mScriptName": "KalistaWAllyPassive",
         "mSpell": {
             "flags": 36,
@@ -3625,8 +3664,8 @@
             "mImgIconName": [
                 "ASSETS/Spells/Icons2D/YorickUnholyCovenant.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3660,7 +3699,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3738,6 +3777,7 @@
     },
     "Characters/Kalista/Spells/KalistaWAbility/KalistaW": {
         "ObjectName": "KalistaW",
+        "objectPath": "Characters/Kalista/Spells/KalistaWAbility/KalistaW",
         "mScriptName": "KalistaW",
         "mSpell": {
             "mAffectsTypeFlags": 15567,
@@ -3886,6 +3926,10 @@
                         40.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ProcDamage",
+                    "__type": "SpellDataValue"
                 }
             ],
             "mAnimationName": "Spell2",
@@ -3893,8 +3937,8 @@
                 "ASSETS/Characters/Kalista/HUD/Icons2D/Kalista_W.dds"
             ],
             "mCastTime": 0.5,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 30.0,
                 30.0,
@@ -3948,7 +3992,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -4161,6 +4205,7 @@
     },
     "Characters/Kalista/Spells/KalistaAllyMarker": {
         "ObjectName": "KalistaAllyMarker",
+        "objectPath": "Characters/Kalista/Spells/KalistaAllyMarker",
         "mScriptName": "KalistaAllyMarker",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RumbleDangerZone",
@@ -4170,6 +4215,7 @@
     },
     "Characters/Kalista/Spells/KalistaWSpawnInWorld": {
         "ObjectName": "KalistaWSpawnInWorld",
+        "objectPath": "Characters/Kalista/Spells/KalistaWSpawnInWorld",
         "mScriptName": "KalistaWSpawnInWorld",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaWSpawnInWorld",
@@ -4179,6 +4225,7 @@
     },
     "Characters/Kalista/Spells/KalistaWSpawnCounter": {
         "ObjectName": "KalistaWSpawnCounter",
+        "objectPath": "Characters/Kalista/Spells/KalistaWSpawnCounter",
         "mScriptName": "KalistaWSpawnCounter",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaWSpawnCounter",
@@ -4188,11 +4235,13 @@
     },
     "Characters/Kalista/Spells/KalistaSpearHoldVFXBuff": {
         "ObjectName": "KalistaSpearHoldVFXBuff",
+        "objectPath": "Characters/Kalista/Spells/KalistaSpearHoldVFXBuff",
         "mScriptName": "KalistaSpearHoldVFXBuff",
         "__type": "SpellObject"
     },
     "Characters/Kalista/Spells/KalistaCritAttack": {
         "ObjectName": "KalistaCritAttack",
+        "objectPath": "Characters/Kalista/Spells/KalistaCritAttack",
         "mScriptName": "KalistaCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -4232,7 +4281,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -4311,6 +4360,7 @@
     },
     "Characters/Kalista/Spells/KalistaCoopStrikeMarkSelf": {
         "ObjectName": "KalistaCoopStrikeMarkSelf",
+        "objectPath": "Characters/Kalista/Spells/KalistaCoopStrikeMarkSelf",
         "mScriptName": "KalistaCoopStrikeMarkSelf",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaCoopStrikeSelfMark",
@@ -4320,6 +4370,7 @@
     },
     "Characters/Kalista/Spells/KalistaBackSpearThreeVFXBuff": {
         "ObjectName": "KalistaBackSpearThreeVFXBuff",
+        "objectPath": "Characters/Kalista/Spells/KalistaBackSpearThreeVFXBuff",
         "mScriptName": "KalistaBackSpearThreeVFXBuff",
         "__type": "SpellObject"
     },
@@ -4336,6 +4387,7 @@
     },
     "Characters/Kalista/Spells/KalistaMysticShotAbility/KalistaMysticShotMisTrue": {
         "ObjectName": "KalistaMysticShotMisTrue",
+        "objectPath": "Characters/Kalista/Spells/KalistaMysticShotAbility/KalistaMysticShotMisTrue",
         "mScriptName": "KalistaMysticShotMisTrue",
         "mSpell": {
             "flags": 4,
@@ -4397,8 +4449,8 @@
                 ""
             ],
             "mCastTime": 0.3499999940395355,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -4432,7 +4484,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -4536,6 +4588,7 @@
     },
     "Characters/Kalista/Spells/KalistaMysticShotAbility/KalistaMysticShotMis": {
         "ObjectName": "KalistaMysticShotMis",
+        "objectPath": "Characters/Kalista/Spells/KalistaMysticShotAbility/KalistaMysticShotMis",
         "mScriptName": "KalistaMysticShotMis",
         "mSpell": {
             "flags": 4,
@@ -4597,8 +4650,8 @@
                 ""
             ],
             "mCastTime": 0.3499999940395355,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -4632,7 +4685,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -4709,6 +4762,7 @@
     },
     "Characters/Kalista/Spells/KalistaMysticShotAbility/KalistaMysticShot": {
         "ObjectName": "KalistaMysticShot",
+        "objectPath": "Characters/Kalista/Spells/KalistaMysticShotAbility/KalistaMysticShot",
         "mScriptName": "KalistaMysticShot",
         "mSpell": {
             "mAffectsTypeFlags": 13327,
@@ -4772,8 +4826,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Kalista/HUD/Icons2D/Kalista_Q.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 9.0,
                 9.0,
@@ -4808,7 +4862,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -4869,7 +4923,7 @@
                 80.0,
                 85.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     60.0,
                     65.0,
@@ -5008,6 +5062,7 @@
     },
     "Characters/Kalista/Spells/KalistaMysticShotAbility/KalistaMysticShotMissile": {
         "ObjectName": "KalistaMysticShotMissile",
+        "objectPath": "Characters/Kalista/Spells/KalistaMysticShotAbility/KalistaMysticShotMissile",
         "mScriptName": "KalistaMysticShotMissile",
         "mSpell": {
             "flags": 4,
@@ -5069,8 +5124,8 @@
                 ""
             ],
             "mCastTime": 0.25099998712539673,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -5104,7 +5159,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -5219,6 +5274,7 @@
     },
     "Characters/Kalista/Spells/KalistaRAllyLineUpdater": {
         "ObjectName": "KalistaRAllyLineUpdater",
+        "objectPath": "Characters/Kalista/Spells/KalistaRAllyLineUpdater",
         "mScriptName": "KalistaRAllyLineUpdater",
         "mBuff": {
             "mDescription": "game_buff_tooltip_XerathMageChains",
@@ -5228,6 +5284,7 @@
     },
     "Characters/Kalista/Spells/KalistaBasicAttackPow": {
         "ObjectName": "KalistaBasicAttackPow",
+        "objectPath": "Characters/Kalista/Spells/KalistaBasicAttackPow",
         "mScriptName": "KalistaBasicAttackPow",
         "mSpell": {
             "flags": 4,
@@ -5279,8 +5336,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.42500001192092896,
-            "{f26881a0}": 0.7999999523162842,
+            "spellCastTime": 0.42500001192092896,
+            "spellTotalTime": 0.7999999523162842,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -5314,7 +5371,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -5381,6 +5438,7 @@
     },
     "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaExpunge": {
         "ObjectName": "KalistaExpunge",
+        "objectPath": "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaExpunge",
         "mScriptName": "KalistaExpunge",
         "mSpell": {
             "mAffectsTypeFlags": 7183,
@@ -5459,8 +5517,8 @@
                 "ASSETS/Characters/Kalista/HUD/Icons2D/Kalista_E.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -5494,7 +5552,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -5562,6 +5620,7 @@
     },
     "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaRSpellPassive": {
         "ObjectName": "KalistaRSpellPassive",
+        "objectPath": "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaRSpellPassive",
         "mScriptName": "KalistaRSpellPassive",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RumbleDangerZone",
@@ -5571,6 +5630,7 @@
     },
     "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaExpungeWrapper": {
         "ObjectName": "KalistaExpungeWrapper",
+        "objectPath": "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaExpungeWrapper",
         "mScriptName": "KalistaExpungeWrapper",
         "mSpell": {
             "flags": 4,
@@ -5850,8 +5910,8 @@
                 "ASSETS/Characters/Kalista/HUD/Icons2D/Kalista_E.dds",
                 "ASSETS/Characters/Kalista/HUD/Icons2D/Kalista_E_Off.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -5887,7 +5947,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -5938,7 +5998,7 @@
                 30.0,
                 30.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     30.0,
                     30.0,
@@ -6061,6 +6121,7 @@
     },
     "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaExpungeParticle": {
         "ObjectName": "KalistaExpungeParticle",
+        "objectPath": "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaExpungeParticle",
         "mScriptName": "KalistaExpungeParticle",
         "mSpell": {
             "flags": 4,
@@ -6097,7 +6158,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -6154,6 +6215,7 @@
     },
     "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaExpungeMarker": {
         "ObjectName": "KalistaExpungeMarker",
+        "objectPath": "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaExpungeMarker",
         "mScriptName": "KalistaExpungeMarker",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaExpungeMarker",
@@ -6163,6 +6225,7 @@
     },
     "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaESlow": {
         "ObjectName": "KalistaESlow",
+        "objectPath": "Characters/Kalista/Spells/KalistaExpungeWrapperAbility/KalistaESlow",
         "mScriptName": "KalistaESlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Slow",
@@ -6172,6 +6235,7 @@
     },
     "Characters/Kalista/Spells/KalistaRInvuln": {
         "ObjectName": "KalistaRInvuln",
+        "objectPath": "Characters/Kalista/Spells/KalistaRInvuln",
         "mScriptName": "KalistaRInvuln",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaRInvuln",
@@ -6181,6 +6245,7 @@
     },
     "Characters/Kalista/Spells/0000": {
         "ObjectName": "0000",
+        "objectPath": "Characters/Kalista/Spells/0000",
         "mScriptName": "0000",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RumbleDangerZone",
@@ -6190,6 +6255,7 @@
     },
     "Characters/Kalista/Spells/KalistaCoopStrikeMarkAlly": {
         "ObjectName": "KalistaCoopStrikeMarkAlly",
+        "objectPath": "Characters/Kalista/Spells/KalistaCoopStrikeMarkAlly",
         "mScriptName": "KalistaCoopStrikeMarkAlly",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaCoopStrikeAllyMark",
@@ -6199,6 +6265,7 @@
     },
     "Characters/Kalista/Spells/KalistaBasicAttackSlow": {
         "ObjectName": "KalistaBasicAttackSlow",
+        "objectPath": "Characters/Kalista/Spells/KalistaBasicAttackSlow",
         "mScriptName": "KalistaBasicAttackSlow",
         "mSpell": {
             "flags": 4,
@@ -6250,8 +6317,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.42500001192092896,
-            "{f26881a0}": 0.7999999523162842,
+            "spellCastTime": 0.42500001192092896,
+            "spellTotalTime": 0.7999999523162842,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -6285,7 +6352,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -6352,6 +6419,7 @@
     },
     "Characters/Kalista/Spells/KalistaWSight": {
         "ObjectName": "KalistaWSight",
+        "objectPath": "Characters/Kalista/Spells/KalistaWSight",
         "mScriptName": "KalistaWSight",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaWSight",
@@ -6361,6 +6429,7 @@
     },
     "Characters/Kalista/Spells/KalistaWRunToMe": {
         "ObjectName": "KalistaWRunToMe",
+        "objectPath": "Characters/Kalista/Spells/KalistaWRunToMe",
         "mScriptName": "KalistaWRunToMe",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaWRunToMe",
@@ -6370,6 +6439,7 @@
     },
     "Characters/Kalista/Spells/KalistaWSpawnReturnToMe": {
         "ObjectName": "KalistaWSpawnReturnToMe",
+        "objectPath": "Characters/Kalista/Spells/KalistaWSpawnReturnToMe",
         "mScriptName": "KalistaWSpawnReturnToMe",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaWSpawnInWorld",
@@ -6379,6 +6449,7 @@
     },
     "Characters/Kalista/Spells/KalistaRAllyDashCantCast2": {
         "ObjectName": "KalistaRAllyDashCantCast2",
+        "objectPath": "Characters/Kalista/Spells/KalistaRAllyDashCantCast2",
         "mScriptName": "KalistaRAllyDashCantCast2",
         "mSpell": {
             "mEffectAmount": [
@@ -6463,8 +6534,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -6501,7 +6572,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -6599,6 +6670,7 @@
     },
     "Characters/Kalista/Spells/KalistaBasicAttackNoneMiss": {
         "ObjectName": "KalistaBasicAttackNoneMiss",
+        "objectPath": "Characters/Kalista/Spells/KalistaBasicAttackNoneMiss",
         "mScriptName": "KalistaBasicAttackNoneMiss",
         "mSpell": {
             "flags": 4,
@@ -6660,8 +6732,8 @@
                 ""
             ],
             "mCastTime": 0.25099998712539673,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -6696,7 +6768,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -6801,6 +6873,7 @@
     },
     "Characters/Kalista/Spells/KalistaRAllyDashCantCast3": {
         "ObjectName": "KalistaRAllyDashCantCast3",
+        "objectPath": "Characters/Kalista/Spells/KalistaRAllyDashCantCast3",
         "mScriptName": "KalistaRAllyDashCantCast3",
         "mSpell": {
             "mEffectAmount": [
@@ -6885,8 +6958,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -6923,7 +6996,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -7021,6 +7094,7 @@
     },
     "Characters/Kalista/Spells/KalistaRAllyDashCantCast0": {
         "ObjectName": "KalistaRAllyDashCantCast0",
+        "objectPath": "Characters/Kalista/Spells/KalistaRAllyDashCantCast0",
         "mScriptName": "KalistaRAllyDashCantCast0",
         "mSpell": {
             "mEffectAmount": [
@@ -7105,8 +7179,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -7143,7 +7217,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -7241,6 +7315,7 @@
     },
     "Characters/Kalista/Spells/KalistaRAllyDashCantCast1": {
         "ObjectName": "KalistaRAllyDashCantCast1",
+        "objectPath": "Characters/Kalista/Spells/KalistaRAllyDashCantCast1",
         "mScriptName": "KalistaRAllyDashCantCast1",
         "mSpell": {
             "mEffectAmount": [
@@ -7325,8 +7400,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -7363,7 +7438,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -7461,6 +7536,7 @@
     },
     "Characters/Kalista/Spells/KalistaWSpawnMinion": {
         "ObjectName": "KalistaWSpawnMinion",
+        "objectPath": "Characters/Kalista/Spells/KalistaWSpawnMinion",
         "mScriptName": "KalistaWSpawnMinion",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaWSpawnMinion",
@@ -7470,6 +7546,7 @@
     },
     "Characters/Kalista/Spells/KalistaDummySpell": {
         "ObjectName": "KalistaDummySpell",
+        "objectPath": "Characters/Kalista/Spells/KalistaDummySpell",
         "mScriptName": "KalistaDummySpell",
         "mSpell": {
             "flags": 20,
@@ -7543,8 +7620,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -7594,11 +7671,13 @@
     },
     "Characters/Kalista/Spells/KalistaBackSpearTwoVFXBuff": {
         "ObjectName": "KalistaBackSpearTwoVFXBuff",
+        "objectPath": "Characters/Kalista/Spells/KalistaBackSpearTwoVFXBuff",
         "mScriptName": "KalistaBackSpearTwoVFXBuff",
         "__type": "SpellObject"
     },
     "Characters/Kalista/Spells/KalistaBasicAttackNone": {
         "ObjectName": "KalistaBasicAttackNone",
+        "objectPath": "Characters/Kalista/Spells/KalistaBasicAttackNone",
         "mScriptName": "KalistaBasicAttackNone",
         "mSpell": {
             "flags": 4,
@@ -7650,8 +7729,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.42500001192092896,
-            "{f26881a0}": 0.7999999523162842,
+            "spellCastTime": 0.42500001192092896,
+            "spellTotalTime": 0.7999999523162842,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -7685,7 +7764,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -7757,6 +7836,7 @@
     },
     "Characters/Kalista/Spells/KalistaCoopStrikeProtect": {
         "ObjectName": "KalistaCoopStrikeProtect",
+        "objectPath": "Characters/Kalista/Spells/KalistaCoopStrikeProtect",
         "mScriptName": "KalistaCoopStrikeProtect",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaCoopStrikeProtect",
@@ -7766,11 +7846,13 @@
     },
     "Characters/Kalista/Spells/KalistaBackSpearOneVFXBuff": {
         "ObjectName": "KalistaBackSpearOneVFXBuff",
+        "objectPath": "Characters/Kalista/Spells/KalistaBackSpearOneVFXBuff",
         "mScriptName": "KalistaBackSpearOneVFXBuff",
         "__type": "SpellObject"
     },
     "Characters/Kalista/Spells/KalistaRAestheticMis": {
         "ObjectName": "KalistaRAestheticMis",
+        "objectPath": "Characters/Kalista/Spells/KalistaRAestheticMis",
         "mScriptName": "KalistaRAestheticMis",
         "mSpell": {
             "flags": 4,
@@ -7808,7 +7890,7 @@
                 4500.0,
                 4500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     4500.0,
                     4500.0,
@@ -7862,6 +7944,7 @@
     },
     "Characters/Kalista/Spells/KalistaCoopStrikeProc": {
         "ObjectName": "KalistaCoopStrikeProc",
+        "objectPath": "Characters/Kalista/Spells/KalistaCoopStrikeProc",
         "mScriptName": "KalistaCoopStrikeProc",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaCoopStrikeProc",
@@ -7871,6 +7954,7 @@
     },
     "Characters/Kalista/Spells/KalistaBasicAttack": {
         "ObjectName": "KalistaBasicAttack",
+        "objectPath": "Characters/Kalista/Spells/KalistaBasicAttack",
         "mScriptName": "KalistaBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -7910,7 +7994,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -7976,6 +8060,7 @@
     },
     "Characters/Kalista/Spells/KalistaWTeleportTracker": {
         "ObjectName": "KalistaWTeleportTracker",
+        "objectPath": "Characters/Kalista/Spells/KalistaWTeleportTracker",
         "mScriptName": "KalistaWTeleportTracker",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CaitlynYordleTrapSight",
@@ -7985,6 +8070,7 @@
     },
     "Characters/Kalista/Spells/ItemHurricaneKalistaAttack": {
         "ObjectName": "ItemHurricaneKalistaAttack",
+        "objectPath": "Characters/Kalista/Spells/ItemHurricaneKalistaAttack",
         "mScriptName": "ItemHurricaneKalistaAttack",
         "mSpell": {
             "flags": 4,
@@ -8039,8 +8125,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -8074,7 +8160,7 @@
                 1400.0,
                 1400.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1400.0,
                     1400.0,
@@ -8141,6 +8227,7 @@
     },
     "Characters/Kalista/Spells/KalistaCoopStrikeAlly": {
         "ObjectName": "KalistaCoopStrikeAlly",
+        "objectPath": "Characters/Kalista/Spells/KalistaCoopStrikeAlly",
         "mScriptName": "KalistaCoopStrikeAlly",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KalistaCoopStrikeAllyMark",
@@ -8534,7 +8621,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     2,
@@ -8613,11 +8700,11 @@
             "__type": "ModifiableFloat"
         },
         "baseMR": {
-            "baseValue": 30.0,
+            "baseValue": 33.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
-            "baseValue": 1.2999999523162842,
+        "mrPerLevel": {
+            "baseValue": 1.100000023841858,
             "__type": "ModifiableFloat"
         },
         "critDamageMultiplier": 2.0,

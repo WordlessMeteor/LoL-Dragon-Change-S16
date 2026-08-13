@@ -10,6 +10,7 @@
     },
     "{036053a9}": {
         "ObjectName": "Jade_OlafPassive",
+        "objectPath": "{036053a9}",
         "mScriptName": "Jade_OlafPassive",
         "mSpell": {
             "DataValues": [
@@ -81,7 +82,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -120,12 +121,13 @@
     },
     "Characters/Jade_Olaf/Spells/Jade_OlafCritAttack": {
         "ObjectName": "Jade_OlafCritAttack",
+        "objectPath": "Characters/Jade_Olaf/Spells/Jade_OlafCritAttack",
         "mScriptName": "Jade_OlafCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_OlafCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -158,7 +160,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -212,6 +214,7 @@
     },
     "Characters/Jade_Olaf/Spells/Jade_OlafWAbility/Jade_OlafW": {
         "ObjectName": "Jade_OlafW",
+        "objectPath": "Characters/Jade_Olaf/Spells/Jade_OlafWAbility/Jade_OlafW",
         "mScriptName": "Jade_OlafW",
         "mSpell": {
             "flags": 4,
@@ -298,8 +301,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/OlafViciousStrikes.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 16.0,
                 16.0,
@@ -311,15 +314,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    16.0,
-                    16.0,
-                    16.0,
-                    16.0,
-                    16.0,
-                    16.0,
-                    16.0
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0,
+                    12.0
                 ],
-                "{0a3e0478}": 16.0,
+                "{0a3e0478}": 12.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -332,7 +335,7 @@
                 700.0,
                 700.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     700.0,
                     700.0,
@@ -367,7 +370,7 @@
                 60.0,
                 60.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     40.0,
                     45.0,
@@ -475,6 +478,7 @@
     },
     "{1e8e640f}": {
         "ObjectName": "Jade_OlafQDebuff",
+        "objectPath": "{1e8e640f}",
         "mScriptName": "Jade_OlafQDebuff",
         "mSpell": {
             "mImgIconName": [
@@ -486,6 +490,7 @@
     },
     "Characters/Jade_Olaf/Spells/Jade_OlafQAbility/Jade_OlafQ": {
         "ObjectName": "Jade_OlafQ",
+        "objectPath": "Characters/Jade_Olaf/Spells/Jade_OlafQAbility/Jade_OlafQ",
         "mScriptName": "Jade_OlafQ",
         "mSpell": {
             "mAffectsTypeFlags": 14346,
@@ -549,13 +554,13 @@
                 {
                     "name": "MinCastRange",
                     "values": [
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0,
-                        400.0
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0,
+                        250.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -584,8 +589,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/OlafAxeThrow.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
             "cooldownTime": [
                 8.0,
                 8.0,
@@ -619,7 +624,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -678,7 +683,7 @@
                 75.0,
                 75.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     55.0,
                     60.0,
@@ -804,6 +809,7 @@
     },
     "{947a7ff6}": {
         "ObjectName": "Jade_OlafQThrowDamage",
+        "objectPath": "{947a7ff6}",
         "mScriptName": "Jade_OlafQThrowDamage",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -873,8 +879,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Jade_Olaf/HUD/Icons2D/Jade_OlafQ.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "mCantCancelWhileWindingUp": true,
             "mProjectTargetToCastRange": true,
             "castRange": [
@@ -886,7 +892,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -973,7 +979,7 @@
                 60.0,
                 60.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     60.0,
                     60.0,
@@ -1023,6 +1029,7 @@
     },
     "{e39046b7}": {
         "ObjectName": "Jade_OlafQThrow",
+        "objectPath": "{e39046b7}",
         "mScriptName": "Jade_OlafQThrow",
         "mSpell": {
             "flags": 4,
@@ -1034,8 +1041,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Jade_Olaf/HUD/Icons2D/Jade_OlafQ.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1069,7 +1076,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -1194,12 +1201,13 @@
     },
     "Characters/Jade_Olaf/Spells/Jade_OlafBasicAttack3": {
         "ObjectName": "Jade_OlafBasicAttack3",
+        "objectPath": "Characters/Jade_Olaf/Spells/Jade_OlafBasicAttack3",
         "mScriptName": "Jade_OlafBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_OlafBasicAttack",
             "mAnimationName": "Attack3",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1232,7 +1240,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1279,12 +1287,13 @@
     },
     "Characters/Jade_Olaf/Spells/Jade_OlafBasicAttack2": {
         "ObjectName": "Jade_OlafBasicAttack2",
+        "objectPath": "Characters/Jade_Olaf/Spells/Jade_OlafBasicAttack2",
         "mScriptName": "Jade_OlafBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_OlafBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1317,7 +1326,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1372,6 +1381,7 @@
     },
     "Characters/Jade_Olaf/Spells/Jade_OlafEAbility/Jade_OlafE": {
         "ObjectName": "Jade_OlafE",
+        "objectPath": "Characters/Jade_Olaf/Spells/Jade_OlafEAbility/Jade_OlafE",
         "mScriptName": "Jade_OlafE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1455,19 +1465,6 @@
                         400.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "ADRatio",
-                    "values": [
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645,
-                        0.4000000059604645
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -1477,12 +1474,6 @@
                         {
                             "mDataValue": "BaseDamage",
                             "__type": "NamedDataValueCalculationPart"
-                        },
-                        {
-                            "mStat": 2,
-                            "mStatFormula": 2,
-                            "mDataValue": "ADRatio",
-                            "__type": "StatByNamedDataValueCalculationPart"
                         }
                     ],
                     "__type": "GameCalculation"
@@ -1493,8 +1484,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/OlafRecklessSwing.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
             "cooldownTime": [
                 9.0,
                 9.0,
@@ -1526,7 +1517,7 @@
                 325.0,
                 325.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     325.0,
                     325.0,
@@ -1635,12 +1626,13 @@
     },
     "{b92c9c05}": {
         "ObjectName": "Jade_OlafCritAttack2",
+        "objectPath": "{b92c9c05}",
         "mScriptName": "Jade_OlafCritAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_OlafCritAttack",
             "mAnimationName": "Attack3",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1673,7 +1665,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1719,6 +1711,7 @@
     },
     "Characters/Jade_Olaf/Spells/Jade_OlafRAbility/Jade_OlafR": {
         "ObjectName": "Jade_OlafR",
+        "objectPath": "Characters/Jade_Olaf/Spells/Jade_OlafRAbility/Jade_OlafR",
         "mScriptName": "Jade_OlafR",
         "mSpell": {
             "flags": 20,
@@ -1780,8 +1773,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/OlafRagnarok.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 100.0,
                 100.0,
@@ -1844,7 +1837,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     75.0,
@@ -1968,18 +1961,32 @@
         },
         "__type": "SpellObject"
     },
+    "{f6d7a50f}": {
+        "ObjectName": "Jade_OlafRPassiveBuff",
+        "objectPath": "{f6d7a50f}",
+        "mScriptName": "Jade_OlafRPassiveBuff",
+        "mSpell": {
+            "mImgIconName": [
+                "ASSETS/UX/Jade/S3Icons/SameSized/OlafRagnarok.dds"
+            ],
+            "__type": "SpellDataResource"
+        },
+        "__type": "SpellObject"
+    },
     "{ddadf626}": {
         "ObjectName": "Jade_OlafAttackSequencer",
+        "objectPath": "{ddadf626}",
         "mScriptName": "Jade_OlafAttackSequencer",
         "__type": "SpellObject"
     },
     "Characters/Jade_Olaf/Spells/Jade_OlafBasicAttack": {
         "ObjectName": "Jade_OlafBasicAttack",
+        "objectPath": "Characters/Jade_Olaf/Spells/Jade_OlafBasicAttack",
         "mScriptName": "Jade_OlafBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_OlafBasicAttack",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2012,7 +2019,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -2159,7 +2166,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -2277,7 +2284,7 @@
             "baseValue": 31.25,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.25,
             "__type": "ModifiableFloat"
         },
@@ -2357,7 +2364,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "{e39046b7}",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",

@@ -780,7 +780,7 @@
             "cost": "@Cost@ маны, все заряды",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Тарик восстанавливает окружающим союзным чемпионам здоровье на величину, зависящую от количества накопленных зарядов. Усиленные Бравадой автоатаки дают заряд Прикосновения звезд.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> раз в @StackCooldown@ сек. или при применении автоатаки, усиленной <spellName>Бравадой</spellName>, Тарик получает заряд (максимум зарядов - @Effect6Amount@).<br><br><spellActive>Активно:</spellActive> Тарик поглощает все заряды и восстанавливает <healing>@HealingPerStack@ здоровья</healing> за заряд союзным чемпионам поблизости (<healing>@MaxStackHealing@ здоровья</healing> при следующем количестве зарядов: @Effect6Amount@).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> раз в @StackCooldown@ сек. или при применении автоатаки, усиленной <spellName>Бравадой</spellName>, Тарик получает заряд (макс. @MaxCharges@ зар.).<br><br><spellActive>Активно:</spellActive> Тарик поглощает все заряды и восстанавливает <healing>@HealingPerStack@ здоровья</healing> за заряд союзным чемпионам поблизости (<healing>@MaxStackHealing@</healing> здоровья при @MaxCharges@ зар.).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Пассивно увеличивает броню Тарика и союзника, на которого наложен Бастион.<br><br>При активации умения Тарик накладывает Бастион на союзного чемпиона, укрывая его от урона щитом. Бастион остается на союзнике до тех пор, пока чемпионы не разойдутся достаточно далеко, чтобы разорвать связь. Все умения Тарика одновременно используются и им, и союзником с Бастионом.",
-            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> <scaleArmor>броня</scaleArmor> Тарика увеличена на <scaleArmor>@BonusArmor@</scaleArmor>, и он поддерживает связь между собой и союзником, помеченным этим умением. Пока они находятся друг около друга, все умения Тарика одновременно используются и им, и этим союзником, а <scaleArmor>броня</scaleArmor> союзника увеличена на <scaleArmor>@BonusArmor@</scaleArmor>.<br><br><spellPassive>Активно:</spellPassive> Тарик помечает союзного чемпиона, накладывая на него <shield>щит прочностью @Effect2Amount@% от максимального запаса здоровья</shield> на @Effect3Amount@ сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Пассивно:</spellPassive> <scaleArmor>броня Тарика выше на @BonusArmor@</scaleArmor>; он поддерживает связь между собой и союзником, помеченным этим умением. Пока они друг около друга, все умения Тарика одновременно использует и он, и этот союзник, а <scaleArmor>броня союзника выше на @BonusArmor@</scaleArmor>.<br><br><spellPassive>Активно:</spellPassive> Тарик помечает союзного чемпиона, накладывая на него <shield>щит прочностью @ShieldHPRatio@% от макс. здоровья</shield> на @ShieldDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ сек. %i:cooldown%",
             "description": "Тарик подготавливает к использованию луч звездного света, который после короткой задержки наносит магический урон и оглушает противников.",
-            "dynamicDescription": "Тарик подготавливает луч звездного света, который по истечении @Effect3Amount@ сек. наносит врагам <magicDamage>@TotalDamage@ магического урона</magicDamage> и <status>оглушает</status> их на @Effect2Amount@ сек.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Тарик подготавливает луч звездного света, по истечении @ChargeDuration@ сек. наносящий врагам <magicDamage>@TotalDamage@ ед. маг. урона</magicDamage> и <status>оглушающий</status> их на @StunDuration@ сек.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

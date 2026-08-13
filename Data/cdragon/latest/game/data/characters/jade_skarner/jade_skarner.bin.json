@@ -11,11 +11,12 @@
     },
     "{0e228055}": {
         "ObjectName": "Jade_SkarnerBasicAttack",
+        "objectPath": "{0e228055}",
         "mScriptName": "Jade_SkarnerBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_Skarner_ReworkBasicAttack",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "bHaveHitEffect": true,
             "castRadius": [
@@ -62,6 +63,7 @@
     },
     "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE": {
         "ObjectName": "Jade_SkarnerE",
+        "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerEAbility/Jade_SkarnerE",
         "mScriptName": "Jade_SkarnerE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -140,7 +142,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -161,7 +163,7 @@
                 70.0,
                 70.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     55.0,
@@ -245,6 +247,7 @@
     },
     "{d70dbefc}": {
         "ObjectName": "Jade_SkarnerE_Missile",
+        "objectPath": "{d70dbefc}",
         "mScriptName": "Jade_SkarnerE_Missile",
         "mSpell": {
             "flags": 4,
@@ -256,8 +259,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerFracture.dds"
             ],
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 23.0,
                 22.0,
@@ -290,7 +293,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -304,7 +307,7 @@
                 "__type": "{0a0eddc9}"
             },
             "mMissileSpec": {
-                "mMissileWidth": 70.0,
+                "mMissileWidth": 120.0,
                 "movementComponent": {
                     "mUseHeightOffsetAtEnd": true,
                     "mTracksTarget": false,
@@ -375,6 +378,7 @@
     },
     "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility/Jade_SkarnerQ": {
         "ObjectName": "Jade_SkarnerQ",
+        "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerQAbility/Jade_SkarnerQ",
         "mScriptName": "Jade_SkarnerQ",
         "mSpell": {
             "flags": 4,
@@ -412,13 +416,13 @@
                 {
                     "name": "SlowPercent",
                     "values": [
-                        -0.15000000596046448,
                         -0.20000000298023224,
                         -0.25,
                         -0.30000001192092896,
                         -0.3499999940395355,
                         -0.4000000059604645,
-                        -0.44999998807907104
+                        -0.44999998807907104,
+                        -0.5
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -458,8 +462,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerVirulentSlash.dds"
             ],
-            "{11704a2b}": 0.3499999940395355,
-            "{f26881a0}": 0.3500000238418579,
+            "spellCastTime": 0.3499999940395355,
+            "spellTotalTime": 0.3500000238418579,
             "cooldownTime": [
                 3.5,
                 3.5,
@@ -497,7 +501,7 @@
                 350.0,
                 350.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     350.0,
                     350.0,
@@ -536,7 +540,7 @@
                 28.0,
                 30.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     20.0,
                     22.0,
@@ -617,6 +621,7 @@
     },
     "{56b7f331}": {
         "ObjectName": "Jade_SkarnerQ_Slow",
+        "objectPath": "{56b7f331}",
         "mScriptName": "Jade_SkarnerQ_Slow",
         "mSpell": {
             "flags": 4,
@@ -628,8 +633,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerVirulentSlash.dds"
             ],
-            "{11704a2b}": 0.3499999940395355,
-            "{f26881a0}": 0.3500000238418579,
+            "spellCastTime": 0.3499999940395355,
+            "spellTotalTime": 0.3500000238418579,
             "cooldownTime": [
                 3.5,
                 3.5,
@@ -667,7 +672,7 @@
                 350.0,
                 350.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     350.0,
                     350.0,
@@ -697,7 +702,7 @@
                 28.0,
                 30.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     20.0,
                     22.0,
@@ -730,6 +735,7 @@
     },
     "{b7fdaf7b}": {
         "ObjectName": "Jade_SkarnerQ_Energy1",
+        "objectPath": "{b7fdaf7b}",
         "mScriptName": "Jade_SkarnerQ_Energy1",
         "mSpell": {
             "flags": 4,
@@ -741,8 +747,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerVirulentSlash.dds"
             ],
-            "{11704a2b}": 0.3499999940395355,
-            "{f26881a0}": 0.3500000238418579,
+            "spellCastTime": 0.3499999940395355,
+            "spellTotalTime": 0.3500000238418579,
             "cooldownTime": [
                 3.5,
                 3.5,
@@ -780,7 +786,7 @@
                 350.0,
                 350.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     350.0,
                     350.0,
@@ -810,7 +816,7 @@
                 28.0,
                 30.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     20.0,
                     22.0,
@@ -843,11 +849,12 @@
     },
     "Characters/Jade_Skarner/Spells/Jade_SkarnerTurretAttack": {
         "ObjectName": "Jade_SkarnerTurretAttack",
+        "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerTurretAttack",
         "mScriptName": "Jade_SkarnerTurretAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "TurretAttack1",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "bHaveHitEffect": true,
             "castRadius": [
@@ -883,11 +890,13 @@
     },
     "{7d35d076}": {
         "ObjectName": "Jade_SkarnerAttackSequencer",
+        "objectPath": "{7d35d076}",
         "mScriptName": "Jade_SkarnerAttackSequencer",
         "__type": "SpellObject"
     },
     "{94db3ef7}": {
         "ObjectName": "Jade_SkarnerR_Buff",
+        "objectPath": "{94db3ef7}",
         "mScriptName": "Jade_SkarnerR_Buff",
         "mSpell": {
             "mAffectsTypeFlags": 2,
@@ -931,8 +940,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerImpale.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.75,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.75,
             "cooldownTime": [
                 120.0,
                 130.0,
@@ -967,7 +976,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -988,7 +997,7 @@
                 150.0,
                 150.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     125.0,
@@ -1056,6 +1065,7 @@
     },
     "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility/Jade_SkarnerR": {
         "ObjectName": "Jade_SkarnerR",
+        "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerRAbility/Jade_SkarnerR",
         "mScriptName": "Jade_SkarnerR",
         "mSpell": {
             "mAffectsTypeFlags": 2,
@@ -1099,8 +1109,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerImpale.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.75,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.75,
             "cooldownTime": [
                 120.0,
                 130.0,
@@ -1135,7 +1145,7 @@
                 500.0,
                 500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     350.0,
                     350.0,
@@ -1167,7 +1177,7 @@
                 150.0,
                 150.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     125.0,
@@ -1243,12 +1253,13 @@
     },
     "{a7502225}": {
         "ObjectName": "Jade_SkarnerBasicAttack2",
+        "objectPath": "{a7502225}",
         "mScriptName": "Jade_SkarnerBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_Skarner_ReworkBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
@@ -1276,6 +1287,7 @@
     },
     "Characters/Jade_Skarner/Spells/Jade_SkarnerWAbility/Jade_SkarnerW": {
         "ObjectName": "Jade_SkarnerW",
+        "objectPath": "Characters/Jade_Skarner/Spells/Jade_SkarnerWAbility/Jade_SkarnerW",
         "mScriptName": "Jade_SkarnerW",
         "mSpell": {
             "flags": 4,
@@ -1344,8 +1356,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/SkarnerExoskeleton.dds"
             ],
-            "{11704a2b}": 0.30000001192092896,
-            "{f26881a0}": 0.5,
+            "spellCastTime": 0.30000001192092896,
+            "spellTotalTime": 0.5,
             "cooldownTime": [
                 18.0,
                 18.0,
@@ -1357,15 +1369,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    18.0,
-                    18.0,
-                    18.0,
-                    18.0,
-                    18.0,
-                    18.0,
-                    18.0
+                    14.0,
+                    14.0,
+                    14.0,
+                    14.0,
+                    14.0,
+                    14.0,
+                    14.0
                 ],
-                "{0a3e0478}": 18.0,
+                "{0a3e0478}": 14.0,
                 "__type": "{0a0eddc9}"
             },
             "mCasterPositionEndOfCastUpdate": 2,
@@ -1382,7 +1394,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -1429,7 +1441,7 @@
                 60.0,
                 60.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     60.0,
                     60.0,
@@ -1500,12 +1512,13 @@
     },
     "{c4382325}": {
         "ObjectName": "Jade_SkarnerCritAttack",
+        "objectPath": "{c4382325}",
         "mScriptName": "Jade_SkarnerCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_Skarner_ReworkCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
@@ -1533,6 +1546,7 @@
     },
     "{f52b58c3}": {
         "ObjectName": "Jade_SkarnerPassive",
+        "objectPath": "{f52b58c3}",
         "mScriptName": "Jade_SkarnerPassive",
         "mSpell": {
             "mImgIconName": [
@@ -1547,7 +1561,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -1992,7 +2006,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mEarlyLevelOverrides": [
                     0,
                     1,
@@ -2117,7 +2131,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 11,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "IsDefaultRecommendation": true,
                 "mEarlyLevelOverrides": [
                     0,
@@ -2210,6 +2224,196 @@
                                                 "__type": "{851b8dc5}"
                                             },
                                             {
+                                                "{d851ffa3}": "3ae33165-2f23-4fff-b3ec-53b608a278cb",
+                                                "Src": {
+                                                    "__type": "IntGet"
+                                                },
+                                                "Dest": {
+                                                    "Var": "newCooldown",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            {
+                                                "{d851ffa3}": "4f0c8d6d-5698-4e67-b897-1960388c0242",
+                                                "Src": {
+                                                    "__type": "IntGet"
+                                                },
+                                                "Dest": {
+                                                    "Var": "CDR",
+                                                    "__type": "ScriptTableSet"
+                                                },
+                                                "__type": "SetVarInTableBlock"
+                                            },
+                                            {
+                                                "{d851ffa3}": "31f1ebfc-284d-42c0-b240-ff55c948f5d0",
+                                                "Condition": null,
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "17bf524b-c906-48d2-a7b6-58b01a9c514c",
+                                                            "Src": {
+                                                                "value": 1,
+                                                                "__type": "IntGet"
+                                                            },
+                                                            "Dest": {
+                                                                "Var": "CDR",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "SetVarInTableBlock"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            {
+                                                "{d851ffa3}": "9c193f8e-2113-4905-9c5a-126b15b1e11a",
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "6d2e7031-582f-4d08-89fa-46721f6088c6",
+                                                            "Src": {
+                                                                "value": 0.5,
+                                                                "__type": "FloatGet"
+                                                            },
+                                                            "Dest": {
+                                                                "Var": "CDR",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "SetVarInTableBlock"
+                                                        }
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            null,
+                                            {
+                                                "{d851ffa3}": "4360131a-887b-4c52-b9f9-de9f05e5701d",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "Cooldown",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Operation": 2,
+                                                    "Value2": {
+                                                        "__type": "IntGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
+                                                },
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "a2b03849-fb96-4674-9931-85221e6de162",
+                                                            "Formula": "ptp.cooldown - ptp.CDR",
+                                                            "Dest": {
+                                                                "Var": "newCooldown",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "{15ebaa9c}"
+                                                        },
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            null,
+                                            {
+                                                "{d851ffa3}": "1692469b-51c5-4ef9-b3ed-f1fcdf9fad1e",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "Cooldown",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Operation": 2,
+                                                    "Value2": {
+                                                        "__type": "IntGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
+                                                },
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "2b0e6acf-7532-4621-9f80-be58ea89b1d3",
+                                                            "Formula": "ptp.cooldown - ptp.CDR",
+                                                            "Dest": {
+                                                                "Var": "newCooldown",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "{15ebaa9c}"
+                                                        },
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            null,
+                                            {
+                                                "{d851ffa3}": "fac3172b-c9cb-4075-b113-f55b7814d096",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "Cooldown",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Operation": 2,
+                                                    "Value2": {
+                                                        "__type": "IntGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
+                                                },
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "059bcccf-a0b2-452c-ad90-3aa279ed6fa3",
+                                                            "Formula": "ptp.cooldown - ptp.CDR",
+                                                            "Dest": {
+                                                                "Var": "newCooldown",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "{15ebaa9c}"
+                                                        },
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            null,
+                                            {
+                                                "{d851ffa3}": "e24f2d2e-8c18-4605-b5c0-8bcfa63a1d49",
+                                                "Condition": {
+                                                    "Value1": {
+                                                        "Var": "Cooldown",
+                                                        "__type": "ScriptTableGet"
+                                                    },
+                                                    "Operation": 2,
+                                                    "Value2": {
+                                                        "__type": "IntGet"
+                                                    },
+                                                    "__type": "ComparisonScriptCondition"
+                                                },
+                                                "Sequence": {
+                                                    "blocks": [
+                                                        {
+                                                            "{d851ffa3}": "8c40dab3-b28c-4ab7-8daa-0d63d91dd86a",
+                                                            "Formula": "ptp.cooldown - ptp.CDR",
+                                                            "Dest": {
+                                                                "Var": "newCooldown",
+                                                                "__type": "ScriptTableSet"
+                                                            },
+                                                            "__type": "{15ebaa9c}"
+                                                        },
+                                                        null
+                                                    ],
+                                                    "__type": "ScriptSequence"
+                                                },
+                                                "__type": "{e524b2fc}"
+                                            },
+                                            {
+                                                "IsDisabled": true,
                                                 "{d851ffa3}": "c7de20e4-a5f4-414c-9458-c1f8ad2fee4c",
                                                 "Condition": null,
                                                 "Sequence": {
@@ -2218,200 +2422,6 @@
                                                             "{d851ffa3}": "078515d5-08c3-469a-b400-20e170b1f5d3",
                                                             "Condition": null,
                                                             "Invert": true,
-                                                            "Sequence": {
-                                                                "blocks": [
-                                                                    {
-                                                                        "{d851ffa3}": "59b04725-b67b-4dd3-be03-e4b4fb250195",
-                                                                        "Src": {
-                                                                            "__type": "IntGet"
-                                                                        },
-                                                                        "Dest": {
-                                                                            "Var": "newCooldown",
-                                                                            "__type": "ScriptTableSet"
-                                                                        },
-                                                                        "__type": "SetVarInTableBlock"
-                                                                    },
-                                                                    {
-                                                                        "{d851ffa3}": "faf89843-cf9e-4b71-9ffa-968cf07951d5",
-                                                                        "Src": {
-                                                                            "__type": "IntGet"
-                                                                        },
-                                                                        "Dest": {
-                                                                            "Var": "CDR",
-                                                                            "__type": "ScriptTableSet"
-                                                                        },
-                                                                        "__type": "SetVarInTableBlock"
-                                                                    },
-                                                                    {
-                                                                        "{d851ffa3}": "2d6730e0-ba97-4ee6-8427-2578dd8e9166",
-                                                                        "Condition": null,
-                                                                        "Sequence": {
-                                                                            "blocks": [
-                                                                                {
-                                                                                    "{d851ffa3}": "ebd4530c-806d-4b16-a50f-13e0ca65e9dd",
-                                                                                    "Src": {
-                                                                                        "value": 1,
-                                                                                        "__type": "IntGet"
-                                                                                    },
-                                                                                    "Dest": {
-                                                                                        "Var": "CDR",
-                                                                                        "__type": "ScriptTableSet"
-                                                                                    },
-                                                                                    "__type": "SetVarInTableBlock"
-                                                                                }
-                                                                            ],
-                                                                            "__type": "ScriptSequence"
-                                                                        },
-                                                                        "__type": "{e524b2fc}"
-                                                                    },
-                                                                    {
-                                                                        "{d851ffa3}": "cf573f30-671c-4b40-8ed9-27c11f8178ea",
-                                                                        "Sequence": {
-                                                                            "blocks": [
-                                                                                {
-                                                                                    "{d851ffa3}": "2c9916c1-2d8b-4c92-be55-04a33ff1f645",
-                                                                                    "Src": {
-                                                                                        "value": 0.5,
-                                                                                        "__type": "FloatGet"
-                                                                                    },
-                                                                                    "Dest": {
-                                                                                        "Var": "CDR",
-                                                                                        "__type": "ScriptTableSet"
-                                                                                    },
-                                                                                    "__type": "SetVarInTableBlock"
-                                                                                }
-                                                                            ],
-                                                                            "__type": "ScriptSequence"
-                                                                        },
-                                                                        "__type": "{e524b2fc}"
-                                                                    },
-                                                                    null,
-                                                                    {
-                                                                        "{d851ffa3}": "b7b78be8-f2d3-491c-add8-04e27dc81234",
-                                                                        "Condition": {
-                                                                            "Value1": {
-                                                                                "Var": "Cooldown",
-                                                                                "__type": "ScriptTableGet"
-                                                                            },
-                                                                            "Operation": 2,
-                                                                            "Value2": {
-                                                                                "__type": "IntGet"
-                                                                            },
-                                                                            "__type": "ComparisonScriptCondition"
-                                                                        },
-                                                                        "Sequence": {
-                                                                            "blocks": [
-                                                                                {
-                                                                                    "{d851ffa3}": "9ec619d5-c1b0-445f-b310-ce2f263a5182",
-                                                                                    "Formula": "ptp.cooldown - ptp.CDR",
-                                                                                    "Dest": {
-                                                                                        "Var": "newCooldown",
-                                                                                        "__type": "ScriptTableSet"
-                                                                                    },
-                                                                                    "__type": "{15ebaa9c}"
-                                                                                },
-                                                                                null
-                                                                            ],
-                                                                            "__type": "ScriptSequence"
-                                                                        },
-                                                                        "__type": "{e524b2fc}"
-                                                                    },
-                                                                    null,
-                                                                    {
-                                                                        "{d851ffa3}": "3ce1a0f7-d686-439c-a313-4db302a73f9b",
-                                                                        "Condition": {
-                                                                            "Value1": {
-                                                                                "Var": "Cooldown",
-                                                                                "__type": "ScriptTableGet"
-                                                                            },
-                                                                            "Operation": 2,
-                                                                            "Value2": {
-                                                                                "__type": "IntGet"
-                                                                            },
-                                                                            "__type": "ComparisonScriptCondition"
-                                                                        },
-                                                                        "Sequence": {
-                                                                            "blocks": [
-                                                                                {
-                                                                                    "{d851ffa3}": "f93d1d83-b545-49ba-9741-61a35c668cfc",
-                                                                                    "Formula": "ptp.cooldown - ptp.CDR",
-                                                                                    "Dest": {
-                                                                                        "Var": "newCooldown",
-                                                                                        "__type": "ScriptTableSet"
-                                                                                    },
-                                                                                    "__type": "{15ebaa9c}"
-                                                                                },
-                                                                                null
-                                                                            ],
-                                                                            "__type": "ScriptSequence"
-                                                                        },
-                                                                        "__type": "{e524b2fc}"
-                                                                    },
-                                                                    null,
-                                                                    {
-                                                                        "{d851ffa3}": "c57b4605-e729-4cbc-b1df-c6b60dc3861e",
-                                                                        "Condition": {
-                                                                            "Value1": {
-                                                                                "Var": "Cooldown",
-                                                                                "__type": "ScriptTableGet"
-                                                                            },
-                                                                            "Operation": 2,
-                                                                            "Value2": {
-                                                                                "__type": "IntGet"
-                                                                            },
-                                                                            "__type": "ComparisonScriptCondition"
-                                                                        },
-                                                                        "Sequence": {
-                                                                            "blocks": [
-                                                                                {
-                                                                                    "{d851ffa3}": "e93b84b5-ae2e-4f2f-92fe-e54a328b8f31",
-                                                                                    "Formula": "ptp.cooldown - ptp.CDR",
-                                                                                    "Dest": {
-                                                                                        "Var": "newCooldown",
-                                                                                        "__type": "ScriptTableSet"
-                                                                                    },
-                                                                                    "__type": "{15ebaa9c}"
-                                                                                },
-                                                                                null
-                                                                            ],
-                                                                            "__type": "ScriptSequence"
-                                                                        },
-                                                                        "__type": "{e524b2fc}"
-                                                                    },
-                                                                    null,
-                                                                    {
-                                                                        "{d851ffa3}": "fe2fa76e-d807-42ce-ab2c-c6b0f264f1bd",
-                                                                        "Condition": {
-                                                                            "Value1": {
-                                                                                "Var": "Cooldown",
-                                                                                "__type": "ScriptTableGet"
-                                                                            },
-                                                                            "Operation": 2,
-                                                                            "Value2": {
-                                                                                "__type": "IntGet"
-                                                                            },
-                                                                            "__type": "ComparisonScriptCondition"
-                                                                        },
-                                                                        "Sequence": {
-                                                                            "blocks": [
-                                                                                {
-                                                                                    "{d851ffa3}": "dba52abc-8ced-4a76-8625-1744f221a703",
-                                                                                    "Formula": "ptp.cooldown - ptp.CDR",
-                                                                                    "Dest": {
-                                                                                        "Var": "newCooldown",
-                                                                                        "__type": "ScriptTableSet"
-                                                                                    },
-                                                                                    "__type": "{15ebaa9c}"
-                                                                                },
-                                                                                null
-                                                                            ],
-                                                                            "__type": "ScriptSequence"
-                                                                        },
-                                                                        "__type": "{e524b2fc}"
-                                                                    }
-                                                                ],
-                                                                "__type": "ScriptSequence"
-                                                            },
                                                             "__type": "{e524b2fc}"
                                                         }
                                                     ],
@@ -2503,7 +2513,7 @@
             "baseValue": 31.25,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.25,
             "__type": "ModifiableFloat"
         },
@@ -2565,7 +2575,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "{d70dbefc}",
             "Characters/Jade_Skarner/Spells/Jade_SkarnerTurretAttack",
             "Shared/Spells/BaseSpell",

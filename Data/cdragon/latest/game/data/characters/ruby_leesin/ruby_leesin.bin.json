@@ -49,7 +49,7 @@
             "baseValue": 32.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 2.049999952316284,
             "__type": "ModifiableFloat"
         },
@@ -133,7 +133,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -283,12 +283,13 @@
     },
     "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinCritAttack": {
         "ObjectName": "Ruby_LeeSinCritAttack",
+        "objectPath": "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinCritAttack",
         "mScriptName": "Ruby_LeeSinCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Ruby_LeeSinCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.41214999556541443,
+            "spellCastTime": 0.41214999556541443,
             "cooldownTime": [
                 -100.0,
                 -100.0,
@@ -321,7 +322,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -379,6 +380,7 @@
     },
     "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinEOneAbility/Ruby_LeeSinEOne": {
         "ObjectName": "Ruby_LeeSinEOne",
+        "objectPath": "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinEOneAbility/Ruby_LeeSinEOne",
         "mScriptName": "Ruby_LeeSinEOne",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -491,8 +493,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Ruby_LeeSin/HUD/Icons2D/Ruby_LeeSinE1.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 9.0,
                 9.0,
@@ -528,7 +530,7 @@
                 515.0,
                 515.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     515.0,
                     515.0,
@@ -579,7 +581,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     50.0,
@@ -690,6 +692,7 @@
     },
     "{2e3c2af1}": {
         "ObjectName": "Ruby_LeeSinETwoDebuff",
+        "objectPath": "{2e3c2af1}",
         "mScriptName": "Ruby_LeeSinETwoDebuff",
         "mSpell": {
             "flags": 4,
@@ -700,8 +703,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Ruby_LeeSin/HUD/Icons2D/Ruby_LeeSinE2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 11.0,
                 10.0,
@@ -734,7 +737,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -795,6 +798,7 @@
     },
     "{9eb14c13}": {
         "ObjectName": "Ruby_LeeSinETwo",
+        "objectPath": "{9eb14c13}",
         "mScriptName": "Ruby_LeeSinETwo",
         "mSpell": {
             "flags": 4,
@@ -805,8 +809,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Ruby_LeeSin/HUD/Icons2D/Ruby_LeeSinE2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "mCantCancelWhileWindingUp": true,
             "useAnimatorFramerate": true,
             "castRange": [
@@ -818,7 +822,7 @@
                 575.0,
                 575.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     575.0,
                     575.0,
@@ -870,7 +874,7 @@
                 25.0,
                 25.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     25.0,
                     25.0,
@@ -936,6 +940,7 @@
     },
     "{1eda1982}": {
         "ObjectName": "Ruby_LeeSinSkin52Manager",
+        "objectPath": "{1eda1982}",
         "mScriptName": "Ruby_LeeSinSkin52Manager",
         "__type": "SpellObject"
     },
@@ -954,6 +959,7 @@
     },
     "{2511ed34}": {
         "ObjectName": "Ruby_LeeSinWOneShield",
+        "objectPath": "{2511ed34}",
         "mScriptName": "Ruby_LeeSinWOneShield",
         "mSpell": {
             "mImgIconName": [
@@ -986,6 +992,7 @@
     },
     "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinWOneAbility/Ruby_LeeSinWOne": {
         "ObjectName": "Ruby_LeeSinWOne",
+        "objectPath": "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinWOneAbility/Ruby_LeeSinWOne",
         "mScriptName": "Ruby_LeeSinWOne",
         "mSpell": {
             "flags": 4,
@@ -1183,7 +1190,7 @@
                 700.0,
                 700.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     700.0,
                     700.0,
@@ -1216,7 +1223,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     50.0,
@@ -1330,6 +1337,7 @@
     },
     "{4d717779}": {
         "ObjectName": "Ruby_LeeSinWOneDash",
+        "objectPath": "{4d717779}",
         "mScriptName": "Ruby_LeeSinWOneDash",
         "mSpell": {
             "SpellEventToAudioEventSuffix": {
@@ -1355,6 +1363,7 @@
     },
     "{ce89532b}": {
         "ObjectName": "Ruby_LeeSinWTwo",
+        "objectPath": "{ce89532b}",
         "mScriptName": "Ruby_LeeSinWTwo",
         "mSpell": {
             "flags": 4,
@@ -1406,8 +1415,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Ruby_LeeSin/HUD/Icons2D/Ruby_LeeSinW2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -1442,7 +1451,7 @@
                 350.0,
                 350.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     350.0,
                     350.0,
@@ -1502,7 +1511,7 @@
                 25.0,
                 25.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     25.0,
                     25.0,
@@ -1588,6 +1597,7 @@
     },
     "{4a4c1fe7}": {
         "ObjectName": "Ruby_LeeSinQTwoDash",
+        "objectPath": "{4a4c1fe7}",
         "mScriptName": "Ruby_LeeSinQTwoDash",
         "mSpell": {
             "flags": 4,
@@ -1628,7 +1638,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -1670,6 +1680,7 @@
     },
     "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinQOneAbility/Ruby_LeeSinQOne": {
         "ObjectName": "Ruby_LeeSinQOne",
+        "objectPath": "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinQOneAbility/Ruby_LeeSinQOne",
         "mScriptName": "Ruby_LeeSinQOne",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1833,8 +1844,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Ruby_LeeSin/HUD/Icons2D/Ruby_LeeSinQ1.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 15.0,
                 14.0,
@@ -1869,7 +1880,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -1962,7 +1973,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     50.0,
@@ -2091,6 +2102,7 @@
     },
     "{ace4d09b}": {
         "ObjectName": "Ruby_LeeSinQTwo",
+        "objectPath": "{ace4d09b}",
         "mScriptName": "Ruby_LeeSinQTwo",
         "mSpell": {
             "flags": 4,
@@ -2105,8 +2117,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Ruby_LeeSin/HUD/Icons2D/Ruby_LeeSinQ2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 12.0,
                 11.0,
@@ -2139,7 +2151,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -2190,7 +2202,7 @@
                 25.0,
                 25.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     25.0,
                     25.0,
@@ -2271,6 +2283,7 @@
     },
     "{cfaa5482}": {
         "ObjectName": "Ruby_LeeSinQManager",
+        "objectPath": "{cfaa5482}",
         "mScriptName": "Ruby_LeeSinQManager",
         "mBuff": {
             "PersistentEffectConditions": [
@@ -2293,11 +2306,12 @@
     },
     "{5b8794a1}": {
         "ObjectName": "Ruby_LeeSinBasicAttack",
+        "objectPath": "{5b8794a1}",
         "mScriptName": "Ruby_LeeSinBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Ruby_LeeSinBasicAttack",
-            "{11704a2b}": 0.41214999556541443,
+            "spellCastTime": 0.41214999556541443,
             "cooldownTime": [
                 -100.0,
                 -100.0,
@@ -2330,7 +2344,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -2387,6 +2401,7 @@
     },
     "{6a7f2466}": {
         "ObjectName": "Ruby_LeeSinPassiveBuff",
+        "objectPath": "{6a7f2466}",
         "mScriptName": "Ruby_LeeSinPassiveBuff",
         "mSpell": {
             "mImgIconName": [
@@ -2419,6 +2434,7 @@
     },
     "{724c553b}": {
         "ObjectName": "Ruby_LeeSinPassive",
+        "objectPath": "{724c553b}",
         "mScriptName": "Ruby_LeeSinPassive",
         "mSpell": {
             "DataValues": [
@@ -2494,7 +2510,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -2539,12 +2555,13 @@
     },
     "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinBasicAttack3": {
         "ObjectName": "Ruby_LeeSinBasicAttack3",
+        "objectPath": "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinBasicAttack3",
         "mScriptName": "Ruby_LeeSinBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Ruby_LeeSinBasicAttack3",
             "mAnimationName": "Attack3",
-            "{11704a2b}": 0.41214999556541443,
+            "spellCastTime": 0.41214999556541443,
             "cooldownTime": [
                 -100.0,
                 -100.0,
@@ -2577,7 +2594,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -2624,12 +2641,13 @@
     },
     "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinBasicAttack2": {
         "ObjectName": "Ruby_LeeSinBasicAttack2",
+        "objectPath": "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinBasicAttack2",
         "mScriptName": "Ruby_LeeSinBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Ruby_LeeSinBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.41214999556541443,
+            "spellCastTime": 0.41214999556541443,
             "cooldownTime": [
                 -100.0,
                 -100.0,
@@ -2662,7 +2680,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -2709,12 +2727,13 @@
     },
     "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinBasicAttack4": {
         "ObjectName": "Ruby_LeeSinBasicAttack4",
+        "objectPath": "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinBasicAttack4",
         "mScriptName": "Ruby_LeeSinBasicAttack4",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Ruby_LeeSinBasicAttack4",
             "mAnimationName": "Attack4",
-            "{11704a2b}": 0.41214999556541443,
+            "spellCastTime": 0.41214999556541443,
             "cooldownTime": [
                 -100.0,
                 -100.0,
@@ -2747,7 +2766,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -2794,11 +2813,13 @@
     },
     "{b87c5903}": {
         "ObjectName": "Ruby_LeeSinSkin31Manager",
+        "objectPath": "{b87c5903}",
         "mScriptName": "Ruby_LeeSinSkin31Manager",
         "__type": "SpellObject"
     },
     "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinRAbility/Ruby_LeeSinR": {
         "ObjectName": "Ruby_LeeSinR",
+        "objectPath": "Characters/Ruby_LeeSin/Spells/Ruby_LeeSinRAbility/Ruby_LeeSinR",
         "mScriptName": "Ruby_LeeSinR",
         "mSpell": {
             "mAffectsTypeFlags": 4106,
@@ -2877,8 +2898,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Ruby_LeeSin/HUD/Icons2D/Ruby_LeeSinR.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 120.0,
                 120.0,
@@ -2912,7 +2933,7 @@
                 375.0,
                 375.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     375.0,
                     375.0,
@@ -3122,6 +3143,7 @@
     },
     "{c467a2b1}": {
         "ObjectName": "Ruby_LeeSinSkin11Manager",
+        "objectPath": "{c467a2b1}",
         "mScriptName": "Ruby_LeeSinSkin11Manager",
         "__type": "SpellObject"
     },
@@ -3192,7 +3214,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,

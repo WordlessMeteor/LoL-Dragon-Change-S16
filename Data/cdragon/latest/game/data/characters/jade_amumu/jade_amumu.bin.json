@@ -10,11 +10,13 @@
     },
     "{37d034f2}": {
         "ObjectName": "Jade_AmumuAuraOfDespairCleanup",
+        "objectPath": "{37d034f2}",
         "mScriptName": "Jade_AmumuAuraOfDespairCleanup",
         "__type": "SpellObject"
     },
     "Characters/Jade_Amumu/Spells/Jade_AmumuAuraofDespairAbility/Jade_AmumuAuraofDespair": {
         "ObjectName": "Jade_AmumuAuraofDespair",
+        "objectPath": "Characters/Jade_Amumu/Spells/Jade_AmumuAuraofDespairAbility/Jade_AmumuAuraofDespair",
         "mScriptName": "Jade_AmumuAuraofDespair",
         "mSpell": {
             "flags": 20,
@@ -108,8 +110,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_AuraOfDespair.dds"
             ],
-            "{11704a2b}": 0.3068000078201294,
-            "{f26881a0}": 2.9333999156951904,
+            "spellCastTime": 0.3068000078201294,
+            "spellTotalTime": 2.9333999156951904,
             "cooldownTime": [
                 1.0,
                 1.0,
@@ -144,7 +146,7 @@
                 300.0,
                 300.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     300.0,
                     300.0,
@@ -177,7 +179,7 @@
                 8.0,
                 8.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     8.0,
                     8.0,
@@ -302,11 +304,13 @@
     },
     "{49510e83}": {
         "ObjectName": "Jade_AmumuCurseoftheSadMummyCastEffects",
+        "objectPath": "{49510e83}",
         "mScriptName": "Jade_AmumuCurseoftheSadMummyCastEffects",
         "__type": "SpellObject"
     },
     "Characters/Jade_Amumu/Spells/Jade_AmumuCurseoftheSadMummyAbility/Jade_AmumuCurseoftheSadMummy": {
         "ObjectName": "Jade_AmumuCurseoftheSadMummy",
+        "objectPath": "Characters/Jade_Amumu/Spells/Jade_AmumuCurseoftheSadMummyAbility/Jade_AmumuCurseoftheSadMummy",
         "mScriptName": "Jade_AmumuCurseoftheSadMummy",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -375,8 +379,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_BandAidThingy.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
             "cooldownTime": [
                 150.0,
                 150.0,
@@ -408,7 +412,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -441,7 +445,7 @@
                 80.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     150.0,
@@ -566,10 +570,11 @@
     },
     "Characters/Jade_Amumu/Spells/Jade_AmumuBasicAttack": {
         "ObjectName": "Jade_AmumuBasicAttack",
+        "objectPath": "Characters/Jade_Amumu/Spells/Jade_AmumuBasicAttack",
         "mScriptName": "Jade_AmumuBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 6095,
-            "{11704a2b}": 0.3541499972343445,
+            "spellCastTime": 0.3541499972343445,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 11.0,
@@ -605,6 +610,7 @@
     },
     "{5cd8f5af}": {
         "ObjectName": "Jade_AmumuCursedTouch",
+        "objectPath": "{5cd8f5af}",
         "mScriptName": "Jade_AmumuCursedTouch",
         "mSpell": {
             "mImgIconName": [
@@ -629,19 +635,20 @@
     },
     "{a1f6917e}": {
         "ObjectName": "Jade_AmumuP",
+        "objectPath": "{a1f6917e}",
         "mScriptName": "Jade_AmumuP",
         "mSpell": {
             "DataValues": [
                 {
                     "name": "DebuffDuration",
                     "values": [
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0,
-                        3.0
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0,
+                        4.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -654,12 +661,12 @@
                             "mBreakpoints": [
                                 {
                                     "mLevel": 7,
-                                    "mAdditionalBonusAtThisLevel": 5.0,
+                                    "mAdditionalBonusAtThisLevel": 10.0,
                                     "__type": "Breakpoint"
                                 },
                                 {
                                     "mLevel": 13,
-                                    "mAdditionalBonusAtThisLevel": 5.0,
+                                    "mAdditionalBonusAtThisLevel": 10.0,
                                     "__type": "Breakpoint"
                                 }
                             ],
@@ -704,7 +711,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -745,6 +752,7 @@
     },
     "Characters/Jade_Amumu/Spells/Jade_AmumuTantrumAbility/Jade_AmumuTantrum": {
         "ObjectName": "Jade_AmumuTantrum",
+        "objectPath": "Characters/Jade_Amumu/Spells/Jade_AmumuTantrumAbility/Jade_AmumuTantrum",
         "mScriptName": "Jade_AmumuTantrum",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -900,8 +908,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_Tantrum.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 10.0,
                 10.0,
@@ -933,7 +941,7 @@
                 350.0,
                 350.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     350.0,
                     350.0,
@@ -966,7 +974,7 @@
                 35.0,
                 35.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     35.0,
                     35.0,
@@ -1069,11 +1077,12 @@
     },
     "Characters/Jade_Amumu/Spells/Jade_AmumuBasicAttack2": {
         "ObjectName": "Jade_AmumuBasicAttack2",
+        "objectPath": "Characters/Jade_Amumu/Spells/Jade_AmumuBasicAttack2",
         "mScriptName": "Jade_AmumuBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 6095,
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3541499972343445,
+            "spellCastTime": 0.3541499972343445,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 11.0,
@@ -1108,6 +1117,7 @@
     },
     "{aab85399}": {
         "ObjectName": "Jade_AmumuSadMummyBandageToss",
+        "objectPath": "{aab85399}",
         "mScriptName": "Jade_AmumuSadMummyBandageToss",
         "mSpell": {
             "flags": 4,
@@ -1159,8 +1169,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_BandageFlinger.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1196,7 +1206,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1294,6 +1304,7 @@
     },
     "Characters/Jade_Amumu/Spells/Jade_AmumuBandageTossAbility/Jade_AmumuBandageToss": {
         "ObjectName": "Jade_AmumuBandageToss",
+        "objectPath": "Characters/Jade_Amumu/Spells/Jade_AmumuBandageTossAbility/Jade_AmumuBandageToss",
         "mScriptName": "Jade_AmumuBandageToss",
         "mSpell": {
             "mAffectsTypeFlags": 14346,
@@ -1301,76 +1312,17 @@
                 "PositiveEffect_MoveBlock",
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        45.0,
-                        70.0,
-                        95.0,
-                        120.0,
-                        145.0,
-                        170.0,
-                        195.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        1800.0,
-                        1800.0,
-                        1800.0,
-                        1800.0,
-                        1800.0,
-                        1800.0,
-                        1800.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
                     "values": [
-                        30.0,
+                        20.0,
                         80.0,
-                        130.0,
-                        180.0,
-                        230.0,
-                        280.0,
-                        330.0
+                        140.0,
+                        200.0,
+                        260.0,
+                        320.0,
+                        380.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1430,13 +1382,12 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.699999988079071,
             "mAnimationName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/DDS/SadMummy_BandageFlinger.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 16.0,
                 16.0,
@@ -1479,7 +1430,7 @@
                 1100.0,
                 1100.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1100.0,
                     1100.0,
@@ -1525,7 +1476,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     80.0,
                     90.0,
@@ -1693,11 +1644,12 @@
     },
     "Characters/Jade_Amumu/Spells/Jade_AmumuCritAttack": {
         "ObjectName": "Jade_AmumuCritAttack",
+        "objectPath": "Characters/Jade_Amumu/Spells/Jade_AmumuCritAttack",
         "mScriptName": "Jade_AmumuCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 6095,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.3541499972343445,
+            "spellCastTime": 0.3541499972343445,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 11.0,
@@ -1725,7 +1677,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -2304,7 +2256,7 @@
             "baseValue": 31.25,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.25,
             "__type": "ModifiableFloat"
         },
@@ -2381,7 +2333,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "{aab85399}",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",

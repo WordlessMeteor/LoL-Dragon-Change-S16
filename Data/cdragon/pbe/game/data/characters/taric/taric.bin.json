@@ -12,7 +12,7 @@
     },
     "Characters/Taric/Spells/TaricPassiveAbility/TaricPassive": {
         "ObjectName": "TaricPassive",
-        "objectPath": "{02fd61b5}",
+        "objectPath": "Characters/Taric/Spells/TaricPassiveAbility/TaricPassive",
         "mScriptName": "TaricPassive",
         "mSpell": {
             "DataValues": [
@@ -133,7 +133,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -169,7 +169,7 @@
     },
     "Characters/Taric/Spells/TaricPassiveAbility/TaricPassiveAttack2": {
         "ObjectName": "TaricPassiveAttack2",
-        "objectPath": "{76d4f0cd}",
+        "objectPath": "Characters/Taric/Spells/TaricPassiveAbility/TaricPassiveAttack2",
         "mScriptName": "TaricPassiveAttack2",
         "mSpell": {
             "flags": 128,
@@ -178,7 +178,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Taric/HUD/Icons2D/Taric_Passive.dds"
             ],
-            "{11704a2b}": 0.375,
+            "spellCastTime": 0.375,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -219,7 +219,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -288,7 +288,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Taric/HUD/Icons2D/Taric_Passive.dds"
             ],
-            "{11704a2b}": 0.375,
+            "spellCastTime": 0.375,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -329,7 +329,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -412,7 +412,7 @@
     },
     "Characters/Taric/Spells/TaricWAbility/TaricWAllyBuff": {
         "ObjectName": "TaricWAllyBuff",
-        "objectPath": "{133a9b92}",
+        "objectPath": "Characters/Taric/Spells/TaricWAbility/TaricWAllyBuff",
         "mScriptName": "TaricWAllyBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TaricWAllyBuff",
@@ -615,8 +615,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Taric/HUD/Icons2D/Taric_W.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 15.0,
                 15.0,
@@ -649,7 +649,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -701,7 +701,7 @@
                 60.0,
                 60.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     60.0,
                     60.0,
@@ -853,20 +853,20 @@
     },
     "Characters/Taric/Spells/TaricWAbility/TaricWShoulderManager": {
         "ObjectName": "TaricWShoulderManager",
-        "objectPath": "{587856ac}",
+        "objectPath": "Characters/Taric/Spells/TaricWAbility/TaricWShoulderManager",
         "mScriptName": "TaricWShoulderManager",
         "__type": "SpellObject"
     },
     "Characters/Taric/Spells/TaricWAbility/TaricWAllyBuffMissile": {
         "ObjectName": "TaricWAllyBuffMissile",
-        "objectPath": "{781e20ce}",
+        "objectPath": "Characters/Taric/Spells/TaricWAbility/TaricWAllyBuffMissile",
         "mScriptName": "TaricWAllyBuffMissile",
         "mSpell": {
             "flags": 132,
             "mAffectsStatusFlags": 32,
             "mAnimationName": "",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -899,7 +899,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -951,7 +951,7 @@
     },
     "Characters/Taric/Spells/TaricWAbility/TaricWSelfBuff": {
         "ObjectName": "TaricWSelfBuff",
-        "objectPath": "{c6758ec2}",
+        "objectPath": "Characters/Taric/Spells/TaricWAbility/TaricWSelfBuff",
         "mScriptName": "TaricWSelfBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TaricWSelfBuff",
@@ -1057,8 +1057,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Taric/HUD/Icons2D/Taric_R.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 210.0,
                 180.0,
@@ -1130,7 +1130,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -1249,7 +1249,7 @@
     },
     "Characters/Taric/Spells/TaricRAbility/TaricRIndicator": {
         "ObjectName": "TaricRIndicator",
-        "objectPath": "{3c4c681a}",
+        "objectPath": "Characters/Taric/Spells/TaricRAbility/TaricRIndicator",
         "mScriptName": "TaricRIndicator",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TaricRIndicator",
@@ -1259,7 +1259,7 @@
     },
     "Characters/Taric/Spells/TaricRAbility/TaricRTarget": {
         "ObjectName": "TaricRTarget",
-        "objectPath": "{8acadf9c}",
+        "objectPath": "Characters/Taric/Spells/TaricRAbility/TaricRTarget",
         "mScriptName": "TaricRTarget",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TaricRTarget",
@@ -1566,8 +1566,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Taric/HUD/Icons2D/Taric_Q.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 3.0,
                 3.0,
@@ -1620,7 +1620,7 @@
                 325.0,
                 325.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     325.0,
                     325.0,
@@ -1688,7 +1688,7 @@
                 60.0,
                 60.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     60.0,
                     60.0,
@@ -1831,7 +1831,7 @@
     },
     "Characters/Taric/Spells/TaricQAbility/TaricQHandGlowManager": {
         "ObjectName": "TaricQHandGlowManager",
-        "objectPath": "{4c438abc}",
+        "objectPath": "Characters/Taric/Spells/TaricQAbility/TaricQHandGlowManager",
         "mScriptName": "TaricQHandGlowManager",
         "__type": "SpellObject"
     },
@@ -1843,7 +1843,7 @@
             "flags": 128,
             "mAffectsTypeFlags": 6826,
             "mAlternateName": "TaricBasicAttack",
-            "{11704a2b}": 0.3487499952316284,
+            "spellCastTime": 0.3487499952316284,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1884,7 +1884,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -1941,7 +1941,7 @@
     },
     "Characters/Taric/Spells/TaricEAbility/TaricEChargeBuff": {
         "ObjectName": "TaricEChargeBuff",
-        "objectPath": "{6c836474}",
+        "objectPath": "Characters/Taric/Spells/TaricEAbility/TaricEChargeBuff",
         "mScriptName": "TaricEChargeBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_TaricEChargeBuff",
@@ -2104,8 +2104,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Taric/HUD/Icons2D/Taric_E.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 17.0,
                 16.0,
@@ -2138,7 +2138,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2191,7 +2191,7 @@
                 40.0,
                 40.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     40.0,
                     40.0,
@@ -2404,12 +2404,12 @@
     },
     "Characters/Taric/Spells/TaricCritAttack": {
         "ObjectName": "TaricCritAttack",
-        "objectPath": "{9aea5add}",
+        "objectPath": "Characters/Taric/Spells/TaricCritAttack",
         "mScriptName": "TaricCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 6826,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.3487499952316284,
+            "spellCastTime": 0.3487499952316284,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2448,7 +2448,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -2495,7 +2495,7 @@
             "flags": 128,
             "mAffectsTypeFlags": 6826,
             "mAnimationName": "Attack3",
-            "{11704a2b}": 0.3487499952316284,
+            "spellCastTime": 0.3487499952316284,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2536,7 +2536,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -2585,7 +2585,7 @@
             "flags": 128,
             "mAffectsTypeFlags": 6826,
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3487499952316284,
+            "spellCastTime": 0.3487499952316284,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2626,7 +2626,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -2689,7 +2689,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     2,
@@ -3381,7 +3381,7 @@
             "baseValue": 28.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 2.049999952316284,
             "__type": "ModifiableFloat"
         },
@@ -3477,7 +3477,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",

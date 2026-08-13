@@ -1,6 +1,7 @@
 {
     "Characters/Janna/Spells/JannaCritAttack": {
         "ObjectName": "JannaCritAttack",
+        "objectPath": "Characters/Janna/Spells/JannaCritAttack",
         "mScriptName": "JannaCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -37,7 +38,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -126,6 +127,7 @@
     },
     "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind": {
         "ObjectName": "ReapTheWhirlwind",
+        "objectPath": "Characters/Janna/Spells/ReapTheWhirlwindAbility/ReapTheWhirlwind",
         "mScriptName": "ReapTheWhirlwind",
         "mSpell": {
             "mAffectsTypeFlags": 7183,
@@ -254,6 +256,97 @@
                         350.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Duration",
+                    "values": [
+                        0.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "Range",
+                    "values": [
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0,
+                        700.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "MaxKnockback",
+                    "values": [
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockbackBaseRange",
+                    "values": [
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0,
+                        875.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockbackSpeed",
+                    "values": [
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0,
+                        1200.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockbackGravity",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "KnockbackDuration",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "mSpellCalculations": {
@@ -273,8 +366,8 @@
                 },
                 "TotalHeal": {
                     "mMultiplier": {
-                        "mEffectIndex": 3,
-                        "__type": "EffectValueCalculationPart"
+                        "mDataValue": "Duration",
+                        "__type": "NamedDataValueCalculationPart"
                     },
                     "tooltipOnly": true,
                     "mModifiedGameCalculation": "HealPerSecond",
@@ -288,8 +381,8 @@
                 "ASSETS/Characters/Janna/HUD/Icons2D/JannaR.dds"
             ],
             "mCastTime": 0.0010000000474974513,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 130.0,
                 130.0,
@@ -322,7 +415,7 @@
                 725.0,
                 725.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     725.0,
                     725.0,
@@ -355,7 +448,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -442,8 +535,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 6,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "KnockbackBaseRange",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -463,6 +556,7 @@
     },
     "Characters/Janna/Spells/ReapTheWhirlwindAbility/Reap_The_Whirlwind": {
         "ObjectName": "Reap_The_Whirlwind",
+        "objectPath": "Characters/Janna/Spells/ReapTheWhirlwindAbility/Reap_The_Whirlwind",
         "mScriptName": "Reap_The_Whirlwind",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Reap_The_Whirlwind",
@@ -484,6 +578,7 @@
     },
     "Characters/Janna/Spells/ForecastJannaVO": {
         "ObjectName": "ForecastJannaVO",
+        "objectPath": "Characters/Janna/Spells/ForecastJannaVO",
         "mScriptName": "ForecastJannaVO",
         "__type": "SpellObject"
     },
@@ -500,6 +595,7 @@
     },
     "Characters/Janna/Spells/EyeOfTheStormAbility/EyeOfTheStorm": {
         "ObjectName": "EyeOfTheStorm",
+        "objectPath": "Characters/Janna/Spells/EyeOfTheStormAbility/EyeOfTheStorm",
         "mScriptName": "EyeOfTheStorm",
         "mSpell": {
             "flags": 4,
@@ -651,8 +747,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Janna/HUD/Icons2D/JannaE.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 16.0,
                 16.0,
@@ -684,7 +780,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -735,7 +831,7 @@
                 90.0,
                 90.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     75.0,
@@ -859,6 +955,7 @@
     },
     "Characters/Janna/Spells/EyeOfTheStormAbility/EyeOfTheStormEmpower": {
         "ObjectName": "EyeOfTheStormEmpower",
+        "objectPath": "Characters/Janna/Spells/EyeOfTheStormAbility/EyeOfTheStormEmpower",
         "mScriptName": "EyeOfTheStormEmpower",
         "mBuff": {
             "mTooltipData": {
@@ -876,6 +973,7 @@
     },
     "Characters/Janna/Spells/EyeOfTheStormAbility/Eye_Of_The_Storm": {
         "ObjectName": "Eye_Of_The_Storm",
+        "objectPath": "Characters/Janna/Spells/EyeOfTheStormAbility/Eye_Of_The_Storm",
         "mScriptName": "Eye_Of_The_Storm",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Eye_Of_The_Storm",
@@ -885,11 +983,13 @@
     },
     "{d4af1669}": {
         "ObjectName": "EyeOfTheStormPassive",
+        "objectPath": "{d4af1669}",
         "mScriptName": "EyeOfTheStormPassive",
         "__type": "SpellObject"
     },
     "Characters/Janna/Spells/TailwindSelfAbility/Tailwind": {
         "ObjectName": "Tailwind",
+        "objectPath": "Characters/Janna/Spells/TailwindSelfAbility/Tailwind",
         "mScriptName": "Tailwind",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Tailwind",
@@ -899,6 +999,7 @@
     },
     "Characters/Janna/Spells/TailwindSelfAbility/TailwindSelf": {
         "ObjectName": "TailwindSelf",
+        "objectPath": "Characters/Janna/Spells/TailwindSelfAbility/TailwindSelf",
         "mScriptName": "TailwindSelf",
         "mSpell": {
             "DataValues": [
@@ -1008,7 +1109,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -1080,6 +1181,7 @@
     },
     "Characters/Janna/Spells/HowlingGaleAbility/Howling_Gale": {
         "ObjectName": "Howling_Gale",
+        "objectPath": "Characters/Janna/Spells/HowlingGaleAbility/Howling_Gale",
         "mScriptName": "Howling_Gale",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Howling_Gale",
@@ -1089,6 +1191,7 @@
     },
     "Characters/Janna/Spells/HowlingGaleAbility/HowlingGale": {
         "ObjectName": "HowlingGale",
+        "objectPath": "Characters/Janna/Spells/HowlingGaleAbility/HowlingGale",
         "mScriptName": "HowlingGale",
         "mSpell": {
             "flags": 4,
@@ -1433,7 +1536,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1494,7 +1597,7 @@
                 110.0,
                 110.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     90.0,
                     95.0,
@@ -1668,8 +1771,8 @@
                     "EffectCalculation": {
                         "mFormulaParts": [
                             {
-                                "mEffectIndex": 4,
-                                "__type": "EffectValueCalculationPart"
+                                "mDataValue": "BaseKnockup",
+                                "__type": "NamedDataValueCalculationPart"
                             }
                         ],
                         "__type": "GameCalculation"
@@ -1715,6 +1818,7 @@
     },
     "Characters/Janna/Spells/HowlingGaleAbility/HowlingGale_URF": {
         "ObjectName": "HowlingGale_URF",
+        "objectPath": "Characters/Janna/Spells/HowlingGaleAbility/HowlingGale_URF",
         "mScriptName": "HowlingGale_URF",
         "mSpell": {
             "flags": 4,
@@ -1841,7 +1945,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1902,7 +2006,7 @@
                 150.0,
                 165.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     90.0,
                     105.0,
@@ -1953,6 +2057,7 @@
     },
     "Characters/Janna/Spells/HowlingGaleAbility/HowlingGaleSpell": {
         "ObjectName": "HowlingGaleSpell",
+        "objectPath": "Characters/Janna/Spells/HowlingGaleAbility/HowlingGaleSpell",
         "mScriptName": "HowlingGaleSpell",
         "mSpell": {
             "flags": 4,
@@ -2009,8 +2114,8 @@
             ],
             "mCoefficient": 1.2000000476837158,
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2045,7 +2150,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2153,6 +2258,7 @@
     },
     "Characters/Janna/Spells/SowTheWindAbility/SowTheWind": {
         "ObjectName": "SowTheWind",
+        "objectPath": "Characters/Janna/Spells/SowTheWindAbility/SowTheWind",
         "mScriptName": "SowTheWind",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2306,8 +2412,8 @@
                 "ASSETS/Characters/Janna/HUD/Icons2D/JannaW.dds"
             ],
             "mCastTime": 0.24500000476837158,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 8.0,
                 8.0,
@@ -2343,7 +2449,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -2428,7 +2534,7 @@
                 70.0,
                 70.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     55.0,
@@ -2545,6 +2651,7 @@
     },
     "Characters/Janna/Spells/SowTheWindAbility/Zephyr": {
         "ObjectName": "Zephyr",
+        "objectPath": "Characters/Janna/Spells/SowTheWindAbility/Zephyr",
         "mScriptName": "Zephyr",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Zephyr",
@@ -2554,6 +2661,7 @@
     },
     "Characters/Janna/Spells/JannaBasicAttack": {
         "ObjectName": "JannaBasicAttack",
+        "objectPath": "Characters/Janna/Spells/JannaBasicAttack",
         "mScriptName": "JannaBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -2592,7 +2700,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -2661,6 +2769,7 @@
     },
     "Characters/Janna/Spells/JannaBasicAttack2": {
         "ObjectName": "JannaBasicAttack2",
+        "objectPath": "Characters/Janna/Spells/JannaBasicAttack2",
         "mScriptName": "JannaBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -2698,7 +2807,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -3450,7 +3559,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -3527,7 +3636,7 @@
             "baseValue": 30.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.2999999523162842,
             "__type": "ModifiableFloat"
         },
@@ -3604,7 +3713,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/Janna/Spells/HowlingGaleAbility/HowlingGaleSpell",
             "Characters/Janna/Spells/JannaCritAttack",
             "Shared/Spells/BaseSpell",

@@ -14,6 +14,7 @@
     },
     "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoStacks": {
         "ObjectName": "EkkoStacks",
+        "objectPath": "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoStacks",
         "mScriptName": "EkkoStacks",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EkkoStacks",
@@ -23,6 +24,7 @@
     },
     "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoPassive": {
         "ObjectName": "EkkoPassive",
+        "objectPath": "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoPassive",
         "mScriptName": "EkkoPassive",
         "mSpell": {
             "mEffectAmount": [
@@ -215,7 +217,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -295,6 +297,7 @@
     },
     "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoPassiveSpeed": {
         "ObjectName": "EkkoPassiveSpeed",
+        "objectPath": "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoPassiveSpeed",
         "mScriptName": "EkkoPassiveSpeed",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EkkoPassiveSpeed",
@@ -304,6 +307,7 @@
     },
     "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoSlow": {
         "ObjectName": "EkkoSlow",
+        "objectPath": "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoSlow",
         "mScriptName": "EkkoSlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EkkoSlow",
@@ -313,6 +317,7 @@
     },
     "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoPassiveSlow": {
         "ObjectName": "EkkoPassiveSlow",
+        "objectPath": "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoPassiveSlow",
         "mScriptName": "EkkoPassiveSlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EkkoPassiveSlow",
@@ -334,6 +339,7 @@
     },
     "Characters/Ekko/Spells/EkkoRAbility/EkkoRInvuln": {
         "ObjectName": "EkkoRInvuln",
+        "objectPath": "Characters/Ekko/Spells/EkkoRAbility/EkkoRInvuln",
         "mScriptName": "EkkoRInvuln",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EkkoRInvuln",
@@ -343,11 +349,13 @@
     },
     "{17813f7d}": {
         "ObjectName": "EkkoRManager",
+        "objectPath": "{17813f7d}",
         "mScriptName": "EkkoRManager",
         "__type": "SpellObject"
     },
     "Characters/Ekko/Spells/EkkoRAbility/EkkoR": {
         "ObjectName": "EkkoR",
+        "objectPath": "Characters/Ekko/Spells/EkkoRAbility/EkkoR",
         "mScriptName": "EkkoR",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -488,7 +496,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -538,7 +546,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -711,11 +719,13 @@
     },
     "{71103854}": {
         "ObjectName": "EkkoRMinion",
+        "objectPath": "{71103854}",
         "mScriptName": "EkkoRMinion",
         "__type": "SpellObject"
     },
     "Characters/Ekko/Spells/EkkoRAbility/EkkoRHeal": {
         "ObjectName": "EkkoRHeal",
+        "objectPath": "Characters/Ekko/Spells/EkkoRAbility/EkkoRHeal",
         "mScriptName": "EkkoRHeal",
         "__type": "SpellObject"
     },
@@ -733,6 +743,7 @@
     },
     "Characters/Ekko/Spells/EkkoWAbility/EkkoWStun": {
         "ObjectName": "EkkoWStun",
+        "objectPath": "Characters/Ekko/Spells/EkkoWAbility/EkkoWStun",
         "mScriptName": "EkkoWStun",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EkkoWStun",
@@ -742,6 +753,7 @@
     },
     "Characters/Ekko/Spells/EkkoWAbility/EkkoWPassive": {
         "ObjectName": "EkkoWPassive",
+        "objectPath": "Characters/Ekko/Spells/EkkoWAbility/EkkoWPassive",
         "mScriptName": "EkkoWPassive",
         "mSpell": {
             "mImgIconName": [
@@ -757,6 +769,7 @@
     },
     "Characters/Ekko/Spells/EkkoWAbility/EkkoWShield": {
         "ObjectName": "EkkoWShield",
+        "objectPath": "Characters/Ekko/Spells/EkkoWAbility/EkkoWShield",
         "mScriptName": "EkkoWShield",
         "mSpell": {
             "mSpellTags": [
@@ -772,6 +785,7 @@
     },
     "Characters/Ekko/Spells/EkkoWAbility/EkkoW": {
         "ObjectName": "EkkoW",
+        "objectPath": "Characters/Ekko/Spells/EkkoWAbility/EkkoW",
         "mScriptName": "EkkoW",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1148,8 +1162,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Ekko/HUD/Icons2D/Ekko_W.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 24.0,
                 22.0,
@@ -1184,7 +1198,7 @@
                 1600.0,
                 1600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1600.0,
                     1600.0,
@@ -1217,7 +1231,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     30.0,
                     35.0,
@@ -1354,6 +1368,7 @@
     },
     "Characters/Ekko/Spells/EkkoWAbility/EkkoStunMarker": {
         "ObjectName": "EkkoStunMarker",
+        "objectPath": "Characters/Ekko/Spells/EkkoWAbility/EkkoStunMarker",
         "mScriptName": "EkkoStunMarker",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EkkoStunMarker",
@@ -1363,11 +1378,12 @@
     },
     "Characters/Ekko/Spells/EkkoBasicAttackP3": {
         "ObjectName": "EkkoBasicAttackP3",
+        "objectPath": "Characters/Ekko/Spells/EkkoBasicAttackP3",
         "mScriptName": "EkkoBasicAttackP3",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack_P_3",
-            "{11704a2b}": 0.3499999940395355,
+            "spellCastTime": 0.3499999940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1402,7 +1418,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -1446,11 +1462,12 @@
     },
     "Characters/Ekko/Spells/EkkoBasicAttackP2": {
         "ObjectName": "EkkoBasicAttackP2",
+        "objectPath": "Characters/Ekko/Spells/EkkoBasicAttackP2",
         "mScriptName": "EkkoBasicAttackP2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack_P_2",
-            "{11704a2b}": 0.3499999940395355,
+            "spellCastTime": 0.3499999940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1485,7 +1502,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -1529,11 +1546,12 @@
     },
     "Characters/Ekko/Spells/EkkoBasicAttackP1": {
         "ObjectName": "EkkoBasicAttackP1",
+        "objectPath": "Characters/Ekko/Spells/EkkoBasicAttackP1",
         "mScriptName": "EkkoBasicAttackP1",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack_P_1",
-            "{11704a2b}": 0.3499999940395355,
+            "spellCastTime": 0.3499999940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1568,7 +1586,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -1623,6 +1641,7 @@
     },
     "Characters/Ekko/Spells/EkkoQAbility/EkkoQReturnDead": {
         "ObjectName": "EkkoQReturnDead",
+        "objectPath": "Characters/Ekko/Spells/EkkoQAbility/EkkoQReturnDead",
         "mScriptName": "EkkoQReturnDead",
         "mSpell": {
             "flags": 4,
@@ -1680,8 +1699,8 @@
             ],
             "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1717,7 +1736,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1814,6 +1833,7 @@
     },
     "Characters/Ekko/Spells/EkkoQAbility/EkkoQReturn": {
         "ObjectName": "EkkoQReturn",
+        "objectPath": "Characters/Ekko/Spells/EkkoQAbility/EkkoQReturn",
         "mScriptName": "EkkoQReturn",
         "mSpell": {
             "flags": 4,
@@ -1872,8 +1892,8 @@
             ],
             "mCoefficient": 0.6000000238418579,
             "mAnimationName": "Spell2",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1906,7 +1926,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1981,6 +2001,7 @@
     },
     "Characters/Ekko/Spells/EkkoQAbility/EkkoQ": {
         "ObjectName": "EkkoQ",
+        "objectPath": "Characters/Ekko/Spells/EkkoQAbility/EkkoQ",
         "mScriptName": "EkkoQ",
         "mSpell": {
             "mAffectsTypeFlags": 13327,
@@ -2222,8 +2243,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Ekko/HUD/Icons2D/Ekko_Q.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 9.5,
                 9.0,
@@ -2257,7 +2278,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -2318,7 +2339,7 @@
                 90.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     60.0,
@@ -2496,6 +2517,7 @@
     },
     "Characters/Ekko/Spells/EkkoQAbility/EkkoQMis": {
         "ObjectName": "EkkoQMis",
+        "objectPath": "Characters/Ekko/Spells/EkkoQAbility/EkkoQMis",
         "mScriptName": "EkkoQMis",
         "mSpell": {
             "flags": 4,
@@ -2554,8 +2576,8 @@
             "mCoefficient": 1.2000000476837158,
             "mAnimationName": "Spell1",
             "mCastTime": 0.25099998712539673,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2589,7 +2611,7 @@
                 950.0,
                 950.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     950.0,
                     950.0,
@@ -2696,11 +2718,12 @@
     },
     "Characters/Ekko/Spells/EkkoBasicAttackTower": {
         "ObjectName": "EkkoBasicAttackTower",
+        "objectPath": "Characters/Ekko/Spells/EkkoBasicAttackTower",
         "mScriptName": "EkkoBasicAttackTower",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack_Tower",
-            "{11704a2b}": 0.3499999940395355,
+            "spellCastTime": 0.3499999940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2734,7 +2757,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -2787,6 +2810,7 @@
     },
     "Characters/Ekko/Spells/EkkoEAbility/EkkoEAttackBuff": {
         "ObjectName": "EkkoEAttackBuff",
+        "objectPath": "Characters/Ekko/Spells/EkkoEAbility/EkkoEAttackBuff",
         "mScriptName": "EkkoEAttackBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_EkkoEAttackBuff",
@@ -2796,6 +2820,7 @@
     },
     "Characters/Ekko/Spells/EkkoEAbility/EkkoE": {
         "ObjectName": "EkkoE",
+        "objectPath": "Characters/Ekko/Spells/EkkoEAbility/EkkoE",
         "mScriptName": "EkkoE",
         "mSpell": {
             "flags": 4,
@@ -2986,7 +3011,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3036,7 +3061,7 @@
                 60.0,
                 60.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     40.0,
                     45.0,
@@ -3172,10 +3197,11 @@
     },
     "Characters/Ekko/Spells/EkkoBasicAttack": {
         "ObjectName": "EkkoBasicAttack",
+        "objectPath": "Characters/Ekko/Spells/EkkoBasicAttack",
         "mScriptName": "EkkoBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
-            "{11704a2b}": 0.3499999940395355,
+            "spellCastTime": 0.3499999940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3210,7 +3236,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -3253,11 +3279,12 @@
     },
     "Characters/Ekko/Spells/EkkoBasicAttack3": {
         "ObjectName": "EkkoBasicAttack3",
+        "objectPath": "Characters/Ekko/Spells/EkkoBasicAttack3",
         "mScriptName": "EkkoBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack3",
-            "{11704a2b}": 0.3499999940395355,
+            "spellCastTime": 0.3499999940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3292,7 +3319,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -3335,11 +3362,12 @@
     },
     "Characters/Ekko/Spells/EkkoBasicAttack2": {
         "ObjectName": "EkkoBasicAttack2",
+        "objectPath": "Characters/Ekko/Spells/EkkoBasicAttack2",
         "mScriptName": "EkkoBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3499999940395355,
+            "spellCastTime": 0.3499999940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3374,7 +3402,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -3417,11 +3445,12 @@
     },
     "Characters/Ekko/Spells/EkkoCritAttack": {
         "ObjectName": "EkkoCritAttack",
+        "objectPath": "Characters/Ekko/Spells/EkkoCritAttack",
         "mScriptName": "EkkoCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.3499999940395355,
+            "spellCastTime": 0.3499999940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3456,7 +3485,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -3500,6 +3529,7 @@
     },
     "Characters/Ekko/Spells/EkkoEAttack": {
         "ObjectName": "EkkoEAttack",
+        "objectPath": "Characters/Ekko/Spells/EkkoEAttack",
         "mScriptName": "EkkoEAttack",
         "mSpell": {
             "mAffectsTypeFlags": 6831,
@@ -3557,8 +3587,8 @@
             "mCoefficient": 0.4000000059604645,
             "mAnimationName": "Spell3_Attack",
             "mCastTime": 0.25,
-            "{11704a2b}": 0.39000001549720764,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.39000001549720764,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 1.0,
                 1.0,
@@ -3596,7 +3626,7 @@
                 2000.0,
                 2000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2000.0,
                     2000.0,
@@ -3659,6 +3689,7 @@
     },
     "{f3b26ab9}": {
         "ObjectName": "EkkoWMis",
+        "objectPath": "{f3b26ab9}",
         "mScriptName": "EkkoWMis",
         "mSpell": {
             "flags": 4194304,
@@ -3719,8 +3750,8 @@
             "mImgIconName": [
                 "ASSETS/Spells/Icons2D/Cryophoenix_FrigidOrb.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3755,7 +3786,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3831,7 +3862,6 @@
             {
                 "MapId": 11,
                 "Position": "jungle",
-                "IsDefaultRecommendation": true,
                 "mDefaultPriority": [
                     3,
                     0,
@@ -3849,6 +3879,7 @@
             {
                 "MapId": 11,
                 "Position": "middle",
+                "IsDefaultRecommendation": true,
                 "mDefaultPriority": [
                     3,
                     0,
@@ -3865,7 +3896,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -4180,7 +4211,7 @@
             "baseValue": 32.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 2.049999952316284,
             "__type": "ModifiableFloat"
         },
@@ -4256,7 +4287,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Characters/Ekko/Spells/EkkoPassiveAbility/EkkoPassiveSpeed",
@@ -4712,6 +4743,7 @@
     },
     "{46e10fa3}": {
         "ObjectName": "Crepe_JinxVsEkko_EkkoWin",
+        "objectPath": "{46e10fa3}",
         "mScriptName": "Crepe_JinxVsEkko_EkkoWin",
         "mBuff": {
             "__type": "BuffData"
@@ -4720,6 +4752,7 @@
     },
     "{a42ed704}": {
         "ObjectName": "Crepe_JinxVsEkko_EkkoReward",
+        "objectPath": "{a42ed704}",
         "mScriptName": "Crepe_JinxVsEkko_EkkoReward",
         "mSpell": {
             "DataValues": [
@@ -4758,6 +4791,7 @@
     },
     "{ab628425}": {
         "ObjectName": "Crepe_JinxVsEkko_EkkoTracker",
+        "objectPath": "{ab628425}",
         "mScriptName": "Crepe_JinxVsEkko_EkkoTracker",
         "mSpell": {
             "mImgIconName": [
@@ -4781,6 +4815,7 @@
     },
     "{bd9cf0a1}": {
         "ObjectName": "Crepe_JinxVsEkko_EkkoStart",
+        "objectPath": "{bd9cf0a1}",
         "mScriptName": "Crepe_JinxVsEkko_EkkoStart",
         "mSpell": {
             "mImgIconName": [

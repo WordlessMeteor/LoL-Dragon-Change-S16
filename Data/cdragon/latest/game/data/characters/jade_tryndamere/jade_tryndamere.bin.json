@@ -13,7 +13,7 @@
             "image": "ASSETS/Characters/Jade_Tryndamere/Skins/Base/Jade_TryndamereLoadScreen_Feeney.tex",
             "__type": "CensoredImage"
         },
-        "__type": "{3018b0da}"
+        "__type": "Portrait"
     },
     "{32ac05f4}": {
         "mNameTraKey": "Jade_Portrait_Name_Tryndamere_LoR_01",
@@ -29,7 +29,7 @@
             "image": "ASSETS/Characters/Jade_Tryndamere/Skins/Base/Jade_TryndamereLoadScreen_LoR_01.tex",
             "__type": "CensoredImage"
         },
-        "__type": "{3018b0da}"
+        "__type": "Portrait"
     },
     "{0fa25305}": {
         "__type": "ChampionRuneRecommendationsContext"
@@ -98,7 +98,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -180,6 +180,7 @@
     },
     "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereE": {
         "ObjectName": "Jade_TryndamereE",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereEAbility/Jade_TryndamereE",
         "mScriptName": "Jade_TryndamereE",
         "mSpell": {
             "flags": 4,
@@ -319,15 +320,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0,
-                    8.0
+                    9.0,
+                    9.0,
+                    9.0,
+                    9.0,
+                    9.0,
+                    9.0,
+                    9.0
                 ],
-                "{0a3e0478}": 8.0,
+                "{0a3e0478}": 9.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -342,7 +343,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -488,6 +489,7 @@
     },
     "{17e52b5e}": {
         "ObjectName": "Jade_TryndamereSlash",
+        "objectPath": "{17e52b5e}",
         "mScriptName": "Jade_TryndamereSlash",
         "mSpell": {
             "flags": 4,
@@ -530,7 +532,7 @@
                 660.0,
                 660.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     660.0,
                     660.0,
@@ -603,11 +605,12 @@
     },
     "Characters/Jade_Tryndamere/Spells/Jade_TryndamereBasicAttack": {
         "ObjectName": "Jade_TryndamereBasicAttack",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereBasicAttack",
         "mScriptName": "Jade_TryndamereBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_TryndamereBasicAttack",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -640,7 +643,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -696,6 +699,7 @@
     },
     "{4f16daa3}": {
         "ObjectName": "Jade_TryndamereQPassive",
+        "objectPath": "{4f16daa3}",
         "mScriptName": "Jade_TryndamereQPassive",
         "mSpell": {
             "mImgIconName": [
@@ -711,6 +715,7 @@
     },
     "{b6ce403c}": {
         "ObjectName": "Jade_TryndamerePassive",
+        "objectPath": "{b6ce403c}",
         "mScriptName": "Jade_TryndamerePassive",
         "mSpell": {
             "DataValues": [
@@ -776,6 +781,7 @@
     },
     "Characters/Jade_Tryndamere/Spells/Jade_TryndamereQAbility/Jade_TryndamereQ": {
         "ObjectName": "Jade_TryndamereQ",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereQAbility/Jade_TryndamereQ",
         "mScriptName": "Jade_TryndamereQ",
         "mSpell": {
             "flags": 4,
@@ -823,13 +829,13 @@
                 {
                     "name": "ADPerStack",
                     "values": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0,
+                        3.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -901,15 +907,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    13.0,
-                    12.0,
+                    15.5,
+                    14.0,
+                    12.5,
                     11.0,
-                    10.0,
-                    9.0,
+                    9.5,
                     8.0,
-                    7.0
+                    6.5
                 ],
-                "{0a3e0478}": 13.0,
+                "{0a3e0478}": 15.5,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1031,12 +1037,13 @@
     },
     "Characters/Jade_Tryndamere/Spells/Jade_TryndamereBasicAttack2": {
         "ObjectName": "Jade_TryndamereBasicAttack2",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereBasicAttack2",
         "mScriptName": "Jade_TryndamereBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_TryndamereBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1069,7 +1076,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1125,6 +1132,7 @@
     },
     "Characters/Jade_Tryndamere/Spells/Jade_TryndamereUndyingRageAbility/Jade_TryndamereUndyingRage": {
         "ObjectName": "Jade_TryndamereUndyingRage",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereUndyingRageAbility/Jade_TryndamereUndyingRage",
         "mScriptName": "Jade_TryndamereUndyingRage",
         "mSpell": {
             "flags": 20,
@@ -1334,6 +1342,7 @@
     },
     "{b8e06586}": {
         "ObjectName": "Jade_Tryndamere_MockingShoutSlow",
+        "objectPath": "{b8e06586}",
         "mScriptName": "Jade_Tryndamere_MockingShoutSlow",
         "mSpell": {
             "mImgIconName": [
@@ -1349,6 +1358,7 @@
     },
     "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_TryndamereW": {
         "ObjectName": "Jade_TryndamereW",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereWAbility/Jade_TryndamereW",
         "mScriptName": "Jade_TryndamereW",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1436,8 +1446,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/48thSlave_Pacify.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -1598,12 +1608,13 @@
     },
     "Characters/Jade_Tryndamere/Spells/Jade_TryndamereCritAttack": {
         "ObjectName": "Jade_TryndamereCritAttack",
+        "objectPath": "Characters/Jade_Tryndamere/Spells/Jade_TryndamereCritAttack",
         "mScriptName": "Jade_TryndamereCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_TryndamereCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.31610000133514404,
+            "spellCastTime": 0.31610000133514404,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1636,7 +1647,7 @@
                 200.0,
                 200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     200.0,
                     200.0,
@@ -1739,7 +1750,7 @@
             "baseValue": 31.25,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.25,
             "__type": "ModifiableFloat"
         },
@@ -1815,7 +1826,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "{17e52b5e}",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",

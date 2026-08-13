@@ -1185,7 +1185,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@&nbsp;s %i:cooldown%",
             "description": "Poppy schwingt ihren Hammer, verursacht Schaden und erschafft ein Gebiet, das Gegner verlangsamt und zeitverzögert explodiert.",
-            "dynamicDescription": "Poppy schlägt auf den Boden, verursacht <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@&nbsp;% des maximalen Lebens als normalen Schaden</physicalDamage> und macht den Boden instabil. <br><br>Der instabile Bereich <status>verlangsamt</status> Gegner um @Slow_@&nbsp;% und bricht nach @DelayBetweenTwoHits@&nbsp;Sekunde auf, was erneut <physicalDamage>@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@&nbsp;% des maximalen Lebens als normalen Schaden</physicalDamage> verursacht.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Poppy schlägt auf den Boden, verursacht <physicalDamage>normalen Schaden in Höhe von@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@ % des maximalen Lebens</physicalDamage> und macht den Boden instabil. <br><br>Der instabile Bereich <status>verlangsamt</status> Gegner um @MoveSpeedMod@ % und bricht nach @DelayBetweenTwoHits@ Sekunde auf, was erneut <physicalDamage>normalen Schaden in Höhe von@BaseDamage@</physicalDamage> plus <physicalDamage>@HealthDamagePercent@ % des maximalen Lebens</physicalDamage> verursacht.@SpellModifierDescriptionAppend@",
             "range": [
                 430.0,
                 430.0,
@@ -1211,72 +1211,72 @@
                 3.0
             ],
             "coefficients": {
-                "coefficient1": 1.0,
+                "coefficient1": 0.0,
                 "coefficient2": 0.0
             },
             "effectAmounts": {
                 "Effect1Amount": [
-                    30.0,
-                    30.0,
-                    55.0,
-                    80.0,
-                    105.0,
-                    130.0,
-                    130.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect2Amount": [
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5,
-                    0.5
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect3Amount": [
-                    15.0,
-                    20.0,
-                    25.0,
-                    30.0,
-                    35.0,
-                    40.0,
-                    45.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect4Amount": [
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0,
-                    1.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect5Amount": [
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0,
-                    9.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect6Amount": [
-                    50.0,
-                    50.0,
-                    80.0,
-                    110.0,
-                    140.0,
-                    170.0,
-                    170.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect7Amount": [
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0,
-                    100.0
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0,
+                    0.0
                 ],
                 "Effect8Amount": [
                     0.0,

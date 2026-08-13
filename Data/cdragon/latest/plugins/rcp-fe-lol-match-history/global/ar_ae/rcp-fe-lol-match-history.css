@@ -1206,7 +1206,7 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    height: 120px;
+    min-height: 120px;
     padding: 7px 7px 7px 0;
     position: relative;
     width: 100%
@@ -1218,7 +1218,7 @@
     border-left: 9px solid #785a28;
     box-sizing: border-box;
     content: "";
-    height: 120px;
+    height: 100%;
     left: auto;
     pointer-events: none;
     position: absolute;
@@ -1415,8 +1415,8 @@
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
-    height: 100%;
     justify-content: space-between;
+    min-height: 100%;
     padding-top: 14px;
     position: relative;
     width: 345px
@@ -1488,9 +1488,16 @@
 }
 
 .tft-match-summary-component .match-summary-right .match-summary-traits {
-    align-items: center;
+    align-items: flex-start;
     display: flex;
     flex: 1 1 auto;
+    flex-direction: column;
+    width: 100%
+}
+
+.tft-match-summary-component .match-summary-right .match-summary-traits .match-summary-traits-row {
+    align-items: center;
+    display: flex;
     flex-direction: row;
     width: 100%
 }
@@ -1500,9 +1507,10 @@
     background-image: url(/fe/lol-match-history/bronze.png);
     background-size: 100% 100%;
     display: flex;
+    flex-shrink: 0;
     height: 28px;
     justify-content: center;
-    margin: 0 0 0 3px;
+    margin: 0 0 2px 3px;
     width: 24px
 }
 
@@ -1561,7 +1569,7 @@
 }
 
 .tft-match-summary-component .match-summary-right .match-summary-traits .match-summary-trait-img-bg:not(:first-child) {
-    margin: 0 8px 0 3px
+    margin: 0 8px 2px 3px
 }
 
 .tft-match-summary-component.pair .placement_3:after,
@@ -1791,8 +1799,28 @@
     font-family: var(--font-frizquadrata)
 }
 
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(el-gr),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(ja-jp),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(ko-kr),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(ro-ro),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(ru-ru),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(th-th),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(tr-tr),
 .match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(vi-VN),
-.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(vi-VN) {
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(zh-cn),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(zh-my),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper .match-history-stats-main .match-history-stats-tb .stats-td-normal:lang(zh-tw),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(el-gr),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(ja-jp),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(ko-kr),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(ro-ro),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(ru-ru),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(th-th),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(tr-tr),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(vi-VN),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(zh-cn),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(zh-my),
+.match-details-root.JADE .match-details-stats-component .match-history-stats-wrapper:lang(zh-tw) {
     font-family: var(--font-display)
 }
 
@@ -6179,7 +6207,17 @@
     font-family: var(--font-frizquadrata)
 }
 
-.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(vi-VN) {
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(el-gr),
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(ja-jp),
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(ko-kr),
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(ro-ro),
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(ru-ru),
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(th-th),
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(tr-tr),
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(vi-VN),
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(zh-cn),
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(zh-my),
+.jade-match-details-nav-component .jade-match-details-tabs-nav .jade-match-details-tab:lang(zh-tw) {
     font-family: var(--font-display)
 }
 

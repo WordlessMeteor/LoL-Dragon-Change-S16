@@ -20,6 +20,7 @@
     },
     "Characters/RekSai/Spells/RekSaiWBurrowedAbility/RekSaiWBurrowed": {
         "ObjectName": "RekSaiWBurrowed",
+        "objectPath": "Characters/RekSai/Spells/RekSaiWBurrowedAbility/RekSaiWBurrowed",
         "mScriptName": "RekSaiWBurrowed",
         "mSpell": {
             "flags": 4,
@@ -137,8 +138,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_W2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -172,7 +173,7 @@
                 1500.0,
                 1500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1500.0,
                     1500.0,
@@ -264,6 +265,7 @@
     },
     "Characters/RekSai/Spells/RekSaiEAbility/RekSaiEReady": {
         "ObjectName": "RekSaiEReady",
+        "objectPath": "Characters/RekSai/Spells/RekSaiEAbility/RekSaiEReady",
         "mScriptName": "RekSaiEReady",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiEReady",
@@ -273,6 +275,7 @@
     },
     "Characters/RekSai/Spells/RekSaiEAbility/RekSaiECooldown": {
         "ObjectName": "RekSaiECooldown",
+        "objectPath": "Characters/RekSai/Spells/RekSaiEAbility/RekSaiECooldown",
         "mScriptName": "RekSaiECooldown",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiECooldown",
@@ -282,6 +285,7 @@
     },
     "Characters/RekSai/Spells/RekSaiEAbility/RekSaiE": {
         "ObjectName": "RekSaiE",
+        "objectPath": "Characters/RekSai/Spells/RekSaiEAbility/RekSaiE",
         "mScriptName": "RekSaiE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -452,6 +456,39 @@
                     "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "TunnelReuseCooldown",
+                            "values": [
+                                5.0,
+                                4.0,
+                                3.0,
+                                2.0,
+                                1.0,
+                                0.0,
+                                -1.0
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "DashCooldown",
+                            "values": [
+                                10.0,
+                                9.0,
+                                8.0,
+                                7.0,
+                                6.0,
+                                5.0,
+                                4.0
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "BaseDamageCalculation": {
                     "mFormulaParts": [
@@ -517,8 +554,8 @@
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_E1.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 6.0,
                 6.0,
@@ -554,7 +591,7 @@
                 225.0,
                 225.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     225.0,
                     225.0,
@@ -667,6 +704,7 @@
     },
     "Characters/RekSai/Spells/RekSaiEAbility/RekSaiESpellPassive": {
         "ObjectName": "RekSaiESpellPassive",
+        "objectPath": "Characters/RekSai/Spells/RekSaiEAbility/RekSaiESpellPassive",
         "mScriptName": "RekSaiESpellPassive",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -717,8 +755,8 @@
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_E1.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 12.0,
                 12.0,
@@ -754,7 +792,7 @@
                 225.0,
                 225.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     225.0,
                     225.0,
@@ -851,6 +889,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowedSlow": {
         "ObjectName": "RekSaiQBurrowedSlow",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowedSlow",
         "mScriptName": "RekSaiQBurrowedSlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiQBurrowedSlow",
@@ -860,6 +899,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowedMis": {
         "ObjectName": "RekSaiQBurrowedMis",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowedMis",
         "mScriptName": "RekSaiQBurrowedMis",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -919,8 +959,8 @@
             "mImgIconName": [
                 ""
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -953,7 +993,7 @@
                 1500.0,
                 1500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1500.0,
                     1500.0,
@@ -1058,6 +1098,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowed": {
         "ObjectName": "RekSaiQBurrowed",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowed",
         "mScriptName": "RekSaiQBurrowed",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1069,13 +1110,27 @@
                 "Trait_Low_Damage",
                 "Trait_AoE"
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        7.5,
+                        7.5,
+                        7.5,
+                        7.5,
+                        7.5,
+                        7.5,
+                        7.5
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mAnimationName": "Spell1_Burrowed",
             "mImgIconName": [
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_Q2.dds"
             ],
             "mCastTime": 0.125,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "mCantCancelWhileWindingUp": true,
             "alwaysSnapFacing": true,
             "bHaveHitEffect": true,
@@ -1088,7 +1143,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1185,6 +1240,7 @@
     },
     "Characters/RekSai/Spells/RekSaiPassiveAbility/RekSaiPRegen": {
         "ObjectName": "RekSaiPRegen",
+        "objectPath": "Characters/RekSai/Spells/RekSaiPassiveAbility/RekSaiPRegen",
         "mScriptName": "RekSaiPRegen",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiPRegen",
@@ -1194,6 +1250,7 @@
     },
     "Characters/RekSai/Spells/RekSaiPassiveAbility/RekSaiPassive": {
         "ObjectName": "RekSaiPassive",
+        "objectPath": "Characters/RekSai/Spells/RekSaiPassiveAbility/RekSaiPassive",
         "mScriptName": "RekSaiPassive",
         "mSpell": {
             "mEffectAmount": [
@@ -1311,17 +1368,76 @@
                         5.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealPercentStartValue",
+                    "values": [
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869,
+                        0.09000000357627869
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "HealPercentEndValue",
+                    "values": [
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
+            "DataValuesModeOverride": {
+                "cherry": {
+                    "SpellDataValues": [
+                        {
+                            "name": "HealPercentStartValue",
+                            "values": [
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612,
+                                0.10000000149011612
+                            ],
+                            "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "HealPercentEndValue",
+                            "values": [
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104,
+                                0.44999998807907104
+                            ],
+                            "__type": "SpellDataValue"
+                        }
+                    ],
+                    "__type": "SpellDataValueVector"
+                }
+            },
             "mSpellCalculations": {
                 "HealAmount": {
                     "mFormulaParts": [
                         {
                             "mStat": 12,
                             "mSubpart": {
-                                "mStartValue": 0.09000000357627869,
-                                "mEndValue": 0.20000000298023224,
-                                "__type": "ByCharLevelInterpolationCalculationPart"
+                                "{0589a59c}": "HealPercentStartValue",
+                                "{0b65bc23}": "HealPercentEndValue",
+                                "__type": "{ee18a47b}"
                             },
                             "__type": "StatBySubPartCalculationPart"
                         }
@@ -1363,7 +1479,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -1400,12 +1516,13 @@
     },
     "Characters/RekSai/Spells/RekSaiBasicAttack5": {
         "ObjectName": "RekSaiBasicAttack5",
+        "objectPath": "Characters/RekSai/Spells/RekSaiBasicAttack5",
         "mScriptName": "RekSaiBasicAttack5",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixBasicAttack",
             "mAnimationName": "Attack5",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "castConeDistance": 100.0,
             "castFrame": 10.0,
@@ -1424,12 +1541,13 @@
     },
     "Characters/RekSai/Spells/RekSaiBasicAttack4": {
         "ObjectName": "RekSaiBasicAttack4",
+        "objectPath": "Characters/RekSai/Spells/RekSaiBasicAttack4",
         "mScriptName": "RekSaiBasicAttack4",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixBasicAttack",
             "mAnimationName": "Attack4",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "castConeDistance": 100.0,
             "castFrame": 10.0,
@@ -1459,12 +1577,13 @@
     },
     "Characters/RekSai/Spells/RekSaiBasicAttack6": {
         "ObjectName": "RekSaiBasicAttack6",
+        "objectPath": "Characters/RekSai/Spells/RekSaiBasicAttack6",
         "mScriptName": "RekSaiBasicAttack6",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixBasicAttack",
             "mAnimationName": "Attack6",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "castConeDistance": 100.0,
             "castFrame": 10.0,
@@ -1483,12 +1602,13 @@
     },
     "Characters/RekSai/Spells/RekSaiBasicAttack3": {
         "ObjectName": "RekSaiBasicAttack3",
+        "objectPath": "Characters/RekSai/Spells/RekSaiBasicAttack3",
         "mScriptName": "RekSaiBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixBasicAttack",
             "mAnimationName": "Attack3",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "castConeDistance": 100.0,
             "castFrame": 10.0,
@@ -1507,12 +1627,13 @@
     },
     "Characters/RekSai/Spells/RekSaiBasicAttack2": {
         "ObjectName": "RekSaiBasicAttack2",
+        "objectPath": "Characters/RekSai/Spells/RekSaiBasicAttack2",
         "mScriptName": "RekSaiBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "castConeDistance": 100.0,
             "castFrame": 10.0,
@@ -1543,6 +1664,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQSpellPassive": {
         "ObjectName": "RekSaiQSpellPassive",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQSpellPassive",
         "mScriptName": "RekSaiQSpellPassive",
         "mSpell": {
             "flags": 4,
@@ -1648,8 +1770,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_Q1.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -1682,7 +1804,7 @@
                 300.0,
                 300.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     300.0,
                     300.0,
@@ -1797,12 +1919,13 @@
     },
     "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack3": {
         "ObjectName": "RekSaiQAttack3",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack3",
         "mScriptName": "RekSaiQAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 24575,
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1838,7 +1961,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -1877,12 +2000,13 @@
     },
     "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack2": {
         "ObjectName": "RekSaiQAttack2",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack2",
         "mScriptName": "RekSaiQAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 24575,
             "mAnimationName": "Spell1b",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1918,7 +2042,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -1957,6 +2081,7 @@
     },
     "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQ": {
         "ObjectName": "RekSaiQ",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQ",
         "mScriptName": "RekSaiQ",
         "mSpell": {
             "flags": 4,
@@ -2298,8 +2423,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_Q1.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -2331,7 +2456,7 @@
                 300.0,
                 300.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     300.0,
                     300.0,
@@ -2445,12 +2570,13 @@
     },
     "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack": {
         "ObjectName": "RekSaiQAttack",
+        "objectPath": "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack",
         "mScriptName": "RekSaiQAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24575,
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2486,7 +2612,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -2525,11 +2651,12 @@
     },
     "Characters/RekSai/Spells/RekSaiInCombat": {
         "ObjectName": "RekSaiInCombat",
+        "objectPath": "Characters/RekSai/Spells/RekSaiInCombat",
         "mScriptName": "RekSaiInCombat",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixBasicAttack",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "castConeDistance": 100.0,
             "castFrame": 12.0,
@@ -2561,6 +2688,7 @@
     },
     "{36cd608e}": {
         "ObjectName": "RekSaiRWrapper",
+        "objectPath": "{36cd608e}",
         "mScriptName": "RekSaiRWrapper",
         "mSpell": {
             "mAffectsTypeFlags": 4106,
@@ -2749,8 +2877,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_R.dds"
             ],
-            "{11704a2b}": 0.0009999871253967285,
-            "{f26881a0}": 0.001000046730041504,
+            "spellCastTime": 0.0009999871253967285,
+            "spellTotalTime": 0.001000046730041504,
             "cooldownTime": [
                 100.0,
                 100.0,
@@ -2786,7 +2914,7 @@
                 1500.0,
                 1500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1500.0,
                     1500.0,
@@ -2880,6 +3008,7 @@
     },
     "{3e616bcb}": {
         "ObjectName": "RekSaiRPrey",
+        "objectPath": "{3e616bcb}",
         "mScriptName": "RekSaiRPrey",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiRPrey",
@@ -2889,6 +3018,7 @@
     },
     "{6a816c9f}": {
         "ObjectName": "RekSaiR2",
+        "objectPath": "{6a816c9f}",
         "mScriptName": "RekSaiR2",
         "mSpell": {
             "flags": 36,
@@ -2993,8 +3123,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_R.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 110.0,
                 100.0,
@@ -3028,7 +3158,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3087,6 +3217,7 @@
     },
     "{d00ab09c}": {
         "ObjectName": "RekSaiRSpellPassive",
+        "objectPath": "{d00ab09c}",
         "mScriptName": "RekSaiRSpellPassive",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiRPrey",
@@ -3096,6 +3227,7 @@
     },
     "Characters/RekSai/Spells/RekSaiRAbility/RekSaiR": {
         "ObjectName": "RekSaiR",
+        "objectPath": "Characters/RekSai/Spells/RekSaiRAbility/RekSaiR",
         "mScriptName": "RekSaiR",
         "mSpell": {
             "mAffectsTypeFlags": 4106,
@@ -3300,8 +3432,8 @@
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_R.dds"
             ],
             "mCastTime": 0.3499999940395355,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 120.0,
                 120.0,
@@ -3338,7 +3470,7 @@
                 1500.0,
                 1500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1500.0,
                     1500.0,
@@ -3434,12 +3566,13 @@
     },
     "Characters/RekSai/Spells/RekSaiCritAttack": {
         "ObjectName": "RekSaiCritAttack",
+        "objectPath": "Characters/RekSai/Spells/RekSaiCritAttack",
         "mScriptName": "RekSaiCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "castConeDistance": 100.0,
             "castFrame": 10.0,
@@ -3458,6 +3591,7 @@
     },
     "Characters/RekSai/Spells/RekSaiWAbility/RekSaiW": {
         "ObjectName": "RekSaiW",
+        "objectPath": "Characters/RekSai/Spells/RekSaiWAbility/RekSaiW",
         "mScriptName": "RekSaiW",
         "mSpell": {
             "flags": 4,
@@ -3808,12 +3942,12 @@
                             "name": "BurrowedMoveSpeed",
                             "values": [
                                 10.0,
-                                15.0,
                                 20.0,
-                                25.0,
                                 30.0,
-                                35.0,
-                                40.0
+                                40.0,
+                                50.0,
+                                60.0,
+                                70.0
                             ],
                             "__type": "SpellDataValue"
                         },
@@ -3854,8 +3988,8 @@
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_W1.dds",
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_W2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -3895,7 +4029,7 @@
                 1500.0,
                 1500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1500.0,
                     1500.0,
@@ -4006,12 +4140,13 @@
     },
     "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWAttack": {
         "ObjectName": "RekSaiWAttack",
+        "objectPath": "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWAttack",
         "mScriptName": "RekSaiWAttack",
         "mSpell": {
             "mAffectsTypeFlags": 6826,
             "mAnimationName": "",
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -4051,6 +4186,7 @@
     },
     "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWSpellPassive": {
         "ObjectName": "RekSaiWSpellPassive",
+        "objectPath": "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWSpellPassive",
         "mScriptName": "RekSaiWSpellPassive",
         "mSpell": {
             "flags": 4,
@@ -4168,8 +4304,8 @@
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_W1.dds",
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_W2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -4203,7 +4339,7 @@
                 1500.0,
                 1500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1500.0,
                     1500.0,
@@ -4303,6 +4439,7 @@
     },
     "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWUnburrowLockout": {
         "ObjectName": "RekSaiWUnburrowLockout",
+        "objectPath": "Characters/RekSai/Spells/RekSaiWAbility/RekSaiWUnburrowLockout",
         "mScriptName": "RekSaiWUnburrowLockout",
         "mSpell": {
             "mAffectsTypeFlags": 9221,
@@ -4355,7 +4492,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -4409,6 +4546,7 @@
     },
     "Characters/RekSai/Spells/RekSaiKnockupImmune": {
         "ObjectName": "RekSaiKnockupImmune",
+        "objectPath": "Characters/RekSai/Spells/RekSaiKnockupImmune",
         "mScriptName": "RekSaiKnockupImmune",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RekSaiKnockupImmune",
@@ -4426,11 +4564,12 @@
     },
     "Characters/RekSai/Spells/RekSaiJetSkiManager": {
         "ObjectName": "RekSaiJetSkiManager",
+        "objectPath": "Characters/RekSai/Spells/RekSaiJetSkiManager",
         "mScriptName": "RekSaiJetSkiManager",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixBasicAttack",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "castConeDistance": 100.0,
             "castFrame": 12.0,
@@ -4449,11 +4588,13 @@
     },
     "Characters/RekSai/Spells/RekSaiRunCycleManager": {
         "ObjectName": "RekSaiRunCycleManager",
+        "objectPath": "Characters/RekSai/Spells/RekSaiRunCycleManager",
         "mScriptName": "RekSaiRunCycleManager",
         "__type": "SpellObject"
     },
     "Characters/RekSai/Spells/RekSaiEBurrowedAbility/RekSaiEBurrowed": {
         "ObjectName": "RekSaiEBurrowed",
+        "objectPath": "Characters/RekSai/Spells/RekSaiEBurrowedAbility/RekSaiEBurrowed",
         "mScriptName": "RekSaiEBurrowed",
         "mSpell": {
             "flags": 4,
@@ -4462,6 +4603,20 @@
                 "PositiveEffect_MoveBlock",
                 "Trait_PlayerSelectedDashDirection"
             ],
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        9.0,
+                        9.0,
+                        8.0,
+                        7.0,
+                        6.0,
+                        5.0,
+                        4.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mAnimationName": "Idle1",
             "mImgIconName": [
                 "ASSETS/Characters/RekSai/HUD/Icons2D/RekSai_E2.dds"
@@ -4500,7 +4655,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -4609,11 +4764,12 @@
     },
     "Characters/RekSai/Spells/RekSaiBasicAttack": {
         "ObjectName": "RekSaiBasicAttack",
+        "objectPath": "Characters/RekSai/Spells/RekSaiBasicAttack",
         "mScriptName": "RekSaiBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixBasicAttack",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "castConeDistance": 100.0,
             "castFrame": 10.0,
@@ -4999,7 +5155,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -5037,27 +5193,15 @@
         ],
         "ChaosJunglePath": [
             {
+                "Camp": 9,
+                "__type": "TakeCamp"
+            },
+            {
                 "Camp": 10,
                 "__type": "TakeCamp"
             },
             {
                 "Camp": 11,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 9,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 8,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 6,
-                "__type": "TakeCamp"
-            },
-            {
-                "Camp": 7,
                 "__type": "TakeCamp"
             },
             {
@@ -6045,7 +6189,7 @@
             "baseValue": 32.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 2.049999952316284,
             "__type": "ModifiableFloat"
         },
@@ -6144,7 +6288,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/RekSai/Spells/RekSaiQBurrowedAbility/RekSaiQBurrowedMis",
             "Shared/Spells/BaseSpell",
             "Characters/RekSai/Spells/RekSaiQAbility/RekSaiQAttack",

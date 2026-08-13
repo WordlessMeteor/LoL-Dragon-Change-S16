@@ -13,6 +13,7 @@
     },
     "Characters/Azir/Spells/AzirWAbility/AzirWProcBuff": {
         "ObjectName": "AzirWProcBuff",
+        "objectPath": "Characters/Azir/Spells/AzirWAbility/AzirWProcBuff",
         "mScriptName": "AzirWProcBuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_AzirRHaste",
@@ -22,6 +23,7 @@
     },
     "Characters/Azir/Spells/AzirWAbility/AzirWSpawnSoldier": {
         "ObjectName": "AzirWSpawnSoldier",
+        "objectPath": "Characters/Azir/Spells/AzirWAbility/AzirWSpawnSoldier",
         "mScriptName": "AzirWSpawnSoldier",
         "mSpell": {
             "mSpellTags": [
@@ -84,7 +86,7 @@
                 "ASSETS/Characters/Azir/HUD/Icons2D/Azir_W.dds"
             ],
             "mCastTime": 0.25,
-            "{f26881a0}": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -118,7 +120,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -186,6 +188,7 @@
     },
     "Characters/Azir/Spells/AzirWAbility/AzirWSelfMissile": {
         "ObjectName": "AzirWSelfMissile",
+        "objectPath": "Characters/Azir/Spells/AzirWAbility/AzirWSelfMissile",
         "mScriptName": "AzirWSelfMissile",
         "mSpell": {
             "flags": 4,
@@ -237,8 +240,8 @@
             "mImgIconName": [
                 "Annie_Disintegrate.dds"
             ],
-            "{11704a2b}": 0.42500001192092896,
-            "{f26881a0}": 0.7999999523162842,
+            "spellCastTime": 0.42500001192092896,
+            "spellTotalTime": 0.7999999523162842,
             "cooldownTime": [
                 60.0,
                 60.0,
@@ -272,7 +275,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -337,6 +340,7 @@
     },
     "Characters/Azir/Spells/AzirWAbility/AzirW": {
         "ObjectName": "AzirW",
+        "objectPath": "Characters/Azir/Spells/AzirWAbility/AzirW",
         "mScriptName": "AzirW",
         "mSpell": {
             "flags": 4,
@@ -463,6 +467,49 @@
                         0.5
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SoldierDuration",
+                    "values": [
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0,
+                        10.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "URFManaCost",
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SubsequentDamageMod",
+                    "values": [
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0,
+                        25.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "InputBufferProtection",
+                    "values": [
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -577,7 +624,7 @@
                 "ASSETS/Characters/Azir/HUD/Icons2D/Azir_W.dds"
             ],
             "mCastTime": 0.25,
-            "{f26881a0}": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 1.5,
                 1.5,
@@ -640,7 +687,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -698,7 +745,7 @@
                 20.0,
                 20.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     40.0,
                     35.0,
@@ -824,6 +871,7 @@
     },
     "Characters/Azir/Spells/AzirSoldierRMissile": {
         "ObjectName": "AzirSoldierRMissile",
+        "objectPath": "Characters/Azir/Spells/AzirSoldierRMissile",
         "mScriptName": "AzirSoldierRMissile",
         "mSpell": {
             "flags": 4,
@@ -863,7 +911,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -942,6 +990,7 @@
     },
     "Characters/Azir/Spells/AzirQWrapperAbility/AzirQWrapper": {
         "ObjectName": "AzirQWrapper",
+        "objectPath": "Characters/Azir/Spells/AzirQWrapperAbility/AzirQWrapper",
         "mScriptName": "AzirQWrapper",
         "mSpell": {
             "flags": 4,
@@ -1030,13 +1079,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        40.0,
-                        60.0,
-                        80.0,
-                        100.0,
-                        120.0,
-                        140.0,
-                        160.0
+                        55.0,
+                        75.0,
+                        95.0,
+                        115.0,
+                        135.0,
+                        155.0,
+                        175.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1076,6 +1125,32 @@
                         0.5,
                         0.550000011920929,
                         0.6000000238418579
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SoldierDashSpeed",
+                    "values": [
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0,
+                        1600.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "SoldierFormationClumpDistance",
+                    "values": [
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0,
+                        200.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -1149,7 +1224,7 @@
                 720.0,
                 720.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     720.0,
                     720.0,
@@ -1198,7 +1273,7 @@
                 110.0,
                 110.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     80.0,
@@ -1337,6 +1412,7 @@
     },
     "Characters/Azir/Spells/AzirQWrapperAbility/AzirQSlow": {
         "ObjectName": "AzirQSlow",
+        "objectPath": "Characters/Azir/Spells/AzirQWrapperAbility/AzirQSlow",
         "mScriptName": "AzirQSlow",
         "mBuff": {
             "mDescription": "game_buff_tooltip_AzirQSlow",
@@ -1346,6 +1422,7 @@
     },
     "Characters/Azir/Spells/AzirQWrapperAbility/AzirQ": {
         "ObjectName": "AzirQ",
+        "objectPath": "Characters/Azir/Spells/AzirQWrapperAbility/AzirQ",
         "mScriptName": "AzirQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1436,7 +1513,7 @@
                 875.0,
                 875.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     875.0,
                     875.0,
@@ -1514,24 +1591,12 @@
         "BotData": {
             "DamageTag": 1,
             "{6d548702}": {
-                "mFormulaParts": [
-                    {
-                        "mEffectIndex": 2,
-                        "__type": "EffectValueCalculationPart"
-                    }
-                ],
                 "__type": "GameCalculation"
             },
             "{ec17e271}": [
                 {
                     "EffectTag": 1,
                     "EffectCalculation": {
-                        "mFormulaParts": [
-                            {
-                                "mEffectIndex": 1,
-                                "__type": "EffectValueCalculationPart"
-                            }
-                        ],
                         "__type": "GameCalculation"
                     },
                     "__type": "{b09016f6}"
@@ -1543,10 +1608,11 @@
     },
     "Characters/Azir/Spells/AzirBasicAttack": {
         "ObjectName": "AzirBasicAttack",
+        "objectPath": "Characters/Azir/Spells/AzirBasicAttack",
         "mScriptName": "AzirBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
-            "{11704a2b}": 0.34389999508857727,
+            "spellCastTime": 0.34389999508857727,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1578,7 +1644,7 @@
                 549.4000244140625,
                 549.4000244140625
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     549.4000244140625,
                     549.4000244140625,
@@ -1630,6 +1696,7 @@
     },
     "Characters/Azir/Spells/AzirEWrapperAbility/AzirE": {
         "ObjectName": "AzirE",
+        "objectPath": "Characters/Azir/Spells/AzirEWrapperAbility/AzirE",
         "mScriptName": "AzirE",
         "mSpell": {
             "flags": 36,
@@ -1768,7 +1835,7 @@
                 3000.0,
                 3000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     3000.0,
                     3000.0,
@@ -1846,6 +1913,7 @@
     },
     "Characters/Azir/Spells/AzirEWrapperAbility/AzirEWrapper": {
         "ObjectName": "AzirEWrapper",
+        "objectPath": "Characters/Azir/Spells/AzirEWrapperAbility/AzirEWrapper",
         "mScriptName": "AzirEWrapper",
         "mSpell": {
             "flags": 36,
@@ -1999,6 +2067,45 @@
                         0.6000000238418579
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "DashSpeed",
+                    "values": [
+                        1700.0,
+                        1700.0,
+                        1700.0,
+                        1700.0,
+                        1700.0,
+                        1700.0,
+                        1700.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ShieldDuration",
+                    "values": [
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5,
+                        1.5
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "CastRange",
+                    "values": [
+                        1100.0,
+                        1100.0,
+                        1100.0,
+                        1100.0,
+                        1100.0,
+                        1100.0,
+                        1100.0
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -2102,7 +2209,7 @@
                 3000.0,
                 3000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     3000.0,
                     3000.0,
@@ -2150,7 +2257,7 @@
                 60.0,
                 60.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     60.0,
                     60.0,
@@ -2276,6 +2383,7 @@
     },
     "Characters/Azir/Spells/AzirEWrapperAbility/AzirEShield": {
         "ObjectName": "AzirEShield",
+        "objectPath": "Characters/Azir/Spells/AzirEWrapperAbility/AzirEShield",
         "mScriptName": "AzirEShield",
         "mBuff": {
             "mDescription": "game_buff_tooltip_AzirEShield",
@@ -2285,6 +2393,7 @@
     },
     "Characters/Azir/Spells/AzirWTower": {
         "ObjectName": "AzirWTower",
+        "objectPath": "Characters/Azir/Spells/AzirWTower",
         "mScriptName": "AzirWTower",
         "mSpell": {
             "mAffectsTypeFlags": 128,
@@ -2348,7 +2457,7 @@
                 "ASSETS/Characters/Azir/HUD/Icons2D/Azir_W.dds"
             ],
             "mCastTime": 0.25,
-            "{f26881a0}": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2382,7 +2491,7 @@
                 575.0,
                 575.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     575.0,
                     575.0,
@@ -2452,6 +2561,7 @@
     },
     "Characters/Azir/Spells/AzirRAbility/AzirR": {
         "ObjectName": "AzirR",
+        "objectPath": "Characters/Azir/Spells/AzirRAbility/AzirR",
         "mScriptName": "AzirR",
         "mSpell": {
             "mAffectsTypeFlags": 15567,
@@ -2629,7 +2739,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2678,7 +2788,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -2858,6 +2968,7 @@
     },
     "Characters/Azir/Spells/AzirRAbility/AzirRHaste": {
         "ObjectName": "AzirRHaste",
+        "objectPath": "Characters/Azir/Spells/AzirRAbility/AzirRHaste",
         "mScriptName": "AzirRHaste",
         "mBuff": {
             "mDescription": "game_buff_tooltip_AzirRHaste",
@@ -2867,6 +2978,7 @@
     },
     "Characters/Azir/Spells/AzirRAbility/AzirRBump": {
         "ObjectName": "AzirRBump",
+        "objectPath": "Characters/Azir/Spells/AzirRAbility/AzirRBump",
         "mScriptName": "AzirRBump",
         "mBuff": {
             "mDescription": "game_buff_tooltip_AzirRBump",
@@ -2876,6 +2988,7 @@
     },
     "Characters/Azir/Spells/AzirDummySpell": {
         "ObjectName": "AzirDummySpell",
+        "objectPath": "Characters/Azir/Spells/AzirDummySpell",
         "mScriptName": "AzirDummySpell",
         "mSpell": {
             "flags": 4,
@@ -2913,7 +3026,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2935,11 +3048,12 @@
     },
     "Characters/Azir/Spells/AzirBasicAttack3": {
         "ObjectName": "AzirBasicAttack3",
+        "objectPath": "Characters/Azir/Spells/AzirBasicAttack3",
         "mScriptName": "AzirBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAnimationName": "Attack3",
-            "{11704a2b}": 0.34389999508857727,
+            "spellCastTime": 0.34389999508857727,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2971,7 +3085,7 @@
                 549.4000244140625,
                 549.4000244140625
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     549.4000244140625,
                     549.4000244140625,
@@ -3012,11 +3126,12 @@
     },
     "Characters/Azir/Spells/AzirBasicAttack2": {
         "ObjectName": "AzirBasicAttack2",
+        "objectPath": "Characters/Azir/Spells/AzirBasicAttack2",
         "mScriptName": "AzirBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.34389999508857727,
+            "spellCastTime": 0.34389999508857727,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3048,7 +3163,7 @@
                 549.4000244140625,
                 549.4000244140625
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     549.4000244140625,
                     549.4000244140625,
@@ -3101,6 +3216,7 @@
     },
     "Characters/Azir/Spells/AzirPassiveAbility/AzirPassive": {
         "ObjectName": "AzirPassive",
+        "objectPath": "Characters/Azir/Spells/AzirPassiveAbility/AzirPassive",
         "mScriptName": "AzirPassive",
         "mSpell": {
             "DataValues": [
@@ -3229,7 +3345,7 @@
                 700.0,
                 700.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     700.0,
                     700.0,
@@ -3268,6 +3384,7 @@
     },
     "Characters/Azir/Spells/AzirPassiveAbility/AzirTowerClickChannel": {
         "ObjectName": "AzirTowerClickChannel",
+        "objectPath": "Characters/Azir/Spells/AzirPassiveAbility/AzirTowerClickChannel",
         "mScriptName": "AzirTowerClickChannel",
         "mSpell": {
             "mAffectsTypeFlags": 3093,
@@ -3310,7 +3427,7 @@
                 850.0,
                 850.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     850.0,
                     850.0,
@@ -3340,6 +3457,7 @@
     },
     "Characters/Azir/Spells/AzirPassiveAvailable": {
         "ObjectName": "AzirPassiveAvailable",
+        "objectPath": "Characters/Azir/Spells/AzirPassiveAvailable",
         "mScriptName": "AzirPassiveAvailable",
         "mBuff": {
             "mDescription": "game_buff_tooltip_AzirPassiveAvailable",
@@ -3349,11 +3467,12 @@
     },
     "Characters/Azir/Spells/AzirCritAttack": {
         "ObjectName": "AzirCritAttack",
+        "objectPath": "Characters/Azir/Spells/AzirCritAttack",
         "mScriptName": "AzirCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.34389999508857727,
+            "spellCastTime": 0.34389999508857727,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3385,7 +3504,7 @@
                 549.4000244140625,
                 549.4000244140625
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     549.4000244140625,
                     549.4000244140625,
@@ -3427,11 +3546,12 @@
     },
     "Characters/Azir/Spells/AzirBasicAttackSoldier": {
         "ObjectName": "AzirBasicAttackSoldier",
+        "objectPath": "Characters/Azir/Spells/AzirBasicAttackSoldier",
         "mScriptName": "AzirBasicAttackSoldier",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAnimationName": "Attack_Command",
-            "{11704a2b}": 0.3499999940395355,
+            "spellCastTime": 0.3499999940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3467,7 +3587,7 @@
                 549.4000244140625,
                 549.4000244140625
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     549.4000244140625,
                     549.4000244140625,
@@ -3496,11 +3616,13 @@
     },
     "Characters/Azir/Spells/AzirRunCycleManager": {
         "ObjectName": "AzirRunCycleManager",
+        "objectPath": "Characters/Azir/Spells/AzirRunCycleManager",
         "mScriptName": "AzirRunCycleManager",
         "__type": "SpellObject"
     },
     "Characters/Azir/Spells/AzirW_URF": {
         "ObjectName": "AzirW_URF",
+        "objectPath": "Characters/Azir/Spells/AzirW_URF",
         "mScriptName": "AzirW_URF",
         "mSpell": {
             "flags": 4,
@@ -3634,7 +3756,7 @@
                 "ASSETS/Characters/Azir/HUD/Icons2D/Azir_W.dds"
             ],
             "mCastTime": 0.25,
-            "{f26881a0}": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3696,7 +3818,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -3754,7 +3876,7 @@
                 40.0,
                 40.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     40.0,
                     40.0,
@@ -3825,6 +3947,7 @@
     },
     "Characters/Azir/Spells/AzirSoldierMissile": {
         "ObjectName": "AzirSoldierMissile",
+        "objectPath": "Characters/Azir/Spells/AzirSoldierMissile",
         "mScriptName": "AzirSoldierMissile",
         "mSpell": {
             "flags": 4,
@@ -3864,7 +3987,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3989,7 +4112,7 @@
             "baseValue": 30.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.2999999523162842,
             "__type": "ModifiableFloat"
         },
@@ -4067,7 +4190,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/Azir/Spells/AzirWAbility/AzirWSelfMissile",
             "Characters/Azir/Spells/AzirPassiveAbility/AzirTowerClickChannel",
             "Characters/Azir/Spells/AzirBasicAttackSoldier",
@@ -5221,7 +5344,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     1,

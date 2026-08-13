@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.15.1",
+    "version": "16.16.1",
     "data": {
         "Jade_Olaf": {
             "id": "Jade_Olaf",
@@ -12,8 +12,8 @@
                 "full": "Jade_Olaf.png",
                 "sprite": "champion1.png",
                 "group": "champion",
-                "x": 384,
-                "y": 0,
+                "x": 0,
+                "y": 48,
                 "w": 48,
                 "h": 48
             },
@@ -203,7 +203,7 @@
                     "id": "Jade_OlafQ",
                     "name": "Undertow",
                     "description": "Olaf throws an axe into the ground at a target location, dealing damage to units it passes through and slowing their movement speed. If Olaf picks up the axe, the ability's cooldown is reduced.",
-                    "tooltip": "Olaf throws an axe to a target location, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> to units it passes through and <status>Slowing</status> them by {{ slowamount*100 }}% decaying over {{ debuffduration }} seconds. <br /><br />If Olaf picks up the axe, the ability's cooldown is reduced by {{ cooldownrefund }} seconds.{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "Olaf throws an axe to a target location, dealing <physicalDamage>{{ totaldamage }} physical damage</physicalDamage> to units it passes through and <status>Slowing</status> them by {{ slowamount*100 }}% over {{ debuffduration }} seconds. <br /><br />If Olaf picks up the axe, the ability's cooldown is reduced by {{ cooldownrefund }} seconds.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Damage",
@@ -335,8 +335,8 @@
                         "full": "Jade_OlafQ.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 0,
+                        "x": 288,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -361,13 +361,13 @@
                     },
                     "maxrank": 5,
                     "cooldown": [
-                        16,
-                        16,
-                        16,
-                        16,
-                        16
+                        12,
+                        12,
+                        12,
+                        12,
+                        12
                     ],
-                    "cooldownBurn": "16",
+                    "cooldownBurn": "12",
                     "cost": [
                         40,
                         45,
@@ -478,8 +478,8 @@
                         "full": "Jade_OlafW.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 0,
+                        "x": 336,
+                        "y": 48,
                         "w": 48,
                         "h": 48
                     },
@@ -621,7 +621,7 @@
                         "full": "Jade_OlafE.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 384,
                         "y": 48,
                         "w": 48,
                         "h": 48
@@ -632,7 +632,7 @@
                     "id": "Jade_OlafR",
                     "name": "Ragnarok",
                     "description": "Olaf temporarily becomes immune to disables and gains bonus Armor, Magic Resist, and Lethality.",
-                    "tooltip": "Olaf cleanses all <status>Immobilizing</status> and <status>Disabling</status> effects on himself and becomes immune to them the next {{ duration }} seconds. During this time, Olaf gains <scaleArmor>{{ resists }} Armor</scaleArmor>, <scaleMR>{{ resists }} Magic Resist</scaleMR>, and {{ armorpen }} Lethality.<br /><br />{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellActive>Active:</spellActive> Olaf cleanses all <status>Immobilizing</status> and <status>Disabling</status> effects on himself and becomes immune to them the next {{ duration }} seconds. During this time, Olaf gains <scaleArmor>{{ resists }} Armor</scaleArmor> and <scaleMR>{{ resists }} Magic Resist</scaleMR>.<br /><br /><spellPassive>Passive:</spellPassive> Olaf gains an additional {{ armorpen }} Lethality.{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "Armor and Magic Resist",
@@ -738,7 +738,7 @@
                         "full": "Jade_OlafR.png",
                         "sprite": "spell4.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 432,
                         "y": 48,
                         "w": 48,
                         "h": 48
@@ -753,8 +753,8 @@
                     "full": "Jade_Olaf_Passive.png",
                     "sprite": "passive1.png",
                     "group": "passive",
-                    "x": 384,
-                    "y": 0,
+                    "x": 0,
+                    "y": 48,
                     "w": 48,
                     "h": 48
                 }

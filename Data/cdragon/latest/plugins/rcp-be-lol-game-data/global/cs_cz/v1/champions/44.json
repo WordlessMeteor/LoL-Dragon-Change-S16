@@ -780,7 +780,7 @@
             "cost": "@Cost@ many, všechna nabití",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Vyléčí okolní spojenecké šampiony na základě počtu dostupných nabití. Útoky posílené Udatností poskytují nabití Doteku světla.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Každých @StackCooldown@&nbsp;sek. a při zásahu útokem ze schopnosti <spellName>Udatnost</spellName> získáš jeden stupeň efektu (max. @Effect6Amount@).<br><br><spellActive>Aktivace:</spellActive> Spotřebuješ všechny stupně efektu a za každý z nich obnovíš okolním spojeneckým šampionům <healing>@HealingPerStack@ zdraví</healing> (max. <healing>@MaxStackHealing@</healing> zdraví při @Effect6Amount@ stupních).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> V pravidelném intervalu @StackCooldown@ sek. a při zásahu útokem ze schopnosti <spellName>Udatnost</spellName> získáš jeden stupeň efektu (max. @MaxCharges@).<br><br><spellActive>Aktivace:</spellActive> Spotřebuješ všechny stupně efektu a za každý z nich obnovíš okolním spojeneckým šampionům <healing>@HealingPerStack@ zdraví</healing> (max. <healing>@MaxStackHealing@</healing> zdraví při @MaxCharges@ stupni).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Pasivně zvyšuje hodnotu brnění Taricovi a jeho chráněnci pod vlivem Bašty.<br><br>Po aktivaci zaštítí vybraného spojence a sešle na něj Baštu. Ta bude aktivní, dokud bude jednotka poblíž Tarica. Z této jednotky vychází schopnosti seslané Taricem.",
-            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Taric získá <scaleArmor>@BonusArmor@ brnění</scaleArmor> a vytvoří pouto mezi sebou a spojencem, s nímž je touto schopností provázaný. Dokud se nachází v jeho blízkosti, získává tento spojenec <scaleArmor>@BonusArmor@ brnění</scaleArmor> a Taric sesílá všechny své schopnosti jak ze své, tak i z jeho pozice.<br><br><spellPassive>Aktivace:</spellPassive> Taric se propojí se spojeneckým šampionem a poskytne mu na @Effect3Amount@&nbsp;sek. <shield>štít o síle @Effect2Amount@&nbsp;% maximálního zdraví</shield>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasivní efekt:</spellPassive> Taric získá <scaleArmor>@BonusArmor@ brnění</scaleArmor> a vytvoří pouto mezi sebou a spojencem, s nímž je touto schopností provázaný. Dokud se nachází v jeho blízkosti, získává tento spojenec <scaleArmor>@BonusArmor@ brnění</scaleArmor> a Taric sesílá všechny své schopnosti jak ze své, tak i z jeho pozice.<br><br><spellPassive>Aktivace: </spellPassive>Taric se propojí se spojeneckým šampionem a poskytne mu na @ShieldDuration@ sek. <shield>štít o síle @ShieldHPRatio@ % maximálního zdraví</shield>.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@AbilityResourceName@: @Cost@",
             "cooldown": "@Cooldown@ sek. %i:cooldown%",
             "description": "Taric vystřelí paprsek hvězdného světla, který po krátké prodlevě způsobí nepřátelům magické poškození a omráčí je.",
-            "dynamicDescription": "Taric vyšle paprsek hvězdného světla, který po uplynutí @Effect3Amount@&nbsp;sek. vybuchne, zasaženým nepřátelům způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na @Effect2Amount@&nbsp;sek. je <status>omráčí</status>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric vyšle paprsek hvězdného světla, který po uplynutí @ChargeDuration@ sek. vybuchne, zasaženým nepřátelům způsobí <magicDamage>@TotalDamage@ bodů magického poškození</magicDamage> a na @StunDuration@ sek. je <status>omráčí</status>.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

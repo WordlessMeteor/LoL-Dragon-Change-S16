@@ -130,7 +130,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -515,7 +515,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -567,7 +567,7 @@
             },
             {
                 "MapId": 453,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "IsDefaultRecommendation": true,
                 "mDefaultPriority": [
                     3,
@@ -588,11 +588,12 @@
     },
     "{1bcedc35}": {
         "ObjectName": "Jade_KarthusCritAttack2",
+        "objectPath": "{1bcedc35}",
         "mScriptName": "Jade_KarthusCritAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3306500017642975,
+            "spellCastTime": 0.3306500017642975,
             "bHaveHitEffect": true,
             "castRange": [
                 800.0,
@@ -603,7 +604,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -659,11 +660,12 @@
     },
     "Characters/Jade_Karthus/Spells/Jade_KarthusBasicAttack": {
         "ObjectName": "Jade_KarthusBasicAttack",
+        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusBasicAttack",
         "mScriptName": "Jade_KarthusBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_KarthusBasicAttack",
-            "{11704a2b}": 0.3306500017642975,
+            "spellCastTime": 0.3306500017642975,
             "bHaveHitEffect": true,
             "castRange": [
                 800.0,
@@ -674,7 +676,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -747,6 +749,7 @@
     },
     "Characters/Jade_Karthus/Spells/Jade_KarthusFallenOneAbility/Jade_KarthusFallenOne": {
         "ObjectName": "Jade_KarthusFallenOne",
+        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusFallenOneAbility/Jade_KarthusFallenOne",
         "mScriptName": "Jade_KarthusFallenOne",
         "mSpell": {
             "flags": 24,
@@ -900,7 +903,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -933,7 +936,7 @@
                 100.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     150.0,
                     175.0,
@@ -1065,6 +1068,7 @@
     },
     "{8c3a02b4}": {
         "ObjectName": "Jade_KarthusFallenOneTarget",
+        "objectPath": "{8c3a02b4}",
         "mScriptName": "Jade_KarthusFallenOneTarget",
         "mSpell": {
             "mImgIconName": [
@@ -1101,6 +1105,7 @@
     },
     "{5f55a42c}": {
         "ObjectName": "Jade_KarthusWallOfPainTarget",
+        "objectPath": "{5f55a42c}",
         "mScriptName": "Jade_KarthusWallOfPainTarget",
         "mSpell": {
             "mImgIconName": [
@@ -1124,6 +1129,7 @@
     },
     "{84635985}": {
         "ObjectName": "Jade_KarthusWallOfPainExtra",
+        "objectPath": "{84635985}",
         "mScriptName": "Jade_KarthusWallOfPainExtra",
         "mSpell": {
             "mImgIconName": [
@@ -1147,6 +1153,7 @@
     },
     "Characters/Jade_Karthus/Spells/Jade_KarthusWallOfPainAbility/Jade_KarthusWallOfPain": {
         "ObjectName": "Jade_KarthusWallOfPain",
+        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusWallOfPainAbility/Jade_KarthusWallOfPain",
         "mScriptName": "Jade_KarthusWallOfPain",
         "mSpell": {
             "mAffectsTypeFlags": 15567,
@@ -1348,7 +1355,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -1381,7 +1388,7 @@
                 70.0,
                 70.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -1528,6 +1535,7 @@
     },
     "{70c05f76}": {
         "ObjectName": "Jade_KarthusAttackSequencer",
+        "objectPath": "{70c05f76}",
         "mScriptName": "Jade_KarthusAttackSequencer",
         "__type": "SpellObject"
     },
@@ -1542,6 +1550,7 @@
     },
     "Characters/Jade_Karthus/Spells/Jade_KarthusDefileAbility/Jade_KarthusDefile": {
         "ObjectName": "Jade_KarthusDefile",
+        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusDefileAbility/Jade_KarthusDefile",
         "mScriptName": "Jade_KarthusDefile",
         "mSpell": {
             "flags": 4,
@@ -1719,7 +1728,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -1763,7 +1772,7 @@
                 78.0,
                 90.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     30.0,
                     42.0,
@@ -1894,6 +1903,7 @@
     },
     "{9409dd6e}": {
         "ObjectName": "Jade_KarthusDefileSoundDummy2",
+        "objectPath": "{9409dd6e}",
         "mScriptName": "Jade_KarthusDefileSoundDummy2",
         "mSpell": {
             "flags": 4,
@@ -1998,7 +2008,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -2057,12 +2067,13 @@
     },
     "Characters/Jade_Karthus/Spells/Jade_KarthusBasicAttack2": {
         "ObjectName": "Jade_KarthusBasicAttack2",
+        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusBasicAttack2",
         "mScriptName": "Jade_KarthusBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "Jade_KarthusBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3306500017642975,
+            "spellCastTime": 0.3306500017642975,
             "bHaveHitEffect": true,
             "castRange": [
                 800.0,
@@ -2073,7 +2084,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -2146,6 +2157,7 @@
     },
     "{ca043212}": {
         "ObjectName": "Jade_KarthusDeathDefiedBuff",
+        "objectPath": "{ca043212}",
         "mScriptName": "Jade_KarthusDeathDefiedBuff",
         "mSpell": {
             "mImgIconName": [
@@ -2174,6 +2186,7 @@
     },
     "{fad2fb2f}": {
         "ObjectName": "Jade_KarthusDeathDefied",
+        "objectPath": "{fad2fb2f}",
         "mScriptName": "Jade_KarthusDeathDefied",
         "mSpell": {
             "DataValues": [
@@ -2241,7 +2254,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -2282,10 +2295,11 @@
     },
     "Characters/Jade_Karthus/Spells/Jade_KarthusCritAttack": {
         "ObjectName": "Jade_KarthusCritAttack",
+        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusCritAttack",
         "mScriptName": "Jade_KarthusCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
-            "{11704a2b}": 0.3306500017642975,
+            "spellCastTime": 0.3306500017642975,
             "bHaveHitEffect": true,
             "castRange": [
                 800.0,
@@ -2296,7 +2310,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -2357,6 +2371,7 @@
     },
     "Characters/Jade_Karthus/Spells/Jade_KarthusLayWasteAbility/Jade_KarthusLayWaste": {
         "ObjectName": "Jade_KarthusLayWaste",
+        "objectPath": "Characters/Jade_Karthus/Spells/Jade_KarthusLayWasteAbility/Jade_KarthusLayWaste",
         "mScriptName": "Jade_KarthusLayWaste",
         "mSpell": {
             "flags": 32,
@@ -2508,8 +2523,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Karthus_LayWaste.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 1.0,
                 1.0,
@@ -2563,7 +2578,7 @@
                 875.0,
                 875.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     875.0,
                     875.0,
@@ -2607,7 +2622,7 @@
                 44.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     20.0,
                     26.0,

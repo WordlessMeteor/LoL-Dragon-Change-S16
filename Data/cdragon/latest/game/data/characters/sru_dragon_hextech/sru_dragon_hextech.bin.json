@@ -1,6 +1,7 @@
 {
     "Characters/sru_dragon_hextech/Spells/sru_dragon_hextech_Attack2_Slow": {
         "ObjectName": "sru_dragon_hextech_Attack2_Slow",
+        "objectPath": "Characters/sru_dragon_hextech/Spells/sru_dragon_hextech_Attack2_Slow",
         "mScriptName": "sru_dragon_hextech_Attack2_Slow",
         "mSpell": {
             "mImgIconName": [
@@ -24,13 +25,14 @@
     },
     "Characters/sru_dragon_hextech/Spells/sru_dragon_hextech_Attack2": {
         "ObjectName": "sru_dragon_hextech_Attack2",
+        "objectPath": "Characters/sru_dragon_hextech/Spells/sru_dragon_hextech_Attack2",
         "mScriptName": "sru_dragon_hextech_Attack2",
         "mSpell": {
             "mAffectsTypeFlags": 7823,
             "mAffectsStatusFlags": 32,
             "mAnimationName": "Spell3",
-            "{11704a2b}": 0.25600001215934753,
-            "{f26881a0}": 0.8299999237060547,
+            "spellCastTime": 0.25600001215934753,
+            "spellTotalTime": 0.8299999237060547,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -67,7 +69,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -87,6 +89,7 @@
     },
     "Characters/sru_dragon_hextech/Spells/sru_dragon_hextech_Attack": {
         "ObjectName": "sru_dragon_hextech_Attack",
+        "objectPath": "Characters/sru_dragon_hextech/Spells/sru_dragon_hextech_Attack",
         "mScriptName": "sru_dragon_hextech_Attack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
@@ -210,8 +213,8 @@
                 }
             },
             "mAnimationName": "Spell1",
-            "{11704a2b}": 0.25599998235702515,
-            "{f26881a0}": 0.8300000429153442,
+            "spellCastTime": 0.25599998235702515,
+            "spellTotalTime": 0.8300000429153442,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -245,7 +248,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -317,7 +320,7 @@
             "baseValue": 32.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 4.0,
             "__type": "ModifiableFloat"
         },
@@ -379,7 +382,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/sru_dragon_hextech/Spells/sru_dragon_hextech_Attack2",
             "Shared/Spells/SRX_DragonBuffHextech",
             "Shared/Spells/SRX_DragonSoulBuffHextech",

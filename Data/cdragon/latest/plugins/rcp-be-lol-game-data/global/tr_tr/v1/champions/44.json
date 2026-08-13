@@ -780,7 +780,7 @@
             "cost": "@Cost@ Mana, tüm yükler",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Biriktirilen yük miktarına bağlı olarak takım arkadaşlarını iyileştirir. Cüretkâr ile güçlenen saldırılar birer Yıldız Işıltısı yükü kazandırır.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Her @StackCooldown@ saniyede bir ve bir <spellName>Cüretkâr</spellName> saldırısı gerçekleştirdikten sonra bir yük kazanır (en fazla: @Effect6Amount@).<br><br><spellActive>Aktif:</spellActive> Tüm yükleri tüketerek yakınındaki takım arkadaşlarını <healing>@HealingPerStack@ Can</healing> iyileştirir (@Effect6Amount@ yükte <healing>@MaxStackHealing@ Can</healing>).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Her @StackCooldown@ saniyede bir ve bir <spellName>Cüretkâr</spellName> saldırısı gerçekleştirdikten sonra bir yük kazanır (en fazla: @MaxCharges@).<br><br><spellActive>Aktif:</spellActive> Tüm yükleri tüketerek yakınındaki takım arkadaşlarını <healing>@HealingPerStack@ Can</healing> iyileştirir (@MaxCharges@ yükte <healing>@MaxStackHealing@</healing> Can).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Taric ve Kristal Siper altında olan takım arkadaşının zırh değerini pasif olarak arttırır.<br><br>Aktif olarak takım arkadaşlarından birine kalkan sağlar ve bu takım arkadaşı Taric'in yanında olduğu sürece Kristal Siper etkisinde kalır. Taric'in kullandığı büyüler, aynı zamanda Kristal Siper altındaki takım arkadaşı üzerinden de gerçekleştirilir.",
-            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Taric <scaleArmor>@BonusArmor@ Zırh</scaleArmor> kazanır ve bu yeteneğiyle bağlandığı takım arkadaşı arasında bir bağ kurar. Takım arkadaşı Taric'in yakınındayken <scaleArmor>@BonusArmor@ Zırh</scaleArmor> kazanır ve Taric tüm yeteneklerini hem kendi hem de takım arkadaşının konumundan kullanır.<br><br><spellPassive>Aktif:</spellPassive> Taric bir takım arkadaşına bağlanarak ona @Effect3Amount@ saniyeliğine <shield>azami canının %@Effect2Amount@ kadarına eşdeğer miktarda kalkan</shield> sağlar.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasif:</spellPassive> Taric <scaleArmor>@BonusArmor@ Zırh</scaleArmor> kazanır ve bu yeteneğiyle bağlandığı takım arkadaşı arasında bir bağ kurar. Takım arkadaşı Taric'in yakınındayken <scaleArmor>@BonusArmor@ Zırh</scaleArmor> kazanır ve Taric tüm yeteneklerini hem kendi hem de takım arkadaşının konumundan kullanır.<br><br><spellPassive>Aktif:</spellPassive> Taric bir takım arkadaşına bağlanarak ona @ShieldDuration@ saniyeliğine <shield>azami canının %@ShieldHPRatio@ kadarına eşdeğer miktarda kalkan</shield> sağlar.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ sn. %i:cooldown%",
             "description": "Taric'in hazırladığı yıldız ışığı huzmesi, kısa bir gecikmenin ardından rakiplere büyü hasarı verir ve onları sersemletir.",
-            "dynamicDescription": "Taric @Effect3Amount@ saniyenin ardından patlayarak rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren ve onları @Effect2Amount@ saniyeliğine <status>sersemleten</status> bir yıldız ışığı huzmesi gönderir.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric @ChargeDuration@ saniyenin ardından patlayarak rakiplere <magicDamage>@TotalDamage@ Büyü Hasarı</magicDamage> veren ve onları @StunDuration@ saniyeliğine <status>sersemleten</status> bir yıldız ışığı huzmesi gönderir.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

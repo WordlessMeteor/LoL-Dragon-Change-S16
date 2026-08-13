@@ -1,11 +1,12 @@
 {
     "Characters/EliseSpider/Spells/EliseSpiderBasicAttack": {
         "ObjectName": "EliseSpiderBasicAttack",
+        "objectPath": "Characters/EliseSpider/Spells/EliseSpiderBasicAttack",
         "mScriptName": "EliseSpiderBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "SkarnerBasicAttack",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "bHaveHitEffect": true,
             "castRadius": [
@@ -37,12 +38,13 @@
     },
     "Characters/EliseSpider/Spells/EliseSpiderBasicAttack3": {
         "ObjectName": "EliseSpiderBasicAttack3",
+        "objectPath": "Characters/EliseSpider/Spells/EliseSpiderBasicAttack3",
         "mScriptName": "EliseSpiderBasicAttack3",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "SkarnerBasicAttack2",
             "mAnimationName": "Attack3",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
@@ -65,12 +67,13 @@
     },
     "Characters/EliseSpider/Spells/EliseSpiderBasicAttack2": {
         "ObjectName": "EliseSpiderBasicAttack2",
+        "objectPath": "Characters/EliseSpider/Spells/EliseSpiderBasicAttack2",
         "mScriptName": "EliseSpiderBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "SkarnerBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
@@ -93,12 +96,13 @@
     },
     "Characters/EliseSpider/Spells/EliseSpiderCritAttack": {
         "ObjectName": "EliseSpiderCritAttack",
+        "objectPath": "Characters/EliseSpider/Spells/EliseSpiderCritAttack",
         "mScriptName": "EliseSpiderCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "SkarnerCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
@@ -190,7 +194,7 @@
             "baseValue": 30.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.2999999523162842,
             "__type": "ModifiableFloat"
         },
@@ -266,7 +270,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/Elise/Spells/EliseSpiderQAbility/EliseSpiderQCast",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",

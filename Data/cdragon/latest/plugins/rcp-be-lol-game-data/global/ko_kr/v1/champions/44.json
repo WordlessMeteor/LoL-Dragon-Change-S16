@@ -780,7 +780,7 @@
             "cost": "마나 @Cost@, 현재 충전량",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "충전량을 모두 소모해 근처의 아군 챔피언을 회복시킵니다.<br><br>담대함으로 강화된 기본 공격 시 충전 대기시간이 줄어듭니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> @StackCooldown@초마다, <spellName>담대함</spellName> 기본 공격이 적중할 때마다 중첩을 1 얻습니다. (최대 @Effect6Amount@)<br><br><spellActive>사용 시:</spellActive> 모든 중첩을 소모해 중첩당 근처 아군 챔피언의 <healing>체력을 @HealingPerStack@</healing>씩 회복시킵니다. (@Effect6Amount@회 중첩 시 <healing>@MaxStackHealing@</healing>)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과:</spellPassive> @StackCooldown@초마다, <spellName>담대함</spellName> 기본 공격이 적중할 때마다 중첩을 1 얻습니다. (최대 @MaxCharges@)<br><br><spellActive>사용 시:</spellActive> 모든 중첩을 소모해 중첩당 근처 아군 챔피언의 <healing>체력을 @HealingPerStack@</healing>씩 회복시킵니다. (@MaxCharges@회 중첩 시 <healing>@MaxStackHealing@</healing>)@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "수호의 고리로 연결된 아군 챔피언과 타릭의 방어력이 상승합니다.<br><br>연결된 아군 챔피언이 타릭 근처에 있는 동안 수호의 고리를 사용하면 연결된 아군에게 보호막을 씌웁니다. 타릭이 스킬을 사용하면 연결된 아군도 같은 스킬을 사용합니다.",
-            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>타릭이 <scaleArmor>@BonusArmor@의 방어력</scaleArmor>을 얻고 자신과 이 스킬로 묶인 아군 사이에 끈을 형성합니다. 서로 가까이 있으면 아군이 <scaleArmor>@BonusArmor@의 방어력</scaleArmor>을 얻으며 타릭과 연결된 아군 둘 다 타릭의 모든 스킬을 사용합니다.<br><br><spellPassive>사용 시: </spellPassive>타릭이 아군 챔피언 하나와 묶이며 @Effect3Amount@초 동안 <shield>최대 체력의 @Effect2Amount@%에 해당하는 보호막</shield>을 부여합니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>기본 지속 효과: </spellPassive>타릭이 <scaleArmor>@BonusArmor@의 방어력</scaleArmor>을 얻고 자신과 이 스킬로 묶인 아군 사이에 끈을 형성합니다. 서로 가까이 있으면 아군이 <scaleArmor>@BonusArmor@의 방어력</scaleArmor>을 얻으며 타릭과 연결된 아군 둘 다 타릭의 모든 스킬을 사용합니다.<br><br><spellPassive>사용 시: </spellPassive>타릭이 아군 챔피언 하나와 묶이며 @ShieldDuration@초 동안 <shield>최대 체력의 @ShieldHPRatio@%에 해당하는 보호막</shield>을 부여합니다.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@AbilityResourceName@ @Cost@",
             "cooldown": "%i:cooldown% @Cooldown@초",
             "description": "타릭이 천상의 별빛을 준비해 잠시 후 적에게 마법 피해를 입히고 기절시킵니다.",
-            "dynamicDescription": "타릭이 별빛 광선을 발사합니다. 광선은 @Effect3Amount@초 후 터지며 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 적을 @Effect2Amount@초 동안 <status>기절</status>시킵니다.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "타릭이 별빛 광선을 발사합니다. 광선은 @ChargeDuration@초 후 터지며 <magicDamage>@TotalDamage@의 마법 피해</magicDamage>를 입히고 적을 @StunDuration@초 동안 <status>기절</status>시킵니다.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

@@ -276,7 +276,7 @@
                         ],
                         "__type": "ParticleEventData"
                     },
-                    "{0cf0606b}": {
+                    "Audio_Laugh": {
                         "mSoundName": "Play_sfx_DariusSkin67_Laugh_anim",
                         "mIsLoop": false,
                         "__type": "SoundEventData"
@@ -2831,6 +2831,65 @@
                 "mFalseConditionClipName": "Run_Base",
                 "__type": "ConditionBoolClipData"
             },
+            "{23bc3a50}": {
+                "mTrackDataName": "UpperBody",
+                "mEventDataMap": {
+                    "wolf": {
+                        "mShowSubmeshList": [
+                            "Wolf_Mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "weapon": {
+                        "mJointNameToOverride": "weapon",
+                        "mJointNameToSnapTo": "SnapWeapon",
+                        "__type": "JointSnapEventData"
+                    },
+                    "{e3a4c5e3}": {
+                        "mEffectKey": "Darius_R_Cast_Wolf",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsKillEvent": false,
+                        "mIsDetachable": true,
+                        "__type": "ParticleEventData"
+                    },
+                    "{5be819d6}": {
+                        "mStartFrame": 9.0,
+                        "mSoundName": "Play_sfx_DariusSkin15_DariusExecute_swing",
+                        "mIsLoop": false,
+                        "__type": "SoundEventData"
+                    },
+                    "BODY": {
+                        "mStartFrame": 3.0,
+                        "mEndFrame": 18.0,
+                        "mHideSubmeshList": [
+                            "Darius_Axe_Mat",
+                            "Darius_Cape_Mat",
+                            "Darius_Skin15_Mat"
+                        ],
+                        "__type": "SubmeshVisibilityEventData"
+                    },
+                    "{cef6a86c}": {
+                        "mEffectKey": "Darius_R_Trail",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "Lion_Root",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mAnimationResourceData": {
+                    "mAnimationFilePath": "ASSETS/Characters/Darius/Skins/Skin15/Animations/Darius_Skin15_Spell4_5.anm",
+                    "__type": "AnimationResourceData"
+                },
+                "__type": "AtomicClipData"
+            },
             "{421a8ec5}": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -2890,112 +2949,31 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{199aedbd}": {
-                "mTrackDataName": "UpperBody",
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Darius/Skins/Skin15/Animations/Darius_Skin15_Idle1.anm",
-                    "__type": "AnimationResourceData"
-                },
-                "__type": "AtomicClipData"
-            },
-            "{e7a44f44}": {
-                "mTrackDataName": "UpperBody",
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Darius/Skins/Skin15/Animations/Darius_Skin15_Idle2.anm",
-                    "__type": "AnimationResourceData"
-                },
-                "__type": "AtomicClipData"
-            },
-            "{ad1567c3}": {
-                "mSelectorPairDataList": [
-                    {
-                        "mClipName": "{199aedbd}",
-                        "mProbability": 62.0,
-                        "__type": "SelectorPairData"
-                    },
-                    {
-                        "mClipName": "{e7a44f44}",
-                        "mProbability": 38.0,
-                        "__type": "SelectorPairData"
-                    }
-                ],
-                "__type": "SelectorClipData"
-            },
-            "{9434004f}": {
-                "mClipNameList": [
-                    "{421a8ec5}",
-                    "{23bc3a50}"
-                ],
-                "__type": "ParallelClipData"
-            },
-            "{23bc3a50}": {
-                "mTrackDataName": "UpperBody",
-                "mEventDataMap": {
-                    "weapon": {
-                        "mJointNameToOverride": "weapon",
-                        "mJointNameToSnapTo": "SnapWeapon",
-                        "__type": "JointSnapEventData"
-                    },
-                    "{e3a4c5e3}": {
-                        "mEffectKey": "Darius_R_Cast_Wolf",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "Root",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "mIsKillEvent": false,
-                        "mIsDetachable": true,
-                        "__type": "ParticleEventData"
-                    },
-                    "{5be819d6}": {
-                        "mStartFrame": 9.0,
-                        "mSoundName": "Play_sfx_DariusSkin15_DariusExecute_swing",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
-                    },
-                    "BODY": {
-                        "mStartFrame": 3.0,
-                        "mEndFrame": 18.0,
-                        "mHideSubmeshList": [
-                            "Darius_Axe_Mat",
-                            "Darius_Cape_Mat",
-                            "Darius_Skin15_Mat"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    },
-                    "{cef6a86c}": {
-                        "mEffectKey": "Darius_R_Trail",
-                        "mParticleEventDataPairList": [
-                            {
-                                "mBoneName": "Lion_Root",
-                                "__type": "ParticleEventDataPair"
-                            }
-                        ],
-                        "__type": "ParticleEventData"
-                    },
-                    "wolf": {
-                        "mShowSubmeshList": [
-                            "Wolf_Mat"
-                        ],
-                        "__type": "SubmeshVisibilityEventData"
-                    }
-                },
-                "mAnimationResourceData": {
-                    "mAnimationFilePath": "ASSETS/Characters/Darius/Skins/Skin15/Animations/Darius_Skin15_Spell4_5.anm",
-                    "__type": "AnimationResourceData"
-                },
-                "__type": "AtomicClipData"
-            },
             "Spell4": {
-                "mSelectorPairDataList": [
-                    {
-                        "mClipName": "{9434004f}",
-                        "mProbability": 100.0,
-                        "__type": "SelectorPairData"
-                    }
-                ],
-                "__type": "SelectorClipData"
+                "Updater": {
+                    "driver": {
+                        "mBoolDriver": {
+                            "mDrivers": [
+                                {
+                                    "mAnimationNames": [
+                                        "{23bc3a50}",
+                                        "{421a8ec5}"
+                                    ],
+                                    "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
+                                }
+                            ],
+                            "__type": "OneTrueMaterialDriver"
+                        },
+                        "mDelayOn": 0.009999999776482582,
+                        "__type": "DelayedBoolMaterialDriver"
+                    },
+                    "__type": "LogicDriverBoolParametricUpdater"
+                },
+                "mChangeAnimationMidPlay": true,
+                "SyncFrameOnChangeAnim": true,
+                "mTrueConditionClipName": "{421a8ec5}",
+                "mFalseConditionClipName": "{23bc3a50}",
+                "__type": "ConditionBoolClipData"
             },
             "{2dfc27a3}": {
                 "Updater": {
@@ -9189,6 +9167,7 @@
                 "__type": "TransitionClipBlendData"
             }
         },
+        "objectPath": "{a7c8a969}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

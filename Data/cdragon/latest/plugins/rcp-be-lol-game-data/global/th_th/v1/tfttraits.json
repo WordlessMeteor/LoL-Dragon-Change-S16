@@ -17906,6 +17906,1802 @@
         ]
     },
     {
+        "display_name": "Adaptor",
+        "trait_id": "DA_18_Adaptor",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Adaptor.TFT_Set18.png",
+        "tooltip_text": "ติดตัว: สกิลของ Adaptor เปลี่ยนแปลงไปขึ้นอยู่กับว่าค่าพลังโจมตีหรือพลังเวทสูงกว่า<br><br>อีกทั้งได้รับพลังเวทหรือพลังโจมตีเพิ่ม ขึ้นอยู่กับว่าค่าไหนสูงกว่าด้วย<br><row>(@MinUnits@) @ADAPGain*100@%  หรือ </row><br><row>(@MinUnits@) @ADAPGain*100@%  หรือ </row><br><row>(@MinUnits@) @ADAPGain*100@%  หรือ </row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAPGain",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPGain",
+                        "value": 0.35
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAPGain",
+                        "value": 0.55
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Apex Predator",
+        "trait_id": "DA_18_ApexPredator",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_ApexPredator.TFT_Set18.png",
+        "tooltip_text": "Elder Dragon ใช้ช่องทีม 2 ช่อง แต่มอบ +2 แก่คุณสมบัติ Riftbeast",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Monolith",
+        "trait_id": "DA_18_Battlemage",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Monolith.TFT_Set18.png",
+        "tooltip_text": "Monolith ได้รับเกราะและต้านทานเวท @Resists@ หน่วย ตามจำนวนศัตรูที่เล็งพวกเขาเป็นเป้าหมาย",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Resists",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Blackthorn",
+        "trait_id": "DA_18_Blackthorn",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGod.TFT_Set18.png",
+        "tooltip_text": "สังเวยพันธมิตรบนช่อง Blackthorn ก่อนเริ่มการต่อสู้ เพื่อมอบพลังชีวิตให้กับแชมเปี้ยนภายในทีม <br><br>แชมเปี้ยน Blackthorn ได้รับค่าสถานะเพิ่มเติมขึ้นอยู่กับบทบาท ระดับดาว และราคาของยูนิตที่สังเวยไป<br><row>(@MinUnits@) @Health@ %i:scaleHealth% หน่วย</row><br><row>(@MinUnits@) @Health@ %i:scaleHealth% หน่วย, โบนัสเพิ่มขึ้น @StatMultiplier*100@%</row><br><row>(@MinUnits@) @Health@ %i:scaleHealth% หน่วย อีกทั้งยูนิตสังเวยหลบเลี่ยงความตาย และได้รับ: @Tier3BonusAD*100@% %i:scaleAD%%i:scaleAP%, <br>@Tier3BonusAttackSpeed*100@% %i:scaleAS%, @Tier3BonusArmor@ %i:scaleArmor%%i:scaleMR% หน่วย, @Tier3BonusHealth@ %i:scaleHealth% หน่วย, @Tier3BonusOmnivamp*100@%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Health",
+                        "value": 175.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Health",
+                        "value": 300.0
+                    },
+                    {
+                        "name": "StatMultiplier",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Health",
+                        "value": 350.0
+                    },
+                    {
+                        "name": "Tier3BonusAD",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "Tier3BonusArmor",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "Tier3BonusAttackSpeed",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "Tier3BonusHealth",
+                        "value": 200.0
+                    },
+                    {
+                        "name": "Tier3BonusOmnivamp",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Blossom",
+        "trait_id": "DA_18_Blossom",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Blossom.TFT_Set18.png",
+        "tooltip_text": "Blossom ช่วยเสริมพลัง Wisp หลังจบทุกรอบการต่อสู้ <br><br>แชมเปี้ยน Blossom ได้รับพลังโจมตี พลังเวท และพลังชีวิตสูงสุด @BonusHealth*100@%<br><row>(@MinUnits@) อัปเกรด Wisp, ได้รับ %i:scaleAD%%i:scaleAP% @ADAP*100@%</row><br><row>(@MinUnits@) Wisp ปรากฏในทุกร้านค้า, ได้รับ %i:scaleAD%%i:scaleAP% @ADAP*100@%</row><br><row>(@MinUnits@) ได้รับ @GoldPerCharmPurchased@ ทองหลังจากซื้อ Wisp, ได้รับ %i:scaleAD%%i:scaleAP% @ADAP*100@%</row><br><row>(@MinUnits@) ซื้อ Wisp ได้ 2 ครั้งต่อรอบ, ได้รับ %i:scaleAD%%i:scaleAP% @ADAP*100@%</row><br><row>(@MinUnits@) Wisp เปี่ยมล้นไปด้วยพลัง, ได้รับ %i:scaleAD%%i:scaleAP% @ADAP*100@%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusHealth",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.12
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "GoldPerCharmPurchased",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 0.5
+                    }
+                ],
+                "min_units": 9,
+                "max_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 11,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Brawler",
+        "trait_id": "DA_18_Brawler",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Brawler.TFT_Set18.png",
+        "tooltip_text": "ทีมของคุณได้รับพลังชีวิตสูงสุด @BrawlerTeamHealth@ หน่วย โดย Brawler จะได้รับมากขึ้น<br><row>(@MinUnits@) @BrawlerHealthPercent*100@% %i:scaleHealth%</row><br><row>(@MinUnits@) @BrawlerHealthPercent*100@% %i:scaleHealth%</row><br><row>(@MinUnits@) @BrawlerHealthPercent*100@% %i:scaleHealth%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerTeamHealth",
+                        "value": 120.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerHealthPercent",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerHealthPercent",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BrawlerHealthPercent",
+                        "value": 0.65
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Caustic",
+        "trait_id": "DA_18_Caustic",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Caustic.TFT_Set18.png",
+        "tooltip_text": "Caustic ฉีกกระชากและสะบั้นศัตรู @ShredPercent@% เป็นเวลา @ShredDuration@ วินาทีเมื่อสร้างความเสียหาย",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ShredDuration",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "ShredPercent",
+                        "value": 30.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Coven",
+        "trait_id": "DA_18_Coven",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Coven.TFT_Set18.png",
+        "tooltip_text": "เก็บสะสมแก่นวิญญาณจากการสังหารแชมเปี้ยน บวกเพิ่มอีกหากพ่ายแพ้รอบต่อสู้กับผู้เล่น <br><br>จากนั้นเริ่มต้นที่แก่นวิญญาณ @EssenceForRitualTooltip@ หน่วย จะได้เลือกเปลี่ยนแก่นวิญญาณเป็นรางวัล หรือเก็บสะสมต่อไป โดยรางวัลแต่ละครั้งต้องใช้แก่นวิญญาณเพิ่มขึ้นเรื่อย ๆ<br><row>(@MinUnits@) แก่นวิญญาณ @EssencePerDeath@ หน่วยเมื่อสังหาร, @EssencePerLoss@ หน่วยเมื่อพ่ายแพ้</row><br><row>(@MinUnits@) @EssencePerDeath@ หน่วยเมื่อสังหาร, @EssencePerLoss@ หน่วยเมื่อพ่ายแพ้</row><br><row>(@MinUnits@) @EssencePerDeath@ หน่วยเมื่อสังหาร, @EssencePerLoss@ หน่วยเมื่อพ่ายแพ้</row><br><row>(@MinUnits@) @EssencePerDeath@ หน่วยเมื่อสังหาร, @EssencePerLoss@ หน่วยเมื่อพ่ายแพ้</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EssenceForRitualTooltip",
+                        "value": 40.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 20.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 25.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 35.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "EssencePerDeath",
+                        "value": 7.0
+                    },
+                    {
+                        "name": "EssencePerLoss",
+                        "value": 100.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Defender",
+        "trait_id": "DA_18_Defender",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Defender.TFT_Set18.png",
+        "tooltip_text": "ทีมของคุณได้รับเกราะและต้านทานเวท @NonDefenderDefenseGain@ หน่วย โดย Defender จะได้รับมากขึ้น<br><row>(@MinUnits@) @DefenderDefenseGain@ หน่วย</row><br><row>(@MinUnits@) @DefenderDefenseGain@ หน่วย</row><br><row>(@MinUnits@) @DefenderDefenseGain@ หน่วย</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "NonDefenderDefenseGain",
+                        "value": 12.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DefenderDefenseGain",
+                        "value": 25.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DefenderDefenseGain",
+                        "value": 55.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DefenderDefenseGain",
+                        "value": 115.0
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Eclipse",
+        "trait_id": "DA_18_Eclipse",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Eclipse.TFT_Set18.png",
+        "tooltip_text": "Eclipse สังหารศัตรูที่มีพลังชีวิตน้อยที่สุดในทันที หลังการต่อสู้ผ่านไป @DelaySeconds@ วินาที จากนั้นสังหารซ้ำอีกครั้งในทุก ๆ @EclipseBeamPeriod@ วินาที",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DelaySeconds",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "EclipseBeamPeriod",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 0,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            }
+        ]
+    },
+    {
+        "display_name": "Elderwood",
+        "trait_id": "DA_18_Elderwood",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Elderwood.TFT_Set18.png",
+        "tooltip_text": "ได้รับต้นไม้ Elderwood ที่สามารถนำไปวางในสนาม<br><row>(@MinUnits@) Stonebark Tree และ Lifebloom</row><br><row>(@MinUnits@) ได้รับ Stonebark Tree ต้นที่สอง และ Stonebark Tree ได้รับพลังชีวิต @StonebarkTreeBonusHealth@ หน่วย</row><br><row>(@MinUnits@) และได้รับ Deepwood Protector</row><br><row>(@MinUnits@) ต้นไม้กลายเป็น 2 ดาว</row><br><row>(@MinUnits@) ต้นไม้กลายเป็น 3 ดาว และผืนป่ามีชีวิตขึ้นมาอีกครั้ง</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "APPerTotalElderwoodStarLevel",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "MaxHealthRatioPerTotalElderwoodStarLevel",
+                        "value": 0.25
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "StonebarkTreeBonusHealth",
+                        "value": 150.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [],
+                "min_units": 7,
+                "max_units": 8,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [],
+                "min_units": 9,
+                "max_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [],
+                "min_units": 11,
+                "style_idx": 6,
+                "style_name": "kChromatic"
+            }
+        ]
+    },
+    {
+        "display_name": "Executioner",
+        "trait_id": "DA_18_Executioner",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Executioner.TFT_Set18.png",
+        "tooltip_text": "<row>(@MinUnits@) Executioner ได้รับสถานะ<TFTKeyword>แม่นยำ</TFTKeyword> มีโอกาสคริติคอล @CritChance*100@%</row><br><row>(@MinUnits@) อีกทั้งทำให้ศัตรูเลือดไหล และสร้างความเสียหายจริงเพิ่มเติม @BonusBleedPercent*100@% ในช่วงเวลา @BleedDuration@ วินาที</row><br><row>(@MinUnits@) ความเสียหายเลือดไหลเพิ่มขึ้นเป็น @BonusBleedPercent*100@%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CritChance",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BleedDuration",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "BonusBleedPercent",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusBleedPercent",
+                        "value": 0.5
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Fae",
+        "trait_id": "DA_18_Fae",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Fae.TFT_Set18.png",
+        "tooltip_text": "ทีมของคุณดึงดูด Pixie เมื่อสร้างความเสียหาย ฮีลพลังชีวิต และมอบโล่ป้องกัน<br><br>โดยแชมเปี้ยน Fae จะได้รับพลังโจมตีและพลังเวทเพิ่มต่อ Pixie แต่ละตัว อีกทั้งเมื่อพลังชีวิตลดลงต่ำกว่า @HealThreshold*100@% พวกเขาจะฮีลพลังชีวิตตามจำนวน Pixie ด้วย<br><row>(@MinUnits@) @ADAP@%  และฮีลพลังชีวิต @Heal@%</row><br><row>(@MinUnits@) @ADAP@% , ฮีลพลังชีวิต @Heal@% และหลังดึงดูด Pixie ครบ 7 ตัว จะเริ่มดึงดูด Golden Pixie แทน ซึ่งมอบทองให้เป็นรางวัล</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealThreshold",
+                        "value": 0.5
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ADAP",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "Heal",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Greenfather",
+        "trait_id": "DA_18_Greenfather",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Greenfather.TFT_Set18.png",
+        "tooltip_text": "Ivern ที่แข็งแกร่งที่สุดเก็บเมล็ดพันธุ์ @SeedsPerCast@ เมล็ดในทุกครั้งที่ร่ายสกิล และได้รับเพิ่ม @CombatStartSeeds@ เมล็ดในทุกรอบการต่อสู้ โดย Ivern จะใช้ @SeedsToGrowHex@ เมล็ดเพื่อสร้างช่องพิเศษบนสนาม ซึ่งมอบโบนัสให้กับยูนิตในช่องนั้น <br><br>เมล็ดพันธุ์: 0 / @SeedsToGrowHex@ เมล็ด<br><br>ไบโอมปัจจุบัน:",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "CombatStartSeeds",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "SeedsPerCast",
+                        "value": 1.0
+                    },
+                    {
+                        "name": "SeedsToGrowHex",
+                        "value": 5.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Hunter",
+        "trait_id": "DA_18_Hunter",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Hunter.TFT_Set18.png",
+        "tooltip_text": "Hunter ได้รับพลังโจมตีเพิ่มเติม และหาก Hunter ไม่ได้สลับไปเล็งเป้าหมายใหม่เป็นเวลา @HunterDuration@ วินาที พวกเขาจะได้รับการคูณความเสียหาย @DamageAmp*100@%<br><row>(@MinUnits@) @HunterAD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @HunterAD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @HunterAD*100@% %i:scaleAD%</row><br><row>(@MinUnits@) @HunterAD*100@% %i:scaleAD%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "HunterDuration",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HunterAD",
+                        "value": 0.6
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Inferno",
+        "trait_id": "DA_18_Inferno",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Inferno.TFT_Set18.png",
+        "tooltip_text": "Inferno <TFTKeyword>เผา</TFTKeyword>ศัตรูและสร้าง<TFTKeyword>บาดแผล</TFTKeyword> @WoundPercent@% เป็นเวลา @Duration@ วินาทีเมื่อสร้างความเสียหาย เอฟเฟกต์เผาของ Inferno สามารถสแตคกับเอฟเฟกต์เผาอื่น ๆ ได้<br><row>(@MinUnits@) เผา @HPBurnPerSecond@%</row><br><row>(@MinUnits@) ช่องร้านค้า @LuckySlotCount@ ช่องที่ไม่ใช่แชมเปี้ยน Inferno ลุกโชติช่วงเมื่อจบการต่อสู้ สุ่มปรากฏแชมเปี้ยนที่มีระดับสูงขึ้นหนึ่งระดับ</row><br><row>(@MinUnits@) ช่องร้านค้าลุกโชติช่วง @LuckySlotCount@ ช่อง, เผา @HPBurnPerSecond@%</row><br><row>(@MinUnits@) ช่องร้านค้าลุกโชติช่วง @LuckySlotCount@ ช่อง, เผา @HPBurnPerSecond@%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Duration",
+                        "value": 4.0
+                    },
+                    {
+                        "name": "WoundPercent",
+                        "value": 33.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HPBurnPerSecond",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "LuckySlotCount",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HPBurnPerSecond",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "LuckySlotCount",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "HPBurnPerSecond",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "LuckySlotCount",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Invoker",
+        "trait_id": "DA_18_Invoker",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Invoker.TFT_Set18.png",
+        "tooltip_text": "ทีมของคุณได้รับฟื้นฟูมานาเพิ่มเติม โดย Invoker จะได้รับมากขึ้น<br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% หน่วย | @InvokerManaBonus@ %i:scaleManaRegen% หน่วย</row><br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% หน่วย | @InvokerManaBonus@ %i:scaleManaRegen% หน่วย</row><br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% หน่วย | @InvokerManaBonus@ %i:scaleManaRegen% หน่วย</row><br><row>(@MinUnits@) @TeamManaRegen@ %i:scaleManaRegen% หน่วย | @InvokerManaBonus@ %i:scaleManaRegen% หน่วย</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "InvokerManaBonus",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "TeamManaRegen",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Lunar",
+        "trait_id": "DA_18_Lunar",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Lunar.TFT_Set18.png",
+        "tooltip_text": "แชมเปี้ยน Lunar และพันธมิตรที่อยู่ติดกันได้รับความเร็วโจมตีและพลังเวท โดยแชมเปี้ยน Lunar จะได้รับมากขึ้น @LunarMultiplier*100@%<br><row>(@MinUnits@) @AttackSpeed*100@% %i:scaleAS%, @AbilityPower*100@% %i:scaleAP%</row><br><row>(@MinUnits@) @AttackSpeed*100@% %i:scaleAS%, @AbilityPower*100@% %i:scaleAP%</row><br><row>(@MinUnits@) @AttackSpeed*100@% %i:scaleAS%, @AbilityPower*100@% %i:scaleAP%</row><br><row>(@MinUnits@) @AttackSpeed*100@% %i:scaleAS%, @AbilityPower*100@% %i:scaleAP%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "LunarMultiplier",
+                        "value": 1.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.07
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.14
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.14
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AbilityPower",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "AttackSpeed",
+                        "value": 0.18
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Avatar",
+        "trait_id": "DA_18_LuxUniqueTrait",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Avatar.TFT_Set18.png",
+        "tooltip_text": "การมี Avatar อยู่บนม้านั่งหรือบนสนามจะเปลี่ยน Avatar ทุกตัวในร้านค้าให้กลายเป็นคุณสมบัตินั้น<br><br>คุณสมบัติที่ Avatar เลือกนับเป็น +2 แก่ตัวคุณสมบัติ",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Old Growth",
+        "trait_id": "DA_18_Maokai_UniqueTrait",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_OldGrowth.TFT_Set18.png",
+        "tooltip_text": "ได้รับพลังชีวิตสูงสุดถาวร @UniqueTraitHealthPerStack@ หน่วย ทุก ๆ ครั้งที่ศัตรูถูกสังหารในระยะ @UniqueTraitHexRange@ ช่อง<br><br>ปัจจุบัน: 0 หน่วย",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "UniqueTraitHealthPerStack",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "UniqueTraitHexRange",
+                        "value": 3.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Rapidfire",
+        "trait_id": "DA_18_Rapidfire",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Rapidfire.TFT_Set18.png",
+        "tooltip_text": "ทีมของคุณได้รับความเร็วโจมตี @TeamAS*100@% โดยแชมเปี้ยน Rapidfire จะได้รับเพิ่มเติมในทุกครั้งที่โจมตี สูงสุดที่ @MaxStacks@ สแตค<br><row>(@MinUnits@) +@ASPerAttack*100@% %i:scaleAS% ต่อการโจมตี</row><br><row>(@MinUnits@) +@ASPerAttack*100@% %i:scaleAS% ต่อการโจมตี</row><br><row>(@MinUnits@) +@ASPerAttack*100@% %i:scaleAS% ต่อการโจมตี</row><br><row>(@MinUnits@) +@ASPerAttack*100@% %i:scaleAS% ต่อการโจมตี</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "MaxStacks",
+                        "value": 10.0
+                    },
+                    {
+                        "name": "TeamAS",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.03
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 3,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.09
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 4,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "ASPerAttack",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 5,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Rival",
+        "trait_id": "DA_18_Rival",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Rival.TFT_Set18.png",
+        "tooltip_text": "<row>(@MinUnits@) โบนัสทำงานเมื่อใช้ Rival เพียง 1 ตัวในสนาม<br><br>Rival เริ่มสะสมแต้มโค่นล้ม และได้รับ 3 แต้มหากโค่นล้ม Rival ตัวอื่น</row><br><row>(@MinUnits@) Rival เริ่มสะสมแต้มโค่นล้ม และได้รับ 3 แต้มหากโค่นล้ม Rival ตัวอื่น<br><br>Kha'Zix วิวัฒนาการเมื่อเก็บแต้มโค่นล้มศัตรู มอบตัวเลือกคุณสมบัติระหว่าง Executioner, Rapidfire, Ravager หรือ Spellweaver แบบถาวร<br><br>Rengar มอบ @RengarGold@/@RengarGold_2@/@RengarGold_3@ ทองเมื่อโค่นล้มครบทุก ๆ @RengarStackReq@ ครั้ง จากนั้นเมื่อโค่นล้มครบ @RengarADStackReq@ ครั้ง ทีมของคุณจะได้รับพลังโจมตี @RengarThresholdAD*100@% บวกอีก @RengarADPerStack*100@% %i:scaleAD% ต่อแต้มโค่นล้มเพิ่มเติม<br><br>Kha'Zix โค่นล้มไป: 0 / 0 ครั้ง<br>Rengar โค่นล้มไป: 0 ครั้ง<br>ทองที่ได้รับ: 0 ทอง</row><br><row>(@MinUnits@) Rival สามารถใช้งานในสนามได้พร้อมกัน เมื่อ Kha'Zix ได้รับมานาจากสกิลของเขา Rengar จะได้รับมานาส่วนนั้นด้วย @Augment_RengarManaPercent*100@% และเมื่อ Rengar ฮีลจากสกิลของเขา Kha'Zix จะได้รับฮีลส่วนนั้นด้วย @Augment_KhaZixHealPercent*100@%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "max_units": 0,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "RengarADPerStack",
+                        "value": 0.002
+                    },
+                    {
+                        "name": "RengarADStackReq",
+                        "value": 30.0
+                    },
+                    {
+                        "name": "RengarGold",
+                        "value": 2.0
+                    },
+                    {
+                        "name": "RengarGold_2",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "RengarGold_3",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "RengarStackReq",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "RengarThresholdAD",
+                        "value": 0.05
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "Augment_KhaZixHealPercent",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Augment_RengarManaPercent",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Ravager",
+        "trait_id": "DA_18_Slayer",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Ravager.TFT_Set18.png",
+        "tooltip_text": "Ravager ได้รับดูดเลือดต่อความเสียหายที่ทำได้ @Omnivamp*100@% อีกทั้งสร้างโบนัสความเสียหายแก่ศัตรู เพิ่มเป็นสองเท่าเมื่อโจมตียูนิตที่พลังชีวิตต่ำกว่า @EnemyHealthThreshold*100@%<br><row>(@MinUnits@) โบนัสความเสียหาย @BonusDamagePercentBase*100@%</row><br><row>(@MinUnits@) โบนัสความเสียหาย @BonusDamagePercentBase*100@%</row><br><row>(@MinUnits@) โบนัสความเสียหาย @BonusDamagePercentBase*100@%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "EnemyHealthThreshold",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Omnivamp",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamagePercentBase",
+                        "value": 0.12
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamagePercentBase",
+                        "value": 0.25
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "BonusDamagePercentBase",
+                        "value": 0.4
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Solar",
+        "trait_id": "DA_18_Solar",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Solar.TFT_Set18.png",
+        "tooltip_text": "<row>(@MinUnits@) แชมเปี้ยนของคุณได้รับโล่ป้องกัน @ShieldRatio*100@% จากพลังชีวิตสูงสุด สร้างโบนัสความเสียหายเวท @BonusMagicDamage*100@% และได้รับโบนัสเพิ่มเติมตามจำนวนแชมเปี้ยน 3 ดาวที่ไม่ซ้ำกันแต่ละตัว:<br><br>1: โล่ป้องกันและความเสียหายเวทเพิ่มขึ้น @PercentIncreasePer3Star*100@% ต่อแชมเปี้ยน 3 ดาว <br>@NumThreeStarThreshold1@: ได้รับ @Threshold1AttackSpeed*100@% %i:scaleAS% และ @Threshold1ArmorMagicResist@ %i:scaleArmor%%i:scaleMR% หน่วย<br>@NumThreeStarThreshold2@: แปลง @Threshold2TrueDamageConversion*100@% ของโบนัสความเสียหายเวทเป็นความเสียหายจริง<br>@NumThreeStarThreshold3@: ทุก @Threshold3StarUpPeriod@ วินาทีในการต่อสู้ แชมเปี้ยน 3 ดาวของคุณจุติเป็นร่าง 4 ดาว</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BonusMagicDamage",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "NumThreeStarThreshold1",
+                        "value": 3.0
+                    },
+                    {
+                        "name": "NumThreeStarThreshold2",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "NumThreeStarThreshold3",
+                        "value": 8.0
+                    },
+                    {
+                        "name": "PercentIncreasePer3Star",
+                        "value": 0.015
+                    },
+                    {
+                        "name": "ShieldRatio",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "Threshold1ArmorMagicResist",
+                        "value": 15.0
+                    },
+                    {
+                        "name": "Threshold1AttackSpeed",
+                        "value": 0.18
+                    },
+                    {
+                        "name": "Threshold2TrueDamageConversion",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "Threshold3StarUpPeriod",
+                        "value": 4.0
+                    }
+                ],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Spellweaver",
+        "trait_id": "DA_18_Spellweaver",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Spellweaver.TFT_Set18.png",
+        "tooltip_text": "ทีมของคุณได้รับพลังเวท @TeamwideAP*100@% โดย Spellweaver จะได้รับมากขึ้น บวกเพิ่มเติมในทุกครั้งที่ Spellweaver ร่ายสกิล<br><row>(@MinUnits@) @SpellweaverAP*100@% %i:scaleAP%, +@APPerCast*100@% %i:scaleAP% ต่อการร่าย</row><br><row>(@MinUnits@) @SpellweaverAP*100@% %i:scaleAP%, +@APPerCast*100@% %i:scaleAP% ต่อการร่าย</row><br><row>(@MinUnits@) @SpellweaverAP*100@% %i:scaleAP%, +@APPerCast*100@% %i:scaleAP% ต่อการร่าย</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "TeamwideAP",
+                        "value": 0.1
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "APPerCast",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "SpellweaverAP",
+                        "value": 0.1
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "APPerCast",
+                        "value": 0.01
+                    },
+                    {
+                        "name": "SpellweaverAP",
+                        "value": 0.3
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "APPerCast",
+                        "value": 0.02
+                    },
+                    {
+                        "name": "SpellweaverAP",
+                        "value": 0.55
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Sprykin",
+        "trait_id": "DA_18_Sprykin",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Sprykin.TFT_Set18.png",
+        "tooltip_text": "อัญเชิญ Big Furry Friend ออกมา ซึ่งสามารถวาง Sprykin ลงบนตัว BFF เพื่อขึ้นขี่หลัง<br><row>(@MinUnits@) ยูนิตที่ขึ้นขี่ได้รับ<br>@HealthIncrease*100@% %i:scaleHealth% และ @AttackSpeedIncrease*100@% %i:scaleAS%</row><br><row>(@MinUnits@) @HealthIncrease*100@% %i:scaleHealth%, @AttackSpeedIncrease*100@% %i:scaleAS% และสกิลของ BFF @TeamwideRatio*100@% จะส่งผลต่อแชมเปี้ยน Sprykin ทั้งหมดด้วย</row><br><row>(@MinUnits@) @HealthIncrease*100@% %i:scaleHealth%, @AttackSpeedIncrease*100@% %i:scaleAS% และสกิลของ BFF @TeamwideRatio*100@% จะส่งผลต่อแชมเปี้ยน Sprykin ทั้งหมดด้วย</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedIncrease",
+                        "value": 0.15
+                    },
+                    {
+                        "name": "HealthIncrease",
+                        "value": 0.15
+                    }
+                ],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedIncrease",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "HealthIncrease",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "TeamwideRatio",
+                        "value": 0.5
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "AttackSpeedIncrease",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "HealthIncrease",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "TeamwideRatio",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 7,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Summoner",
+        "trait_id": "DA_18_Summoner",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Summoner.TFT_Set18.png",
+        "tooltip_text": "Summoner เสริมพลังยูนิตซัมมอนในรูปแบบที่แตกต่างกัน<br><br>Yorick: พลังชีวิต +@HealthMult*100@%<br>Azir: ความเสียหาย +@DamageMult*100@%<br>Mama Beak: ความเสียหาย +@DamageMult*100@%<br>Zyra: ต้นไม้โจมตีเพิ่ม +@NumExtraAttacks@ ครั้ง<br><row>(@MinUnits@) เสริมพลังยูนิตซัมมอน</row><br><row>(@MinUnits@) เพิ่มเอฟเฟกต์แต่ละอย่างขึ้น 50%</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageMult",
+                        "value": 0.45
+                    },
+                    {
+                        "name": "HealthMult",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "NumExtraAttacks",
+                        "value": 4.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 2,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 3,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Vanguard",
+        "trait_id": "DA_18_Vanguard",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Vanguard.TFT_Set18.png",
+        "tooltip_text": "เมื่อเริ่มการต่อสู้และเมื่อพลังชีวิตเหลือน้อยกว่า @HealthThreshold*100@% Vanguard จะได้รับโล่ป้องกันจากพลังชีวิตสูงสุดเป็นเวลา @ShieldDuration@ วินาที<br><row>(@MinUnits@) @MaxHealthShield*100@% จากพลังชีวิตสูงสุด</row><br><row>(@MinUnits@) @MaxHealthShield*100@% จากพลังชีวิตสูงสุด</row><br><row>(@MinUnits@) @MaxHealthShield*100@% จากพลังชีวิตสูงสุด และได้รับความทนทาน @DurabilityIncrease*100@% ขณะมีโล่ป้องกัน</row>",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "HealthThreshold",
+                        "value": 0.5
+                    },
+                    {
+                        "name": "ShieldDuration",
+                        "value": 10.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "MaxHealthShield",
+                        "value": 0.18
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "MaxHealthShield",
+                        "value": 0.35
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "DurabilityIncrease",
+                        "value": 0.06
+                    },
+                    {
+                        "name": "MaxHealthShield",
+                        "value": 0.45
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Thornmaiden",
+        "trait_id": "DA_18_ZyraUniqueTrait",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_ZyraOrigin.TFT_Set18.png",
+        "tooltip_text": "ทีมของคุณได้รับความทนทาน @BaseDurability*100@% เพิ่มขึ้นเป็น @IncreasedDurability*100@% หากต้นไม้ของ Zyra @PlantNumThreshold@ ต้นขึ้นไปยังมีชีวิตอยู่",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "BaseDurability",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "IncreasedDurability",
+                        "value": 0.1
+                    },
+                    {
+                        "name": "PlantNumThreshold",
+                        "value": 6.0
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Attuned",
+        "trait_id": "DA_AluneUniqueTrait18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Attuned.TFT_Set18.png",
+        "tooltip_text": "Alune ที่แข็งแกร่งที่สุดหมุนเวียนช่วงแสงจันทร์ในทุกครั้งที่ร่ายสกิล โดยขณะดวงจันทร์สว่างครึ่งดวงหรือน้อยกว่า ทีมของคุณได้รับความทนทาน @Durability*100@% หากดวงจันทร์สว่างเกินครึ่งดวง ได้รับการคูณความเสียหาย @DamageAmp*100@%",
+        "innate_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "DamageAmp",
+                        "value": 0.07
+                    },
+                    {
+                        "name": "Durability",
+                        "value": 0.07
+                    }
+                ]
+            }
+        ],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Bounty Seeker",
+        "trait_id": "DA_DravenUniqueTrait18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_BountySeeker.TFT_Set18.png",
+        "tooltip_text": "เลือกค่าหัว ซึ่ง Draven ที่แข็งแกร่งที่สุดสามารถเพิ่มความคืบหน้าเพื่อรับรางวัล จากนั้นเมื่อล่าค่าหัวสำเร็จ ได้เลือกค่าหัวอีกครั้ง",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Emerald Aspect",
+        "trait_id": "DA_Emerald18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_EmeraldAspect.TFT_Set18.png",
+        "tooltip_text": "ลากพันธมิตรไปวางทับ Taric ที่แข็งแกร่งที่สุดเพื่อจับคู่ และสกิลของ Taric จะมอบโบนัสทรงพลังให้กับคู่หู",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 1,
+                "style_idx": 4,
+                "style_name": "kUnique"
+            }
+        ]
+    },
+    {
+        "display_name": "Flora Fatalis",
+        "trait_id": "DA_FloraFatalis18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_FloraFatalis.TFT_Set18.png",
+        "tooltip_text": "แชมเปี้ยน Flora Fatalis เก็บเกี่ยวศัตรูทุก ๆ ครั้งที่โค่นล้ม ทำให้ได้รับ:<br><row>(@MinUnits@) มานา @Mana@ หน่วย</row><br><row>(@MinUnits@) และฮีลพันธมิตรที่พลังชีวิตน้อยที่สุด @PercentHeal*100@% จากพลังชีวิตสูงสุดด้วย</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "Mana",
+                        "value": 10.0
+                    }
+                ],
+                "min_units": 1,
+                "max_units": 1,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "PercentHeal",
+                        "value": 0.08
+                    }
+                ],
+                "min_units": 2,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Juggernaut",
+        "trait_id": "DA_Juggernaut18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Juggernaut.TFT_Set18.png",
+        "tooltip_text": "ทีมของคุณได้รับความทนทาน โดย Juggernaut จะได้รับมากขึ้น<br><row>(@MinUnits@) @TeamDurability*100@% %i:scaleDR% หรือ @JuggernautDurability*100@% %i:scaleDR%</row><br><row>(@MinUnits@) @TeamDurability*100@% %i:scaleDR% หรือ @JuggernautDurability*100@% %i:scaleDR%</row><br><row>(@MinUnits@) @TeamDurability*100@% %i:scaleDR% หรือ @JuggernautDurability*100@% %i:scaleDR%</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [
+                    {
+                        "name": "JuggernautDurability",
+                        "value": 0.2
+                    },
+                    {
+                        "name": "TeamDurability",
+                        "value": 0.04
+                    }
+                ],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "JuggernautDurability",
+                        "value": 0.3
+                    },
+                    {
+                        "name": "TeamDurability",
+                        "value": 0.06
+                    }
+                ],
+                "min_units": 4,
+                "max_units": 5,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "JuggernautDurability",
+                        "value": 0.4
+                    },
+                    {
+                        "name": "TeamDurability",
+                        "value": 0.08
+                    }
+                ],
+                "min_units": 6,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Primal",
+        "trait_id": "DA_Primal18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Primal.TFT_Set18.png",
+        "tooltip_text": "เลือก 1 ใน 4 พรแห่ง Primal<br><row>(@MinUnits@)</row><br><row>(@MinUnits@)</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 2,
+                "max_units": 3,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [],
+                "min_units": 4,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
+        "display_name": "Riftbeast",
+        "trait_id": "DA_Riftbeast18",
+        "set": "TFTSet18",
+        "icon_path": "/lol-game-data/assets/ASSETS/UX/TraitIcons/Trait_Icon_18_Riftbeast.TFT_Set18.png",
+        "tooltip_text": "<row>(@MinUnits@) ใช้ Alpha Mark เพื่อมอบบัฟพิเศษให้กับ Riftbeast</row><br><row>(@MinUnits@) ทุก ๆ @OverrunCombats@ รอบการต่อสู้ ร้านค้าครั้งถัดไปจะเต็มไปด้วย Riftbeast</row><br><row>(@MinUnits@) เมื่อเริ่มการต่อสู้และทุก ๆ 5 วินาที Riftbeast เติบโตและได้รับ <br>@CapstoneAD*100@% %i:scaleAD%, @CapstoneAP*100@% %i:scaleAP%, @CapstoneAspd*100@% %i:scaleAS%<br>+@CapstoneArmor@ %i:scaleArmor% หน่วย, +@CapstoneMR@ %i:scaleMR% หน่วย, +@CapstoneHealth@ %i:scaleHealth% หน่วย, +@CapstoneManaRegen@ %i:scaleManaRegen% หน่วย</row><br><row>(@MinUnits@) ขนาดทีมสูงสุด +@TeamSize@ หน่วย</row>",
+        "innate_trait_sets": [],
+        "conditional_trait_sets": [
+            {
+                "constants": [],
+                "min_units": 3,
+                "max_units": 4,
+                "style_idx": 2,
+                "style_name": "kBronze"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "OverrunCombats",
+                        "value": 3.0
+                    }
+                ],
+                "min_units": 5,
+                "max_units": 6,
+                "style_idx": 3,
+                "style_name": "kSilver"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "CapstoneAD",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "CapstoneAP",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "CapstoneArmor",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "CapstoneAspd",
+                        "value": 0.05
+                    },
+                    {
+                        "name": "CapstoneHealth",
+                        "value": 50.0
+                    },
+                    {
+                        "name": "CapstoneMR",
+                        "value": 5.0
+                    },
+                    {
+                        "name": "CapstoneManaRegen",
+                        "value": 1.0
+                    }
+                ],
+                "min_units": 7,
+                "max_units": 9,
+                "style_idx": 5,
+                "style_name": "kGold"
+            },
+            {
+                "constants": [
+                    {
+                        "name": "TeamSize",
+                        "value": 2.0
+                    }
+                ],
+                "min_units": 10,
+                "style_idx": 5,
+                "style_name": "kGold"
+            }
+        ]
+    },
+    {
         "display_name": "Astro",
         "trait_id": "Astro",
         "set": "TFTSet3",

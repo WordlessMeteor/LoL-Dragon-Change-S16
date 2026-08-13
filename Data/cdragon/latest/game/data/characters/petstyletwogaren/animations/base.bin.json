@@ -211,7 +211,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{e5848c9f}": {
+            "Cast_Animation_01": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Table": {
@@ -236,7 +236,7 @@
                 "startFrame": 8.0,
                 "__type": "AtomicClipData"
             },
-            "{c3e9b6a9}": {
+            "Cast_Cycle_Base": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
@@ -277,7 +277,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{150e3e90}": {
+            "Damage_Hurt_Base": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -533,7 +533,7 @@
                 "startFrame": 8.0,
                 "__type": "AtomicClipData"
             },
-            "{ff7ec843}": {
+            "Reaction_WinStreakStart": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -549,7 +549,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{2977b336}": {
+            "Reaction_WinStreakEnd": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -565,7 +565,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{ef33df2e}": {
+            "Reaction_Top4": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -581,7 +581,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{c3fa865c}": {
+            "Reaction_3Star": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -778,7 +778,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{d2b36ff6}": {
+            "Taunt_Strike_Quick": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -1008,8 +1008,8 @@
                         "mAnimationNames": [
                             "Taunt_loop",
                             "Taunt_In",
-                            "{d2b36ff6}",
-                            "{d17d88f2}"
+                            "Taunt_Strike_Quick",
+                            "Taunt_Strike_Slow"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
@@ -1172,7 +1172,7 @@
                 },
                 "__type": "SequencerClipData"
             },
-            "{71176af2}": {
+            "Celebrate_Base": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -1246,7 +1246,7 @@
             },
             "Celebrate": {
                 "mClipNameList": [
-                    "{71176af2}",
+                    "Celebrate_Base",
                     "Joke_Loop"
                 ],
                 "mEventDataMap": {
@@ -1286,7 +1286,7 @@
                 "EndFrame": 2.0,
                 "__type": "AtomicClipData"
             },
-            "{e9d54398}": {
+            "Pedestal_In_No_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mAnimationResourceData": {
@@ -1296,7 +1296,7 @@
                 "EndFrame": 2.0,
                 "__type": "AtomicClipData"
             },
-            "{a11e46b5}": {
+            "Pedestal_Out_No_Vfx": {
                 "mMaskDataName": "Vfx",
                 "mTrackDataName": "Vfx",
                 "mAnimationResourceData": {
@@ -1361,7 +1361,7 @@
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{e9d54398}",
+                "mTrueConditionClipName": "Pedestal_In_No_Vfx",
                 "mFalseConditionClipName": "Pedestal_In_Vfx",
                 "__type": "ConditionBoolClipData"
             },
@@ -1377,12 +1377,12 @@
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
                 "mTrueConditionClipName": "Pedestal_Out_Vfx",
-                "mFalseConditionClipName": "{a11e46b5}",
+                "mFalseConditionClipName": "Pedestal_Out_No_Vfx",
                 "__type": "ConditionBoolClipData"
             },
             "Cast_Cycle": {
                 "mClipNameList": [
-                    "{c3e9b6a9}",
+                    "Cast_Cycle_Base",
                     "{8ea09c03}"
                 ],
                 "__type": "ParallelClipData"
@@ -1438,12 +1438,12 @@
             },
             "{5e5fc064}": {
                 "mClipNameList": [
-                    "{5d8a8c0c}",
+                    "Cast_Run_Base",
                     "{1ea9f0d0}"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{5d8a8c0c}": {
+            "Cast_Run_Base": {
                 "mTrackDataName": "Base",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/PetStyleTwoGaren/Themes/Base/Animations/PetStyleTwoGaren_Base_Run.anm",
@@ -1451,7 +1451,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{d17d88f2}": {
+            "Taunt_Strike_Slow": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Arm": {
@@ -1523,20 +1523,20 @@
                 "Updater": {
                     "driver": {
                         "mAnimationNames": [
-                            "{d2b36ff6}",
-                            "{d17d88f2}"
+                            "Taunt_Strike_Quick",
+                            "Taunt_Strike_Slow"
                         ],
                         "__type": "IsAnimationPlayingDynamicMaterialBoolDriver"
                     },
                     "__type": "LogicDriverBoolParametricUpdater"
                 },
-                "mTrueConditionClipName": "{d2b36ff6}",
-                "mFalseConditionClipName": "{d17d88f2}",
+                "mTrueConditionClipName": "Taunt_Strike_Quick",
+                "mFalseConditionClipName": "Taunt_Strike_Slow",
                 "__type": "ConditionBoolClipData"
             },
             "Damage_Hurt": {
                 "mClipNameList": [
-                    "{150e3e90}",
+                    "Damage_Hurt_Base",
                     "{1ea9f0d0}"
                 ],
                 "__type": "ParallelClipData"
@@ -2447,6 +2447,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{af3dddf9}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

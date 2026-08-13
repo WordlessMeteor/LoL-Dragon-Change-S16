@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.15.1",
+    "version": "16.16.1",
     "data": {
         "Nidalee": {
             "id": "Nidalee",
@@ -10,7 +10,7 @@
             "title": "奈德丽",
             "image": {
                 "full": "Nidalee.png",
-                "sprite": "champion5.png",
+                "sprite": "champion3.png",
                 "group": "champion",
                 "x": 144,
                 "y": 0,
@@ -651,7 +651,7 @@
                     "rangeBurn": "1500",
                     "image": {
                         "full": "JavelinToss.png",
-                        "sprite": "spell16.png",
+                        "sprite": "spell10.png",
                         "group": "spell",
                         "x": 288,
                         "y": 0,
@@ -664,7 +664,7 @@
                     "id": "Bushwhack",
                     "name": "丛林伏击 / 猛扑",
                     "description": "人类形态下， 奈德丽会对指定位置放置一个陷阱，踩中陷阱的单位的视野将会被暴露给奈德丽，并持续受到伤害。美洲狮形态下，她会猛扑向目标，落地时造成伤害。",
-                    "tooltip": "<keywordMajor>人类形态：</keywordMajor>奈德丽放置一个持续2分钟的隐形陷阱。当有一个敌人走到它上面时，该敌人会每秒受到<magicDamage>{{ damagepersecond }}魔法伤害</magicDamage>，持续{{ e3 }}秒。<br /><br />最多可以有{{ maxtraps }}个陷阱同时存在。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<keywordMajor>人类形态：</keywordMajor>奈德丽放置一个持续2分钟的隐形陷阱。当有一个敌人走到它上面时，该敌人会每秒受到<magicDamage>{{ damagepersecond }}魔法伤害</magicDamage>，持续{{ dotduration }}秒。<br /><br />最多可以有{{ maxtraps }}个陷阱同时存在。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "陷阱伤害",
@@ -672,7 +672,7 @@
                             "陷阱法力消耗"
                         ],
                         "effect": [
-                            "{{ e7 }} -> {{ e7NL }}",
+                            "{{ totalflatdamage }} -> {{ totalflatdamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -794,7 +794,7 @@
                     "rangeBurn": "900",
                     "image": {
                         "full": "Bushwhack.png",
-                        "sprite": "spell16.png",
+                        "sprite": "spell10.png",
                         "group": "spell",
                         "x": 336,
                         "y": 0,
@@ -937,7 +937,7 @@
                     "rangeBurn": "900",
                     "image": {
                         "full": "PrimalSurge.png",
-                        "sprite": "spell16.png",
+                        "sprite": "spell10.png",
                         "group": "spell",
                         "x": 384,
                         "y": 0,
@@ -1071,7 +1071,7 @@
                     "rangeBurn": "20",
                     "image": {
                         "full": "AspectOfTheCougar.png",
-                        "sprite": "spell16.png",
+                        "sprite": "spell10.png",
                         "group": "spell",
                         "x": 432,
                         "y": 0,
@@ -1086,7 +1086,7 @@
                 "description": "在穿越草丛进行移动时，奈德丽的移动速度会提升10%，持续2秒，并在朝着1400码内的出现在己方视野内的敌方英雄进行移动时，移动速度加成会提升至30%。<br><br>在【Q标枪投掷】或【W丛林伏击】对敌方英雄或野怪造成伤害后，奈德丽会开始<font color='#FFF673'>捕猎</font>目标英雄，提供其<font color='#ee91d7'>真实视野</font>，持续4秒。在此期间，奈德丽获得10%移动速度加成（在她朝着<font color='#FFF673'>被捕猎</font>的目标移动时，这个加成会提升至30%）并且她的【Q推倒】和【W猛扑】会对这些目标造成强化伤害。",
                 "image": {
                     "full": "Nidalee_Passive.png",
-                    "sprite": "passive5.png",
+                    "sprite": "passive3.png",
                     "group": "passive",
                     "x": 144,
                     "y": 0,

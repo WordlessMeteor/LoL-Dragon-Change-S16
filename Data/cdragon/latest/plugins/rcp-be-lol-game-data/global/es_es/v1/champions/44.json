@@ -780,7 +780,7 @@
             "cost": "@Cost@ de maná, todas las cargas",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Cura a los aliados cercanos según las cargas acumuladas. Los ataques potenciados por Bravuconería otorgan una carga de Toque de luz estelar.",
-            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Obtiene una acumulación (máximo: @Effect6Amount@) cada @StackCooldown@ s y cada vez que asesta un ataque potenciado por <spellName>Bravuconería</spellName>.<br><br><spellActive>Activa:</spellActive> Consume todas las acumulaciones y restaura <healing>@HealingPerStack@ de vida</healing> por acumulación a los campeones aliados cercanos (<healing>@MaxStackHealing@</healing> de curación con @Effect6Amount@ acumulaciones).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva:</spellPassive> Obtiene una acumulación (máximo: @MaxCharges@) cada @StackCooldown@ s y cada vez que asesta un ataque potenciado por <spellName>Bravuconería</spellName>.<br><br><spellActive>Activa:</spellActive> Consume todas las acumulaciones y restaura <healing>@HealingPerStack@ de vida</healing> por acumulación a los campeones aliados cercanos (<healing>@MaxStackHealing@</healing> de curación con @MaxCharges@ acumulación(es)).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Aumenta de forma pasiva la armadura de Taric y del aliado vinculado con Bastión.<br><br>Al activarlo, coloca un escudo a un aliado y le otorga Bastión mientras que permanezca cerca de Taric. Los hechizos de Taric también se lanzan desde el aliado vinculado por Bastión.",
-            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>Taric obtiene <scaleArmor>@BonusArmor@ de armadura</scaleArmor> y forma un vínculo con un aliado. Cuando están cerca, el aliado obtiene <scaleArmor>@BonusArmor@ de armadura</scaleArmor> y Taric lanza todas sus habilidades desde él y su aliado vinculado.<br><br><spellPassive>Activa: </spellPassive>Taric se vincula a un campeón aliado, lo que le otorga un <shield>escudo del @Effect2Amount@% de la vida máxima</shield> durante @Effect3Amount@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Pasiva: </spellPassive>Taric obtiene <scaleArmor>@BonusArmor@ de armadura</scaleArmor> y forma un vínculo con un aliado. Cuando están cerca, el aliado obtiene <scaleArmor>@BonusArmor@ de armadura</scaleArmor>, y Taric lanza todas sus habilidades desde su posición y la de su aliado vinculado.<br><br><spellPassive>Activa: </spellPassive>Taric se vincula a un campeón aliado, lo que le otorga un escudo del <shield>@ShieldHPRatio@% de la vida máxima</shield> durante @ShieldDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Taric prepara un rayo de luz estelar que, tras un breve momento, inflige daño mágico y aturde a los enemigos.",
-            "dynamicDescription": "Taric proyecta un rayo de luz estelar que explota tras @Effect3Amount@ s para infligir <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y <status>aturdir</status> a los enemigos durante @Effect2Amount@ s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric proyecta un rayo de luz estelar que explota tras @ChargeDuration@ s para infligir <magicDamage>@TotalDamage@ de daño mágico</magicDamage> y <status>aturdir</status> a los enemigos durante @StunDuration@ s.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

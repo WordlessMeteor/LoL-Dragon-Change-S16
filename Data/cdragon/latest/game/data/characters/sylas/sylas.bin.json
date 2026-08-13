@@ -419,7 +419,7 @@
             "baseValue": 32.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 2.549999952316284,
             "__type": "ModifiableFloat"
         },
@@ -614,6 +614,7 @@
     },
     "Characters/Sylas/Spells/SylasPassiveAttack": {
         "ObjectName": "SylasPassiveAttack",
+        "objectPath": "Characters/Sylas/Spells/SylasPassiveAttack",
         "mScriptName": "SylasPassiveAttack",
         "mSpell": {
             "flags": 4,
@@ -626,8 +627,8 @@
                 "ASSETS/Characters/Sylas/HUD/Icons2D/SylasP.dds"
             ],
             "mCastTime": 0.10000000149011612,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 16.0,
                 16.0,
@@ -671,7 +672,7 @@
                 300.0,
                 300.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     300.0,
                     300.0,
@@ -754,6 +755,7 @@
     },
     "Characters/Sylas/Spells/SylasPassiveAbility/SylasPassive": {
         "ObjectName": "SylasPassive",
+        "objectPath": "Characters/Sylas/Spells/SylasPassiveAbility/SylasPassive",
         "mScriptName": "SylasPassive",
         "mSpell": {
             "flags": 36,
@@ -901,7 +903,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -953,10 +955,11 @@
     },
     "Characters/Sylas/Spells/SylasBasicAttack": {
         "ObjectName": "SylasBasicAttack",
+        "objectPath": "Characters/Sylas/Spells/SylasBasicAttack",
         "mScriptName": "SylasBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
-            "{11704a2b}": 0.382099986076355,
+            "spellCastTime": 0.382099986076355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -990,7 +993,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -1052,16 +1055,18 @@
     },
     "{2636d129}": {
         "ObjectName": "SylasSkin46RunAnimation",
+        "objectPath": "{2636d129}",
         "mScriptName": "SylasSkin46RunAnimation",
         "__type": "SpellObject"
     },
     "Characters/Sylas/Spells/SylasBasicAttack2": {
         "ObjectName": "SylasBasicAttack2",
+        "objectPath": "Characters/Sylas/Spells/SylasBasicAttack2",
         "mScriptName": "SylasBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.382099986076355,
+            "spellCastTime": 0.382099986076355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1095,7 +1100,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -1166,11 +1171,13 @@
     },
     "Characters/Sylas/Spells/SylasWAbility/SylasWDamageAndHeal": {
         "ObjectName": "SylasWDamageAndHeal",
+        "objectPath": "Characters/Sylas/Spells/SylasWAbility/SylasWDamageAndHeal",
         "mScriptName": "SylasWDamageAndHeal",
         "__type": "SpellObject"
     },
     "Characters/Sylas/Spells/SylasWAbility/SylasW": {
         "ObjectName": "SylasW",
+        "objectPath": "Characters/Sylas/Spells/SylasWAbility/SylasW",
         "mScriptName": "SylasW",
         "mSpell": {
             "flags": 4,
@@ -1336,8 +1343,8 @@
                 "ASSETS/Characters/Sylas/HUD/Icons2D/SylasW.dds"
             ],
             "mCastTime": 0.15000000596046448,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 12.0,
                 12.0,
@@ -1402,7 +1409,7 @@
                 90.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     60.0,
@@ -1546,6 +1553,7 @@
     },
     "Characters/Sylas/Spells/SylasRAbility/SylasR": {
         "ObjectName": "SylasR",
+        "objectPath": "Characters/Sylas/Spells/SylasRAbility/SylasR",
         "mScriptName": "SylasR",
         "mSpell": {
             "mAffectsTypeFlags": 16387,
@@ -1688,7 +1696,7 @@
                 950.0,
                 950.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     950.0,
                     950.0,
@@ -1764,7 +1772,7 @@
                 75.0,
                 75.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     75.0,
                     75.0,
@@ -1855,6 +1863,7 @@
     },
     "Characters/Sylas/Spells/SylasQAbility/SylasQ": {
         "ObjectName": "SylasQ",
+        "objectPath": "Characters/Sylas/Spells/SylasQAbility/SylasQ",
         "mScriptName": "SylasQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2037,8 +2046,8 @@
                 "ASSETS/Characters/Sylas/HUD/Icons2D/SylasQ.dds"
             ],
             "mCastTime": 0.4000000059604645,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 10.0,
                 10.0,
@@ -2072,7 +2081,7 @@
                 850.0,
                 850.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     850.0,
                     850.0,
@@ -2143,7 +2152,7 @@
                 55.0,
                 55.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     55.0,
                     55.0,
@@ -2324,11 +2333,12 @@
     },
     "Characters/Sylas/Spells/SylasCritAttack": {
         "ObjectName": "SylasCritAttack",
+        "objectPath": "Characters/Sylas/Spells/SylasCritAttack",
         "mScriptName": "SylasCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.382099986076355,
+            "spellCastTime": 0.382099986076355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2362,7 +2372,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -2424,6 +2434,7 @@
     },
     "Characters/Sylas/Spells/SylasRCosmeticMissile": {
         "ObjectName": "SylasRCosmeticMissile",
+        "objectPath": "Characters/Sylas/Spells/SylasRCosmeticMissile",
         "mScriptName": "SylasRCosmeticMissile",
         "mSpell": {
             "mAffectsTypeFlags": 1,
@@ -2470,7 +2481,7 @@
                 1500.0,
                 1500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1500.0,
                     1500.0,
@@ -2561,16 +2572,19 @@
     },
     "{860ca759}": {
         "ObjectName": "SylasSkin46WAttackAnimation",
+        "objectPath": "{860ca759}",
         "mScriptName": "SylasSkin46WAttackAnimation",
         "__type": "SpellObject"
     },
     "{9213a1bb}": {
         "ObjectName": "SylasSkin46Manager",
+        "objectPath": "{9213a1bb}",
         "mScriptName": "SylasSkin46Manager",
         "__type": "SpellObject"
     },
     "Characters/Sylas/Spells/SylasPassiveAttackNoAnim": {
         "ObjectName": "SylasPassiveAttackNoAnim",
+        "objectPath": "Characters/Sylas/Spells/SylasPassiveAttackNoAnim",
         "mScriptName": "SylasPassiveAttackNoAnim",
         "mSpell": {
             "flags": 4,
@@ -2583,8 +2597,8 @@
                 "ASSETS/Characters/Sylas/HUD/Icons2D/SylasP.dds"
             ],
             "mCastTime": 0.10000000149011612,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 16.0,
                 16.0,
@@ -2628,7 +2642,7 @@
                 300.0,
                 300.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     300.0,
                     300.0,
@@ -2714,6 +2728,7 @@
     },
     "Characters/Sylas/Spells/SylasEAbility/SylasEShield": {
         "ObjectName": "SylasEShield",
+        "objectPath": "Characters/Sylas/Spells/SylasEAbility/SylasEShield",
         "mScriptName": "SylasEShield",
         "mSpell": {
             "flags": 4,
@@ -2724,8 +2739,8 @@
                 "ASSETS/Characters/Sylas/HUD/Icons2D/SylasE.dds"
             ],
             "mCastTime": 0.10000000149011612,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 16.0,
                 16.0,
@@ -2769,7 +2784,7 @@
                 300.0,
                 300.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     300.0,
                     300.0,
@@ -2843,6 +2858,7 @@
     },
     "Characters/Sylas/Spells/SylasEAbility/SylasE": {
         "ObjectName": "SylasE",
+        "objectPath": "Characters/Sylas/Spells/SylasEAbility/SylasE",
         "mScriptName": "SylasE",
         "mSpell": {
             "flags": 4,
@@ -2916,8 +2932,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sylas/HUD/Icons2D/SylasE.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 13.0,
                 13.0,
@@ -3006,7 +3022,7 @@
                 65.0,
                 65.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     65.0,
                     65.0,
@@ -3145,6 +3161,7 @@
     },
     "Characters/Sylas/Spells/SylasEAbility/SylasE2": {
         "ObjectName": "SylasE2",
+        "objectPath": "Characters/Sylas/Spells/SylasEAbility/SylasE2",
         "mScriptName": "SylasE2",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -3173,8 +3190,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Sylas/HUD/Icons2D/SylasE2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3211,7 +3228,7 @@
                 850.0,
                 850.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     850.0,
                     850.0,
@@ -3353,6 +3370,7 @@
     },
     "Characters/Sylas/Spells/SylasRBuff": {
         "ObjectName": "SylasRBuff",
+        "objectPath": "Characters/Sylas/Spells/SylasRBuff",
         "mScriptName": "SylasRBuff",
         "mSpell": {
             "mImgIconName": [
@@ -3389,12 +3407,13 @@
     },
     "Characters/Sylas/Spells/SylasCheatExtraSpellTest": {
         "ObjectName": "SylasCheatExtraSpellTest",
+        "objectPath": "Characters/Sylas/Spells/SylasCheatExtraSpellTest",
         "mScriptName": "SylasCheatExtraSpellTest",
         "mSpell": {
             "mAffectsTypeFlags": 8192,
             "mAffectsStatusFlags": 120,
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cannotBeSuppressed": true,
             "canCastWhileDisabled": true,
             "canCastOrQueueWhileCasting": true,
@@ -3484,7 +3503,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     1,

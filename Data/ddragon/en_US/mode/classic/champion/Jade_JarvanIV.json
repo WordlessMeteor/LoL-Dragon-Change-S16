@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.15.1",
+    "version": "16.16.1",
     "data": {
         "Jade_JarvanIV": {
             "id": "Jade_JarvanIV",
@@ -12,8 +12,8 @@
                 "full": "Jade_JarvanIV.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 432,
-                "y": 48,
+                "x": 0,
+                "y": 96,
                 "w": 48,
                 "h": 48
             },
@@ -196,7 +196,7 @@
                 "mpperlevel": 40,
                 "movespeed": 340,
                 "armor": 21.6,
-                "armorperlevel": 3.6,
+                "armorperlevel": 3,
                 "spellblock": 31.25,
                 "spellblockperlevel": 1.25,
                 "attackrange": 175,
@@ -226,7 +226,7 @@
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
-                            "{{ e2 }}% -> {{ e2NL }}%",
+                            "{{ armorshredpercent }}% -> {{ armorshredpercentNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}",
                             "{{ cost }} -> {{ costNL }}"
                         ]
@@ -252,25 +252,25 @@
                     "effect": [
                         null,
                         [
-                            80,
-                            120,
-                            160,
-                            200,
-                            240
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            10,
-                            14,
-                            18,
-                            22,
-                            26
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            3,
-                            3,
-                            3,
-                            3,
-                            3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -324,9 +324,9 @@
                     ],
                     "effectBurn": [
                         null,
-                        "80/120/160/200/240",
-                        "10/14/18/22/26",
-                        "3",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -350,7 +350,7 @@
                         "full": "Jade_JarvanIVDragonStrike.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 96,
+                        "x": 288,
                         "y": 48,
                         "w": 48,
                         "h": 48
@@ -399,46 +399,46 @@
                     "effect": [
                         null,
                         [
-                            60,
-                            80,
-                            100,
-                            120,
-                            140
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            15,
-                            20,
-                            25,
-                            30,
-                            35
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            10,
-                            20,
-                            30,
-                            40,
-                            50
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            4,
-                            4,
-                            4,
-                            4,
-                            4
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            2,
-                            2,
-                            2,
-                            2,
-                            2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.013,
-                            0.013,
-                            0.013,
-                            0.013,
-                            0.013
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             0,
@@ -471,12 +471,12 @@
                     ],
                     "effectBurn": [
                         null,
-                        "60/80/100/120/140",
-                        "15/20/25/30/35",
-                        "10/20/30/40/50",
-                        "4",
-                        "2",
-                        "0.01",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
                         "0",
                         "0",
                         "0",
@@ -497,7 +497,7 @@
                         "full": "Jade_JarvanIVGoldenAegis.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 144,
+                        "x": 336,
                         "y": 48,
                         "w": 48,
                         "h": 48
@@ -512,15 +512,15 @@
                     "leveltip": {
                         "label": [
                             "Damage",
-                            "Passive Attack Speed",
-                            "Active Attack Speed",
-                            "Passive Armor"
+                            "Attack Speed",
+                            "Armor",
+                            "@AbilityResourceName@ Cost"
                         ],
                         "effect": [
                             "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ passiveattackspeed*100.000000 }}% -> {{ passiveattackspeednl*100.000000 }}%",
-                            "{{ passiveattackspeed*100.000000 }}% -> {{ passiveattackspeednl*100.000000 }}%",
-                            "{{ passivearmor }} -> {{ passivearmorNL }}"
+                            "{{ passivearmor }} -> {{ passivearmorNL }}",
+                            "{{ cost }} -> {{ costNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -534,35 +534,35 @@
                     "cooldownBurn": "13",
                     "cost": [
                         55,
-                        55,
-                        55,
-                        55,
-                        55
+                        60,
+                        65,
+                        70,
+                        75
                     ],
-                    "costBurn": "55",
+                    "costBurn": "55/60/65/70/75",
                     "datavalues": {},
                     "effect": [
                         null,
                         [
-                            10,
-                            13,
-                            16,
-                            19,
-                            22
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            60,
-                            105,
-                            150,
-                            195,
-                            240
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
-                            0.2,
-                            0.225,
-                            0.25,
-                            0.275,
-                            0.3
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             8,
@@ -616,9 +616,9 @@
                     ],
                     "effectBurn": [
                         null,
-                        "10/13/16/19/22",
-                        "60/105/150/195/240",
-                        "0.2/0.225/0.25/0.275/0.3",
+                        "0",
+                        "0",
+                        "0",
                         "8",
                         "0",
                         "0",
@@ -642,7 +642,7 @@
                         "full": "Jade_JarvanIVDemacianStandard.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 192,
+                        "x": 384,
                         "y": 48,
                         "w": 48,
                         "h": 48
@@ -759,7 +759,7 @@
                         "full": "Jade_JarvanIVCataclysm.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 240,
+                        "x": 432,
                         "y": 48,
                         "w": 48,
                         "h": 48
@@ -774,8 +774,8 @@
                     "full": "Jade_JarvanIVP.png",
                     "sprite": "passive0.png",
                     "group": "passive",
-                    "x": 432,
-                    "y": 48,
+                    "x": 0,
+                    "y": 96,
                     "w": 48,
                     "h": 48
                 }

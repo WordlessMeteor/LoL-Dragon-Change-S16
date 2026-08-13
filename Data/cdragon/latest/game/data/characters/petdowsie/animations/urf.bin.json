@@ -89,7 +89,7 @@
                         ],
                         "__type": "SubmeshVisibilityEventData"
                     },
-                    "{85f259b4}": {
+                    "VFX_Taunt": {
                         "mEffectKey": "PetDowsie_Taunt",
                         "mParticleEventDataPairList": [
                             {
@@ -126,7 +126,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{71176af2}": {
+            "Celebrate_Base": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{7c0dc71e}": {
@@ -437,7 +437,7 @@
             "Run_Base": {
                 "mConditionFloatPairDataList": [
                     {
-                        "mClipName": "{b910f2d7}",
+                        "mClipName": "Run1_BASE",
                         "__type": "ConditionFloatPairData"
                     },
                     {
@@ -452,7 +452,7 @@
                 "mChangeAnimationMidPlay": true,
                 "__type": "ConditionFloatClipData"
             },
-            "{b910f2d7}": {
+            "Run1_BASE": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mTickDuration": 0.02500000037252903,
@@ -478,11 +478,11 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{c3e9b6a9}": {
+            "Cast_Cycle_Base": {
                 "mFlags": 2,
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
-                    "{a5db086f}": {
+                    "VFX_Cast": {
                         "mEffectKey": "PetDowsie_Cast",
                         "mParticleEventDataPairList": [
                             {
@@ -509,7 +509,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{150e3e90}": {
+            "Damage_Hurt_Base": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "{093d9194}": {
@@ -745,7 +745,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{9e55a33e}": {
+            "Laugh_BASE": {
                 "mTrackDataName": "Base",
                 "mEventDataMap": {
                     "Fish": {
@@ -813,7 +813,7 @@
                         ],
                         "__type": "SubmeshVisibilityEventData"
                     },
-                    "{94235a89}": {
+                    "VFX_Laugh": {
                         "mStartFrame": 7.0,
                         "mEffectKey": "PetDowsie_Laugh",
                         "mParticleEventDataPairList": [
@@ -868,7 +868,7 @@
             },
             "Cast_Cycle": {
                 "mClipNameList": [
-                    "{c3e9b6a9}",
+                    "Cast_Cycle_Base",
                     "{c02c8d32}"
                 ],
                 "__type": "ParallelClipData"
@@ -882,14 +882,14 @@
             },
             "Celebrate": {
                 "mClipNameList": [
-                    "{71176af2}",
+                    "Celebrate_Base",
                     "{c02c8d32}"
                 ],
                 "__type": "ParallelClipData"
             },
             "Damage_Hurt": {
                 "mClipNameList": [
-                    "{150e3e90}",
+                    "Damage_Hurt_Base",
                     "{c02c8d32}"
                 ],
                 "__type": "ParallelClipData"
@@ -978,28 +978,28 @@
                 ],
                 "__type": "ParallelClipData"
             },
-            "{c3fa865c}": {
+            "Reaction_3Star": {
                 "mClipNameList": [
                     "{bf57c8e4}",
                     "{c02c8d32}"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{ef33df2e}": {
+            "Reaction_Top4": {
                 "mClipNameList": [
                     "{fac6abce}",
                     "{c02c8d32}"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{2977b336}": {
+            "Reaction_WinStreakEnd": {
                 "mClipNameList": [
                     "{ceb14836}",
                     "{c02c8d32}"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{ff7ec843}": {
+            "Reaction_WinStreakStart": {
                 "mClipNameList": [
                     "{f01f23e1}",
                     "{c02c8d32}"
@@ -1008,7 +1008,7 @@
             },
             "Laugh": {
                 "mClipNameList": [
-                    "{9e55a33e}",
+                    "Laugh_BASE",
                     "{c02c8d32}"
                 ],
                 "__type": "ParallelClipData"
@@ -1907,6 +1907,7 @@
                 "__type": "TransitionClipBlendData"
             }
         },
+        "objectPath": "{19caf6c8}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

@@ -565,7 +565,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Όλαφ πετάει ένα τσεκούρι στο έδαφος σε μια στοχευμένη περιοχή, το οποίο προκαλεί ζημιά στις μονάδες που διαπερνά και επιβραδύνει την Ταχύτητα Κίνησής τους. Αν ο Όλαφ σηκώσει το τσεκούρι, ο Χρόνος Επαναφόρτισης της ικανότητας μειώνεται.",
-            "dynamicDescription": "Ο Όλαφ πετάει ένα τσεκούρι σε μια τοποθεσία-στόχο, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> στις μονάδες που διαπερνά και <status>Επιβραδύνοντάς</status> τες κατά @SlowAmount*100@%. Η Επιβράδυνση εξασθενεί μέσα σε @DebuffDuration@ δευτερόλεπτα. <br><br>Αν ο Όλαφ σηκώσει το τσεκούρι, ο Χρόνος Επαναφόρτισης της ικανότητας μειώνεται κατά @CooldownRefund@ δευτ.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Ο Όλαφ πετάει ένα τσεκούρι σε μια τοποθεσία-στόχο, προκαλώντας <physicalDamage>@TotalDamage@ Σωματική Ζημιά</physicalDamage> στις μονάδες που διαπερνά και <status>Επιβραδύνοντάς</status> τες κατά @SlowAmount*100@% στη διάρκεια @DebuffDuration@ δευτ. <br><br>Αν ο Όλαφ σηκώσει το τσεκούρι, ο Χρόνος Επαναφόρτισης της ικανότητας μειώνεται κατά @CooldownRefund@ δευτ.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -733,12 +733,12 @@
                 60.0
             ],
             "cooldownCoefficients": [
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 1.0,
@@ -1015,7 +1015,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown% δευτ.",
             "description": "Ο Όλαφ γίνεται προσωρινά άτρωτος σε εξουδετερώσεις και αποκτά επιπλέον Θωράκιση, Αντίσταση Μαγείας και Θνησιμότητα.",
-            "dynamicDescription": "Ο Όλαφ αφαιρεί από πάνω του όλες τις επιδράσεις <status>Ακινητοποίησης</status> και <status>Εξουδετέρωσης</status> και αποκτά ανοσία σε αυτές για τα επόμενα @Duration@ δευτερόλεπτα. Κατά τη διάρκεια αυτής της περιόδου, ο Όλαφ αποκτά <scaleArmor>@Resists@ Θωράκιση</scaleArmor>, <scaleMR>@Resists@ Αντίσταση Μαγείας</scaleMR> και @ArmorPen@ Θνησιμότητα.<br><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellActive>Ενεργή:</spellActive> Ο Όλαφ αφαιρεί από πάνω του όλες τις επιδράσεις <status>Ακινητοποίησης</status> και <status>Εξουδετέρωσης</status> και αποκτά ανοσία σε αυτές για τα επόμενα @Duration@ δευτερόλεπτα. Κατά τη διάρκεια αυτής της περιόδου, ο Όλαφ αποκτά <scaleArmor>@Resists@ Θωράκιση</scaleArmor> και <scaleMR>@Resists@ Αντίσταση Μαγείας</scaleMR>.<br><br><spellPassive>Παθητική:</spellPassive> Ο Όλαφ αποκτά επιπλέον @ArmorPen@ Θνησιμότητα.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

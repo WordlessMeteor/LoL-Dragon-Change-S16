@@ -1292,7 +1292,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Vladimir le roba vida al enemigo objetivo. Cuando los recursos de Vladimir estén al máximo, durante un breve periodo Transfusión inflige mucho más daño y cura mucho más.",
-            "dynamicDescription": "Vladimir absorbe la fuerza vital de su objetivo, le inflige <magicDamage>@BaseDamageTooltip@ de daño mágico</magicDamage> y se cura <healing>@BaseHealTooltip@ de vida</healing>. Después de usar esta habilidad dos veces, Vladimir obtiene un <speed>@MovementSpeedOnQ2@% de velocidad de movimiento</speed> durante 0,5 s y potencia el siguiente uso de esta habilidad durante @Effect8Amount@ s.<br><br>La versión potenciada de esta habilidad inflige <magicDamage>@EmpoweredDamageTooltip@ de daño mágico</magicDamage> y restaura <healing>@EmpoweredHealTooltip@ más un @EmpoweredHealPercentTooltip@ de la vida que le falte</healing>.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vladimir absorbe la fuerza vital de su objetivo, le inflige <magicDamage>@BaseDamageTooltip@ de daño mágico</magicDamage> y se cura <healing>@BaseHealTooltip@ de vida</healing>. Después de usar esta habilidad dos veces, Vladimir obtiene un <speed>@MovementSpeedOnQ2@% de velocidad de movimiento</speed> durante 0,5 s y potencia su siguiente uso durante @FrenzyDuration@ s.<br><br>La versión potenciada de esta habilidad inflige <magicDamage>@EmpoweredDamageTooltip@ de daño mágico</magicDamage> y restaura <healing>@EmpoweredHealTooltip@ más un @EmpoweredHealPercentTooltip@ de la vida que le falte</healing>.@SpellModifierDescriptionAppend@",
             "range": [
                 600.0,
                 600.0,
@@ -1589,7 +1589,7 @@
             "abilityIconPath": "/lol-game-data/assets/ASSETS/Characters/Vladimir/HUD/Icons2D/VladimirE.png",
             "abilityVideoPath": "champion-abilities/0008/ability_0008_E1.webm",
             "abilityVideoImagePath": "champion-abilities/0008/ability_0008_E1.jpg",
-            "cost": "Coste de canalización: <font color='#CC3300'>@Effect2Amount@% de la vida máxima (@ChargeHealthTooltip@)</font>",
+            "cost": "Coste de canalización: <font color='#CC3300'>@MaxHealthCost@% de la vida máxima (@ChargeHealthTooltip@)</font>",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Vladimir paga con su propia vida para cargar una reserva de sangre que, una vez liberada, inflige daño en el área circundante. Este ataque puede ser bloqueado por las unidades enemigas.",
             "dynamicDescription": "<charge>Comenzar a cargar: </charge>Vladimir carga una reserva de sangre y sacrifica hasta <font color='#CC3300'>@ChargeHealthTooltip@ de vida</font>. Cuando la reserva está llena, Vladimir se <status>ralentiza</status> un 20%.<br><br><release>Lanzamiento: </release>Vladimir desencadena un torrente de proyectiles de sangre contra los enemigos cercanos, lo que inflige entre <magicDamage>@MinDamageTooltip@</magicDamage> y <magicDamage>@MaxDamageTooltip@ de daño mágico</magicDamage> según el tiempo de carga. Si se carga esta habilidad durante al menos 1 s, también <status>ralentiza</status> un @SlowPercent@% a los objetivos durante 0,5&nbsp;s.@SpellModifierDescriptionAppend@",
@@ -1742,7 +1742,7 @@
             "cost": "Sin coste",
             "cooldown": "@Cooldown@ s %i:cooldown%",
             "description": "Vladimir infecta una zona con una plaga virulenta. Los enemigos afectados reciben más daño mientras dura el efecto. Pasados unos segundos, Hemoplaga inflige daño mágico a los enemigos infectados y cura a Vladimir por cada campeón enemigo golpeado.",
-            "dynamicDescription": "Vladimir crea una plaga virulenta que provoca que sus víctimas reciban un @Effect2Amount@% de daño adicional de todas las fuentes durante @Effect4Amount@ s. Cuando termina el efecto, Vladimir inflige <magicDamage>@Damage@ de daño mágico</magicDamage> a todos los objetivos infectados. Vladimir recupera <healing>@Damage@ de vida</healing> si golpea a un campeón y recupera <healing>@SecondaryHealingTooltip@ de vida</healing> adicional por cada campeón a partir del primero.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Vladimir crea una plaga virulenta que provoca que sus víctimas reciban un @DamageAmp@% de daño adicional de todas las fuentes durante @Duration@ s. Cuando termina el efecto, Vladimir inflige <magicDamage>@Damage@ de daño mágico</magicDamage> a todos los objetivos infectados. Vladimir recupera <healing>@Damage@ de vida</healing> si golpea a un campeón y <healing>@SecondaryHealingTooltip@ de vida</healing> adicional por cada campeón a partir del primero.@SpellModifierDescriptionAppend@",
             "range": [
                 625.0,
                 625.0,

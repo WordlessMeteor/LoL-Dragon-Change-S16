@@ -2,7 +2,7 @@
     "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments": {
         "PathHashToSelf": "clientstates/gameplay/ux/tft/tft7_armory_augments",
         "BaseLoadable": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/UIBase",
-        "MobileOverrideLoadable": "{437c9981}",
+        "MobileOverrideLoadable": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/UIMobile",
         "UseSequencer": true,
         "ArmoryStyle": 4,
         "UseToggleButtonOnPc": true,
@@ -26,11 +26,11 @@
                 "__type": "TftArmoryButtonStyleData"
             },
             "{b5063433}": {
-                "1": "{5879341d}",
-                "2": "{5c4b1815}",
-                "0": "{5f8c112d}",
-                "3": "{cbe11da6}",
-                "4": "{0da05bc9}"
+                "1": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/IntroSequence",
+                "2": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/HoverSequence",
+                "0": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/IdleSequence",
+                "3": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/SelectedSequence",
+                "4": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/UnSelectedSequence"
             },
             "{692794b6}": "{febd4c97}",
             "__type": "TftArmorySlotData"
@@ -44,7 +44,7 @@
         "ShouldHideButtonsOnChoice": true,
         "__type": "TFTArmoryViewController"
     },
-    "{0da05bc9}": {
+    "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/UnSelectedSequence": {
         "category": "{9f8ef333}",
         "Actions": [
             {
@@ -100,11 +100,11 @@
                 "__type": "{1a4d18fe}"
             }
         ],
-        "PathHash": "{0da05bc9}",
+        "PathHash": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/UnSelectedSequence",
         "path": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/UnSelectedSequence",
         "__type": "Sequence"
     },
-    "{5879341d}": {
+    "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/IntroSequence": {
         "category": "{8550650f}",
         "Actions": [
             {
@@ -184,11 +184,11 @@
                 "__type": "SequencePhaseOverride"
             }
         ],
-        "PathHash": "{5879341d}",
+        "PathHash": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/IntroSequence",
         "path": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/IntroSequence",
         "__type": "Sequence"
     },
-    "{5c4b1815}": {
+    "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/HoverSequence": {
         "category": "{9f8ef333}",
         "Actions": [
             {
@@ -219,11 +219,11 @@
                 "__type": "SequencePhaseOverride"
             }
         ],
-        "PathHash": "{5c4b1815}",
+        "PathHash": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/HoverSequence",
         "path": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/HoverSequence",
         "__type": "Sequence"
     },
-    "{5f8c112d}": {
+    "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/IdleSequence": {
         "category": "{bd16ecf9}",
         "Actions": [
             {
@@ -265,11 +265,11 @@
                 "__type": "SequencePhaseOverride"
             }
         ],
-        "PathHash": "{5f8c112d}",
+        "PathHash": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/IdleSequence",
         "path": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/IdleSequence",
         "__type": "Sequence"
     },
-    "{cbe11da6}": {
+    "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/SelectedSequence": {
         "category": "{9f8ef333}",
         "Actions": [
             {
@@ -320,7 +320,7 @@
                 "__type": "{1a4d18fe}"
             }
         ],
-        "PathHash": "{cbe11da6}",
+        "PathHash": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/SelectedSequence",
         "path": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Sequences/SelectedSequence",
         "__type": "Sequence"
     },
@@ -1551,6 +1551,7 @@
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFT_UI_DragonAug_Card_IdleVFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFTM_UI_DragonAug_Card_StaticVFX": {
@@ -1806,6 +1807,7 @@
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFTM_UI_DragonAug_Card_StaticVFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFTM_UI_DragonAug_Card_HoverVFX": {
@@ -2758,6 +2760,7 @@
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFTM_UI_DragonAug_Card_HoverVFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFTM_UI_DragonAug_Card_FlashInVFX": {
@@ -4315,6 +4318,7 @@
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFTM_UI_DragonAug_Card_FlashInVFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFTM_UI_DragonAug_Card_SelectedVFX": {
@@ -7362,6 +7366,7 @@
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFTM_UI_DragonAug_Card_SelectedVFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFTM_UI_DragonAug_Card_IdleVFX": {
@@ -8036,6 +8041,7 @@
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFTM_UI_DragonAug_Card_IdleVFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFT_UI_DragonAug_Card_SelectedVFX": {
@@ -11075,6 +11081,7 @@
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFT_UI_DragonAug_Card_SelectedVFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFT_UI_DragonAug_Card_StaticVFX": {
@@ -11330,6 +11337,7 @@
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFT_UI_DragonAug_Card_StaticVFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFT_UI_DragonAug_Card_HoverVFX": {
@@ -12737,6 +12745,7 @@
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFT_UI_DragonAug_Card_HoverVFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFT_UI_DragonAug_Card_FlashInVFX": {
@@ -14296,9 +14305,10 @@
         "{9836cd87}": 7,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/Particles/TFT_UI_DragonAug_Card_FlashInVFX",
         "__type": "VfxSystemDefinitionData"
     },
-    "{437c9981}": {
+    "ClientStates/Gameplay/UX/TFT/TFT7_Armory_Augments/UIMobile": {
         "FilepathHash": "clientstates/gameplay/ux/tft/tft7_armory_augments/uimobile",
         "OverrideSrcFolder": "clientstates/gameplay/ux/tft/tft7_armory_augments/uibase",
         "__type": "UiPropertyOverrideLoadable"

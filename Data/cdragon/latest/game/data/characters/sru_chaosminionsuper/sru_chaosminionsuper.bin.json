@@ -485,6 +485,7 @@
     },
     "Characters/SRU_ChaosMinionSuper/Spells/SRU_ChaosMinionSuperBasicAttack2": {
         "ObjectName": "SRU_ChaosMinionSuperBasicAttack2",
+        "objectPath": "Characters/SRU_ChaosMinionSuper/Spells/SRU_ChaosMinionSuperBasicAttack2",
         "mScriptName": "SRU_ChaosMinionSuperBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -522,7 +523,7 @@
                 73.9000015258789,
                 73.9000015258789
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     73.9000015258789,
                     73.9000015258789,
@@ -562,6 +563,7 @@
     },
     "Characters/SRU_ChaosMinionSuper/Spells/SRU_ChaosMinionSuperBasicAttack": {
         "ObjectName": "SRU_ChaosMinionSuperBasicAttack",
+        "objectPath": "Characters/SRU_ChaosMinionSuper/Spells/SRU_ChaosMinionSuperBasicAttack",
         "mScriptName": "SRU_ChaosMinionSuperBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -598,7 +600,7 @@
                 73.9000015258789,
                 73.9000015258789
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     73.9000015258789,
                     73.9000015258789,
@@ -787,7 +789,18 @@
             },
             "{eb530788}": {
                 "blocks": [
-                    null
+                    {
+                        "{d851ffa3}": "b61f29f7-2151-40fd-96c7-eff693fa8f93",
+                        "Condition": null,
+                        "Invert": true,
+                        "Sequence": {
+                            "blocks": [
+                                null
+                            ],
+                            "__type": "ScriptSequence"
+                        },
+                        "__type": "{e524b2fc}"
+                    }
                 ],
                 "__type": "RootScriptSequence"
             },

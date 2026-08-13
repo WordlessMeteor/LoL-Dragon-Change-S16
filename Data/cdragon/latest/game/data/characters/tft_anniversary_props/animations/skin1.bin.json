@@ -738,7 +738,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{3a6955f7}": {
+            "Level1_Idle": {
                 "mFlags": 2,
                 "mSelectorPairDataList": [
                     {
@@ -754,7 +754,7 @@
                 ],
                 "__type": "SelectorClipData"
             },
-            "{f6ab3929}": {
+            "Level7_Idle": {
                 "mFlags": 2,
                 "mSelectorPairDataList": [
                     {
@@ -776,8 +776,8 @@
                     "VisibilityFlags": 8,
                     "__type": "{267a1194}"
                 },
-                "mTrueConditionClipName": "{f6ab3929}",
-                "mFalseConditionClipName": "{3a6955f7}",
+                "mTrueConditionClipName": "Level7_Idle",
+                "mFalseConditionClipName": "Level1_Idle",
                 "__type": "ConditionBoolClipData"
             },
             "Level1_Click_Head01": {
@@ -1034,14 +1034,14 @@
                     "{1416929a}",
                     "{ab28531f}",
                     "{49b17813}",
-                    "{f6ab3929}"
+                    "Level7_Idle"
                 ],
                 "__type": "SequencerClipData"
             },
             "{0a4d9a13}": {
                 "mClipNameList": [
                     "{49b17813}",
-                    "{f6ab3929}"
+                    "Level7_Idle"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -1676,11 +1676,11 @@
             "Idle": {
                 "mConditionFloatPairDataList": [
                     {
-                        "mClipName": "{3a6955f7}",
+                        "mClipName": "Level1_Idle",
                         "__type": "ConditionFloatPairData"
                     },
                     {
-                        "mClipName": "{f6ab3929}",
+                        "mClipName": "Level7_Idle",
                         "mValue": 7.0,
                         "__type": "ConditionFloatPairData"
                     }
@@ -3922,6 +3922,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{2fa45a15}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

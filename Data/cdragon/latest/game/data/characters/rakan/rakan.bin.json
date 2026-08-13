@@ -12,6 +12,7 @@
     },
     "Characters/Rakan/Spells/RakanWAbility/RakanWCharm": {
         "ObjectName": "RakanWCharm",
+        "objectPath": "Characters/Rakan/Spells/RakanWAbility/RakanWCharm",
         "mScriptName": "RakanWCharm",
         "mBuff": {
             "mDescription": "Buff_RakanWCharm_Tooltip",
@@ -30,6 +31,7 @@
     },
     "Characters/Rakan/Spells/RakanWAbility/RakanWCast": {
         "ObjectName": "RakanWCast",
+        "objectPath": "Characters/Rakan/Spells/RakanWAbility/RakanWCast",
         "mScriptName": "RakanWCast",
         "mSpell": {
             "flags": 32,
@@ -124,8 +126,8 @@
                 "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_W.dds"
             ],
             "mCastTime": 0.3499999940395355,
-            "{11704a2b}": 0.3499999940395355,
-            "{f26881a0}": 0.3500000238418579,
+            "spellCastTime": 0.3499999940395355,
+            "spellTotalTime": 0.3500000238418579,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -163,7 +165,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -198,6 +200,7 @@
     },
     "Characters/Rakan/Spells/RakanWAbility/RakanW": {
         "ObjectName": "RakanW",
+        "objectPath": "Characters/Rakan/Spells/RakanWAbility/RakanW",
         "mScriptName": "RakanW",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -329,8 +332,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_W.dds"
             ],
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 14.0,
                 14.0,
@@ -374,7 +377,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -444,7 +447,7 @@
                 90.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     60.0,
@@ -598,6 +601,7 @@
     },
     "Characters/Rakan/Spells/RakanQAbility/RakanQ": {
         "ObjectName": "RakanQ",
+        "objectPath": "Characters/Rakan/Spells/RakanQAbility/RakanQ",
         "mScriptName": "RakanQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -769,8 +773,8 @@
                 "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_Q.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 11.0,
                 11.0,
@@ -818,7 +822,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -886,7 +890,7 @@
                 45.0,
                 45.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     45.0,
                     45.0,
@@ -1008,6 +1012,7 @@
     },
     "Characters/Rakan/Spells/RakanQAbility/RakanQMark": {
         "ObjectName": "RakanQMark",
+        "objectPath": "Characters/Rakan/Spells/RakanQAbility/RakanQMark",
         "mScriptName": "RakanQMark",
         "mSpell": {
             "mSpellTags": [
@@ -1023,6 +1028,7 @@
     },
     "Characters/Rakan/Spells/RakanQAbility/RakanQMis": {
         "ObjectName": "RakanQMis",
+        "objectPath": "Characters/Rakan/Spells/RakanQAbility/RakanQMis",
         "mScriptName": "RakanQMis",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1113,7 +1119,7 @@
                 900.0,
                 900.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     900.0,
                     900.0,
@@ -1169,6 +1175,7 @@
     },
     "Characters/Rakan/Spells/RakanQAbility/RakanQReturnMis": {
         "ObjectName": "RakanQReturnMis",
+        "objectPath": "Characters/Rakan/Spells/RakanQAbility/RakanQReturnMis",
         "mScriptName": "RakanQReturnMis",
         "mSpell": {
             "flags": 4,
@@ -1268,7 +1275,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1321,16 +1328,18 @@
     },
     "{f443380d}": {
         "ObjectName": "RakanQHeal",
+        "objectPath": "{f443380d}",
         "mScriptName": "RakanQHeal",
         "__type": "SpellObject"
     },
     "Characters/Rakan/Spells/RakanCritAttack": {
         "ObjectName": "RakanCritAttack",
+        "objectPath": "Characters/Rakan/Spells/RakanCritAttack",
         "mScriptName": "RakanCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 512,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.19999998807907104,
+            "spellCastTime": 0.19999998807907104,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1366,7 +1375,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -1424,6 +1433,7 @@
     },
     "Characters/Rakan/Spells/RakanEAbility/RakanE": {
         "ObjectName": "RakanE",
+        "objectPath": "Characters/Rakan/Spells/RakanEAbility/RakanE",
         "mScriptName": "RakanE",
         "mSpell": {
             "flags": 4,
@@ -1644,8 +1654,8 @@
                 "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_E.dds",
                 "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_E2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1701,7 +1711,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1762,7 +1772,7 @@
                 60.0,
                 65.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     40.0,
                     45.0,
@@ -1910,6 +1920,7 @@
     },
     "Characters/Rakan/Spells/RakanEAbility/RakanEShield": {
         "ObjectName": "RakanEShield",
+        "objectPath": "Characters/Rakan/Spells/RakanEAbility/RakanEShield",
         "mScriptName": "RakanEShield",
         "mSpell": {
             "flags": 4,
@@ -1979,8 +1990,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_E.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 13.0,
                 13.0,
@@ -2013,7 +2024,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -2064,7 +2075,7 @@
                 110.0,
                 120.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     80.0,
@@ -2095,6 +2106,7 @@
     },
     "Characters/Rakan/Spells/RakanEAbility/RakanECast": {
         "ObjectName": "RakanECast",
+        "objectPath": "Characters/Rakan/Spells/RakanEAbility/RakanECast",
         "mScriptName": "RakanECast",
         "mSpell": {
             "flags": 4,
@@ -2183,8 +2195,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_E.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2239,7 +2251,7 @@
                 700.0,
                 700.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     700.0,
                     700.0,
@@ -2314,6 +2326,7 @@
     },
     "Characters/Rakan/Spells/RakanEAbility/RakanERecast": {
         "ObjectName": "RakanERecast",
+        "objectPath": "Characters/Rakan/Spells/RakanEAbility/RakanERecast",
         "mScriptName": "RakanERecast",
         "mSpell": {
             "flags": 4,
@@ -2334,8 +2347,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_E2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2391,7 +2404,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2523,6 +2536,7 @@
     },
     "Characters/Rakan/Spells/RakanEAbility/RakanECastXaya": {
         "ObjectName": "RakanECastXaya",
+        "objectPath": "Characters/Rakan/Spells/RakanEAbility/RakanECastXaya",
         "mScriptName": "RakanECastXaya",
         "mSpell": {
             "flags": 4,
@@ -2611,8 +2625,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_E.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2667,7 +2681,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -2764,16 +2778,18 @@
     },
     "Characters/Rakan/Spells/RakanRunCycleManager": {
         "ObjectName": "RakanRunCycleManager",
+        "objectPath": "Characters/Rakan/Spells/RakanRunCycleManager",
         "mScriptName": "RakanRunCycleManager",
         "__type": "SpellObject"
     },
     "Characters/Rakan/Spells/RakanBasicAttackShort": {
         "ObjectName": "RakanBasicAttackShort",
+        "objectPath": "Characters/Rakan/Spells/RakanBasicAttackShort",
         "mScriptName": "RakanBasicAttackShort",
         "mSpell": {
             "mAffectsTypeFlags": 512,
             "mAnimationName": "Melee_Attack1",
-            "{11704a2b}": 0.19999998807907104,
+            "spellCastTime": 0.19999998807907104,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2809,7 +2825,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -2864,6 +2880,7 @@
     },
     "Characters/Rakan/Spells/RakanPassiveAbility/RakanPassive": {
         "ObjectName": "RakanPassive",
+        "objectPath": "Characters/Rakan/Spells/RakanPassiveAbility/RakanPassive",
         "mScriptName": "RakanPassive",
         "mSpell": {
             "DataValues": [
@@ -2973,7 +2990,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -3035,11 +3052,13 @@
     },
     "Characters/Rakan/Spells/RakanPassiveAbility/RakanPassiveReady": {
         "ObjectName": "RakanPassiveReady",
+        "objectPath": "Characters/Rakan/Spells/RakanPassiveAbility/RakanPassiveReady",
         "mScriptName": "RakanPassiveReady",
         "__type": "SpellObject"
     },
     "Characters/Rakan/Spells/RakanPassiveAbility/RakanPassiveShield": {
         "ObjectName": "RakanPassiveShield",
+        "objectPath": "Characters/Rakan/Spells/RakanPassiveAbility/RakanPassiveShield",
         "mScriptName": "RakanPassiveShield",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RakanPassiveShield",
@@ -3061,11 +3080,12 @@
     },
     "Characters/Rakan/Spells/RakanBasicAttackShort2": {
         "ObjectName": "RakanBasicAttackShort2",
+        "objectPath": "Characters/Rakan/Spells/RakanBasicAttackShort2",
         "mScriptName": "RakanBasicAttackShort2",
         "mSpell": {
             "mAffectsTypeFlags": 512,
             "mAnimationName": "Melee_Attack2",
-            "{11704a2b}": 0.19999998807907104,
+            "spellCastTime": 0.19999998807907104,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3101,7 +3121,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -3145,10 +3165,11 @@
     },
     "Characters/Rakan/Spells/RakanBasicAttack": {
         "ObjectName": "RakanBasicAttack",
+        "objectPath": "Characters/Rakan/Spells/RakanBasicAttack",
         "mScriptName": "RakanBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 512,
-            "{11704a2b}": 0.19999998807907104,
+            "spellCastTime": 0.19999998807907104,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3184,7 +3205,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -3228,6 +3249,7 @@
     },
     "Characters/Rakan/Spells/RakanRAbility/RakanRDebuff": {
         "ObjectName": "RakanRDebuff",
+        "objectPath": "Characters/Rakan/Spells/RakanRAbility/RakanRDebuff",
         "mScriptName": "RakanRDebuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_RakanRDebuff",
@@ -3237,6 +3259,7 @@
     },
     "Characters/Rakan/Spells/RakanRAbility/RakanR": {
         "ObjectName": "RakanR",
+        "objectPath": "Characters/Rakan/Spells/RakanRAbility/RakanR",
         "mScriptName": "RakanR",
         "mSpell": {
             "flags": 20,
@@ -3477,7 +3500,7 @@
                 "ASSETS/Characters/Rakan/HUD/Icons2D/Rakan_R.dds",
                 "Rakan_R_Cancel.dds"
             ],
-            "{11704a2b}": 0.25,
+            "spellCastTime": 0.25,
             "cooldownTime": [
                 130.0,
                 130.0,
@@ -3521,7 +3544,7 @@
                 150.0,
                 150.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     150.0,
                     150.0,
@@ -3545,7 +3568,7 @@
                 100.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -3651,11 +3674,12 @@
     },
     "Characters/Rakan/Spells/RakanBasicAttack2": {
         "ObjectName": "RakanBasicAttack2",
+        "objectPath": "Characters/Rakan/Spells/RakanBasicAttack2",
         "mScriptName": "RakanBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 512,
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.19999998807907104,
+            "spellCastTime": 0.19999998807907104,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3691,7 +3715,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -4149,7 +4173,7 @@
             "baseValue": 32.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 2.049999952316284,
             "__type": "ModifiableFloat"
         },
@@ -4441,7 +4465,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     1,

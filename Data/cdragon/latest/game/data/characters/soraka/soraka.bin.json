@@ -359,6 +359,7 @@
     },
     "{0c424ff9}": {
         "ObjectName": "SorakaEPacify",
+        "objectPath": "{0c424ff9}",
         "mScriptName": "SorakaEPacify",
         "mBuff": {
             "mDescription": "game_buff_tooltip_SorakaEPacify",
@@ -368,6 +369,7 @@
     },
     "Characters/Soraka/Spells/SorakaEAbility/SorakaE": {
         "ObjectName": "SorakaE",
+        "objectPath": "Characters/Soraka/Spells/SorakaEAbility/SorakaE",
         "mScriptName": "SorakaE",
         "mSpell": {
             "mAffectsTypeFlags": 7183,
@@ -472,7 +474,7 @@
                 875.0,
                 875.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     875.0,
                     875.0,
@@ -532,7 +534,7 @@
                 90.0,
                 90.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     75.0,
@@ -676,6 +678,7 @@
     },
     "{f63cefa4}": {
         "ObjectName": "SorakaESnare",
+        "objectPath": "{f63cefa4}",
         "mScriptName": "SorakaESnare",
         "mBuff": {
             "mDescription": "game_buff_tooltip_SorakaESnare",
@@ -696,6 +699,7 @@
     },
     "{0f15243f}": {
         "ObjectName": "SorakaQReturnMissile",
+        "objectPath": "{0f15243f}",
         "mScriptName": "SorakaQReturnMissile",
         "mSpell": {
             "flags": 4,
@@ -731,7 +735,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -784,6 +788,7 @@
     },
     "{37202a65}": {
         "ObjectName": "SorakaQMissile",
+        "objectPath": "{37202a65}",
         "mScriptName": "SorakaQMissile",
         "mSpell": {
             "flags": 4194304,
@@ -840,8 +845,8 @@
             ],
             "mCoefficient": 0.4000000059604645,
             "mAnimationName": "Spell3",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -875,7 +880,7 @@
                 1500.0,
                 1500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1500.0,
                     1500.0,
@@ -940,6 +945,7 @@
     },
     "Characters/Soraka/Spells/SorakaQAbility/SorakaQ": {
         "ObjectName": "SorakaQ",
+        "objectPath": "Characters/Soraka/Spells/SorakaQAbility/SorakaQ",
         "mScriptName": "SorakaQ",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -1188,8 +1194,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_Q.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 9.0,
                 8.0,
@@ -1225,7 +1231,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -1286,7 +1292,7 @@
                 65.0,
                 65.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     45.0,
                     50.0,
@@ -1505,6 +1511,7 @@
     },
     "{fdaed7b0}": {
         "ObjectName": "SorakaQRegen",
+        "objectPath": "{fdaed7b0}",
         "mScriptName": "SorakaQRegen",
         "mBuff": {
             "mDescription": "game_buff_tooltip_SorakaQRegen",
@@ -1523,6 +1530,7 @@
     },
     "Characters/Soraka/Spells/Consecration_SelfAbility/Consecration_Self": {
         "ObjectName": "Consecration_Self",
+        "objectPath": "Characters/Soraka/Spells/Consecration_SelfAbility/Consecration_Self",
         "mScriptName": "Consecration_Self",
         "mSpell": {
             "DataValues": [
@@ -1565,7 +1573,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -1621,6 +1629,7 @@
     },
     "Characters/Soraka/Spells/SorakaRAbility/SorakaR": {
         "ObjectName": "SorakaR",
+        "objectPath": "Characters/Soraka/Spells/SorakaRAbility/SorakaR",
         "mScriptName": "SorakaR",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -1749,7 +1758,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1782,7 +1791,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -1887,11 +1896,12 @@
     },
     "Characters/Soraka/Spells/SorakaBasicAttack": {
         "ObjectName": "SorakaBasicAttack",
+        "objectPath": "Characters/Soraka/Spells/SorakaBasicAttack",
         "mScriptName": "SorakaBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "SorakaBasicAttack",
-            "{11704a2b}": 0.4437499940395355,
+            "spellCastTime": 0.4437499940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1923,7 +1933,7 @@
                 622.7000122070312,
                 622.7000122070312
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     622.7000122070312,
                     622.7000122070312,
@@ -1988,6 +1998,7 @@
     },
     "Characters/Soraka/Spells/SorakaPassive": {
         "ObjectName": "SorakaPassive",
+        "objectPath": "Characters/Soraka/Spells/SorakaPassive",
         "mScriptName": "SorakaPassive",
         "mBuff": {
             "mDescription": "buff_desc_SorakaPassive",
@@ -1997,6 +2008,7 @@
     },
     "Characters/Soraka/Spells/SorakaWAbility/SorakaW": {
         "ObjectName": "SorakaW",
+        "objectPath": "Characters/Soraka/Spells/SorakaWAbility/SorakaW",
         "mScriptName": "SorakaW",
         "mSpell": {
             "mAffectsTypeFlags": 16385,
@@ -2103,6 +2115,20 @@
                     "__type": "SpellDataValueVector"
                 }
             },
+            "{f9c2333e}": {
+                "cherry": {
+                    "value": [
+                        7.0,
+                        7.0,
+                        6.0,
+                        5.0,
+                        4.0,
+                        3.0,
+                        2.0
+                    ],
+                    "__type": "SpellEffectAmount"
+                }
+            },
             "mSpellCalculations": {
                 "TotalHeal": {
                     "mFormulaParts": [
@@ -2133,7 +2159,7 @@
                 "ASSETS/Characters/Soraka/HUD/Icons2D/Soraka_W.dds"
             ],
             "mCastTime": 0.25,
-            "{f26881a0}": 0.5,
+            "spellTotalTime": 0.5,
             "cooldownTime": [
                 6.0,
                 6.0,
@@ -2166,7 +2192,7 @@
                 550.0,
                 550.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     550.0,
                     550.0,
@@ -2217,7 +2243,7 @@
                 60.0,
                 60.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     40.0,
                     45.0,
@@ -2341,12 +2367,13 @@
     },
     "Characters/Soraka/Spells/SorakaCritAttack": {
         "ObjectName": "SorakaCritAttack",
+        "objectPath": "Characters/Soraka/Spells/SorakaCritAttack",
         "mScriptName": "SorakaCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "SorakaCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.4437499940395355,
+            "spellCastTime": 0.4437499940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2379,7 +2406,7 @@
                 622.7000122070312,
                 622.7000122070312
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     622.7000122070312,
                     622.7000122070312,
@@ -2445,6 +2472,7 @@
     },
     "Characters/Soraka/Spells/SorakaWCastTime": {
         "ObjectName": "SorakaWCastTime",
+        "objectPath": "Characters/Soraka/Spells/SorakaWCastTime",
         "mScriptName": "SorakaWCastTime",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -2548,7 +2576,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -2610,6 +2638,7 @@
     },
     "Characters/Soraka/Spells/SorakaRCastTime": {
         "ObjectName": "SorakaRCastTime",
+        "objectPath": "Characters/Soraka/Spells/SorakaRCastTime",
         "mScriptName": "SorakaRCastTime",
         "mSpell": {
             "mAffectsTypeFlags": 1029,
@@ -2713,7 +2742,7 @@
                 1000.0,
                 1000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1000.0,
                     1000.0,
@@ -2762,6 +2791,7 @@
     },
     "Characters/Soraka/Spells/Consecration": {
         "ObjectName": "Consecration",
+        "objectPath": "Characters/Soraka/Spells/Consecration",
         "mScriptName": "Consecration",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Consecration",
@@ -2771,11 +2801,12 @@
     },
     "Characters/Soraka/Spells/Soraka_BasicAttack": {
         "ObjectName": "Soraka_BasicAttack",
+        "objectPath": "Characters/Soraka/Spells/Soraka_BasicAttack",
         "mScriptName": "Soraka_BasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 512,
             "mAlternateName": "SorakaBasicAttack",
-            "{11704a2b}": 0.4437499940395355,
+            "spellCastTime": 0.4437499940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2807,7 +2838,7 @@
                 622.7000122070312,
                 622.7000122070312
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     622.7000122070312,
                     622.7000122070312,
@@ -2872,12 +2903,13 @@
     },
     "Characters/Soraka/Spells/SorakaBasicAttack2": {
         "ObjectName": "SorakaBasicAttack2",
+        "objectPath": "Characters/Soraka/Spells/SorakaBasicAttack2",
         "mScriptName": "SorakaBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "SorakaBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.4437499940395355,
+            "spellCastTime": 0.4437499940395355,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2909,7 +2941,7 @@
                 622.7000122070312,
                 622.7000122070312
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     622.7000122070312,
                     622.7000122070312,
@@ -2974,6 +3006,7 @@
     },
     "Characters/Soraka/Spells/SorakaWParticleMissile": {
         "ObjectName": "SorakaWParticleMissile",
+        "objectPath": "Characters/Soraka/Spells/SorakaWParticleMissile",
         "mScriptName": "SorakaWParticleMissile",
         "mSpell": {
             "flags": 4,
@@ -3009,7 +3042,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -3172,7 +3205,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     1,
@@ -3249,7 +3282,7 @@
             "baseValue": 30.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.2999999523162842,
             "__type": "ModifiableFloat"
         },
@@ -3325,7 +3358,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
             "Characters/Soraka/Spells/SorakaRCastTime",

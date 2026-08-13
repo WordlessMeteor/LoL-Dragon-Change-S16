@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.15.1",
+    "version": "16.16.1",
     "data": {
         "Jade_Katarina": {
             "id": "Jade_Katarina",
@@ -12,7 +12,7 @@
                 "full": "Jade_Katarina.png",
                 "sprite": "champion0.png",
                 "group": "champion",
-                "x": 144,
+                "x": 192,
                 "y": 96,
                 "w": 48,
                 "h": 48
@@ -354,8 +354,8 @@
                         "full": "Jade_KatarinaQ.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 384,
-                        "y": 96,
+                        "x": 96,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -495,8 +495,8 @@
                         "full": "Jade_KatarinaW.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 432,
-                        "y": 96,
+                        "x": 144,
+                        "y": 144,
                         "w": 48,
                         "h": 48
                     },
@@ -636,7 +636,7 @@
                         "full": "Jade_KatarinaE.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 0,
+                        "x": 192,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -654,7 +654,7 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ ttdamage }} -> {{ ttdamageNL }}",
+                            "{{ damageinstance*10.000000 }} -> {{ damageinstancenl*10.000000 }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -751,7 +751,7 @@
                         "full": "Jade_KatarinaR.png",
                         "sprite": "spell2.png",
                         "group": "spell",
-                        "x": 48,
+                        "x": 240,
                         "y": 144,
                         "w": 48,
                         "h": 48
@@ -766,7 +766,7 @@
                     "full": "Jade_Katarina_Passive.png",
                     "sprite": "passive0.png",
                     "group": "passive",
-                    "x": 144,
+                    "x": 192,
                     "y": 96,
                     "w": 48,
                     "h": 48

@@ -565,7 +565,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يرمي أولاف فأسًا إلى الأرض في موقع مستهدف، فيلحق الضرر بالوحدات التي يمر عبرها ويبطئ سرعة حركتها. إذا التقط أولاف الفأس، يتم تقليص فترة تبريد القدرة.",
-            "dynamicDescription": "يرمي أولاف فأسًا إلى موقع مستهدف، فيلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> بالوحدات التي يمر عبرها و <status>يبطئها</status> بنسبة @SlowAmount*100@% تتلاشى على مدار @DebuffDuration@ث. <br><br>إذا التقط أولاف الفأس، يتم تقليص فترة تبريد القدرة بمقدار @CooldownRefund@ث.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "يرمي أولاف فأسًا إلى موقع مستهدف، فيلحق <physicalDamage>@TotalDamage@ ضرر مادي</physicalDamage> بالوحدات التي يمر عبرها، كما <status>يبطئها</status> بنسبة @SlowAmount*100@% لمدة @DebuffDuration@ث. <br><br>إذا التقط أولاف الفأس، يتم تقليص فترة تبريد القدرة بمقدار @CooldownRefund@ث.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -733,12 +733,12 @@
                 60.0
             ],
             "cooldownCoefficients": [
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 1.0,
@@ -1015,7 +1015,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ %i:cooldown%",
             "description": "يصبح أولاف منيعًا ضد تأثيرات التعطيل بشكل مؤقت ويكسب زيادةً في الدروع ومقاومة السحر وقوة الفتك.",
-            "dynamicDescription": "يزيل أولاف جميع تأثيرات <status>شل الحركة</status> و<status>التعطيل</status> عن نفسه ويصبح منيعًا ضدها خلال الثواني الـ @Duration@ التالية. خلال هذه المدة، يكسب أولاف <scaleArmor>@Resists@ دروع</scaleArmor> و <scaleMR>@Resists@ مقاومة سحر</scaleMR> و @ArmorPen@ قوة فتك.<br><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellActive>تأثير نشط:</spellActive> يزيل أولاف جميع تأثيرات <status>شل الحركة</status> و<status>التعطيل</status> عن نفسه ويصبح منيعًا ضدها خلال الثواني الـ @Duration@ التالية. خلال هذه المدة، يكسب أولاف <scaleArmor>@Resists@ دروع</scaleArmor> و <scaleMR>@Resists@ مقاومة سحر</scaleMR>.<br><br><spellPassive>تأثير كامن:</spellPassive> يكسب أولاف @ArmorPen@ قوة فتك إضافية.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

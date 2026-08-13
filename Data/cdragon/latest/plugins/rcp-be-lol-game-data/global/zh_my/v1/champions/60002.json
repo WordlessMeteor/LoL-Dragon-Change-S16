@@ -565,7 +565,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "欧拉夫朝目标位置扔出一柄战斧，对沿途经过的单位造成伤害并降低其移动速度。如果欧拉夫捡起斧头，那么这个技能的冷却时间就会缩短。",
-            "dynamicDescription": "欧拉夫朝目标位置扔出一柄战斧，对沿途经过的单位造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>，并使其<status>减速</status>@SlowAmount*100@%，减速效果会在@DebuffDuration@秒内衰减。<br><br>如果欧拉夫捡起斧头，那么这个技能的冷却时间就会缩短@CooldownRefund@秒。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "欧拉夫朝目标位置扔出一柄战斧，对沿途经过的单位造成<physicalDamage>@TotalDamage@物理伤害</physicalDamage>，并使其<status>减速</status>@SlowAmount*100@%，持续@DebuffDuration@秒。<br><br>如果欧拉夫捡起斧头，那么这个技能的冷却时间就会缩短@CooldownRefund@秒。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -733,12 +733,12 @@
                 60.0
             ],
             "cooldownCoefficients": [
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 1.0,
@@ -1015,7 +1015,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ 秒 %i:cooldown%",
             "description": "欧拉夫短暂免疫控制效果，并获得额外的物理防御、魔法防御和物理致命。",
-            "dynamicDescription": "欧拉夫会净化自身所有<status>定身</status>和<status>控制</status>效果，并在接下来的@Duration@秒内免疫这些效果。在此期间，欧拉夫获得<scaleArmor>@Resists@物理防御</scaleArmor>、<scaleMR>@Resists@魔法防御</scaleMR>和@ArmorPen@物理致命。<br><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellActive>主动：</spellActive>欧拉夫会净化自身所有<status>定身</status>和<status>控制</status>效果，并在接下来的@Duration@秒内免疫这些效果。在此期间，欧拉夫获得<scaleArmor>@Resists@物理防御</scaleArmor>、<scaleMR>@Resists@魔法防御</scaleMR>。<br><br><spellPassive>被动：</spellPassive> 欧拉夫获得额外@ArmorPen@物理致命。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

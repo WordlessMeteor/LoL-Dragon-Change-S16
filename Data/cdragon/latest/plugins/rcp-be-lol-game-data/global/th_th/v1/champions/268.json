@@ -857,7 +857,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "เวลาโหลด @AmmoRechargeTime@ วินาที (@Cooldown@ วินาที %i:cooldown%)",
             "description": "Azir เรียกทหารทรายออกมาช่วยโจมตีศัตรูที่อยู่ใกล้ ๆ เขา ทหารทรายจะโจมตีศัตรูที่อยู่ในระยะการโจมตีของพวกมันแทนการโจมตีปกติของ Azir การโจมตีของทหารทรายเหล่านี้จะสร้างความเสียหายเวทให้กับศัตรูเป็นเส้นตรง",
-            "dynamicDescription": "Azir อัญเชิญ<keywordMajor>ทหารทราย</keywordMajor>เป็นเวลา @Effect1Amount@ วินาที เมื่อ Azir โจมตีศัตรูที่อยู่ใกล้<keywordMajor>ทหารทราย</keywordMajor> เขาจะสั่งทหารของเขาให้โจมตีแทน สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage>ในทิศทางของพวกเขา<br><br>สกิลนี้มี @MaxAmmo@ ชาร์จ@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Azir อัญเชิญ<keywordMajor>ทหารทราย</keywordMajor>เป็นเวลา @SoldierDuration@ วินาที เมื่อ Azir โจมตีศัตรูที่อยู่ใกล้<keywordMajor>ทหารทราย</keywordMajor> เขาจะสั่งทหารของเขาให้โจมตีแทน สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> ในทิศทางของพวกเขา<br><br>สกิลนี้มี @MaxAmmo@ ชาร์จ@SpellModifierDescriptionAppend@",
             "range": [
                 525.0,
                 525.0,
@@ -1007,7 +1007,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Azir สร้างโล่ให้กับตัวเองเป็นระยะเวลาสั้น ๆ และพุ่งเข้าไปยังทหารทรายเป้าหมาย สร้างความเสียหายให้กับศัตรูทุกตัว ถ้าหาก Azir พุ่งชนโดนแชมเปี้ยนศัตรูเขาจะหยุดและเตรียมพร้อมทหารทรายตัวใหม่เพื่อปล่อยทันที",
-            "dynamicDescription": "Azir ได้รับ<shield>โล่ป้องกันความเสียหาย @TotalShield@ หน่วย</shield>เป็นเวลา @Effect6Amount@ วินาที และพุ่งไปหาหนึ่งใน<keywordMajor>ทหารทราย</keywordMajor>ของเขา สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> ให้กับศัตรูที่เขาพุ่งผ่าน<br><br>หาก Azir พุ่งโดนแชมเปี้ยนศัตรู เขาจะหยุดและได้รับชาร์จ<keywordMajor>ทหารทราย</keywordMajor>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Azir ได้รับ<shield>โล่ป้องกัน @TotalShield@ หน่วย</shield>เป็นเวลา @ShieldDuration@ วินาที และพุ่งไปหาหนึ่งใน<keywordMajor>ทหารทราย</keywordMajor>ของเขา สร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> ให้กับศัตรูที่เขาพุ่งผ่าน<br><br>หาก Azir พุ่งโดนแชมเปี้ยนศัตรู เขาจะหยุดและได้รับชาร์จ<keywordMajor>ทหารทราย</keywordMajor>@SpellModifierDescriptionAppend@",
             "range": [
                 1100.0,
                 1100.0,
@@ -1157,7 +1157,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Azir เรียกทหารถือโล่มาพุ่งเข้าโจมตีศัตรู พร้อมสร้างความเสียหายและผลักศัตรูให้กระเด็นออกไป",
-            "dynamicDescription": "Azir เรียกกำแพงทหารติดเกราะออกมาพุ่งไปด้านหน้า <status>กระแทกศัตรูให้กระเด็นออก</status> พร้อมทั้งสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> ทหารเหล่านี้จะยังคงทำหน้าที่ยืนหยัดดั่งกำแพงและปิดทางเดินศัตรูเป็นเวลา @Effect4Amount@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Azir เรียกกำแพงทหารติดเกราะออกมาพุ่งไปด้านหน้า <status>กระแทกลอย</status>ศัตรู พร้อมสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> ทหารเหล่านี้จะยังคงยืนหยัดเป็นกำแพงและปิดทางเดินศัตรูเป็นเวลา @WallDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 250.0,
                 250.0,

@@ -11,6 +11,7 @@
     },
     "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankPowerFistAbility/Jade_BlitzcrankPowerFist": {
         "ObjectName": "Jade_BlitzcrankPowerFist",
+        "objectPath": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankPowerFistAbility/Jade_BlitzcrankPowerFist",
         "mScriptName": "Jade_BlitzcrankPowerFist",
         "mSpell": {
             "flags": 4,
@@ -68,8 +69,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_PowerFist.dds"
             ],
-            "{11704a2b}": 0.5217499732971191,
-            "{f26881a0}": 1.533400058746338,
+            "spellCastTime": 0.5217499732971191,
+            "spellTotalTime": 1.533400058746338,
             "cooldownTime": [
                 9.0,
                 9.0,
@@ -101,7 +102,7 @@
                 300.0,
                 300.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     300.0,
                     300.0,
@@ -136,7 +137,7 @@
                 25.0,
                 25.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     25.0,
                     25.0,
@@ -256,12 +257,13 @@
     },
     "{04308f67}": {
         "ObjectName": "Jade_BlitzcrankPowerFistAttack",
+        "objectPath": "{04308f67}",
         "mScriptName": "Jade_BlitzcrankPowerFistAttack",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAlternateName": "Jade_Blitzcrank_PowerFist",
             "mAnimationName": "Spell3",
-            "{11704a2b}": 0.34389999508857727,
+            "spellCastTime": 0.34389999508857727,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -295,7 +297,7 @@
                 49.400001525878906,
                 49.400001525878906
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     49.400001525878906,
                     49.400001525878906,
@@ -351,6 +353,7 @@
     },
     "{78031576}": {
         "ObjectName": "Jade_BlitzcrankPowerFistSlow",
+        "objectPath": "{78031576}",
         "mScriptName": "Jade_BlitzcrankPowerFistSlow",
         "mSpell": {
             "mImgIconName": [
@@ -385,6 +388,7 @@
     },
     "{3464132a}": {
         "ObjectName": "Jade_BlitzcrankManaBarrier",
+        "objectPath": "{3464132a}",
         "mScriptName": "Jade_BlitzcrankManaBarrier",
         "mSpell": {
             "mImgIconName": [
@@ -412,6 +416,7 @@
     },
     "{3e3cc3c7}": {
         "ObjectName": "Jade_BlitzcrankManaBarrierIcon",
+        "objectPath": "{3e3cc3c7}",
         "mScriptName": "Jade_BlitzcrankManaBarrierIcon",
         "mSpell": {
             "mEffectAmount": [
@@ -555,7 +560,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -591,6 +596,7 @@
     },
     "{6459c6bb}": {
         "ObjectName": "Jade_BlitzcrankManaBarrierCooldown",
+        "objectPath": "{6459c6bb}",
         "mScriptName": "Jade_BlitzcrankManaBarrierCooldown",
         "mSpell": {
             "mImgIconName": [
@@ -615,6 +621,7 @@
     },
     "{36da259d}": {
         "ObjectName": "Jade_Blitzcrank_GodOfGrab_Buff",
+        "objectPath": "{36da259d}",
         "mScriptName": "Jade_Blitzcrank_GodOfGrab_Buff",
         "mSpell": {
             "mImgIconName": [
@@ -646,6 +653,7 @@
     },
     "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankOverdriveAbility/Jade_BlitzcrankOverdrive": {
         "ObjectName": "Jade_BlitzcrankOverdrive",
+        "objectPath": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankOverdriveAbility/Jade_BlitzcrankOverdrive",
         "mScriptName": "Jade_BlitzcrankOverdrive",
         "mSpell": {
             "flags": 4,
@@ -660,26 +668,26 @@
                 {
                     "name": "MoveSpeedMod",
                     "values": [
-                        0.1599999964237213,
+                        0.11999999731779099,
                         0.1599999964237213,
                         0.20000000298023224,
                         0.23999999463558197,
                         0.2800000011920929,
                         0.3199999928474426,
-                        0.3199999928474426
+                        0.36000001430511475
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
                     "name": "AttackSpeedMod",
                     "values": [
-                        0.20000000298023224,
+                        0.2199999988079071,
                         0.30000001192092896,
                         0.3799999952316284,
                         0.46000000834465027,
                         0.5400000214576721,
                         0.6200000047683716,
-                        0.6200000047683716
+                        0.699999988079071
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -695,139 +703,14 @@
                         8.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MoveSpeedModReduction",
-                    "values": [
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896,
-                        0.30000001192092896
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "SlowDuration",
-                    "values": [
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5,
-                        1.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MoveSpeedModMin",
-                    "values": [
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612,
-                        0.10000000149011612
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "MoveSpeedModMinTime",
-                    "values": [
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5,
-                        2.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PercentHealthDamage",
-                    "values": [
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582,
-                        0.009999999776482582
-                    ],
-                    "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "SlowDuration",
-                            "values": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "AttackSpeedMod",
-                            "values": [
-                                0.6499999761581421,
-                                0.699999988079071,
-                                0.75,
-                                0.800000011920929,
-                                0.8500000238418579,
-                                0.8999999761581421,
-                                0.949999988079071
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "MoveSpeedModReduction",
-                            "values": [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0,
-                        10.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_Overdrive.dds"
             ],
-            "{11704a2b}": 0.4043000042438507,
-            "{f26881a0}": 1.2461999654769897,
+            "spellCastTime": 0.4043000042438507,
+            "spellTotalTime": 1.2461999654769897,
             "cooldownTime": [
                 15.0,
                 15.0,
@@ -839,15 +722,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0,
-                    15.0
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0,
+                    20.0
                 ],
-                "{0a3e0478}": 15.0,
+                "{0a3e0478}": 20.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -860,7 +743,7 @@
                 1.0,
                 1.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1.0,
                     1.0,
@@ -895,7 +778,7 @@
                 75.0,
                 75.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     75.0,
                     75.0,
@@ -991,6 +874,7 @@
     },
     "{44e322e3}": {
         "ObjectName": "Jade_Blitzcrank_GodOfGrab",
+        "objectPath": "{44e322e3}",
         "mScriptName": "Jade_Blitzcrank_GodOfGrab",
         "mSpell": {
             "__type": "SpellDataResource"
@@ -1002,11 +886,12 @@
     },
     "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankCritAttack": {
         "ObjectName": "Jade_BlitzcrankCritAttack",
+        "objectPath": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankCritAttack",
         "mScriptName": "Jade_BlitzcrankCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.34389999508857727,
+            "spellCastTime": 0.34389999508857727,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1039,7 +924,7 @@
                 49.400001525878906,
                 49.400001525878906
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     49.400001525878906,
                     49.400001525878906,
@@ -1104,6 +989,7 @@
     },
     "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankStaticFieldAbility/Jade_BlitzcrankStaticField": {
         "ObjectName": "Jade_BlitzcrankStaticField",
+        "objectPath": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankStaticFieldAbility/Jade_BlitzcrankStaticField",
         "mScriptName": "Jade_BlitzcrankStaticField",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1118,22 +1004,22 @@
                         100.0,
                         200.0,
                         300.0,
-                        300.0,
-                        300.0,
-                        300.0
+                        400.0,
+                        500.0,
+                        600.0
                     ],
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "ZapCountdown",
+                    "name": "PassiveAPRatio",
                     "values": [
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224,
+                        0.20000000298023224
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1153,39 +1039,13 @@
                 {
                     "name": "ActiveBaseDamage",
                     "values": [
-                        150.0,
-                        250.0,
-                        375.0,
+                        100.0,
+                        200.0,
+                        300.0,
+                        400.0,
                         500.0,
-                        500.0,
-                        500.0,
-                        500.0
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "SilenceDuration",
-                    "values": [
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5,
-                        0.5
-                    ],
-                    "__type": "SpellDataValue"
-                },
-                {
-                    "name": "PassiveAPRatio",
-                    "values": [
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224,
-                        0.20000000298023224
+                        600.0,
+                        700.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1203,68 +1063,21 @@
                     "__type": "SpellDataValue"
                 },
                 {
-                    "name": "PassiveManaRatio",
+                    "name": "SilenceDuration",
                     "values": [
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806,
-                        0.05000000074505806
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5,
+                        0.5
                     ],
                     "__type": "SpellDataValue"
                 }
             ],
-            "DataValuesModeOverride": {
-                "cherry": {
-                    "SpellDataValues": [
-                        {
-                            "name": "ActiveAPRatio",
-                            "values": [
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0,
-                                1.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "PassiveBaseDamage",
-                            "values": [
-                                10.0,
-                                60.0,
-                                110.0,
-                                160.0,
-                                210.0,
-                                260.0,
-                                310.0
-                            ],
-                            "__type": "SpellDataValue"
-                        },
-                        {
-                            "name": "PassiveAPRatio",
-                            "values": [
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224,
-                                0.20000000298023224
-                            ],
-                            "__type": "SpellDataValue"
-                        }
-                    ],
-                    "__type": "SpellDataValueVector"
-                }
-            },
             "mSpellCalculations": {
                 "ActiveDamage": {
-                    "mSimpleTooltipCalculationDisplay": 6,
                     "mFormulaParts": [
                         {
                             "mDataValue": "ActiveBaseDamage",
@@ -1296,8 +1109,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_StaticField.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 30.0,
                 30.0,
@@ -1330,7 +1143,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -1363,7 +1176,7 @@
                 150.0,
                 150.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     150.0,
                     150.0,
@@ -1476,6 +1289,7 @@
     },
     "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankRocketGrabAbility/Jade_BlitzcrankRocketGrab": {
         "ObjectName": "Jade_BlitzcrankRocketGrab",
+        "objectPath": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankRocketGrabAbility/Jade_BlitzcrankRocketGrab",
         "mScriptName": "Jade_BlitzcrankRocketGrab",
         "mSpell": {
             "mAffectsTypeFlags": 13327,
@@ -1488,58 +1302,17 @@
             "mSpellTags": [
                 "Trait_ImmobilizingCCSpell"
             ],
-            "mEffectAmount": [
-                {
-                    "value": [
-                        40.0,
-                        90.0,
-                        140.0,
-                        190.0,
-                        240.0,
-                        290.0,
-                        340.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
                     "values": [
-                        80.0,
-                        80.0,
-                        135.0,
-                        190.0,
-                        245.0,
+                        0.0,
+                        60.0,
+                        120.0,
+                        180.0,
+                        240.0,
                         300.0,
-                        300.0
+                        360.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -1568,26 +1341,8 @@
                         1.0
                     ],
                     "__type": "SpellDataValue"
-                },
-                {
-                    "name": "CherryBonusHaste",
-                    "__type": "SpellDataValue"
                 }
             ],
-            "{f9c2333e}": {
-                "cherry": {
-                    "value": [
-                        11.0,
-                        11.0,
-                        10.5,
-                        10.0,
-                        9.5,
-                        9.0,
-                        8.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                }
-            },
             "mSpellCalculations": {
                 "TotalDamage": {
                     "mSimpleTooltipCalculationDisplay": 6,
@@ -1604,14 +1359,13 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 1.0,
             "mAnimationName": "Spell1",
             "mAnimationLoopName": "Spell1",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Blitzcrank_RocketGrab.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 21.0,
                 20.0,
@@ -1623,14 +1377,15 @@
             ],
             "Cooldown": {
                 "values": [
+                    23.0,
+                    22.0,
                     21.0,
                     20.0,
                     19.0,
                     18.0,
-                    17.0,
-                    16.0,
-                    16.0
+                    17.0
                 ],
+                "{0a3e0478}": 23.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -1644,7 +1399,7 @@
                 10000.0,
                 10000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     10000.0,
                     10000.0,
@@ -1688,7 +1443,7 @@
                 120.0,
                 120.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     120.0,
                     120.0,
@@ -1864,6 +1619,7 @@
     },
     "{bdc45b51}": {
         "ObjectName": "Jade_BlitzcrankRocketGrabMissile",
+        "objectPath": "{bdc45b51}",
         "mScriptName": "Jade_BlitzcrankRocketGrabMissile",
         "mSpell": {
             "flags": 4,
@@ -1873,8 +1629,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Jade_Blitzcrank/HUD/Icons2D/Jade_Blitzcrank_RocketGrab.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 23.0,
                 22.0,
@@ -1906,7 +1662,7 @@
                 1080.0,
                 1080.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1080.0,
                     1080.0,
@@ -2018,12 +1774,13 @@
     },
     "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankBasicAttack2": {
         "ObjectName": "Jade_BlitzcrankBasicAttack2",
+        "objectPath": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankBasicAttack2",
         "mScriptName": "Jade_BlitzcrankBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAlternateName": "Jade_BlitzcrankBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.34389999508857727,
+            "spellCastTime": 0.34389999508857727,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2056,7 +1813,7 @@
                 49.400001525878906,
                 49.400001525878906
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     49.400001525878906,
                     49.400001525878906,
@@ -2115,11 +1872,12 @@
     },
     "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankBasicAttack": {
         "ObjectName": "Jade_BlitzcrankBasicAttack",
+        "objectPath": "Characters/Jade_Blitzcrank/Spells/Jade_BlitzcrankBasicAttack",
         "mScriptName": "Jade_BlitzcrankBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAlternateName": "Jade_BlitzcrankBasicAttack",
-            "{11704a2b}": 0.34389999508857727,
+            "spellCastTime": 0.34389999508857727,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2152,7 +1910,7 @@
                 49.400001525878906,
                 49.400001525878906
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     49.400001525878906,
                     49.400001525878906,
@@ -2384,7 +2142,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -2419,7 +2177,7 @@
             },
             {
                 "MapId": 453,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "IsDefaultRecommendation": true,
                 "mDefaultPriority": [
                     3,
@@ -2499,7 +2257,7 @@
             "baseValue": 31.25,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.25,
             "__type": "ModifiableFloat"
         },
@@ -2575,7 +2333,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "{bdc45b51}",
             "{04308f67}",
             "Shared/Spells/BaseSpell",
@@ -2885,7 +2643,7 @@
             "image": "ASSETS/Characters/Jade_Blitzcrank/Skins/Base/Jade_BlitzCrankLoadScreen_ClassicReborn.tex",
             "__type": "CensoredImage"
         },
-        "__type": "{3018b0da}"
+        "__type": "Portrait"
     },
     "__linked": []
 }

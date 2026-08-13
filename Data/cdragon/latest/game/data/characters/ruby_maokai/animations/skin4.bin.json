@@ -84,7 +84,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{76bbc6a0}": {
+            "Idle3_BASE": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Ruby_Maokai/Skins/Base/Animations/Ruby_Maokai_idle3.anm",
@@ -100,7 +100,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{9e55a33e}": {
+            "Laugh_BASE": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Ruby_Maokai/Skins/Base/Animations/Ruby_Maokai_laugh.anm",
@@ -230,7 +230,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{1b254ae6}": {
+            "Idle1_PAR": {
                 "mFlags": 2,
                 "mClipNameList": [
                     "Idle1_Base",
@@ -451,16 +451,16 @@
                 ],
                 "__type": "ParallelClipData"
             },
-            "{2c00f6af}": {
+            "Idle2_PAR": {
                 "mClipNameList": [
                     "Idle2_Base",
                     "{173a1c97}"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{d8f2ee80}": {
+            "Idle3_PAR": {
                 "mClipNameList": [
-                    "{76bbc6a0}",
+                    "Idle3_BASE",
                     "{163a1b04}"
                 ],
                 "__type": "ParallelClipData"
@@ -474,7 +474,7 @@
             },
             "Laugh": {
                 "mClipNameList": [
-                    "{9e55a33e}",
+                    "Laugh_BASE",
                     "{1ec32112}"
                 ],
                 "__type": "ParallelClipData"
@@ -550,15 +550,15 @@
             "{e75f72aa}": {
                 "mSelectorPairDataList": [
                     {
-                        "mClipName": "{1b254ae6}",
+                        "mClipName": "Idle1_PAR",
                         "__type": "SelectorPairData"
                     },
                     {
-                        "mClipName": "{2c00f6af}",
+                        "mClipName": "Idle2_PAR",
                         "__type": "SelectorPairData"
                     },
                     {
-                        "mClipName": "{d8f2ee80}",
+                        "mClipName": "Idle3_PAR",
                         "__type": "SelectorPairData"
                     }
                 ],
@@ -567,7 +567,7 @@
             "Idle1": {
                 "mClipNameList": [
                     "{44828187}",
-                    "{1b254ae6}",
+                    "Idle1_PAR",
                     "{e75f72aa}"
                 ],
                 "__type": "SequencerClipData"
@@ -1215,6 +1215,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{6b2ca0c9}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

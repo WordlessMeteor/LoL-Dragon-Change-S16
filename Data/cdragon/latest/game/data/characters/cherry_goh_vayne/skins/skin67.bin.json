@@ -288,6 +288,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
+        "objectPath": "{22069f8c}",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Eye": {
@@ -661,6 +662,7 @@
         "particleName": "Cherry_GoH_Vayne_Skin67_Idle_Ghost_Eye",
         "particlePath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Eye",
         "flags": 1236,
+        "objectPath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Eye",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Emote_Idle02_GhostEnd": {
@@ -2358,6 +2360,7 @@
         "particleName": "Cherry_GoH_Vayne_Skin67_Emote_Idle02_GhostEnd",
         "particlePath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Emote_Idle02_GhostEnd",
         "flags": 1221,
+        "objectPath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Emote_Idle02_GhostEnd",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Trail01": {
@@ -3095,6 +3098,7 @@
         "particleName": "Cherry_GoH_Vayne_Skin67_Idle_Ghost_Trail01",
         "particlePath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Trail01",
         "flags": 1236,
+        "objectPath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Trail01",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Hand": {
@@ -3366,6 +3370,7 @@
         "particleName": "Cherry_GoH_Vayne_Skin67_Idle_Ghost_Hand",
         "particlePath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Hand",
         "flags": 1236,
+        "objectPath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Hand",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_HandGun": {
@@ -3422,6 +3427,7 @@
         "particleName": "Cherry_GoH_Vayne_Skin67_Idle_HandGun",
         "particlePath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_HandGun",
         "flags": 1236,
+        "objectPath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_HandGun",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Arm": {
@@ -3573,6 +3579,7 @@
         "particleName": "Cherry_GoH_Vayne_Skin67_Idle_Ghost_Arm",
         "particlePath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Arm",
         "flags": 1236,
+        "objectPath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Idle_Ghost_Arm",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Emote_Idle02_Ghost": {
@@ -5328,6 +5335,7 @@
         "particleName": "Cherry_GoH_Vayne_Skin67_Emote_Idle02_Ghost",
         "particlePath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Emote_Idle02_Ghost",
         "flags": 1221,
+        "objectPath": "Characters/Cherry_GoH_Vayne/Skins/Skin67/Particles/Cherry_GoH_Vayne_Skin67_Emote_Idle02_Ghost",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Cherry_GoH_Vayne/Skins/Skin67/Materials/DemonHand01": {
@@ -5434,9 +5442,94 @@
                 "TextureName": "Alpha_Multiplier_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Shape",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Color",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Holographic_Tiling",
+                "value": [
+                    77.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Direction",
+                "value": [
+                    0.10000000149011612,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Tiling",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Height",
+                "value": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Ribbon_U_Remap",
                 "value": [
@@ -6099,6 +6192,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_HOLOGRAPHIC_MATRIX",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
                 "on": false,
@@ -9564,9 +9663,94 @@
                 "TextureName": "Alpha_Multiplier_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Shape",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Color",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Holographic_Tiling",
+                "value": [
+                    77.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Direction",
+                "value": [
+                    0.10000000149011612,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Tiling",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Height",
+                "value": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Ribbon_U_Remap",
                 "value": [
@@ -10229,6 +10413,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_HOLOGRAPHIC_MATRIX",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
                 "on": false,

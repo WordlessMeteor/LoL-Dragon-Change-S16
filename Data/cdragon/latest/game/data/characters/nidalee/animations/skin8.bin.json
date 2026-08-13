@@ -48,7 +48,7 @@
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{bc45bbc5}": {
+                    "Audio_Dance": {
                         "mSoundName": "Play_sfx_Nidalee_Dance3D_buffactivate",
                         "__type": "SoundEventData"
                     }
@@ -67,7 +67,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{ba9fda17}": {
+            "RAW_Idle1": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Nidalee/Skins/Base/Animations/nidalee_2012_idle1.anm",
@@ -75,7 +75,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{bb9fdbaa}": {
+            "RAW_Idle2": {
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Nidalee/Skins/Base/Animations/nidalee_2012_idle2.anm",
@@ -176,7 +176,7 @@
             "Idle1": {
                 "mClipNameList": [
                     "{e45faaba}",
-                    "{ba9fda17}",
+                    "RAW_Idle1",
                     "Idle2"
                 ],
                 "__type": "SequencerClipData"
@@ -184,12 +184,12 @@
             "Idle2": {
                 "mFlags": 2,
                 "mClipNameList": [
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{bb9fdbaa}",
-                    "{ba9fda17}",
-                    "{ba9fda17}"
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle2",
+                    "RAW_Idle1",
+                    "RAW_Idle1"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -197,12 +197,12 @@
                 "mFlags": 2,
                 "mSelectorPairDataList": [
                     {
-                        "mClipName": "{ba9fda17}",
+                        "mClipName": "RAW_Idle1",
                         "mProbability": 80.0,
                         "__type": "SelectorPairData"
                     },
                     {
-                        "mClipName": "{bb9fdbaa}",
+                        "mClipName": "RAW_Idle2",
                         "mProbability": 20.0,
                         "__type": "SelectorPairData"
                     }
@@ -269,33 +269,33 @@
             "Taunt": {
                 "mClipNameList": [
                     "{b3d0c366}",
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{ba9fda17}"
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle1"
                 ],
                 "__type": "SequencerClipData"
             },
             "Joke": {
                 "mClipNameList": [
                     "{bbee8205}",
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{ba9fda17}"
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle1"
                 ],
                 "__type": "SequencerClipData"
             },
             "Laugh": {
                 "mClipNameList": [
                     "{e7a9a7b3}",
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{ba9fda17}",
-                    "{ba9fda17}"
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle1",
+                    "RAW_Idle1"
                 ],
                 "__type": "SequencerClipData"
             },
@@ -410,6 +410,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{07f8a934}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

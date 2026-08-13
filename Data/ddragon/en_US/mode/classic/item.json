@@ -1,6 +1,6 @@
 {
     "type": "item",
-    "version": "16.15.1",
+    "version": "16.16.1",
     "basic": {
         "name": "",
         "rune": {
@@ -3323,7 +3323,7 @@
         },
         "773035": {
             "name": "Last Whisper",
-            "description": "<mainText><stats><attention>40</attention> Attack Damage</stats><br><br><jadeUnique>Piercing Volley:</jadeUnique> You ignore <armorPen>35%</armorPen> of your opponent's armor.</mainText>",
+            "description": "<mainText><stats><attention>40</attention> Attack Damage</stats><br><br><jadeUnique>Piercing Volley:</jadeUnique> You ignore <armorPen>35%</armorPen> of your opponent's <scaleArmor>Armor</scaleArmor>.</mainText>",
             "colloq": "",
             "plaintext": "",
             "from": [
@@ -4496,7 +4496,7 @@
         },
         "773085": {
             "name": "Runaan's Hurricane",
-            "description": "<mainText><stats><attention>70%</attention> Attack Speed</stats><br><br><jadeUnique>Hurricane Volley:</jadeUnique> When Attacking, bolts are fired at up to 2 enemies near the target, each dealing each dealing 10 (<physicalDamage>50% of Attack Damage</physicalDamage>) physical damage. These bolts apply on-hit effects.</mainText>",
+            "description": "<mainText><stats><attention>70%</attention> Attack Speed</stats><br><br><jadeUnique>Hurricane Volley:</jadeUnique> When Attacking, bolts are fired at up to 2 enemies near the target, each dealing each dealing <physicalDamage> physical damage</physicalDamage>. These bolts apply on-hit effects.</mainText>",
             "colloq": "",
             "plaintext": "",
             "from": [
@@ -4528,14 +4528,6 @@
             },
             "stats": {
                 "PercentAttackSpeedMod": 0.7
-            },
-            "effect": {
-                "Effect1Amount": "0",
-                "Effect2Amount": "40",
-                "Effect3Amount": "2",
-                "Effect4Amount": "0",
-                "Effect5Amount": "40",
-                "Effect6Amount": "1"
             },
             "depth": 2
         },
@@ -4967,6 +4959,7 @@
             },
             "tags": [
                 "SpellBlock",
+                "HealthRegen",
                 "SpellDamage"
             ],
             "maps": {
@@ -5060,8 +5053,8 @@
             },
             "tags": [
                 "Armor",
-                "Damage",
-                "OnHit"
+                "OnHit",
+                "Jungle"
             ],
             "maps": {
                 "453": true
@@ -5313,7 +5306,7 @@
         },
         "773115": {
             "name": "Nashor's Tooth",
-            "description": "<mainText><stats><attention>65</attention> Ability Power<br><attention>50%</attention> Attack Speed</stats><br><br>20% Cooldown Reduction</mainText>",
+            "description": "<mainText><stats><attention>65</attention> Ability Power<br><attention>50%</attention> Attack Speed<br><attention>20%</attention> Cooldown Reduction</stats><br><br></mainText>",
             "colloq": "",
             "plaintext": "",
             "from": [
@@ -5511,7 +5504,7 @@
         },
         "773128": {
             "name": "Deathfire Grasp",
-            "description": "<mainText><stats><attention>120</attention> Ability Power</stats><br><br>10% Cooldown Reduction<jadeUnique>Active</jadeUnique> 60s<br>Deals 15% of target champion's maximum Health in <magicDamage>magic damage</magicDamage> and increases all subsequent <magicDamage>magic damage</magicDamage> taken by the target by 20% for 4 seconds.</mainText>",
+            "description": "<mainText><stats><attention>120</attention> Ability Power<br><attention>10%</attention> Cooldown Reduction</stats><br><br><jadeUnique>Active</jadeUnique> 60s<br>Deals 15% of target champion's maximum Health in <magicDamage>magic damage</magicDamage> and increases all subsequent <magicDamage>magic damage</magicDamage> taken by the target by 20% for 4 seconds.</mainText>",
             "colloq": "",
             "plaintext": "",
             "from": [
@@ -6225,7 +6218,15 @@
                 "total": 2000,
                 "sell": 1400
             },
-            "tags": [],
+            "tags": [
+                "Armor",
+                "Damage",
+                "LifeSteal",
+                "Vision",
+                "Active",
+                "OnHit",
+                "Jungle"
+            ],
             "maps": {
                 "453": true
             },
@@ -6502,7 +6503,7 @@
         },
         "773173": {
             "name": "Eleisa's Miracle",
-            "description": "<mainText><stats><attention>10</attention> Health Regen per 5 seconds<br><attention>15</attention> Mana Regen per 5 seconds</stats><br><br><jadeUnique>Aid:</jadeUnique> <spellName>Heal, Clairvoyance</spellName> and <spellName>Clarity</spellName> summoner spell cooldowns are reduced by 25%.<br><jadeUnique>Eleisa's Blessing:</jadeUnique> Upon gaining 3 levels with this item, all effects of this item become permanent, and this item is consumed.</mainText>",
+            "description": "<mainText><stats><attention>10</attention> Health Regen per 5 seconds<br><attention>15</attention> Mana Regen per 5 seconds</stats><br><br><jadeUnique>Aid:</jadeUnique> <spellName>Heal, Clairvoyance</spellName> and <spellName>Clarity</spellName> summoner spell cooldowns are reduced by 30%.<br><jadeUnique>Eleisa's Blessing:</jadeUnique> Upon gaining 3 levels with this item, all effects of this item become permanent, and this item is consumed.</mainText>",
             "colloq": "",
             "plaintext": "",
             "from": [
@@ -6858,7 +6859,7 @@
         },
         "773222": {
             "name": "Mikael's Crucible",
-            "description": "<mainText><stats><attention>40</attention> Magic Resist<br><attention>7</attention> Health Regen per 5 seconds<br><attention>18</attention> Mana Regen per 5 seconds</stats><br><br><jadeUnique>Mana Font:</jadeUnique> Increases <scaleMana>Mana Regen</scaleMana> by 1% for every 1% of missing Mana.<jadeUnique>Active</jadeUnique> 180s<br>Removes all <status>Stuns, Slows, Taunts, Fears, Silences, Blinds,</status> and <status>Immobilizes</status> on an allied champion and <healing>Heals</healing> that champion for <healing>150</healing> (<scaleHealth>+10 of maximum Health</scaleHealth>).</mainText>",
+            "description": "<mainText><stats><attention>40</attention> Magic Resist<br><attention>7</attention> Health Regen per 5 seconds<br><attention>18</attention> Mana Regen per 5 seconds</stats><br><br><jadeUnique>Mana Font:</jadeUnique> Increases <scaleMana>Mana Regen</scaleMana> by 1% for every 1% of missing Mana.<jadeUnique>Active</jadeUnique> 180s<br>Removes all <status>Stuns, Slows, Taunts, Fears, Silences, Blinds,</status> and <status>Immobilizes</status> on an allied champion and <healing>Heals</healing> that champion for <healing>150</healing> (<scaleHealth>+10% of maximum Health</scaleHealth>).</mainText>",
             "colloq": "",
             "plaintext": "",
             "from": [

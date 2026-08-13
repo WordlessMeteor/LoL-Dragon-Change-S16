@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.15.1",
+    "version": "16.16.1",
     "data": {
         "Vladimir": {
             "id": "Vladimir",
@@ -10,7 +10,7 @@
             "title": "弗拉基米尔",
             "image": {
                 "full": "Vladimir.png",
-                "sprite": "champion7.png",
+                "sprite": "champion5.png",
                 "group": "champion",
                 "x": 192,
                 "y": 0,
@@ -460,7 +460,7 @@
                     "id": "VladimirQ",
                     "name": "鲜血转换",
                     "description": "弗拉基米尔从目标敌人身上偷取生命值。当弗拉基米尔的资源槽攒满后，鲜血转换将暂时获得增益，提升伤害和治疗效果。",
-                    "tooltip": "弗拉基米尔汲取目标的生命力，造成<magicDamage>{{ basedamagetooltip }}魔法伤害</magicDamage>并回复<healing>{{ basehealtooltip }}生命值</healing>。在使用2次这个技能后，弗拉基米尔会获得<speed>{{ movementspeedonq2 }}%移动速度</speed>，持续0.5秒，并强化这个技能的下一次使用，持续{{ e8 }}秒。<br /><br />这个技能的强化版会造成<magicDamage>{{ empowereddamagetooltip }}魔法伤害</magicDamage>并回复额外的<healing>{{ empoweredhealtooltip }}加上{{ empoweredhealpercenttooltip }}已损失生命值</healing>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "弗拉基米尔汲取目标的生命力，造成<magicDamage>{{ basedamagetooltip }}魔法伤害</magicDamage>并回复<healing>{{ basehealtooltip }}生命值</healing>。在使用2次这个技能后，弗拉基米尔会获得持续0.5秒的<speed>{{ movementspeedonq2 }}%移动速度</speed>，并强化这个技能的下一次使用，持续{{ frenzyduration }}秒。<br /><br />这个技能的强化版会转而造成<magicDamage>{{ empowereddamagetooltip }}魔法伤害</magicDamage>并回复额外的<healing>{{ empoweredhealtooltip }}加上{{ empoweredhealpercenttooltip }}已损失生命值</healing>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
@@ -468,8 +468,8 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
-                            "{{ e2 }} -> {{ e2NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ baseheal }} -> {{ basehealNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -590,7 +590,7 @@
                     "rangeBurn": "600",
                     "image": {
                         "full": "VladimirQ.png",
-                        "sprite": "spell22.png",
+                        "sprite": "spell16.png",
                         "group": "spell",
                         "x": 0,
                         "y": 48,
@@ -731,7 +731,7 @@
                     "rangeBurn": "350",
                     "image": {
                         "full": "VladimirSanguinePool.png",
-                        "sprite": "spell22.png",
+                        "sprite": "spell16.png",
                         "group": "spell",
                         "x": 48,
                         "y": 48,
@@ -753,9 +753,9 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e3 }} -> {{ e3NL }}",
-                            "{{ e0 }} -> {{ e0NL }}",
-                            "{{ e9 }}% -> {{ e9NL }}%",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
+                            "{{ basemaxdamage }} -> {{ basemaxdamageNL }}",
+                            "{{ slowpercent }}% -> {{ slowpercentNL }}%",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -876,26 +876,26 @@
                     "rangeBurn": "600",
                     "image": {
                         "full": "VladimirE.png",
-                        "sprite": "spell22.png",
+                        "sprite": "spell16.png",
                         "group": "spell",
                         "x": 96,
                         "y": 48,
                         "w": 48,
                         "h": 48
                     },
-                    "resource": "引导过程消耗{{ e2 }}%最大生命值({{ chargehealthtooltip }})"
+                    "resource": "引导过程消耗{{ maxhealthcost }}%最大生命值({{ chargehealthtooltip }})"
                 },
                 {
                     "id": "VladimirHemoplague",
                     "name": "血之瘟疫",
                     "description": "弗拉基米尔令一片区域感染上剧毒瘟疫，增加受感染敌人所受的伤害。在几秒后，血之瘟疫会对被感染的敌人造成魔法伤害，并根据命中的敌方英雄数来治疗弗拉基米尔。",
-                    "tooltip": "弗拉基米尔生成一个剧毒瘟疫，使他的目标们所受伤害(所有来源)提高{{ e2 }}%，持续{{ e4 }}秒。在它消散后，弗拉基米尔对所有被感染的目标造成<magicDamage>{{ damage }}魔法伤害</magicDamage>。如果弗拉基米尔命中了一名敌方英雄，那么就会治疗自身<healing>{{ damage }}生命值</healing>，此后每命中一名敌方英雄会治疗自身额外的<healing>{{ secondaryhealingtooltip }}生命值</healing>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "弗拉基米尔生成一个剧毒瘟疫，使他的目标们所受伤害(所有来源)提高{{ damageamp }}%，持续{{ duration }}秒。在它消散后，弗拉基米尔对所有被感染的目标造成<magicDamage>{{ damage }}魔法伤害</magicDamage>。如果弗拉基米尔命中了一名敌方英雄，那么就会回复自身<healing>{{ damage }}生命值</healing>，此后每命中一名敌方英雄会回复自身额外的 <healing>{{ secondaryhealingtooltip }}生命值</healing>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}"
+                            "{{ basedamage }} -> {{ basedamageNL }}"
                         ]
                     },
                     "maxrank": 3,
@@ -989,7 +989,7 @@
                     "rangeBurn": "625",
                     "image": {
                         "full": "VladimirHemoplague.png",
-                        "sprite": "spell22.png",
+                        "sprite": "spell16.png",
                         "group": "spell",
                         "x": 144,
                         "y": 48,
@@ -1004,7 +1004,7 @@
                 "description": "每30生命值加成给予弗拉基米尔1法术强度，每1法术强度给予弗拉基米尔1.6生命值（不会自我循环叠加）。",
                 "image": {
                     "full": "VladimirP.png",
-                    "sprite": "passive7.png",
+                    "sprite": "passive5.png",
                     "group": "passive",
                     "x": 192,
                     "y": 0,

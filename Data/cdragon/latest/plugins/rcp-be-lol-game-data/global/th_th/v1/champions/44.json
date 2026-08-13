@@ -780,7 +780,7 @@
             "cost": "@Cost@ มานา ทุกชาร์จ",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ฮีลให้แก่เพื่อนร่วมทีมรอบข้าง โดยขึ้นกับชาร์จที่เก็บสะสมมา Bravado จะได้รับการเพิ่มพลังตามจำนวนชาร์จของ Starlight's Touch",
-            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> ได้รับสแตค (สูงสุด @Effect6Amount@ สแตค) ทุก @StackCooldown@ วินาที และเมื่อโจมตีด้วย <spellName>Bravado</spellName><br><br><spellActive>กดใช้:</spellActive> ใช้สแตคทั้งหมดเพื่อฟื้นฟู<healing>พลังชีวิต @HealingPerStack@ หน่วย</healing>ต่อสแตคให้กับแชมเปี้ยนร่วมทีมที่อยู่ใกล้ ๆ (<healing>@MaxStackHealing@</healing> หน่วยที่ @Effect6Amount@ สแตค)@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว:</spellPassive> ได้รับหนึ่งสแตค (สูงสุด @MaxCharges@ สแตค) ทุก ๆ @StackCooldown@ วินาที และเมื่อโจมตีด้วย <spellName>Bravado</spellName><br><br><spellActive>กดใช้:</spellActive> ใช้งานสแตคทั้งหมดเพื่อฟื้นฟู<healing>พลังชีวิต @HealingPerStack@ หน่วย</healing>ต่อสแตคให้กับแชมเปี้ยนใกล้เคียง (<healing>@MaxStackHealing@</healing> หน่วยที่ @MaxCharges@ สแตค)@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "ช่วยเพิ่มเกราะของ Taric และเพื่อนร่วมทีมที่ได้รับ Bastion<br><br>กดใช้เพื่อสร้างโล่ป้องกันความเสียหายให้แก่เพื่อนร่วมทีมตัวหนึ่ง และช่วยให้เขาได้รับ Bastion ตราบเท่าที่พวกเขายังอยู่ใกล้กับ Taric สกิลของ Taric จะถูกใช้ออกจากเพื่อนร่วมทีมที่มี Bastion อยู่ด้วย",
-            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>Taric ได้รับ<scaleArmor>เกราะ @BonusArmor@ หน่วย</scaleArmor> และเชื่อมตัวเขากับเพื่อนร่วมทีมด้วยสกิลนี้ ตราบใดที่พวกเขาอยู่ใกล้กัน เพื่อนร่วมทีมจะได้รับ<scaleArmor>เกราะ @BonusArmor@ หน่วย</scaleArmor> และ Taric จะร่ายสกิลทั้งหมดจากตัวเขาเองและเพื่อนร่วมทีมที่เชื่อมอยู่<br><br><spellPassive>กดใช้: </spellPassive>Taric เชื่อมกับแชมเปี้ยนร่วมทีม มอบ<shield>โล่ป้องกันความเสียหาย @Effect2Amount@% ตามพลังชีวิตสูงสุด</shield> เป็นเวลา @Effect3Amount@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>ติดตัว: </spellPassive>Taric ได้รับ<scaleArmor>เกราะ @BonusArmor@ หน่วย</scaleArmor> และเชื่อมตัวเขาและเพื่อนร่วมทีมด้วยสกิลนี้ ตราบใดที่พวกเขาอยู่ใกล้กัน เพื่อนร่วมทีมจะได้รับ<scaleArmor>เกราะ @BonusArmor@ หน่วย</scaleArmor> และ Taric จะร่ายสกิลทั้งหมดจากตัวเขาเองและเพื่อนร่วมทีมที่เชื่อมต่อ<br><br><spellPassive>กดใช้: </spellPassive>Taric เชื่อมกับแชมเปี้ยนร่วมทีม มอบ<shield>โล่ป้องกัน @ShieldHPRatio@ % จากพลังชีวิตสูงสุด</shield> เป็นเวลา @ShieldDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@ วินาที %i:cooldown%",
             "description": "Taric ตั้งเส้นลำแสงดวงดาวในทิศทางที่กำหนด หลังจากผ่านไปครู่หนึ่ง มันจะสร้างความเสียหายเวทและสตันศัตรู",
-            "dynamicDescription": "Taric ปล่อยบีมแห่งดวงดาว หลังจากนั้น @Effect3Amount@ วินาทีมันจะสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และ<status>สตัน</status>ศัตรูเป็นเวลา @Effect2Amount@ วินาที@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric ปล่อยลำแสงแห่งดวงดาว หลังจากนั้น @ChargeDuration@ วินาทีมันจะสร้าง<magicDamage>ความเสียหายเวท @TotalDamage@ หน่วย</magicDamage> และ<status>สตัน</status>ศัตรูเป็นเวลา @StunDuration@ วินาที@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

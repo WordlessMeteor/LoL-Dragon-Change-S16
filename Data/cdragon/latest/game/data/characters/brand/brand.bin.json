@@ -359,6 +359,7 @@
     },
     "Characters/Brand/Spells/BrandPassiveAbility/BrandAblaze": {
         "ObjectName": "BrandAblaze",
+        "objectPath": "Characters/Brand/Spells/BrandPassiveAbility/BrandAblaze",
         "mScriptName": "BrandAblaze",
         "mSpell": {
             "flags": 4,
@@ -424,8 +425,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandP.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 8.5,
                 8.0,
@@ -458,7 +459,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -519,7 +520,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     50.0,
@@ -553,6 +554,7 @@
     },
     "Characters/Brand/Spells/BrandPassiveAbility/BrandPassive": {
         "ObjectName": "BrandPassive",
+        "objectPath": "Characters/Brand/Spells/BrandPassiveAbility/BrandPassive",
         "mScriptName": "BrandPassive",
         "mSpell": {
             "mEffectAmount": [
@@ -646,6 +648,19 @@
                         50.0,
                         50.0,
                         50.0
+                    ],
+                    "__type": "SpellDataValue"
+                },
+                {
+                    "name": "ManaRestoration",
+                    "values": [
+                        20.0,
+                        20.0,
+                        25.0,
+                        30.0,
+                        35.0,
+                        40.0,
+                        40.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -805,7 +820,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -842,6 +857,7 @@
     },
     "Characters/Brand/Spells/BrandPassiveAbility/BrandAblazeDetonateMarker": {
         "ObjectName": "BrandAblazeDetonateMarker",
+        "objectPath": "Characters/Brand/Spells/BrandPassiveAbility/BrandAblazeDetonateMarker",
         "mScriptName": "BrandAblazeDetonateMarker",
         "mSpell": {
             "flags": 4,
@@ -897,8 +913,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandP-Debuff.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 8.5,
                 8.0,
@@ -931,7 +947,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -992,7 +1008,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     50.0,
@@ -1026,6 +1042,7 @@
     },
     "Characters/Brand/Spells/BrandWildfire": {
         "ObjectName": "BrandWildfire",
+        "objectPath": "Characters/Brand/Spells/BrandWildfire",
         "mScriptName": "BrandWildfire",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1097,8 +1114,8 @@
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandPyroclasm.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 105.0,
                 105.0,
@@ -1131,7 +1148,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -1187,7 +1204,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -1234,6 +1251,7 @@
     },
     "Characters/Brand/Spells/BrandDamageTracker": {
         "ObjectName": "BrandDamageTracker",
+        "objectPath": "Characters/Brand/Spells/BrandDamageTracker",
         "mScriptName": "BrandDamageTracker",
         "mBuff": {
             "mDescription": "game_buff_tooltip_BrandDamageTracker",
@@ -1244,11 +1262,13 @@
     },
     "Characters/Brand/Spells/BrandPassiveRunspeed": {
         "ObjectName": "BrandPassiveRunspeed",
+        "objectPath": "Characters/Brand/Spells/BrandPassiveRunspeed",
         "mScriptName": "BrandPassiveRunspeed",
         "__type": "SpellObject"
     },
     "Characters/Brand/Spells/BrandConflagrationMissile": {
         "ObjectName": "BrandConflagrationMissile",
+        "objectPath": "Characters/Brand/Spells/BrandConflagrationMissile",
         "mScriptName": "BrandConflagrationMissile",
         "mSpell": {
             "flags": 4,
@@ -1300,8 +1320,8 @@
             "mImgIconName": [
                 "Annie_Disintegrate.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 11.0,
                 10.0,
@@ -1334,7 +1354,7 @@
                 675.0,
                 675.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     675.0,
                     675.0,
@@ -1400,11 +1420,12 @@
     },
     "Characters/Brand/Spells/BrandBasicAttack": {
         "ObjectName": "BrandBasicAttack",
+        "objectPath": "Characters/Brand/Spells/BrandBasicAttack",
         "mScriptName": "BrandBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAlternateName": "BrandBasicAttack",
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1437,7 +1458,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -1512,6 +1533,7 @@
     },
     "Characters/Brand/Spells/BrandWAbility/BrandW": {
         "ObjectName": "BrandW",
+        "objectPath": "Characters/Brand/Spells/BrandWAbility/BrandW",
         "mScriptName": "BrandW",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1597,6 +1619,19 @@
                         300.0
                     ],
                     "__type": "SpellDataValue"
+                },
+                {
+                    "name": "PDamageBonus",
+                    "values": [
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25,
+                        0.25
+                    ],
+                    "__type": "SpellDataValue"
                 }
             ],
             "DataValuesModeOverride": {
@@ -1678,8 +1713,8 @@
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandW.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 10.5,
                 10.0,
@@ -1713,7 +1748,7 @@
                 900.0,
                 900.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     900.0,
                     900.0,
@@ -1766,7 +1801,7 @@
                 100.0,
                 110.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     60.0,
                     70.0,
@@ -1850,6 +1885,7 @@
     },
     "Characters/Brand/Spells/BrandConflagration": {
         "ObjectName": "BrandConflagration",
+        "objectPath": "Characters/Brand/Spells/BrandConflagration",
         "mScriptName": "BrandConflagration",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1900,8 +1936,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandConflagration.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 13.0,
                 12.0,
@@ -1934,7 +1970,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -1978,7 +2014,7 @@
                 90.0,
                 95.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     75.0,
@@ -2035,6 +2071,7 @@
     },
     "Characters/Brand/Spells/BrandEAbility/BrandE": {
         "ObjectName": "BrandE",
+        "objectPath": "Characters/Brand/Spells/BrandEAbility/BrandE",
         "mScriptName": "BrandE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2151,8 +2188,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandE.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 13.0,
                 13.0,
@@ -2185,7 +2222,7 @@
                 675.0,
                 675.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     675.0,
                     675.0,
@@ -2229,7 +2266,7 @@
                 90.0,
                 95.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     90.0,
                     90.0,
@@ -2347,6 +2384,7 @@
     },
     "Characters/Brand/Spells/BrandEAbility/BrandEMissile": {
         "ObjectName": "BrandEMissile",
+        "objectPath": "Characters/Brand/Spells/BrandEAbility/BrandEMissile",
         "mScriptName": "BrandEMissile",
         "mSpell": {
             "flags": 4,
@@ -2398,8 +2436,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandE.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 11.0,
                 10.0,
@@ -2432,7 +2470,7 @@
                 675.0,
                 675.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     675.0,
                     675.0,
@@ -2497,12 +2535,13 @@
     },
     "Characters/Brand/Spells/BrandCritAttack": {
         "ObjectName": "BrandCritAttack",
+        "objectPath": "Characters/Brand/Spells/BrandCritAttack",
         "mScriptName": "BrandCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAlternateName": "BrandCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2535,7 +2574,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -2612,6 +2651,7 @@
     },
     "Characters/Brand/Spells/BrandRAbility/BrandRMissile": {
         "ObjectName": "BrandRMissile",
+        "objectPath": "Characters/Brand/Spells/BrandRAbility/BrandRMissile",
         "mScriptName": "BrandRMissile",
         "mSpell": {
             "flags": 4,
@@ -2664,8 +2704,8 @@
             "mImgIconName": [
                 "Annie_Disintegrate.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2699,7 +2739,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -2766,6 +2806,7 @@
     },
     "Characters/Brand/Spells/BrandRAbility/BrandR": {
         "ObjectName": "BrandR",
+        "objectPath": "Characters/Brand/Spells/BrandRAbility/BrandR",
         "mScriptName": "BrandR",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2882,8 +2923,8 @@
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandR.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 100.0,
                 100.0,
@@ -2916,7 +2957,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -2975,7 +3016,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -3114,6 +3155,7 @@
     },
     "Characters/Brand/Spells/BrandBlazeMissile": {
         "ObjectName": "BrandBlazeMissile",
+        "objectPath": "Characters/Brand/Spells/BrandBlazeMissile",
         "mScriptName": "BrandBlazeMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -3173,8 +3215,8 @@
             "mImgIconName": [
                 "FallenAngel_DarkBinding.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3208,7 +3250,7 @@
                 1100.0,
                 1100.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1100.0,
                     1100.0,
@@ -3314,6 +3356,7 @@
     },
     "Characters/Brand/Spells/BrandFissure": {
         "ObjectName": "BrandFissure",
+        "objectPath": "Characters/Brand/Spells/BrandFissure",
         "mScriptName": "BrandFissure",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -3373,8 +3416,8 @@
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandPillarOfFlame.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "mCantCancelWhileWindingUp": true,
             "mSpellRevealsChampion": false,
             "useAnimatorFramerate": true,
@@ -3387,7 +3430,7 @@
                 900.0,
                 900.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     900.0,
                     900.0,
@@ -3440,7 +3483,7 @@
                 110.0,
                 120.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     80.0,
@@ -3489,6 +3532,7 @@
     },
     "Characters/Brand/Spells/BrandWildfireMissile": {
         "ObjectName": "BrandWildfireMissile",
+        "objectPath": "Characters/Brand/Spells/BrandWildfireMissile",
         "mScriptName": "BrandWildfireMissile",
         "mSpell": {
             "flags": 4,
@@ -3541,8 +3585,8 @@
             "mImgIconName": [
                 "Annie_Disintegrate.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3576,7 +3620,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -3644,12 +3688,13 @@
     },
     "Characters/Brand/Spells/BrandBasicAttack2": {
         "ObjectName": "BrandBasicAttack2",
+        "objectPath": "Characters/Brand/Spells/BrandBasicAttack2",
         "mScriptName": "BrandBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAlternateName": "BrandBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3682,7 +3727,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -3749,6 +3794,7 @@
     },
     "Characters/Brand/Spells/BrandQAbility/BrandQ": {
         "ObjectName": "BrandQ",
+        "objectPath": "Characters/Brand/Spells/BrandQAbility/BrandQ",
         "mScriptName": "BrandQ",
         "mSpell": {
             "mAffectsTypeFlags": 13327,
@@ -3900,8 +3946,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandQ.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 8.5,
                 8.0,
@@ -3934,7 +3980,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3995,7 +4041,7 @@
                 70.0,
                 70.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     70.0,
@@ -4026,8 +4072,7 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Effect%dAmount",
-                                    "typeIndex": 1,
+                                    "type": "SpellBaseDamage",
                                     "nameOverride": "Spell_ListType_Damage",
                                     "__type": "TooltipInstanceListElement"
                                 },
@@ -4142,6 +4187,7 @@
     },
     "Characters/Brand/Spells/BrandQAbility/BrandQMissile": {
         "ObjectName": "BrandQMissile",
+        "objectPath": "Characters/Brand/Spells/BrandQAbility/BrandQMissile",
         "mScriptName": "BrandQMissile",
         "mSpell": {
             "flags": 4,
@@ -4202,8 +4248,8 @@
             "mImgIconName": [
                 "FallenAngel_DarkBinding.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -4237,7 +4283,7 @@
                 1100.0,
                 1100.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1100.0,
                     1100.0,
@@ -4324,6 +4370,7 @@
     },
     "Characters/Brand/Spells/BrandBlaze": {
         "ObjectName": "BrandBlaze",
+        "objectPath": "Characters/Brand/Spells/BrandBlaze",
         "mScriptName": "BrandBlaze",
         "mSpell": {
             "flags": 4,
@@ -4380,8 +4427,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Brand/HUD/Icons2D/BrandSear.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 8.5,
                 8.0,
@@ -4414,7 +4461,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -4475,7 +4522,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     50.0,
@@ -4527,12 +4574,13 @@
     },
     "Characters/Brand/Spells/BrandScorchAttack": {
         "ObjectName": "BrandScorchAttack",
+        "objectPath": "Characters/Brand/Spells/BrandScorchAttack",
         "mScriptName": "BrandScorchAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAlternateName": "BrandScorchAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -4564,7 +4612,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -4630,6 +4678,7 @@
     },
     "Characters/Brand/Spells/BrandDamageTracker2": {
         "ObjectName": "BrandDamageTracker2",
+        "objectPath": "Characters/Brand/Spells/BrandDamageTracker2",
         "mScriptName": "BrandDamageTracker2",
         "mBuff": {
             "mDescription": "game_buff_tooltip_BrandDamageTracker2",
@@ -4697,7 +4746,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     1,
@@ -4918,7 +4967,7 @@
             "baseValue": 30.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.2999999523162842,
             "__type": "ModifiableFloat"
         },
@@ -4993,7 +5042,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/Brand/Spells/BrandQAbility/BrandQMissile",
             "Characters/Brand/Spells/BrandRAbility/BrandRMissile",
             "Characters/Brand/Spells/BrandEAbility/BrandEMissile",
@@ -5054,7 +5103,6 @@
                     "{ca762bfc}": true,
                     "{b75b2ab8}": true,
                     "{b66d0e47}": true,
-                    "{e9f30ef6}": true,
                     "__type": "ToolAiPresence"
                 },
                 "3": {

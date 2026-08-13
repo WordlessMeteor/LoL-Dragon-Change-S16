@@ -696,7 +696,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "洛克扔出封印法器来对命中的敌人们造成伤害并且有可能将其处决。成功处决敌人会为洛克提供增益效果。",
-            "dynamicDescription": "洛克朝目标位置扔出封印法器，对落点范围内的敌人造成<magicDamage>@Damage@魔法伤害</magicDamage>和在@SlowDuration@秒内持续衰减的@SlowAmount*100@%的<status>减速</status>。这个法器会将命中的敌人们标记@Duration@秒，从而在被标记的敌方英雄们低于@ExecutionThreshold*100@%生命值时立刻将其处决并封印，并重置其他受影响的敌方英雄身上的标记持续时间。<br><br>效果结束后，若法器封印了至少一个英雄，就会着陆在地面上。洛克可以主动拾取该法器，基于每个被封印的英雄，获得@ExecuteThresholdPerStack*100@%的永久处决阈值提升，并返还@CooldownReduction@%的当前冷却时间。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "洛克朝目标位置扔出封印法器，对落点范围内的敌人造成<magicDamage>@Damage@魔法伤害</magicDamage>和在@SlowDuration@秒内持续衰减的@SlowAmount*100@%的<status>减速</status>。这个法器会将命中的敌人们标记@Duration@秒，从而在被标记的敌方英雄们低于<spellName>@ExecuteTooltipCalc@</spellName>生命值时立刻将其处决并封印，并重置其他受影响的敌方英雄身上的标记持续时间。<br><br>时长结束后，若法器封印了至少一个英雄，就会着陆在地面上。洛克可以主动拾取该法器，基于每个被封印的英雄，获得@ExecuteThresholdPerStack*100@%的永久处决阈值提升，并返还他的@CooldownReduction@%的总冷却时间。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,

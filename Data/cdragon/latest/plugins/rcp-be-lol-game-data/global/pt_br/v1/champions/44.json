@@ -780,7 +780,7 @@
             "cost": "@Cost@ Mana, todas as cargas",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Cura Campeões aliados próximos com base nas cargas armazenadas. Ataques fortalecidos por Bravata concedem uma carga de Fulgor Estelar.",
-            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> recebe um acúmulo (máximo de @Effect6Amount@) a cada @StackCooldown@s e quando acertar um Ataque com <spellName>Bravata</spellName>.<br><br><spellActive>Ativo:</spellActive> consome todos os acúmulos para restaurar <healing>@HealingPerStack@ de Vida</healing> por acúmulo a todos os Campeões aliados próximos (<healing>@MaxStackHealing@</healing> com @Effect6Amount@ acúmulos).@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo:</spellPassive> recebe um acúmulo (máximo de @MaxCharges@) a cada @StackCooldown@s e quando acertar um Ataque com <spellName>Bravata</spellName>.<br><br><spellActive>Ativo:</spellActive> consome todos os acúmulos para restaurar <healing>@HealingPerStack@ de Vida</healing> por acúmulo a todos os Campeões aliados próximos (<healing>@MaxStackHealing@</healing> com @MaxCharges@ acúmulos).@SpellModifierDescriptionAppend@",
             "range": [
                 325.0,
                 325.0,
@@ -930,7 +930,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Aumenta passivamente a Armadura de Taric e de qualquer Campeão aliado com Bastião.<br><br>Protege ativamente um aliado e lhe concede Bastião por todo o tempo que permanecer próximo a Taric. As habilidades de Taric também são conjuradas a partir do aliado com Bastião.",
-            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>Taric recebe <scaleArmor>@BonusArmor@ de Armadura</scaleArmor> e forma uma ligação entre ele e o aliado escolhido. Enquanto permanecerem próximos, o aliado vinculado recebe <scaleArmor>@BonusArmor@ de Armadura</scaleArmor> e as Habilidades de Taric também são conjuradas pelo aliado vinculado.<br><br><spellPassive>Ativo: </spellPassive>Taric se liga a um Campeão aliado, concedendo um Escudo equivalente a <shield>@Effect2Amount@% da Vida máxima</shield> por @Effect3Amount@s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellPassive>Passivo: </spellPassive>Taric recebe <scaleArmor>@BonusArmor@ de Armadura</scaleArmor> e forma uma ligação entre ele e o aliado escolhido. Enquanto permanecerem próximos, o aliado vinculado recebe <scaleArmor>@BonusArmor@ de Armadura</scaleArmor> e as Habilidades de Taric também são conjuradas pelo aliado vinculado.<br><br><spellPassive>Ativo: </spellPassive>Taric se liga a um Campeão aliado, concedendo <shield>Escudo equivalente a @ShieldHPRatio@% da Vida máxima</shield> por @ShieldDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 800.0,
                 800.0,
@@ -1080,7 +1080,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Taric prepara um feixe de luz estelar que, após um breve intervalo, causa Dano Mágico e atordoa inimigos.",
-            "dynamicDescription": "Taric projeta um feixe de luz estelar que explode depois de @Effect3Amount@s, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e <status>Atordoando</status> inimigos por @Effect2Amount@s.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Taric projeta um feixe de luz estelar que explode depois de @ChargeDuration@s, causando <magicDamage>@TotalDamage@ de Dano Mágico</magicDamage> e <status>Atordoando</status> inimigos por @StunDuration@s.@SpellModifierDescriptionAppend@",
             "range": [
                 610.0,
                 610.0,

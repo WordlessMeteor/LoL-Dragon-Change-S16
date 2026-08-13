@@ -565,7 +565,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Olaf throws an axe into the ground at a target location, dealing damage to units it passes through and slowing their movement speed. If Olaf picks up the axe, the ability's cooldown is reduced.",
-            "dynamicDescription": "Olaf throws an axe to a target location, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> to units it passes through and <status>Slowing</status> them by @SlowAmount*100@% decaying over @DebuffDuration@ seconds. <br><br>If Olaf picks up the axe, the ability's cooldown is reduced by @CooldownRefund@ seconds.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf throws an axe to a target location, dealing <physicalDamage>@TotalDamage@ physical damage</physicalDamage> to units it passes through and <status>Slowing</status> them by @SlowAmount*100@% over @DebuffDuration@ seconds. <br><br>If Olaf picks up the axe, the ability's cooldown is reduced by @CooldownRefund@ seconds.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -733,12 +733,12 @@
                 60.0
             ],
             "cooldownCoefficients": [
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 1.0,
@@ -1015,7 +1015,7 @@
             "cost": "@Cost@ @AbilityResourceName@",
             "cooldown": "@Cooldown@s %i:cooldown%",
             "description": "Olaf temporarily becomes immune to disables and gains bonus Armor, Magic Resist, and Lethality.",
-            "dynamicDescription": "Olaf cleanses all <status>Immobilizing</status> and <status>Disabling</status> effects on himself and becomes immune to them the next @Duration@ seconds. During this time, Olaf gains <scaleArmor>@Resists@ Armor</scaleArmor>, <scaleMR>@Resists@ Magic Resist</scaleMR>, and @ArmorPen@ Lethality.<br><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellActive>Active:</spellActive> Olaf cleanses all <status>Immobilizing</status> and <status>Disabling</status> effects on himself and becomes immune to them the next @Duration@ seconds. During this time, Olaf gains <scaleArmor>@Resists@ Armor</scaleArmor> and <scaleMR>@Resists@ Magic Resist</scaleMR>.<br><br><spellPassive>Passive:</spellPassive> Olaf gains an additional @ArmorPen@ Lethality.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

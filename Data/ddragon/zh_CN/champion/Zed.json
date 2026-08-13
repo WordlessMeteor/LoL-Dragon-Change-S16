@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.15.1",
+    "version": "16.16.1",
     "data": {
         "Zed": {
             "id": "Zed",
@@ -10,7 +10,7 @@
             "title": "劫",
             "image": {
                 "full": "Zed.png",
-                "sprite": "champion7.png",
+                "sprite": "champion5.png",
                 "group": "champion",
                 "x": 336,
                 "y": 48,
@@ -679,7 +679,7 @@
                     "rangeBurn": "900",
                     "image": {
                         "full": "ZedQ.png",
-                        "sprite": "spell23.png",
+                        "sprite": "spell17.png",
                         "group": "spell",
                         "x": 96,
                         "y": 96,
@@ -692,7 +692,7 @@
                     "id": "ZedW",
                     "name": "影奥义！分身",
                     "description": "<font color='#FF9900'>被动：</font>当劫和他的影分身用相同技能击中一名敌方英雄时，劫会回复能量。每次施放技能只会回复一次能量。<br><br><font color='#FF9900'>主动：</font>劫的影分身向前突进，并在一个地方维持若干秒。再次激活此技能会让劫与这个影分身互换位置。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>当劫和他的<keywordMajor>影分身</keywordMajor>用相同技能击中一名敌方英雄时，劫会回复<keywordMajor>{{ e3 }}能量</keywordMajor>。<br /><br /><spellActive>主动：</spellActive>劫的<keywordMajor>影分身</keywordMajor>向前突进，并在一个地方维持{{ e5 }}秒。<recast>再次施放</recast>这个技能会让劫与这个<keywordMajor>影分身</keywordMajor>互换位置。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>当劫和他的<keywordMajor>影分身</keywordMajor>用相同技能击中一名敌方英雄时，劫会回复<keywordMajor>{{ energyrestoredoublehit }}能量</keywordMajor>。<br /><br /><spellActive>主动：</spellActive>劫的<keywordMajor>影分身</keywordMajor>向前冲刺，并在一个地方维持{{ shadowdurationtooltip }}秒。<recast>再次施放</recast>这个技能会让劫与这个<keywordMajor>影分身</keywordMajor>互换位置。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "能量返还",
@@ -700,7 +700,7 @@
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e3 }} -> {{ e3NL }}",
+                            "{{ energyrestoredoublehit }} -> {{ energyrestoredoublehitNL }}",
                             "{{ cost }} -> {{ costNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
@@ -733,11 +733,11 @@
                             5.25
                         ],
                         [
-                            0.2,
-                            0.2,
-                            0.2,
-                            0.2,
-                            0.2
+                            0,
+                            0,
+                            0,
+                            0,
+                            0
                         ],
                         [
                             30,
@@ -799,7 +799,7 @@
                     "effectBurn": [
                         null,
                         "5.25",
-                        "0.2",
+                        "0",
                         "30/35/40/45/50",
                         "5.25",
                         "5",
@@ -822,7 +822,7 @@
                     "rangeBurn": "650",
                     "image": {
                         "full": "ZedW.png",
-                        "sprite": "spell23.png",
+                        "sprite": "spell17.png",
                         "group": "spell",
                         "x": 144,
                         "y": 96,
@@ -965,7 +965,7 @@
                     "rangeBurn": "290",
                     "image": {
                         "full": "ZedE.png",
-                        "sprite": "spell23.png",
+                        "sprite": "spell17.png",
                         "group": "spell",
                         "x": 192,
                         "y": 96,
@@ -1080,7 +1080,7 @@
                     "rangeBurn": "625",
                     "image": {
                         "full": "ZedR.png",
-                        "sprite": "spell23.png",
+                        "sprite": "spell17.png",
                         "group": "spell",
                         "x": 240,
                         "y": 96,
@@ -1095,7 +1095,7 @@
                 "description": "劫的普通攻击会对低生命值的目标造成额外魔法伤害。这个特效在数秒内只能对相同的敌方英雄生效一次。",
                 "image": {
                     "full": "ZedP.png",
-                    "sprite": "passive7.png",
+                    "sprite": "passive5.png",
                     "group": "passive",
                     "x": 336,
                     "y": 48,

@@ -1,7 +1,7 @@
 {
     "type": "champion",
     "format": "standAloneComplex",
-    "version": "16.15.1",
+    "version": "16.16.1",
     "data": {
         "Taric": {
             "id": "Taric",
@@ -10,7 +10,7 @@
             "title": "塔里克",
             "image": {
                 "full": "Taric.png",
-                "sprite": "champion6.png",
+                "sprite": "champion4.png",
                 "group": "champion",
                 "x": 288,
                 "y": 48,
@@ -312,15 +312,15 @@
                     "id": "TaricQ",
                     "name": "星光之触",
                     "description": "基于已储存的充能来治疗附近的友方英雄。【正气凌人】的强化普攻会为这个技能提供一层充能。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>每{{ stackcooldown }}秒和打出一次<spellName>正气凌人</spellName>攻击时获得一层效果(最多{{ e6 }}层)。<br /><br /><spellActive>主动：</spellActive>消耗所有层数来为附近的友方英雄们回复<healing>{{ healingperstack }}x层数的生命值</healing>(在{{ e6 }}层时回复<healing>{{ maxstackhealing }}生命值</healing>)。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>每{{ stackcooldown }}秒和打出一次<spellName>正气凌人</spellName>攻击时获得一层效果(最多{{ maxcharges }})。<br /><br /><spellActive>主动：</spellActive>消耗所有层数来为附近的友方英雄们回复<healing>{{ healingperstack }}x层数的生命值</healing>(在{{ maxcharges }}层时回复<healing>{{ maxstackhealing }}生命值</healing>)。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "最大充能",
                             "最大治疗效果"
                         ],
                         "effect": [
-                            "{{ e6 }} -> {{ e6NL }}",
-                            "{{ e5 }} -> {{ e5NL }}"
+                            "{{ maxcharges }} -> {{ maxchargesNL }}",
+                            "{{ basehealmax }} -> {{ basehealmaxNL }}"
                         ]
                     },
                     "maxrank": 5,
@@ -440,7 +440,7 @@
                     "rangeBurn": "325",
                     "image": {
                         "full": "TaricQ.png",
-                        "sprite": "spell20.png",
+                        "sprite": "spell14.png",
                         "group": "spell",
                         "x": 384,
                         "y": 48,
@@ -453,7 +453,7 @@
                     "id": "TaricW",
                     "name": "坚毅壁垒",
                     "description": "被动提升塔里克和带有【坚毅壁垒】效果的友方英雄的护甲。<br><br>主动施放会为一名友方英雄提供护盾和【坚毅壁垒】效果，只要该英雄呆在塔里克身边，【坚毅壁垒】效果会一直持续。塔里克的技能也会从带有【坚毅壁垒】效果的友方英雄身上施放。",
-                    "tooltip": "<spellPassive>被动：</spellPassive>塔里克获得<scaleArmor>{{ bonusarmor }}护甲</scaleArmor>并在他和被此技能绑定过的友方英雄之间形成一条灵链。只要他们在彼此附近，该友方英雄就会获得<scaleArmor>{{ bonusarmor }}护甲</scaleArmor>并且塔里克的各个技能也会从他自己和该友方英雄处施放。<br /><br /><spellPassive>主动：</spellPassive>塔里克与一名友方英雄进行绑定，提供持续{{ e3 }}秒的<shield>{{ e2 }}%最大生命值的护盾值</shield>。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "<spellPassive>被动：</spellPassive>塔里克获得<scaleArmor>{{ bonusarmor }}护甲</scaleArmor>并在他和被此技能绑定过的友方英雄之间形成一条灵链。只要他们在彼此附近，该友方英雄就会获得<scaleArmor>{{ bonusarmor }}护甲</scaleArmor>并且塔里克的各个技能也会从他自己和该友方英雄处施放。<br /><br /><spellPassive>主动：</spellPassive>塔里克与一名友方英雄进行绑定，提供持续{{ shieldduration }}秒的<shield>{{ shieldhpratio }}%最大生命值的护盾值</shield>。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "被动护甲",
@@ -461,7 +461,7 @@
                         ],
                         "effect": [
                             "{{ armorbonuspercentage*100.000000 }}% -> {{ armorbonuspercentagenl*100.000000 }}%",
-                            "{{ e2 }}% -> {{ e2NL }}%"
+                            "{{ shieldhpratio }}% -> {{ shieldhpratioNL }}%"
                         ]
                     },
                     "maxrank": 5,
@@ -581,7 +581,7 @@
                     "rangeBurn": "800",
                     "image": {
                         "full": "TaricW.png",
-                        "sprite": "spell20.png",
+                        "sprite": "spell14.png",
                         "group": "spell",
                         "x": 432,
                         "y": 48,
@@ -594,14 +594,14 @@
                     "id": "TaricE",
                     "name": "炫光",
                     "description": "塔里克准备施放一束星光，在短暂的延迟后，会对敌人造成魔法伤害和晕眩效果。",
-                    "tooltip": "塔里克投射一束星光，在{{ e3 }}秒后爆裂，以造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>并使敌人们<status>晕眩</status>{{ e2 }}秒。{{ spellmodifierdescriptionappend }}",
+                    "tooltip": "塔里克投射一束星光，在{{ chargeduration }}秒后爆裂，以造成<magicDamage>{{ totaldamage }}魔法伤害</magicDamage>并使敌人们<status>晕眩</status>{{ stunduration }}秒。{{ spellmodifierdescriptionappend }}",
                     "leveltip": {
                         "label": [
                             "伤害",
                             "冷却时间"
                         ],
                         "effect": [
-                            "{{ e1 }} -> {{ e1NL }}",
+                            "{{ basedamage }} -> {{ basedamageNL }}",
                             "{{ cooldown }} -> {{ cooldownNL }}"
                         ]
                     },
@@ -722,7 +722,7 @@
                     "rangeBurn": "610",
                     "image": {
                         "full": "TaricE.png",
-                        "sprite": "spell20.png",
+                        "sprite": "spell14.png",
                         "group": "spell",
                         "x": 0,
                         "y": 96,
@@ -835,7 +835,7 @@
                     "rangeBurn": "400",
                     "image": {
                         "full": "TaricR.png",
-                        "sprite": "spell20.png",
+                        "sprite": "spell14.png",
                         "group": "spell",
                         "x": 48,
                         "y": 96,
@@ -850,7 +850,7 @@
                 "description": "每次施放技能会强化塔里克的下2次普攻，以造成额外魔法伤害，使他的基础技能的冷却时间减少，并且可以快速地连续攻击。",
                 "image": {
                     "full": "Taric_Passive.png",
-                    "sprite": "passive6.png",
+                    "sprite": "passive4.png",
                     "group": "passive",
                     "x": 288,
                     "y": 48,

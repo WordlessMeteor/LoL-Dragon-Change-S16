@@ -2,7 +2,7 @@
     "ClientStates/Gameplay/UX/EndOfGame": {
         "PathHashToSelf": "clientstates/gameplay/ux/endofgame",
         "BaseLoadable": "ClientStates/Gameplay/UX/EndOfGame/UIBase",
-        "TencentOverrideLoadable": "{40e9b356}",
+        "TencentOverrideLoadable": "ClientStates/Gameplay/UX/EndOfGame/UITencent",
         "MainScene": "ClientStates/Gameplay/UX/EndOfGame/UIBase/EndOfGameMainScene",
         "ContinueButton": "ClientStates/Gameplay/UX/EndOfGame/UIBase/EndOfGameMainScene/EOG_ContinueButton",
         "VictoryGroupHandle": "ClientStates/Gameplay/UX/EndOfGame/UIBase/EndOfGameMainScene/EOG_VictoryGroup",
@@ -10,13 +10,13 @@
         "{7a765367}": [
             {
                 "Mutator": "UseTeamSpecificEoG",
-                "{d9f00a6c}": "{beaf2e2c}",
+                "{d9f00a6c}": "ClientStates/Gameplay/UX/EndOfGame/UICrepeOrder",
                 "__type": "{ffc26938}"
             },
             {
                 "Mutator": "UseTeamSpecificEoG",
                 "Team": 200,
-                "{d9f00a6c}": "{a279729c}",
+                "{d9f00a6c}": "ClientStates/Gameplay/UX/EndOfGame/UICrepeChaos",
                 "__type": "{ffc26938}"
             }
         ],
@@ -38,7 +38,7 @@
         },
         "__type": "EndOfGameViewController"
     },
-    "{40e9b356}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UITencent": {
         "FilepathHash": "clientstates/gameplay/ux/endofgame/uitencent",
         "OverrideSrcFolder": "clientstates/gameplay/ux/endofgame/uibase",
         "__type": "UiPropertyOverrideLoadable"
@@ -9055,6 +9055,7 @@
         "flags": 199,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/Crepe/EoG_Crepe_Chaos_Defeat",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/Crepe/EoG_Crepe_Order_Victory": {
@@ -16935,6 +16936,7 @@
         "flags": 199,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/Crepe/EoG_Crepe_Order_Victory",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/Crepe/EoG_Crepe_Order_Defeat": {
@@ -24891,6 +24893,7 @@
         "flags": 199,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/Crepe/EoG_Crepe_Order_Defeat",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/Crepe/EoG_Crepe_Chaos_Victory": {
@@ -32803,6 +32806,7 @@
         "flags": 199,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/Crepe/EoG_Crepe_Chaos_Victory",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_TencentACE_VFX": {
@@ -34863,6 +34867,7 @@
         "flags": 708,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_TencentACE_VFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_Vanguard_VFX": {
@@ -37790,6 +37795,7 @@
         "flags": 708,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_Vanguard_VFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_Victory_VFX": {
@@ -39688,6 +39694,7 @@
         "flags": 199,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_Victory_VFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_Defeat_VFX": {
@@ -41586,6 +41593,7 @@
         "flags": 199,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_Defeat_VFX",
         "__type": "VfxSystemDefinitionData"
     },
     "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_IGNB_VFX": {
@@ -44513,9 +44521,10 @@
         "flags": 708,
         "drawingLayer": 1,
         "hudAnchorPositionFromWorldProjection": false,
+        "objectPath": "ClientStates/Gameplay/UX/EndOfGame/EndOfGame_VFX/EoG_IGNB_VFX",
         "__type": "VfxSystemDefinitionData"
     },
-    "{a279729c}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UICrepeChaos": {
         "FilepathHash": "clientstates/gameplay/ux/endofgame/uicrepechaos",
         "OverrideSrcFolder": "clientstates/gameplay/ux/endofgame/uibase",
         "__type": "UiPropertyOverrideLoadable"
@@ -44524,7 +44533,7 @@
         "FilepathHash": "clientstates/gameplay/ux/endofgame/uibase",
         "__type": "UiPropertyLoadable"
     },
-    "{beaf2e2c}": {
+    "ClientStates/Gameplay/UX/EndOfGame/UICrepeOrder": {
         "FilepathHash": "clientstates/gameplay/ux/endofgame/uicrepeorder",
         "OverrideSrcFolder": "clientstates/gameplay/ux/endofgame/uibase",
         "__type": "UiPropertyOverrideLoadable"

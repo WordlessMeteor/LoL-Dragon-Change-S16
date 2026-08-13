@@ -1,6 +1,7 @@
 {
     "Characters/TFT15_Gangplank/Spells/TFT15_GangplankCritAttack": {
         "ObjectName": "TFT15_GangplankCritAttack",
+        "objectPath": "Characters/TFT15_Gangplank/Spells/TFT15_GangplankCritAttack",
         "mScriptName": "TFT15_GangplankCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -16,12 +17,13 @@
     },
     "{56f04250}": {
         "ObjectName": "TFT15_GangplankSpell_Bullet",
+        "objectPath": "{56f04250}",
         "mScriptName": "TFT15_GangplankSpell_Bullet",
         "mSpell": {
             "mAffectsTypeFlags": 22538,
             "mAnimationName": "",
             "mCastTime": 0.6000000238418579,
-            "{11704a2b}": 1.5,
+            "spellCastTime": 1.5,
             "useAnimatorFramerate": true,
             "bHaveHitEffect": true,
             "castRange": [
@@ -33,7 +35,7 @@
                 2300.0,
                 2300.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2300.0,
                     2300.0,
@@ -100,6 +102,7 @@
     },
     "Characters/TFT15_Gangplank/Spells/TFT15_GangplankBasicAttack2": {
         "ObjectName": "TFT15_GangplankBasicAttack2",
+        "objectPath": "Characters/TFT15_Gangplank/Spells/TFT15_GangplankBasicAttack2",
         "mScriptName": "TFT15_GangplankBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -115,6 +118,7 @@
     },
     "Characters/TFT15_Gangplank/Spells/TFT15_GangplankBasicAttack": {
         "ObjectName": "TFT15_GangplankBasicAttack",
+        "objectPath": "Characters/TFT15_Gangplank/Spells/TFT15_GangplankBasicAttack",
         "mScriptName": "TFT15_GangplankBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -129,6 +133,7 @@
     },
     "Characters/TFT15_Gangplank/Spells/TFT15_GangplankSpell": {
         "ObjectName": "TFT15_GangplankSpell",
+        "objectPath": "Characters/TFT15_Gangplank/Spells/TFT15_GangplankSpell",
         "mScriptName": "TFT15_GangplankSpell",
         "mSpell": {
             "flags": 4,
@@ -239,8 +244,8 @@
             },
             "mAnimationName": "",
             "mCastTime": 0.25,
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -274,7 +279,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,

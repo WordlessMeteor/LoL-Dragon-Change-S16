@@ -2,8 +2,9 @@
     "{52f70d7e}": {
         "mCascadeBlendValue": 0.0,
         "mClipDataMap": {
-            "Attack1": {
+            "{01777011}": {
                 "mTrackDataName": "Default",
+                "mTickDuration": 0.02500000037252903,
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Jade_Gangplank/Skins/Skin301/Animations/attack1.anm",
                     "__type": "AnimationResourceData"
@@ -12,6 +13,23 @@
             },
             "Attack2": {
                 "mTrackDataName": "Default",
+                "mEventDataMap": {
+                    "CAST": {
+                        "mName": "CAST",
+                        "mStartFrame": 9.0,
+                        "mEffectKey": "Jade_Gangplank_Q_cas",
+                        "mParticleEventDataPairList": [
+                            {
+                                "mBoneName": "R_WEAPON",
+                                "__type": "ParticleEventDataPair"
+                            }
+                        ],
+                        "mIsLoop": false,
+                        "mIsKillEvent": false,
+                        "__type": "ParticleEventData"
+                    }
+                },
+                "mTickDuration": 0.027027027681469917,
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Jade_Gangplank/Skins/Skin301/Animations/attack2.anm",
                     "__type": "AnimationResourceData"
@@ -38,13 +56,6 @@
             "Dance": {
                 "mFlags": 2,
                 "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "{584e30c1}": {
-                        "mName": "{584e30c1}",
-                        "mSoundName": "Play_sfx_Gangplank_Base_Dance3D_buffactivate",
-                        "__type": "SoundEventData"
-                    }
-                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Jade_Gangplank/Skins/Skin301/Animations/dance.anm",
                     "__type": "AnimationResourceData"
@@ -53,15 +64,6 @@
             },
             "Death": {
                 "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "{8df283ac}": {
-                        "mName": "{8df283ac}",
-                        "mSoundName": "Play_sfx_Gangplank_Base_Death3D_buffactivate",
-                        "mIsLoop": false,
-                        "mIsKillEvent": false,
-                        "__type": "SoundEventData"
-                    }
-                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Jade_Gangplank/Skins/Skin301/Animations/death.anm",
                     "__type": "AnimationResourceData"
@@ -79,14 +81,6 @@
             },
             "Laugh": {
                 "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "{eb24c137}": {
-                        "mName": "{eb24c137}",
-                        "mSoundName": "Play_sfx_Gangplank_Base_Laugh3D_buffactivate",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
-                    }
-                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Jade_Gangplank/Skins/Skin301/Animations/laugh.anm",
                     "__type": "AnimationResourceData"
@@ -118,13 +112,6 @@
                         "mIsLoop": false,
                         "mIsKillEvent": false,
                         "__type": "ParticleEventData"
-                    },
-                    "{36449878}": {
-                        "mName": "{36449878}",
-                        "mSoundName": "Play_sfx_Gangplank_GangplankQProceedCrit_Cast_Swing",
-                        "mIsLoop": false,
-                        "mIsKillEvent": false,
-                        "__type": "SoundEventData"
                     }
                 },
                 "mAnimationResourceData": {
@@ -161,14 +148,6 @@
             },
             "Taunt": {
                 "mTrackDataName": "Default",
-                "mEventDataMap": {
-                    "audio_emote_taunt": {
-                        "mName": "audio_emote_taunt",
-                        "mSoundName": "Play_sfx_Gangplank_Base_Taunt3D_buffactivate",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
-                    }
-                },
                 "mAnimationResourceData": {
                     "mAnimationFilePath": "ASSETS/Characters/Jade_Gangplank/Skins/Skin301/Animations/taunt.anm",
                     "__type": "AnimationResourceData"
@@ -193,12 +172,6 @@
                             "Crate_Mat"
                         ],
                         "__type": "SubmeshVisibilityEventData"
-                    },
-                    "{50195603}": {
-                        "mName": "{50195603}",
-                        "mSoundName": "Play_sfx_Gangplank_Base_Recall3D_buffactivate",
-                        "mIsLoop": false,
-                        "__type": "SoundEventData"
                     }
                 },
                 "mAnimationResourceData": {
@@ -248,6 +221,21 @@
                     "__type": "AnimationResourceData"
                 },
                 "__type": "AtomicClipData"
+            },
+            "Attack1": {
+                "mSelectorPairDataList": [
+                    {
+                        "mClipName": "{01777011}",
+                        "mProbability": 70.0,
+                        "__type": "SelectorPairData"
+                    },
+                    {
+                        "mClipName": "Attack2",
+                        "mProbability": 30.0,
+                        "__type": "SelectorPairData"
+                    }
+                ],
+                "__type": "SelectorClipData"
             }
         },
         "mMaskDataMap": {
@@ -317,19 +305,19 @@
             }
         },
         "mBlendDataTable": {
-            "6247030502054051911": {
+            "105676337669619783": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6247030502141246797": {
+            "105676337756814669": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6247030502504003400": {
+            "105676338119571272": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6247030502683874516": {
+            "105676338299442388": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -565,7 +553,7 @@
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
-            "6247030502020496673": {
+            "105676337636064545": {
                 "mTime": 0.0,
                 "__type": "TimeBlendData"
             },
@@ -634,6 +622,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{52f70d7e}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

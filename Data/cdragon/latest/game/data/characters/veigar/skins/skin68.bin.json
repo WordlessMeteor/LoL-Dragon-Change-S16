@@ -363,6 +363,7 @@
                 "__type": "PersistentEffectConditionData"
             }
         ],
+        "objectPath": "{999523dd}",
         "__type": "SkinCharacterDataProperties"
     },
     "Characters/Veigar/Skins/Skin68/Materials/Veigar_Skin68_HairMat01_inst": {
@@ -1445,9 +1446,94 @@
                 "TextureName": "Alpha_Multiplier_Texture",
                 "texturePath": "ASSETS/Shared/Materials/white.tex",
                 "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Shape",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Mask",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
+            },
+            {
+                "TextureName": "Holographic_Color",
+                "texturePath": "ASSETS/Shared/Materials/black.tex",
+                "__type": "StaticMaterialShaderSamplerDef"
             }
         ],
         "paramValues": [
+            {
+                "name": "Holographic_Tiling",
+                "value": [
+                    77.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Intensity",
+                "value": [
+                    0.5,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Tiling",
+                "value": [
+                    1.0,
+                    1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Direction",
+                "value": [
+                    0.10000000149011612,
+                    -1.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Mask_Scroll_Speed",
+                "value": [
+                    0.30000001192092896,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Tiling",
+                "value": [
+                    1.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
+            {
+                "name": "Holographic_Parallax_Height",
+                "value": [
+                    9.0,
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "__type": "StaticMaterialShaderParamDef"
+            },
             {
                 "name": "Ribbon_U_Remap",
                 "value": [
@@ -2104,6 +2190,12 @@
             }
         ],
         "switches": [
+            {
+                "name": "USE_HOLOGRAPHIC_MATRIX",
+                "on": false,
+                "Group": "Holographic",
+                "__type": "StaticMaterialSwitchDef"
+            },
             {
                 "name": "USE_ALPHA_MULTIPLIER_TEXTURE",
                 "on": false,
@@ -4178,6 +4270,7 @@
         "particleName": "Veigar_Skin68_Z_FireWeapon",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Z_FireWeapon",
         "flags": 1237,
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Z_FireWeapon",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_Staff": {
@@ -4557,6 +4650,7 @@
         "particleName": "Veigar_Skin68_Idle_Staff",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_Staff",
         "flags": 1236,
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_Staff",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_RunGround": {
@@ -5829,6 +5923,7 @@
         ],
         "particleName": "Veigar_Skin68_Idle_RunGround",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_RunGround",
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_RunGround",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Z_BuffPoro": {
@@ -11849,6 +11944,7 @@
         "particleName": "Veigar_Skin68_Z_BuffPoro",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Z_BuffPoro",
         "flags": 1237,
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Z_BuffPoro",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_R_mis": {
@@ -18934,6 +19030,7 @@
         ],
         "particleName": "Veigar_Skin68_R_mis",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_R_mis",
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_R_mis",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_Weapon": {
@@ -20441,6 +20538,7 @@
         "particleName": "Veigar_Skin68_Idle_Weapon",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_Weapon",
         "flags": 1236,
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_Weapon",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_E_CageGreenChild": {
@@ -26147,6 +26245,7 @@
         "particleName": "Veigar_Skin68_E_CageGreenChild",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_E_CageGreenChild",
         "flags": 197,
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_E_CageGreenChild",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Q_mis": {
@@ -32056,6 +32155,7 @@
         ],
         "particleName": "Veigar_Skin68_Q_mis",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Q_mis",
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Q_mis",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_BigHand": {
@@ -32416,6 +32516,7 @@
         "particleName": "Veigar_Skin68_Idle_BigHand",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_BigHand",
         "flags": 1236,
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_BigHand",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_R_MisMax": {
@@ -38440,6 +38541,7 @@
         ],
         "particleName": "Veigar_Skin68_R_MisMax",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_R_MisMax",
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_R_MisMax",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Z_BuffWeapon": {
@@ -41356,6 +41458,7 @@
         "particleName": "Veigar_Skin68_Z_BuffWeapon",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Z_BuffWeapon",
         "flags": 213,
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Z_BuffWeapon",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_E_CageGreen": {
@@ -49473,6 +49576,7 @@
         "soundOnCreateDefault": "Play_sfx_Veigar_VeigarEventHorizon_buffactivate",
         "soundPersistentDefault": "Play_sfx_Veigar_VeigarEventHorizon_loop",
         "flags": 197,
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_E_CageGreen",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_Crown": {
@@ -49715,6 +49819,7 @@
         "particleName": "Veigar_Skin68_Idle_Crown",
         "particlePath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_Crown",
         "flags": 1236,
+        "objectPath": "Characters/Veigar/Skins/Skin68/Particles/Veigar_Skin68_Idle_Crown",
         "__type": "VfxSystemDefinitionData"
     },
     "Characters/Veigar/Skins/Skin68/Resources": {

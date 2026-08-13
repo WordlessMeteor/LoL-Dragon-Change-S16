@@ -1,6 +1,7 @@
 {
     "Characters/Khazix/Spells/KhazixPAttack": {
         "ObjectName": "KhazixPAttack",
+        "objectPath": "Characters/Khazix/Spells/KhazixPAttack",
         "mScriptName": "KhazixPAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -26,6 +27,7 @@
     },
     "{0d18828e}": {
         "ObjectName": "KhazixHatredDefeat",
+        "objectPath": "{0d18828e}",
         "mScriptName": "KhazixHatredDefeat",
         "mSpell": {
             "ImgIconPath": "ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_P.dds",
@@ -39,12 +41,13 @@
     },
     "Characters/Khazix/Spells/KhazixCritAttack": {
         "ObjectName": "KhazixCritAttack",
+        "objectPath": "Characters/Khazix/Spells/KhazixCritAttack",
         "mScriptName": "KhazixCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
             "castFrame": 9.0,
@@ -78,6 +81,7 @@
     },
     "Characters/Khazix/Spells/KhazixQAbility/KhazixQ": {
         "ObjectName": "KhazixQ",
+        "objectPath": "Characters/Khazix/Spells/KhazixQAbility/KhazixQ",
         "mScriptName": "KhazixQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -276,8 +280,8 @@
                 "ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_Q.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -312,7 +316,7 @@
                 325.0,
                 325.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     325.0,
                     325.0,
@@ -363,7 +367,7 @@
                 20.0,
                 20.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -448,6 +452,7 @@
     },
     "Characters/Khazix/Spells/KhazixQAbility/KhazixQDR": {
         "ObjectName": "KhazixQDR",
+        "objectPath": "Characters/Khazix/Spells/KhazixQAbility/KhazixQDR",
         "mScriptName": "KhazixQDR",
         "mSpell": {
             "mAlternateName": "KhazixQDR",
@@ -464,6 +469,7 @@
     },
     "Characters/Khazix/Spells/KhazixQAbility/KhazixQEvo": {
         "ObjectName": "KhazixQEvo",
+        "objectPath": "Characters/Khazix/Spells/KhazixQAbility/KhazixQEvo",
         "mScriptName": "KhazixQEvo",
         "mSpell": {
             "mAffectsTypeFlags": 8192,
@@ -550,8 +556,8 @@
                 ""
             ],
             "mCastTime": 2.0,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -586,7 +592,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -650,11 +656,13 @@
     },
     "Characters/Khazix/Spells/KhazixQAbility/KhazixQPassiveIsolation": {
         "ObjectName": "KhazixQPassiveIsolation",
+        "objectPath": "Characters/Khazix/Spells/KhazixQAbility/KhazixQPassiveIsolation",
         "mScriptName": "KhazixQPassiveIsolation",
         "__type": "SpellObject"
     },
     "Characters/Khazix/Spells/KhazixQAbility/KhazixQLong": {
         "ObjectName": "KhazixQLong",
+        "objectPath": "Characters/Khazix/Spells/KhazixQAbility/KhazixQLong",
         "mScriptName": "KhazixQLong",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -732,8 +740,8 @@
                 "ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_Q_red.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 4.0,
                 4.0,
@@ -768,7 +776,7 @@
                 375.0,
                 375.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     375.0,
                     375.0,
@@ -819,7 +827,7 @@
                 20.0,
                 20.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -856,16 +864,18 @@
     },
     "Characters/Khazix/Spells/KhazixPassiveEvoTracker": {
         "ObjectName": "KhazixPassiveEvoTracker",
+        "objectPath": "Characters/Khazix/Spells/KhazixPassiveEvoTracker",
         "mScriptName": "KhazixPassiveEvoTracker",
         "__type": "SpellObject"
     },
     "Characters/Khazix/Spells/KhazixBasicAttack": {
         "ObjectName": "KhazixBasicAttack",
+        "objectPath": "Characters/Khazix/Spells/KhazixBasicAttack",
         "mScriptName": "KhazixBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixBasicAttack",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
@@ -904,6 +914,7 @@
     },
     "Characters/Khazix/Spells/KhazixRAbility/KhazixREvoCharTextureBuff": {
         "ObjectName": "KhazixREvoCharTextureBuff",
+        "objectPath": "Characters/Khazix/Spells/KhazixRAbility/KhazixREvoCharTextureBuff",
         "mScriptName": "KhazixREvoCharTextureBuff",
         "mBuff": {
             "PersistentEffectConditions": [
@@ -923,11 +934,13 @@
     },
     "Characters/Khazix/Spells/KhazixRAbility/KhazixRPassiveEvoTracker": {
         "ObjectName": "KhazixRPassiveEvoTracker",
+        "objectPath": "Characters/Khazix/Spells/KhazixRAbility/KhazixRPassiveEvoTracker",
         "mScriptName": "KhazixRPassiveEvoTracker",
         "__type": "SpellObject"
     },
     "Characters/Khazix/Spells/KhazixRAbility/KhazixRStealth": {
         "ObjectName": "KhazixRStealth",
+        "objectPath": "Characters/Khazix/Spells/KhazixRAbility/KhazixRStealth",
         "mScriptName": "KhazixRStealth",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KhazixRStealth",
@@ -937,6 +950,7 @@
     },
     "Characters/Khazix/Spells/KhazixRAbility/KhazixR": {
         "ObjectName": "KhazixR",
+        "objectPath": "Characters/Khazix/Spells/KhazixRAbility/KhazixR",
         "mScriptName": "KhazixR",
         "mSpell": {
             "flags": 36,
@@ -1174,7 +1188,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1225,7 +1239,7 @@
                 100.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -1341,6 +1355,7 @@
     },
     "Characters/Khazix/Spells/KhazixRAbility/KhazixREvo": {
         "ObjectName": "KhazixREvo",
+        "objectPath": "Characters/Khazix/Spells/KhazixRAbility/KhazixREvo",
         "mScriptName": "KhazixREvo",
         "mSpell": {
             "mAffectsTypeFlags": 8192,
@@ -1427,8 +1442,8 @@
                 ""
             ],
             "mCastTime": 2.0,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1463,7 +1478,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -1527,6 +1542,7 @@
     },
     "Characters/Khazix/Spells/KhazixRAbility/KhazixREvoStealth": {
         "ObjectName": "KhazixREvoStealth",
+        "objectPath": "Characters/Khazix/Spells/KhazixRAbility/KhazixREvoStealth",
         "mScriptName": "KhazixREvoStealth",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KhazixREvoStealth",
@@ -1547,6 +1563,7 @@
     },
     "Characters/Khazix/Spells/KhazixEAbility/KhazixEEvo": {
         "ObjectName": "KhazixEEvo",
+        "objectPath": "Characters/Khazix/Spells/KhazixEAbility/KhazixEEvo",
         "mScriptName": "KhazixEEvo",
         "mSpell": {
             "mAffectsTypeFlags": 8192,
@@ -1636,8 +1653,8 @@
                 ""
             ],
             "mCastTime": 2.0,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1672,7 +1689,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -1736,6 +1753,7 @@
     },
     "Characters/Khazix/Spells/KhazixEAbility/KhazixEInvisMissile": {
         "ObjectName": "KhazixEInvisMissile",
+        "objectPath": "Characters/Khazix/Spells/KhazixEAbility/KhazixEInvisMissile",
         "mScriptName": "KhazixEInvisMissile",
         "mSpell": {
             "flags": 4194308,
@@ -1784,8 +1802,8 @@
             ],
             "mCoefficient": 1.0,
             "mAnimationName": "Spell2",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1819,7 +1837,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1915,6 +1933,7 @@
     },
     "Characters/Khazix/Spells/KhazixEAbility/KhazixE": {
         "ObjectName": "KhazixE",
+        "objectPath": "Characters/Khazix/Spells/KhazixEAbility/KhazixE",
         "mScriptName": "KhazixE",
         "mSpell": {
             "flags": 4,
@@ -2104,8 +2123,8 @@
                 "ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_E.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 22.0,
                 20.0,
@@ -2140,7 +2159,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2200,7 +2219,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     50.0,
@@ -2307,6 +2326,7 @@
     },
     "Characters/Khazix/Spells/KhazixEAbility/KhazixELong": {
         "ObjectName": "KhazixELong",
+        "objectPath": "Characters/Khazix/Spells/KhazixEAbility/KhazixELong",
         "mScriptName": "KhazixELong",
         "mSpell": {
             "flags": 4,
@@ -2388,8 +2408,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_E_red.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 22.0,
                 20.0,
@@ -2423,7 +2443,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2483,7 +2503,7 @@
                 50.0,
                 50.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     50.0,
@@ -2543,6 +2563,7 @@
     },
     "Characters/Khazix/Spells/KhazixWAbility/KhazixWMissile": {
         "ObjectName": "KhazixWMissile",
+        "objectPath": "Characters/Khazix/Spells/KhazixWAbility/KhazixWMissile",
         "mScriptName": "KhazixWMissile",
         "mSpell": {
             "flags": 4,
@@ -2618,8 +2639,8 @@
             ],
             "mAnimationName": "Spell4",
             "mCastTime": 0.25,
-            "{11704a2b}": 0.17500001192092896,
-            "{f26881a0}": 0.6000000238418579,
+            "spellCastTime": 0.17500001192092896,
+            "spellTotalTime": 0.6000000238418579,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2654,7 +2675,7 @@
                 1025.0,
                 1025.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1025.0,
                     1025.0,
@@ -2751,6 +2772,7 @@
     },
     "Characters/Khazix/Spells/KhazixWAbility/KhazixWLong": {
         "ObjectName": "KhazixWLong",
+        "objectPath": "Characters/Khazix/Spells/KhazixWAbility/KhazixWLong",
         "mScriptName": "KhazixWLong",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2847,8 +2869,8 @@
                 "ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_W_red.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 9.0,
                 9.0,
@@ -2884,7 +2906,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2947,7 +2969,7 @@
                 75.0,
                 80.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     55.0,
                     60.0,
@@ -2985,6 +3007,7 @@
     },
     "Characters/Khazix/Spells/KhazixWAbility/KhazixW": {
         "ObjectName": "KhazixW",
+        "objectPath": "Characters/Khazix/Spells/KhazixWAbility/KhazixW",
         "mScriptName": "KhazixW",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -3263,8 +3286,8 @@
                 "ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_W.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 9.0,
                 9.0,
@@ -3299,7 +3322,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3361,7 +3384,7 @@
                 75.0,
                 80.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     55.0,
                     60.0,
@@ -3489,6 +3512,7 @@
     },
     "Characters/Khazix/Spells/KhazixWAbility/KhazixWSight": {
         "ObjectName": "KhazixWSight",
+        "objectPath": "Characters/Khazix/Spells/KhazixWAbility/KhazixWSight",
         "mScriptName": "KhazixWSight",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KhazixWSight",
@@ -3498,6 +3522,7 @@
     },
     "Characters/Khazix/Spells/KhazixWAbility/KhazixWEvo": {
         "ObjectName": "KhazixWEvo",
+        "objectPath": "Characters/Khazix/Spells/KhazixWAbility/KhazixWEvo",
         "mScriptName": "KhazixWEvo",
         "mSpell": {
             "mAffectsTypeFlags": 8192,
@@ -3508,8 +3533,8 @@
                 ""
             ],
             "mCastTime": 2.0,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3544,7 +3569,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -3608,6 +3633,7 @@
     },
     "Characters/Khazix/Spells/KhazixWAbility/KhazixWEvoSlow": {
         "ObjectName": "KhazixWEvoSlow",
+        "objectPath": "Characters/Khazix/Spells/KhazixWAbility/KhazixWEvoSlow",
         "mScriptName": "KhazixWEvoSlow",
         "mSpell": {
             "mAlternateName": "KhazixWEvoSlow",
@@ -3624,6 +3650,7 @@
     },
     "{5451910a}": {
         "ObjectName": "KhazixHatredReward",
+        "objectPath": "{5451910a}",
         "mScriptName": "KhazixHatredReward",
         "mSpell": {
             "ImgIconPath": "ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_P.dds",
@@ -3647,6 +3674,7 @@
     },
     "Characters/Khazix/Spells/KhazixPassiveAbility/KhazixPDamage": {
         "ObjectName": "KhazixPDamage",
+        "objectPath": "Characters/Khazix/Spells/KhazixPassiveAbility/KhazixPDamage",
         "mScriptName": "KhazixPDamage",
         "mSpell": {
             "mImgIconName": [
@@ -3662,6 +3690,7 @@
     },
     "Characters/Khazix/Spells/KhazixPassiveAbility/KhazixPassive": {
         "ObjectName": "KhazixPassive",
+        "objectPath": "Characters/Khazix/Spells/KhazixPassiveAbility/KhazixPassive",
         "mScriptName": "KhazixPassive",
         "mSpell": {
             "flags": 20,
@@ -3806,8 +3835,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/KhaZix/HUD/Icons2D/Khazix_P.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3888,12 +3917,13 @@
     },
     "Characters/Khazix/Spells/KhazixBasicAttack2": {
         "ObjectName": "KhazixBasicAttack2",
+        "objectPath": "Characters/Khazix/Spells/KhazixBasicAttack2",
         "mScriptName": "KhazixBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "KhazixBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3461499810218811,
+            "spellCastTime": 0.3461499810218811,
             "mApplyMaterialOnHitSound": true,
             "bHaveHitEffect": true,
             "castConeDistance": 100.0,
@@ -3916,6 +3946,7 @@
     },
     "{c7d8b264}": {
         "ObjectName": "KhazixHatredReady",
+        "objectPath": "{c7d8b264}",
         "mScriptName": "KhazixHatredReady",
         "mBuff": {
             "mDescription": "game_buff_tooltip_KhazixHatred",
@@ -3925,6 +3956,7 @@
     },
     "{ef93d5ae}": {
         "ObjectName": "KhazixHatredWins",
+        "objectPath": "{ef93d5ae}",
         "mScriptName": "KhazixHatredWins",
         "mBuff": {
             "__type": "BuffData"
@@ -4010,7 +4042,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     1,
@@ -4710,7 +4742,7 @@
             "baseValue": 32.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 2.049999952316284,
             "__type": "ModifiableFloat"
         },
@@ -4785,7 +4817,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/Khazix/Spells/KhazixWAbility/KhazixWMissile",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -4865,7 +4897,6 @@
                     "{b75b2ab8}": true,
                     "{b66d0e47}": true,
                     "{6175bb7b}": true,
-                    "{e9f30ef6}": true,
                     "__type": "ToolAiPresence"
                 },
                 "3": {

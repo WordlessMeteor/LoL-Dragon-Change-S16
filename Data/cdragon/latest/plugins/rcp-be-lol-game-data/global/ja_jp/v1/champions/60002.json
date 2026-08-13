@@ -565,7 +565,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "指定した場所へ斧を投げ、斧が触れた敵ユニットにダメージを与え、移動速度を低下させる。斧を拾うと、このスキルのクールダウンが短縮する。",
-            "dynamicDescription": "指定した場所へ斧を投げ、斧が触れた敵ユニットに<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、@SlowAmount*100@%の<status>スロウ効果</status>を与える。スロウ効果は@DebuffDuration@秒かけて元に戻る。<br><br>斧を拾うと、このスキルのクールダウンが@CooldownRefund@秒短縮される。@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "指定した場所へ斧を投げ、斧が触れた敵ユニットに<physicalDamage>@TotalDamage@の物理ダメージ</physicalDamage>を与え、@DebuffDuration@秒間、@SlowAmount*100@%の<status>スロウ効果</status>を与える。<br><br>斧を拾うと、このスキルのクールダウンが@CooldownRefund@秒短縮される。@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -733,12 +733,12 @@
                 60.0
             ],
             "cooldownCoefficients": [
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 1.0,
@@ -1015,7 +1015,7 @@
             "cost": "@Cost@@AbilityResourceName@",
             "cooldown": "@Cooldown@秒 %i:cooldown%",
             "description": "一時的に行動妨害効果を受けなくなり、物理防御、魔法防御、脅威が増加する。",
-            "dynamicDescription": "自身が受けたあらゆる<status>移動不能効果</status>と<status>行動妨害効果</status>を除去し、その後@Duration@秒間、それらの効果を受けなくなる。この効果時間中、<scaleArmor>物理防御が@Resists@</scaleArmor>、<scaleMR>魔法防御が@Resists@</scaleMR>、脅威が@ArmorPen@増加する。<br><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellActive>発動効果:</spellActive> 自身が受けたあらゆる<status>移動不能効果</status>と<status>行動妨害効果</status>を除去し、その後@Duration@秒間、それらの効果を受けなくなる。この効果時間中、<scaleArmor>物理防御が@Resists@</scaleArmor>、<scaleMR>魔法防御が@Resists@</scaleMR>増加する。<br><br><spellPassive>自動効果:</spellPassive> オラフは追加で@ArmorPen@の脅威を獲得する。@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

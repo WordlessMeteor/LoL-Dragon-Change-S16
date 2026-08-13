@@ -9,6 +9,7 @@
     },
     "{0189be9e}": {
         "ObjectName": "Jade_Heimerdinger_BlindingDart",
+        "objectPath": "{0189be9e}",
         "mScriptName": "Jade_Heimerdinger_BlindingDart",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -67,8 +68,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_CH1ConcussionGrenade.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 11.699999809265137,
                 11.699999809265137,
@@ -102,7 +103,7 @@
                 920.0,
                 920.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     920.0,
                     920.0,
@@ -154,7 +155,7 @@
                 120.0,
                 120.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     80.0,
                     90.0,
@@ -273,6 +274,7 @@
     },
     "{13d141ef}": {
         "ObjectName": "Jade_HeimerdingerE_Upgrade",
+        "objectPath": "{13d141ef}",
         "mScriptName": "Jade_HeimerdingerE_Upgrade",
         "mSpell": {
             "mAffectsTypeFlags": 6794,
@@ -288,8 +290,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_CH1ConcussionGrenade.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -324,7 +326,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -483,6 +485,7 @@
     },
     "{3125de21}": {
         "ObjectName": "Jade_HeimerdingerE_Spell",
+        "objectPath": "{3125de21}",
         "mScriptName": "Jade_HeimerdingerE_Spell",
         "mSpell": {
             "mAffectsTypeFlags": 6794,
@@ -498,8 +501,8 @@
                 "ASSETS/Characters/Jade_Heimerdinger/HUD/Icons2D/Jade_Heimerdinger_E2.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -534,7 +537,7 @@
                 2500.0,
                 2500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     2500.0,
                     2500.0,
@@ -693,6 +696,7 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerEAbility/Jade_HeimerdingerE": {
         "ObjectName": "Jade_HeimerdingerE",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerEAbility/Jade_HeimerdingerE",
         "mScriptName": "Jade_HeimerdingerE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -743,16 +747,14 @@
                     "__type": "GameCalculation"
                 }
             },
-            "mCoefficient": 0.6000000238418579,
-            "mCoefficient2": 0.75,
             "mAnimationName": "Spell3",
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_CH1ConcussionGrenade.dds",
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_CH1ConcussionGrenade.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 13.0,
                 13.0,
@@ -764,14 +766,15 @@
             ],
             "Cooldown": {
                 "values": [
-                    13.0,
+                    15.0,
+                    14.0,
                     13.0,
                     12.0,
                     11.0,
                     10.0,
-                    9.0,
                     9.0
                 ],
+                "{0a3e0478}": 15.0,
                 "__type": "{0a0eddc9}"
             },
             "mCantCancelWhileWindingUp": true,
@@ -786,7 +789,7 @@
                 920.0,
                 920.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     920.0,
                     920.0,
@@ -838,7 +841,7 @@
                 120.0,
                 120.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     80.0,
                     90.0,
@@ -984,6 +987,7 @@
     },
     "{0ae9d646}": {
         "ObjectName": "Jade_HeimerdingerR_UpgradeBuff",
+        "objectPath": "{0ae9d646}",
         "mScriptName": "Jade_HeimerdingerR_UpgradeBuff",
         "mSpell": {
             "flags": 4,
@@ -1150,8 +1154,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_UPGRADE.dds"
             ],
-            "{11704a2b}": 0.3812499940395355,
-            "{f26881a0}": 1.5399999618530273,
+            "spellCastTime": 0.3812499940395355,
+            "spellTotalTime": 1.5399999618530273,
             "cooldownTime": [
                 108.0,
                 108.0,
@@ -1186,7 +1190,7 @@
                 280.0,
                 280.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     280.0,
                     280.0,
@@ -1246,7 +1250,7 @@
                 90.0,
                 90.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     90.0,
                     90.0,
@@ -1327,6 +1331,7 @@
     },
     "{15b57bfa}": {
         "ObjectName": "Jade_HeimerdingerR_UpgradeSlow",
+        "objectPath": "{15b57bfa}",
         "mScriptName": "Jade_HeimerdingerR_UpgradeSlow",
         "mSpell": {
             "flags": 4,
@@ -1493,8 +1498,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_UPGRADE.dds"
             ],
-            "{11704a2b}": 0.3812499940395355,
-            "{f26881a0}": 1.5399999618530273,
+            "spellCastTime": 0.3812499940395355,
+            "spellTotalTime": 1.5399999618530273,
             "cooldownTime": [
                 108.0,
                 108.0,
@@ -1529,7 +1534,7 @@
                 280.0,
                 280.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     280.0,
                     280.0,
@@ -1589,7 +1594,7 @@
                 90.0,
                 90.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     90.0,
                     90.0,
@@ -1666,6 +1671,7 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerRAbility/Jade_HeimerdingerR": {
         "ObjectName": "Jade_HeimerdingerR",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerRAbility/Jade_HeimerdingerR",
         "mScriptName": "Jade_HeimerdingerR",
         "mSpell": {
             "flags": 4,
@@ -1832,8 +1838,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_UPGRADE.dds"
             ],
-            "{11704a2b}": 0.3812499940395355,
-            "{f26881a0}": 1.5399999618530273,
+            "spellCastTime": 0.3812499940395355,
+            "spellTotalTime": 1.5399999618530273,
             "cooldownTime": [
                 120.0,
                 120.0,
@@ -1866,7 +1872,7 @@
                 280.0,
                 280.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     280.0,
                     280.0,
@@ -1926,7 +1932,7 @@
                 90.0,
                 90.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     90.0,
                     90.0,
@@ -2007,6 +2013,7 @@
     },
     "{d76d5335}": {
         "ObjectName": "Jade_HeimerdingerR_Proof",
+        "objectPath": "{d76d5335}",
         "mScriptName": "Jade_HeimerdingerR_Proof",
         "mSpell": {
             "flags": 4,
@@ -2173,8 +2180,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_H28GEvolutionTurret.dds"
             ],
-            "{11704a2b}": 0.3812499940395355,
-            "{f26881a0}": 1.5399999618530273,
+            "spellCastTime": 0.3812499940395355,
+            "spellTotalTime": 1.5399999618530273,
             "cooldownTime": [
                 108.0,
                 108.0,
@@ -2209,7 +2216,7 @@
                 280.0,
                 280.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     280.0,
                     280.0,
@@ -2269,7 +2276,7 @@
                 90.0,
                 90.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     90.0,
                     90.0,
@@ -2346,11 +2353,12 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerBasicAttack": {
         "ObjectName": "Jade_HeimerdingerBasicAttack",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerBasicAttack",
         "mScriptName": "Jade_HeimerdingerBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAlternateName": "HeimerdingerBasicAttack",
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2384,7 +2392,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -2464,6 +2472,7 @@
     },
     "{1d3d63ca}": {
         "ObjectName": "Jade_Heimerdinger_UrAniumRounds",
+        "objectPath": "{1d3d63ca}",
         "mScriptName": "Jade_Heimerdinger_UrAniumRounds",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -2605,8 +2614,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_H28GEvolutionTurret.dds",
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_H28GEvolutionTurret.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.8999999761581421,
                 0.8999999761581421,
@@ -2660,7 +2669,7 @@
                 350.0,
                 350.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     350.0,
                     350.0,
@@ -2711,7 +2720,7 @@
                 110.0,
                 120.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     80.0,
@@ -2822,50 +2831,10 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerQAbility/Jade_HeimerdingerQ": {
         "ObjectName": "Jade_HeimerdingerQ",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerQAbility/Jade_HeimerdingerQ",
         "mScriptName": "Jade_HeimerdingerQ",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
-            "mEffectAmount": [
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0,
-                        900.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "Level4BonusHP",
@@ -2883,13 +2852,13 @@
                 {
                     "name": "BaseDamage",
                     "values": [
-                        22.0,
-                        30.0,
-                        38.0,
-                        46.0,
-                        54.0,
-                        62.0,
-                        70.0
+                        20.0,
+                        28.0,
+                        36.0,
+                        44.0,
+                        52.0,
+                        60.0,
+                        68.0
                     ],
                     "__type": "SpellDataValue"
                 },
@@ -2924,44 +2893,9 @@
                 "Health": {
                     "mFormulaParts": [
                         {
-                            "mNumber": 260.0,
-                            "__type": "NumberCalculationPart"
-                        },
-                        {
-                            "values": [
-                                0.0,
-                                15.0,
-                                30.0,
-                                45.0,
-                                60.0,
-                                75.0,
-                                90.0,
-                                105.0,
-                                120.0,
-                                135.0,
-                                150.0,
-                                165.0,
-                                180.0,
-                                195.0,
-                                210.0,
-                                225.0,
-                                240.0,
-                                255.0,
-                                270.0,
-                                285.0,
-                                300.0,
-                                315.0,
-                                330.0,
-                                345.0,
-                                360.0,
-                                375.0,
-                                390.0,
-                                405.0,
-                                420.0,
-                                435.0,
-                                450.0
-                            ],
-                            "__type": "ByCharLevelFormulaCalculationPart"
+                            "mLevel1Value": 275.0,
+                            "mInitialBonusPerLevel": 15.0,
+                            "__type": "ByCharLevelBreakpointsCalculationPart"
                         },
                         {
                             "mDataValue": "Level4BonusHP",
@@ -2976,8 +2910,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_H28GEvolutionTurret.dds",
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_H28GEvolutionTurret.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 1.0,
                 1.0,
@@ -3031,7 +2965,7 @@
                 350.0,
                 350.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     350.0,
                     350.0,
@@ -3082,7 +3016,7 @@
                 110.0,
                 120.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     80.0,
@@ -3197,6 +3131,7 @@
     },
     "{e036be6b}": {
         "ObjectName": "Jade_Heimerdinger_UrAniumRoundsHit",
+        "objectPath": "{e036be6b}",
         "mScriptName": "Jade_Heimerdinger_UrAniumRoundsHit",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -3338,8 +3273,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_H28GEvolutionTurret.dds",
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_H28GEvolutionTurret.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.8999999761581421,
                 0.8999999761581421,
@@ -3393,7 +3328,7 @@
                 350.0,
                 350.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     350.0,
                     350.0,
@@ -3444,7 +3379,7 @@
                 110.0,
                 120.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     80.0,
@@ -3555,6 +3490,7 @@
     },
     "{febccbb9}": {
         "ObjectName": "Jade_Heimerdinger_UrAniumRounds_DebuffVisual",
+        "objectPath": "{febccbb9}",
         "mScriptName": "Jade_Heimerdinger_UrAniumRounds_DebuffVisual",
         "mBuff": {
             "__type": "BuffData"
@@ -3571,6 +3507,7 @@
     },
     "{2d7a6d34}": {
         "ObjectName": "Jade_HeimerdingerPassive_Icon",
+        "objectPath": "{2d7a6d34}",
         "mScriptName": "Jade_HeimerdingerPassive_Icon",
         "mSpell": {
             "mEffectAmount": [
@@ -3645,7 +3582,7 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_TechmaturgicalRepairBots.dds"
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     900.0,
                     900.0,
@@ -3682,6 +3619,7 @@
     },
     "{6b05d0bc}": {
         "ObjectName": "Jade_HeimerdingerPassive",
+        "objectPath": "{6b05d0bc}",
         "mScriptName": "Jade_HeimerdingerPassive",
         "mSpell": {
             "mEffectAmount": [
@@ -3764,7 +3702,7 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_TechmaturgicalRepairBots.dds"
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     900.0,
                     900.0,
@@ -3809,115 +3747,21 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerWAbility/Jade_HeimerdingerW": {
         "ObjectName": "Jade_HeimerdingerW",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerWAbility/Jade_HeimerdingerW",
         "mScriptName": "Jade_HeimerdingerW",
         "mSpell": {
             "flags": 4,
-            "mEffectAmount": [
-                {
-                    "value": [
-                        30.0,
-                        60.0,
-                        90.0,
-                        120.0,
-                        150.0,
-                        180.0,
-                        210.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        6.0,
-                        12.0,
-                        18.0,
-                        24.0,
-                        30.0,
-                        36.0,
-                        42.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0,
-                        25.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0,
-                        20.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0,
-                        30.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        54.0,
-                        108.0,
-                        162.0,
-                        216.0,
-                        270.0,
-                        324.0,
-                        378.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "value": [
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0,
-                        5.0
-                    ],
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                },
-                {
-                    "__type": "SpellEffectAmount"
-                }
-            ],
             "DataValues": [
                 {
                     "name": "BaseDamage",
                     "values": [
-                        35.0,
-                        85.0,
-                        135.0,
-                        185.0,
-                        235.0,
-                        285.0,
-                        335.0
+                        20.0,
+                        70.0,
+                        120.0,
+                        170.0,
+                        220.0,
+                        270.0,
+                        320.0
                     ],
                     "__type": "SpellDataValue"
                 }
@@ -3959,8 +3803,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_HextechMicroRockets.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "mCantCancelWhileWindingUp": true,
             "mSpellRevealsChampion": false,
             "useAnimatorFramerate": true,
@@ -3973,7 +3817,7 @@
                 1100.0,
                 1100.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1100.0,
                     1100.0,
@@ -4025,7 +3869,7 @@
                 145.0,
                 90.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     65.0,
                     85.0,
@@ -4057,12 +3901,12 @@
                             "levelCount": 5,
                             "Elements": [
                                 {
-                                    "type": "Cost",
+                                    "type": "BaseDamage",
+                                    "nameOverride": "Spell_ListType_BaseDamage",
                                     "__type": "TooltipInstanceListElement"
                                 },
                                 {
-                                    "type": "BaseDamage",
-                                    "nameOverride": "Spell_ListType_BaseDamage",
+                                    "type": "Cost",
                                     "__type": "TooltipInstanceListElement"
                                 }
                             ],
@@ -4130,6 +3974,7 @@
     },
     "{ae0bfa97}": {
         "ObjectName": "Jade_HeimerdingerW_Missile",
+        "objectPath": "{ae0bfa97}",
         "mScriptName": "Jade_HeimerdingerW_Missile",
         "mSpell": {
             "flags": 4,
@@ -4280,8 +4125,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Heimerdinger_HextechMicroRockets.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 11.0,
                 11.0,
@@ -4315,7 +4160,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -4482,17 +4327,19 @@
     },
     "{9298c0f9}": {
         "ObjectName": "Jade_HeimerdingerRunCycleManager",
+        "objectPath": "{9298c0f9}",
         "mScriptName": "Jade_HeimerdingerRunCycleManager",
         "__type": "SpellObject"
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerBasicAttack2": {
         "ObjectName": "Jade_HeimerdingerBasicAttack2",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerBasicAttack2",
         "mScriptName": "Jade_HeimerdingerBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAlternateName": "HeimerdingerBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -4525,7 +4372,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -4597,6 +4444,7 @@
     },
     "{c20d1869}": {
         "ObjectName": "Jade_Heimerdinger_EggRYD_Display",
+        "objectPath": "{c20d1869}",
         "mScriptName": "Jade_Heimerdinger_EggRYD_Display",
         "mSpell": {
             "mEffectAmount": [
@@ -4690,11 +4538,12 @@
     },
     "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerCritAttack": {
         "ObjectName": "Jade_HeimerdingerCritAttack",
+        "objectPath": "Characters/Jade_Heimerdinger/Spells/Jade_HeimerdingerCritAttack",
         "mScriptName": "Jade_HeimerdingerCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 24527,
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -4728,7 +4577,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -4863,7 +4712,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mEarlyLevelOverrides": [
                     0,
                     1,
@@ -4908,7 +4757,7 @@
             },
             {
                 "MapId": 453,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "IsDefaultRecommendation": true,
                 "mEarlyLevelOverrides": [
                     0,
@@ -5053,7 +4902,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "{3125de21}",
             "{ae0bfa97}",
             "{13d141ef}",

@@ -47,7 +47,7 @@
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{bc45bbc5}": {
+                    "Audio_Dance": {
                         "mSoundName": "Play_sfx_Rengar_Dance3D_buffactivate",
                         "mIsLoop": false,
                         "__type": "SoundEventData"
@@ -92,11 +92,11 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{9e55a33e}": {
+            "Laugh_BASE": {
                 "mFlags": 1,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{0cf0606b}": {
+                    "Audio_Laugh": {
                         "mSoundName": "Play_sfx_Rengar_Laugh3D_buffactivate",
                         "mIsLoop": false,
                         "__type": "SoundEventData"
@@ -237,7 +237,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{602b063d}": {
+            "Raw_LionGuy_recall": {
                 "mFlags": 8,
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
@@ -246,7 +246,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{6208af50}": {
+            "Raw_LionGuy_recall_idle": {
                 "mFlags": 2,
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
@@ -258,8 +258,8 @@
             "Attack1": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{b5b7e047}": {
-                        "mName": "{b5b7e047}",
+                    "BA1": {
+                        "mName": "BA1",
                         "mStartFrame": 2.0,
                         "mEffectKey": "Rengar_BA1_Cas",
                         "mParticleEventDataPairList": [
@@ -281,8 +281,8 @@
             "Attack2": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{b6b7e1da}": {
-                        "mName": "{b6b7e1da}",
+                    "BA2": {
+                        "mName": "BA2",
                         "mStartFrame": 2.0,
                         "mEffectKey": "Rengar_BA2_Cas",
                         "mParticleEventDataPairList": [
@@ -304,8 +304,8 @@
             "Attack3": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{b7b7e36d}": {
-                        "mName": "{b7b7e36d}",
+                    "BA3": {
+                        "mName": "BA3",
                         "mStartFrame": 2.0,
                         "mEffectKey": "Rengar_BA3_Cas",
                         "mParticleEventDataPairList": [
@@ -328,7 +328,7 @@
                 "mFlags": 1,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{eed2417d}": {
+                    "Audio_Joke": {
                         "mSoundName": "Play_sfx_Rengar_Joke3D_buffactivate",
                         "mIsLoop": false,
                         "__type": "SoundEventData"
@@ -340,7 +340,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{76bbc6a0}": {
+            "Idle3_BASE": {
                 "mFlags": 1,
                 "mTrackDataName": "Default",
                 "mAnimationResourceData": {
@@ -349,7 +349,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{7cb9d840}": {
+            "Run1_Fast_BASE": {
                 "mFlags": 3,
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
@@ -391,12 +391,12 @@
             },
             "Run1_Fast": {
                 "mClipNameList": [
-                    "{f4784b95}",
-                    "{7cb9d840}"
+                    "Run1_Fast_TASSEL",
+                    "Run1_Fast_BASE"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{f4784b95}": {
+            "Run1_Fast_TASSEL": {
                 "mFlags": 6,
                 "mMaskDataName": "Tassel",
                 "mTrackDataName": "Tassel",
@@ -406,7 +406,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{8932308b}": {
+            "Idle1_TASSEL": {
                 "mFlags": 6,
                 "mMaskDataName": "Tassel",
                 "mTrackDataName": "Tassel",
@@ -419,19 +419,19 @@
             "Idle1": {
                 "mSelectorPairDataList": [
                     {
-                        "mClipName": "{1b254ae6}",
+                        "mClipName": "Idle1_PAR",
                         "mProbability": 75.0,
                         "__type": "SelectorPairData"
                     },
                     {
-                        "mClipName": "{2c00f6af}",
+                        "mClipName": "Idle2_PAR",
                         "mProbability": 25.0,
                         "__type": "SelectorPairData"
                     }
                 ],
                 "__type": "SelectorClipData"
             },
-            "{c5288be8}": {
+            "Idle2_TASSEL": {
                 "mFlags": 4,
                 "mMaskDataName": "Tassel",
                 "mTrackDataName": "Tassel",
@@ -441,7 +441,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{747ae0f5}": {
+            "Idle3_TASSEL": {
                 "mFlags": 4,
                 "mMaskDataName": "Tassel",
                 "mTrackDataName": "Tassel",
@@ -451,7 +451,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{299519f8}": {
+            "Taunt_TASSEL": {
                 "mFlags": 4,
                 "mMaskDataName": "Tassel",
                 "mTrackDataName": "Tassel",
@@ -464,11 +464,11 @@
             "Taunt": {
                 "mClipNameList": [
                     "Taunt_Base",
-                    "{299519f8}"
+                    "Taunt_TASSEL"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{febfc6d3}": {
+            "Laugh_TASSEL": {
                 "mFlags": 4,
                 "mMaskDataName": "Tassel",
                 "mTrackDataName": "Tassel",
@@ -480,19 +480,19 @@
             },
             "Laugh": {
                 "mClipNameList": [
-                    "{9e55a33e}",
-                    "{febfc6d3}"
+                    "Laugh_BASE",
+                    "Laugh_TASSEL"
                 ],
                 "__type": "ParallelClipData"
             },
             "Dance": {
                 "mClipNameList": [
                     "Dance_Base",
-                    "{d4939539}"
+                    "Dance_TASSEL"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{d4939539}": {
+            "Dance_TASSEL": {
                 "mMaskDataName": "Tassel",
                 "mTrackDataName": "Tassel",
                 "mAnimationResourceData": {
@@ -524,8 +524,8 @@
                 "mMaskDataName": "Hood",
                 "mTrackDataName": "Hood",
                 "mEventDataMap": {
-                    "{e6fda1e1}": {
-                        "mName": "{e6fda1e1}",
+                    "HoodLoop": {
+                        "mName": "HoodLoop",
                         "mShowSubmeshList": [
                             "Hood"
                         ],
@@ -557,7 +557,7 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{d884c53b}": {
+            "Hood_On_BASE": {
                 "mFlags": 8,
                 "mMaskDataName": "Arm",
                 "mTrackDataName": "Hood",
@@ -577,9 +577,9 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{1d902a0d}": {
+            "Hood_On": {
                 "mClipNameList": [
-                    "{d884c53b}",
+                    "Hood_On_BASE",
                     "Hood_Loop"
                 ],
                 "__type": "SequencerClipData"
@@ -592,11 +592,11 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{713ed5b5}": {
+            "Spell1_Idle_TRA": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{9c4b7e97}": {
-                        "mName": "{9c4b7e97}",
+                    "Q_Long": {
+                        "mName": "Q_Long",
                         "mStartFrame": 4.0,
                         "mEffectKey": "Rengar_Q_Cas",
                         "mParticleEventDataPairList": [
@@ -615,31 +615,31 @@
                 },
                 "__type": "AtomicClipData"
             },
-            "{1b254ae6}": {
+            "Idle1_PAR": {
                 "mClipNameList": [
                     "Idle1_Base",
-                    "{8932308b}"
+                    "Idle1_TASSEL"
                 ],
                 "__type": "ParallelClipData"
             },
-            "{2c00f6af}": {
+            "Idle2_PAR": {
                 "mClipNameList": [
                     "Idle2_Base",
-                    "{c5288be8}"
+                    "Idle2_TASSEL"
                 ],
                 "__type": "ParallelClipData"
             },
             "Spell4_Idle": {
                 "mClipNameList": [
-                    "{747ae0f5}",
-                    "{76bbc6a0}"
+                    "Idle3_TASSEL",
+                    "Idle3_BASE"
                 ],
                 "__type": "ParallelClipData"
             },
             "Attack4": {
                 "mTrackDataName": "Default",
                 "mEventDataMap": {
-                    "{b0b7d868}": {
+                    "BA4": {
                         "mEffectKey": "Rengar_Q_Cas",
                         "mParticleEventDataPairList": [
                             {
@@ -1416,7 +1416,7 @@
                 "__type": "TransitionClipBlendData"
             },
             "12895556604164517606": {
-                "mClipName": "{713ed5b5}",
+                "mClipName": "Spell1_Idle_TRA",
                 "__type": "TransitionClipBlendData"
             },
             "12895556604249691573": {
@@ -1424,7 +1424,7 @@
                 "__type": "TimeBlendData"
             },
             "12895556604341765792": {
-                "mClipName": "{713ed5b5}",
+                "mClipName": "Spell1_Idle_TRA",
                 "__type": "TransitionClipBlendData"
             },
             "12895556604442302528": {
@@ -1440,7 +1440,7 @@
                 "__type": "TimeBlendData"
             },
             "12895556606105937457": {
-                "mClipName": "{713ed5b5}",
+                "mClipName": "Spell1_Idle_TRA",
                 "__type": "TransitionClipBlendData"
             },
             "13039675255171725416": {
@@ -1644,6 +1644,7 @@
                 "__type": "TimeBlendData"
             }
         },
+        "objectPath": "{90279fb9}",
         "__type": "AnimationGraphData"
     },
     "__linked": []

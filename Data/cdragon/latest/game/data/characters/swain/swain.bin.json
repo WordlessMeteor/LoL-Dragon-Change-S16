@@ -11,6 +11,7 @@
     },
     "Characters/Swain/Spells/SwainPassiveReturnBirdMissile": {
         "ObjectName": "SwainPassiveReturnBirdMissile",
+        "objectPath": "Characters/Swain/Spells/SwainPassiveReturnBirdMissile",
         "mScriptName": "SwainPassiveReturnBirdMissile",
         "mSpell": {
             "flags": 4194308,
@@ -127,8 +128,8 @@
             ],
             "mCoefficient": 0.5,
             "mAnimationName": "Spell2",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -184,7 +185,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -315,6 +316,7 @@
     },
     "Characters/Swain/Spells/SwainRAbility/SwainR": {
         "ObjectName": "SwainR",
+        "objectPath": "Characters/Swain/Spells/SwainRAbility/SwainR",
         "mScriptName": "SwainR",
         "mSpell": {
             "mAffectsTypeFlags": 8192,
@@ -646,6 +648,19 @@
                                 20.0
                             ],
                             "__type": "SpellDataValue"
+                        },
+                        {
+                            "name": "HealHPRatio",
+                            "values": [
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.009999999776482582,
+                                0.009999999776482582
+                            ],
+                            "__type": "SpellDataValue"
                         }
                     ],
                     "__type": "SpellDataValueVector"
@@ -712,7 +727,7 @@
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_R2.dds",
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_R2_No_Charge.dds"
             ],
-            "{f26881a0}": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 120.0,
                 120.0,
@@ -752,7 +767,7 @@
                 600.0,
                 600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     600.0,
                     600.0,
@@ -809,7 +824,7 @@
                 100.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -976,6 +991,7 @@
     },
     "Characters/Swain/Spells/SwainRAbility/SwainRSoulFlare": {
         "ObjectName": "SwainRSoulFlare",
+        "objectPath": "Characters/Swain/Spells/SwainRAbility/SwainRSoulFlare",
         "mScriptName": "SwainRSoulFlare",
         "mSpell": {
             "mAffectsTypeFlags": 8192,
@@ -990,8 +1006,8 @@
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_R2.dds",
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_R2_No_Charge.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 8.0,
                 8.0,
@@ -1050,7 +1066,7 @@
                 1100.0,
                 1100.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1100.0,
                     1100.0,
@@ -1164,6 +1180,7 @@
     },
     "Characters/Swain/Spells/SwainRSoulBurn": {
         "ObjectName": "SwainRSoulBurn",
+        "objectPath": "Characters/Swain/Spells/SwainRSoulBurn",
         "mScriptName": "SwainRSoulBurn",
         "mBuff": {
             "mDescription": "game_buff_tooltip_SwainRSoulBurn",
@@ -1203,6 +1220,7 @@
     },
     "Characters/Swain/Spells/SwainPPullReady": {
         "ObjectName": "SwainPPullReady",
+        "objectPath": "Characters/Swain/Spells/SwainPPullReady",
         "mScriptName": "SwainPPullReady",
         "mBuff": {
             "mDescription": "buff_desc_SwainPPullReady",
@@ -1220,6 +1238,7 @@
     },
     "Characters/Swain/Spells/SwainQAbility/SwainQ": {
         "ObjectName": "SwainQ",
+        "objectPath": "Characters/Swain/Spells/SwainQAbility/SwainQ",
         "mScriptName": "SwainQ",
         "mSpell": {
             "mAffectsTypeFlags": 7375,
@@ -1332,8 +1351,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_Q.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 7.0,
                 7.0,
@@ -1367,7 +1386,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -1419,7 +1438,7 @@
                 60.0,
                 60.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     40.0,
                     45.0,
@@ -1648,6 +1667,7 @@
     },
     "{51330b76}": {
         "ObjectName": "SwainEReturnMissile",
+        "objectPath": "{51330b76}",
         "mScriptName": "SwainEReturnMissile",
         "mSpell": {
             "flags": 4,
@@ -1658,8 +1678,8 @@
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_E.dds"
             ],
             "mCastTime": 0.05000000074505806,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 13.0,
                 13.0,
@@ -1694,7 +1714,7 @@
                 1600.0,
                 1600.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1600.0,
                     1600.0,
@@ -1838,6 +1858,7 @@
     },
     "{51eae544}": {
         "ObjectName": "SwainERoot",
+        "objectPath": "{51eae544}",
         "mScriptName": "SwainERoot",
         "mBuff": {
             "mDescription": "game_buff_tooltip_SwainERoot",
@@ -1865,6 +1886,7 @@
     },
     "Characters/Swain/Spells/SwainEAbility/SwainE2": {
         "ObjectName": "SwainE2",
+        "objectPath": "Characters/Swain/Spells/SwainEAbility/SwainE2",
         "mScriptName": "SwainE2",
         "mSpell": {
             "flags": 4,
@@ -1906,7 +1928,7 @@
                 1150.0,
                 1150.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1150.0,
                     1150.0,
@@ -2017,6 +2039,7 @@
     },
     "Characters/Swain/Spells/SwainEAbility/SwainE": {
         "ObjectName": "SwainE",
+        "objectPath": "Characters/Swain/Spells/SwainEAbility/SwainE",
         "mScriptName": "SwainE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2126,8 +2149,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_E.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 12.0,
                 12.0,
@@ -2159,7 +2182,7 @@
                 850.0,
                 850.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     850.0,
                     850.0,
@@ -2251,7 +2274,7 @@
                 70.0,
                 70.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     55.0,
@@ -2382,11 +2405,13 @@
     },
     "Characters/Swain/Spells/SwainPSoulDropListener": {
         "ObjectName": "SwainPSoulDropListener",
+        "objectPath": "Characters/Swain/Spells/SwainPSoulDropListener",
         "mScriptName": "SwainPSoulDropListener",
         "__type": "SpellObject"
     },
     "Characters/Swain/Spells/SwainRNovaSlow": {
         "ObjectName": "SwainRNovaSlow",
+        "objectPath": "Characters/Swain/Spells/SwainRNovaSlow",
         "mScriptName": "SwainRNovaSlow",
         "mBuff": {
             "mDescription": "buff_desc_SwainRNovaSlow",
@@ -2396,6 +2421,7 @@
     },
     "Characters/Swain/Spells/SwainSoulCounter": {
         "ObjectName": "SwainSoulCounter",
+        "objectPath": "Characters/Swain/Spells/SwainSoulCounter",
         "mScriptName": "SwainSoulCounter",
         "mBuff": {
             "mDescription": "buff_desc_SwainSoulCounterKey",
@@ -2406,11 +2432,13 @@
     },
     "Characters/Swain/Spells/SwainRSoulProgression": {
         "ObjectName": "SwainRSoulProgression",
+        "objectPath": "Characters/Swain/Spells/SwainRSoulProgression",
         "mScriptName": "SwainRSoulProgression",
         "__type": "SpellObject"
     },
     "Characters/Swain/Spells/SwainPDummyCast": {
         "ObjectName": "SwainPDummyCast",
+        "objectPath": "Characters/Swain/Spells/SwainPDummyCast",
         "mScriptName": "SwainPDummyCast",
         "mSpell": {
             "mAffectsTypeFlags": 9221,
@@ -2549,8 +2577,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_P.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -2585,7 +2613,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2653,6 +2681,7 @@
     },
     "Characters/Swain/Spells/SwainRDamageCounter": {
         "ObjectName": "SwainRDamageCounter",
+        "objectPath": "Characters/Swain/Spells/SwainRDamageCounter",
         "mScriptName": "SwainRDamageCounter",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -2788,8 +2817,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_R2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
             "mCantCancelWhileWindingUp": true,
             "useAnimatorFramerate": true,
             "castRange": [
@@ -2801,7 +2830,7 @@
                 700.0,
                 700.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     700.0,
                     700.0,
@@ -2852,7 +2881,7 @@
                 70.0,
                 70.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     70.0,
@@ -2897,6 +2926,7 @@
     },
     "Characters/Swain/Spells/SwainRGroundTrail": {
         "ObjectName": "SwainRGroundTrail",
+        "objectPath": "Characters/Swain/Spells/SwainRGroundTrail",
         "mScriptName": "SwainRGroundTrail",
         "mSpell": {
             "flags": 4,
@@ -2918,7 +2948,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2970,6 +3000,7 @@
     },
     "Characters/Swain/Spells/SwainBirdMissileSelfOnly": {
         "ObjectName": "SwainBirdMissileSelfOnly",
+        "objectPath": "Characters/Swain/Spells/SwainBirdMissileSelfOnly",
         "mScriptName": "SwainBirdMissileSelfOnly",
         "mSpell": {
             "flags": 4194308,
@@ -3080,8 +3111,8 @@
             ],
             "mCoefficient": 0.5,
             "mAnimationName": "Spell2",
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3137,7 +3168,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3258,6 +3289,7 @@
     },
     "Characters/Swain/Spells/SwainPassiveAbility/SwainPassive": {
         "ObjectName": "SwainPassive",
+        "objectPath": "Characters/Swain/Spells/SwainPassiveAbility/SwainPassive",
         "mScriptName": "SwainPassive",
         "mSpell": {
             "DataValues": [
@@ -3354,7 +3386,7 @@
                 1150.0,
                 1150.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1150.0,
                     1150.0,
@@ -3404,6 +3436,7 @@
     },
     "Characters/Swain/Spells/SwainPSoulTrail": {
         "ObjectName": "SwainPSoulTrail",
+        "objectPath": "Characters/Swain/Spells/SwainPSoulTrail",
         "mScriptName": "SwainPSoulTrail",
         "mSpell": {
             "flags": 4,
@@ -3414,7 +3447,7 @@
                 ],
                 "__type": "ObjectTags"
             },
-            "{11704a2b}": 0.4327000081539154,
+            "spellCastTime": 0.4327000081539154,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -3447,7 +3480,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -3532,6 +3565,7 @@
     },
     "Characters/Swain/Spells/SwainWAbility/SwainW": {
         "ObjectName": "SwainW",
+        "objectPath": "Characters/Swain/Spells/SwainWAbility/SwainW",
         "mScriptName": "SwainW",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -3675,8 +3709,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_W.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.25,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.25,
             "cooldownTime": [
                 22.0,
                 22.0,
@@ -3722,7 +3756,7 @@
                 7500.0,
                 7500.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     5500.0,
                     5500.0,
@@ -3783,7 +3817,7 @@
                 80.0,
                 80.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     60.0,
                     65.0,
@@ -3929,6 +3963,7 @@
     },
     "Characters/Swain/Spells/SwainRMegaNovaMissile": {
         "ObjectName": "SwainRMegaNovaMissile",
+        "objectPath": "Characters/Swain/Spells/SwainRMegaNovaMissile",
         "mScriptName": "SwainRMegaNovaMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -4061,8 +4096,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_R2.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 11.5,
                 11.5,
@@ -4095,7 +4130,7 @@
                 675.0,
                 675.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     675.0,
                     675.0,
@@ -4238,17 +4273,19 @@
     },
     "Characters/Swain/Spells/SwainWPingPassive": {
         "ObjectName": "SwainWPingPassive",
+        "objectPath": "Characters/Swain/Spells/SwainWPingPassive",
         "mScriptName": "SwainWPingPassive",
         "__type": "SpellObject"
     },
     "Characters/Swain/Spells/SwainBasicAttack2": {
         "ObjectName": "SwainBasicAttack2",
+        "objectPath": "Characters/Swain/Spells/SwainBasicAttack2",
         "mScriptName": "SwainBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
             "mAlternateName": "SwainBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.3306500017642975,
+            "spellCastTime": 0.3306500017642975,
             "bHaveHitEffect": true,
             "castRange": [
                 800.0,
@@ -4259,7 +4296,7 @@
                 800.0,
                 800.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     800.0,
                     800.0,
@@ -4316,6 +4353,7 @@
     },
     "Characters/Swain/Spells/SwainQDummyMissile": {
         "ObjectName": "SwainQDummyMissile",
+        "objectPath": "Characters/Swain/Spells/SwainQDummyMissile",
         "mScriptName": "SwainQDummyMissile",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -4448,8 +4486,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Swain/HUD/Icons2D/Swain_E.dds"
             ],
-            "{11704a2b}": 0.0,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.0,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -4482,7 +4520,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -4620,6 +4658,7 @@
     },
     "Characters/Swain/Spells/SwainBasicAttack": {
         "ObjectName": "SwainBasicAttack",
+        "objectPath": "Characters/Swain/Spells/SwainBasicAttack",
         "mScriptName": "SwainBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 5327,
@@ -4687,6 +4726,7 @@
     },
     "Characters/Swain/Spells/SwainPassivePullMoveBuff": {
         "ObjectName": "SwainPassivePullMoveBuff",
+        "objectPath": "Characters/Swain/Spells/SwainPassivePullMoveBuff",
         "mScriptName": "SwainPassivePullMoveBuff",
         "mSpell": {
             "mAlternateName": "SwainPassivePullMoveBuff",
@@ -4792,7 +4832,7 @@
             "baseValue": 31.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.5499999523162842,
             "__type": "ModifiableFloat"
         },
@@ -4861,7 +4901,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "Characters/Swain/Spells/SwainPDummyCast",
             "{51330b76}",
             "Shared/Spells/BaseSpell",
@@ -5399,7 +5439,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mEarlyLevelOverrides": [
                     0,
                     1,

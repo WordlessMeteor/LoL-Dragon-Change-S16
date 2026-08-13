@@ -12,6 +12,7 @@
     },
     "{00a591bc}": {
         "ObjectName": "Jade_GangplankR_Ball",
+        "objectPath": "{00a591bc}",
         "mScriptName": "Jade_GangplankR_Ball",
         "mSpell": {
             "flags": 4,
@@ -26,7 +27,7 @@
                 20000.0,
                 20000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20000.0,
                     20000.0,
@@ -55,6 +56,7 @@
     },
     "{d37c3fd0}": {
         "ObjectName": "Jade_GangplankR_Slow",
+        "objectPath": "{d37c3fd0}",
         "mScriptName": "Jade_GangplankR_Slow",
         "mSpell": {
             "mImgIconName": [
@@ -78,6 +80,7 @@
     },
     "Characters/Jade_Gangplank/Spells/Jade_GangplankRAbility/Jade_GangplankR": {
         "ObjectName": "Jade_GangplankR",
+        "objectPath": "Characters/Jade_Gangplank/Spells/Jade_GangplankRAbility/Jade_GangplankR",
         "mScriptName": "Jade_GangplankR",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -250,8 +253,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_CannonBarrage.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 120.0,
                 120.0,
@@ -286,7 +289,7 @@
                 20000.0,
                 20000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20000.0,
                     20000.0,
@@ -335,7 +338,7 @@
                 100.0,
                 100.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -434,6 +437,7 @@
     },
     "{02062618}": {
         "ObjectName": "Jade_GangplankBilgewaterToken",
+        "objectPath": "{02062618}",
         "mScriptName": "Jade_GangplankBilgewaterToken",
         "mBuff": {
             "mDescription": "game_buff_tooltip_Jade_GangplankBilgewaterToken",
@@ -452,6 +456,7 @@
     },
     "Characters/Jade_Gangplank/Spells/Jade_GangplankWAbility/Jade_GangplankW": {
         "ObjectName": "Jade_GangplankW",
+        "objectPath": "Characters/Jade_Gangplank/Spells/Jade_GangplankWAbility/Jade_GangplankW",
         "mScriptName": "Jade_GangplankW",
         "mSpell": {
             "mAffectsTypeFlags": 15567,
@@ -571,8 +576,8 @@
                 "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_RemoveScurvy.dds"
             ],
             "mCastTime": 0.25,
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 24.0,
                 22.0,
@@ -607,7 +612,7 @@
                 20.0,
                 20.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     20.0,
                     20.0,
@@ -647,7 +652,7 @@
                 65.0,
                 65.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     65.0,
                     65.0,
@@ -778,6 +783,7 @@
     },
     "{67531f9e}": {
         "ObjectName": "Jade_GangplankW_Buff",
+        "objectPath": "{67531f9e}",
         "mScriptName": "Jade_GangplankW_Buff",
         "mSpell": {
             "mImgIconName": [
@@ -801,8 +807,10 @@
     },
     "Characters/Jade_Gangplank/Spells/Jade_GangplankBasicAttack": {
         "ObjectName": "Jade_GangplankBasicAttack",
+        "objectPath": "Characters/Jade_Gangplank/Spells/Jade_GangplankBasicAttack",
         "mScriptName": "Jade_GangplankBasicAttack",
         "mSpell": {
+            "useAnimatorFramerate": true,
             "bHaveHitEffect": true,
             "castFrame": 8.710000038146973,
             "mHitEffectKey": "Jade_Gangplank_BA_tar",
@@ -828,11 +836,13 @@
     },
     "{3d9b8289}": {
         "ObjectName": "Jade_GangplankPassive_Debuff",
+        "objectPath": "{3d9b8289}",
         "mScriptName": "Jade_GangplankPassive_Debuff",
         "__type": "SpellObject"
     },
     "{9139d956}": {
         "ObjectName": "Jade_GangplankPassive",
+        "objectPath": "{9139d956}",
         "mScriptName": "Jade_GangplankPassive",
         "mSpell": {
             "DataValues": [
@@ -963,7 +973,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -999,6 +1009,7 @@
     },
     "{f11da6cd}": {
         "ObjectName": "Jade_GangplankPassive_Counter",
+        "objectPath": "{f11da6cd}",
         "mScriptName": "Jade_GangplankPassive_Counter",
         "mSpell": {
             "mImgIconName": [
@@ -1031,6 +1042,7 @@
     },
     "Characters/Jade_Gangplank/Spells/Jade_GangplankEAbility/Jade_GangplankE": {
         "ObjectName": "Jade_GangplankE",
+        "objectPath": "Characters/Jade_Gangplank/Spells/Jade_GangplankEAbility/Jade_GangplankE",
         "mScriptName": "Jade_GangplankE",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1254,8 +1266,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_RaiseMorale.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 0.7000000476837158,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 0.7000000476837158,
             "cooldownTime": [
                 20.0,
                 20.0,
@@ -1292,7 +1304,7 @@
                 1200.0,
                 1200.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     1200.0,
                     1200.0,
@@ -1341,7 +1353,7 @@
                 70.0,
                 70.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     55.0,
@@ -1452,6 +1464,7 @@
     },
     "{ff7d1052}": {
         "ObjectName": "Jade_GangplankE_Buff",
+        "objectPath": "{ff7d1052}",
         "mScriptName": "Jade_GangplankE_Buff",
         "mSpell": {
             "mImgIconName": [
@@ -1486,6 +1499,7 @@
     },
     "{4b70c950}": {
         "ObjectName": "Jade_Gangplank_IsBank",
+        "objectPath": "{4b70c950}",
         "mScriptName": "Jade_Gangplank_IsBank",
         "mSpell": {
             "mImgIconName": [
@@ -1509,6 +1523,7 @@
     },
     "Characters/Jade_Gangplank/Spells/Jade_GangplankCritAttack": {
         "ObjectName": "Jade_GangplankCritAttack",
+        "objectPath": "Characters/Jade_Gangplank/Spells/Jade_GangplankCritAttack",
         "mScriptName": "Jade_GangplankCritAttack",
         "mSpell": {
             "mAnimationName": "Crit",
@@ -1527,6 +1542,7 @@
     },
     "{b97caa03}": {
         "ObjectName": "Jade_Gangplank_IsPirate",
+        "objectPath": "{b97caa03}",
         "mScriptName": "Jade_Gangplank_IsPirate",
         "mSpell": {
             "mImgIconName": [
@@ -1550,6 +1566,7 @@
     },
     "Characters/Jade_Gangplank/Spells/Jade_GangplankQAbility/Jade_GangplankQ": {
         "ObjectName": "Jade_GangplankQ",
+        "objectPath": "Characters/Jade_Gangplank/Spells/Jade_GangplankQAbility/Jade_GangplankQ",
         "mScriptName": "Jade_GangplankQ",
         "mSpell": {
             "mAffectsTypeFlags": 6154,
@@ -1729,8 +1746,8 @@
             "mImgIconName": [
                 "ASSETS/UX/Jade/S3Icons/SameSized/Gangplank_Parley.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 5.0,
                 5.0,
@@ -1765,7 +1782,7 @@
                 625.0,
                 625.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     625.0,
                     625.0,
@@ -1841,7 +1858,7 @@
                 70.0,
                 75.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     55.0,
@@ -1978,7 +1995,7 @@
             "baseValue": 31.25,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.25,
             "__type": "ModifiableFloat"
         },
@@ -2047,7 +2064,7 @@
             "BaseSpell",
             "BaseSpell"
         ],
-        "{c1984296}": [
+        "extraSpellsList": [
             "{00a591bc}",
             "Shared/Spells/BaseSpell",
             "Shared/Spells/BaseSpell",
@@ -2402,7 +2419,7 @@
         "RecSpellRankUpInfos": [
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     0,
@@ -2470,7 +2487,7 @@
             "image": "ASSETS/Characters/Jade_Gangplank/Skins/Base/Jade_GangeplankLoadScreen_LoR_01.tex",
             "__type": "CensoredImage"
         },
-        "__type": "{3018b0da}"
+        "__type": "Portrait"
     },
     "{ec98e4bd}": {
         "mNameTraKey": "Jade_Portrait_Name_Gangplank_Feeney",
@@ -2486,7 +2503,7 @@
             "image": "ASSETS/Characters/Jade_Gangplank/Skins/Base/Jade_GangplankLoadScreen_Feeney.tex",
             "__type": "CensoredImage"
         },
-        "__type": "{3018b0da}"
+        "__type": "Portrait"
     },
     "{b5536f41}": {
         "ScriptName": "charscriptJade_Gangplank",

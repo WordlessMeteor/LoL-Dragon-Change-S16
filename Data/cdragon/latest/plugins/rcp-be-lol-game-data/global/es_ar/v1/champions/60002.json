@@ -565,7 +565,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Olaf lanza un hacha a la ubicación objetivo, lo que inflige daño a las unidades que atraviesa y reduce su velocidad de movimiento. Si Olaf toma el hacha, el enfriamiento de esta habilidad se reduce.",
-            "dynamicDescription": "Olaf lanza un hacha a la ubicación objetivo, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> a las unidades a su paso y las <status>ralentiza</status> en un @SlowAmount*100@%, que decae a lo largo de @DebuffDuration@ seg. <br><br>Si Olaf toma el hacha, el enfriamiento de esta habilidad se reduce en @CooldownRefund@ seg.@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "Olaf lanza un hacha a la ubicación objetivo, lo que inflige <physicalDamage>@TotalDamage@ de daño físico</physicalDamage> a las unidades a su paso y las <status>ralentiza</status> en un @SlowAmount*100@% a lo largo de @DebuffDuration@ seg. <br><br>Si Olaf toma el hacha, el enfriamiento de esta habilidad se reduce en @CooldownRefund@ seg.@SpellModifierDescriptionAppend@",
             "range": [
                 1000.0,
                 1000.0,
@@ -733,12 +733,12 @@
                 60.0
             ],
             "cooldownCoefficients": [
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0,
-                16.0
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0,
+                12.0
             ],
             "coefficients": {
                 "coefficient1": 1.0,
@@ -1015,7 +1015,7 @@
             "cost": "@Cost@ de @AbilityResourceName@",
             "cooldown": "@Cooldown@ seg %i:cooldown%",
             "description": "Olaf se vuelve temporalmente inmune a las inhabilitaciones y obtiene armadura, resistencia mágica y letalidad adicionales.",
-            "dynamicDescription": "Olaf purifica todos los efectos <status>inmovilizadores</status> e <status>incapacitantes</status> en él y se vuelve inmune a ellos durante @Duration@ seg. En ese periodo, Olaf obtiene <scaleArmor>@Resists@ de Armadura</scaleArmor>, <scaleMR>@Resists@ de Resistencia Mágica</scaleMR> y @ArmorPen@ de Letalidad.<br><br>@SpellModifierDescriptionAppend@",
+            "dynamicDescription": "<spellActive>Activa:</spellActive> Olaf purifica todos los efectos <status>inmovilizadores</status> e <status>incapacitantes</status> en él y se vuelve inmune a ellos durante @Duration@ seg. En ese periodo, Olaf obtiene <scaleArmor>@Resists@ de Armadura</scaleArmor> y <scaleMR>@Resists@ de Resistencia Mágica</scaleMR>.<br><br><spellPassive>Pasiva:</spellPassive> Olaf obtiene @ArmorPen@ de Letalidad adicional.@SpellModifierDescriptionAppend@",
             "range": [
                 400.0,
                 400.0,

@@ -58,7 +58,7 @@
             "baseValue": 32.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.2999999523162842,
             "__type": "ModifiableFloat"
         },
@@ -271,7 +271,7 @@
             "baseValue": 32.0,
             "__type": "ModifiableFloat"
         },
-        "{01262a25}": {
+        "mrPerLevel": {
             "baseValue": 1.2999999523162842,
             "__type": "ModifiableFloat"
         },
@@ -793,7 +793,7 @@
     },
     "Characters/Cassiopeia/Spells/CassiopeiaPassiveAbility/CassiopeiaPassive": {
         "ObjectName": "CassiopeiaPassive",
-        "objectPath": "{1c4c7f27}",
+        "objectPath": "Characters/Cassiopeia/Spells/CassiopeiaPassiveAbility/CassiopeiaPassive",
         "mScriptName": "CassiopeiaPassive",
         "mSpell": {
             "mSpellCalculations": {
@@ -821,7 +821,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -955,7 +955,7 @@
                 0.0,
                 0.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     0.0,
                     0.0,
@@ -1216,7 +1216,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Cassiopeia/HUD/Icons2D/Cassiopeia_Q.dds"
             ],
-            "{11704a2b}": 0.25,
+            "spellCastTime": 0.25,
             "cooldownTime": [
                 3.5,
                 3.5,
@@ -1249,7 +1249,7 @@
                 850.0,
                 850.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     850.0,
                     850.0,
@@ -1311,7 +1311,7 @@
                 70.0,
                 70.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     50.0,
                     55.0,
@@ -1443,7 +1443,7 @@
     },
     "Characters/Cassiopeia/Spells/CassiopeiaQAbility/CassiopeiaQDebuff": {
         "ObjectName": "CassiopeiaQDebuff",
-        "objectPath": "{5d9377d9}",
+        "objectPath": "Characters/Cassiopeia/Spells/CassiopeiaQAbility/CassiopeiaQDebuff",
         "mScriptName": "CassiopeiaQDebuff",
         "mBuff": {
             "mDescription": "game_buff_tooltip_CassiopeiaQDebuff",
@@ -1618,8 +1618,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Cassiopeia/HUD/Icons2D/Cassiopeia_E.dds"
             ],
-            "{11704a2b}": 0.125,
-            "{f26881a0}": 0.0,
+            "spellCastTime": 0.125,
+            "spellTotalTime": 0.0,
             "cooldownTime": [
                 0.75,
                 0.75,
@@ -1653,7 +1653,7 @@
                 700.0,
                 700.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     700.0,
                     700.0,
@@ -1727,7 +1727,7 @@
                 40.0,
                 40.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     40.0,
                     40.0,
@@ -1834,13 +1834,13 @@
     },
     "Characters/Cassiopeia/Spells/CassiopeiaCritAttack": {
         "ObjectName": "CassiopeiaCritAttack",
-        "objectPath": "{676f351d}",
+        "objectPath": "Characters/Cassiopeia/Spells/CassiopeiaCritAttack",
         "mScriptName": "CassiopeiaCritAttack",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAlternateName": "CassiopeaCritAttack",
             "mAnimationName": "Crit",
-            "{11704a2b}": 0.29385000467300415,
+            "spellCastTime": 0.29385000467300415,
             "bHaveHitEffect": true,
             "castRange": [
                 650.0,
@@ -1851,7 +1851,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -1907,19 +1907,19 @@
     },
     "Characters/Cassiopeia/Spells/CassiopeiaStatStonePoisonTracker": {
         "ObjectName": "CassiopeiaStatStonePoisonTracker",
-        "objectPath": "{73dc3198}",
+        "objectPath": "Characters/Cassiopeia/Spells/CassiopeiaStatStonePoisonTracker",
         "mScriptName": "CassiopeiaStatStonePoisonTracker",
         "__type": "SpellObject"
     },
     "Characters/Cassiopeia/Spells/CassPoisonDebuffListener": {
         "ObjectName": "CassPoisonDebuffListener",
-        "objectPath": "{8172dcd2}",
+        "objectPath": "Characters/Cassiopeia/Spells/CassPoisonDebuffListener",
         "mScriptName": "CassPoisonDebuffListener",
         "__type": "SpellObject"
     },
     "Characters/Cassiopeia/Spells/CassiopeiaWAbility/CassiopeiaWMissile": {
         "ObjectName": "CassiopeiaWMissile",
-        "objectPath": "{84b8f0a9}",
+        "objectPath": "Characters/Cassiopeia/Spells/CassiopeiaWAbility/CassiopeiaWMissile",
         "mScriptName": "CassiopeiaWMissile",
         "mSpell": {
             "flags": 4,
@@ -1931,8 +1931,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Cassiopeia/HUD/Icons2D/Cassiopeia_W.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 0.0,
                 0.0,
@@ -1968,7 +1968,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2256,8 +2256,8 @@
             "mImgIconName": [
                 "ASSETS/Characters/Cassiopeia/HUD/Icons2D/Cassiopeia_W.dds"
             ],
-            "{11704a2b}": 0.25,
-            "{f26881a0}": 1.0,
+            "spellCastTime": 0.25,
+            "spellTotalTime": 1.0,
             "cooldownTime": [
                 24.0,
                 24.0,
@@ -2292,7 +2292,7 @@
                 25000.0,
                 25000.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     25000.0,
                     25000.0,
@@ -2345,7 +2345,7 @@
                 90.0,
                 90.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     70.0,
                     75.0,
@@ -2541,7 +2541,7 @@
     },
     "Characters/Cassiopeia/Spells/CassiopeiaWAbility/CassiopeiaWSlow": {
         "ObjectName": "CassiopeiaWSlow",
-        "objectPath": "{d48b3d3e}",
+        "objectPath": "Characters/Cassiopeia/Spells/CassiopeiaWAbility/CassiopeiaWSlow",
         "mScriptName": "CassiopeiaWSlow",
         "mSpell": {
             "flags": 4194304,
@@ -2611,7 +2611,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Cassiopeia/HUD/Icons2D/Cassiopeia_W.dds"
             ],
-            "{f26881a0}": 0.5,
+            "spellTotalTime": 0.5,
             "cooldownTime": [
                 140.0,
                 130.0,
@@ -2644,7 +2644,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -2678,7 +2678,7 @@
                 0.0,
                 40.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     120.0,
                     160.0,
@@ -2787,7 +2787,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Cassiopeia/HUD/Icons2D/Cassiopeia_R.dds"
             ],
-            "{f26881a0}": 0.5,
+            "spellTotalTime": 0.5,
             "cooldownTime": [
                 140.0,
                 130.0,
@@ -2820,7 +2820,7 @@
                 750.0,
                 750.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     750.0,
                     750.0,
@@ -2854,7 +2854,7 @@
                 0.0,
                 40.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     120.0,
                     160.0,
@@ -3012,7 +3012,7 @@
             "mImgIconName": [
                 "ASSETS/Characters/Cassiopeia/HUD/Icons2D/Cassiopeia_R.dds"
             ],
-            "{f26881a0}": 0.5,
+            "spellTotalTime": 0.5,
             "cooldownTime": [
                 120.0,
                 120.0,
@@ -3045,7 +3045,7 @@
                 825.0,
                 700.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     825.0,
                     825.0,
@@ -3078,7 +3078,7 @@
                 0.0,
                 0.0
             ],
-            "{210f9ec0}": {
+            "manaValues": {
                 "values": [
                     100.0,
                     100.0,
@@ -3242,13 +3242,13 @@
     },
     "Characters/Cassiopeia/Spells/CassiopeiaBasicAttack2": {
         "ObjectName": "CassiopeiaBasicAttack2",
-        "objectPath": "{c509babd}",
+        "objectPath": "Characters/Cassiopeia/Spells/CassiopeiaBasicAttack2",
         "mScriptName": "CassiopeiaBasicAttack2",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAlternateName": "CassiopeaBasicAttack2",
             "mAnimationName": "Attack2",
-            "{11704a2b}": 0.29385000467300415,
+            "spellCastTime": 0.29385000467300415,
             "bHaveHitEffect": true,
             "castRange": [
                 650.0,
@@ -3259,7 +3259,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -3316,12 +3316,12 @@
     },
     "Characters/Cassiopeia/Spells/CassiopeiaBasicAttack": {
         "ObjectName": "CassiopeiaBasicAttack",
-        "objectPath": "{ceaa445d}",
+        "objectPath": "Characters/Cassiopeia/Spells/CassiopeiaBasicAttack",
         "mScriptName": "CassiopeiaBasicAttack",
         "mSpell": {
             "mAffectsTypeFlags": 8143,
             "mAlternateName": "CassiopeaBasicAttack",
-            "{11704a2b}": 0.29385000467300415,
+            "spellCastTime": 0.29385000467300415,
             "bHaveHitEffect": true,
             "castRange": [
                 650.0,
@@ -3332,7 +3332,7 @@
                 650.0,
                 650.0
             ],
-            "{0e1136d1}": {
+            "castRangeValues": {
                 "values": [
                     650.0,
                     650.0,
@@ -3442,7 +3442,7 @@
             },
             {
                 "MapId": 12,
-                "Position": "{ada7afdb}",
+                "Position": "None",
                 "mDefaultPriority": [
                     3,
                     2,
